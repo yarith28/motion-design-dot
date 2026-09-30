@@ -1,7 +1,7 @@
 {
-  "total": 40,
-  "fullCompletionDesktop": 40,
-  "fullCompletionMobile": 40,
+  "total": 55,
+  "fullCompletionDesktop": 55,
+  "fullCompletionMobile": 55,
   "limits": "Chromium; mobile touch emulated. Browser completions use legal inputs with solvers or read-only test observations where needed. No physical-device, other-engine, or screen-reader certification.",
   "games": [
     {
@@ -453,6 +453,171 @@
       "restart": true,
       "evidence": "coverage/logic-room.json",
       "suite": "tests/logic-room.cjs"
+    },
+    {
+      "id": "make-24",
+      "name": "Twenty Four",
+      "url": "number-room/?game=make-24",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobile": true,
+      "mobileInput": true,
+      "restart": true,
+      "evidence": "coverage/number-room.json",
+      "suite": "tests/number-room.cjs"
+    },
+    {
+      "id": "merge-garden",
+      "name": "Merge Garden",
+      "url": "number-room/?game=merge-garden",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobile": true,
+      "mobileInput": true,
+      "restart": true,
+      "evidence": "coverage/number-room.json",
+      "suite": "tests/number-room.cjs"
+    },
+    {
+      "id": "bit-lanterns",
+      "name": "Bit Lanterns",
+      "url": "number-room/?game=bit-lanterns",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobile": true,
+      "mobileInput": true,
+      "restart": true,
+      "evidence": "coverage/number-room.json",
+      "suite": "tests/number-room.cjs"
+    },
+    {
+      "id": "fraction-balance",
+      "name": "Fraction Balance",
+      "url": "number-room/?game=fraction-balance",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobile": true,
+      "mobileInput": true,
+      "restart": true,
+      "evidence": "coverage/number-room.json",
+      "suite": "tests/number-room.cjs"
+    },
+    {
+      "id": "matchstick-equation",
+      "name": "Matchlight",
+      "url": "number-room/?game=matchstick-equation",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobile": true,
+      "mobileInput": true,
+      "restart": true,
+      "evidence": "coverage/number-room.json",
+      "suite": "tests/number-room.cjs"
+    },
+    {
+      "id": "factor-loom",
+      "name": "Factor Loom",
+      "url": "number-room/?game=factor-loom",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobile": true,
+      "mobileInput": true,
+      "restart": true,
+      "evidence": "coverage/number-room.json",
+      "suite": "tests/number-room.cjs"
+    },
+    {
+      "id": "clockwork",
+      "name": "Clockwork",
+      "url": "number-room/?game=clockwork",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobile": true,
+      "mobileInput": true,
+      "restart": true,
+      "evidence": "coverage/number-room.json",
+      "suite": "tests/number-room.cjs"
+    },
+    {
+      "id": "fraction-mosaic",
+      "name": "Fraction Mosaic",
+      "url": "number-room/?game=fraction-mosaic",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobile": true,
+      "mobileInput": true,
+      "restart": true,
+      "evidence": "coverage/number-room.json",
+      "suite": "tests/number-room.cjs"
+    },
+    {
+      "id": "precedence-lab",
+      "name": "Bracket Lab",
+      "url": "number-room/?game=precedence-lab",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobile": true,
+      "mobileInput": true,
+      "restart": true,
+      "evidence": "coverage/number-room.json",
+      "suite": "tests/number-room.cjs"
+    },
+    {
+      "id": "estimation-studio",
+      "name": "Scale Sense",
+      "url": "number-room/?game=estimation-studio",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobile": true,
+      "mobileInput": true,
+      "restart": true,
+      "evidence": "coverage/number-room.json",
+      "suite": "tests/number-room.cjs"
+    },
+    {
+      "id": "ratio-mixer",
+      "name": "Ratio Mixer",
+      "url": "number-room/?game=ratio-mixer",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobile": true,
+      "mobileInput": true,
+      "restart": true,
+      "evidence": "coverage/number-room.json",
+      "suite": "tests/number-room.cjs"
+    },
+    {
+      "id": "sequence-detective",
+      "name": "Sequence Detective",
+      "url": "number-room/?game=sequence-detective",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobile": true,
+      "mobileInput": true,
+      "restart": true,
+      "evidence": "coverage/number-room.json",
+      "suite": "tests/number-room.cjs"
+    },
+    {
+      "id": "decimal-market",
+      "name": "Exact Change",
+      "url": "number-room/?game=decimal-market",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobile": true,
+      "mobileInput": true,
+      "restart": true,
+      "evidence": "coverage/number-room.json",
+      "suite": "tests/number-room.cjs"
+    },
+    {
+      "id": "digit-forge",
+      "name": "Digit Forge",
+      "url": "number-room/?game=digit-forge",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobile": true,
+      "mobileInput": true,
+      "restart": true,
+      "evidence": "coverage/number-room.json",
+      "suite": "tests/number-room.cjs"
+    },
+    {
+      "id": "coordinate-courier",
+      "name": "Coordinate Courier",
+      "url": "number-room/?game=coordinate-courier",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobile": true,
+      "mobileInput": true,
+      "restart": true,
+      "evidence": "coverage/number-room.json",
+      "suite": "tests/number-room.cjs"
     }
   ]
 }

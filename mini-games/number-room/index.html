@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#f1f0e8" />
+    <title>Number Room — Small Hours</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../play.css" />
+    <link rel="stylesheet" href="room.css" />
+    <script src="../common.js" defer></script>
+    <script src="room.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="../"
+        ><span class="brand-icon" aria-hidden="true">✳</span>small hours</a
+      ><a class="mono back" href="../">← All games</a>
+    </header>
+    <main class="play-main">
+      <div class="play-heading">
+        <div>
+          <p class="eyebrow">Small Hours / The number room</p>
+          <h1 id="title">Number Room</h1>
+        </div>
+        <button id="restart" class="quiet">Restart</button>
+      </div>
+      <div class="play-layout">
+        <section class="tabletop" aria-label="Number game">
+          <div class="scoreboard">
+            <div><span>Chapter</span><strong id="round">1 / 3</strong></div>
+            <div><span>Score</span><strong id="score">0</strong></div>
+            <div><span>Checks</span><strong id="checks">0</strong></div>
+          </div>
+          <div class="room-stage">
+            <div class="stage-label mono">
+              <span id="mechanic"></span
+              ><span id="emblem" aria-hidden="true"></span>
+            </div>
+            <div id="scene"></div>
+            <div id="actions" class="actions"></div>
+          </div>
+          <p id="message" class="game-message" role="status" aria-live="polite">
+            Loading your game…
+          </p>
+          <div id="result" class="result" hidden>
+            <h2 id="result-title"></h2>
+            <p id="result-copy"></p>
+            <button id="next" class="cta">Continue ↗</button>
+          </div>
+        </section>
+        <aside class="play-aside">
+          <span class="pill live">A little room to think</span>
+          <h2 id="description"></h2>
+          <ol class="rule-list" id="rules"></ol>
+          <p class="small-note" id="controls"></p>
+          <div class="record">
+            <span class="mono">Best / complete game</span
+            ><strong id="best">—</strong>
+            <p id="storage-note"></p>
+          </div>
+          <p class="small-note session-note">
+            No timers. Leaving the tab never costs a turn. Restart begins a new
+            game; puzzle chapters are carefully composed and always solvable.
+          </p>
+        </aside>
+      </div>
+      <footer class="mono">
+        <span>Small Hours / Play with possibility</span
+        ><a href="../">Back to the collection ↗</a>
+      </footer>
+    </main>
+  </body>
+</html>

@@ -1,6 +1,6 @@
 # Small Hours
 
-A small, expandable browser arcade with 40 finished games. The catalog is `index.html`, with working All / Adventure / Reflex / Memory / Puzzle / Strategy filters. Every displayed game is playable.
+A small, expandable browser arcade with 55 finished games. The catalog is `index.html`, with working All / Adventure / Reflex / Memory / Puzzle / Strategy filters. Every displayed game is playable.
 
 ## Play locally
 
@@ -157,3 +157,8 @@ Catalog search supports titles, mechanics and controls, combines with category f
 Fifteen logic games passed thirty desktop/mobile completion cases and independent rule review. Validators reject disconnected bridge networks, separate closed loops, and tents incorrectly sharing a tree. Seating clues are indirect and independently checked across all 120 permutations for uniqueness. Keyboard grid navigation and accessible filled/empty states were checked. Evidence: `coverage/logic-room.json` and `tests/logic-room.cjs`.
 
 This batch also fixes three spatial review findings: a rover program that reaches its destination then hits a wall must fail; exhausted orbital routes keep their stranded feedback and disable travel; completion retains keyboard focus on Play again. The precise counterexamples are in `tests/spatial-room-edges.cjs`. Signal Run additionally completed a full touch-mobile win with all shields and restart, recorded in `coverage/signal-mobile.json`.
+
+
+## Number Room release batch
+
+Fifteen different number mechanics include card-expression building, merge-once sliding tiles, binary switches, rational balance and packing, physical matchstick relocation, modular jumps, grouping precedence, logarithmic estimation, ratio pouring and constrained shopping. Every game completed all its chapters on desktop and mobile; the shortest formats contain five chapters. Arithmetic targets, merge rules, invalid operations and accessible focus/selection were checked independently. Evidence: `coverage/number-room.json`; test: `tests/number-room.cjs`. No test hook ships in the games.

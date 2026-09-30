@@ -1,0 +1,203 @@
+{
+  "suite": "number-room",
+  "testedAt": "2026-09-30T16:38:35.346Z",
+  "browser": "Chromium",
+  "limitations": [
+    "Mobile viewport/touch emulation, not physical device",
+    "Other browser engines untested",
+    "Seeded puzzle chapters repeat on replay"
+  ],
+  "games": [
+    {
+      "id": "make-24",
+      "passed": true,
+      "completed": true,
+      "restart": true,
+      "mobile": true,
+      "desktop": true,
+      "storageFailures": true,
+      "checks": [
+        "All chapters completed through legal UI input; invalid input, repeated restart, record persistence, storage failure, reduced motion, 320px layout, navigation, no page errors."
+      ]
+    },
+    {
+      "id": "merge-garden",
+      "passed": true,
+      "completed": true,
+      "restart": true,
+      "mobile": true,
+      "desktop": true,
+      "storageFailures": true,
+      "checks": [
+        "128 reached with 82 legal slides (desktop), 0 retries",
+        "128 reached with 80 legal slides (mobile), 0 retries",
+        "All chapters completed through legal UI input; invalid input, repeated restart, record persistence, storage failure, reduced motion, 320px layout, navigation, no page errors."
+      ]
+    },
+    {
+      "id": "bit-lanterns",
+      "passed": true,
+      "completed": true,
+      "restart": true,
+      "mobile": true,
+      "desktop": true,
+      "storageFailures": true,
+      "checks": [
+        "All chapters completed through legal UI input; invalid input, repeated restart, record persistence, storage failure, reduced motion, 320px layout, navigation, no page errors."
+      ]
+    },
+    {
+      "id": "fraction-balance",
+      "passed": true,
+      "completed": true,
+      "restart": true,
+      "mobile": true,
+      "desktop": true,
+      "storageFailures": true,
+      "checks": [
+        "All chapters completed through legal UI input; invalid input, repeated restart, record persistence, storage failure, reduced motion, 320px layout, navigation, no page errors."
+      ]
+    },
+    {
+      "id": "factor-loom",
+      "passed": true,
+      "completed": true,
+      "restart": true,
+      "mobile": true,
+      "desktop": true,
+      "storageFailures": true,
+      "checks": [
+        "All chapters completed through legal UI input; invalid input, repeated restart, record persistence, storage failure, reduced motion, 320px layout, navigation, no page errors."
+      ]
+    },
+    {
+      "id": "clockwork",
+      "passed": true,
+      "completed": true,
+      "restart": true,
+      "mobile": true,
+      "desktop": true,
+      "storageFailures": true,
+      "checks": [
+        "All chapters completed through legal UI input; invalid input, repeated restart, record persistence, storage failure, reduced motion, 320px layout, navigation, no page errors."
+      ]
+    },
+    {
+      "id": "fraction-mosaic",
+      "passed": true,
+      "completed": true,
+      "restart": true,
+      "mobile": true,
+      "desktop": true,
+      "storageFailures": true,
+      "checks": [
+        "All chapters completed through legal UI input; invalid input, repeated restart, record persistence, storage failure, reduced motion, 320px layout, navigation, no page errors."
+      ]
+    },
+    {
+      "id": "precedence-lab",
+      "passed": true,
+      "completed": true,
+      "restart": true,
+      "mobile": true,
+      "desktop": true,
+      "storageFailures": true,
+      "checks": [
+        "All chapters completed through legal UI input; invalid input, repeated restart, record persistence, storage failure, reduced motion, 320px layout, navigation, no page errors."
+      ]
+    },
+    {
+      "id": "estimation-studio",
+      "passed": true,
+      "completed": true,
+      "restart": true,
+      "mobile": true,
+      "desktop": true,
+      "storageFailures": true,
+      "checks": [
+        "All chapters completed through legal UI input; invalid input, repeated restart, record persistence, storage failure, reduced motion, 320px layout, navigation, no page errors."
+      ]
+    },
+    {
+      "id": "ratio-mixer",
+      "passed": true,
+      "completed": true,
+      "restart": true,
+      "mobile": true,
+      "desktop": true,
+      "storageFailures": true,
+      "checks": [
+        "All chapters completed through legal UI input; invalid input, repeated restart, record persistence, storage failure, reduced motion, 320px layout, navigation, no page errors."
+      ]
+    },
+    {
+      "id": "sequence-detective",
+      "passed": true,
+      "completed": true,
+      "restart": true,
+      "mobile": true,
+      "desktop": true,
+      "storageFailures": true,
+      "checks": [
+        "All chapters completed through legal UI input; invalid input, repeated restart, record persistence, storage failure, reduced motion, 320px layout, navigation, no page errors."
+      ]
+    },
+    {
+      "id": "decimal-market",
+      "passed": true,
+      "completed": true,
+      "restart": true,
+      "mobile": true,
+      "desktop": true,
+      "storageFailures": true,
+      "checks": [
+        "All chapters completed through legal UI input; invalid input, repeated restart, record persistence, storage failure, reduced motion, 320px layout, navigation, no page errors."
+      ]
+    },
+    {
+      "id": "digit-forge",
+      "passed": true,
+      "completed": true,
+      "restart": true,
+      "mobile": true,
+      "desktop": true,
+      "storageFailures": true,
+      "checks": [
+        "All chapters completed through legal UI input; invalid input, repeated restart, record persistence, storage failure, reduced motion, 320px layout, navigation, no page errors."
+      ]
+    },
+    {
+      "id": "coordinate-courier",
+      "passed": true,
+      "completed": true,
+      "restart": true,
+      "mobile": true,
+      "desktop": true,
+      "storageFailures": true,
+      "checks": [
+        "All chapters completed through legal UI input; invalid input, repeated restart, record persistence, storage failure, reduced motion, 320px layout, navigation, no page errors."
+      ]
+    },
+    {
+      "id": "matchstick-equation",
+      "passed": true,
+      "completed": true,
+      "restart": true,
+      "mobile": true,
+      "desktop": true,
+      "storageFailures": true,
+      "checks": [
+        "All chapters completed through legal UI input; invalid input, repeated restart, record persistence, storage failure, reduced motion, 320px layout, navigation, no page errors."
+      ]
+    }
+  ],
+  "deepChecks": [
+    "Read-only production merge: each tile merges once, no-op unchanged, full dead board detected",
+    "Production operator precedence and seven-segment validity",
+    "Keyboard Enter/Space preserves focus and toggles bits",
+    "Reduced-motion computed animation:none / transition:0s",
+    "Visibilitychange leaves turn-based state unchanged",
+    "Matchlight native dropdown keyboard focus survives rerender and advances to Check after placement",
+    "Make24 operand order and Factor spool selected state exposed; ratio/market steppers have contextual names"
+  ]
+}

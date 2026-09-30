@@ -1,0 +1,485 @@
+.room-stage {
+  padding: 26px;
+  background: var(--accent, #dce7bb);
+  min-height: 360px;
+}
+.stage-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  font-size: 10px;
+  margin-bottom: 28px;
+}
+.stage-label span:last-child {
+  font-size: 26px;
+  letter-spacing: -2px;
+}
+.play-aside h2 {
+  font-size: 31px;
+  line-height: 1.12;
+}
+.actions {
+  display: flex;
+  gap: 9px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+.actions button,
+.choice,
+.stepper button {
+  background: #faf9f2;
+  border: 1px solid #20231f;
+  border-radius: 9px;
+  min-height: 46px;
+  padding: 11px 16px;
+  font-weight: bold;
+}
+.actions button.primary {
+  background: var(--ink);
+  color: var(--paper);
+}
+.target {
+  text-align: center;
+  font-size: clamp(29px, 5vw, 48px);
+  letter-spacing: -2px;
+  margin: 12px 0 22px;
+  line-height: 1.2;
+}
+.target small {
+  display: block;
+  font:
+    10px/1.6 "Courier New",
+    monospace;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  margin-bottom: 10px;
+}
+.hint {
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.7;
+  margin: 14px 0;
+}
+.cards {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.card {
+  min-width: 62px;
+  min-height: 73px;
+  border: 1px solid var(--ink);
+  border-radius: 12px;
+  background: #faf9f2;
+  color: var(--ink);
+  font-size: 29px;
+  padding: 12px;
+  box-shadow: 0 4px 0 #20231f20;
+  transition: transform 0.15s;
+}
+.card.selected,
+.choice.selected {
+  background: var(--ink);
+  color: var(--paper);
+  transform: translateY(-3px);
+}
+button:disabled {
+  opacity: 0.45;
+}
+.equation {
+  font-size: 30px;
+  text-align: center;
+  line-height: 1.8;
+}
+.number-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  max-width: 380px;
+  margin: auto;
+  background: #20231f20;
+  padding: 8px;
+  border-radius: 14px;
+}
+.number-grid span {
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  font-size: clamp(22px, 5vw, 37px);
+  font-weight: bold;
+  background: #ffffff40;
+  color: #20231f;
+}
+.number-grid span.filled {
+  background: #faf9f2;
+  animation: pop 0.15s;
+}
+.number-grid span.large {
+  background: #20231f;
+  color: #e7f293;
+}
+.lanterns {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+.lantern {
+  border: 1px solid var(--ink);
+  background: #faf9f2;
+  border-radius: 13px;
+  padding: 14px 4px;
+  color: var(--ink);
+  font-size: 25px;
+  min-height: 83px;
+}
+.lantern small {
+  display: block;
+  font-size: 11px;
+  margin-bottom: 8px;
+}
+.lantern.on {
+  background: var(--ink);
+  color: #e7f293;
+}
+.pans {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  align-items: end;
+}
+.pan {
+  min-height: 125px;
+  border-bottom: 5px solid var(--ink);
+  border-radius: 0 0 40px 40px;
+  text-align: center;
+  padding: 14px;
+  background: #ffffff50;
+}
+.pan strong {
+  font-size: 35px;
+  display: block;
+}
+.pan .choice {
+  padding: 7px;
+  min-height: 38px;
+  margin: 2px;
+}
+.beam {
+  height: 5px;
+  background: var(--ink);
+  width: 90%;
+  margin: 14px auto;
+  transform: rotate(var(--tilt, 0deg));
+  transition: transform 0.2s;
+}
+.ribbon {
+  display: flex;
+  height: 100px;
+  border: 2px solid var(--ink);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  background: #faf9f2;
+}
+.ribbon button {
+  height: 100%;
+  padding: 0;
+  background: #267c72;
+  color: white;
+  border: 1px solid #20231f;
+  font-weight: bold;
+  font-size: 14px;
+}
+.ribbon .tick {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  border-left: 2px dashed #20231f80;
+  pointer-events: none;
+}
+.clock {
+  width: 230px;
+  height: 230px;
+  margin: auto;
+  position: relative;
+  border-radius: 50%;
+  border: 2px solid var(--ink);
+  background: #faf9f2;
+}
+.clock-number {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+}
+.clock-number.current {
+  background: var(--ink);
+  color: white;
+  border-radius: 50%;
+  padding: 7px;
+  font-weight: bold;
+}
+.clock-number.destination {
+  outline: 2px solid #c05832;
+  outline-offset: 5px;
+  border-radius: 50%;
+}
+.clock-center {
+  position: absolute;
+  inset: 90px;
+  display: grid;
+  place-items: center;
+  font-size: 29px;
+}
+.slider {
+  width: 100%;
+  accent-color: #20231f;
+  min-height: 44px;
+}
+.axis {
+  display: flex;
+  justify-content: space-between;
+  font: 11px monospace;
+}
+.jar {
+  height: 180px;
+  width: 140px;
+  border: 3px solid var(--ink);
+  border-radius: 12px 12px 30px 30px;
+  margin: 0 auto 20px;
+  display: flex;
+  flex-direction: column-reverse;
+  overflow: hidden;
+  background: #ffffff80;
+}
+.jar div {
+  display: grid;
+  place-items: center;
+  font-size: 12px;
+  font-weight: bold;
+  transition: height 0.2s;
+}
+.coral {
+  background: #ed9d7e;
+}
+.teal {
+  background: #6ebdb0;
+}
+.steppers {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.stepper {
+  border: 1px solid #20231f40;
+  padding: 12px;
+  border-radius: 12px;
+  text-align: center;
+  background: #ffffff40;
+}
+.stepper p {
+  font-size: 12px;
+  margin: 0 0 10px;
+}
+.stepper strong {
+  display: inline-block;
+  min-width: 28px;
+}
+.stepper button {
+  padding: 6px 13px;
+}
+.coordinate-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  max-width: 360px;
+  margin: auto;
+  border: 1px solid #20231f50;
+}
+.coordinate-grid span {
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  background: #ffffff60;
+  border: 1px solid #20231f18;
+  font-size: 17px;
+}
+.coordinate-grid .origin {
+  background: #20231f18;
+}
+.coordinate-grid .courier {
+  background: var(--ink);
+  color: white;
+}
+.coordinate-grid .parcel {
+  background: #f0bb80;
+}
+.route {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  font: 12px monospace;
+  margin: 18px 0;
+  flex-wrap: wrap;
+}
+.route .done {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+.digits {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  align-items: center;
+}
+.seven {
+  position: relative;
+  width: 60px;
+  height: 100px;
+  flex-shrink: 0;
+}
+.segment {
+  position: absolute;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 5px;
+  background: #20231f13;
+}
+.segment.lit {
+  background: #20231f;
+}
+.segment.selected {
+  background: #c75430;
+}
+.segment.horizontal {
+  width: 36px;
+  height: 10px;
+  left: 12px;
+}
+.segment.vertical {
+  width: 10px;
+  height: 34px;
+}
+.segment.a {
+  top: 3px;
+}
+.segment.g {
+  top: 45px;
+}
+.segment.d {
+  top: 87px;
+}
+.segment.f {
+  left: 3px;
+  top: 12px;
+}
+.segment.b {
+  left: 47px;
+  top: 12px;
+}
+.segment.e {
+  left: 3px;
+  top: 54px;
+}
+.segment.c {
+  left: 47px;
+  top: 54px;
+}
+.seven.operator {
+  width: 40px;
+}
+.operator .horizontal {
+  width: 36px;
+  left: 2px;
+}
+.operator .vertical {
+  height: 36px;
+  top: 32px;
+  left: 15px;
+}
+.equals {
+  font-size: 30px;
+  padding: 0 6px;
+}
+.match-note {
+  font-size: 11px;
+  text-align: center;
+  line-height: 1.7;
+}
+.result {
+  background: var(--accent);
+}
+@keyframes pop {
+  from {
+    transform: scale(0.9);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@media (max-width: 420px) {
+  .room-stage {
+    padding: 18px 14px;
+  }
+  .stage-label {
+    font-size: 9px;
+  }
+  .card {
+    min-width: 52px;
+    font-size: 24px;
+    padding: 9px;
+  }
+  .actions button {
+    padding: 10px 12px;
+  }
+  .seven {
+    transform: scale(0.85);
+    margin: 0 -5px;
+  }
+  .seven.operator {
+    margin: 0 -3px;
+  }
+  .equals {
+    padding: 0 3px;
+  }
+  .stepper {
+    padding: 9px;
+  }
+  .play-aside h2 {
+    font-size: 28px;
+  }
+  .number-grid {
+    gap: 5px;
+    padding: 5px;
+  }
+}
+.match-selects {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 20px;
+}
+.match-selects label {
+  font:
+    11px/1.5 "Courier New",
+    monospace;
+  min-width: 0;
+}
+.match-selects select {
+  display: block;
+  width: 100%;
+  min-height: 44px;
+  background: #faf9f2;
+  color: #20231f;
+  border: 1px solid #20231f;
+  border-radius: 7px;
+  margin-top: 5px;
+  font-size: 12px;
+}
+.match-selects select:focus-visible {
+  outline: 3px solid #bd4423;
+  outline-offset: 3px;
+}

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "total": 40,
+  "total": 55,
   "games": [
     {
       "id": "signal-run",
@@ -593,6 +593,276 @@
       "accent": "#b8d5d1",
       "symbol": "Σ",
       "family": "logic-room",
+      "status": "verified"
+    },
+    {
+      "id": "make-24",
+      "name": "Twenty Four",
+      "category": "number",
+      "description": "Combine four cards into a single perfect 24.",
+      "mechanic": "Pairwise expression construction",
+      "rules": [
+        "Select two number cards in order, then an operation.",
+        "Each operation replaces both cards with its result. Use every card to finish at 24.",
+        "Undo lets you explore. Division by zero is never allowed."
+      ],
+      "controls": "Tap or click two cards, then an operation. Keyboard: Tab and Enter / Space. Undo reverses a combination.",
+      "url": "number-room/?game=make-24",
+      "accent": "#dce7bb",
+      "symbol": "24",
+      "family": "number-room",
+      "status": "verified"
+    },
+    {
+      "id": "merge-garden",
+      "name": "Merge Garden",
+      "category": "number",
+      "description": "Slide a garden of numbers into one brilliant 128.",
+      "mechanic": "Directional sliding and tile fusion",
+      "rules": [
+        "Use arrows or the four direction buttons to slide every tile.",
+        "Equal neighbors merge once per move. A new 2 or 4 grows after each legal slide.",
+        "Grow a 128 tile. If every cell fills with no possible merge, start a fresh garden."
+      ],
+      "controls": "Arrow keys slide the garden. On touch screens, use the four direction buttons. Each slide is a turn.",
+      "url": "number-room/?game=merge-garden",
+      "accent": "#d9e6cf",
+      "symbol": "↗",
+      "family": "number-room",
+      "status": "verified"
+    },
+    {
+      "id": "bit-lanterns",
+      "name": "Bit Lanterns",
+      "category": "number",
+      "description": "Light eight little lanterns to speak in binary.",
+      "mechanic": "Binary positional encoding",
+      "rules": [
+        "Each lantern contributes the number printed above it when lit.",
+        "Toggle lanterns until their total matches the target.",
+        "Send five increasingly complex signals. Extra checks cost points, never lives."
+      ],
+      "controls": "Tap a lantern to toggle it. Keyboard: Tab to a lantern, then Enter / Space. The total updates instantly.",
+      "url": "number-room/?game=bit-lanterns",
+      "accent": "#cedee8",
+      "symbol": "01",
+      "family": "number-room",
+      "status": "verified"
+    },
+    {
+      "id": "fraction-balance",
+      "name": "Fraction Balance",
+      "category": "number",
+      "description": "Find the combination that makes both pans agree.",
+      "mechanic": "Rational-weight composition",
+      "rules": [
+        "The left pan holds the target weight. Add fraction weights to the right.",
+        "Use at most three weights; tap a weight on the pan to remove it.",
+        "Balance exactly, then check. Different combinations may work."
+      ],
+      "controls": "Tap a fraction to place a weight; tap a weight on the pan to remove it. All controls support Tab and Enter / Space.",
+      "url": "number-room/?game=fraction-balance",
+      "accent": "#e9d4ca",
+      "symbol": "½",
+      "family": "number-room",
+      "status": "verified"
+    },
+    {
+      "id": "matchstick-equation",
+      "name": "Matchlight",
+      "category": "number",
+      "description": "Move one match. Make the whole equation true.",
+      "mechanic": "Seven-segment topology repair",
+      "rules": [
+        "Select one dark match to lift it. Then select one empty slot to place it.",
+        "Only one match may move. All digits must remain valid seven-segment numbers.",
+        "Check the repaired equation. Undo returns the original arrangement."
+      ],
+      "controls": "Tap a match and an empty slot, or use the Lift / Place dropdowns. Keyboard: Tab, arrow keys in dropdowns, Enter to choose.",
+      "url": "number-room/?game=matchstick-equation",
+      "accent": "#eadbb6",
+      "symbol": "≠",
+      "family": "number-room",
+      "status": "verified"
+    },
+    {
+      "id": "factor-loom",
+      "name": "Factor Loom",
+      "category": "number",
+      "description": "Weave prime threads into one exact product.",
+      "mechanic": "Prime-factor resource selection",
+      "rules": [
+        "Each spool is a prime number. Choose spools to multiply them together.",
+        "Each physical spool can be used once. Tap a chosen spool to return it.",
+        "Make the target product exactly. Unused spools are allowed."
+      ],
+      "controls": "Tap a spool to weave it in or return it. Keyboard: Tab and Enter / Space. Check when the product matches.",
+      "url": "number-room/?game=factor-loom",
+      "accent": "#d9d2e6",
+      "symbol": "×",
+      "family": "number-room",
+      "status": "verified"
+    },
+    {
+      "id": "clockwork",
+      "name": "Clockwork",
+      "category": "number",
+      "description": "A few small jumps. One exact arrival.",
+      "mechanic": "Modular arithmetic route planning",
+      "rules": [
+        "Start at twelve. Each button moves clockwise or counterclockwise around the dial.",
+        "Land on the marked destination using exactly the allotted jumps.",
+        "Undo a jump to plan another route. Crossing twelve wraps around."
+      ],
+      "controls": "Tap a jump button to move around the dial. Keyboard: Tab and Enter / Space. Undo takes back one jump.",
+      "url": "number-room/?game=clockwork",
+      "accent": "#e5dca9",
+      "symbol": "◷",
+      "family": "number-room",
+      "status": "verified"
+    },
+    {
+      "id": "fraction-mosaic",
+      "name": "Fraction Mosaic",
+      "category": "number",
+      "description": "Fit colored pieces into a perfectly full ribbon.",
+      "mechanic": "Ordered rational interval packing",
+      "rules": [
+        "The ribbon has marked boundaries. Choose fraction pieces in the correct order.",
+        "Every placed piece must end on a marked boundary, with no gaps or overhang.",
+        "Fill the unit ribbon using the available pieces. Tap the last piece to take it back."
+      ],
+      "controls": "Tap fraction cards to fit the ribbon in order. Remove last reverses a placement. Keyboard: Tab and Enter / Space.",
+      "url": "number-room/?game=fraction-mosaic",
+      "accent": "#d2e4df",
+      "symbol": "▰",
+      "family": "number-room",
+      "status": "verified"
+    },
+    {
+      "id": "precedence-lab",
+      "name": "Bracket Lab",
+      "category": "number",
+      "description": "One pair of brackets changes everything.",
+      "mechanic": "Operator-precedence manipulation",
+      "rules": [
+        "The numbers and operators stay in their printed order.",
+        "Choose the first and last number to wrap in one pair of brackets.",
+        "Make the expression equal the target. Tap endpoints again to change your selection."
+      ],
+      "controls": "Tap two number cards to choose the bracket endpoints. Keyboard: Tab and Enter / Space. Check the resulting expression.",
+      "url": "number-room/?game=precedence-lab",
+      "accent": "#ead8c6",
+      "symbol": "( )",
+      "family": "number-room",
+      "status": "verified"
+    },
+    {
+      "id": "estimation-studio",
+      "name": "Scale Sense",
+      "category": "number",
+      "description": "Find your bearings on a landscape of powers.",
+      "mechanic": "Logarithmic magnitude estimation",
+      "rules": [
+        "The line runs from 1 to 1,000. Equal distances multiply by the same factor.",
+        "Move the marker with the slider or arrow keys, then commit your estimate.",
+        "Locate five magnitudes within a factor of 1.3. A miss reveals the direction; try again."
+      ],
+      "controls": "Drag or tap the slider. Keyboard: Tab to the slider, then left / right arrows; Home / End reach the ends. Commit when ready.",
+      "url": "number-room/?game=estimation-studio",
+      "accent": "#d8dfe8",
+      "symbol": "≈",
+      "family": "number-room",
+      "status": "verified"
+    },
+    {
+      "id": "ratio-mixer",
+      "name": "Ratio Mixer",
+      "category": "number",
+      "description": "Compose a color with just the right proportions.",
+      "mechanic": "Integer ratio and capacity planning",
+      "rules": [
+        "Add coral and teal scoops to the jar. Each scoop is one unit.",
+        "Match the requested ratio and fill the jar to its exact capacity.",
+        "Remove scoops with the minus buttons to adjust your recipe."
+      ],
+      "controls": "Use plus / minus beside each ingredient. Keyboard: Tab and Enter / Space. The jar shows your mixture as it fills.",
+      "url": "number-room/?game=ratio-mixer",
+      "accent": "#e8cfc7",
+      "symbol": "∶",
+      "family": "number-room",
+      "status": "verified"
+    },
+    {
+      "id": "sequence-detective",
+      "name": "Sequence Detective",
+      "category": "number",
+      "description": "A pattern is hiding in plain sight.",
+      "mechanic": "Recurrence inference",
+      "rules": [
+        "Study the visible sequence and the clue describing its family.",
+        "Choose the missing number from four candidates.",
+        "Wrong guesses give feedback. Solve five different pattern families."
+      ],
+      "controls": "Tap or click the next number. Keyboard: Tab between choices, then Enter / Space. Read the family clue before guessing.",
+      "url": "number-room/?game=sequence-detective",
+      "accent": "#dce2be",
+      "symbol": "…",
+      "family": "number-room",
+      "status": "verified"
+    },
+    {
+      "id": "decimal-market",
+      "name": "Exact Change",
+      "category": "number",
+      "description": "A small basket. A satisfyingly exact total.",
+      "mechanic": "Constrained integer shopping",
+      "rules": [
+        "Use plus and minus to choose quantities of three goods.",
+        "Spend the entire budget and buy exactly the stated number of items.",
+        "Prices are in cents, so your basket never suffers rounding surprises."
+      ],
+      "controls": "Use plus / minus for each item, then Pay exactly. Keyboard: Tab and Enter / Space. Totals use exact integer cents.",
+      "url": "number-room/?game=decimal-market",
+      "accent": "#e7dcc7",
+      "symbol": "¢",
+      "family": "number-room",
+      "status": "verified"
+    },
+    {
+      "id": "digit-forge",
+      "name": "Digit Forge",
+      "category": "number",
+      "description": "Arrange a handful of digits into something precise.",
+      "mechanic": "Digit permutation with divisibility constraints",
+      "rules": [
+        "Tap digit cards to build a number from left to right.",
+        "Use each card exactly once and satisfy both clues. No leading zero.",
+        "Tap the last placed digit to return it. Check when your number is complete."
+      ],
+      "controls": "Tap digit cards in order. Take back last lets you edit. Keyboard: Tab and Enter / Space. Check once every card is placed.",
+      "url": "number-room/?game=digit-forge",
+      "accent": "#d7d9e9",
+      "symbol": "#",
+      "family": "number-room",
+      "status": "verified"
+    },
+    {
+      "id": "coordinate-courier",
+      "name": "Coordinate Courier",
+      "category": "number",
+      "description": "A tiny delivery route across the Cartesian plane.",
+      "mechanic": "Coordinate navigation with ordered waypoints",
+      "rules": [
+        "Collect numbered parcels in order at their printed coordinates.",
+        "Move one grid unit with arrows or direction buttons. x increases right; y increases up.",
+        "Reach every parcel within the step budget. Undo if you take a wrong turn."
+      ],
+      "controls": "Arrow keys or the four direction buttons move one cell. Undo takes back a step. Touch the buttons to steer.",
+      "url": "number-room/?game=coordinate-courier",
+      "accent": "#cde1d8",
+      "symbol": "⌖",
+      "family": "number-room",
       "status": "verified"
     }
   ]
