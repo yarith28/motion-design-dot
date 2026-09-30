@@ -1,6 +1,6 @@
 # Small Hours
 
-A small, expandable browser arcade with five finished games. The catalog is `index.html`, with working All / Adventure / Reflex / Memory / Puzzle filters. Every displayed game is playable.
+A small, expandable browser arcade with ten finished games. The catalog is `index.html`, with working All / Adventure / Reflex / Memory / Puzzle / Strategy filters. Every displayed game is playable.
 
 ## Play locally
 
@@ -113,3 +113,33 @@ Pages was enabled from **main / (root)** on 2026-09-30. GitHub's initial Pages b
 The catalog defaults to Grid. The labeled Grid / List buttons switch between poster cards and compact illustrated rows while preserving the active category filter. The selection is saved under `small-hours-catalog-view`; unavailable storage leaves the switch functional without persistence.
 
 The live-page browser suite now checks both views on desktop and touch-emulated mobile, Enter/Space operation, pressed states, filtering, reload and return-navigation persistence, 390px and 320px containment, reduced motion, blocked storage reads, and failed storage writes. Local Chromium checks passed along with all five games' desktop/mobile smoke checks and source-asset comparisons. Screenshots of both list layouts were reviewed. Physical devices, other browser engines, and screen readers were not tested.
+
+
+## Five more pocket worlds — local verification, 2026-09-30
+
+These additions are implemented and verified locally. This verification does not establish a deployed version; no commit, push, or deployment was performed for this expansion while publication authorization was pending.
+
+| Game | Play | Progression and record |
+| --- | --- | --- |
+| Lantern Lines | Tap a lantern to flip it and its orthogonal neighbors; put every light to sleep. Arrow keys move focus, Enter/Space toggles. Undo, chapter retry and constructive hints are included. | Three generated 3×3 / 4×4 / 5×5 chapters. Legal-toggle generation guarantees a solution. Fewest total moves. |
+| Tide Pool | Choose a color/shape with buttons or keys 1–5 to absorb neighboring sea glass from the top-left region. | Three 6×6 / 7×7 / 8×8 pools. A computed greedy solution plus three spare moves certifies each budget. Same-pool retry on loss; highest expedition score. |
+| Word Weave | Arrange shuffled letters to match a clue. Tap tiles or type letters; Backspace removes, Enter checks. Optional hints repair the next letter. | Five clues randomly chosen from twenty, including repeated-letter words. Each word starts at 100 points; hints cost 20, wrong answers cost 10, minimum 20. Highest five-word score. |
+| Sky Stack | Drop moving slabs onto the tower with the button or Space. Overhangs are trimmed; close alignment restores a little width. | Twelve floors to win; zero overlap ends a build. Escalating speed, perfect-fit bonuses, highest score. P/Escape or Pause freezes play; blur/hidden-tab events also pause. |
+| Pebble Post | Push parcels onto stamps with arrows/WASD or touch directions. Undo with Z; reset the stop or the whole route. | Five handcrafted stops, independently solved pars 1 / 2 / 10 / 14 / 20. Fewest total moves, route par 47. Undo remains available after completion. |
+
+Each new game uses optional local records via the existing shared storage helper. Read/write failures preserve the current visit's record and display the fallback note. The four turn-based games have no countdown or delayed gameplay callbacks, so leaving the tab does not penalize the player. Sky Stack resets its frame timestamp on resume and cancels old animation frames on restart. Reduced-motion settings remove decorative motion while retaining essential moving slabs.
+
+### Browser checks performed
+
+- Each new game completed its entire progression through actual UI input on desktop and touch-emulated mobile Chromium. Tests cover repeated restart, replay, completion, navigation, keyboard operation, blocked storage reads and failed writes, saved-record reloads, and 320px containment. Screenshots were inspected.
+- Lantern Lines: all three chapters, hints, undo, retry, roving arrow-key focus, and persisted fewest-moves record.
+- Tide Pool: all three pools, deliberate budget exhaustion and same-board retry, certified greedy routes, and constant-RNG generation edge case. Shape labels accompany colors.
+- Word Weave: all five clues, duplicate letters, wrong guesses, hint correction, physical typing/Backspace/Enter, focus retention after tile selection/removal, and mobile letter-bank targets of at least 44px.
+- Sky Stack: twelve-floor wins on desktop and mobile, deliberate loss/trim, pause-time freeze, blur handling, repeated restart, and actual touch drops.
+- Pebble Post: independent breadth-first search of rendered boards proved all five pars; actual inputs completed the route. Blocked moves/pushes, undo after wins, and next-action focus were verified.
+- Catalog: ten working game links; truthful category counts (Adventure 1 / Reflex 3 / Memory 1 / Puzzle 3 / Strategy 2); Grid/List toggle, filter retention, view persistence, keyboard, reduced motion, storage failures, 390px and 320px overflow checks. All ten game pages passed desktop/mobile smoke checks with no page or asset errors. Thirty-eight HTML/CSS/JS responses matched local source.
+- Existing Signal Run, collection, Afterglow browser suites and 162-trajectory Afterglow engine checks passed. The timing-test clock is explicitly paused during precise Orbit input to prevent real-time actionability delays from affecting simulated timing. Existing game source and `motion-showcase/` were not changed.
+
+Reproduce against a local server using `BASE_URL=http://127.0.0.1:8790 node mini-games/tests/<slug>.cjs`, where `<slug>` is `lantern-lines`, `tide-pool`, `word-weave`, `sky-stack`, or `pebble-post`. Existing regression suites accept the same `BASE_URL`. For the complete catalog smoke/asset suite use `LIVE_BASE_URL=http://127.0.0.1:8790 CHROMIUM_PATH=/usr/bin/chromium node mini-games/tests/live-pages.cjs`. Playwright and Chromium are test-only dependencies; the games need no installation or build.
+
+Limitations: Chromium only, with emulated touch; no physical devices, Safari, Firefox, or screen-reader verification. Solver/ideal-input runs validate rules and completions, not human difficulty. The spatial games still rely on visual board interpretation despite labeled controls/status. No new audio is included.

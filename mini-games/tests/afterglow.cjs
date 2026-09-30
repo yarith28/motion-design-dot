@@ -45,7 +45,7 @@ async function win(page,touch=false,choices=['power','orbs']){
 (async()=>{
  const browser=await chromium.launch({executablePath:process.env.CHROMIUM_PATH||'/usr/bin/chromium',headless:true,args:['--no-sandbox']});
  const page=await browser.newPage({viewport:{width:1440,height:1150}});await setup(page);
- await page.goto(base+'/mini-games/');assert.equal(await page.locator('[data-category]:visible').count(),5);
+ await page.goto(base+'/mini-games/');assert.equal(await page.locator('[data-category]:visible').count(),10);
  await page.locator('[data-filter="adventure"]').click();assert.equal(await page.locator('[data-category]:visible').count(),1);
  await page.getByRole('link',{name:'Enter the night garden'}).click();await page.screenshot({path:out+'/intro-desktop.png',fullPage:true});
  assert.equal((await page.evaluate(()=>probe())).audio,null);
@@ -78,7 +78,7 @@ async function win(page,touch=false,choices=['power','orbs']){
   const finished=await win(mp,true,['saves','power']);mobileScore=finished.total+finished.s.score;assert.equal(finished.particles,0);assert.match(await mp.locator('#storage-note').innerText(),/unavailable/);await mp.screenshot({path:out+'/victory-mobile.png',fullPage:true});
   await mp.locator('#begin').tap();await mp.setViewportSize({width:320,height:740});assert.equal(await mp.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);await mp.keyboard.press('p');
   await mp.screenshot({path:out+'/small-phone.png',fullPage:true});const panel=await mp.locator('.panel').boundingBox(),stage=await mp.locator('.stage').boundingBox();assert.ok(panel.height<=stage.height);
-  await mp.getByRole('link',{name:'All games',exact:false}).tap();await mp.waitForURL('**/mini-games/');await mp.locator('[data-category]').first().waitFor();assert.equal(await mp.locator('[data-category]:visible').count(),5);await context.close();
+  await mp.getByRole('link',{name:'All games',exact:false}).tap();await mp.waitForURL('**/mini-games/');await mp.locator('[data-category]').first().waitFor();assert.equal(await mp.locator('[data-category]:visible').count(),10);await context.close();
  }
  assert.deepEqual(errors,[]);console.log(JSON.stringify({passed:true,desktopScore:victory.total+victory.s.score,volleys:victory.volleys,mobileScore,cadence,errors,screenshots:out}));await browser.close();
 })().catch(e=>{console.error(e);process.exit(1)});
