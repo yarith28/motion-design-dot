@@ -107,3 +107,9 @@ Pages was enabled from **main / (root)** on 2026-09-30. GitHub's initial Pages b
 - Afterglow: https://yarith28.github.io/motion-design-dot/mini-games/afterglow/
 
 `.github/workflows/verify-pages.yml` runs `tests/live-pages.cjs` against the actual published site from a GitHub-hosted runner. It waits for 23 published files to match source byte-for-byte, checks the root redirect and category filters, loads every game on desktop and touch-emulated mobile, exercises each game's controls and Afterglow's aim/launch/pause/recall/restart flow, and saves screenshots plus a JSON report as workflow artifacts. It uses no game-state probes or response rewriting. The execution workspace itself blocks `github.io` network access, so these live checks run in Actions. The workflow has read-only repository permissions and no deployment credentials; it only tests the public site. No custom domain, DNS, or paid hosting was configured.
+
+## Catalog views — 2026-09-30
+
+The catalog defaults to Grid. The labeled Grid / List buttons switch between poster cards and compact illustrated rows while preserving the active category filter. The selection is saved under `small-hours-catalog-view`; unavailable storage leaves the switch functional without persistence.
+
+The live-page browser suite now checks both views on desktop and touch-emulated mobile, Enter/Space operation, pressed states, filtering, reload and return-navigation persistence, 390px and 320px containment, reduced motion, blocked storage reads, and failed storage writes. Local Chromium checks passed along with all five games' desktop/mobile smoke checks and source-asset comparisons. Screenshots of both list layouts were reviewed. Physical devices, other browser engines, and screen readers were not tested.
