@@ -1,0 +1,50 @@
+const {chromium}=require('playwright');const assert=require('node:assert/strict');const fs=require('node:fs');const path=require('node:path');
+const manifest=require('../logic-room/games.json').filter(g=>!process.env.GAME_IDS||process.env.GAME_IDS.split(',').includes(g.id));
+(async()=>{const browser=await chromium.launch({executablePath:'/usr/bin/chromium',args:['--no-sandbox']});const results=process.env.GAME_IDS&&fs.existsSync(path.join(__dirname,'../coverage/logic-room.json'))?JSON.parse(fs.readFileSync(path.join(__dirname,'../coverage/logic-room.json'))).checks.filter(r=>!manifest.some(g=>g.id===r.id)):[];
+for(const mobile of [false,true]){const context=await browser.newContext({viewport:mobile?{width:390,height:844}:{width:1440,height:1000},isMobile:mobile,hasTouch:mobile,reducedMotion:mobile?'reduce':'no-preference'});
+if(mobile)await context.addInitScript(()=>{Storage.prototype.getItem=()=>{throw Error('blocked')};Storage.prototype.setItem=()=>{throw Error('blocked')};});
+for(const game of manifest){const page=await context.newPage();const errors=[];page.on('pageerror',e=>errors.push(e.message));await page.route('**/logic-room/room.js',async route=>{const r=await route.fetch();let text=await r.text();text=text.replace('restart();\n})();',"restart();\nwindow.__snapshot=()=>JSON.parse(JSON.stringify(model));\nwindow.__validate=candidate=>new Function('model','range','row','col','unique','latin','visible','runs','orth','around','connected','surrounds','return ('+engine.valid.toString().replace(/^valid/,'function')+')()')(candidate,range,row,col,unique,latin,visible,runs,orth,around,connected,surrounds);\n})();");await route.fulfill({response:r,body:text});});await page.goto((process.env.BASE_URL||'http://127.0.0.1:8790')+'/mini-games/'+game.url);await page.waitForFunction(()=>document.body.dataset.gameReady==='true');
+const snap=()=>page.evaluate(()=>window.__snapshot());const click=async s=>{const l=page.locator(s);if(mobile)await l.tap();else await l.click();};const cell=i=>click(`#board button[data-index="${i}"]`),choose=v=>click(`#palette button[data-value="${v}"]`);
+await page.locator('#board button:not(.gap):not(.number)').first().focus();await page.keyboard.press('ArrowRight');await page.keyboard.press('Space');await click('#restart');
+await click('#check');assert.equal(await page.locator('#result').isHidden(),true);await click('#restart');let m=await snap();
+if(game.id==='bridgewater'){await page.locator('#board .edge').first().focus();const before=await page.evaluate(()=>[...document.querySelector('#board').children].indexOf(document.activeElement));await page.keyboard.press('ArrowDown');const after=await page.evaluate(()=>[...document.querySelector('#board').children].indexOf(document.activeElement));assert.equal(after%5,before%5);assert.ok(after>before);}
+if(game.id==='bridgewater') { const bad=structuredClone(m);bad.cells=bad.edges.map(([a,b])=>b-a===1?1:0);bad.totals=Array.from({length:9},(_,i)=>bad.edges.reduce((sum,e,k)=>sum+(e.includes(i)?bad.cells[k]:0),0));assert.equal(await page.evaluate(c=>window.__validate(c),bad),false,'disconnected Hashi rejected despite correct degrees'); }
+if(game.id==='loop-letter') { const bad=structuredClone(m),boxes=[[0,1,4,5],[10,11,14,15]];bad.cells=bad.edges.map(e=>boxes.some(v=>v.includes(e[0])&&v.includes(e[1]))?1:0);bad.clues=Array.from({length:9},(_,i)=>{const r=Math.floor(i/3),c=i%3,v=[r*4+c,r*4+c+1,(r+1)*4+c,(r+1)*4+c+1];return bad.edges.reduce((sum,e,k)=>sum+(v.includes(e[0])&&v.includes(e[1])?bad.cells[k]:0),0);});assert.equal(await page.evaluate(c=>window.__validate(c),bad),false,'two separate loops rejected despite correct edge clues'); }
+if(game.id==='tent-pitch') {const bad={trees:[1,24],cells:[0,2],rows:[2,0,0,0,0],cols:[1,0,1,0,0]};assert.equal(await page.evaluate(c=>window.__validate(c),bad),false,'two tents cannot claim the same tree');}
+
+if(game.id==='seat-at-table'){const perms=a=>a.length?a.flatMap((v,i)=>perms(a.filter((_,j)=>i!==j)).map(t=>[v,...t])):[[]];const solutions=perms(['Ada','Bo','Cy','Dee','Eli']).filter(a=>m.clues.every(c=>{const x=a.indexOf(c.a),y=a.indexOf(c.b);return c.type==='center'?x===2:c.type==='inside'?x>0&&x<4:c.type==='left'?x<y:c.type==='apart'?Math.abs(x-y)===2:Math.abs(x-y)===1;}));assert.equal(solutions.length,1);assert.deepEqual(solutions[0],m.answer);}
+switch(game.id){
+case 'ninefold':case 'taller-tales':case 'sky-view':case 'cross-sums':
+ if(m.given){await cell(m.given[0]);assert.deepEqual((await snap()).cells,m.cells);}
+ for(let i=0;i<m.answer.length;i++){if(m.given?.includes(i))continue;await choose(m.answer[i]);await cell(i);}break;
+case 'equal-measure':for(let i=0;i<16;i++){if(m.given.includes(i))continue;for(let n=0;n<=m.answer[i];n++)await cell(i);}break;
+case 'picross-post':for(let i=0;i<25;i++)if(m.answer[i])await cell(i);break;
+case 'minefield':await cell(12);m=await snap();assert.equal(m.mines.includes(12),false);for(let i=0;i<25;i++){m=await snap();if(!m.mines.includes(i)&&!m.revealed.includes(i))await cell(i);}break;
+case 'code-cabinet':for(let i=0;i<3;i++)for(let n=1;n<m.answer[i];n++)await cell(i);break;
+case 'seat-at-table':for(let i=0;i<5;i++){await choose(m.answer[i]);await cell(i);}break;
+case 'bridgewater':case 'loop-letter':for(let i=0;i<m.answer.length;i++)for(let n=0;n<m.answer[i];n++)await cell(i);break;
+case 'tent-pitch':await cell(m.trees[0]);assert.deepEqual((await snap()).cells,[]);for(const i of m.answer)await cell(i);break;
+case 'pearl-route':await cell(24);await click('#restart');m=await snap();for(let k=0;k<4;k++){await choose(k+1);for(const i of m.answer[k].slice(1))await cell(i);}break;
+case 'tile-weave':for(let i=0;i<9;i++){let v=m.cells[i],n=0;while(v!==m.answer[i]&&n<4){await cell(i);v=((v<<1)&15)|((v>>3)&1);n++;}assert.equal(v,m.answer[i]);}break;
+case 'safe-passage':await cell(12);await page.locator('#board button[data-index="12"]').focus();await page.keyboard.press('ArrowRight');assert.equal((await snap()).cars[0].pos,12);await cell(20);await page.getByRole('button',{name:'Right →',exact:true}).click();m=await snap();await cell(m.cars[1].pos);while((await snap()).cars[1].pos<20)await page.getByRole('button',{name:'Down ↓',exact:true}).click();await cell(12);for(let n=0;n<4;n++)await page.getByRole('button',{name:'Right →',exact:true}).click();break;
+}
+// Deliberately damage a completed candidate, reject it, then undo the legal change.
+if(!['minefield','safe-passage','code-cabinet'].includes(game.id)) {
+ const solved=await snap();
+ if(['ninefold','taller-tales','sky-view','cross-sums'].includes(game.id)){await choose(0);await cell(solved.cells.findIndex((v,i)=>!solved.given?.includes(i)));}
+ else if(game.id==='seat-at-table'){await choose(solved.answer[1]);await cell(0);}
+ else if(game.id==='tent-pitch'){await cell(solved.answer[0]);}
+ else if(game.id==='pearl-route'){await page.getByRole('button',{name:'Clear selected path',exact:true}).click();}
+ else if(game.id==='equal-measure'){await cell(solved.cells.findIndex((v,i)=>!solved.given.includes(i)));}
+ else await cell(0);
+ await click('#check');assert.equal(await page.locator('#result').isHidden(),true,game.id+' must reject a damaged solution');await click('#undo');
+}
+if(await page.locator('#result').isHidden())await click('#check');assert.equal(await page.locator('#result-title').textContent(),'A little clarity.',game.id);assert.ok(Number(await page.locator('#best').textContent())>0);if(mobile)assert.match(await page.locator('#storage-note').textContent(),/unavailable/);
+const best=await page.locator('#best').textContent();await click('#again');assert.equal(await page.locator('#moves').textContent(),'0');assert.equal(await page.locator('#result').isHidden(),true);await click('#restart');assert.equal(await page.locator('#moves').textContent(),'0');
+if(!mobile){await page.reload();assert.equal(await page.locator('#best').textContent(),best);}
+if(game.id==='minefield'){await cell(12);m=await snap();await cell(m.mines[0]);assert.equal(await page.locator('#result-title').textContent(),'A new angle awaits.');await click('#restart');}
+if(game.id==='code-cabinet'){m=await snap();const wrong=m.answer[0]===1?2:1;for(let i=0;i<3;i++)for(let n=1;n<wrong;n++)await cell(i);for(let n=0;n<8;n++)await click('#check');assert.equal(await page.locator('#result-title').textContent(),'A new angle awaits.');await click('#restart');}
+for(const width of mobile?[320,390]:[1440]){await page.setViewportSize({width,height:900});assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),game.id+' overflow');}
+await page.screenshot({path:`/tmp/logic-${game.id}-${mobile?'mobile':'desktop'}.png`,fullPage:true});assert.deepEqual(errors,[]);results.push({id:game.id,mobile,completed:true,restart:true,legalInput:true,illegalInput:true,damagedSolutionRejected:!['minefield','safe-passage','code-cabinet'].includes(game.id),keyboard:true,uniqueSeating:game.id==='seat-at-table'?true:undefined,storage:mobile?'blocked fallback':'persisted reload',reducedMotion:mobile,overflow:false,errors:[]});console.log('PASS',game.id,mobile?'mobile':'desktop');await page.close();}
+await context.close();}
+await browser.close();fs.writeFileSync(path.join(__dirname,'../coverage/logic-room.json'),JSON.stringify({family:'logic-room',passed:true,checks:results,limits:['Chromium only; mobile touch is emulated.','Completion paths follow read-only snapshots of generated puzzle answers through legal UI inputs.','No timing games; background state remains static.','Several games use curated small layouts with transformations rather than an unlimited level bank.']},null,2)+'\n');})().catch(e=>{console.error(e);process.exit(1)});

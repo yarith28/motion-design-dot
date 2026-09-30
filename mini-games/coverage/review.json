@@ -1,0 +1,65 @@
+{
+  "method": "Independent agents reviewed rule engines and exercised targeted browser counterexamples; owners fixed and retested findings. Root inspected catalog and representative screenshots.",
+  "findings": [
+    {
+      "game": "stamp-studio",
+      "issue": "Markup leaked into accessible labels and visible button text",
+      "resolution": "Escaped attribute helper and clean labels; screenshots and edge tests passed"
+    },
+    {
+      "game": "rover-script",
+      "issue": "A route reaching the goal and then hitting a wall could win",
+      "resolution": "Track collision failures for the entire program; legal solution wins, trailing wall step is rejected"
+    },
+    {
+      "game": "orbit-transfer",
+      "issue": "Exhausted-fuel input cleared stranded feedback",
+      "resolution": "Explicit stranded state with disabled travel controls until restart"
+    },
+    {
+      "game": "seat-at-table",
+      "issue": "Initial clues directly disclosed seating order",
+      "resolution": "Indirect generated constraint sets independently checked for a unique permutation"
+    },
+    {
+      "game": "bridgewater",
+      "issue": "Arrow navigation across skipped grid cells changed columns",
+      "resolution": "Full-grid coordinates preserve arrow direction"
+    },
+    {
+      "game": "compound-works",
+      "issue": "Valid alternate compounds were rejected by an ambiguous pack",
+      "resolution": "Curated unambiguous replacement pack, targeted full round retested"
+    },
+    {
+      "game": "proofreader",
+      "issue": "A correctly spelled word was labeled a spelling error",
+      "resolution": "Replaced with an actual misspelling"
+    },
+    {
+      "game": "matchstick-equation",
+      "issue": "Keyboard dropdown lost focus after rerender",
+      "resolution": "Focus restoration and explicit native keyboard regression"
+    },
+    {
+      "game": "bridge",
+      "issue": "Couriers could block the only route with no valid move",
+      "resolution": "Standard jump/side-step pawn rules for both sides; exact reported replay and random rounds retested"
+    },
+    {
+      "game": "balance-beam",
+      "issue": "No-input play could win",
+      "resolution": "Tuned instability; idle loss and active-input wins independently checked"
+    },
+    {
+      "game": "paper-links",
+      "issue": "Sinking an intermediate green on the final stroke allowed extra shots",
+      "resolution": "Enforce stroke cap on shot and intermediate-hole transition; exact twelfth-shot regression"
+    },
+    {
+      "game": "harbor-catch",
+      "issue": "Initial falling-object mechanic overlapped Signal Run",
+      "resolution": "Redesigned as boat positioning plus lowering/reeling a fishing hook with finite casts and depth decisions"
+    }
+  ]
+}

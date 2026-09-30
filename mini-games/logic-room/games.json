@@ -1,0 +1,227 @@
+[
+  {
+    "id": "minefield",
+    "name": "Minefield",
+    "category": "puzzle",
+    "description": "Reveal the meadow without disturbing a mine.",
+    "mechanic": "Safe-first-click minesweeper",
+    "rules": [
+      "Reveal every safe square. Numbers count neighboring mines, including diagonals.",
+      "Switch to Flag to mark a suspected mine. Your first reveal is always safe."
+    ],
+    "controls": "Tap or click cells and controls; Tab then Enter / Space works throughout. Arrow keys navigate the board.",
+    "url": "logic-room/?game=minefield",
+    "accent": "#e3c18d",
+    "symbol": "\u2733"
+  },
+  {
+    "id": "picross-post",
+    "name": "Picross Post",
+    "category": "puzzle",
+    "description": "A tiny picture, written in numbers.",
+    "mechanic": "Nonogram run deduction",
+    "rules": [
+      "Numbers beside each row and column describe consecutive filled runs, separated by at least one empty cell.",
+      "Tap to fill. Tap again to mark empty, then again to clear. Check when your picture is ready."
+    ],
+    "controls": "Tap or click cells and controls; Tab then Enter / Space works throughout. Arrow keys navigate the board.",
+    "url": "logic-room/?game=picross-post",
+    "accent": "#d6bbdd",
+    "symbol": "\u25a6"
+  },
+  {
+    "id": "ninefold",
+    "name": "Ninefold",
+    "category": "puzzle",
+    "description": "Four numbers. Three kinds of harmony.",
+    "mechanic": "Mini Sudoku",
+    "rules": [
+      "Fill empty cells with 1\u20134. Each row, column and outlined 2\u00d72 box must contain each digit once.",
+      "Choose a digit, then a square. Given digits cannot change."
+    ],
+    "controls": "Tap or click cells and controls; Tab then Enter / Space works throughout. Arrow keys navigate the board.",
+    "url": "logic-room/?game=ninefold",
+    "accent": "#bdd6b7",
+    "symbol": "4"
+  },
+  {
+    "id": "equal-measure",
+    "name": "Equal Measure",
+    "category": "puzzle",
+    "description": "Bring dark and light into balance.",
+    "mechanic": "Binary constraint puzzle",
+    "rules": [
+      "Each row and column needs two suns and two moons. Never place three identical symbols consecutively.",
+      "Every row must differ from every other row, and columns must also be unique. Tap blanks to cycle symbols."
+    ],
+    "controls": "Tap or click cells and controls; Tab then Enter / Space works throughout. Arrow keys navigate the board.",
+    "url": "logic-room/?game=equal-measure",
+    "accent": "#ead38d",
+    "symbol": "\u25d0"
+  },
+  {
+    "id": "taller-tales",
+    "name": "Taller Tales",
+    "category": "puzzle",
+    "description": "Small signs make a big difference.",
+    "mechanic": "Futoshiki inequalities",
+    "rules": [
+      "Fill each row and column with 1\u20134 once each.",
+      "The signs between neighboring cells point to the smaller number. Given digits are fixed."
+    ],
+    "controls": "Tap or click cells and controls; Tab then Enter / Space works throughout. Arrow keys navigate the board.",
+    "url": "logic-room/?game=taller-tales",
+    "accent": "#b8d5d1",
+    "symbol": "\u227a"
+  },
+  {
+    "id": "code-cabinet",
+    "name": "Code Cabinet",
+    "category": "puzzle",
+    "description": "Listen to what the lock tells you.",
+    "mechanic": "Mastermind deduction",
+    "rules": [
+      "Find a hidden code of three symbols chosen from six; symbols may repeat. You have eight guesses.",
+      "A solid dot means correct symbol and position. A hollow dot means correct symbol, wrong position. Feedback dots are unordered."
+    ],
+    "controls": "Tap or click cells and controls; Tab then Enter / Space works throughout. Arrow keys navigate the board.",
+    "url": "logic-room/?game=code-cabinet",
+    "accent": "#e3c18d",
+    "symbol": "\u2318"
+  },
+  {
+    "id": "seat-at-table",
+    "name": "Seat at the Table",
+    "category": "puzzle",
+    "description": "There is a place for everyone.",
+    "mechanic": "Relational ordering",
+    "rules": [
+      "Arrange five guests in seats from left to right so all written clues are true.",
+      "Choose a guest, then a seat. A guest already seated moves to the new place, swapping occupants."
+    ],
+    "controls": "Tap or click cells and controls; Tab then Enter / Space works throughout. Arrow keys navigate the board.",
+    "url": "logic-room/?game=seat-at-table",
+    "accent": "#d6bbdd",
+    "symbol": "\u2667"
+  },
+  {
+    "id": "sky-view",
+    "name": "Sky View",
+    "category": "puzzle",
+    "description": "Read a skyline from every angle.",
+    "mechanic": "Skyscraper visibility",
+    "rules": [
+      "Place heights 1\u20134 once per row and column. A taller building hides every shorter building behind it.",
+      "Edge clues count buildings visible from that direction."
+    ],
+    "controls": "Tap or click cells and controls; Tab then Enter / Space works throughout. Arrow keys navigate the board.",
+    "url": "logic-room/?game=sky-view",
+    "accent": "#bdd6b7",
+    "symbol": "\u25a5"
+  },
+  {
+    "id": "bridgewater",
+    "name": "Bridgewater",
+    "category": "puzzle",
+    "description": "Bring the islands together.",
+    "mechanic": "Hashi bridge network",
+    "rules": [
+      "Connect islands horizontally or vertically. Each island needs the number of bridges printed on it.",
+      "Tap a link to cycle zero, one or two bridges. Bridges cannot cross, and every island must join one connected network."
+    ],
+    "controls": "Tap or click cells and controls; Tab then Enter / Space works throughout. Arrow keys navigate the board.",
+    "url": "logic-room/?game=bridgewater",
+    "accent": "#ead38d",
+    "symbol": "\u256c"
+  },
+  {
+    "id": "loop-letter",
+    "name": "Loop Letter",
+    "category": "puzzle",
+    "description": "One line. One unbroken thought.",
+    "mechanic": "Slitherlink loop construction",
+    "rules": [
+      "Draw a single closed loop along the grid edges. Each number counts the drawn edges around its cell.",
+      "Tap an edge to add or remove it. No branches, loose ends or separate loops."
+    ],
+    "controls": "Tap or click cells and controls; Tab then Enter / Space works throughout. Arrow keys navigate the board.",
+    "url": "logic-room/?game=loop-letter",
+    "accent": "#b8d5d1",
+    "symbol": "\u25a1"
+  },
+  {
+    "id": "tent-pitch",
+    "name": "Tent Pitch",
+    "category": "puzzle",
+    "description": "Make room for a quiet night.",
+    "mechanic": "Tents placement",
+    "rules": [
+      "Place one tent beside each tree horizontally or vertically. Every tent must be paired with a different tree.",
+      "Tents cannot touch, even diagonally. Edge numbers give tents required per row and column."
+    ],
+    "controls": "Tap or click cells and controls; Tab then Enter / Space works throughout. Arrow keys navigate the board.",
+    "url": "logic-room/?game=tent-pitch",
+    "accent": "#e3c18d",
+    "symbol": "\u25b3"
+  },
+  {
+    "id": "pearl-route",
+    "name": "Pearl Route",
+    "category": "puzzle",
+    "description": "Give every pair its own path.",
+    "mechanic": "Numberlink path routing",
+    "rules": [
+      "Join each matching letter pair with an orthogonal path. Paths cannot overlap.",
+      "Choose a letter, then tap neighboring cells to extend its path. Tap its starting endpoint or use Clear path to start that route again. Empty cells are allowed."
+    ],
+    "controls": "Tap or click cells and controls; Tab then Enter / Space works throughout. Arrow keys navigate the board.",
+    "url": "logic-room/?game=pearl-route",
+    "accent": "#d6bbdd",
+    "symbol": "\u221e"
+  },
+  {
+    "id": "tile-weave",
+    "name": "Tile Weave",
+    "category": "puzzle",
+    "description": "A quarter-turn changes everything.",
+    "mechanic": "Pipe rotation network",
+    "rules": [
+      "Rotate tiles until every pipe connects with its neighbors, with no pipe pointing outside the board.",
+      "All tiles must form one connected water network. Tap to rotate clockwise."
+    ],
+    "controls": "Tap or click cells and controls; Tab then Enter / Space works throughout. Arrow keys navigate the board.",
+    "url": "logic-room/?game=tile-weave",
+    "accent": "#bdd6b7",
+    "symbol": "\u2301"
+  },
+  {
+    "id": "safe-passage",
+    "name": "Safe Passage",
+    "category": "puzzle",
+    "description": "Unpack a small traffic jam.",
+    "mechanic": "Sliding-block escape",
+    "rules": [
+      "Move the red car to the right edge to escape. Cars slide only along their length and cannot pass through one another.",
+      "Select a car, then use the arrow buttons or keyboard arrows."
+    ],
+    "controls": "Tap or click cells and controls; Tab then Enter / Space works throughout. Arrow keys navigate the board.",
+    "url": "logic-room/?game=safe-passage",
+    "accent": "#ead38d",
+    "symbol": "\u2192"
+  },
+  {
+    "id": "cross-sums",
+    "name": "Cross Sums",
+    "category": "puzzle",
+    "description": "Let the totals do the talking.",
+    "mechanic": "Kakuro sum intersections",
+    "rules": [
+      "Fill each white square with 1\u20139. Row sums appear on the left; column sums appear above.",
+      "No digit may repeat within a row or column. Any arrangement satisfying every sum is accepted."
+    ],
+    "controls": "Tap or click cells and controls; Tab then Enter / Space works throughout. Arrow keys navigate the board.",
+    "url": "logic-room/?game=cross-sums",
+    "accent": "#b8d5d1",
+    "symbol": "\u03a3"
+  }
+]

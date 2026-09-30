@@ -1,42 +1,42 @@
 {
   "target": 100,
-  "verifiedLive": 10,
-  "liveCommit": "ca0f41c4b7e0c41763c0430238a9e2488c495e93",
-  "liveVerificationRun": "https://github.com/yarith28/motion-design-dot/actions/runs/36743817025",
-  "phase": "Publishing verified spatial collection; remaining collections under tests and independent review",
+  "verifiedLive": 25,
+  "liveCommit": "b25f8d75383bb9a70851710df1efed7674b9dce0",
+  "liveVerificationRun": "https://github.com/yarith28/motion-design-dot/actions/runs/36745929719",
+  "phase": "Logic batch local catalog checks; arcade final deep tests; independent-review corrections verified",
   "publicationRule": "Only passing, completed entries are linked in the catalog. Planned inventory does not count as playable.",
   "collections": [
     {
       "id": "logic-room",
       "target": 15,
-      "status": "testing"
+      "status": "verified locally; reviewed"
     },
     {
       "id": "word-room",
       "target": 15,
-      "status": "implementing"
+      "status": "verified locally; reviewed"
     },
     {
       "id": "number-room",
       "target": 15,
-      "status": "implementing"
+      "status": "verified locally; reviewed"
     },
     {
       "id": "strategy-room",
       "target": 15,
-      "status": "implementing"
+      "status": "verified locally; reviewed"
     },
     {
       "id": "spatial-room",
       "target": 15,
-      "status": "verified, catalog integrated"
+      "status": "verified locally; reviewed"
     },
     {
       "id": "arcade-room",
       "target": 15,
-      "status": "implementing"
+      "status": "final browser tests and tuning"
     }
   ],
-  "catalogPlayable": 25,
-  "verifiedLocal": 55
+  "catalogPlayable": 40,
+  "verifiedLocal": 85
 }

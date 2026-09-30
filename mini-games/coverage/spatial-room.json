@@ -310,7 +310,11 @@
     "Incorrect final paper layer order does not win",
     "Orbit fuel exhaustion and restart",
     "Crane same-stack invalid transfer and restart",
-    "Keyboard focus preserved after board rerender"
+    "Keyboard focus preserved after board rerender",
+    "Rover arrival followed by wall collision is rejected",
+    "Removing trailing collision command then rerunning wins",
+    "Victory focuses Play again after final board render",
+    "Orbit fuel exhaustion displays Stranded and disables travel until restart"
   ],
   "visualChecks": [
     "390px Loose Ends layout",

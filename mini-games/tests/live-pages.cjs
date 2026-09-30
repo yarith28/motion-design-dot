@@ -21,9 +21,10 @@ async function catalogShot(page,file){
 const hash=bytes=>crypto.createHash('sha256').update(bytes).digest('hex');
 async function publishedFiles(){
  for(let attempt=0;attempt<20;attempt++){
-  const checks=await Promise.all(files.map(async file=>{
+  const checks=[];
+  for(let offset=0;offset<files.length;offset+=6)checks.push(...await Promise.all(files.slice(offset,offset+6).map(async file=>{
    try{const response=await fetch(`${base}/${file}?verify=${process.env.GITHUB_SHA||'manual'}`,{signal:AbortSignal.timeout(15000)});const bytes=Buffer.from(await response.arrayBuffer());return {file,status:response.status,match:response.ok&&hash(bytes)===hash(fs.readFileSync(file))}}catch(e){return {file,error:e.message,match:false}}
-  }));
+  })));
   if(checks.every(c=>c.match))return checks;
   console.log('Waiting for published files',checks.filter(c=>!c.match));
   if(attempt<19)await new Promise(resolve=>setTimeout(resolve,10000));

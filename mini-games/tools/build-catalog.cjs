@@ -29,4 +29,5 @@ html=html.replace(/(<span id="game-count"[^>]*>)[^<]*/,`$1${all.length} games / 
 html=html.replace(/\b(?:Ten|\d+) little games:[^"]*/,`${all.length} little games: quick reflexes, thoughtful puzzles, wordplay, and small adventures.`);
 fs.writeFileSync(path.join(root,'index.html'),html);
 fs.writeFileSync(path.join(root,'inventory.json'),JSON.stringify({version:1,total:all.length,games:all},null,2)+'\n');
+const readme=path.join(root,'README.md');fs.writeFileSync(readme,fs.readFileSync(readme,'utf8').replace(/with (?:ten|\d+) finished games/,`with ${all.length} finished games`));
 console.log(`Generated ${all.length} playable entries from ${rooms.length} verified rooms.`);

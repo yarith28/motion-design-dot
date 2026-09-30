@@ -1,6 +1,6 @@
 # Small Hours
 
-A small, expandable browser arcade with 25 finished games. The catalog is `index.html`, with working All / Adventure / Reflex / Memory / Puzzle / Strategy filters. Every displayed game is playable.
+A small, expandable browser arcade with 40 finished games. The catalog is `index.html`, with working All / Adventure / Reflex / Memory / Puzzle / Strategy filters. Every displayed game is playable.
 
 ## Play locally
 
@@ -150,3 +150,10 @@ Limitations: Chromium only, with emulated touch; no physical devices, Safari, Fi
 Fifteen distinct spatial games join the original ten. The family manifest `spatial-room/games.json` documents each mechanic and route; `coverage/spatial-room.json` records all thirty full desktop/mobile completions. Tests include actual legal input, restart, invalid routes and transfers, keyboard focus, blocked storage, reduced motion, and 320px bounds. Shadow Turn, Pigment Lab, and Stamp Studio each contain three authored studies; the other spatial games are finite authored puzzles. An independent visual review corrected stamp label escaping and restored the shared brand header.
 
 Catalog search supports titles, mechanics and controls, combines with category filters, and offers clear empty results. The Grid/List choice continues to persist. Catalog previews show actual game boards. `tools/build-catalog.cjs` generates static cards from explicitly selected verified room manifests; no build is required to play. `inventory.json` is the playable inventory, while `inventory-plan.json` is the larger work plan and does not make planned entries playable. `progress.json` retains the last verified deployment and current batch state.
+
+
+## Logic Room release batch
+
+Fifteen logic games passed thirty desktop/mobile completion cases and independent rule review. Validators reject disconnected bridge networks, separate closed loops, and tents incorrectly sharing a tree. Seating clues are indirect and independently checked across all 120 permutations for uniqueness. Keyboard grid navigation and accessible filled/empty states were checked. Evidence: `coverage/logic-room.json` and `tests/logic-room.cjs`.
+
+This batch also fixes three spatial review findings: a rover program that reaches its destination then hits a wall must fail; exhausted orbital routes keep their stranded feedback and disable travel; completion retains keyboard focus on Play again. The precise counterexamples are in `tests/spatial-room-edges.cjs`. Signal Run additionally completed a full touch-mobile win with all shields and restart, recorded in `coverage/signal-mobile.json`.
