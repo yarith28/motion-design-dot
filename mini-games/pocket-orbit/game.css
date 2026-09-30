@@ -1,0 +1,16 @@
+.tabletop { background: #293226; color: var(--paper); border-color: var(--ink); }
+.scoreboard { border-color: #526048; }.scoreboard>div+div { border-color: #526048; }.scoreboard span { color: #c1ccb4; }
+.orbit-stage { max-width: 425px; margin: -10px auto -2px; }
+#orbit { display: block; width: 100%; overflow: visible; }
+.orbit-guide { fill: none; stroke: #536247; stroke-width: 2; }.orbit-inner { fill: none; stroke: #536247; stroke-width: 1; stroke-dasharray: 2 9; }
+#target-arc { fill: none; stroke: var(--lime); stroke-width: 25; stroke-linecap: butt; }
+#target-center { stroke: #293226; stroke-width: 3; }
+#courier circle:first-child { fill: var(--paper); stroke: #293226; stroke-width: 4; }#courier circle:last-child { fill: #293226; }
+.dial-label,.dial-small { fill: #c1ccb4; font: bold 9px 'Courier New',monospace; letter-spacing: 1.5px; text-anchor: middle; }
+.dial-value { fill: var(--paper); font: bold 34px Arial,sans-serif; letter-spacing: -1.5px; text-anchor: middle; }.dial-small { font-size: 9px; letter-spacing: .3px; }
+.round-dots { display: flex; justify-content: center; gap: 10px; margin: 0 0 25px; }.round-dots span { display: grid; place-items: center; width: 23px; height: 23px; border: 1px solid #879779; border-radius: 50%; font: 10px monospace; color: #e6eccd; }.round-dots .hit { background: var(--lime); color: var(--ink); border-color: var(--lime); }.round-dots .miss { background: var(--orange); color: var(--ink); border-color: var(--orange); }
+.orbit-controls { display: flex; gap: 12px; }.orbit-controls .cta { flex: 1; background: var(--lime); color: var(--ink); }.orbit-controls .quiet { color: var(--paper); border-color: #657253; min-width: 83px; }
+.game-message { min-height: 62px; display: grid; place-items: center; color: #d4f35b; }
+.result { color: var(--ink); }
+@media(max-width:420px) { .orbit-controls .cta { padding: 15px; gap: 10px; }.round-dots { gap: 8px; margin-bottom: 20px; }.orbit-stage { margin-top: -6px; } }
+#action { touch-action: manipulation; }

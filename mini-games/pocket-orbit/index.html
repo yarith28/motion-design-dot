@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f1f0e8"><title>Pocket Orbit — Small Hours</title>
+  <meta name="description" content="A small test of good timing Play Pocket Orbit, a handcrafted browser game from Small Hours.">
+  <link rel="stylesheet" href="../styles.css"><link rel="stylesheet" href="../play.css"><link rel="stylesheet" href="game.css">
+  <script src="../common.js" defer></script><script src="game.js" defer></script>
+</head>
+<body>
+  <header><a class="brand" href="../"><span class="brand-icon" aria-hidden="true">✳</span>small hours</a><a class="mono back" href="../">← All games</a></header>
+  <main class="play-main">
+    <div class="play-heading"><div><p class="eyebrow">SH—003 / Timing</p><h1>Pocket Orbit<span>.</span></h1></div><button class="quiet" id="restart">Restart</button></div>
+    <div class="play-layout">
+      <section class="tabletop" aria-label="Pocket Orbit game">
+        <div class="scoreboard"><div><span>Score</span><strong id="score">0</strong></div><div><span>Orbit</span><strong id="round">1 / 8</strong></div><div><span>Chances</span><strong id="lives">3 / 3</strong></div></div>
+        <div class="table-content"><div class="orbit-stage"><svg id="orbit" viewBox="0 0 400 400" role="img" aria-label="A moving courier dot orbiting a target arc. Stop the dot inside the marked arc."><circle class="orbit-guide" cx="200" cy="200" r="146"/><circle class="orbit-inner" cx="200" cy="200" r="118"/><path id="target-arc"/><path id="target-center"/><g id="courier"><circle r="14"/><circle r="4"/></g><text x="200" y="181" class="dial-label" id="dial-label">FIND YOUR MOMENT</text><text x="200" y="225" class="dial-value" id="dial-value">READY?</text><text x="200" y="249" class="dial-small" id="direction">8 orbits. 3 chances.</text></svg></div><div id="round-dots" class="round-dots" aria-label="Eight rounds"></div><div class="orbit-controls"><button class="cta" id="action">Start orbit <span aria-hidden="true">↗</span></button><button class="quiet" id="pause" disabled>Pause</button></div></div>
+        <p class="game-message" id="message" role="status" aria-live="polite">Stop the dot inside the lime arc. Closer to the notch = more points.</p>
+        <div class="result" id="result" hidden><h2 id="result-title"></h2><p id="result-copy"></p><button class="cta" id="again">Play again <span aria-hidden="true">↗</span></button></div>
+      </section>
+      <aside class="play-aside"><span class="pill live">A small test of good timing</span><h2>Right place.<br>Right moment.</h2><ol class="rule-list"><li><b>Find the sweet spot.</b><p>Stop the moving dot inside the lime arc. Aim for the center notch: a closer hit earns up to 100 points.</p></li><li><b>Eight chances to shine.</b><p>Complete eight orbits. Three misses end the run early. The target narrows and the pace builds.</p></li><li><b>One tap is all it takes.</b><p>Tap Lock orbit, or press Space. P / Escape pauses. Changing tabs or windows automatically pauses your run.</p></li></ol><div class="record"><span class="mono">Best / most points</span><strong id="best">—</strong><p id="storage-note">Saved on this browser.</p></div><p class="small-note session-note">Decorative motion respects your preference. The moving dot is essential to this timing game.</p></aside>
+    </div>
+    <footer class="mono"><span>Small Hours / A little room for play</span><a href="../">Back to the collection ↗</a></footer>
+  </main>
+</body></html>

@@ -1,0 +1,11 @@
+.memory-board { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.card { position: relative; aspect-ratio: 1; border: 1px solid #292f26; border-radius: 12px; background: #303a2c; color: #e6eccd; display: grid; place-items: center; transition: background .25s, transform .25s, box-shadow .25s; }
+.card:not([aria-disabled=true]):hover { transform: translateY(-3px); box-shadow: 0 5px 0 #c8cbbb; }
+.card:before { content: ''; position: absolute; inset: 9px; border: 1px solid #657253; border-radius: 6px; }
+.card .card-back { font: bold 12px 'Courier New', monospace; letter-spacing: 2px; }
+.card svg { width: 51%; height: 51%; fill: none; stroke: currentColor; stroke-width: 4; stroke-linejoin: round; stroke-linecap: round; }
+.card.open { background: #e4dbfa; color: #34303c; transform: rotate(-2deg); }
+.card.open:before, .card.matched:before { border-color: currentColor; opacity: .22; }
+.card.matched { background: var(--lime); color: var(--ink); transform: none; }
+.card.matched:after { content: '✓'; position: absolute; right: 7px; bottom: 4px; font: 11px monospace; }
+@media(max-width:420px) { .memory-board { gap: 8px; }.card { border-radius: 9px; }.card:before { inset: 6px; }.card .card-back { font-size: 10px; } }

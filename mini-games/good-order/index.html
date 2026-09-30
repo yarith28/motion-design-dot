@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f1f0e8"><title>Good Order — Small Hours</title>
+  <meta name="description" content="One empty space. Plenty of possibility. Play Good Order, a handcrafted browser game from Small Hours.">
+  <link rel="stylesheet" href="../styles.css"><link rel="stylesheet" href="../play.css"><link rel="stylesheet" href="game.css">
+  <script src="../common.js" defer></script><script src="game.js" defer></script>
+</head>
+<body>
+  <header><a class="brand" href="../"><span class="brand-icon" aria-hidden="true">✳</span>small hours</a><a class="mono back" href="../">← All games</a></header>
+  <main class="play-main">
+    <div class="play-heading"><div><p class="eyebrow">SH—004 / Sliding puzzle</p><h1>Good Order<span>.</span></h1></div><button class="quiet" id="restart">Restart</button></div>
+    <div class="play-layout">
+      <section class="tabletop" aria-label="Good Order game">
+        <div class="scoreboard"><div><span>Moves</span><strong id="moves">0</strong></div><div><span>In place</span><strong id="placed">0 / 8</strong></div><div><span>Grid</span><strong id="grid-size">3 × 3</strong></div></div>
+        <div class="table-content"><div class="puzzle-wrap"><div id="puzzle-board" class="puzzle-board" role="group" aria-label="Sliding puzzle. Arrange one through eight, with the empty space at bottom right."></div><div id="goal" class="goal" hidden><p class="mono">Your destination</p><div class="goal-grid" aria-label="Goal: one two three, four five six, seven eight empty"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span></span></div></div></div><div class="board-controls"><span class="mono">Find a little order.</span><button class="quiet" id="peek" aria-expanded="false" aria-controls="goal">Show goal</button></div></div>
+        <p class="game-message" id="message" role="status" aria-live="polite">Slide a neighboring tile into the empty space.</p>
+        <div class="result" id="result" hidden><h2 id="result-title"></h2><p id="result-copy"></p><button class="cta" id="again">Play again <span aria-hidden="true">↗</span></button></div>
+      </section>
+      <aside class="play-aside"><span class="pill live">One empty space. Plenty of possibility.</span><h2>A place for<br>everything.</h2><ol class="rule-list"><li><b>Make room.</b><p>Tap a tile beside the empty space to slide it. Only horizontal and vertical neighbors can move.</p></li><li><b>Bring it all together.</b><p>Arrange 1–8 in reading order, with the empty space at bottom right. Each shuffle starts from the goal using legal moves, so it is always solvable.</p></li><li><b>Take a different angle.</b><p>Arrow keys move the empty space. You can also Tab to a tile and press Enter / Space. Show goal gives you a reference without changing your puzzle.</p></li></ol><div class="record"><span class="mono">Best / fewest moves</span><strong id="best">—</strong><p id="storage-note">Saved on this browser.</p></div><p class="small-note session-note">No clock, no pressure. Every shuffle is different; personal bests compare move counts across puzzles.</p></aside>
+    </div>
+    <footer class="mono"><span>Small Hours / A little room for play</span><a href="../">Back to the collection ↗</a></footer>
+  </main>
+</body></html>

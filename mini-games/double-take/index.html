@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f1f0e8"><title>Double Take — Small Hours</title>
+  <meta name="description" content="A little attention, doubled Play Double Take, a handcrafted browser game from Small Hours.">
+  <link rel="stylesheet" href="../styles.css"><link rel="stylesheet" href="../play.css"><link rel="stylesheet" href="game.css">
+  <script src="../common.js" defer></script><script src="game.js" defer></script>
+</head>
+<body>
+  <header><a class="brand" href="../"><span class="brand-icon" aria-hidden="true">✳</span>small hours</a><a class="mono back" href="../">← All games</a></header>
+  <main class="play-main">
+    <div class="play-heading"><div><p class="eyebrow">SH—002 / Memory</p><h1>Double Take<span>.</span></h1></div><button class="quiet" id="restart">Restart</button></div>
+    <div class="play-layout">
+      <section class="tabletop" aria-label="Double Take game">
+        <div class="scoreboard"><div><span>Turns</span><strong id="turns">0</strong></div><div><span>Pairs</span><strong id="pairs">0 / 8</strong></div><div><span>Precision</span><strong id="precision">—</strong></div></div>
+        <div class="table-content"><div id="memory-board" class="memory-board" role="group" aria-label="Sixteen memory cards. Arrow keys move focus; Enter or Space flips a card."></div></div>
+        <p class="game-message" id="message" role="status" aria-live="polite">Turn over two cards. Find their other halves.</p>
+        <div class="result" id="result" hidden><h2 id="result-title"></h2><p id="result-copy"></p><button class="cta" id="again">Play again <span aria-hidden="true">↗</span></button></div>
+      </section>
+      <aside class="play-aside"><span class="pill live">A little attention, doubled</span><h2>Some things<br>come in pairs.</h2><ol class="rule-list"><li><b>Turn two.</b><p>Flip any two cards. Matching shapes stay face up; mismatches turn back after a moment.</p></li><li><b>Make a mental map.</b><p>Find all eight pairs in as few turns as possible. There is no timer. Take your time.</p></li><li><b>Tap, or use your keys.</b><p>Tap cards, or use arrow keys to move focus and Enter / Space to flip. A second tap on the same card does not count.</p></li></ol><div class="record"><span class="mono">Best / fewest turns</span><strong id="best">—</strong><p id="storage-note">Saved on this browser.</p></div><p class="small-note session-note">A perfect round takes eight turns. Restart reshuffles all sixteen cards.</p></aside>
+    </div>
+    <footer class="mono"><span>Small Hours / A little room for play</span><a href="../">Back to the collection ↗</a></footer>
+  </main>
+</body></html>
