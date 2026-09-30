@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "total": 70,
+  "total": 85,
   "games": [
     {
       "id": "signal-run",
@@ -171,13 +171,14 @@
     {
       "id": "gear-train",
       "name": "Gear Train",
-      "description": "Build a reduction train with exactly the right output.",
-      "mechanic": "gear ratio arrangement",
+      "description": "Plan three compound transmissions, from paired reducers to a locked input and a mixed-speed train.",
+      "mechanic": "Adjacent-swap compound transmission planning",
       "rules": [
-        "Select two gears to swap them into the four sockets.",
-        "The paired shafts must deliver the target output ratio."
+        "Select a gear, then its neighbor in the A → B → C bench order to exchange them. Each exchange counts once; selecting the same gear again cancels. Bolted sockets cannot move.",
+        "Each mesh must meet its displayed teeth ratio: driver teeth ÷ follower teeth. Mesh ratios multiply into the output speed, but the correct final product alone is not enough.",
+        "Test the train to certify a study, then choose Next study. Finish all three. Undo reverses a swap; Reset this study keeps earlier progress; Restart begins the whole journey."
       ],
-      "controls": "Tap or click buttons. Tab and Enter / Space work throughout.",
+      "controls": "Select adjacent bench gears by tap or keyboard Enter/Space. Test certifies a study; Undo reverses a swap. Three studies with four then six sockets.",
       "category": "puzzle",
       "url": "spatial-room/?game=gear-train",
       "accent": "#e4b07d",
@@ -239,14 +240,14 @@
     {
       "id": "pigment-lab",
       "name": "Pigment Lab",
-      "description": "Mix three transparent inks to a carefully measured shade.",
-      "mechanic": "subtractive color mixing",
+      "description": "Move translucent ink stencils to restore three layered prints.",
+      "mechanic": "Spatial subtractive-color stencil alignment",
       "rules": [
-        "Add or remove drops of cyan, magenta, and yellow.",
-        "Match the recipe clues and the reference color exactly.",
-        "Complete all three curated studies to finish the round."
+        "Choose a cyan, magenta or yellow stencil, then tap its top-left anchor on your print. Stencils may overlap but must fit on the paper.",
+        "Rotate turns the selected stencil clockwise and lifts it for repositioning. Match the reference, including all blank cells.",
+        "Complete three different print studies. C, M and Y letters identify inks and mixtures, so color is never the only clue."
       ],
-      "controls": "Tap or click buttons. Tab and Enter / Space work throughout.",
+      "controls": "Tap a stencil, Rotate if needed, then a grid square. Tab and Enter / Space operate every control. Lift removes the selected stencil.",
       "category": "puzzle",
       "url": "spatial-room/?game=pigment-lab",
       "accent": "#e4b07d",
@@ -274,13 +275,14 @@
     {
       "id": "balance-mobile",
       "name": "Balance Mobile",
-      "description": "Hang four weights to bring a kinetic sculpture to rest.",
-      "mechanic": "torque placement",
+      "description": "Compose three balanced sculptures, from symmetry to fixed anchors and uneven arms.",
+      "mechanic": "Progressive torque placement with asymmetric arms and fixed anchors",
       "rules": [
-        "Select a weight, then a hook. Choose a hung weight again to lift it.",
-        "Use every weight. Left and right torque must balance: weight × distance."
+        "Choose a free weight, then an empty hook. A hung free weight can be lifted by selecting it again. Every available weight must be used once.",
+        "Balance total left and right torque: each weight contributes its mass multiplied by its distance from the center. The sculpture tilts toward the heavier torque.",
+        "Complete three sculptures. Green anchor weights and hooks marked FIXED cannot move. Later sculptures use unequal arm distances; Restart begins all three again."
       ],
-      "controls": "Tap or click buttons. Tab and Enter / Space work throughout.",
+      "controls": "Tap a weight and hook, or use Tab then Enter / Space. Lettered hooks show side and distance; numeric torque and tilt both reflect the arrangement.",
       "category": "puzzle",
       "url": "spatial-room/?game=balance-mobile",
       "accent": "#e4b07d",
@@ -1133,6 +1135,276 @@
       "accent": "#edd9ae",
       "symbol": "✓",
       "family": "word-room",
+      "status": "verified"
+    },
+    {
+      "id": "reversi",
+      "name": "Ink & Ivory",
+      "category": "strategy",
+      "description": "Bracket pale discs and turn a small board in your favor.",
+      "mechanic": "Disc-flipping territory against a three-ply positional opponent.",
+      "rules": [
+        "You play ink first. Place on a dotted square so a straight line of pale discs ends at another ink disc. All bracketed discs turn ink.",
+        "The house follows the same rules. A player without a legal move passes automatically. The game ends when neither can move.",
+        "Most discs wins. Corners cannot be flipped; the house values stable corners and edges."
+      ],
+      "controls": "Tap or click the board and action buttons. Tab to a control; Enter or Space selects. Arrow keys move focus between board squares.",
+      "url": "strategy-room/?game=reversi",
+      "accent": "#c9d5b5",
+      "symbol": "◐",
+      "family": "strategy-room",
+      "status": "verified"
+    },
+    {
+      "id": "four",
+      "name": "Four Together",
+      "category": "strategy",
+      "description": "Drop, threaten, block. Make an unbroken line of four.",
+      "mechanic": "Gravity alignment against a depth-four tactical opponent.",
+      "rules": [
+        "Choose a numbered column to drop an ink disc into its lowest empty space. The house then drops a pale disc.",
+        "Connect four horizontally, vertically, or diagonally to win. A full column cannot accept another disc.",
+        "A full board without a winning line is a draw. The house looks ahead for wins and threats."
+      ],
+      "controls": "Tap or click the board and action buttons. Tab to a control; Enter or Space selects. Arrow keys move focus between board squares.",
+      "url": "strategy-room/?game=four",
+      "accent": "#e9b991",
+      "symbol": "▤",
+      "family": "strategy-room",
+      "status": "verified"
+    },
+    {
+      "id": "kalah",
+      "name": "Seed & Store",
+      "category": "strategy",
+      "description": "Sow a handful. Capture a bowl. Bring the harvest home.",
+      "mechanic": "Six-bowl Kalah seed sowing with captures and extra turns.",
+      "rules": [
+        "Choose one of your six lower bowls. Sow its seeds one at a time to the right, into your store, across the upper row to the left, then back around. Skip the house store.",
+        "Last seed in your store earns another turn. Last seed in your empty lower bowl captures that seed and any seeds in the opposite bowl, if it is occupied.",
+        "When either row empties, remaining seeds go to their owner’s store. Most stored seeds wins."
+      ],
+      "controls": "Tap or click the board and action buttons. Tab to a control; Enter or Space selects. Arrow keys move focus between board squares.",
+      "url": "strategy-room/?game=kalah",
+      "accent": "#d6be88",
+      "symbol": "◌",
+      "family": "strategy-room",
+      "status": "verified"
+    },
+    {
+      "id": "nim",
+      "name": "Matchstick Market",
+      "category": "strategy",
+      "description": "One row at a time. Leave the house without the last word.",
+      "mechanic": "Normal-play three-heap Nim against an exact mathematical opponent.",
+      "rules": [
+        "Remove any positive number of matches from one row on each turn. Buttons show row and amount.",
+        "The house removes matches by the same rule. Whoever takes the final match wins.",
+        "There is no luck. The house plays optimal Nim; the opening is winnable with careful play."
+      ],
+      "controls": "Tap or click the board and action buttons. Tab to a control; Enter or Space selects. Arrow keys move focus between board squares.",
+      "url": "strategy-room/?game=nim",
+      "accent": "#e2b09b",
+      "symbol": "Ⅲ",
+      "family": "strategy-room",
+      "status": "verified"
+    },
+    {
+      "id": "fences",
+      "name": "Fence & Field",
+      "category": "strategy",
+      "description": "A line becomes a square. A square becomes yours.",
+      "mechanic": "Dots-and-boxes area capture with chained extra moves.",
+      "rules": [
+        "Tap an empty edge between dots. Complete the fourth edge of a square to claim it.",
+        "Claiming a square earns another edge. The house captures available squares and avoids giving away easy ones.",
+        "When all nine squares are claimed, the larger collection wins."
+      ],
+      "controls": "Tap or click the board and action buttons. Tab to a control; Enter or Space selects. Arrow keys move focus between board squares.",
+      "url": "strategy-room/?game=fences",
+      "accent": "#c2d5b2",
+      "symbol": "▦",
+      "family": "strategy-room",
+      "status": "verified"
+    },
+    {
+      "id": "peg",
+      "name": "Last Pebble",
+      "category": "strategy",
+      "description": "Jump a quiet garden down to one solitary stone.",
+      "mechanic": "Seven-peg orthogonal jump solitaire on a diamond garden.",
+      "rules": [
+        "Select a pebble, then a highlighted empty hole two spaces away. The pebble between them is removed.",
+        "Jumps are horizontal or vertical, never diagonal. Select another pebble to change your mind.",
+        "Leave exactly one pebble. This handcrafted arrangement has a six-jump solution; a board with no legal jumps ends the round."
+      ],
+      "controls": "Tap or click the board and action buttons. Tab to a control; Enter or Space selects. Arrow keys move focus between board squares.",
+      "url": "strategy-room/?game=peg",
+      "accent": "#b9c7c5",
+      "symbol": "⠿",
+      "family": "strategy-room",
+      "status": "verified"
+    },
+    {
+      "id": "pawns",
+      "name": "Royal Crossing",
+      "category": "strategy",
+      "description": "Protect a path and send one pawn to the far bank.",
+      "mechanic": "Breakthrough pawn racing with diagonal captures against lookahead AI.",
+      "rules": [
+        "Select an ink pawn, then a highlighted destination. Ink moves upward one row; the house moves downward.",
+        "Move straight into an empty square, or diagonally into an empty square or an enemy pawn. Captured pawns leave the board.",
+        "Reach the opposite edge first, capture all enemy pawns, or leave the opponent with no move to win."
+      ],
+      "controls": "Tap or click the board and action buttons. Tab to a control; Enter or Space selects. Arrow keys move focus between board squares.",
+      "url": "strategy-room/?game=pawns",
+      "accent": "#cfc1da",
+      "symbol": "♟",
+      "family": "strategy-room",
+      "status": "verified"
+    },
+    {
+      "id": "fleet",
+      "name": "Hidden Fleet",
+      "category": "strategy",
+      "description": "Sound a little bay and account for every vessel.",
+      "mechanic": "Battleship-style spatial search with known fleet constraints.",
+      "rules": [
+        "Tap a square to sound it. A diamond marks a vessel; a cross marks open water.",
+        "The fleet contains three straight vessels of lengths 3, 2, and 2. Vessels never touch, including diagonally.",
+        "Find all seven occupied squares in as few soundings as possible. The handcrafted chart stays the same on replay."
+      ],
+      "controls": "Tap or click the board and action buttons. Tab to a control; Enter or Space selects. Arrow keys move focus between board squares.",
+      "url": "strategy-room/?game=fleet",
+      "accent": "#abcbd8",
+      "symbol": "⚓",
+      "family": "strategy-room",
+      "status": "verified"
+    },
+    {
+      "id": "guild",
+      "name": "Border Guild",
+      "category": "strategy",
+      "description": "Claim valuable districts. Make their shared edges count.",
+      "mechanic": "Alternating territory drafting with adjacency and denial scoring.",
+      "rules": [
+        "You and the house alternate claiming one district. Each printed number is its base influence.",
+        "Every shared horizontal or vertical edge between your districts adds 2 influence. Each edge scores once.",
+        "After all sixteen districts are claimed, most influence wins. The house weighs value, connections, and blocking your growth."
+      ],
+      "controls": "Tap or click the board and action buttons. Tab to a control; Enter or Space selects. Arrow keys move focus between board squares.",
+      "url": "strategy-room/?game=guild",
+      "accent": "#d9bfa5",
+      "symbol": "▧",
+      "family": "strategy-room",
+      "status": "verified"
+    },
+    {
+      "id": "orchard",
+      "name": "Orchard Keeper",
+      "category": "strategy",
+      "description": "Plan a twelve-day harvest with a small supply of rain.",
+      "mechanic": "Deterministic resource-and-time management on nine planting plots.",
+      "rules": [
+        "Plant an empty plot for 2 water. Every action advances one day and ripens planted trees by one step.",
+        "A tree is ripe after three actions, including its planting day. Tap a ripe tree to harvest 4 fruit and clear its plot. Collect rain spends a day to gain 3 water.",
+        "Gather 20 fruit in twelve days. Five plantings need more than your starting 8 water: make time to collect rain, ripen trees, and harvest. Unharvested trees do not score. Nothing advances while you are away."
+      ],
+      "controls": "Tap or click the board and action buttons. Tab to a control; Enter or Space selects. Arrow keys move focus between board squares.",
+      "url": "strategy-room/?game=orchard",
+      "accent": "#c9d598",
+      "symbol": "♧",
+      "family": "strategy-room",
+      "status": "verified"
+    },
+    {
+      "id": "bridge",
+      "name": "Narrow Bridge",
+      "category": "strategy",
+      "description": "A step forward, or a fence that makes the other route longer.",
+      "mechanic": "Pawn racing with limited route-preserving edge barriers.",
+      "rules": [
+        "Your ink courier starts below; the house starts above. Reach the opposite row first. Walk one adjacent square. When facing the other courier, jump straight over it; if a wall or edge blocks that jump, step sideways around it instead.",
+        "Or choose Place a fence, then two neighboring squares. A fence blocks only their shared edge. Each side has three fences.",
+        "Fences may never remove every route to either goal. The house walks a shortest route or builds a useful detour. Sixty turns without a winner is a draw."
+      ],
+      "controls": "Tap or click the board and action buttons. Tab to a control; Enter or Space selects. Arrow keys move focus between board squares.",
+      "url": "strategy-room/?game=bridge",
+      "accent": "#d0bca8",
+      "symbol": "╫",
+      "family": "strategy-room",
+      "status": "verified"
+    },
+    {
+      "id": "hex",
+      "name": "Sixfold",
+      "category": "strategy",
+      "description": "Weave a continuous thread across six-sided neighborhoods.",
+      "mechanic": "Hex connection on a four-by-four rhombus against distance-aware AI.",
+      "rules": [
+        "You place ink stones and connect top to bottom. The house places pale stones and connects left to right.",
+        "Each hex touches up to six neighbors: left, right, above, below, upper-right, and lower-left. Stones never move after placement.",
+        "The first connected chain across its two banks wins. The house takes immediate wins, blocks immediate threats, and shortens its route."
+      ],
+      "controls": "Tap or click the board and action buttons. Tab to a control; Enter or Space selects. Arrow keys move focus between board squares.",
+      "url": "strategy-room/?game=hex",
+      "accent": "#b9c9e1",
+      "symbol": "⬡",
+      "family": "strategy-room",
+      "status": "verified"
+    },
+    {
+      "id": "towers",
+      "name": "Watchtower",
+      "category": "strategy",
+      "description": "Three towers. Twenty-five corners to keep in sight.",
+      "mechanic": "Queen-ray coverage optimization with a three-piece placement budget.",
+      "rules": [
+        "Place three towers on the board. Each watches its complete row, column, and both diagonals. Towers do not block one another.",
+        "Dotted squares are watched. Tap a placed tower to lift it and try another square.",
+        "Cover all twenty-five squares, then Seal the plan. Partial coverage earns a score, and a complete arrangement exists."
+      ],
+      "controls": "Tap or click the board and action buttons. Tab to a control; Enter or Space selects. Arrow keys move focus between board squares.",
+      "url": "strategy-room/?game=towers",
+      "accent": "#d5c8a8",
+      "symbol": "♜",
+      "family": "strategy-room",
+      "status": "verified"
+    },
+    {
+      "id": "siege",
+      "name": "Quiet Siege",
+      "category": "strategy",
+      "description": "Move your queen, close a square, and keep a corridor open.",
+      "mechanic": "Compact Amazons territory trapping against mobility-aware AI.",
+      "rules": [
+        "Your ink queen moves any distance along a clear row, column, or diagonal. Choose a highlighted destination.",
+        "Then close one empty square visible along a clear line from your new position. Closed squares stay blocked for the round.",
+        "The house does the same. Trap its queen so it has no legal move, while keeping room for your own."
+      ],
+      "controls": "Tap or click the board and action buttons. Tab to a control; Enter or Space selects. Arrow keys move focus between board squares.",
+      "url": "strategy-room/?game=siege",
+      "accent": "#c4b5cc",
+      "symbol": "♛",
+      "family": "strategy-room",
+      "status": "verified"
+    },
+    {
+      "id": "trade",
+      "name": "Trading Day",
+      "category": "strategy",
+      "description": "Eight public prices. One considered trade each day.",
+      "mechanic": "Finite-horizon inventory trading with public price calendar.",
+      "rules": [
+        "Start with 12 coins and room for three crates. Each day choose to buy one crate, sell one crate, or wait.",
+        "The entire eight-day price calendar is visible. You can only buy what you can afford and sell what you hold.",
+        "After day eight, remaining crates sell automatically at the final price. Finish with at least 24 coins."
+      ],
+      "controls": "Tap or click the board and action buttons. Tab to a control; Enter or Space selects. Arrow keys move focus between board squares.",
+      "url": "strategy-room/?game=trade",
+      "accent": "#dcbca0",
+      "symbol": "↗",
+      "family": "strategy-room",
       "status": "verified"
     }
   ]

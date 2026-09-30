@@ -1,9 +1,9 @@
 {
   "target": 100,
-  "verifiedLive": 55,
-  "liveCommit": "90da0c0341ecf866d20dfaf62c8543ef812eca2e",
-  "liveVerificationRun": "https://github.com/yarith28/motion-design-dot/actions/runs/36747492499",
-  "phase": "Publishing reviewed Word Room; all 100 locally completed",
+  "verifiedLive": 70,
+  "liveCommit": "0e612a51925521009cc32a6441f9e83b98a664d2",
+  "liveVerificationRun": "https://github.com/yarith28/motion-design-dot/actions/runs/36748419234",
+  "phase": "Rechecking85-game catalog after independent quality improvements",
   "publicationRule": "Only passing, completed entries are linked in the catalog. Planned inventory does not count as playable.",
   "collections": [
     {
@@ -14,7 +14,7 @@
     {
       "id": "word-room",
       "target": 15,
-      "status": "verified locally; reviewed"
+      "status": "verified live"
     },
     {
       "id": "number-room",
@@ -24,7 +24,7 @@
     {
       "id": "strategy-room",
       "target": 15,
-      "status": "verified locally; reviewed"
+      "status": "verified locally; reviewed; catalog integrated"
     },
     {
       "id": "spatial-room",
@@ -37,6 +37,7 @@
       "status": "verified locally; reviewed"
     }
   ],
-  "catalogPlayable": 70,
-  "verifiedLocal": 100
+  "catalogPlayable": 85,
+  "verifiedLocal": 100,
+  "localVerificationNote": "All100 current games completed desktop/mobile; ordinary-play review fixes and deeper spatial studies retested."
 }

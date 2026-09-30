@@ -78,13 +78,14 @@
   {
     "id": "gear-train",
     "name": "Gear Train",
-    "description": "Build a reduction train with exactly the right output.",
-    "mechanic": "gear ratio arrangement",
+    "description": "Plan three compound transmissions, from paired reducers to a locked input and a mixed-speed train.",
+    "mechanic": "Adjacent-swap compound transmission planning",
     "rules": [
-      "Select two gears to swap them into the four sockets.",
-      "The paired shafts must deliver the target output ratio."
+      "Select a gear, then its neighbor in the A \u2192 B \u2192 C bench order to exchange them. Each exchange counts once; selecting the same gear again cancels. Bolted sockets cannot move.",
+      "Each mesh must meet its displayed teeth ratio: driver teeth \u00f7 follower teeth. Mesh ratios multiply into the output speed, but the correct final product alone is not enough.",
+      "Test the train to certify a study, then choose Next study. Finish all three. Undo reverses a swap; Reset this study keeps earlier progress; Restart begins the whole journey."
     ],
-    "controls": "Tap or click buttons. Tab and Enter / Space work throughout.",
+    "controls": "Select adjacent bench gears by tap or keyboard Enter/Space. Test certifies a study; Undo reverses a swap. Three studies with four then six sockets.",
     "category": "puzzle",
     "url": "spatial-room/?game=gear-train",
     "accent": "#e4b07d",
@@ -138,14 +139,14 @@
   {
     "id": "pigment-lab",
     "name": "Pigment Lab",
-    "description": "Mix three transparent inks to a carefully measured shade.",
-    "mechanic": "subtractive color mixing",
+    "description": "Move translucent ink stencils to restore three layered prints.",
+    "mechanic": "Spatial subtractive-color stencil alignment",
     "rules": [
-      "Add or remove drops of cyan, magenta, and yellow.",
-      "Match the recipe clues and the reference color exactly.",
-      "Complete all three curated studies to finish the round."
+      "Choose a cyan, magenta or yellow stencil, then tap its top-left anchor on your print. Stencils may overlap but must fit on the paper.",
+      "Rotate turns the selected stencil clockwise and lifts it for repositioning. Match the reference, including all blank cells.",
+      "Complete three different print studies. C, M and Y letters identify inks and mixtures, so color is never the only clue."
     ],
-    "controls": "Tap or click buttons. Tab and Enter / Space work throughout.",
+    "controls": "Tap a stencil, Rotate if needed, then a grid square. Tab and Enter / Space operate every control. Lift removes the selected stencil.",
     "category": "puzzle",
     "url": "spatial-room/?game=pigment-lab",
     "accent": "#e4b07d",
@@ -169,13 +170,14 @@
   {
     "id": "balance-mobile",
     "name": "Balance Mobile",
-    "description": "Hang four weights to bring a kinetic sculpture to rest.",
-    "mechanic": "torque placement",
+    "description": "Compose three balanced sculptures, from symmetry to fixed anchors and uneven arms.",
+    "mechanic": "Progressive torque placement with asymmetric arms and fixed anchors",
     "rules": [
-      "Select a weight, then a hook. Choose a hung weight again to lift it.",
-      "Use every weight. Left and right torque must balance: weight \u00d7 distance."
+      "Choose a free weight, then an empty hook. A hung free weight can be lifted by selecting it again. Every available weight must be used once.",
+      "Balance total left and right torque: each weight contributes its mass multiplied by its distance from the center. The sculpture tilts toward the heavier torque.",
+      "Complete three sculptures. Green anchor weights and hooks marked FIXED cannot move. Later sculptures use unequal arm distances; Restart begins all three again."
     ],
-    "controls": "Tap or click buttons. Tab and Enter / Space work throughout.",
+    "controls": "Tap a weight and hook, or use Tab then Enter / Space. Lettered hooks show side and distance; numeric torque and tilt both reflect the arrangement.",
     "category": "puzzle",
     "url": "spatial-room/?game=balance-mobile",
     "accent": "#e4b07d",

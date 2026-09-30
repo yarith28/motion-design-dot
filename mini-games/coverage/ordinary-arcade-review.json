@@ -1,0 +1,95 @@
+{
+  "review": "Independent ordinary-play Arcade Room audit",
+  "reviewedAt": "2026-09-30T17:11:33.873977+00:00",
+  "method": "Read displayed rules and public game manifest. Played using native browser keyboard, mouse/tap, and a native CDP touch hold/release. Read visible HUD and inspected screenshots. No arcade implementation source, solver paths, response probes, state injection or hidden runtime variables were inspected.",
+  "environment": {
+    "browser": "Chromium",
+    "desktop": "1280 x 900 and 1280 x 960",
+    "mobile": "390 x 844; focused regression at 320 x 800",
+    "baseURL": "http://127.0.0.1:8790"
+  },
+  "sample": [
+    {
+      "id": "paper-links",
+      "ordinaryActions": "Aimed right briefly and took a first shot at default 60% power, then waited for rest.",
+      "observed": "One stroke recorded; ball hit the central obstacle and stopped below it. Aim line and BALL IN MOTION/AIM THEN SHOOT feedback made next action understandable. No instant win.",
+      "assessment": "Bank-shot/friction puzzle was readable. Did not finish all three greens."
+    },
+    {
+      "id": "soft-landing",
+      "ordinaryActions": "Tilted right briefly, held thrust, then coasted.",
+      "observed": "Fuel fell to 96%; tilt 21 degrees and horizontal speed 34 were visible. Changing thrust affected descent.",
+      "assessment": "Meaningful inertial control and useful telemetry. Degrees/radians instruction mismatch was found and fixed; no full landing completed in this review."
+    },
+    {
+      "id": "garden-guard",
+      "ordinaryActions": "Identified striped pest in visible square 7, resumed and pressed 7.",
+      "observed": "Earned 100 points and 1/12 pests without losing care. Pest artwork is visibly distinct from empty holes; row numbers help keyboard selection.",
+      "assessment": "Selective reaction mechanic and mobile composition were clear. Full 30 second shift not completed."
+    },
+    {
+      "id": "rope-skip",
+      "ordinaryActions": "Initially tried Space after button resume; after diagnosing focus issue, used a timed Jump button press from visual countdown.",
+      "observed": "Earned 100 points and 1/16 clean skips with all 3 catches remaining. Premature untutored presses did not instantly award progress.",
+      "assessment": "Countdown/rope cue teaches timing; focused resume regression now jumps correctly."
+    },
+    {
+      "id": "pinball-pocket",
+      "ordinaryActions": "Held left flipper while launching, then alternated right hold after the ball rose.",
+      "observed": "Three bumper contacts earned 300 points;3 balls remained. Flippers, gutter and drain were visually clear.",
+      "assessment": "Different physical objective from the original Afterglow volley game; full 1000 point target not completed."
+    },
+    {
+      "id": "harbor-catch",
+      "ordinaryActions": "Used visible fish direction/depth to hold the on-screen Cast control for about 1.5 seconds using native touch, then released.",
+      "observed": "Landed 1 fish on 1 cast, earned 321 points; hooked fish automatically reeled aboard as instructions promised.",
+      "assessment": "Touch behavior and staged cast/reel feedback felt coherent. Full 3 fish round not completed."
+    }
+  ],
+  "findings": [
+    {
+      "severity": "medium",
+      "id": "resume-focus",
+      "reproduction": "Rope Skip: Start, click/tap Pause, click/tap Resume, then press documented Space action.",
+      "before": "Focus remained on pause button; Space activated that button and paused again instead of jumping.",
+      "status": "fixed by owner and independently verified",
+      "after": "Fresh 320 px reload: focus CANVAS#game after Resume; Space left button label Pause and screenshot showed IN THE AIR."
+    },
+    {
+      "severity": "low",
+      "id": "landing-angle-units",
+      "reproduction": "Read Soft Landing rule 3 beside its live tilt HUD.",
+      "before": "Rules required 0.22 radians while HUD displayed degrees.",
+      "status": "fixed by owner and independently verified",
+      "after": "Fresh page now says within about 13 degrees of upright."
+    }
+  ],
+  "visualReview": {
+    "desktop": "Inspected paused desktop layouts for golf, lander and garden, and active desktop Rope Skip screenshot.",
+    "mobile": "Inspected active 390 px garden, golf, lander, harbor, pinball and rope screenshots; inspected fixed 320 px Rope Skip screen. No clipped controls or horizontal overflow observed in inspected views.",
+    "screenshots": [
+      "ordinary-arcade/golf-mobile.png",
+      "ordinary-arcade/harbor-mobile.png",
+      "ordinary-arcade/pinball-mobile.png",
+      "ordinary-arcade/rope-desktop.png",
+      "ordinary-arcade/resume-fixed-320.png"
+    ]
+  },
+  "distinctness": {
+    "observedSample": "Six sampled games use bank shots, velocity-controlled landing, selective pest tapping, periodic jumping, flipper rebounds and hook-depth interception. These are meaningfully different decision loops.",
+    "metadataOnlyForRemaining": "The other nine Arcade Room games were reviewed by stated mechanics only, not ordinary-play sessions.",
+    "overlapNotes": [
+      "Paper Links, Quiet Curl, Moon Basket and Table Bowls share aim/power controls, but declared objectives and physics differ: course navigation, proximity scoring, ballistic hoop entry and multi-ball pocketing. Only Paper Links was played in this audit.",
+      "Rope Skip and Beat Post share timing with original Pocket Orbit/Sky Stack, but periodic character clearance and multi-lane note delivery differ from stopping a marker or stacking slabs. Beat Post was not played.",
+      "Pinball Pocket shares ball rebounds with Afterglow, but flipper/gutter survival differs from a planned volley. No exact reskin identified in sampled play.",
+      "Original memory, sliding puzzle, lantern toggling, crate pushing, color flooding and anagrams do not duplicate sampled Arcade mechanics."
+    ]
+  },
+  "recommendation": "No remaining blocking ordinary-play issue found in the six-game sample after the two fixes. This is a sampled usability/mechanics audit, not an assertion that all 100 games were manually played or that every Arcade round was completed.",
+  "limits": [
+    "Six of 15 Arcade games received ordinary-play attempts; remaining nine were metadata review only.",
+    "Most attempts tested learning and early progression, not entire rounds. Existing solver coverage is separate evidence.",
+    "Desktop/mobile emulation used Chromium; no physical phone, other browser engine, screen reader or multi-person usability study.",
+    "Brief pause was used while inspecting some captured screens. Timing success after inspection is not evidence of untouched real-time difficulty."
+  ]
+}

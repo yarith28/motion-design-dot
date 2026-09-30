@@ -60,6 +60,46 @@
       "game": "harbor-catch",
       "issue": "Initial falling-object mechanic overlapped Signal Run",
       "resolution": "Redesigned as boat positioning plus lowering/reeling a fishing hook with finite casts and depth decisions"
+    },
+    {
+      "game": "four",
+      "issue": "Mobile column controls wrapped out of alignment",
+      "resolution": "Seven aligned controls and tappable board columns; all seven tested at320/390px with pointer and keyboard"
+    },
+    {
+      "game": "orchard",
+      "issue": "Original harvest goal needed no resource tradeoff",
+      "resolution": "Goal20 requires water replenishment; independent optimum enumeration and winning/losing UI rounds"
+    },
+    {
+      "game": "gear-train",
+      "issue": "One simple swap ended the entire game",
+      "resolution": "Three progressive constrained studies; minimum4,10,12swaps; individual mesh validation and stage controls"
+    },
+    {
+      "game": "pigment-lab",
+      "issue": "Ingredient recipes overlapped numerical ratio gameplay",
+      "resolution": "Redesigned around spatial positioning and rotating translucent ink stencils across three prints"
+    },
+    {
+      "game": "rope-skip",
+      "issue": "Resume left keyboard focus on Pause so Space paused again",
+      "resolution": "Resume returns focus to canvas; actual button-resume then Space regression passed"
+    },
+    {
+      "game": "soft-landing",
+      "issue": "Instruction angle units differed from HUD",
+      "resolution": "Instructions use degrees matching visible telemetry"
+    },
+    {
+      "game": "balance-mobile",
+      "issue": "Single small assignment lacked depth and a real beam visual",
+      "resolution": "Three progressive torque sculptures with asymmetric arms, fixed anchors and live beam/weight visual; all168legal arrangements independently enumerated"
     }
+  ],
+  "ordinaryPlayReviews": [
+    "ordinary-arcade-review.json",
+    "ordinary-board-review.json",
+    "ordinary-puzzle-review.json"
   ]
 }

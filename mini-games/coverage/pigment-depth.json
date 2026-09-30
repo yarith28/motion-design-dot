@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "mechanic": "Movable/rotatable subtractive-color stencils; no ingredient-count arithmetic",
+  "checks": [
+    {
+      "mobile": false,
+      "completeThreeStudies": true,
+      "legalInputs": true,
+      "invalidPlacementRejected": true,
+      "rotationLift": true,
+      "keyboard": true,
+      "restart": true,
+      "storage": "persisted",
+      "reducedMotion": false,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "mobile": true,
+      "completeThreeStudies": true,
+      "legalInputs": true,
+      "invalidPlacementRejected": true,
+      "rotationLift": true,
+      "keyboard": true,
+      "restart": true,
+      "storage": "blocked fallback",
+      "reducedMotion": true,
+      "overflow": false,
+      "errors": []
+    }
+  ],
+  "limits": [
+    "Chromium emulation only",
+    "Fixed authored studies",
+    "Colors also encoded with letters"
+  ]
+}

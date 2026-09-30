@@ -1,0 +1,77 @@
+{
+  "review": "Independent ordinary-input play audit",
+  "method": "Playwright used only as mouse/keyboard and visible DOM reader. No source answer, state snapshot, solver, or validation probe used for these play sessions. Reviewer had previously inspected family code in a separate technical review; this is not a blinded novice test.",
+  "viewports": [
+    {
+      "width": 1200,
+      "height": 900
+    },
+    {
+      "width": 320,
+      "height": 850
+    }
+  ],
+  "games": [
+    {
+      "id": "make-24",
+      "completed": true,
+      "chapters": 3,
+      "input": "Visible cards combined by mental arithmetic; multiplication, subtraction and division.",
+      "evidence": "mini-games/coverage/ordinary-puzzle/twenty-four-desktop.png"
+    },
+    {
+      "id": "ninefold",
+      "completed": true,
+      "input": "Filled eight missing cells using visible Sudoku clues; accepted valid completion.",
+      "evidence": "mini-games/coverage/ordinary-puzzle/ninefold-desktop.png"
+    },
+    {
+      "id": "one-letter-away",
+      "completed": true,
+      "input": "Invalid direct COLD\u2192WARM rejected; typed CORD,CARD,WARD,WARM from visible notebook.",
+      "evidence": "/tmp/ordinary-ladder-desktop.png"
+    },
+    {
+      "id": "proofreader",
+      "completed": true,
+      "chapters": 3,
+      "input": "Selected visible typos and typed address,different,cushion.",
+      "evidence": "mini-games/coverage/ordinary-puzzle/proofreader-mobile.png"
+    },
+    {
+      "id": "fraction-balance",
+      "completed": true,
+      "chapters": 3,
+      "input": "Composed visible target fractions with mental sums: 1/2+1/2;1/2+1/2+1/6;3/4+1/2.",
+      "evidence": "/tmp/ordinary-balance-mobile.png"
+    },
+    {
+      "id": "code-cabinet",
+      "completed": true,
+      "input": "Guessed111, observed two exact feedback dots, guessed112 and won. Restart returned moves0.",
+      "evidence": "/tmp/ordinary-code-mobile.png"
+    }
+  ],
+  "screenshotsInspected": [
+    "mini-games/coverage/ordinary-puzzle/twenty-four-desktop.png",
+    "mini-games/coverage/ordinary-puzzle/proofreader-mobile.png"
+  ],
+  "consoleErrors": [],
+  "manifestAudit": {
+    "scope": "10 existing games plus90 new family entries (all6 family manifests)",
+    "uniqueNewIds": 90,
+    "uniqueNewUrls": 90,
+    "newEntriesMissingRules": 0,
+    "finding": "Pigment Lab ingredient-count recipes overlap too closely with Ratio Mixer. Root accepted redesign into movable/rotatable translucent ink stencils; not signed off until updated game tested. Gear Train single-swap depth issue independently identified by another reviewer, author upgrade underway.",
+    "otherDistinctions": "Fraction Balance unordered rational composition vs Fraction Mosaic ordered seam packing; Sudoku vs Futoshiki vs Skyscrapers use distinct constraints; sports share aim controls but goals/physics differ; word pair games test different semantic/phonetic relations. No other direct reskin identified in manifest-level audit.",
+    "remediation": "Pigment redesigned as movable/rotatable translucent ink stencils, three stages; Gear upgraded to three adjacent-swap transmissions; Balance upgraded to three torque sculptures. Dedicated desktop/mobile suites and final full15game desktop/mobile Spatial regression all passed. These follow-up implementation checks are distinct from the six-game ordinary-input audit."
+  },
+  "actionableBugs": [],
+  "limits": [
+    "Six complete games independently played, not all100;100-game depth audit is manifest/rules-level only.",
+    "Mobile viewport emulation with mouse/keyboard, not physical touch/device testing.",
+    "No novice-user or screen-reader study.",
+    "Some curated puzzles have finite replay content.",
+    "Three screenshots saved in repository; remaining screenshot artifacts are temporary workspace paths."
+  ]
+}

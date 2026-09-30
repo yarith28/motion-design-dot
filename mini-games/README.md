@@ -1,6 +1,6 @@
 # Small Hours
 
-A small, expandable browser arcade with 70 finished games. The catalog is `index.html`, with working All / Adventure / Reflex / Memory / Puzzle / Strategy filters. Every displayed game is playable.
+A small, expandable browser arcade with 85 finished games. The catalog is `index.html`, with working All / Adventure / Reflex / Memory / Puzzle / Strategy filters. Every displayed game is playable.
 
 ## Play locally
 
@@ -167,3 +167,13 @@ Fifteen different number mechanics include card-expression building, merge-once 
 ## Word Room release batch
 
 Fifteen word games use distinct deduction, transformation, ordering, decoding and language mechanics. All completed on desktop and touch-mobile, including multi-chapter rounds, keyboard input, repeated restart, blocked storage and reduced motion. Independent review removed ambiguous compound pairings and corrected an invalid spelling challenge. Evidence: `coverage/word-room.json`, `tests/word-room.cjs` and `tests/word-room-edges.cjs`. The live catalog suite also passed all 70 entries locally.
+
+
+## Strategy Room release batch
+
+Fifteen strategy games span territory capture, sowing, impartial play, route blocking, solo planning, resource management and tactical movement. Every entry reached a terminal result through legal desktop and mobile UI play; competitive rounds can end in a loss. Orchard additionally has verified winning and losing routes, and its 20-fruit goal requires replenishing water. Engine checks cover rule constraints. Independent review found and fixed a Narrow Bridge deadlock by implementing legal pawn jumps and sidesteps, with the exact failing sequence now a regression case. Evidence: `coverage/strategy-room.json` and `tests/strategy-room.cjs`.
+
+
+## Independent ordinary-play review
+
+Three reviewers played 19 distinct sample games using visible instructions and normal controls, separately from the full completion suites. The review was not a blinded novice study. Findings led to aligned mobile column controls, clearer Rover failure messages, corrected pause/resume focus and angle units, a resource-constrained Orchard goal, and deeper Gear, Pigment and Balance games. Gear now has three constrained mechanical studies; Pigment uses movable/rotatable ink stencils; Balance uses three visible torque sculptures with independently enumerated valid arrangements. Review methods, individual observations, limits and screenshots are in `coverage/ordinary-*-review.json` and their companion image folders. Full scripted completions, ordinary-play samples and deployed launch/reset checks are separate evidence categories.

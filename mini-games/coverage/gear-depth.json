@@ -1,0 +1,58 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "mobile": false,
+      "completedStudies": 3,
+      "minimumSwaps": [
+        4,
+        10,
+        12
+      ],
+      "fullRoundSwaps": 26,
+      "ordinaryFirstSwapNotWin": true,
+      "productOnlyRejected": true,
+      "illegalNonNeighbor": true,
+      "lockedSocket": true,
+      "undo": true,
+      "stageReset": true,
+      "midProgressRestart": true,
+      "repeatedRestart": true,
+      "keyboard": true,
+      "reducedMotion": false,
+      "storage": "persisted record",
+      "overflow320": false,
+      "roverBlockedCommandFeedback": true,
+      "consoleErrors": []
+    },
+    {
+      "mobile": true,
+      "completedStudies": 3,
+      "minimumSwaps": [
+        4,
+        10,
+        12
+      ],
+      "fullRoundSwaps": 26,
+      "ordinaryFirstSwapNotWin": true,
+      "productOnlyRejected": true,
+      "illegalNonNeighbor": true,
+      "lockedSocket": true,
+      "undo": true,
+      "stageReset": true,
+      "midProgressRestart": true,
+      "repeatedRestart": true,
+      "keyboard": true,
+      "reducedMotion": true,
+      "storage": "blocked fallback",
+      "overflow320": false,
+      "roverBlockedCommandFeedback": true,
+      "consoleErrors": []
+    }
+  ],
+  "limits": [
+    "Chromium desktop and emulated mobile only.",
+    "Three authored studies; adjacent-swap shortest solutions independently enumerated by BFS.",
+    "No production state injection or response probes."
+  ]
+}

@@ -1,7 +1,7 @@
 {
-  "total": 70,
-  "fullCompletionDesktop": 70,
-  "fullCompletionMobile": 70,
+  "total": 85,
+  "fullCompletionDesktop": 85,
+  "fullCompletionMobile": 85,
   "limits": "Chromium; mobile touch emulated. Browser completions use legal inputs with solvers or read-only test observations where needed. No physical-device, other-engine, or screen-reader certification.",
   "games": [
     {
@@ -783,6 +783,171 @@
       "restart": true,
       "evidence": "coverage/word-room.json",
       "suite": "tests/word-room.cjs"
+    },
+    {
+      "id": "reversi",
+      "name": "Ink & Ivory",
+      "url": "strategy-room/?game=reversi",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobile": true,
+      "mobileInput": true,
+      "restart": true,
+      "evidence": "coverage/strategy-room.json",
+      "suite": "tests/strategy-room.cjs"
+    },
+    {
+      "id": "four",
+      "name": "Four Together",
+      "url": "strategy-room/?game=four",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobile": true,
+      "mobileInput": true,
+      "restart": true,
+      "evidence": "coverage/strategy-room.json",
+      "suite": "tests/strategy-room.cjs"
+    },
+    {
+      "id": "kalah",
+      "name": "Seed & Store",
+      "url": "strategy-room/?game=kalah",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobile": true,
+      "mobileInput": true,
+      "restart": true,
+      "evidence": "coverage/strategy-room.json",
+      "suite": "tests/strategy-room.cjs"
+    },
+    {
+      "id": "nim",
+      "name": "Matchstick Market",
+      "url": "strategy-room/?game=nim",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobile": true,
+      "mobileInput": true,
+      "restart": true,
+      "evidence": "coverage/strategy-room.json",
+      "suite": "tests/strategy-room.cjs"
+    },
+    {
+      "id": "fences",
+      "name": "Fence & Field",
+      "url": "strategy-room/?game=fences",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobile": true,
+      "mobileInput": true,
+      "restart": true,
+      "evidence": "coverage/strategy-room.json",
+      "suite": "tests/strategy-room.cjs"
+    },
+    {
+      "id": "peg",
+      "name": "Last Pebble",
+      "url": "strategy-room/?game=peg",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobile": true,
+      "mobileInput": true,
+      "restart": true,
+      "evidence": "coverage/strategy-room.json",
+      "suite": "tests/strategy-room.cjs"
+    },
+    {
+      "id": "pawns",
+      "name": "Royal Crossing",
+      "url": "strategy-room/?game=pawns",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobile": true,
+      "mobileInput": true,
+      "restart": true,
+      "evidence": "coverage/strategy-room.json",
+      "suite": "tests/strategy-room.cjs"
+    },
+    {
+      "id": "fleet",
+      "name": "Hidden Fleet",
+      "url": "strategy-room/?game=fleet",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobile": true,
+      "mobileInput": true,
+      "restart": true,
+      "evidence": "coverage/strategy-room.json",
+      "suite": "tests/strategy-room.cjs"
+    },
+    {
+      "id": "guild",
+      "name": "Border Guild",
+      "url": "strategy-room/?game=guild",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobile": true,
+      "mobileInput": true,
+      "restart": true,
+      "evidence": "coverage/strategy-room.json",
+      "suite": "tests/strategy-room.cjs"
+    },
+    {
+      "id": "orchard",
+      "name": "Orchard Keeper",
+      "url": "strategy-room/?game=orchard",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobile": true,
+      "mobileInput": true,
+      "restart": true,
+      "evidence": "coverage/strategy-room.json",
+      "suite": "tests/strategy-room.cjs"
+    },
+    {
+      "id": "bridge",
+      "name": "Narrow Bridge",
+      "url": "strategy-room/?game=bridge",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobile": true,
+      "mobileInput": true,
+      "restart": true,
+      "evidence": "coverage/strategy-room.json",
+      "suite": "tests/strategy-room.cjs"
+    },
+    {
+      "id": "hex",
+      "name": "Sixfold",
+      "url": "strategy-room/?game=hex",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobile": true,
+      "mobileInput": true,
+      "restart": true,
+      "evidence": "coverage/strategy-room.json",
+      "suite": "tests/strategy-room.cjs"
+    },
+    {
+      "id": "towers",
+      "name": "Watchtower",
+      "url": "strategy-room/?game=towers",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobile": true,
+      "mobileInput": true,
+      "restart": true,
+      "evidence": "coverage/strategy-room.json",
+      "suite": "tests/strategy-room.cjs"
+    },
+    {
+      "id": "siege",
+      "name": "Quiet Siege",
+      "url": "strategy-room/?game=siege",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobile": true,
+      "mobileInput": true,
+      "restart": true,
+      "evidence": "coverage/strategy-room.json",
+      "suite": "tests/strategy-room.cjs"
+    },
+    {
+      "id": "trade",
+      "name": "Trading Day",
+      "url": "strategy-room/?game=trade",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobile": true,
+      "mobileInput": true,
+      "restart": true,
+      "evidence": "coverage/strategy-room.json",
+      "suite": "tests/strategy-room.cjs"
     }
   ]
 }

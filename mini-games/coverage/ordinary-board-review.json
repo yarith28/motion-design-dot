@@ -1,0 +1,575 @@
+{
+  "review": "Independent ordinary-play board-room audit",
+  "scope": {
+    "rooms": [
+      "strategy-room",
+      "spatial-room"
+    ],
+    "manifestGamesReviewed": 30,
+    "gamesPlayed": 7,
+    "desktopViewport": [
+      1360,
+      1000
+    ],
+    "mobileViewport": [
+      390,
+      844
+    ],
+    "method": "Human-chosen ordinary UI button and keyboard actions based only on visible rules, visible DOM labels and screenshots. No room source, solver, hidden state, test probe or clock manipulation used. Manifest mechanics also compared.",
+    "limits": [
+      "Representative sample, not ordinary-play certification of all30games.",
+      "Chromium with emulated mobile; no physical device or other browser engine.",
+      "Separate authored-game solver suites are not represented as ordinary play here."
+    ]
+  },
+  "samples": [
+    {
+      "id": "orchard",
+      "room": "strategy-room",
+      "viewport": "desktop",
+      "observed": "First attempt planted four plots, harvested four, then collected rain four times: 16 fruit won at day12. Starting water funded the entire goal; rain was unnecessary for the win.",
+      "completed": true,
+      "screenshots": [
+        "ordinary-board/orchard-complete.png"
+      ]
+    },
+    {
+      "id": "four",
+      "room": "strategy-room",
+      "viewport": "mobile",
+      "observed": "Played columns4,4,3 against legal house replies. The initial controls wrapped6+1. After the owner fix, seven controls aligned with the board; a fresh column7 selection placed in the rightmost column.",
+      "completed": false,
+      "screenshots": [
+        "ordinary-board/four-mobile-before.png",
+        "ordinary-board/four-mobile-fixed.png"
+      ]
+    },
+    {
+      "id": "gear-train",
+      "room": "spatial-room",
+      "viewport": "desktop and mobile",
+      "observed": "Original game solved with one B/C swap. Revised game required four adjacent swaps to certify study1; Next opened study2 with six gears and a fixed input. Progression was independently verified; the full revised three-study game was not completed in this audit.",
+      "completedOriginalVersion": true,
+      "completedRevisedVersion": false,
+      "screenshots": [
+        "ordinary-board/gear-one-swap-before.png",
+        "ordinary-board/gear-study2-revised.png"
+      ]
+    },
+    {
+      "id": "rover-script",
+      "room": "spatial-room",
+      "viewport": "mobile",
+      "observed": "Tried a blocked Forward run, cleared it, then planned an18-command parcel-and-flag route from the visible grid and won. Revised failure feedback identifies command1 and the blocked cell. The long program wraps without overflow.",
+      "completed": true,
+      "screenshots": [
+        "ordinary-board/rover-route-mobile.png",
+        "ordinary-board/rover-error-fixed.png"
+      ]
+    },
+    {
+      "id": "shadow-turn",
+      "room": "spatial-room",
+      "viewport": "mobile",
+      "observed": "Matched the four shapes visually in seven rotations; the game advanced to study2 instead of ending. Reference thumbnails and mobile cards were clear.",
+      "completed": false,
+      "screenshots": [
+        "ordinary-board/shadow-study2-mobile.png"
+      ]
+    },
+    {
+      "id": "mirror-mail",
+      "room": "spatial-room",
+      "viewport": "desktop",
+      "observed": "Initial Send beam showed a miss and highlighted the path. Rotated mirrors1,3,4,5 by tracing the visible ray directions; the second send solved the board. It required reasoning through five reflections.",
+      "completed": true,
+      "screenshots": [
+        "ordinary-board/mirror-solved.png"
+      ]
+    },
+    {
+      "id": "balance-mobile",
+      "room": "spatial-room",
+      "viewport": "desktop",
+      "observed": "Visible torque arithmetic yielded weights2,4,1,3 across the four hooks. Four placements ended the entire game. Flat number cards did not depict the advertised kinetic sculpture.",
+      "completed": true,
+      "screenshots": [
+        "ordinary-board/balance-four-placement-before.png"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "id": "four-controls",
+      "severity": "medium",
+      "status": "resolved-and-independently-rechecked",
+      "finding": "At390px, column7 wrapped below the middle, breaking the spatial mapping between board and controls.",
+      "resolution": "Seven aligned controls now map correctly. A fresh ordinary column7 drop was verified."
+    },
+    {
+      "id": "gear-depth",
+      "severity": "medium",
+      "status": "resolved-and-independently-rechecked",
+      "finding": "The entire original game ended after one obvious swap, requiring only two clicks.",
+      "resolution": "Three studies now add adjacent exchanges, individual mesh constraints and a locked input. Study1 certification and entry into study2 were manually verified."
+    },
+    {
+      "id": "gear-stale-rules",
+      "severity": "medium",
+      "status": "pending-manifest-reconciliation",
+      "finding": "A fresh page after the progression fix showed old sidebar rules referring to four sockets, while study2 has six. An earlier load had the corrected copy, suggesting a concurrent manifest overwrite.",
+      "repro": "Open revised Gear Train, certify study1, then choose Next. Compare the six sockets with the four-socket sidebar text.",
+      "requested": "Reconcile the latest games.json Gear rules and description. Parent and owner were notified."
+    },
+    {
+      "id": "balance-depth-art",
+      "severity": "medium",
+      "status": "pending-owner-improvement",
+      "finding": "One four-weight assignment has only24 possible arrangements. Four placements complete the game, and the interface uses flat cards rather than a beam.",
+      "requested": "Parent accepted three authored studies and a proper beam visual; implementation remained pending at this audit close."
+    },
+    {
+      "id": "orchard-depth",
+      "severity": "low",
+      "status": "recommendation-forwarded",
+      "finding": "Starting8 water funds the entire16-fruit goal. Four remaining days can be spent on filler, so resource planning is not needed to win.",
+      "requested": "Consider a20-fruit goal or an equivalent authored constraint requiring rain and scheduling."
+    },
+    {
+      "id": "orchard-countdown-wording",
+      "severity": "low",
+      "status": "owner-reported-fixed",
+      "finding": "The planting day already counts, but feedback said three actions remained before ripeness.",
+      "resolution": "The owner changed the wording to two more actions. That copy change was not independently replayed in this audit."
+    },
+    {
+      "id": "rover-feedback",
+      "severity": "medium",
+      "status": "resolved-and-independently-rechecked",
+      "finding": "Failed runs originally gave only generic Keep exploring feedback, without identifying the offending command.",
+      "resolution": "A fresh Forward run identifies command1 and the blocked row/column. The caption separates program length from run attempts."
+    }
+  ],
+  "mechanicsAssessment": "No exact rule clones were identified across the30 manifest entries. Original Gear Train and Balance Mobile shared a thin four-number assignment presentation, despite ratio versus torque rules; the Gear revision adds meaningful constraints and progression. Reflection drawing versus rotation matching, and Hamiltonian paths versus directed beacon routes, have distinguishable goals and state rules. This is a manifest comparison, not gameplay validation of every entry.",
+  "pageErrors": [],
+  "horizontalOverflowObserved": false,
+  "publicationRecommendation": "Hold the pending Balance depth/art improvement and reconcileGear manifest copy. Other sampled functional concerns were resolved as noted; no blanket ordinary-play claim for unsampled games.",
+  "actions": [
+    {
+      "open": "http://127.0.0.1:8790/mini-games/strategy-room/?game=orchard",
+      "mobile": false
+    },
+    {
+      "url": "http://127.0.0.1:8790/mini-games/strategy-room/?game=orchard",
+      "click": "Plot 1: empty, plant for 2 water",
+      "n": 0
+    },
+    {
+      "url": "http://127.0.0.1:8790/mini-games/strategy-room/?game=orchard",
+      "click": "Plot 2: empty, plant for 2 water",
+      "n": 0
+    },
+    {
+      "url": "http://127.0.0.1:8790/mini-games/strategy-room/?game=orchard",
+      "click": "Plot 3: empty, plant for 2 water",
+      "n": 0
+    },
+    {
+      "url": "http://127.0.0.1:8790/mini-games/strategy-room/?game=orchard",
+      "click": "Plot 4: empty, plant for 2 water",
+      "n": 0
+    },
+    {
+      "url": "http://127.0.0.1:8790/mini-games/strategy-room/?game=orchard",
+      "click": "Plot 1: ripe, harvest 4 fruit",
+      "n": 0
+    },
+    {
+      "url": "http://127.0.0.1:8790/mini-games/strategy-room/?game=orchard",
+      "click": "Plot 2: ripe, harvest 4 fruit",
+      "n": 0
+    },
+    {
+      "url": "http://127.0.0.1:8790/mini-games/strategy-room/?game=orchard",
+      "click": "Plot 3: ripe, harvest 4 fruit",
+      "n": 0
+    },
+    {
+      "url": "http://127.0.0.1:8790/mini-games/strategy-room/?game=orchard",
+      "click": "Plot 4: ripe, harvest 4 fruit",
+      "n": 0
+    },
+    {
+      "url": "http://127.0.0.1:8790/mini-games/strategy-room/?game=orchard",
+      "click": "Spend one day collecting three water",
+      "n": 0
+    },
+    {
+      "url": "http://127.0.0.1:8790/mini-games/strategy-room/?game=orchard",
+      "click": "Spend one day collecting three water",
+      "n": 0
+    },
+    {
+      "url": "http://127.0.0.1:8790/mini-games/strategy-room/?game=orchard",
+      "click": "Spend one day collecting three water",
+      "n": 0
+    },
+    {
+      "url": "http://127.0.0.1:8790/mini-games/strategy-room/?game=orchard",
+      "click": "Spend one day collecting three water",
+      "n": 0
+    },
+    {
+      "open": "http://127.0.0.1:8790/mini-games/strategy-room/?game=four",
+      "mobile": true
+    },
+    {
+      "url": "http://127.0.0.1:8790/mini-games/strategy-room/?game=four",
+      "click": "Drop in column 4",
+      "n": 0
+    },
+    {
+      "url": "http://127.0.0.1:8790/mini-games/strategy-room/?game=four",
+      "click": "Drop in column 4",
+      "n": 0
+    },
+    {
+      "url": "http://127.0.0.1:8790/mini-games/strategy-room/?game=four",
+      "click": "Drop in column 3",
+      "n": 0
+    },
+    {
+      "open": "http://127.0.0.1:8790/mini-games/spatial-room/?game=gear-train",
+      "mobile": false
+    },
+    {
+      "url": "http://127.0.0.1:8790/mini-games/spatial-room/?game=gear-train",
+      "click": "Socket B, 24 teeth",
+      "n": 0
+    },
+    {
+      "url": "http://127.0.0.1:8790/mini-games/spatial-room/?game=gear-train",
+      "click": "Socket C, 12 teeth",
+      "n": 0
+    },
+    {
+      "open": "http://127.0.0.1:8790/mini-games/spatial-room/?game=rover-script",
+      "mobile": true
+    },
+    {
+      "url": "http://127.0.0.1:8790/mini-games/spatial-room/?game=rover-script",
+      "click": "Forward",
+      "n": 0
+    },
+    {
+      "url": "http://127.0.0.1:8790/mini-games/spatial-room/?game=rover-script",
+      "click": "Run route",
+      "n": 0
+    },
+    {
+      "url": "http://127.0.0.1:8790/mini-games/spatial-room/?game=rover-script",
+      "click": "Clear",
+      "n": 0
+    },
+    {
+      "url": "http://127.0.0.1:8790/mini-games/spatial-room/?game=rover-script",
+      "click": "Turn right",
+      "n": 0
+    },
+    {
+      "url": "http://127.0.0.1:8790/mini-games/spatial-room/?game=rover-script",
+      "click": "Forward",
+      "n": 0
+    },
+    {
+      "url": "http://127.0.0.1:8790/mini-games/spatial-room/?game=rover-script",
+      "click": "Forward",
+      "n": 0
+    },
+    {
+      "url": "http://127.0.0.1:8790/mini-games/spatial-room/?game=rover-script",
+      "click": "Turn left",
+      "n": 0
+    },
+    {
+      "url": "http://127.0.0.1:8790/mini-games/spatial-room/?game=rover-script",
+      "click": "Forward",
+      "n": 0
+    },
+    {
+      "url": "http://127.0.0.1:8790/mini-games/spatial-room/?game=rover-script",
+      "click": "Forward",
+      "n": 0
+    },
+    {
+      "url": "http://127.0.0.1:8790/mini-games/spatial-room/?game=rover-script",
+      "click": "Turn right",
+      "n": 0
+    },
+    {
+      "url": "http://127.0.0.1:8790/mini-games/spatial-room/?game=rover-script",
+      "click": "Turn right",
+      "n": 0
+    },
+    {
+      "url": "http://127.0.0.1:8790/mini-games/spatial-room/?game=rover-script",
+      "click": "Forward",
+      "n": 0
+    },
+    {
+      "url": "http://127.0.0.1:8790/mini-games/spatial-room/?game=rover-script",
+      "click": "Forward",
+      "n": 0
+    },
+    {
+      "url": "http://127.0.0.1:8790/mini-games/spatial-room/?game=rover-script",
+      "click": "Turn left",
+      "n": 0
+    },
+    {
+      "url": "http://127.0.0.1:8790/mini-games/spatial-room/?game=rover-script",
+      "click": "Forward",
+      "n": 0
+    },
+    {
+      "url": "http://127.0.0.1:8790/mini-games/spatial-room/?game=rover-script",
+      "click": "Forward",
+      "n": 0
+    },
+    {
+      "url": "http://127.0.0.1:8790/mini-games/spatial-room/?game=rover-script",
+      "click": "Turn left",
+      "n": 0
+    },
+    {
+      "url": "http://127.0.0.1:8790/mini-games/spatial-room/?game=rover-script",
+      "click": "Forward",
+      "n": 0
+    },
+    {
+      "url": "http://127.0.0.1:8790/mini-games/spatial-room/?game=rover-script",
+      "click": "Forward",
+      "n": 0
+    },
+    {
+      "url": "http://127.0.0.1:8790/mini-games/spatial-room/?game=rover-script",
+      "click": "Forward",
+      "n": 0
+    },
+    {
+      "url": "http://127.0.0.1:8790/mini-games/spatial-room/?game=rover-script",
+      "click": "Forward",
+      "n": 0
+    },
+    {
+      "url": "http://127.0.0.1:8790/mini-games/spatial-room/?game=rover-script",
+      "click": "Run route",
+      "n": 0
+    },
+    {
+      "open": "http://127.0.0.1:8790/mini-games/spatial-room/?game=shadow-turn",
+      "mobile": true
+    },
+    {
+      "url": "http://127.0.0.1:8790/mini-games/spatial-room/?game=shadow-turn",
+      "click": "Rotate silhouette 1",
+      "n": 0
+    },
+    {
+      "url": "http://127.0.0.1:8790/mini-games/spatial-room/?game=shadow-turn",
+      "click": "Rotate silhouette 2",
+      "n": 0
+    },
+    {
+      "url": "http://127.0.0.1:8790/mini-games/spatial-room/?game=shadow-turn",
+      "click": "Rotate silhouette 3",
+      "n": 0
+    },
+    {
+      "url": "http://127.0.0.1:8790/mini-games/spatial-room/?game=shadow-turn",
+      "click": "Rotate silhouette 4",
+      "n": 0
+    },
+    {
+      "url": "http://127.0.0.1:8790/mini-games/spatial-room/?game=shadow-turn",
+      "click": "Rotate silhouette 2",
+      "n": 0
+    },
+    {
+      "url": "http://127.0.0.1:8790/mini-games/spatial-room/?game=shadow-turn",
+      "click": "Rotate silhouette 2",
+      "n": 0
+    },
+    {
+      "url": "http://127.0.0.1:8790/mini-games/spatial-room/?game=shadow-turn",
+      "click": "Rotate silhouette 3",
+      "n": 0
+    },
+    {
+      "open": "http://127.0.0.1:8790/mini-games/spatial-room/?game=mirror-mail",
+      "mobile": false
+    },
+    {
+      "url": "http://127.0.0.1:8790/mini-games/spatial-room/?game=mirror-mail",
+      "click": "Send beam",
+      "n": 0
+    },
+    {
+      "url": "http://127.0.0.1:8790/mini-games/spatial-room/?game=mirror-mail",
+      "click": "Mirror 1: slash",
+      "n": 0
+    },
+    {
+      "url": "http://127.0.0.1:8790/mini-games/spatial-room/?game=mirror-mail",
+      "click": "Mirror 3: backslash",
+      "n": 0
+    },
+    {
+      "url": "http://127.0.0.1:8790/mini-games/spatial-room/?game=mirror-mail",
+      "click": "Mirror 4: backslash",
+      "n": 0
+    },
+    {
+      "url": "http://127.0.0.1:8790/mini-games/spatial-room/?game=mirror-mail",
+      "click": "Mirror 5: slash",
+      "n": 0
+    },
+    {
+      "url": "http://127.0.0.1:8790/mini-games/spatial-room/?game=mirror-mail",
+      "click": "Send beam",
+      "n": 0
+    },
+    {
+      "open": "http://127.0.0.1:8790/mini-games/strategy-room/?game=four",
+      "mobile": true
+    },
+    {
+      "url": "http://127.0.0.1:8790/mini-games/strategy-room/?game=four",
+      "click": "Drop in column 7",
+      "n": 0
+    },
+    {
+      "key": "Tab",
+      "url": "http://127.0.0.1:8790/mini-games/strategy-room/?game=four"
+    },
+    {
+      "open": "http://127.0.0.1:8790/mini-games/spatial-room/?game=balance-mobile",
+      "mobile": false
+    },
+    {
+      "url": "http://127.0.0.1:8790/mini-games/spatial-room/?game=balance-mobile",
+      "click": "2 kg",
+      "n": 0
+    },
+    {
+      "url": "http://127.0.0.1:8790/mini-games/spatial-room/?game=balance-mobile",
+      "click": "Hook 1",
+      "n": 0
+    },
+    {
+      "url": "http://127.0.0.1:8790/mini-games/spatial-room/?game=balance-mobile",
+      "click": "4 kg",
+      "n": 0
+    },
+    {
+      "url": "http://127.0.0.1:8790/mini-games/spatial-room/?game=balance-mobile",
+      "click": "Hook 2",
+      "n": 0
+    },
+    {
+      "url": "http://127.0.0.1:8790/mini-games/spatial-room/?game=balance-mobile",
+      "click": "1 kg",
+      "n": 0
+    },
+    {
+      "url": "http://127.0.0.1:8790/mini-games/spatial-room/?game=balance-mobile",
+      "click": "Hook 3",
+      "n": 0
+    },
+    {
+      "url": "http://127.0.0.1:8790/mini-games/spatial-room/?game=balance-mobile",
+      "click": "3 kg",
+      "n": 0
+    },
+    {
+      "url": "http://127.0.0.1:8790/mini-games/spatial-room/?game=balance-mobile",
+      "click": "Hook 4",
+      "n": 0
+    },
+    {
+      "open": "http://127.0.0.1:8790/mini-games/spatial-room/?game=gear-train",
+      "mobile": true
+    },
+    {
+      "url": "http://127.0.0.1:8790/mini-games/spatial-room/?game=gear-train",
+      "click": "Socket C, 12 teeth",
+      "n": 0
+    },
+    {
+      "url": "http://127.0.0.1:8790/mini-games/spatial-room/?game=gear-train",
+      "click": "Socket D, 8 teeth",
+      "n": 0
+    },
+    {
+      "url": "http://127.0.0.1:8790/mini-games/spatial-room/?game=gear-train",
+      "click": "Socket B, 24 teeth",
+      "n": 0
+    },
+    {
+      "url": "http://127.0.0.1:8790/mini-games/spatial-room/?game=gear-train",
+      "click": "Socket C, 8 teeth",
+      "n": 0
+    },
+    {
+      "url": "http://127.0.0.1:8790/mini-games/spatial-room/?game=gear-train",
+      "click": "Socket A, 16 teeth",
+      "n": 0
+    },
+    {
+      "url": "http://127.0.0.1:8790/mini-games/spatial-room/?game=gear-train",
+      "click": "Socket B, 8 teeth",
+      "n": 0
+    },
+    {
+      "url": "http://127.0.0.1:8790/mini-games/spatial-room/?game=gear-train",
+      "click": "Socket C, 24 teeth",
+      "n": 0
+    },
+    {
+      "url": "http://127.0.0.1:8790/mini-games/spatial-room/?game=gear-train",
+      "click": "Socket D, 12 teeth",
+      "n": 0
+    },
+    {
+      "url": "http://127.0.0.1:8790/mini-games/spatial-room/?game=gear-train",
+      "click": "Test the train",
+      "n": 0
+    },
+    {
+      "open": "http://127.0.0.1:8790/mini-games/spatial-room/?game=rover-script",
+      "mobile": true
+    },
+    {
+      "url": "http://127.0.0.1:8790/mini-games/spatial-room/?game=rover-script",
+      "click": "Forward",
+      "n": 0
+    },
+    {
+      "url": "http://127.0.0.1:8790/mini-games/spatial-room/?game=rover-script",
+      "click": "Run route",
+      "n": 0
+    }
+  ],
+  "followUpVerification": {
+    "gearMetadata": "Canonicalmanifest and browserdata reconciled; exactsidebar assertions in gear-depth suite passed.",
+    "balance": "Replaced single assignment withthree beamstudies; independent168arrangement enumeration and full desktop/mobile tests passed.",
+    "orchard": "Goal20 nowrequires waterreplenishment; winning20 and losing16 routes passed.",
+    "evidence": [
+      "gear-depth.json",
+      "balance-depth.json",
+      "spatial-room.json",
+      "strategy-room.json"
+    ],
+    "scope": "Owner/root followup after independent reviewer report; original observations retained."
+  }
+}
