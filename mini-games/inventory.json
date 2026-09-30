@@ -1,0 +1,344 @@
+{
+  "version": 1,
+  "total": 25,
+  "games": [
+    {
+      "id": "signal-run",
+      "name": "Signal Run",
+      "category": "reflex",
+      "url": "signal-run/",
+      "family": "original",
+      "status": "verified"
+    },
+    {
+      "id": "double-take",
+      "name": "Double Take",
+      "category": "memory",
+      "url": "double-take/",
+      "family": "original",
+      "status": "verified"
+    },
+    {
+      "id": "pocket-orbit",
+      "name": "Pocket Orbit",
+      "category": "reflex",
+      "url": "pocket-orbit/",
+      "family": "original",
+      "status": "verified"
+    },
+    {
+      "id": "good-order",
+      "name": "Good Order",
+      "category": "puzzle",
+      "url": "good-order/",
+      "family": "original",
+      "status": "verified"
+    },
+    {
+      "id": "afterglow",
+      "name": "Afterglow",
+      "category": "adventure",
+      "url": "afterglow/",
+      "family": "original",
+      "status": "verified"
+    },
+    {
+      "id": "lantern-lines",
+      "name": "Lantern Lines",
+      "category": "puzzle",
+      "url": "lantern-lines/",
+      "family": "original",
+      "status": "verified"
+    },
+    {
+      "id": "tide-pool",
+      "name": "Tide Pool",
+      "category": "strategy",
+      "url": "tide-pool/",
+      "family": "original",
+      "status": "verified"
+    },
+    {
+      "id": "word-weave",
+      "name": "Word Weave",
+      "category": "puzzle",
+      "url": "word-weave/",
+      "family": "original",
+      "status": "verified"
+    },
+    {
+      "id": "sky-stack",
+      "name": "Sky Stack",
+      "category": "reflex",
+      "url": "sky-stack/",
+      "family": "original",
+      "status": "verified"
+    },
+    {
+      "id": "pebble-post",
+      "name": "Pebble Post",
+      "category": "strategy",
+      "url": "pebble-post/",
+      "family": "original",
+      "status": "verified"
+    },
+    {
+      "id": "tangram-dock",
+      "name": "Tangram Dock",
+      "description": "Fit three unusual cargo shapes into a perfectly packed dock.",
+      "mechanic": "polyomino packing",
+      "rules": [
+        "Choose a piece, then an empty square for its top-left corner.",
+        "Fill every square without overlaps. Remove a placed piece by choosing it again."
+      ],
+      "controls": "Tap or click buttons. Tab and Enter / Space work throughout.",
+      "category": "puzzle",
+      "url": "spatial-room/?game=tangram-dock",
+      "accent": "#e4b07d",
+      "symbol": "▧",
+      "family": "spatial-room",
+      "status": "verified"
+    },
+    {
+      "id": "mirror-mail",
+      "name": "Mirror Mail",
+      "description": "Deliver a beam through a tiny mirrored sorting room.",
+      "mechanic": "ray reflection",
+      "rules": [
+        "Tap mirrors to turn them between / and \\.",
+        "Send light from the left entrance to the bottom delivery port."
+      ],
+      "controls": "Tap or click buttons. Tab and Enter / Space work throughout.",
+      "category": "puzzle",
+      "url": "spatial-room/?game=mirror-mail",
+      "accent": "#e4b07d",
+      "symbol": "↗",
+      "family": "spatial-room",
+      "status": "verified"
+    },
+    {
+      "id": "bilateral",
+      "name": "Bilateral",
+      "description": "Restore the missing half of a woven reflection.",
+      "mechanic": "reflection drawing",
+      "rules": [
+        "The left pattern is fixed. Toggle squares on the right.",
+        "Match the exact horizontal reflection across the seam."
+      ],
+      "controls": "Tap or click buttons. Tab and Enter / Space work throughout.",
+      "category": "puzzle",
+      "url": "spatial-room/?game=bilateral",
+      "accent": "#e4b07d",
+      "symbol": "◐",
+      "family": "spatial-room",
+      "status": "verified"
+    },
+    {
+      "id": "shadow-turn",
+      "name": "Shadow Turn",
+      "description": "Turn four silhouettes until their shadows agree.",
+      "mechanic": "independent shape rotation",
+      "rules": [
+        "Each large cutout turns one quarter clockwise when tapped.",
+        "Match all four cutouts to their small reference silhouettes.",
+        "Complete all three curated studies to finish the round."
+      ],
+      "controls": "Tap or click buttons. Tab and Enter / Space work throughout.",
+      "category": "puzzle",
+      "url": "spatial-room/?game=shadow-turn",
+      "accent": "#e4b07d",
+      "symbol": "◴",
+      "family": "spatial-room",
+      "status": "verified"
+    },
+    {
+      "id": "loose-ends",
+      "name": "Loose Ends",
+      "description": "Exchange crossing points to untangle a knotted necklace.",
+      "mechanic": "graph untangling",
+      "rules": [
+        "Select a point, then another point to swap their positions.",
+        "Remove every crossing between non-adjacent cords."
+      ],
+      "controls": "Tap or click buttons. Tab and Enter / Space work throughout.",
+      "category": "puzzle",
+      "url": "spatial-room/?game=loose-ends",
+      "accent": "#e4b07d",
+      "symbol": "⌘",
+      "family": "spatial-room",
+      "status": "verified"
+    },
+    {
+      "id": "gear-train",
+      "name": "Gear Train",
+      "description": "Build a reduction train with exactly the right output.",
+      "mechanic": "gear ratio arrangement",
+      "rules": [
+        "Select two gears to swap them into the four sockets.",
+        "The paired shafts must deliver the target output ratio."
+      ],
+      "controls": "Tap or click buttons. Tab and Enter / Space work throughout.",
+      "category": "puzzle",
+      "url": "spatial-room/?game=gear-train",
+      "accent": "#e4b07d",
+      "symbol": "⚙",
+      "family": "spatial-room",
+      "status": "verified"
+    },
+    {
+      "id": "measured-pour",
+      "name": "Measured Pour",
+      "description": "Measure a precise parcel of water with two unmarked jugs.",
+      "mechanic": "jug transfer",
+      "rules": [
+        "Fill, empty, or pour between the 3L and 5L jugs.",
+        "Leave exactly 4L in the large jug. Pours stop when full or empty."
+      ],
+      "controls": "Tap or click buttons. Tab and Enter / Space work throughout.",
+      "category": "puzzle",
+      "url": "spatial-room/?game=measured-pour",
+      "accent": "#e4b07d",
+      "symbol": "◒",
+      "family": "spatial-room",
+      "status": "verified"
+    },
+    {
+      "id": "rover-script",
+      "name": "Rover Script",
+      "description": "Write a short route for a little delivery rover.",
+      "mechanic": "robot programming",
+      "rules": [
+        "Queue forward, left, or right commands; Run executes the route.",
+        "Collect the parcel and reach the flag without hitting walls. Clear edits your program."
+      ],
+      "controls": "Tap or click buttons. Tab and Enter / Space work throughout.",
+      "category": "puzzle",
+      "url": "spatial-room/?game=rover-script",
+      "accent": "#e4b07d",
+      "symbol": "⌁",
+      "family": "spatial-room",
+      "status": "verified"
+    },
+    {
+      "id": "paper-trail",
+      "name": "Paper Trail",
+      "description": "Fold a marked strip into one perfectly aligned stack.",
+      "mechanic": "paper folding",
+      "rules": [
+        "Fold the left or right half onto the other half.",
+        "Match the target top-to-bottom layer order after three folds."
+      ],
+      "controls": "Tap or click buttons. Tab and Enter / Space work throughout.",
+      "category": "puzzle",
+      "url": "spatial-room/?game=paper-trail",
+      "accent": "#e4b07d",
+      "symbol": "▱",
+      "family": "spatial-room",
+      "status": "verified"
+    },
+    {
+      "id": "pigment-lab",
+      "name": "Pigment Lab",
+      "description": "Mix three transparent inks to a carefully measured shade.",
+      "mechanic": "subtractive color mixing",
+      "rules": [
+        "Add or remove drops of cyan, magenta, and yellow.",
+        "Match the recipe clues and the reference color exactly.",
+        "Complete all three curated studies to finish the round."
+      ],
+      "controls": "Tap or click buttons. Tab and Enter / Space work throughout.",
+      "category": "puzzle",
+      "url": "spatial-room/?game=pigment-lab",
+      "accent": "#e4b07d",
+      "symbol": "●",
+      "family": "spatial-room",
+      "status": "verified"
+    },
+    {
+      "id": "cable-loom",
+      "name": "Cable Loom",
+      "description": "Thread a cable through every brass peg in one stroke.",
+      "mechanic": "Hamiltonian path",
+      "rules": [
+        "Begin at S and tap a neighboring peg to extend the cable.",
+        "Visit every peg once, finishing at E. Undo retracts one segment."
+      ],
+      "controls": "Tap or click buttons. Tab and Enter / Space work throughout.",
+      "category": "puzzle",
+      "url": "spatial-room/?game=cable-loom",
+      "accent": "#e4b07d",
+      "symbol": "⌇",
+      "family": "spatial-room",
+      "status": "verified"
+    },
+    {
+      "id": "balance-mobile",
+      "name": "Balance Mobile",
+      "description": "Hang four weights to bring a kinetic sculpture to rest.",
+      "mechanic": "torque placement",
+      "rules": [
+        "Select a weight, then a hook. Choose a hung weight again to lift it.",
+        "Use every weight. Left and right torque must balance: weight × distance."
+      ],
+      "controls": "Tap or click buttons. Tab and Enter / Space work throughout.",
+      "category": "puzzle",
+      "url": "spatial-room/?game=balance-mobile",
+      "accent": "#e4b07d",
+      "symbol": "⚖",
+      "family": "spatial-room",
+      "status": "verified"
+    },
+    {
+      "id": "crate-crane",
+      "name": "Crate Crane",
+      "description": "Sort a little freight yard using only its top containers.",
+      "mechanic": "stack rearrangement",
+      "rules": [
+        "Select a stack to lift its top crate, then a destination.",
+        "Stacks hold three crates. Make the left stack all A and the right stack all B."
+      ],
+      "controls": "Tap or click buttons. Tab and Enter / Space work throughout.",
+      "category": "puzzle",
+      "url": "spatial-room/?game=crate-crane",
+      "accent": "#e4b07d",
+      "symbol": "▥",
+      "family": "spatial-room",
+      "status": "verified"
+    },
+    {
+      "id": "orbit-transfer",
+      "name": "Orbit Transfer",
+      "description": "Navigate a one-way constellation while collecting every beacon.",
+      "mechanic": "directed route planning",
+      "rules": [
+        "Travel along an available arrow from your current station.",
+        "Collect the three beacons, then dock at F before the 8-step fuel reserve runs out."
+      ],
+      "controls": "Tap or click buttons. Tab and Enter / Space work throughout.",
+      "category": "puzzle",
+      "url": "spatial-room/?game=orbit-transfer",
+      "accent": "#e4b07d",
+      "symbol": "✧",
+      "family": "spatial-room",
+      "status": "verified"
+    },
+    {
+      "id": "stamp-studio",
+      "name": "Stamp Studio",
+      "description": "Compose a print from overlapping transparent stamps.",
+      "mechanic": "set union composition",
+      "rules": [
+        "Toggle stamps in the tray to overlay their ink.",
+        "Match the target print. Ink only adds: extra squares cannot be erased by another stamp.",
+        "Complete all three curated studies to finish the round."
+      ],
+      "controls": "Tap or click buttons. Tab and Enter / Space work throughout.",
+      "category": "puzzle",
+      "url": "spatial-room/?game=stamp-studio",
+      "accent": "#e4b07d",
+      "symbol": "▦",
+      "family": "spatial-room",
+      "status": "verified"
+    }
+  ]
+}

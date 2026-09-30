@@ -1,0 +1,319 @@
+{
+  "passed": true,
+  "browser": "Chromium",
+  "notes": "All completions through legal click/tap inputs. Mobile320 reduced motion + blocked storage. Fixed crafted puzzles, no timing. Physical devices and screen readers untested.",
+  "checks": [
+    {
+      "id": "tangram-dock",
+      "mobile": false,
+      "completed": true,
+      "restart": true,
+      "keyboard": true,
+      "overflow": false,
+      "storageBlocked": false,
+      "reducedMotion": false
+    },
+    {
+      "id": "mirror-mail",
+      "mobile": false,
+      "completed": true,
+      "restart": true,
+      "keyboard": true,
+      "overflow": false,
+      "storageBlocked": false,
+      "reducedMotion": false
+    },
+    {
+      "id": "bilateral",
+      "mobile": false,
+      "completed": true,
+      "restart": true,
+      "keyboard": true,
+      "overflow": false,
+      "storageBlocked": false,
+      "reducedMotion": false
+    },
+    {
+      "id": "shadow-turn",
+      "mobile": false,
+      "completed": true,
+      "restart": true,
+      "keyboard": true,
+      "overflow": false,
+      "storageBlocked": false,
+      "reducedMotion": false
+    },
+    {
+      "id": "loose-ends",
+      "mobile": false,
+      "completed": true,
+      "restart": true,
+      "keyboard": true,
+      "overflow": false,
+      "storageBlocked": false,
+      "reducedMotion": false
+    },
+    {
+      "id": "gear-train",
+      "mobile": false,
+      "completed": true,
+      "restart": true,
+      "keyboard": true,
+      "overflow": false,
+      "storageBlocked": false,
+      "reducedMotion": false
+    },
+    {
+      "id": "measured-pour",
+      "mobile": false,
+      "completed": true,
+      "restart": true,
+      "keyboard": true,
+      "overflow": false,
+      "storageBlocked": false,
+      "reducedMotion": false
+    },
+    {
+      "id": "rover-script",
+      "mobile": false,
+      "completed": true,
+      "restart": true,
+      "keyboard": true,
+      "overflow": false,
+      "storageBlocked": false,
+      "reducedMotion": false
+    },
+    {
+      "id": "paper-trail",
+      "mobile": false,
+      "completed": true,
+      "restart": true,
+      "keyboard": true,
+      "overflow": false,
+      "storageBlocked": false,
+      "reducedMotion": false
+    },
+    {
+      "id": "pigment-lab",
+      "mobile": false,
+      "completed": true,
+      "restart": true,
+      "keyboard": true,
+      "overflow": false,
+      "storageBlocked": false,
+      "reducedMotion": false
+    },
+    {
+      "id": "cable-loom",
+      "mobile": false,
+      "completed": true,
+      "restart": true,
+      "keyboard": true,
+      "overflow": false,
+      "storageBlocked": false,
+      "reducedMotion": false
+    },
+    {
+      "id": "balance-mobile",
+      "mobile": false,
+      "completed": true,
+      "restart": true,
+      "keyboard": true,
+      "overflow": false,
+      "storageBlocked": false,
+      "reducedMotion": false
+    },
+    {
+      "id": "crate-crane",
+      "mobile": false,
+      "completed": true,
+      "restart": true,
+      "keyboard": true,
+      "overflow": false,
+      "storageBlocked": false,
+      "reducedMotion": false
+    },
+    {
+      "id": "orbit-transfer",
+      "mobile": false,
+      "completed": true,
+      "restart": true,
+      "keyboard": true,
+      "overflow": false,
+      "storageBlocked": false,
+      "reducedMotion": false
+    },
+    {
+      "id": "stamp-studio",
+      "mobile": false,
+      "completed": true,
+      "restart": true,
+      "keyboard": true,
+      "overflow": false,
+      "storageBlocked": false,
+      "reducedMotion": false
+    },
+    {
+      "id": "tangram-dock",
+      "mobile": true,
+      "completed": true,
+      "restart": true,
+      "keyboard": true,
+      "overflow": false,
+      "storageBlocked": true,
+      "reducedMotion": true
+    },
+    {
+      "id": "mirror-mail",
+      "mobile": true,
+      "completed": true,
+      "restart": true,
+      "keyboard": true,
+      "overflow": false,
+      "storageBlocked": true,
+      "reducedMotion": true
+    },
+    {
+      "id": "bilateral",
+      "mobile": true,
+      "completed": true,
+      "restart": true,
+      "keyboard": true,
+      "overflow": false,
+      "storageBlocked": true,
+      "reducedMotion": true
+    },
+    {
+      "id": "shadow-turn",
+      "mobile": true,
+      "completed": true,
+      "restart": true,
+      "keyboard": true,
+      "overflow": false,
+      "storageBlocked": true,
+      "reducedMotion": true
+    },
+    {
+      "id": "loose-ends",
+      "mobile": true,
+      "completed": true,
+      "restart": true,
+      "keyboard": true,
+      "overflow": false,
+      "storageBlocked": true,
+      "reducedMotion": true
+    },
+    {
+      "id": "gear-train",
+      "mobile": true,
+      "completed": true,
+      "restart": true,
+      "keyboard": true,
+      "overflow": false,
+      "storageBlocked": true,
+      "reducedMotion": true
+    },
+    {
+      "id": "measured-pour",
+      "mobile": true,
+      "completed": true,
+      "restart": true,
+      "keyboard": true,
+      "overflow": false,
+      "storageBlocked": true,
+      "reducedMotion": true
+    },
+    {
+      "id": "rover-script",
+      "mobile": true,
+      "completed": true,
+      "restart": true,
+      "keyboard": true,
+      "overflow": false,
+      "storageBlocked": true,
+      "reducedMotion": true
+    },
+    {
+      "id": "paper-trail",
+      "mobile": true,
+      "completed": true,
+      "restart": true,
+      "keyboard": true,
+      "overflow": false,
+      "storageBlocked": true,
+      "reducedMotion": true
+    },
+    {
+      "id": "pigment-lab",
+      "mobile": true,
+      "completed": true,
+      "restart": true,
+      "keyboard": true,
+      "overflow": false,
+      "storageBlocked": true,
+      "reducedMotion": true
+    },
+    {
+      "id": "cable-loom",
+      "mobile": true,
+      "completed": true,
+      "restart": true,
+      "keyboard": true,
+      "overflow": false,
+      "storageBlocked": true,
+      "reducedMotion": true
+    },
+    {
+      "id": "balance-mobile",
+      "mobile": true,
+      "completed": true,
+      "restart": true,
+      "keyboard": true,
+      "overflow": false,
+      "storageBlocked": true,
+      "reducedMotion": true
+    },
+    {
+      "id": "crate-crane",
+      "mobile": true,
+      "completed": true,
+      "restart": true,
+      "keyboard": true,
+      "overflow": false,
+      "storageBlocked": true,
+      "reducedMotion": true
+    },
+    {
+      "id": "orbit-transfer",
+      "mobile": true,
+      "completed": true,
+      "restart": true,
+      "keyboard": true,
+      "overflow": false,
+      "storageBlocked": true,
+      "reducedMotion": true
+    },
+    {
+      "id": "stamp-studio",
+      "mobile": true,
+      "completed": true,
+      "restart": true,
+      "keyboard": true,
+      "overflow": false,
+      "storageBlocked": true,
+      "reducedMotion": true
+    }
+  ],
+  "edgeChecks": [
+    "Wrong mirror path does not win",
+    "Rover wall collision allows edit and restart",
+    "Incorrect final paper layer order does not win",
+    "Orbit fuel exhaustion and restart",
+    "Crane same-stack invalid transfer and restart",
+    "Keyboard focus preserved after board rerender"
+  ],
+  "visualChecks": [
+    "390px Loose Ends layout",
+    "390px Stamp Studio after escaped-label correction"
+  ]
+}

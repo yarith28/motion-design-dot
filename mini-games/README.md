@@ -1,6 +1,6 @@
 # Small Hours
 
-A small, expandable browser arcade with ten finished games. The catalog is `index.html`, with working All / Adventure / Reflex / Memory / Puzzle / Strategy filters. Every displayed game is playable.
+A small, expandable browser arcade with 25 finished games. The catalog is `index.html`, with working All / Adventure / Reflex / Memory / Puzzle / Strategy filters. Every displayed game is playable.
 
 ## Play locally
 
@@ -143,3 +143,10 @@ Each new game uses optional local records via the existing shared storage helper
 Reproduce against a local server using `BASE_URL=http://127.0.0.1:8790 node mini-games/tests/<slug>.cjs`, where `<slug>` is `lantern-lines`, `tide-pool`, `word-weave`, `sky-stack`, or `pebble-post`. Existing regression suites accept the same `BASE_URL`. For the complete catalog smoke/asset suite use `LIVE_BASE_URL=http://127.0.0.1:8790 CHROMIUM_PATH=/usr/bin/chromium node mini-games/tests/live-pages.cjs`. Playwright and Chromium are test-only dependencies; the games need no installation or build.
 
 Limitations: Chromium only, with emulated touch; no physical devices, Safari, Firefox, or screen-reader verification. Solver/ideal-input runs validate rules and completions, not human difficulty. The spatial games still rely on visual board interpretation despite labeled controls/status. No new audio is included.
+
+
+## Spatial Room release batch
+
+Fifteen distinct spatial games join the original ten. The family manifest `spatial-room/games.json` documents each mechanic and route; `coverage/spatial-room.json` records all thirty full desktop/mobile completions. Tests include actual legal input, restart, invalid routes and transfers, keyboard focus, blocked storage, reduced motion, and 320px bounds. Shadow Turn, Pigment Lab, and Stamp Studio each contain three authored studies; the other spatial games are finite authored puzzles. An independent visual review corrected stamp label escaping and restored the shared brand header.
+
+Catalog search supports titles, mechanics and controls, combines with category filters, and offers clear empty results. The Grid/List choice continues to persist. Catalog previews show actual game boards. `tools/build-catalog.cjs` generates static cards from explicitly selected verified room manifests; no build is required to play. `inventory.json` is the playable inventory, while `inventory-plan.json` is the larger work plan and does not make planned entries playable. `progress.json` retains the last verified deployment and current batch state.
