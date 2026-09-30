@@ -1,6 +1,6 @@
 # Small Hours
 
-A small, expandable browser arcade with four finished games. The catalog is `index.html`, with working All / Reflex / Memory / Puzzle filters. Every displayed game is playable.
+A small, expandable browser arcade with five finished games. The catalog is `index.html`, with working All / Adventure / Reflex / Memory / Puzzle filters. Every displayed game is playable.
 
 ## Play locally
 
@@ -34,6 +34,18 @@ A 60-second lane-switching sprint: collect star signals, avoid orange X obstacle
 ## Good Order
 
 `good-order/index.html` is an untimed eight-tile sliding puzzle. Tap a neighboring tile, or use arrow keys to move the empty space. Arrange 1–8 in reading order, leaving the bottom-right space empty. The generator walks 32 legal moves from the solved position, never immediately reversing its previous move, and makes another move if it lands on the goal. Thus every starting position is solvable and unsolved. Show goal overlays a reference and prevents moves while open. The record (`small-hours-good-order-best`) is the fewest moves across completed random puzzles; puzzle difficulty varies, so this is a casual personal record, not a ranked comparison.
+
+## Afterglow
+
+`afterglow/index.html` is a three-garden ricochet expedition, with its own dusk-purple and peach art direction. Aim a volley of fireflies, use the walls for bank shots, and clear all pods before they descend into the soil. Numbered pods need that many damage points; flower pods burst into their neighbors, while green seeds add a firefly to the next volley. Between gardens choose more fireflies, more damage, or extra rescues. Every garden uses one of six shifted/reflected arrangements. A rescue moves pods back two rows; the run ends when another pod reaches the soil with no rescues left. Clear all three gardens to win.
+
+- Drag or tap the field, use the native angle slider, or press left/right arrows. Shift + arrows fine-tunes aim. Release fireflies, Enter/Space on its button, or Space on the field/slider launches.
+- The first returning firefly sets the next launch point. Recall ends the volley early and advances the pods. Volleys automatically return after 12 active seconds to avoid indefinitely trapped trajectories.
+- P / Escape and the pause button freeze both aiming and volleys. Blur and tab visibility changes pause automatically. Resume clears accumulated frame time. Restart discards every ball, particle, pending launch, score, and upgrade from the previous expedition.
+- Local best uses `small-hours-afterglow-best`, with the shared storage fallback. Points: 10 per damaging collision, 75 per opened pod, 250 per cleared garden, and a completion bonus of 500 plus 150 per unused rescue.
+- Optional oscillator-based Web Audio starts only after Sound on. Sound can be turned off at any time and is suspended while paused. Audio failure does not block gameplay. There are no external audio files.
+- Reduced motion removes decorative animation, trails, flashes, and particles. The essential ball movement remains. Canvas pixels adapt to device pixel ratio up to 2×; particles are capped at 250; physics uses a fixed 120 Hz step with a capped frame accumulator.
+- The visual physics field is not a fully nonvisual game. Controls and status are labeled, but bank-shot geometry requires sight.
 
 ## Shared behavior
 
@@ -75,3 +87,22 @@ Checks performed:
 - Re-ran the original Signal Run browser suite: a 60-second win with 29,500 points and three shields, a loss, restarts, navigation, storage fallback, and mobile controls passed.
 
 Run `node mini-games/tests/collection.cjs` after starting the local server. It supports the same `BASE_URL`, `CHROMIUM_PATH`, and `SCREENSHOT_DIR` overrides as the original suite; screenshots default to `/tmp/small-hours-collection`. No runtime dependencies or build step were added. Verification used Chromium with emulated touch, not physical devices, Safari, Firefox, or a screen reader. Automated ideal-input runs do not measure human difficulty. No website deployment or Pages changes were made.
+
+
+## Afterglow verification — 2026-09-30
+
+`tests/afterglow.cjs` uses real Chromium and Playwright over local HTTP. It injects a read-only observation probe into the test response, selects angles with the pure physics engine, and completes actual browser expeditions through the UI. No probe or auto-player is shipped in the game. The engine has a deterministic API so trajectories and edge cases can be inspected independently.
+
+Verified full three-garden victories on desktop and touch-emulated mobile, both upgrade transitions, all three upgrade choices across runs, the rescue and loss paths, five mid-volley restarts, new runs from both ending and pause states, arrow-key aiming, native slider keys, pointer dragging, touch aiming, keyboard launch, recall, best-score persistence, and catalog navigation. Paused ball state remained unchanged after three simulated seconds. Blur and visibility-change handlers were exercised. Sound was confirmed off with no AudioContext before opt-in, then toggled on/off without JavaScript errors. The mobile suite completed runs with reduced motion, blocked storage reads, and quota-style write failures; it checked 390px and 320px layouts and panel containment.
+
+Reviewed desktop, mobile, in-flight, upgrade, victory, and loss screenshots. A 90-frame real-time headless desktop sample averaged approximately 16.7 ms per frame (about 60 fps); this is a local smoke measurement, not a physical-device performance guarantee. The prior collection and Signal Run suites were rerun successfully; the catalog expectations now reflect five games and the Adventure filter. The standalone `node mini-games/tests/afterglow-engine.cjs` check also passed 162 trajectories across 18 garden arrangements, including near-horizontal and vertical launches, finite positions, bounded launches, and guaranteed volley return. The root redirect and Space-to-launch while the angle slider is focused were checked separately.
+
+Run `node mini-games/tests/afterglow.cjs` with Playwright and Chromium installed. Its default local server URL is `http://127.0.0.1:8781`; override `BASE_URL`, `CHROMIUM_PATH`, and `SCREENSHOT_DIR` as needed. Screenshots default to `/tmp/small-hours-afterglow`. Touch was emulated; no Safari, Firefox, physical-device, screen-reader, or audible speaker-quality testing was performed. Automated angle selection verifies mechanics and completion, not human difficulty.
+
+## GitHub Pages preparation and current blocker
+
+The root `index.html` redirects to `mini-games/`, and `.nojekyll` makes the repository ready for plain static publishing from **main / (root)**. No custom domain, DNS, paid service, or external asset hosting is involved.
+
+Pages activation was requested but could not be completed in this environment. The authenticated repository metadata reports `has_pages: false`. The available connector has no Pages settings action. A direct `gh api repos/yarith28/motion-design-dot/pages` request, including an escalated check, returns `Get "https://api.github.com/repos/yarith28/motion-design-dot/pages": Forbidden`. The public Pages URL also cannot be verified through this execution network (`CONNECT tunnel failed, response 403`). These are not deployment-success signals. No failing deployment workflow or new secret was added.
+
+To activate the prepared site, open [Settings → Pages](https://github.com/yarith28/motion-design-dot/settings/pages), select **Deploy from a branch**, choose **main** and **/(root)**, and Save. After GitHub finishes publishing, the expected catalog path is `https://yarith28.github.io/motion-design-dot/mini-games/`, with Afterglow at the `afterglow/` subpath. Those expected URLs are not claimed to be live. The root URL will lead to the catalog once Pages is enabled.

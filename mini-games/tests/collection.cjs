@@ -72,9 +72,9 @@ async function completeOrbit(page, touch=false) {
 (async()=>{
   const browser=await chromium.launch({executablePath:process.env.CHROMIUM_PATH||'/usr/bin/chromium',headless:true,args:['--no-sandbox']});
   const page=await browser.newPage({viewport:{width:1440,height:1100}});await instrument(page);
-  await page.goto(base+'/mini-games/');assert.equal(await page.locator('[data-category]:visible').count(),4);
+  await page.goto(base+'/mini-games/');assert.equal(await page.locator('[data-category]:visible').count(),5);
   await page.screenshot({path:out+'/catalog-desktop.png',fullPage:true});
-  for(const [filter,count] of [['memory',1],['puzzle',1],['reflex',2],['all',4]]) {
+  for(const [filter,count] of [['memory',1],['puzzle',1],['reflex',2],['adventure',1],['all',5]]) {
     await page.locator(`[data-filter="${filter}"]`).click();assert.equal(await page.locator('[data-category]:visible').count(),count);
   }
   await page.getByRole('link',{name:'Find your pairs'}).click();await page.clock.install();
@@ -122,7 +122,7 @@ async function completeOrbit(page, touch=false) {
       if(slug==='double-take')await completeMemory(mp,true);if(slug==='good-order')await completePuzzle(mp,true);if(slug==='pocket-orbit')await completeOrbit(mp,true);
       assert.match(await mp.locator('#storage-note').innerText(),/unavailable/);assert.equal(await mp.locator('#result').isVisible(),true);
       await mp.locator('#again').tap();await mp.setViewportSize({width:320,height:740});assert.equal(await mp.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);await mp.setViewportSize({width:390,height:844});
-      await mp.getByRole('link',{name:'All games'}).tap();await mp.waitForURL('**/mini-games/');await mp.locator('[data-category]').first().waitFor();assert.equal(await mp.locator('[data-category]:visible').count(),4);
+      await mp.getByRole('link',{name:'All games'}).tap();await mp.waitForURL('**/mini-games/');await mp.locator('[data-category]').first().waitFor();assert.equal(await mp.locator('[data-category]:visible').count(),5);
     }
     await context.close();
   }
