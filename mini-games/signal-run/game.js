@@ -26,19 +26,19 @@
     $('pause').innerHTML = 'Pause <kbd>P</kbd>'; updateUI(); say('Run started. Three shields.'); $('pause').focus({preventScroll:true});
   }
   function overlay(title, copy, button, overline) {
-    $('overlay-title').textContent = title; $('overlay-copy').textContent = copy; $('start').textContent = button;
+    $('overlay-title').textContent = title; $('overlay-copy').textContent = copy; $('start').replaceChildren(document.createTextNode(button)); const arrow = document.createElement('span'); arrow.textContent = '↗'; arrow.setAttribute('aria-hidden', 'true'); $('start').append(arrow);
     $('overline').textContent = overline; $('overlay-hint').textContent = '← → / A D to switch • or tap a lane';
     $('overlay').hidden = false; $('start').focus({preventScroll:true});
   }
   function pause() {
-    if (state === 'playing') { state = 'paused'; overlay('Take a breath.', 'Your run is right where you left it.', 'Resume run ↗', 'Connection on hold'); $('pause').innerHTML = 'Resume <kbd>P</kbd>'; say('Paused.'); }
+    if (state === 'playing') { state = 'paused'; overlay('Take a breath.', 'Your run is right where you left it.', 'Resume run', 'Connection on hold'); $('pause').innerHTML = 'Resume <kbd>P</kbd>'; say('Paused.'); }
     else if (state === 'paused') { state = 'playing'; $('overlay').hidden = true; $('pause').innerHTML = 'Pause <kbd>P</kbd>'; $('pause').focus({preventScroll:true}); say('Run resumed.'); }
   }
   function end(won) {
     state = 'ended'; const newBest = score > best;
     if (newBest) { best = score; try { localStorage.setItem('small-hours-signal-best', String(best)); } catch { storageAvailable = false; } recordUI(); }
     $('pause').disabled = true; $('feedback').textContent = '';
-    overlay(won ? 'Signal delivered.' : 'Connection lost.', `${score.toLocaleString()} points · ${Math.floor(elapsed)} seconds. ${won ? 'A full minute of flow. Beautifully done.' : 'A fresh frequency is one more run away.'}`, 'Play again ↻', newBest ? 'New personal best' : won ? 'Run complete / 60 seconds' : 'Out of shields');
+    overlay(won ? 'Signal delivered.' : 'Connection lost.', `${score.toLocaleString()} points · ${Math.floor(elapsed)} seconds. ${won ? 'A full minute of flow. Beautifully done.' : 'A fresh frequency is one more run away.'}`, 'Play again', newBest ? 'New personal best' : won ? 'Run complete / 60 seconds' : 'Out of shields');
     say(`${won ? 'Run complete' : 'Game over'}. ${score} points.${newBest ? ' New personal best.' : ''}`);
   }
   function selectLane(value) { if(state !== 'playing') return; lane = Math.max(0, Math.min(2, value)); updateUI(); }
