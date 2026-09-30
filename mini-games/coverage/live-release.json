@@ -1,0 +1,2211 @@
+{
+  "passed": true,
+  "sourceSha": "0821d41f2f1cf88b3cc92727a2bcc67cecf53010",
+  "base": "https://yarith28.github.io/motion-design-dot",
+  "catalogViews": "grid/list, persistence, filters, keyboard, 320px, reduced motion and blocked storage passed",
+  "rootRedirect": "https://yarith28.github.io/motion-design-dot/mini-games/",
+  "assetChecks": [
+    {
+      "file": "index.html",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/afterglow/engine.js",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/afterglow/game.css",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/afterglow/game.js",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/afterglow/index.html",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/arcade-room/games.json",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/arcade-room/index.html",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/arcade-room/room.css",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/arcade-room/room.js",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/catalog.css",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/catalog.js",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/common.js",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/double-take/game.css",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/double-take/game.js",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/double-take/index.html",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/good-order/game.css",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/good-order/game.js",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/good-order/index.html",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/index.html",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/inventory-plan.json",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/inventory.json",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/lantern-lines/game.css",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/lantern-lines/game.js",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/lantern-lines/index.html",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/logic-room/games.js",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/logic-room/games.json",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/logic-room/index.html",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/logic-room/room.css",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/logic-room/room.js",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/number-room/games.json",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/number-room/index.html",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/number-room/room.css",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/number-room/room.js",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/pebble-post/game.css",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/pebble-post/game.js",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/pebble-post/index.html",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/play.css",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/pocket-orbit/game.css",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/pocket-orbit/game.js",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/pocket-orbit/index.html",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/alphabet-trail.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/balance-beam.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/balance-mobile.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/beat-post.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/bilateral.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/bit-lanterns.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/bridge.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/bridgewater.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/cable-loom.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/center-letter.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/chain-reaction.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/clockwork.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/code-cabinet.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/compound-works.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/coordinate-courier.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/crate-crane.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/cross-sums.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/crossings.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/decimal-market.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/digit-forge.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/equal-measure.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/estimation-studio.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/factor-loom.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/fences.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/fleet.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/four.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/fraction-balance.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/fraction-mosaic.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/garden-guard.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/gear-train.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/guild.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/harbor-catch.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/hex.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/hidden-grove.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/kalah.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/kite-flight.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/last-letter.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/loop-letter.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/loose-ends.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/make-24.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/matchstick-equation.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/measured-pour.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/merge-garden.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/minefield.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/mirror-mail.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/moon-basket.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/nim.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/ninefold.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/odd-company.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/one-letter-away.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/orbit-transfer.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/orchard.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/paper-links.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/paper-trail.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/pawns.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/pearl-route.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/peg.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/picross-post.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/pigment-lab.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/pinball-pocket.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/precedence-lab.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/proofreader.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/quiet-curl.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/rally-club.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/ratio-mixer.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/reversi.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/rhyme-lines.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/rope-skip.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/rover-script.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/safe-passage.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/seat-at-table.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/secret-post.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/sentence-studio.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/sequence-detective.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/shadow-turn.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/siege.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/sky-view.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/soft-landing.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/stamp-studio.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/star-tow.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/table-bowls.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/taller-tales.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/tangram-dock.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/tent-pitch.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/tile-weave.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/towers.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/trade.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/velvet-snake.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/vowel-weather.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/previews/wordbreak.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/progress.json",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/signal-run/game.css",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/signal-run/game.js",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/signal-run/index.html",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/sky-stack/game.css",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/sky-stack/game.js",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/sky-stack/index.html",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/spatial-room/data.js",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/spatial-room/games.json",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/spatial-room/index.html",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/spatial-room/room.css",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/spatial-room/room.js",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/strategy-room/engines.mjs",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/strategy-room/game.js",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/strategy-room/games.json",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/strategy-room/index.html",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/strategy-room/room.css",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/styles.css",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/tide-pool/game.css",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/tide-pool/game.js",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/tide-pool/index.html",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/word-room/data.js",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/word-room/games.json",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/word-room/index.html",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/word-room/room.css",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/word-room/room.js",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/word-weave/game.css",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/word-weave/game.js",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "mini-games/word-weave/index.html",
+      "status": 200,
+      "match": true
+    }
+  ],
+  "results": [
+    {
+      "game": "signal-run",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/signal-run/",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "afterglow",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/afterglow/",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "double-take",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/double-take/",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "pocket-orbit",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/pocket-orbit/",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "good-order",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/good-order/",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "lantern-lines",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/lantern-lines/",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "tide-pool",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/tide-pool/",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "word-weave",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/word-weave/",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "sky-stack",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/sky-stack/",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "pebble-post",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/pebble-post/",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "tangram-dock",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/spatial-room/?game=tangram-dock",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "mirror-mail",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/spatial-room/?game=mirror-mail",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "bilateral",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/spatial-room/?game=bilateral",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "shadow-turn",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/spatial-room/?game=shadow-turn",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "loose-ends",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/spatial-room/?game=loose-ends",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "gear-train",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/spatial-room/?game=gear-train",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "measured-pour",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/spatial-room/?game=measured-pour",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "rover-script",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/spatial-room/?game=rover-script",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "paper-trail",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/spatial-room/?game=paper-trail",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "pigment-lab",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/spatial-room/?game=pigment-lab",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "cable-loom",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/spatial-room/?game=cable-loom",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "balance-mobile",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/spatial-room/?game=balance-mobile",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "crate-crane",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/spatial-room/?game=crate-crane",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "orbit-transfer",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/spatial-room/?game=orbit-transfer",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "stamp-studio",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/spatial-room/?game=stamp-studio",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "minefield",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/logic-room/?game=minefield",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "picross-post",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/logic-room/?game=picross-post",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "ninefold",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/logic-room/?game=ninefold",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "equal-measure",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/logic-room/?game=equal-measure",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "taller-tales",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/logic-room/?game=taller-tales",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "code-cabinet",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/logic-room/?game=code-cabinet",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "seat-at-table",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/logic-room/?game=seat-at-table",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "sky-view",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/logic-room/?game=sky-view",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "bridgewater",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/logic-room/?game=bridgewater",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "loop-letter",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/logic-room/?game=loop-letter",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "tent-pitch",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/logic-room/?game=tent-pitch",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "pearl-route",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/logic-room/?game=pearl-route",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "tile-weave",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/logic-room/?game=tile-weave",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "safe-passage",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/logic-room/?game=safe-passage",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "cross-sums",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/logic-room/?game=cross-sums",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "make-24",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/number-room/?game=make-24",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "merge-garden",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/number-room/?game=merge-garden",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "bit-lanterns",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/number-room/?game=bit-lanterns",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "fraction-balance",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/number-room/?game=fraction-balance",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "matchstick-equation",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/number-room/?game=matchstick-equation",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "factor-loom",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/number-room/?game=factor-loom",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "clockwork",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/number-room/?game=clockwork",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "fraction-mosaic",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/number-room/?game=fraction-mosaic",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "precedence-lab",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/number-room/?game=precedence-lab",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "estimation-studio",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/number-room/?game=estimation-studio",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "ratio-mixer",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/number-room/?game=ratio-mixer",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "sequence-detective",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/number-room/?game=sequence-detective",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "decimal-market",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/number-room/?game=decimal-market",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "digit-forge",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/number-room/?game=digit-forge",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "coordinate-courier",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/number-room/?game=coordinate-courier",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "hidden-grove",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/word-room/?game=hidden-grove",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "one-letter-away",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/word-room/?game=one-letter-away",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "last-letter",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/word-room/?game=last-letter",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "crossings",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/word-room/?game=crossings",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "wordbreak",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/word-room/?game=wordbreak",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "secret-post",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/word-room/?game=secret-post",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "center-letter",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/word-room/?game=center-letter",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "odd-company",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/word-room/?game=odd-company",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "alphabet-trail",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/word-room/?game=alphabet-trail",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "sentence-studio",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/word-room/?game=sentence-studio",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "compound-works",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/word-room/?game=compound-works",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "rhyme-lines",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/word-room/?game=rhyme-lines",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "vowel-weather",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/word-room/?game=vowel-weather",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "chain-reaction",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/word-room/?game=chain-reaction",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "proofreader",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/word-room/?game=proofreader",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "reversi",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/strategy-room/?game=reversi",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "four",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/strategy-room/?game=four",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "kalah",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/strategy-room/?game=kalah",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "nim",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/strategy-room/?game=nim",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "fences",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/strategy-room/?game=fences",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "peg",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/strategy-room/?game=peg",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "pawns",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/strategy-room/?game=pawns",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "fleet",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/strategy-room/?game=fleet",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "guild",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/strategy-room/?game=guild",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "orchard",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/strategy-room/?game=orchard",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "bridge",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/strategy-room/?game=bridge",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "hex",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/strategy-room/?game=hex",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "towers",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/strategy-room/?game=towers",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "siege",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/strategy-room/?game=siege",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "trade",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/strategy-room/?game=trade",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "velvet-snake",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/arcade-room/?game=velvet-snake",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "rally-club",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/arcade-room/?game=rally-club",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "paper-links",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/arcade-room/?game=paper-links",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "moon-basket",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/arcade-room/?game=moon-basket",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "quiet-curl",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/arcade-room/?game=quiet-curl",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "kite-flight",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/arcade-room/?game=kite-flight",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "soft-landing",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/arcade-room/?game=soft-landing",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "star-tow",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/arcade-room/?game=star-tow",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "garden-guard",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/arcade-room/?game=garden-guard",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "beat-post",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/arcade-room/?game=beat-post",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "pinball-pocket",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/arcade-room/?game=pinball-pocket",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "rope-skip",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/arcade-room/?game=rope-skip",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "table-bowls",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/arcade-room/?game=table-bowls",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "balance-beam",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/arcade-room/?game=balance-beam",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "harbor-catch",
+      "viewport": "desktop",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/arcade-room/?game=harbor-catch",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "signal-run",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/signal-run/",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "afterglow",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/afterglow/",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "double-take",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/double-take/",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "pocket-orbit",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/pocket-orbit/",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "good-order",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/good-order/",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "lantern-lines",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/lantern-lines/",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "tide-pool",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/tide-pool/",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "word-weave",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/word-weave/",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "sky-stack",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/sky-stack/",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "pebble-post",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/pebble-post/",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "tangram-dock",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/spatial-room/?game=tangram-dock",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "mirror-mail",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/spatial-room/?game=mirror-mail",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "bilateral",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/spatial-room/?game=bilateral",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "shadow-turn",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/spatial-room/?game=shadow-turn",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "loose-ends",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/spatial-room/?game=loose-ends",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "gear-train",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/spatial-room/?game=gear-train",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "measured-pour",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/spatial-room/?game=measured-pour",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "rover-script",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/spatial-room/?game=rover-script",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "paper-trail",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/spatial-room/?game=paper-trail",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "pigment-lab",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/spatial-room/?game=pigment-lab",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "cable-loom",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/spatial-room/?game=cable-loom",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "balance-mobile",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/spatial-room/?game=balance-mobile",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "crate-crane",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/spatial-room/?game=crate-crane",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "orbit-transfer",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/spatial-room/?game=orbit-transfer",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "stamp-studio",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/spatial-room/?game=stamp-studio",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "minefield",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/logic-room/?game=minefield",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "picross-post",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/logic-room/?game=picross-post",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "ninefold",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/logic-room/?game=ninefold",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "equal-measure",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/logic-room/?game=equal-measure",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "taller-tales",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/logic-room/?game=taller-tales",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "code-cabinet",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/logic-room/?game=code-cabinet",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "seat-at-table",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/logic-room/?game=seat-at-table",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "sky-view",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/logic-room/?game=sky-view",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "bridgewater",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/logic-room/?game=bridgewater",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "loop-letter",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/logic-room/?game=loop-letter",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "tent-pitch",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/logic-room/?game=tent-pitch",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "pearl-route",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/logic-room/?game=pearl-route",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "tile-weave",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/logic-room/?game=tile-weave",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "safe-passage",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/logic-room/?game=safe-passage",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "cross-sums",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/logic-room/?game=cross-sums",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "make-24",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/number-room/?game=make-24",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "merge-garden",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/number-room/?game=merge-garden",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "bit-lanterns",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/number-room/?game=bit-lanterns",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "fraction-balance",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/number-room/?game=fraction-balance",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "matchstick-equation",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/number-room/?game=matchstick-equation",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "factor-loom",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/number-room/?game=factor-loom",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "clockwork",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/number-room/?game=clockwork",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "fraction-mosaic",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/number-room/?game=fraction-mosaic",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "precedence-lab",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/number-room/?game=precedence-lab",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "estimation-studio",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/number-room/?game=estimation-studio",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "ratio-mixer",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/number-room/?game=ratio-mixer",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "sequence-detective",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/number-room/?game=sequence-detective",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "decimal-market",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/number-room/?game=decimal-market",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "digit-forge",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/number-room/?game=digit-forge",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "coordinate-courier",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/number-room/?game=coordinate-courier",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "hidden-grove",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/word-room/?game=hidden-grove",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "one-letter-away",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/word-room/?game=one-letter-away",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "last-letter",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/word-room/?game=last-letter",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "crossings",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/word-room/?game=crossings",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "wordbreak",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/word-room/?game=wordbreak",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "secret-post",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/word-room/?game=secret-post",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "center-letter",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/word-room/?game=center-letter",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "odd-company",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/word-room/?game=odd-company",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "alphabet-trail",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/word-room/?game=alphabet-trail",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "sentence-studio",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/word-room/?game=sentence-studio",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "compound-works",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/word-room/?game=compound-works",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "rhyme-lines",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/word-room/?game=rhyme-lines",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "vowel-weather",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/word-room/?game=vowel-weather",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "chain-reaction",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/word-room/?game=chain-reaction",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "proofreader",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/word-room/?game=proofreader",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "reversi",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/strategy-room/?game=reversi",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "four",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/strategy-room/?game=four",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "kalah",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/strategy-room/?game=kalah",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "nim",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/strategy-room/?game=nim",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "fences",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/strategy-room/?game=fences",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "peg",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/strategy-room/?game=peg",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "pawns",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/strategy-room/?game=pawns",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "fleet",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/strategy-room/?game=fleet",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "guild",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/strategy-room/?game=guild",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "orchard",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/strategy-room/?game=orchard",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "bridge",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/strategy-room/?game=bridge",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "hex",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/strategy-room/?game=hex",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "towers",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/strategy-room/?game=towers",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "siege",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/strategy-room/?game=siege",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "trade",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/strategy-room/?game=trade",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "velvet-snake",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/arcade-room/?game=velvet-snake",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "rally-club",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/arcade-room/?game=rally-club",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "paper-links",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/arcade-room/?game=paper-links",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "moon-basket",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/arcade-room/?game=moon-basket",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "quiet-curl",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/arcade-room/?game=quiet-curl",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "kite-flight",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/arcade-room/?game=kite-flight",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "soft-landing",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/arcade-room/?game=soft-landing",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "star-tow",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/arcade-room/?game=star-tow",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "garden-guard",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/arcade-room/?game=garden-guard",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "beat-post",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/arcade-room/?game=beat-post",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "pinball-pocket",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/arcade-room/?game=pinball-pocket",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "rope-skip",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/arcade-room/?game=rope-skip",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "table-bowls",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/arcade-room/?game=table-bowls",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "balance-beam",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/arcade-room/?game=balance-beam",
+      "status": 200,
+      "smoke": "passed"
+    },
+    {
+      "game": "harbor-catch",
+      "viewport": "mobile",
+      "url": "https://yarith28.github.io/motion-design-dot/mini-games/arcade-room/?game=harbor-catch",
+      "status": 200,
+      "smoke": "passed"
+    }
+  ],
+  "errors": [],
+  "failures": [],
+  "verificationRun": "https://github.com/yarith28/motion-design-dot/actions/runs/36751272054",
+  "pagesRun": "https://github.com/yarith28/motion-design-dot/actions/runs/36751270877",
+  "scope": "Real GitHub Pages Chromium desktop/mobile launch/reset and catalog checks; full completion rounds are recorded separately in coverage/index.json."
+}

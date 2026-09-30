@@ -186,3 +186,8 @@ Fifteen action and sports games add snake, paddle rally, mini-golf, basketball, 
 ## Complete collection evidence
 
 `inventory.json` lists all100 actual routes and mechanics. `coverage/index.json` maps every entry to full desktop and mobile completion evidence. The original ten game implementations and `motion-showcase/` remain unchanged by the90-game expansion. New games use local browser assets and need no build or external service. The Pages workflow verifies source bytes, root redirect, all catalog routes on desktop/mobile, Grid/List preference, search/filter counts, image loading, reduced motion, blocked storage and responsive containment. Live checks launch and restart the new games; full rounds are the separate local suites. `progress.json` identifies the last verified deployment; pushing a commit alone is not deployment proof.
+
+
+## Verified live100-game release
+
+The full collection is live at https://yarith28.github.io/motion-design-dot/mini-games/ . Release `0821d41f2f1cf88b3cc92727a2bcc67cecf53010` passed the [live browser workflow](https://github.com/yarith28/motion-design-dot/actions/runs/36751272054):200 game/viewport checks,159 matching runtime assets, no browser or asset failures. The root redirect, all100 entry links, catalog controls and desktop/mobile rendering were verified against the actual GitHub Pages site. The captured report is `coverage/live-release.json`. This release reference is intentionally immutable; subsequent documentation commits record evidence without changing gameplay.

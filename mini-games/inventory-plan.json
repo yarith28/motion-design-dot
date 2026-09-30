@@ -1,606 +1,606 @@
 {
   "target": 100,
-  "note": "Implementation inventory complete:100 distinct playable entries. Local completion evidence is in coverage/index.json; verified deployment status is in progress.json.",
+  "note": "Completed100-game inventory. All entries verified live; immutable release evidence is in coverage/live-release.json and full local completion evidence in coverage/index.json.",
   "games": [
     {
       "id": "signal-run",
       "name": "Signal Run",
       "family": "original",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "double-take",
       "name": "Double Take",
       "family": "original",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "pocket-orbit",
       "name": "Pocket Orbit",
       "family": "original",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "good-order",
       "name": "Good Order",
       "family": "original",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "afterglow",
       "name": "Afterglow",
       "family": "original",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "lantern-lines",
       "name": "Lantern Lines",
       "family": "original",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "tide-pool",
       "name": "Tide Pool",
       "family": "original",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "word-weave",
       "name": "Word Weave",
       "family": "original",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "sky-stack",
       "name": "Sky Stack",
       "family": "original",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "pebble-post",
       "name": "Pebble Post",
       "family": "original",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "tangram-dock",
       "name": "Tangram Dock",
       "family": "spatial-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "mirror-mail",
       "name": "Mirror Mail",
       "family": "spatial-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "bilateral",
       "name": "Bilateral",
       "family": "spatial-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "shadow-turn",
       "name": "Shadow Turn",
       "family": "spatial-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "loose-ends",
       "name": "Loose Ends",
       "family": "spatial-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "gear-train",
       "name": "Gear Train",
       "family": "spatial-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "measured-pour",
       "name": "Measured Pour",
       "family": "spatial-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "rover-script",
       "name": "Rover Script",
       "family": "spatial-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "paper-trail",
       "name": "Paper Trail",
       "family": "spatial-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "pigment-lab",
       "name": "Pigment Lab",
       "family": "spatial-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "cable-loom",
       "name": "Cable Loom",
       "family": "spatial-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "balance-mobile",
       "name": "Balance Mobile",
       "family": "spatial-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "crate-crane",
       "name": "Crate Crane",
       "family": "spatial-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "orbit-transfer",
       "name": "Orbit Transfer",
       "family": "spatial-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "stamp-studio",
       "name": "Stamp Studio",
       "family": "spatial-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "minefield",
       "name": "Minefield",
       "family": "logic-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "picross-post",
       "name": "Picross Post",
       "family": "logic-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "ninefold",
       "name": "Ninefold",
       "family": "logic-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "equal-measure",
       "name": "Equal Measure",
       "family": "logic-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "taller-tales",
       "name": "Taller Tales",
       "family": "logic-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "code-cabinet",
       "name": "Code Cabinet",
       "family": "logic-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "seat-at-table",
       "name": "Seat at the Table",
       "family": "logic-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "sky-view",
       "name": "Sky View",
       "family": "logic-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "bridgewater",
       "name": "Bridgewater",
       "family": "logic-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "loop-letter",
       "name": "Loop Letter",
       "family": "logic-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "tent-pitch",
       "name": "Tent Pitch",
       "family": "logic-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "pearl-route",
       "name": "Pearl Route",
       "family": "logic-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "tile-weave",
       "name": "Tile Weave",
       "family": "logic-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "safe-passage",
       "name": "Safe Passage",
       "family": "logic-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "cross-sums",
       "name": "Cross Sums",
       "family": "logic-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "make-24",
       "name": "Twenty Four",
       "family": "number-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "merge-garden",
       "name": "Merge Garden",
       "family": "number-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "bit-lanterns",
       "name": "Bit Lanterns",
       "family": "number-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "fraction-balance",
       "name": "Fraction Balance",
       "family": "number-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "matchstick-equation",
       "name": "Matchlight",
       "family": "number-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "factor-loom",
       "name": "Factor Loom",
       "family": "number-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "clockwork",
       "name": "Clockwork",
       "family": "number-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "fraction-mosaic",
       "name": "Fraction Mosaic",
       "family": "number-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "precedence-lab",
       "name": "Bracket Lab",
       "family": "number-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "estimation-studio",
       "name": "Scale Sense",
       "family": "number-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "ratio-mixer",
       "name": "Ratio Mixer",
       "family": "number-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "sequence-detective",
       "name": "Sequence Detective",
       "family": "number-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "decimal-market",
       "name": "Exact Change",
       "family": "number-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "digit-forge",
       "name": "Digit Forge",
       "family": "number-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "coordinate-courier",
       "name": "Coordinate Courier",
       "family": "number-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "hidden-grove",
       "name": "Hidden Grove",
       "family": "word-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "one-letter-away",
       "name": "One Letter Away",
       "family": "word-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "last-letter",
       "name": "Last Letter",
       "family": "word-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "crossings",
       "name": "Crossings",
       "family": "word-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "wordbreak",
       "name": "Wordbreak",
       "family": "word-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "secret-post",
       "name": "Secret Post",
       "family": "word-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "center-letter",
       "name": "Center Letter",
       "family": "word-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "odd-company",
       "name": "Odd Company",
       "family": "word-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "alphabet-trail",
       "name": "Alphabet Trail",
       "family": "word-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "sentence-studio",
       "name": "Sentence Studio",
       "family": "word-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "compound-works",
       "name": "Compound Works",
       "family": "word-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "rhyme-lines",
       "name": "Rhyme Lines",
       "family": "word-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "vowel-weather",
       "name": "Vowel Weather",
       "family": "word-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "chain-reaction",
       "name": "Chain Reaction",
       "family": "word-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "proofreader",
       "name": "Proofreader",
       "family": "word-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "reversi",
       "name": "Ink & Ivory",
       "family": "strategy-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "four",
       "name": "Four Together",
       "family": "strategy-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "kalah",
       "name": "Seed & Store",
       "family": "strategy-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "nim",
       "name": "Matchstick Market",
       "family": "strategy-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "fences",
       "name": "Fence & Field",
       "family": "strategy-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "peg",
       "name": "Last Pebble",
       "family": "strategy-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "pawns",
       "name": "Royal Crossing",
       "family": "strategy-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "fleet",
       "name": "Hidden Fleet",
       "family": "strategy-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "guild",
       "name": "Border Guild",
       "family": "strategy-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "orchard",
       "name": "Orchard Keeper",
       "family": "strategy-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "bridge",
       "name": "Narrow Bridge",
       "family": "strategy-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "hex",
       "name": "Sixfold",
       "family": "strategy-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "towers",
       "name": "Watchtower",
       "family": "strategy-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "siege",
       "name": "Quiet Siege",
       "family": "strategy-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "trade",
       "name": "Trading Day",
       "family": "strategy-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "velvet-snake",
       "name": "Velvet Snake",
       "family": "arcade-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "rally-club",
       "name": "Rally Club",
       "family": "arcade-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "paper-links",
       "name": "Paper Links",
       "family": "arcade-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "moon-basket",
       "name": "Moon Basket",
       "family": "arcade-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "quiet-curl",
       "name": "Quiet Curl",
       "family": "arcade-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "kite-flight",
       "name": "Kite Flight",
       "family": "arcade-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "soft-landing",
       "name": "Soft Landing",
       "family": "arcade-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "star-tow",
       "name": "Star Tow",
       "family": "arcade-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "garden-guard",
       "name": "Garden Guard",
       "family": "arcade-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "beat-post",
       "name": "Beat Post",
       "family": "arcade-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "pinball-pocket",
       "name": "Pinball Pocket",
       "family": "arcade-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "rope-skip",
       "name": "Rope Skip",
       "family": "arcade-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "table-bowls",
       "name": "Table Bowls",
       "family": "arcade-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "balance-beam",
       "name": "Balance Beam",
       "family": "arcade-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     },
     {
       "id": "harbor-catch",
       "name": "Harbor Catch",
       "family": "arcade-room",
-      "status": "verified-locally"
+      "status": "verified-live"
     }
   ]
 }

@@ -1,9 +1,9 @@
 {
   "target": 100,
-  "verifiedLive": 85,
-  "liveCommit": "5102a3c6930e70411aabedba76d1c332b8dacd68",
-  "liveVerificationRun": "https://github.com/yarith28/motion-design-dot/actions/runs/36750744623",
-  "phase": "Publishing final100-game release; all local completion and catalog checks passed",
+  "verifiedLive": 100,
+  "liveCommit": "0821d41f2f1cf88b3cc92727a2bcc67cecf53010",
+  "liveVerificationRun": "https://github.com/yarith28/motion-design-dot/actions/runs/36751272054",
+  "phase": "Complete:100 playable games verified locally and live",
   "publicationRule": "Only passing, completed entries are linked in the catalog. Planned inventory does not count as playable.",
   "collections": [
     {
@@ -34,10 +34,12 @@
     {
       "id": "arcade-room",
       "target": 15,
-      "status": "verified locally; independently reviewed; catalog integrated"
+      "status": "verified live"
     }
   ],
   "catalogPlayable": 100,
   "verifiedLocal": 100,
-  "localVerificationNote": "All100 current games completed desktop/mobile; ordinary-play review fixes and deeper spatial studies retested."
+  "localVerificationNote": "All100 current games completed desktop/mobile. Independent ordinary-play review sampled19games and all resulting fixes were retested.",
+  "liveEvidence": "coverage/live-release.json",
+  "liveCommitMeaning": "Verified gameplay release. Subsequent evidence-only commits preserve this release reference."
 }
