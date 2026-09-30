@@ -1,7 +1,7 @@
 {
-  "total": 85,
-  "fullCompletionDesktop": 85,
-  "fullCompletionMobile": 85,
+  "total": 100,
+  "fullCompletionDesktop": 100,
+  "fullCompletionMobile": 100,
   "limits": "Chromium; mobile touch emulated. Browser completions use legal inputs with solvers or read-only test observations where needed. No physical-device, other-engine, or screen-reader certification.",
   "games": [
     {
@@ -948,6 +948,171 @@
       "restart": true,
       "evidence": "coverage/strategy-room.json",
       "suite": "tests/strategy-room.cjs"
+    },
+    {
+      "id": "velvet-snake",
+      "name": "Velvet Snake",
+      "url": "arcade-room/?game=velvet-snake",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobile": true,
+      "mobileInput": true,
+      "restart": true,
+      "evidence": "coverage/arcade-room.json",
+      "suite": "tests/arcade-room.cjs"
+    },
+    {
+      "id": "rally-club",
+      "name": "Rally Club",
+      "url": "arcade-room/?game=rally-club",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobile": true,
+      "mobileInput": true,
+      "restart": true,
+      "evidence": "coverage/arcade-room.json",
+      "suite": "tests/arcade-room.cjs"
+    },
+    {
+      "id": "paper-links",
+      "name": "Paper Links",
+      "url": "arcade-room/?game=paper-links",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobile": true,
+      "mobileInput": true,
+      "restart": true,
+      "evidence": "coverage/arcade-room.json",
+      "suite": "tests/arcade-room.cjs"
+    },
+    {
+      "id": "moon-basket",
+      "name": "Moon Basket",
+      "url": "arcade-room/?game=moon-basket",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobile": true,
+      "mobileInput": true,
+      "restart": true,
+      "evidence": "coverage/arcade-room.json",
+      "suite": "tests/arcade-room.cjs"
+    },
+    {
+      "id": "quiet-curl",
+      "name": "Quiet Curl",
+      "url": "arcade-room/?game=quiet-curl",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobile": true,
+      "mobileInput": true,
+      "restart": true,
+      "evidence": "coverage/arcade-room.json",
+      "suite": "tests/arcade-room.cjs"
+    },
+    {
+      "id": "kite-flight",
+      "name": "Kite Flight",
+      "url": "arcade-room/?game=kite-flight",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobile": true,
+      "mobileInput": true,
+      "restart": true,
+      "evidence": "coverage/arcade-room.json",
+      "suite": "tests/arcade-room.cjs"
+    },
+    {
+      "id": "soft-landing",
+      "name": "Soft Landing",
+      "url": "arcade-room/?game=soft-landing",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobile": true,
+      "mobileInput": true,
+      "restart": true,
+      "evidence": "coverage/arcade-room.json",
+      "suite": "tests/arcade-room.cjs"
+    },
+    {
+      "id": "star-tow",
+      "name": "Star Tow",
+      "url": "arcade-room/?game=star-tow",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobile": true,
+      "mobileInput": true,
+      "restart": true,
+      "evidence": "coverage/arcade-room.json",
+      "suite": "tests/arcade-room.cjs"
+    },
+    {
+      "id": "garden-guard",
+      "name": "Garden Guard",
+      "url": "arcade-room/?game=garden-guard",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobile": true,
+      "mobileInput": true,
+      "restart": true,
+      "evidence": "coverage/arcade-room.json",
+      "suite": "tests/arcade-room.cjs"
+    },
+    {
+      "id": "beat-post",
+      "name": "Beat Post",
+      "url": "arcade-room/?game=beat-post",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobile": true,
+      "mobileInput": true,
+      "restart": true,
+      "evidence": "coverage/arcade-room.json",
+      "suite": "tests/arcade-room.cjs"
+    },
+    {
+      "id": "pinball-pocket",
+      "name": "Pinball Pocket",
+      "url": "arcade-room/?game=pinball-pocket",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobile": true,
+      "mobileInput": true,
+      "restart": true,
+      "evidence": "coverage/arcade-room.json",
+      "suite": "tests/arcade-room.cjs"
+    },
+    {
+      "id": "rope-skip",
+      "name": "Rope Skip",
+      "url": "arcade-room/?game=rope-skip",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobile": true,
+      "mobileInput": true,
+      "restart": true,
+      "evidence": "coverage/arcade-room.json",
+      "suite": "tests/arcade-room.cjs"
+    },
+    {
+      "id": "table-bowls",
+      "name": "Table Bowls",
+      "url": "arcade-room/?game=table-bowls",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobile": true,
+      "mobileInput": true,
+      "restart": true,
+      "evidence": "coverage/arcade-room.json",
+      "suite": "tests/arcade-room.cjs"
+    },
+    {
+      "id": "balance-beam",
+      "name": "Balance Beam",
+      "url": "arcade-room/?game=balance-beam",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobile": true,
+      "mobileInput": true,
+      "restart": true,
+      "evidence": "coverage/arcade-room.json",
+      "suite": "tests/arcade-room.cjs"
+    },
+    {
+      "id": "harbor-catch",
+      "name": "Harbor Catch",
+      "url": "arcade-room/?game=harbor-catch",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobile": true,
+      "mobileInput": true,
+      "restart": true,
+      "evidence": "coverage/arcade-room.json",
+      "suite": "tests/arcade-room.cjs"
     }
   ]
 }

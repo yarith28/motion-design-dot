@@ -1,0 +1,302 @@
+[
+  {
+    "id": "velvet-snake",
+    "name": "Velvet Snake",
+    "category": "arcade",
+    "description": "A slow little appetite. A growing little problem.",
+    "mechanic": "Steer a grid snake to gather twelve berries without touching walls or its own tail.",
+    "rules": [
+      "Collect 12 berries to finish your garden walk.",
+      "Every berry grows your snake. Walls and your own tail end the walk.",
+      "Choose your direction early. You cannot turn straight back into yourself."
+    ],
+    "controls": "Arrow keys or WASD; tap the four direction buttons.",
+    "url": "arcade-room/?game=velvet-snake",
+    "accent": "#b6d2a3",
+    "symbol": "⌁",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#pause"
+    }
+  },
+  {
+    "id": "rally-club",
+    "name": "Rally Club",
+    "category": "sports",
+    "description": "An after-hours table for two.",
+    "mechanic": "Paddle versus an imperfect opponent; win five points before the computer.",
+    "rules": [
+      "Move your paddle to return the ball. First to five wins.",
+      "Hit nearer a paddle edge to send a sharper angle.",
+      "Your opponent reacts slowly. Change the angle to find an opening."
+    ],
+    "controls": "Up/Down or W/S; drag on the court, or hold the direction buttons.",
+    "url": "arcade-room/?game=rally-club",
+    "accent": "#d4b8cf",
+    "symbol": "↔",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#pause"
+    }
+  },
+  {
+    "id": "paper-links",
+    "name": "Paper Links",
+    "category": "sports",
+    "description": "Three tiny greens. A patient line.",
+    "mechanic": "Aim and power a friction-driven golf ball through three obstacle courses.",
+    "rules": [
+      "Sink a ball on each of three miniature greens.",
+      "Drag from the ball toward your target: farther means stronger.",
+      "Use the walls to bank. Finish all greens within 12 strokes."
+    ],
+    "controls": "Drag from the ball then release; Left/Right aim, Up/Down power, Space shoots.",
+    "url": "arcade-room/?game=paper-links",
+    "accent": "#b6d2a3",
+    "symbol": "⚑",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#pause"
+    }
+  },
+  {
+    "id": "moon-basket",
+    "name": "Moon Basket",
+    "category": "sports",
+    "description": "Put a soft arc into the evening.",
+    "mechanic": "Adjust a ballistic shot to pass downward through a basketball hoop.",
+    "rules": [
+      "Make three baskets in eight shots.",
+      "Adjust the launch angle and strength before each shot.",
+      "The ball must travel down through the hoop. A higher arc helps."
+    ],
+    "controls": "Left/Right angle, Up/Down strength; Space or Shoot. Drag upward from the ball to aim.",
+    "url": "arcade-room/?game=moon-basket",
+    "accent": "#ecc096",
+    "symbol": "◡",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#pause"
+    }
+  },
+  {
+    "id": "quiet-curl",
+    "name": "Quiet Curl",
+    "category": "sports",
+    "description": "Three stones. One quiet center.",
+    "mechanic": "Aim and send three curling stones across friction ice to score proximity points.",
+    "rules": [
+      "Send three stones toward the house.",
+      "A stone inside the outer ring earns points; the center earns most.",
+      "Score at least 120 total. Your stones can bump one another."
+    ],
+    "controls": "Left/Right aim, Up/Down strength; Space or Release. Drag toward the target to aim.",
+    "url": "arcade-room/?game=quiet-curl",
+    "accent": "#b9d8e3",
+    "symbol": "◎",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#pause"
+    }
+  },
+  {
+    "id": "kite-flight",
+    "name": "Kite Flight",
+    "category": "arcade",
+    "description": "A ribbon of air between the rooftops.",
+    "mechanic": "Hold-to-rise and release-to-fall flying through ten scrolling gates.",
+    "rules": [
+      "Guide your kite through ten openings.",
+      "Hold Lift to rise; let go to glide down.",
+      "Touching a gate or the top/bottom ends the flight."
+    ],
+    "controls": "Hold Space, the Lift button, or the sky; release to glide.",
+    "url": "arcade-room/?game=kite-flight",
+    "accent": "#b9d8e3",
+    "symbol": "◇",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#pause"
+    }
+  },
+  {
+    "id": "soft-landing",
+    "name": "Soft Landing",
+    "category": "arcade",
+    "description": "A small engine. A softer arrival.",
+    "mechanic": "Rotate and thrust a lunar craft, managing velocity and fuel to land safely.",
+    "rules": [
+      "Land on the striped pad, upright and gently.",
+      "Use thrust to slow your descent; tilt to drift sideways.",
+      "Touch down below 32 vertical speed and 22 sideways speed, within about 13 degrees of upright."
+    ],
+    "controls": "Left/Right rotate; hold Space or Thrust. Speed and fuel are shown below the sky.",
+    "url": "arcade-room/?game=soft-landing",
+    "accent": "#c4bfd8",
+    "symbol": "△",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#pause"
+    }
+  },
+  {
+    "id": "star-tow",
+    "name": "Star Tow",
+    "category": "arcade",
+    "description": "Bring the strays back to their star.",
+    "mechanic": "Steer an inertial spacecraft to pick up three cargo pods and deliver each to a central dock.",
+    "rules": [
+      "Touch a gold pod to tow it. Carry one at a time.",
+      "Bring it into the central dock slowly (below 70 speed).",
+      "Deliver all three before the 60-second shift ends. Coast and brake to turn."
+    ],
+    "controls": "Left/Right rotate, Space thrust, Down brake; use on-screen controls.",
+    "url": "arcade-room/?game=star-tow",
+    "accent": "#c4bfd8",
+    "symbol": "✧",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#pause"
+    }
+  },
+  {
+    "id": "garden-guard",
+    "name": "Garden Guard",
+    "category": "arcade",
+    "description": "A kindly eye for a busy patch.",
+    "mechanic": "Selectively tap emerging pests while leaving flowers untouched.",
+    "rules": [
+      "Tap striped pests when they emerge. Leave flowers alone.",
+      "Catch 12 pests during a 30-second shift.",
+      "Three flower taps end the shift. Missing a pest only costs time."
+    ],
+    "controls": "Tap a garden square; keys1–9 select squares.",
+    "url": "arcade-room/?game=garden-guard",
+    "accent": "#c8d3a2",
+    "symbol": "✿",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#pause"
+    }
+  },
+  {
+    "id": "beat-post",
+    "name": "Beat Post",
+    "category": "arcade",
+    "description": "Sort the night mail to a little rhythm.",
+    "mechanic": "Hit three lanes as scheduled notes cross a timing line.",
+    "rules": [
+      "Sort 24 notes by hitting their lane at the delivery line.",
+      "Near-perfect hits earn more points. Eight misses end the round.",
+      "Deliver at least 18 notes. There is no audio requirement; follow the visual pulse."
+    ],
+    "controls": "Left/Down/Right or A/S/D; tap the three lane buttons.",
+    "url": "arcade-room/?game=beat-post",
+    "accent": "#d4b8cf",
+    "symbol": "♫",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#pause"
+    }
+  },
+  {
+    "id": "pinball-pocket",
+    "name": "Pinball Pocket",
+    "category": "arcade",
+    "description": "A whole arcade in your coat pocket.",
+    "mechanic": "Operate two flippers to bounce a ball into bumpers while avoiding the drain.",
+    "rules": [
+      "Light the bumpers to earn 1,000 points.",
+      "Hold the left and right flippers to bounce a low ball back up.",
+      "You have three balls. Hold one flipper while launching to aim toward that side. Side gutters stay open."
+    ],
+    "controls": "Left/Right or A/D hold flippers; on-screen flipper buttons. Space launches a ball.",
+    "url": "arcade-room/?game=pinball-pocket",
+    "accent": "#ecc096",
+    "symbol": "✦",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#pause"
+    }
+  },
+  {
+    "id": "rope-skip",
+    "name": "Rope Skip",
+    "category": "sports",
+    "description": "A little hop. A little grace.",
+    "mechanic": "Jump a character over periodic rope sweeps; landed recovery prevents spam.",
+    "rules": [
+      "Clear 16 rope sweeps to finish.",
+      "Jump as the rope approaches your feet.",
+      "Three catches end the session. Let your feet land before jumping again."
+    ],
+    "controls": "Space or Jump; the moving rope and countdown arc show the approach.",
+    "url": "arcade-room/?game=rope-skip",
+    "accent": "#d4b8cf",
+    "symbol": "⌒",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#pause"
+    }
+  },
+  {
+    "id": "table-bowls",
+    "name": "Table Bowls",
+    "category": "sports",
+    "description": "A tidy table, a satisfying clack.",
+    "mechanic": "Shoot a cue ball into three object balls and pocket them within eight shots.",
+    "rules": [
+      "Pocket all three colored balls in eight shots.",
+      "Aim the white cue ball; drag farther for more power.",
+      "Only shoot when every ball stops. A scratched cue ball returns to the start."
+    ],
+    "controls": "Drag from white ball; Left/Right aim, Up/Down strength, Space shoots.",
+    "url": "arcade-room/?game=table-bowls",
+    "accent": "#a6c9bc",
+    "symbol": "●",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#pause"
+    }
+  },
+  {
+    "id": "balance-beam",
+    "name": "Balance Beam",
+    "category": "arcade",
+    "description": "Keep your center while the world tilts.",
+    "mechanic": "Lean a beam to counter a moving breeze and keep a rolling marble on the platform.",
+    "rules": [
+      "Keep the marble on the beam for 30 seconds.",
+      "Tilt left or right to bring the marble back. Its weight tips the beam farther as it drifts.",
+      "Gentle corrections beat big swings. Falling off ends the balance."
+    ],
+    "controls": "Left/Right or A/D; hold the on-screen tilt controls.",
+    "url": "arcade-room/?game=balance-beam",
+    "accent": "#ecc096",
+    "symbol": "↞",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#pause"
+    }
+  },
+  {
+    "id": "harbor-catch",
+    "name": "Harbor Catch",
+    "category": "arcade",
+    "description": "A patient line beneath the harbor.",
+    "mechanic": "Position a boat, lower a hook into patrolling fish at different depths, then reel a catch aboard within eight casts.",
+    "rules": [
+      "Land three fish within eight casts. Move the boat before you lower your line.",
+      "Hold Cast to lower the hook. Release to reel it back; a hooked fish reels in automatically.",
+      "Fish patrol different depths. Predict their path; touching the seabed wastes your cast."
+    ],
+    "controls": "Left/Right or drag to move the boat while the hook is up. Hold Space or Cast to lower; release to reel.",
+    "url": "arcade-room/?game=harbor-catch",
+    "accent": "#b9d8e3",
+    "symbol": "∪",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#pause"
+    }
+  }
+]

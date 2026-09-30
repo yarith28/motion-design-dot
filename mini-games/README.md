@@ -1,6 +1,6 @@
 # Small Hours
 
-A small, expandable browser arcade with 85 finished games. The catalog is `index.html`, with working All / Adventure / Reflex / Memory / Puzzle / Strategy filters. Every displayed game is playable.
+A small, expandable browser arcade with 100 finished games. The catalog is `index.html`, with working All / Adventure / Reflex / Memory / Puzzle / Strategy filters. Every displayed game is playable.
 
 ## Play locally
 
@@ -177,3 +177,12 @@ Fifteen strategy games span territory capture, sowing, impartial play, route blo
 ## Independent ordinary-play review
 
 Three reviewers played 19 distinct sample games using visible instructions and normal controls, separately from the full completion suites. The review was not a blinded novice study. Findings led to aligned mobile column controls, clearer Rover failure messages, corrected pause/resume focus and angle units, a resource-constrained Orchard goal, and deeper Gear, Pigment and Balance games. Gear now has three constrained mechanical studies; Pigment uses movable/rotatable ink stencils; Balance uses three visible torque sculptures with independently enumerated valid arrangements. Review methods, individual observations, limits and screenshots are in `coverage/ordinary-*-review.json` and their companion image folders. Full scripted completions, ordinary-play samples and deployed launch/reset checks are separate evidence categories.
+
+
+## Arcade Room release batch
+
+Fifteen action and sports games add snake, paddle rally, mini-golf, basketball, curling, flight, lunar landing, inertial cargo towing, selective reaction, rhythm, pinball, rope jumping, billiards, beam balancing and fishing. All15 passed full winning desktop/mobile rounds and alternate loss rounds, repeated restart, pause/background freeze, storage failures, keyboard/touch controls and responsive bounds. Resume focus and landing instruction units were corrected after independent ordinary play. Evidence: `coverage/arcade-room.json`; reproducible test: `tests/arcade-room.cjs`. Automated wins use legal controls, virtual time and read-only observations; these establish reachable outcomes, not human difficulty.
+
+## Complete collection evidence
+
+`inventory.json` lists all100 actual routes and mechanics. `coverage/index.json` maps every entry to full desktop and mobile completion evidence. The original ten game implementations and `motion-showcase/` remain unchanged by the90-game expansion. New games use local browser assets and need no build or external service. The Pages workflow verifies source bytes, root redirect, all catalog routes on desktop/mobile, Grid/List preference, search/filter counts, image loading, reduced motion, blocked storage and responsive containment. Live checks launch and restart the new games; full rounds are the separate local suites. `progress.json` identifies the last verified deployment; pushing a commit alone is not deployment proof.

@@ -1,9 +1,9 @@
 {
   "target": 100,
-  "verifiedLive": 70,
-  "liveCommit": "0e612a51925521009cc32a6441f9e83b98a664d2",
-  "liveVerificationRun": "https://github.com/yarith28/motion-design-dot/actions/runs/36748419234",
-  "phase": "Rechecking85-game catalog after independent quality improvements",
+  "verifiedLive": 85,
+  "liveCommit": "5102a3c6930e70411aabedba76d1c332b8dacd68",
+  "liveVerificationRun": "https://github.com/yarith28/motion-design-dot/actions/runs/36750744623",
+  "phase": "Publishing final100-game release; all local completion and catalog checks passed",
   "publicationRule": "Only passing, completed entries are linked in the catalog. Planned inventory does not count as playable.",
   "collections": [
     {
@@ -24,7 +24,7 @@
     {
       "id": "strategy-room",
       "target": 15,
-      "status": "verified locally; reviewed; catalog integrated"
+      "status": "verified live"
     },
     {
       "id": "spatial-room",
@@ -34,10 +34,10 @@
     {
       "id": "arcade-room",
       "target": 15,
-      "status": "verified locally; reviewed"
+      "status": "verified locally; independently reviewed; catalog integrated"
     }
   ],
-  "catalogPlayable": 85,
+  "catalogPlayable": 100,
   "verifiedLocal": 100,
   "localVerificationNote": "All100 current games completed desktop/mobile; ordinary-play review fixes and deeper spatial studies retested."
 }

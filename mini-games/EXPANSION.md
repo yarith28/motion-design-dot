@@ -16,3 +16,7 @@ The explicit 100-entry planning inventory is `inventory-plan.json`. Final playab
 ## Evidence
 
 `coverage/*.json` records per-game test coverage and limitations. `tests/*-room.cjs` are reproducible browser suites. The catalog-wide suite checks links, search, filters, both layouts, preference persistence, asset errors and responsive bounds. Automated ideal-input completions prove rules and completion paths, not human difficulty or enjoyment. Physical devices, non-Chromium engines and screen readers require separate verification.
+
+## Completed implementation
+
+All100 entries are implemented and locally completed on desktop and emulated mobile. The final inventory replaces provisional names with actual routes. An additional independent ordinary-play review sampled19games, audited family mechanics and triggered substantive depth and usability improvements before final release. See `coverage/review.json` and `coverage/ordinary-*-review.json`. Current live count and deployment evidence remain in `progress.json`.
