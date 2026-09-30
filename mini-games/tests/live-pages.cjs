@@ -4,7 +4,7 @@ const assert=require('node:assert/strict');
 const fs=require('node:fs');
 const crypto=require('node:crypto');
 const base=(process.env.LIVE_BASE_URL||'https://yarith28.github.io/motion-design-dot').replace(/\/$/,'');
-const out='live-verification';fs.mkdirSync(out,{recursive:true});
+const out=process.env.SCREENSHOT_DIR||'live-verification';fs.mkdirSync(out,{recursive:true});
 const games=['signal-run','double-take','pocket-orbit','good-order','afterglow'];
 const files=['index.html','mini-games/index.html','mini-games/styles.css','mini-games/catalog.css','mini-games/catalog.js','mini-games/common.js','mini-games/play.css',...games.flatMap(g=>['index.html','game.css','game.js'].map(f=>`mini-games/${g}/${f}`)),'mini-games/afterglow/engine.js'];
 const hash=bytes=>crypto.createHash('sha256').update(bytes).digest('hex');
@@ -20,7 +20,7 @@ async function publishedFiles(){
  throw Error('Published files did not match the checked-out source within the deployment window');
 }
 (async()=>{
- const assets=await publishedFiles();const browser=await chromium.launch({headless:true});const errors=[],failures=[],results=[];
+ const assets=await publishedFiles();const browser=await chromium.launch({headless:true,...(process.env.CHROMIUM_PATH?{executablePath:process.env.CHROMIUM_PATH}:{})});const errors=[],failures=[],results=[];
  for(const mobile of [false,true]){
   const context=await browser.newContext({viewport:mobile?{width:390,height:844}:{width:1440,height:1000},isMobile:mobile,hasTouch:mobile,deviceScaleFactor:mobile?2:1,reducedMotion:mobile?'reduce':'no-preference'});
   const page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));page.on('response',r=>{if(r.status()>=400&&['document','script','stylesheet'].includes(r.request().resourceType()))failures.push({url:r.url(),status:r.status()})});
@@ -34,7 +34,7 @@ async function publishedFiles(){
    const game=new URL(url).pathname.split('/').filter(Boolean).at(-1);assert.ok(games.includes(game));
    if(game==='signal-run'){await page.locator('#start').click();await page.keyboard.press('ArrowLeft');assert.equal(await page.locator('[data-lane="0"]').getAttribute('aria-pressed'),'true');await page.locator('#pause').click();assert.equal(await page.locator('#overlay-title').innerText(),'Take a breath.');}
    if(game==='double-take'){const card=page.locator('.card').first();mobile?await card.tap():await card.click();assert.match(await card.getAttribute('aria-label'),/Card 1:/);assert.doesNotMatch(await card.getAttribute('aria-label'),/face down/);await page.locator('#restart').click();assert.match(await card.getAttribute('aria-label'),/face down/);}
-   if(game==='pocket-orbit'){mobile?await page.locator('#action').tap():await page.locator('#action').click();assert.match(await page.locator('#action').innerText(),/Lock orbit/);await page.locator('#pause').click();assert.equal(await page.locator('#dial-value').innerText(),'PAUSED');await page.locator('#restart').click();assert.equal(await page.locator('#score').innerText(),'0');}
+   if(game==='pocket-orbit'){mobile?await page.locator('#action').tap():await page.locator('#action').click();assert.match(await page.locator('#action').innerText(),/Lock orbit/);await page.locator('#pause').click();assert.equal(await page.locator('#dial-value').textContent(),'PAUSED');await page.locator('#restart').click();assert.equal(await page.locator('#score').innerText(),'0');}
    if(game==='good-order'){const tile=page.locator('.tile.neighbor').first();mobile?await tile.tap():await tile.click();assert.equal(await page.locator('#moves').innerText(),'1');await page.locator('#peek').click();assert.equal(await page.locator('#goal').isVisible(),true);await page.locator('#restart').click();assert.equal(await page.locator('#moves').innerText(),'0');}
    if(game==='afterglow'){
     mobile?await page.locator('#begin').tap():await page.locator('#begin').click();assert.equal(await page.locator('#launch').isEnabled(),true);
