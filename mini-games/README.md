@@ -99,10 +99,11 @@ Reviewed desktop, mobile, in-flight, upgrade, victory, and loss screenshots. A 9
 
 Run `node mini-games/tests/afterglow.cjs` with Playwright and Chromium installed. Its default local server URL is `http://127.0.0.1:8781`; override `BASE_URL`, `CHROMIUM_PATH`, and `SCREENSHOT_DIR` as needed. Screenshots default to `/tmp/small-hours-afterglow`. Touch was emulated; no Safari, Firefox, physical-device, screen-reader, or audible speaker-quality testing was performed. Automated angle selection verifies mechanics and completion, not human difficulty.
 
-## GitHub Pages preparation and current blocker
+## GitHub Pages deployment
 
-The root `index.html` redirects to `mini-games/`, and `.nojekyll` makes the repository ready for plain static publishing from **main / (root)**. No custom domain, DNS, paid service, or external asset hosting is involved.
+Pages was enabled from **main / (root)** on 2026-09-30. GitHub's initial Pages build and deployment completed successfully for `c96922fd4b2b1ec2c129f4bb74da8811f2a09fe0`. The root `index.html` redirects to `mini-games/`, and `.nojekyll` preserves the browser-native files without a build transformation.
 
-Pages activation was requested but could not be completed in this environment. The authenticated repository metadata reports `has_pages: false`. The available connector has no Pages settings action. A direct `gh api repos/yarith28/motion-design-dot/pages` request, including an escalated check, returns `Get "https://api.github.com/repos/yarith28/motion-design-dot/pages": Forbidden`. The public Pages URL also cannot be verified through this execution network (`CONNECT tunnel failed, response 403`). These are not deployment-success signals. No failing deployment workflow or new secret was added.
+- Catalog: https://yarith28.github.io/motion-design-dot/mini-games/
+- Afterglow: https://yarith28.github.io/motion-design-dot/mini-games/afterglow/
 
-To activate the prepared site, open [Settings → Pages](https://github.com/yarith28/motion-design-dot/settings/pages), select **Deploy from a branch**, choose **main** and **/(root)**, and Save. After GitHub finishes publishing, the expected catalog path is `https://yarith28.github.io/motion-design-dot/mini-games/`, with Afterglow at the `afterglow/` subpath. Those expected URLs are not claimed to be live. The root URL will lead to the catalog once Pages is enabled.
+`.github/workflows/verify-pages.yml` runs `tests/live-pages.cjs` against the actual published site from a GitHub-hosted runner. It waits for 23 published files to match source byte-for-byte, checks the root redirect and category filters, loads every game on desktop and touch-emulated mobile, exercises each game's controls and Afterglow's aim/launch/pause/recall/restart flow, and saves screenshots plus a JSON report as workflow artifacts. It uses no game-state probes or response rewriting. The execution workspace itself blocks `github.io` network access, so these live checks run in Actions. The workflow has read-only repository permissions and no deployment credentials; it only tests the public site. No custom domain, DNS, or paid hosting was configured.

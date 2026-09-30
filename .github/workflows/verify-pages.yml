@@ -1,0 +1,37 @@
+name: Verify live arcade
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/verify-pages.yml'
+      - 'mini-games/**'
+      - 'index.html'
+      - '.nojekyll'
+permissions:
+  contents: read
+concurrency:
+  group: verify-live-arcade
+  cancel-in-progress: true
+jobs:
+  live-browser-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install test-only browser dependencies
+        run: |
+          npm install --prefix "$RUNNER_TEMP/pages-smoke" playwright@1.55.0
+          "$RUNNER_TEMP/pages-smoke/node_modules/.bin/playwright" install --with-deps chromium
+      - name: Verify deployed assets and desktop/mobile gameplay
+        env:
+          NODE_PATH: ${{ runner.temp }}/pages-smoke/node_modules
+          LIVE_BASE_URL: https://yarith28.github.io/motion-design-dot
+        run: node mini-games/tests/live-pages.cjs
+      - name: Save live verification evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: live-arcade-verification
+          path: live-verification/
+          retention-days: 7
