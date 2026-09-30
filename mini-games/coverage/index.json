@@ -1,7 +1,7 @@
 {
-  "total": 55,
-  "fullCompletionDesktop": 55,
-  "fullCompletionMobile": 55,
+  "total": 70,
+  "fullCompletionDesktop": 70,
+  "fullCompletionMobile": 70,
   "limits": "Chromium; mobile touch emulated. Browser completions use legal inputs with solvers or read-only test observations where needed. No physical-device, other-engine, or screen-reader certification.",
   "games": [
     {
@@ -618,6 +618,171 @@
       "restart": true,
       "evidence": "coverage/number-room.json",
       "suite": "tests/number-room.cjs"
+    },
+    {
+      "id": "hidden-grove",
+      "name": "Hidden Grove",
+      "url": "word-room/?game=hidden-grove",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobile": true,
+      "mobileInput": true,
+      "restart": true,
+      "evidence": "coverage/word-room.json",
+      "suite": "tests/word-room.cjs"
+    },
+    {
+      "id": "one-letter-away",
+      "name": "One Letter Away",
+      "url": "word-room/?game=one-letter-away",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobile": true,
+      "mobileInput": true,
+      "restart": true,
+      "evidence": "coverage/word-room.json",
+      "suite": "tests/word-room.cjs"
+    },
+    {
+      "id": "last-letter",
+      "name": "Last Letter",
+      "url": "word-room/?game=last-letter",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobile": true,
+      "mobileInput": true,
+      "restart": true,
+      "evidence": "coverage/word-room.json",
+      "suite": "tests/word-room.cjs"
+    },
+    {
+      "id": "crossings",
+      "name": "Crossings",
+      "url": "word-room/?game=crossings",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobile": true,
+      "mobileInput": true,
+      "restart": true,
+      "evidence": "coverage/word-room.json",
+      "suite": "tests/word-room.cjs"
+    },
+    {
+      "id": "wordbreak",
+      "name": "Wordbreak",
+      "url": "word-room/?game=wordbreak",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobile": true,
+      "mobileInput": true,
+      "restart": true,
+      "evidence": "coverage/word-room.json",
+      "suite": "tests/word-room.cjs"
+    },
+    {
+      "id": "secret-post",
+      "name": "Secret Post",
+      "url": "word-room/?game=secret-post",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobile": true,
+      "mobileInput": true,
+      "restart": true,
+      "evidence": "coverage/word-room.json",
+      "suite": "tests/word-room.cjs"
+    },
+    {
+      "id": "center-letter",
+      "name": "Center Letter",
+      "url": "word-room/?game=center-letter",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobile": true,
+      "mobileInput": true,
+      "restart": true,
+      "evidence": "coverage/word-room.json",
+      "suite": "tests/word-room.cjs"
+    },
+    {
+      "id": "odd-company",
+      "name": "Odd Company",
+      "url": "word-room/?game=odd-company",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobile": true,
+      "mobileInput": true,
+      "restart": true,
+      "evidence": "coverage/word-room.json",
+      "suite": "tests/word-room.cjs"
+    },
+    {
+      "id": "alphabet-trail",
+      "name": "Alphabet Trail",
+      "url": "word-room/?game=alphabet-trail",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobile": true,
+      "mobileInput": true,
+      "restart": true,
+      "evidence": "coverage/word-room.json",
+      "suite": "tests/word-room.cjs"
+    },
+    {
+      "id": "sentence-studio",
+      "name": "Sentence Studio",
+      "url": "word-room/?game=sentence-studio",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobile": true,
+      "mobileInput": true,
+      "restart": true,
+      "evidence": "coverage/word-room.json",
+      "suite": "tests/word-room.cjs"
+    },
+    {
+      "id": "compound-works",
+      "name": "Compound Works",
+      "url": "word-room/?game=compound-works",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobile": true,
+      "mobileInput": true,
+      "restart": true,
+      "evidence": "coverage/word-room.json",
+      "suite": "tests/word-room.cjs"
+    },
+    {
+      "id": "rhyme-lines",
+      "name": "Rhyme Lines",
+      "url": "word-room/?game=rhyme-lines",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobile": true,
+      "mobileInput": true,
+      "restart": true,
+      "evidence": "coverage/word-room.json",
+      "suite": "tests/word-room.cjs"
+    },
+    {
+      "id": "vowel-weather",
+      "name": "Vowel Weather",
+      "url": "word-room/?game=vowel-weather",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobile": true,
+      "mobileInput": true,
+      "restart": true,
+      "evidence": "coverage/word-room.json",
+      "suite": "tests/word-room.cjs"
+    },
+    {
+      "id": "chain-reaction",
+      "name": "Chain Reaction",
+      "url": "word-room/?game=chain-reaction",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobile": true,
+      "mobileInput": true,
+      "restart": true,
+      "evidence": "coverage/word-room.json",
+      "suite": "tests/word-room.cjs"
+    },
+    {
+      "id": "proofreader",
+      "name": "Proofreader",
+      "url": "word-room/?game=proofreader",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobile": true,
+      "mobileInput": true,
+      "restart": true,
+      "evidence": "coverage/word-room.json",
+      "suite": "tests/word-room.cjs"
     }
   ]
 }

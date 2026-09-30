@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "total": 55,
+  "total": 70,
   "games": [
     {
       "id": "signal-run",
@@ -863,6 +863,276 @@
       "accent": "#cde1d8",
       "symbol": "⌖",
       "family": "number-room",
+      "status": "verified"
+    },
+    {
+      "id": "hidden-grove",
+      "name": "Hidden Grove",
+      "category": "word",
+      "description": "Find four words hidden along straight lines in a leafy letter grid.",
+      "mechanic": "word search",
+      "rules": [
+        "Tap the first and last letter of a word. Lines can run horizontally, vertically or diagonally, in either direction.",
+        "Find all four listed words. A wrong line costs 10 points. Tap the same square to cancel.",
+        "Use Tab and Enter, or arrow keys within the grid. No dragging or timer."
+      ],
+      "controls": "Tap endpoints; arrows move focus; Enter selects.",
+      "url": "word-room/?game=hidden-grove",
+      "accent": "#edc5c4",
+      "symbol": "WG",
+      "family": "word-room",
+      "status": "verified"
+    },
+    {
+      "id": "one-letter-away",
+      "name": "One Letter Away",
+      "category": "word",
+      "description": "Bridge two words, changing just one letter at each step.",
+      "mechanic": "word ladder",
+      "rules": [
+        "Change exactly one letter to make a word in the open notebook. All words have four letters.",
+        "Reach the target from the starting word. The notebook is the complete allowed vocabulary for this puzzle.",
+        "Submit by typing and Enter. Undo a step if you take a detour. Invalid steps cost 10 points."
+      ],
+      "controls": "Type four letters and Enter; Undo steps.",
+      "url": "word-room/?game=one-letter-away",
+      "accent": "#dce4ba",
+      "symbol": "A→B",
+      "family": "word-room",
+      "status": "verified"
+    },
+    {
+      "id": "last-letter",
+      "name": "Last Letter",
+      "category": "word",
+      "description": "Guess a hidden word before six little leaves fall.",
+      "mechanic": "hangman",
+      "rules": [
+        "Read the clue, then choose letters to uncover a hidden word.",
+        "Correct letters fill every matching position. A wrong letter costs one of six leaves. Repeating a guess is free.",
+        "Reveal the whole word to win. Six wrong letters end the round and reveal the answer."
+      ],
+      "controls": "Tap letters or type A–Z.",
+      "url": "word-room/?game=last-letter",
+      "accent": "#edd9ae",
+      "symbol": "Aa",
+      "family": "word-room",
+      "status": "verified"
+    },
+    {
+      "id": "crossings",
+      "name": "Crossings",
+      "category": "word",
+      "description": "Fill three across clues and the down word that ties them together.",
+      "mechanic": "mini crossword",
+      "rules": [
+        "Fill the white squares from four clues. Three across entries share letters with one down entry.",
+        "Type a letter in each square. Arrow keys move through the board; Tab visits white squares.",
+        "Check the completed grid. Correct letters turn green; wrong checks cost 10 points."
+      ],
+      "controls": "Type letters; arrows move; Check grid.",
+      "url": "word-room/?game=crossings",
+      "accent": "#cbdcda",
+      "symbol": "+",
+      "family": "word-room",
+      "status": "verified"
+    },
+    {
+      "id": "wordbreak",
+      "name": "Wordbreak",
+      "category": "word",
+      "description": "Find the spaces hiding inside a run of letters.",
+      "mechanic": "word segmentation",
+      "rules": [
+        "Tap between letters to place or remove word boundaries.",
+        "Restore the sentence described by the clue. Capitalization and punctuation are already stripped away.",
+        "Check your spaces. Solve three phrases; wrong checks cost 10 points."
+      ],
+      "controls": "Tap boundaries; Tab and Enter toggle.",
+      "url": "word-room/?game=wordbreak",
+      "accent": "#edc5c4",
+      "symbol": "ab/c",
+      "family": "word-room",
+      "status": "verified"
+    },
+    {
+      "id": "secret-post",
+      "name": "Secret Post",
+      "category": "word",
+      "description": "Decode a letter-substitution message, one shared symbol at a time.",
+      "mechanic": "cryptogram",
+      "rules": [
+        "Every cipher letter always stands for the same plain letter. Spaces are already in place.",
+        "Select a cipher tile, then a letter from the keyboard. All copies change together; each plain letter can map only once.",
+        "Check the message or ask for a revealed letter. Hints cost 20 points; wrong checks cost 10."
+      ],
+      "controls": "Select cipher tile, type or tap letter; Backspace clears.",
+      "url": "word-room/?game=secret-post",
+      "accent": "#dce4ba",
+      "symbol": "?→!",
+      "family": "word-room",
+      "status": "verified"
+    },
+    {
+      "id": "center-letter",
+      "name": "Center Letter",
+      "category": "word",
+      "description": "Build five clue words around one indispensable letter.",
+      "mechanic": "central-letter dictionary",
+      "rules": [
+        "Use only the displayed letters. Letters may repeat, but the green center letter must appear in every word.",
+        "Find the five curated clue answers. This small puzzle dictionary contains exactly these five words.",
+        "Type a word and press Enter. Duplicate answers are free; other invalid guesses cost 10 points."
+      ],
+      "controls": "Type words and Enter; five clue answers.",
+      "url": "word-room/?game=center-letter",
+      "accent": "#edd9ae",
+      "symbol": "◎",
+      "family": "word-room",
+      "status": "verified"
+    },
+    {
+      "id": "odd-company",
+      "name": "Odd Company",
+      "category": "word",
+      "description": "Read the relationship and find the word that does not belong.",
+      "mechanic": "semantic classification",
+      "rules": [
+        "Four words share a page; only three fit the stated relationship.",
+        "Choose the exception. A wrong choice stays on the page for another try and costs 10 points.",
+        "Solve three groups. Each reveal explains the distinction."
+      ],
+      "controls": "Tap a word or Tab and Enter.",
+      "url": "word-room/?game=odd-company",
+      "accent": "#cbdcda",
+      "symbol": "3+1",
+      "family": "word-room",
+      "status": "verified"
+    },
+    {
+      "id": "alphabet-trail",
+      "name": "Alphabet Trail",
+      "category": "word",
+      "description": "Trace A to Y through an unbroken neighboring path.",
+      "mechanic": "alphabet adjacency path",
+      "rules": [
+        "Start at A and visit B, C and onward to Y. Move only one square horizontally or vertically.",
+        "Every letter is used once. Diagonal or out-of-order moves cost 10 points without changing your path.",
+        "Undo your last step if needed. Arrow keys move focus; Enter chooses a square."
+      ],
+      "controls": "Tap cells; arrows and Enter; Undo.",
+      "url": "word-room/?game=alphabet-trail",
+      "accent": "#edc5c4",
+      "symbol": "A⋯Y",
+      "family": "word-room",
+      "status": "verified"
+    },
+    {
+      "id": "sentence-studio",
+      "name": "Sentence Studio",
+      "category": "word",
+      "description": "Reassemble a familiar saying from shuffled whole-word slips.",
+      "mechanic": "sentence reconstruction",
+      "rules": [
+        "Tap whole words to reconstruct the familiar saying named by the clue.",
+        "The capitalized first word and punctuated last word help frame the sentence. Tap an arranged word to return it.",
+        "Check your saying. Solve three; wrong checks cost 10 points."
+      ],
+      "controls": "Tap word slips; Tab and Enter; Clear.",
+      "url": "word-room/?game=sentence-studio",
+      "accent": "#dce4ba",
+      "symbol": "¶",
+      "family": "word-room",
+      "status": "verified"
+    },
+    {
+      "id": "compound-works",
+      "name": "Compound Works",
+      "category": "word",
+      "description": "Join two halves into four everyday compound words.",
+      "mechanic": "compound pairing",
+      "rules": [
+        "Choose a word from the left, then its partner from the right.",
+        "Every half is used once. Find the four familiar closed compound words for this set.",
+        "Correct pairs stay joined. Wrong pairs reset your selection and cost 10 points."
+      ],
+      "controls": "Choose left then right; Tab and Enter.",
+      "url": "word-room/?game=compound-works",
+      "accent": "#edd9ae",
+      "symbol": "sun+",
+      "family": "word-room",
+      "status": "verified"
+    },
+    {
+      "id": "rhyme-lines",
+      "name": "Rhyme Lines",
+      "category": "word",
+      "description": "Match words by their ending sound, not their spelling.",
+      "mechanic": "phonetic pairing",
+      "rules": [
+        "Choose a word on the left and its rhyming partner on the right.",
+        "Use ordinary English pronunciation. Every word belongs to exactly one pair in this set.",
+        "Find four pairs. Wrong matches reset selection and cost 10 points."
+      ],
+      "controls": "Choose left then right; Tab and Enter.",
+      "url": "word-room/?game=rhyme-lines",
+      "accent": "#cbdcda",
+      "symbol": "♪",
+      "family": "word-room",
+      "status": "verified"
+    },
+    {
+      "id": "vowel-weather",
+      "name": "Vowel Weather",
+      "category": "word",
+      "description": "Bring the missing vowels back to three clue words.",
+      "mechanic": "constrained vowel restoration",
+      "rules": [
+        "Consonants stay in place. Every blank needs A, E, I, O or U.",
+        "Read the clue and type the whole restored word. Its consonants and length must match the pattern.",
+        "Restore three words. Wrong checks cost 10 points."
+      ],
+      "controls": "Type the complete word and Enter.",
+      "url": "word-room/?game=vowel-weather",
+      "accent": "#edc5c4",
+      "symbol": "A E I",
+      "family": "word-room",
+      "status": "verified"
+    },
+    {
+      "id": "chain-reaction",
+      "name": "Chain Reaction",
+      "category": "word",
+      "description": "Thread six words together by their first and last letters.",
+      "mechanic": "endpoint word chaining",
+      "rules": [
+        "The starting word is pinned. Choose a remaining word that begins with the last letter of the chain.",
+        "Use all six words once. Only the first and last letters matter.",
+        "Undo to escape a dead end. Invalid joins cost 10 points."
+      ],
+      "controls": "Tap next word; Tab and Enter; Undo.",
+      "url": "word-room/?game=chain-reaction",
+      "accent": "#dce4ba",
+      "symbol": "→",
+      "family": "word-room",
+      "status": "verified"
+    },
+    {
+      "id": "proofreader",
+      "name": "Proofreader",
+      "category": "word",
+      "description": "Spot the misspelled word and put the sentence right.",
+      "mechanic": "spelling correction",
+      "rules": [
+        "Exactly one word in each sentence has a spelling mistake. Tap that word to edit it.",
+        "Type the correctly spelled replacement and submit. The other words are already correct.",
+        "Repair three sentences. Wrong selections or corrections cost 10 points."
+      ],
+      "controls": "Select word, type correction, Enter.",
+      "url": "word-room/?game=proofreader",
+      "accent": "#edd9ae",
+      "symbol": "✓",
+      "family": "word-room",
       "status": "verified"
     }
   ]

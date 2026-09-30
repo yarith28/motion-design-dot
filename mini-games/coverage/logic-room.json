@@ -73,20 +73,6 @@
       "errors": []
     },
     {
-      "id": "code-cabinet",
-      "mobile": false,
-      "completed": true,
-      "restart": true,
-      "legalInput": true,
-      "illegalInput": true,
-      "damagedSolutionRejected": false,
-      "keyboard": true,
-      "storage": "persisted reload",
-      "reducedMotion": false,
-      "overflow": false,
-      "errors": []
-    },
-    {
       "id": "sky-view",
       "mobile": false,
       "completed": true,
@@ -241,20 +227,6 @@
       "errors": []
     },
     {
-      "id": "code-cabinet",
-      "mobile": true,
-      "completed": true,
-      "restart": true,
-      "legalInput": true,
-      "illegalInput": true,
-      "damagedSolutionRejected": false,
-      "keyboard": true,
-      "storage": "blocked fallback",
-      "reducedMotion": true,
-      "overflow": false,
-      "errors": []
-    },
-    {
       "id": "sky-view",
       "mobile": true,
       "completed": true,
@@ -418,6 +390,34 @@
       "legalInput": true,
       "illegalInput": true,
       "damagedSolutionRejected": true,
+      "keyboard": true,
+      "storage": "blocked fallback",
+      "reducedMotion": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "code-cabinet",
+      "mobile": false,
+      "completed": true,
+      "restart": true,
+      "legalInput": true,
+      "illegalInput": true,
+      "damagedSolutionRejected": false,
+      "keyboard": true,
+      "storage": "persisted reload",
+      "reducedMotion": false,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "code-cabinet",
+      "mobile": true,
+      "completed": true,
+      "restart": true,
+      "legalInput": true,
+      "illegalInput": true,
+      "damagedSolutionRejected": false,
       "keyboard": true,
       "storage": "blocked fallback",
       "reducedMotion": true,

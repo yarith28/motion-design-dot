@@ -1,6 +1,6 @@
 # Small Hours
 
-A small, expandable browser arcade with 55 finished games. The catalog is `index.html`, with working All / Adventure / Reflex / Memory / Puzzle / Strategy filters. Every displayed game is playable.
+A small, expandable browser arcade with 70 finished games. The catalog is `index.html`, with working All / Adventure / Reflex / Memory / Puzzle / Strategy filters. Every displayed game is playable.
 
 ## Play locally
 
@@ -162,3 +162,8 @@ This batch also fixes three spatial review findings: a rover program that reache
 ## Number Room release batch
 
 Fifteen different number mechanics include card-expression building, merge-once sliding tiles, binary switches, rational balance and packing, physical matchstick relocation, modular jumps, grouping precedence, logarithmic estimation, ratio pouring and constrained shopping. Every game completed all its chapters on desktop and mobile; the shortest formats contain five chapters. Arithmetic targets, merge rules, invalid operations and accessible focus/selection were checked independently. Evidence: `coverage/number-room.json`; test: `tests/number-room.cjs`. No test hook ships in the games.
+
+
+## Word Room release batch
+
+Fifteen word games use distinct deduction, transformation, ordering, decoding and language mechanics. All completed on desktop and touch-mobile, including multi-chapter rounds, keyboard input, repeated restart, blocked storage and reduced motion. Independent review removed ambiguous compound pairings and corrected an invalid spelling challenge. Evidence: `coverage/word-room.json`, `tests/word-room.cjs` and `tests/word-room-edges.cjs`. The live catalog suite also passed all 70 entries locally.
