@@ -1,0 +1,797 @@
+{
+  "schemaVersion": 2,
+  "suite": "puzzle-lab",
+  "passed": true,
+  "status": "passed",
+  "startedAt": "2026-10-01T04:11:18.201Z",
+  "source": {
+    "sha256": "fcaa4f3b0a13711b759f31aeb19c263dbf2287987f758f73b1584f0ead77afc9",
+    "files": [
+      "catalog.css",
+      "catalog.js",
+      "common.js",
+      "index.html",
+      "inventory.json",
+      "play.css",
+      "puzzle-lab/data.js",
+      "puzzle-lab/engines.js",
+      "puzzle-lab/games.json",
+      "puzzle-lab/index.html",
+      "puzzle-lab/lab.css",
+      "puzzle-lab/room.js",
+      "styles.css",
+      "tests/fixtures/baseline100.json",
+      "tests/fixtures/tabletop-paths.json",
+      "tests/puzzle-lab.cjs",
+      "tools/evidence.cjs",
+      "tools/run-suite.cjs"
+    ]
+  },
+  "requestedBaseURL": "http://127.0.0.1:8790",
+  "browser": {
+    "engine": "Chromium",
+    "version": "Chromium 151.0.7922.173 built on Debian GNU/Linux 13 (trixie)",
+    "executable": "/usr/bin/chromium"
+  },
+  "scope": {
+    "desktopCompletion": true,
+    "mobileViewportCompletion": true,
+    "touchGameplayCompletion": false,
+    "touchControlSmoke": true,
+    "completionMeans": "winning full progression",
+    "method": "scripted UI; curated answers or board solvers",
+    "mobileMethod": "touch gameplay with scripted navigation/solvers"
+  },
+  "games": [
+    "mutual-match",
+    "ice-station",
+    "cube-seal",
+    "knight-exchange",
+    "map-inks",
+    "circuit-break",
+    "copper-tree",
+    "river-capacity",
+    "honest-company",
+    "gate-foundry",
+    "rewrite-press",
+    "twin-steps",
+    "seed-tomorrow",
+    "voxel-post",
+    "hitori-harbor",
+    "island-census",
+    "parcel-survey",
+    "arrow-audit",
+    "parity-repair",
+    "safety-ferry"
+  ],
+  "limits": [
+    "Mobile is Chromium viewport/touch emulation, not Safari or a physical device.",
+    "Solver completions do not establish human difficulty or accessibility."
+  ],
+  "servedRuntimeBefore": {
+    "baseURL": "http://127.0.0.1:8790",
+    "passed": true,
+    "sha256": "c68ce36460c330f344dbcba9db433f24ed5f807a9e9d5720eff96df431f1cbd9",
+    "fileCount": 13,
+    "verifiedAt": "2026-10-01T04:11:18.321Z"
+  },
+  "exitCode": 0,
+  "signal": null,
+  "sourceUnchanged": true,
+  "servedRuntime": {
+    "baseURL": "http://127.0.0.1:8790",
+    "passed": true,
+    "sha256": "c68ce36460c330f344dbcba9db433f24ed5f807a9e9d5720eff96df431f1cbd9",
+    "fileCount": 13,
+    "verifiedAt": "2026-10-01T04:13:08.470Z"
+  },
+  "completionEvidence": {
+    "sha256": "0d07317bcc0013889992ac66ce936f0ab64a223a82bff894a5558e82bb5c1e41",
+    "file": "coverage/puzzle-lab.json",
+    "cases": [
+      {
+        "id": "mutual-match",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "studiesCompleted": 3,
+        "edgeCases": [
+          "initial incomplete study rejected",
+          "keyboard activation retains visible control focus",
+          "pair assignment undo restores unassigned courier",
+          "all three studies complete and completed study locked"
+        ],
+        "inputMethod": "Mouse clicks plus ordinary keyboard Space action; solver-guided legal UI inputs",
+        "touchOnly": false,
+        "completionType": "read-only solver probe guided UI",
+        "errors": []
+      },
+      {
+        "id": "mutual-match",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "studiesCompleted": 3,
+        "edgeCases": [
+          "initial incomplete study rejected",
+          "pair assignment undo restores unassigned courier",
+          "all three studies complete and completed study locked"
+        ],
+        "inputMethod": "Touchscreen taps only; solver-guided legal UI inputs",
+        "touchOnly": true,
+        "completionType": "read-only solver probe guided UI",
+        "errors": []
+      },
+      {
+        "id": "ice-station",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "studiesCompleted": 3,
+        "edgeCases": [
+          "initial incomplete study rejected",
+          "keyboard activation retains visible control focus",
+          "blocked move leaves position and orientation unchanged",
+          "every ice study has substantial reachable interior stops and verified minimum route depth",
+          "all three studies complete and completed study locked"
+        ],
+        "inputMethod": "Mouse clicks plus ordinary keyboard Space action; solver-guided legal UI inputs",
+        "touchOnly": false,
+        "completionType": "read-only solver probe guided UI",
+        "errors": []
+      },
+      {
+        "id": "ice-station",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "studiesCompleted": 3,
+        "edgeCases": [
+          "initial incomplete study rejected",
+          "blocked move leaves position and orientation unchanged",
+          "every ice study has substantial reachable interior stops and verified minimum route depth",
+          "all three studies complete and completed study locked"
+        ],
+        "inputMethod": "Touchscreen taps only; solver-guided legal UI inputs",
+        "touchOnly": true,
+        "completionType": "read-only solver probe guided UI",
+        "errors": []
+      },
+      {
+        "id": "cube-seal",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "studiesCompleted": 3,
+        "edgeCases": [
+          "initial incomplete study rejected",
+          "keyboard activation retains visible control focus",
+          "blocked move leaves position and orientation unchanged",
+          "all three studies complete and completed study locked"
+        ],
+        "inputMethod": "Mouse clicks plus ordinary keyboard Space action; solver-guided legal UI inputs",
+        "touchOnly": false,
+        "completionType": "read-only solver probe guided UI",
+        "errors": []
+      },
+      {
+        "id": "cube-seal",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "studiesCompleted": 3,
+        "edgeCases": [
+          "initial incomplete study rejected",
+          "blocked move leaves position and orientation unchanged",
+          "all three studies complete and completed study locked"
+        ],
+        "inputMethod": "Touchscreen taps only; solver-guided legal UI inputs",
+        "touchOnly": true,
+        "completionType": "read-only solver probe guided UI",
+        "errors": []
+      },
+      {
+        "id": "knight-exchange",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "studiesCompleted": 3,
+        "edgeCases": [
+          "initial incomplete study rejected",
+          "keyboard activation retains visible control focus",
+          "non-knight jump rejected",
+          "all three studies complete and completed study locked"
+        ],
+        "inputMethod": "Mouse clicks plus ordinary keyboard Space action; solver-guided legal UI inputs",
+        "touchOnly": false,
+        "completionType": "read-only solver probe guided UI",
+        "errors": []
+      },
+      {
+        "id": "knight-exchange",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "studiesCompleted": 3,
+        "edgeCases": [
+          "initial incomplete study rejected",
+          "non-knight jump rejected",
+          "all three studies complete and completed study locked"
+        ],
+        "inputMethod": "Touchscreen taps only; solver-guided legal UI inputs",
+        "touchOnly": true,
+        "completionType": "read-only solver probe guided UI",
+        "errors": []
+      },
+      {
+        "id": "map-inks",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "studiesCompleted": 3,
+        "edgeCases": [
+          "initial incomplete study rejected",
+          "keyboard activation retains visible control focus",
+          "adjacent identical colors rejected",
+          "all three studies complete and completed study locked"
+        ],
+        "inputMethod": "Mouse clicks plus ordinary keyboard Space action; solver-guided legal UI inputs",
+        "touchOnly": false,
+        "completionType": "read-only solver probe guided UI",
+        "errors": []
+      },
+      {
+        "id": "map-inks",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "studiesCompleted": 3,
+        "edgeCases": [
+          "initial incomplete study rejected",
+          "adjacent identical colors rejected",
+          "all three studies complete and completed study locked"
+        ],
+        "inputMethod": "Touchscreen taps only; solver-guided legal UI inputs",
+        "touchOnly": true,
+        "completionType": "read-only solver probe guided UI",
+        "errors": []
+      },
+      {
+        "id": "circuit-break",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "studiesCompleted": 3,
+        "edgeCases": [
+          "initial incomplete study rejected",
+          "keyboard activation retains visible control focus",
+          "transmitter cannot be disabled",
+          "all three studies complete and completed study locked"
+        ],
+        "inputMethod": "Mouse clicks plus ordinary keyboard Space action; solver-guided legal UI inputs",
+        "touchOnly": false,
+        "completionType": "read-only solver probe guided UI",
+        "errors": []
+      },
+      {
+        "id": "circuit-break",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "studiesCompleted": 3,
+        "edgeCases": [
+          "initial incomplete study rejected",
+          "transmitter cannot be disabled",
+          "all three studies complete and completed study locked"
+        ],
+        "inputMethod": "Touchscreen taps only; solver-guided legal UI inputs",
+        "touchOnly": true,
+        "completionType": "read-only solver probe guided UI",
+        "errors": []
+      },
+      {
+        "id": "copper-tree",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "studiesCompleted": 3,
+        "edgeCases": [
+          "initial incomplete study rejected",
+          "keyboard activation retains visible control focus",
+          "partial edited candidate rejected",
+          "all three studies complete and completed study locked"
+        ],
+        "inputMethod": "Mouse clicks plus ordinary keyboard Space action; solver-guided legal UI inputs",
+        "touchOnly": false,
+        "completionType": "read-only solver probe guided UI",
+        "errors": []
+      },
+      {
+        "id": "copper-tree",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "studiesCompleted": 3,
+        "edgeCases": [
+          "initial incomplete study rejected",
+          "partial edited candidate rejected",
+          "all three studies complete and completed study locked"
+        ],
+        "inputMethod": "Touchscreen taps only; solver-guided legal UI inputs",
+        "touchOnly": true,
+        "completionType": "read-only solver probe guided UI",
+        "errors": []
+      },
+      {
+        "id": "river-capacity",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "studiesCompleted": 3,
+        "edgeCases": [
+          "initial incomplete study rejected",
+          "keyboard activation retains visible control focus",
+          "unconserved intermediate flow rejected",
+          "all three studies complete and completed study locked"
+        ],
+        "inputMethod": "Mouse clicks plus ordinary keyboard Space action; solver-guided legal UI inputs",
+        "touchOnly": false,
+        "completionType": "read-only solver probe guided UI",
+        "errors": []
+      },
+      {
+        "id": "river-capacity",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "studiesCompleted": 3,
+        "edgeCases": [
+          "initial incomplete study rejected",
+          "unconserved intermediate flow rejected",
+          "all three studies complete and completed study locked"
+        ],
+        "inputMethod": "Touchscreen taps only; solver-guided legal UI inputs",
+        "touchOnly": true,
+        "completionType": "read-only solver probe guided UI",
+        "errors": []
+      },
+      {
+        "id": "honest-company",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "studiesCompleted": 3,
+        "edgeCases": [
+          "initial incomplete study rejected",
+          "keyboard activation retains visible control focus",
+          "legal edit undo restores original model and failed check",
+          "all three studies complete and completed study locked"
+        ],
+        "inputMethod": "Mouse clicks plus ordinary keyboard Space action; solver-guided legal UI inputs",
+        "touchOnly": false,
+        "completionType": "read-only solver probe guided UI",
+        "errors": []
+      },
+      {
+        "id": "honest-company",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "studiesCompleted": 3,
+        "edgeCases": [
+          "initial incomplete study rejected",
+          "legal edit undo restores original model and failed check",
+          "all three studies complete and completed study locked"
+        ],
+        "inputMethod": "Touchscreen taps only; solver-guided legal UI inputs",
+        "touchOnly": true,
+        "completionType": "read-only solver probe guided UI",
+        "errors": []
+      },
+      {
+        "id": "gate-foundry",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "studiesCompleted": 3,
+        "edgeCases": [
+          "initial incomplete study rejected",
+          "keyboard activation retains visible control focus",
+          "legal edit undo restores original model and failed check",
+          "all three studies complete and completed study locked"
+        ],
+        "inputMethod": "Mouse clicks plus ordinary keyboard Space action; solver-guided legal UI inputs",
+        "touchOnly": false,
+        "completionType": "read-only solver probe guided UI",
+        "errors": []
+      },
+      {
+        "id": "gate-foundry",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "studiesCompleted": 3,
+        "edgeCases": [
+          "initial incomplete study rejected",
+          "legal edit undo restores original model and failed check",
+          "all three studies complete and completed study locked"
+        ],
+        "inputMethod": "Touchscreen taps only; solver-guided legal UI inputs",
+        "touchOnly": true,
+        "completionType": "read-only solver probe guided UI",
+        "errors": []
+      },
+      {
+        "id": "rewrite-press",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "studiesCompleted": 3,
+        "edgeCases": [
+          "initial incomplete study rejected",
+          "keyboard activation retains visible control focus",
+          "rule applied at nonmatching substring rejected",
+          "all three studies complete and completed study locked"
+        ],
+        "inputMethod": "Mouse clicks plus ordinary keyboard Space action; solver-guided legal UI inputs",
+        "touchOnly": false,
+        "completionType": "read-only solver probe guided UI",
+        "errors": []
+      },
+      {
+        "id": "rewrite-press",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "studiesCompleted": 3,
+        "edgeCases": [
+          "initial incomplete study rejected",
+          "rule applied at nonmatching substring rejected",
+          "all three studies complete and completed study locked"
+        ],
+        "inputMethod": "Touchscreen taps only; solver-guided legal UI inputs",
+        "touchOnly": true,
+        "completionType": "read-only solver probe guided UI",
+        "errors": []
+      },
+      {
+        "id": "twin-steps",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "studiesCompleted": 3,
+        "edgeCases": [
+          "initial incomplete study rejected",
+          "keyboard activation retains visible control focus",
+          "partial edited candidate rejected",
+          "all three studies complete and completed study locked"
+        ],
+        "inputMethod": "Mouse clicks plus ordinary keyboard Space action; solver-guided legal UI inputs",
+        "touchOnly": false,
+        "completionType": "read-only solver probe guided UI",
+        "errors": []
+      },
+      {
+        "id": "twin-steps",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "studiesCompleted": 3,
+        "edgeCases": [
+          "initial incomplete study rejected",
+          "partial edited candidate rejected",
+          "all three studies complete and completed study locked"
+        ],
+        "inputMethod": "Touchscreen taps only; solver-guided legal UI inputs",
+        "touchOnly": true,
+        "completionType": "read-only solver probe guided UI",
+        "errors": []
+      },
+      {
+        "id": "seed-tomorrow",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "studiesCompleted": 3,
+        "edgeCases": [
+          "initial incomplete study rejected",
+          "keyboard activation retains visible control focus",
+          "legal edit undo restores original model and failed check",
+          "all three studies complete and completed study locked"
+        ],
+        "inputMethod": "Mouse clicks plus ordinary keyboard Space action; solver-guided legal UI inputs",
+        "touchOnly": false,
+        "completionType": "read-only solver probe guided UI",
+        "errors": []
+      },
+      {
+        "id": "seed-tomorrow",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "studiesCompleted": 3,
+        "edgeCases": [
+          "initial incomplete study rejected",
+          "legal edit undo restores original model and failed check",
+          "all three studies complete and completed study locked"
+        ],
+        "inputMethod": "Touchscreen taps only; solver-guided legal UI inputs",
+        "touchOnly": true,
+        "completionType": "read-only solver probe guided UI",
+        "errors": []
+      },
+      {
+        "id": "voxel-post",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "studiesCompleted": 3,
+        "edgeCases": [
+          "initial incomplete study rejected",
+          "keyboard activation retains visible control focus",
+          "legal edit undo restores original model and failed check",
+          "all three studies complete and completed study locked"
+        ],
+        "inputMethod": "Mouse clicks plus ordinary keyboard Space action; solver-guided legal UI inputs",
+        "touchOnly": false,
+        "completionType": "read-only solver probe guided UI",
+        "errors": []
+      },
+      {
+        "id": "voxel-post",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "studiesCompleted": 3,
+        "edgeCases": [
+          "initial incomplete study rejected",
+          "legal edit undo restores original model and failed check",
+          "all three studies complete and completed study locked"
+        ],
+        "inputMethod": "Touchscreen taps only; solver-guided legal UI inputs",
+        "touchOnly": true,
+        "completionType": "read-only solver probe guided UI",
+        "errors": []
+      },
+      {
+        "id": "hitori-harbor",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "studiesCompleted": 3,
+        "edgeCases": [
+          "initial incomplete study rejected",
+          "keyboard activation retains visible control focus",
+          "adjacent shaded cells rejected",
+          "all three studies complete and completed study locked"
+        ],
+        "inputMethod": "Mouse clicks plus ordinary keyboard Space action; solver-guided legal UI inputs",
+        "touchOnly": false,
+        "completionType": "read-only solver probe guided UI",
+        "errors": []
+      },
+      {
+        "id": "hitori-harbor",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "studiesCompleted": 3,
+        "edgeCases": [
+          "initial incomplete study rejected",
+          "adjacent shaded cells rejected",
+          "all three studies complete and completed study locked"
+        ],
+        "inputMethod": "Touchscreen taps only; solver-guided legal UI inputs",
+        "touchOnly": true,
+        "completionType": "read-only solver probe guided UI",
+        "errors": []
+      },
+      {
+        "id": "island-census",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "studiesCompleted": 3,
+        "edgeCases": [
+          "initial incomplete study rejected",
+          "keyboard activation retains visible control focus",
+          "fixed lighthouse remains land",
+          "all three studies complete and completed study locked"
+        ],
+        "inputMethod": "Mouse clicks plus ordinary keyboard Space action; solver-guided legal UI inputs",
+        "touchOnly": false,
+        "completionType": "read-only solver probe guided UI",
+        "errors": []
+      },
+      {
+        "id": "island-census",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "studiesCompleted": 3,
+        "edgeCases": [
+          "initial incomplete study rejected",
+          "fixed lighthouse remains land",
+          "all three studies complete and completed study locked"
+        ],
+        "inputMethod": "Touchscreen taps only; solver-guided legal UI inputs",
+        "touchOnly": true,
+        "completionType": "read-only solver probe guided UI",
+        "errors": []
+      },
+      {
+        "id": "parcel-survey",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "studiesCompleted": 3,
+        "edgeCases": [
+          "initial incomplete study rejected",
+          "keyboard activation retains visible control focus",
+          "rectangle containing multiple stakes rejected",
+          "all three studies complete and completed study locked"
+        ],
+        "inputMethod": "Mouse clicks plus ordinary keyboard Space action; solver-guided legal UI inputs",
+        "touchOnly": false,
+        "completionType": "read-only solver probe guided UI",
+        "errors": []
+      },
+      {
+        "id": "parcel-survey",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "studiesCompleted": 3,
+        "edgeCases": [
+          "initial incomplete study rejected",
+          "rectangle containing multiple stakes rejected",
+          "all three studies complete and completed study locked"
+        ],
+        "inputMethod": "Touchscreen taps only; solver-guided legal UI inputs",
+        "touchOnly": true,
+        "completionType": "read-only solver probe guided UI",
+        "errors": []
+      },
+      {
+        "id": "arrow-audit",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "studiesCompleted": 3,
+        "edgeCases": [
+          "initial incomplete study rejected",
+          "keyboard activation retains visible control focus",
+          "excess reversed arrows rejected",
+          "all three studies complete and completed study locked"
+        ],
+        "inputMethod": "Mouse clicks plus ordinary keyboard Space action; solver-guided legal UI inputs",
+        "touchOnly": false,
+        "completionType": "read-only solver probe guided UI",
+        "errors": []
+      },
+      {
+        "id": "arrow-audit",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "studiesCompleted": 3,
+        "edgeCases": [
+          "initial incomplete study rejected",
+          "excess reversed arrows rejected",
+          "all three studies complete and completed study locked"
+        ],
+        "inputMethod": "Touchscreen taps only; solver-guided legal UI inputs",
+        "touchOnly": true,
+        "completionType": "read-only solver probe guided UI",
+        "errors": []
+      },
+      {
+        "id": "parity-repair",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "studiesCompleted": 3,
+        "edgeCases": [
+          "initial incomplete study rejected",
+          "keyboard activation retains visible control focus",
+          "excess repaired bits rejected",
+          "all three studies complete and completed study locked"
+        ],
+        "inputMethod": "Mouse clicks plus ordinary keyboard Space action; solver-guided legal UI inputs",
+        "touchOnly": false,
+        "completionType": "read-only solver probe guided UI",
+        "errors": []
+      },
+      {
+        "id": "parity-repair",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "studiesCompleted": 3,
+        "edgeCases": [
+          "initial incomplete study rejected",
+          "excess repaired bits rejected",
+          "all three studies complete and completed study locked"
+        ],
+        "inputMethod": "Touchscreen taps only; solver-guided legal UI inputs",
+        "touchOnly": true,
+        "completionType": "read-only solver probe guided UI",
+        "errors": []
+      },
+      {
+        "id": "safety-ferry",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "studiesCompleted": 3,
+        "edgeCases": [
+          "initial incomplete study rejected",
+          "keyboard activation retains visible control focus",
+          "unsafe unattended bank crossing refused",
+          "all three studies complete and completed study locked"
+        ],
+        "inputMethod": "Mouse clicks plus ordinary keyboard Space action; solver-guided legal UI inputs",
+        "touchOnly": false,
+        "completionType": "read-only solver probe guided UI",
+        "errors": []
+      },
+      {
+        "id": "safety-ferry",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "studiesCompleted": 3,
+        "edgeCases": [
+          "initial incomplete study rejected",
+          "unsafe unattended bank crossing refused",
+          "all three studies complete and completed study locked"
+        ],
+        "inputMethod": "Touchscreen taps only; solver-guided legal UI inputs",
+        "touchOnly": true,
+        "completionType": "read-only solver probe guided UI",
+        "errors": []
+      }
+    ]
+  },
+  "finishedAt": "2026-10-01T04:13:08.470Z"
+}

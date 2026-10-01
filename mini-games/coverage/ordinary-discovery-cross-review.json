@@ -1,0 +1,216 @@
+{
+  "reviewer": "puzzles worker independent of discovery implementation",
+  "dateUTC": "2026-10-01T04:01:55.314382+00:00",
+  "sourceHashReviewed": "d444349aedef847f47f9fc28dc3b2356d6b3abf73e9d2f091d7738758d1d6b9d",
+  "scope": "All20 source mechanics reviewed; three additional visible-only ordinary touch samples before reading source. No hidden state, solver or code-derived answers used in ordinary samples.",
+  "overallDisposition": "Source mechanics approved after revisions; limited ordinary follow-up confirmed. Full automated matrix belongs to discovery owner.",
+  "sourceReviews": [
+    {
+      "id": "ray-archive",
+      "disposition": "substantive",
+      "finding": "Spatial active ray probing is distinct from Battleship hidden-cell sampling. All 560 legal three-atom layouts have unique full 24-port signatures in supplemental read-only analysis."
+    },
+    {
+      "id": "false-weight",
+      "disposition": "substantive",
+      "finding": "Player chooses balanced groups to partition heavy/light hypotheses. Three studies alter known sign and candidate size."
+    },
+    {
+      "id": "three-of-a-kind",
+      "disposition": "substantive",
+      "finding": "Three simultaneous ternary properties define valid triples; random replacement tableau, error bound and single-member clue are implemented."
+    },
+    {
+      "id": "second-look",
+      "disposition": "substantive",
+      "finding": "Alternating scene comparison with persistent marks, three independently changed positions and three studies is distinct from pair memory."
+    },
+    {
+      "id": "fog-journal",
+      "disposition": "substantive",
+      "finding": "Generated maze exploration reveals exits locally and requires artifact return under lamp budget; no exposed complete route."
+    },
+    {
+      "id": "prefix-press",
+      "disposition": "substantive",
+      "finding": "True Huffman tree building, accumulated weighted cost, undo and player bit encoding; meaningful three-study progression."
+    },
+    {
+      "id": "transit-observatory",
+      "disposition": "substantive",
+      "finding": "Active modular timing probes shrink full period/phase hypotheses. Supplemental minimax analysis proves six observations sufficient and five insufficient in worst case."
+    },
+    {
+      "id": "specimen-rule",
+      "disposition": "substantive",
+      "finding": "Players construct experiments against six rule hypotheses then predict held-out tuples; not a fixed answer index."
+    },
+    {
+      "id": "causal-lab",
+      "disposition": "substantive",
+      "finding": "Observed lamp patterns arise from an acyclic OR network with a missing edge and explicit interventions; fault identification requires unique evidence."
+    },
+    {
+      "id": "parallax-post",
+      "disposition": "resolved-on-follow-up",
+      "finding": "Left landmark spacing16 exceeds maximum disparity12, so right order never changes; A\u2192a through E\u2192e is a constant correspondence answer. Ask for nontrivial uniquely inferable pairing.",
+      "originalDisposition": "revision-requested",
+      "resolution": "Dense x coordinates 28,34,36,42,60; generation forces same-shape depth difference3, causing order crossing at default baseline3. Right DOM order and labels shuffle independently. Integer-depth constraint disambiguates true correspondence. Source rechecked."
+    },
+    {
+      "id": "wave-desk",
+      "disposition": "resolved-on-follow-up",
+      "finding": "Signed basis amplitudes actually synthesize displayed numeric/visual samples. Reject rare all-zero secret if every study must begin unsolved.",
+      "originalDisposition": "minor-guard-requested",
+      "resolution": "Generator now rejects all-zero amplitudes (source rechecked)."
+    },
+    {
+      "id": "twenty-questions",
+      "disposition": "resolved-on-follow-up",
+      "finding": "Source now samples12 of32 possible five-trait specimens with guaranteed three-query decision depth per stage; metadata still claims16 and four traits.",
+      "originalDisposition": "metadata-requested",
+      "resolution": "Field guide now matches twelve-card catalog and five traits."
+    },
+    {
+      "id": "scent-trail",
+      "disposition": "substantive",
+      "finding": "Wind-shifted Manhattan observations and rover movement create a distinct localization loop with action costs."
+    },
+    {
+      "id": "fossil-brush",
+      "disposition": "resolved-on-follow-up",
+      "finding": "Sonar identifies exact two bone rows; brushing all12 row cells costs\u226424<30 and never damages bone. Dominant safe routine makes broad-tool tradeoff unnecessary.",
+      "originalDisposition": "revision-requested",
+      "resolution": "Varied four/five-cell connected footprints across two/three rows. Budget15/22 prevents guaranteed brush-all positive rows; visible safe depth2 triples justify broad chisel use. Source rechecked; not claiming chisel necessary for an omniscient player."
+    },
+    {
+      "id": "archive-edit",
+      "disposition": "resolved-on-follow-up",
+      "finding": "Only three mandatory patches and two conflicts; Required value displayed makes every conflict direct literal matching. All three releases repeat structure with new words.",
+      "originalDisposition": "revision-requested",
+      "resolution": "Seven optional patches, dependencies, five fields and three-pick budget make selective planning necessary. Targeted touch UI rejected unmet dependency then accepted chosen three-patch plan and advanced release."
+    },
+    {
+      "id": "lens-library",
+      "disposition": "resolved-on-follow-up",
+      "finding": "Generator only guarantees source separation under actual kernel, not separation of all source/kernel pairs. Alternating [0,1,0,1,0,1] produces identical flat blur under all kernels yet non-secret kernel rejected.",
+      "originalDisposition": "correctness-requested",
+      "resolution": "Generator now requires all nine source/kernel blurred outputs distinct. Ambiguous alternating-source example rejected by generation."
+    },
+    {
+      "id": "invisible-ink",
+      "disposition": "resolved-on-follow-up",
+      "finding": "Exact row counts plus7charges guarantee exhaustive scanning of the at-most-two positive rows in\u22646 scans. No adaptive inference necessary. Description promises ordered message absent from game; six-parcel text conflicts with9board.",
+      "originalDisposition": "revision-requested",
+      "resolution": "Five-scan budget plus fair counterfeits forces elimination before reading every channel. Targeted touch study inferred B1/C3 with pressure unread after four scans; accepted and advanced."
+    },
+    {
+      "id": "clockmaker-cabinet",
+      "disposition": "substantive",
+      "finding": "Multi-room inventory combination, tool prerequisites and clock repair chain implemented. Fixed authored escape room is legitimately one puzzle with several causal steps."
+    },
+    {
+      "id": "track-exchange",
+      "disposition": "resolved-on-follow-up",
+      "finding": "Movement blocks only #; claimed W/G ability restrictions absent. Ordinary win28moves confirms rendezvous exchange, but grid permits bypassing gate/water and claimed abilities are unenforced.",
+      "originalDisposition": "correctness-requested",
+      "resolution": "Movement now enforces G requires iron key and Ada cannot cross W; maps create mandatory key gate/water band. Touch retest blocked keyless gate and Ada water without move cost, then full win in twenty moves through valid exchange."
+    },
+    {
+      "id": "folded-world",
+      "disposition": "resolved-on-follow-up",
+      "finding": "Real room-specific frame transformations implemented, but an exact shortest compass route is printed after every move. Player decision is almost entirely local rotation; ask whether route hints should be optional/costed.",
+      "originalDisposition": "depth-review-requested",
+      "resolution": "Twelve rooms, rotated and mirrored frames and atlas route planning; exact-next-step route removed."
+    }
+  ],
+  "ordinaryCases": [
+    {
+      "id": "invisible-ink",
+      "profile": "Chromium390x844 touch emulation",
+      "touchOnly": true,
+      "outcome": "first sheet completed; stopped after exposing dominant strategy",
+      "observations": [
+        "Manifest0,1,1 made relevant rows explicit. Six strip scans exposed all channels for rows2and3, leaving1charge.",
+        "Correctly selected C2/C3 and advanced to sheet2. New manifest0,0,2 made second sheet even easier."
+      ],
+      "restartTested": false,
+      "screenshot": "/tmp/ordinary-invisible-ink.png"
+    },
+    {
+      "id": "archive-edit",
+      "profile": "Chromium390x844 touch emulation",
+      "touchOnly": true,
+      "outcome": "release1 completed; release2 inspected",
+      "observations": [
+        "Incorrect initial publish spent one reviewcredit (3\u21922).",
+        "Applied Editorial, Survey; incoming Region matched explicit Required. Applied Materials; kept current Size matching explicit Required. Published successfully.",
+        "Release2 changed values/order, retaining same three patches and direct Required matching."
+      ],
+      "restartTested": false,
+      "screenshot": "/tmp/ordinary-archive-edit.png"
+    },
+    {
+      "id": "track-exchange",
+      "profile": "Chromium390x844 touch emulation",
+      "touchOnly": true,
+      "outcome": "full win",
+      "observations": [
+        "Transfer away from hatches refused without spending moves.",
+        "Collected Ada key and Bo crank, rendezvoused at both H cells, swapped objects, brought both to exits in28moves.",
+        "Restart rebuilt initial empty inventories and zero moves."
+      ],
+      "restartTested": true,
+      "screenshot": "/tmp/ordinary-track-exchange.png"
+    }
+  ],
+  "limits": [
+    "Human-in-the-loop visible DOM reading and touchscreen taps through Playwright, not a physical device.",
+    "Ordinary samples preceded source review. Subsequent source analysis is clearly separated.",
+    "Review findings refer to stated source hash and may be resolved by later worker changes.",
+    "No claim all20 games independently completed; ordinary full completion only Track Exchange."
+  ],
+  "followUp": {
+    "dateUTC": "2026-10-01T04:06:38.666514+00:00",
+    "sourceHashReviewed": "6da7141b9c1641fe7cf7755a48f5be05526b8e5d6c1ed4975b91a381a5c1a025",
+    "scope": "Reread all nine changed implementations; visible tap-only spot checks of revised Track Exchange, Archive Edit, Invisible Ink. Reviewer had source familiarity by this follow-up; no hidden state reads, model writes or injected hooks used.",
+    "cases": [
+      {
+        "id": "track-exchange",
+        "outcome": "full win",
+        "touchOnly": true,
+        "assertions": [
+          "Keyless iron gate blocked; moves remained2.",
+          "Ada water entry blocked; moves remained4.",
+          "Bo crossed mandatory water band; exchanged crank/key at shared hatch; both exited after20 successful moves."
+        ],
+        "screenshot": "/tmp/ordinary-track-fixed-win.png"
+      },
+      {
+        "id": "archive-edit",
+        "outcome": "release1 complete",
+        "touchOnly": true,
+        "assertions": [
+          "Editorial dependency Rush rejected with three picks unchanged.",
+          "Visible plan Seal,Rush,Editorial covered five fields with three picks; resolved Region incoming; published to release2."
+        ],
+        "screenshot": "/tmp/ordinary-archive-fixed-study.png"
+      },
+      {
+        "id": "invisible-ink",
+        "outcome": "sheet1 complete",
+        "touchOnly": true,
+        "assertions": [
+          "After four UV/heat scans, alternatives in positive rows eliminated.",
+          "Inferred B1/C3 despite unobserved pressure and certified successfully."
+        ],
+        "screenshot": "/tmp/ordinary-invisible-fixed-inference.png"
+      }
+    ],
+    "remainingLimitations": [
+      "Parallax/Fossil/Folded/Lens corrected source inspected, not manually completed in follow-up.",
+      "Archive/Ink follow-up covers first study; owner must retain full progression tests.",
+      "No physical mobile or actual screenreader validation."
+    ]
+  }
+}

@@ -3,15 +3,14 @@
   "suite": "pebble-post",
   "passed": true,
   "status": "passed",
-  "startedAt": "2026-10-01T02:00:56.000Z",
+  "startedAt": "2026-10-01T04:08:46.225Z",
   "source": {
-    "sha256": "d12748bff7461eb467cd37c47431c7f381d80661813f5dfaba8a6b7c6eb37d88",
+    "sha256": "08f3d4966ad97619912043cfdda1bc8ffe059c98828ba33c29e612d97db0c825",
     "files": [
       "catalog.css",
       "catalog.js",
       "common.js",
       "index.html",
-      "inventory-plan.json",
       "inventory.json",
       "pebble-post/game.css",
       "pebble-post/game.js",
@@ -32,11 +31,11 @@
   "scope": {
     "desktopCompletion": true,
     "mobileViewportCompletion": true,
-    "touchGameplayCompletion": true,
+    "touchGameplayCompletion": false,
     "touchControlSmoke": true,
     "completionMeans": "winning full progression",
     "method": "scripted UI; curated answers or board solvers",
-    "mobileMethod": "touch gameplay with scripted navigation/solvers"
+    "mobileMethod": "touch gameplay mixed with mouse check/undo actions"
   },
   "games": [
     "pebble-post"
@@ -48,9 +47,9 @@
   "servedRuntimeBefore": {
     "baseURL": "http://127.0.0.1:8790",
     "passed": true,
-    "sha256": "cb0c08f885d6c0358f473d8297cba3b8b10c9d3caffde728b5c33049c1a28b82",
-    "fileCount": 11,
-    "verifiedAt": "2026-10-01T02:00:57.292Z"
+    "sha256": "ff8abf871f841b0ddbab6a7a27cc9e7f28f98bef4d5e4a05f047f2858496b08c",
+    "fileCount": 10,
+    "verifiedAt": "2026-10-01T04:08:46.352Z"
   },
   "exitCode": 0,
   "signal": null,
@@ -58,9 +57,10 @@
   "servedRuntime": {
     "baseURL": "http://127.0.0.1:8790",
     "passed": true,
-    "sha256": "cb0c08f885d6c0358f473d8297cba3b8b10c9d3caffde728b5c33049c1a28b82",
-    "fileCount": 11,
-    "verifiedAt": "2026-10-01T02:01:42.013Z"
+    "sha256": "ff8abf871f841b0ddbab6a7a27cc9e7f28f98bef4d5e4a05f047f2858496b08c",
+    "fileCount": 10,
+    "verifiedAt": "2026-10-01T04:09:02.460Z"
   },
-  "finishedAt": "2026-10-01T02:01:42.013Z"
+  "completionEvidence": null,
+  "finishedAt": "2026-10-01T04:09:02.460Z"
 }

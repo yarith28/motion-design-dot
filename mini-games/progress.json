@@ -1,6 +1,6 @@
 {
-  "target": 100,
-  "phase": "Confirmed review fixes implemented; source-matched local suites passed",
+  "target": 200,
+  "phase": "200 implemented, independently reviewed and source-matched locally verified; exact-commit publication workflow required",
   "publicationRule": "Implemented playable entries are linked in the catalog; source-matched verification is tracked independently in coverage/index.json. Planned inventory is not playable.",
   "collections": [
     {
@@ -32,9 +32,34 @@
       "id": "arcade-room",
       "target": 15,
       "status": "implemented; consult current source-matched evidence"
+    },
+    {
+      "id": "systems-room",
+      "target": 20,
+      "status": "implemented and reviewed; consult current source-matched evidence"
+    },
+    {
+      "id": "tabletop-room",
+      "target": 20,
+      "status": "implemented and reviewed; consult current source-matched evidence"
+    },
+    {
+      "id": "puzzle-lab",
+      "target": 20,
+      "status": "implemented and reviewed; consult current source-matched evidence"
+    },
+    {
+      "id": "kinetic-room",
+      "target": 20,
+      "status": "implemented and reviewed; consult current source-matched evidence"
+    },
+    {
+      "id": "discovery-room",
+      "target": 20,
+      "status": "implemented and reviewed; consult current source-matched evidence"
     }
   ],
-  "catalogPlayable": 100,
+  "catalogPlayable": 200,
   "liveCommitMeaning": "The nested historicalRelease identifies the previously verified publication; it is not proof for current changed source.",
   "historicalRelease": {
     "verifiedLive": 100,
@@ -48,14 +73,30 @@
   "currentLocalEvidence": "coverage/index.json",
   "currentLiveVerification": {
     "workflow": "https://github.com/yarith28/motion-design-dot/actions/workflows/verify-pages.yml",
-    "policy": "A successful run matching the published commit is required. Consult that run for deployed byte matching, 200 route/viewport smoke checks and reviewed-issue Chromium/WebKit regressions. A push alone is not verification."
+    "policy": "A successful workflow run matching the published commit is required: source byte equivalence, 400 route/viewport cases, original reviewed-issue regressions, new-game Chromium/WebKit controls and full new-game Chromium completion jobs. A push is not deployment proof."
   },
   "currentLocalVerification": {
     "evidence": "coverage/index.json",
-    "verified": 100,
-    "desktopCompletions": 100,
-    "mobileViewportCompletions": 100,
-    "touchGameplayCompletions": 54,
-    "scope": "Current successful suite runs only; source content hashes exclude generated coverage and documentation. Mobile viewport completion is not touch-only completion or iPhone/Safari certification. Solvers may inspect hidden answers and use virtual time. Competitive strategy terminal results can be losses. Live route/reset checks and ordinary-play samples are separate."
+    "status": "Passed all 20 source-matched suites",
+    "newGames": 100,
+    "newDesktopCases": 100,
+    "newMobileCases": 100,
+    "newTouchOnlyGames": 97,
+    "localRouteResetCases": 400,
+    "localAssetsMatched": 313,
+    "controlsCases": 200,
+    "controlsEngine": "Chromium 151.0.7922.173",
+    "limits": "Completion uses solvers/probes/legal plans. Competitive terminal losses count; 3 discovery mobile paths use mixed native field entry. Ordinary review is sampled. No physical device or screen-reader session.",
+    "verifiedGames": 200,
+    "desktopCompletions": 200,
+    "mobileViewportCompletions": 200,
+    "touchGameplayCompletions": 149
+  },
+  "baselinePreserved": {
+    "commit": "6f4469cc7491b2b6255e7479c20880adf99787df",
+    "games": 100,
+    "runtimeFiles": 66,
+    "test": "tests/preservation.cjs",
+    "verifiedBaselineWorkflow": "https://github.com/yarith28/motion-design-dot/actions/runs/36805539459"
   }
 }

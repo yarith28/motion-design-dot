@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "total": 100,
+  "total": 200,
   "games": [
     {
       "id": "signal-run",
@@ -1735,6 +1735,2265 @@
         "actionSelector": "#pause"
       },
       "family": "arcade-room",
+      "status": "playable"
+    },
+    {
+      "id": "junction-nine",
+      "name": "Junction Nine",
+      "category": "strategy",
+      "description": "Keep a busy crossing flowing without letting a queue spill back.",
+      "mechanic": "Traffic phase coordination with incompatible movements, changing arrivals and queue spillback.",
+      "rules": [
+        "Choose a green phase each minute. Straight phases clear up to 5 from their queue and 1 from the matching turn queue. Turn phases clear 4 turning cars and 1 matching straight car.",
+        "Changing axis (north/south to east/west) uses one unit of clearance for safe all-red. Arrivals shown for the next three minutes join after clearance. A queue above 10 spills back and ends the shift.",
+        "Run all 16 minutes, clear at least 72 cars and finish with every queue at 7 or below. Emergency flush clears up to 3 from every queue, but you have only two."
+      ],
+      "controls": "Tap the labeled actions, or use Tab and Enter / Space. Arrow keys move between actions. Nothing advances while you are away.",
+      "url": "systems-room/?game=junction-nine",
+      "accent": "#bed0b2",
+      "symbol": "↔",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#actions button:not(:disabled)"
+      },
+      "family": "systems-room",
+      "status": "playable"
+    },
+    {
+      "id": "assembly-belt",
+      "name": "Assembly Belt",
+      "category": "strategy",
+      "description": "Stamp, bake and sort a procession of little brass badges.",
+      "mechanic": "Live conveyor processing with ordered transformations, limited machine energy and rejection handling.",
+      "rules": [
+        "The belt has four stations: load → press → oven → dispatch. Every action moves every badge one station after machines operate. Load a blank of the next order’s shape or leave a gap.",
+        "A die setting stamps badges at the press; the oven must be set to bake. Changing a die or oven setting takes a tick too. The oven has 17 heat ticks; heating an empty station still costs one. The die stamps the badge already at the press before the belt moves. Ring badges require a round die; seal badges need a square die. Dispatch accepts only correctly stamped, baked badges.",
+        "Deliver at least 10 of 12 orders in 24 ticks. A rejected badge counts against the order; a gap does not. Preview the next four order shapes. Plan machine changes ahead of the moving belt."
+      ],
+      "controls": "Tap the labeled actions, or use Tab and Enter / Space. Arrow keys move between actions. Nothing advances while you are away.",
+      "url": "systems-room/?game=assembly-belt",
+      "accent": "#d4bea4",
+      "symbol": "⚙",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#actions button:not(:disabled)"
+      },
+      "family": "systems-room",
+      "status": "playable"
+    },
+    {
+      "id": "marsh-balance",
+      "name": "Marsh Balance",
+      "category": "strategy",
+      "description": "Keep reeds, grazers and foxes in a living balance.",
+      "mechanic": "Delayed coupled predator–prey population control with habitat regeneration.",
+      "rules": [
+        "Run a marsh for 12 seasons. Reeds regrow by 8 each season, then grazers eat 1 reed each. Foxes eat up to 2 grazers each. Every third season, grazers grow by half if enough reeds remain; foxes grow by 1 if at least 6 grazers remain.",
+        "Choose one intervention each season: plant 10 reeds, relocate 3 grazers in/out, relocate 1 fox in/out, or preserve habitat (+3 reed regrowth for this season). Relocations cost 2 funds; planting costs 3. Habitat preservation is free. Every third season earns 4 funds.",
+        "Never let reeds reach 0, grazers fall below 3, or foxes fall below 1. Finish with reeds 15–50, grazers 6–18 and foxes 1–4. Birth timing means a safe-looking population can still overshoot."
+      ],
+      "controls": "Tap the labeled actions, or use Tab and Enter / Space. Arrow keys move between actions. Nothing advances while you are away.",
+      "url": "systems-room/?game=marsh-balance",
+      "accent": "#b9ced3",
+      "symbol": "♧",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#actions button:not(:disabled)"
+      },
+      "family": "systems-room",
+      "status": "playable"
+    },
+    {
+      "id": "reorder-point",
+      "name": "Reorder Point",
+      "category": "strategy",
+      "description": "Order early enough, but leave room on the shelves.",
+      "mechanic": "Inventory lot sizing with shipping lead time, holding costs and lost demand.",
+      "rules": [
+        "Meet twelve days of demand. Each day choose an order of 0, 3 or 6 crates. An order placed today arrives at the start of the day after tomorrow. Two in-transit slots show exactly what is on the way.",
+        "Crates cost 2 each plus a 2-coin shipping fee per nonempty order. Each served customer pays 5. Unfilled demand is lost. Shelf space is 12; arriving overflow is discarded. Leftover stock costs 1 coin per 3 crates each night, rounded down.",
+        "Start with 8 crates and 28 coins. Serve at least 39 customers and finish with 70 coins. Orders require cash now; tomorrow’s sales cannot fund today’s order."
+      ],
+      "controls": "Tap the labeled actions, or use Tab and Enter / Space. Arrow keys move between actions. Nothing advances while you are away.",
+      "url": "systems-room/?game=reorder-point",
+      "accent": "#d0bfd4",
+      "symbol": "▤",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#actions button:not(:disabled)"
+      },
+      "family": "systems-room",
+      "status": "playable"
+    },
+    {
+      "id": "workshop-shift",
+      "name": "Workshop Shift",
+      "category": "strategy",
+      "description": "Three workers, a small workshop, and a very full order book.",
+      "mechanic": "Worker placement with exclusive stations, shift resets and multi-resource recipes.",
+      "rules": [
+        "Each shift has three workers. Assign one to a station; that station stays occupied until the next shift. The six stations are timber, foundry, tool bench, cart bench, training and the trading desk.",
+        "Timber/foundry produce 2 materials, plus 1 after training. A tool needs 2 timber + 1 metal and earns 3 reputation; a cart needs 3 timber + 2 metal and earns 5. Training costs 1 of each material and permanently improves gathering. The trading desk swaps 2 of either material for 2 of the other.",
+        "Finish eight shifts with 35 reputation, at least four tools and three carts. You may end a shift early, but unused workers do not carry over."
+      ],
+      "controls": "Tap the labeled actions, or use Tab and Enter / Space. Arrow keys move between actions. Nothing advances while you are away.",
+      "url": "systems-room/?game=workshop-shift",
+      "accent": "#bed0b2",
+      "symbol": "⚒",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#actions button:not(:disabled)"
+      },
+      "family": "systems-room",
+      "status": "playable"
+    },
+    {
+      "id": "signal-cabinet",
+      "name": "Signal Cabinet",
+      "category": "strategy",
+      "description": "Every job has a deadline. Every change of tools costs time.",
+      "mechanic": "Online priority scheduling with setup costs, released jobs and completion deadlines.",
+      "rules": [
+        "Eight jobs arrive during a 24-minute shift. Each needs two minutes of work. Select a released job to work one minute; switching between ink and wire tools consumes the minute as setup, without processing.",
+        "A job can be interrupted and resumed. Its remaining work stays done. Deadlines are inclusive: a job due at minute 5 must finish by the end of your fifth action. Expired jobs leave the queue.",
+        "Finish at least 7 jobs. Two missed deadlines end the shift. All release times and deadlines are public; scheduling one class in a batch saves setup but may strand an urgent job."
+      ],
+      "controls": "Tap the labeled actions, or use Tab and Enter / Space. Arrow keys move between actions. Nothing advances while you are away.",
+      "url": "systems-room/?game=signal-cabinet",
+      "accent": "#d4bea4",
+      "symbol": "≋",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#actions button:not(:disabled)"
+      },
+      "family": "systems-room",
+      "status": "playable"
+    },
+    {
+      "id": "cold-chain",
+      "name": "Cold Chain",
+      "category": "strategy",
+      "description": "A cool room, a warm stove, and ingredients that will not wait.",
+      "mechanic": "Perishable batch processing with parallel aging, cooling capacity and recipe orders.",
+      "rules": [
+        "Each tick brings the next pair of ingredients: F is fruit, M is milk. Warm ingredients age by one each tick and spoil at age 4. Two refrigerator slots stop aging entirely. Moving one ingredient into or out of the fridge takes a tick.",
+        "Cook jam from two fruit, yogurt from two milk, or a parfait from one fruit and milk that has chilled for at least two ticks. Parfait needs cold milk; other cooking uses the oldest suitable ingredients first, including chilled ones. A batch earns one order. Incoming ingredients arrive after aging; the kitchen holds at most 8 total. Overflow is discarded.",
+        "Across 16 ticks, make at least 3 jam, 2 yogurt and 3 parfait. Start with one fruit and one milk. Cooling can bridge a gap in the delivery schedule, but every fridge move uses cooking time."
+      ],
+      "controls": "Tap the labeled actions, or use Tab and Enter / Space. Arrow keys move between actions. Nothing advances while you are away.",
+      "url": "systems-room/?game=cold-chain",
+      "accent": "#b9ced3",
+      "symbol": "◇",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#actions button:not(:disabled)"
+      },
+      "family": "systems-room",
+      "status": "playable"
+    },
+    {
+      "id": "reservoir",
+      "name": "Reservoir",
+      "category": "strategy",
+      "description": "Make room for rain and save enough for a dry morning.",
+      "mechanic": "Forecast-driven release control under storage, flood and demand constraints.",
+      "rules": [
+        "Fourteen days of river flow are forecast. Choose a release of 0–8 units. Today’s rain enters first; the release then leaves storage. Serve the daily demand before any excess release is counted as waste.",
+        "Storage above 20 after release floods the banks. Storage below zero is impossible: only available water releases. Each unit of unmet demand counts as a shortage. Once shortages exceed 3 the town closes the reservoir.",
+        "Finish with at most 3 shortage units, at most 13 waste units and at least 3 water in reserve. Plan storage through the dry spell, then make space for the second storm."
+      ],
+      "controls": "Tap the labeled actions, or use Tab and Enter / Space. Arrow keys move between actions. Nothing advances while you are away.",
+      "url": "systems-room/?game=reservoir",
+      "accent": "#d0bfd4",
+      "symbol": "≈",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#actions button:not(:disabled)"
+      },
+      "family": "systems-room",
+      "status": "playable"
+    },
+    {
+      "id": "power-desk",
+      "name": "Power Desk",
+      "category": "strategy",
+      "description": "Wake the generators before the city needs them.",
+      "mechanic": "Unit commitment with startup delays, ramping, fuel and battery dispatch.",
+      "rules": [
+        "The city needs power for 14 hours. Set the slow turbine target to 0, 2, 4 or 6. Its output changes by at most 2 per hour; starting from off produces 0 on its first hour. Once started, it follows your target on later hours.",
+        "Choose battery mode with the target: reserve automatically stores up to 2 spare power or supplies up to 2 deficit; boost can supply up to 4 but never charge. The battery holds 8 and starts at 6. Each actual turbine unit costs 1 fuel.",
+        "Serve every demand with no more than 3 total unserved units, using at most 61 fuel. Finish with battery at least 2. High output is safe but wastes fuel; startup and ramping make late corrections costly."
+      ],
+      "controls": "Tap the labeled actions, or use Tab and Enter / Space. Arrow keys move between actions. Nothing advances while you are away.",
+      "url": "systems-room/?game=power-desk",
+      "accent": "#bed0b2",
+      "symbol": "ϟ",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#actions button:not(:disabled)"
+      },
+      "family": "systems-room",
+      "status": "playable"
+    },
+    {
+      "id": "carry-on",
+      "name": "Carry On",
+      "category": "strategy",
+      "description": "Pack an expedition from offers that will not come back.",
+      "mechanic": "Sequential multidimensional knapsack with irreversible decisions and a single exchange.",
+      "rules": [
+        "Twelve expedition offers arrive one at a time. Accept or pass; passed items leave for good. Carry at most 15 weight and 14 volume. You see the next two categories, but exact future sizes and values arrive with the offer.",
+        "Once per expedition you may exchange one packed item for the current offer. The removed item is lost and the exchange must fit both capacities. Different categories represent coverage, not interchangeable points.",
+        "Finish with at least 40 usefulness, four different categories, shelter and medicine. Replay uses the same expedition, so you can improve a plan with what you learned."
+      ],
+      "controls": "Tap the labeled actions, or use Tab and Enter / Space. Arrow keys move between actions. Nothing advances while you are away.",
+      "url": "systems-room/?game=carry-on",
+      "accent": "#d4bea4",
+      "symbol": "▣",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#actions button:not(:disabled)"
+      },
+      "family": "systems-room",
+      "status": "playable"
+    },
+    {
+      "id": "quiet-majority",
+      "name": "Quiet Majority",
+      "category": "strategy",
+      "description": "Find a coalition that can live with the same promise.",
+      "mechanic": "Coalition bargaining with irrevocable concessions, faction vetoes and public counteroffers.",
+      "rules": [
+        "Negotiate three bills with 15 council seats. Each bill needs 11 yes votes. Harbor, Garden, Clinic and Guild have public policy weights and approval thresholds. One point of any policy helps some factions and can upset another.",
+        "Each bill allows four negotiations. Add one Harbor/Garden/Clinic policy for 1 treasury, or promise a faction a 2-point approval grant for 2 treasury. Grants expire after the vote; policy levels carry into later bills. You may vote early.",
+        "Pass all three bills and keep treasury at 0 or higher. Start with policy 1/1/1 and 12 treasury. Each passed bill returns 2 treasury; each failed bill costs 1. Thresholds change for every bill, so a first majority may not last."
+      ],
+      "controls": "Tap the labeled actions, or use Tab and Enter / Space. Arrow keys move between actions. Nothing advances while you are away.",
+      "url": "systems-room/?game=quiet-majority",
+      "accent": "#b9ced3",
+      "symbol": "◉",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#actions button:not(:disabled)"
+      },
+      "family": "systems-room",
+      "status": "playable"
+    },
+    {
+      "id": "safe-return",
+      "name": "Safe Return",
+      "category": "strategy",
+      "description": "Write a little insurance, and keep enough in reserve.",
+      "mechanic": "Correlated-risk underwriting across a forecast cycle with capital exposure constraints.",
+      "rules": [
+        "Write one three-day insurance policy per day, or decline. Premiums arrive immediately; every active policy pays its listed loss on every matching weather day. New policies cover today and the next two days.",
+        "Weather is public for the next four days. Multiple policies of one type share the same risk: a flood can hit every insured house together. Policies expire after their third payout check. Keep positive capital after each day.",
+        "Finish twelve days with at least 45 free capital and at least 7 policies written. At closing, each remaining policy-day reserves 4 capital; only capital above that reserve counts. Start with 20 capital. New policies cost no cash upfront, but collect claims after their premium. Avoid leaving active exposure in the last-day accounts."
+      ],
+      "controls": "Tap the labeled actions, or use Tab and Enter / Space. Arrow keys move between actions. Nothing advances while you are away.",
+      "url": "systems-room/?game=safe-return",
+      "accent": "#d0bfd4",
+      "symbol": "⌂",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#actions button:not(:disabled)"
+      },
+      "family": "systems-room",
+      "status": "playable"
+    },
+    {
+      "id": "firebreak",
+      "name": "Firebreak",
+      "category": "strategy",
+      "description": "Wind moves the fire. Give it somewhere safe to stop.",
+      "mechanic": "Dynamic fire-front containment using persistent trenches and limited water.",
+      "rules": [
+        "Protect four cabins on a 6×6 hillside for ten wind shifts. You have one crew action before each spread. A trench permanently blocks fire; water extinguishes one burning cell and all burning neighbors, but only one tank are available.",
+        "Burning cells become ash after spreading. East wind spreads east and south; south wind spreads south and west. Fire cannot cross trenches, ash or wet cells. Lightning ignites an unprotected square after spreads 3, 5, 7 and 9: respectively row 1 column 4; row 3 column 5; row 5 column 5; row 2 column 4.",
+        "Keep all four cabins unburned. Build trenches on any empty non-cabin cell. The grid labels every location and terrain; choose a burning cell for a water action. End crew turn skips remaining actions."
+      ],
+      "controls": "Tap the labeled actions, or use Tab and Enter / Space. Arrow keys move between actions. Nothing advances while you are away.",
+      "url": "systems-room/?game=firebreak",
+      "accent": "#bed0b2",
+      "symbol": "♨",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#actions button:not(:disabled)"
+      },
+      "family": "systems-room",
+      "status": "playable"
+    },
+    {
+      "id": "kiln-house",
+      "name": "Kiln House",
+      "category": "strategy",
+      "description": "Warm the heart of the clay without cracking its shell.",
+      "mechanic": "Coupled thermal inertia control with temperature dwell and gradient stress.",
+      "rules": [
+        "Fire a clay vessel by heating both its shell and its core. Choose heat 0–3; each level spends that much fuel. Heat raises the shell quickly, while the core follows only 22% of the previous temperature gap each tick.",
+        "The shell loses 12% of its warmth above room temperature (20°) and transfers 25% of its gap to the core. Venting removes an extra 10° from the shell. A gap over 38° or shell above 110° cracks the clay.",
+        "Keep the core at 55–70° and shell at 65–90° for three consecutive ticks, then cool the core to 32° or less. Finish within 40 ticks and 30 fuel. Cooling too early resets the dwell; venting too hard can crack a hot core."
+      ],
+      "controls": "Tap the labeled actions, or use Tab and Enter / Space. Arrow keys move between actions. Nothing advances while you are away.",
+      "url": "systems-room/?game=kiln-house",
+      "accent": "#d4bea4",
+      "symbol": "◒",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#actions button:not(:disabled)"
+      },
+      "family": "systems-room",
+      "status": "playable"
+    },
+    {
+      "id": "two-couriers",
+      "name": "Two Couriers",
+      "category": "strategy",
+      "description": "Make four deliveries without sending both bicycles into one lane.",
+      "mechanic": "Two-agent pickup-and-delivery with shared-road occupancy and parcel destinations.",
+      "rules": [
+        "Two couriers share a narrow road: West gate — West junction — Center — East junction — East gate. A passing bay branches from Center; the North depot branches from West junction and South depot from East junction.",
+        "Each action moves one courier along one road. Couriers cannot occupy the same stop or pass through one another. A courier automatically picks up a waiting parcel if empty, and delivers when reaching its destination. Each carries one parcel.",
+        "Deliver all four parcels within 34 moves. The west/east parcels cross in opposite directions; use the passing bay to let loaded couriers get through. North and south parcels also cross. All positions, loads and destinations remain visible."
+      ],
+      "controls": "Tap the labeled actions, or use Tab and Enter / Space. Arrow keys move between actions. Nothing advances while you are away.",
+      "url": "systems-room/?game=two-couriers",
+      "accent": "#b9ced3",
+      "symbol": "⇄",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#actions button:not(:disabled)"
+      },
+      "family": "systems-room",
+      "status": "playable"
+    },
+    {
+      "id": "elevator-night",
+      "name": "Elevator Night",
+      "category": "strategy",
+      "description": "One small lift for a building full of last-minute journeys.",
+      "mechanic": "Capacity-constrained elevator dispatch with passenger queues and ride deadlines.",
+      "rules": [
+        "Carry eight passengers through a five-floor building. Move one floor per tick, or open doors. Door opening first unloads arriving passengers, then boards the oldest waiting passengers up to capacity 2. Moving does not board or unload.",
+        "Every passenger has a release time and delivery deadline. Passengers appear at their release tick. A passenger still waiting or riding when their deadline passes is missed and leaves. The destination of everyone aboard is visible.",
+        "Deliver at least 7 passengers within 28 ticks. Two missed passengers end the shift. You cannot choose which passenger boards: oldest first, so route and door timing determine the load."
+      ],
+      "controls": "Tap the labeled actions, or use Tab and Enter / Space. Arrow keys move between actions. Nothing advances while you are away.",
+      "url": "systems-room/?game=elevator-night",
+      "accent": "#d0bfd4",
+      "symbol": "↕",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#actions button:not(:disabled)"
+      },
+      "family": "systems-room",
+      "status": "playable"
+    },
+    {
+      "id": "supply-web",
+      "name": "Supply Web",
+      "category": "strategy",
+      "description": "Build the little factory around its narrowest bottleneck.",
+      "mechanic": "Production network investment with sequential material flow and throughput bottlenecks.",
+      "rules": [
+        "Build a factory that turns ore into metal, timber into boards, and both into bicycles. Each tick processes stations in order: mines/forest → smelters/saws → assembly. A smelter converts 2 ore to 1 metal; a saw converts 2 timber to 1 board; assembly consumes 1 metal + 1 board for a bicycle.",
+        "Each station starts with capacity 1, except assembly capacity 0. Spend cash to add capacity, or take a contract selling up to 2 bicycles for 7 each. Production runs after every choice. Building costs: mine/forest 3, smelter/saw 4, assembly 5. Inventory carries over.",
+        "In 16 ticks, produce at least 12 bicycles and finish with 10 cash. Start with 13 cash. Extra downstream capacity is useless without raw feed, and unsold stock cannot fund construction."
+      ],
+      "controls": "Tap the labeled actions, or use Tab and Enter / Space. Arrow keys move between actions. Nothing advances while you are away.",
+      "url": "systems-room/?game=supply-web",
+      "accent": "#bed0b2",
+      "symbol": "▦",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#actions button:not(:disabled)"
+      },
+      "family": "systems-room",
+      "status": "playable"
+    },
+    {
+      "id": "growing-block",
+      "name": "Growing Block",
+      "category": "strategy",
+      "description": "Make a neighborhood where people want to stay.",
+      "mechanic": "Urban zoning with spatial externalities, migration, upkeep and tax feedback.",
+      "rules": [
+        "Zone a 4×4 neighborhood over twelve years. Choose a building type, then an empty lot; building advances one year. Homes cost 4, parks 3, factories 5 and shops 4. Waiting advances without building.",
+        "After each year, factories earn 3. Parks and shops each cost 1 upkeep. Homes gain one resident (capacity 4) when beside a park or shop and when adjacent parks are at least as numerous as adjacent factories. Otherwise they lose one resident. Each home pays floor(residents/2) tax; shops earn one per adjacent occupied home.",
+        "Finish with 20 residents, 8 cash and no polluted occupied home. Start with a home, park and distant factory. Shared edges count; diagonals do not. A new building’s effects apply immediately, and a negative treasury ends the plan."
+      ],
+      "controls": "Tap the labeled actions, or use Tab and Enter / Space. Arrow keys move between actions. Nothing advances while you are away.",
+      "url": "systems-room/?game=growing-block",
+      "accent": "#d4bea4",
+      "symbol": "▧",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#actions button:not(:disabled)"
+      },
+      "family": "systems-room",
+      "status": "playable"
+    },
+    {
+      "id": "borrowed-time",
+      "name": "Borrowed Time",
+      "category": "strategy",
+      "description": "Two crews and one launch date. Find the critical path.",
+      "mechanic": "Precedence-constrained parallel project scheduling with resource-specific crew assignments.",
+      "rules": [
+        "Nine project tasks form a dependency graph. Two crews work in parallel: the planner and the builder. Assign any ready task to a free crew, then advance one day. Assignment itself does not use a day.",
+        "A task cannot start until every prerequisite is complete. Matching crew specialty reduces its printed duration by one day; the other crew needs the full duration. Once assigned, a task stays with that crew until finished.",
+        "Complete Launch by the end of day 16. All tasks are required by the final dependency chain. Leaving a crew idle can be correct when tomorrow unlocks a task it handles faster."
+      ],
+      "controls": "Tap the labeled actions, or use Tab and Enter / Space. Arrow keys move between actions. Nothing advances while you are away.",
+      "url": "systems-room/?game=borrowed-time",
+      "accent": "#b9ced3",
+      "symbol": "⌛",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#actions button:not(:disabled)"
+      },
+      "family": "systems-room",
+      "status": "playable"
+    },
+    {
+      "id": "convoy-ledger",
+      "name": "Convoy Ledger",
+      "category": "strategy",
+      "description": "Spread the escorts carefully. Bring every ship home.",
+      "mechanic": "Persistent escort allocation across simultaneous threatened shipping lanes.",
+      "rules": [
+        "Dispatch five convoys across three lanes. Each lane shows threat and cargo value. Allocate your six escorts one at a time; then sail all lanes together. Each escort cancels one threat. You can recall an allocation before sailing.",
+        "If a lane has any uncovered threat, that lane loses its cargo and one assigned escort (if present). A fully protected lane delivers all cargo. After sailing, surviving escorts return and one replacement joins, up to six.",
+        "Deliver at least 58 cargo across five waves. You may deliberately abandon a low-value lane to fully protect the others. Splitting escorts thinly can lose every cargo and shrink the fleet for later waves."
+      ],
+      "controls": "Tap the labeled actions, or use Tab and Enter / Space. Arrow keys move between actions. Nothing advances while you are away.",
+      "url": "systems-room/?game=convoy-ledger",
+      "accent": "#d0bfd4",
+      "symbol": "⚓",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#actions button:not(:disabled)"
+      },
+      "family": "systems-room",
+      "status": "playable"
+    },
+    {
+      "id": "velvet-tricks",
+      "name": "Velvet Tricks",
+      "category": "strategy",
+      "description": "Follow suit, save a trump, and take control of the lead.",
+      "mechanic": "Follow-suit trump trick taking with a changing leader.",
+      "rules": [
+        "Play one card per trick. You must follow the lead suit if you can; otherwise any card is legal. Spades are trump. Highest trump wins; without trump, highest card of the lead suit wins.",
+        "The trick winner leads next. Your eight-card hand and the house hand exhaust together. Win at least five tricks; four is a draw. The house conserves high cards when it cannot win."
+      ],
+      "controls": "Tap or click cards, board squares and labeled actions. Tab moves focus; Enter or Space activates. Arrow keys move between neighboring controls. No timing or dragging required.",
+      "url": "tabletop-room/?game=velvet-tricks",
+      "accent": "#c9d5b5",
+      "symbol": "♧",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "[data-action]"
+      },
+      "family": "tabletop-room",
+      "status": "playable"
+    },
+    {
+      "id": "twenty-one",
+      "name": "Twenty-One",
+      "category": "strategy",
+      "description": "Read the dealer. Decide how much of your stack belongs on the next card.",
+      "mechanic": "Five-round blackjack with hit, stand, double and a finite chip stack.",
+      "rules": [
+        "Start with 20 chips. Each of five hands costs a 2-chip stake. Aces count 11 or 1; faces count 10. The dealer shows one card and stands at 17, including soft 17.",
+        "Hit for another card or stand. Double is available only on your first decision, costs another 2 chips and deals exactly one card. Above 21 loses. A two-card 21 pays 3:2; other wins pay 1:1. Ties return the stake.",
+        "Finish five hands with more than 20 chips to win. The dealer hole card stays hidden until you stand or bust."
+      ],
+      "controls": "Tap or click cards, board squares and labeled actions. Tab moves focus; Enter or Space activates. Arrow keys move between neighboring controls. No timing or dragging required.",
+      "url": "tabletop-room/?game=twenty-one",
+      "accent": "#dcbca0",
+      "symbol": "◇",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "[data-action]"
+      },
+      "family": "tabletop-room",
+      "status": "playable"
+    },
+    {
+      "id": "meld-atelier",
+      "name": "Meld Atelier",
+      "category": "strategy",
+      "description": "Keep a useful card. Let the rest of the hand become a plan.",
+      "mechanic": "Draw-discard rummy with selectable sets/runs and deadwood pressure.",
+      "rules": [
+        "Draw from the face-up discard or the stock, then discard one card. You may instead lay a selected meld: three or more equal ranks, or three or more consecutive ranks in one suit. Aces are low.",
+        "Select cards to build a meld; Lay meld removes it permanently. Remaining cards are deadwood: ace 1, numbers their rank, faces 10. Melds may be laid only after drawing.",
+        "After discarding, knock at 10 or less deadwood to win. You have twelve draws. On the final discard, more than 10 deadwood loses. Plan overlapping runs and sets before committing."
+      ],
+      "controls": "Tap or click cards, board squares and labeled actions. Tab moves focus; Enter or Space activates. Arrow keys move between neighboring controls. No timing or dragging required.",
+      "url": "tabletop-room/?game=meld-atelier",
+      "accent": "#cfc1da",
+      "symbol": "◈",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "[data-action]"
+      },
+      "family": "tabletop-room",
+      "status": "playable"
+    },
+    {
+      "id": "five-card-evening",
+      "name": "Five Card Evening",
+      "category": "strategy",
+      "description": "Five hands, three second chances. Spend a redraw where it matters.",
+      "mechanic": "Draw poker with a scarce second-redraw budget and rank-dependent stakes.",
+      "rules": [
+        "Play five hands from fresh shuffled decks. Choose a 1-, 2- or 3-chip stake, then select cards to hold and draw replacements once for free.",
+        "You have three extra redraws for the entire evening. After the free draw, either settle or spend an extra redraw, choosing held cards again. Pair pays 1× stake, two pair 2×, trips 3×, straight 4×, flush 5×, full house 7×, four 12×, straight flush 20×. Payout includes the stake; high card returns nothing.",
+        "Start with 12 chips. End above 12 to win; going broke ends early. Aces are high, except A-2-3-4-5 is a straight. The ranking table stays visible."
+      ],
+      "controls": "Tap or click cards, board squares and labeled actions. Tab moves focus; Enter or Space activates. Arrow keys move between neighboring controls. No timing or dragging required.",
+      "url": "tabletop-room/?game=five-card-evening",
+      "accent": "#abcbd8",
+      "symbol": "✦",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "[data-action]"
+      },
+      "family": "tabletop-room",
+      "status": "playable"
+    },
+    {
+      "id": "last-hand",
+      "name": "Last Hand",
+      "category": "strategy",
+      "description": "Make the lead expensive. Save the pair that opens the door.",
+      "mechanic": "Climbing card shedding with matching group sizes, passes and lead resets.",
+      "rules": [
+        "Select one, two or three cards of the same rank. To beat a lead, play the same number of cards at a higher rank. Aces are high.",
+        "Pass to give the other player a fresh lead. The house may pass too. A fresh lead may be a single, pair or triple. The house prefers shedding groups and keeps strong cards for contested leads.",
+        "First to empty their ten-card hand wins. You can deselect cards before playing. Pass is unavailable when you hold a fresh lead."
+      ],
+      "controls": "Tap or click cards, board squares and labeled actions. Tab moves focus; Enter or Space activates. Arrow keys move between neighboring controls. No timing or dragging required.",
+      "url": "tabletop-room/?game=last-hand",
+      "accent": "#c9d5b5",
+      "symbol": "♧",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "[data-action]"
+      },
+      "family": "tabletop-room",
+      "status": "playable"
+    },
+    {
+      "id": "scopa-shelf",
+      "name": "Scopa Shelf",
+      "category": "strategy",
+      "description": "One card can gather a whole table. Choose what it leaves behind.",
+      "mechanic": "Scopa sum capture with explicit subset choice and sweep bonuses.",
+      "rules": [
+        "Select a hand card, then table cards whose ranks sum to its rank. If the table has any single exact-rank match, you must capture exactly one such card.",
+        "If any capture exists you must take one; otherwise Lay card places your card on the table. Clearing the table earns a sweep, except on the final play. Three-card hands refill until the 40-card deck is exhausted.",
+        "Each captured card is one point, each sweep five. Last capturer gathers remaining table cards. Beat the house total. Ranks run 1–10 in four suits."
+      ],
+      "controls": "Tap or click cards, board squares and labeled actions. Tab moves focus; Enter or Space activates. Arrow keys move between neighboring controls. No timing or dragging required.",
+      "url": "tabletop-room/?game=scopa-shelf",
+      "accent": "#dcbca0",
+      "symbol": "◇",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "[data-action]"
+      },
+      "family": "tabletop-room",
+      "status": "playable"
+    },
+    {
+      "id": "domino-parlour",
+      "name": "Domino Parlour",
+      "category": "strategy",
+      "description": "Two open ends. One hand to empty before the table closes.",
+      "mechanic": "Two-ended domino shedding with boneyard draws and blocked-hand resolution.",
+      "rules": [
+        "Play a tile on either matching chain end. A tile is automatically oriented to fit. Each tile can be placed left or right when both fit.",
+        "If no tile fits, draw from the boneyard. A drawn playable tile may be used immediately. When the boneyard is empty, pass. The house follows the same rules.",
+        "Empty your hand first. If both players pass, lower total pips wins. All 28 double-six tiles appear once; inspect both ends before committing."
+      ],
+      "controls": "Tap or click cards, board squares and labeled actions. Tab moves focus; Enter or Space activates. Arrow keys move between neighboring controls. No timing or dragging required.",
+      "url": "tabletop-room/?game=domino-parlour",
+      "accent": "#cfc1da",
+      "symbol": "◈",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "[data-action]"
+      },
+      "family": "tabletop-room",
+      "status": "playable"
+    },
+    {
+      "id": "bank-the-roll",
+      "name": "Bank the Roll",
+      "category": "strategy",
+      "description": "A growing turn is only yours when you bank it.",
+      "mechanic": "Pig dice push-your-luck racing with unbanked turn value.",
+      "rules": [
+        "Roll one die. A 2–6 adds to this turn; a 1 loses the entire unbanked turn and passes play. Bank saves your turn and passes play.",
+        "The house banks at 14 turn points, or when it reaches the goal. First to bank 60 points wins. Banking zero is unavailable.",
+        "There is no real-time pressure. The die is rolled anew after every decision; previous results do not change its odds."
+      ],
+      "controls": "Tap or click cards, board squares and labeled actions. Tab moves focus; Enter or Space activates. Arrow keys move between neighboring controls. No timing or dragging required.",
+      "url": "tabletop-room/?game=bank-the-roll",
+      "accent": "#abcbd8",
+      "symbol": "✦",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "[data-action]"
+      },
+      "family": "tabletop-room",
+      "status": "playable"
+    },
+    {
+      "id": "six-columns",
+      "name": "Six Columns",
+      "category": "strategy",
+      "description": "Keep the right dice for the right empty line.",
+      "mechanic": "Five-dice hold/reroll optimization with six irreversible scoring categories.",
+      "rules": [
+        "Roll five dice, then toggle holds and reroll up to twice. At any point, lock an unused category.",
+        "Categories: Ones scores ones; Sixes scores sixes; Three of a kind scores all dice if any three match; Full house scores 25 for a pair plus a triple; Straight scores 30 for five consecutive values; Chance scores all dice.",
+        "Fill all six rows and total at least 75. A category can score zero, so preserve flexible rows for awkward rolls. No bonuses or wild cards."
+      ],
+      "controls": "Tap or click cards, board squares and labeled actions. Tab moves focus; Enter or Space activates. Arrow keys move between neighboring controls. No timing or dragging required.",
+      "url": "tabletop-room/?game=six-columns",
+      "accent": "#c9d5b5",
+      "symbol": "♧",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "[data-action]"
+      },
+      "family": "tabletop-room",
+      "status": "playable"
+    },
+    {
+      "id": "hidden-dice",
+      "name": "Hidden Dice",
+      "category": "strategy",
+      "description": "The bid climbs. At some point, somebody has to call it.",
+      "mechanic": "Liar dice rising quantity/face bids with hidden opposing dice and challenge attrition.",
+      "rules": [
+        "Both players start with four concealed dice; yours are visible. A bid claims at least that many of a face across all dice. Ones are ordinary, never wild.",
+        "Raise by increasing quantity, or keeping quantity and increasing face. Challenge the current house bid instead if you think it is false.",
+        "Reveal all dice on a challenge. If the claim is true the challenger loses a die; otherwise the bidder loses one. A new round is rolled and you open. Remove all house dice before losing yours. House bids use its own dice and uncertainty."
+      ],
+      "controls": "Tap or click cards, board squares and labeled actions. Tab moves focus; Enter or Space activates. Arrow keys move between neighboring controls. No timing or dragging required.",
+      "url": "tabletop-room/?game=hidden-dice",
+      "accent": "#dcbca0",
+      "symbol": "◇",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "[data-action]"
+      },
+      "family": "tabletop-room",
+      "status": "playable"
+    },
+    {
+      "id": "sealed-bids",
+      "name": "Sealed Bids",
+      "category": "strategy",
+      "description": "Every bid is a card you will never see again.",
+      "mechanic": "Goofspiel simultaneous one-use ranked bids with tied-prize carryover.",
+      "rules": [
+        "You and the house each hold bidding cards 1–10. Ten prizes, valued 1–10, arrive in a shuffled public queue.",
+        "Choose one bid without seeing the house bid. Higher bid wins the prize pot; both bid cards are spent. A tie carries the pot into the next prize.",
+        "Most prize points after ten rounds wins. If the final round ties, divide its pot equally. The house values large prizes and conserves expensive bids for later."
+      ],
+      "controls": "Tap or click cards, board squares and labeled actions. Tab moves focus; Enter or Space activates. Arrow keys move between neighboring controls. No timing or dragging required.",
+      "url": "tabletop-room/?game=sealed-bids",
+      "accent": "#cfc1da",
+      "symbol": "◈",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "[data-action]"
+      },
+      "family": "tabletop-room",
+      "status": "playable"
+    },
+    {
+      "id": "thirty-one-lane",
+      "name": "Thirty-One Lane",
+      "category": "strategy",
+      "description": "A fifteen, a pair, a run. Small points make a careful race.",
+      "mechanic": "Cribbage pegging with ordered run/pair bonuses, go and 31 resets.",
+      "rules": [
+        "Alternate one card into the running count, never above 31. Aces count 1; faces count 10. Reach 15 or 31 for 2 points.",
+        "Consecutive equal ranks score 2 for a pair, 6 for a triple, 12 for four. The longest trailing sequence of 3 or more distinct consecutive ranks scores its length, in any order. Both bonuses may combine with a total bonus.",
+        "When neither can play, the last player earns 1 (unless they made 31) and count resets. Ten cards each; most pegging points wins. This is pegging only, with no hand-counting stage."
+      ],
+      "controls": "Tap or click cards, board squares and labeled actions. Tab moves focus; Enter or Space activates. Arrow keys move between neighboring controls. No timing or dragging required.",
+      "url": "tabletop-room/?game=thirty-one-lane",
+      "accent": "#abcbd8",
+      "symbol": "✦",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "[data-action]"
+      },
+      "family": "tabletop-room",
+      "status": "playable"
+    },
+    {
+      "id": "formation-flags",
+      "name": "Formation Flags",
+      "category": "strategy",
+      "description": "Commit a suit. Build a run. Know which flag to abandon.",
+      "mechanic": "Three-card formation contest over five lanes with refill drafting.",
+      "rules": [
+        "Play a card from your five-card hand to one of five flags. Each side can commit three cards at each flag. Draw a replacement from the shared deck after playing.",
+        "Once both sides have three cards, compare formations: straight flush, three of a kind, flush, straight, then sum. Ties within a rank compare total, then favor the first side to complete. Ranks 1–9 in four suits.",
+        "Win three flags. Cards cannot move once committed. When no cards remain, empty places stay empty; more cards wins an incomplete flag, then formation strength."
+      ],
+      "controls": "Tap or click cards, board squares and labeled actions. Tab moves focus; Enter or Space activates. Arrow keys move between neighboring controls. No timing or dragging required.",
+      "url": "tabletop-room/?game=formation-flags",
+      "accent": "#c9d5b5",
+      "symbol": "♧",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "[data-action]"
+      },
+      "family": "tabletop-room",
+      "status": "playable"
+    },
+    {
+      "id": "crown-and-guard",
+      "name": "Crown & Guard",
+      "category": "strategy",
+      "description": "A king needs one open corner. Guards need all four sides.",
+      "mechanic": "Asymmetric tafl escape with rook movement and sandwich capture.",
+      "rules": [
+        "You command the crown and four guards. The house commands eight attackers. Slide any piece along an empty row or column; pieces cannot jump. Only the crown may stop on a corner or the central throne; other pieces may cross the empty throne.",
+        "After moving, capture an adjacent enemy caught between your piece and another friendly piece, a corner or the empty throne. The crown is captured only when all four adjacent directions are attackers or the edge.",
+        "Escape with the crown onto any corner. The house wins by surrounding the crown or leaving you without a move. After 80 turns, attackers hold the siege."
+      ],
+      "controls": "Tap or click cards, board squares and labeled actions. Tab moves focus; Enter or Space activates. Arrow keys move between neighboring controls. No timing or dragging required.",
+      "url": "tabletop-room/?game=crown-and-guard",
+      "accent": "#dcbca0",
+      "symbol": "◇",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "[data-action]"
+      },
+      "family": "tabletop-room",
+      "status": "playable"
+    },
+    {
+      "id": "draught-garden",
+      "name": "Draught Garden",
+      "category": "strategy",
+      "description": "A jump is compulsory. Where it ends is the question.",
+      "mechanic": "Six-by-six draughts with mandatory multi-capture and king promotion.",
+      "rules": [
+        "Ink moves diagonally toward the upper edge on dark squares. Jump an adjacent house piece into the empty square beyond to capture. If any capture exists, a capture is compulsory.",
+        "After a jump, continue with the same piece while another capture is possible. Reaching the far row crowns a king and ends that capture turn; kings can step and capture backward.",
+        "Capture all opposing pieces or leave the house no legal move. Forty turns without a capture or promotion is a draw. The house prefers captures and promotion. The match also draws after 160 full turns."
+      ],
+      "controls": "Tap or click cards, board squares and labeled actions. Tab moves focus; Enter or Space activates. Arrow keys move between neighboring controls. No timing or dragging required.",
+      "url": "tabletop-room/?game=draught-garden",
+      "accent": "#cfc1da",
+      "symbol": "◈",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "[data-action]"
+      },
+      "family": "tabletop-room",
+      "status": "playable"
+    },
+    {
+      "id": "borrowed-steps",
+      "name": "Borrowed Steps",
+      "category": "strategy",
+      "description": "Use a movement card. Give it away.",
+      "mechanic": "Onitama-style exchanged movement cards with master/temple victory.",
+      "rules": [
+        "You and the house each have two public movement cards; one spare waits between you. Select a card, one of your pieces, then a highlighted destination. Movement offsets are shown from your side; house directions are reversed.",
+        "A move captures an enemy on its destination. After moving, exchange your used card for the spare, so the house may receive it next.",
+        "Capture the house master or move your master onto its central home temple. The house has the same goals. Eighty turns is a draw."
+      ],
+      "controls": "Tap or click cards, board squares and labeled actions. Tab moves focus; Enter or Space activates. Arrow keys move between neighboring controls. No timing or dragging required.",
+      "url": "tabletop-room/?game=borrowed-steps",
+      "accent": "#abcbd8",
+      "symbol": "✦",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "[data-action]"
+      },
+      "family": "tabletop-room",
+      "status": "playable"
+    },
+    {
+      "id": "marble-council",
+      "name": "Marble Council",
+      "category": "strategy",
+      "description": "One marble cannot move two. A line can change the edge.",
+      "mechanic": "Hex-board inline group pushing and edge ejection with numerical superiority.",
+      "rules": [
+        "Select an ink marble at the rear of a straight line, then choose one of six directions. Up to three contiguous friendly marbles move together one space along that line. Sideways group shifts are not part of this compact ruleset.",
+        "A group may push one or two opposing marbles only if it outnumbers them and the space beyond is empty or off the board. Friendly marbles may never leave the board.",
+        "Eject three opposing marbles to win. House uses the same rules. Fifty full turns without three ejections is decided by ejections, then central presence."
+      ],
+      "controls": "Tap or click cards, board squares and labeled actions. Tab moves focus; Enter or Space activates. Arrow keys move between neighboring controls. No timing or dragging required.",
+      "url": "tabletop-room/?game=marble-council",
+      "accent": "#c9d5b5",
+      "symbol": "♧",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "[data-action]"
+      },
+      "family": "tabletop-room",
+      "status": "playable"
+    },
+    {
+      "id": "joining-lines",
+      "name": "Joining Lines",
+      "category": "strategy",
+      "description": "The crowd decides how far you travel.",
+      "mechanic": "Lines of Action movement distances determined by occupancy, with army connectivity victory.",
+      "rules": [
+        "Select an ink piece. Move horizontally, vertically or diagonally by exactly the total number of pieces of either color on that entire line.",
+        "You may jump over friendly pieces, never enemies. You may land on an enemy to capture, but never on a friendly piece. House follows identical rules.",
+        "Connect every remaining piece of your color through orthogonal or diagonal neighbors to win. If both connect on a move, the mover wins. Eighty turns is a draw."
+      ],
+      "controls": "Tap or click cards, board squares and labeled actions. Tab moves focus; Enter or Space activates. Arrow keys move between neighboring controls. No timing or dragging required.",
+      "url": "tabletop-room/?game=joining-lines",
+      "accent": "#dcbca0",
+      "symbol": "◇",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "[data-action]"
+      },
+      "family": "tabletop-room",
+      "status": "playable"
+    },
+    {
+      "id": "terrace-duel",
+      "name": "Terrace Duel",
+      "category": "strategy",
+      "description": "Build the step you want to climb. Leave no staircase unguarded.",
+      "mechanic": "Two-worker move/build tactics on a rising three-dimensional board.",
+      "rules": [
+        "Select one of your two workers, then an adjacent empty square. You may climb at most one level but descend any distance. A level-four dome cannot be entered.",
+        "After moving, build one level on any neighboring empty square. Towers begin at zero. Building on level three creates a dome.",
+        "Move up onto level three to win immediately. The house moves and builds by the same rules. If you have no legal move, you lose."
+      ],
+      "controls": "Tap or click cards, board squares and labeled actions. Tab moves focus; Enter or Space activates. Arrow keys move between neighboring controls. No timing or dragging required.",
+      "url": "tabletop-room/?game=terrace-duel",
+      "accent": "#cfc1da",
+      "symbol": "◈",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "[data-action]"
+      },
+      "family": "tabletop-room",
+      "status": "playable"
+    },
+    {
+      "id": "court-of-suits",
+      "name": "Court of Suits",
+      "category": "strategy",
+      "description": "An honest hand against a very stubborn court.",
+      "mechanic": "Solo card combat against telegraphed armor/strike cycles, with finite hand and suit timing.",
+      "rules": [
+        "Defeat three court foes with 16, 22 and 28 health. Their base attacks deal 2, 3 and 4. Every foe cycles through Brace (3 armor, base attack), Heavy strike (no armor, base +4 attack), then Quick strike (no armor, base attack). The next intent is always visible.",
+        "Play one card each turn. Its rank is damage, reduced by current armor. Clubs double damage before armor; spades reduce this attack by their rank; hearts heal that rank up to 20; diamonds draw two extra. Every turn draws a replacement. Save defense for heavy strikes and use the brace to prepare your hand.",
+        "A surviving foe retaliates. Defeating one skips its attack, heals you 3 and draws two cards; the next begins with Brace. Lose at zero health or an empty hand before all foes fall. Your finite deck contains ranks 1–6 in four suits."
+      ],
+      "controls": "Tap or click cards, board squares and labeled actions. Tab moves focus; Enter or Space activates. Arrow keys move between neighboring controls. No timing or dragging required.",
+      "url": "tabletop-room/?game=court-of-suits",
+      "accent": "#abcbd8",
+      "symbol": "✦",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "[data-action]"
+      },
+      "family": "tabletop-room",
+      "status": "playable"
+    },
+    {
+      "id": "mutual-match",
+      "name": "Mutual Match",
+      "category": "puzzle",
+      "description": "Pair couriers and routes so nobody wants to leave their partner.",
+      "mechanic": "Ranked preference stability",
+      "rules": [
+        "Select a courier, then a route. Occupants swap when a route is taken.",
+        "Both sides rank every possible partner, best first. A blocking pair prefers each other to their assigned partners.",
+        "Match everyone without any blocking pair. Check explains the first unhappy pair."
+      ],
+      "controls": "Tap buttons or use Tab and Enter / Space. Direction games also support arrow keys. Undo, Reset study and Restart are always available.",
+      "url": "puzzle-lab/?game=mutual-match",
+      "accent": "#dec39c",
+      "symbol": "◇",
+      "smoke": {
+        "start": "#start",
+        "action": "#board [data-key=\"route-0\"]",
+        "restart": "#restart",
+        "status": "#status",
+        "actionSelector": "#board [data-key=\"route-0\"]"
+      },
+      "family": "puzzle-lab",
+      "status": "playable"
+    },
+    {
+      "id": "ice-station",
+      "name": "Ice Station",
+      "category": "puzzle",
+      "description": "Coast between ice walls and collect the route seals.",
+      "mechanic": "Stop-to-stop momentum routing",
+      "rules": [
+        "Choose a direction: the skater slides until the next wall. You cannot stop midway.",
+        "Collect every seal you pass, then stop at the hollow dock.",
+        "Three increasingly intricate rinks. Undo retraces a whole slide."
+      ],
+      "controls": "Tap buttons or use Tab and Enter / Space. Direction games also support arrow keys. Undo, Reset study and Restart are always available.",
+      "url": "puzzle-lab/?game=ice-station",
+      "accent": "#b9d6d0",
+      "symbol": "⌘",
+      "smoke": {
+        "start": "#start",
+        "action": "#extra [data-key=\"dir-R\"]",
+        "restart": "#restart",
+        "status": "#status",
+        "actionSelector": "#extra [data-key=\"dir-R\"]"
+      },
+      "family": "puzzle-lab",
+      "status": "playable"
+    },
+    {
+      "id": "cube-seal",
+      "name": "Cube Seal",
+      "category": "puzzle",
+      "description": "Roll a numbered cube onto seals with the correct face underneath.",
+      "mechanic": "Coupled cube orientation and position",
+      "rules": [
+        "Roll with the direction buttons. The cube turns one quarter on each step.",
+        "Land on each numbered seal with that number on the bottom face. Visit them in the shown order.",
+        "The face compass shows top, bottom, north, south, west and east. Walls block movement."
+      ],
+      "controls": "Tap buttons or use Tab and Enter / Space. Direction games also support arrow keys. Undo, Reset study and Restart are always available.",
+      "url": "puzzle-lab/?game=cube-seal",
+      "accent": "#c9c2e1",
+      "symbol": "▧",
+      "smoke": {
+        "start": "#start",
+        "action": "#extra [data-key=\"dir-R\"]",
+        "restart": "#restart",
+        "status": "#status",
+        "actionSelector": "#extra [data-key=\"dir-R\"]"
+      },
+      "family": "puzzle-lab",
+      "status": "playable"
+    },
+    {
+      "id": "knight-exchange",
+      "name": "Knight Exchange",
+      "category": "puzzle",
+      "description": "Exchange two flocks using only a knight’s leap.",
+      "mechanic": "Occupancy constrained knight permutation",
+      "rules": [
+        "Select a bird, then an empty square a knight move away: two cells one way and one sideways.",
+        "Amber birds belong on A nests; blue birds on B nests. No captures and no ordinary steps.",
+        "Undo reverses one jump. Check when both flocks have exchanged sides."
+      ],
+      "controls": "Tap buttons or use Tab and Enter / Space. Direction games also support arrow keys. Undo, Reset study and Restart are always available.",
+      "url": "puzzle-lab/?game=knight-exchange",
+      "accent": "#d7d4a4",
+      "symbol": "↟",
+      "smoke": {
+        "start": "#start",
+        "action": "#board button.piece",
+        "restart": "#restart",
+        "status": "#status",
+        "actionSelector": "#board button.piece"
+      },
+      "family": "puzzle-lab",
+      "status": "playable"
+    },
+    {
+      "id": "map-inks",
+      "name": "Map Inks",
+      "category": "puzzle",
+      "description": "Give neighboring districts different inks with a tiny palette.",
+      "mechanic": "Graph vertex coloring",
+      "rules": [
+        "Choose an ink, then a district. Lines list which districts are neighbors.",
+        "Every connected pair must use different inks. Use no more than the available three inks.",
+        "All districts must be colored. Check identifies an exact conflicting border."
+      ],
+      "controls": "Tap buttons or use Tab and Enter / Space. Direction games also support arrow keys. Undo, Reset study and Restart are always available.",
+      "url": "puzzle-lab/?game=map-inks",
+      "accent": "#dec39c",
+      "symbol": "◇",
+      "smoke": {
+        "start": "#start",
+        "action": "#board button",
+        "restart": "#restart",
+        "status": "#status",
+        "actionSelector": "#board button"
+      },
+      "family": "puzzle-lab",
+      "status": "playable"
+    },
+    {
+      "id": "circuit-break",
+      "name": "Circuit Break",
+      "category": "puzzle",
+      "description": "Isolate the broadcast before it reaches the quiet archive.",
+      "mechanic": "Budgeted vertex cut",
+      "rules": [
+        "Tap relay nodes to take them offline, or tap again to restore them.",
+        "Signals travel both ways along every listed wire. Protect every archive from every transmitter.",
+        "Transmitters and archives cannot be removed. Stay within the relay budget; Check traces a surviving leak."
+      ],
+      "controls": "Tap buttons or use Tab and Enter / Space. Direction games also support arrow keys. Undo, Reset study and Restart are always available.",
+      "url": "puzzle-lab/?game=circuit-break",
+      "accent": "#b9d6d0",
+      "symbol": "⌘",
+      "smoke": {
+        "start": "#start",
+        "action": "#board [data-key=\"node-1\"]",
+        "restart": "#restart",
+        "status": "#status",
+        "actionSelector": "#board [data-key=\"node-1\"]"
+      },
+      "family": "puzzle-lab",
+      "status": "playable"
+    },
+    {
+      "id": "copper-tree",
+      "name": "Copper Tree",
+      "category": "puzzle",
+      "description": "Connect the whole village with the lightest copper tree.",
+      "mechanic": "Minimum spanning tree construction",
+      "rules": [
+        "Toggle links to connect every village. Their printed numbers are copper costs.",
+        "A tree has no cycles. You must connect all villages at or below the target budget.",
+        "Extra loops waste copper. Check explains a cycle, missing connection or overspend."
+      ],
+      "controls": "Tap buttons or use Tab and Enter / Space. Direction games also support arrow keys. Undo, Reset study and Restart are always available.",
+      "url": "puzzle-lab/?game=copper-tree",
+      "accent": "#c9c2e1",
+      "symbol": "▧",
+      "smoke": {
+        "start": "#start",
+        "action": "#board button",
+        "restart": "#restart",
+        "status": "#status",
+        "actionSelector": "#board button"
+      },
+      "family": "puzzle-lab",
+      "status": "playable"
+    },
+    {
+      "id": "river-capacity",
+      "name": "River Capacity",
+      "category": "puzzle",
+      "description": "Fill the harbor through a network of narrow channels.",
+      "mechanic": "Conserved capacitated network flow",
+      "rules": [
+        "Each channel button cycles its flow from zero to its printed capacity.",
+        "At every intermediate basin, total water in must equal total water out.",
+        "Deliver the target flow from S to T. Check points to a basin that leaks or creates water."
+      ],
+      "controls": "Tap buttons or use Tab and Enter / Space. Direction games also support arrow keys. Undo, Reset study and Restart are always available.",
+      "url": "puzzle-lab/?game=river-capacity",
+      "accent": "#d7d4a4",
+      "symbol": "↟",
+      "smoke": {
+        "start": "#start",
+        "action": "#board button",
+        "restart": "#restart",
+        "status": "#status",
+        "actionSelector": "#board button"
+      },
+      "family": "puzzle-lab",
+      "status": "playable"
+    },
+    {
+      "id": "honest-company",
+      "name": "Honest Company",
+      "category": "puzzle",
+      "description": "Find a consistent account in a room full of claims.",
+      "mechanic": "Self-referential truth assignment",
+      "rules": [
+        "Each speaker is either honest H or lying L. Tap a speaker to cycle unknown → H → L.",
+        "An honest speaker’s claim must be true; a liar’s claim must be false.",
+        "Assign every speaker. Self-references are intentional; any fully consistent assignment is accepted."
+      ],
+      "controls": "Tap buttons or use Tab and Enter / Space. Direction games also support arrow keys. Undo, Reset study and Restart are always available.",
+      "url": "puzzle-lab/?game=honest-company",
+      "accent": "#dec39c",
+      "symbol": "◇",
+      "smoke": {
+        "start": "#start",
+        "action": "#board button",
+        "restart": "#restart",
+        "status": "#status",
+        "actionSelector": "#board button"
+      },
+      "family": "puzzle-lab",
+      "status": "playable"
+    },
+    {
+      "id": "gate-foundry",
+      "name": "Gate Foundry",
+      "category": "puzzle",
+      "description": "Build a tiny circuit that works for every possible input.",
+      "mechanic": "Truth table circuit synthesis",
+      "rules": [
+        "Cycle each socket through AND, OR, XOR, NAND and NOR gates.",
+        "The two input wires for each socket are fixed. Later sockets may use earlier outputs.",
+        "Match every output in the truth table, not just one example. Check reports a counterexample input."
+      ],
+      "controls": "Tap buttons or use Tab and Enter / Space. Direction games also support arrow keys. Undo, Reset study and Restart are always available.",
+      "url": "puzzle-lab/?game=gate-foundry",
+      "accent": "#b9d6d0",
+      "symbol": "⌘",
+      "smoke": {
+        "start": "#start",
+        "action": "#board button",
+        "restart": "#restart",
+        "status": "#status",
+        "actionSelector": "#board button"
+      },
+      "family": "puzzle-lab",
+      "status": "playable"
+    },
+    {
+      "id": "rewrite-press",
+      "name": "Rewrite Press",
+      "category": "puzzle",
+      "description": "Rewrite a ribbon without losing the route to your target.",
+      "mechanic": "Bounded substring rewriting",
+      "rules": [
+        "Choose a replacement rule, then tap an occurrence on the ribbon to apply it.",
+        "Only the selected substring changes. Rules can grow, shrink or reorder symbols.",
+        "Reach the exact target within the rewrite budget. Undo is unlimited and restores the budget."
+      ],
+      "controls": "Tap buttons or use Tab and Enter / Space. Direction games also support arrow keys. Undo, Reset study and Restart are always available.",
+      "url": "puzzle-lab/?game=rewrite-press",
+      "accent": "#c9c2e1",
+      "symbol": "▧",
+      "smoke": {
+        "start": "#start",
+        "action": "#board button",
+        "restart": "#restart",
+        "status": "#status",
+        "actionSelector": "#board button"
+      },
+      "family": "puzzle-lab",
+      "status": "playable"
+    },
+    {
+      "id": "twin-steps",
+      "name": "Twin Steps",
+      "category": "puzzle",
+      "description": "One set of footsteps. Two different journeys.",
+      "mechanic": "Mirrored simultaneous maze navigation",
+      "rules": [
+        "A direction moves the amber walker one cell and the blue walker in the opposite direction.",
+        "A wall blocks only the walker that touches it; the other may still move.",
+        "Leave both walkers on their own docks at the same time. Undo reverses both positions."
+      ],
+      "controls": "Tap buttons or use Tab and Enter / Space. Direction games also support arrow keys. Undo, Reset study and Restart are always available.",
+      "url": "puzzle-lab/?game=twin-steps",
+      "accent": "#d7d4a4",
+      "symbol": "↟",
+      "smoke": {
+        "start": "#start",
+        "action": "#extra [data-key=\"dir-R\"]",
+        "restart": "#restart",
+        "status": "#status",
+        "actionSelector": "#extra [data-key=\"dir-R\"]"
+      },
+      "family": "puzzle-lab",
+      "status": "playable"
+    },
+    {
+      "id": "seed-tomorrow",
+      "name": "Seed Tomorrow",
+      "category": "puzzle",
+      "description": "Plant the beginning of a pattern you can only see tomorrow.",
+      "mechanic": "Inverse cellular evolution",
+      "rules": [
+        "Toggle seeds in the top row. Each next cell is alive only when exactly one of its left and right neighbors was alive.",
+        "The row wraps at its ends. Middle cells do not count as their own neighbors.",
+        "After the printed number of days, the row must match the target. The timeline updates with every seed."
+      ],
+      "controls": "Tap buttons or use Tab and Enter / Space. Direction games also support arrow keys. Undo, Reset study and Restart are always available.",
+      "url": "puzzle-lab/?game=seed-tomorrow",
+      "accent": "#dec39c",
+      "symbol": "◇",
+      "smoke": {
+        "start": "#start",
+        "action": "#board button",
+        "restart": "#restart",
+        "status": "#status",
+        "actionSelector": "#board button"
+      },
+      "family": "puzzle-lab",
+      "status": "playable"
+    },
+    {
+      "id": "voxel-post",
+      "name": "Voxel Post",
+      "category": "puzzle",
+      "description": "Rebuild a tiny sculpture from three sets of counts.",
+      "mechanic": "Orthogonal projection reconstruction",
+      "rules": [
+        "Toggle blocks in the three horizontal layers. Each layer is a 3 by 3 grid.",
+        "The X, Y and Z projections count blocks along each line through the sculpture.",
+        "Make every printed projection count agree. Alternate sculptures with identical projections are accepted."
+      ],
+      "controls": "Tap buttons or use Tab and Enter / Space. Direction games also support arrow keys. Undo, Reset study and Restart are always available.",
+      "url": "puzzle-lab/?game=voxel-post",
+      "accent": "#b9d6d0",
+      "symbol": "⌘",
+      "smoke": {
+        "start": "#start",
+        "action": "#board button",
+        "restart": "#restart",
+        "status": "#status",
+        "actionSelector": "#board button"
+      },
+      "family": "puzzle-lab",
+      "status": "playable"
+    },
+    {
+      "id": "hitori-harbor",
+      "name": "Hitori Harbor",
+      "category": "puzzle",
+      "description": "Shade away repeats without breaking the remaining town.",
+      "mechanic": "Duplicate elimination with connectivity",
+      "rules": [
+        "Shade cells so every row and column has no repeated unshaded number.",
+        "Shaded cells must never share an edge. All unshaded cells must remain connected by edges.",
+        "Tap to shade or restore. Check explains a repeated number, touching shade or divided town."
+      ],
+      "controls": "Tap buttons or use Tab and Enter / Space. Direction games also support arrow keys. Undo, Reset study and Restart are always available.",
+      "url": "puzzle-lab/?game=hitori-harbor",
+      "accent": "#c9c2e1",
+      "symbol": "▧",
+      "smoke": {
+        "start": "#start",
+        "action": "#board button",
+        "restart": "#restart",
+        "status": "#status",
+        "actionSelector": "#board button"
+      },
+      "family": "puzzle-lab",
+      "status": "playable"
+    },
+    {
+      "id": "island-census",
+      "name": "Island Census",
+      "category": "puzzle",
+      "description": "Give every lighthouse exactly the right island.",
+      "mechanic": "Island size and sea connectivity deduction",
+      "rules": [
+        "Tap unnumbered cells to cycle unknown → land → sea. Numbered cells are fixed land.",
+        "Each land island must have exactly one number and that many cells. Distinct islands cannot touch by an edge.",
+        "All sea cells must connect, and no 2 by 2 square may be all sea. Mark every cell before checking."
+      ],
+      "controls": "Tap buttons or use Tab and Enter / Space. Direction games also support arrow keys. Undo, Reset study and Restart are always available.",
+      "url": "puzzle-lab/?game=island-census",
+      "accent": "#d7d4a4",
+      "symbol": "↟",
+      "smoke": {
+        "start": "#start",
+        "action": "#board button:not(.fixed)",
+        "restart": "#restart",
+        "status": "#status",
+        "actionSelector": "#board button:not(.fixed)"
+      },
+      "family": "puzzle-lab",
+      "status": "playable"
+    },
+    {
+      "id": "parcel-survey",
+      "name": "Parcel Survey",
+      "category": "puzzle",
+      "description": "Draw property lines around the surveyor’s numbered stakes.",
+      "mechanic": "Anchored rectangle partition",
+      "rules": [
+        "Tap two opposite corners to draw a rectangle. It must contain exactly one numbered stake.",
+        "Its area must equal that stake’s number. Rectangles cannot overlap.",
+        "Cover the whole survey. Tap a filled rectangle to remove it; Undo returns the previous edit."
+      ],
+      "controls": "Tap buttons or use Tab and Enter / Space. Direction games also support arrow keys. Undo, Reset study and Restart are always available.",
+      "url": "puzzle-lab/?game=parcel-survey",
+      "accent": "#dec39c",
+      "symbol": "◇",
+      "smoke": {
+        "start": "#start",
+        "action": "#board button",
+        "restart": "#restart",
+        "status": "#status",
+        "actionSelector": "#board button"
+      },
+      "family": "puzzle-lab",
+      "status": "playable"
+    },
+    {
+      "id": "arrow-audit",
+      "name": "Arrow Audit",
+      "category": "puzzle",
+      "description": "Turn a circular chain of promises into a possible schedule.",
+      "mechanic": "Minimum feedback arc reversal",
+      "rules": [
+        "Each arrow says one task must happen before another. Tap to reverse its direction.",
+        "Create a graph with no directed cycle while changing no more than the stated number of arrows.",
+        "Acyclic arrows admit an ordering of all tasks. Check traces an exact cycle when one remains."
+      ],
+      "controls": "Tap buttons or use Tab and Enter / Space. Direction games also support arrow keys. Undo, Reset study and Restart are always available.",
+      "url": "puzzle-lab/?game=arrow-audit",
+      "accent": "#b9d6d0",
+      "symbol": "⌘",
+      "smoke": {
+        "start": "#start",
+        "action": "#board button",
+        "restart": "#restart",
+        "status": "#status",
+        "actionSelector": "#board button"
+      },
+      "family": "puzzle-lab",
+      "status": "playable"
+    },
+    {
+      "id": "parity-repair",
+      "name": "Parity Repair",
+      "category": "puzzle",
+      "description": "Repair a damaged packet from its checksum fingerprints.",
+      "mechanic": "Constrained multi-bit syndrome correction",
+      "rules": [
+        "Tap damaged bits to flip them. Row, column and wrapping diagonal checks show required even/odd parity.",
+        "Restore every checksum using at most the printed number of flipped cells. Tap a cell again to undo its flip.",
+        "Original values are shown under the edited bits. Any minimum-budget repair satisfying all checks is accepted."
+      ],
+      "controls": "Tap buttons or use Tab and Enter / Space. Direction games also support arrow keys. Undo, Reset study and Restart are always available.",
+      "url": "puzzle-lab/?game=parity-repair",
+      "accent": "#c9c2e1",
+      "symbol": "▧",
+      "smoke": {
+        "start": "#start",
+        "action": "#board button",
+        "restart": "#restart",
+        "status": "#status",
+        "actionSelector": "#board button"
+      },
+      "family": "puzzle-lab",
+      "status": "playable"
+    },
+    {
+      "id": "safety-ferry",
+      "name": "Safety Ferry",
+      "category": "puzzle",
+      "description": "Ferry a delicate company across without leaving trouble behind.",
+      "mechanic": "Safety invariant river transport",
+      "rules": [
+        "Select cargo on the ferry’s current bank, then Sail. Capacity limits how many can ride; empty crossings are allowed.",
+        "Pairs listed as incompatible may never share a bank without the ferryman.",
+        "Bring everyone to the far bank. Unsafe crossings are refused with an explanation; Undo reverses a safe crossing."
+      ],
+      "controls": "Tap buttons or use Tab and Enter / Space. Direction games also support arrow keys. Undo, Reset study and Restart are always available.",
+      "url": "puzzle-lab/?game=safety-ferry",
+      "accent": "#d7d4a4",
+      "symbol": "↟",
+      "smoke": {
+        "start": "#start",
+        "action": "#board button",
+        "restart": "#restart",
+        "status": "#status",
+        "actionSelector": "#board button"
+      },
+      "family": "puzzle-lab",
+      "status": "playable"
+    },
+    {
+      "id": "vector-rally",
+      "name": "Vector Rally",
+      "category": "strategy",
+      "description": "Choose integer acceleration; your accumulated velocity traces a swept path around a race course. Brake before bends.",
+      "mechanic": "Choose integer acceleration; your accumulated velocity traces a swept path around a race course. Brake before bends.",
+      "rules": [
+        "Visit checkpoints 1–4 in order, then finish with speed at most one. You have 65 driving turns.",
+        "Each control adds −1, 0 or +1 to horizontal and vertical velocity, capped at ±2. Your car then travels that entire velocity. Coast keeps it unchanged.",
+        "The whole swept path must stay on the pale track. Brake with acceleration opposite your velocity before a corner. The line forecasts a coast."
+      ],
+      "controls": "Use the on-screen action buttons, or their displayed keyboard shortcuts. All simulations advance only when you act; selection and aim controls are free where noted.",
+      "url": "kinetic-room/?game=vector-rally",
+      "accent": "#b9c9a6",
+      "symbol": "↗",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#inputs button"
+      },
+      "family": "kinetic-room",
+      "status": "playable"
+    },
+    {
+      "id": "border-bloom",
+      "name": "Border Bloom",
+      "category": "strategy",
+      "description": "Close exposed trails to claim two gardens, then use a central refuge to finish a tighter second enclosure.",
+      "mechanic": "Leave a safe border to draw an exposed trail; reconnect to claim territory while a roaming hazard can cut the trail.",
+      "rules": [
+        "Enclose two gardens: claim seventy tiles in the first, then ninety in the second. Choose Next garden after the first target. The second starts from the opposite edge with a small central refuge.",
+        "Moving onto blank ground draws an exposed trail. Rejoin any safe tile to seal the line and fill the region that does not contain the spark.",
+        "The spark bounces off claimed ground. If it touches your exposed trail, or you cross your own trail, the attempt ends. Use the board description for its direction. The two gardens share a 180-action allowance."
+      ],
+      "controls": "Use the on-screen action buttons, or their displayed keyboard shortcuts. All simulations advance only when you act; selection and aim controls are free where noted.",
+      "url": "kinetic-room/?game=border-bloom",
+      "accent": "#b9c9a6",
+      "symbol": "▧",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#inputs button"
+      },
+      "family": "kinetic-room",
+      "status": "playable"
+    },
+    {
+      "id": "lantern-heist",
+      "name": "Lantern Heist",
+      "category": "strategy",
+      "description": "Steal seals while avoiding rotating patrol sightlines; lure guards with a noise decoy, then reach the exit.",
+      "mechanic": "Steal seals while avoiding rotating patrol sightlines; lure guards with a noise decoy, then reach the exit.",
+      "rules": [
+        "Collect three ◆ seals, then reach E at the upper right within 80 actions. Walls block movement and lantern beams.",
+        "Each guard turns clockwise after every action; its arrow and pale beam show the NEXT sweep. Sight reaches three clear squares. Being seen ends the attempt.",
+        "Three decoys interrupt sight for three actions apiece. Wait safely behind walls to change the guard phase, or use a decoy to cross a watched corridor."
+      ],
+      "controls": "Use the on-screen action buttons, or their displayed keyboard shortcuts. All simulations advance only when you act; selection and aim controls are free where noted.",
+      "url": "kinetic-room/?game=lantern-heist",
+      "accent": "#b9c9a6",
+      "symbol": "◐",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#inputs button"
+      },
+      "family": "kinetic-room",
+      "status": "playable"
+    },
+    {
+      "id": "boulder-burrow",
+      "name": "Boulder Burrow",
+      "category": "strategy",
+      "description": "Excavate soil under falling and rolling boulders to uncover gems without being crushed or sealing the escape.",
+      "mechanic": "Excavate soil under falling and rolling boulders to uncover gems without being crushed or sealing the escape.",
+      "rules": [
+        "Dig through soil to collect all five ◆ gems, then leave at E. Stone walls cannot be excavated.",
+        "After every action, boulders fall one empty square. A boulder on rock or masonry rolls sideways if both the neighboring cell and the cell below it are empty.",
+        "A falling boulder crushes you. Soil supports rocks until excavated: approach gems from the side, and keep an escape route open. Ninety actions are available."
+      ],
+      "controls": "Use the on-screen action buttons, or their displayed keyboard shortcuts. All simulations advance only when you act; selection and aim controls are free where noted.",
+      "url": "kinetic-room/?game=boulder-burrow",
+      "accent": "#b9c9a6",
+      "symbol": "◆",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#inputs button"
+      },
+      "family": "kinetic-room",
+      "status": "playable"
+    },
+    {
+      "id": "fuse-garden",
+      "name": "Fuse Garden",
+      "category": "strategy",
+      "description": "Plant delayed cross-blast bombs, shelter behind masonry, and chain detonate barriers to reach the exit.",
+      "mechanic": "Plant delayed cross-blast bombs, shelter behind masonry, and chain detonate barriers to reach the exit.",
+      "rules": [
+        "Blast open three C crates, collect the ◆ stamps they release, then reach E within 100 turns.",
+        "A planted bomb burns for four actions, including the planting action. Its blast reaches two cells in each cardinal direction. Masonry stops it; a crate absorbs the blast.",
+        "Lit bombs block walking; up to two may burn at once. A blast ignites other bombs immediately. Shelter behind a corner before the fuse expires—any blast reaching you ends the attempt."
+      ],
+      "controls": "Use the on-screen action buttons, or their displayed keyboard shortcuts. All simulations advance only when you act; selection and aim controls are free where noted.",
+      "url": "kinetic-room/?game=fuse-garden",
+      "accent": "#b9c9a6",
+      "symbol": "✳",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#inputs button"
+      },
+      "family": "kinetic-room",
+      "status": "playable"
+    },
+    {
+      "id": "quiet-foil",
+      "name": "Quiet Foil",
+      "category": "strategy",
+      "description": "Manage distance and stamina against telegraphed thrusts; parry to open a riposte or retreat to recover.",
+      "mechanic": "Manage distance and stamina against telegraphed thrusts; parry to open a riposte or retreat to recover.",
+      "rules": [
+        "Score five touches before suffering four. Thrust costs two stamina and reaches distance one or two; recovery restores two, up to six.",
+        "The displayed opponent intent executes after your action. Advance closes distance; thrust attacks; guard blocks ordinary attacks; recover and feint leave openings.",
+        "Parry costs one stamina. Parrying a thrust creates a one-action riposte for two touches. Parrying a feint instead drains two extra stamina. Move or recover when too far away."
+      ],
+      "controls": "Use the on-screen action buttons, or their displayed keyboard shortcuts. All simulations advance only when you act; selection and aim controls are free where noted.",
+      "url": "kinetic-room/?game=quiet-foil",
+      "accent": "#b9c9a6",
+      "symbol": "⚔",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#inputs button"
+      },
+      "family": "kinetic-room",
+      "status": "playable"
+    },
+    {
+      "id": "four-holds",
+      "name": "Four Holds",
+      "category": "strategy",
+      "description": "Move individual climbing limbs between reachable holds while maintaining support and controlling fatigue.",
+      "mechanic": "Move individual climbing limbs between reachable holds while maintaining support and controlling fatigue.",
+      "rules": [
+        "Bring both hands to row zero and both feet to row two or higher. Select one limb, then move it one hold with a direction. Selection takes no time.",
+        "Hands remain above all feet, every hand-to-foot reach is at most 4.2 units, paired hands and paired feet stay within two rows, and feet stay within four columns. Occupied or missing holds cannot be used.",
+        "A move costs one fatigue; repeating the same limb costs two. Invalid regrips also cost one. Chalk restores four only when feet share a row. Reach twelve fatigue and your grip fails."
+      ],
+      "controls": "Use the on-screen action buttons, or their displayed keyboard shortcuts. All simulations advance only when you act; selection and aim controls are free where noted.",
+      "url": "kinetic-room/?game=four-holds",
+      "accent": "#b9c9a6",
+      "symbol": "⌘",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#inputs button"
+      },
+      "family": "kinetic-room",
+      "status": "playable"
+    },
+    {
+      "id": "trailer-yard",
+      "name": "Trailer Yard",
+      "category": "strategy",
+      "description": "Steer and reverse an articulated tractor/trailer into a loading bay without jackknifing.",
+      "mechanic": "Steer and reverse an articulated tractor/trailer into a loading bay without jackknifing.",
+      "rules": [
+        "Park the trailer in B at (9,2), pointing east. Both tractor and trailer must be aligned; the trailer center must be within 0.65 units of the bay.",
+        "Choose a left, straight or right wheel angle, then drive forward or backward. Wheel selection takes no time. Driving changes tractor heading and pulls or pushes the articulated trailer.",
+        "Bodies cannot touch walls or crates. A hitch angle above about 66 degrees jackknifes. Reverse in small corrections; you have 100 driving actions."
+      ],
+      "controls": "Use the on-screen action buttons, or their displayed keyboard shortcuts. All simulations advance only when you act; selection and aim controls are free where noted.",
+      "url": "kinetic-room/?game=trailer-yard",
+      "accent": "#b9c9a6",
+      "symbol": "↶",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#inputs button"
+      },
+      "family": "kinetic-room",
+      "status": "playable"
+    },
+    {
+      "id": "gravity-boots",
+      "name": "Gravity Boots",
+      "category": "strategy",
+      "description": "Flip gravity to traverse floors and ceilings, retaining horizontal velocity through spike-lined chambers.",
+      "mechanic": "Flip gravity to traverse floors and ceilings, retaining horizontal velocity through spike-lined chambers.",
+      "rules": [
+        "Gather all three ◆ seals and arrive at E on the lower right within 80 turns. Each action advances gravity and lateral motion.",
+        "Left and right add sideways velocity, capped at 0.75. Brake retains only one quarter of lateral drift. Flip reverses gravity and resets vertical speed.",
+        "Floors, ceilings and ledges catch the boots; ^ spikes end the attempt. Keep lateral drift under control when flipping between surfaces."
+      ],
+      "controls": "Use the on-screen action buttons, or their displayed keyboard shortcuts. All simulations advance only when you act; selection and aim controls are free where noted.",
+      "url": "kinetic-room/?game=gravity-boots",
+      "accent": "#b9c9a6",
+      "symbol": "↕",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#inputs button"
+      },
+      "family": "kinetic-room",
+      "status": "playable"
+    },
+    {
+      "id": "portal-parcel",
+      "name": "Portal Parcel",
+      "category": "strategy",
+      "description": "Throw a bouncing beacon, let it travel, then exchange positions to bypass solid barriers.",
+      "mechanic": "Throw a bouncing beacon, let it travel, then exchange positions to bypass solid barriers.",
+      "rules": [
+        "Collect two ◆ parcels and reach E. Walk horizontally, but use the beacon to cross the tall barriers. Every action advances its flight and your fall.",
+        "Throw sends a beacon upward and sideways. It bounces off walls and ceilings. Let fly advances the simulation without changing your position deliberately.",
+        "Swap moves you to the beacon and returns it to your hand. You then fall gently, so exchange above safe ground. A spike landing ends the run; only one beacon can be deployed at a time."
+      ],
+      "controls": "Use the on-screen action buttons, or their displayed keyboard shortcuts. All simulations advance only when you act; selection and aim controls are free where noted.",
+      "url": "kinetic-room/?game=portal-parcel",
+      "accent": "#b9c9a6",
+      "symbol": "◇",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#inputs button"
+      },
+      "family": "kinetic-room",
+      "status": "playable"
+    },
+    {
+      "id": "echo-steps",
+      "name": "Echo Steps",
+      "category": "strategy",
+      "description": "Record a route, rewind, then cooperate with its replay to hold switches and open a timed exit.",
+      "mechanic": "Record a route, rewind, then cooperate with its replay to hold switches and open a timed exit.",
+      "rules": [
+        "Record up to 32 positions by moving or waiting. Then rewind: you return to S while an echo replays one recorded position after each action.",
+        "The gate G opens only while the echo stands on P at (3,2). Record enough waiting on the plate to let your present self cross.",
+        "During replay collect the ◆ key beyond the gate and reach E. If the echo ends before you pass the gate, the attempt fails. Erase starts a new tape."
+      ],
+      "controls": "Use the on-screen action buttons, or their displayed keyboard shortcuts. All simulations advance only when you act; selection and aim controls are free where noted.",
+      "url": "kinetic-room/?game=echo-steps",
+      "accent": "#b9c9a6",
+      "symbol": "◌",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#inputs button"
+      },
+      "family": "kinetic-room",
+      "status": "playable"
+    },
+    {
+      "id": "phase-walk",
+      "name": "Phase Walk",
+      "category": "strategy",
+      "description": "Change between three material phases to pass selective walls; phase anchors restrict where you may change.",
+      "mechanic": "Change between three material phases to pass selective walls; phase anchors restrict where you may change.",
+      "rules": [
+        "Collect three ◆ material seals and reach E within 90 turns. Solid # masonry blocks every phase.",
+        "A, B and C walls can be passed only while you are in their matching phase. Other open ground is always traversable.",
+        "Change phase only on an o anchor, S or E. Phase cycles A → B → C → A. Plan which anchor you can reach after passing a selective wall."
+      ],
+      "controls": "Use the on-screen action buttons, or their displayed keyboard shortcuts. All simulations advance only when you act; selection and aim controls are free where noted.",
+      "url": "kinetic-room/?game=phase-walk",
+      "accent": "#b9c9a6",
+      "symbol": "◈",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#inputs button"
+      },
+      "family": "kinetic-room",
+      "status": "playable"
+    },
+    {
+      "id": "wind-sail",
+      "name": "Wind Sail",
+      "category": "strategy",
+      "description": "Choose heading and sail trim to tack against wind through separated racing buoys without stalling or grounding.",
+      "mechanic": "Choose heading and sail trim to tack against wind through separated racing buoys without stalling or grounding.",
+      "rules": [
+        "Round buoys 1, 2 and 3 in that order. Wind blows south; every action also adds a small southward current. Avoid shore and islands.",
+        "Turning changes heading by 45 degrees, then sails one step. Holding course keeps heading. Changing trim also advances the boat.",
+        "Due north is the no-go heading and stalls. NW and NE make upwind progress with tight trim; other headings favor loose trim. Tack across the wind and leave room for turns."
+      ],
+      "controls": "Use the on-screen action buttons, or their displayed keyboard shortcuts. All simulations advance only when you act; selection and aim controls are free where noted.",
+      "url": "kinetic-room/?game=wind-sail",
+      "accent": "#b9c9a6",
+      "symbol": "≈",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#inputs button"
+      },
+      "family": "kinetic-room",
+      "status": "playable"
+    },
+    {
+      "id": "scissor-lift",
+      "name": "Scissor Lift",
+      "category": "strategy",
+      "description": "Drive a telescoping vehicle under ceilings, raise its deck to receive freight, then carry and unload at elevated docks.",
+      "mechanic": "Drive a telescoping vehicle under ceilings, raise its deck to receive freight, then carry and unload at elevated docks.",
+      "rules": [
+        "Complete three freight orders. Collect at the indicated column and height, then unload at the destination. Transfer requires sway at most one.",
+        "Deck height ranges from one to five. Low beams at columns 4–6 have clearance below height three; column 7 requires height below four. Driving or raising into a beam ends the attempt.",
+        "Driving above height two adds sway; reversing adds one more. Stabilize reduces sway by three, lowering reduces one. At eight sway the platform topples. Lower freight before crossing the arch."
+      ],
+      "controls": "Use the on-screen action buttons, or their displayed keyboard shortcuts. All simulations advance only when you act; selection and aim controls are free where noted.",
+      "url": "kinetic-room/?game=scissor-lift",
+      "accent": "#b9c9a6",
+      "symbol": "↟",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#inputs button"
+      },
+      "family": "kinetic-room",
+      "status": "playable"
+    },
+    {
+      "id": "ricochet-duel",
+      "name": "Ricochet Duel",
+      "category": "strategy",
+      "description": "Aim reflecting rays past walls and an oriented rotating shield; alternate repositioning and shooting with limited ammunition.",
+      "mechanic": "Aim reflecting rays past walls and an oriented rotating shield; alternate repositioning and shooting with limited ammunition.",
+      "rules": [
+        "Hit the opponent three times before three hull hits or spending nine rays. Aiming is free; stepping, waiting and firing advance the defense.",
+        "The dotted sight reflects off the outer room and central pillar, up to four bounces. The enemy shield turns a quarter-turn after every action; its front blocks shots.",
+        "A highlighted column fires on the next action. Step away to evade it while choosing a new shot origin. Angle zero points right, ninety points down."
+      ],
+      "controls": "Use the on-screen action buttons, or their displayed keyboard shortcuts. All simulations advance only when you act; selection and aim controls are free where noted.",
+      "url": "kinetic-room/?game=ricochet-duel",
+      "accent": "#b9c9a6",
+      "symbol": "↗",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#inputs button"
+      },
+      "family": "kinetic-room",
+      "status": "playable"
+    },
+    {
+      "id": "soft-sculpt",
+      "name": "Soft Sculpt",
+      "category": "strategy",
+      "description": "Cut structural bonds to lighten a suspended sculpture while preserving connectivity, mass and balance.",
+      "mechanic": "Inverse weighted-network disconnection with irreversible falling components, target suspended mass and zero torque.",
+      "rules": [
+        "Complete three hanging sculptures. Retained mass must equal the target and torque must be zero; torque is each weight multiplied by its signed arm from the hook.",
+        "Select a numbered bond, then cut it. Any component without a surviving path to node zero falls permanently. Redundant bonds can keep a cut group hanging. A starred protected weight must remain.",
+        "Only four cuts per study are available. Find a connected balanced remainder, then Next study. Restart returns to study one. The text board description lists every weight, arm and bond."
+      ],
+      "controls": "Use the on-screen action buttons, or their displayed keyboard shortcuts. All simulations advance only when you act; selection and aim controls are free where noted.",
+      "url": "kinetic-room/?game=soft-sculpt",
+      "accent": "#b9c9a6",
+      "symbol": "▥",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#inputs button"
+      },
+      "family": "kinetic-room",
+      "status": "playable"
+    },
+    {
+      "id": "spring-courier",
+      "name": "Spring Courier",
+      "category": "strategy",
+      "description": "Pump a suspended parcel, release its pendulum, then catch a new anchor or a landing platform.",
+      "mechanic": "Pump a suspended parcel, release its pendulum, then catch a new anchor or a landing platform.",
+      "rules": [
+        "Visit all three overhead anchors, then land in the right-hand pad. Time advances one physics step with every action.",
+        "While attached, pump left or right to build angular momentum. Release keeps the tangent velocity of your swing. Coasting lets gravity shape the arc.",
+        "While airborne, Catch attaches to the nearest unused anchor between 0.7 and 3.6 units away, preserving tangential momentum. Missing the landing pad, water, or leaving the rigging ends the attempt."
+      ],
+      "controls": "Use the on-screen action buttons, or their displayed keyboard shortcuts. All simulations advance only when you act; selection and aim controls are free where noted.",
+      "url": "kinetic-room/?game=spring-courier",
+      "accent": "#b9c9a6",
+      "symbol": "⌒",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#inputs button"
+      },
+      "family": "kinetic-room",
+      "status": "playable"
+    },
+    {
+      "id": "shatter-belt",
+      "name": "Shatter Belt",
+      "category": "strategy",
+      "description": "Rotate and fire at drifting rocks that split into smaller faster fragments; manage recoil and shield protection.",
+      "mechanic": "Rotate and fire at drifting rocks that split into smaller faster fragments; manage recoil and shield protection.",
+      "rules": [
+        "Clear three large asteroids and their six fragments. Large rocks split into two smaller faster threats when hit. Five hull hits end the attempt.",
+        "Rotate freely in 22.5-degree steps; firing, thrusting, drifting and shielding advance the field. Beams hit the first rock on their forward line.",
+        "Thrust and recoil change your drift; space wraps at the edges. Three shield pulses block collisions for one step each. Aim at nearby fragments before they close in."
+      ],
+      "controls": "Use the on-screen action buttons, or their displayed keyboard shortcuts. All simulations advance only when you act; selection and aim controls are free where noted.",
+      "url": "kinetic-room/?game=shatter-belt",
+      "accent": "#b9c9a6",
+      "symbol": "✧",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#inputs button"
+      },
+      "family": "kinetic-room",
+      "status": "playable"
+    },
+    {
+      "id": "lantern-defense",
+      "name": "Lantern Defense",
+      "category": "strategy",
+      "description": "Launch expanding interceptors ahead of descending projectiles; chain blast coverage protects three separated bases with finite ammunition.",
+      "mechanic": "Launch expanding interceptors ahead of descending projectiles; chain blast coverage protects three separated bases with finite ammunition.",
+      "rules": [
+        "Protect at least two of the three lantern bases through twelve incoming projectiles. Aim freely; Launch or Advance sky moves every projectile.",
+        "Each interceptor grows from a small burst to a wide circle before fading. Place it ahead of a projectile rather than directly on its current position.",
+        "Intercepted projectiles start secondary explosions that can chain together. You have twelve interceptors. Bases stand at columns 2, 6 and 10; two lost bases end the defense."
+      ],
+      "controls": "Use the on-screen action buttons, or their displayed keyboard shortcuts. All simulations advance only when you act; selection and aim controls are free where noted.",
+      "url": "kinetic-room/?game=lantern-defense",
+      "accent": "#b9c9a6",
+      "symbol": "☄",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#inputs button"
+      },
+      "family": "kinetic-room",
+      "status": "playable"
+    },
+    {
+      "id": "little-walkers",
+      "name": "Little Walkers",
+      "category": "strategy",
+      "description": "Prepare shared terrain for two rescues, then coordinate lead walkers from opposite entrances.",
+      "mechanic": "Assign limited builder, digger and blocker jobs to autonomous walkers; reshape terrain and rescue a quota.",
+      "rules": [
+        "Complete two rescues: first save five of six walkers across one gap; then save seven of eight from opposite entrances at a central exit. Each advance moves every active walker and welcomes a new one every three turns.",
+        "Select a walker, then assign a job without advancing time. Builder lays four floor cells ahead but stops at X walls; digger breaks those walls; blocker reverses approaching walkers. Release returns a blocker to walking.",
+        "Each rescue has two builder kits, two digger kits and one blocker kit. In the second rescue prepare BOTH approaches before the following crowds arrive. You may select and assign several workers before advancing. Two falls make the quota impossible."
+      ],
+      "controls": "Use the on-screen action buttons, or their displayed keyboard shortcuts. All simulations advance only when you act; selection and aim controls are free where noted.",
+      "url": "kinetic-room/?game=little-walkers",
+      "accent": "#b9c9a6",
+      "symbol": "♟",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#inputs button"
+      },
+      "family": "kinetic-room",
+      "status": "playable"
+    },
+    {
+      "id": "ray-archive",
+      "name": "Ray Archive",
+      "category": "puzzle",
+      "description": "Probe perimeter ports to observe deflections and infer hidden atoms",
+      "mechanic": "Black Box perimeter ray inference",
+      "rules": [
+        "Hidden atoms bend rays away, or absorb rays that hit them directly. Fire a ray from any edge port and read its exit. A ray with an atom immediately to one side reflects back.",
+        "Switch from Probe to Mark to place your three atom guesses. Rays cost one charge; checking an incorrect layout costs two. Solve two chambers with twelve charges each.",
+        "Coordinates and a full ray log accompany the board. Atoms never touch an edge."
+      ],
+      "controls": "Tap or click controls; Tab then Enter / Space. Arrow keys move within grids.",
+      "url": "discovery-room/?game=ray-archive",
+      "accent": "#c4d8bc",
+      "symbol": "⌕",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": ".ray-port"
+      },
+      "family": "discovery-room",
+      "status": "playable"
+    },
+    {
+      "id": "false-weight",
+      "name": "False Weight",
+      "category": "puzzle",
+      "description": "Design equal-pan experiments to identify a heavy or light counterfeit across three assays.",
+      "mechanic": "Adaptive balance-scale experimentation",
+      "rules": [
+        "One coin differs in weight. Choose coins for the left and right pans, then weigh equal-size groups. A result tells you which side is heavier.",
+        "Identify the coin and whether it is heavy or light. Clear three rounds: 9 coins known heavy, 9 known light, then 6 with either sign. You get three weighings per round.",
+        "Wrong accusations cost a weighing. Every hypothesis consistent with your measurements remains listed."
+      ],
+      "controls": "Tap or click controls; Tab then Enter / Space. Arrow keys move within grids.",
+      "url": "discovery-room/?game=false-weight",
+      "accent": "#c4d8bc",
+      "symbol": "⌕",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": ".grid .cell"
+      },
+      "family": "discovery-room",
+      "status": "playable"
+    },
+    {
+      "id": "three-of-a-kind",
+      "name": "Three of a Kind",
+      "category": "puzzle",
+      "description": "Find triples satisfying all-same or all-different simultaneously across three visual dimensions in a changing tableau.",
+      "mechanic": "Set-style relational triple selection",
+      "rules": [
+        "Select three cards. For EACH property—shape, count and fill—the three values must be all the same or all different.",
+        "Find six valid triples in the changing twelve-card tableau. A correct triple is replaced; three incorrect triples end the study.",
+        "Every card spells out its properties. Ask for one clue per tableau: it identifies one member of a valid triple."
+      ],
+      "controls": "Tap or click controls; Tab then Enter / Space. Arrow keys move within grids.",
+      "url": "discovery-room/?game=three-of-a-kind",
+      "accent": "#c4d8bc",
+      "symbol": "⌕",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": ".grid .cell"
+      },
+      "family": "discovery-room",
+      "status": "playable"
+    },
+    {
+      "id": "second-look",
+      "name": "Second Look",
+      "category": "puzzle",
+      "description": "Alternate two complete scenes, locate modifications while ignoring unchanged objects",
+      "mechanic": "Change blindness with deliberate scene toggling",
+      "rules": [
+        "Inspect scene A, then switch to scene B. Three objects change one attribute between the views.",
+        "Mark the three changed positions while viewing either scene, then submit. Clear three scenes. Three wrong submissions end the study.",
+        "The scene is never shown side by side. Switching is unlimited; marks and your notes persist."
+      ],
+      "controls": "Tap or click controls; Tab then Enter / Space. Arrow keys move within grids.",
+      "url": "discovery-room/?game=second-look",
+      "accent": "#c4d8bc",
+      "symbol": "⌕",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": ".grid .cell"
+      },
+      "family": "discovery-room",
+      "status": "playable"
+    },
+    {
+      "id": "fog-journal",
+      "name": "Fog Journal",
+      "category": "adventure",
+      "description": "Use one-cell sight and persistent hand-marked journal to collect an artifact and return, with finite lamp fuel.",
+      "mechanic": "Limited-vision maze mapping with return trip",
+      "rules": [
+        "Explore using North, East, South and West. You can see only adjacent passages; the journal remembers places you visit.",
+        "Collect the brass artifact and return to the entrance before 90 lamp units run out. Each successful step uses one; bumping a wall costs nothing.",
+        "Two generated mazes await. Coordinates, exits and your visited trail are always available as text."
+      ],
+      "controls": "Tap or click controls; Tab then Enter / Space. Arrow keys move within grids.",
+      "url": "discovery-room/?game=fog-journal",
+      "accent": "#c4d8bc",
+      "symbol": "⌕",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#board button"
+      },
+      "family": "discovery-room",
+      "status": "playable"
+    },
+    {
+      "id": "prefix-press",
+      "name": "Prefix Press",
+      "category": "puzzle",
+      "description": "Merge least-weight messages into a prefix tree, then encode a dispatch. Optimize weighted path length, not number representation.",
+      "mechanic": "Weighted prefix-code tree construction",
+      "rules": [
+        "Build an efficient binary code by repeatedly merging two available message trees. Each merge adds their combined weight to transmission cost.",
+        "Match the optimal cost shown, then encode the requested message using the completed tree. Clear three dispatches.",
+        "Undo a merge to revise. Any prefix tree decodes correctly, but only an optimal tree meets the bandwidth budget."
+      ],
+      "controls": "Tap or click controls; Tab then Enter / Space. Arrow keys move within grids.",
+      "url": "discovery-room/?game=prefix-press",
+      "accent": "#c4d8bc",
+      "symbol": "⌕",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#board button"
+      },
+      "family": "discovery-room",
+      "status": "playable"
+    },
+    {
+      "id": "transit-observatory",
+      "name": "Transit Observatory",
+      "category": "puzzle",
+      "description": "Choose observation times, eliminate period/phase hypotheses, identify three transiting worlds within an observation budget.",
+      "mechanic": "Active temporal sampling to resolve orbital aliases",
+      "rules": [
+        "A planet appears when time modulo its period equals its phase. Every candidate orbit is listed. Choose a time and observe whether a transit occurs.",
+        "Identify period and phase uniquely in at most six observations. Clear three skies. A premature or wrong claim costs an observation.",
+        "Times range 0–59. Repeated observations provide no new information and still use a charge."
+      ],
+      "controls": "Tap or click controls; Tab then Enter / Space. Arrow keys move within grids.",
+      "url": "discovery-room/?game=transit-observatory",
+      "accent": "#c4d8bc",
+      "symbol": "⌕",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#board button"
+      },
+      "family": "discovery-room",
+      "status": "playable"
+    },
+    {
+      "id": "specimen-rule",
+      "name": "Specimen Rule",
+      "category": "puzzle",
+      "description": "Construct specimens to query membership, then correctly classify unseen specimens",
+      "mechanic": "Active hypothesis testing of a hidden grammar",
+      "rules": [
+        "The hidden rule accepts or rejects three-number specimens. The complete set of possible rules appears beside the bench.",
+        "Set three values from 1–4 and run experiments. Then identify the rule and classify four fresh specimens. Clear two studies.",
+        "Experiments cost one of eight charges. An incorrect rule claim costs two. Holdout answers cannot be changed after submitting."
+      ],
+      "controls": "Tap or click controls; Tab then Enter / Space. Arrow keys move within grids.",
+      "url": "discovery-room/?game=specimen-rule",
+      "accent": "#c4d8bc",
+      "symbol": "⌕",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#board button"
+      },
+      "family": "discovery-room",
+      "status": "playable"
+    },
+    {
+      "id": "causal-lab",
+      "name": "Causal Lab",
+      "category": "puzzle",
+      "description": "Toggle interventions and observe propagated effects",
+      "mechanic": "Intervention-based causal circuit diagnosis",
+      "rules": [
+        "One wire in the displayed acyclic machine is broken. Set the two input switches and measure the four lamp outputs.",
+        "A lamp lights if ANY working incoming wire carries power. Direct interventions let you force one intermediate lamp off before measurement.",
+        "Use at most six measurements to locate the broken wire. Clear three machines; wrong diagnoses cost two measurements."
+      ],
+      "controls": "Tap or click controls; Tab then Enter / Space. Arrow keys move within grids.",
+      "url": "discovery-room/?game=causal-lab",
+      "accent": "#c4d8bc",
+      "symbol": "⌕",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#board button"
+      },
+      "family": "discovery-room",
+      "status": "playable"
+    },
+    {
+      "id": "parallax-post",
+      "name": "Parallax Post",
+      "category": "puzzle",
+      "description": "Reconstruct stereo correspondences, move the camera baseline, and isolate a depth plane.",
+      "mechanic": "Active stereo correspondence with variable camera baseline and selective depth focus",
+      "rules": [
+        "Match all five landmarks between left and right camera views. Shapes can repeat: compare spatial positions as well as shape. Selecting a left landmark and then its right counterpart records the correspondence.",
+        "Change the camera baseline to see the parallax increase. Depth disparity equals (left x − right x) divided by baseline; every depth is 1–4. Changing baseline clears existing matches.",
+        "After reconstructing all five correspondences, focus on the requested pair’s shared depth and expose the plate. Clear four scenes with eight plates; an incorrect match or exposure consumes a plate."
+      ],
+      "controls": "Tap or click controls; Tab then Enter / Space. Arrow keys move within grids.",
+      "url": "discovery-room/?game=parallax-post",
+      "accent": "#c4d8bc",
+      "symbol": "⌕",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "button[aria-label^=\"Left landmark\"]"
+      },
+      "family": "discovery-room",
+      "status": "playable"
+    },
+    {
+      "id": "wave-desk",
+      "name": "Wave Desk",
+      "category": "puzzle",
+      "description": "Adjust signed amplitudes of temporal basis waves to cancel noise and reconstruct sampled signal",
+      "mechanic": "Discrete harmonic signal synthesis",
+      "rules": [
+        "Three known basis waves combine by addition. Adjust each signed amplitude from −3 to 3 to match every sample of the reference.",
+        "The live table shows each basis sample and your combined signal. Match all samples and certify; clear three signals.",
+        "You have six failed certifications in total. Slider changes are free, and numeric errors reveal exactly where interference remains."
+      ],
+      "controls": "Tap or click controls; Tab then Enter / Space. Arrow keys move within grids.",
+      "url": "discovery-room/?game=wave-desk",
+      "accent": "#c4d8bc",
+      "symbol": "⌕",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#board button"
+      },
+      "family": "discovery-room",
+      "status": "playable"
+    },
+    {
+      "id": "twenty-questions",
+      "name": "Question Orchard",
+      "category": "puzzle",
+      "description": "Choose balanced property questions to identify multiple hidden objects within a shared query budget, with visible candidate elimination.",
+      "mechanic": "Adaptive binary decision-tree construction",
+      "rules": [
+        "A secret specimen belongs to a twelve-card catalog drawn from 32 possible combinations of five traits. The manifest supplies one known trait. Ask about any trait to eliminate impossible candidates.",
+        "Identify four specimens using at most twelve questions total. Catalogs change, so traits can split candidates unevenly. Plan a question tree: every initial catalog can be solved within three well-chosen questions.",
+        "Each new specimen comes with one free known property. Wrong identification costs two questions; candidate cards can be selected at any time."
+      ],
+      "controls": "Tap or click controls; Tab then Enter / Space. Arrow keys move within grids.",
+      "url": "discovery-room/?game=twenty-questions",
+      "accent": "#c4d8bc",
+      "symbol": "⌕",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#board button"
+      },
+      "family": "discovery-room",
+      "status": "playable"
+    },
+    {
+      "id": "scent-trail",
+      "name": "Scent Trail",
+      "category": "puzzle",
+      "description": "Sample local concentration, move a tracked rover against a wind-shifted plume and sample at source",
+      "mechanic": "Gradient navigation with moving plume",
+      "rules": [
+        "A beacon creates a scent field. Scan reports Manhattan distance to its wind-displaced plume center. Wind and its offset are shown.",
+        "Move the rover and triangulate the true beacon; collect only when standing on its actual position. Recover three beacons within thirty actions each.",
+        "Scans and moves cost one action. Collection at the wrong position costs three. Wind changes after each scan, so account for the displayed offset."
+      ],
+      "controls": "Tap or click controls; Tab then Enter / Space. Arrow keys move within grids.",
+      "url": "discovery-room/?game=scent-trail",
+      "accent": "#c4d8bc",
+      "symbol": "⌕",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#board button"
+      },
+      "family": "discovery-room",
+      "status": "playable"
+    },
+    {
+      "id": "fossil-brush",
+      "name": "Fossil Brush",
+      "category": "puzzle",
+      "description": "Plan broad and precise cuts to expose varied buried fossils within a tight tool budget.",
+      "mechanic": "Risk-aware excavation with tool footprints",
+      "rules": [
+        "Excavate a 6×6 sediment block. Each cell has a visible layer depth. Brush removes one layer from one cell; chisel removes two layers from a three-cell row segment.",
+        "Expose every fossil cell and submit with at least eight of ten integrity remaining. The action budget is deliberately too small to brush all sediment in the sonar-positive rows: plan efficient broad cuts where all three depths are two.",
+        "Sonar gives row fossil counts, but fossils have different connected shapes. Further blows below depth zero damage bone. Clear two digs; the budget varies with the number of occupied rows."
+      ],
+      "controls": "Tap or click controls; Tab then Enter / Space. Arrow keys move within grids.",
+      "url": "discovery-room/?game=fossil-brush",
+      "accent": "#c4d8bc",
+      "symbol": "⌕",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": ".grid .cell"
+      },
+      "family": "discovery-room",
+      "status": "playable"
+    },
+    {
+      "id": "archive-edit",
+      "name": "Archive Edit",
+      "category": "puzzle",
+      "description": "Choose a limited set of dependent patches, then resolve their conflicting edits into a publishable document.",
+      "mechanic": "Version-control branching and selective merge",
+      "rules": [
+        "Seven alternative commits edit five fields from a common base. Only three cherry-picks fit each release, and some require a named predecessor. Inspect every delta and choose a compatible subset.",
+        "A field changed from the base creates a conflict when another patch changes it differently. Choose current or incoming; resolve all conflicts to finish applying the patch.",
+        "Meet all five requirements and publish. Reset this release restores the copy and three-pick budget but preserves review credits. Three failed publications end the study; clear three different patch graphs."
+      ],
+      "controls": "Tap or click controls; Tab then Enter / Space. Arrow keys move within grids.",
+      "url": "discovery-room/?game=archive-edit",
+      "accent": "#c4d8bc",
+      "symbol": "⌕",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#board button"
+      },
+      "family": "discovery-room",
+      "status": "playable"
+    },
+    {
+      "id": "lens-library",
+      "name": "Lens Library",
+      "category": "puzzle",
+      "description": "Inspect blurred samples, infer the neighborhood blur kernel via calibration probes, then choose an inverse reconstruction to recover an image.",
+      "mechanic": "Convolution model identification and deblurring",
+      "rules": [
+        "A hidden blur averages each pixel with either its left neighbor, right neighbor, or both. Edges wrap.",
+        "Send a single bright calibration pixel through the lens and inspect its output to infer the kernel. Then select the sharp source whose predicted blur matches the observed image.",
+        "Clear four plates with six charges. Calibrations cost one; wrong restorations cost two. The three candidate source images are shown numerically."
+      ],
+      "controls": "Tap or click controls; Tab then Enter / Space. Arrow keys move within grids.",
+      "url": "discovery-room/?game=lens-library",
+      "accent": "#c4d8bc",
+      "symbol": "⌕",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#board button"
+      },
+      "family": "discovery-room",
+      "status": "playable"
+    },
+    {
+      "id": "invisible-ink",
+      "name": "Invisible Ink",
+      "category": "puzzle",
+      "description": "Use limited spectral strip exposures and a manifest to eliminate counterfeit parcels.",
+      "mechanic": "Multi-channel observation and evidence intersection",
+      "rules": [
+        "Nine parcels each carry three hidden evidence bits. Only the two genuine parcels have all three bits. Scan a row or column in one channel to reveal three observations at once.",
+        "You have five scans. The manifest gives the number of genuine parcels in each row. A single absent bit proves a counterfeit; once enough alternatives are eliminated, infer the remaining genuine parcels without exposing every bit.",
+        "Every sheet is solvable within five scans. At least one occupied row has counterfeits with at most one positive trace, which can be excluded after two different-channel scans. Mark two parcels and certify; a wrong certification ends the study. Clear three sheets."
+      ],
+      "controls": "Tap or click controls; Tab then Enter / Space. Arrow keys move within grids.",
+      "url": "discovery-room/?game=invisible-ink",
+      "accent": "#c4d8bc",
+      "symbol": "⌕",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": ".grid .cell"
+      },
+      "family": "discovery-room",
+      "status": "playable"
+    },
+    {
+      "id": "clockmaker-cabinet",
+      "name": "Clockmaker’s Cabinet",
+      "category": "adventure",
+      "description": "Explore connected rooms, collect and combine objects, change machinery states and unlock the exit through causal item-use chains.",
+      "mechanic": "Inventory-combination escape adventure",
+      "rules": [
+        "Explore the workshop, greenhouse and clock tower. Collect objects, select an inventory item, then use it on a fixture or combine it with another item.",
+        "Repair the clock and unlock the front door. Physical clues explain object uses; experimenting on an incompatible fixture costs one of six patience marks.",
+        "There is no timer. A notebook records discoveries and completed machinery. Restart rebuilds the entire escape room."
+      ],
+      "controls": "Tap or click controls; Tab then Enter / Space. Arrow keys move within grids.",
+      "url": "discovery-room/?game=clockmaker-cabinet",
+      "accent": "#c4d8bc",
+      "symbol": "⌕",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#board button:has-text(\"Desk\")"
+      },
+      "family": "discovery-room",
+      "status": "playable"
+    },
+    {
+      "id": "track-exchange",
+      "name": "Track Exchange",
+      "category": "adventure",
+      "description": "Navigate complementary gate and water routes, then exchange the objects each explorer needs to escape.",
+      "mechanic": "Asymmetric two-character exploration and object transfer",
+      "rules": [
+        "Switch control between Ada and Bo on separate maps. Ada must collect the iron key to pass her gate; Bo can cross the mandatory water band and collect the crank.",
+        "Each explorer must stand at H before transferring or exchanging carried objects. Ada needs Bo’s crank for her exit; Bo needs Ada’s iron key. Neither can finish alone.",
+        "Bring both explorers to E and unlock each exit within fifty successful moves. Blocked movement and invalid object use cost nothing."
+      ],
+      "controls": "Tap or click controls; Tab then Enter / Space. Arrow keys move within grids.",
+      "url": "discovery-room/?game=track-exchange",
+      "accent": "#c4d8bc",
+      "symbol": "⌕",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#board button:has-text(\"South\")"
+      },
+      "family": "discovery-room",
+      "status": "playable"
+    },
+    {
+      "id": "folded-world",
+      "name": "Folded World",
+      "category": "adventure",
+      "description": "Plan atlas routes through rooms that rotate and reflect your local compass.",
+      "mechanic": "Non-Euclidean room exploration and orientation inference",
+      "rules": [
+        "Twelve rooms have different local compass frames; some are mirrored. The room tells you which local door points north and whether clockwise local movement turns clockwise or counterclockwise on the compass.",
+        "Plan a route using the atlas, collect seals in rooms 3, 6 and 9 in that order, then return to room 0. Translate each desired compass direction into the current room’s local door.",
+        "You have eighteen moves. The travel log records actual compass travel; restart creates new room orientations and mirrors."
+      ],
+      "controls": "Tap or click controls; Tab then Enter / Space. Arrow keys move within grids.",
+      "url": "discovery-room/?game=folded-world",
+      "accent": "#c4d8bc",
+      "symbol": "⌕",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#board button"
+      },
+      "family": "discovery-room",
       "status": "playable"
     }
   ]

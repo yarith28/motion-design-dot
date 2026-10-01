@@ -3,15 +3,14 @@
   "suite": "number-room",
   "passed": true,
   "status": "passed",
-  "startedAt": "2026-10-01T02:00:36.578Z",
+  "startedAt": "2026-10-01T04:09:02.541Z",
   "source": {
-    "sha256": "3d7532716575500995a260e5164a37a8150d6725bd973678f8d1c122c8ef0420",
+    "sha256": "a269973831a0f48100f86294c096616e3880a42ed2b7d80abab23e39044d5835",
     "files": [
       "catalog.css",
       "catalog.js",
       "common.js",
       "index.html",
-      "inventory-plan.json",
       "inventory.json",
       "number-room/games.json",
       "number-room/index.html",
@@ -63,9 +62,9 @@
   "servedRuntimeBefore": {
     "baseURL": "http://127.0.0.1:8790",
     "passed": true,
-    "sha256": "04234b8f36e3c49087bd3608c940a7590bc63d3322e3f83b0fbd10e2cdf95e04",
-    "fileCount": 12,
-    "verifiedAt": "2026-10-01T02:00:36.830Z"
+    "sha256": "83f0d2e02c20af75dbde400cd42948c564bffdacaa19c78bba0d9b0cb1f222f7",
+    "fileCount": 11,
+    "verifiedAt": "2026-10-01T04:09:02.777Z"
   },
   "exitCode": 0,
   "signal": null,
@@ -73,9 +72,10 @@
   "servedRuntime": {
     "baseURL": "http://127.0.0.1:8790",
     "passed": true,
-    "sha256": "04234b8f36e3c49087bd3608c940a7590bc63d3322e3f83b0fbd10e2cdf95e04",
-    "fileCount": 12,
-    "verifiedAt": "2026-10-01T02:02:42.541Z"
+    "sha256": "83f0d2e02c20af75dbde400cd42948c564bffdacaa19c78bba0d9b0cb1f222f7",
+    "fileCount": 11,
+    "verifiedAt": "2026-10-01T04:10:17.941Z"
   },
-  "finishedAt": "2026-10-01T02:02:42.541Z"
+  "completionEvidence": null,
+  "finishedAt": "2026-10-01T04:10:17.941Z"
 }

@@ -1,0 +1,402 @@
+[
+  {
+    "id": "ray-archive",
+    "name": "Ray Archive",
+    "category": "puzzle",
+    "description": "Probe perimeter ports to observe deflections and infer hidden atoms",
+    "mechanic": "Black Box perimeter ray inference",
+    "rules": [
+      "Hidden atoms bend rays away, or absorb rays that hit them directly. Fire a ray from any edge port and read its exit. A ray with an atom immediately to one side reflects back.",
+      "Switch from Probe to Mark to place your three atom guesses. Rays cost one charge; checking an incorrect layout costs two. Solve two chambers with twelve charges each.",
+      "Coordinates and a full ray log accompany the board. Atoms never touch an edge."
+    ],
+    "controls": "Tap or click controls; Tab then Enter / Space. Arrow keys move within grids.",
+    "url": "discovery-room/?game=ray-archive",
+    "accent": "#c4d8bc",
+    "symbol": "\u2315",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": ".ray-port"
+    }
+  },
+  {
+    "id": "false-weight",
+    "name": "False Weight",
+    "category": "puzzle",
+    "description": "Design equal-pan experiments to identify a heavy or light counterfeit across three assays.",
+    "mechanic": "Adaptive balance-scale experimentation",
+    "rules": [
+      "One coin differs in weight. Choose coins for the left and right pans, then weigh equal-size groups. A result tells you which side is heavier.",
+      "Identify the coin and whether it is heavy or light. Clear three rounds: 9 coins known heavy, 9 known light, then 6 with either sign. You get three weighings per round.",
+      "Wrong accusations cost a weighing. Every hypothesis consistent with your measurements remains listed."
+    ],
+    "controls": "Tap or click controls; Tab then Enter / Space. Arrow keys move within grids.",
+    "url": "discovery-room/?game=false-weight",
+    "accent": "#c4d8bc",
+    "symbol": "\u2315",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": ".grid .cell"
+    }
+  },
+  {
+    "id": "three-of-a-kind",
+    "name": "Three of a Kind",
+    "category": "puzzle",
+    "description": "Find triples satisfying all-same or all-different simultaneously across three visual dimensions in a changing tableau.",
+    "mechanic": "Set-style relational triple selection",
+    "rules": [
+      "Select three cards. For EACH property\u2014shape, count and fill\u2014the three values must be all the same or all different.",
+      "Find six valid triples in the changing twelve-card tableau. A correct triple is replaced; three incorrect triples end the study.",
+      "Every card spells out its properties. Ask for one clue per tableau: it identifies one member of a valid triple."
+    ],
+    "controls": "Tap or click controls; Tab then Enter / Space. Arrow keys move within grids.",
+    "url": "discovery-room/?game=three-of-a-kind",
+    "accent": "#c4d8bc",
+    "symbol": "\u2315",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": ".grid .cell"
+    }
+  },
+  {
+    "id": "second-look",
+    "name": "Second Look",
+    "category": "puzzle",
+    "description": "Alternate two complete scenes, locate modifications while ignoring unchanged objects",
+    "mechanic": "Change blindness with deliberate scene toggling",
+    "rules": [
+      "Inspect scene A, then switch to scene B. Three objects change one attribute between the views.",
+      "Mark the three changed positions while viewing either scene, then submit. Clear three scenes. Three wrong submissions end the study.",
+      "The scene is never shown side by side. Switching is unlimited; marks and your notes persist."
+    ],
+    "controls": "Tap or click controls; Tab then Enter / Space. Arrow keys move within grids.",
+    "url": "discovery-room/?game=second-look",
+    "accent": "#c4d8bc",
+    "symbol": "\u2315",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": ".grid .cell"
+    }
+  },
+  {
+    "id": "fog-journal",
+    "name": "Fog Journal",
+    "category": "adventure",
+    "description": "Use one-cell sight and persistent hand-marked journal to collect an artifact and return, with finite lamp fuel.",
+    "mechanic": "Limited-vision maze mapping with return trip",
+    "rules": [
+      "Explore using North, East, South and West. You can see only adjacent passages; the journal remembers places you visit.",
+      "Collect the brass artifact and return to the entrance before 90 lamp units run out. Each successful step uses one; bumping a wall costs nothing.",
+      "Two generated mazes await. Coordinates, exits and your visited trail are always available as text."
+    ],
+    "controls": "Tap or click controls; Tab then Enter / Space. Arrow keys move within grids.",
+    "url": "discovery-room/?game=fog-journal",
+    "accent": "#c4d8bc",
+    "symbol": "\u2315",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board button"
+    }
+  },
+  {
+    "id": "prefix-press",
+    "name": "Prefix Press",
+    "category": "puzzle",
+    "description": "Merge least-weight messages into a prefix tree, then encode a dispatch. Optimize weighted path length, not number representation.",
+    "mechanic": "Weighted prefix-code tree construction",
+    "rules": [
+      "Build an efficient binary code by repeatedly merging two available message trees. Each merge adds their combined weight to transmission cost.",
+      "Match the optimal cost shown, then encode the requested message using the completed tree. Clear three dispatches.",
+      "Undo a merge to revise. Any prefix tree decodes correctly, but only an optimal tree meets the bandwidth budget."
+    ],
+    "controls": "Tap or click controls; Tab then Enter / Space. Arrow keys move within grids.",
+    "url": "discovery-room/?game=prefix-press",
+    "accent": "#c4d8bc",
+    "symbol": "\u2315",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board button"
+    }
+  },
+  {
+    "id": "transit-observatory",
+    "name": "Transit Observatory",
+    "category": "puzzle",
+    "description": "Choose observation times, eliminate period/phase hypotheses, identify three transiting worlds within an observation budget.",
+    "mechanic": "Active temporal sampling to resolve orbital aliases",
+    "rules": [
+      "A planet appears when time modulo its period equals its phase. Every candidate orbit is listed. Choose a time and observe whether a transit occurs.",
+      "Identify period and phase uniquely in at most six observations. Clear three skies. A premature or wrong claim costs an observation.",
+      "Times range 0\u201359. Repeated observations provide no new information and still use a charge."
+    ],
+    "controls": "Tap or click controls; Tab then Enter / Space. Arrow keys move within grids.",
+    "url": "discovery-room/?game=transit-observatory",
+    "accent": "#c4d8bc",
+    "symbol": "\u2315",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board button"
+    }
+  },
+  {
+    "id": "specimen-rule",
+    "name": "Specimen Rule",
+    "category": "puzzle",
+    "description": "Construct specimens to query membership, then correctly classify unseen specimens",
+    "mechanic": "Active hypothesis testing of a hidden grammar",
+    "rules": [
+      "The hidden rule accepts or rejects three-number specimens. The complete set of possible rules appears beside the bench.",
+      "Set three values from 1\u20134 and run experiments. Then identify the rule and classify four fresh specimens. Clear two studies.",
+      "Experiments cost one of eight charges. An incorrect rule claim costs two. Holdout answers cannot be changed after submitting."
+    ],
+    "controls": "Tap or click controls; Tab then Enter / Space. Arrow keys move within grids.",
+    "url": "discovery-room/?game=specimen-rule",
+    "accent": "#c4d8bc",
+    "symbol": "\u2315",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board button"
+    }
+  },
+  {
+    "id": "causal-lab",
+    "name": "Causal Lab",
+    "category": "puzzle",
+    "description": "Toggle interventions and observe propagated effects",
+    "mechanic": "Intervention-based causal circuit diagnosis",
+    "rules": [
+      "One wire in the displayed acyclic machine is broken. Set the two input switches and measure the four lamp outputs.",
+      "A lamp lights if ANY working incoming wire carries power. Direct interventions let you force one intermediate lamp off before measurement.",
+      "Use at most six measurements to locate the broken wire. Clear three machines; wrong diagnoses cost two measurements."
+    ],
+    "controls": "Tap or click controls; Tab then Enter / Space. Arrow keys move within grids.",
+    "url": "discovery-room/?game=causal-lab",
+    "accent": "#c4d8bc",
+    "symbol": "\u2315",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board button"
+    }
+  },
+  {
+    "id": "parallax-post",
+    "name": "Parallax Post",
+    "category": "puzzle",
+    "description": "Reconstruct stereo correspondences, move the camera baseline, and isolate a depth plane.",
+    "mechanic": "Active stereo correspondence with variable camera baseline and selective depth focus",
+    "rules": [
+      "Match all five landmarks between left and right camera views. Shapes can repeat: compare spatial positions as well as shape. Selecting a left landmark and then its right counterpart records the correspondence.",
+      "Change the camera baseline to see the parallax increase. Depth disparity equals (left x \u2212 right x) divided by baseline; every depth is 1\u20134. Changing baseline clears existing matches.",
+      "After reconstructing all five correspondences, focus on the requested pair\u2019s shared depth and expose the plate. Clear four scenes with eight plates; an incorrect match or exposure consumes a plate."
+    ],
+    "controls": "Tap or click controls; Tab then Enter / Space. Arrow keys move within grids.",
+    "url": "discovery-room/?game=parallax-post",
+    "accent": "#c4d8bc",
+    "symbol": "\u2315",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "button[aria-label^=\"Left landmark\"]"
+    }
+  },
+  {
+    "id": "wave-desk",
+    "name": "Wave Desk",
+    "category": "puzzle",
+    "description": "Adjust signed amplitudes of temporal basis waves to cancel noise and reconstruct sampled signal",
+    "mechanic": "Discrete harmonic signal synthesis",
+    "rules": [
+      "Three known basis waves combine by addition. Adjust each signed amplitude from \u22123 to 3 to match every sample of the reference.",
+      "The live table shows each basis sample and your combined signal. Match all samples and certify; clear three signals.",
+      "You have six failed certifications in total. Slider changes are free, and numeric errors reveal exactly where interference remains."
+    ],
+    "controls": "Tap or click controls; Tab then Enter / Space. Arrow keys move within grids.",
+    "url": "discovery-room/?game=wave-desk",
+    "accent": "#c4d8bc",
+    "symbol": "\u2315",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board button"
+    }
+  },
+  {
+    "id": "twenty-questions",
+    "name": "Question Orchard",
+    "category": "puzzle",
+    "description": "Choose balanced property questions to identify multiple hidden objects within a shared query budget, with visible candidate elimination.",
+    "mechanic": "Adaptive binary decision-tree construction",
+    "rules": [
+      "A secret specimen belongs to a twelve-card catalog drawn from 32 possible combinations of five traits. The manifest supplies one known trait. Ask about any trait to eliminate impossible candidates.",
+      "Identify four specimens using at most twelve questions total. Catalogs change, so traits can split candidates unevenly. Plan a question tree: every initial catalog can be solved within three well-chosen questions.",
+      "Each new specimen comes with one free known property. Wrong identification costs two questions; candidate cards can be selected at any time."
+    ],
+    "controls": "Tap or click controls; Tab then Enter / Space. Arrow keys move within grids.",
+    "url": "discovery-room/?game=twenty-questions",
+    "accent": "#c4d8bc",
+    "symbol": "\u2315",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board button"
+    }
+  },
+  {
+    "id": "scent-trail",
+    "name": "Scent Trail",
+    "category": "puzzle",
+    "description": "Sample local concentration, move a tracked rover against a wind-shifted plume and sample at source",
+    "mechanic": "Gradient navigation with moving plume",
+    "rules": [
+      "A beacon creates a scent field. Scan reports Manhattan distance to its wind-displaced plume center. Wind and its offset are shown.",
+      "Move the rover and triangulate the true beacon; collect only when standing on its actual position. Recover three beacons within thirty actions each.",
+      "Scans and moves cost one action. Collection at the wrong position costs three. Wind changes after each scan, so account for the displayed offset."
+    ],
+    "controls": "Tap or click controls; Tab then Enter / Space. Arrow keys move within grids.",
+    "url": "discovery-room/?game=scent-trail",
+    "accent": "#c4d8bc",
+    "symbol": "\u2315",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board button"
+    }
+  },
+  {
+    "id": "fossil-brush",
+    "name": "Fossil Brush",
+    "category": "puzzle",
+    "description": "Plan broad and precise cuts to expose varied buried fossils within a tight tool budget.",
+    "mechanic": "Risk-aware excavation with tool footprints",
+    "rules": [
+      "Excavate a 6\u00d76 sediment block. Each cell has a visible layer depth. Brush removes one layer from one cell; chisel removes two layers from a three-cell row segment.",
+      "Expose every fossil cell and submit with at least eight of ten integrity remaining. The action budget is deliberately too small to brush all sediment in the sonar-positive rows: plan efficient broad cuts where all three depths are two.",
+      "Sonar gives row fossil counts, but fossils have different connected shapes. Further blows below depth zero damage bone. Clear two digs; the budget varies with the number of occupied rows."
+    ],
+    "controls": "Tap or click controls; Tab then Enter / Space. Arrow keys move within grids.",
+    "url": "discovery-room/?game=fossil-brush",
+    "accent": "#c4d8bc",
+    "symbol": "\u2315",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": ".grid .cell"
+    }
+  },
+  {
+    "id": "archive-edit",
+    "name": "Archive Edit",
+    "category": "puzzle",
+    "description": "Choose a limited set of dependent patches, then resolve their conflicting edits into a publishable document.",
+    "mechanic": "Version-control branching and selective merge",
+    "rules": [
+      "Seven alternative commits edit five fields from a common base. Only three cherry-picks fit each release, and some require a named predecessor. Inspect every delta and choose a compatible subset.",
+      "A field changed from the base creates a conflict when another patch changes it differently. Choose current or incoming; resolve all conflicts to finish applying the patch.",
+      "Meet all five requirements and publish. Reset this release restores the copy and three-pick budget but preserves review credits. Three failed publications end the study; clear three different patch graphs."
+    ],
+    "controls": "Tap or click controls; Tab then Enter / Space. Arrow keys move within grids.",
+    "url": "discovery-room/?game=archive-edit",
+    "accent": "#c4d8bc",
+    "symbol": "\u2315",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board button"
+    }
+  },
+  {
+    "id": "lens-library",
+    "name": "Lens Library",
+    "category": "puzzle",
+    "description": "Inspect blurred samples, infer the neighborhood blur kernel via calibration probes, then choose an inverse reconstruction to recover an image.",
+    "mechanic": "Convolution model identification and deblurring",
+    "rules": [
+      "A hidden blur averages each pixel with either its left neighbor, right neighbor, or both. Edges wrap.",
+      "Send a single bright calibration pixel through the lens and inspect its output to infer the kernel. Then select the sharp source whose predicted blur matches the observed image.",
+      "Clear four plates with six charges. Calibrations cost one; wrong restorations cost two. The three candidate source images are shown numerically."
+    ],
+    "controls": "Tap or click controls; Tab then Enter / Space. Arrow keys move within grids.",
+    "url": "discovery-room/?game=lens-library",
+    "accent": "#c4d8bc",
+    "symbol": "\u2315",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board button"
+    }
+  },
+  {
+    "id": "invisible-ink",
+    "name": "Invisible Ink",
+    "category": "puzzle",
+    "description": "Use limited spectral strip exposures and a manifest to eliminate counterfeit parcels.",
+    "mechanic": "Multi-channel observation and evidence intersection",
+    "rules": [
+      "Nine parcels each carry three hidden evidence bits. Only the two genuine parcels have all three bits. Scan a row or column in one channel to reveal three observations at once.",
+      "You have five scans. The manifest gives the number of genuine parcels in each row. A single absent bit proves a counterfeit; once enough alternatives are eliminated, infer the remaining genuine parcels without exposing every bit.",
+      "Every sheet is solvable within five scans. At least one occupied row has counterfeits with at most one positive trace, which can be excluded after two different-channel scans. Mark two parcels and certify; a wrong certification ends the study. Clear three sheets."
+    ],
+    "controls": "Tap or click controls; Tab then Enter / Space. Arrow keys move within grids.",
+    "url": "discovery-room/?game=invisible-ink",
+    "accent": "#c4d8bc",
+    "symbol": "\u2315",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": ".grid .cell"
+    }
+  },
+  {
+    "id": "clockmaker-cabinet",
+    "name": "Clockmaker\u2019s Cabinet",
+    "category": "adventure",
+    "description": "Explore connected rooms, collect and combine objects, change machinery states and unlock the exit through causal item-use chains.",
+    "mechanic": "Inventory-combination escape adventure",
+    "rules": [
+      "Explore the workshop, greenhouse and clock tower. Collect objects, select an inventory item, then use it on a fixture or combine it with another item.",
+      "Repair the clock and unlock the front door. Physical clues explain object uses; experimenting on an incompatible fixture costs one of six patience marks.",
+      "There is no timer. A notebook records discoveries and completed machinery. Restart rebuilds the entire escape room."
+    ],
+    "controls": "Tap or click controls; Tab then Enter / Space. Arrow keys move within grids.",
+    "url": "discovery-room/?game=clockmaker-cabinet",
+    "accent": "#c4d8bc",
+    "symbol": "\u2315",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board button:has-text(\"Desk\")"
+    }
+  },
+  {
+    "id": "track-exchange",
+    "name": "Track Exchange",
+    "category": "adventure",
+    "description": "Navigate complementary gate and water routes, then exchange the objects each explorer needs to escape.",
+    "mechanic": "Asymmetric two-character exploration and object transfer",
+    "rules": [
+      "Switch control between Ada and Bo on separate maps. Ada must collect the iron key to pass her gate; Bo can cross the mandatory water band and collect the crank.",
+      "Each explorer must stand at H before transferring or exchanging carried objects. Ada needs Bo\u2019s crank for her exit; Bo needs Ada\u2019s iron key. Neither can finish alone.",
+      "Bring both explorers to E and unlock each exit within fifty successful moves. Blocked movement and invalid object use cost nothing."
+    ],
+    "controls": "Tap or click controls; Tab then Enter / Space. Arrow keys move within grids.",
+    "url": "discovery-room/?game=track-exchange",
+    "accent": "#c4d8bc",
+    "symbol": "\u2315",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board button:has-text(\"South\")"
+    }
+  },
+  {
+    "id": "folded-world",
+    "name": "Folded World",
+    "category": "adventure",
+    "description": "Plan atlas routes through rooms that rotate and reflect your local compass.",
+    "mechanic": "Non-Euclidean room exploration and orientation inference",
+    "rules": [
+      "Twelve rooms have different local compass frames; some are mirrored. The room tells you which local door points north and whether clockwise local movement turns clockwise or counterclockwise on the compass.",
+      "Plan a route using the atlas, collect seals in rooms 3, 6 and 9 in that order, then return to room 0. Translate each desired compass direction into the current room\u2019s local door.",
+      "You have eighteen moves. The travel log records actual compass travel; restart creates new room orientations and mirrors."
+    ],
+    "controls": "Tap or click controls; Tab then Enter / Space. Arrow keys move within grids.",
+    "url": "discovery-room/?game=folded-world",
+    "accent": "#c4d8bc",
+    "symbol": "\u2315",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board button"
+    }
+  }
+]

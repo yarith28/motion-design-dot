@@ -1,0 +1,26 @@
+import * as junction from './junction-nine.mjs';
+import * as assembly from './assembly-belt.mjs';
+import * as marsh from './marsh-balance.mjs';
+import * as reorder from './reorder-point.mjs';
+import * as workshop from './workshop-shift.mjs';
+import * as signal from './signal-cabinet.mjs';
+import * as cold from './cold-chain.mjs';
+import * as reservoir from './reservoir.mjs';
+import * as power from './power-desk.mjs';
+import * as carry from './carry-on.mjs';
+import * as council from './quiet-majority.mjs';
+import * as insurance from './safe-return.mjs';
+import * as fire from './firebreak.mjs';
+import * as kiln from './kiln-house.mjs';
+import * as couriers from './two-couriers.mjs';
+import * as elevator from './elevator-night.mjs';
+import * as supply from './supply-web.mjs';
+import * as city from './growing-block.mjs';
+import * as project from './borrowed-time.mjs';
+import * as convoy from './convoy-ledger.mjs';
+export const engines={'junction-nine':junction,'assembly-belt':assembly,'marsh-balance':marsh,'reorder-point':reorder,'workshop-shift':workshop,'signal-cabinet':signal,'cold-chain':cold,reservoir,'power-desk':power,'carry-on':carry,'quiet-majority':council,'safe-return':insurance,firebreak:fire,'kiln-house':kiln,'two-couriers':couriers,'elevator-night':elevator,'supply-web':supply,'growing-block':city,'borrowed-time':project,'convoy-ledger':convoy};
+export const start=id=>engines[id].init();
+export const choices=(id,s)=>s.done?[]:engines[id].choices(s);
+export const legal=(id,s)=>choices(id,s).map(a=>a.id);
+export function step(id,s,a){if(!legal(id,s).includes(a))return s;let next=structuredClone(s);engines[id].apply(next,a);return next;}
+export const view=(id,s)=>engines[id].view(s);

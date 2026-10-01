@@ -3,15 +3,14 @@
   "suite": "browser",
   "passed": true,
   "status": "passed",
-  "startedAt": "2026-10-01T02:00:11.851Z",
+  "startedAt": "2026-10-01T04:14:54.343Z",
   "source": {
-    "sha256": "251d1f8eef0bf508b46a16f27872e2359c30751ff91e1f19a9c7a381417234a7",
+    "sha256": "a9631c4b5f2cac3ba77cd6ee2055467754ecda9e1822a43f7fb7002852667b4b",
     "files": [
       "catalog.css",
       "catalog.js",
       "common.js",
       "index.html",
-      "inventory-plan.json",
       "inventory.json",
       "play.css",
       "signal-run/game.css",
@@ -48,9 +47,9 @@
   "servedRuntimeBefore": {
     "baseURL": "http://127.0.0.1:8790",
     "passed": true,
-    "sha256": "62ae0320071b125db1b4357cbd485120ff2437066a2772022d2a9cafaacbac8e",
-    "fileCount": 11,
-    "verifiedAt": "2026-10-01T02:00:13.041Z"
+    "sha256": "842828b98491a1ea1b83bd07c9f16e34e0ab85e5a2f03bc9f516d89a9f497b26",
+    "fileCount": 10,
+    "verifiedAt": "2026-10-01T04:14:54.470Z"
   },
   "exitCode": 0,
   "signal": null,
@@ -58,9 +57,10 @@
   "servedRuntime": {
     "baseURL": "http://127.0.0.1:8790",
     "passed": true,
-    "sha256": "62ae0320071b125db1b4357cbd485120ff2437066a2772022d2a9cafaacbac8e",
-    "fileCount": 11,
-    "verifiedAt": "2026-10-01T02:00:49.122Z"
+    "sha256": "842828b98491a1ea1b83bd07c9f16e34e0ab85e5a2f03bc9f516d89a9f497b26",
+    "fileCount": 10,
+    "verifiedAt": "2026-10-01T04:15:16.062Z"
   },
-  "finishedAt": "2026-10-01T02:00:49.122Z"
+  "completionEvidence": null,
+  "finishedAt": "2026-10-01T04:15:16.062Z"
 }

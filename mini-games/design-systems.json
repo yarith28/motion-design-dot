@@ -1,0 +1,215 @@
+{
+  "family": "systems-room",
+  "count": 20,
+  "games": [
+    {
+      "id": "junction-nine",
+      "name": "Junction Nine",
+      "core": "Traffic phase coordination with incompatible movements, changing arrivals and queue spillback.",
+      "nearestNeighbor": "Signal Run",
+      "distinction": "Control competing queues across time rather than navigate hazards.",
+      "status": "implemented-and-ui-verified",
+      "nearestNew": "elevator-night",
+      "newDistinction": "Traffic selects mutually exclusive service phases for stationary competing queues; elevator instead routes one capacity-limited carrier between floors."
+    },
+    {
+      "id": "assembly-belt",
+      "name": "Assembly Belt",
+      "core": "Live conveyor processing with ordered transformations, limited machine energy and rejection handling.",
+      "nearestNeighbor": "Rover Script",
+      "distinction": "Operate a moving production pipeline rather than prewrite a robot route.",
+      "status": "implemented-and-ui-verified",
+      "nearestNew": "supply-web",
+      "newDistinction": "Assembly changes the transformation of individual moving workpieces at physical pipeline stages; Supply Web invests in aggregate capacity along a resource DAG."
+    },
+    {
+      "id": "marsh-balance",
+      "name": "Marsh Balance",
+      "core": "Delayed coupled predator–prey population control with habitat regeneration.",
+      "nearestNeighbor": "Orchard Keeper",
+      "distinction": "Population feedback and lag rather than individual plant maturity.",
+      "status": "implemented-and-ui-verified",
+      "nearestNew": "growing-block",
+      "newDistinction": "Ecology couples delayed births, feeding and regeneration; urban zoning changes migration through persistent spatial externalities and taxes."
+    },
+    {
+      "id": "reorder-point",
+      "name": "Reorder Point",
+      "core": "Inventory lot sizing with shipping lead time, holding costs and lost demand.",
+      "nearestNeighbor": "Trading Day",
+      "distinction": "Fulfill demand through a delayed pipeline rather than time resale prices.",
+      "status": "implemented-and-ui-verified",
+      "nearestNew": "cold-chain",
+      "newDistinction": "Reordering chooses lot sizes before transport delay; Cold Chain handles ingredient expiration, refrigeration dwell and recipe composition after receipt."
+    },
+    {
+      "id": "workshop-shift",
+      "name": "Workshop Shift",
+      "core": "Worker placement with exclusive stations, shift resets and multi-resource recipes.",
+      "nearestNeighbor": "Orchard Keeper",
+      "distinction": "Allocate a limited worker set across occupied stations each shift.",
+      "status": "implemented-and-ui-verified",
+      "nearestNew": "supply-web",
+      "newDistinction": "Workshop assigns a finite crew to stations that become occupied until the shift ends; Supply Web permanently invests in throughput capacity that runs every tick."
+    },
+    {
+      "id": "signal-cabinet",
+      "name": "Signal Cabinet",
+      "core": "Online priority scheduling with setup costs, released jobs and completion deadlines.",
+      "nearestNeighbor": "Borrowed Time",
+      "distinction": "Single processor with dynamic arrivals and setup classes, not a prerequisite graph.",
+      "status": "implemented-and-ui-verified",
+      "nearestNew": "borrowed-time",
+      "newDistinction": "Signal Cabinet preempts jobs on one processor with expensive tool-class switches; Borrowed Time uses simultaneous non-preemptible crews on a prerequisite DAG."
+    },
+    {
+      "id": "cold-chain",
+      "name": "Cold Chain",
+      "core": "Perishable batch processing with parallel aging, cooling capacity and recipe orders.",
+      "nearestNeighbor": "Orchard Keeper",
+      "distinction": "Batch composition and expiry across processing stages.",
+      "status": "implemented-and-ui-verified",
+      "nearestNew": "reorder-point",
+      "newDistinction": "Cold Chain chooses refrigeration and cooking actions over individually aging ingredients; Reorder Point controls procurement quantities in a two-day shipping pipeline."
+    },
+    {
+      "id": "reservoir",
+      "name": "Reservoir",
+      "core": "Forecast-driven release control under storage, flood and demand constraints.",
+      "nearestNeighbor": "Measured Pour",
+      "distinction": "Time-varying external inflows and demand, not conservation in jugs.",
+      "status": "implemented-and-ui-verified",
+      "nearestNew": "kiln-house",
+      "newDistinction": "Reservoir directly releases one stock under external flow forecasts; Kiln House must control two thermally coupled lagging states and dwell before cooling."
+    },
+    {
+      "id": "power-desk",
+      "name": "Power Desk",
+      "core": "Unit commitment with startup delays, ramping, fuel and battery dispatch.",
+      "nearestNeighbor": "Reservoir",
+      "distinction": "Discrete plant startup and dispatch constraints.",
+      "status": "implemented-and-ui-verified",
+      "nearestNew": "reservoir",
+      "newDistinction": "Power Desk schedules a discrete startup and ramp-limited turbine plus bounded battery dispatch; Reservoir directly chooses a water release without startup or ramping."
+    },
+    {
+      "id": "carry-on",
+      "name": "Carry On",
+      "core": "Sequential multidimensional knapsack with irreversible decisions and a single exchange.",
+      "nearestNeighbor": "Decimal Market",
+      "distinction": "Online acceptance and replacement, rather than a fixed shopping combination.",
+      "status": "implemented-and-ui-verified",
+      "nearestNew": "convoy-ledger",
+      "newDistinction": "Carry On commits sequentially under two packing constraints and limited exchange, with incomplete previews; Convoy allocates reusable escorts simultaneously against fully visible route threats."
+    },
+    {
+      "id": "quiet-majority",
+      "name": "Quiet Majority",
+      "core": "Coalition bargaining with irrevocable concessions, faction vetoes and public counteroffers.",
+      "nearestNeighbor": "Border Guild",
+      "distinction": "Choose binding policy concessions satisfying conflicting factions, no territory draft.",
+      "status": "implemented-and-ui-verified",
+      "nearestNew": "workshop-shift",
+      "newDistinction": "Council commits policies with positive and negative faction preferences and temporary grants to meet vote thresholds; Workshop allocates workers to production stations and material recipes."
+    },
+    {
+      "id": "safe-return",
+      "name": "Safe Return",
+      "core": "Correlated-risk underwriting across a forecast cycle with capital exposure constraints.",
+      "nearestNeighbor": "Trading Day",
+      "distinction": "Premium versus correlated contingent loss, not inventory arbitrage.",
+      "status": "implemented-and-ui-verified",
+      "nearestNew": "carry-on",
+      "newDistinction": "Insurance accumulates correlated contingent liabilities lasting three days; Carry On makes irrevocable physical-capacity acceptance choices without future payouts."
+    },
+    {
+      "id": "firebreak",
+      "name": "Firebreak",
+      "core": "Dynamic fire-front containment using persistent trenches and limited water.",
+      "nearestNeighbor": "Tide Pool",
+      "distinction": "Defend valuable cells against an evolving frontier rather than grow a region.",
+      "status": "implemented-and-ui-verified",
+      "nearestNew": "marsh-balance",
+      "newDistinction": "Firebreak modifies a spatial propagation frontier and reacts to scheduled ignitions; Marsh Balance regulates numerical populations through coupled food-web feedback."
+    },
+    {
+      "id": "kiln-house",
+      "name": "Kiln House",
+      "core": "Coupled thermal inertia control with temperature dwell and gradient stress.",
+      "nearestNeighbor": "Reservoir",
+      "distinction": "Two delayed thermal states and material stress, not a scalar stock.",
+      "status": "implemented-and-ui-verified",
+      "nearestNew": "power-desk",
+      "newDistinction": "Kiln House must manage conduction lag, temperature gradient stress, dwell and final cooldown; Power Desk matches electrical supply using startup and ramp constraints."
+    },
+    {
+      "id": "two-couriers",
+      "name": "Two Couriers",
+      "core": "Two-agent pickup-and-delivery with shared-road occupancy and parcel destinations.",
+      "nearestNeighbor": "Coordinate Courier",
+      "distinction": "Coordinate two independently loaded agents, not one waypoint walk.",
+      "status": "implemented-and-ui-verified",
+      "nearestNew": "elevator-night",
+      "newDistinction": "Couriers coordinate two independent loaded agents through a passing bay on a shared narrow graph; elevator routes a single FIFO carrier with capacity and door-stop costs."
+    },
+    {
+      "id": "elevator-night",
+      "name": "Elevator Night",
+      "core": "Capacity-constrained elevator dispatch with passenger queues and ride deadlines.",
+      "nearestNeighbor": "Two Couriers",
+      "distinction": "A shared carrier, directional boarding and passenger queue discipline.",
+      "status": "implemented-and-ui-verified",
+      "nearestNew": "two-couriers",
+      "newDistinction": "Elevator dispatch serves dynamically released passenger queues with capacity and delivery deadlines; couriers independently route two agents and must explicitly resolve occupancy conflicts."
+    },
+    {
+      "id": "supply-web",
+      "name": "Supply Web",
+      "core": "Production network investment with sequential material flow and throughput bottlenecks.",
+      "nearestNeighbor": "Gear Train",
+      "distinction": "Buy productive capacity and route inventories, not match mechanical ratios.",
+      "status": "implemented-and-ui-verified",
+      "nearestNew": "assembly-belt",
+      "newDistinction": "Supply Web invests in a production DAG and balances raw-feed and processing bottlenecks; Assembly Belt transforms discrete moving pieces with machine settings and heat budget."
+    },
+    {
+      "id": "growing-block",
+      "name": "Growing Block",
+      "core": "Urban zoning with spatial externalities, migration, upkeep and tax feedback.",
+      "nearestNeighbor": "Border Guild",
+      "distinction": "Buildings alter habitation over successive years rather than score drafted territory.",
+      "status": "implemented-and-ui-verified",
+      "nearestNew": "marsh-balance",
+      "newDistinction": "Growing Block places persistent buildings whose local externalities govern migration and tax feedback; Marsh Balance acts on delayed population and food stocks without land placement."
+    },
+    {
+      "id": "borrowed-time",
+      "name": "Borrowed Time",
+      "core": "Precedence-constrained parallel project scheduling with resource-specific crew assignments.",
+      "nearestNeighbor": "Signal Cabinet",
+      "distinction": "A dependency DAG with parallel crews and readiness constraints.",
+      "status": "implemented-and-ui-verified",
+      "nearestNew": "signal-cabinet",
+      "newDistinction": "Borrowed Time schedules parallel specialist crews under a dependency DAG; Signal Cabinet instead preempts one processor and pays tool-class setup time."
+    },
+    {
+      "id": "convoy-ledger",
+      "name": "Convoy Ledger",
+      "core": "Persistent escort allocation across simultaneous threatened shipping lanes.",
+      "nearestNeighbor": "Hidden Fleet",
+      "distinction": "Visible-threat defense allocation and fleet attrition, not spatial search.",
+      "status": "implemented-and-ui-verified",
+      "nearestNew": "safe-return",
+      "newDistinction": "Convoy makes simultaneous route-protection allocations with persistent escort losses; insurance accepts overlapping correlated liabilities and manages capital through forecast events."
+    }
+  ],
+  "verification": {
+    "automated": "Every game: winning source-derived plan, deliberate loss and restart through keyboard and touch-only UI; 40 profile cases.",
+    "independent": "All20 source-reviewed; ordinary source-blind desktop wins in Workshop Shift, Quiet Majority and Cold Chain.",
+    "limitations": [
+      "Chromium touch emulation is not physical-device testing.",
+      "Source-derived win plans establish reachability, not unaided difficulty.",
+      "No actual screenreader session."
+    ]
+  }
+}

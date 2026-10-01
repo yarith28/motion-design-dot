@@ -1,0 +1,222 @@
+[
+  {
+    "id": "ray-archive",
+    "name": "Ray Archive",
+    "mechanic": "Black Box perimeter ray inference",
+    "nearestExisting": "fleet",
+    "distinction": "Probe perimeter ports to observe deflections and infer hidden atoms; firing a ray returns topology, not cell hit/miss.",
+    "status": "implemented-40-ui-cases-passed-independent-crossgate-approved",
+    "nearestNew": "scent-trail",
+    "reviewNotes": "Replaced separate port tray with spatially surrounding ports.",
+    "verification": "Current engine SHA6da7141b9c1641fe7cf7755a48f5be05526b8e5d6c1ed4975b91a381a5c1a025; desktop and mobile UI wins/restart/edges40of40. Independent cross-review approved. Final wrapper regate owned by parent."
+  },
+  {
+    "id": "false-weight",
+    "name": "False Weight",
+    "mechanic": "Adaptive balance-scale experimentation",
+    "nearestExisting": "balance-mobile",
+    "distinction": "Design equal-pan experiments to identify a heavy or light counterfeit across three assays. Nearest-neighbor distinction is implemented in the action/state rules, as recorded in reviewNotes.",
+    "status": "implemented-40-ui-cases-passed-independent-crossgate-approved",
+    "nearestNew": "twenty-questions",
+    "reviewNotes": "Distinct loop reviewed in cross-batch inventory; source-independent UI solver and invalid-action checks.",
+    "verification": "Current engine SHA6da7141b9c1641fe7cf7755a48f5be05526b8e5d6c1ed4975b91a381a5c1a025; desktop and mobile UI wins/restart/edges40of40. Independent cross-review approved. Final wrapper regate owned by parent."
+  },
+  {
+    "id": "three-of-a-kind",
+    "name": "Three of a Kind",
+    "mechanic": "Set-style relational triple selection",
+    "nearestExisting": "odd-company",
+    "distinction": "Find triples satisfying all-same or all-different simultaneously across three visual dimensions in a changing tableau.",
+    "status": "implemented-40-ui-cases-passed-independent-crossgate-approved",
+    "nearestNew": "none: distinct state/action model",
+    "reviewNotes": "Distinct loop reviewed in cross-batch inventory; source-independent UI solver and invalid-action checks.",
+    "verification": "Current engine SHA6da7141b9c1641fe7cf7755a48f5be05526b8e5d6c1ed4975b91a381a5c1a025; desktop and mobile UI wins/restart/edges40of40. Independent cross-review approved. Final wrapper regate owned by parent."
+  },
+  {
+    "id": "second-look",
+    "name": "Second Look",
+    "mechanic": "Change blindness with deliberate scene toggling",
+    "nearestExisting": "double-take",
+    "distinction": "Alternate two complete scenes, locate modifications while ignoring unchanged objects; no hidden pair identities.",
+    "status": "implemented-40-ui-cases-passed-independent-crossgate-approved",
+    "nearestNew": "none: distinct state/action model",
+    "reviewNotes": "Distinct loop reviewed in cross-batch inventory; source-independent UI solver and invalid-action checks.",
+    "verification": "Current engine SHA6da7141b9c1641fe7cf7755a48f5be05526b8e5d6c1ed4975b91a381a5c1a025; desktop and mobile UI wins/restart/edges40of40. Independent cross-review approved. Final wrapper regate owned by parent."
+  },
+  {
+    "id": "fog-journal",
+    "name": "Fog Journal",
+    "mechanic": "Limited-vision maze mapping with return trip",
+    "nearestExisting": "coordinate-courier",
+    "distinction": "Procedural local-visibility maze exploration, persistent journal and artifact return under fuel; existing courier shows fixed coordinates and ordered targets.",
+    "status": "implemented-40-ui-cases-passed-independent-crossgate-approved",
+    "nearestNew": "none: distinct state/action model",
+    "reviewNotes": "Distinct loop reviewed in cross-batch inventory; source-independent UI solver and invalid-action checks.",
+    "verification": "Current engine SHA6da7141b9c1641fe7cf7755a48f5be05526b8e5d6c1ed4975b91a381a5c1a025; desktop and mobile UI wins/restart/edges40of40. Independent cross-review approved. Final wrapper regate owned by parent."
+  },
+  {
+    "id": "prefix-press",
+    "name": "Prefix Press",
+    "mechanic": "Weighted prefix-code tree construction",
+    "nearestExisting": "bit-lanterns",
+    "distinction": "Merge least-weight messages into a prefix tree, then encode a dispatch. Optimize weighted path length, not number representation.",
+    "status": "implemented-40-ui-cases-passed-independent-crossgate-approved",
+    "nearestNew": "none: distinct state/action model",
+    "reviewNotes": "Independent ordinary touch completion; added visible prefix tree; removed manufactured quit/loss.",
+    "verification": "Current engine SHA6da7141b9c1641fe7cf7755a48f5be05526b8e5d6c1ed4975b91a381a5c1a025; desktop and mobile UI wins/restart/edges40of40. Independent cross-review approved. Final wrapper regate owned by parent."
+  },
+  {
+    "id": "transit-observatory",
+    "name": "Transit Observatory",
+    "mechanic": "Active temporal sampling to resolve orbital aliases",
+    "nearestExisting": "sequence-detective",
+    "distinction": "Choose observation times, eliminate period/phase hypotheses, identify three transiting worlds within an observation budget.",
+    "status": "implemented-40-ui-cases-passed-independent-crossgate-approved",
+    "nearestNew": "specimen-rule",
+    "reviewNotes": "Distinct loop reviewed in cross-batch inventory; source-independent UI solver and invalid-action checks.",
+    "verification": "Current engine SHA6da7141b9c1641fe7cf7755a48f5be05526b8e5d6c1ed4975b91a381a5c1a025; desktop and mobile UI wins/restart/edges40of40. Independent cross-review approved. Final wrapper regate owned by parent."
+  },
+  {
+    "id": "specimen-rule",
+    "name": "Specimen Rule",
+    "mechanic": "Active hypothesis testing of a hidden grammar",
+    "nearestExisting": "sequence-detective",
+    "distinction": "Construct specimens to query membership, then correctly classify unseen specimens; experiments distinguish relational rules rather than predict a numeric continuation.",
+    "status": "implemented-40-ui-cases-passed-independent-crossgate-approved",
+    "nearestNew": "twenty-questions",
+    "reviewNotes": "Independent ordinary mixed-input completion and resource-exhaustion test.",
+    "verification": "Current engine SHA6da7141b9c1641fe7cf7755a48f5be05526b8e5d6c1ed4975b91a381a5c1a025; desktop and mobile UI wins/restart/edges40of40. Independent cross-review approved. Final wrapper regate owned by parent."
+  },
+  {
+    "id": "causal-lab",
+    "name": "Causal Lab",
+    "mechanic": "Intervention-based causal circuit diagnosis",
+    "nearestExisting": "code-cabinet",
+    "distinction": "Toggle interventions and observe propagated effects; isolate a broken directed link rather than guess a secret code.",
+    "status": "implemented-40-ui-cases-passed-independent-crossgate-approved",
+    "nearestNew": "none: distinct state/action model",
+    "reviewNotes": "Distinct loop reviewed in cross-batch inventory; source-independent UI solver and invalid-action checks.",
+    "verification": "Current engine SHA6da7141b9c1641fe7cf7755a48f5be05526b8e5d6c1ed4975b91a381a5c1a025; desktop and mobile UI wins/restart/edges40of40. Independent cross-review approved. Final wrapper regate owned by parent."
+  },
+  {
+    "id": "parallax-post",
+    "name": "Parallax Post",
+    "mechanic": "Active stereo correspondence with variable camera baseline and selective depth focus",
+    "nearestExisting": "sky-view",
+    "distinction": "Reconstruct stereo correspondences, move the camera baseline, and isolate a depth plane. Nearest-neighbor distinction is implemented in the action/state rules, as recorded in reviewNotes.",
+    "status": "implemented-40-ui-cases-passed-independent-crossgate-approved",
+    "nearestNew": "none: distinct state/action model",
+    "reviewNotes": "Rejected arithmetic table, then fixed ordinal matching. Default stereo view has an actual same-shape order crossing, shuffled right DOM/labels, unique integer-depth correspondence, variable camera baseline.",
+    "verification": "Current engine SHA6da7141b9c1641fe7cf7755a48f5be05526b8e5d6c1ed4975b91a381a5c1a025; desktop and mobile UI wins/restart/edges40of40. Independent cross-review approved. Final wrapper regate owned by parent."
+  },
+  {
+    "id": "wave-desk",
+    "name": "Wave Desk",
+    "mechanic": "Discrete harmonic signal synthesis",
+    "nearestExisting": "pigment-lab",
+    "distinction": "Adjust signed amplitudes of temporal basis waves to cancel noise and reconstruct sampled signal; interference permits subtraction.",
+    "status": "implemented-40-ui-cases-passed-independent-crossgate-approved",
+    "nearestNew": "none: distinct state/action model",
+    "reviewNotes": "Added live target/current waveform plot.",
+    "verification": "Current engine SHA6da7141b9c1641fe7cf7755a48f5be05526b8e5d6c1ed4975b91a381a5c1a025; desktop and mobile UI wins/restart/edges40of40. Independent cross-review approved. Final wrapper regate owned by parent."
+  },
+  {
+    "id": "twenty-questions",
+    "name": "Question Orchard",
+    "mechanic": "Adaptive binary decision-tree construction",
+    "nearestExisting": "code-cabinet",
+    "distinction": "A changing correlated-trait catalog makes question order matter under a shared query budget; known-property decision-tree search differs from constructing experiments to discover an unknown rule in Specimen Rule.",
+    "status": "implemented-40-ui-cases-passed-independent-crossgate-approved",
+    "nearestNew": "none: distinct state/action model",
+    "reviewNotes": "Rejected trivial independent-property catalog; generated correlated catalogs with verified three-question trees.",
+    "verification": "Current engine SHA6da7141b9c1641fe7cf7755a48f5be05526b8e5d6c1ed4975b91a381a5c1a025; desktop and mobile UI wins/restart/edges40of40. Independent cross-review approved. Final wrapper regate owned by parent."
+  },
+  {
+    "id": "scent-trail",
+    "name": "Scent Trail",
+    "mechanic": "Gradient navigation with moving plume",
+    "nearestExisting": "fleet",
+    "distinction": "Sample local concentration, move a tracked rover against a wind-shifted plume and sample at source; sensors return gradients, not occupancy.",
+    "status": "implemented-40-ui-cases-passed-independent-crossgate-approved",
+    "nearestNew": "none: distinct state/action model",
+    "reviewNotes": "Distinct loop reviewed in cross-batch inventory; source-independent UI solver and invalid-action checks.",
+    "verification": "Current engine SHA6da7141b9c1641fe7cf7755a48f5be05526b8e5d6c1ed4975b91a381a5c1a025; desktop and mobile UI wins/restart/edges40of40. Independent cross-review approved. Final wrapper regate owned by parent."
+  },
+  {
+    "id": "fossil-brush",
+    "name": "Fossil Brush",
+    "mechanic": "Risk-aware excavation with tool footprints",
+    "nearestExisting": "minefield",
+    "distinction": "Plan broad and precise cuts to expose varied buried fossils within a tight tool budget. Nearest-neighbor distinction is implemented in the action/state rules, as recorded in reviewNotes.",
+    "status": "implemented-40-ui-cases-passed-independent-crossgate-approved",
+    "nearestNew": "none: distinct state/action model",
+    "reviewNotes": "Rejected dominant all-brush routine. Varied connected footprints and budget below pure-brush minimum require safe broad-cut planning; depth-2 triples guarantee a feasible route.",
+    "verification": "Current engine SHA6da7141b9c1641fe7cf7755a48f5be05526b8e5d6c1ed4975b91a381a5c1a025; desktop and mobile UI wins/restart/edges40of40. Independent cross-review approved. Final wrapper regate owned by parent."
+  },
+  {
+    "id": "archive-edit",
+    "name": "Archive Edit",
+    "mechanic": "Version-control branching and selective merge",
+    "nearestExisting": "sentence-studio",
+    "distinction": "Choose a limited set of dependent patches, then resolve their conflicting edits into a publishable document. Nearest-neighbor distinction is implemented in the action/state rules, as recorded in reviewNotes.",
+    "status": "implemented-40-ui-cases-passed-independent-crossgate-approved",
+    "nearestNew": "none: distinct state/action model",
+    "reviewNotes": "Rejected compulsory three-patch tutorial. Rebuilt as seven optional/dependent commits, five fields, three-pick budget, shuffled field/patch roles and real conflict resolution.",
+    "verification": "Current engine SHA6da7141b9c1641fe7cf7755a48f5be05526b8e5d6c1ed4975b91a381a5c1a025; desktop and mobile UI wins/restart/edges40of40. Independent cross-review approved. Final wrapper regate owned by parent."
+  },
+  {
+    "id": "lens-library",
+    "name": "Lens Library",
+    "mechanic": "Convolution model identification and deblurring",
+    "nearestExisting": "stamp-studio",
+    "distinction": "Inspect blurred samples, infer the neighborhood blur kernel via calibration probes, then choose an inverse reconstruction to recover an image.",
+    "status": "implemented-40-ui-cases-passed-independent-crossgate-approved",
+    "nearestNew": "wave-desk",
+    "reviewNotes": "All nine source/kernel candidate outputs are distinct to eliminate arbitrary rejection of observationally equivalent repairs.",
+    "verification": "Current engine SHA6da7141b9c1641fe7cf7755a48f5be05526b8e5d6c1ed4975b91a381a5c1a025; desktop and mobile UI wins/restart/edges40of40. Independent cross-review approved. Final wrapper regate owned by parent."
+  },
+  {
+    "id": "invisible-ink",
+    "name": "Invisible Ink",
+    "mechanic": "Multi-channel observation and evidence intersection",
+    "nearestExisting": "hidden-grove",
+    "distinction": "Use limited spectral strip exposures and a manifest to eliminate counterfeit parcels. Nearest-neighbor distinction is implemented in the action/state rules, as recorded in reviewNotes.",
+    "status": "implemented-40-ui-cases-passed-independent-crossgate-approved",
+    "nearestNew": "none: distinct state/action model",
+    "reviewNotes": "Rejected exhaustive six-scan routine. Five-charge limit now requires negative-evidence elimination using manifest counts; generated sheets guarantee bounded inference.",
+    "verification": "Current engine SHA6da7141b9c1641fe7cf7755a48f5be05526b8e5d6c1ed4975b91a381a5c1a025; desktop and mobile UI wins/restart/edges40of40. Independent cross-review approved. Final wrapper regate owned by parent."
+  },
+  {
+    "id": "clockmaker-cabinet",
+    "name": "Clockmaker\u2019s Cabinet",
+    "mechanic": "Inventory-combination escape adventure",
+    "nearestExisting": "afterglow",
+    "distinction": "Explore connected rooms, collect and combine objects, change machinery states and unlock the exit through causal item-use chains.",
+    "status": "implemented-40-ui-cases-passed-independent-crossgate-approved",
+    "nearestNew": "none: distinct state/action model",
+    "reviewNotes": "Independent ordinary touch completion; corrected inventory selection and completed-fixture feedback.",
+    "verification": "Current engine SHA6da7141b9c1641fe7cf7755a48f5be05526b8e5d6c1ed4975b91a381a5c1a025; desktop and mobile UI wins/restart/edges40of40. Independent cross-review approved. Final wrapper regate owned by parent."
+  },
+  {
+    "id": "track-exchange",
+    "name": "Track Exchange",
+    "mechanic": "Asymmetric two-character exploration and object transfer",
+    "nearestExisting": "coordinate-courier",
+    "distinction": "Navigate complementary gate and water routes, then exchange the objects each explorer needs to escape. Nearest-neighbor distinction is implemented in the action/state rules, as recorded in reviewNotes.",
+    "status": "implemented-40-ui-cases-passed-independent-crossgate-approved",
+    "nearestNew": "none: distinct state/action model",
+    "reviewNotes": "Added enforced mandatory iron-gate and water chokepoints, with complementary key/crank exchange required for both exits.",
+    "verification": "Current engine SHA6da7141b9c1641fe7cf7755a48f5be05526b8e5d6c1ed4975b91a381a5c1a025; desktop and mobile UI wins/restart/edges40of40. Independent cross-review approved. Final wrapper regate owned by parent."
+  },
+  {
+    "id": "folded-world",
+    "name": "Folded World",
+    "mechanic": "Non-Euclidean room exploration and orientation inference",
+    "nearestExisting": "orbit-transfer",
+    "distinction": "Plan atlas routes through rooms that rotate and reflect your local compass. Nearest-neighbor distinction is implemented in the action/state rules, as recorded in reviewNotes.",
+    "status": "implemented-40-ui-cases-passed-independent-crossgate-approved",
+    "nearestNew": "none: distinct state/action model",
+    "reviewNotes": "Removed printed next direction; twelve-room atlas requires route planning and conversion through both rotated and mirrored local frames.",
+    "verification": "Current engine SHA6da7141b9c1641fe7cf7755a48f5be05526b8e5d6c1ed4975b91a381a5c1a025; desktop and mobile UI wins/restart/edges40of40. Independent cross-review approved. Final wrapper regate owned by parent."
+  }
+]

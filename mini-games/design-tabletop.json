@@ -1,0 +1,306 @@
+{
+  "room": "tabletop-room",
+  "count": 20,
+  "games": [
+    {
+      "id": "velvet-tricks",
+      "name": "Velvet Tricks",
+      "coreDecision": "Follow-suit trump trick taking with a changing leader.",
+      "nearestNeighbor": "Twenty-One",
+      "distinction": "Individual trick ownership, forced suit obligations and control of who leads, rather than sum/bust decisions.",
+      "depth": [
+        "Play one card per trick. You must follow the lead suit if you can; otherwise any card is legal. Spades are trump. Highest trump wins; without trump, highest card of the lead suit wins.",
+        "The trick winner leads next. Your eight-card hand and the house hand exhaust together. Win at least five tricks; four is a draw. The house conserves high cards when it cannot win."
+      ],
+      "reviewStatus": "Independent reviewer accepted core mechanic after all20 source reviews; full source-planned desktop/touch terminal coverage passed.",
+      "nearestExisting": "code-cabinet",
+      "nearestNew": "last-hand"
+    },
+    {
+      "id": "twenty-one",
+      "name": "Twenty-One",
+      "coreDecision": "Five-round blackjack with hit, stand, double and a finite chip stack.",
+      "nearestNeighbor": "Bank the Roll",
+      "distinction": "A shared finite deck, flexible ace valuation and dealer comparison replace a repeat-until-bust race.",
+      "depth": [
+        "Start with 20 chips. Each of five hands costs a 2-chip stake. Aces count 11 or 1; faces count 10. The dealer shows one card and stands at 17, including soft 17.",
+        "Hit for another card or stand. Double is available only on your first decision, costs another 2 chips and deals exactly one card. Above 21 loses. A two-card 21 pays 3:2; other wins pay 1:1. Ties return the stake.",
+        "Finish five hands with more than 20 chips to win. The dealer hole card stays hidden until you stand or bust."
+      ],
+      "reviewStatus": "Independent reviewer accepted core mechanic after all20 source reviews; full source-planned desktop/touch terminal coverage passed.",
+      "nearestExisting": "trade",
+      "nearestNew": "bank-the-roll"
+    },
+    {
+      "id": "meld-atelier",
+      "name": "Meld Atelier",
+      "coreDecision": "Draw-discard rummy with selectable sets/runs and deadwood pressure.",
+      "nearestNeighbor": "Five Card Evening",
+      "distinction": "Repeated information acquisition and incompatible meld commitments, rather than a single final five-card rank.",
+      "depth": [
+        "Draw from the face-up discard or the stock, then discard one card. You may instead lay a selected meld: three or more equal ranks, or three or more consecutive ranks in one suit. Aces are low.",
+        "Select cards to build a meld; Lay meld removes it permanently. Remaining cards are deadwood: ace 1, numbers their rank, faces 10. Melds may be laid only after drawing.",
+        "After discarding, knock at 10 or less deadwood to win. You have twelve draws. On the final discard, more than 10 deadwood loses. Plan overlapping runs and sets before committing."
+      ],
+      "reviewStatus": "Independent reviewer accepted core mechanic after all20 source reviews; full source-planned desktop/touch terminal coverage passed.",
+      "nearestExisting": "chain-reaction",
+      "nearestNew": "five-card-evening"
+    },
+    {
+      "id": "five-card-evening",
+      "name": "Five Card Evening",
+      "coreDecision": "Draw poker with a scarce second-redraw budget and rank-dependent stakes.",
+      "nearestNeighbor": "Meld Atelier",
+      "distinction": "A scarce shared redraw budget and stake allocation across hands; no runs/sets removal or discard market.",
+      "depth": [
+        "Play five hands from fresh shuffled decks. Choose a 1-, 2- or 3-chip stake, then select cards to hold and draw replacements once for free.",
+        "You have three extra redraws for the entire evening. After the free draw, either settle or spend an extra redraw, choosing held cards again. Pair pays 1\u00d7 stake, two pair 2\u00d7, trips 3\u00d7, straight 4\u00d7, flush 5\u00d7, full house 7\u00d7, four 12\u00d7, straight flush 20\u00d7. Payout includes the stake; high card returns nothing.",
+        "Start with 12 chips. End above 12 to win; going broke ends early. Aces are high, except A-2-3-4-5 is a straight. The ranking table stays visible."
+      ],
+      "reviewStatus": "Independent reviewer accepted core mechanic after all20 source reviews; full source-planned desktop/touch terminal coverage passed.",
+      "nearestExisting": "trade",
+      "nearestNew": "meld-atelier"
+    },
+    {
+      "id": "last-hand",
+      "name": "Last Hand",
+      "coreDecision": "Climbing card shedding with matching group sizes, passes and lead resets.",
+      "nearestNeighbor": "Velvet Tricks",
+      "distinction": "Combination sizes and pass-driven lead reset govern hand depletion, not suit-following trick accumulation.",
+      "depth": [
+        "Select one, two or three cards of the same rank. To beat a lead, play the same number of cards at a higher rank. Aces are high.",
+        "Pass to give the other player a fresh lead. The house may pass too. A fresh lead may be a single, pair or triple. The house prefers shedding groups and keeps strong cards for contested leads.",
+        "First to empty their ten-card hand wins. You can deselect cards before playing. Pass is unavailable when you hold a fresh lead."
+      ],
+      "reviewStatus": "Independent reviewer accepted core mechanic after all20 source reviews; full source-planned desktop/touch terminal coverage passed.",
+      "nearestExisting": "nim",
+      "nearestNew": "velvet-tricks"
+    },
+    {
+      "id": "scopa-shelf",
+      "name": "Scopa Shelf",
+      "coreDecision": "Scopa sum capture with explicit subset choice and sweep bonuses.",
+      "nearestNeighbor": "Make 24",
+      "distinction": "Adversarial exposed-card capture, forced exact-rank priority and control of the next table, not expression assembly.",
+      "depth": [
+        "Select a hand card, then table cards whose ranks sum to its rank. If the table has any single exact-rank match, you must capture exactly one such card.",
+        "If any capture exists you must take one; otherwise Lay card places your card on the table. Clearing the table earns a sweep, except on the final play. Three-card hands refill until the 40-card deck is exhausted.",
+        "Each captured card is one point, each sweep five. Last capturer gathers remaining table cards. Beat the house total. Ranks run 1\u201310 in four suits."
+      ],
+      "reviewStatus": "Independent reviewer accepted core mechanic after all20 source reviews; full source-planned desktop/touch terminal coverage passed.",
+      "nearestExisting": "make-24",
+      "nearestNew": "thirty-one-lane"
+    },
+    {
+      "id": "domino-parlour",
+      "name": "Domino Parlour",
+      "coreDecision": "Two-ended domino shedding with boneyard draws and blocked-hand resolution.",
+      "nearestNeighbor": "Chain Reaction",
+      "distinction": "Opponent, two-ended orientation and finite draws create blockage and pip-management decisions beyond word endpoint matching.",
+      "depth": [
+        "Play a tile on either matching chain end. A tile is automatically oriented to fit. Each tile can be placed left or right when both fit.",
+        "If no tile fits, draw from the boneyard. A drawn playable tile may be used immediately. When the boneyard is empty, pass. The house follows the same rules.",
+        "Empty your hand first. If both players pass, lower total pips wins. All 28 double-six tiles appear once; inspect both ends before committing."
+      ],
+      "reviewStatus": "Independent reviewer accepted core mechanic after all20 source reviews; full source-planned desktop/touch terminal coverage passed.",
+      "nearestExisting": "chain-reaction",
+      "nearestNew": "last-hand"
+    },
+    {
+      "id": "bank-the-roll",
+      "name": "Bank the Roll",
+      "coreDecision": "Pig dice push-your-luck racing with unbanked turn value.",
+      "nearestNeighbor": "Six Columns",
+      "distinction": "The decision is when to stop accumulating exposed risk, not which dice/category combination to reserve.",
+      "depth": [
+        "Roll one die. A 2\u20136 adds to this turn; a 1 loses the entire unbanked turn and passes play. Bank saves your turn and passes play.",
+        "The house banks at 14 turn points, or when it reaches the goal. First to bank 60 points wins. Banking zero is unavailable.",
+        "There is no real-time pressure. The die is rolled anew after every decision; previous results do not change its odds."
+      ],
+      "reviewStatus": "Independent reviewer accepted core mechanic after all20 source reviews; full source-planned desktop/touch terminal coverage passed.",
+      "nearestExisting": "tide-pool",
+      "nearestNew": "six-columns"
+    },
+    {
+      "id": "six-columns",
+      "name": "Six Columns",
+      "coreDecision": "Five-dice hold/reroll optimization with six irreversible scoring categories.",
+      "nearestNeighbor": "Bank the Roll",
+      "distinction": "Irreversible category allocation and selective rerolling replace a cumulative bust-or-bank choice.",
+      "depth": [
+        "Roll five dice, then toggle holds and reroll up to twice. At any point, lock an unused category.",
+        "Categories: Ones scores ones; Sixes scores sixes; Three of a kind scores all dice if any three match; Full house scores 25 for a pair plus a triple; Straight scores 30 for five consecutive values; Chance scores all dice.",
+        "Fill all six rows and total at least 75. A category can score zero, so preserve flexible rows for awkward rolls. No bonuses or wild cards."
+      ],
+      "reviewStatus": "Independent reviewer accepted core mechanic after all20 source reviews; full source-planned desktop/touch terminal coverage passed.",
+      "nearestExisting": "make-24",
+      "nearestNew": "bank-the-roll"
+    },
+    {
+      "id": "hidden-dice",
+      "name": "Hidden Dice",
+      "coreDecision": "Liar dice rising quantity/face bids with hidden opposing dice and challenge attrition.",
+      "nearestNeighbor": "Code Cabinet",
+      "distinction": "Adversarial probabilistic claims and costly challenge timing, rather than deterministic feedback deduction.",
+      "depth": [
+        "Both players start with four concealed dice; yours are visible. A bid claims at least that many of a face across all dice. Ones are ordinary, never wild.",
+        "Raise by increasing quantity, or keeping quantity and increasing face. Challenge the current house bid instead if you think it is false.",
+        "Reveal all dice on a challenge. If the claim is true the challenger loses a die; otherwise the bidder loses one. A new round is rolled and you open. Remove all house dice before losing yours. House bids use its own dice and uncertainty."
+      ],
+      "reviewStatus": "Independent reviewer accepted core mechanic after all20 source reviews; full source-planned desktop/touch terminal coverage passed.",
+      "nearestExisting": "code-cabinet",
+      "nearestNew": "sealed-bids"
+    },
+    {
+      "id": "sealed-bids",
+      "name": "Sealed Bids",
+      "coreDecision": "Goofspiel simultaneous one-use ranked bids with tied-prize carryover.",
+      "nearestNeighbor": "Trading Day",
+      "distinction": "Irrecoverable simultaneous bids and opponent denial, without money, inventory or buy/sell price arbitrage.",
+      "depth": [
+        "You and the house each hold bidding cards 1\u201310. Ten prizes, valued 1\u201310, arrive in a shuffled public queue.",
+        "Choose one bid without seeing the house bid. Higher bid wins the prize pot; both bid cards are spent. A tie carries the pot into the next prize.",
+        "Most prize points after ten rounds wins. If the final round ties, divide its pot equally. The house values large prizes and conserves expensive bids for later."
+      ],
+      "reviewStatus": "Independent reviewer accepted core mechanic after all20 source reviews; full source-planned desktop/touch terminal coverage passed.",
+      "nearestExisting": "trade",
+      "nearestNew": "hidden-dice"
+    },
+    {
+      "id": "thirty-one-lane",
+      "name": "Thirty-One Lane",
+      "coreDecision": "Cribbage pegging with ordered run/pair bonuses, go and 31 resets.",
+      "nearestNeighbor": "Twenty-One",
+      "distinction": "Ordered communal sequence bonuses, exact totals and forced go replace private-hand bust/dealer comparison.",
+      "depth": [
+        "Alternate one card into the running count, never above 31. Aces count 1; faces count 10. Reach 15 or 31 for 2 points.",
+        "Consecutive equal ranks score 2 for a pair, 6 for a triple, 12 for four. The longest trailing sequence of 3 or more distinct consecutive ranks scores its length, in any order. Both bonuses may combine with a total bonus.",
+        "When neither can play, the last player earns 1 (unless they made 31) and count resets. Ten cards each; most pegging points wins. This is pegging only, with no hand-counting stage."
+      ],
+      "reviewStatus": "Independent reviewer accepted core mechanic after all20 source reviews; full source-planned desktop/touch terminal coverage passed.",
+      "nearestExisting": "make-24",
+      "nearestNew": "twenty-one"
+    },
+    {
+      "id": "formation-flags",
+      "name": "Formation Flags",
+      "coreDecision": "Three-card formation contest over five lanes with refill drafting.",
+      "nearestNeighbor": "Border Guild",
+      "distinction": "Each lane compares a committed poker formation, with hand/refill uncertainty rather than static numeric district/adjacency scoring.",
+      "depth": [
+        "Play a card from your five-card hand to one of five flags. Each side can commit three cards at each flag. Draw a replacement from the shared deck after playing.",
+        "Once both sides have three cards, compare formations: straight flush, three of a kind, flush, straight, then sum. Ties within a rank compare total, then favor the first side to complete. Ranks 1\u20139 in four suits.",
+        "Win three flags. Cards cannot move once committed. When no cards remain, empty places stay empty; more cards wins an incomplete flag, then formation strength."
+      ],
+      "reviewStatus": "Independent reviewer accepted core mechanic after all20 source reviews; full source-planned desktop/touch terminal coverage passed.",
+      "nearestExisting": "guild",
+      "nearestNew": "five-card-evening"
+    },
+    {
+      "id": "crown-and-guard",
+      "name": "Crown & Guard",
+      "coreDecision": "Asymmetric tafl escape with rook movement and sandwich capture.",
+      "nearestNeighbor": "Royal Crossing",
+      "distinction": "Asymmetric escort and sandwich capture, special squares and rook lines replace symmetric one-step pawn racing.",
+      "depth": [
+        "You command the crown and four guards. The house commands eight attackers. Slide any piece along an empty row or column; pieces cannot jump. Only the crown may stop on a corner or the central throne; other pieces may cross the empty throne.",
+        "After moving, capture an adjacent enemy caught between your piece and another friendly piece, a corner or the empty throne. The crown is captured only when all four adjacent directions are attackers or the edge.",
+        "Escape with the crown onto any corner. The house wins by surrounding the crown or leaving you without a move. After 80 turns, attackers hold the siege."
+      ],
+      "reviewStatus": "Independent reviewer accepted core mechanic after all20 source reviews; full source-planned desktop/touch terminal coverage passed.",
+      "nearestExisting": "pawns",
+      "nearestNew": "borrowed-steps"
+    },
+    {
+      "id": "draught-garden",
+      "name": "Draught Garden",
+      "coreDecision": "Six-by-six draughts with mandatory multi-capture and king promotion.",
+      "nearestNeighbor": "Last Pebble",
+      "distinction": "Compulsory adversarial capture chains and promotion produce tactical exchange decisions, unlike fixed solo peg elimination.",
+      "depth": [
+        "Ink moves diagonally toward the upper edge on dark squares. Jump an adjacent house piece into the empty square beyond to capture. If any capture exists, a capture is compulsory.",
+        "After a jump, continue with the same piece while another capture is possible. Reaching the far row crowns a king and ends that capture turn; kings can step and capture backward.",
+        "Capture all opposing pieces or leave the house no legal move. Forty turns without a capture or promotion is a draw. The house prefers captures and promotion. The match also draws after 160 full turns."
+      ],
+      "reviewStatus": "Independent reviewer accepted core mechanic after all20 source reviews; full source-planned desktop/touch terminal coverage passed.",
+      "nearestExisting": "peg",
+      "nearestNew": "crown-and-guard"
+    },
+    {
+      "id": "borrowed-steps",
+      "name": "Borrowed Steps",
+      "coreDecision": "Onitama-style exchanged movement cards with master/temple victory.",
+      "nearestNeighbor": "Royal Crossing",
+      "distinction": "Transferable public movement patterns are a shared evolving resource; royal capture/temple goals replace uniform pawn rules.",
+      "depth": [
+        "You and the house each have two public movement cards; one spare waits between you. Select a card, one of your pieces, then a highlighted destination. Movement offsets are shown from your side; house directions are reversed.",
+        "A move captures an enemy on its destination. After moving, exchange your used card for the spare, so the house may receive it next.",
+        "Capture the house master or move your master onto its central home temple. The house has the same goals. Eighty turns is a draw."
+      ],
+      "reviewStatus": "Independent reviewer accepted core mechanic after all20 source reviews; full source-planned desktop/touch terminal coverage passed.",
+      "nearestExisting": "pawns",
+      "nearestNew": "crown-and-guard"
+    },
+    {
+      "id": "marble-council",
+      "name": "Marble Council",
+      "coreDecision": "Hex-board inline group pushing and edge ejection with numerical superiority.",
+      "nearestNeighbor": "Ink & Ivory",
+      "distinction": "Pieces move and push through local numerical strength to eject at edges; no bracket-conversion or placement.",
+      "depth": [
+        "Select an ink marble at the rear of a straight line, then choose one of six directions. Up to three contiguous friendly marbles move together one space along that line. Sideways group shifts are not part of this compact ruleset.",
+        "A group may push one or two opposing marbles only if it outnumbers them and the space beyond is empty or off the board. Friendly marbles may never leave the board.",
+        "Eject three opposing marbles to win. House uses the same rules. Fifty full turns without three ejections is decided by ejections, then central presence."
+      ],
+      "reviewStatus": "Independent reviewer accepted core mechanic after all20 source reviews; full source-planned desktop/touch terminal coverage passed.",
+      "nearestExisting": "reversi",
+      "nearestNew": "draught-garden"
+    },
+    {
+      "id": "joining-lines",
+      "name": "Joining Lines",
+      "coreDecision": "Lines of Action movement distances determined by occupancy, with army connectivity victory.",
+      "nearestNeighbor": "Sixfold",
+      "distinction": "Mobile armies use population-dependent travel and captures, rather than irreversible stones linking fixed board edges.",
+      "depth": [
+        "Select an ink piece. Move horizontally, vertically or diagonally by exactly the total number of pieces of either color on that entire line.",
+        "You may jump over friendly pieces, never enemies. You may land on an enemy to capture, but never on a friendly piece. House follows identical rules.",
+        "Connect every remaining piece of your color through orthogonal or diagonal neighbors to win. If both connect on a move, the mover wins. Eighty turns is a draw."
+      ],
+      "reviewStatus": "Independent reviewer accepted core mechanic after all20 source reviews; full source-planned desktop/touch terminal coverage passed.",
+      "nearestExisting": "hex",
+      "nearestNew": "marble-council"
+    },
+    {
+      "id": "terrace-duel",
+      "name": "Terrace Duel",
+      "coreDecision": "Two-worker move/build tactics on a rising three-dimensional board.",
+      "nearestNeighbor": "Quiet Siege",
+      "distinction": "Local height construction changes future climb access and creates a positive level-three objective, not ray movement/irreversible flat obstruction.",
+      "depth": [
+        "Select one of your two workers, then an adjacent empty square. You may climb at most one level but descend any distance. A level-four dome cannot be entered.",
+        "After moving, build one level on any neighboring empty square. Towers begin at zero. Building on level three creates a dome.",
+        "Move up onto level three to win immediately. The house moves and builds by the same rules. If you have no legal move, you lose."
+      ],
+      "reviewStatus": "Independent reviewer accepted core mechanic after all20 source reviews; full source-planned desktop/touch terminal coverage passed.",
+      "nearestExisting": "siege",
+      "nearestNew": "crown-and-guard"
+    },
+    {
+      "id": "court-of-suits",
+      "name": "Court of Suits",
+      "coreDecision": "Read the armor/heavy/quick intent cycle and time finite cards for damage, guard, healing or draw.",
+      "nearestNeighbor": "Orchard Keeper",
+      "distinction": "Tactical suit effects against escalating enemy damage and finite hand sequencing, not planting/production scheduling.",
+      "depth": [
+        "Defeat three court foes with 16, 22 and 28 health. Their base attacks deal 2, 3 and 4. Every foe cycles through Brace (3 armor, base attack), Heavy strike (no armor, base +4 attack), then Quick strike (no armor, base attack). The next intent is always visible.",
+        "Play one card each turn. Its rank is damage, reduced by current armor. Clubs double damage before armor; spades reduce this attack by their rank; hearts heal that rank up to 20; diamonds draw two extra. Every turn draws a replacement. Save defense for heavy strikes and use the brace to prepare your hand.",
+        "A surviving foe retaliates. Defeating one skips its attack, heals you 3 and draws two cards; the next begins with Brace. Lose at zero health or an empty hand before all foes fall. Your finite deck contains ranks 1\u20136 in four suits."
+      ],
+      "reviewStatus": "Independent reviewer accepted core mechanic after all20 source reviews; full source-planned desktop/touch terminal coverage passed.",
+      "nearestExisting": "orchard",
+      "nearestNew": "meld-atelier",
+      "qualityRevision": "Reviewer found raw highest-damage play won980/1000 seeded rounds; revised armor/heavy/quick intent cycle cut it to19/1000 in independent review. This metric does not establish all seeds are winnable."
+    }
+  ]
+}

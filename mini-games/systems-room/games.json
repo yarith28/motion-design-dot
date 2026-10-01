@@ -1,0 +1,402 @@
+[
+  {
+    "id": "junction-nine",
+    "name": "Junction Nine",
+    "category": "strategy",
+    "description": "Keep a busy crossing flowing without letting a queue spill back.",
+    "mechanic": "Traffic phase coordination with incompatible movements, changing arrivals and queue spillback.",
+    "rules": [
+      "Choose a green phase each minute. Straight phases clear up to 5 from their queue and 1 from the matching turn queue. Turn phases clear 4 turning cars and 1 matching straight car.",
+      "Changing axis (north/south to east/west) uses one unit of clearance for safe all-red. Arrivals shown for the next three minutes join after clearance. A queue above 10 spills back and ends the shift.",
+      "Run all 16 minutes, clear at least 72 cars and finish with every queue at 7 or below. Emergency flush clears up to 3 from every queue, but you have only two."
+    ],
+    "controls": "Tap the labeled actions, or use Tab and Enter / Space. Arrow keys move between actions. Nothing advances while you are away.",
+    "url": "systems-room/?game=junction-nine",
+    "accent": "#bed0b2",
+    "symbol": "↔",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#actions button:not(:disabled)"
+    }
+  },
+  {
+    "id": "assembly-belt",
+    "name": "Assembly Belt",
+    "category": "strategy",
+    "description": "Stamp, bake and sort a procession of little brass badges.",
+    "mechanic": "Live conveyor processing with ordered transformations, limited machine energy and rejection handling.",
+    "rules": [
+      "The belt has four stations: load → press → oven → dispatch. Every action moves every badge one station after machines operate. Load a blank of the next order’s shape or leave a gap.",
+      "A die setting stamps badges at the press; the oven must be set to bake. Changing a die or oven setting takes a tick too. The oven has 17 heat ticks; heating an empty station still costs one. The die stamps the badge already at the press before the belt moves. Ring badges require a round die; seal badges need a square die. Dispatch accepts only correctly stamped, baked badges.",
+      "Deliver at least 10 of 12 orders in 24 ticks. A rejected badge counts against the order; a gap does not. Preview the next four order shapes. Plan machine changes ahead of the moving belt."
+    ],
+    "controls": "Tap the labeled actions, or use Tab and Enter / Space. Arrow keys move between actions. Nothing advances while you are away.",
+    "url": "systems-room/?game=assembly-belt",
+    "accent": "#d4bea4",
+    "symbol": "⚙",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#actions button:not(:disabled)"
+    }
+  },
+  {
+    "id": "marsh-balance",
+    "name": "Marsh Balance",
+    "category": "strategy",
+    "description": "Keep reeds, grazers and foxes in a living balance.",
+    "mechanic": "Delayed coupled predator–prey population control with habitat regeneration.",
+    "rules": [
+      "Run a marsh for 12 seasons. Reeds regrow by 8 each season, then grazers eat 1 reed each. Foxes eat up to 2 grazers each. Every third season, grazers grow by half if enough reeds remain; foxes grow by 1 if at least 6 grazers remain.",
+      "Choose one intervention each season: plant 10 reeds, relocate 3 grazers in/out, relocate 1 fox in/out, or preserve habitat (+3 reed regrowth for this season). Relocations cost 2 funds; planting costs 3. Habitat preservation is free. Every third season earns 4 funds.",
+      "Never let reeds reach 0, grazers fall below 3, or foxes fall below 1. Finish with reeds 15–50, grazers 6–18 and foxes 1–4. Birth timing means a safe-looking population can still overshoot."
+    ],
+    "controls": "Tap the labeled actions, or use Tab and Enter / Space. Arrow keys move between actions. Nothing advances while you are away.",
+    "url": "systems-room/?game=marsh-balance",
+    "accent": "#b9ced3",
+    "symbol": "♧",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#actions button:not(:disabled)"
+    }
+  },
+  {
+    "id": "reorder-point",
+    "name": "Reorder Point",
+    "category": "strategy",
+    "description": "Order early enough, but leave room on the shelves.",
+    "mechanic": "Inventory lot sizing with shipping lead time, holding costs and lost demand.",
+    "rules": [
+      "Meet twelve days of demand. Each day choose an order of 0, 3 or 6 crates. An order placed today arrives at the start of the day after tomorrow. Two in-transit slots show exactly what is on the way.",
+      "Crates cost 2 each plus a 2-coin shipping fee per nonempty order. Each served customer pays 5. Unfilled demand is lost. Shelf space is 12; arriving overflow is discarded. Leftover stock costs 1 coin per 3 crates each night, rounded down.",
+      "Start with 8 crates and 28 coins. Serve at least 39 customers and finish with 70 coins. Orders require cash now; tomorrow’s sales cannot fund today’s order."
+    ],
+    "controls": "Tap the labeled actions, or use Tab and Enter / Space. Arrow keys move between actions. Nothing advances while you are away.",
+    "url": "systems-room/?game=reorder-point",
+    "accent": "#d0bfd4",
+    "symbol": "▤",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#actions button:not(:disabled)"
+    }
+  },
+  {
+    "id": "workshop-shift",
+    "name": "Workshop Shift",
+    "category": "strategy",
+    "description": "Three workers, a small workshop, and a very full order book.",
+    "mechanic": "Worker placement with exclusive stations, shift resets and multi-resource recipes.",
+    "rules": [
+      "Each shift has three workers. Assign one to a station; that station stays occupied until the next shift. The six stations are timber, foundry, tool bench, cart bench, training and the trading desk.",
+      "Timber/foundry produce 2 materials, plus 1 after training. A tool needs 2 timber + 1 metal and earns 3 reputation; a cart needs 3 timber + 2 metal and earns 5. Training costs 1 of each material and permanently improves gathering. The trading desk swaps 2 of either material for 2 of the other.",
+      "Finish eight shifts with 35 reputation, at least four tools and three carts. You may end a shift early, but unused workers do not carry over."
+    ],
+    "controls": "Tap the labeled actions, or use Tab and Enter / Space. Arrow keys move between actions. Nothing advances while you are away.",
+    "url": "systems-room/?game=workshop-shift",
+    "accent": "#bed0b2",
+    "symbol": "⚒",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#actions button:not(:disabled)"
+    }
+  },
+  {
+    "id": "signal-cabinet",
+    "name": "Signal Cabinet",
+    "category": "strategy",
+    "description": "Every job has a deadline. Every change of tools costs time.",
+    "mechanic": "Online priority scheduling with setup costs, released jobs and completion deadlines.",
+    "rules": [
+      "Eight jobs arrive during a 24-minute shift. Each needs two minutes of work. Select a released job to work one minute; switching between ink and wire tools consumes the minute as setup, without processing.",
+      "A job can be interrupted and resumed. Its remaining work stays done. Deadlines are inclusive: a job due at minute 5 must finish by the end of your fifth action. Expired jobs leave the queue.",
+      "Finish at least 7 jobs. Two missed deadlines end the shift. All release times and deadlines are public; scheduling one class in a batch saves setup but may strand an urgent job."
+    ],
+    "controls": "Tap the labeled actions, or use Tab and Enter / Space. Arrow keys move between actions. Nothing advances while you are away.",
+    "url": "systems-room/?game=signal-cabinet",
+    "accent": "#d4bea4",
+    "symbol": "≋",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#actions button:not(:disabled)"
+    }
+  },
+  {
+    "id": "cold-chain",
+    "name": "Cold Chain",
+    "category": "strategy",
+    "description": "A cool room, a warm stove, and ingredients that will not wait.",
+    "mechanic": "Perishable batch processing with parallel aging, cooling capacity and recipe orders.",
+    "rules": [
+      "Each tick brings the next pair of ingredients: F is fruit, M is milk. Warm ingredients age by one each tick and spoil at age 4. Two refrigerator slots stop aging entirely. Moving one ingredient into or out of the fridge takes a tick.",
+      "Cook jam from two fruit, yogurt from two milk, or a parfait from one fruit and milk that has chilled for at least two ticks. Parfait needs cold milk; other cooking uses the oldest suitable ingredients first, including chilled ones. A batch earns one order. Incoming ingredients arrive after aging; the kitchen holds at most 8 total. Overflow is discarded.",
+      "Across 16 ticks, make at least 3 jam, 2 yogurt and 3 parfait. Start with one fruit and one milk. Cooling can bridge a gap in the delivery schedule, but every fridge move uses cooking time."
+    ],
+    "controls": "Tap the labeled actions, or use Tab and Enter / Space. Arrow keys move between actions. Nothing advances while you are away.",
+    "url": "systems-room/?game=cold-chain",
+    "accent": "#b9ced3",
+    "symbol": "◇",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#actions button:not(:disabled)"
+    }
+  },
+  {
+    "id": "reservoir",
+    "name": "Reservoir",
+    "category": "strategy",
+    "description": "Make room for rain and save enough for a dry morning.",
+    "mechanic": "Forecast-driven release control under storage, flood and demand constraints.",
+    "rules": [
+      "Fourteen days of river flow are forecast. Choose a release of 0–8 units. Today’s rain enters first; the release then leaves storage. Serve the daily demand before any excess release is counted as waste.",
+      "Storage above 20 after release floods the banks. Storage below zero is impossible: only available water releases. Each unit of unmet demand counts as a shortage. Once shortages exceed 3 the town closes the reservoir.",
+      "Finish with at most 3 shortage units, at most 13 waste units and at least 3 water in reserve. Plan storage through the dry spell, then make space for the second storm."
+    ],
+    "controls": "Tap the labeled actions, or use Tab and Enter / Space. Arrow keys move between actions. Nothing advances while you are away.",
+    "url": "systems-room/?game=reservoir",
+    "accent": "#d0bfd4",
+    "symbol": "≈",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#actions button:not(:disabled)"
+    }
+  },
+  {
+    "id": "power-desk",
+    "name": "Power Desk",
+    "category": "strategy",
+    "description": "Wake the generators before the city needs them.",
+    "mechanic": "Unit commitment with startup delays, ramping, fuel and battery dispatch.",
+    "rules": [
+      "The city needs power for 14 hours. Set the slow turbine target to 0, 2, 4 or 6. Its output changes by at most 2 per hour; starting from off produces 0 on its first hour. Once started, it follows your target on later hours.",
+      "Choose battery mode with the target: reserve automatically stores up to 2 spare power or supplies up to 2 deficit; boost can supply up to 4 but never charge. The battery holds 8 and starts at 6. Each actual turbine unit costs 1 fuel.",
+      "Serve every demand with no more than 3 total unserved units, using at most 61 fuel. Finish with battery at least 2. High output is safe but wastes fuel; startup and ramping make late corrections costly."
+    ],
+    "controls": "Tap the labeled actions, or use Tab and Enter / Space. Arrow keys move between actions. Nothing advances while you are away.",
+    "url": "systems-room/?game=power-desk",
+    "accent": "#bed0b2",
+    "symbol": "ϟ",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#actions button:not(:disabled)"
+    }
+  },
+  {
+    "id": "carry-on",
+    "name": "Carry On",
+    "category": "strategy",
+    "description": "Pack an expedition from offers that will not come back.",
+    "mechanic": "Sequential multidimensional knapsack with irreversible decisions and a single exchange.",
+    "rules": [
+      "Twelve expedition offers arrive one at a time. Accept or pass; passed items leave for good. Carry at most 15 weight and 14 volume. You see the next two categories, but exact future sizes and values arrive with the offer.",
+      "Once per expedition you may exchange one packed item for the current offer. The removed item is lost and the exchange must fit both capacities. Different categories represent coverage, not interchangeable points.",
+      "Finish with at least 40 usefulness, four different categories, shelter and medicine. Replay uses the same expedition, so you can improve a plan with what you learned."
+    ],
+    "controls": "Tap the labeled actions, or use Tab and Enter / Space. Arrow keys move between actions. Nothing advances while you are away.",
+    "url": "systems-room/?game=carry-on",
+    "accent": "#d4bea4",
+    "symbol": "▣",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#actions button:not(:disabled)"
+    }
+  },
+  {
+    "id": "quiet-majority",
+    "name": "Quiet Majority",
+    "category": "strategy",
+    "description": "Find a coalition that can live with the same promise.",
+    "mechanic": "Coalition bargaining with irrevocable concessions, faction vetoes and public counteroffers.",
+    "rules": [
+      "Negotiate three bills with 15 council seats. Each bill needs 11 yes votes. Harbor, Garden, Clinic and Guild have public policy weights and approval thresholds. One point of any policy helps some factions and can upset another.",
+      "Each bill allows four negotiations. Add one Harbor/Garden/Clinic policy for 1 treasury, or promise a faction a 2-point approval grant for 2 treasury. Grants expire after the vote; policy levels carry into later bills. You may vote early.",
+      "Pass all three bills and keep treasury at 0 or higher. Start with policy 1/1/1 and 12 treasury. Each passed bill returns 2 treasury; each failed bill costs 1. Thresholds change for every bill, so a first majority may not last."
+    ],
+    "controls": "Tap the labeled actions, or use Tab and Enter / Space. Arrow keys move between actions. Nothing advances while you are away.",
+    "url": "systems-room/?game=quiet-majority",
+    "accent": "#b9ced3",
+    "symbol": "◉",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#actions button:not(:disabled)"
+    }
+  },
+  {
+    "id": "safe-return",
+    "name": "Safe Return",
+    "category": "strategy",
+    "description": "Write a little insurance, and keep enough in reserve.",
+    "mechanic": "Correlated-risk underwriting across a forecast cycle with capital exposure constraints.",
+    "rules": [
+      "Write one three-day insurance policy per day, or decline. Premiums arrive immediately; every active policy pays its listed loss on every matching weather day. New policies cover today and the next two days.",
+      "Weather is public for the next four days. Multiple policies of one type share the same risk: a flood can hit every insured house together. Policies expire after their third payout check. Keep positive capital after each day.",
+      "Finish twelve days with at least 45 free capital and at least 7 policies written. At closing, each remaining policy-day reserves 4 capital; only capital above that reserve counts. Start with 20 capital. New policies cost no cash upfront, but collect claims after their premium. Avoid leaving active exposure in the last-day accounts."
+    ],
+    "controls": "Tap the labeled actions, or use Tab and Enter / Space. Arrow keys move between actions. Nothing advances while you are away.",
+    "url": "systems-room/?game=safe-return",
+    "accent": "#d0bfd4",
+    "symbol": "⌂",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#actions button:not(:disabled)"
+    }
+  },
+  {
+    "id": "firebreak",
+    "name": "Firebreak",
+    "category": "strategy",
+    "description": "Wind moves the fire. Give it somewhere safe to stop.",
+    "mechanic": "Dynamic fire-front containment using persistent trenches and limited water.",
+    "rules": [
+      "Protect four cabins on a 6×6 hillside for ten wind shifts. You have one crew action before each spread. A trench permanently blocks fire; water extinguishes one burning cell and all burning neighbors, but only one tank are available.",
+      "Burning cells become ash after spreading. East wind spreads east and south; south wind spreads south and west. Fire cannot cross trenches, ash or wet cells. Lightning ignites an unprotected square after spreads 3, 5, 7 and 9: respectively row 1 column 4; row 3 column 5; row 5 column 5; row 2 column 4.",
+      "Keep all four cabins unburned. Build trenches on any empty non-cabin cell. The grid labels every location and terrain; choose a burning cell for a water action. End crew turn skips remaining actions."
+    ],
+    "controls": "Tap the labeled actions, or use Tab and Enter / Space. Arrow keys move between actions. Nothing advances while you are away.",
+    "url": "systems-room/?game=firebreak",
+    "accent": "#bed0b2",
+    "symbol": "♨",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#actions button:not(:disabled)"
+    }
+  },
+  {
+    "id": "kiln-house",
+    "name": "Kiln House",
+    "category": "strategy",
+    "description": "Warm the heart of the clay without cracking its shell.",
+    "mechanic": "Coupled thermal inertia control with temperature dwell and gradient stress.",
+    "rules": [
+      "Fire a clay vessel by heating both its shell and its core. Choose heat 0–3; each level spends that much fuel. Heat raises the shell quickly, while the core follows only 22% of the previous temperature gap each tick.",
+      "The shell loses 12% of its warmth above room temperature (20°) and transfers 25% of its gap to the core. Venting removes an extra 10° from the shell. A gap over 38° or shell above 110° cracks the clay.",
+      "Keep the core at 55–70° and shell at 65–90° for three consecutive ticks, then cool the core to 32° or less. Finish within 40 ticks and 30 fuel. Cooling too early resets the dwell; venting too hard can crack a hot core."
+    ],
+    "controls": "Tap the labeled actions, or use Tab and Enter / Space. Arrow keys move between actions. Nothing advances while you are away.",
+    "url": "systems-room/?game=kiln-house",
+    "accent": "#d4bea4",
+    "symbol": "◒",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#actions button:not(:disabled)"
+    }
+  },
+  {
+    "id": "two-couriers",
+    "name": "Two Couriers",
+    "category": "strategy",
+    "description": "Make four deliveries without sending both bicycles into one lane.",
+    "mechanic": "Two-agent pickup-and-delivery with shared-road occupancy and parcel destinations.",
+    "rules": [
+      "Two couriers share a narrow road: West gate — West junction — Center — East junction — East gate. A passing bay branches from Center; the North depot branches from West junction and South depot from East junction.",
+      "Each action moves one courier along one road. Couriers cannot occupy the same stop or pass through one another. A courier automatically picks up a waiting parcel if empty, and delivers when reaching its destination. Each carries one parcel.",
+      "Deliver all four parcels within 34 moves. The west/east parcels cross in opposite directions; use the passing bay to let loaded couriers get through. North and south parcels also cross. All positions, loads and destinations remain visible."
+    ],
+    "controls": "Tap the labeled actions, or use Tab and Enter / Space. Arrow keys move between actions. Nothing advances while you are away.",
+    "url": "systems-room/?game=two-couriers",
+    "accent": "#b9ced3",
+    "symbol": "⇄",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#actions button:not(:disabled)"
+    }
+  },
+  {
+    "id": "elevator-night",
+    "name": "Elevator Night",
+    "category": "strategy",
+    "description": "One small lift for a building full of last-minute journeys.",
+    "mechanic": "Capacity-constrained elevator dispatch with passenger queues and ride deadlines.",
+    "rules": [
+      "Carry eight passengers through a five-floor building. Move one floor per tick, or open doors. Door opening first unloads arriving passengers, then boards the oldest waiting passengers up to capacity 2. Moving does not board or unload.",
+      "Every passenger has a release time and delivery deadline. Passengers appear at their release tick. A passenger still waiting or riding when their deadline passes is missed and leaves. The destination of everyone aboard is visible.",
+      "Deliver at least 7 passengers within 28 ticks. Two missed passengers end the shift. You cannot choose which passenger boards: oldest first, so route and door timing determine the load."
+    ],
+    "controls": "Tap the labeled actions, or use Tab and Enter / Space. Arrow keys move between actions. Nothing advances while you are away.",
+    "url": "systems-room/?game=elevator-night",
+    "accent": "#d0bfd4",
+    "symbol": "↕",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#actions button:not(:disabled)"
+    }
+  },
+  {
+    "id": "supply-web",
+    "name": "Supply Web",
+    "category": "strategy",
+    "description": "Build the little factory around its narrowest bottleneck.",
+    "mechanic": "Production network investment with sequential material flow and throughput bottlenecks.",
+    "rules": [
+      "Build a factory that turns ore into metal, timber into boards, and both into bicycles. Each tick processes stations in order: mines/forest → smelters/saws → assembly. A smelter converts 2 ore to 1 metal; a saw converts 2 timber to 1 board; assembly consumes 1 metal + 1 board for a bicycle.",
+      "Each station starts with capacity 1, except assembly capacity 0. Spend cash to add capacity, or take a contract selling up to 2 bicycles for 7 each. Production runs after every choice. Building costs: mine/forest 3, smelter/saw 4, assembly 5. Inventory carries over.",
+      "In 16 ticks, produce at least 12 bicycles and finish with 10 cash. Start with 13 cash. Extra downstream capacity is useless without raw feed, and unsold stock cannot fund construction."
+    ],
+    "controls": "Tap the labeled actions, or use Tab and Enter / Space. Arrow keys move between actions. Nothing advances while you are away.",
+    "url": "systems-room/?game=supply-web",
+    "accent": "#bed0b2",
+    "symbol": "▦",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#actions button:not(:disabled)"
+    }
+  },
+  {
+    "id": "growing-block",
+    "name": "Growing Block",
+    "category": "strategy",
+    "description": "Make a neighborhood where people want to stay.",
+    "mechanic": "Urban zoning with spatial externalities, migration, upkeep and tax feedback.",
+    "rules": [
+      "Zone a 4×4 neighborhood over twelve years. Choose a building type, then an empty lot; building advances one year. Homes cost 4, parks 3, factories 5 and shops 4. Waiting advances without building.",
+      "After each year, factories earn 3. Parks and shops each cost 1 upkeep. Homes gain one resident (capacity 4) when beside a park or shop and when adjacent parks are at least as numerous as adjacent factories. Otherwise they lose one resident. Each home pays floor(residents/2) tax; shops earn one per adjacent occupied home.",
+      "Finish with 20 residents, 8 cash and no polluted occupied home. Start with a home, park and distant factory. Shared edges count; diagonals do not. A new building’s effects apply immediately, and a negative treasury ends the plan."
+    ],
+    "controls": "Tap the labeled actions, or use Tab and Enter / Space. Arrow keys move between actions. Nothing advances while you are away.",
+    "url": "systems-room/?game=growing-block",
+    "accent": "#d4bea4",
+    "symbol": "▧",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#actions button:not(:disabled)"
+    }
+  },
+  {
+    "id": "borrowed-time",
+    "name": "Borrowed Time",
+    "category": "strategy",
+    "description": "Two crews and one launch date. Find the critical path.",
+    "mechanic": "Precedence-constrained parallel project scheduling with resource-specific crew assignments.",
+    "rules": [
+      "Nine project tasks form a dependency graph. Two crews work in parallel: the planner and the builder. Assign any ready task to a free crew, then advance one day. Assignment itself does not use a day.",
+      "A task cannot start until every prerequisite is complete. Matching crew specialty reduces its printed duration by one day; the other crew needs the full duration. Once assigned, a task stays with that crew until finished.",
+      "Complete Launch by the end of day 16. All tasks are required by the final dependency chain. Leaving a crew idle can be correct when tomorrow unlocks a task it handles faster."
+    ],
+    "controls": "Tap the labeled actions, or use Tab and Enter / Space. Arrow keys move between actions. Nothing advances while you are away.",
+    "url": "systems-room/?game=borrowed-time",
+    "accent": "#b9ced3",
+    "symbol": "⌛",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#actions button:not(:disabled)"
+    }
+  },
+  {
+    "id": "convoy-ledger",
+    "name": "Convoy Ledger",
+    "category": "strategy",
+    "description": "Spread the escorts carefully. Bring every ship home.",
+    "mechanic": "Persistent escort allocation across simultaneous threatened shipping lanes.",
+    "rules": [
+      "Dispatch five convoys across three lanes. Each lane shows threat and cargo value. Allocate your six escorts one at a time; then sail all lanes together. Each escort cancels one threat. You can recall an allocation before sailing.",
+      "If a lane has any uncovered threat, that lane loses its cargo and one assigned escort (if present). A fully protected lane delivers all cargo. After sailing, surviving escorts return and one replacement joins, up to six.",
+      "Deliver at least 58 cargo across five waves. You may deliberately abandon a low-value lane to fully protect the others. Splitting escorts thinly can lose every cargo and shrink the fleet for later waves."
+    ],
+    "controls": "Tap the labeled actions, or use Tab and Enter / Space. Arrow keys move between actions. Nothing advances while you are away.",
+    "url": "systems-room/?game=convoy-ledger",
+    "accent": "#d0bfd4",
+    "symbol": "⚓",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#actions button:not(:disabled)"
+    }
+  }
+]

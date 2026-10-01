@@ -6,7 +6,8 @@ const old=[['signal-run','Signal Run','reflex'],['double-take','Double Take','me
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const games=rooms.flatMap(room=>{
  const data=JSON.parse(fs.readFileSync(path.join(root,room,'games.json')));
- if(data.length!==15)throw Error(room+' must have 15 distinct games');
+ const expected={'systems-room':20,'tabletop-room':20,'puzzle-lab':20,'kinetic-room':20,'discovery-room':20}[room]||15;
+ if(data.length!==expected)throw Error(room+' must have '+expected+' distinct games');
  if(!fs.existsSync(path.join(root,'coverage',room+'.json')))throw Error('Missing browser evidence for '+room);
  return data.map(g=>({...g,family:room,status:'playable'}));
 });

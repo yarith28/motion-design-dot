@@ -1,0 +1,693 @@
+{
+  "schemaVersion": 2,
+  "suite": "discovery-room",
+  "passed": true,
+  "status": "passed",
+  "startedAt": "2026-10-01T04:13:08.518Z",
+  "source": {
+    "sha256": "533b8922e0d42c1d0522b4a0f817dbac602e57ef044b17b05c4afd45db57b727",
+    "files": [
+      "catalog.css",
+      "catalog.js",
+      "common.js",
+      "discovery-room/games.json",
+      "discovery-room/index.html",
+      "discovery-room/room.css",
+      "discovery-room/room.js",
+      "index.html",
+      "inventory.json",
+      "play.css",
+      "styles.css",
+      "tests/discovery-room.cjs",
+      "tests/fixtures/baseline100.json",
+      "tests/fixtures/tabletop-paths.json",
+      "tools/evidence.cjs",
+      "tools/run-suite.cjs"
+    ]
+  },
+  "requestedBaseURL": "http://127.0.0.1:8790",
+  "browser": {
+    "engine": "Chromium",
+    "version": "Chromium 151.0.7922.173 built on Debian GNU/Linux 13 (trixie)",
+    "executable": "/usr/bin/chromium"
+  },
+  "scope": {
+    "desktopCompletion": true,
+    "mobileViewportCompletion": true,
+    "touchGameplayCompletion": false,
+    "touchControlSmoke": true,
+    "completionMeans": "winning full progression",
+    "method": "scripted UI; curated answers or board solvers",
+    "mobileMethod": "touch gameplay with scripted navigation/solvers"
+  },
+  "games": [
+    "ray-archive",
+    "false-weight",
+    "three-of-a-kind",
+    "second-look",
+    "fog-journal",
+    "prefix-press",
+    "transit-observatory",
+    "specimen-rule",
+    "causal-lab",
+    "parallax-post",
+    "wave-desk",
+    "twenty-questions",
+    "scent-trail",
+    "fossil-brush",
+    "archive-edit",
+    "lens-library",
+    "invisible-ink",
+    "clockmaker-cabinet",
+    "track-exchange",
+    "folded-world"
+  ],
+  "limits": [
+    "Mobile is Chromium viewport/touch emulation, not Safari or a physical device.",
+    "Solver completions do not establish human difficulty or accessibility."
+  ],
+  "servedRuntimeBefore": {
+    "baseURL": "http://127.0.0.1:8790",
+    "passed": true,
+    "sha256": "3e7f8d0df5da2de710362c46ed21efd8c2a9b8a055ec2d25d5286290fdd9f13f",
+    "fileCount": 11,
+    "verifiedAt": "2026-10-01T04:13:08.644Z"
+  },
+  "exitCode": 0,
+  "signal": null,
+  "sourceUnchanged": true,
+  "servedRuntime": {
+    "baseURL": "http://127.0.0.1:8790",
+    "passed": true,
+    "sha256": "3e7f8d0df5da2de710362c46ed21efd8c2a9b8a055ec2d25d5286290fdd9f13f",
+    "fileCount": 11,
+    "verifiedAt": "2026-10-01T04:14:33.457Z"
+  },
+  "completionEvidence": {
+    "sha256": "9d72e1a6858440ce9fd7b87b9efaa99980f837ed46688f709927b8b2291ecd5b",
+    "file": "coverage/discovery-room.json",
+    "cases": [
+      {
+        "id": "ray-archive",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "edgeCases": [
+          "Asserted invalid-action guard or resource-exhaustion loss before restart",
+          "Incomplete atom certification leaves round active",
+          "Restart clears terminal outcome"
+        ],
+        "touchOnly": false,
+        "inputMethod": "Pointer clicks plus native field fill/select",
+        "verification": "solver-driven UI, visible evidence only"
+      },
+      {
+        "id": "ray-archive",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "edgeCases": [
+          "Asserted invalid-action guard or resource-exhaustion loss before restart",
+          "Incomplete atom certification leaves round active",
+          "Restart clears terminal outcome"
+        ],
+        "touchOnly": true,
+        "inputMethod": "Touchscreen tap on all gameplay buttons",
+        "verification": "solver-driven UI, visible evidence only"
+      },
+      {
+        "id": "false-weight",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "edgeCases": [
+          "Asserted invalid-action guard or resource-exhaustion loss before restart",
+          "Balanced-pan hypothesis elimination; three different counterfeit cases",
+          "Restart clears terminal outcome"
+        ],
+        "touchOnly": false,
+        "inputMethod": "Pointer clicks plus native field fill/select",
+        "verification": "solver-driven UI, visible evidence only"
+      },
+      {
+        "id": "false-weight",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "edgeCases": [
+          "Asserted invalid-action guard or resource-exhaustion loss before restart",
+          "Balanced-pan hypothesis elimination; three different counterfeit cases",
+          "Restart clears terminal outcome"
+        ],
+        "touchOnly": true,
+        "inputMethod": "Touchscreen tap on all gameplay buttons",
+        "verification": "solver-driven UI, visible evidence only"
+      },
+      {
+        "id": "three-of-a-kind",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "edgeCases": [
+          "Asserted invalid-action guard or resource-exhaustion loss before restart",
+          "Six changing tableaux solved with all-three-property validation",
+          "Restart clears terminal outcome"
+        ],
+        "touchOnly": false,
+        "inputMethod": "Pointer clicks plus native field fill/select",
+        "verification": "solver-driven UI, visible evidence only"
+      },
+      {
+        "id": "three-of-a-kind",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "edgeCases": [
+          "Asserted invalid-action guard or resource-exhaustion loss before restart",
+          "Six changing tableaux solved with all-three-property validation",
+          "Restart clears terminal outcome"
+        ],
+        "touchOnly": true,
+        "inputMethod": "Touchscreen tap on all gameplay buttons",
+        "verification": "solver-driven UI, visible evidence only"
+      },
+      {
+        "id": "second-look",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "edgeCases": [
+          "Asserted invalid-action guard or resource-exhaustion loss before restart",
+          "Three visual scenes compared through view switches only",
+          "Restart clears terminal outcome"
+        ],
+        "touchOnly": false,
+        "inputMethod": "Pointer clicks plus native field fill/select",
+        "verification": "solver-driven UI, visible evidence only"
+      },
+      {
+        "id": "second-look",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "edgeCases": [
+          "Asserted invalid-action guard or resource-exhaustion loss before restart",
+          "Three visual scenes compared through view switches only",
+          "Restart clears terminal outcome"
+        ],
+        "touchOnly": true,
+        "inputMethod": "Touchscreen tap on all gameplay buttons",
+        "verification": "solver-driven UI, visible evidence only"
+      },
+      {
+        "id": "fog-journal",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "edgeCases": [
+          "Asserted invalid-action guard or resource-exhaustion loss before restart",
+          "Mapped unknown mazes using visible exits, collected artifacts and retraced route",
+          "Restart clears terminal outcome"
+        ],
+        "touchOnly": false,
+        "inputMethod": "Pointer clicks plus native field fill/select",
+        "verification": "solver-driven UI, visible evidence only"
+      },
+      {
+        "id": "fog-journal",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "edgeCases": [
+          "Asserted invalid-action guard or resource-exhaustion loss before restart",
+          "Mapped unknown mazes using visible exits, collected artifacts and retraced route",
+          "Restart clears terminal outcome"
+        ],
+        "touchOnly": true,
+        "inputMethod": "Touchscreen tap on all gameplay buttons",
+        "verification": "solver-driven UI, visible evidence only"
+      },
+      {
+        "id": "prefix-press",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "edgeCases": [
+          "Asserted invalid-action guard or resource-exhaustion loss before restart",
+          "Optimal tree and independently encoded dispatch for each alphabet",
+          "Restart clears terminal outcome"
+        ],
+        "touchOnly": false,
+        "inputMethod": "Pointer clicks plus native field fill/select",
+        "verification": "solver-driven UI, visible evidence only"
+      },
+      {
+        "id": "prefix-press",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "edgeCases": [
+          "Asserted invalid-action guard or resource-exhaustion loss before restart",
+          "Optimal tree and independently encoded dispatch for each alphabet",
+          "Restart clears terminal outcome"
+        ],
+        "touchOnly": true,
+        "inputMethod": "Touchscreen tap on all gameplay buttons",
+        "verification": "solver-driven UI, visible evidence only"
+      },
+      {
+        "id": "transit-observatory",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "edgeCases": [
+          "Asserted invalid-action guard or resource-exhaustion loss before restart",
+          "Adaptive public-hypothesis temporal sampling, uniqueness required",
+          "Restart clears terminal outcome"
+        ],
+        "touchOnly": false,
+        "inputMethod": "Pointer clicks plus native field fill/select",
+        "verification": "solver-driven UI, visible evidence only"
+      },
+      {
+        "id": "transit-observatory",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "edgeCases": [
+          "Asserted invalid-action guard or resource-exhaustion loss before restart",
+          "Adaptive public-hypothesis temporal sampling, uniqueness required",
+          "Restart clears terminal outcome"
+        ],
+        "touchOnly": false,
+        "inputMethod": "Touch buttons plus programmatic native field fill/select",
+        "verification": "solver-driven UI, visible evidence only"
+      },
+      {
+        "id": "specimen-rule",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "edgeCases": [
+          "Asserted invalid-action guard or resource-exhaustion loss before restart",
+          "Constructed distinguishing experiments and classified unseen specimens",
+          "Restart clears terminal outcome"
+        ],
+        "touchOnly": false,
+        "inputMethod": "Pointer clicks plus native field fill/select",
+        "verification": "solver-driven UI, visible evidence only"
+      },
+      {
+        "id": "specimen-rule",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "edgeCases": [
+          "Asserted invalid-action guard or resource-exhaustion loss before restart",
+          "Constructed distinguishing experiments and classified unseen specimens",
+          "Restart clears terminal outcome"
+        ],
+        "touchOnly": false,
+        "inputMethod": "Touch buttons plus programmatic native field fill/select",
+        "verification": "solver-driven UI, visible evidence only"
+      },
+      {
+        "id": "causal-lab",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "edgeCases": [
+          "Asserted invalid-action guard or resource-exhaustion loss before restart",
+          "Interventions distinguish every surviving wire hypothesis",
+          "Restart clears terminal outcome"
+        ],
+        "touchOnly": false,
+        "inputMethod": "Pointer clicks plus native field fill/select",
+        "verification": "solver-driven UI, visible evidence only"
+      },
+      {
+        "id": "causal-lab",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "edgeCases": [
+          "Asserted invalid-action guard or resource-exhaustion loss before restart",
+          "Interventions distinguish every surviving wire hypothesis",
+          "Restart clears terminal outcome"
+        ],
+        "touchOnly": false,
+        "inputMethod": "Touch buttons plus programmatic native field fill/select",
+        "verification": "solver-driven UI, visible evidence only"
+      },
+      {
+        "id": "parallax-post",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "edgeCases": [
+          "Asserted invalid-action guard or resource-exhaustion loss before restart",
+          "Active stereo correspondence reconstruction with changed camera baseline",
+          "Restart clears terminal outcome"
+        ],
+        "touchOnly": false,
+        "inputMethod": "Pointer clicks plus native field fill/select",
+        "verification": "solver-driven UI, visible evidence only"
+      },
+      {
+        "id": "parallax-post",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "edgeCases": [
+          "Asserted invalid-action guard or resource-exhaustion loss before restart",
+          "Active stereo correspondence reconstruction with changed camera baseline",
+          "Restart clears terminal outcome"
+        ],
+        "touchOnly": true,
+        "inputMethod": "Touchscreen tap on all gameplay buttons",
+        "verification": "solver-driven UI, visible evidence only"
+      },
+      {
+        "id": "wave-desk",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "edgeCases": [
+          "Asserted invalid-action guard or resource-exhaustion loss before restart",
+          "Signed synthesis solved against all eight visible samples",
+          "Restart clears terminal outcome"
+        ],
+        "touchOnly": false,
+        "inputMethod": "Pointer clicks plus native field fill/select",
+        "verification": "solver-driven UI, visible evidence only"
+      },
+      {
+        "id": "wave-desk",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "edgeCases": [
+          "Asserted invalid-action guard or resource-exhaustion loss before restart",
+          "Signed synthesis solved against all eight visible samples",
+          "Restart clears terminal outcome"
+        ],
+        "touchOnly": true,
+        "inputMethod": "Touchscreen tap on all gameplay buttons",
+        "verification": "solver-driven UI, visible evidence only"
+      },
+      {
+        "id": "twenty-questions",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "edgeCases": [
+          "Asserted invalid-action guard or resource-exhaustion loss before restart",
+          "Optimal adaptive questions for correlated trait catalogs under shared budget",
+          "Restart clears terminal outcome"
+        ],
+        "touchOnly": false,
+        "inputMethod": "Pointer clicks plus native field fill/select",
+        "verification": "solver-driven UI, visible evidence only"
+      },
+      {
+        "id": "twenty-questions",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "edgeCases": [
+          "Asserted invalid-action guard or resource-exhaustion loss before restart",
+          "Optimal adaptive questions for correlated trait catalogs under shared budget",
+          "Restart clears terminal outcome"
+        ],
+        "touchOnly": true,
+        "inputMethod": "Touchscreen tap on all gameplay buttons",
+        "verification": "solver-driven UI, visible evidence only"
+      },
+      {
+        "id": "scent-trail",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "edgeCases": [
+          "Asserted invalid-action guard or resource-exhaustion loss before restart",
+          "Plume position inferred from logged wind-corrected distances",
+          "Restart clears terminal outcome"
+        ],
+        "touchOnly": false,
+        "inputMethod": "Pointer clicks plus native field fill/select",
+        "verification": "solver-driven UI, visible evidence only"
+      },
+      {
+        "id": "scent-trail",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "edgeCases": [
+          "Asserted invalid-action guard or resource-exhaustion loss before restart",
+          "Plume position inferred from logged wind-corrected distances",
+          "Restart clears terminal outcome"
+        ],
+        "touchOnly": true,
+        "inputMethod": "Touchscreen tap on all gameplay buttons",
+        "verification": "solver-driven UI, visible evidence only"
+      },
+      {
+        "id": "fossil-brush",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "edgeCases": [
+          "Asserted invalid-action guard or resource-exhaustion loss before restart",
+          "Safe broad cuts are required to fit action budget; finishing precision brush preserves integrity",
+          "Restart clears terminal outcome"
+        ],
+        "touchOnly": false,
+        "inputMethod": "Pointer clicks plus native field fill/select",
+        "verification": "solver-driven UI, visible evidence only"
+      },
+      {
+        "id": "fossil-brush",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "edgeCases": [
+          "Asserted invalid-action guard or resource-exhaustion loss before restart",
+          "Safe broad cuts are required to fit action budget; finishing precision brush preserves integrity",
+          "Restart clears terminal outcome"
+        ],
+        "touchOnly": true,
+        "inputMethod": "Touchscreen tap on all gameplay buttons",
+        "verification": "solver-driven UI, visible evidence only"
+      },
+      {
+        "id": "archive-edit",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "edgeCases": [
+          "Asserted invalid-action guard or resource-exhaustion loss before restart",
+          "Solved visible dependent patch subset/order under three-pick budget and both conflict choices",
+          "Restart clears terminal outcome"
+        ],
+        "touchOnly": false,
+        "inputMethod": "Pointer clicks plus native field fill/select",
+        "verification": "solver-driven UI, visible evidence only"
+      },
+      {
+        "id": "archive-edit",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "edgeCases": [
+          "Asserted invalid-action guard or resource-exhaustion loss before restart",
+          "Solved visible dependent patch subset/order under three-pick budget and both conflict choices",
+          "Restart clears terminal outcome"
+        ],
+        "touchOnly": true,
+        "inputMethod": "Touchscreen tap on all gameplay buttons",
+        "verification": "solver-driven UI, visible evidence only"
+      },
+      {
+        "id": "lens-library",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "edgeCases": [
+          "Asserted invalid-action guard or resource-exhaustion loss before restart",
+          "Calibration kernel plus forward reconstruction identifies source",
+          "Restart clears terminal outcome"
+        ],
+        "touchOnly": false,
+        "inputMethod": "Pointer clicks plus native field fill/select",
+        "verification": "solver-driven UI, visible evidence only"
+      },
+      {
+        "id": "lens-library",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "edgeCases": [
+          "Asserted invalid-action guard or resource-exhaustion loss before restart",
+          "Calibration kernel plus forward reconstruction identifies source",
+          "Restart clears terminal outcome"
+        ],
+        "touchOnly": true,
+        "inputMethod": "Touchscreen tap on all gameplay buttons",
+        "verification": "solver-driven UI, visible evidence only"
+      },
+      {
+        "id": "invisible-ink",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "edgeCases": [
+          "Asserted invalid-action guard or resource-exhaustion loss before restart",
+          "Adaptive strip exposures stop when manifest and negative evidence identify remaining genuine parcels",
+          "Restart clears terminal outcome"
+        ],
+        "touchOnly": false,
+        "inputMethod": "Pointer clicks plus native field fill/select",
+        "verification": "solver-driven UI, visible evidence only"
+      },
+      {
+        "id": "invisible-ink",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "edgeCases": [
+          "Asserted invalid-action guard or resource-exhaustion loss before restart",
+          "Adaptive strip exposures stop when manifest and negative evidence identify remaining genuine parcels",
+          "Restart clears terminal outcome"
+        ],
+        "touchOnly": true,
+        "inputMethod": "Touchscreen tap on all gameplay buttons",
+        "verification": "solver-driven UI, visible evidence only"
+      },
+      {
+        "id": "clockmaker-cabinet",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "edgeCases": [
+          "Asserted invalid-action guard or resource-exhaustion loss before restart",
+          "Causal item combination, fixture repair, winding, setting and escape chain",
+          "Restart clears terminal outcome"
+        ],
+        "touchOnly": false,
+        "inputMethod": "Pointer clicks plus native field fill/select",
+        "verification": "solver-driven UI, visible evidence only"
+      },
+      {
+        "id": "clockmaker-cabinet",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "edgeCases": [
+          "Asserted invalid-action guard or resource-exhaustion loss before restart",
+          "Causal item combination, fixture repair, winding, setting and escape chain",
+          "Restart clears terminal outcome"
+        ],
+        "touchOnly": true,
+        "inputMethod": "Touchscreen tap on all gameplay buttons",
+        "verification": "solver-driven UI, visible evidence only"
+      },
+      {
+        "id": "track-exchange",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "edgeCases": [
+          "Asserted invalid-action guard or resource-exhaustion loss before restart",
+          "Key-gate chokepoint and water crossing precede simultaneous hatch exchange and both escapes",
+          "Restart clears terminal outcome"
+        ],
+        "touchOnly": false,
+        "inputMethod": "Pointer clicks plus native field fill/select",
+        "verification": "solver-driven UI, visible evidence only"
+      },
+      {
+        "id": "track-exchange",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "edgeCases": [
+          "Asserted invalid-action guard or resource-exhaustion loss before restart",
+          "Key-gate chokepoint and water crossing precede simultaneous hatch exchange and both escapes",
+          "Restart clears terminal outcome"
+        ],
+        "touchOnly": true,
+        "inputMethod": "Touchscreen tap on all gameplay buttons",
+        "verification": "solver-driven UI, visible evidence only"
+      },
+      {
+        "id": "folded-world",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "edgeCases": [
+          "Asserted invalid-action guard or resource-exhaustion loss before restart",
+          "Plans atlas routes and converts both rotated and reflected local frames",
+          "Restart clears terminal outcome"
+        ],
+        "touchOnly": false,
+        "inputMethod": "Pointer clicks plus native field fill/select",
+        "verification": "solver-driven UI, visible evidence only"
+      },
+      {
+        "id": "folded-world",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "edgeCases": [
+          "Asserted invalid-action guard or resource-exhaustion loss before restart",
+          "Plans atlas routes and converts both rotated and reflected local frames",
+          "Restart clears terminal outcome"
+        ],
+        "touchOnly": true,
+        "inputMethod": "Touchscreen tap on all gameplay buttons",
+        "verification": "solver-driven UI, visible evidence only"
+      }
+    ]
+  },
+  "finishedAt": "2026-10-01T04:14:33.459Z"
+}

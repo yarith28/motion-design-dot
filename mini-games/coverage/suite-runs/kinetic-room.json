@@ -1,0 +1,777 @@
+{
+  "schemaVersion": 2,
+  "suite": "kinetic-room",
+  "passed": true,
+  "status": "passed",
+  "startedAt": "2026-10-01T04:11:55.842Z",
+  "source": {
+    "sha256": "33dd30156e2a76bc7e63024547648bca502c1547eebc20531a7401b2065ab220",
+    "files": [
+      "catalog.css",
+      "catalog.js",
+      "common.js",
+      "index.html",
+      "inventory.json",
+      "kinetic-room/engines.js",
+      "kinetic-room/games.json",
+      "kinetic-room/index.html",
+      "kinetic-room/room.css",
+      "kinetic-room/room.js",
+      "play.css",
+      "styles.css",
+      "tests/fixtures/baseline100.json",
+      "tests/fixtures/tabletop-paths.json",
+      "tests/kinetic-plans.json",
+      "tests/kinetic-room.cjs",
+      "tools/evidence.cjs",
+      "tools/run-suite.cjs"
+    ]
+  },
+  "requestedBaseURL": "http://127.0.0.1:8790",
+  "browser": {
+    "engine": "Chromium",
+    "version": "Chromium 151.0.7922.173 built on Debian GNU/Linux 13 (trixie)",
+    "executable": "/usr/bin/chromium"
+  },
+  "scope": {
+    "desktopCompletion": true,
+    "mobileViewportCompletion": true,
+    "touchGameplayCompletion": false,
+    "touchControlSmoke": true,
+    "completionMeans": "winning full progression",
+    "method": "scripted UI; curated answers or board solvers",
+    "mobileMethod": "touch gameplay with scripted navigation/solvers"
+  },
+  "games": [
+    "vector-rally",
+    "border-bloom",
+    "lantern-heist",
+    "boulder-burrow",
+    "fuse-garden",
+    "quiet-foil",
+    "four-holds",
+    "trailer-yard",
+    "gravity-boots",
+    "portal-parcel",
+    "echo-steps",
+    "phase-walk",
+    "wind-sail",
+    "scissor-lift",
+    "ricochet-duel",
+    "soft-sculpt",
+    "spring-courier",
+    "shatter-belt",
+    "lantern-defense",
+    "little-walkers"
+  ],
+  "limits": [
+    "Mobile is Chromium viewport/touch emulation, not Safari or a physical device.",
+    "Solver completions do not establish human difficulty or accessibility."
+  ],
+  "servedRuntimeBefore": {
+    "baseURL": "http://127.0.0.1:8790",
+    "passed": true,
+    "sha256": "ca86834f834ec60ddc980ab4fec464bdc8929c9c99ab07be192866c5495489d4",
+    "fileCount": 12,
+    "verifiedAt": "2026-10-01T04:11:55.971Z"
+  },
+  "exitCode": 0,
+  "signal": null,
+  "sourceUnchanged": true,
+  "servedRuntime": {
+    "baseURL": "http://127.0.0.1:8790",
+    "passed": true,
+    "sha256": "ca86834f834ec60ddc980ab4fec464bdc8929c9c99ab07be192866c5495489d4",
+    "fileCount": 12,
+    "verifiedAt": "2026-10-01T04:13:34.517Z"
+  },
+  "completionEvidence": {
+    "sha256": "09106aba684ef637071424f7981171d48c233ce580a9e4169f3273cd732150dc",
+    "file": "coverage/kinetic-room.json",
+    "cases": [
+      {
+        "id": "vector-rally",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": false,
+        "edgeCases": [
+          "asserted terminal loss: track edge",
+          "terminal controls disabled",
+          "restart after both win and loss restores initial state",
+          "320px layout has no horizontal overflow",
+          "text board description present",
+          "coasting from rest preserves zero velocity",
+          "overspeed final checkpoint can be followed by braking without undefined checkpoint crash"
+        ],
+        "inputMethod": "Native Enter activation of focused public buttons for full solver-derived win and loss; arrow input verified inert after terminal."
+      },
+      {
+        "id": "vector-rally",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": true,
+        "edgeCases": [
+          "asserted terminal loss: track edge",
+          "terminal controls disabled",
+          "restart after both win and loss restores initial state",
+          "320px layout has no horizontal overflow",
+          "text board description present",
+          "coasting from rest preserves zero velocity",
+          "overspeed final checkpoint can be followed by braking without undefined checkpoint crash"
+        ],
+        "inputMethod": "Only public button touchscreen taps, including the complete solver-derived winning and losing action paths."
+      },
+      {
+        "id": "border-bloom",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": false,
+        "edgeCases": [
+          "asserted terminal loss: exposed trail",
+          "terminal controls disabled",
+          "restart after both win and loss restores initial state",
+          "320px layout has no horizontal overflow",
+          "text board description present",
+          "frame boundary rejects movement"
+        ],
+        "inputMethod": "Native Enter activation of focused public buttons for full solver-derived win and loss; arrow input verified inert after terminal."
+      },
+      {
+        "id": "border-bloom",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": true,
+        "edgeCases": [
+          "asserted terminal loss: exposed trail",
+          "terminal controls disabled",
+          "restart after both win and loss restores initial state",
+          "320px layout has no horizontal overflow",
+          "text board description present",
+          "frame boundary rejects movement"
+        ],
+        "inputMethod": "Only public button touchscreen taps, including the complete solver-derived winning and losing action paths."
+      },
+      {
+        "id": "lantern-heist",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": false,
+        "edgeCases": [
+          "asserted terminal loss: lantern caught",
+          "terminal controls disabled",
+          "restart after both win and loss restores initial state",
+          "320px layout has no horizontal overflow",
+          "text board description present",
+          "decoy consumes one charge and starts finite distraction"
+        ],
+        "inputMethod": "Native Enter activation of focused public buttons for full solver-derived win and loss; arrow input verified inert after terminal."
+      },
+      {
+        "id": "lantern-heist",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": true,
+        "edgeCases": [
+          "asserted terminal loss: lantern caught",
+          "terminal controls disabled",
+          "restart after both win and loss restores initial state",
+          "320px layout has no horizontal overflow",
+          "text board description present",
+          "decoy consumes one charge and starts finite distraction"
+        ],
+        "inputMethod": "Only public button touchscreen taps, including the complete solver-derived winning and losing action paths."
+      },
+      {
+        "id": "boulder-burrow",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": false,
+        "edgeCases": [
+          "asserted terminal loss: boulder",
+          "terminal controls disabled",
+          "restart after both win and loss restores initial state",
+          "320px layout has no horizontal overflow",
+          "text board description present",
+          "wall cannot be excavated"
+        ],
+        "inputMethod": "Native Enter activation of focused public buttons for full solver-derived win and loss; arrow input verified inert after terminal."
+      },
+      {
+        "id": "boulder-burrow",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": true,
+        "edgeCases": [
+          "asserted terminal loss: boulder",
+          "terminal controls disabled",
+          "restart after both win and loss restores initial state",
+          "320px layout has no horizontal overflow",
+          "text board description present",
+          "wall cannot be excavated"
+        ],
+        "inputMethod": "Only public button touchscreen taps, including the complete solver-derived winning and losing action paths."
+      },
+      {
+        "id": "fuse-garden",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": false,
+        "edgeCases": [
+          "asserted terminal loss: blast",
+          "terminal controls disabled",
+          "restart after both win and loss restores initial state",
+          "320px layout has no horizontal overflow",
+          "text board description present",
+          "cannot plant duplicate fuse on occupied square"
+        ],
+        "inputMethod": "Native Enter activation of focused public buttons for full solver-derived win and loss; arrow input verified inert after terminal."
+      },
+      {
+        "id": "fuse-garden",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": true,
+        "edgeCases": [
+          "asserted terminal loss: blast",
+          "terminal controls disabled",
+          "restart after both win and loss restores initial state",
+          "320px layout has no horizontal overflow",
+          "text board description present",
+          "cannot plant duplicate fuse on occupied square"
+        ],
+        "inputMethod": "Only public button touchscreen taps, including the complete solver-derived winning and losing action paths."
+      },
+      {
+        "id": "quiet-foil",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": false,
+        "edgeCases": [
+          "asserted terminal loss: opposing touches",
+          "terminal controls disabled",
+          "restart after both win and loss restores initial state",
+          "320px layout has no horizontal overflow",
+          "text board description present",
+          "thrust outside range consumes stamina without scoring"
+        ],
+        "inputMethod": "Native Enter activation of focused public buttons for full solver-derived win and loss; arrow input verified inert after terminal."
+      },
+      {
+        "id": "quiet-foil",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": true,
+        "edgeCases": [
+          "asserted terminal loss: opposing touches",
+          "terminal controls disabled",
+          "restart after both win and loss restores initial state",
+          "320px layout has no horizontal overflow",
+          "text board description present",
+          "thrust outside range consumes stamina without scoring"
+        ],
+        "inputMethod": "Only public button touchscreen taps, including the complete solver-derived winning and losing action paths."
+      },
+      {
+        "id": "four-holds",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": false,
+        "edgeCases": [
+          "asserted terminal loss: grip is exhausted",
+          "terminal controls disabled",
+          "restart after both win and loss restores initial state",
+          "320px layout has no horizontal overflow",
+          "text board description present",
+          "missing hold rejects regrip and costs fatigue"
+        ],
+        "inputMethod": "Native Enter activation of focused public buttons for full solver-derived win and loss; arrow input verified inert after terminal."
+      },
+      {
+        "id": "four-holds",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": true,
+        "edgeCases": [
+          "asserted terminal loss: grip is exhausted",
+          "terminal controls disabled",
+          "restart after both win and loss restores initial state",
+          "320px layout has no horizontal overflow",
+          "text board description present",
+          "missing hold rejects regrip and costs fatigue"
+        ],
+        "inputMethod": "Only public button touchscreen taps, including the complete solver-derived winning and losing action paths."
+      },
+      {
+        "id": "trailer-yard",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": false,
+        "edgeCases": [
+          "asserted terminal loss: vehicle body",
+          "terminal controls disabled",
+          "restart after both win and loss restores initial state",
+          "320px layout has no horizontal overflow",
+          "text board description present",
+          "wheel selection does not advance vehicle physics"
+        ],
+        "inputMethod": "Native Enter activation of focused public buttons for full solver-derived win and loss; arrow input verified inert after terminal."
+      },
+      {
+        "id": "trailer-yard",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": true,
+        "edgeCases": [
+          "asserted terminal loss: vehicle body",
+          "terminal controls disabled",
+          "restart after both win and loss restores initial state",
+          "320px layout has no horizontal overflow",
+          "text board description present",
+          "wheel selection does not advance vehicle physics"
+        ],
+        "inputMethod": "Only public button touchscreen taps, including the complete solver-derived winning and losing action paths."
+      },
+      {
+        "id": "gravity-boots",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": false,
+        "edgeCases": [
+          "asserted terminal loss: spike",
+          "terminal controls disabled",
+          "restart after both win and loss restores initial state",
+          "320px layout has no horizontal overflow",
+          "text board description present",
+          "gravity reversal changes polarity"
+        ],
+        "inputMethod": "Native Enter activation of focused public buttons for full solver-derived win and loss; arrow input verified inert after terminal."
+      },
+      {
+        "id": "gravity-boots",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": true,
+        "edgeCases": [
+          "asserted terminal loss: spike",
+          "terminal controls disabled",
+          "restart after both win and loss restores initial state",
+          "320px layout has no horizontal overflow",
+          "text board description present",
+          "gravity reversal changes polarity"
+        ],
+        "inputMethod": "Only public button touchscreen taps, including the complete solver-derived winning and losing action paths."
+      },
+      {
+        "id": "portal-parcel",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": false,
+        "edgeCases": [
+          "asserted terminal loss: spike",
+          "terminal controls disabled",
+          "restart after both win and loss restores initial state",
+          "320px layout has no horizontal overflow",
+          "text board description present",
+          "exchange requires a deployed beacon"
+        ],
+        "inputMethod": "Native Enter activation of focused public buttons for full solver-derived win and loss; arrow input verified inert after terminal."
+      },
+      {
+        "id": "portal-parcel",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": true,
+        "edgeCases": [
+          "asserted terminal loss: spike",
+          "terminal controls disabled",
+          "restart after both win and loss restores initial state",
+          "320px layout has no horizontal overflow",
+          "text board description present",
+          "exchange requires a deployed beacon"
+        ],
+        "inputMethod": "Only public button touchscreen taps, including the complete solver-derived winning and losing action paths."
+      },
+      {
+        "id": "echo-steps",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": false,
+        "edgeCases": [
+          "asserted terminal loss: echo faded",
+          "terminal controls disabled",
+          "restart after both win and loss restores initial state",
+          "320px layout has no horizontal overflow",
+          "text board description present",
+          "empty recording cannot replay"
+        ],
+        "inputMethod": "Native Enter activation of focused public buttons for full solver-derived win and loss; arrow input verified inert after terminal."
+      },
+      {
+        "id": "echo-steps",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": true,
+        "edgeCases": [
+          "asserted terminal loss: echo faded",
+          "terminal controls disabled",
+          "restart after both win and loss restores initial state",
+          "320px layout has no horizontal overflow",
+          "text board description present",
+          "empty recording cannot replay"
+        ],
+        "inputMethod": "Only public button touchscreen taps, including the complete solver-derived winning and losing action paths."
+      },
+      {
+        "id": "phase-walk",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": false,
+        "edgeCases": [
+          "asserted terminal loss: budget",
+          "terminal controls disabled",
+          "restart after both win and loss restores initial state",
+          "320px layout has no horizontal overflow",
+          "text board description present",
+          "phase change outside anchor is rejected"
+        ],
+        "inputMethod": "Native Enter activation of focused public buttons for full solver-derived win and loss; arrow input verified inert after terminal."
+      },
+      {
+        "id": "phase-walk",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": true,
+        "edgeCases": [
+          "asserted terminal loss: budget",
+          "terminal controls disabled",
+          "restart after both win and loss restores initial state",
+          "320px layout has no horizontal overflow",
+          "text board description present",
+          "phase change outside anchor is rejected"
+        ],
+        "inputMethod": "Only public button touchscreen taps, including the complete solver-derived winning and losing action paths."
+      },
+      {
+        "id": "wind-sail",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": false,
+        "edgeCases": [
+          "asserted terminal loss: grounded",
+          "terminal controls disabled",
+          "restart after both win and loss restores initial state",
+          "320px layout has no horizontal overflow",
+          "text board description present",
+          "direct upwind heading stalls propulsion"
+        ],
+        "inputMethod": "Native Enter activation of focused public buttons for full solver-derived win and loss; arrow input verified inert after terminal."
+      },
+      {
+        "id": "wind-sail",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": true,
+        "edgeCases": [
+          "asserted terminal loss: grounded",
+          "terminal controls disabled",
+          "restart after both win and loss restores initial state",
+          "320px layout has no horizontal overflow",
+          "text board description present",
+          "direct upwind heading stalls propulsion"
+        ],
+        "inputMethod": "Only public button touchscreen taps, including the complete solver-derived winning and losing action paths."
+      },
+      {
+        "id": "scissor-lift",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": false,
+        "edgeCases": [
+          "asserted terminal loss: beam",
+          "terminal controls disabled",
+          "restart after both win and loss restores initial state",
+          "320px layout has no horizontal overflow",
+          "text board description present",
+          "wrong dock cannot transfer freight"
+        ],
+        "inputMethod": "Native Enter activation of focused public buttons for full solver-derived win and loss; arrow input verified inert after terminal."
+      },
+      {
+        "id": "scissor-lift",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": true,
+        "edgeCases": [
+          "asserted terminal loss: beam",
+          "terminal controls disabled",
+          "restart after both win and loss restores initial state",
+          "320px layout has no horizontal overflow",
+          "text board description present",
+          "wrong dock cannot transfer freight"
+        ],
+        "inputMethod": "Only public button touchscreen taps, including the complete solver-derived winning and losing action paths."
+      },
+      {
+        "id": "ricochet-duel",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": false,
+        "edgeCases": [
+          "asserted terminal loss: marked-column",
+          "terminal controls disabled",
+          "restart after both win and loss restores initial state",
+          "320px layout has no horizontal overflow",
+          "text board description present",
+          "aim changes are free while shield stays put"
+        ],
+        "inputMethod": "Native Enter activation of focused public buttons for full solver-derived win and loss; arrow input verified inert after terminal."
+      },
+      {
+        "id": "ricochet-duel",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": true,
+        "edgeCases": [
+          "asserted terminal loss: marked-column",
+          "terminal controls disabled",
+          "restart after both win and loss restores initial state",
+          "320px layout has no horizontal overflow",
+          "text board description present",
+          "aim changes are free while shield stays put"
+        ],
+        "inputMethod": "Only public button touchscreen taps, including the complete solver-derived winning and losing action paths."
+      },
+      {
+        "id": "soft-sculpt",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": false,
+        "edgeCases": [
+          "asserted terminal loss: protected weight",
+          "terminal controls disabled",
+          "restart after both win and loss restores initial state",
+          "320px layout has no horizontal overflow",
+          "text board description present",
+          "cutting redundant support preserves connected load"
+        ],
+        "inputMethod": "Native Enter activation of focused public buttons for full solver-derived win and loss; arrow input verified inert after terminal."
+      },
+      {
+        "id": "soft-sculpt",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": true,
+        "edgeCases": [
+          "asserted terminal loss: protected weight",
+          "terminal controls disabled",
+          "restart after both win and loss restores initial state",
+          "320px layout has no horizontal overflow",
+          "text board description present",
+          "cutting redundant support preserves connected load"
+        ],
+        "inputMethod": "Only public button touchscreen taps, including the complete solver-derived winning and losing action paths."
+      },
+      {
+        "id": "spring-courier",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": false,
+        "edgeCases": [
+          "asserted terminal loss: water",
+          "terminal controls disabled",
+          "restart after both win and loss restores initial state",
+          "320px layout has no horizontal overflow",
+          "text board description present",
+          "release transfers pendulum to free flight"
+        ],
+        "inputMethod": "Native Enter activation of focused public buttons for full solver-derived win and loss; arrow input verified inert after terminal."
+      },
+      {
+        "id": "spring-courier",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": true,
+        "edgeCases": [
+          "asserted terminal loss: water",
+          "terminal controls disabled",
+          "restart after both win and loss restores initial state",
+          "320px layout has no horizontal overflow",
+          "text board description present",
+          "release transfers pendulum to free flight"
+        ],
+        "inputMethod": "Only public button touchscreen taps, including the complete solver-derived winning and losing action paths."
+      },
+      {
+        "id": "shatter-belt",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": false,
+        "edgeCases": [
+          "asserted terminal loss: budget",
+          "terminal controls disabled",
+          "restart after both win and loss restores initial state",
+          "320px layout has no horizontal overflow",
+          "text board description present",
+          "free aim adjustment preserves field turn"
+        ],
+        "inputMethod": "Native Enter activation of focused public buttons for full solver-derived win and loss; arrow input verified inert after terminal."
+      },
+      {
+        "id": "shatter-belt",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": true,
+        "edgeCases": [
+          "asserted terminal loss: budget",
+          "terminal controls disabled",
+          "restart after both win and loss restores initial state",
+          "320px layout has no horizontal overflow",
+          "text board description present",
+          "free aim adjustment preserves field turn"
+        ],
+        "inputMethod": "Only public button touchscreen taps, including the complete solver-derived winning and losing action paths."
+      },
+      {
+        "id": "lantern-defense",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": false,
+        "edgeCases": [
+          "asserted terminal loss: bases were lost",
+          "terminal controls disabled",
+          "restart after both win and loss restores initial state",
+          "320px layout has no horizontal overflow",
+          "text board description present",
+          "free targeting preserves incoming clock"
+        ],
+        "inputMethod": "Native Enter activation of focused public buttons for full solver-derived win and loss; arrow input verified inert after terminal."
+      },
+      {
+        "id": "lantern-defense",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": true,
+        "edgeCases": [
+          "asserted terminal loss: bases were lost",
+          "terminal controls disabled",
+          "restart after both win and loss restores initial state",
+          "320px layout has no horizontal overflow",
+          "text board description present",
+          "free targeting preserves incoming clock"
+        ],
+        "inputMethod": "Only public button touchscreen taps, including the complete solver-derived winning and losing action paths."
+      },
+      {
+        "id": "little-walkers",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": false,
+        "edgeCases": [
+          "asserted terminal loss: quota",
+          "terminal controls disabled",
+          "restart after both win and loss restores initial state",
+          "320px layout has no horizontal overflow",
+          "text board description present",
+          "unspawned walker cannot consume a kit"
+        ],
+        "inputMethod": "Native Enter activation of focused public buttons for full solver-derived win and loss; arrow input verified inert after terminal."
+      },
+      {
+        "id": "little-walkers",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": true,
+        "edgeCases": [
+          "asserted terminal loss: quota",
+          "terminal controls disabled",
+          "restart after both win and loss restores initial state",
+          "320px layout has no horizontal overflow",
+          "text board description present",
+          "unspawned walker cannot consume a kit"
+        ],
+        "inputMethod": "Only public button touchscreen taps, including the complete solver-derived winning and losing action paths."
+      }
+    ]
+  },
+  "finishedAt": "2026-10-01T04:13:34.518Z"
+}

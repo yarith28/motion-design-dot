@@ -3,15 +3,14 @@
   "suite": "sky-stack",
   "passed": true,
   "status": "passed",
-  "startedAt": "2026-10-01T02:00:49.427Z",
+  "startedAt": "2026-10-01T04:08:45.414Z",
   "source": {
-    "sha256": "62efc9f0e93e8eb2ff6fd81ddfc4acb60c37ca772563d311239f6d7b8f6b112c",
+    "sha256": "a528b7d40c873d72912f171c67bc545ba0ce8376c4f984a1ce227a17cbcaeefd",
     "files": [
       "catalog.css",
       "catalog.js",
       "common.js",
       "index.html",
-      "inventory-plan.json",
       "inventory.json",
       "play.css",
       "sky-stack/game.css",
@@ -48,9 +47,9 @@
   "servedRuntimeBefore": {
     "baseURL": "http://127.0.0.1:8790",
     "passed": true,
-    "sha256": "7d8a3013f25909f66978ad45525a96a997db8ed74b5cddd165d3df26ad15e3ea",
-    "fileCount": 11,
-    "verifiedAt": "2026-10-01T02:00:49.829Z"
+    "sha256": "a9427432a9d602b6028cc713f1fbfd953881139b51cb15d9de71af1251e53433",
+    "fileCount": 10,
+    "verifiedAt": "2026-10-01T04:08:45.564Z"
   },
   "exitCode": 0,
   "signal": null,
@@ -58,9 +57,10 @@
   "servedRuntime": {
     "baseURL": "http://127.0.0.1:8790",
     "passed": true,
-    "sha256": "7d8a3013f25909f66978ad45525a96a997db8ed74b5cddd165d3df26ad15e3ea",
-    "fileCount": 11,
-    "verifiedAt": "2026-10-01T02:01:44.611Z"
+    "sha256": "a9427432a9d602b6028cc713f1fbfd953881139b51cb15d9de71af1251e53433",
+    "fileCount": 10,
+    "verifiedAt": "2026-10-01T04:08:59.212Z"
   },
-  "finishedAt": "2026-10-01T02:01:44.611Z"
+  "completionEvidence": null,
+  "finishedAt": "2026-10-01T04:08:59.212Z"
 }

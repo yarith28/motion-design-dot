@@ -95,7 +95,10 @@ async function completeOrbit(page, touch=false) {
   await page.locator('.card').first().focus();await page.keyboard.press('ArrowRight');assert.equal(await page.locator('.card').nth(1).evaluate(e=>e===document.activeElement),true);
   await completeMemory(page);await page.screenshot({path:out+'/memory-complete.png',fullPage:true});
   await page.locator('#again').click();assert.equal((await page.evaluate(()=>probe())).turns,0);
-  await page.getByRole('link',{name:'All games'}).click();await page.getByRole('link',{name:'Find your pairs'}).click();assert.equal(await page.locator('#best').innerText(),'8');
+  await page.getByRole('link',{name:'All games'}).click();await page.getByRole('link',{name:'Find your pairs'}).click();
+  // The new document exposes #best before its deferred game script restores storage.
+  // Wait for page readiness, then assert the record; do not poll for the expected value.
+  await page.waitForLoadState('load');assert.equal(await page.locator('#best').innerText(),'8');
   await open(page,'good-order');await page.screenshot({path:out+'/puzzle-desktop.png',fullPage:true});
   for(let i=0;i<25;i++) {const {cells}=await page.evaluate(()=>probe());let inversions=0;for(let a=0;a<9;a++)for(let b=a+1;b<9;b++)if(cells[a]&&cells[b]&&cells[a]>cells[b])inversions++;assert.equal(inversions%2,0);assert.notEqual(cells.join(''),'123456780');await page.locator('#restart').click()}
   await page.locator('#peek').click();const before=await page.evaluate(()=>probe());await page.keyboard.press('ArrowLeft');assert.deepEqual((await page.evaluate(()=>probe())).cells,before.cells);await page.locator('#peek').click();

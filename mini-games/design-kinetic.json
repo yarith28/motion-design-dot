@@ -1,0 +1,202 @@
+[
+  {
+    "id": "vector-rally",
+    "name": "Vector Rally",
+    "coreLoop": "Choose integer acceleration; your accumulated velocity traces a swept path around a race course. Brake before bends.",
+    "nearestExisting": "Star Tow",
+    "decisiveDifference": "Discrete acceleration planning and swept collision on a race track, not free-flight cargo collection.",
+    "qualityPlan": "Deterministic simulation with visible state; keyboard and touch controls; restart and terminal state; UI-input solution and failure checks.",
+    "nearestNew": "trailer-yard",
+    "newDifference": "Velocity addition versus articulated reverse steering."
+  },
+  {
+    "id": "border-bloom",
+    "name": "Border Bloom",
+    "coreLoop": "Leave a safe border to draw an exposed trail; reconnect to claim territory while a roaming hazard can cut the trail.",
+    "nearestExisting": "Velvet Snake",
+    "decisiveDifference": "Enclose area and return to safety; trail resets rather than growing a permanent body.",
+    "qualityPlan": "Deterministic simulation with visible state; keyboard and touch controls; restart and terminal state; UI-input solution and failure checks.",
+    "nearestNew": "fuse-garden",
+    "newDifference": "Area enclosure versus placing timed explosive hazards."
+  },
+  {
+    "id": "lantern-heist",
+    "name": "Lantern Heist",
+    "coreLoop": "Steal seals while avoiding rotating patrol sightlines; lure guards with a noise decoy, then reach the exit.",
+    "nearestExisting": "Rover Script",
+    "decisiveDifference": "Direct stealth movement against clocked enemy visibility and distraction, rather than queued single-agent commands.",
+    "qualityPlan": "Deterministic simulation with visible state; keyboard and touch controls; restart and terminal state; UI-input solution and failure checks.",
+    "nearestNew": "echo-steps",
+    "newDifference": "Visibility/patrol phase versus recording cooperative movement."
+  },
+  {
+    "id": "boulder-burrow",
+    "name": "Boulder Burrow",
+    "coreLoop": "Excavate soil under falling and rolling boulders to uncover gems without being crushed or sealing the escape.",
+    "nearestExisting": "Crate Crane",
+    "decisiveDifference": "Gravity updates terrain after every step; no stack sorting or crate push target.",
+    "qualityPlan": "Deterministic simulation with visible state; keyboard and touch controls; restart and terminal state; UI-input solution and failure checks.",
+    "nearestNew": "soft-sculpt",
+    "newDifference": "Excavation changes a falling hazard field versus selective structural removal."
+  },
+  {
+    "id": "fuse-garden",
+    "name": "Fuse Garden",
+    "coreLoop": "Plant delayed cross-blast bombs, shelter behind masonry, and chain detonate barriers to reach the exit.",
+    "nearestExisting": "Minefield",
+    "decisiveDifference": "Create and schedule hazards yourself; timed escape and destructive topology rather than hidden-mine deduction.",
+    "qualityPlan": "Deterministic simulation with visible state; keyboard and touch controls; restart and terminal state; UI-input solution and failure checks.",
+    "nearestNew": "lantern-defense",
+    "newDifference": "Player-created escape hazards versus remote interception coverage."
+  },
+  {
+    "id": "quiet-foil",
+    "name": "Quiet Foil",
+    "coreLoop": "Manage distance and stamina against telegraphed thrusts; parry to open a riposte or retreat to recover.",
+    "nearestExisting": "Rope Skip",
+    "decisiveDifference": "Opponent state, spacing, resource and initiative decisions rather than periodic timing.",
+    "qualityPlan": "Deterministic simulation with visible state; keyboard and touch controls; restart and terminal state; UI-input solution and failure checks.",
+    "nearestNew": "ricochet-duel",
+    "newDifference": "Distance/stamina/initiative duel versus spatial ray origin and banking."
+  },
+  {
+    "id": "four-holds",
+    "name": "Four Holds",
+    "coreLoop": "Move individual climbing limbs between reachable holds while maintaining support and controlling fatigue.",
+    "nearestExisting": "Balance Mobile",
+    "decisiveDifference": "Moving contact topology and reach constraints, not static torque equation.",
+    "qualityPlan": "Deterministic simulation with visible state; keyboard and touch controls; restart and terminal state; UI-input solution and failure checks.",
+    "nearestNew": "spring-courier",
+    "newDifference": "Maintained contact constraints versus free-flight pendulum transitions."
+  },
+  {
+    "id": "trailer-yard",
+    "name": "Trailer Yard",
+    "coreLoop": "Steer and reverse an articulated tractor/trailer into a loading bay without jackknifing.",
+    "nearestExisting": "Star Tow",
+    "decisiveDifference": "Coupled tractor/trailer headings, reversing and final alignment rather than inertial docking.",
+    "qualityPlan": "Deterministic simulation with visible state; keyboard and touch controls; restart and terminal state; UI-input solution and failure checks.",
+    "nearestNew": "vector-rally",
+    "newDifference": "Coupled orientations versus independent integer acceleration."
+  },
+  {
+    "id": "gravity-boots",
+    "name": "Gravity Boots",
+    "coreLoop": "Flip gravity to traverse floors and ceilings, retaining horizontal velocity through spike-lined chambers.",
+    "nearestExisting": "Kite Flight",
+    "decisiveDifference": "Surface polarity and lateral momentum; no repeated hold-to-rise gates.",
+    "qualityPlan": "Deterministic simulation with visible state; keyboard and touch controls; restart and terminal state; UI-input solution and failure checks.",
+    "nearestNew": "portal-parcel",
+    "newDifference": "Surface gravity and drift versus placing then exchanging with a remote body."
+  },
+  {
+    "id": "portal-parcel",
+    "name": "Portal Parcel",
+    "coreLoop": "Throw a bouncing beacon, let it travel, then exchange positions to bypass solid barriers.",
+    "nearestExisting": "Orbit Transfer",
+    "decisiveDifference": "Ballistic remote-body placement followed by position exchange, not a fixed directed graph.",
+    "qualityPlan": "Deterministic simulation with visible state; keyboard and touch controls; restart and terminal state; UI-input solution and failure checks.",
+    "nearestNew": "gravity-boots",
+    "newDifference": "Remote throw/swap body transfer versus local gravity polarity."
+  },
+  {
+    "id": "echo-steps",
+    "name": "Echo Steps",
+    "coreLoop": "Record a route, rewind, then cooperate with its replay to hold switches and open a timed exit.",
+    "nearestExisting": "Rover Script",
+    "decisiveDifference": "Two simultaneous time-offset bodies and pressure-plate cooperation rather than single-agent queued route.",
+    "qualityPlan": "Deterministic simulation with visible state; keyboard and touch controls; restart and terminal state; UI-input solution and failure checks.",
+    "nearestNew": "lantern-heist",
+    "newDifference": "Recorded simultaneous cooperation versus adversarial patrol surveillance."
+  },
+  {
+    "id": "phase-walk",
+    "name": "Phase Walk",
+    "coreLoop": "Change between three material phases to pass selective walls; phase anchors restrict where you may change.",
+    "nearestExisting": "Orbit Transfer",
+    "decisiveDifference": "State-dependent physical passability with restricted phase transitions, not graph-edge routing.",
+    "qualityPlan": "Deterministic simulation with visible state; keyboard and touch controls; restart and terminal state; UI-input solution and failure checks.",
+    "nearestNew": "gravity-boots",
+    "newDifference": "Discrete anchored material state versus continuous velocity/gravity."
+  },
+  {
+    "id": "wind-sail",
+    "name": "Wind Sail",
+    "coreLoop": "Choose heading and sail trim to tack against wind through separated racing buoys without stalling or grounding.",
+    "nearestExisting": "Star Tow",
+    "decisiveDifference": "Wind-relative propulsion and an upwind no-go cone require tacking rather than thrust/braking.",
+    "qualityPlan": "Deterministic simulation with visible state; keyboard and touch controls; restart and terminal state; UI-input solution and failure checks.",
+    "nearestNew": "vector-rally",
+    "newDifference": "Wind-relative tacking and sail trim versus acceleration racing."
+  },
+  {
+    "id": "scissor-lift",
+    "name": "Scissor Lift",
+    "coreLoop": "Drive a telescoping vehicle under ceilings, raise its deck to receive freight, then carry and unload at elevated docks.",
+    "nearestExisting": "Sky Stack",
+    "decisiveDifference": "Vehicle clearance, changing geometry, and loaded-height safety rather than dropping blocks.",
+    "qualityPlan": "Deterministic simulation with visible state; keyboard and touch controls; restart and terminal state; UI-input solution and failure checks.",
+    "nearestNew": "trailer-yard",
+    "newDifference": "Variable vehicle height and sway versus articulated yaw."
+  },
+  {
+    "id": "ricochet-duel",
+    "name": "Ricochet Duel",
+    "coreLoop": "Aim reflecting rays past walls and an oriented rotating shield; alternate repositioning and shooting with limited ammunition.",
+    "nearestExisting": "Afterglow",
+    "decisiveDifference": "Moving shot origin, rotating directional shield and enemy column attacks govern alternating tactical turns rather than brick volley survival.",
+    "qualityPlan": "Deterministic simulation with visible state; keyboard and touch controls; restart and terminal state; UI-input solution and failure checks.",
+    "nearestNew": "shatter-belt",
+    "newDifference": "Origin/reflective paths/shield facing versus threat subdivision."
+  },
+  {
+    "id": "soft-sculpt",
+    "name": "Soft Sculpt",
+    "coreLoop": "Cut bonds in a weighted hanging network; disconnected components fall irreversibly. Reach target suspended mass and zero torque while retaining a protected weight.",
+    "nearestExisting": "Balance Mobile",
+    "decisiveDifference": "Inverse removal through graph connectivity, redundant supports and irreversible falling components; no free weight placement.",
+    "qualityPlan": "Deterministic simulation with visible state; keyboard and touch controls; restart and terminal state; UI-input solution and failure checks.",
+    "nearestNew": "four-holds",
+    "newDifference": "Network disconnection changes retained load; climbing changes individual contacts and reach."
+  },
+  {
+    "id": "spring-courier",
+    "name": "Spring Courier",
+    "coreLoop": "Pump a suspended parcel, release its pendulum, then catch a new anchor or a landing platform.",
+    "nearestExisting": "Rope Skip",
+    "decisiveDifference": "Pendulum energy and anchor-to-anchor travel, not jumping over a timed sweep.",
+    "qualityPlan": "Deterministic simulation with visible state; keyboard and touch controls; restart and terminal state; UI-input solution and failure checks.",
+    "nearestNew": "four-holds",
+    "newDifference": "Momentum and tangent release versus limb reach/support constraints."
+  },
+  {
+    "id": "shatter-belt",
+    "name": "Shatter Belt",
+    "coreLoop": "Rotate and fire at drifting rocks that split into smaller faster fragments; manage recoil and shield protection.",
+    "nearestExisting": "Star Tow",
+    "decisiveDifference": "Threat subdivision and line-of-fire positioning rather than cargo collection; combat changes obstacle population.",
+    "qualityPlan": "Deterministic simulation with visible state; keyboard and touch controls; restart and terminal state; UI-input solution and failure checks.",
+    "nearestNew": "ricochet-duel",
+    "newDifference": "Splitting threat population versus a defended target with oriented shield."
+  },
+  {
+    "id": "lantern-defense",
+    "name": "Lantern Defense",
+    "coreLoop": "Launch expanding interceptors ahead of descending projectiles; chain blast coverage protects three separated bases with finite ammunition.",
+    "nearestExisting": "Garden Guard",
+    "decisiveDifference": "Predictive interception and persistent expanding areas, not tapping targets at their current position.",
+    "qualityPlan": "Deterministic simulation with visible state; keyboard and touch controls; restart and terminal state; UI-input solution and failure checks.",
+    "nearestNew": "fuse-garden",
+    "newDifference": "Remote growing blast prediction versus sheltering from self-planted bombs."
+  },
+  {
+    "id": "little-walkers",
+    "name": "Little Walkers",
+    "coreLoop": "Assign limited builder, digger and blocker jobs to autonomous walkers; reshape terrain and rescue a quota.",
+    "nearestExisting": "Rover Script",
+    "decisiveDifference": "Concurrent agents, scarce terrain-changing roles and emergent paths rather than a queued single-agent script.",
+    "qualityPlan": "Deterministic simulation with visible state; keyboard and touch controls; restart and terminal state; UI-input solution and failure checks.",
+    "nearestNew": "echo-steps",
+    "newDifference": "Scarce jobs alter shared terrain for concurrent agents versus one replayed collaborator."
+  }
+]

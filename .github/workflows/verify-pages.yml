@@ -16,9 +16,11 @@ concurrency:
 jobs:
   live-browser-check:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
+      - name: Preserve the original collection and showcase
+        run: node mini-games/tests/preservation.cjs
       - name: Install test-only browser dependencies
         run: |
           npm install --prefix "$RUNNER_TEMP/pages-smoke" playwright@1.55.0
@@ -36,7 +38,7 @@ jobs:
         run: |
           set -o pipefail
           export CHROMIUM_PATH="$(node -e "process.stdout.write(require('playwright').chromium.executablePath())")"
-          for suite in resume-focus number-room-review-regressions spatial-accessibility review-arcade-strategy; do
+          for suite in resume-focus number-room-review-regressions spatial-accessibility review-arcade-strategy expansion-controls; do
             node "mini-games/tests/$suite.cjs" | tee "live-verification/fix-$suite-chromium.log"
           done
       - name: Install WebKit for browser-engine regression checks
@@ -50,7 +52,7 @@ jobs:
           BROWSER_ENGINE: webkit
         run: |
           set -o pipefail
-          for suite in resume-focus number-room-review-regressions spatial-accessibility review-arcade-strategy; do
+          for suite in resume-focus number-room-review-regressions spatial-accessibility review-arcade-strategy expansion-controls; do
             node "mini-games/tests/$suite.cjs" | tee "live-verification/fix-$suite-webkit.log"
           done
       - name: Save live verification evidence
@@ -59,4 +61,38 @@ jobs:
         with:
           name: live-arcade-verification
           path: live-verification/
+          retention-days: 7
+  new-game-completion:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    strategy:
+      fail-fast: false
+      matrix:
+        room: [systems-room, tabletop-room, puzzle-lab, kinetic-room, discovery-room]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install test-only browser dependencies
+        run: |
+          npm install --prefix "$RUNNER_TEMP/completion" playwright@1.55.0
+          "$RUNNER_TEMP/completion/node_modules/.bin/playwright" install chromium
+      - name: Complete every new game through desktop and touch UI
+        env:
+          NODE_PATH: ${{ runner.temp }}/completion/node_modules
+          BASE_URL: http://127.0.0.1:8790
+          ROOM: ${{ matrix.room }}
+        run: |
+          export CHROMIUM_PATH="$(node -e "process.stdout.write(require('playwright').chromium.executablePath())")"
+          python3 -m http.server 8790 --bind 127.0.0.1 > "$RUNNER_TEMP/server.log" 2>&1 &
+          node mini-games/tools/run-suite.cjs "$ROOM"
+          node mini-games/tests/evidence-index.cjs
+          node mini-games/tests/evidence-fresh.cjs
+          node mini-games/tools/coverage-index.cjs
+      - name: Save exact-commit completion evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: completion-${{ matrix.room }}
+          path: |
+            mini-games/coverage/${{ matrix.room }}.json
+            mini-games/coverage/suite-runs/${{ matrix.room }}.json
           retention-days: 7

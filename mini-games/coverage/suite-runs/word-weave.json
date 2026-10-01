@@ -3,15 +3,14 @@
   "suite": "word-weave",
   "passed": true,
   "status": "passed",
-  "startedAt": "2026-10-01T02:00:56.029Z",
+  "startedAt": "2026-10-01T04:08:33.552Z",
   "source": {
-    "sha256": "dd3db5c4a765e44fcdc9935029fcca968ef8e54fe8f42425026f659ffb708046",
+    "sha256": "33ecdcb498a754ff133cb2ebad4695b25cf2ac88de196aaa829b7e53b639976d",
     "files": [
       "catalog.css",
       "catalog.js",
       "common.js",
       "index.html",
-      "inventory-plan.json",
       "inventory.json",
       "play.css",
       "styles.css",
@@ -32,11 +31,11 @@
   "scope": {
     "desktopCompletion": true,
     "mobileViewportCompletion": true,
-    "touchGameplayCompletion": true,
+    "touchGameplayCompletion": false,
     "touchControlSmoke": true,
     "completionMeans": "winning full progression",
     "method": "scripted UI; curated answers or board solvers",
-    "mobileMethod": "touch gameplay with scripted navigation/solvers"
+    "mobileMethod": "touch gameplay mixed with mouse check/undo actions"
   },
   "games": [
     "word-weave"
@@ -48,9 +47,9 @@
   "servedRuntimeBefore": {
     "baseURL": "http://127.0.0.1:8790",
     "passed": true,
-    "sha256": "a69e6b694e735b3ba6457f70d7246df10b71bd790eeb1094b11b83dfbeafe69f",
-    "fileCount": 11,
-    "verifiedAt": "2026-10-01T02:00:56.966Z"
+    "sha256": "7e8579e43a3a792578001c03dfa7392fccb49fb69eae82d8304976e0914d0747",
+    "fileCount": 10,
+    "verifiedAt": "2026-10-01T04:08:33.659Z"
   },
   "exitCode": 0,
   "signal": null,
@@ -58,9 +57,10 @@
   "servedRuntime": {
     "baseURL": "http://127.0.0.1:8790",
     "passed": true,
-    "sha256": "a69e6b694e735b3ba6457f70d7246df10b71bd790eeb1094b11b83dfbeafe69f",
-    "fileCount": 11,
-    "verifiedAt": "2026-10-01T02:01:39.183Z"
+    "sha256": "7e8579e43a3a792578001c03dfa7392fccb49fb69eae82d8304976e0914d0747",
+    "fileCount": 10,
+    "verifiedAt": "2026-10-01T04:08:45.353Z"
   },
-  "finishedAt": "2026-10-01T02:01:39.183Z"
+  "completionEvidence": null,
+  "finishedAt": "2026-10-01T04:08:45.354Z"
 }

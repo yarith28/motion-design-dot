@@ -1,0 +1,1808 @@
+{
+  "commit": "6f4469cc7491b2b6255e7479c20880adf99787df",
+  "games": [
+    {
+      "id": "signal-run",
+      "name": "Signal Run",
+      "category": "reflex",
+      "url": "signal-run/",
+      "family": "original",
+      "status": "playable"
+    },
+    {
+      "id": "double-take",
+      "name": "Double Take",
+      "category": "memory",
+      "url": "double-take/",
+      "family": "original",
+      "status": "playable"
+    },
+    {
+      "id": "pocket-orbit",
+      "name": "Pocket Orbit",
+      "category": "reflex",
+      "url": "pocket-orbit/",
+      "family": "original",
+      "status": "playable"
+    },
+    {
+      "id": "good-order",
+      "name": "Good Order",
+      "category": "puzzle",
+      "url": "good-order/",
+      "family": "original",
+      "status": "playable"
+    },
+    {
+      "id": "afterglow",
+      "name": "Afterglow",
+      "category": "adventure",
+      "url": "afterglow/",
+      "family": "original",
+      "status": "playable"
+    },
+    {
+      "id": "lantern-lines",
+      "name": "Lantern Lines",
+      "category": "puzzle",
+      "url": "lantern-lines/",
+      "family": "original",
+      "status": "playable"
+    },
+    {
+      "id": "tide-pool",
+      "name": "Tide Pool",
+      "category": "strategy",
+      "url": "tide-pool/",
+      "family": "original",
+      "status": "playable"
+    },
+    {
+      "id": "word-weave",
+      "name": "Word Weave",
+      "category": "puzzle",
+      "url": "word-weave/",
+      "family": "original",
+      "status": "playable"
+    },
+    {
+      "id": "sky-stack",
+      "name": "Sky Stack",
+      "category": "reflex",
+      "url": "sky-stack/",
+      "family": "original",
+      "status": "playable"
+    },
+    {
+      "id": "pebble-post",
+      "name": "Pebble Post",
+      "category": "strategy",
+      "url": "pebble-post/",
+      "family": "original",
+      "status": "playable"
+    },
+    {
+      "id": "tangram-dock",
+      "name": "Tangram Dock",
+      "description": "Fit three unusual cargo shapes into a perfectly packed dock.",
+      "mechanic": "polyomino packing",
+      "rules": [
+        "Choose a piece, then an empty square for its top-left corner.",
+        "Fill every square without overlaps. Remove a placed piece by choosing it again."
+      ],
+      "controls": "Tap or click buttons. Tab and Enter / Space work throughout.",
+      "category": "puzzle",
+      "url": "spatial-room/?game=tangram-dock",
+      "accent": "#e4b07d",
+      "symbol": "▧",
+      "family": "spatial-room",
+      "status": "playable"
+    },
+    {
+      "id": "mirror-mail",
+      "name": "Mirror Mail",
+      "description": "Deliver a beam through a tiny mirrored sorting room.",
+      "mechanic": "ray reflection",
+      "rules": [
+        "Tap mirrors to turn them between / and \\.",
+        "Send light from the left entrance to the bottom delivery port."
+      ],
+      "controls": "Tap or click buttons. Tab and Enter / Space work throughout.",
+      "category": "puzzle",
+      "url": "spatial-room/?game=mirror-mail",
+      "accent": "#e4b07d",
+      "symbol": "↗",
+      "family": "spatial-room",
+      "status": "playable"
+    },
+    {
+      "id": "bilateral",
+      "name": "Bilateral",
+      "description": "Restore the missing half of a woven reflection.",
+      "mechanic": "reflection drawing",
+      "rules": [
+        "The left pattern is fixed. Toggle squares on the right.",
+        "Match the exact horizontal reflection across the seam."
+      ],
+      "controls": "Tap or click buttons. Tab and Enter / Space work throughout.",
+      "category": "puzzle",
+      "url": "spatial-room/?game=bilateral",
+      "accent": "#e4b07d",
+      "symbol": "◐",
+      "family": "spatial-room",
+      "status": "playable"
+    },
+    {
+      "id": "shadow-turn",
+      "name": "Shadow Turn",
+      "description": "Turn four silhouettes until their shadows agree.",
+      "mechanic": "independent shape rotation",
+      "rules": [
+        "Each large cutout turns one quarter clockwise when tapped.",
+        "Match all four cutouts to their small reference silhouettes.",
+        "Complete all three curated studies to finish the round."
+      ],
+      "controls": "Tap or click buttons. Tab and Enter / Space work throughout.",
+      "category": "puzzle",
+      "url": "spatial-room/?game=shadow-turn",
+      "accent": "#e4b07d",
+      "symbol": "◴",
+      "family": "spatial-room",
+      "status": "playable"
+    },
+    {
+      "id": "loose-ends",
+      "name": "Loose Ends",
+      "description": "Exchange crossing points to untangle a knotted necklace.",
+      "mechanic": "graph untangling",
+      "rules": [
+        "Select a point, then another point to swap their positions.",
+        "Remove every crossing between non-adjacent cords."
+      ],
+      "controls": "Tap or click buttons. Tab and Enter / Space work throughout.",
+      "category": "puzzle",
+      "url": "spatial-room/?game=loose-ends",
+      "accent": "#e4b07d",
+      "symbol": "⌘",
+      "family": "spatial-room",
+      "status": "playable"
+    },
+    {
+      "id": "gear-train",
+      "name": "Gear Train",
+      "description": "Plan three compound transmissions, from paired reducers to a locked input and a mixed-speed train.",
+      "mechanic": "Adjacent-swap compound transmission planning",
+      "rules": [
+        "Select a gear, then its neighbor in the A → B → C bench order to exchange them. Each exchange counts once; selecting the same gear again cancels. Bolted sockets cannot move.",
+        "Each mesh must meet its displayed teeth ratio: driver teeth ÷ follower teeth. Mesh ratios multiply into the output speed, but the correct final product alone is not enough.",
+        "Test the train to certify a study, then choose Next study. Finish all three. Undo reverses a swap; Reset this study keeps earlier progress; Restart begins the whole journey."
+      ],
+      "controls": "Select adjacent bench gears by tap or keyboard Enter/Space. Test certifies a study; Undo reverses a swap. Three studies with four then six sockets.",
+      "category": "puzzle",
+      "url": "spatial-room/?game=gear-train",
+      "accent": "#e4b07d",
+      "symbol": "⚙",
+      "family": "spatial-room",
+      "status": "playable"
+    },
+    {
+      "id": "measured-pour",
+      "name": "Measured Pour",
+      "description": "Measure a precise parcel of water with two unmarked jugs.",
+      "mechanic": "jug transfer",
+      "rules": [
+        "Fill, empty, or pour between the 3L and 5L jugs.",
+        "Leave exactly 4L in the large jug. Pours stop when full or empty."
+      ],
+      "controls": "Tap or click buttons. Tab and Enter / Space work throughout.",
+      "category": "puzzle",
+      "url": "spatial-room/?game=measured-pour",
+      "accent": "#e4b07d",
+      "symbol": "◒",
+      "family": "spatial-room",
+      "status": "playable"
+    },
+    {
+      "id": "rover-script",
+      "name": "Rover Script",
+      "description": "Write a short route for a little delivery rover.",
+      "mechanic": "robot programming",
+      "rules": [
+        "Queue forward, left, or right commands; Run executes the route.",
+        "Collect the parcel and reach the flag without hitting walls. Clear edits your program."
+      ],
+      "controls": "Tap or click buttons. Tab and Enter / Space work throughout.",
+      "category": "puzzle",
+      "url": "spatial-room/?game=rover-script",
+      "accent": "#e4b07d",
+      "symbol": "⌁",
+      "family": "spatial-room",
+      "status": "playable"
+    },
+    {
+      "id": "paper-trail",
+      "name": "Paper Trail",
+      "description": "Fold a marked strip into one perfectly aligned stack.",
+      "mechanic": "paper folding",
+      "rules": [
+        "Fold the left or right half onto the other half.",
+        "Match the target top-to-bottom layer order after three folds."
+      ],
+      "controls": "Tap or click buttons. Tab and Enter / Space work throughout.",
+      "category": "puzzle",
+      "url": "spatial-room/?game=paper-trail",
+      "accent": "#e4b07d",
+      "symbol": "▱",
+      "family": "spatial-room",
+      "status": "playable"
+    },
+    {
+      "id": "pigment-lab",
+      "name": "Pigment Lab",
+      "description": "Move translucent ink stencils to restore three layered prints.",
+      "mechanic": "Spatial subtractive-color stencil alignment",
+      "rules": [
+        "Choose a cyan, magenta or yellow stencil, then tap its top-left anchor on your print. Stencils may overlap but must fit on the paper.",
+        "Rotate turns the selected stencil clockwise and lifts it for repositioning. Match the reference, including all blank cells.",
+        "Complete three different print studies. C, M and Y letters identify inks and mixtures, so color is never the only clue."
+      ],
+      "controls": "Tap a stencil, Rotate if needed, then a grid square. Tab and Enter / Space operate every control. Lift removes the selected stencil.",
+      "category": "puzzle",
+      "url": "spatial-room/?game=pigment-lab",
+      "accent": "#e4b07d",
+      "symbol": "●",
+      "family": "spatial-room",
+      "status": "playable"
+    },
+    {
+      "id": "cable-loom",
+      "name": "Cable Loom",
+      "description": "Thread a cable through every brass peg in one stroke.",
+      "mechanic": "Hamiltonian path",
+      "rules": [
+        "Begin at S and tap a neighboring peg to extend the cable.",
+        "Visit every peg once, finishing at E. Undo retracts one segment."
+      ],
+      "controls": "Tap or click buttons. Tab and Enter / Space work throughout.",
+      "category": "puzzle",
+      "url": "spatial-room/?game=cable-loom",
+      "accent": "#e4b07d",
+      "symbol": "⌇",
+      "family": "spatial-room",
+      "status": "playable"
+    },
+    {
+      "id": "balance-mobile",
+      "name": "Balance Mobile",
+      "description": "Compose three balanced sculptures, from symmetry to fixed anchors and uneven arms.",
+      "mechanic": "Progressive torque placement with asymmetric arms and fixed anchors",
+      "rules": [
+        "Choose a free weight, then an empty hook. A hung free weight can be lifted by selecting it again. Every available weight must be used once.",
+        "Balance total left and right torque: each weight contributes its mass multiplied by its distance from the center. The sculpture tilts toward the heavier torque.",
+        "Complete three sculptures. Green anchor weights and hooks marked FIXED cannot move. Later sculptures use unequal arm distances; Restart begins all three again."
+      ],
+      "controls": "Tap a weight and hook, or use Tab then Enter / Space. Lettered hooks show side and distance; numeric torque and tilt both reflect the arrangement.",
+      "category": "puzzle",
+      "url": "spatial-room/?game=balance-mobile",
+      "accent": "#e4b07d",
+      "symbol": "⚖",
+      "family": "spatial-room",
+      "status": "playable"
+    },
+    {
+      "id": "crate-crane",
+      "name": "Crate Crane",
+      "description": "Sort a little freight yard using only its top containers.",
+      "mechanic": "stack rearrangement",
+      "rules": [
+        "Select a stack to lift its top crate, then a destination.",
+        "Stacks hold three crates. Make the left stack all A and the right stack all B."
+      ],
+      "controls": "Tap or click buttons. Tab and Enter / Space work throughout.",
+      "category": "puzzle",
+      "url": "spatial-room/?game=crate-crane",
+      "accent": "#e4b07d",
+      "symbol": "▥",
+      "family": "spatial-room",
+      "status": "playable"
+    },
+    {
+      "id": "orbit-transfer",
+      "name": "Orbit Transfer",
+      "description": "Navigate a one-way constellation while collecting every beacon.",
+      "mechanic": "directed route planning",
+      "rules": [
+        "Travel along an available arrow from your current station.",
+        "Collect the three beacons, then dock at F before the 8-step fuel reserve runs out."
+      ],
+      "controls": "Tap or click buttons. Tab and Enter / Space work throughout.",
+      "category": "puzzle",
+      "url": "spatial-room/?game=orbit-transfer",
+      "accent": "#e4b07d",
+      "symbol": "✧",
+      "family": "spatial-room",
+      "status": "playable"
+    },
+    {
+      "id": "stamp-studio",
+      "name": "Stamp Studio",
+      "description": "Compose a print from overlapping transparent stamps.",
+      "mechanic": "set union composition",
+      "rules": [
+        "Toggle stamps in the tray to overlay their ink.",
+        "Match the target print. Ink only adds: extra squares cannot be erased by another stamp.",
+        "Complete all three curated studies to finish the round."
+      ],
+      "controls": "Tap or click buttons. Tab and Enter / Space work throughout.",
+      "category": "puzzle",
+      "url": "spatial-room/?game=stamp-studio",
+      "accent": "#e4b07d",
+      "symbol": "▦",
+      "family": "spatial-room",
+      "status": "playable"
+    },
+    {
+      "id": "minefield",
+      "name": "Minefield",
+      "category": "puzzle",
+      "description": "Reveal the meadow without disturbing a mine.",
+      "mechanic": "Safe-first-click minesweeper",
+      "rules": [
+        "Reveal every safe square. Numbers count neighboring mines, including diagonals.",
+        "Switch to Flag to mark a suspected mine. Your first reveal is always safe."
+      ],
+      "controls": "Tap or click cells and controls; Tab then Enter / Space works throughout. Arrow keys navigate the board.",
+      "url": "logic-room/?game=minefield",
+      "accent": "#e3c18d",
+      "symbol": "✳",
+      "family": "logic-room",
+      "status": "playable"
+    },
+    {
+      "id": "picross-post",
+      "name": "Picross Post",
+      "category": "puzzle",
+      "description": "A tiny picture, written in numbers.",
+      "mechanic": "Nonogram run deduction",
+      "rules": [
+        "Numbers beside each row and column describe consecutive filled runs, separated by at least one empty cell.",
+        "Tap to fill. Tap again to mark empty, then again to clear. Check when your picture is ready."
+      ],
+      "controls": "Tap or click cells and controls; Tab then Enter / Space works throughout. Arrow keys navigate the board.",
+      "url": "logic-room/?game=picross-post",
+      "accent": "#d6bbdd",
+      "symbol": "▦",
+      "family": "logic-room",
+      "status": "playable"
+    },
+    {
+      "id": "ninefold",
+      "name": "Ninefold",
+      "category": "puzzle",
+      "description": "Four numbers. Three kinds of harmony.",
+      "mechanic": "Mini Sudoku",
+      "rules": [
+        "Fill empty cells with 1–4. Each row, column and outlined 2×2 box must contain each digit once.",
+        "Choose a digit, then a square. Given digits cannot change."
+      ],
+      "controls": "Tap or click cells and controls; Tab then Enter / Space works throughout. Arrow keys navigate the board.",
+      "url": "logic-room/?game=ninefold",
+      "accent": "#bdd6b7",
+      "symbol": "4",
+      "family": "logic-room",
+      "status": "playable"
+    },
+    {
+      "id": "equal-measure",
+      "name": "Equal Measure",
+      "category": "puzzle",
+      "description": "Bring dark and light into balance.",
+      "mechanic": "Binary constraint puzzle",
+      "rules": [
+        "Each row and column needs two suns and two moons. Never place three identical symbols consecutively.",
+        "Every row must differ from every other row, and columns must also be unique. Tap blanks to cycle symbols."
+      ],
+      "controls": "Tap or click cells and controls; Tab then Enter / Space works throughout. Arrow keys navigate the board.",
+      "url": "logic-room/?game=equal-measure",
+      "accent": "#ead38d",
+      "symbol": "◐",
+      "family": "logic-room",
+      "status": "playable"
+    },
+    {
+      "id": "taller-tales",
+      "name": "Taller Tales",
+      "category": "puzzle",
+      "description": "Small signs make a big difference.",
+      "mechanic": "Futoshiki inequalities",
+      "rules": [
+        "Fill each row and column with 1–4 once each.",
+        "The signs between neighboring cells point to the smaller number. Given digits are fixed."
+      ],
+      "controls": "Tap or click cells and controls; Tab then Enter / Space works throughout. Arrow keys navigate the board.",
+      "url": "logic-room/?game=taller-tales",
+      "accent": "#b8d5d1",
+      "symbol": "≺",
+      "family": "logic-room",
+      "status": "playable"
+    },
+    {
+      "id": "code-cabinet",
+      "name": "Code Cabinet",
+      "category": "puzzle",
+      "description": "Listen to what the lock tells you.",
+      "mechanic": "Mastermind deduction",
+      "rules": [
+        "Find a hidden code of three symbols chosen from six; symbols may repeat. You have eight guesses.",
+        "A solid dot means correct symbol and position. A hollow dot means correct symbol, wrong position. Feedback dots are unordered."
+      ],
+      "controls": "Tap or click cells and controls; Tab then Enter / Space works throughout. Arrow keys navigate the board.",
+      "url": "logic-room/?game=code-cabinet",
+      "accent": "#e3c18d",
+      "symbol": "⌘",
+      "family": "logic-room",
+      "status": "playable"
+    },
+    {
+      "id": "seat-at-table",
+      "name": "Seat at the Table",
+      "category": "puzzle",
+      "description": "There is a place for everyone.",
+      "mechanic": "Relational ordering",
+      "rules": [
+        "Arrange five guests in seats from left to right so all written clues are true.",
+        "Choose a guest, then a seat. A guest already seated moves to the new place, swapping occupants."
+      ],
+      "controls": "Tap or click cells and controls; Tab then Enter / Space works throughout. Arrow keys navigate the board.",
+      "url": "logic-room/?game=seat-at-table",
+      "accent": "#d6bbdd",
+      "symbol": "♧",
+      "family": "logic-room",
+      "status": "playable"
+    },
+    {
+      "id": "sky-view",
+      "name": "Sky View",
+      "category": "puzzle",
+      "description": "Read a skyline from every angle.",
+      "mechanic": "Skyscraper visibility",
+      "rules": [
+        "Place heights 1–4 once per row and column. A taller building hides every shorter building behind it.",
+        "Edge clues count buildings visible from that direction."
+      ],
+      "controls": "Tap or click cells and controls; Tab then Enter / Space works throughout. Arrow keys navigate the board.",
+      "url": "logic-room/?game=sky-view",
+      "accent": "#bdd6b7",
+      "symbol": "▥",
+      "family": "logic-room",
+      "status": "playable"
+    },
+    {
+      "id": "bridgewater",
+      "name": "Bridgewater",
+      "category": "puzzle",
+      "description": "Bring the islands together.",
+      "mechanic": "Hashi bridge network",
+      "rules": [
+        "Connect islands horizontally or vertically. Each island needs the number of bridges printed on it.",
+        "Tap a link to cycle zero, one or two bridges. Bridges cannot cross, and every island must join one connected network."
+      ],
+      "controls": "Tap or click cells and controls; Tab then Enter / Space works throughout. Arrow keys navigate the board.",
+      "url": "logic-room/?game=bridgewater",
+      "accent": "#ead38d",
+      "symbol": "╬",
+      "family": "logic-room",
+      "status": "playable"
+    },
+    {
+      "id": "loop-letter",
+      "name": "Loop Letter",
+      "category": "puzzle",
+      "description": "One line. One unbroken thought.",
+      "mechanic": "Slitherlink loop construction",
+      "rules": [
+        "Draw a single closed loop along the grid edges. Each number counts the drawn edges around its cell.",
+        "Tap an edge to add or remove it. No branches, loose ends or separate loops."
+      ],
+      "controls": "Tap or click cells and controls; Tab then Enter / Space works throughout. Arrow keys navigate the board.",
+      "url": "logic-room/?game=loop-letter",
+      "accent": "#b8d5d1",
+      "symbol": "□",
+      "family": "logic-room",
+      "status": "playable"
+    },
+    {
+      "id": "tent-pitch",
+      "name": "Tent Pitch",
+      "category": "puzzle",
+      "description": "Make room for a quiet night.",
+      "mechanic": "Tents placement",
+      "rules": [
+        "Place one tent beside each tree horizontally or vertically. Every tent must be paired with a different tree.",
+        "Tents cannot touch, even diagonally. Edge numbers give tents required per row and column."
+      ],
+      "controls": "Tap or click cells and controls; Tab then Enter / Space works throughout. Arrow keys navigate the board.",
+      "url": "logic-room/?game=tent-pitch",
+      "accent": "#e3c18d",
+      "symbol": "△",
+      "family": "logic-room",
+      "status": "playable"
+    },
+    {
+      "id": "pearl-route",
+      "name": "Pearl Route",
+      "category": "puzzle",
+      "description": "Give every pair its own path.",
+      "mechanic": "Numberlink path routing",
+      "rules": [
+        "Join each matching letter pair with an orthogonal path. Paths cannot overlap.",
+        "Choose a letter, then tap neighboring cells to extend its path. Tap its starting endpoint or use Clear path to start that route again. Empty cells are allowed."
+      ],
+      "controls": "Tap or click cells and controls; Tab then Enter / Space works throughout. Arrow keys navigate the board.",
+      "url": "logic-room/?game=pearl-route",
+      "accent": "#d6bbdd",
+      "symbol": "∞",
+      "family": "logic-room",
+      "status": "playable"
+    },
+    {
+      "id": "tile-weave",
+      "name": "Tile Weave",
+      "category": "puzzle",
+      "description": "A quarter-turn changes everything.",
+      "mechanic": "Pipe rotation network",
+      "rules": [
+        "Rotate tiles until every pipe connects with its neighbors, with no pipe pointing outside the board.",
+        "All tiles must form one connected water network. Tap to rotate clockwise."
+      ],
+      "controls": "Tap or click cells and controls; Tab then Enter / Space works throughout. Arrow keys navigate the board.",
+      "url": "logic-room/?game=tile-weave",
+      "accent": "#bdd6b7",
+      "symbol": "⌁",
+      "family": "logic-room",
+      "status": "playable"
+    },
+    {
+      "id": "safe-passage",
+      "name": "Safe Passage",
+      "category": "puzzle",
+      "description": "Unpack a small traffic jam.",
+      "mechanic": "Sliding-block escape",
+      "rules": [
+        "Move the red car to the right edge to escape. Cars slide only along their length and cannot pass through one another.",
+        "Select a car, then use the arrow buttons or keyboard arrows."
+      ],
+      "controls": "Tap or click cells and controls; Tab then Enter / Space works throughout. Arrow keys navigate the board.",
+      "url": "logic-room/?game=safe-passage",
+      "accent": "#ead38d",
+      "symbol": "→",
+      "family": "logic-room",
+      "status": "playable"
+    },
+    {
+      "id": "cross-sums",
+      "name": "Cross Sums",
+      "category": "puzzle",
+      "description": "Let the totals do the talking.",
+      "mechanic": "Kakuro sum intersections",
+      "rules": [
+        "Fill each white square with 1–9. Row sums appear on the left; column sums appear above.",
+        "No digit may repeat within a row or column. Any arrangement satisfying every sum is accepted."
+      ],
+      "controls": "Tap or click cells and controls; Tab then Enter / Space works throughout. Arrow keys navigate the board.",
+      "url": "logic-room/?game=cross-sums",
+      "accent": "#b8d5d1",
+      "symbol": "Σ",
+      "family": "logic-room",
+      "status": "playable"
+    },
+    {
+      "id": "make-24",
+      "name": "Twenty Four",
+      "category": "number",
+      "description": "Combine four cards into a single perfect 24.",
+      "mechanic": "Pairwise expression construction",
+      "rules": [
+        "Select two number cards in order, then an operation.",
+        "Each operation replaces both cards with its result. Use every card to finish at 24.",
+        "Undo lets you explore. Division by zero is never allowed."
+      ],
+      "controls": "Tap or click two cards, then an operation. Keyboard: Tab and Enter / Space. Undo reverses a combination.",
+      "url": "number-room/?game=make-24",
+      "accent": "#dce7bb",
+      "symbol": "24",
+      "family": "number-room",
+      "status": "playable"
+    },
+    {
+      "id": "merge-garden",
+      "name": "Merge Garden",
+      "category": "number",
+      "description": "Slide a garden of numbers into one brilliant 128.",
+      "mechanic": "Directional sliding and tile fusion",
+      "rules": [
+        "Use arrows or the four direction buttons to slide every tile.",
+        "Equal neighbors merge once per move. A new 2 or 4 grows after each legal slide.",
+        "Grow a 128 tile. If every cell fills with no possible merge, start a fresh garden."
+      ],
+      "controls": "Arrow keys slide the garden. On touch screens, use the four direction buttons. Each slide is a turn.",
+      "url": "number-room/?game=merge-garden",
+      "accent": "#d9e6cf",
+      "symbol": "↗",
+      "family": "number-room",
+      "status": "playable"
+    },
+    {
+      "id": "bit-lanterns",
+      "name": "Bit Lanterns",
+      "category": "number",
+      "description": "Light eight little lanterns to speak in binary.",
+      "mechanic": "Binary positional encoding",
+      "rules": [
+        "Each lantern contributes the number printed above it when lit.",
+        "Toggle lanterns until their total matches the target.",
+        "Send five increasingly complex signals. Extra checks cost points, never lives."
+      ],
+      "controls": "Tap a lantern to toggle it. Keyboard: Tab to a lantern, then Enter / Space. The total updates instantly.",
+      "url": "number-room/?game=bit-lanterns",
+      "accent": "#cedee8",
+      "symbol": "01",
+      "family": "number-room",
+      "status": "playable"
+    },
+    {
+      "id": "fraction-balance",
+      "name": "Fraction Balance",
+      "category": "number",
+      "description": "Find the combination that makes both pans agree.",
+      "mechanic": "Rational-weight composition",
+      "rules": [
+        "The left pan holds the target weight. Add fraction weights to the right.",
+        "Use at most three weights; tap a weight on the pan to remove it.",
+        "Balance exactly, then check. Different combinations may work."
+      ],
+      "controls": "Tap a fraction to place a weight; tap a weight on the pan to remove it. All controls support Tab and Enter / Space.",
+      "url": "number-room/?game=fraction-balance",
+      "accent": "#e9d4ca",
+      "symbol": "½",
+      "family": "number-room",
+      "status": "playable"
+    },
+    {
+      "id": "matchstick-equation",
+      "name": "Matchlight",
+      "category": "number",
+      "description": "Move one match. Make the whole equation true.",
+      "mechanic": "Seven-segment topology repair",
+      "rules": [
+        "Select one dark match to lift it. Then select one empty slot to place it.",
+        "Only one match may move. All digits must remain valid seven-segment numbers.",
+        "Check the repaired equation. Undo returns the original arrangement."
+      ],
+      "controls": "Tap a match and an empty slot, or use the Lift / Place dropdowns. Keyboard: Tab, arrow keys in dropdowns, Enter to choose.",
+      "url": "number-room/?game=matchstick-equation",
+      "accent": "#eadbb6",
+      "symbol": "≠",
+      "family": "number-room",
+      "status": "playable"
+    },
+    {
+      "id": "factor-loom",
+      "name": "Factor Loom",
+      "category": "number",
+      "description": "Weave prime threads into one exact product.",
+      "mechanic": "Prime-factor resource selection",
+      "rules": [
+        "Each spool is a prime number. Choose spools to multiply them together.",
+        "Each physical spool can be used once. Tap a chosen spool to return it.",
+        "Make the target product exactly. Unused spools are allowed."
+      ],
+      "controls": "Tap a spool to weave it in or return it. Keyboard: Tab and Enter / Space. Check when the product matches.",
+      "url": "number-room/?game=factor-loom",
+      "accent": "#d9d2e6",
+      "symbol": "×",
+      "family": "number-room",
+      "status": "playable"
+    },
+    {
+      "id": "clockwork",
+      "name": "Clockwork",
+      "category": "number",
+      "description": "A few small jumps. One exact arrival.",
+      "mechanic": "Modular arithmetic route planning",
+      "rules": [
+        "Start at twelve. Each button moves clockwise or counterclockwise around the dial.",
+        "Land on the marked destination using exactly the allotted jumps.",
+        "Undo a jump to plan another route. Crossing twelve wraps around."
+      ],
+      "controls": "Tap a jump button to move around the dial. Keyboard: Tab and Enter / Space. Undo takes back one jump.",
+      "url": "number-room/?game=clockwork",
+      "accent": "#e5dca9",
+      "symbol": "◷",
+      "family": "number-room",
+      "status": "playable"
+    },
+    {
+      "id": "fraction-mosaic",
+      "name": "Fraction Mosaic",
+      "category": "number",
+      "description": "Fit colored pieces into a perfectly full ribbon.",
+      "mechanic": "Ordered rational interval packing",
+      "rules": [
+        "The ribbon has marked boundaries. Choose fraction pieces in the correct order.",
+        "Every placed piece must end on a marked boundary, with no gaps or overhang.",
+        "Fill the unit ribbon using the available pieces. Tap the last piece to take it back."
+      ],
+      "controls": "Tap fraction cards to fit the ribbon in order. Remove last reverses a placement. Keyboard: Tab and Enter / Space.",
+      "url": "number-room/?game=fraction-mosaic",
+      "accent": "#d2e4df",
+      "symbol": "▰",
+      "family": "number-room",
+      "status": "playable"
+    },
+    {
+      "id": "precedence-lab",
+      "name": "Bracket Lab",
+      "category": "number",
+      "description": "One pair of brackets changes everything.",
+      "mechanic": "Operator-precedence manipulation",
+      "rules": [
+        "The numbers and operators stay in their printed order.",
+        "Choose the first and last number to wrap in one pair of brackets.",
+        "Make the expression equal the target. Tap endpoints again to change your selection."
+      ],
+      "controls": "Tap two number cards to choose the bracket endpoints. Keyboard: Tab and Enter / Space. Check the resulting expression.",
+      "url": "number-room/?game=precedence-lab",
+      "accent": "#ead8c6",
+      "symbol": "( )",
+      "family": "number-room",
+      "status": "playable"
+    },
+    {
+      "id": "estimation-studio",
+      "name": "Scale Sense",
+      "category": "number",
+      "description": "Find your bearings on a landscape of powers.",
+      "mechanic": "Logarithmic magnitude estimation",
+      "rules": [
+        "The line runs from 1 to 1,000. Equal distances multiply by the same factor.",
+        "Move the marker with the slider or arrow keys, then commit your estimate.",
+        "Locate five magnitudes within a factor of 1.3. A miss reveals the direction; try again."
+      ],
+      "controls": "Drag or tap the slider. Keyboard: Tab to the slider, then left / right arrows; Home / End reach the ends. Commit when ready.",
+      "url": "number-room/?game=estimation-studio",
+      "accent": "#d8dfe8",
+      "symbol": "≈",
+      "family": "number-room",
+      "status": "playable"
+    },
+    {
+      "id": "ratio-mixer",
+      "name": "Ratio Mixer",
+      "category": "number",
+      "description": "Compose a color with just the right proportions.",
+      "mechanic": "Integer ratio and capacity planning",
+      "rules": [
+        "Add coral and teal scoops to the jar. Each scoop is one unit.",
+        "Match the requested ratio and fill the jar to its exact capacity.",
+        "Remove scoops with the minus buttons to adjust your recipe."
+      ],
+      "controls": "Use plus / minus beside each ingredient. Keyboard: Tab and Enter / Space. The jar shows your mixture as it fills.",
+      "url": "number-room/?game=ratio-mixer",
+      "accent": "#e8cfc7",
+      "symbol": "∶",
+      "family": "number-room",
+      "status": "playable"
+    },
+    {
+      "id": "sequence-detective",
+      "name": "Sequence Detective",
+      "category": "number",
+      "description": "A pattern is hiding in plain sight.",
+      "mechanic": "Recurrence inference",
+      "rules": [
+        "Study the visible sequence and the clue describing its family.",
+        "Choose the missing number from four candidates.",
+        "Wrong guesses give feedback. Solve five different pattern families."
+      ],
+      "controls": "Tap or click the next number. Keyboard: Tab between choices, then Enter / Space. Read the family clue before guessing.",
+      "url": "number-room/?game=sequence-detective",
+      "accent": "#dce2be",
+      "symbol": "…",
+      "family": "number-room",
+      "status": "playable"
+    },
+    {
+      "id": "decimal-market",
+      "name": "Exact Change",
+      "category": "number",
+      "description": "A small basket. A satisfyingly exact total.",
+      "mechanic": "Constrained integer shopping",
+      "rules": [
+        "Use plus and minus to choose quantities of three goods.",
+        "Spend the entire budget and buy exactly the stated number of items.",
+        "Prices are in cents, so your basket never suffers rounding surprises."
+      ],
+      "controls": "Use plus / minus for each item, then Pay exactly. Keyboard: Tab and Enter / Space. Totals use exact integer cents.",
+      "url": "number-room/?game=decimal-market",
+      "accent": "#e7dcc7",
+      "symbol": "¢",
+      "family": "number-room",
+      "status": "playable"
+    },
+    {
+      "id": "digit-forge",
+      "name": "Digit Forge",
+      "category": "number",
+      "description": "Arrange a handful of digits into something precise.",
+      "mechanic": "Digit permutation with divisibility constraints",
+      "rules": [
+        "Tap digit cards to build a number from left to right.",
+        "Use each card exactly once and satisfy both clues. No leading zero.",
+        "Tap the last placed digit to return it. Check when your number is complete."
+      ],
+      "controls": "Tap digit cards in order. Take back last lets you edit. Keyboard: Tab and Enter / Space. Check once every card is placed.",
+      "url": "number-room/?game=digit-forge",
+      "accent": "#d7d9e9",
+      "symbol": "#",
+      "family": "number-room",
+      "status": "playable"
+    },
+    {
+      "id": "coordinate-courier",
+      "name": "Coordinate Courier",
+      "category": "number",
+      "description": "A tiny delivery route across the Cartesian plane.",
+      "mechanic": "Coordinate navigation with ordered waypoints",
+      "rules": [
+        "Collect numbered parcels in order at their printed coordinates.",
+        "Move one grid unit with arrows or direction buttons. x increases right; y increases up.",
+        "Reach every parcel within the step budget. Undo if you take a wrong turn."
+      ],
+      "controls": "Arrow keys or the four direction buttons move one cell. Undo takes back a step. Touch the buttons to steer.",
+      "url": "number-room/?game=coordinate-courier",
+      "accent": "#cde1d8",
+      "symbol": "⌖",
+      "family": "number-room",
+      "status": "playable"
+    },
+    {
+      "id": "hidden-grove",
+      "name": "Hidden Grove",
+      "category": "word",
+      "description": "Find four words hidden along straight lines in a leafy letter grid.",
+      "mechanic": "word search",
+      "rules": [
+        "Tap the first and last letter of a word. Lines can run horizontally, vertically or diagonally, in either direction.",
+        "Find all four listed words. A wrong line costs 10 points. Tap the same square to cancel.",
+        "Use Tab and Enter, or arrow keys within the grid. No dragging or timer."
+      ],
+      "controls": "Tap endpoints; arrows move focus; Enter selects.",
+      "url": "word-room/?game=hidden-grove",
+      "accent": "#edc5c4",
+      "symbol": "WG",
+      "family": "word-room",
+      "status": "playable"
+    },
+    {
+      "id": "one-letter-away",
+      "name": "One Letter Away",
+      "category": "word",
+      "description": "Bridge two words, changing just one letter at each step.",
+      "mechanic": "word ladder",
+      "rules": [
+        "Change exactly one letter to make a word in the open notebook. All words have four letters.",
+        "Reach the target from the starting word. The notebook is the complete allowed vocabulary for this puzzle.",
+        "Submit by typing and Enter. Undo a step if you take a detour. Invalid steps cost 10 points."
+      ],
+      "controls": "Type four letters and Enter; Undo steps.",
+      "url": "word-room/?game=one-letter-away",
+      "accent": "#dce4ba",
+      "symbol": "A→B",
+      "family": "word-room",
+      "status": "playable"
+    },
+    {
+      "id": "last-letter",
+      "name": "Last Letter",
+      "category": "word",
+      "description": "Guess a hidden word before six little leaves fall.",
+      "mechanic": "hangman",
+      "rules": [
+        "Read the clue, then choose letters to uncover a hidden word.",
+        "Correct letters fill every matching position. A wrong letter costs one of six leaves. Repeating a guess is free.",
+        "Reveal the whole word to win. Six wrong letters end the round and reveal the answer."
+      ],
+      "controls": "Tap letters or type A–Z.",
+      "url": "word-room/?game=last-letter",
+      "accent": "#edd9ae",
+      "symbol": "Aa",
+      "family": "word-room",
+      "status": "playable"
+    },
+    {
+      "id": "crossings",
+      "name": "Crossings",
+      "category": "word",
+      "description": "Fill three across clues and the down word that ties them together.",
+      "mechanic": "mini crossword",
+      "rules": [
+        "Fill the white squares from four clues. Three across entries share letters with one down entry.",
+        "Type a letter in each square. Arrow keys move through the board; Tab visits white squares.",
+        "Check the completed grid. Correct letters turn green; wrong checks cost 10 points."
+      ],
+      "controls": "Type letters; arrows move; Check grid.",
+      "url": "word-room/?game=crossings",
+      "accent": "#cbdcda",
+      "symbol": "+",
+      "family": "word-room",
+      "status": "playable"
+    },
+    {
+      "id": "wordbreak",
+      "name": "Wordbreak",
+      "category": "word",
+      "description": "Find the spaces hiding inside a run of letters.",
+      "mechanic": "word segmentation",
+      "rules": [
+        "Tap between letters to place or remove word boundaries.",
+        "Restore the sentence described by the clue. Capitalization and punctuation are already stripped away.",
+        "Check your spaces. Solve three phrases; wrong checks cost 10 points."
+      ],
+      "controls": "Tap boundaries; Tab and Enter toggle.",
+      "url": "word-room/?game=wordbreak",
+      "accent": "#edc5c4",
+      "symbol": "ab/c",
+      "family": "word-room",
+      "status": "playable"
+    },
+    {
+      "id": "secret-post",
+      "name": "Secret Post",
+      "category": "word",
+      "description": "Decode a letter-substitution message, one shared symbol at a time.",
+      "mechanic": "cryptogram",
+      "rules": [
+        "Every cipher letter always stands for the same plain letter. Spaces are already in place.",
+        "Select a cipher tile, then a letter from the keyboard. All copies change together; each plain letter can map only once.",
+        "Check the message or ask for a revealed letter. Hints cost 20 points; wrong checks cost 10."
+      ],
+      "controls": "Select cipher tile, type or tap letter; Backspace clears.",
+      "url": "word-room/?game=secret-post",
+      "accent": "#dce4ba",
+      "symbol": "?→!",
+      "family": "word-room",
+      "status": "playable"
+    },
+    {
+      "id": "center-letter",
+      "name": "Center Letter",
+      "category": "word",
+      "description": "Build five clue words around one indispensable letter.",
+      "mechanic": "central-letter dictionary",
+      "rules": [
+        "Use only the displayed letters. Letters may repeat, but the green center letter must appear in every word.",
+        "Find the five curated clue answers. This small puzzle dictionary contains exactly these five words.",
+        "Type a word and press Enter. Duplicate answers are free; other invalid guesses cost 10 points."
+      ],
+      "controls": "Type words and Enter; five clue answers.",
+      "url": "word-room/?game=center-letter",
+      "accent": "#edd9ae",
+      "symbol": "◎",
+      "family": "word-room",
+      "status": "playable"
+    },
+    {
+      "id": "odd-company",
+      "name": "Odd Company",
+      "category": "word",
+      "description": "Read the relationship and find the word that does not belong.",
+      "mechanic": "semantic classification",
+      "rules": [
+        "Four words share a page; only three fit the stated relationship.",
+        "Choose the exception. A wrong choice stays on the page for another try and costs 10 points.",
+        "Solve three groups. Each reveal explains the distinction."
+      ],
+      "controls": "Tap a word or Tab and Enter.",
+      "url": "word-room/?game=odd-company",
+      "accent": "#cbdcda",
+      "symbol": "3+1",
+      "family": "word-room",
+      "status": "playable"
+    },
+    {
+      "id": "alphabet-trail",
+      "name": "Alphabet Trail",
+      "category": "word",
+      "description": "Trace A to Y through an unbroken neighboring path.",
+      "mechanic": "alphabet adjacency path",
+      "rules": [
+        "Start at A and visit B, C and onward to Y. Move only one square horizontally or vertically.",
+        "Every letter is used once. Diagonal or out-of-order moves cost 10 points without changing your path.",
+        "Undo your last step if needed. Arrow keys move focus; Enter chooses a square."
+      ],
+      "controls": "Tap cells; arrows and Enter; Undo.",
+      "url": "word-room/?game=alphabet-trail",
+      "accent": "#edc5c4",
+      "symbol": "A⋯Y",
+      "family": "word-room",
+      "status": "playable"
+    },
+    {
+      "id": "sentence-studio",
+      "name": "Sentence Studio",
+      "category": "word",
+      "description": "Reassemble a familiar saying from shuffled whole-word slips.",
+      "mechanic": "sentence reconstruction",
+      "rules": [
+        "Tap whole words to reconstruct the familiar saying named by the clue.",
+        "The capitalized first word and punctuated last word help frame the sentence. Tap an arranged word to return it.",
+        "Check your saying. Solve three; wrong checks cost 10 points."
+      ],
+      "controls": "Tap word slips; Tab and Enter; Clear.",
+      "url": "word-room/?game=sentence-studio",
+      "accent": "#dce4ba",
+      "symbol": "¶",
+      "family": "word-room",
+      "status": "playable"
+    },
+    {
+      "id": "compound-works",
+      "name": "Compound Works",
+      "category": "word",
+      "description": "Join two halves into four everyday compound words.",
+      "mechanic": "compound pairing",
+      "rules": [
+        "Choose a word from the left, then its partner from the right.",
+        "Every half is used once. Find the four familiar closed compound words for this set.",
+        "Correct pairs stay joined. Wrong pairs reset your selection and cost 10 points."
+      ],
+      "controls": "Choose left then right; Tab and Enter.",
+      "url": "word-room/?game=compound-works",
+      "accent": "#edd9ae",
+      "symbol": "sun+",
+      "family": "word-room",
+      "status": "playable"
+    },
+    {
+      "id": "rhyme-lines",
+      "name": "Rhyme Lines",
+      "category": "word",
+      "description": "Match words by their ending sound, not their spelling.",
+      "mechanic": "phonetic pairing",
+      "rules": [
+        "Choose a word on the left and its rhyming partner on the right.",
+        "Use ordinary English pronunciation. Every word belongs to exactly one pair in this set.",
+        "Find four pairs. Wrong matches reset selection and cost 10 points."
+      ],
+      "controls": "Choose left then right; Tab and Enter.",
+      "url": "word-room/?game=rhyme-lines",
+      "accent": "#cbdcda",
+      "symbol": "♪",
+      "family": "word-room",
+      "status": "playable"
+    },
+    {
+      "id": "vowel-weather",
+      "name": "Vowel Weather",
+      "category": "word",
+      "description": "Bring the missing vowels back to three clue words.",
+      "mechanic": "constrained vowel restoration",
+      "rules": [
+        "Consonants stay in place. Every blank needs A, E, I, O or U.",
+        "Read the clue and type the whole restored word. Its consonants and length must match the pattern.",
+        "Restore three words. Wrong checks cost 10 points."
+      ],
+      "controls": "Type the complete word and Enter.",
+      "url": "word-room/?game=vowel-weather",
+      "accent": "#edc5c4",
+      "symbol": "A E I",
+      "family": "word-room",
+      "status": "playable"
+    },
+    {
+      "id": "chain-reaction",
+      "name": "Chain Reaction",
+      "category": "word",
+      "description": "Thread six words together by their first and last letters.",
+      "mechanic": "endpoint word chaining",
+      "rules": [
+        "The starting word is pinned. Choose a remaining word that begins with the last letter of the chain.",
+        "Use all six words once. Only the first and last letters matter.",
+        "Undo to escape a dead end. Invalid joins cost 10 points."
+      ],
+      "controls": "Tap next word; Tab and Enter; Undo.",
+      "url": "word-room/?game=chain-reaction",
+      "accent": "#dce4ba",
+      "symbol": "→",
+      "family": "word-room",
+      "status": "playable"
+    },
+    {
+      "id": "proofreader",
+      "name": "Proofreader",
+      "category": "word",
+      "description": "Spot the misspelled word and put the sentence right.",
+      "mechanic": "spelling correction",
+      "rules": [
+        "Exactly one word in each sentence has a spelling mistake. Tap that word to edit it.",
+        "Type the correctly spelled replacement and submit. The other words are already correct.",
+        "Repair three sentences. Wrong selections or corrections cost 10 points."
+      ],
+      "controls": "Select word, type correction, Enter.",
+      "url": "word-room/?game=proofreader",
+      "accent": "#edd9ae",
+      "symbol": "✓",
+      "family": "word-room",
+      "status": "playable"
+    },
+    {
+      "id": "reversi",
+      "name": "Ink & Ivory",
+      "category": "strategy",
+      "description": "Bracket pale discs and turn a small board in your favor.",
+      "mechanic": "Disc-flipping territory against a three-ply positional opponent.",
+      "rules": [
+        "You play ink first. Place on a dotted square so a straight line of pale discs ends at another ink disc. All bracketed discs turn ink.",
+        "The house follows the same rules. A player without a legal move passes automatically. The game ends when neither can move.",
+        "Most discs wins. Corners cannot be flipped; the house values stable corners and edges."
+      ],
+      "controls": "Tap or click the board and action buttons. Tab to a control; Enter or Space selects. Arrow keys move focus between board squares.",
+      "url": "strategy-room/?game=reversi",
+      "accent": "#c9d5b5",
+      "symbol": "◐",
+      "family": "strategy-room",
+      "status": "playable"
+    },
+    {
+      "id": "four",
+      "name": "Four Together",
+      "category": "strategy",
+      "description": "Drop, threaten, block. Make an unbroken line of four.",
+      "mechanic": "Gravity alignment against a depth-four tactical opponent.",
+      "rules": [
+        "Choose a numbered column to drop an ink disc into its lowest empty space. The house then drops a pale disc.",
+        "Connect four horizontally, vertically, or diagonally to win. A full column cannot accept another disc.",
+        "A full board without a winning line is a draw. The house looks ahead for wins and threats."
+      ],
+      "controls": "Tap or click the board and action buttons. Tab to a control; Enter or Space selects. Arrow keys move focus between board squares.",
+      "url": "strategy-room/?game=four",
+      "accent": "#e9b991",
+      "symbol": "▤",
+      "family": "strategy-room",
+      "status": "playable"
+    },
+    {
+      "id": "kalah",
+      "name": "Seed & Store",
+      "category": "strategy",
+      "description": "Sow a handful. Capture a bowl. Bring the harvest home.",
+      "mechanic": "Six-bowl Kalah seed sowing with captures and extra turns.",
+      "rules": [
+        "Choose one of your six lower bowls. Sow its seeds one at a time to the right, into your store, across the upper row to the left, then back around. Skip the house store.",
+        "Last seed in your store earns another turn. Last seed in your empty lower bowl captures that seed and any seeds in the opposite bowl, if it is occupied.",
+        "When either row empties, remaining seeds go to their owner’s store. Most stored seeds wins."
+      ],
+      "controls": "Tap or click the board and action buttons. Tab to a control; Enter or Space selects. Arrow keys move focus between board squares.",
+      "url": "strategy-room/?game=kalah",
+      "accent": "#d6be88",
+      "symbol": "◌",
+      "family": "strategy-room",
+      "status": "playable"
+    },
+    {
+      "id": "nim",
+      "name": "Matchstick Market",
+      "category": "strategy",
+      "description": "One row at a time. Leave the house without the last word.",
+      "mechanic": "Normal-play three-heap Nim against an exact mathematical opponent.",
+      "rules": [
+        "Remove any positive number of matches from one row on each turn. Buttons show row and amount.",
+        "The house removes matches by the same rule. Whoever takes the final match wins.",
+        "There is no luck. The house plays optimal Nim; the opening is winnable with careful play."
+      ],
+      "controls": "Tap or click the board and action buttons. Tab to a control; Enter or Space selects. Arrow keys move focus between board squares.",
+      "url": "strategy-room/?game=nim",
+      "accent": "#e2b09b",
+      "symbol": "Ⅲ",
+      "family": "strategy-room",
+      "status": "playable"
+    },
+    {
+      "id": "fences",
+      "name": "Fence & Field",
+      "category": "strategy",
+      "description": "A line becomes a square. A square becomes yours.",
+      "mechanic": "Dots-and-boxes area capture with chained extra moves.",
+      "rules": [
+        "Tap an empty edge between dots. Complete the fourth edge of a square to claim it.",
+        "Claiming a square earns another edge. The house captures available squares and avoids giving away easy ones.",
+        "When all nine squares are claimed, the larger collection wins."
+      ],
+      "controls": "Tap or click the board and action buttons. Tab to a control; Enter or Space selects. Arrow keys move focus between board squares.",
+      "url": "strategy-room/?game=fences",
+      "accent": "#c2d5b2",
+      "symbol": "▦",
+      "family": "strategy-room",
+      "status": "playable"
+    },
+    {
+      "id": "peg",
+      "name": "Last Pebble",
+      "category": "strategy",
+      "description": "Jump a quiet garden down to one solitary stone.",
+      "mechanic": "Seven-peg orthogonal jump solitaire on a diamond garden.",
+      "rules": [
+        "Select a pebble, then a highlighted empty hole two spaces away. The pebble between them is removed.",
+        "Jumps are horizontal or vertical, never diagonal. Select another pebble to change your mind.",
+        "Leave exactly one pebble. This handcrafted arrangement has a six-jump solution; a board with no legal jumps ends the round."
+      ],
+      "controls": "Tap or click the board and action buttons. Tab to a control; Enter or Space selects. Arrow keys move focus between board squares.",
+      "url": "strategy-room/?game=peg",
+      "accent": "#b9c7c5",
+      "symbol": "⠿",
+      "family": "strategy-room",
+      "status": "playable"
+    },
+    {
+      "id": "pawns",
+      "name": "Royal Crossing",
+      "category": "strategy",
+      "description": "Protect a path and send one pawn to the far bank.",
+      "mechanic": "Breakthrough pawn racing with diagonal captures against lookahead AI.",
+      "rules": [
+        "Select an ink pawn, then a highlighted destination. Ink moves upward one row; the house moves downward.",
+        "Move straight into an empty square, or diagonally into an empty square or an enemy pawn. Captured pawns leave the board.",
+        "Reach the opposite edge first, capture all enemy pawns, or leave the opponent with no move to win."
+      ],
+      "controls": "Tap or click the board and action buttons. Tab to a control; Enter or Space selects. Arrow keys move focus between board squares.",
+      "url": "strategy-room/?game=pawns",
+      "accent": "#cfc1da",
+      "symbol": "♟",
+      "family": "strategy-room",
+      "status": "playable"
+    },
+    {
+      "id": "fleet",
+      "name": "Hidden Fleet",
+      "category": "strategy",
+      "description": "Sound a little bay and account for every vessel.",
+      "mechanic": "Battleship-style spatial search with known fleet constraints.",
+      "rules": [
+        "Tap a square to sound it. A diamond marks a vessel; a cross marks open water.",
+        "The fleet contains three straight vessels of lengths 3, 2, and 2. Vessels never touch, including diagonally.",
+        "Find all seven occupied squares in as few soundings as possible. The handcrafted chart stays the same on replay."
+      ],
+      "controls": "Tap or click the board and action buttons. Tab to a control; Enter or Space selects. Arrow keys move focus between board squares.",
+      "url": "strategy-room/?game=fleet",
+      "accent": "#abcbd8",
+      "symbol": "⚓",
+      "family": "strategy-room",
+      "status": "playable"
+    },
+    {
+      "id": "guild",
+      "name": "Border Guild",
+      "category": "strategy",
+      "description": "Claim valuable districts. Make their shared edges count.",
+      "mechanic": "Alternating territory drafting with adjacency and denial scoring.",
+      "rules": [
+        "You and the house alternate claiming one district. Each printed number is its base influence.",
+        "Every shared horizontal or vertical edge between your districts adds 2 influence. Each edge scores once.",
+        "After all sixteen districts are claimed, most influence wins. The house weighs value, connections, and blocking your growth."
+      ],
+      "controls": "Tap or click the board and action buttons. Tab to a control; Enter or Space selects. Arrow keys move focus between board squares.",
+      "url": "strategy-room/?game=guild",
+      "accent": "#d9bfa5",
+      "symbol": "▧",
+      "family": "strategy-room",
+      "status": "playable"
+    },
+    {
+      "id": "orchard",
+      "name": "Orchard Keeper",
+      "category": "strategy",
+      "description": "Plan a twelve-day harvest with a small supply of rain.",
+      "mechanic": "Deterministic resource-and-time management on nine planting plots.",
+      "rules": [
+        "Plant an empty plot for 2 water. Every action advances one day and ripens planted trees by one step.",
+        "A tree is ripe after three actions, including its planting day. Tap a ripe tree to harvest 4 fruit and clear its plot. Collect rain spends a day to gain 3 water.",
+        "Gather 20 fruit in twelve days. Five plantings need more than your starting 8 water: make time to collect rain, ripen trees, and harvest. Unharvested trees do not score. Nothing advances while you are away."
+      ],
+      "controls": "Tap or click the board and action buttons. Tab to a control; Enter or Space selects. Arrow keys move focus between board squares.",
+      "url": "strategy-room/?game=orchard",
+      "accent": "#c9d598",
+      "symbol": "♧",
+      "family": "strategy-room",
+      "status": "playable"
+    },
+    {
+      "id": "bridge",
+      "name": "Narrow Bridge",
+      "category": "strategy",
+      "description": "A step forward, or a fence that makes the other route longer.",
+      "mechanic": "Pawn racing with limited route-preserving edge barriers.",
+      "rules": [
+        "Your ink courier starts below; the house starts above. Reach the opposite row first. Walk one adjacent square. When facing the other courier, jump straight over it; if a wall or edge blocks that jump, step sideways around it instead.",
+        "Or choose Place a fence, then two neighboring squares. A fence blocks only their shared edge. Each side has three fences.",
+        "Fences may never remove every route to either goal. The house walks a shortest route or builds a useful detour. Sixty turns without a winner is a draw."
+      ],
+      "controls": "Tap or click the board and action buttons. Tab to a control; Enter or Space selects. Arrow keys move focus between board squares.",
+      "url": "strategy-room/?game=bridge",
+      "accent": "#d0bca8",
+      "symbol": "╫",
+      "family": "strategy-room",
+      "status": "playable"
+    },
+    {
+      "id": "hex",
+      "name": "Sixfold",
+      "category": "strategy",
+      "description": "Weave a continuous thread across six-sided neighborhoods.",
+      "mechanic": "Hex connection on a four-by-four rhombus against distance-aware AI.",
+      "rules": [
+        "You place ink stones and connect top to bottom. The house places pale stones and connects left to right.",
+        "Each hex touches up to six neighbors: left, right, above, below, upper-right, and lower-left. Stones never move after placement.",
+        "The first connected chain across its two banks wins. The house takes immediate wins, blocks immediate threats, and shortens its route."
+      ],
+      "controls": "Tap or click the board and action buttons. Tab to a control; Enter or Space selects. Arrow keys move focus between board squares.",
+      "url": "strategy-room/?game=hex",
+      "accent": "#b9c9e1",
+      "symbol": "⬡",
+      "family": "strategy-room",
+      "status": "playable"
+    },
+    {
+      "id": "towers",
+      "name": "Watchtower",
+      "category": "strategy",
+      "description": "Three towers. Twenty-five corners to keep in sight.",
+      "mechanic": "Queen-ray coverage optimization with a three-piece placement budget.",
+      "rules": [
+        "Place three towers on the board. Each watches its complete row, column, and both diagonals. Towers do not block one another.",
+        "Dotted squares are watched. Tap a placed tower to lift it and try another square.",
+        "Cover all twenty-five squares, then Seal the plan. Partial coverage earns a score, and a complete arrangement exists."
+      ],
+      "controls": "Tap or click the board and action buttons. Tab to a control; Enter or Space selects. Arrow keys move focus between board squares.",
+      "url": "strategy-room/?game=towers",
+      "accent": "#d5c8a8",
+      "symbol": "♜",
+      "family": "strategy-room",
+      "status": "playable"
+    },
+    {
+      "id": "siege",
+      "name": "Quiet Siege",
+      "category": "strategy",
+      "description": "Move your queen, close a square, and keep a corridor open.",
+      "mechanic": "Compact Amazons territory trapping against mobility-aware AI.",
+      "rules": [
+        "Your ink queen moves any distance along a clear row, column, or diagonal. Choose a highlighted destination.",
+        "Then close one empty square visible along a clear line from your new position. Closed squares stay blocked for the round.",
+        "The house does the same. Trap its queen so it has no legal move, while keeping room for your own."
+      ],
+      "controls": "Tap or click the board and action buttons. Tab to a control; Enter or Space selects. Arrow keys move focus between board squares.",
+      "url": "strategy-room/?game=siege",
+      "accent": "#c4b5cc",
+      "symbol": "♛",
+      "family": "strategy-room",
+      "status": "playable"
+    },
+    {
+      "id": "trade",
+      "name": "Trading Day",
+      "category": "strategy",
+      "description": "Eight public prices. One considered trade each day.",
+      "mechanic": "Finite-horizon inventory trading with public price calendar.",
+      "rules": [
+        "Start with 12 coins and room for three crates. Each day choose to buy one crate, sell one crate, or wait.",
+        "The entire eight-day price calendar is visible. You can only buy what you can afford and sell what you hold.",
+        "After day eight, remaining crates sell automatically at the final price. Finish with at least 24 coins."
+      ],
+      "controls": "Tap or click the board and action buttons. Tab to a control; Enter or Space selects. Arrow keys move focus between board squares.",
+      "url": "strategy-room/?game=trade",
+      "accent": "#dcbca0",
+      "symbol": "↗",
+      "family": "strategy-room",
+      "status": "playable"
+    },
+    {
+      "id": "velvet-snake",
+      "name": "Velvet Snake",
+      "category": "arcade",
+      "description": "A slow little appetite. A growing little problem.",
+      "mechanic": "Steer a grid snake to gather twelve berries without touching walls or its own tail.",
+      "rules": [
+        "Collect 12 berries to finish your garden walk.",
+        "Every berry grows your snake. Walls and your own tail end the walk.",
+        "Choose your direction early. You cannot turn straight back into yourself."
+      ],
+      "controls": "Arrow keys or WASD; tap the four direction buttons.",
+      "url": "arcade-room/?game=velvet-snake",
+      "accent": "#b6d2a3",
+      "symbol": "⌁",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#pause"
+      },
+      "family": "arcade-room",
+      "status": "playable"
+    },
+    {
+      "id": "rally-club",
+      "name": "Rally Club",
+      "category": "sports",
+      "description": "An after-hours table for two.",
+      "mechanic": "Paddle versus an imperfect opponent; win five points before the computer.",
+      "rules": [
+        "Move your paddle to return the ball. First to five wins.",
+        "Hit nearer a paddle edge to send a sharper angle.",
+        "Your opponent reacts slowly. Change the angle to find an opening."
+      ],
+      "controls": "Up/Down or W/S; drag on the court, or hold the direction buttons.",
+      "url": "arcade-room/?game=rally-club",
+      "accent": "#d4b8cf",
+      "symbol": "↔",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#pause"
+      },
+      "family": "arcade-room",
+      "status": "playable"
+    },
+    {
+      "id": "paper-links",
+      "name": "Paper Links",
+      "category": "sports",
+      "description": "Three tiny greens. A patient line.",
+      "mechanic": "Aim and power a friction-driven golf ball through three obstacle courses.",
+      "rules": [
+        "Sink a ball on each of three miniature greens.",
+        "Drag from the ball toward your target: farther means stronger.",
+        "Use the walls to bank. Finish all greens within 12 strokes."
+      ],
+      "controls": "Drag from the ball then release; Left/Right aim, Up/Down power, Space shoots.",
+      "url": "arcade-room/?game=paper-links",
+      "accent": "#b6d2a3",
+      "symbol": "⚑",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#pause"
+      },
+      "family": "arcade-room",
+      "status": "playable"
+    },
+    {
+      "id": "moon-basket",
+      "name": "Moon Basket",
+      "category": "sports",
+      "description": "Put a soft arc into the evening.",
+      "mechanic": "Adjust a ballistic shot to pass downward through a basketball hoop.",
+      "rules": [
+        "Make three baskets in eight shots.",
+        "Adjust the launch angle and strength before each shot.",
+        "The ball must travel down through the hoop. A higher arc helps."
+      ],
+      "controls": "Left/Right angle, Up/Down strength; Space or Shoot. Drag upward from the ball to aim.",
+      "url": "arcade-room/?game=moon-basket",
+      "accent": "#ecc096",
+      "symbol": "◡",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#pause"
+      },
+      "family": "arcade-room",
+      "status": "playable"
+    },
+    {
+      "id": "quiet-curl",
+      "name": "Quiet Curl",
+      "category": "sports",
+      "description": "Three stones. One quiet center.",
+      "mechanic": "Aim and send three curling stones across friction ice to score proximity points.",
+      "rules": [
+        "Send three stones toward the house.",
+        "A stone inside the outer ring earns points; the center earns most.",
+        "Score at least 120 total. Your stones can bump one another."
+      ],
+      "controls": "Left/Right aim, Up/Down strength; Space or Release. Drag toward the target to aim.",
+      "url": "arcade-room/?game=quiet-curl",
+      "accent": "#b9d8e3",
+      "symbol": "◎",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#pause"
+      },
+      "family": "arcade-room",
+      "status": "playable"
+    },
+    {
+      "id": "kite-flight",
+      "name": "Kite Flight",
+      "category": "arcade",
+      "description": "A ribbon of air between the rooftops.",
+      "mechanic": "Hold-to-rise and release-to-fall flying through ten scrolling gates.",
+      "rules": [
+        "Guide your kite through ten openings.",
+        "Hold Lift to rise; let go to glide down.",
+        "Touching a gate or the top/bottom ends the flight."
+      ],
+      "controls": "Hold Space, the Lift button, or the sky; release to glide.",
+      "url": "arcade-room/?game=kite-flight",
+      "accent": "#b9d8e3",
+      "symbol": "◇",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#pause"
+      },
+      "family": "arcade-room",
+      "status": "playable"
+    },
+    {
+      "id": "soft-landing",
+      "name": "Soft Landing",
+      "category": "arcade",
+      "description": "A small engine. A softer arrival.",
+      "mechanic": "Rotate and thrust a lunar craft, managing velocity and fuel to land safely.",
+      "rules": [
+        "Land on the striped pad, upright and gently.",
+        "Use thrust to slow your descent; tilt to drift sideways.",
+        "Touch down below 32 vertical speed and 22 sideways speed, within about 13 degrees of upright."
+      ],
+      "controls": "Left/Right rotate; hold Space or Thrust. Speed and fuel are shown below the sky.",
+      "url": "arcade-room/?game=soft-landing",
+      "accent": "#c4bfd8",
+      "symbol": "△",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#pause"
+      },
+      "family": "arcade-room",
+      "status": "playable"
+    },
+    {
+      "id": "star-tow",
+      "name": "Star Tow",
+      "category": "arcade",
+      "description": "Bring the strays back to their star.",
+      "mechanic": "Steer an inertial spacecraft to pick up three cargo pods and deliver each to a central dock.",
+      "rules": [
+        "Touch a gold pod to tow it. Carry one at a time.",
+        "Bring it into the central dock slowly (below 70 speed).",
+        "Deliver all three before the 60-second shift ends. Coast and brake to turn."
+      ],
+      "controls": "Left/Right rotate, Space thrust, Down brake; use on-screen controls.",
+      "url": "arcade-room/?game=star-tow",
+      "accent": "#c4bfd8",
+      "symbol": "✧",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#pause"
+      },
+      "family": "arcade-room",
+      "status": "playable"
+    },
+    {
+      "id": "garden-guard",
+      "name": "Garden Guard",
+      "category": "arcade",
+      "description": "A kindly eye for a busy patch.",
+      "mechanic": "Selectively tap emerging pests while leaving flowers untouched.",
+      "rules": [
+        "Tap striped pests when they emerge. Leave flowers alone.",
+        "Catch 12 pests during a 30-second shift.",
+        "Three flower taps end the shift. Missing a pest only costs time."
+      ],
+      "controls": "Tap a garden square; keys1–9 select squares.",
+      "url": "arcade-room/?game=garden-guard",
+      "accent": "#c8d3a2",
+      "symbol": "✿",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#pause"
+      },
+      "family": "arcade-room",
+      "status": "playable"
+    },
+    {
+      "id": "beat-post",
+      "name": "Beat Post",
+      "category": "arcade",
+      "description": "Sort the night mail to a little rhythm.",
+      "mechanic": "Hit three lanes as scheduled notes cross a timing line.",
+      "rules": [
+        "Sort 24 notes by hitting their lane at the delivery line.",
+        "Near-perfect hits earn more points. A missed note or wrong-lane / mistimed tap costs one mistake; eight mistakes end the round.",
+        "Deliver at least 18 notes. Press only the lane with an envelope at the gold line. There is no audio requirement; follow the visual pulse."
+      ],
+      "controls": "Left/Down/Right or A/S/D; tap the three lane buttons.",
+      "url": "arcade-room/?game=beat-post",
+      "accent": "#d4b8cf",
+      "symbol": "♫",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#pause"
+      },
+      "family": "arcade-room",
+      "status": "playable"
+    },
+    {
+      "id": "pinball-pocket",
+      "name": "Pinball Pocket",
+      "category": "arcade",
+      "description": "A whole arcade in your coat pocket.",
+      "mechanic": "Operate two flippers to bounce a ball into bumpers while avoiding the drain.",
+      "rules": [
+        "Light the bumpers to earn 1,000 points.",
+        "Hold the left and right flippers to bounce a low ball back up.",
+        "You have three balls. Hold one flipper while launching to aim toward that side. Side gutters stay open."
+      ],
+      "controls": "Left/Right or A/D hold flippers; on-screen flipper buttons. Space launches a ball.",
+      "url": "arcade-room/?game=pinball-pocket",
+      "accent": "#ecc096",
+      "symbol": "✦",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#pause"
+      },
+      "family": "arcade-room",
+      "status": "playable"
+    },
+    {
+      "id": "rope-skip",
+      "name": "Rope Skip",
+      "category": "sports",
+      "description": "A little hop. A little grace.",
+      "mechanic": "Jump a character over periodic rope sweeps; landed recovery prevents spam.",
+      "rules": [
+        "Clear 16 rope sweeps to finish.",
+        "Jump as the rope approaches your feet.",
+        "Three catches end the session. Let your feet land before jumping again."
+      ],
+      "controls": "Space or Jump; the moving rope and countdown arc show the approach.",
+      "url": "arcade-room/?game=rope-skip",
+      "accent": "#d4b8cf",
+      "symbol": "⌒",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#pause"
+      },
+      "family": "arcade-room",
+      "status": "playable"
+    },
+    {
+      "id": "table-bowls",
+      "name": "Table Bowls",
+      "category": "sports",
+      "description": "A tidy table, a satisfying clack.",
+      "mechanic": "Shoot a cue ball into three object balls and pocket them within eight shots.",
+      "rules": [
+        "Pocket all three colored balls in eight shots.",
+        "Aim the white cue ball; drag farther for more power.",
+        "Only shoot when every ball stops. A scratched cue ball returns to the start."
+      ],
+      "controls": "Drag from white ball; Left/Right aim, Up/Down strength, Space shoots.",
+      "url": "arcade-room/?game=table-bowls",
+      "accent": "#a6c9bc",
+      "symbol": "●",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#pause"
+      },
+      "family": "arcade-room",
+      "status": "playable"
+    },
+    {
+      "id": "balance-beam",
+      "name": "Balance Beam",
+      "category": "arcade",
+      "description": "Keep your center while the world tilts.",
+      "mechanic": "Lean a beam to counter a moving breeze and keep a rolling marble on the platform.",
+      "rules": [
+        "Keep the marble on the beam for 30 seconds.",
+        "Tilt left or right to bring the marble back. Its weight tips the beam farther as it drifts.",
+        "Gentle corrections beat big swings. Falling off ends the balance."
+      ],
+      "controls": "Left/Right or A/D; hold the on-screen tilt controls.",
+      "url": "arcade-room/?game=balance-beam",
+      "accent": "#ecc096",
+      "symbol": "↞",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#pause"
+      },
+      "family": "arcade-room",
+      "status": "playable"
+    },
+    {
+      "id": "harbor-catch",
+      "name": "Harbor Catch",
+      "category": "arcade",
+      "description": "A patient line beneath the harbor.",
+      "mechanic": "Position a boat, lower a hook into patrolling fish at different depths, then reel a catch aboard within eight casts.",
+      "rules": [
+        "Land three fish within eight casts. Move the boat before you lower your line.",
+        "Hold Cast to lower the hook. Release to reel it back; a hooked fish reels in automatically.",
+        "Fish patrol different depths. Predict their path; touching the seabed wastes your cast."
+      ],
+      "controls": "Left/Right or drag to move the boat while the hook is up. Hold Space or Cast to lower; release to reel.",
+      "url": "arcade-room/?game=harbor-catch",
+      "accent": "#b9d8e3",
+      "symbol": "∪",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#pause"
+      },
+      "family": "arcade-room",
+      "status": "playable"
+    }
+  ],
+  "files": {
+    "mini-games/signal-run/game.css": "e9d9d3441c336fdbbea8e90f21f4608032ec87868aaa2ae39b313fe47bab7fbf",
+    "mini-games/signal-run/game.js": "f795415a49bd43abf2c7002125e723631b4a338ac4cc25357517f55b4ed7beed",
+    "mini-games/signal-run/index.html": "cff74adcd765851fd50f290409f48b663d73db0c7d49fc6626f7a02e41d1a794",
+    "mini-games/double-take/game.css": "1398f240eabcf5345195e6789804c5d653d6a10287b6b0aff099f9ec044c5953",
+    "mini-games/double-take/game.js": "712360718dc30ab3be402cefa5db9526c2525d9c14f35113a10404bf990e6759",
+    "mini-games/double-take/index.html": "f0bc66ade337a49bef11ebfa4aa62222fba72bfdcd394ba37134c717fa95fc89",
+    "mini-games/pocket-orbit/game.css": "c5970b4464c33912b1d37ce4622e7610599d29d7377750ad23d277c4bef22f44",
+    "mini-games/pocket-orbit/game.js": "1c546b11607074e4debb809b51e1be573578af566d6453dcd22bba94ee2f46ed",
+    "mini-games/pocket-orbit/index.html": "d559cf90a61451df61b53dbb9a3b82ca9008a52c84d2aba1ec292445e8971874",
+    "mini-games/good-order/game.css": "badad69498358ddf760b7feba8d9481282e31c1bb339a6ac472fdee491ae971b",
+    "mini-games/good-order/game.js": "2eb66100c252503e13200160f18bf52079a88003d8e976f8e6028d829b2be58d",
+    "mini-games/good-order/index.html": "e0ef371c1b08ba2ecc2a3a3ed14831edd300d12a8a61342243a98dca213d7306",
+    "mini-games/afterglow/engine.js": "1d93882c8129f8c991de6485fd5b08d0f3be3e7a5f4e453d5d35a1e4a6263ce9",
+    "mini-games/afterglow/game.css": "c3490aaae075b0bcb352b96c8738196499a30ae053e1b7b344d15de479f67df6",
+    "mini-games/afterglow/game.js": "335ec34cea6fc1d42846be5668f2c88803f4ec7748d358fc125a6b568efd6675",
+    "mini-games/afterglow/index.html": "2c83520111764761b49a242d92343a6ebd410c21e333d0fddb5111a521ffb464",
+    "mini-games/lantern-lines/game.css": "c24f5c217fc1310015b091d618a9e521cf1bb3341362427451cc1c3fc67cf568",
+    "mini-games/lantern-lines/game.js": "8acc4fb4f92e20b9aa4df8d63638ed02f6dbe6b174e28610134131f4ae7c94a2",
+    "mini-games/lantern-lines/index.html": "92e18efc0337acbbd1712ce67f8249e87470889f8369109f54d086c926118635",
+    "mini-games/tide-pool/game.css": "f448c58eba9152d156c545df6f72b1e439bbe2955184639171f83d6feb861c7f",
+    "mini-games/tide-pool/game.js": "07532c30863fd38912f62348a3d787f35224ea6030878cc36f37ccadcafa3962",
+    "mini-games/tide-pool/index.html": "5dc972ba0cc05addda843df74666455da7de5701d3a8869965c06afe5e0bc3d2",
+    "mini-games/word-weave/game.css": "155750c217eb700c1d4772ca5aec86f2b76764e02523ade5bf344e597961cd27",
+    "mini-games/word-weave/game.js": "f80600556036641bf1efbbea8caf287f43540e46dd594043b40a6a2346f4d4e9",
+    "mini-games/word-weave/index.html": "4cf12dec37eec72647181766cbc4b2248a579aa7641d2afce06b1964538e1088",
+    "mini-games/sky-stack/game.css": "028930a14775dccd05ca8c2b4534f521ef5d5f34d083a23d931f2f0620b7316c",
+    "mini-games/sky-stack/game.js": "97fdf8c9475ad6be78eb4092121282d615fddd11bba9159f6b3ee854e8872db0",
+    "mini-games/sky-stack/index.html": "b2f57c8cae07da9a4daf99ed5c466f6888ff7e411786559e57f60c56219b8632",
+    "mini-games/pebble-post/game.css": "42304d85d848c1a8e823ccfba3589823cd22498e943fbb59fb2c84ce77c0b3f2",
+    "mini-games/pebble-post/game.js": "f491348d303838b0f0daa6dc56b857d0f8138f84038e7f605f6ae1da2ea9cee6",
+    "mini-games/pebble-post/index.html": "4d74f5d6d9574b43bd7462cba1118fccf09a5c14925d47cb890a3a3e91c7544a",
+    "mini-games/spatial-room/data.js": "70716ae1d4e982aebf3e5dca50e3b81107a219a449ff7cf27773a0811480571c",
+    "mini-games/spatial-room/games.json": "064fc0643f106c88e49cd156541de9d6f49eea5d0f555aa9dbbb045cd5ec3675",
+    "mini-games/spatial-room/index.html": "6ed53726cfe1b5524e82f9e25f1a1458e3b835008688d32a26dc8cb5ce09f909",
+    "mini-games/spatial-room/room.css": "27472a6489e4e2f6aba92bb30c3933c9efa5f4a38451577f1b53ad9a97522972",
+    "mini-games/spatial-room/room.js": "91d58bef655ccb3ccab0a7fe91fcc1178997ba6d1ff1f09ad58e3c6b1fed4119",
+    "mini-games/logic-room/games.js": "1a1eea8d98f86bec1659b529fbaa57efe4d04399941639ae0671988872061749",
+    "mini-games/logic-room/games.json": "5c564ac4baccbd038a30436e4ae28372e88f24e87c8dc78fb5db21e8a44d35ef",
+    "mini-games/logic-room/index.html": "87e278efaf7139d8e866d0f7b46c05b6214174e37e64b1aaf218be5b8932841c",
+    "mini-games/logic-room/room.css": "04d77721ad2d0d6e7fd5660526ac212117cfcc0db6f45913d73ae0140bb19b45",
+    "mini-games/logic-room/room.js": "8a268d926020967fc4cc996693adb160d2c3fa6101763d05e985c4c4467f47bc",
+    "mini-games/number-room/games.json": "bbe234918789d016f69a69b0c396ee7f4acad725147b4e09ec39313a110ace0f",
+    "mini-games/number-room/index.html": "3a9f562613172f1356fd11b6b0c649bf7a704cb74ee5d6ce45062b020e0b1cdd",
+    "mini-games/number-room/room.css": "231a57a07edefdcd462d5109da6c6547335ebd15cfbda910ce07f641745942a5",
+    "mini-games/number-room/room.js": "fbf9031d63cfc1e3ee9784be212e17583012397862d126054ece736442f849d8",
+    "mini-games/word-room/data.js": "ad5df00840b793dab4391fed6548746bcf971d86959a92adc99a2eb09b9ef2f0",
+    "mini-games/word-room/games.json": "a3b125a095071803a583f20f71fa479e9b4ad4c690fc83afda63953969c6a92b",
+    "mini-games/word-room/index.html": "84afdfe0865cd67864bb1153116256c21252ac0dfa7654c951f2570ae5066ea5",
+    "mini-games/word-room/room.css": "465670b7a585a1f6a52e7d82e2b68316733bf913cab7ab34b4cea2a7aae703a1",
+    "mini-games/word-room/room.js": "47601c8f130807d297ce63c982bf52d519110fe72042460a005ff4c372de663c",
+    "mini-games/strategy-room/engines.mjs": "6f51531160b592e9b7481ce7615209d976b99a31424b4e9283ee9761dd245d75",
+    "mini-games/strategy-room/game.js": "964eaf5c3046c64406f28e28afbd65ec0c5d386963dbdcb402f63ed7920fecd8",
+    "mini-games/strategy-room/games.json": "4ce1ee3450d2b7176f4f3165649ca7b89ccd9694669c4c773962b4d5cf11750e",
+    "mini-games/strategy-room/index.html": "7fe244f0765f5cbe0ee115d6492f90f71bde21136f12da396e370900f3265bfd",
+    "mini-games/strategy-room/room.css": "76499e6b32357a309e69c6cb7019aa03e6863c3ce210c125deb1b444758ed004",
+    "mini-games/arcade-room/games.json": "e7ed3a8bec3551b9610b3091eef05969390b386b5b35988a6f3e7f4e1ebb7197",
+    "mini-games/arcade-room/index.html": "0351a0b0fc4eefdf6b1db378295189ebddcb8b9a9c5f98fdcb970742ca617a9a",
+    "mini-games/arcade-room/room.css": "d3321ec306ab6b356f89f974ed5664b50467a4b326aacf9098cc785cbc7fa00c",
+    "mini-games/arcade-room/room.js": "e5bb735c12919a63fa060d6c8125ecc441feb644e15b3acdf3a14414ae203214",
+    "motion-showcase/README.md": "b056662ca35b49cdf8439231be773f1757339f9491268a0f2816a4e93840b76e",
+    "motion-showcase/index.html": "4e51b5cb30b4bfd5b784cbdc4212c0c5a8cd938ef5cabebf68fce194fd2584ae",
+    "mini-games/catalog.js": "c041cb7696c9343e8ba3af69cca8230f61e49d9d64d964f613a9ba252ceb07d5",
+    "mini-games/catalog.css": "3f7fed0b9eabdbb1ab1c308d225dcf4022d4946882a80968dccd0f8197d75840",
+    "mini-games/common.js": "c14967b43f3c485423b29ab47b8021776fe15933d1e8207467991491bc769cab",
+    "mini-games/play.css": "653182c898e835ca0f733f8e0c1f99a44073ea6fd2d0521b8aaff4d3f0313191",
+    "mini-games/styles.css": "2f55c2ed941f3c912a09747355e89af92148812f825d97cf5f72f3075c3d0281"
+  }
+}

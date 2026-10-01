@@ -1,0 +1,863 @@
+{
+  "suite": "tabletop-room",
+  "passed": true,
+  "testedAt": "2026-10-01T04:10:47.237Z",
+  "cases": [
+    {
+      "id": "velvet-tricks",
+      "profile": "desktop",
+      "variant": "main",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "edgeCases": [
+        "invalid engine action is inert",
+        "terminal gameplay controls removed",
+        "repeat restart restores opening"
+      ],
+      "inputMethod": "Keyboard Space for first action, pointer clicks for remaining actions",
+      "touchOnly": false,
+      "classification": "source-planned UI-input reachability replay",
+      "actions": 8
+    },
+    {
+      "id": "twenty-one",
+      "profile": "desktop",
+      "variant": "main",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "edgeCases": [
+        "invalid engine action is inert",
+        "terminal gameplay controls removed",
+        "repeat restart restores opening"
+      ],
+      "inputMethod": "Keyboard Space for first action, pointer clicks for remaining actions",
+      "touchOnly": false,
+      "classification": "source-planned UI-input reachability replay",
+      "actions": 12
+    },
+    {
+      "id": "twenty-one",
+      "profile": "desktop",
+      "variant": "failure",
+      "passed": true,
+      "outcome": "loss",
+      "restart": true,
+      "edgeCases": [
+        "invalid engine action is inert",
+        "terminal gameplay controls removed",
+        "repeat restart restores opening",
+        "deliberate losing route"
+      ],
+      "inputMethod": "Keyboard Space for first action, pointer clicks for remaining actions",
+      "touchOnly": false,
+      "classification": "source-planned UI-input reachability replay",
+      "actions": 13
+    },
+    {
+      "id": "meld-atelier",
+      "profile": "desktop",
+      "variant": "main",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "edgeCases": [
+        "invalid engine action is inert",
+        "terminal gameplay controls removed",
+        "repeat restart restores opening"
+      ],
+      "inputMethod": "Keyboard Space for first action, pointer clicks for remaining actions",
+      "touchOnly": false,
+      "classification": "source-planned UI-input reachability replay",
+      "actions": 39
+    },
+    {
+      "id": "meld-atelier",
+      "profile": "desktop",
+      "variant": "failure",
+      "passed": true,
+      "outcome": "loss",
+      "restart": true,
+      "edgeCases": [
+        "invalid engine action is inert",
+        "terminal gameplay controls removed",
+        "repeat restart restores opening",
+        "deliberate losing route"
+      ],
+      "inputMethod": "Keyboard Space for first action, pointer clicks for remaining actions",
+      "touchOnly": false,
+      "classification": "source-planned UI-input reachability replay",
+      "actions": 36
+    },
+    {
+      "id": "five-card-evening",
+      "profile": "desktop",
+      "variant": "main",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "edgeCases": [
+        "invalid engine action is inert",
+        "terminal gameplay controls removed",
+        "repeat restart restores opening"
+      ],
+      "inputMethod": "Keyboard Space for first action, pointer clicks for remaining actions",
+      "touchOnly": false,
+      "classification": "source-planned UI-input reachability replay",
+      "actions": 26
+    },
+    {
+      "id": "five-card-evening",
+      "profile": "desktop",
+      "variant": "failure",
+      "passed": true,
+      "outcome": "loss",
+      "restart": true,
+      "edgeCases": [
+        "invalid engine action is inert",
+        "terminal gameplay controls removed",
+        "repeat restart restores opening",
+        "deliberate losing route"
+      ],
+      "inputMethod": "Keyboard Space for first action, pointer clicks for remaining actions",
+      "touchOnly": false,
+      "classification": "source-planned UI-input reachability replay",
+      "actions": 24
+    },
+    {
+      "id": "five-card-evening",
+      "profile": "desktop",
+      "variant": "redraw-budget",
+      "passed": true,
+      "outcome": "draw",
+      "restart": true,
+      "edgeCases": [
+        "invalid engine action is inert",
+        "terminal gameplay controls removed",
+        "repeat restart restores opening"
+      ],
+      "inputMethod": "Keyboard Space for first action, pointer clicks for remaining actions",
+      "touchOnly": false,
+      "classification": "source-planned UI-input reachability replay",
+      "actions": 29
+    },
+    {
+      "id": "last-hand",
+      "profile": "desktop",
+      "variant": "main",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "edgeCases": [
+        "invalid engine action is inert",
+        "terminal gameplay controls removed",
+        "repeat restart restores opening"
+      ],
+      "inputMethod": "Keyboard Space for first action, pointer clicks for remaining actions",
+      "touchOnly": false,
+      "classification": "source-planned UI-input reachability replay",
+      "actions": 20
+    },
+    {
+      "id": "scopa-shelf",
+      "profile": "desktop",
+      "variant": "main",
+      "passed": true,
+      "outcome": "loss",
+      "restart": true,
+      "edgeCases": [
+        "invalid engine action is inert",
+        "terminal gameplay controls removed",
+        "repeat restart restores opening"
+      ],
+      "inputMethod": "Keyboard Space for first action, pointer clicks for remaining actions",
+      "touchOnly": false,
+      "classification": "source-planned UI-input reachability replay",
+      "actions": 45
+    },
+    {
+      "id": "domino-parlour",
+      "profile": "desktop",
+      "variant": "main",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "edgeCases": [
+        "invalid engine action is inert",
+        "terminal gameplay controls removed",
+        "repeat restart restores opening"
+      ],
+      "inputMethod": "Keyboard Space for first action, pointer clicks for remaining actions",
+      "touchOnly": false,
+      "classification": "source-planned UI-input reachability replay",
+      "actions": 9
+    },
+    {
+      "id": "bank-the-roll",
+      "profile": "desktop",
+      "variant": "main",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "edgeCases": [
+        "invalid engine action is inert",
+        "terminal gameplay controls removed",
+        "repeat restart restores opening"
+      ],
+      "inputMethod": "Keyboard Space for first action, pointer clicks for remaining actions",
+      "touchOnly": false,
+      "classification": "source-planned UI-input reachability replay",
+      "actions": 33
+    },
+    {
+      "id": "bank-the-roll",
+      "profile": "desktop",
+      "variant": "failure",
+      "passed": true,
+      "outcome": "loss",
+      "restart": true,
+      "edgeCases": [
+        "invalid engine action is inert",
+        "terminal gameplay controls removed",
+        "repeat restart restores opening",
+        "deliberate losing route"
+      ],
+      "inputMethod": "Keyboard Space for first action, pointer clicks for remaining actions",
+      "touchOnly": false,
+      "classification": "source-planned UI-input reachability replay",
+      "actions": 68
+    },
+    {
+      "id": "six-columns",
+      "profile": "desktop",
+      "variant": "main",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "edgeCases": [
+        "invalid engine action is inert",
+        "terminal gameplay controls removed",
+        "repeat restart restores opening"
+      ],
+      "inputMethod": "Keyboard Space for first action, pointer clicks for remaining actions",
+      "touchOnly": false,
+      "classification": "source-planned UI-input reachability replay",
+      "actions": 39
+    },
+    {
+      "id": "six-columns",
+      "profile": "desktop",
+      "variant": "failure",
+      "passed": true,
+      "outcome": "loss",
+      "restart": true,
+      "edgeCases": [
+        "invalid engine action is inert",
+        "terminal gameplay controls removed",
+        "repeat restart restores opening",
+        "deliberate losing route"
+      ],
+      "inputMethod": "Keyboard Space for first action, pointer clicks for remaining actions",
+      "touchOnly": false,
+      "classification": "source-planned UI-input reachability replay",
+      "actions": 6
+    },
+    {
+      "id": "hidden-dice",
+      "profile": "desktop",
+      "variant": "main",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "edgeCases": [
+        "invalid engine action is inert",
+        "terminal gameplay controls removed",
+        "repeat restart restores opening"
+      ],
+      "inputMethod": "Keyboard Space for first action, pointer clicks for remaining actions",
+      "touchOnly": false,
+      "classification": "source-planned UI-input reachability replay",
+      "actions": 17
+    },
+    {
+      "id": "hidden-dice",
+      "profile": "desktop",
+      "variant": "failure",
+      "passed": true,
+      "outcome": "loss",
+      "restart": true,
+      "edgeCases": [
+        "invalid engine action is inert",
+        "terminal gameplay controls removed",
+        "repeat restart restores opening",
+        "deliberate losing route"
+      ],
+      "inputMethod": "Keyboard Space for first action, pointer clicks for remaining actions",
+      "touchOnly": false,
+      "classification": "source-planned UI-input reachability replay",
+      "actions": 10
+    },
+    {
+      "id": "sealed-bids",
+      "profile": "desktop",
+      "variant": "main",
+      "passed": true,
+      "outcome": "loss",
+      "restart": true,
+      "edgeCases": [
+        "invalid engine action is inert",
+        "terminal gameplay controls removed",
+        "repeat restart restores opening"
+      ],
+      "inputMethod": "Keyboard Space for first action, pointer clicks for remaining actions",
+      "touchOnly": false,
+      "classification": "source-planned UI-input reachability replay",
+      "actions": 10
+    },
+    {
+      "id": "thirty-one-lane",
+      "profile": "desktop",
+      "variant": "main",
+      "passed": true,
+      "outcome": "loss",
+      "restart": true,
+      "edgeCases": [
+        "invalid engine action is inert",
+        "terminal gameplay controls removed",
+        "repeat restart restores opening"
+      ],
+      "inputMethod": "Keyboard Space for first action, pointer clicks for remaining actions",
+      "touchOnly": false,
+      "classification": "source-planned UI-input reachability replay",
+      "actions": 10
+    },
+    {
+      "id": "formation-flags",
+      "profile": "desktop",
+      "variant": "main",
+      "passed": true,
+      "outcome": "loss",
+      "restart": true,
+      "edgeCases": [
+        "invalid engine action is inert",
+        "terminal gameplay controls removed",
+        "repeat restart restores opening"
+      ],
+      "inputMethod": "Keyboard Space for first action, pointer clicks for remaining actions",
+      "touchOnly": false,
+      "classification": "source-planned UI-input reachability replay",
+      "actions": 24
+    },
+    {
+      "id": "crown-and-guard",
+      "profile": "desktop",
+      "variant": "main",
+      "passed": true,
+      "outcome": "loss",
+      "restart": true,
+      "edgeCases": [
+        "invalid engine action is inert",
+        "terminal gameplay controls removed",
+        "repeat restart restores opening",
+        "unavailable board square is inert"
+      ],
+      "inputMethod": "Keyboard Space for first action, pointer clicks for remaining actions",
+      "touchOnly": false,
+      "classification": "source-planned UI-input reachability replay",
+      "actions": 22
+    },
+    {
+      "id": "draught-garden",
+      "profile": "desktop",
+      "variant": "main",
+      "passed": true,
+      "outcome": "loss",
+      "restart": true,
+      "edgeCases": [
+        "invalid engine action is inert",
+        "terminal gameplay controls removed",
+        "repeat restart restores opening",
+        "unavailable board square is inert"
+      ],
+      "inputMethod": "Keyboard Space for first action, pointer clicks for remaining actions",
+      "touchOnly": false,
+      "classification": "source-planned UI-input reachability replay",
+      "actions": 24
+    },
+    {
+      "id": "borrowed-steps",
+      "profile": "desktop",
+      "variant": "main",
+      "passed": true,
+      "outcome": "loss",
+      "restart": true,
+      "edgeCases": [
+        "invalid engine action is inert",
+        "terminal gameplay controls removed",
+        "repeat restart restores opening",
+        "unavailable board square is inert"
+      ],
+      "inputMethod": "Keyboard Space for first action, pointer clicks for remaining actions",
+      "touchOnly": false,
+      "classification": "source-planned UI-input reachability replay",
+      "actions": 14
+    },
+    {
+      "id": "marble-council",
+      "profile": "desktop",
+      "variant": "main",
+      "passed": true,
+      "outcome": "loss",
+      "restart": true,
+      "edgeCases": [
+        "invalid engine action is inert",
+        "terminal gameplay controls removed",
+        "repeat restart restores opening",
+        "unavailable board square is inert"
+      ],
+      "inputMethod": "Keyboard Space for first action, pointer clicks for remaining actions",
+      "touchOnly": false,
+      "classification": "source-planned UI-input reachability replay",
+      "actions": 24
+    },
+    {
+      "id": "joining-lines",
+      "profile": "desktop",
+      "variant": "main",
+      "passed": true,
+      "outcome": "loss",
+      "restart": true,
+      "edgeCases": [
+        "invalid engine action is inert",
+        "terminal gameplay controls removed",
+        "repeat restart restores opening",
+        "unavailable board square is inert"
+      ],
+      "inputMethod": "Keyboard Space for first action, pointer clicks for remaining actions",
+      "touchOnly": false,
+      "classification": "source-planned UI-input reachability replay",
+      "actions": 22
+    },
+    {
+      "id": "terrace-duel",
+      "profile": "desktop",
+      "variant": "main",
+      "passed": true,
+      "outcome": "loss",
+      "restart": true,
+      "edgeCases": [
+        "invalid engine action is inert",
+        "terminal gameplay controls removed",
+        "repeat restart restores opening",
+        "unavailable board square is inert"
+      ],
+      "inputMethod": "Keyboard Space for first action, pointer clicks for remaining actions",
+      "touchOnly": false,
+      "classification": "source-planned UI-input reachability replay",
+      "actions": 18
+    },
+    {
+      "id": "court-of-suits",
+      "profile": "desktop",
+      "variant": "main",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "edgeCases": [
+        "invalid engine action is inert",
+        "terminal gameplay controls removed",
+        "repeat restart restores opening"
+      ],
+      "inputMethod": "Keyboard Space for first action, pointer clicks for remaining actions",
+      "touchOnly": false,
+      "classification": "source-planned UI-input reachability replay",
+      "actions": 16
+    },
+    {
+      "id": "court-of-suits",
+      "profile": "desktop",
+      "variant": "failure",
+      "passed": true,
+      "outcome": "loss",
+      "restart": true,
+      "edgeCases": [
+        "invalid engine action is inert",
+        "terminal gameplay controls removed",
+        "repeat restart restores opening",
+        "deliberate losing route"
+      ],
+      "inputMethod": "Keyboard Space for first action, pointer clicks for remaining actions",
+      "touchOnly": false,
+      "classification": "source-planned UI-input reachability replay",
+      "actions": 9
+    },
+    {
+      "id": "velvet-tricks",
+      "profile": "mobile-touch",
+      "variant": "main",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "edgeCases": [
+        "invalid engine action is inert",
+        "terminal gameplay controls removed",
+        "repeat restart restores opening"
+      ],
+      "inputMethod": "Playwright touchscreen taps for every gameplay action",
+      "touchOnly": true,
+      "classification": "source-planned UI-input reachability replay",
+      "actions": 8
+    },
+    {
+      "id": "twenty-one",
+      "profile": "mobile-touch",
+      "variant": "main",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "edgeCases": [
+        "invalid engine action is inert",
+        "terminal gameplay controls removed",
+        "repeat restart restores opening"
+      ],
+      "inputMethod": "Playwright touchscreen taps for every gameplay action",
+      "touchOnly": true,
+      "classification": "source-planned UI-input reachability replay",
+      "actions": 12
+    },
+    {
+      "id": "meld-atelier",
+      "profile": "mobile-touch",
+      "variant": "main",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "edgeCases": [
+        "invalid engine action is inert",
+        "terminal gameplay controls removed",
+        "repeat restart restores opening"
+      ],
+      "inputMethod": "Playwright touchscreen taps for every gameplay action",
+      "touchOnly": true,
+      "classification": "source-planned UI-input reachability replay",
+      "actions": 39
+    },
+    {
+      "id": "five-card-evening",
+      "profile": "mobile-touch",
+      "variant": "main",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "edgeCases": [
+        "invalid engine action is inert",
+        "terminal gameplay controls removed",
+        "repeat restart restores opening"
+      ],
+      "inputMethod": "Playwright touchscreen taps for every gameplay action",
+      "touchOnly": true,
+      "classification": "source-planned UI-input reachability replay",
+      "actions": 26
+    },
+    {
+      "id": "last-hand",
+      "profile": "mobile-touch",
+      "variant": "main",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "edgeCases": [
+        "invalid engine action is inert",
+        "terminal gameplay controls removed",
+        "repeat restart restores opening"
+      ],
+      "inputMethod": "Playwright touchscreen taps for every gameplay action",
+      "touchOnly": true,
+      "classification": "source-planned UI-input reachability replay",
+      "actions": 20
+    },
+    {
+      "id": "scopa-shelf",
+      "profile": "mobile-touch",
+      "variant": "main",
+      "passed": true,
+      "outcome": "loss",
+      "restart": true,
+      "edgeCases": [
+        "invalid engine action is inert",
+        "terminal gameplay controls removed",
+        "repeat restart restores opening"
+      ],
+      "inputMethod": "Playwright touchscreen taps for every gameplay action",
+      "touchOnly": true,
+      "classification": "source-planned UI-input reachability replay",
+      "actions": 45
+    },
+    {
+      "id": "domino-parlour",
+      "profile": "mobile-touch",
+      "variant": "main",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "edgeCases": [
+        "invalid engine action is inert",
+        "terminal gameplay controls removed",
+        "repeat restart restores opening"
+      ],
+      "inputMethod": "Playwright touchscreen taps for every gameplay action",
+      "touchOnly": true,
+      "classification": "source-planned UI-input reachability replay",
+      "actions": 9
+    },
+    {
+      "id": "bank-the-roll",
+      "profile": "mobile-touch",
+      "variant": "main",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "edgeCases": [
+        "invalid engine action is inert",
+        "terminal gameplay controls removed",
+        "repeat restart restores opening"
+      ],
+      "inputMethod": "Playwright touchscreen taps for every gameplay action",
+      "touchOnly": true,
+      "classification": "source-planned UI-input reachability replay",
+      "actions": 33
+    },
+    {
+      "id": "six-columns",
+      "profile": "mobile-touch",
+      "variant": "main",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "edgeCases": [
+        "invalid engine action is inert",
+        "terminal gameplay controls removed",
+        "repeat restart restores opening"
+      ],
+      "inputMethod": "Playwright touchscreen taps for every gameplay action",
+      "touchOnly": true,
+      "classification": "source-planned UI-input reachability replay",
+      "actions": 39
+    },
+    {
+      "id": "hidden-dice",
+      "profile": "mobile-touch",
+      "variant": "main",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "edgeCases": [
+        "invalid engine action is inert",
+        "terminal gameplay controls removed",
+        "repeat restart restores opening"
+      ],
+      "inputMethod": "Playwright touchscreen taps for every gameplay action",
+      "touchOnly": true,
+      "classification": "source-planned UI-input reachability replay",
+      "actions": 17
+    },
+    {
+      "id": "sealed-bids",
+      "profile": "mobile-touch",
+      "variant": "main",
+      "passed": true,
+      "outcome": "loss",
+      "restart": true,
+      "edgeCases": [
+        "invalid engine action is inert",
+        "terminal gameplay controls removed",
+        "repeat restart restores opening"
+      ],
+      "inputMethod": "Playwright touchscreen taps for every gameplay action",
+      "touchOnly": true,
+      "classification": "source-planned UI-input reachability replay",
+      "actions": 10
+    },
+    {
+      "id": "thirty-one-lane",
+      "profile": "mobile-touch",
+      "variant": "main",
+      "passed": true,
+      "outcome": "loss",
+      "restart": true,
+      "edgeCases": [
+        "invalid engine action is inert",
+        "terminal gameplay controls removed",
+        "repeat restart restores opening"
+      ],
+      "inputMethod": "Playwright touchscreen taps for every gameplay action",
+      "touchOnly": true,
+      "classification": "source-planned UI-input reachability replay",
+      "actions": 10
+    },
+    {
+      "id": "formation-flags",
+      "profile": "mobile-touch",
+      "variant": "main",
+      "passed": true,
+      "outcome": "loss",
+      "restart": true,
+      "edgeCases": [
+        "invalid engine action is inert",
+        "terminal gameplay controls removed",
+        "repeat restart restores opening"
+      ],
+      "inputMethod": "Playwright touchscreen taps for every gameplay action",
+      "touchOnly": true,
+      "classification": "source-planned UI-input reachability replay",
+      "actions": 24
+    },
+    {
+      "id": "crown-and-guard",
+      "profile": "mobile-touch",
+      "variant": "main",
+      "passed": true,
+      "outcome": "loss",
+      "restart": true,
+      "edgeCases": [
+        "invalid engine action is inert",
+        "terminal gameplay controls removed",
+        "repeat restart restores opening",
+        "unavailable board square is inert"
+      ],
+      "inputMethod": "Playwright touchscreen taps for every gameplay action",
+      "touchOnly": true,
+      "classification": "source-planned UI-input reachability replay",
+      "actions": 22
+    },
+    {
+      "id": "draught-garden",
+      "profile": "mobile-touch",
+      "variant": "main",
+      "passed": true,
+      "outcome": "loss",
+      "restart": true,
+      "edgeCases": [
+        "invalid engine action is inert",
+        "terminal gameplay controls removed",
+        "repeat restart restores opening",
+        "unavailable board square is inert"
+      ],
+      "inputMethod": "Playwright touchscreen taps for every gameplay action",
+      "touchOnly": true,
+      "classification": "source-planned UI-input reachability replay",
+      "actions": 24
+    },
+    {
+      "id": "borrowed-steps",
+      "profile": "mobile-touch",
+      "variant": "main",
+      "passed": true,
+      "outcome": "loss",
+      "restart": true,
+      "edgeCases": [
+        "invalid engine action is inert",
+        "terminal gameplay controls removed",
+        "repeat restart restores opening",
+        "unavailable board square is inert"
+      ],
+      "inputMethod": "Playwright touchscreen taps for every gameplay action",
+      "touchOnly": true,
+      "classification": "source-planned UI-input reachability replay",
+      "actions": 14
+    },
+    {
+      "id": "marble-council",
+      "profile": "mobile-touch",
+      "variant": "main",
+      "passed": true,
+      "outcome": "loss",
+      "restart": true,
+      "edgeCases": [
+        "invalid engine action is inert",
+        "terminal gameplay controls removed",
+        "repeat restart restores opening",
+        "unavailable board square is inert"
+      ],
+      "inputMethod": "Playwright touchscreen taps for every gameplay action",
+      "touchOnly": true,
+      "classification": "source-planned UI-input reachability replay",
+      "actions": 24
+    },
+    {
+      "id": "joining-lines",
+      "profile": "mobile-touch",
+      "variant": "main",
+      "passed": true,
+      "outcome": "loss",
+      "restart": true,
+      "edgeCases": [
+        "invalid engine action is inert",
+        "terminal gameplay controls removed",
+        "repeat restart restores opening",
+        "unavailable board square is inert"
+      ],
+      "inputMethod": "Playwright touchscreen taps for every gameplay action",
+      "touchOnly": true,
+      "classification": "source-planned UI-input reachability replay",
+      "actions": 22
+    },
+    {
+      "id": "terrace-duel",
+      "profile": "mobile-touch",
+      "variant": "main",
+      "passed": true,
+      "outcome": "loss",
+      "restart": true,
+      "edgeCases": [
+        "invalid engine action is inert",
+        "terminal gameplay controls removed",
+        "repeat restart restores opening",
+        "unavailable board square is inert"
+      ],
+      "inputMethod": "Playwright touchscreen taps for every gameplay action",
+      "touchOnly": true,
+      "classification": "source-planned UI-input reachability replay",
+      "actions": 18
+    },
+    {
+      "id": "court-of-suits",
+      "profile": "mobile-touch",
+      "variant": "main",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "edgeCases": [
+        "invalid engine action is inert",
+        "terminal gameplay controls removed",
+        "repeat restart restores opening"
+      ],
+      "inputMethod": "Playwright touchscreen taps for every gameplay action",
+      "touchOnly": true,
+      "classification": "source-planned UI-input reachability replay",
+      "actions": 16
+    }
+  ],
+  "limits": [
+    "Source-planned pure-engine routes replayed through real visible UI controls; no runtime state injection or delivered test hooks.",
+    "Chromium desktop and emulated touch mobile; not physical-device or screen-reader verification.",
+    "Competitive routes include losses, so terminal coverage does not claim mastery or that every opponent is deeply tuned.",
+    "Separate independent reviewer covers ordinary play samples; these planned routes do not count as unassisted ordinary play."
+  ],
+  "engineChecks": {
+    "transitions": 627,
+    "invalidAndTerminalLock": true,
+    "specific": [
+      "true/false liar challenges",
+      "zero-bank rejection",
+      "climbing group size",
+      "rummy run",
+      "Scopa exact capture priority",
+      "mandatory draught capture and chain",
+      "movement card exchange",
+      "dice row immutability",
+      "spade mitigation"
+    ]
+  }
+}

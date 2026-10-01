@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "reviewedAt": "2026-10-01T03:58:42.638Z",
+  "sourceSha256": "2c02720cd7e2140798b040a56de80854dbe4e0350018b524d268d5fd8c5a18fe",
+  "checks": [
+    {
+      "stage": 1,
+      "iceSamples": 50,
+      "minReachableStops": 10,
+      "minWinningSlides": 6,
+      "otherUnsolvedSamples": 150
+    },
+    {
+      "stage": 2,
+      "iceSamples": 50,
+      "minReachableStops": 12,
+      "minWinningSlides": 8,
+      "otherUnsolvedSamples": 150
+    },
+    {
+      "stage": 3,
+      "iceSamples": 50,
+      "minReachableStops": 14,
+      "minWinningSlides": 10,
+      "otherUnsolvedSamples": 150
+    }
+  ],
+  "scope": "Independent model generation and BFS reachability checks; NOT browser UI completion, ordinary play or physical-device testing."
+}

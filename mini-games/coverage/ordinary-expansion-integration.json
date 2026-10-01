@@ -1,0 +1,51 @@
+{
+  "reviewedAt": "2026-10-01T03:49:06.108Z",
+  "reviewer": "integration agent, separate from game implementers",
+  "browser": {
+    "engine": "Chromium",
+    "executable": "/usr/bin/chromium",
+    "viewport": "390x844",
+    "touchEmulation": true
+  },
+  "method": "Read rendered rules and board states. Chose moves in conversation; issued actual Playwright taps. No hidden game-state reading, model solver or forced state in this sample. The reviewer was not a blinded novice.",
+  "cases": [
+    {
+      "id": "mutual-match",
+      "outcome": "win",
+      "completedStudies": 3,
+      "restart": true,
+      "negativeCase": "Deliberately assigned D to route2 and B to route3 in first study; checker correctly explained blocking pair D/3. Swapping them passed.",
+      "observation": "Preference conflicts grow across 4,5,6 partners. Full displayed rankings support reasoning and feedback names the actual violated constraint.",
+      "screenshot": "ordinary-expansion-integration/mutual-match-win.png"
+    },
+    {
+      "id": "honest-company",
+      "outcome": "rules and initial-board review only",
+      "finding": "Repeated identical statements with same operands trivialized generated deduction. Sent implementer to exclude same-operand and duplicate clauses."
+    },
+    {
+      "id": "parallax-post",
+      "outcome": "initial-board review only",
+      "finding": "Labeled coordinate subtraction lacked promised stereo correspondence. Requested redesign before acceptance."
+    },
+    {
+      "id": "wave-desk",
+      "outcome": "initial-board review only",
+      "finding": "Numeric table lacked visual synthesis feedback. Requested plotted reference and current wave."
+    },
+    {
+      "id": "ray-archive",
+      "outcome": "initial-board review only",
+      "finding": "Detached 24-button ray list made phone use long and spatial mapping indirect. Requested perimeter controls."
+    }
+  ],
+  "reviewTimeSource": {
+    "mini-games/puzzle-lab/room.js": "be3ee01b82cd72876ce8d0af5f46048eeab07ea4c3cca7ddae1706a8cad1a980",
+    "mini-games/puzzle-lab/engines.js": "8951c46bf8909519ee0dee4bdcfdfedf8136994eed097ada6bf3fd84131f048d"
+  },
+  "limits": [
+    "This is a small ordinary-input review sample, not all100 games.",
+    "Review-time snapshots may precede later fixes; full source-matched suites are separate.",
+    "No physical phone, screen reader or novice difficulty study."
+  ]
+}

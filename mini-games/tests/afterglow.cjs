@@ -48,7 +48,7 @@ async function win(page,touch=false,choices=['power','orbs']){
  const browser=await chromium.launch({executablePath:process.env.CHROMIUM_PATH||'/usr/bin/chromium',headless:true,args:['--no-sandbox']});
  const page=await browser.newPage({viewport:{width:1440,height:1150}});await setup(page);
  await page.goto(base+'/mini-games/');assert.equal(await page.locator('[data-category]:visible').count(),inventory.length);
- await page.locator('[data-filter="adventure"]').click();assert.equal(await page.locator('[data-category]:visible').count(),1);
+ await page.locator('[data-filter="adventure"]').click();assert.equal(await page.locator('[data-category]:visible').count(),categoryCount('adventure'));
  await page.getByRole('link',{name:'Enter the night garden'}).click();await page.screenshot({path:out+'/intro-desktop.png',fullPage:true});
  assert.equal((await page.evaluate(()=>probe())).audio,null);
  await page.locator('#begin').click();await page.locator('#sound').click();assert.equal((await page.evaluate(()=>probe())).sound,true);

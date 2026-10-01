@@ -1,0 +1,401 @@
+[
+  {
+    "id": "velvet-tricks",
+    "name": "Velvet Tricks",
+    "category": "strategy",
+    "description": "Follow suit, save a trump, and take control of the lead.",
+    "mechanic": "Follow-suit trump trick taking with a changing leader.",
+    "rules": [
+      "Play one card per trick. You must follow the lead suit if you can; otherwise any card is legal. Spades are trump. Highest trump wins; without trump, highest card of the lead suit wins.",
+      "The trick winner leads next. Your eight-card hand and the house hand exhaust together. Win at least five tricks; four is a draw. The house conserves high cards when it cannot win."
+    ],
+    "controls": "Tap or click cards, board squares and labeled actions. Tab moves focus; Enter or Space activates. Arrow keys move between neighboring controls. No timing or dragging required.",
+    "url": "tabletop-room/?game=velvet-tricks",
+    "accent": "#c9d5b5",
+    "symbol": "\u2667",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action]"
+    }
+  },
+  {
+    "id": "twenty-one",
+    "name": "Twenty-One",
+    "category": "strategy",
+    "description": "Read the dealer. Decide how much of your stack belongs on the next card.",
+    "mechanic": "Five-round blackjack with hit, stand, double and a finite chip stack.",
+    "rules": [
+      "Start with 20 chips. Each of five hands costs a 2-chip stake. Aces count 11 or 1; faces count 10. The dealer shows one card and stands at 17, including soft 17.",
+      "Hit for another card or stand. Double is available only on your first decision, costs another 2 chips and deals exactly one card. Above 21 loses. A two-card 21 pays 3:2; other wins pay 1:1. Ties return the stake.",
+      "Finish five hands with more than 20 chips to win. The dealer hole card stays hidden until you stand or bust."
+    ],
+    "controls": "Tap or click cards, board squares and labeled actions. Tab moves focus; Enter or Space activates. Arrow keys move between neighboring controls. No timing or dragging required.",
+    "url": "tabletop-room/?game=twenty-one",
+    "accent": "#dcbca0",
+    "symbol": "\u25c7",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action]"
+    }
+  },
+  {
+    "id": "meld-atelier",
+    "name": "Meld Atelier",
+    "category": "strategy",
+    "description": "Keep a useful card. Let the rest of the hand become a plan.",
+    "mechanic": "Draw-discard rummy with selectable sets/runs and deadwood pressure.",
+    "rules": [
+      "Draw from the face-up discard or the stock, then discard one card. You may instead lay a selected meld: three or more equal ranks, or three or more consecutive ranks in one suit. Aces are low.",
+      "Select cards to build a meld; Lay meld removes it permanently. Remaining cards are deadwood: ace 1, numbers their rank, faces 10. Melds may be laid only after drawing.",
+      "After discarding, knock at 10 or less deadwood to win. You have twelve draws. On the final discard, more than 10 deadwood loses. Plan overlapping runs and sets before committing."
+    ],
+    "controls": "Tap or click cards, board squares and labeled actions. Tab moves focus; Enter or Space activates. Arrow keys move between neighboring controls. No timing or dragging required.",
+    "url": "tabletop-room/?game=meld-atelier",
+    "accent": "#cfc1da",
+    "symbol": "\u25c8",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action]"
+    }
+  },
+  {
+    "id": "five-card-evening",
+    "name": "Five Card Evening",
+    "category": "strategy",
+    "description": "Five hands, three second chances. Spend a redraw where it matters.",
+    "mechanic": "Draw poker with a scarce second-redraw budget and rank-dependent stakes.",
+    "rules": [
+      "Play five hands from fresh shuffled decks. Choose a 1-, 2- or 3-chip stake, then select cards to hold and draw replacements once for free.",
+      "You have three extra redraws for the entire evening. After the free draw, either settle or spend an extra redraw, choosing held cards again. Pair pays 1\u00d7 stake, two pair 2\u00d7, trips 3\u00d7, straight 4\u00d7, flush 5\u00d7, full house 7\u00d7, four 12\u00d7, straight flush 20\u00d7. Payout includes the stake; high card returns nothing.",
+      "Start with 12 chips. End above 12 to win; going broke ends early. Aces are high, except A-2-3-4-5 is a straight. The ranking table stays visible."
+    ],
+    "controls": "Tap or click cards, board squares and labeled actions. Tab moves focus; Enter or Space activates. Arrow keys move between neighboring controls. No timing or dragging required.",
+    "url": "tabletop-room/?game=five-card-evening",
+    "accent": "#abcbd8",
+    "symbol": "\u2726",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action]"
+    }
+  },
+  {
+    "id": "last-hand",
+    "name": "Last Hand",
+    "category": "strategy",
+    "description": "Make the lead expensive. Save the pair that opens the door.",
+    "mechanic": "Climbing card shedding with matching group sizes, passes and lead resets.",
+    "rules": [
+      "Select one, two or three cards of the same rank. To beat a lead, play the same number of cards at a higher rank. Aces are high.",
+      "Pass to give the other player a fresh lead. The house may pass too. A fresh lead may be a single, pair or triple. The house prefers shedding groups and keeps strong cards for contested leads.",
+      "First to empty their ten-card hand wins. You can deselect cards before playing. Pass is unavailable when you hold a fresh lead."
+    ],
+    "controls": "Tap or click cards, board squares and labeled actions. Tab moves focus; Enter or Space activates. Arrow keys move between neighboring controls. No timing or dragging required.",
+    "url": "tabletop-room/?game=last-hand",
+    "accent": "#c9d5b5",
+    "symbol": "\u2667",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action]"
+    }
+  },
+  {
+    "id": "scopa-shelf",
+    "name": "Scopa Shelf",
+    "category": "strategy",
+    "description": "One card can gather a whole table. Choose what it leaves behind.",
+    "mechanic": "Scopa sum capture with explicit subset choice and sweep bonuses.",
+    "rules": [
+      "Select a hand card, then table cards whose ranks sum to its rank. If the table has any single exact-rank match, you must capture exactly one such card.",
+      "If any capture exists you must take one; otherwise Lay card places your card on the table. Clearing the table earns a sweep, except on the final play. Three-card hands refill until the 40-card deck is exhausted.",
+      "Each captured card is one point, each sweep five. Last capturer gathers remaining table cards. Beat the house total. Ranks run 1\u201310 in four suits."
+    ],
+    "controls": "Tap or click cards, board squares and labeled actions. Tab moves focus; Enter or Space activates. Arrow keys move between neighboring controls. No timing or dragging required.",
+    "url": "tabletop-room/?game=scopa-shelf",
+    "accent": "#dcbca0",
+    "symbol": "\u25c7",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action]"
+    }
+  },
+  {
+    "id": "domino-parlour",
+    "name": "Domino Parlour",
+    "category": "strategy",
+    "description": "Two open ends. One hand to empty before the table closes.",
+    "mechanic": "Two-ended domino shedding with boneyard draws and blocked-hand resolution.",
+    "rules": [
+      "Play a tile on either matching chain end. A tile is automatically oriented to fit. Each tile can be placed left or right when both fit.",
+      "If no tile fits, draw from the boneyard. A drawn playable tile may be used immediately. When the boneyard is empty, pass. The house follows the same rules.",
+      "Empty your hand first. If both players pass, lower total pips wins. All 28 double-six tiles appear once; inspect both ends before committing."
+    ],
+    "controls": "Tap or click cards, board squares and labeled actions. Tab moves focus; Enter or Space activates. Arrow keys move between neighboring controls. No timing or dragging required.",
+    "url": "tabletop-room/?game=domino-parlour",
+    "accent": "#cfc1da",
+    "symbol": "\u25c8",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action]"
+    }
+  },
+  {
+    "id": "bank-the-roll",
+    "name": "Bank the Roll",
+    "category": "strategy",
+    "description": "A growing turn is only yours when you bank it.",
+    "mechanic": "Pig dice push-your-luck racing with unbanked turn value.",
+    "rules": [
+      "Roll one die. A 2\u20136 adds to this turn; a 1 loses the entire unbanked turn and passes play. Bank saves your turn and passes play.",
+      "The house banks at 14 turn points, or when it reaches the goal. First to bank 60 points wins. Banking zero is unavailable.",
+      "There is no real-time pressure. The die is rolled anew after every decision; previous results do not change its odds."
+    ],
+    "controls": "Tap or click cards, board squares and labeled actions. Tab moves focus; Enter or Space activates. Arrow keys move between neighboring controls. No timing or dragging required.",
+    "url": "tabletop-room/?game=bank-the-roll",
+    "accent": "#abcbd8",
+    "symbol": "\u2726",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action]"
+    }
+  },
+  {
+    "id": "six-columns",
+    "name": "Six Columns",
+    "category": "strategy",
+    "description": "Keep the right dice for the right empty line.",
+    "mechanic": "Five-dice hold/reroll optimization with six irreversible scoring categories.",
+    "rules": [
+      "Roll five dice, then toggle holds and reroll up to twice. At any point, lock an unused category.",
+      "Categories: Ones scores ones; Sixes scores sixes; Three of a kind scores all dice if any three match; Full house scores 25 for a pair plus a triple; Straight scores 30 for five consecutive values; Chance scores all dice.",
+      "Fill all six rows and total at least 75. A category can score zero, so preserve flexible rows for awkward rolls. No bonuses or wild cards."
+    ],
+    "controls": "Tap or click cards, board squares and labeled actions. Tab moves focus; Enter or Space activates. Arrow keys move between neighboring controls. No timing or dragging required.",
+    "url": "tabletop-room/?game=six-columns",
+    "accent": "#c9d5b5",
+    "symbol": "\u2667",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action]"
+    }
+  },
+  {
+    "id": "hidden-dice",
+    "name": "Hidden Dice",
+    "category": "strategy",
+    "description": "The bid climbs. At some point, somebody has to call it.",
+    "mechanic": "Liar dice rising quantity/face bids with hidden opposing dice and challenge attrition.",
+    "rules": [
+      "Both players start with four concealed dice; yours are visible. A bid claims at least that many of a face across all dice. Ones are ordinary, never wild.",
+      "Raise by increasing quantity, or keeping quantity and increasing face. Challenge the current house bid instead if you think it is false.",
+      "Reveal all dice on a challenge. If the claim is true the challenger loses a die; otherwise the bidder loses one. A new round is rolled and you open. Remove all house dice before losing yours. House bids use its own dice and uncertainty."
+    ],
+    "controls": "Tap or click cards, board squares and labeled actions. Tab moves focus; Enter or Space activates. Arrow keys move between neighboring controls. No timing or dragging required.",
+    "url": "tabletop-room/?game=hidden-dice",
+    "accent": "#dcbca0",
+    "symbol": "\u25c7",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action]"
+    }
+  },
+  {
+    "id": "sealed-bids",
+    "name": "Sealed Bids",
+    "category": "strategy",
+    "description": "Every bid is a card you will never see again.",
+    "mechanic": "Goofspiel simultaneous one-use ranked bids with tied-prize carryover.",
+    "rules": [
+      "You and the house each hold bidding cards 1\u201310. Ten prizes, valued 1\u201310, arrive in a shuffled public queue.",
+      "Choose one bid without seeing the house bid. Higher bid wins the prize pot; both bid cards are spent. A tie carries the pot into the next prize.",
+      "Most prize points after ten rounds wins. If the final round ties, divide its pot equally. The house values large prizes and conserves expensive bids for later."
+    ],
+    "controls": "Tap or click cards, board squares and labeled actions. Tab moves focus; Enter or Space activates. Arrow keys move between neighboring controls. No timing or dragging required.",
+    "url": "tabletop-room/?game=sealed-bids",
+    "accent": "#cfc1da",
+    "symbol": "\u25c8",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action]"
+    }
+  },
+  {
+    "id": "thirty-one-lane",
+    "name": "Thirty-One Lane",
+    "category": "strategy",
+    "description": "A fifteen, a pair, a run. Small points make a careful race.",
+    "mechanic": "Cribbage pegging with ordered run/pair bonuses, go and 31 resets.",
+    "rules": [
+      "Alternate one card into the running count, never above 31. Aces count 1; faces count 10. Reach 15 or 31 for 2 points.",
+      "Consecutive equal ranks score 2 for a pair, 6 for a triple, 12 for four. The longest trailing sequence of 3 or more distinct consecutive ranks scores its length, in any order. Both bonuses may combine with a total bonus.",
+      "When neither can play, the last player earns 1 (unless they made 31) and count resets. Ten cards each; most pegging points wins. This is pegging only, with no hand-counting stage."
+    ],
+    "controls": "Tap or click cards, board squares and labeled actions. Tab moves focus; Enter or Space activates. Arrow keys move between neighboring controls. No timing or dragging required.",
+    "url": "tabletop-room/?game=thirty-one-lane",
+    "accent": "#abcbd8",
+    "symbol": "\u2726",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action]"
+    }
+  },
+  {
+    "id": "formation-flags",
+    "name": "Formation Flags",
+    "category": "strategy",
+    "description": "Commit a suit. Build a run. Know which flag to abandon.",
+    "mechanic": "Three-card formation contest over five lanes with refill drafting.",
+    "rules": [
+      "Play a card from your five-card hand to one of five flags. Each side can commit three cards at each flag. Draw a replacement from the shared deck after playing.",
+      "Once both sides have three cards, compare formations: straight flush, three of a kind, flush, straight, then sum. Ties within a rank compare total, then favor the first side to complete. Ranks 1\u20139 in four suits.",
+      "Win three flags. Cards cannot move once committed. When no cards remain, empty places stay empty; more cards wins an incomplete flag, then formation strength."
+    ],
+    "controls": "Tap or click cards, board squares and labeled actions. Tab moves focus; Enter or Space activates. Arrow keys move between neighboring controls. No timing or dragging required.",
+    "url": "tabletop-room/?game=formation-flags",
+    "accent": "#c9d5b5",
+    "symbol": "\u2667",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action]"
+    }
+  },
+  {
+    "id": "crown-and-guard",
+    "name": "Crown & Guard",
+    "category": "strategy",
+    "description": "A king needs one open corner. Guards need all four sides.",
+    "mechanic": "Asymmetric tafl escape with rook movement and sandwich capture.",
+    "rules": [
+      "You command the crown and four guards. The house commands eight attackers. Slide any piece along an empty row or column; pieces cannot jump. Only the crown may stop on a corner or the central throne; other pieces may cross the empty throne.",
+      "After moving, capture an adjacent enemy caught between your piece and another friendly piece, a corner or the empty throne. The crown is captured only when all four adjacent directions are attackers or the edge.",
+      "Escape with the crown onto any corner. The house wins by surrounding the crown or leaving you without a move. After 80 turns, attackers hold the siege."
+    ],
+    "controls": "Tap or click cards, board squares and labeled actions. Tab moves focus; Enter or Space activates. Arrow keys move between neighboring controls. No timing or dragging required.",
+    "url": "tabletop-room/?game=crown-and-guard",
+    "accent": "#dcbca0",
+    "symbol": "\u25c7",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action]"
+    }
+  },
+  {
+    "id": "draught-garden",
+    "name": "Draught Garden",
+    "category": "strategy",
+    "description": "A jump is compulsory. Where it ends is the question.",
+    "mechanic": "Six-by-six draughts with mandatory multi-capture and king promotion.",
+    "rules": [
+      "Ink moves diagonally toward the upper edge on dark squares. Jump an adjacent house piece into the empty square beyond to capture. If any capture exists, a capture is compulsory.",
+      "After a jump, continue with the same piece while another capture is possible. Reaching the far row crowns a king and ends that capture turn; kings can step and capture backward.",
+      "Capture all opposing pieces or leave the house no legal move. Forty turns without a capture or promotion is a draw. The house prefers captures and promotion. The match also draws after 160 full turns."
+    ],
+    "controls": "Tap or click cards, board squares and labeled actions. Tab moves focus; Enter or Space activates. Arrow keys move between neighboring controls. No timing or dragging required.",
+    "url": "tabletop-room/?game=draught-garden",
+    "accent": "#cfc1da",
+    "symbol": "\u25c8",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action]"
+    }
+  },
+  {
+    "id": "borrowed-steps",
+    "name": "Borrowed Steps",
+    "category": "strategy",
+    "description": "Use a movement card. Give it away.",
+    "mechanic": "Onitama-style exchanged movement cards with master/temple victory.",
+    "rules": [
+      "You and the house each have two public movement cards; one spare waits between you. Select a card, one of your pieces, then a highlighted destination. Movement offsets are shown from your side; house directions are reversed.",
+      "A move captures an enemy on its destination. After moving, exchange your used card for the spare, so the house may receive it next.",
+      "Capture the house master or move your master onto its central home temple. The house has the same goals. Eighty turns is a draw."
+    ],
+    "controls": "Tap or click cards, board squares and labeled actions. Tab moves focus; Enter or Space activates. Arrow keys move between neighboring controls. No timing or dragging required.",
+    "url": "tabletop-room/?game=borrowed-steps",
+    "accent": "#abcbd8",
+    "symbol": "\u2726",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action]"
+    }
+  },
+  {
+    "id": "marble-council",
+    "name": "Marble Council",
+    "category": "strategy",
+    "description": "One marble cannot move two. A line can change the edge.",
+    "mechanic": "Hex-board inline group pushing and edge ejection with numerical superiority.",
+    "rules": [
+      "Select an ink marble at the rear of a straight line, then choose one of six directions. Up to three contiguous friendly marbles move together one space along that line. Sideways group shifts are not part of this compact ruleset.",
+      "A group may push one or two opposing marbles only if it outnumbers them and the space beyond is empty or off the board. Friendly marbles may never leave the board.",
+      "Eject three opposing marbles to win. House uses the same rules. Fifty full turns without three ejections is decided by ejections, then central presence."
+    ],
+    "controls": "Tap or click cards, board squares and labeled actions. Tab moves focus; Enter or Space activates. Arrow keys move between neighboring controls. No timing or dragging required.",
+    "url": "tabletop-room/?game=marble-council",
+    "accent": "#c9d5b5",
+    "symbol": "\u2667",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action]"
+    }
+  },
+  {
+    "id": "joining-lines",
+    "name": "Joining Lines",
+    "category": "strategy",
+    "description": "The crowd decides how far you travel.",
+    "mechanic": "Lines of Action movement distances determined by occupancy, with army connectivity victory.",
+    "rules": [
+      "Select an ink piece. Move horizontally, vertically or diagonally by exactly the total number of pieces of either color on that entire line.",
+      "You may jump over friendly pieces, never enemies. You may land on an enemy to capture, but never on a friendly piece. House follows identical rules.",
+      "Connect every remaining piece of your color through orthogonal or diagonal neighbors to win. If both connect on a move, the mover wins. Eighty turns is a draw."
+    ],
+    "controls": "Tap or click cards, board squares and labeled actions. Tab moves focus; Enter or Space activates. Arrow keys move between neighboring controls. No timing or dragging required.",
+    "url": "tabletop-room/?game=joining-lines",
+    "accent": "#dcbca0",
+    "symbol": "\u25c7",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action]"
+    }
+  },
+  {
+    "id": "terrace-duel",
+    "name": "Terrace Duel",
+    "category": "strategy",
+    "description": "Build the step you want to climb. Leave no staircase unguarded.",
+    "mechanic": "Two-worker move/build tactics on a rising three-dimensional board.",
+    "rules": [
+      "Select one of your two workers, then an adjacent empty square. You may climb at most one level but descend any distance. A level-four dome cannot be entered.",
+      "After moving, build one level on any neighboring empty square. Towers begin at zero. Building on level three creates a dome.",
+      "Move up onto level three to win immediately. The house moves and builds by the same rules. If you have no legal move, you lose."
+    ],
+    "controls": "Tap or click cards, board squares and labeled actions. Tab moves focus; Enter or Space activates. Arrow keys move between neighboring controls. No timing or dragging required.",
+    "url": "tabletop-room/?game=terrace-duel",
+    "accent": "#cfc1da",
+    "symbol": "\u25c8",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action]"
+    }
+  },
+  {
+    "id": "court-of-suits",
+    "name": "Court of Suits",
+    "category": "strategy",
+    "description": "An honest hand against a very stubborn court.",
+    "mechanic": "Solo card combat against telegraphed armor/strike cycles, with finite hand and suit timing.",
+    "rules": [
+      "Defeat three court foes with 16, 22 and 28 health. Their base attacks deal 2, 3 and 4. Every foe cycles through Brace (3 armor, base attack), Heavy strike (no armor, base +4 attack), then Quick strike (no armor, base attack). The next intent is always visible.",
+      "Play one card each turn. Its rank is damage, reduced by current armor. Clubs double damage before armor; spades reduce this attack by their rank; hearts heal that rank up to 20; diamonds draw two extra. Every turn draws a replacement. Save defense for heavy strikes and use the brace to prepare your hand.",
+      "A surviving foe retaliates. Defeating one skips its attack, heals you 3 and draws two cards; the next begins with Brace. Lose at zero health or an empty hand before all foes fall. Your finite deck contains ranks 1\u20136 in four suits."
+    ],
+    "controls": "Tap or click cards, board squares and labeled actions. Tab moves focus; Enter or Space activates. Arrow keys move between neighboring controls. No timing or dragging required.",
+    "url": "tabletop-room/?game=court-of-suits",
+    "accent": "#abcbd8",
+    "symbol": "\u2726",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action]"
+    }
+  }
+]

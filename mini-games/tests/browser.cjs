@@ -10,12 +10,13 @@ require('node:fs').mkdirSync(out,{recursive:true});
  assert.equal(await page.locator('.feature').count(),1); await page.getByRole('link',{name:"Let's play"}).click();
  await page.screenshot({path:out+'/game-desktop.png',fullPage:true});
  await page.route('**/game.js',async route=>{let response=await route.fetch();let source=await response.text();source=source.replace('recordUI(); updateUI(); requestAnimationFrame(frame);',`window.probe=()=>({state,lane,score,health,elapsed,objects:objects.map(o=>({...o}))}); recordUI(); updateUI(); requestAnimationFrame(frame);`);await route.fulfill({response,body:source});});
- await page.reload();await page.clock.install();await page.getByRole('button',{name:'Start run'}).click();
+ await page.reload();await page.clock.install();await page.clock.pauseAt(await page.evaluate(()=>Date.now())+100);await page.getByRole('button',{name:'Start run'}).click();
  await page.keyboard.press('ArrowLeft');assert.equal((await page.evaluate(()=>probe())).lane,0);
  await page.keyboard.press('d');assert.equal((await page.evaluate(()=>probe())).lane,1);
  await page.keyboard.press('p');const pausedAt=(await page.evaluate(()=>probe())).elapsed;await page.clock.runFor(2000);assert.equal((await page.evaluate(()=>probe())).elapsed,pausedAt);
  await page.getByRole('button',{name:'Resume run'}).click();
  for(let i=0;i<5;i++){await page.clock.runFor(250);await page.getByRole('button',{name:'Restart'}).click();assert.equal((await page.evaluate(()=>probe())).score,0);assert.equal((await page.evaluate(()=>probe())).health,3)}
+ // The clock is paused above so only runFor advances simulation, independent of automation latency.
  // Drive actual keyboard inputs toward each arriving signal; no gameplay state mutation.
  for(let i=0;i<610;i++){
   const s=await page.evaluate(()=>probe());if(s.state==='ended')break;
@@ -29,7 +30,7 @@ require('node:fs').mkdirSync(out,{recursive:true});
  for(let i=0;i<400;i++){let s=await page.evaluate(()=>probe());if(s.state==='ended')break;const target=s.objects.filter(o=>o.kind==='static'&&!o.resolved&&o.y>200).sort((a,b)=>b.y-a.y)[0];if(target)await page.locator(`[data-lane="${target.lane}"]`).click();await page.clock.runFor(100)}
  let lost=await page.evaluate(()=>probe());assert.equal(lost.health,0);assert.equal(lost.state,'ended');assert.match(await page.locator('#overlay-title').innerText(),/lost/);
  await page.getByRole('link',{name:'All games'}).click();assert.equal(await page.locator('#best').innerText(),saved);
- await page.getByRole('link',{name:"Let's play"}).click();assert.equal(await page.locator('#best').innerText(),saved);
+ await page.getByRole('link',{name:"Let's play"}).click();await page.getByText('Saved on this browser.',{exact:true}).waitFor();assert.equal(await page.locator('#best').innerText(),saved);
  await page.getByRole('button',{name:'Start run'}).click();await page.evaluate(()=>window.dispatchEvent(new Event('blur')));assert.equal((await page.evaluate(()=>probe())).state,'paused');
  const mobile=await browser.newContext({viewport:{width:390,height:844},isMobile:true,hasTouch:true,deviceScaleFactor:2,reducedMotion:'reduce'});const mp=await mobile.newPage();mp.on('pageerror',e=>errors.push(e.message));
  await mp.addInitScript(()=>{Object.defineProperty(window,'localStorage',{get(){throw new Error('disabled')}})});
@@ -48,7 +49,7 @@ require('node:fs').mkdirSync(out,{recursive:true});
  // Existing best is higher, so use a fresh context to exercise failed record writes.
  const bp=await browser.newPage();await bp.addInitScript(()=>{Storage.prototype.setItem=function(){throw new Error('quota exceeded')}});
  await bp.route('**/game.js',async route=>{const response=await route.fetch();const source=(await response.text()).replace('recordUI(); updateUI(); requestAnimationFrame(frame);','window.probe=()=>({state,lane,score,objects:objects.map(o=>({...o}))}); recordUI(); updateUI(); requestAnimationFrame(frame);');await route.fulfill({response,body:source})});
- await bp.goto(base+'/mini-games/signal-run/');await bp.clock.install();await bp.getByRole('button',{name:'Start run'}).click();
+ await bp.goto(base+'/mini-games/signal-run/');await bp.clock.install();await bp.clock.pauseAt(await bp.evaluate(()=>Date.now())+100);await bp.getByRole('button',{name:'Start run'}).click();
  for(let i=0;i<250;i++){const s=await bp.evaluate(()=>probe());if(s.state==='ended')break;const kind=s.score>0?'static':'signal';const target=s.objects.filter(o=>o.kind===kind&&!o.resolved&&o.y>200).sort((a,b)=>b.y-a.y)[0];if(target)await bp.locator(`[data-lane="${target.lane}"]`).click();await bp.clock.runFor(100)}
  assert.equal((await bp.evaluate(()=>probe())).state,'ended');assert.ok((await bp.evaluate(()=>probe())).score>0);assert.match(await bp.locator('#storage-note').innerText(),/unavailable/);
  assert.deepEqual(errors,[]);console.log(JSON.stringify({passed:true,winScore:won.score,winHealth:won.health,lossTime:lost.elapsed,errors,screenshots:out}));await browser.close();

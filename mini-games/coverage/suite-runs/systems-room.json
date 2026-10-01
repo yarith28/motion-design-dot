@@ -1,0 +1,916 @@
+{
+  "schemaVersion": 2,
+  "suite": "systems-room",
+  "passed": true,
+  "status": "passed",
+  "startedAt": "2026-10-01T04:10:18.413Z",
+  "source": {
+    "sha256": "25039d46c832c2395aad87ea103354e35daa73d645cbd2922f4e7426b2db538e",
+    "files": [
+      "catalog.css",
+      "catalog.js",
+      "common.js",
+      "index.html",
+      "inventory.json",
+      "play.css",
+      "styles.css",
+      "systems-room/assembly-belt.mjs",
+      "systems-room/borrowed-time.mjs",
+      "systems-room/carry-on.mjs",
+      "systems-room/cold-chain.mjs",
+      "systems-room/convoy-ledger.mjs",
+      "systems-room/core.mjs",
+      "systems-room/elevator-night.mjs",
+      "systems-room/engines.mjs",
+      "systems-room/firebreak.mjs",
+      "systems-room/game.js",
+      "systems-room/games.json",
+      "systems-room/growing-block.mjs",
+      "systems-room/index.html",
+      "systems-room/junction-nine.mjs",
+      "systems-room/kiln-house.mjs",
+      "systems-room/marsh-balance.mjs",
+      "systems-room/power-desk.mjs",
+      "systems-room/quiet-majority.mjs",
+      "systems-room/reorder-point.mjs",
+      "systems-room/reservoir.mjs",
+      "systems-room/room.css",
+      "systems-room/safe-return.mjs",
+      "systems-room/signal-cabinet.mjs",
+      "systems-room/supply-web.mjs",
+      "systems-room/two-couriers.mjs",
+      "systems-room/workshop-shift.mjs",
+      "tests/fixtures/baseline100.json",
+      "tests/fixtures/tabletop-paths.json",
+      "tests/systems-paths.json",
+      "tests/systems-room.cjs",
+      "tools/evidence.cjs",
+      "tools/run-suite.cjs"
+    ]
+  },
+  "requestedBaseURL": "http://127.0.0.1:8790",
+  "browser": {
+    "engine": "Chromium",
+    "version": "Chromium 151.0.7922.173 built on Debian GNU/Linux 13 (trixie)",
+    "executable": "/usr/bin/chromium"
+  },
+  "scope": {
+    "desktopCompletion": true,
+    "mobileViewportCompletion": true,
+    "touchGameplayCompletion": false,
+    "touchControlSmoke": true,
+    "completionMeans": "winning full progression",
+    "method": "scripted UI; curated answers or board solvers",
+    "mobileMethod": "touch gameplay with scripted navigation/solvers"
+  },
+  "games": [
+    "junction-nine",
+    "assembly-belt",
+    "marsh-balance",
+    "reorder-point",
+    "workshop-shift",
+    "signal-cabinet",
+    "cold-chain",
+    "reservoir",
+    "power-desk",
+    "carry-on",
+    "quiet-majority",
+    "safe-return",
+    "firebreak",
+    "kiln-house",
+    "two-couriers",
+    "elevator-night",
+    "supply-web",
+    "growing-block",
+    "borrowed-time",
+    "convoy-ledger"
+  ],
+  "limits": [
+    "Mobile is Chromium viewport/touch emulation, not Safari or a physical device.",
+    "Solver completions do not establish human difficulty or accessibility."
+  ],
+  "servedRuntimeBefore": {
+    "baseURL": "http://127.0.0.1:8790",
+    "passed": true,
+    "sha256": "7d4fa8c6d1038a506261d23d63ac46598c7a8fdfba7a3068f9d00e6cda43b141",
+    "fileCount": 33,
+    "verifiedAt": "2026-10-01T04:10:18.608Z"
+  },
+  "exitCode": 0,
+  "signal": null,
+  "sourceUnchanged": true,
+  "servedRuntime": {
+    "baseURL": "http://127.0.0.1:8790",
+    "passed": true,
+    "sha256": "7d4fa8c6d1038a506261d23d63ac46598c7a8fdfba7a3068f9d00e6cda43b141",
+    "fileCount": 33,
+    "verifiedAt": "2026-10-01T04:11:18.153Z"
+  },
+  "completionEvidence": {
+    "sha256": "bf31626c21d7e78f320107e119b64a5e1535d43503c08ea735dce0c855164517",
+    "file": "coverage/systems-room.json",
+    "cases": [
+      {
+        "id": "junction-nine",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": false,
+        "inputMethod": "Keyboard focus + Enter activation on actual controls; source-derived solution replay",
+        "ordinaryInput": "Unsolved first available control activated, focus and restart checked; no unaided completion claim",
+        "winActions": 16,
+        "lossActions": 4,
+        "edgeCases": [
+          "Deliberate failure route reaches loss through UI",
+          "Terminal controls unavailable",
+          "Restart and Play again restore initial scoreboard",
+          "Keyboard focus never falls to BODY after action",
+          "Invalid engine action and post-terminal action are rejected",
+          "No horizontal overflow; no page errors"
+        ]
+      },
+      {
+        "id": "junction-nine",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": true,
+        "inputMethod": "Touch-only taps on actual onscreen controls; source-derived solution replay",
+        "ordinaryInput": "Unsolved first available control activated, focus and restart checked; no unaided completion claim",
+        "winActions": 16,
+        "lossActions": 4,
+        "edgeCases": [
+          "Deliberate failure route reaches loss through UI",
+          "Terminal controls unavailable",
+          "Restart and Play again restore initial scoreboard",
+          "Keyboard focus never falls to BODY after action",
+          "Invalid engine action and post-terminal action are rejected",
+          "No horizontal overflow; no page errors"
+        ]
+      },
+      {
+        "id": "assembly-belt",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": false,
+        "inputMethod": "Keyboard focus + Enter activation on actual controls; source-derived solution replay",
+        "ordinaryInput": "Unsolved first available control activated, focus and restart checked; no unaided completion claim",
+        "winActions": 20,
+        "lossActions": 24,
+        "edgeCases": [
+          "Deliberate failure route reaches loss through UI",
+          "Terminal controls unavailable",
+          "Restart and Play again restore initial scoreboard",
+          "Keyboard focus never falls to BODY after action",
+          "Invalid engine action and post-terminal action are rejected",
+          "No horizontal overflow; no page errors"
+        ]
+      },
+      {
+        "id": "assembly-belt",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": true,
+        "inputMethod": "Touch-only taps on actual onscreen controls; source-derived solution replay",
+        "ordinaryInput": "Unsolved first available control activated, focus and restart checked; no unaided completion claim",
+        "winActions": 20,
+        "lossActions": 24,
+        "edgeCases": [
+          "Deliberate failure route reaches loss through UI",
+          "Terminal controls unavailable",
+          "Restart and Play again restore initial scoreboard",
+          "Keyboard focus never falls to BODY after action",
+          "Invalid engine action and post-terminal action are rejected",
+          "No horizontal overflow; no page errors"
+        ]
+      },
+      {
+        "id": "marsh-balance",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": false,
+        "inputMethod": "Keyboard focus + Enter activation on actual controls; source-derived solution replay",
+        "ordinaryInput": "Unsolved first available control activated, focus and restart checked; no unaided completion claim",
+        "winActions": 12,
+        "lossActions": 3,
+        "edgeCases": [
+          "Deliberate failure route reaches loss through UI",
+          "Terminal controls unavailable",
+          "Restart and Play again restore initial scoreboard",
+          "Keyboard focus never falls to BODY after action",
+          "Invalid engine action and post-terminal action are rejected",
+          "No horizontal overflow; no page errors"
+        ]
+      },
+      {
+        "id": "marsh-balance",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": true,
+        "inputMethod": "Touch-only taps on actual onscreen controls; source-derived solution replay",
+        "ordinaryInput": "Unsolved first available control activated, focus and restart checked; no unaided completion claim",
+        "winActions": 12,
+        "lossActions": 3,
+        "edgeCases": [
+          "Deliberate failure route reaches loss through UI",
+          "Terminal controls unavailable",
+          "Restart and Play again restore initial scoreboard",
+          "Keyboard focus never falls to BODY after action",
+          "Invalid engine action and post-terminal action are rejected",
+          "No horizontal overflow; no page errors"
+        ]
+      },
+      {
+        "id": "reorder-point",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": false,
+        "inputMethod": "Keyboard focus + Enter activation on actual controls; source-derived solution replay",
+        "ordinaryInput": "Unsolved first available control activated, focus and restart checked; no unaided completion claim",
+        "winActions": 12,
+        "lossActions": 12,
+        "edgeCases": [
+          "Deliberate failure route reaches loss through UI",
+          "Terminal controls unavailable",
+          "Restart and Play again restore initial scoreboard",
+          "Keyboard focus never falls to BODY after action",
+          "Invalid engine action and post-terminal action are rejected",
+          "No horizontal overflow; no page errors"
+        ]
+      },
+      {
+        "id": "reorder-point",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": true,
+        "inputMethod": "Touch-only taps on actual onscreen controls; source-derived solution replay",
+        "ordinaryInput": "Unsolved first available control activated, focus and restart checked; no unaided completion claim",
+        "winActions": 12,
+        "lossActions": 12,
+        "edgeCases": [
+          "Deliberate failure route reaches loss through UI",
+          "Terminal controls unavailable",
+          "Restart and Play again restore initial scoreboard",
+          "Keyboard focus never falls to BODY after action",
+          "Invalid engine action and post-terminal action are rejected",
+          "No horizontal overflow; no page errors"
+        ]
+      },
+      {
+        "id": "workshop-shift",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": false,
+        "inputMethod": "Keyboard focus + Enter activation on actual controls; source-derived solution replay",
+        "ordinaryInput": "Unsolved first available control activated, focus and restart checked; no unaided completion claim",
+        "winActions": 23,
+        "lossActions": 8,
+        "edgeCases": [
+          "Deliberate failure route reaches loss through UI",
+          "Terminal controls unavailable",
+          "Restart and Play again restore initial scoreboard",
+          "Keyboard focus never falls to BODY after action",
+          "Invalid engine action and post-terminal action are rejected",
+          "No horizontal overflow; no page errors"
+        ]
+      },
+      {
+        "id": "workshop-shift",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": true,
+        "inputMethod": "Touch-only taps on actual onscreen controls; source-derived solution replay",
+        "ordinaryInput": "Unsolved first available control activated, focus and restart checked; no unaided completion claim",
+        "winActions": 23,
+        "lossActions": 8,
+        "edgeCases": [
+          "Deliberate failure route reaches loss through UI",
+          "Terminal controls unavailable",
+          "Restart and Play again restore initial scoreboard",
+          "Keyboard focus never falls to BODY after action",
+          "Invalid engine action and post-terminal action are rejected",
+          "No horizontal overflow; no page errors"
+        ]
+      },
+      {
+        "id": "signal-cabinet",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": false,
+        "inputMethod": "Keyboard focus + Enter activation on actual controls; source-derived solution replay",
+        "ordinaryInput": "Unsolved first available control activated, focus and restart checked; no unaided completion claim",
+        "winActions": 18,
+        "lossActions": 7,
+        "edgeCases": [
+          "Deliberate failure route reaches loss through UI",
+          "Terminal controls unavailable",
+          "Restart and Play again restore initial scoreboard",
+          "Keyboard focus never falls to BODY after action",
+          "Invalid engine action and post-terminal action are rejected",
+          "No horizontal overflow; no page errors"
+        ]
+      },
+      {
+        "id": "signal-cabinet",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": true,
+        "inputMethod": "Touch-only taps on actual onscreen controls; source-derived solution replay",
+        "ordinaryInput": "Unsolved first available control activated, focus and restart checked; no unaided completion claim",
+        "winActions": 18,
+        "lossActions": 7,
+        "edgeCases": [
+          "Deliberate failure route reaches loss through UI",
+          "Terminal controls unavailable",
+          "Restart and Play again restore initial scoreboard",
+          "Keyboard focus never falls to BODY after action",
+          "Invalid engine action and post-terminal action are rejected",
+          "No horizontal overflow; no page errors"
+        ]
+      },
+      {
+        "id": "cold-chain",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": false,
+        "inputMethod": "Keyboard focus + Enter activation on actual controls; source-derived solution replay",
+        "ordinaryInput": "Unsolved first available control activated, focus and restart checked; no unaided completion claim",
+        "winActions": 16,
+        "lossActions": 16,
+        "edgeCases": [
+          "Deliberate failure route reaches loss through UI",
+          "Terminal controls unavailable",
+          "Restart and Play again restore initial scoreboard",
+          "Keyboard focus never falls to BODY after action",
+          "Invalid engine action and post-terminal action are rejected",
+          "No horizontal overflow; no page errors"
+        ]
+      },
+      {
+        "id": "cold-chain",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": true,
+        "inputMethod": "Touch-only taps on actual onscreen controls; source-derived solution replay",
+        "ordinaryInput": "Unsolved first available control activated, focus and restart checked; no unaided completion claim",
+        "winActions": 16,
+        "lossActions": 16,
+        "edgeCases": [
+          "Deliberate failure route reaches loss through UI",
+          "Terminal controls unavailable",
+          "Restart and Play again restore initial scoreboard",
+          "Keyboard focus never falls to BODY after action",
+          "Invalid engine action and post-terminal action are rejected",
+          "No horizontal overflow; no page errors"
+        ]
+      },
+      {
+        "id": "reservoir",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": false,
+        "inputMethod": "Keyboard focus + Enter activation on actual controls; source-derived solution replay",
+        "ordinaryInput": "Unsolved first available control activated, focus and restart checked; no unaided completion claim",
+        "winActions": 14,
+        "lossActions": 2,
+        "edgeCases": [
+          "Deliberate failure route reaches loss through UI",
+          "Terminal controls unavailable",
+          "Restart and Play again restore initial scoreboard",
+          "Keyboard focus never falls to BODY after action",
+          "Invalid engine action and post-terminal action are rejected",
+          "No horizontal overflow; no page errors"
+        ]
+      },
+      {
+        "id": "reservoir",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": true,
+        "inputMethod": "Touch-only taps on actual onscreen controls; source-derived solution replay",
+        "ordinaryInput": "Unsolved first available control activated, focus and restart checked; no unaided completion claim",
+        "winActions": 14,
+        "lossActions": 2,
+        "edgeCases": [
+          "Deliberate failure route reaches loss through UI",
+          "Terminal controls unavailable",
+          "Restart and Play again restore initial scoreboard",
+          "Keyboard focus never falls to BODY after action",
+          "Invalid engine action and post-terminal action are rejected",
+          "No horizontal overflow; no page errors"
+        ]
+      },
+      {
+        "id": "power-desk",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": false,
+        "inputMethod": "Keyboard focus + Enter activation on actual controls; source-derived solution replay",
+        "ordinaryInput": "Unsolved first available control activated, focus and restart checked; no unaided completion claim",
+        "winActions": 14,
+        "lossActions": 4,
+        "edgeCases": [
+          "Deliberate failure route reaches loss through UI",
+          "Terminal controls unavailable",
+          "Restart and Play again restore initial scoreboard",
+          "Keyboard focus never falls to BODY after action",
+          "Invalid engine action and post-terminal action are rejected",
+          "No horizontal overflow; no page errors"
+        ]
+      },
+      {
+        "id": "power-desk",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": true,
+        "inputMethod": "Touch-only taps on actual onscreen controls; source-derived solution replay",
+        "ordinaryInput": "Unsolved first available control activated, focus and restart checked; no unaided completion claim",
+        "winActions": 14,
+        "lossActions": 4,
+        "edgeCases": [
+          "Deliberate failure route reaches loss through UI",
+          "Terminal controls unavailable",
+          "Restart and Play again restore initial scoreboard",
+          "Keyboard focus never falls to BODY after action",
+          "Invalid engine action and post-terminal action are rejected",
+          "No horizontal overflow; no page errors"
+        ]
+      },
+      {
+        "id": "carry-on",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": false,
+        "inputMethod": "Keyboard focus + Enter activation on actual controls; source-derived solution replay",
+        "ordinaryInput": "Unsolved first available control activated, focus and restart checked; no unaided completion claim",
+        "winActions": 12,
+        "lossActions": 12,
+        "edgeCases": [
+          "Deliberate failure route reaches loss through UI",
+          "Terminal controls unavailable",
+          "Restart and Play again restore initial scoreboard",
+          "Keyboard focus never falls to BODY after action",
+          "Invalid engine action and post-terminal action are rejected",
+          "No horizontal overflow; no page errors"
+        ]
+      },
+      {
+        "id": "carry-on",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": true,
+        "inputMethod": "Touch-only taps on actual onscreen controls; source-derived solution replay",
+        "ordinaryInput": "Unsolved first available control activated, focus and restart checked; no unaided completion claim",
+        "winActions": 12,
+        "lossActions": 12,
+        "edgeCases": [
+          "Deliberate failure route reaches loss through UI",
+          "Terminal controls unavailable",
+          "Restart and Play again restore initial scoreboard",
+          "Keyboard focus never falls to BODY after action",
+          "Invalid engine action and post-terminal action are rejected",
+          "No horizontal overflow; no page errors"
+        ]
+      },
+      {
+        "id": "quiet-majority",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": false,
+        "inputMethod": "Keyboard focus + Enter activation on actual controls; source-derived solution replay",
+        "ordinaryInput": "Unsolved first available control activated, focus and restart checked; no unaided completion claim",
+        "winActions": 11,
+        "lossActions": 3,
+        "edgeCases": [
+          "Deliberate failure route reaches loss through UI",
+          "Terminal controls unavailable",
+          "Restart and Play again restore initial scoreboard",
+          "Keyboard focus never falls to BODY after action",
+          "Invalid engine action and post-terminal action are rejected",
+          "No horizontal overflow; no page errors"
+        ]
+      },
+      {
+        "id": "quiet-majority",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": true,
+        "inputMethod": "Touch-only taps on actual onscreen controls; source-derived solution replay",
+        "ordinaryInput": "Unsolved first available control activated, focus and restart checked; no unaided completion claim",
+        "winActions": 11,
+        "lossActions": 3,
+        "edgeCases": [
+          "Deliberate failure route reaches loss through UI",
+          "Terminal controls unavailable",
+          "Restart and Play again restore initial scoreboard",
+          "Keyboard focus never falls to BODY after action",
+          "Invalid engine action and post-terminal action are rejected",
+          "No horizontal overflow; no page errors"
+        ]
+      },
+      {
+        "id": "safe-return",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": false,
+        "inputMethod": "Keyboard focus + Enter activation on actual controls; source-derived solution replay",
+        "ordinaryInput": "Unsolved first available control activated, focus and restart checked; no unaided completion claim",
+        "winActions": 12,
+        "lossActions": 12,
+        "edgeCases": [
+          "Deliberate failure route reaches loss through UI",
+          "Terminal controls unavailable",
+          "Restart and Play again restore initial scoreboard",
+          "Keyboard focus never falls to BODY after action",
+          "Invalid engine action and post-terminal action are rejected",
+          "No horizontal overflow; no page errors"
+        ]
+      },
+      {
+        "id": "safe-return",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": true,
+        "inputMethod": "Touch-only taps on actual onscreen controls; source-derived solution replay",
+        "ordinaryInput": "Unsolved first available control activated, focus and restart checked; no unaided completion claim",
+        "winActions": 12,
+        "lossActions": 12,
+        "edgeCases": [
+          "Deliberate failure route reaches loss through UI",
+          "Terminal controls unavailable",
+          "Restart and Play again restore initial scoreboard",
+          "Keyboard focus never falls to BODY after action",
+          "Invalid engine action and post-terminal action are rejected",
+          "No horizontal overflow; no page errors"
+        ]
+      },
+      {
+        "id": "firebreak",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": false,
+        "inputMethod": "Keyboard focus + Enter activation on actual controls; source-derived solution replay",
+        "ordinaryInput": "Unsolved first available control activated, focus and restart checked; no unaided completion claim",
+        "winActions": 10,
+        "lossActions": 6,
+        "edgeCases": [
+          "Deliberate failure route reaches loss through UI",
+          "Terminal controls unavailable",
+          "Restart and Play again restore initial scoreboard",
+          "Keyboard focus never falls to BODY after action",
+          "Invalid engine action and post-terminal action are rejected",
+          "No horizontal overflow; no page errors"
+        ]
+      },
+      {
+        "id": "firebreak",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": true,
+        "inputMethod": "Touch-only taps on actual onscreen controls; source-derived solution replay",
+        "ordinaryInput": "Unsolved first available control activated, focus and restart checked; no unaided completion claim",
+        "winActions": 10,
+        "lossActions": 6,
+        "edgeCases": [
+          "Deliberate failure route reaches loss through UI",
+          "Terminal controls unavailable",
+          "Restart and Play again restore initial scoreboard",
+          "Keyboard focus never falls to BODY after action",
+          "Invalid engine action and post-terminal action are rejected",
+          "No horizontal overflow; no page errors"
+        ]
+      },
+      {
+        "id": "kiln-house",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": false,
+        "inputMethod": "Keyboard focus + Enter activation on actual controls; source-derived solution replay",
+        "ordinaryInput": "Unsolved first available control activated, focus and restart checked; no unaided completion claim",
+        "winActions": 18,
+        "lossActions": 40,
+        "edgeCases": [
+          "Deliberate failure route reaches loss through UI",
+          "Terminal controls unavailable",
+          "Restart and Play again restore initial scoreboard",
+          "Keyboard focus never falls to BODY after action",
+          "Invalid engine action and post-terminal action are rejected",
+          "No horizontal overflow; no page errors"
+        ]
+      },
+      {
+        "id": "kiln-house",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": true,
+        "inputMethod": "Touch-only taps on actual onscreen controls; source-derived solution replay",
+        "ordinaryInput": "Unsolved first available control activated, focus and restart checked; no unaided completion claim",
+        "winActions": 18,
+        "lossActions": 40,
+        "edgeCases": [
+          "Deliberate failure route reaches loss through UI",
+          "Terminal controls unavailable",
+          "Restart and Play again restore initial scoreboard",
+          "Keyboard focus never falls to BODY after action",
+          "Invalid engine action and post-terminal action are rejected",
+          "No horizontal overflow; no page errors"
+        ]
+      },
+      {
+        "id": "two-couriers",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": false,
+        "inputMethod": "Keyboard focus + Enter activation on actual controls; source-derived solution replay",
+        "ordinaryInput": "Unsolved first available control activated, focus and restart checked; no unaided completion claim",
+        "winActions": 20,
+        "lossActions": 34,
+        "edgeCases": [
+          "Deliberate failure route reaches loss through UI",
+          "Terminal controls unavailable",
+          "Restart and Play again restore initial scoreboard",
+          "Keyboard focus never falls to BODY after action",
+          "Invalid engine action and post-terminal action are rejected",
+          "No horizontal overflow; no page errors"
+        ]
+      },
+      {
+        "id": "two-couriers",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": true,
+        "inputMethod": "Touch-only taps on actual onscreen controls; source-derived solution replay",
+        "ordinaryInput": "Unsolved first available control activated, focus and restart checked; no unaided completion claim",
+        "winActions": 20,
+        "lossActions": 34,
+        "edgeCases": [
+          "Deliberate failure route reaches loss through UI",
+          "Terminal controls unavailable",
+          "Restart and Play again restore initial scoreboard",
+          "Keyboard focus never falls to BODY after action",
+          "Invalid engine action and post-terminal action are rejected",
+          "No horizontal overflow; no page errors"
+        ]
+      },
+      {
+        "id": "elevator-night",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": false,
+        "inputMethod": "Keyboard focus + Enter activation on actual controls; source-derived solution replay",
+        "ordinaryInput": "Unsolved first available control activated, focus and restart checked; no unaided completion claim",
+        "winActions": 23,
+        "lossActions": 13,
+        "edgeCases": [
+          "Deliberate failure route reaches loss through UI",
+          "Terminal controls unavailable",
+          "Restart and Play again restore initial scoreboard",
+          "Keyboard focus never falls to BODY after action",
+          "Invalid engine action and post-terminal action are rejected",
+          "No horizontal overflow; no page errors"
+        ]
+      },
+      {
+        "id": "elevator-night",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": true,
+        "inputMethod": "Touch-only taps on actual onscreen controls; source-derived solution replay",
+        "ordinaryInput": "Unsolved first available control activated, focus and restart checked; no unaided completion claim",
+        "winActions": 23,
+        "lossActions": 13,
+        "edgeCases": [
+          "Deliberate failure route reaches loss through UI",
+          "Terminal controls unavailable",
+          "Restart and Play again restore initial scoreboard",
+          "Keyboard focus never falls to BODY after action",
+          "Invalid engine action and post-terminal action are rejected",
+          "No horizontal overflow; no page errors"
+        ]
+      },
+      {
+        "id": "supply-web",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": false,
+        "inputMethod": "Keyboard focus + Enter activation on actual controls; source-derived solution replay",
+        "ordinaryInput": "Unsolved first available control activated, focus and restart checked; no unaided completion claim",
+        "winActions": 16,
+        "lossActions": 16,
+        "edgeCases": [
+          "Deliberate failure route reaches loss through UI",
+          "Terminal controls unavailable",
+          "Restart and Play again restore initial scoreboard",
+          "Keyboard focus never falls to BODY after action",
+          "Invalid engine action and post-terminal action are rejected",
+          "No horizontal overflow; no page errors"
+        ]
+      },
+      {
+        "id": "supply-web",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": true,
+        "inputMethod": "Touch-only taps on actual onscreen controls; source-derived solution replay",
+        "ordinaryInput": "Unsolved first available control activated, focus and restart checked; no unaided completion claim",
+        "winActions": 16,
+        "lossActions": 16,
+        "edgeCases": [
+          "Deliberate failure route reaches loss through UI",
+          "Terminal controls unavailable",
+          "Restart and Play again restore initial scoreboard",
+          "Keyboard focus never falls to BODY after action",
+          "Invalid engine action and post-terminal action are rejected",
+          "No horizontal overflow; no page errors"
+        ]
+      },
+      {
+        "id": "growing-block",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": false,
+        "inputMethod": "Keyboard focus + Enter activation on actual controls; source-derived solution replay",
+        "ordinaryInput": "Unsolved first available control activated, focus and restart checked; no unaided completion claim",
+        "winActions": 13,
+        "lossActions": 12,
+        "edgeCases": [
+          "Deliberate failure route reaches loss through UI",
+          "Terminal controls unavailable",
+          "Restart and Play again restore initial scoreboard",
+          "Keyboard focus never falls to BODY after action",
+          "Invalid engine action and post-terminal action are rejected",
+          "No horizontal overflow; no page errors"
+        ]
+      },
+      {
+        "id": "growing-block",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": true,
+        "inputMethod": "Touch-only taps on actual onscreen controls; source-derived solution replay",
+        "ordinaryInput": "Unsolved first available control activated, focus and restart checked; no unaided completion claim",
+        "winActions": 13,
+        "lossActions": 12,
+        "edgeCases": [
+          "Deliberate failure route reaches loss through UI",
+          "Terminal controls unavailable",
+          "Restart and Play again restore initial scoreboard",
+          "Keyboard focus never falls to BODY after action",
+          "Invalid engine action and post-terminal action are rejected",
+          "No horizontal overflow; no page errors"
+        ]
+      },
+      {
+        "id": "borrowed-time",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": false,
+        "inputMethod": "Keyboard focus + Enter activation on actual controls; source-derived solution replay",
+        "ordinaryInput": "Unsolved first available control activated, focus and restart checked; no unaided completion claim",
+        "winActions": 22,
+        "lossActions": 16,
+        "edgeCases": [
+          "Deliberate failure route reaches loss through UI",
+          "Terminal controls unavailable",
+          "Restart and Play again restore initial scoreboard",
+          "Keyboard focus never falls to BODY after action",
+          "Invalid engine action and post-terminal action are rejected",
+          "No horizontal overflow; no page errors"
+        ]
+      },
+      {
+        "id": "borrowed-time",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": true,
+        "inputMethod": "Touch-only taps on actual onscreen controls; source-derived solution replay",
+        "ordinaryInput": "Unsolved first available control activated, focus and restart checked; no unaided completion claim",
+        "winActions": 22,
+        "lossActions": 16,
+        "edgeCases": [
+          "Deliberate failure route reaches loss through UI",
+          "Terminal controls unavailable",
+          "Restart and Play again restore initial scoreboard",
+          "Keyboard focus never falls to BODY after action",
+          "Invalid engine action and post-terminal action are rejected",
+          "No horizontal overflow; no page errors"
+        ]
+      },
+      {
+        "id": "convoy-ledger",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": false,
+        "inputMethod": "Keyboard focus + Enter activation on actual controls; source-derived solution replay",
+        "ordinaryInput": "Unsolved first available control activated, focus and restart checked; no unaided completion claim",
+        "winActions": 32,
+        "lossActions": 5,
+        "edgeCases": [
+          "Deliberate failure route reaches loss through UI",
+          "Terminal controls unavailable",
+          "Restart and Play again restore initial scoreboard",
+          "Keyboard focus never falls to BODY after action",
+          "Invalid engine action and post-terminal action are rejected",
+          "No horizontal overflow; no page errors"
+        ]
+      },
+      {
+        "id": "convoy-ledger",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": true,
+        "inputMethod": "Touch-only taps on actual onscreen controls; source-derived solution replay",
+        "ordinaryInput": "Unsolved first available control activated, focus and restart checked; no unaided completion claim",
+        "winActions": 32,
+        "lossActions": 5,
+        "edgeCases": [
+          "Deliberate failure route reaches loss through UI",
+          "Terminal controls unavailable",
+          "Restart and Play again restore initial scoreboard",
+          "Keyboard focus never falls to BODY after action",
+          "Invalid engine action and post-terminal action are rejected",
+          "No horizontal overflow; no page errors"
+        ]
+      }
+    ]
+  },
+  "finishedAt": "2026-10-01T04:11:18.154Z"
+}

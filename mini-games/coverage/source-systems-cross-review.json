@@ -1,0 +1,328 @@
+{
+  "reviewer": "tabletop worker, independent of systems implementation",
+  "reviewedAt": "2026-10-01T04:02:34.108885+00:00",
+  "passed": true,
+  "count": 20,
+  "games": [
+    {
+      "id": "junction-nine",
+      "sourceReviewed": true,
+      "verdict": "accepted",
+      "mechanicReview": "Four coupled queues, axis-switch clearance loss, forecasted arrivals, two flushes and spillback/final backlog gates. Phase spam cannot ignore the other queues.",
+      "sourceHashes": {
+        "systems-room/junction-nine.mjs": "e2a719390a4df21e3741ddd143ce55b7244c277e2d5c200e90944d998068ef30",
+        "systems-room/core.mjs": "5db2bf09c4e519c49247c65f71202a6ffbe94035d2c77bace6e50a453b949a54",
+        "systems-room/engines.mjs": "32d15caf7be339e4cf5966bdc1586735ccf232b72e8a6773dad4ba0862b467b4",
+        "systems-room/game.js": "97fa1f24a74d5a286a8ceef05325cd4059ab66723c9b3bbee71cee004920ca89",
+        "systems-room/room.css": "22808f79089a8401e7042ec5bf0b9c22d4d620ca64b26a743021caafe0915cb6",
+        "systems-room/index.html": "b1b3f175bdd3bfdd05274c37b38de066e8a04a7f5344a29e68568f4bea27e071",
+        "systems-room/games.json": "581064175a1ee4911cb660c129ee67935ab1a2556a37b8a4213d0be49536a224"
+      }
+    },
+    {
+      "id": "assembly-belt",
+      "sourceReviewed": true,
+      "verdict": "accepted",
+      "mechanicReview": "All pieces shift through press/oven/dispatch after every setting/load choice. Die ordering and finite heat budget are real state, not cosmetic. Exhausted oven no longer offers a false reheat action.",
+      "sourceHashes": {
+        "systems-room/assembly-belt.mjs": "e874273962305e50ffd3a64507dcfac2d82e3979ed30af79e81ef40210f0a40f",
+        "systems-room/core.mjs": "5db2bf09c4e519c49247c65f71202a6ffbe94035d2c77bace6e50a453b949a54",
+        "systems-room/engines.mjs": "32d15caf7be339e4cf5966bdc1586735ccf232b72e8a6773dad4ba0862b467b4",
+        "systems-room/game.js": "97fa1f24a74d5a286a8ceef05325cd4059ab66723c9b3bbee71cee004920ca89",
+        "systems-room/room.css": "22808f79089a8401e7042ec5bf0b9c22d4d620ca64b26a743021caafe0915cb6",
+        "systems-room/index.html": "b1b3f175bdd3bfdd05274c37b38de066e8a04a7f5344a29e68568f4bea27e071",
+        "systems-room/games.json": "581064175a1ee4911cb660c129ee67935ab1a2556a37b8a4213d0be49536a224"
+      }
+    },
+    {
+      "id": "marsh-balance",
+      "sourceReviewed": true,
+      "verdict": "accepted",
+      "mechanicReview": "Predator consumption, periodic births and budgeted interventions form coupled population dynamics; each level has survival and end-band constraints.",
+      "sourceHashes": {
+        "systems-room/marsh-balance.mjs": "348d1f3369dd40f5eb75721eb39399598321e046184b52f6b71f3c6bd9318d00",
+        "systems-room/core.mjs": "5db2bf09c4e519c49247c65f71202a6ffbe94035d2c77bace6e50a453b949a54",
+        "systems-room/engines.mjs": "32d15caf7be339e4cf5966bdc1586735ccf232b72e8a6773dad4ba0862b467b4",
+        "systems-room/game.js": "97fa1f24a74d5a286a8ceef05325cd4059ab66723c9b3bbee71cee004920ca89",
+        "systems-room/room.css": "22808f79089a8401e7042ec5bf0b9c22d4d620ca64b26a743021caafe0915cb6",
+        "systems-room/index.html": "b1b3f175bdd3bfdd05274c37b38de066e8a04a7f5344a29e68568f4bea27e071",
+        "systems-room/games.json": "581064175a1ee4911cb660c129ee67935ab1a2556a37b8a4213d0be49536a224"
+      }
+    },
+    {
+      "id": "reorder-point",
+      "sourceReviewed": true,
+      "verdict": "accepted",
+      "mechanicReview": "Two-slot committed supply pipeline, pay-before-sales timing, capacity waste and service/profit gates require advance ordering rather than immediate buy/sell arbitrage.",
+      "sourceHashes": {
+        "systems-room/reorder-point.mjs": "3e819f14e5d37c739fcf004a32ac77527c2ab7a87cbd8514a7d5fc234f18bcdb",
+        "systems-room/core.mjs": "5db2bf09c4e519c49247c65f71202a6ffbe94035d2c77bace6e50a453b949a54",
+        "systems-room/engines.mjs": "32d15caf7be339e4cf5966bdc1586735ccf232b72e8a6773dad4ba0862b467b4",
+        "systems-room/game.js": "97fa1f24a74d5a286a8ceef05325cd4059ab66723c9b3bbee71cee004920ca89",
+        "systems-room/room.css": "22808f79089a8401e7042ec5bf0b9c22d4d620ca64b26a743021caafe0915cb6",
+        "systems-room/index.html": "b1b3f175bdd3bfdd05274c37b38de066e8a04a7f5344a29e68568f4bea27e071",
+        "systems-room/games.json": "581064175a1ee4911cb660c129ee67935ab1a2556a37b8a4213d0be49536a224"
+      }
+    },
+    {
+      "id": "workshop-shift",
+      "sourceReviewed": true,
+      "verdict": "accepted",
+      "mechanicReview": "Three workers and exclusive stations reset by shift; training changes gathering yield. Mixed output targets plus materials require scheduling. Independently ordinary-played full win.",
+      "sourceHashes": {
+        "systems-room/workshop-shift.mjs": "1b59c757adef7f99138dd72ca5730ece4cbe6eebb6c486e57f3a619780b8b6d3",
+        "systems-room/core.mjs": "5db2bf09c4e519c49247c65f71202a6ffbe94035d2c77bace6e50a453b949a54",
+        "systems-room/engines.mjs": "32d15caf7be339e4cf5966bdc1586735ccf232b72e8a6773dad4ba0862b467b4",
+        "systems-room/game.js": "97fa1f24a74d5a286a8ceef05325cd4059ab66723c9b3bbee71cee004920ca89",
+        "systems-room/room.css": "22808f79089a8401e7042ec5bf0b9c22d4d620ca64b26a743021caafe0915cb6",
+        "systems-room/index.html": "b1b3f175bdd3bfdd05274c37b38de066e8a04a7f5344a29e68568f4bea27e071",
+        "systems-room/games.json": "581064175a1ee4911cb660c129ee67935ab1a2556a37b8a4213d0be49536a224"
+      }
+    },
+    {
+      "id": "signal-cabinet",
+      "sourceReviewed": true,
+      "verdict": "accepted",
+      "mechanicReview": "Released jobs keep partial progress across interruption; class switch consumes a tick, deadlines expire explicitly and two misses lose. Batch sequencing is essential.",
+      "sourceHashes": {
+        "systems-room/signal-cabinet.mjs": "09ba6d1af2447dad857fdb45a751a34e0390a8e5c52ff4c07d5300edf7900c01",
+        "systems-room/core.mjs": "5db2bf09c4e519c49247c65f71202a6ffbe94035d2c77bace6e50a453b949a54",
+        "systems-room/engines.mjs": "32d15caf7be339e4cf5966bdc1586735ccf232b72e8a6773dad4ba0862b467b4",
+        "systems-room/game.js": "97fa1f24a74d5a286a8ceef05325cd4059ab66723c9b3bbee71cee004920ca89",
+        "systems-room/room.css": "22808f79089a8401e7042ec5bf0b9c22d4d620ca64b26a743021caafe0915cb6",
+        "systems-room/index.html": "b1b3f175bdd3bfdd05274c37b38de066e8a04a7f5344a29e68568f4bea27e071",
+        "systems-room/games.json": "581064175a1ee4911cb660c129ee67935ab1a2556a37b8a4213d0be49536a224"
+      }
+    },
+    {
+      "id": "cold-chain",
+      "sourceReviewed": true,
+      "verdict": "accepted",
+      "mechanicReview": "Aging/spoilage, two fridge slots, move costs and mandatory two-tick chilled milk for parfait make refrigeration mechanically necessary. Independently ordinary-played full win.",
+      "sourceHashes": {
+        "systems-room/cold-chain.mjs": "69691c4cdc09cbcf0c9dd6f9b80ec58d9b6ef398a7dc840f60f678ff85a07dad",
+        "systems-room/core.mjs": "5db2bf09c4e519c49247c65f71202a6ffbe94035d2c77bace6e50a453b949a54",
+        "systems-room/engines.mjs": "32d15caf7be339e4cf5966bdc1586735ccf232b72e8a6773dad4ba0862b467b4",
+        "systems-room/game.js": "97fa1f24a74d5a286a8ceef05325cd4059ab66723c9b3bbee71cee004920ca89",
+        "systems-room/room.css": "22808f79089a8401e7042ec5bf0b9c22d4d620ca64b26a743021caafe0915cb6",
+        "systems-room/index.html": "b1b3f175bdd3bfdd05274c37b38de066e8a04a7f5344a29e68568f4bea27e071",
+        "systems-room/games.json": "581064175a1ee4911cb660c129ee67935ab1a2556a37b8a4213d0be49536a224"
+      }
+    },
+    {
+      "id": "reservoir",
+      "sourceReviewed": true,
+      "verdict": "accepted",
+      "mechanicReview": "Forecast inflow enters before release, flood and shortage are immediate loss checks, while reserve/waste constrain final result. Surplus and drought create opposing pressures.",
+      "sourceHashes": {
+        "systems-room/reservoir.mjs": "127f9866eb0ba3924a2aa9c64eb82f6aa3be4928733b29539113ac79da61057f",
+        "systems-room/core.mjs": "5db2bf09c4e519c49247c65f71202a6ffbe94035d2c77bace6e50a453b949a54",
+        "systems-room/engines.mjs": "32d15caf7be339e4cf5966bdc1586735ccf232b72e8a6773dad4ba0862b467b4",
+        "systems-room/game.js": "97fa1f24a74d5a286a8ceef05325cd4059ab66723c9b3bbee71cee004920ca89",
+        "systems-room/room.css": "22808f79089a8401e7042ec5bf0b9c22d4d620ca64b26a743021caafe0915cb6",
+        "systems-room/index.html": "b1b3f175bdd3bfdd05274c37b38de066e8a04a7f5344a29e68568f4bea27e071",
+        "systems-room/games.json": "581064175a1ee4911cb660c129ee67935ab1a2556a37b8a4213d0be49536a224"
+      }
+    },
+    {
+      "id": "power-desk",
+      "sourceReviewed": true,
+      "verdict": "accepted",
+      "mechanicReview": "Off-state startup delay, ramp limit, two distinct battery modes, fuel and reserve constraints are implemented independently of target selection.",
+      "sourceHashes": {
+        "systems-room/power-desk.mjs": "cf7195f36659c0e91fda1c6487676e0ba099ecd8ea51d17a1383053430fbb58c",
+        "systems-room/core.mjs": "5db2bf09c4e519c49247c65f71202a6ffbe94035d2c77bace6e50a453b949a54",
+        "systems-room/engines.mjs": "32d15caf7be339e4cf5966bdc1586735ccf232b72e8a6773dad4ba0862b467b4",
+        "systems-room/game.js": "97fa1f24a74d5a286a8ceef05325cd4059ab66723c9b3bbee71cee004920ca89",
+        "systems-room/room.css": "22808f79089a8401e7042ec5bf0b9c22d4d620ca64b26a743021caafe0915cb6",
+        "systems-room/index.html": "b1b3f175bdd3bfdd05274c37b38de066e8a04a7f5344a29e68568f4bea27e071",
+        "systems-room/games.json": "581064175a1ee4911cb660c129ee67935ab1a2556a37b8a4213d0be49536a224"
+      }
+    },
+    {
+      "id": "carry-on",
+      "sourceReviewed": true,
+      "verdict": "accepted",
+      "mechanicReview": "Irreversible arriving offers, two simultaneous capacities, one exchange and category requirements distinguish it from scalar-value packing or shopping.",
+      "sourceHashes": {
+        "systems-room/carry-on.mjs": "556e3dacd6643ef3d1d5f85e29522ade07584926054e53867bb7ddb467b218da",
+        "systems-room/core.mjs": "5db2bf09c4e519c49247c65f71202a6ffbe94035d2c77bace6e50a453b949a54",
+        "systems-room/engines.mjs": "32d15caf7be339e4cf5966bdc1586735ccf232b72e8a6773dad4ba0862b467b4",
+        "systems-room/game.js": "97fa1f24a74d5a286a8ceef05325cd4059ab66723c9b3bbee71cee004920ca89",
+        "systems-room/room.css": "22808f79089a8401e7042ec5bf0b9c22d4d620ca64b26a743021caafe0915cb6",
+        "systems-room/index.html": "b1b3f175bdd3bfdd05274c37b38de066e8a04a7f5344a29e68568f4bea27e071",
+        "systems-room/games.json": "581064175a1ee4911cb660c129ee67935ab1a2556a37b8a4213d0be49536a224"
+      }
+    },
+    {
+      "id": "quiet-majority",
+      "sourceReviewed": true,
+      "verdict": "accepted",
+      "mechanicReview": "Public faction utility weights can move support in opposite directions; per-bill action cap, persistent policies and expiring grants enforce a changing coalition. Independently ordinary-played full win.",
+      "sourceHashes": {
+        "systems-room/quiet-majority.mjs": "88dce452656679d8294901e33f653dad8aaf2f16ef5af432fe27da4f13d53657",
+        "systems-room/core.mjs": "5db2bf09c4e519c49247c65f71202a6ffbe94035d2c77bace6e50a453b949a54",
+        "systems-room/engines.mjs": "32d15caf7be339e4cf5966bdc1586735ccf232b72e8a6773dad4ba0862b467b4",
+        "systems-room/game.js": "97fa1f24a74d5a286a8ceef05325cd4059ab66723c9b3bbee71cee004920ca89",
+        "systems-room/room.css": "22808f79089a8401e7042ec5bf0b9c22d4d620ca64b26a743021caafe0915cb6",
+        "systems-room/index.html": "b1b3f175bdd3bfdd05274c37b38de066e8a04a7f5344a29e68568f4bea27e071",
+        "systems-room/games.json": "581064175a1ee4911cb660c129ee67935ab1a2556a37b8a4213d0be49536a224"
+      }
+    },
+    {
+      "id": "safe-return",
+      "sourceReviewed": true,
+      "verdict": "accepted",
+      "mechanicReview": "Each policy overlaps three daily weather checks; multiple same-type losses correlate, minimum written count prevents declining every day, and closing runoff reserve prevents final-day premium farming.",
+      "sourceHashes": {
+        "systems-room/safe-return.mjs": "1862eb8a426f402e3d1745bc11661668bbfd76d84fc0471045d2cad714faa08a",
+        "systems-room/core.mjs": "5db2bf09c4e519c49247c65f71202a6ffbe94035d2c77bace6e50a453b949a54",
+        "systems-room/engines.mjs": "32d15caf7be339e4cf5966bdc1586735ccf232b72e8a6773dad4ba0862b467b4",
+        "systems-room/game.js": "97fa1f24a74d5a286a8ceef05325cd4059ab66723c9b3bbee71cee004920ca89",
+        "systems-room/room.css": "22808f79089a8401e7042ec5bf0b9c22d4d620ca64b26a743021caafe0915cb6",
+        "systems-room/index.html": "b1b3f175bdd3bfdd05274c37b38de066e8a04a7f5344a29e68568f4bea27e071",
+        "systems-room/games.json": "581064175a1ee4911cb660c129ee67935ab1a2556a37b8a4213d0be49536a224"
+      }
+    },
+    {
+      "id": "firebreak",
+      "sourceReviewed": true,
+      "verdict": "accepted",
+      "mechanicReview": "One crew action per spread, persistent barriers, limited water, directional fire and four later lightning ignitions require multi-wave protection. Any cabin burning loses.",
+      "sourceHashes": {
+        "systems-room/firebreak.mjs": "b6db72d85452797496c0b302d542c9b79cea7a6a103cea552fd2e7cd837c2bf9",
+        "systems-room/core.mjs": "5db2bf09c4e519c49247c65f71202a6ffbe94035d2c77bace6e50a453b949a54",
+        "systems-room/engines.mjs": "32d15caf7be339e4cf5966bdc1586735ccf232b72e8a6773dad4ba0862b467b4",
+        "systems-room/game.js": "97fa1f24a74d5a286a8ceef05325cd4059ab66723c9b3bbee71cee004920ca89",
+        "systems-room/room.css": "22808f79089a8401e7042ec5bf0b9c22d4d620ca64b26a743021caafe0915cb6",
+        "systems-room/index.html": "b1b3f175bdd3bfdd05274c37b38de066e8a04a7f5344a29e68568f4bea27e071",
+        "systems-room/games.json": "581064175a1ee4911cb660c129ee67935ab1a2556a37b8a4213d0be49536a224"
+      }
+    },
+    {
+      "id": "kiln-house",
+      "sourceReviewed": true,
+      "verdict": "accepted",
+      "mechanicReview": "Core uses previous shell-core gap; thermal lag, consecutive dwell, stress bounds and post-firing cooling define a distinct feedback-control problem.",
+      "sourceHashes": {
+        "systems-room/kiln-house.mjs": "a33f2883108832c1dc7970842e3b97d0dc049c968e2dd3a37cd48f427fe1e78a",
+        "systems-room/core.mjs": "5db2bf09c4e519c49247c65f71202a6ffbe94035d2c77bace6e50a453b949a54",
+        "systems-room/engines.mjs": "32d15caf7be339e4cf5966bdc1586735ccf232b72e8a6773dad4ba0862b467b4",
+        "systems-room/game.js": "97fa1f24a74d5a286a8ceef05325cd4059ab66723c9b3bbee71cee004920ca89",
+        "systems-room/room.css": "22808f79089a8401e7042ec5bf0b9c22d4d620ca64b26a743021caafe0915cb6",
+        "systems-room/index.html": "b1b3f175bdd3bfdd05274c37b38de066e8a04a7f5344a29e68568f4bea27e071",
+        "systems-room/games.json": "581064175a1ee4911cb660c129ee67935ab1a2556a37b8a4213d0be49536a224"
+      }
+    },
+    {
+      "id": "two-couriers",
+      "sourceReviewed": true,
+      "verdict": "accepted",
+      "mechanicReview": "One courier moves at a time on a bottleneck graph, occupied stops block transit, passing bay and one-parcel capacity make opposing deliveries interdependent.",
+      "sourceHashes": {
+        "systems-room/two-couriers.mjs": "1967e7b4b7a0f91696cac149df3a55663df56fa60bfe51321f0f2b418835361b",
+        "systems-room/core.mjs": "5db2bf09c4e519c49247c65f71202a6ffbe94035d2c77bace6e50a453b949a54",
+        "systems-room/engines.mjs": "32d15caf7be339e4cf5966bdc1586735ccf232b72e8a6773dad4ba0862b467b4",
+        "systems-room/game.js": "97fa1f24a74d5a286a8ceef05325cd4059ab66723c9b3bbee71cee004920ca89",
+        "systems-room/room.css": "22808f79089a8401e7042ec5bf0b9c22d4d620ca64b26a743021caafe0915cb6",
+        "systems-room/index.html": "b1b3f175bdd3bfdd05274c37b38de066e8a04a7f5344a29e68568f4bea27e071",
+        "systems-room/games.json": "581064175a1ee4911cb660c129ee67935ab1a2556a37b8a4213d0be49536a224"
+      }
+    },
+    {
+      "id": "elevator-night",
+      "sourceReviewed": true,
+      "verdict": "accepted",
+      "mechanicReview": "Travel and door opening are separate ticks, capacity two and oldest-first boarding constrain batching, release times/deadlines require route scheduling.",
+      "sourceHashes": {
+        "systems-room/elevator-night.mjs": "d61eef3fd45518804e4e85700c2cc6d1ca5e7480c6f6e54e5ffdab9333767739",
+        "systems-room/core.mjs": "5db2bf09c4e519c49247c65f71202a6ffbe94035d2c77bace6e50a453b949a54",
+        "systems-room/engines.mjs": "32d15caf7be339e4cf5966bdc1586735ccf232b72e8a6773dad4ba0862b467b4",
+        "systems-room/game.js": "97fa1f24a74d5a286a8ceef05325cd4059ab66723c9b3bbee71cee004920ca89",
+        "systems-room/room.css": "22808f79089a8401e7042ec5bf0b9c22d4d620ca64b26a743021caafe0915cb6",
+        "systems-room/index.html": "b1b3f175bdd3bfdd05274c37b38de066e8a04a7f5344a29e68568f4bea27e071",
+        "systems-room/games.json": "581064175a1ee4911cb660c129ee67935ab1a2556a37b8a4213d0be49536a224"
+      }
+    },
+    {
+      "id": "supply-web",
+      "sourceReviewed": true,
+      "verdict": "accepted",
+      "mechanicReview": "Serial production stages consume actual upstream inventories, assembly has a two-input bottleneck, construction competes with sales for finite cash and turns.",
+      "sourceHashes": {
+        "systems-room/supply-web.mjs": "e6c8d8ab33cf776989d3063c8aa45c0fd752c306c6d13385a699429a5afdb1fc",
+        "systems-room/core.mjs": "5db2bf09c4e519c49247c65f71202a6ffbe94035d2c77bace6e50a453b949a54",
+        "systems-room/engines.mjs": "32d15caf7be339e4cf5966bdc1586735ccf232b72e8a6773dad4ba0862b467b4",
+        "systems-room/game.js": "97fa1f24a74d5a286a8ceef05325cd4059ab66723c9b3bbee71cee004920ca89",
+        "systems-room/room.css": "22808f79089a8401e7042ec5bf0b9c22d4d620ca64b26a743021caafe0915cb6",
+        "systems-room/index.html": "b1b3f175bdd3bfdd05274c37b38de066e8a04a7f5344a29e68568f4bea27e071",
+        "systems-room/games.json": "581064175a1ee4911cb660c129ee67935ab1a2556a37b8a4213d0be49536a224"
+      }
+    },
+    {
+      "id": "growing-block",
+      "sourceReviewed": true,
+      "verdict": "accepted",
+      "mechanicReview": "Spatial amenity/pollution affects per-home migration, then income pays for zoning. Review found and resolved row-order income artifact; mirrored board incomes now independently equal.",
+      "sourceHashes": {
+        "systems-room/growing-block.mjs": "489631afd37975030cb3f7ab16f6064e3bbc50a7949fe36df52415656b7f3784",
+        "systems-room/core.mjs": "5db2bf09c4e519c49247c65f71202a6ffbe94035d2c77bace6e50a453b949a54",
+        "systems-room/engines.mjs": "32d15caf7be339e4cf5966bdc1586735ccf232b72e8a6773dad4ba0862b467b4",
+        "systems-room/game.js": "97fa1f24a74d5a286a8ceef05325cd4059ab66723c9b3bbee71cee004920ca89",
+        "systems-room/room.css": "22808f79089a8401e7042ec5bf0b9c22d4d620ca64b26a743021caafe0915cb6",
+        "systems-room/index.html": "b1b3f175bdd3bfdd05274c37b38de066e8a04a7f5344a29e68568f4bea27e071",
+        "systems-room/games.json": "581064175a1ee4911cb660c129ee67935ab1a2556a37b8a4213d0be49536a224"
+      }
+    },
+    {
+      "id": "borrowed-time",
+      "sourceReviewed": true,
+      "verdict": "accepted",
+      "mechanicReview": "Dependency graph blocks premature work; two persistent task assignments run simultaneously, crew specialty changes duration, and all tasks feed final launch.",
+      "sourceHashes": {
+        "systems-room/borrowed-time.mjs": "e852875bc7af0d578ff09a917c67453363297f4f2bc9ff42be64455576191fee",
+        "systems-room/core.mjs": "5db2bf09c4e519c49247c65f71202a6ffbe94035d2c77bace6e50a453b949a54",
+        "systems-room/engines.mjs": "32d15caf7be339e4cf5966bdc1586735ccf232b72e8a6773dad4ba0862b467b4",
+        "systems-room/game.js": "97fa1f24a74d5a286a8ceef05325cd4059ab66723c9b3bbee71cee004920ca89",
+        "systems-room/room.css": "22808f79089a8401e7042ec5bf0b9c22d4d620ca64b26a743021caafe0915cb6",
+        "systems-room/index.html": "b1b3f175bdd3bfdd05274c37b38de066e8a04a7f5344a29e68568f4bea27e071",
+        "systems-room/games.json": "581064175a1ee4911cb660c129ee67935ab1a2556a37b8a4213d0be49536a224"
+      }
+    },
+    {
+      "id": "convoy-ledger",
+      "sourceReviewed": true,
+      "verdict": "accepted",
+      "mechanicReview": "Escort thresholds protect entire cargo lanes, partial coverage loses cargo and possibly escorts, recall enables allocation planning and survivors carry into future waves.",
+      "sourceHashes": {
+        "systems-room/convoy-ledger.mjs": "290d37440a0fb5478b7fbd9c5d923a80005df5ccfddb72d4ff1d0121c08ec60a",
+        "systems-room/core.mjs": "5db2bf09c4e519c49247c65f71202a6ffbe94035d2c77bace6e50a453b949a54",
+        "systems-room/engines.mjs": "32d15caf7be339e4cf5966bdc1586735ccf232b72e8a6773dad4ba0862b467b4",
+        "systems-room/game.js": "97fa1f24a74d5a286a8ceef05325cd4059ab66723c9b3bbee71cee004920ca89",
+        "systems-room/room.css": "22808f79089a8401e7042ec5bf0b9c22d4d620ca64b26a743021caafe0915cb6",
+        "systems-room/index.html": "b1b3f175bdd3bfdd05274c37b38de066e8a04a7f5344a29e68568f4bea27e071",
+        "systems-room/games.json": "581064175a1ee4911cb660c129ee67935ab1a2556a37b8a4213d0be49536a224"
+      }
+    }
+  ],
+  "resolvedFindings": [
+    {
+      "id": "growing-block",
+      "issue": "Shop income depended on row-order because migration and income shared one iteration.",
+      "fix": "All home migration completes in its own pass before income. Independently checked shop-first and mirrored shop-last positions both earn 4 net (cash14).",
+      "status": "resolved"
+    },
+    {
+      "id": "assembly-belt",
+      "issue": "Systems owner removed exhausted-fuel Heat oven control during review.",
+      "check": "Independently asserted no oven action when energy0 and ovenoff.",
+      "status": "resolved"
+    }
+  ],
+  "ordinaryPlayEvidence": "ordinary-systems-cross-review.json",
+  "limitations": [
+    "Source review establishes implemented mechanics and obvious bypass guards, not exhaustive strategy or all possible reachable states.",
+    "Ordinary input sampling covered Workshop Shift, Quiet Majority and Cold Chain; source review covers all20.",
+    "Final worker suite/parent release provenance remains required for exact-source test matching."
+  ]
+}

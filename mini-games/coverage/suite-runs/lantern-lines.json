@@ -3,15 +3,14 @@
   "suite": "lantern-lines",
   "passed": true,
   "status": "passed",
-  "startedAt": "2026-10-01T02:00:11.863Z",
+  "startedAt": "2026-10-01T04:08:29.355Z",
   "source": {
-    "sha256": "ce93ad3629a58566c784b9947a5483c8faa159dd48de7b1727eca929d4f23f44",
+    "sha256": "c27f194567fe062ac9fadf79fb35d0224b8c6433c7494d1a20ccdee35c670c60",
     "files": [
       "catalog.css",
       "catalog.js",
       "common.js",
       "index.html",
-      "inventory-plan.json",
       "inventory.json",
       "lantern-lines/game.css",
       "lantern-lines/game.js",
@@ -48,9 +47,9 @@
   "servedRuntimeBefore": {
     "baseURL": "http://127.0.0.1:8790",
     "passed": true,
-    "sha256": "84206967884e97e84a7578f6c08aa2e7ccade41b567b0f775ad0831c2b12c481",
-    "fileCount": 11,
-    "verifiedAt": "2026-10-01T02:00:12.095Z"
+    "sha256": "071bd8a8c8449e3ac8b01e67998e57e30feca74a91d154beba081edec8f805be",
+    "fileCount": 10,
+    "verifiedAt": "2026-10-01T04:08:29.471Z"
   },
   "exitCode": 0,
   "signal": null,
@@ -58,9 +57,10 @@
   "servedRuntime": {
     "baseURL": "http://127.0.0.1:8790",
     "passed": true,
-    "sha256": "84206967884e97e84a7578f6c08aa2e7ccade41b567b0f775ad0831c2b12c481",
-    "fileCount": 11,
-    "verifiedAt": "2026-10-01T02:00:37.903Z"
+    "sha256": "071bd8a8c8449e3ac8b01e67998e57e30feca74a91d154beba081edec8f805be",
+    "fileCount": 10,
+    "verifiedAt": "2026-10-01T04:08:46.164Z"
   },
-  "finishedAt": "2026-10-01T02:00:37.903Z"
+  "completionEvidence": null,
+  "finishedAt": "2026-10-01T04:08:46.164Z"
 }

@@ -3,15 +3,14 @@
   "suite": "strategy-room",
   "passed": true,
   "status": "passed",
-  "startedAt": "2026-10-01T02:00:58.151Z",
+  "startedAt": "2026-10-01T04:10:09.642Z",
   "source": {
-    "sha256": "d97562ac85c19d5a0acbe30c024db934efc3645ca7c889016ea000ca582def1e",
+    "sha256": "93030a02b6da95e6c57152f5b4e8481b9983144cc009aa202b8d252cd408ccb4",
     "files": [
       "catalog.css",
       "catalog.js",
       "common.js",
       "index.html",
-      "inventory-plan.json",
       "inventory.json",
       "play.css",
       "strategy-room/engines.mjs",
@@ -36,7 +35,7 @@
     "mobileViewportCompletion": true,
     "touchGameplayCompletion": true,
     "touchControlSmoke": true,
-    "completionMeans": "terminal result; competitive losses count",
+    "completionMeans": "terminal result; competitive losses and draws count",
     "method": "scripted UI; curated answers or board solvers",
     "mobileMethod": "touch gameplay with scripted navigation/solvers"
   },
@@ -64,9 +63,9 @@
   "servedRuntimeBefore": {
     "baseURL": "http://127.0.0.1:8790",
     "passed": true,
-    "sha256": "ce5909fee5b215a0df31c3ff4cc27ad133c3ad235003a26a54be393f75815d25",
-    "fileCount": 13,
-    "verifiedAt": "2026-10-01T02:00:58.554Z"
+    "sha256": "e29abd06a99b1c342153bcd91f651a3b4c3d4030b6f8ff82c1c681375f5ff4db",
+    "fileCount": 12,
+    "verifiedAt": "2026-10-01T04:10:09.780Z"
   },
   "exitCode": 0,
   "signal": null,
@@ -74,9 +73,10 @@
   "servedRuntime": {
     "baseURL": "http://127.0.0.1:8790",
     "passed": true,
-    "sha256": "ce5909fee5b215a0df31c3ff4cc27ad133c3ad235003a26a54be393f75815d25",
-    "fileCount": 13,
-    "verifiedAt": "2026-10-01T02:02:17.099Z"
+    "sha256": "e29abd06a99b1c342153bcd91f651a3b4c3d4030b6f8ff82c1c681375f5ff4db",
+    "fileCount": 12,
+    "verifiedAt": "2026-10-01T04:10:46.763Z"
   },
-  "finishedAt": "2026-10-01T02:02:17.099Z"
+  "completionEvidence": null,
+  "finishedAt": "2026-10-01T04:10:46.763Z"
 }

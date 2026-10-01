@@ -1,6 +1,42 @@
 # Small Hours
 
-A small, expandable browser arcade with 100 playable games. The catalog is `index.html`, with working All / Adventure / Reflex / Memory / Puzzle / Strategy filters. Every displayed game is playable.
+A small, expandable browser arcade with 200 playable games. The catalog is `index.html`, with working All / Adventure / Reflex / Memory / Puzzle / Strategy filters. Every displayed game is playable.
+
+## The 200-game expansion
+
+The additional 100 games occupy five static rooms of 20 games each. [The design inventory](EXPANSION-200-DESIGNS.md) compares their defining decisions with neighboring games, and [the independent review](EXPANSION-200-REVIEW.md) records rejected concepts, revisions and review limits.
+
+- **Systems:** queues, conveyor processing, ecological feedback, lead-time ordering, worker placement, cold storage, reservoir control, power commitment, online packing, coalition negotiation, underwriting, containment, thermal control, couriers, elevator dispatch, production networks, zoning, dependency scheduling and defense allocation.
+- **Tabletop:** trick-taking, blackjack, rummy, draw poker, climbing cards, sum captures, dominoes, dice banking, dice categories, bid challenges, sealed bids, pegging, formation contests, king escape, capture chains, exchanged movement cards, marble pushing, army connectivity, climbing/building and suit-based combat.
+- **Puzzle Lab:** stable matching, sliding ice, cube orientation, knight exchange, graph coloring, vertex cuts, minimum spanning trees, conserved flow, truth assignments, logic gates, rewriting, coupled walkers, cellular evolution, voxel projections, Hitori, island/sea constraints, rectangle partitions, cycle reversal, parity repair and safe transport. Each has three studies.
+- **Kinetic:** discrete acceleration, trail enclosure, stealth, falling rocks, delayed blasts, fencing, supported climbing, trailer articulation, gravity inversion, thrown-beacon exchange, recorded cooperation, material phases, sailing, telescoping transport, shield ricochets, structural cutting, spring travel, fragmenting threats, interception and autonomous-worker rescue. These games advance time on player actions; they are not real-time reflex games.
+- **Discovery:** ray inference, experimental weighing, relational triples, scene comparison, limited-vision exploration, prefix trees, temporal sampling, hypothesis testing, causal interventions, stereo correspondence, wave synthesis, question selection, gradient search, excavation, selective patch merging, blur inversion, limited-channel evidence, object-use escape, asymmetric cooperation and orientation-changing exploration.
+
+The original 100 entries and game runtime files, catalog interaction code, and `motion-showcase/` are preserved. `tests/preservation.cjs` checks their recorded baseline bytes. New games use native browser controls, local assets and no paid services or runtime dependencies.
+
+### Verification boundaries
+
+See the [release verification record](EXPANSION-200-VERIFICATION.md) for exact scopes and evidence links.
+
+`coverage/index.json` is the current aggregate, not a historical README claim. A successful suite must match current runtime/test/fixture bytes, verify served assets before and after execution, and produce fresh complete per-game evidence. Missing, stale, failed, contradictory or partial evidence fails the gate. The runner refuses to label WebKit execution as Chromium. New suites distinguish desktop, mobile viewport, touch-only gameplay and mixed input per game. Competitive tabletop terminal results may be losses or draws; solitaire progressions must win.
+
+Full-game checks use rendered-state solvers, read-only probes or source-derived legal plans. They establish reachable outcomes and tested rules, not unaided difficulty. Ordinary-input review is a separate, explicitly sampled category. No physical iPhone, screen-reader user study or blanket deep-polish claim is made. Some games have authored scenarios; others generate or shuffle new studies/deals.
+
+Run the new suites through the same provenance wrapper as the existing suites:
+
+```sh
+for room in systems-room tabletop-room puzzle-lab kinetic-room discovery-room; do
+  node mini-games/tools/run-suite.cjs "$room" || exit 1
+done
+node mini-games/tools/coverage-index.cjs
+node mini-games/tests/evidence-index.cjs
+node mini-games/tests/evidence-assets.cjs
+node mini-games/tests/evidence-fresh.cjs
+node mini-games/tests/preservation.cjs
+node mini-games/tests/expansion-controls.cjs
+```
+
+The GitHub workflow checks the exact pushed commit: full new-game Chromium suites, published byte equality and 400 catalog route/reset cases, followed by original issue regressions and new-game control checks in Chromium and WebKit. Browser-engine checks are not physical-device certification. Two legacy suites, Word Weave and Pebble Post, are now correctly classified as mixed mobile input because their winning paths include mouse check/undo actions.
 
 ## Play locally
 

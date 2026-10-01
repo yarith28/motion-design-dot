@@ -3,15 +3,14 @@
   "suite": "word-room",
   "passed": true,
   "status": "passed",
-  "startedAt": "2026-10-01T02:00:36.625Z",
+  "startedAt": "2026-10-01T04:09:32.919Z",
   "source": {
-    "sha256": "96ecbe0aae7757b036c9711e4361582a1b6c069b5a95927d01a4269bc4182e85",
+    "sha256": "abef914026af756cc0f3060eda665c22410af1cf7f3438547a0374b768cf4baa",
     "files": [
       "catalog.css",
       "catalog.js",
       "common.js",
       "index.html",
-      "inventory-plan.json",
       "inventory.json",
       "play.css",
       "styles.css",
@@ -65,9 +64,9 @@
   "servedRuntimeBefore": {
     "baseURL": "http://127.0.0.1:8790",
     "passed": true,
-    "sha256": "c1d28400e74e7e80bd3b34057e67b18b0cf1c9e5205121f51bdfa94da283d415",
-    "fileCount": 13,
-    "verifiedAt": "2026-10-01T02:00:36.980Z"
+    "sha256": "e0c901a291da751c07ddedc96b8a2ea96eac0bf5a6cadf7d3d383fc21335f9fd",
+    "fileCount": 12,
+    "verifiedAt": "2026-10-01T04:09:33.133Z"
   },
   "exitCode": 0,
   "signal": null,
@@ -75,9 +74,10 @@
   "servedRuntime": {
     "baseURL": "http://127.0.0.1:8790",
     "passed": true,
-    "sha256": "c1d28400e74e7e80bd3b34057e67b18b0cf1c9e5205121f51bdfa94da283d415",
-    "fileCount": 13,
-    "verifiedAt": "2026-10-01T02:02:13.671Z"
+    "sha256": "e0c901a291da751c07ddedc96b8a2ea96eac0bf5a6cadf7d3d383fc21335f9fd",
+    "fileCount": 12,
+    "verifiedAt": "2026-10-01T04:10:18.347Z"
   },
-  "finishedAt": "2026-10-01T02:02:13.671Z"
+  "completionEvidence": null,
+  "finishedAt": "2026-10-01T04:10:18.347Z"
 }

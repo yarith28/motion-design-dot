@@ -3,15 +3,14 @@
   "suite": "spatial-room",
   "passed": true,
   "status": "passed",
-  "startedAt": "2026-10-01T02:00:43.876Z",
+  "startedAt": "2026-10-01T04:08:46.340Z",
   "source": {
-    "sha256": "fc1aaa82e608e342b717096fecd4396e13e3f788378fc0ea2c080023f8be28e5",
+    "sha256": "19df4d529584edf521568c501fa7d3ae303a1c1d38745192b10b00069a273ac9",
     "files": [
       "catalog.css",
       "catalog.js",
       "common.js",
       "index.html",
-      "inventory-plan.json",
       "inventory.json",
       "play.css",
       "spatial-room/data.js",
@@ -66,9 +65,9 @@
   "servedRuntimeBefore": {
     "baseURL": "http://127.0.0.1:8790",
     "passed": true,
-    "sha256": "6e6fa53c939a39b0abb5216a804b65bdfd1fb35a8638a8f5326fe67322c04e6c",
-    "fileCount": 13,
-    "verifiedAt": "2026-10-01T02:00:45.616Z"
+    "sha256": "e0758bf42c78b38c06ed5a134dd3af4f78f8fc5db7db78185bf2eb1bd5b0bc1b",
+    "fileCount": 12,
+    "verifiedAt": "2026-10-01T04:08:46.451Z"
   },
   "exitCode": 0,
   "signal": null,
@@ -76,9 +75,10 @@
   "servedRuntime": {
     "baseURL": "http://127.0.0.1:8790",
     "passed": true,
-    "sha256": "6e6fa53c939a39b0abb5216a804b65bdfd1fb35a8638a8f5326fe67322c04e6c",
-    "fileCount": 13,
-    "verifiedAt": "2026-10-01T02:02:11.864Z"
+    "sha256": "e0758bf42c78b38c06ed5a134dd3af4f78f8fc5db7db78185bf2eb1bd5b0bc1b",
+    "fileCount": 12,
+    "verifiedAt": "2026-10-01T04:09:32.797Z"
   },
-  "finishedAt": "2026-10-01T02:02:11.864Z"
+  "completionEvidence": null,
+  "finishedAt": "2026-10-01T04:09:32.797Z"
 }

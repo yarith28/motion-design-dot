@@ -3,9 +3,9 @@
   "suite": "collection",
   "passed": true,
   "status": "passed",
-  "startedAt": "2026-10-01T02:19:48.174Z",
+  "startedAt": "2026-10-01T04:14:37.161Z",
   "source": {
-    "sha256": "1359a64ce8bea0230e0a35ca6f75f77bf24dc599d8b0b43b75516993f17a2076",
+    "sha256": "699638d1c6bfdb32c01fd94002aa52a5611de3515b2904a6eca23c2bef9b3db5",
     "files": [
       "catalog.css",
       "catalog.js",
@@ -17,7 +17,6 @@
       "good-order/game.js",
       "good-order/index.html",
       "index.html",
-      "inventory-plan.json",
       "inventory.json",
       "play.css",
       "pocket-orbit/game.css",
@@ -56,9 +55,9 @@
   "servedRuntimeBefore": {
     "baseURL": "http://127.0.0.1:8790",
     "passed": true,
-    "sha256": "caac7eb06bdce0a6f1b1ce62739962baddeb6cec422b3a353d8eb13d34aae959",
-    "fileCount": 17,
-    "verifiedAt": "2026-10-01T02:19:48.291Z"
+    "sha256": "d6cde0de7b0526cd64807393008414d27c71f1bd40e5a0870bc9f6d07dc82069",
+    "fileCount": 16,
+    "verifiedAt": "2026-10-01T04:14:37.271Z"
   },
   "exitCode": 0,
   "signal": null,
@@ -66,9 +65,10 @@
   "servedRuntime": {
     "baseURL": "http://127.0.0.1:8790",
     "passed": true,
-    "sha256": "caac7eb06bdce0a6f1b1ce62739962baddeb6cec422b3a353d8eb13d34aae959",
-    "fileCount": 17,
-    "verifiedAt": "2026-10-01T02:20:17.290Z"
+    "sha256": "d6cde0de7b0526cd64807393008414d27c71f1bd40e5a0870bc9f6d07dc82069",
+    "fileCount": 16,
+    "verifiedAt": "2026-10-01T04:15:09.982Z"
   },
-  "finishedAt": "2026-10-01T02:20:17.290Z"
+  "completionEvidence": null,
+  "finishedAt": "2026-10-01T04:15:09.982Z"
 }

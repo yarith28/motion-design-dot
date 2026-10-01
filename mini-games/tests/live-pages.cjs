@@ -7,6 +7,7 @@ const base=(process.env.LIVE_BASE_URL||'https://yarith28.github.io/motion-design
 const out=process.env.SCREENSHOT_DIR||'live-verification';fs.mkdirSync(out,{recursive:true});
 const inventory=JSON.parse(fs.readFileSync('mini-games/inventory.json','utf8'));
 const total=inventory.games.length;
+const expansionRooms=new Set(['systems-room','tabletop-room','puzzle-lab','kinetic-room','discovery-room']);
 const categories=[...new Set(inventory.games.map(g=>g.category))];
 const categoryCount=c=>c==='all'?total:inventory.games.filter(g=>g.category===c).length;
 const games=['signal-run','double-take','pocket-orbit','good-order','afterglow','lantern-lines','tide-pool','word-weave','sky-stack','pebble-post'];
@@ -44,13 +45,13 @@ async function publishedFiles(){
   assert.equal(await listButton.getAttribute('aria-pressed'),'true');
   assert.equal(await page.locator('#game-catalog').getAttribute('data-view'),'list');
   for(const [filter,count] of ['reflex','adventure','all'].map(c=>[c,categoryCount(c)])){await page.locator(`[data-filter="${filter}"]`).click();assert.equal(await page.locator('[data-category]:visible').count(),count)}
-  await page.locator('[data-filter="memory"]').click();await gridButton.click();assert.equal(await page.locator('[data-category]:visible').count(),1);await listButton.click();assert.equal(await page.locator('[data-category]:visible').count(),1);await page.locator('[data-filter="all"]').click();
+  await page.locator('[data-filter="memory"]').click();await gridButton.click();assert.equal(await page.locator('[data-category]:visible').count(),categoryCount('memory'));await listButton.click();assert.equal(await page.locator('[data-category]:visible').count(),categoryCount('memory'));await page.locator('[data-filter="all"]').click();
   await page.reload();assert.equal(await page.locator('#game-catalog').getAttribute('data-view'),'list');
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
   await catalogShot(page,`${out}/catalog-list-${mobile?'mobile':'desktop'}.png`);
   if(mobile){await page.setViewportSize({width:320,height:740});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);await page.setViewportSize({width:390,height:844})}
   for(const link of await page.locator('[data-category] a.cta').all()){const box=await link.boundingBox();assert.ok(box&&box.width>=40&&box.height>=32)}
-  await page.locator('[data-category="adventure"] a.cta').click();await page.waitForURL('**/afterglow/');await page.getByRole('link',{name:'All games',exact:false}).click();await page.waitForURL(base+'/mini-games/');assert.equal(await page.locator('#game-catalog').getAttribute('data-view'),'list');
+  await page.locator('[data-category="adventure"] a.cta[href="afterglow/"]').click();await page.waitForURL('**/afterglow/');await page.getByRole('link',{name:'All games',exact:false}).click();await page.waitForURL(base+'/mini-games/');assert.equal(await page.locator('#game-catalog').getAttribute('data-view'),'list');
   await gridButton.focus();await page.keyboard.press('Space');await page.reload();assert.equal(await page.locator('#game-catalog').getAttribute('data-view'),'grid');
   await page.locator('#game-search').fill('not-a-real-title-927');assert.equal(await page.locator('[data-category]:visible').count(),0);assert.equal(await page.locator('#empty-results').isVisible(),true);await page.locator('#clear-filters').click();assert.equal(await page.locator('[data-category]:visible').count(),total);
   await page.keyboard.press('/');assert.equal(await page.locator('#game-search').evaluate(e=>e===document.activeElement),true);await page.locator('#game-search').fill('Afterglow');assert.equal(await page.locator('[data-category]:visible').count(),1);await page.keyboard.press('Escape');assert.equal(await page.locator('[data-category]:visible').count(),total);
@@ -60,7 +61,17 @@ async function publishedFiles(){
   for(const url of entries){
    const response=await page.goto(url,{waitUntil:'networkidle'});assert.equal(response.status(),200);assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
    const game=new URL(url).pathname.split('/').filter(Boolean).at(-1);const entry=inventory.games.find(g=>new URL(g.url,base+'/mini-games/').href===url);assert.ok(entry,'Every route is inventoried');
-   if(game.endsWith('-room')){await page.waitForSelector('body[data-game-ready="true"]');assert.equal(await page.locator('body').getAttribute('data-game-id'),entry.id);assert.ok((await page.locator('#message').innerText()).length>0);await page.locator('#restart').click();assert.equal(await page.locator('body').getAttribute('data-game-id'),entry.id);await page.screenshot({path:`${out}/${entry.id}-${mobile?'mobile':'desktop'}.png`,fullPage:true});}
+   if(game.endsWith('-room')&&!expansionRooms.has(game)){await page.waitForSelector('body[data-game-ready="true"]');assert.equal(await page.locator('body').getAttribute('data-game-id'),entry.id);assert.ok((await page.locator('#message').innerText()).length>0);await page.locator('#restart').click();assert.equal(await page.locator('body').getAttribute('data-game-id'),entry.id);await page.screenshot({path:`${out}/${entry.id}-${mobile?'mobile':'desktop'}.png`,fullPage:true});}
+   if(expansionRooms.has(entry.family)){
+    await page.waitForSelector('body[data-game-ready="true"]');assert.equal(await page.locator('body').getAttribute('data-game-id'),entry.id);
+    const activate=async selector=>page.locator(selector).first()[mobile?'tap':'click']();
+    const start=entry.smoke?.startSelector||'#start';if(await page.locator(start).isVisible())await activate(start);
+    assert.ok((await page.locator('#status').innerText()).trim().length>0,'New game exposes status');
+    if((entry.smoke?.actionSelector||entry.smoke?.action))await activate(entry.smoke.actionSelector||entry.smoke.action);
+    await activate('#restart');assert.equal(await page.locator('body').getAttribute('data-game-id'),entry.id);
+    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
+    await page.screenshot({path:`${out}/${entry.id}-${mobile?'mobile':'desktop'}.png`,fullPage:true});
+   }
    if(game==='signal-run'){await page.locator('#start').click();await page.keyboard.press('ArrowLeft');assert.equal(await page.locator('[data-lane="0"]').getAttribute('aria-pressed'),'true');await page.locator('#pause').click();assert.equal(await page.locator('#overlay-title').innerText(),'Take a breath.');}
    if(game==='double-take'){const card=page.locator('.card').first();mobile?await card.tap():await card.click();assert.match(await card.getAttribute('aria-label'),/Card 1:/);assert.doesNotMatch(await card.getAttribute('aria-label'),/face down/);await page.locator('#restart').click();assert.match(await card.getAttribute('aria-label'),/face down/);}
    if(game==='pocket-orbit'){mobile?await page.locator('#action').tap():await page.locator('#action').click();assert.match(await page.locator('#action').innerText(),/Lock orbit/);await page.locator('#pause').click();assert.equal(await page.locator('#dial-value').textContent(),'PAUSED');await page.locator('#restart').click();assert.equal(await page.locator('#score').innerText(),'0');}
@@ -91,6 +102,6 @@ async function publishedFiles(){
   await page.getByRole('button',{name:'Grid',exact:true}).tap();await page.getByRole('button',{name:'List',exact:true}).tap();await page.reload();assert.equal(await page.locator('#game-catalog').getAttribute('data-view'),'grid');await context.close();
  }
  assert.deepEqual(errors,[]);assert.deepEqual(failures,[]);await browser.close();
- const report={passed:true,verifiedAt:new Date().toISOString(),browser:{engine:'Chromium',version:browser.version(),mobile:'390x844 touch emulation, not a physical device',input:'mixed click, keyboard and selected touch actions'},scope:'Published byte equivalence, catalog checks and 200 route/reset smoke cases; not full-game completion or touch-only verification. Fixed-issue regressions run separately in the workflow.',sourceSha:process.env.GITHUB_SHA||null,base,catalogViews:'grid/list, persistence, filters, keyboard, 320px, reduced motion and blocked storage passed',rootRedirect:base+'/mini-games/',assetChecks:assets,results,errors,failures};fs.writeFileSync(`${out}/report.json`,JSON.stringify(report,null,2));console.log(JSON.stringify(report));
+ const report={passed:true,verifiedAt:new Date().toISOString(),browser:{engine:'Chromium',version:browser.version(),mobile:'390x844 touch emulation, not a physical device',input:'mixed click, keyboard and selected touch actions'},scope:`Published byte equivalence, catalog checks and ${total*2} route/reset smoke cases; not full-game completion or touch-only verification. Fixed-issue regressions run separately in the workflow.`,sourceSha:process.env.GITHUB_SHA||null,base,catalogViews:'grid/list, persistence, filters, keyboard, 320px, reduced motion and blocked storage passed',rootRedirect:base+'/mini-games/',assetChecks:assets,results,errors,failures};fs.writeFileSync(`${out}/report.json`,JSON.stringify(report,null,2));console.log(JSON.stringify(report));
  if(process.env.GITHUB_STEP_SUMMARY)fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY,`## Live arcade verified\n\n- Catalog: ${base}/mini-games/\n- Afterglow: ${base}/mini-games/afterglow/\n- Source: ${process.env.GITHUB_SHA}\n- ${assets.length} published files matched source byte-for-byte.\n- ${total} games passed desktop and mobile route/reset checks; original ten also passed gameplay smoke checks.\n- Root redirect, filters, navigation, Afterglow aim/launch/pause/recall/restart, and zero script/asset errors verified.\n`);
 })().catch(e=>{console.error(e);fs.writeFileSync(`${out}/failure.txt`,e.stack||String(e));process.exit(1)});
