@@ -15,8 +15,8 @@ function assets(dir){return fs.readdirSync(dir,{withFileTypes:true}).flatMap(e=>
 const files=['index.html',...assets('mini-games')];
 async function catalogShot(page,file){
  await page.locator('img').evaluateAll(imgs=>imgs.forEach(img=>img.loading='eager'));
- // Decode every preview, one at a time: concurrent decode of hundreds of large images can exhaust the browser decoder queue.
- const imageFailures=await page.evaluate(async()=>{const failures=[];for(const img of document.images){try{await img.decode()}catch(error){failures.push({src:img.currentSrc||img.src,complete:img.complete,width:img.naturalWidth,error:String(error)})}}return failures});
+ // decode() retains decoded data through a rendering frame; yield that frame before decoding the next preview.
+ const imageFailures=await page.evaluate(async()=>{const failures=[];for(const img of document.images){try{await img.decode();await new Promise(resolve=>requestAnimationFrame(resolve))}catch(error){failures.push({src:img.currentSrc||img.src,complete:img.complete,width:img.naturalWidth,error:String(error)})}}return failures});
  assert.deepEqual(imageFailures,[],'Every catalog preview must decode');
  if(total>30)await page.locator('#game-catalog').scrollIntoViewIfNeeded();
  await page.screenshot({path:file,fullPage:total<=30});
