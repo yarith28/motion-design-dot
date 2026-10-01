@@ -47,9 +47,9 @@ async function publishedFiles(){
   for(const [filter,count] of ['reflex','adventure','all'].map(c=>[c,categoryCount(c)])){await page.locator(`[data-filter="${filter}"]`).click();assert.equal(await page.locator('[data-category]:visible').count(),count)}
   await page.locator('[data-filter="memory"]').click();await gridButton.click();assert.equal(await page.locator('[data-category]:visible').count(),categoryCount('memory'));await listButton.click();assert.equal(await page.locator('[data-category]:visible').count(),categoryCount('memory'));await page.locator('[data-filter="all"]').click();
   await page.reload();assert.equal(await page.locator('#game-catalog').getAttribute('data-view'),'list');
-  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
+  assert.equal(await page.evaluate(width=>document.documentElement.scrollWidth<=width,page.viewportSize().width),true);
   await catalogShot(page,`${out}/catalog-list-${mobile?'mobile':'desktop'}.png`);
-  if(mobile){await page.setViewportSize({width:320,height:740});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);await page.setViewportSize({width:390,height:844})}
+  if(mobile){await page.setViewportSize({width:320,height:740});assert.equal(await page.evaluate(width=>document.documentElement.scrollWidth<=width,page.viewportSize().width),true);await page.setViewportSize({width:390,height:844})}
   for(const link of await page.locator('[data-category] a.cta').all()){const box=await link.boundingBox();assert.ok(box&&box.width>=40&&box.height>=32)}
   await page.locator('[data-category="adventure"] a.cta[href="afterglow/"]').click();await page.waitForURL('**/afterglow/');await page.getByRole('link',{name:'All games',exact:false}).click();await page.waitForURL(base+'/mini-games/');assert.equal(await page.locator('#game-catalog').getAttribute('data-view'),'list');
   await gridButton.focus();await page.keyboard.press('Space');await page.reload();assert.equal(await page.locator('#game-catalog').getAttribute('data-view'),'grid');
@@ -59,7 +59,7 @@ async function publishedFiles(){
   await catalogShot(page,`${out}/catalog-${mobile?'mobile':'desktop'}.png`);
   for(const [filter,count] of [...categories,'all'].map(c=>[c,categoryCount(c)])){await page.locator(`[data-filter="${filter}"]`).click();assert.equal(await page.locator('[data-category]:visible').count(),count)}
   for(const url of entries){
-   const response=await page.goto(url,{waitUntil:'networkidle'});assert.equal(response.status(),200);assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
+   const response=await page.goto(url,{waitUntil:'networkidle'});assert.equal(response.status(),200);assert.equal(await page.evaluate(width=>document.documentElement.scrollWidth<=width,page.viewportSize().width),true);
    const game=new URL(url).pathname.split('/').filter(Boolean).at(-1);const entry=inventory.games.find(g=>new URL(g.url,base+'/mini-games/').href===url);assert.ok(entry,'Every route is inventoried');
    if(game.endsWith('-room')&&!expansionRooms.has(game)){await page.waitForSelector('body[data-game-ready="true"]');assert.equal(await page.locator('body').getAttribute('data-game-id'),entry.id);assert.ok((await page.locator('#message').innerText()).length>0);await page.locator('#restart').click();assert.equal(await page.locator('body').getAttribute('data-game-id'),entry.id);await page.screenshot({path:`${out}/${entry.id}-${mobile?'mobile':'desktop'}.png`,fullPage:true});}
    if(expansionRooms.has(entry.family)){
@@ -69,7 +69,7 @@ async function publishedFiles(){
     assert.ok((await page.locator('#status').innerText()).trim().length>0,'New game exposes status');
     if((entry.smoke?.actionSelector||entry.smoke?.action))await activate(entry.smoke.actionSelector||entry.smoke.action);
     await activate('#restart');assert.equal(await page.locator('body').getAttribute('data-game-id'),entry.id);
-    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
+    assert.equal(await page.evaluate(width=>document.documentElement.scrollWidth<=width,page.viewportSize().width),true);
     await page.screenshot({path:`${out}/${entry.id}-${mobile?'mobile':'desktop'}.png`,fullPage:true});
    }
    if(game==='signal-run'){await page.locator('#start').click();await page.keyboard.press('ArrowLeft');assert.equal(await page.locator('[data-lane="0"]').getAttribute('aria-pressed'),'true');await page.locator('#pause').click();assert.equal(await page.locator('#overlay-title').innerText(),'Take a breath.');}
