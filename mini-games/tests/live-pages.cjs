@@ -15,7 +15,8 @@ function assets(dir){return fs.readdirSync(dir,{withFileTypes:true}).flatMap(e=>
 const files=['index.html',...assets('mini-games')];
 async function catalogShot(page,file){
  await page.locator('img').evaluateAll(imgs=>imgs.forEach(img=>img.loading='eager'));
- await page.evaluate(()=>Promise.all([...document.images].map(img=>img.decode())));
+ const imageFailures=await page.evaluate(async()=>{const results=await Promise.allSettled([...document.images].map(img=>img.decode()));return results.flatMap((result,index)=>result.status==='rejected'?[{src:document.images[index].currentSrc||document.images[index].src,complete:document.images[index].complete,width:document.images[index].naturalWidth,error:String(result.reason)}]:[])});
+ assert.deepEqual(imageFailures,[],'Every catalog preview must decode');
  if(total>30)await page.locator('#game-catalog').scrollIntoViewIfNeeded();
  await page.screenshot({path:file,fullPage:total<=30});
 }
