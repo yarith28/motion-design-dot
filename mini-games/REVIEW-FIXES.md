@@ -4,7 +4,7 @@ This update addresses the confirmed interaction, gameplay, accessibility-informa
 
 ## Changes
 
-- **Sky Stack / Pocket Orbit / Afterglow:** Resume restores gameplay focus, so the documented Space action no longer activates Pause. A final sibling check found and repaired the same issue in Afterglow, which now focuses its aiming field. Orbit also handles resuming during between-round feedback without leaving Space on Pause or stealing focus after the player navigates elsewhere.
+- **Sky Stack / Pocket Orbit / Afterglow:** Resume restores gameplay focus, so the documented Space action no longer activates Pause. A final sibling check found and repaired the same issue in Afterglow, which now focuses its aiming field. Live Chromium 140 testing additionally exposed a zero-detail touch click that activated Orbit twice; pointer-generated clicks are now excluded from its keyboard/assistive fallback. Orbit also handles resuming during between-round feedback without leaving Space on Pause or stealing focus after the player navigates elsewhere.
 - **Sequence Detective:** each session covers every answer slot, with shuffled positions and distractors. Repeating the third position cannot complete a session; choices stay stable after a wrong answer.
 - **Beat Post:** wrong-lane and mistimed taps now share the eight-mistake budget with missed notes. Blind three-lane spam loses; accurate play still wins. The rules, loss explanation and remaining-mistakes display explain the change.
 - **Stamp Studio:** the accessibility tree exposes target/current filled coordinates, each stamp's geometry and selection state.

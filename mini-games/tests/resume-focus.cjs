@@ -13,11 +13,16 @@ const base=process.env.BASE_URL||'http://127.0.0.1:8790';
   await page.goto(`${base}/mini-games/${game}/`);
   const activate=async id=>page.locator(id)[mobile?'tap':'click']();
   console.log('CASE',game,mobile?'mobile':'desktop');
-  await page.evaluate(()=>{window.controlEvents=[];for(const type of ['pointerdown','pointerup','click','keydown','keyup'])document.addEventListener(type,e=>{if(e.target.closest('#action,#pause'))window.controlEvents.push({type,detail:e.detail,pointerType:e.pointerType,key:e.key,target:e.target.id});},true);});
   await activate('#action');
-  console.log('START',JSON.stringify(await page.evaluate(()=>({focus:document.activeElement.id,message:document.getElementById('message').textContent,disabled:document.getElementById('action').disabled,events:window.controlEvents}))));
+  assert(await page.locator('#action').isEnabled(),'One start tap must not also submit an orbit lock');
+  if(game==='pocket-orbit'){
+   assert.equal(await page.locator('#lives').textContent(),'3 / 3');
+   // Replay the native zero-detail touch click observed in live Chromium140,
+   // including on newer browsers that report detail=1 for the physical tap.
+   await page.locator('#action').evaluate(el=>el.dispatchEvent(new PointerEvent('click',{bubbles:true,detail:0,pointerType:'touch'})));
+   assert(await page.locator('#action').isEnabled(),'Compatibility touch click must not submit a second action');
+  }
   await activate('#pause');await activate('#pause');
-  console.log('RESUME',JSON.stringify(await page.evaluate(()=>({focus:document.activeElement.id,message:document.getElementById('message').textContent,disabled:document.getElementById('action').disabled,events:window.controlEvents}))));
   assert.equal(await page.locator('#pause').textContent(),'Pause');
   assert.equal(await page.evaluate(()=>document.activeElement.id),'action');
   await page.keyboard.press('Space');
@@ -44,6 +49,12 @@ const base=process.env.BASE_URL||'http://127.0.0.1:8790';
   await activate('#pause');assert.equal(await page.evaluate(()=>document.activeElement.id),'action');
   // Mobile primary-action control is exercised with touch, not a mouse fallback.
   if(mobile){await activate('#action');assert.notEqual(await page.locator('#pause').textContent(),'Resume');}
+  if(game==='pocket-orbit'){
+   await activate('#restart');
+   await page.locator('#action').focus();await page.keyboard.press('Enter');
+   assert(await page.locator('#action').isDisabled(),'Enter still activates the keyboard click fallback');
+   assert.notEqual(await page.locator('#pause').textContent(),'Resume');
+  }
   checks.push({game,viewport:mobile?'390x844':'1280x900',resumeSpace:true,betweenInterval:game==='pocket-orbit',restartBlurResume:true,touchAction:mobile,input:mobile?'touch buttons + explicit keyboard regression':'mouse buttons + keyboard'});
   await context.close();
  }

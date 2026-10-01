@@ -81,7 +81,10 @@
     if (event.button !== 0 || $('action').disabled) return;
     event.preventDefault(); $('action').focus({preventScroll:true}); lock();
   });
-  $('action').addEventListener('click', event => { if (event.detail === 0) lock(); });
+  // Some Chromium versions emit detail=0 for touch clicks after pointerdown.
+  // Touch/pen input was already handled on contact. Keep zero-detail mouse
+  // compatibility clicks available for keyboard and assistive activation.
+  $('action').addEventListener('click', event => { if (event.detail === 0 && !['touch', 'pen'].includes(event.pointerType)) lock(); });
   $('pause').addEventListener('click', pause);
   $('restart').addEventListener('click', () => { start(); $('action').focus({preventScroll:true}); });
   $('again').addEventListener('click', () => { start(); $('action').focus({preventScroll:true}); });
