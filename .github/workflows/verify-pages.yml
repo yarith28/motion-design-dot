@@ -24,6 +24,7 @@ jobs:
           npm install --prefix "$RUNNER_TEMP/pages-smoke" playwright@1.55.0
           "$RUNNER_TEMP/pages-smoke/node_modules/.bin/playwright" install chromium
       - name: Verify deployed assets and desktop/mobile route-reset smoke
+        id: live-smoke
         env:
           NODE_PATH: ${{ runner.temp }}/pages-smoke/node_modules
           LIVE_BASE_URL: https://yarith28.github.io/motion-design-dot
@@ -39,8 +40,10 @@ jobs:
             node "mini-games/tests/$suite.cjs" | tee "live-verification/fix-$suite-chromium.log"
           done
       - name: Install WebKit for browser-engine regression checks
+        if: ${{ !cancelled() && steps.live-smoke.outcome == 'success' }}
         run: '"$RUNNER_TEMP/pages-smoke/node_modules/.bin/playwright" install --with-deps webkit'
       - name: Verify reviewed fixes on deployed WebKit UI
+        if: ${{ !cancelled() && steps.live-smoke.outcome == 'success' }}
         env:
           NODE_PATH: ${{ runner.temp }}/pages-smoke/node_modules
           BASE_URL: https://yarith28.github.io/motion-design-dot
