@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 2,
+  "suite": "word-room",
+  "passed": true,
+  "status": "passed",
+  "startedAt": "2026-10-01T02:00:36.625Z",
+  "source": {
+    "sha256": "96ecbe0aae7757b036c9711e4361582a1b6c069b5a95927d01a4269bc4182e85",
+    "files": [
+      "catalog.css",
+      "catalog.js",
+      "common.js",
+      "index.html",
+      "inventory-plan.json",
+      "inventory.json",
+      "play.css",
+      "styles.css",
+      "tests/word-room-edges.cjs",
+      "tests/word-room.cjs",
+      "tools/evidence.cjs",
+      "tools/run-suite.cjs",
+      "word-room/data.js",
+      "word-room/games.json",
+      "word-room/index.html",
+      "word-room/room.css",
+      "word-room/room.js"
+    ]
+  },
+  "requestedBaseURL": "http://127.0.0.1:8790",
+  "browser": {
+    "engine": "Chromium",
+    "version": "Chromium 151.0.7922.173 built on Debian GNU/Linux 13 (trixie)",
+    "executable": "/usr/bin/chromium"
+  },
+  "scope": {
+    "desktopCompletion": true,
+    "mobileViewportCompletion": true,
+    "touchGameplayCompletion": false,
+    "touchControlSmoke": true,
+    "completionMeans": "winning full progression",
+    "method": "scripted UI; curated answers or board solvers",
+    "mobileMethod": "touch buttons mixed with programmatic text entry"
+  },
+  "games": [
+    "hidden-grove",
+    "one-letter-away",
+    "last-letter",
+    "crossings",
+    "wordbreak",
+    "secret-post",
+    "center-letter",
+    "odd-company",
+    "alphabet-trail",
+    "sentence-studio",
+    "compound-works",
+    "rhyme-lines",
+    "vowel-weather",
+    "chain-reaction",
+    "proofreader"
+  ],
+  "limits": [
+    "Mobile is Chromium viewport/touch emulation, not Safari or a physical device.",
+    "Solver completions do not establish human difficulty or accessibility."
+  ],
+  "servedRuntimeBefore": {
+    "baseURL": "http://127.0.0.1:8790",
+    "passed": true,
+    "sha256": "c1d28400e74e7e80bd3b34057e67b18b0cf1c9e5205121f51bdfa94da283d415",
+    "fileCount": 13,
+    "verifiedAt": "2026-10-01T02:00:36.980Z"
+  },
+  "exitCode": 0,
+  "signal": null,
+  "sourceUnchanged": true,
+  "servedRuntime": {
+    "baseURL": "http://127.0.0.1:8790",
+    "passed": true,
+    "sha256": "c1d28400e74e7e80bd3b34057e67b18b0cf1c9e5205121f51bdfa94da283d415",
+    "fileCount": 13,
+    "verifiedAt": "2026-10-01T02:02:13.671Z"
+  },
+  "finishedAt": "2026-10-01T02:02:13.671Z"
+}

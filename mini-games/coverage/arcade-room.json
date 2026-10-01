@@ -178,6 +178,35 @@
       "desktop": true
     },
     {
+      "id": "soft-landing",
+      "passed": true,
+      "completed": true,
+      "restart": true,
+      "mobile": true,
+      "checks": [
+        "Full winning rounds desktop and mobile",
+        "Desktop alternate completion/loss",
+        "Three restarts on each viewport",
+        "P keyboard pause, frozen clock, blur and visibility pause",
+        "390px and320px layout,44px controls",
+        "Mobile touch controls smoke and reduced motion",
+        "Blocked storage fallback/mobile session best",
+        "Saved best survives desktop reload",
+        "Return to catalog"
+      ],
+      "limitations": [
+        "Chromium only; mobile is emulated, not a physical device.",
+        "Winning routes use solver-directed real keyboard/pointer input, virtual time and a read-only test-response state probe. No production test hooks."
+      ],
+      "desktopScore": 1045,
+      "lossRound": {
+        "score": 20,
+        "won": false
+      },
+      "mobileScore": 1045,
+      "desktop": true
+    },
+    {
       "id": "star-tow",
       "passed": true,
       "completed": true,
@@ -294,6 +323,35 @@
       "desktop": true
     },
     {
+      "id": "rope-skip",
+      "passed": true,
+      "completed": true,
+      "restart": true,
+      "mobile": true,
+      "checks": [
+        "Full winning rounds desktop and mobile",
+        "Desktop alternate completion/loss",
+        "Three restarts on each viewport",
+        "P keyboard pause, frozen clock, blur and visibility pause",
+        "390px and320px layout,44px controls",
+        "Mobile touch controls smoke and reduced motion",
+        "Blocked storage fallback/mobile session best",
+        "Saved best survives desktop reload",
+        "Return to catalog"
+      ],
+      "limitations": [
+        "Chromium only; mobile is emulated, not a physical device.",
+        "Winning routes use solver-directed real keyboard/pointer input, virtual time and a read-only test-response state probe. No production test hooks."
+      ],
+      "desktopScore": 1600,
+      "lossRound": {
+        "score": 0,
+        "won": false
+      },
+      "mobileScore": 1600,
+      "desktop": true
+    },
+    {
       "id": "table-bowls",
       "passed": true,
       "completed": true,
@@ -379,77 +437,6 @@
       },
       "mobileScore": 962,
       "desktop": true
-    },
-    {
-      "id": "rope-skip",
-      "passed": true,
-      "completed": true,
-      "restart": true,
-      "mobile": true,
-      "checks": [
-        "Full winning rounds desktop and mobile",
-        "Desktop alternate completion/loss",
-        "Three restarts on each viewport",
-        "P keyboard pause, frozen clock, blur and visibility pause",
-        "390px and320px layout,44px controls",
-        "Mobile touch controls smoke and reduced motion",
-        "Blocked storage fallback/mobile session best",
-        "Saved best survives desktop reload",
-        "Return to catalog"
-      ],
-      "limitations": [
-        "Chromium only; mobile is emulated, not a physical device.",
-        "Winning routes use solver-directed real keyboard/pointer input, virtual time and a read-only test-response state probe. No production test hooks."
-      ],
-      "desktopScore": 1600,
-      "lossRound": {
-        "score": 0,
-        "won": false
-      },
-      "mobileScore": 1600,
-      "desktop": true
-    },
-    {
-      "id": "soft-landing",
-      "passed": true,
-      "completed": true,
-      "restart": true,
-      "mobile": true,
-      "checks": [
-        "Full winning rounds desktop and mobile",
-        "Desktop alternate completion/loss",
-        "Three restarts on each viewport",
-        "P keyboard pause, frozen clock, blur and visibility pause",
-        "390px and320px layout,44px controls",
-        "Mobile touch controls smoke and reduced motion",
-        "Blocked storage fallback/mobile session best",
-        "Saved best survives desktop reload",
-        "Return to catalog"
-      ],
-      "limitations": [
-        "Chromium only; mobile is emulated, not a physical device.",
-        "Winning routes use solver-directed real keyboard/pointer input, virtual time and a read-only test-response state probe. No production test hooks."
-      ],
-      "desktopScore": 1045,
-      "lossRound": {
-        "score": 20,
-        "won": false
-      },
-      "mobileScore": 1045,
-      "desktop": true
     }
-  ],
-  "latestFocusedRegression": {
-    "games": [
-      "rope-skip",
-      "soft-landing"
-    ],
-    "desktopAndMobile": true,
-    "fullWins": 4,
-    "checks": [
-      "Pause-button Resume focuses the canvas; subsequent Space jumps instead of pausing again.",
-      "Landing instructions use approximately13 degrees to match the HUD."
-    ],
-    "sourceSha256": "58b40454b28598c0e67bc289da35459bb5d1c4c8de062789cdcf8fe202ade71a"
-  }
+  ]
 }

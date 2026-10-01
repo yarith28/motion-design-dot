@@ -1,16 +1,9 @@
-/* Normalize evidence without treating a missing test as a pass. */
-const fs=require('node:fs'),path=require('node:path');
-const root=path.resolve(__dirname,'..'),inventory=JSON.parse(fs.readFileSync(path.join(root,'inventory.json')));
-const oldSuites={'signal-run':'browser.cjs','double-take':'collection.cjs','pocket-orbit':'collection.cjs','good-order':'collection.cjs','afterglow':'afterglow.cjs','lantern-lines':'lantern-lines.cjs','tide-pool':'tide-pool.cjs','word-weave':'word-weave.cjs','sky-stack':'sky-stack.cjs','pebble-post':'pebble-post.cjs'};
-const games=inventory.games.map(game=>{
- if(game.family==='original')return {id:game.id,name:game.name,url:game.url,fullCompletionDesktop:true,fullCompletionMobile:game.id!=='signal-run'||JSON.parse(fs.readFileSync(path.join(root,'coverage/signal-mobile.json'))).fullCompletionMobile===true,mobileInput:true,restart:true,evidence:'README.md',suite:'tests/'+oldSuites[game.id],note:game.id==='signal-run'?'Desktop win/loss; mobile full win and restart additionally recorded in coverage/signal-mobile.json.':'Full-round browser checks described in original verification notes.'};
- const evidence='coverage/'+game.family+'.json',report=JSON.parse(fs.readFileSync(path.join(root,evidence)));
- const checks=(report.games||report.checks||[]).filter(c=>c.id===game.id);
- const valid=c=>c.completed===true&&c.restart===true&&c.passed!==false&&c.overflow!==true&&c.noOverflow!==false&&(!c.errors||c.errors.length===0);
- const desktop=checks.some(c=>valid(c)&&(c.desktop===true||c.mobile===false));
- const mobile=checks.some(c=>valid(c)&&c.mobile===true);
- if(!desktop||!mobile)throw Error('Incomplete desktop/mobile completion evidence: '+game.id);
- return {id:game.id,name:game.name,url:game.url,fullCompletionDesktop:desktop,fullCompletionMobile:mobile,mobileInput:mobile,restart:true,evidence,suite:'tests/'+game.family+'.cjs'};
-});
-const report={total:games.length,fullCompletionDesktop:games.filter(g=>g.fullCompletionDesktop).length,fullCompletionMobile:games.filter(g=>g.fullCompletionMobile).length,limits:'Chromium; mobile touch emulated. Browser completions use legal inputs with solvers or read-only test observations where needed. No physical-device, other-engine, or screen-reader certification.',games};
-fs.writeFileSync(path.join(root,'coverage/index.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify({total:report.total,desktopCompleted:report.fullCompletionDesktop,mobileCompleted:report.fullCompletionMobile}));
+/* Missing, failed, stale and legacy evidence never becomes a current pass. */
+const fs=require('node:fs'),path=require('node:path'),E=require('./evidence.cjs');
+const inventory=JSON.parse(fs.readFileSync(path.join(E.root,'inventory.json'))),runs=[];
+for(const id of Object.keys(E.suites)){const file=path.join(E.root,'coverage','suite-runs',id+'.json');let run;try{run=JSON.parse(fs.readFileSync(file));}catch{runs.push({suite:id,current:false,reason:'missing or unreadable suite result'});continue;}
+const current=E.validRun(run,id);
+runs.push({...run,current,reason:current?null:run.passed?'source changed or unsupported provenance':'suite not passed',evidence:'coverage/suite-runs/'+id+'.json'});}
+const games=inventory.games.map(game=>{const relevant=runs.filter(r=>E.gameIds(r.suite).includes(game.id)),good=relevant.filter(r=>r.current);const has=key=>good.some(r=>E.scope(r.suite)[key]);return {id:game.id,name:game.name,url:game.url,status:has('desktopCompletion')&&has('mobileViewportCompletion')?'verified':'unverified',fullCompletionDesktop:has('desktopCompletion'),fullCompletionMobileViewport:has('mobileViewportCompletion'),touchGameplayCompletion:has('touchGameplayCompletion'),evidence:good.map(r=>r.evidence),methods:good.map(r=>({suite:r.suite,...E.scope(r.suite)})),unverifiedSuites:relevant.filter(r=>!r.current).map(r=>({suite:r.suite,reason:r.reason}))};});
+const report={schemaVersion:2,generatedAt:new Date().toISOString(),total:games.length,verified:games.filter(g=>g.status==='verified').length,desktopCompletions:games.filter(g=>g.fullCompletionDesktop).length,mobileViewportCompletions:games.filter(g=>g.fullCompletionMobileViewport).length,touchGameplayCompletions:games.filter(g=>g.touchGameplayCompletion).length,limits:'Current successful suite runs only; source content hashes exclude generated coverage and documentation. Mobile viewport completion is not touch-only completion or iPhone/Safari certification. Solvers may inspect hidden answers and use virtual time. Competitive strategy terminal results can be losses. Live route/reset checks and ordinary-play samples are separate.',games};
+fs.writeFileSync(path.join(E.root,'coverage/index.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify({total:report.total,verified:report.verified,desktop:report.desktopCompletions,mobileViewport:report.mobileViewportCompletions,touchGameplay:report.touchGameplayCompletions}));if(report.verified!==report.total)process.exitCode=1;

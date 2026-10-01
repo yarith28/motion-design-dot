@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 2,
+  "suite": "pebble-post",
+  "passed": true,
+  "status": "passed",
+  "startedAt": "2026-10-01T02:00:56.000Z",
+  "source": {
+    "sha256": "d12748bff7461eb467cd37c47431c7f381d80661813f5dfaba8a6b7c6eb37d88",
+    "files": [
+      "catalog.css",
+      "catalog.js",
+      "common.js",
+      "index.html",
+      "inventory-plan.json",
+      "inventory.json",
+      "pebble-post/game.css",
+      "pebble-post/game.js",
+      "pebble-post/index.html",
+      "play.css",
+      "styles.css",
+      "tests/pebble-post.cjs",
+      "tools/evidence.cjs",
+      "tools/run-suite.cjs"
+    ]
+  },
+  "requestedBaseURL": "http://127.0.0.1:8790",
+  "browser": {
+    "engine": "Chromium",
+    "version": "Chromium 151.0.7922.173 built on Debian GNU/Linux 13 (trixie)",
+    "executable": "/usr/bin/chromium"
+  },
+  "scope": {
+    "desktopCompletion": true,
+    "mobileViewportCompletion": true,
+    "touchGameplayCompletion": true,
+    "touchControlSmoke": true,
+    "completionMeans": "winning full progression",
+    "method": "scripted UI; curated answers or board solvers",
+    "mobileMethod": "touch gameplay with scripted navigation/solvers"
+  },
+  "games": [
+    "pebble-post"
+  ],
+  "limits": [
+    "Mobile is Chromium viewport/touch emulation, not Safari or a physical device.",
+    "Solver completions do not establish human difficulty or accessibility."
+  ],
+  "servedRuntimeBefore": {
+    "baseURL": "http://127.0.0.1:8790",
+    "passed": true,
+    "sha256": "cb0c08f885d6c0358f473d8297cba3b8b10c9d3caffde728b5c33049c1a28b82",
+    "fileCount": 11,
+    "verifiedAt": "2026-10-01T02:00:57.292Z"
+  },
+  "exitCode": 0,
+  "signal": null,
+  "sourceUnchanged": true,
+  "servedRuntime": {
+    "baseURL": "http://127.0.0.1:8790",
+    "passed": true,
+    "sha256": "cb0c08f885d6c0358f473d8297cba3b8b10c9d3caffde728b5c33049c1a28b82",
+    "fileCount": 11,
+    "verifiedAt": "2026-10-01T02:01:42.013Z"
+  },
+  "finishedAt": "2026-10-01T02:01:42.013Z"
+}

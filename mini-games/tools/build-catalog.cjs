@@ -1,14 +1,14 @@
-/* Build static cards from verified room manifests. No runtime/build dependency. */
+/* Build static cards from playable room manifests. No runtime/build dependency. */
 const fs=require('node:fs'),path=require('node:path');
 const root=path.resolve(__dirname,'..');
 const rooms=process.argv.slice(2);
-const old=[['signal-run','Signal Run','reflex'],['double-take','Double Take','memory'],['pocket-orbit','Pocket Orbit','reflex'],['good-order','Good Order','puzzle'],['afterglow','Afterglow','adventure'],['lantern-lines','Lantern Lines','puzzle'],['tide-pool','Tide Pool','strategy'],['word-weave','Word Weave','puzzle'],['sky-stack','Sky Stack','reflex'],['pebble-post','Pebble Post','strategy']].map(([id,name,category])=>({id,name,category,url:id+'/',family:'original',status:'verified'}));
+const old=[['signal-run','Signal Run','reflex'],['double-take','Double Take','memory'],['pocket-orbit','Pocket Orbit','reflex'],['good-order','Good Order','puzzle'],['afterglow','Afterglow','adventure'],['lantern-lines','Lantern Lines','puzzle'],['tide-pool','Tide Pool','strategy'],['word-weave','Word Weave','puzzle'],['sky-stack','Sky Stack','reflex'],['pebble-post','Pebble Post','strategy']].map(([id,name,category])=>({id,name,category,url:id+'/',family:'original',status:'playable'}));
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const games=rooms.flatMap(room=>{
  const data=JSON.parse(fs.readFileSync(path.join(root,room,'games.json')));
  if(data.length!==15)throw Error(room+' must have 15 distinct games');
  if(!fs.existsSync(path.join(root,'coverage',room+'.json')))throw Error('Missing browser evidence for '+room);
- return data.map(g=>({...g,family:room,status:'verified'}));
+ return data.map(g=>({...g,family:room,status:'playable'}));
 });
 const all=[...old,...games];if(new Set(all.map(g=>g.id)).size!==all.length)throw Error('Duplicate game ids');
 for(const g of games){if(!g.mechanic||!g.description||!g.rules?.length||!g.url.startsWith(g.family+'/?game='))throw Error('Incomplete game '+g.id);}
@@ -29,5 +29,5 @@ html=html.replace(/(<span id="game-count"[^>]*>)[^<]*/,`$1${all.length} games / 
 html=html.replace(/\b(?:Ten|\d+) little games:[^"]*/,`${all.length} little games: quick reflexes, thoughtful puzzles, wordplay, and small adventures.`);
 fs.writeFileSync(path.join(root,'index.html'),html);
 fs.writeFileSync(path.join(root,'inventory.json'),JSON.stringify({version:1,total:all.length,games:all},null,2)+'\n');
-const readme=path.join(root,'README.md');fs.writeFileSync(readme,fs.readFileSync(readme,'utf8').replace(/with (?:ten|\d+) finished games/,`with ${all.length} finished games`));
-console.log(`Generated ${all.length} playable entries from ${rooms.length} verified rooms.`);
+const readme=path.join(root,'README.md');fs.writeFileSync(readme,fs.readFileSync(readme,'utf8').replace(/with (?:ten|\d+) (?:finished|playable) games/,`with ${all.length} playable games`));
+console.log(`Generated ${all.length} playable entries from ${rooms.length} playable rooms.`);

@@ -85,7 +85,7 @@
     if(mode==='aim'||mode==='volley') {
       resumeMode=mode;mode='paused';panel('Connection on hold','Take a breath.','Your fireflies are right where you left them.','Return to the garden');
       if(audio)audio.suspend().catch(()=>{});sync();message('Paused. Nothing in the garden moves.');
-    } else if(mode==='paused') {mode=resumeMode;last=null;accumulator=0;$('veil').hidden=true;audioResume();sync();message('Welcome back. Your expedition continues.');$('pause').focus({preventScroll:true})}
+    } else if(mode==='paused') {mode=resumeMode;last=null;accumulator=0;$('veil').hidden=true;audioResume();sync();message('Welcome back. Your expedition continues.');canvas.focus({preventScroll:true})}
   }
   function burst(x,y,kind) {
     if(kind!=='hit')flowers.push({x,y,petals:5+(flowers.length%3),rotation:flowers.length*.7});

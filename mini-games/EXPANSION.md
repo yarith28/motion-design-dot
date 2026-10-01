@@ -2,7 +2,7 @@
 
 Quality gate: a catalog entry is one distinct set of rules and decisions, not a renamed difficulty level. Shared controls, drawing code, physics and components are encouraged; a repeated engine needs a materially different objective and interaction to justify another entry. No incomplete entries are linked as playable.
 
-The explicit 100-entry planning inventory is `inventory-plan.json`. Final playable metadata lives in each room's `games.json` and the generated `inventory.json`. The original ten remain intact. Six new rooms contribute fifteen games each: logic and deduction; words; numbers; strategy; spatial construction; arcade and sports.
+The explicit 100-entry planning inventory is `inventory-plan.json`. Final playable metadata lives in each room's `games.json` and the generated `inventory.json`. The expansion preserved the original ten; subsequent review fixes are tracked separately. Six new rooms contribute fifteen games each: logic and deduction; words; numbers; strategy; spatial construction; arcade and sports.
 
 ## Implementation and release sequence
 
@@ -19,4 +19,6 @@ The explicit 100-entry planning inventory is `inventory-plan.json`. Final playab
 
 ## Completed implementation
 
-All100 entries are implemented and locally completed on desktop and emulated mobile. The final inventory replaces provisional names with actual routes. An additional independent ordinary-play review sampled19games, audited family mechanics and triggered substantive depth and usability improvements before final release. See `coverage/review.json` and `coverage/ordinary-*-review.json`. Current live count and deployment evidence remain in `progress.json`.
+All 100 entries are implemented. The historical release recorded scripted desktop/mobile-viewport completions; current source must pass the source-matched verification gate in `README.md` before a fresh completion claim. The final inventory replaces provisional names with actual routes. An additional independent ordinary-play review sampled19games, audited family mechanics and triggered substantive depth and usability improvements before final release. See `coverage/review.json` and `coverage/ordinary-*-review.json`. Historical deployment evidence remains nested in `progress.json`; current local status is generated in `coverage/index.json`, and changed source requires fresh live verification.
+
+The aggregate now fails closed on missing, failed, malformed or stale suite-run records. `tools/run-suite.cjs` captures actual execution provenance; `tools/coverage-index.cjs` distinguishes desktop completion, mobile-viewport completion and touch gameplay. Ideal-input solver runs remain separate from ordinary-play samples and live route/reset checks.

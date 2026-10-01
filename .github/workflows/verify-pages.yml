@@ -16,18 +16,40 @@ concurrency:
 jobs:
   live-browser-check:
     runs-on: ubuntu-latest
-    timeout-minutes: 12
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
       - name: Install test-only browser dependencies
         run: |
           npm install --prefix "$RUNNER_TEMP/pages-smoke" playwright@1.55.0
           "$RUNNER_TEMP/pages-smoke/node_modules/.bin/playwright" install chromium
-      - name: Verify deployed assets and desktop/mobile gameplay
+      - name: Verify deployed assets and desktop/mobile route-reset smoke
         env:
           NODE_PATH: ${{ runner.temp }}/pages-smoke/node_modules
           LIVE_BASE_URL: https://yarith28.github.io/motion-design-dot
         run: node mini-games/tests/live-pages.cjs
+      - name: Verify reviewed fixes on deployed Chromium UI
+        env:
+          NODE_PATH: ${{ runner.temp }}/pages-smoke/node_modules
+          BASE_URL: https://yarith28.github.io/motion-design-dot
+        run: |
+          set -o pipefail
+          export CHROMIUM_PATH="$(node -e "process.stdout.write(require('playwright').chromium.executablePath())")"
+          for suite in resume-focus number-room-review-regressions spatial-accessibility review-arcade-strategy; do
+            node "mini-games/tests/$suite.cjs" | tee "live-verification/fix-$suite-chromium.log"
+          done
+      - name: Install WebKit for browser-engine regression checks
+        run: '"$RUNNER_TEMP/pages-smoke/node_modules/.bin/playwright" install --with-deps webkit'
+      - name: Verify reviewed fixes on deployed WebKit UI
+        env:
+          NODE_PATH: ${{ runner.temp }}/pages-smoke/node_modules
+          BASE_URL: https://yarith28.github.io/motion-design-dot
+          BROWSER_ENGINE: webkit
+        run: |
+          set -o pipefail
+          for suite in resume-focus number-room-review-regressions spatial-accessibility review-arcade-strategy; do
+            node "mini-games/tests/$suite.cjs" | tee "live-verification/fix-$suite-webkit.log"
+          done
       - name: Save live verification evidence
         if: always()
         uses: actions/upload-artifact@v4

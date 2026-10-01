@@ -1,7 +1,8 @@
 {
   "suite": "strategy-room",
   "passed": true,
-  "testedAt": "2026-09-30T17:10:42.437Z",
+  "completedRounds": 32,
+  "testedAt": "2026-10-01T02:02:17.056Z",
   "games": [
     {
       "id": "reversi",
@@ -269,6 +270,5 @@
       "consoleErrors": 0,
       "notes": "Completed round through legal UI actions; competitive rounds may end in a loss. Chromium desktop and emulated touch mobile. Mobile denies storage reads/writes. No physical-device or other-engine test."
     }
-  ],
-  "completedRounds": 32
+  ]
 }

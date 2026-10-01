@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 2,
+  "suite": "lantern-lines",
+  "passed": true,
+  "status": "passed",
+  "startedAt": "2026-10-01T02:00:11.863Z",
+  "source": {
+    "sha256": "ce93ad3629a58566c784b9947a5483c8faa159dd48de7b1727eca929d4f23f44",
+    "files": [
+      "catalog.css",
+      "catalog.js",
+      "common.js",
+      "index.html",
+      "inventory-plan.json",
+      "inventory.json",
+      "lantern-lines/game.css",
+      "lantern-lines/game.js",
+      "lantern-lines/index.html",
+      "play.css",
+      "styles.css",
+      "tests/lantern-lines.cjs",
+      "tools/evidence.cjs",
+      "tools/run-suite.cjs"
+    ]
+  },
+  "requestedBaseURL": "http://127.0.0.1:8790",
+  "browser": {
+    "engine": "Chromium",
+    "version": "Chromium 151.0.7922.173 built on Debian GNU/Linux 13 (trixie)",
+    "executable": "/usr/bin/chromium"
+  },
+  "scope": {
+    "desktopCompletion": true,
+    "mobileViewportCompletion": true,
+    "touchGameplayCompletion": true,
+    "touchControlSmoke": true,
+    "completionMeans": "winning full progression",
+    "method": "scripted UI; curated answers or board solvers",
+    "mobileMethod": "touch gameplay with scripted navigation/solvers"
+  },
+  "games": [
+    "lantern-lines"
+  ],
+  "limits": [
+    "Mobile is Chromium viewport/touch emulation, not Safari or a physical device.",
+    "Solver completions do not establish human difficulty or accessibility."
+  ],
+  "servedRuntimeBefore": {
+    "baseURL": "http://127.0.0.1:8790",
+    "passed": true,
+    "sha256": "84206967884e97e84a7578f6c08aa2e7ccade41b567b0f775ad0831c2b12c481",
+    "fileCount": 11,
+    "verifiedAt": "2026-10-01T02:00:12.095Z"
+  },
+  "exitCode": 0,
+  "signal": null,
+  "sourceUnchanged": true,
+  "servedRuntime": {
+    "baseURL": "http://127.0.0.1:8790",
+    "passed": true,
+    "sha256": "84206967884e97e84a7578f6c08aa2e7ccade41b567b0f775ad0831c2b12c481",
+    "fileCount": 11,
+    "verifiedAt": "2026-10-01T02:00:37.903Z"
+  },
+  "finishedAt": "2026-10-01T02:00:37.903Z"
+}

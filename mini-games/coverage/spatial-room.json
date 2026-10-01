@@ -1,7 +1,7 @@
 {
   "passed": true,
   "browser": "Chromium",
-  "notes": "All30 completions via legal click/tap input; desktop1200 and mobile320 with reduced motion+blocked storage. Includes upgraded three-stage Gear Train, Pigment Lab and Balance Mobile. Additional dedicated depth and edge suites passed. No timed puzzles.",
+  "notes": "All completions through legal click/tap inputs. Mobile320 reduced motion + blocked storage. Fixed crafted puzzles, no timing. Physical devices and screen readers untested.",
   "checks": [
     {
       "id": "tangram-dock",
@@ -303,20 +303,5 @@
       "storageBlocked": true,
       "reducedMotion": true
     }
-  ],
-  "depthSuites": [
-    "pigment-depth.json",
-    "balance-depth.json",
-    "gear-depth.json"
-  ],
-  "edgeChecks": [
-    "Wrong mirror path does not win",
-    "Rover wall collision allows edit and restart",
-    "Rover arrival followed by wall collision is rejected; removing trailing command and rerunning wins",
-    "Victory focuses Play again after final render",
-    "Incorrect final paper layer order does not win",
-    "Orbit fuel exhaustion shows Stranded and disables travel; restart recovers",
-    "Crane same-stack invalid transfer and restart",
-    "Keyboard focus preserved after board rerender"
   ]
 }

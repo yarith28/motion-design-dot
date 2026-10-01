@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 2,
+  "suite": "signal-mobile-complete",
+  "passed": true,
+  "status": "passed",
+  "startedAt": "2026-10-01T02:00:11.845Z",
+  "source": {
+    "sha256": "074e7cdc979a0efebd43b44e6de47433cc809e07260ef82b5d62014e676c4276",
+    "files": [
+      "catalog.css",
+      "catalog.js",
+      "common.js",
+      "index.html",
+      "inventory-plan.json",
+      "inventory.json",
+      "play.css",
+      "signal-run/game.css",
+      "signal-run/game.js",
+      "signal-run/index.html",
+      "styles.css",
+      "tests/signal-mobile-complete.cjs",
+      "tools/evidence.cjs",
+      "tools/run-suite.cjs"
+    ]
+  },
+  "requestedBaseURL": "http://127.0.0.1:8790",
+  "browser": {
+    "engine": "Chromium",
+    "version": "Chromium 151.0.7922.173 built on Debian GNU/Linux 13 (trixie)",
+    "executable": "/usr/bin/chromium"
+  },
+  "scope": {
+    "desktopCompletion": false,
+    "mobileViewportCompletion": true,
+    "touchGameplayCompletion": true,
+    "touchControlSmoke": false,
+    "completionMeans": "winning full progression",
+    "method": "solver-directed UI with read-only injected observations; timing suites control virtual time",
+    "mobileMethod": "touch gameplay with scripted navigation/solvers"
+  },
+  "games": [
+    "signal-run"
+  ],
+  "limits": [
+    "Mobile is Chromium viewport/touch emulation, not Safari or a physical device.",
+    "Solver completions do not establish human difficulty or accessibility."
+  ],
+  "servedRuntimeBefore": {
+    "baseURL": "http://127.0.0.1:8790",
+    "passed": true,
+    "sha256": "62ae0320071b125db1b4357cbd485120ff2437066a2772022d2a9cafaacbac8e",
+    "fileCount": 11,
+    "verifiedAt": "2026-10-01T02:00:12.015Z"
+  },
+  "exitCode": 0,
+  "signal": null,
+  "sourceUnchanged": true,
+  "servedRuntime": {
+    "baseURL": "http://127.0.0.1:8790",
+    "passed": true,
+    "sha256": "62ae0320071b125db1b4357cbd485120ff2437066a2772022d2a9cafaacbac8e",
+    "fileCount": 11,
+    "verifiedAt": "2026-10-01T02:00:30.060Z"
+  },
+  "finishedAt": "2026-10-01T02:00:30.062Z"
+}

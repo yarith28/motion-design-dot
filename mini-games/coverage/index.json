@@ -1,1118 +1,2523 @@
 {
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-01T02:06:43.664Z",
   "total": 100,
-  "fullCompletionDesktop": 100,
-  "fullCompletionMobile": 100,
-  "limits": "Chromium; mobile touch emulated. Browser completions use legal inputs with solvers or read-only test observations where needed. No physical-device, other-engine, or screen-reader certification.",
+  "verified": 100,
+  "desktopCompletions": 100,
+  "mobileViewportCompletions": 100,
+  "touchGameplayCompletions": 54,
+  "limits": "Current successful suite runs only; source content hashes exclude generated coverage and documentation. Mobile viewport completion is not touch-only completion or iPhone/Safari certification. Solvers may inspect hidden answers and use virtual time. Competitive strategy terminal results can be losses. Live route/reset checks and ordinary-play samples are separate.",
   "games": [
     {
       "id": "signal-run",
       "name": "Signal Run",
       "url": "signal-run/",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "README.md",
-      "suite": "tests/browser.cjs",
-      "note": "Desktop win/loss; mobile full win and restart additionally recorded in coverage/signal-mobile.json."
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/browser.json",
+        "coverage/suite-runs/signal-mobile-complete.json"
+      ],
+      "methods": [
+        {
+          "suite": "browser",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": false,
+          "touchGameplayCompletion": false,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "solver-directed UI with read-only injected observations; timing suites control virtual time",
+          "mobileMethod": "touch smoke only"
+        },
+        {
+          "suite": "signal-mobile-complete",
+          "desktopCompletion": false,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": false,
+          "completionMeans": "winning full progression",
+          "method": "solver-directed UI with read-only injected observations; timing suites control virtual time",
+          "mobileMethod": "touch gameplay with scripted navigation/solvers"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "double-take",
       "name": "Double Take",
       "url": "double-take/",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "README.md",
-      "suite": "tests/collection.cjs",
-      "note": "Full-round browser checks described in original verification notes."
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/collection.json"
+      ],
+      "methods": [
+        {
+          "suite": "collection",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "solver-directed UI with read-only injected observations; timing suites control virtual time",
+          "mobileMethod": "touch gameplay with scripted navigation/solvers"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "pocket-orbit",
       "name": "Pocket Orbit",
       "url": "pocket-orbit/",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "README.md",
-      "suite": "tests/collection.cjs",
-      "note": "Full-round browser checks described in original verification notes."
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/collection.json"
+      ],
+      "methods": [
+        {
+          "suite": "collection",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "solver-directed UI with read-only injected observations; timing suites control virtual time",
+          "mobileMethod": "touch gameplay with scripted navigation/solvers"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "good-order",
       "name": "Good Order",
       "url": "good-order/",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "README.md",
-      "suite": "tests/collection.cjs",
-      "note": "Full-round browser checks described in original verification notes."
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/collection.json"
+      ],
+      "methods": [
+        {
+          "suite": "collection",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "solver-directed UI with read-only injected observations; timing suites control virtual time",
+          "mobileMethod": "touch gameplay with scripted navigation/solvers"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "afterglow",
       "name": "Afterglow",
       "url": "afterglow/",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "README.md",
-      "suite": "tests/afterglow.cjs",
-      "note": "Full-round browser checks described in original verification notes."
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": false,
+      "evidence": [
+        "coverage/suite-runs/afterglow.json"
+      ],
+      "methods": [
+        {
+          "suite": "afterglow",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": false,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "solver-directed UI with read-only injected observations; timing suites control virtual time",
+          "mobileMethod": "DOM-set aiming with touch launch and upgrades"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "lantern-lines",
       "name": "Lantern Lines",
       "url": "lantern-lines/",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "README.md",
-      "suite": "tests/lantern-lines.cjs",
-      "note": "Full-round browser checks described in original verification notes."
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/lantern-lines.json"
+      ],
+      "methods": [
+        {
+          "suite": "lantern-lines",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "scripted UI; curated answers or board solvers",
+          "mobileMethod": "touch gameplay with scripted navigation/solvers"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "tide-pool",
       "name": "Tide Pool",
       "url": "tide-pool/",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "README.md",
-      "suite": "tests/tide-pool.cjs",
-      "note": "Full-round browser checks described in original verification notes."
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/tide-pool.json"
+      ],
+      "methods": [
+        {
+          "suite": "tide-pool",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "scripted UI; curated answers or board solvers",
+          "mobileMethod": "touch gameplay with scripted navigation/solvers"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "word-weave",
       "name": "Word Weave",
       "url": "word-weave/",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "README.md",
-      "suite": "tests/word-weave.cjs",
-      "note": "Full-round browser checks described in original verification notes."
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/word-weave.json"
+      ],
+      "methods": [
+        {
+          "suite": "word-weave",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "scripted UI; curated answers or board solvers",
+          "mobileMethod": "touch gameplay with scripted navigation/solvers"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "sky-stack",
       "name": "Sky Stack",
       "url": "sky-stack/",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "README.md",
-      "suite": "tests/sky-stack.cjs",
-      "note": "Full-round browser checks described in original verification notes."
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/sky-stack.json"
+      ],
+      "methods": [
+        {
+          "suite": "sky-stack",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "scripted UI; curated answers or board solvers",
+          "mobileMethod": "touch gameplay with scripted navigation/solvers"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "pebble-post",
       "name": "Pebble Post",
       "url": "pebble-post/",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "README.md",
-      "suite": "tests/pebble-post.cjs",
-      "note": "Full-round browser checks described in original verification notes."
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/pebble-post.json"
+      ],
+      "methods": [
+        {
+          "suite": "pebble-post",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "scripted UI; curated answers or board solvers",
+          "mobileMethod": "touch gameplay with scripted navigation/solvers"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "tangram-dock",
       "name": "Tangram Dock",
       "url": "spatial-room/?game=tangram-dock",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/spatial-room.json",
-      "suite": "tests/spatial-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/spatial-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "spatial-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "scripted UI; curated answers or board solvers",
+          "mobileMethod": "touch gameplay with scripted navigation/solvers"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "mirror-mail",
       "name": "Mirror Mail",
       "url": "spatial-room/?game=mirror-mail",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/spatial-room.json",
-      "suite": "tests/spatial-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/spatial-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "spatial-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "scripted UI; curated answers or board solvers",
+          "mobileMethod": "touch gameplay with scripted navigation/solvers"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "bilateral",
       "name": "Bilateral",
       "url": "spatial-room/?game=bilateral",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/spatial-room.json",
-      "suite": "tests/spatial-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/spatial-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "spatial-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "scripted UI; curated answers or board solvers",
+          "mobileMethod": "touch gameplay with scripted navigation/solvers"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "shadow-turn",
       "name": "Shadow Turn",
       "url": "spatial-room/?game=shadow-turn",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/spatial-room.json",
-      "suite": "tests/spatial-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/spatial-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "spatial-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "scripted UI; curated answers or board solvers",
+          "mobileMethod": "touch gameplay with scripted navigation/solvers"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "loose-ends",
       "name": "Loose Ends",
       "url": "spatial-room/?game=loose-ends",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/spatial-room.json",
-      "suite": "tests/spatial-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/spatial-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "spatial-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "scripted UI; curated answers or board solvers",
+          "mobileMethod": "touch gameplay with scripted navigation/solvers"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "gear-train",
       "name": "Gear Train",
       "url": "spatial-room/?game=gear-train",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/spatial-room.json",
-      "suite": "tests/spatial-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/spatial-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "spatial-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "scripted UI; curated answers or board solvers",
+          "mobileMethod": "touch gameplay with scripted navigation/solvers"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "measured-pour",
       "name": "Measured Pour",
       "url": "spatial-room/?game=measured-pour",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/spatial-room.json",
-      "suite": "tests/spatial-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/spatial-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "spatial-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "scripted UI; curated answers or board solvers",
+          "mobileMethod": "touch gameplay with scripted navigation/solvers"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "rover-script",
       "name": "Rover Script",
       "url": "spatial-room/?game=rover-script",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/spatial-room.json",
-      "suite": "tests/spatial-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/spatial-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "spatial-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "scripted UI; curated answers or board solvers",
+          "mobileMethod": "touch gameplay with scripted navigation/solvers"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "paper-trail",
       "name": "Paper Trail",
       "url": "spatial-room/?game=paper-trail",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/spatial-room.json",
-      "suite": "tests/spatial-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/spatial-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "spatial-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "scripted UI; curated answers or board solvers",
+          "mobileMethod": "touch gameplay with scripted navigation/solvers"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "pigment-lab",
       "name": "Pigment Lab",
       "url": "spatial-room/?game=pigment-lab",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/spatial-room.json",
-      "suite": "tests/spatial-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/spatial-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "spatial-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "scripted UI; curated answers or board solvers",
+          "mobileMethod": "touch gameplay with scripted navigation/solvers"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "cable-loom",
       "name": "Cable Loom",
       "url": "spatial-room/?game=cable-loom",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/spatial-room.json",
-      "suite": "tests/spatial-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/spatial-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "spatial-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "scripted UI; curated answers or board solvers",
+          "mobileMethod": "touch gameplay with scripted navigation/solvers"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "balance-mobile",
       "name": "Balance Mobile",
       "url": "spatial-room/?game=balance-mobile",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/spatial-room.json",
-      "suite": "tests/spatial-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/spatial-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "spatial-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "scripted UI; curated answers or board solvers",
+          "mobileMethod": "touch gameplay with scripted navigation/solvers"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "crate-crane",
       "name": "Crate Crane",
       "url": "spatial-room/?game=crate-crane",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/spatial-room.json",
-      "suite": "tests/spatial-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/spatial-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "spatial-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "scripted UI; curated answers or board solvers",
+          "mobileMethod": "touch gameplay with scripted navigation/solvers"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "orbit-transfer",
       "name": "Orbit Transfer",
       "url": "spatial-room/?game=orbit-transfer",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/spatial-room.json",
-      "suite": "tests/spatial-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/spatial-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "spatial-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "scripted UI; curated answers or board solvers",
+          "mobileMethod": "touch gameplay with scripted navigation/solvers"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "stamp-studio",
       "name": "Stamp Studio",
       "url": "spatial-room/?game=stamp-studio",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/spatial-room.json",
-      "suite": "tests/spatial-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/spatial-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "spatial-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "scripted UI; curated answers or board solvers",
+          "mobileMethod": "touch gameplay with scripted navigation/solvers"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "minefield",
       "name": "Minefield",
       "url": "logic-room/?game=minefield",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/logic-room.json",
-      "suite": "tests/logic-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/logic-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "logic-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "solver-directed UI with read-only injected observations; timing suites control virtual time",
+          "mobileMethod": "touch gameplay with scripted navigation/solvers"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "picross-post",
       "name": "Picross Post",
       "url": "logic-room/?game=picross-post",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/logic-room.json",
-      "suite": "tests/logic-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/logic-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "logic-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "solver-directed UI with read-only injected observations; timing suites control virtual time",
+          "mobileMethod": "touch gameplay with scripted navigation/solvers"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "ninefold",
       "name": "Ninefold",
       "url": "logic-room/?game=ninefold",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/logic-room.json",
-      "suite": "tests/logic-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/logic-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "logic-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "solver-directed UI with read-only injected observations; timing suites control virtual time",
+          "mobileMethod": "touch gameplay with scripted navigation/solvers"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "equal-measure",
       "name": "Equal Measure",
       "url": "logic-room/?game=equal-measure",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/logic-room.json",
-      "suite": "tests/logic-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/logic-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "logic-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "solver-directed UI with read-only injected observations; timing suites control virtual time",
+          "mobileMethod": "touch gameplay with scripted navigation/solvers"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "taller-tales",
       "name": "Taller Tales",
       "url": "logic-room/?game=taller-tales",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/logic-room.json",
-      "suite": "tests/logic-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/logic-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "logic-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "solver-directed UI with read-only injected observations; timing suites control virtual time",
+          "mobileMethod": "touch gameplay with scripted navigation/solvers"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "code-cabinet",
       "name": "Code Cabinet",
       "url": "logic-room/?game=code-cabinet",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/logic-room.json",
-      "suite": "tests/logic-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/logic-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "logic-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "solver-directed UI with read-only injected observations; timing suites control virtual time",
+          "mobileMethod": "touch gameplay with scripted navigation/solvers"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "seat-at-table",
       "name": "Seat at the Table",
       "url": "logic-room/?game=seat-at-table",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/logic-room.json",
-      "suite": "tests/logic-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/logic-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "logic-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "solver-directed UI with read-only injected observations; timing suites control virtual time",
+          "mobileMethod": "touch gameplay with scripted navigation/solvers"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "sky-view",
       "name": "Sky View",
       "url": "logic-room/?game=sky-view",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/logic-room.json",
-      "suite": "tests/logic-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/logic-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "logic-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "solver-directed UI with read-only injected observations; timing suites control virtual time",
+          "mobileMethod": "touch gameplay with scripted navigation/solvers"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "bridgewater",
       "name": "Bridgewater",
       "url": "logic-room/?game=bridgewater",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/logic-room.json",
-      "suite": "tests/logic-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/logic-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "logic-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "solver-directed UI with read-only injected observations; timing suites control virtual time",
+          "mobileMethod": "touch gameplay with scripted navigation/solvers"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "loop-letter",
       "name": "Loop Letter",
       "url": "logic-room/?game=loop-letter",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/logic-room.json",
-      "suite": "tests/logic-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/logic-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "logic-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "solver-directed UI with read-only injected observations; timing suites control virtual time",
+          "mobileMethod": "touch gameplay with scripted navigation/solvers"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "tent-pitch",
       "name": "Tent Pitch",
       "url": "logic-room/?game=tent-pitch",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/logic-room.json",
-      "suite": "tests/logic-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/logic-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "logic-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "solver-directed UI with read-only injected observations; timing suites control virtual time",
+          "mobileMethod": "touch gameplay with scripted navigation/solvers"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "pearl-route",
       "name": "Pearl Route",
       "url": "logic-room/?game=pearl-route",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/logic-room.json",
-      "suite": "tests/logic-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/logic-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "logic-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "solver-directed UI with read-only injected observations; timing suites control virtual time",
+          "mobileMethod": "touch gameplay with scripted navigation/solvers"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "tile-weave",
       "name": "Tile Weave",
       "url": "logic-room/?game=tile-weave",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/logic-room.json",
-      "suite": "tests/logic-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/logic-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "logic-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "solver-directed UI with read-only injected observations; timing suites control virtual time",
+          "mobileMethod": "touch gameplay with scripted navigation/solvers"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "safe-passage",
       "name": "Safe Passage",
       "url": "logic-room/?game=safe-passage",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/logic-room.json",
-      "suite": "tests/logic-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/logic-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "logic-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "solver-directed UI with read-only injected observations; timing suites control virtual time",
+          "mobileMethod": "touch gameplay with scripted navigation/solvers"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "cross-sums",
       "name": "Cross Sums",
       "url": "logic-room/?game=cross-sums",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/logic-room.json",
-      "suite": "tests/logic-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/logic-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "logic-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "solver-directed UI with read-only injected observations; timing suites control virtual time",
+          "mobileMethod": "touch gameplay with scripted navigation/solvers"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "make-24",
       "name": "Twenty Four",
       "url": "number-room/?game=make-24",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/number-room.json",
-      "suite": "tests/number-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": false,
+      "evidence": [
+        "coverage/suite-runs/number-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "number-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": false,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "scripted UI; curated answers or board solvers",
+          "mobileMethod": "touch controls mixed with keyboard/range actions"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "merge-garden",
       "name": "Merge Garden",
       "url": "number-room/?game=merge-garden",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/number-room.json",
-      "suite": "tests/number-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": false,
+      "evidence": [
+        "coverage/suite-runs/number-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "number-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": false,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "scripted UI; curated answers or board solvers",
+          "mobileMethod": "touch controls mixed with keyboard/range actions"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "bit-lanterns",
       "name": "Bit Lanterns",
       "url": "number-room/?game=bit-lanterns",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/number-room.json",
-      "suite": "tests/number-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": false,
+      "evidence": [
+        "coverage/suite-runs/number-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "number-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": false,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "scripted UI; curated answers or board solvers",
+          "mobileMethod": "touch controls mixed with keyboard/range actions"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "fraction-balance",
       "name": "Fraction Balance",
       "url": "number-room/?game=fraction-balance",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/number-room.json",
-      "suite": "tests/number-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": false,
+      "evidence": [
+        "coverage/suite-runs/number-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "number-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": false,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "scripted UI; curated answers or board solvers",
+          "mobileMethod": "touch controls mixed with keyboard/range actions"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "matchstick-equation",
       "name": "Matchlight",
       "url": "number-room/?game=matchstick-equation",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/number-room.json",
-      "suite": "tests/number-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": false,
+      "evidence": [
+        "coverage/suite-runs/number-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "number-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": false,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "scripted UI; curated answers or board solvers",
+          "mobileMethod": "touch controls mixed with keyboard/range actions"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "factor-loom",
       "name": "Factor Loom",
       "url": "number-room/?game=factor-loom",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/number-room.json",
-      "suite": "tests/number-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": false,
+      "evidence": [
+        "coverage/suite-runs/number-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "number-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": false,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "scripted UI; curated answers or board solvers",
+          "mobileMethod": "touch controls mixed with keyboard/range actions"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "clockwork",
       "name": "Clockwork",
       "url": "number-room/?game=clockwork",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/number-room.json",
-      "suite": "tests/number-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": false,
+      "evidence": [
+        "coverage/suite-runs/number-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "number-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": false,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "scripted UI; curated answers or board solvers",
+          "mobileMethod": "touch controls mixed with keyboard/range actions"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "fraction-mosaic",
       "name": "Fraction Mosaic",
       "url": "number-room/?game=fraction-mosaic",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/number-room.json",
-      "suite": "tests/number-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": false,
+      "evidence": [
+        "coverage/suite-runs/number-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "number-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": false,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "scripted UI; curated answers or board solvers",
+          "mobileMethod": "touch controls mixed with keyboard/range actions"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "precedence-lab",
       "name": "Bracket Lab",
       "url": "number-room/?game=precedence-lab",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/number-room.json",
-      "suite": "tests/number-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": false,
+      "evidence": [
+        "coverage/suite-runs/number-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "number-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": false,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "scripted UI; curated answers or board solvers",
+          "mobileMethod": "touch controls mixed with keyboard/range actions"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "estimation-studio",
       "name": "Scale Sense",
       "url": "number-room/?game=estimation-studio",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/number-room.json",
-      "suite": "tests/number-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": false,
+      "evidence": [
+        "coverage/suite-runs/number-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "number-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": false,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "scripted UI; curated answers or board solvers",
+          "mobileMethod": "touch controls mixed with keyboard/range actions"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "ratio-mixer",
       "name": "Ratio Mixer",
       "url": "number-room/?game=ratio-mixer",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/number-room.json",
-      "suite": "tests/number-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": false,
+      "evidence": [
+        "coverage/suite-runs/number-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "number-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": false,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "scripted UI; curated answers or board solvers",
+          "mobileMethod": "touch controls mixed with keyboard/range actions"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "sequence-detective",
       "name": "Sequence Detective",
       "url": "number-room/?game=sequence-detective",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/number-room.json",
-      "suite": "tests/number-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": false,
+      "evidence": [
+        "coverage/suite-runs/number-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "number-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": false,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "scripted UI; curated answers or board solvers",
+          "mobileMethod": "touch controls mixed with keyboard/range actions"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "decimal-market",
       "name": "Exact Change",
       "url": "number-room/?game=decimal-market",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/number-room.json",
-      "suite": "tests/number-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": false,
+      "evidence": [
+        "coverage/suite-runs/number-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "number-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": false,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "scripted UI; curated answers or board solvers",
+          "mobileMethod": "touch controls mixed with keyboard/range actions"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "digit-forge",
       "name": "Digit Forge",
       "url": "number-room/?game=digit-forge",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/number-room.json",
-      "suite": "tests/number-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": false,
+      "evidence": [
+        "coverage/suite-runs/number-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "number-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": false,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "scripted UI; curated answers or board solvers",
+          "mobileMethod": "touch controls mixed with keyboard/range actions"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "coordinate-courier",
       "name": "Coordinate Courier",
       "url": "number-room/?game=coordinate-courier",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/number-room.json",
-      "suite": "tests/number-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": false,
+      "evidence": [
+        "coverage/suite-runs/number-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "number-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": false,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "scripted UI; curated answers or board solvers",
+          "mobileMethod": "touch controls mixed with keyboard/range actions"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "hidden-grove",
       "name": "Hidden Grove",
       "url": "word-room/?game=hidden-grove",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/word-room.json",
-      "suite": "tests/word-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": false,
+      "evidence": [
+        "coverage/suite-runs/word-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "word-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": false,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "scripted UI; curated answers or board solvers",
+          "mobileMethod": "touch buttons mixed with programmatic text entry"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "one-letter-away",
       "name": "One Letter Away",
       "url": "word-room/?game=one-letter-away",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/word-room.json",
-      "suite": "tests/word-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": false,
+      "evidence": [
+        "coverage/suite-runs/word-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "word-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": false,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "scripted UI; curated answers or board solvers",
+          "mobileMethod": "touch buttons mixed with programmatic text entry"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "last-letter",
       "name": "Last Letter",
       "url": "word-room/?game=last-letter",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/word-room.json",
-      "suite": "tests/word-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": false,
+      "evidence": [
+        "coverage/suite-runs/word-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "word-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": false,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "scripted UI; curated answers or board solvers",
+          "mobileMethod": "touch buttons mixed with programmatic text entry"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "crossings",
       "name": "Crossings",
       "url": "word-room/?game=crossings",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/word-room.json",
-      "suite": "tests/word-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": false,
+      "evidence": [
+        "coverage/suite-runs/word-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "word-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": false,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "scripted UI; curated answers or board solvers",
+          "mobileMethod": "touch buttons mixed with programmatic text entry"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "wordbreak",
       "name": "Wordbreak",
       "url": "word-room/?game=wordbreak",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/word-room.json",
-      "suite": "tests/word-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": false,
+      "evidence": [
+        "coverage/suite-runs/word-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "word-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": false,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "scripted UI; curated answers or board solvers",
+          "mobileMethod": "touch buttons mixed with programmatic text entry"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "secret-post",
       "name": "Secret Post",
       "url": "word-room/?game=secret-post",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/word-room.json",
-      "suite": "tests/word-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": false,
+      "evidence": [
+        "coverage/suite-runs/word-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "word-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": false,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "scripted UI; curated answers or board solvers",
+          "mobileMethod": "touch buttons mixed with programmatic text entry"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "center-letter",
       "name": "Center Letter",
       "url": "word-room/?game=center-letter",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/word-room.json",
-      "suite": "tests/word-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": false,
+      "evidence": [
+        "coverage/suite-runs/word-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "word-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": false,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "scripted UI; curated answers or board solvers",
+          "mobileMethod": "touch buttons mixed with programmatic text entry"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "odd-company",
       "name": "Odd Company",
       "url": "word-room/?game=odd-company",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/word-room.json",
-      "suite": "tests/word-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": false,
+      "evidence": [
+        "coverage/suite-runs/word-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "word-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": false,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "scripted UI; curated answers or board solvers",
+          "mobileMethod": "touch buttons mixed with programmatic text entry"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "alphabet-trail",
       "name": "Alphabet Trail",
       "url": "word-room/?game=alphabet-trail",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/word-room.json",
-      "suite": "tests/word-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": false,
+      "evidence": [
+        "coverage/suite-runs/word-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "word-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": false,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "scripted UI; curated answers or board solvers",
+          "mobileMethod": "touch buttons mixed with programmatic text entry"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "sentence-studio",
       "name": "Sentence Studio",
       "url": "word-room/?game=sentence-studio",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/word-room.json",
-      "suite": "tests/word-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": false,
+      "evidence": [
+        "coverage/suite-runs/word-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "word-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": false,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "scripted UI; curated answers or board solvers",
+          "mobileMethod": "touch buttons mixed with programmatic text entry"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "compound-works",
       "name": "Compound Works",
       "url": "word-room/?game=compound-works",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/word-room.json",
-      "suite": "tests/word-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": false,
+      "evidence": [
+        "coverage/suite-runs/word-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "word-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": false,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "scripted UI; curated answers or board solvers",
+          "mobileMethod": "touch buttons mixed with programmatic text entry"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "rhyme-lines",
       "name": "Rhyme Lines",
       "url": "word-room/?game=rhyme-lines",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/word-room.json",
-      "suite": "tests/word-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": false,
+      "evidence": [
+        "coverage/suite-runs/word-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "word-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": false,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "scripted UI; curated answers or board solvers",
+          "mobileMethod": "touch buttons mixed with programmatic text entry"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "vowel-weather",
       "name": "Vowel Weather",
       "url": "word-room/?game=vowel-weather",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/word-room.json",
-      "suite": "tests/word-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": false,
+      "evidence": [
+        "coverage/suite-runs/word-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "word-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": false,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "scripted UI; curated answers or board solvers",
+          "mobileMethod": "touch buttons mixed with programmatic text entry"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "chain-reaction",
       "name": "Chain Reaction",
       "url": "word-room/?game=chain-reaction",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/word-room.json",
-      "suite": "tests/word-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": false,
+      "evidence": [
+        "coverage/suite-runs/word-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "word-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": false,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "scripted UI; curated answers or board solvers",
+          "mobileMethod": "touch buttons mixed with programmatic text entry"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "proofreader",
       "name": "Proofreader",
       "url": "word-room/?game=proofreader",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/word-room.json",
-      "suite": "tests/word-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": false,
+      "evidence": [
+        "coverage/suite-runs/word-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "word-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": false,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "scripted UI; curated answers or board solvers",
+          "mobileMethod": "touch buttons mixed with programmatic text entry"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "reversi",
       "name": "Ink & Ivory",
       "url": "strategy-room/?game=reversi",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/strategy-room.json",
-      "suite": "tests/strategy-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/strategy-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "strategy-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "terminal result; competitive losses count",
+          "method": "scripted UI; curated answers or board solvers",
+          "mobileMethod": "touch gameplay with scripted navigation/solvers"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "four",
       "name": "Four Together",
       "url": "strategy-room/?game=four",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/strategy-room.json",
-      "suite": "tests/strategy-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/strategy-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "strategy-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "terminal result; competitive losses count",
+          "method": "scripted UI; curated answers or board solvers",
+          "mobileMethod": "touch gameplay with scripted navigation/solvers"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "kalah",
       "name": "Seed & Store",
       "url": "strategy-room/?game=kalah",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/strategy-room.json",
-      "suite": "tests/strategy-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/strategy-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "strategy-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "terminal result; competitive losses count",
+          "method": "scripted UI; curated answers or board solvers",
+          "mobileMethod": "touch gameplay with scripted navigation/solvers"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "nim",
       "name": "Matchstick Market",
       "url": "strategy-room/?game=nim",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/strategy-room.json",
-      "suite": "tests/strategy-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/strategy-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "strategy-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "terminal result; competitive losses count",
+          "method": "scripted UI; curated answers or board solvers",
+          "mobileMethod": "touch gameplay with scripted navigation/solvers"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "fences",
       "name": "Fence & Field",
       "url": "strategy-room/?game=fences",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/strategy-room.json",
-      "suite": "tests/strategy-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/strategy-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "strategy-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "terminal result; competitive losses count",
+          "method": "scripted UI; curated answers or board solvers",
+          "mobileMethod": "touch gameplay with scripted navigation/solvers"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "peg",
       "name": "Last Pebble",
       "url": "strategy-room/?game=peg",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/strategy-room.json",
-      "suite": "tests/strategy-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/strategy-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "strategy-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "terminal result; competitive losses count",
+          "method": "scripted UI; curated answers or board solvers",
+          "mobileMethod": "touch gameplay with scripted navigation/solvers"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "pawns",
       "name": "Royal Crossing",
       "url": "strategy-room/?game=pawns",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/strategy-room.json",
-      "suite": "tests/strategy-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/strategy-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "strategy-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "terminal result; competitive losses count",
+          "method": "scripted UI; curated answers or board solvers",
+          "mobileMethod": "touch gameplay with scripted navigation/solvers"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "fleet",
       "name": "Hidden Fleet",
       "url": "strategy-room/?game=fleet",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/strategy-room.json",
-      "suite": "tests/strategy-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/strategy-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "strategy-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "terminal result; competitive losses count",
+          "method": "scripted UI; curated answers or board solvers",
+          "mobileMethod": "touch gameplay with scripted navigation/solvers"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "guild",
       "name": "Border Guild",
       "url": "strategy-room/?game=guild",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/strategy-room.json",
-      "suite": "tests/strategy-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/strategy-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "strategy-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "terminal result; competitive losses count",
+          "method": "scripted UI; curated answers or board solvers",
+          "mobileMethod": "touch gameplay with scripted navigation/solvers"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "orchard",
       "name": "Orchard Keeper",
       "url": "strategy-room/?game=orchard",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/strategy-room.json",
-      "suite": "tests/strategy-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/strategy-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "strategy-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "terminal result; competitive losses count",
+          "method": "scripted UI; curated answers or board solvers",
+          "mobileMethod": "touch gameplay with scripted navigation/solvers"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "bridge",
       "name": "Narrow Bridge",
       "url": "strategy-room/?game=bridge",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/strategy-room.json",
-      "suite": "tests/strategy-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/strategy-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "strategy-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "terminal result; competitive losses count",
+          "method": "scripted UI; curated answers or board solvers",
+          "mobileMethod": "touch gameplay with scripted navigation/solvers"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "hex",
       "name": "Sixfold",
       "url": "strategy-room/?game=hex",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/strategy-room.json",
-      "suite": "tests/strategy-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/strategy-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "strategy-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "terminal result; competitive losses count",
+          "method": "scripted UI; curated answers or board solvers",
+          "mobileMethod": "touch gameplay with scripted navigation/solvers"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "towers",
       "name": "Watchtower",
       "url": "strategy-room/?game=towers",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/strategy-room.json",
-      "suite": "tests/strategy-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/strategy-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "strategy-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "terminal result; competitive losses count",
+          "method": "scripted UI; curated answers or board solvers",
+          "mobileMethod": "touch gameplay with scripted navigation/solvers"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "siege",
       "name": "Quiet Siege",
       "url": "strategy-room/?game=siege",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/strategy-room.json",
-      "suite": "tests/strategy-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/strategy-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "strategy-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "terminal result; competitive losses count",
+          "method": "scripted UI; curated answers or board solvers",
+          "mobileMethod": "touch gameplay with scripted navigation/solvers"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "trade",
       "name": "Trading Day",
       "url": "strategy-room/?game=trade",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/strategy-room.json",
-      "suite": "tests/strategy-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/strategy-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "strategy-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "terminal result; competitive losses count",
+          "method": "scripted UI; curated answers or board solvers",
+          "mobileMethod": "touch gameplay with scripted navigation/solvers"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "velvet-snake",
       "name": "Velvet Snake",
       "url": "arcade-room/?game=velvet-snake",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/arcade-room.json",
-      "suite": "tests/arcade-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": false,
+      "evidence": [
+        "coverage/suite-runs/arcade-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "arcade-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": false,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "solver-directed UI with read-only injected observations; timing suites control virtual time",
+          "mobileMethod": "keyboard/mouse solver in mobile viewport; separate touch smoke"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "rally-club",
       "name": "Rally Club",
       "url": "arcade-room/?game=rally-club",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/arcade-room.json",
-      "suite": "tests/arcade-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": false,
+      "evidence": [
+        "coverage/suite-runs/arcade-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "arcade-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": false,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "solver-directed UI with read-only injected observations; timing suites control virtual time",
+          "mobileMethod": "keyboard/mouse solver in mobile viewport; separate touch smoke"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "paper-links",
       "name": "Paper Links",
       "url": "arcade-room/?game=paper-links",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/arcade-room.json",
-      "suite": "tests/arcade-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": false,
+      "evidence": [
+        "coverage/suite-runs/arcade-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "arcade-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": false,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "solver-directed UI with read-only injected observations; timing suites control virtual time",
+          "mobileMethod": "keyboard/mouse solver in mobile viewport; separate touch smoke"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "moon-basket",
       "name": "Moon Basket",
       "url": "arcade-room/?game=moon-basket",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/arcade-room.json",
-      "suite": "tests/arcade-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": false,
+      "evidence": [
+        "coverage/suite-runs/arcade-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "arcade-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": false,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "solver-directed UI with read-only injected observations; timing suites control virtual time",
+          "mobileMethod": "keyboard/mouse solver in mobile viewport; separate touch smoke"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "quiet-curl",
       "name": "Quiet Curl",
       "url": "arcade-room/?game=quiet-curl",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/arcade-room.json",
-      "suite": "tests/arcade-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": false,
+      "evidence": [
+        "coverage/suite-runs/arcade-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "arcade-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": false,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "solver-directed UI with read-only injected observations; timing suites control virtual time",
+          "mobileMethod": "keyboard/mouse solver in mobile viewport; separate touch smoke"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "kite-flight",
       "name": "Kite Flight",
       "url": "arcade-room/?game=kite-flight",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/arcade-room.json",
-      "suite": "tests/arcade-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": false,
+      "evidence": [
+        "coverage/suite-runs/arcade-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "arcade-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": false,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "solver-directed UI with read-only injected observations; timing suites control virtual time",
+          "mobileMethod": "keyboard/mouse solver in mobile viewport; separate touch smoke"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "soft-landing",
       "name": "Soft Landing",
       "url": "arcade-room/?game=soft-landing",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/arcade-room.json",
-      "suite": "tests/arcade-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": false,
+      "evidence": [
+        "coverage/suite-runs/arcade-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "arcade-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": false,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "solver-directed UI with read-only injected observations; timing suites control virtual time",
+          "mobileMethod": "keyboard/mouse solver in mobile viewport; separate touch smoke"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "star-tow",
       "name": "Star Tow",
       "url": "arcade-room/?game=star-tow",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/arcade-room.json",
-      "suite": "tests/arcade-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": false,
+      "evidence": [
+        "coverage/suite-runs/arcade-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "arcade-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": false,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "solver-directed UI with read-only injected observations; timing suites control virtual time",
+          "mobileMethod": "keyboard/mouse solver in mobile viewport; separate touch smoke"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "garden-guard",
       "name": "Garden Guard",
       "url": "arcade-room/?game=garden-guard",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/arcade-room.json",
-      "suite": "tests/arcade-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": false,
+      "evidence": [
+        "coverage/suite-runs/arcade-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "arcade-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": false,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "solver-directed UI with read-only injected observations; timing suites control virtual time",
+          "mobileMethod": "keyboard/mouse solver in mobile viewport; separate touch smoke"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "beat-post",
       "name": "Beat Post",
       "url": "arcade-room/?game=beat-post",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/arcade-room.json",
-      "suite": "tests/arcade-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": false,
+      "evidence": [
+        "coverage/suite-runs/arcade-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "arcade-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": false,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "solver-directed UI with read-only injected observations; timing suites control virtual time",
+          "mobileMethod": "keyboard/mouse solver in mobile viewport; separate touch smoke"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "pinball-pocket",
       "name": "Pinball Pocket",
       "url": "arcade-room/?game=pinball-pocket",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/arcade-room.json",
-      "suite": "tests/arcade-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": false,
+      "evidence": [
+        "coverage/suite-runs/arcade-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "arcade-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": false,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "solver-directed UI with read-only injected observations; timing suites control virtual time",
+          "mobileMethod": "keyboard/mouse solver in mobile viewport; separate touch smoke"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "rope-skip",
       "name": "Rope Skip",
       "url": "arcade-room/?game=rope-skip",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/arcade-room.json",
-      "suite": "tests/arcade-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": false,
+      "evidence": [
+        "coverage/suite-runs/arcade-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "arcade-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": false,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "solver-directed UI with read-only injected observations; timing suites control virtual time",
+          "mobileMethod": "keyboard/mouse solver in mobile viewport; separate touch smoke"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "table-bowls",
       "name": "Table Bowls",
       "url": "arcade-room/?game=table-bowls",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/arcade-room.json",
-      "suite": "tests/arcade-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": false,
+      "evidence": [
+        "coverage/suite-runs/arcade-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "arcade-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": false,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "solver-directed UI with read-only injected observations; timing suites control virtual time",
+          "mobileMethod": "keyboard/mouse solver in mobile viewport; separate touch smoke"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "balance-beam",
       "name": "Balance Beam",
       "url": "arcade-room/?game=balance-beam",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/arcade-room.json",
-      "suite": "tests/arcade-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": false,
+      "evidence": [
+        "coverage/suite-runs/arcade-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "arcade-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": false,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "solver-directed UI with read-only injected observations; timing suites control virtual time",
+          "mobileMethod": "keyboard/mouse solver in mobile viewport; separate touch smoke"
+        }
+      ],
+      "unverifiedSuites": []
     },
     {
       "id": "harbor-catch",
       "name": "Harbor Catch",
       "url": "arcade-room/?game=harbor-catch",
+      "status": "verified",
       "fullCompletionDesktop": true,
-      "fullCompletionMobile": true,
-      "mobileInput": true,
-      "restart": true,
-      "evidence": "coverage/arcade-room.json",
-      "suite": "tests/arcade-room.cjs"
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": false,
+      "evidence": [
+        "coverage/suite-runs/arcade-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "arcade-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": false,
+          "touchControlSmoke": true,
+          "completionMeans": "winning full progression",
+          "method": "solver-directed UI with read-only injected observations; timing suites control virtual time",
+          "mobileMethod": "keyboard/mouse solver in mobile viewport; separate touch smoke"
+        }
+      ],
+      "unverifiedSuites": []
     }
   ]
 }

@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 2,
+  "suite": "spatial-room",
+  "passed": true,
+  "status": "passed",
+  "startedAt": "2026-10-01T02:00:43.876Z",
+  "source": {
+    "sha256": "fc1aaa82e608e342b717096fecd4396e13e3f788378fc0ea2c080023f8be28e5",
+    "files": [
+      "catalog.css",
+      "catalog.js",
+      "common.js",
+      "index.html",
+      "inventory-plan.json",
+      "inventory.json",
+      "play.css",
+      "spatial-room/data.js",
+      "spatial-room/games.json",
+      "spatial-room/index.html",
+      "spatial-room/room.css",
+      "spatial-room/room.js",
+      "styles.css",
+      "tests/balance-depth.cjs",
+      "tests/gear-depth.cjs",
+      "tests/spatial-room.cjs",
+      "tools/evidence.cjs",
+      "tools/run-suite.cjs"
+    ]
+  },
+  "requestedBaseURL": "http://127.0.0.1:8790",
+  "browser": {
+    "engine": "Chromium",
+    "version": "Chromium 151.0.7922.173 built on Debian GNU/Linux 13 (trixie)",
+    "executable": "/usr/bin/chromium"
+  },
+  "scope": {
+    "desktopCompletion": true,
+    "mobileViewportCompletion": true,
+    "touchGameplayCompletion": true,
+    "touchControlSmoke": true,
+    "completionMeans": "winning full progression",
+    "method": "scripted UI; curated answers or board solvers",
+    "mobileMethod": "touch gameplay with scripted navigation/solvers"
+  },
+  "games": [
+    "tangram-dock",
+    "mirror-mail",
+    "bilateral",
+    "shadow-turn",
+    "loose-ends",
+    "gear-train",
+    "measured-pour",
+    "rover-script",
+    "paper-trail",
+    "pigment-lab",
+    "cable-loom",
+    "balance-mobile",
+    "crate-crane",
+    "orbit-transfer",
+    "stamp-studio"
+  ],
+  "limits": [
+    "Mobile is Chromium viewport/touch emulation, not Safari or a physical device.",
+    "Solver completions do not establish human difficulty or accessibility."
+  ],
+  "servedRuntimeBefore": {
+    "baseURL": "http://127.0.0.1:8790",
+    "passed": true,
+    "sha256": "6e6fa53c939a39b0abb5216a804b65bdfd1fb35a8638a8f5326fe67322c04e6c",
+    "fileCount": 13,
+    "verifiedAt": "2026-10-01T02:00:45.616Z"
+  },
+  "exitCode": 0,
+  "signal": null,
+  "sourceUnchanged": true,
+  "servedRuntime": {
+    "baseURL": "http://127.0.0.1:8790",
+    "passed": true,
+    "sha256": "6e6fa53c939a39b0abb5216a804b65bdfd1fb35a8638a8f5326fe67322c04e6c",
+    "fileCount": 13,
+    "verifiedAt": "2026-10-01T02:02:11.864Z"
+  },
+  "finishedAt": "2026-10-01T02:02:11.864Z"
+}

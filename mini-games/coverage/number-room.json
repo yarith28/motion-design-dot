@@ -1,11 +1,11 @@
 {
   "suite": "number-room",
-  "testedAt": "2026-09-30T16:38:35.346Z",
+  "testedAt": "2026-10-01T02:02:41.123Z",
   "browser": "Chromium",
   "limitations": [
     "Mobile viewport/touch emulation, not physical device",
     "Other browser engines untested",
-    "Seeded puzzle chapters repeat on replay"
+    "Curated puzzle chapters repeat on replay; Merge Garden uses random spawns"
   ],
   "games": [
     {
@@ -29,8 +29,8 @@
       "desktop": true,
       "storageFailures": true,
       "checks": [
-        "128 reached with 82 legal slides (desktop), 0 retries",
-        "128 reached with 80 legal slides (mobile), 0 retries",
+        "128 reached with 91 legal slides (desktop), 0 retries",
+        "128 reached with 93 legal slides (mobile), 0 retries",
         "All chapters completed through legal UI input; invalid input, repeated restart, record persistence, storage failure, reduced motion, 320px layout, navigation, no page errors."
       ]
     },
@@ -48,6 +48,18 @@
     },
     {
       "id": "fraction-balance",
+      "passed": true,
+      "completed": true,
+      "restart": true,
+      "mobile": true,
+      "desktop": true,
+      "storageFailures": true,
+      "checks": [
+        "All chapters completed through legal UI input; invalid input, repeated restart, record persistence, storage failure, reduced motion, 320px layout, navigation, no page errors."
+      ]
+    },
+    {
+      "id": "matchstick-equation",
       "passed": true,
       "completed": true,
       "restart": true,
@@ -168,18 +180,6 @@
     },
     {
       "id": "coordinate-courier",
-      "passed": true,
-      "completed": true,
-      "restart": true,
-      "mobile": true,
-      "desktop": true,
-      "storageFailures": true,
-      "checks": [
-        "All chapters completed through legal UI input; invalid input, repeated restart, record persistence, storage failure, reduced motion, 320px layout, navigation, no page errors."
-      ]
-    },
-    {
-      "id": "matchstick-equation",
       "passed": true,
       "completed": true,
       "restart": true,

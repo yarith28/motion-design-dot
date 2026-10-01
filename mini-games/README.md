@@ -1,6 +1,6 @@
 # Small Hours
 
-A small, expandable browser arcade with 100 finished games. The catalog is `index.html`, with working All / Adventure / Reflex / Memory / Puzzle / Strategy filters. Every displayed game is playable.
+A small, expandable browser arcade with 100 playable games. The catalog is `index.html`, with working All / Adventure / Reflex / Memory / Puzzle / Strategy filters. Every displayed game is playable.
 
 ## Play locally
 
@@ -181,13 +181,38 @@ Three reviewers played 19 distinct sample games using visible instructions and n
 
 ## Arcade Room release batch
 
-Fifteen action and sports games add snake, paddle rally, mini-golf, basketball, curling, flight, lunar landing, inertial cargo towing, selective reaction, rhythm, pinball, rope jumping, billiards, beam balancing and fishing. All15 passed full winning desktop/mobile rounds and alternate loss rounds, repeated restart, pause/background freeze, storage failures, keyboard/touch controls and responsive bounds. Resume focus and landing instruction units were corrected after independent ordinary play. Evidence: `coverage/arcade-room.json`; reproducible test: `tests/arcade-room.cjs`. Automated wins use legal controls, virtual time and read-only observations; these establish reachable outcomes, not human difficulty.
+Fifteen action and sports games add snake, paddle rally, mini-golf, basketball, curling, flight, lunar landing, inertial cargo towing, selective reaction, rhythm, pinball, rope jumping, billiards, beam balancing and fishing. The historical suite passed full winning desktop and mobile-viewport rounds plus desktop alternate loss rounds, repeated restart, pause/background freeze, storage failures and responsive bounds. Mobile full rounds used keyboard/mouse solvers after a separate touch-control smoke check; they were not touch-only completions. Resume focus and landing instruction units were corrected after independent ordinary play. Evidence: `coverage/arcade-room.json`; reproducible test: `tests/arcade-room.cjs`. Automated wins use legal controls, virtual time and read-only observations; these establish reachable outcomes, not human difficulty.
 
 ## Complete collection evidence
 
-`inventory.json` lists all100 actual routes and mechanics. `coverage/index.json` maps every entry to full desktop and mobile completion evidence. The original ten game implementations and `motion-showcase/` remain unchanged by the90-game expansion. New games use local browser assets and need no build or external service. The Pages workflow verifies source bytes, root redirect, all catalog routes on desktop/mobile, Grid/List preference, search/filter counts, image loading, reduced motion, blocked storage and responsive containment. Live checks launch and restart the new games; full rounds are the separate local suites. `progress.json` identifies the last verified deployment; pushing a commit alone is not deployment proof.
+`inventory.json` lists all100 actual routes and mechanics. `coverage/index.json` now maps entries to current source-content-matched suite results; missing, failed or stale evidence is marked unverified and makes the index command fail. Mobile-viewport completion and touch gameplay completion are separate fields. The original ten game implementations and `motion-showcase/` remain unchanged by the90-game expansion. New games use local browser assets and need no build or external service. The Pages workflow verifies source bytes, root redirect, all catalog routes on desktop/mobile, Grid/List preference, search/filter counts, image loading, reduced motion, blocked storage and responsive containment. Live checks launch and restart the new games; full rounds are the separate local suites. `progress.json` identifies the last verified deployment; pushing a commit alone is not deployment proof.
 
 
 ## Verified live100-game release
 
-The full collection is live at https://yarith28.github.io/motion-design-dot/mini-games/ . Release `0821d41f2f1cf88b3cc92727a2bcc67cecf53010` passed the [live browser workflow](https://github.com/yarith28/motion-design-dot/actions/runs/36751272054):200 game/viewport checks,159 matching runtime assets, no browser or asset failures. The root redirect, all100 entry links, catalog controls and desktop/mobile rendering were verified against the actual GitHub Pages site. The captured report is `coverage/live-release.json`. This release reference is intentionally immutable; subsequent documentation commits record evidence without changing gameplay.
+The full collection is live at https://yarith28.github.io/motion-design-dot/mini-games/ . Release `0821d41f2f1cf88b3cc92727a2bcc67cecf53010` passed the [live browser workflow](https://github.com/yarith28/motion-design-dot/actions/runs/36751272054):200 game/viewport checks,159 matching runtime assets, no browser or asset failures. The root redirect, all100 entry links, catalog controls and desktop/mobile rendering were verified against the actual GitHub Pages site. The captured report is `coverage/live-release.json`. This is historical publication evidence for the named release. Later gameplay fixes require fresh local evidence and a new successful live workflow; this record does not certify changed source.
+
+
+## Current verification gate (October 2026)
+
+Earlier verification sections are historical run notes, not proof for changed source. The current gate requires a successful execution of each suite through the provenance runner, then a clean aggregate:
+
+```sh
+# Start a static server from the repository root before running suites.
+export BASE_URL=http://127.0.0.1:8765
+for suite in browser signal-mobile-complete collection afterglow lantern-lines tide-pool word-weave sky-stack pebble-post spatial-room logic-room number-room word-room strategy-room arcade-room; do
+  node mini-games/tools/run-suite.cjs "$suite" || exit 1
+done
+node mini-games/tools/coverage-index.cjs
+node mini-games/tests/evidence-index.cjs
+node mini-games/tests/evidence-assets.cjs
+```
+
+`coverage/suite-runs/*.json` records actual suite exit status, start/end time, Chromium version, input/solver method, and a hash of relevant runtime and test sources. The runner byte-compares every relevant runtime asset served by BASE_URL with local files before and after testing, and records the verified URL and asset hash. It supplies BASE_URL consistently (default http://127.0.0.1:8790). A failed or interrupted rerun supersedes an older pass. Runtime or test changes invalidate affected records. Generated coverage, progress metadata and documentation are excluded from hashing, so recording results does not invalidate them. Partial/resumed runs cannot certify a full suite. No pass is inferred from README prose.
+
+A desktop or mobile-viewport completion means the suite reached its asserted full result; competitive strategy results may be losses. Touch gameplay means the completion's game actions use touch (scripted navigation may use other controls). Arcade full rounds use keyboard/mouse in the mobile viewport; Afterglow uses DOM-set aiming; Number Room mixes touch and keyboard/range actions; Word Room mixes touch and programmatic text entry. These are explicitly not touch-only completion claims. Solvers, hidden-answer observation and controlled clocks prove reachable results and regression behavior, not human difficulty, screen-reader access or physical iPhone/Safari compatibility. Live launch/reset smoke and ordinary-play samples remain separate evidence categories.
+
+
+## Independent review fixes
+
+See [REVIEW-FIXES.md](REVIEW-FIXES.md) for the October 1 interaction, gameplay, nonvisual-state and evidence-reporting corrections, regression methods and remaining depth work. The live workflow now runs the reviewed-issue regressions after matching deployed source bytes, in Chromium and WebKit; successful runs are browser-engine evidence, not physical-device or screen-reader certification.

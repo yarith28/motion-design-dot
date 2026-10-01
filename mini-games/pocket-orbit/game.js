@@ -27,6 +27,7 @@
     $('dial-label').textContent = `ORBIT ${round+1} / 8`; $('dial-value').textContent = 'LOCK IN'; $('direction').textContent = 'Clockwise / find the notch';
     $('message').textContent = 'Stop inside the lime arc. Aim for its center notch.';
     $('action').disabled = false; actionLabel('Lock orbit'); stats(); draw();
+    if (document.activeElement === $('dial-value')) $('action').focus({preventScroll:true});
   }
   function start() {
     round = score = misses = 0; results = []; wait = 0; last = null;
@@ -60,6 +61,10 @@
       state = beforePause; last = null; $('pause').textContent = 'Pause'; $('action').disabled = state !== 'playing';
       $('dial-value').textContent = state === 'playing' ? 'LOCK IN' : results.at(-1) === 'hit' ? 'LOCKED' : 'MISSED';
       $('message').textContent = 'Back in orbit. Find your moment.';
+      // A resumed feedback interval has no enabled action yet. Keep Space away
+      // from Pause, then restore action focus when the next orbit is ready.
+      if (state === 'playing') $('action').focus({preventScroll:true});
+      else { $('dial-value').tabIndex = -1; $('dial-value').focus({preventScroll:true}); }
     }
   }
   function frame(now) {

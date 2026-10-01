@@ -1,0 +1,10 @@
+/* Synthetic fixture validates served-byte gate without altering real reports. */
+const fs=require('node:fs'),path=require('node:path'),os=require('node:os'),http=require('node:http'),assert=require('node:assert/strict'),{spawn}=require('node:child_process');
+(async()=>{const temp=fs.mkdtempSync(path.join(os.tmpdir(),'small-hours-assets-')),source=path.resolve(__dirname,'..'),root=path.join(temp,'mini-games');let server;
+try{fs.cpSync(source,root,{recursive:true,filter:p=>!p.split(path.sep).includes('coverage')});fs.writeFileSync(path.join(root,'tests/browser.cjs'),'/* synthetic fixture, not a game completion */ process.exit(0);\n');let mismatched=true;
+server=http.createServer((req,res)=>{const file=path.join(temp,decodeURIComponent(req.url));if(mismatched){res.end('deliberately different fixture bytes');return;}try{res.end(fs.readFileSync(file));}catch{res.writeHead(404);res.end();}});await new Promise(r=>server.listen(0,'127.0.0.1',r));
+const run=()=>new Promise((resolve,reject)=>{const child=spawn(process.execPath,[path.join(root,'tools/run-suite.cjs'),'browser'],{env:{...process.env,BASE_URL:'http://127.0.0.1:'+server.address().port},stdio:'pipe'});let output='';child.stdout.on('data',d=>output+=d);child.stderr.on('data',d=>output+=d);child.on('error',reject);child.on('close',code=>resolve({code,output,record:JSON.parse(fs.readFileSync(path.join(root,'coverage/suite-runs/browser.json')))}));});
+let result=await run();assert.equal(result.code,1);assert.equal(result.record.passed,false);assert.match(result.record.error,/does not match source/);assert.equal(result.record.exitCode,undefined,'mismatched assets stop before suite');
+mismatched=false;result=await run();assert.equal(result.code,0,result.output);assert.equal(result.record.servedRuntime.passed,true);assert(require(path.join(root,'tools/evidence.cjs')).validRun(result.record,'browser'));
+console.log('Served-source fixture: wrong bytes reject before suite; exact bytes accepted with explicit synthetic child result.');
+}finally{if(server)await new Promise(r=>server.close(r));fs.rmSync(temp,{recursive:true,force:true});}})().catch(e=>{console.error(e);process.exit(1)});

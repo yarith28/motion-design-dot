@@ -40,7 +40,8 @@
     moves = 0,
     ended = false,
     state = {},
-    history = [];
+    history = [],
+    sequencePositions = [];
   const fmt = (n) =>
     Number.isInteger(n) ? String(n) : String(Math.round(n * 1000) / 1000);
   const fraction = (n) =>
@@ -137,6 +138,12 @@
   function restart() {
     chapter = 0;
     score = 0;
+    if (game.id === "sequence-detective") {
+      // Cover every answer slot so repeating one position cannot solve a session.
+      sequencePositions = SmallHours.shuffle([
+        0, 1, 2, 3, Math.floor(Math.random() * 4),
+      ]);
+    }
     begin();
   }
   $("restart").onclick = restart;
@@ -666,8 +673,8 @@
     },
   };
   engines["sequence-detective"] = {
-    init: () =>
-      [
+    init() {
+      const puzzle = [
         {
           terms: [2, 5, 11, 23],
           answer: 47,
@@ -698,7 +705,13 @@
           choices: [19, 20, 21, 25],
           clue: "Each gap grows by one.",
         },
-      ][chapter],
+      ][chapter];
+      const choices = SmallHours.shuffle(
+        puzzle.choices.filter((n) => n !== puzzle.answer),
+      );
+      choices.splice(sequencePositions[chapter], 0, puzzle.answer);
+      return { ...puzzle, choices };
+    },
     render() {
       scene.innerHTML =
         target("What comes next?", state.terms.join(" · ") + " · ?") +
@@ -895,7 +908,11 @@
       const replacement = [...document.querySelectorAll("[data-action]")].find(
         (b) => b.dataset.action === fa && b.dataset.value === fv && !b.disabled,
       );
-      replacement?.focus({ preventScroll: true });
+      const nextCard = ["digit", "piece"].includes(fa)
+        ? scene.querySelector(`[data-action="${fa}"]:not(:disabled)`) ||
+          actions.querySelector('[data-action="check"]')
+        : null;
+      (replacement || nextCard)?.focus({ preventScroll: true });
     }
     if (!ended && matchSelect) {
       const replacement = scene.querySelector(

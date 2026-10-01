@@ -1,6 +1,6 @@
 {
   "room": "word-room",
-  "checkedAt": "2026-09-30T16:38:40.307Z",
+  "checkedAt": "2026-10-01T02:00:37.887Z",
   "browser": "Chromium",
   "method": "Unmodified browser UI; curated data and rendered DOM used by solvers.",
   "games": [
@@ -399,88 +399,17 @@
     "English curated offline dictionaries, not comprehensive language dictionaries.",
     "Chromium only; mobile device emulated, no physical device or screen-reader audit."
   ],
-  "passed": true,
-  "deepChecks": {
-    "passed": true,
-    "checks": [
-      "All curated crossword crossings, ladder steps, center dictionaries and endpoint chains validated.",
-      "Hangman six-miss loss, repeated guesses, terminal input guard and restart.",
-      "Cipher duplicate mapping guard, keyboard clear and20-point hint cost.",
-      "Ladder undo; word-search arrow focus, Enter selection and cancellation; crossword arrow navigation.",
-      "Sentence keyboard focus, Space selection and removal.",
-      "Twenty-five generated alphabet boards have25 unique letters and full orthogonal solution.",
-      "Best score persists after reload.",
-      "Write-only quota failure preserves session best and completion."
-    ]
-  },
-  "targetedRetests": [
-    {
-      "passed": true,
-      "games": [
-        {
-          "id": "compound-works",
-          "passed": true,
-          "completed": true,
-          "restart": true,
-          "invalidInput": true,
-          "legalInput": true,
-          "mobile": false,
-          "storageBlocked": false,
-          "reducedMotion": false,
-          "noOverflow": true,
-          "noPageErrors": true
-        },
-        {
-          "id": "compound-works",
-          "passed": true,
-          "completed": true,
-          "restart": true,
-          "invalidInput": true,
-          "legalInput": true,
-          "mobile": true,
-          "storageBlocked": true,
-          "reducedMotion": true,
-          "noOverflow": true,
-          "noPageErrors": true
-        }
-      ],
-      "reason": "Replacement compound pack removes alternative SNOWBALL/FOOTMAN solution."
-    },
-    {
-      "passed": true,
-      "games": [
-        {
-          "id": "proofreader",
-          "passed": true,
-          "completed": true,
-          "restart": true,
-          "invalidInput": true,
-          "legalInput": true,
-          "mobile": false,
-          "storageBlocked": false,
-          "reducedMotion": false,
-          "noOverflow": true,
-          "noPageErrors": true
-        },
-        {
-          "id": "proofreader",
-          "passed": true,
-          "completed": true,
-          "restart": true,
-          "invalidInput": true,
-          "legalInput": true,
-          "mobile": true,
-          "storageBlocked": true,
-          "reducedMotion": true,
-          "noOverflow": true,
-          "noPageErrors": true
-        }
-      ],
-      "reason": "Changed valid verb shelve to actual misspelling shelv."
-    }
+  "deepChecks": [
+    "All curated crossword crossings, ladder steps, center dictionaries and endpoint chains validated.",
+    "Hangman loss, repeated guesses, terminal input guard and restart verified.",
+    "Cipher uniqueness, keyboard clearing and hint cost verified.",
+    "Ladder undo verified.",
+    "Word-search arrow focus, Enter selection and cancel verified.",
+    "Crossword arrow navigation skips black squares.",
+    "Sentence keyboard focus, Space input and removal verified.",
+    "Twenty-five generated alphabet boards checked for unique letters and full orthogonal solution.",
+    "Best score persists after reload.",
+    "Write-only storage quota failure retains session best and completion."
   ],
-  "visualReview": [
-    "Desktop crossword and cipher layouts reviewed.",
-    "320px mobile cipher and word-segmentation layouts reviewed."
-  ]
+  "passed": true
 }

@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 2,
+  "suite": "word-weave",
+  "passed": true,
+  "status": "passed",
+  "startedAt": "2026-10-01T02:00:56.029Z",
+  "source": {
+    "sha256": "dd3db5c4a765e44fcdc9935029fcca968ef8e54fe8f42425026f659ffb708046",
+    "files": [
+      "catalog.css",
+      "catalog.js",
+      "common.js",
+      "index.html",
+      "inventory-plan.json",
+      "inventory.json",
+      "play.css",
+      "styles.css",
+      "tests/word-weave.cjs",
+      "tools/evidence.cjs",
+      "tools/run-suite.cjs",
+      "word-weave/game.css",
+      "word-weave/game.js",
+      "word-weave/index.html"
+    ]
+  },
+  "requestedBaseURL": "http://127.0.0.1:8790",
+  "browser": {
+    "engine": "Chromium",
+    "version": "Chromium 151.0.7922.173 built on Debian GNU/Linux 13 (trixie)",
+    "executable": "/usr/bin/chromium"
+  },
+  "scope": {
+    "desktopCompletion": true,
+    "mobileViewportCompletion": true,
+    "touchGameplayCompletion": true,
+    "touchControlSmoke": true,
+    "completionMeans": "winning full progression",
+    "method": "scripted UI; curated answers or board solvers",
+    "mobileMethod": "touch gameplay with scripted navigation/solvers"
+  },
+  "games": [
+    "word-weave"
+  ],
+  "limits": [
+    "Mobile is Chromium viewport/touch emulation, not Safari or a physical device.",
+    "Solver completions do not establish human difficulty or accessibility."
+  ],
+  "servedRuntimeBefore": {
+    "baseURL": "http://127.0.0.1:8790",
+    "passed": true,
+    "sha256": "a69e6b694e735b3ba6457f70d7246df10b71bd790eeb1094b11b83dfbeafe69f",
+    "fileCount": 11,
+    "verifiedAt": "2026-10-01T02:00:56.966Z"
+  },
+  "exitCode": 0,
+  "signal": null,
+  "sourceUnchanged": true,
+  "servedRuntime": {
+    "baseURL": "http://127.0.0.1:8790",
+    "passed": true,
+    "sha256": "a69e6b694e735b3ba6457f70d7246df10b71bd790eeb1094b11b83dfbeafe69f",
+    "fileCount": 11,
+    "verifiedAt": "2026-10-01T02:01:39.183Z"
+  },
+  "finishedAt": "2026-10-01T02:01:39.183Z"
+}
