@@ -1,0 +1,16 @@
+import {engines} from './engines.mjs';
+const games=await(await fetch('./games.json')).json(),id=new URLSearchParams(location.search).get('game')||games[0].id,g=games.find(x=>x.id===id)||games[0],engine=engines[g.id];
+const $=s=>document.querySelector(s),board=$('#board');document.title=g.name+' — Small Hours';$('h1').textContent=g.name;$('#description').textContent=g.description;document.body.dataset.gameId=g.id;
+g.rules.forEach(t=>{let li=document.createElement('li');li.textContent=t;$('#rules').append(li)});
+let stage=0,s=null,history=[],started=false;
+function el(tag,text,parent=board){const e=document.createElement(tag);e.textContent=text;parent.append(e);return e}
+function render(focus){board.replaceChildren();$('#intro').hidden=started;board.hidden=!started;$('#result').hidden=true;$('#undo').disabled=!history.length||s?.outcome!=='playing';$('#reset').disabled=!started;document.body.dataset.outcome=s?.outcome==='win'&&stage<2?'study-win':s?.outcome||'intro';$('#scoreboard').textContent=`Study ${stage+1} / 3${s?' · '+(s.title||''):' · Ready when you are'}`;
+ if(!s)return;
+ let group=board;const c={p:t=>el('p',t),h:t=>el('h3',t),pre:t=>el('pre',t),table:(heads,rows)=>{const w=el('div','');w.className='table-wrap';const table=el('table','',w),tr=el('tr','',el('thead','',table));heads.forEach(x=>el('th',x,tr));let b=el('tbody','',table);rows.forEach(r=>{let row=el('tr','',b);r.forEach(x=>el('td',String(x),row))})},group:()=>{group=el('div','');group.className='buttons'},button:(key,label,disabled=false,selected=undefined)=>{if(group===board)c.group();let b=el('button',label,group);b.dataset.action=key;b.disabled=disabled||s.outcome!=='playing';if(selected!==undefined)b.setAttribute('aria-pressed',String(selected));b.addEventListener('click',()=>act(key));return b}};
+ engine.render(c,s);$('#status').textContent=s.note||'';
+ if(s.outcome!=='playing'){const won=s.outcome==='win';$('#result').hidden=false;$('#result-title').textContent=won?(stage===2?'Three studies complete.':'Study complete.'):'A new approach awaits.';$('#result-copy').textContent=s.note;$('#next').hidden=!won||stage===2;$('#again').textContent=won&&stage<2?'Restart all studies':'Try a fresh journey';$('#result').focus()}
+ else if(focus){const b=board.querySelector(`[data-action="${CSS.escape(focus)}"]`);if(b&&!b.disabled)b.focus();else{const next=board.querySelector('button:not(:disabled)');next?.focus()}}
+}
+function act(key){if(!s||s.outcome!=='playing')return;const before=structuredClone(s);engine.act(s,key);if(JSON.stringify(before)!==JSON.stringify(s))history.push(before);render(key)}
+function begin(){started=true;stage=0;s=engine.init(0);history=[];render();board.querySelector('button:not(:disabled)')?.focus()}
+$('#start').onclick=begin;$('#restart').onclick=begin;$('#again').onclick=begin;$('#next').onclick=()=>{if(s.outcome!=='win'||stage>=2)return;stage++;s=engine.init(stage);history=[];render();board.querySelector('button:not(:disabled)')?.focus()};$('#reset').onclick=()=>{s=engine.init(stage);history=[];render();board.querySelector('button:not(:disabled)')?.focus()};$('#undo').onclick=()=>{if(history.length&&s.outcome==='playing'){s=history.pop();render();board.querySelector('button:not(:disabled)')?.focus()}};render();document.body.dataset.gameReady='true';

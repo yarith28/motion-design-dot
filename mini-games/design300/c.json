@@ -1,0 +1,831 @@
+{
+  "scope": "DESIGN ONLY; no implementation approved; all200 inventory read, original rules and nearest kinetic engines inspected; final remediated-baseline recheck required",
+  "requested": 25,
+  "drafted": 25,
+  "acceptedCount": 0,
+  "rejected": [
+    "C16"
+  ],
+  "independentReview": "Independent uniqueness and depth reviewers provisionally accept24substantive designs with explicit implementation gates; C16 rejected. A05 withdrawn as duplicate of C13. Final remediated200 comparison outstanding. All QA described here remains future acceptance work, not executed evidence.",
+  "globalQA": "All QA are future acceptance requirements, not claims of executed playtests. UI traces must be authored from visible rules/state; no internal state injection, answer readout or solver-probe guided wins. Each accepted game needs ordinary keyboard and touch-sized control completion, legitimate failure, restart, focus safety, pause/blur behavior where applicable,320px viewport and readable status.",
+  "items": [
+    {
+      "id": "C01",
+      "name": "Falling Foundry",
+      "core": "Rotate and translate falling tetrominoes into a persistent well; full rows disappear and overhang holes survive.",
+      "stateActions": "10\u00d716 occupancy, active piece orientation, next3, hold slot and lock state; move, rotate, soft/hard drop, hold once per piece.",
+      "decisions": "Trade immediate row clear against future cavity access; reserve a useful piece; choose stack surface for known upcoming pieces.",
+      "depth": "Three authored fair bags followed by seeded bags; target10 rows. Must contain forced lateral placement and a recoverable buried cavity; no all-I bags.",
+      "winLoss": "Clear10 rows wins; occupied spawn loses.",
+      "controls": "Arrows move/rotate, Z reverse rotate, explicit Hold/Drop; touch six buttons. All actions have named touch buttons and Tab/Enter activation; game keyboard shortcuts operate only while board owns focus. Escape pauses; returning from background requires explicit resume.",
+      "accessibility": "Shape and text accompany color; adjustable pace and pause; reduced decorative motion; persistent controls and focus; concise live result announcements. Ghost landing silhouette; turn-paced drop mode offers exactly the same placements without reflex demand; full textual board.",
+      "qa": [
+        "Required named teaching scenario: Notched Well: a sideways cavity is accessible before but not after dropping the square from preview; compare hold-square then rotate-L against square-first, complete target rows in the former and demonstrate buried hole in the latter.",
+        "Win10 rows through public controls, using hold and two distinct rotations; record actual input trace.",
+        "Build one-column tower until spawn blocks: loss, no extra piece spawning.",
+        "Demonstrate clearing below an overhang moves every cell correctly; controls remain usable at320px."
+      ],
+      "existingNeighbors": [
+        {
+          "id": "sky-stack",
+          "distinction": "Sky Stack trims timed horizontal slab overhang; this uses polyomino orientation, cavities, row removal and lookahead."
+        },
+        {
+          "id": "tangram-dock",
+          "distinction": "Irreversible sequential arrivals and line removal change remaining packing space, unlike arranging supplied fixed pieces."
+        }
+      ],
+      "proposalNeighbors": [
+        "C02 removes matched symbols; C01 fills complete rows irrespective of piece identity."
+      ],
+      "risks": "Wall kicks must be documented and modest; random bags require reachability and ordinary play evidence, not a solver-only target.",
+      "status": "provisionally accepted by independent uniqueness and depth reviewers; defining-mechanic implementation gates and final remediated200 comparison outstanding"
+    },
+    {
+      "id": "C02",
+      "name": "Cascade Orchard",
+      "core": "Swap adjacent symbols to create horizontal/vertical triples; simultaneous matches clear and gravity refills, with objectives embedded below layered blockers.",
+      "stateActions": "8\u00d78 symbols, blockers with1\u20132 layers, limited18 swaps and visible refill stream; choose neighboring swap, undo before commit only.",
+      "decisions": "Create a future double match or a gravity cascade; clear a blocker that changes which symbols can reach lower goals.",
+      "depth": "Three distinct boards, including a cascade needed within budget; refill deterministic and previewed so planning dominates luck.",
+      "winLoss": "Remove all marked blockers within18 valid swaps wins; budget exhausted loses; invalid swap costs nothing.",
+      "controls": "Tap source and adjacent cell; roving grid arrows+Enter. All actions have named touch buttons and Tab/Enter activation; game keyboard shortcuts operate only while board owns focus. Escape pauses; returning from background requires explicit resume.",
+      "accessibility": "Shape and text accompany color; adjustable pace and pause; reduced decorative motion; persistent controls and focus; concise live result announcements. Each symbol has a letter and geometric mark; announce matched cells and settled board.",
+      "qa": [
+        "Required named teaching scenario: Cross Beneath Stone: choose between immediate horizontal triple away from objective and setup swap that drops a vertical triple beneath the two-layer blocker; only the latter permits win within remaining3moves.",
+        "Win each board without hints/internal state; at least one win must depend on a two-stage cascade.",
+        "Use legal nonobjective swaps until18; explicit failure and correct restart.",
+        "Verify simultaneous row/column intersection counted once and refill creates no instant unsolicited victory."
+      ],
+      "existingNeighbors": [
+        {
+          "id": "merge-garden",
+          "distinction": "Choose one adjacent pair and clear runs; no whole-board sliding or equal-number fusion."
+        },
+        {
+          "id": "three-of-a-kind",
+          "distinction": "Spatial adjacency and persistent gravity-generated future board, not selecting any relational triple."
+        }
+      ],
+      "proposalNeighbors": [
+        "C03 shoots into hex attachment graph and drops unsupported branches; C02 exchanges existing neighbors in a gravity grid."
+      ],
+      "risks": "Avoid power-up clutter and randomized unwinnable refill; matching alone is not enough unless cascades and objective obstruction matter.",
+      "status": "provisionally accepted by independent uniqueness and depth reviewers; defining-mechanic implementation gates and final remediated200 comparison outstanding"
+    },
+    {
+      "id": "C03",
+      "name": "Bubble Canopy",
+      "core": "Shoot a colored bubble to attach to a hex canopy; groups of3+ pop and any cluster disconnected from ceiling drops.",
+      "stateActions": "Fixed hex attachment grid, aim angle, current/next2 bubbles, canopy support graph and lower danger line; aim/fire and one held bubble.",
+      "decisions": "Choose direct cluster growth versus removing a narrow support; use bank shot to reach behind a branch; conserve rare color.",
+      "depth": "Three canopies with alternative supports; one requires a bank shot and one needs preparation before a major drop.",
+      "winLoss": "Clear all marked nest bubbles in18 shots wins; canopy crosses danger line or shot budget expires loses.",
+      "controls": "Aim slider and Left/Right; Fire button; touch slider+nudge buttons. All actions have named touch buttons and Tab/Enter activation; game keyboard shortcuts operate only while board owns focus. Escape pauses; returning from background requires explicit resume.",
+      "accessibility": "Shape and text accompany color; adjustable pace and pause; reduced decorative motion; persistent controls and focus; concise live result announcements. Aim preview stops at first contact; letters identify colors, textual cluster/support descriptions; no time pressure.",
+      "qa": [
+        "Required named teaching scenario: Two Roots: nest hangs from two differently colored supports; popping only left support must not drop nest, whereas prepared right-bank shot removes final support and does.",
+        "Win with a bank shot and a support-drop chain via only aim/fire/hold UI.",
+        "Deliberately attach ineffective bubbles until danger line or18 shots; verify loss without scoring falsely.",
+        "Check touching-but-not-connected diagonal slots never count as ceiling support."
+      ],
+      "existingNeighbors": [
+        {
+          "id": "afterglow",
+          "distinction": "Shots remain as graph vertices and same-color connected groups remove whole unsupported components; no repeated HP damage by bouncing volley."
+        },
+        {
+          "id": "soft-sculpt",
+          "distinction": "Create graph nodes with colored attachment projectiles before removing groups, rather than choose four existing bonds to cut."
+        }
+      ],
+      "proposalNeighbors": [
+        "C02 matches runs after adjacent swapping; canopy uses graph connectivity and shot-created positions."
+      ],
+      "risks": "Nearest graph-removal and aiming neighbors need source comparison; do not turn game into Afterglow with colored targets.",
+      "status": "provisionally accepted by independent uniqueness and depth reviewers; defining-mechanic implementation gates and final remediated200 comparison outstanding"
+    },
+    {
+      "id": "C04",
+      "name": "Step and Spring",
+      "core": "Direct variable-height jumps with coyote-time and air steering over moving and one-way platforms; landing resets jump permission.",
+      "stateActions": "Avatar position/velocity, grounded support and platform phase; left/right, hold/release jump.",
+      "decisions": "Choose takeoff edge, jump duration and landing momentum; deliberately drop through one-way platform to access a lower route.",
+      "depth": "Three short chambers demand low-ceiling short hop, moving-platform carry and falling through one-way deck; checkpoints between chambers.",
+      "winLoss": "Reach bell in all3 chambers wins; spikes/fall lose a life, three lives lose run.",
+      "controls": "Left/right, Jump, Drop buttons; arrows/Z/Down. All actions have named touch buttons and Tab/Enter activation; game keyboard shortcuts operate only while board owns focus. Escape pauses; returning from background requires explicit resume.",
+      "accessibility": "Shape and text accompany color; adjustable pace and pause; reduced decorative motion; persistent controls and focus; concise live result announcements. Slow simulation option; hazards shaped+labelled; platform phase text; no mandatory simultaneous touch chords (latched direction option).",
+      "qa": [
+        "Required named teaching scenario: Low Roof to Ferry: tall jump hits roof and falls short; release jump early to land on moving support, wait until it carries past wall, then jump to one-way deck and drop through for key.",
+        "Ordinary keyboard win across all3 chambers, including short hop and moving-support transfer; repeat using touch-sized buttons.",
+        "Walk off unprotected edge three times: terminal loss; checkpoints do not restore spent lives.",
+        "Jump on focused restart must not also activate restart; release on blur clears held input."
+      ],
+      "existingNeighbors": [
+        {
+          "id": "gravity-boots",
+          "distinction": "Jump initiation requires contact and variable impulse; gravity stays fixed and one-way/moving support matters."
+        },
+        {
+          "id": "kite-flight",
+          "distinction": "Grounded takeoff/landing cycles and route choice replace continuous hold-to-rise flight."
+        }
+      ],
+      "proposalNeighbors": [
+        "C19 transports player on moving supports in discrete cross-lane hops; C04 uses vertical velocity and jump arcs."
+      ],
+      "risks": "Generic platform layout alone is insufficient: all defining mechanics must be unavoidable in at least one chamber.",
+      "status": "provisionally accepted by independent uniqueness and depth reviewers; defining-mechanic implementation gates and final remediated200 comparison outstanding"
+    },
+    {
+      "id": "C05",
+      "name": "Lantern Lanes",
+      "core": "Clear pellets in a maze while distinct pursuers chase; scarce power pellets reverse contact danger for a short interval.",
+      "stateActions": "Maze pellet set, avatar junction, three enemies with public chase/scatter behavior, power remaining,3 lives.",
+      "decisions": "Plan a sweep avoiding future dead-end traps; delay power pickup until enemies congregate; decide whether to reverse for stragglers.",
+      "depth": "Two mazes with loops and escape bottlenecks; enemies obey different observable targets and never teleport.",
+      "winLoss": "Collect all pellets then exit wins; third unpowered enemy contact loses.",
+      "controls": "Four movement buttons/arrows; queued turns accepted before junction. All actions have named touch buttons and Tab/Enter activation; game keyboard shortcuts operate only while board owns focus. Escape pauses; returning from background requires explicit resume.",
+      "accessibility": "Shape and text accompany color; adjustable pace and pause; reduced decorative motion; persistent controls and focus; concise live result announcements. Enemy target rules explained in text; icons/shapes; slow and one-tick step mode, turn preview; no flashing power state.",
+      "qa": [
+        "Required named teaching scenario: Last Corridor: two pellets remain in a dead end; taking power before distant enemy arrival wastes its window, delaying pickup until pursuer commits permits clear and escape.",
+        "Win both maps by ordinary route selection; evidence must include power-state enemy contact and return to danger.",
+        "Stand in enemy route with no power until3 lives lost; immunity prevents repeated loss in same collision.",
+        "Remaining pellet count matches visible board and reset restores all pellets."
+      ],
+      "existingNeighbors": [
+        {
+          "id": "lantern-heist",
+          "distinction": "Pursuers target player and blocking coverage dynamically; no fixed rotating sightlines/noise-decoy stealth. Power changes collision polarity."
+        },
+        {
+          "id": "velvet-snake",
+          "distinction": "Independent adversarial pursuit and finite map sweeping, no growing self-collision body."
+        }
+      ],
+      "proposalNeighbors": [
+        "C14 controls a repulsion field to move a flock rather than fleeing pursuers."
+      ],
+      "risks": "Avoid trivial perimeter-only sweep or power chain lasting entire map; pursuit behavior must produce credible recoverable traps.",
+      "status": "provisionally accepted by independent uniqueness and depth reviewers; defining-mechanic implementation gates and final remediated200 comparison outstanding"
+    },
+    {
+      "id": "C06",
+      "name": "Threaded Return",
+      "core": "Navigate with a finite tether that wraps around posts; winding history changes reachable space even at the same avatar position.",
+      "stateActions": "Avatar cell, ordered rope contact stack, fixed anchor, post corners and remaining slack; move cardinally and optionally retrace.",
+      "decisions": "Choose which side of a post to pass; spend slack on an objective detour; unwind a loop before attempting opposite corridor.",
+      "depth": "Three gardens require return past posts with different winding routes; exact rope path persists and must be readable.",
+      "winLoss": "Retrieve3tags and return anchor with tether intact wins. No terminal-loss fiction: an attempted overlength step is a failed move with a visible slack deficit and unchanged state; player can recover by unwinding or restart.",
+      "controls": "Directional step buttons/arrows; inspect tether button. All actions have named touch buttons and Tab/Enter activation; game keyboard shortcuts operate only while board owns focus. Escape pauses; returning from background requires explicit resume.",
+      "accessibility": "Shape and text accompany color; adjustable pace and pause; reduced decorative motion; persistent controls and focus; concise live result announcements. Text rope contact order, segment lengths and slack; no precision drag needed.",
+      "qa": [
+        "Required named teaching scenario: Twin Posts: tag lies beyond clockwise loop; returning to same tile clockwise leaves insufficient slack for left tag, while reversing around first post restores slack and unlocks left route.",
+        "Win all3 layouts with a mandatory unwind shown in input trace.",
+        "Take wrong winding route to exhaust slack; verify blocked move and recover by reversing route; Failed move reports required/available slack without consuming input or corrupting rope; recovery remains possible.",
+        "Same avatar coordinate with different wrapping must expose different slack/reachable options."
+      ],
+      "existingNeighbors": [
+        {
+          "id": "spring-courier",
+          "distinction": "Tether is a persistent wrapping obstacle-history constraint, not an energy-pumping pendulum with release/catch."
+        },
+        {
+          "id": "cable-loom",
+          "distinction": "Revisiting cells and unwinding are essential; no Hamiltonian visit-once target."
+        }
+      ],
+      "proposalNeighbors": [
+        "C09 has configuration geometry but no path-history state."
+      ],
+      "risks": "Robust rope topology around corners is implementation risk; grid-based exact taut-rope model preferable to unstable continuous simulation. Independent depth review correctly identified that reversible movement cannot create permanent stranding; blocked failed attempt plus recovery is the honest puzzle failure model.",
+      "status": "provisionally accepted by independent uniqueness and depth reviewers; defining-mechanic implementation gates and final remediated200 comparison outstanding"
+    },
+    {
+      "id": "C07",
+      "name": "Magnetic Quartet",
+      "core": "Manipulate two movable field sources to guide positive and negative charged pucks concurrently into separate traps.",
+      "stateActions": "Four puck positions/velocities, two magnet positions/polarities, walls and capture sockets; move a magnet one grid step, invert its pole, advance one physics tick.",
+      "decisions": "A field pulling one puck repels another; temporarily park a puck behind a shield before steering its opposite charge; control overshoot using opposing source.",
+      "depth": "Three arenas with fixed field-shield obstacles and capture order choices; no per-puck control.",
+      "winLoss": "Capture all4 correct sockets wins; puck enters wrong irreversible trap or exits boundary loses.",
+      "controls": "Select magnet then arrows, Invert and Advance; touch equivalent. All actions have named touch buttons and Tab/Enter activation; game keyboard shortcuts operate only while board owns focus. Escape pauses; returning from background requires explicit resume.",
+      "accessibility": "Shape and text accompany color; adjustable pace and pause; reduced decorative motion; persistent controls and focus; concise live result announcements. Force arrows, charge signs and numerical position/velocity; fully stepwise so no drag/reflex demand.",
+      "qa": [
+        "Required named teaching scenario: Opposite Sockets: equal positive and negative pucks start adjacent; single fixed pole sends one wrong way; shield one, reverse pole, then brake the first with second magnet.",
+        "Ordinary-input win must steer both signs and deliberately cancel a velocity component; record tick trace.",
+        "Send positive puck into negative socket: terminal loss; no silent reset.",
+        "One magnet movement must measurably affect at least two uncaptured pucks, preventing independent knob puzzles."
+      ],
+      "existingNeighbors": [
+        {
+          "id": "star-tow",
+          "distinction": "Indirect shared force fields act simultaneously with opposite signs; no directly thrust-controlled craft."
+        },
+        {
+          "id": "wave-desk",
+          "distinction": "Dynamic state with velocity, collisions and irreversible captures, not selecting static amplitudes to match samples."
+        }
+      ],
+      "proposalNeighbors": [
+        "C14 repels agents by proximity but flock has self-propulsion/cohesion and no opposite charge/velocity dynamics."
+      ],
+      "risks": "Reject if independently controlled regions trivialize coupling; use deterministic bounded integration and display force behavior.",
+      "status": "provisionally accepted by independent uniqueness and depth reviewers; defining-mechanic implementation gates and final remediated200 comparison outstanding"
+    },
+    {
+      "id": "C08",
+      "name": "Span Workshop",
+      "core": "Build a load-bearing truss from pinned joints and tension/compression members; a moving test cart changes stresses across the span.",
+      "stateActions": "Joint positions on construction grid, members, material budget; add/remove beam or cable, test cart traverse.",
+      "decisions": "Triangulate to distribute load versus spend on stronger members; a tension cable cannot replace a compression strut; optimize moving-load worst case.",
+      "depth": "Three gaps with different anchor availability and load paths; allow several viable designs under budget.",
+      "winLoss": "Cart crosses without broken member or excess deflection wins; collapse during test fails attempt; editable retries.",
+      "controls": "Select two joints and Beam/Cable buttons; keyboard roving joints. All actions have named touch buttons and Tab/Enter activation; game keyboard shortcuts operate only while board owns focus. Escape pauses; returning from background requires explicit resume.",
+      "accessibility": "Shape and text accompany color; adjustable pace and pause; reduced decorative motion; persistent controls and focus; concise live result announcements. Text member force/capacity table and tension/compression labels; step test cart; no color-only stress.",
+      "qa": [
+        "Required named teaching scenario: Midspan Cart: cable under the deck goes slack in compression while a beam takes load; moving cart to opposite half reverses force on a diagonal, requiring material choice rather than connectivity.",
+        "Create a valid truss and run full crossing via public UI, not preloaded answer.",
+        "Test a deliberately unsupported middle deck: load failure during traverse; repair via UI and complete.",
+        "At least one beam changes from tension to compression as cart moves; cable-only replacement must fail."
+      ],
+      "existingNeighbors": [
+        {
+          "id": "balance-mobile",
+          "distinction": "Distributed structural load path under moving loads with material-specific force constraints, not static mass\u00d7arm equality."
+        },
+        {
+          "id": "soft-sculpt",
+          "distinction": "Construct a structure and assess load capacity, not merely connected-component survival after cuts."
+        }
+      ],
+      "proposalNeighbors": [
+        "C17 constructs propagation paths; structural equilibrium is independent of event reachability."
+      ],
+      "risks": "Largest simulation scope; simplified statically determinate trusses may be needed. Connectivity-only implementation is a rejection.",
+      "status": "provisionally accepted by independent uniqueness and depth reviewers; defining-mechanic implementation gates and final remediated200 comparison outstanding"
+    },
+    {
+      "id": "C09",
+      "name": "Corner Carry",
+      "core": "Translate and rotate a rigid asymmetric object through narrow corridors where its full swept shape must fit.",
+      "stateActions": "Sofa polygon position/orientation, collision walls, target footprint; translate one unit or rotate15degrees about chosen handle. Select movement for free swept-volume preview; explicit Commit executes the shown move. Preview labels any predicted damaging contact.",
+      "decisions": "Choose rotation center to swing around a jamb; retreat to widen turning clearance; plan orientation before entering corridor.",
+      "depth": "Three rooms with dogleg, pillar and asymmetric exit; no single pose fits every doorway.",
+      "winLoss": "Match target pose inside final room wins. Free preview or invalid selection never causes damage. Explicit Commit of a warned collision leaves pose unchanged and spends1handling integrity;10such committed impacts loses.",
+      "controls": "Four move and two rotate buttons; choose handle by tap; arrows/Q/E, H cycles pivot. All actions have named touch buttons and Tab/Enter activation; game keyboard shortcuts operate only while board owns focus. Escape pauses; returning from background requires explicit resume.",
+      "accessibility": "Shape and text accompany color; adjustable pace and pause; reduced decorative motion; persistent controls and focus; concise live result announcements. Numbered handle, angle and minimum clearances; ghost swept-volume preview, textual blocked corner.",
+      "qa": [
+        "Required named teaching scenario: Dogleg Door: sofa endpoint poses both fit but in-place center rotation intersects inner corner; translate backward, change pivot to end handle and swing in alcove before entering next corridor.",
+        "Win all3 using both translation and pivot rotation; trace includes backing out before a corner.",
+        "Commit10 moves whose sweep intersects wall: lose even if endpoint is clear.",
+        "Verify rotations cannot tunnel polygon corners through thin walls.",
+        "Preview10collisions without committing: integrity unchanged. Commit one warned collision: exactly1integrity lost and pose unchanged; outcome cannot depend on key auto-repeat."
+      ],
+      "existingNeighbors": [
+        {
+          "id": "trailer-yard",
+          "distinction": "Direct rigid-polygon configuration-space manipulation with selectable pivots, no articulated steering/reversing dynamics."
+        },
+        {
+          "id": "safe-passage",
+          "distinction": "Continuous orientation and swept polygon geometry, not axis-aligned sliding blocks on fixed tracks."
+        }
+      ],
+      "proposalNeighbors": [
+        "C13 has joint-angle configuration space; C09 moves one rigid body with free translation."
+      ],
+      "risks": "May be too close to articulated-arm configuration search if both lack distinct required geometry; independent review required. Preview and Commit separation is required; no surprise penalty for selection or free exploration.",
+      "status": "provisionally accepted by independent uniqueness and depth reviewers; defining-mechanic implementation gates and final remediated200 comparison outstanding"
+    },
+    {
+      "id": "C10",
+      "name": "Borrowed Seconds",
+      "core": "Rewind one selected moving object along its actual history while player and all other objects continue forward.",
+      "stateActions": "Avatar position, per-object120tick history, rewind charge, irreversible carried key; move avatar, select object, rewind one tick or release.",
+      "decisions": "Ride a rewinding platform upstream; rewind a door without rewinding a pursuing hazard; choose which history interval to preserve.",
+      "depth": "Three rooms require interleaving object histories; direct rewind of avatar prohibited; no ghost recording.",
+      "winLoss": "Bring key to exit in each room wins; crush/fall loses life, third loss ends run.",
+      "controls": "Arrows move, Jump, select object and Rewind/Advance buttons; entirely step-able. All actions have named touch buttons and Tab/Enter activation; game keyboard shortcuts operate only while board owns focus. Escape pauses; returning from background requires explicit resume.",
+      "accessibility": "Shape and text accompany color; adjustable pace and pause; reduced decorative motion; persistent controls and focus; concise live result announcements. Timeline strip and textual selected-object coordinates before/after; no reverse-motion blur.",
+      "qa": [
+        "Required named teaching scenario: Upstream Key: key rides player forward while selected platform travels backward through its last4positions; rewinding whole world would return key, so independent object timeline is necessary.",
+        "Win a chamber only by rewinding platform while carrying nonrewound key; UI trace verifies independent histories.",
+        "Rewind a platform into occupied crushing space: life loss; history reset rules consistent after checkpoint.",
+        "Holding rewind at history start cannot generate charge or stall every other object."
+      ],
+      "existingNeighbors": [
+        {
+          "id": "echo-steps",
+          "distinction": "No ghost cooperative replay; local object history is reversed while other causal state persists."
+        },
+        {
+          "id": "rover-script",
+          "distinction": "History comes from played world dynamics, not predefined command queue."
+        }
+      ],
+      "proposalNeighbors": [
+        "C04 ordinary jump navigation; C10 progress must require incompatible object-time directions."
+      ],
+      "risks": "Time systems can become opaque. Must show what is rewindable and prove no simple forward-only route.",
+      "status": "provisionally accepted by independent uniqueness and depth reviewers; defining-mechanic implementation gates and final remediated200 comparison outstanding"
+    },
+    {
+      "id": "C11",
+      "name": "Many as One",
+      "core": "Split conserved body mass into controllable cells, move through size restrictions, then merge to exert required weight.",
+      "stateActions": "Up to4 cells with mass/radius and position, shared mass total, narrow channels and scales; select, move, split a selected cell into two positive integer masses chosen with a slider, merge touching cells.",
+      "decisions": "Distribute mass across simultaneous scales versus retaining enough combined mass for a heavy gate; leave room for future recombination.",
+      "depth": "Three arenas with unavoidable split, asymmetric branch and recombination; no mass creation or absorption farming.",
+      "winLoss": "Activate all weighted locks and merge prescribed mass at exit wins; lose too much mass in drain or strand cells irreversibly loses.",
+      "controls": "Select cell numbered button; arrows move, Split/Merge buttons. All actions have named touch buttons and Tab/Enter activation; game keyboard shortcuts operate only while board owns focus. Escape pauses; returning from background requires explicit resume. Split dialog exposes both resulting integer masses before confirmation.",
+      "accessibility": "Shape and text accompany color; adjustable pace and pause; reduced decorative motion; persistent controls and focus; concise live result announcements. Explicit mass, diameter, gate requirements and collision preview; turn-based exact movement.",
+      "qa": [
+        "Required named teaching scenario: Split Toll: two scales require masses2and3simultaneously while remaining mass1threads bypass to unlock reunion; smallest-form-only and largest-form-only policies cannot open both.",
+        "Win with at least one split into unequal route allocations and later merge; mass conserved after each public action.",
+        "Send needed mass into marked drain; failure states explain deficit rather than allowing impossible play forever.",
+        "Trying merge across wall must be rejected; disabled split reasons readable."
+      ],
+      "existingNeighbors": [
+        {
+          "id": "track-exchange",
+          "distinction": "The controllable entities themselves divide and recombine with conserved size/mass; no fixed pair exchanging inventory."
+        },
+        {
+          "id": "phase-walk",
+          "distinction": "Size is not a freely toggled passability color: multiple persistent bodies and conservation couple simultaneous fixtures."
+        }
+      ],
+      "proposalNeighbors": [
+        "C07 simultaneous bodies share field control; C11 explicitly reallocates conserved physical mass."
+      ],
+      "risks": "Reject any level solvable by always minimum size then always maximum size; independent-body allocation must matter.",
+      "status": "provisionally accepted by independent uniqueness and depth reviewers; defining-mechanic implementation gates and final remediated200 comparison outstanding"
+    },
+    {
+      "id": "C12",
+      "name": "Crater Courtesy",
+      "core": "Alternate ballistic shots with an opponent on destructible terrain; excavation changes cover, support and future firing position.",
+      "stateActions": "Terrain heightfield, tank position, health, projectile angle/power, public wind and3 ammunition types; aim, shoot or limited relocate.",
+      "decisions": "Excavate support instead of direct hit; retain ridge for cover versus open firing arc; account for own recoil/fall after terrain removal.",
+      "depth": "Three opponent patterns with visible aiming tell and nonomniscient error; several viable cover strategies.",
+      "winLoss": "Reduce opponent hull to0 wins; own hull0 or fall beyond boundary loses.",
+      "controls": "Angle/power sliders with nudge buttons; Fire/Move; keyboard labeled shortcuts. All actions have named touch buttons and Tab/Enter activation; game keyboard shortcuts operate only while board owns focus. Escape pauses; returning from background requires explicit resume.",
+      "accessibility": "Shape and text accompany color; adjustable pace and pause; reduced decorative motion; persistent controls and focus; concise live result announcements. Numerical wind, aim and terrain heights; step projectile option and no mandatory sound; large impact marker.",
+      "qa": [
+        "Required named teaching scenario: Undercut Ridge: opponent hull protected by ridge but supporting ledge is exposed; excavate below it to shift enemy below cover, then take direct shot. Direct identical shots must fail within ammo.",
+        "Win via ordinary aiming including at least one terrain-changing shot that alters later line of fire.",
+        "Miss while opponent destroys player support: terminal loss and correct fall damage.",
+        "No invisible solver aim or perfect opponent; tested novice can win default difficulty."
+      ],
+      "existingNeighbors": [
+        {
+          "id": "moon-basket",
+          "distinction": "Adversarial persistent terrain modification changes subsequent positions/cover, rather than independent ballistic hoop shots."
+        },
+        {
+          "id": "ricochet-duel",
+          "distinction": "Gravity trajectory and destroyable support drive strategy; no reflecting laser/shield orientation."
+        }
+      ],
+      "proposalNeighbors": [
+        "C03 also projectile placement but creates stationary support graph, not deformation of adversarial terrain."
+      ],
+      "risks": "Could collapse into generic aim exchange if terrain changes are cosmetic; wins must demonstrate excavation strategy.",
+      "status": "provisionally accepted by independent uniqueness and depth reviewers; defining-mechanic implementation gates and final remediated200 comparison outstanding"
+    },
+    {
+      "id": "C13",
+      "name": "Elbow Room",
+      "core": "Drive a3-joint arm through obstacles while retaining a grasped payload; elbow configuration and swept link collisions matter.",
+      "stateActions": "Base fixed, joint angles, gripper/payload orientation, obstacles, pickup/delivery fixtures; select joint and rotate\u00b115degrees; grip/release.",
+      "decisions": "Choose elbow-up versus elbow-down posture; retract distal link before shoulder swing; preserve payload clearance while moving between fixtures.",
+      "depth": "Three workcells with at least two inverse-kinematic branches and a required branch change.",
+      "winLoss": "Deliver3 parcels undamaged wins;3 contact strikes or dropped parcel in hazard loses.",
+      "controls": "Joint1/2/3 selection buttons and\u00b1; G grip. All actions have named touch buttons and Tab/Enter activation; game keyboard shortcuts operate only while board owns focus. Escape pauses; returning from background requires explicit resume.",
+      "accessibility": "Shape and text accompany color; adjustable pace and pause; reduced decorative motion; persistent controls and focus; concise live result announcements. Angles, endpoint coordinates and per-link clearances shown textually; keyboard complete; ghosts preview sweep.",
+      "qa": [
+        "Required named teaching scenario: Elbow Gate: gripper can reach target in two poses but only elbow-down fits payload corridor; retract wrist before rotating shoulder, then extend after passing jamb.",
+        "Win by grasping, transporting and releasing all3 through ordinary joint buttons.",
+        "Rotate elbow so middle link crosses obstacle although endpoint is clear: register collision.",
+        "Attempt premature release into hazard: loss; selecting joint must not advance or move arm."
+      ],
+      "existingNeighbors": [
+        {
+          "id": "four-holds",
+          "distinction": "Continuous linked rotational configuration with obstacle collision and payload, rather than discrete independent limb contacts constrained by support/reach."
+        },
+        {
+          "id": "trailer-yard",
+          "distinction": "Actuate each joint around fixed base, not steer coupled trailing vehicle."
+        }
+      ],
+      "proposalNeighbors": [
+        "C09 rigid-body pose planning; C13 internal configuration can change while endpoint remains fixed."
+      ],
+      "risks": "High pairing risk with C09; retain only if internal posture fundamentally changes reachable payload route.",
+      "status": "provisionally accepted by independent uniqueness and depth reviewers; defining-mechanic implementation gates and final remediated200 comparison outstanding"
+    },
+    {
+      "id": "C14",
+      "name": "Common Meadow",
+      "core": "Move one shepherd whose repulsion steers a self-propelled cohesive flock through gates without splitting stragglers off.",
+      "stateActions": "Shepherd position, sheep positions/headings, cohesion/separation radii, gates and pen; shepherd move, whistle briefly expands repulsion with cooldown.",
+      "decisions": "Approach from outside flock to turn its center; compress flock before narrow gate; circle back for straggler without scattering leading group.",
+      "depth": "Three paddocks with concave obstacles, split danger and alternate gate approach; flock rules consistent and visible.",
+      "winLoss": "Pen8of9 sheep wins;3 escape beyond boundary loses.",
+      "controls": "Shepherd direction buttons/arrows; Whistle; slow/step mode. All actions have named touch buttons and Tab/Enter activation; game keyboard shortcuts operate only while board owns focus. Escape pauses; returning from background requires explicit resume.",
+      "accessibility": "Shape and text accompany color; adjustable pace and pause; reduced decorative motion; persistent controls and focus; concise live result announcements. Flock center, straggler directions and distance text; numbered sheep and high-contrast gate boundaries.",
+      "qa": [
+        "Required named teaching scenario: Concave Pen: direct approach scatters lead sheep around both sides of barrier; gather behind flock, approach gate diagonally, and circle outside to recover straggler before whistle.",
+        "Ordinary win includes recovering a separated sheep then regrouping before gate.",
+        "Approach from wrong side until3 sheep cross marked escape edge: natural failure.",
+        "Constant whistle or fixed circular motion must not reliably win all maps; verify actual public-input comparison."
+      ],
+      "existingNeighbors": [
+        {
+          "id": "little-walkers",
+          "distinction": "No per-agent jobs or terrain building; local continuous repulsion changes cohesive group dynamics."
+        },
+        {
+          "id": "marsh-balance",
+          "distinction": "Spatial individual-agent steering through gates, not aggregate predator/prey population management."
+        }
+      ],
+      "proposalNeighbors": [
+        "C07 shared field steering; flock self-propulsion, neighbor cohesion and sorting through gates must distinguish it from charged-puck control."
+      ],
+      "risks": "Boid noise can become frustrating; deterministic update and generous gates essential. Review pair with C07.",
+      "status": "provisionally accepted by independent uniqueness and depth reviewers; defining-mechanic implementation gates and final remediated200 comparison outstanding"
+    },
+    {
+      "id": "C15",
+      "name": "Folded Cuttings",
+      "core": "Cut one polygonal path through a folded sheet; unfolding duplicates each cut through the layer-transform history.",
+      "stateActions": "Sheet polygon, up to3 chosen creases with reflected layer transforms, drawn cut segments and cut budget; fold, trace cut, unfold preview, commit.",
+      "decisions": "Select fold order and crease to place repeated holes; route cut from boundary without severing required bridges; shared cuts affect multiple layers.",
+      "depth": "Three asymmetric target silhouettes requiring different folding transforms; at least one cut yields multiple target holes.",
+      "winLoss": "Unfolded sheet matches target within grid tolerance and stays connected wins; sever protected bridge or exhaust3 committed sheets loses.",
+      "controls": "Grid vertices selected by tap/arrows+Enter; Fold axis buttons, Cut/Preview/Commit. All actions have named touch buttons and Tab/Enter activation; game keyboard shortcuts operate only while board owns focus. Escape pauses; returning from background requires explicit resume.",
+      "accessibility": "Shape and text accompany color; adjustable pace and pause; reduced decorative motion; persistent controls and focus; concise live result announcements. Grid-based polygon list and target occupancy, transform history text, no freehand precision required.",
+      "qa": [
+        "Required named teaching scenario: Offset Fold: folding along off-center crease before second perpendicular fold makes one cut create two unequal-distance holes; reversed fold order must not match target.",
+        "Win all3 by actual fold/cut/unfold UI and produce duplicated hole from one cut.",
+        "Cut through protected bridge; irreversible failed sheet must be counted and visible.",
+        "Compare reverse fold order on asymmetric sheet: transforms and outcomes differ."
+      ],
+      "existingNeighbors": [
+        {
+          "id": "paper-trail",
+          "distinction": "Layer geometry propagates cuts into an unfolded silhouette; target is material topology, not top-to-bottom layer order."
+        },
+        {
+          "id": "stamp-studio",
+          "distinction": "Transform-composed subtractive cuts with preserved connectivity, not independent union of ready-made masks."
+        }
+      ],
+      "proposalNeighbors": [
+        "C08 retains structural capacity; C15 sheet connectivity only, not stress simulation."
+      ],
+      "risks": "Fold selection must be substantive; fixed fold with independent cut toggles would be a shallow mask puzzle.",
+      "status": "provisionally accepted by independent uniqueness and depth reviewers; defining-mechanic implementation gates and final remediated200 comparison outstanding"
+    },
+    {
+      "id": "C16",
+      "name": "Call and Return",
+      "core": "Reproduce a growing ordered sequence of spatially distinct tones/shapes after demonstration.",
+      "stateActions": "Sequence, demonstration/reproduction phase, response index and3 errors; press4pads in order.",
+      "decisions": "Retain temporal order and chunk repeated phrases; no strategic choice beyond accurate recall.",
+      "depth": "Sequences grow4\u219210 with repeated motifs and unambiguous presentation; alternate input pace untimed.",
+      "winLoss": "Complete10-item phrase wins;3 incorrect presses lose.",
+      "controls": "Four large pads/QWER and Tab activation. All actions have named touch buttons and Tab/Enter activation; game keyboard shortcuts operate only while board owns focus. Escape pauses; returning from background requires explicit resume.",
+      "accessibility": "Shape and text accompany color; adjustable pace and pause; reduced decorative motion; persistent controls and focus; concise live result announcements. Audio optional, equivalent numbered visual pulses; user advances demonstration manually if needed.",
+      "qa": [
+        "Win all lengths using only pad UI without reading hidden sequence.",
+        "Press wrong first pad3 times: failure; phase gating rejects input during demonstration."
+      ],
+      "existingNeighbors": [
+        {
+          "id": "double-take",
+          "distinction": "Temporal ordered recall without persistent face-down spatial pair search."
+        },
+        {
+          "id": "beat-post",
+          "distinction": "Untimed recall after demonstration, not matching concurrent timing lanes."
+        }
+      ],
+      "proposalNeighbors": [
+        "No close C neighbor."
+      ],
+      "risks": "RESERVE / DEPTH REJECTION LIKELY: different memory skill, but lacks meaningful decisions; do not count toward100 without independent acceptance.",
+      "status": "rejected: recall has no consequential decisions; not counted"
+    },
+    {
+      "id": "C17",
+      "name": "Domino Relay",
+      "core": "Position directional dominoes and launch a physical knockdown cascade with branches and finite travel delays.",
+      "stateActions": "Grid cells with standing domino direction, special long bridge pieces, obstacles, targets with synchronized arrival window; place/rotate, launch.",
+      "decisions": "Branch a knockdown stream without wasting limited pieces; choose longer route to synchronize two triggers; preserve force direction at corners.",
+      "depth": "Three layouts require branching, gap spanning and timing convergence; two piece lengths with defined knock reach.",
+      "winLoss": "All bells trigger, paired bells within2ticks, wins; cascade stops before target or forbidden bell trips loses test.",
+      "controls": "Select piece then cell, Rotate, Launch/Step; roving grid. All actions have named touch buttons and Tab/Enter activation; game keyboard shortcuts operate only while board owns focus. Escape pauses; returning from background requires explicit resume.",
+      "accessibility": "Shape and text accompany color; adjustable pace and pause; reduced decorative motion; persistent controls and focus; concise live result announcements. Direction arrows+text, falling event log and time markers; step entire simulation.",
+      "qa": [
+        "Required named teaching scenario: Double Bell: left branch takes4ticks and right6; add2domino detour on left to meet within1tick. Connectivity alone reaches both but fails synchronized target.",
+        "Construct and win a branching delayed relay via UI; at least one path deliberately lengthened.",
+        "Remove bridge domino: propagation stops and explains unreached target; launch invalid sync layout fails.",
+        "Two simultaneous strikes on same domino trigger it once, independent of iteration order."
+      ],
+      "existingNeighbors": [
+        {
+          "id": "rover-script",
+          "distinction": "Spatial branching event propagation from contact geometry; no single-agent sequential commands."
+        },
+        {
+          "id": "gate-foundry",
+          "distinction": "Physical directional reach and travel time, not static Boolean function synthesis."
+        },
+        {
+          "id": "tile-weave",
+          "distinction": "Contact propagation has indispensable branch transit time and synchronization failure; connectivity alone is insufficient."
+        }
+      ],
+      "proposalNeighbors": [
+        "C08 construction shares no decision loop beyond placement; C17 judges event timing/reach."
+      ],
+      "risks": "If implemented as wires carrying a pulse without physical geometry, overlap with network/circuit proposals may rise; show reach and falling direction.",
+      "status": "provisionally accepted by independent uniqueness and depth reviewers; defining-mechanic implementation gates and final remediated200 comparison outstanding"
+    },
+    {
+      "id": "C18",
+      "name": "Siding Stories",
+      "core": "Shunt coupled wagons through a track graph with sidings, switch points and directional locomotive access.",
+      "stateActions": "Ordered wagon chains, locomotive end/orientation, switch positions and siding capacities; move one track segment, couple/uncouple nearest coupling, set unoccupied switch.",
+      "decisions": "Use a siding to reverse order; preserve room for locomotive run-around; choose where to split train so future access remains possible.",
+      "depth": "Three yards: facing/trailing points, loop run-around, constrained double-sided delivery; each requires uncoupling and reorder.",
+      "winLoss": "Deliver wagons to specified stations in target order with locomotive at shed wins; derail by occupied switch or no remaining recoverable routing permits loss/restart.",
+      "controls": "Forward/reverse and Couple/Uncouple buttons; select turnout then Toggle. All actions have named touch buttons and Tab/Enter activation; game keyboard shortcuts operate only while board owns focus. Escape pauses; returning from background requires explicit resume.",
+      "accessibility": "Shape and text accompany color; adjustable pace and pause; reduced decorative motion; persistent controls and focus; concise live result announcements. Track IDs, ordered chains, direction and capacities as text; turn-based no timing demand.",
+      "qa": [
+        "Required named teaching scenario: Run-around: locomotive behind wagonsAB cannot deliverBfirst by pushing into dead ends; uncouple, use loop to reach far end, split and reverse before recoupling.",
+        "Ordinary win must perform run-around, reverse movement and two uncouplings.",
+        "Attempt throw switch under wagon: blocked with reason; explicit derail attempt at buffer causes terminal loss.",
+        "Wagon chains cannot overlap, teleport or reorder when reversing."
+      ],
+      "existingNeighbors": [
+        {
+          "id": "crate-crane",
+          "distinction": "Track connectivity and locomotive access govern permutations of coupled ordered chains; arbitrary top-item source-to-destination transfer impossible."
+        },
+        {
+          "id": "junction-nine",
+          "distinction": "Single-engine shunting sequence rather than live traffic signal queue service."
+        }
+      ],
+      "proposalNeighbors": [
+        "C09 transports rigid shape; no coupling/order manipulation."
+      ],
+      "risks": "May reduce to stack sorting if yard only has parallel dead ends; mandatory run-around is acceptance gate.",
+      "status": "provisionally accepted by independent uniqueness and depth reviewers; defining-mechanic implementation gates and final remediated200 comparison outstanding"
+    },
+    {
+      "id": "C19",
+      "name": "Across the Current",
+      "core": "Cross alternating roads and rivers by discrete hops; moving logs carry the player in their reference frame between hops.",
+      "stateActions": "Player tile/subtile position, independently moving logs/vehicles,4home slots and3lives; hop four directions or wait.",
+      "decisions": "Wait on moving support for a downstream alignment; choose which home remains reachable from present current; retreat before log leaves screen.",
+      "depth": "Two boards with opposite currents, gaps and home occupancy; unique home landings prevent repeating one safe route.",
+      "winLoss": "Fill4different homes wins;3 collisions/drownings/edge drifts loses.",
+      "controls": "Directional buttons/arrows, Wait; slow and step modes. All actions have named touch buttons and Tab/Enter activation; game keyboard shortcuts operate only while board owns focus. Escape pauses; returning from background requires explicit resume.",
+      "accessibility": "Shape and text accompany color; adjustable pace and pause; reduced decorative motion; persistent controls and focus; concise live result announcements. Support label, drift direction and next danger text; homes labeled occupied/free.",
+      "qa": [
+        "Required named teaching scenario: Opposed Logs: upper current left, lower current right; waiting on lower log aligns transfer to upper, then reverse course for unfilled home. Holding forward dies or reaches occupied home.",
+        "Win4homes with at least one deliberate wait-while-carried transfer between opposing currents.",
+        "Remain on log until carried off edge: lose a life; repeat3 times terminal loss.",
+        "Hop into previously filled home cannot count twice; no same-lane perpetual safe exploit."
+      ],
+      "existingNeighbors": [
+        {
+          "id": "signal-run",
+          "distinction": "Bidirectional traversal over moving support frames and irreversible home coverage, not lateral selection among incoming collectible/hazard lanes."
+        },
+        {
+          "id": "rope-skip",
+          "distinction": "Spatial route selection and carried coordinates, not one periodic obstacle jump."
+        }
+      ],
+      "proposalNeighbors": [
+        "C04 moving platforms overlap superficially; C19 has no jump trajectory control and depends on relative-current transport and occupied-home planning."
+      ],
+      "risks": "RESERVE pending review: direct movement avoidance may be judged too close to platformer/Signal Run if support transport is not necessary.",
+      "status": "provisionally accepted by independent uniqueness and depth reviewers; defining-mechanic implementation gates and final remediated200 comparison outstanding"
+    },
+    {
+      "id": "C20",
+      "name": "Watchtower Bend",
+      "core": "Build autonomous defenses along a branching route; tower positions reshape route length while mixed enemies have different targeting and armor vulnerabilities.",
+      "stateActions": "Grid route, entrance/exit, tower slots, money, tower ranges and upgrade branches, public next wave; place/remove/upgrade between waves, choose priority.",
+      "decisions": "Spend on rerouting versus damage; overlap slowing and splash fields but retain armor-piercing lane; choose priority to avoid wasting heavy shots on nearly defeated fast units.",
+      "depth": "Three waves each containing complementary enemy threats; route can never be fully sealed. At least two viable build strategies.",
+      "winLoss": "Finish3waves with at least1of5gate integrity wins; fifth leak loses.",
+      "controls": "Select cell, Tower/Upgrade/Priority buttons; grid arrows/Enter; Launch wave and Pause. All actions have named touch buttons and Tab/Enter activation; game keyboard shortcuts operate only while board owns focus. Escape pauses; returning from background requires explicit resume.",
+      "accessibility": "Shape and text accompany color; adjustable pace and pause; reduced decorative motion; persistent controls and focus; concise live result announcements. Range outlines/patterns; next-wave armor/speed text; combat can advance one second at a time.",
+      "qa": [
+        "Named fixture Forked Pass: two buildable cells change which corridor is shortest; win requires either longer slow route or fast armor-focused kill zone, not both. Record ordinary build and wave actions.",
+        "Fill route illegally: reject construction with path warning and refund; intentionally build only splash versus armored wave until5leaks, terminal loss.",
+        "Replay same public wave with different tower priority; verify attack allocation and outcome differ."
+      ],
+      "existingNeighbors": [
+        {
+          "id": "lantern-defense",
+          "distinction": "Persistent autonomous structures, spatial route control and investment precede waves; no manual timed interceptor shots."
+        },
+        {
+          "id": "towers",
+          "distinction": "Dynamic enemies with HP/resistances and timed attacks/upgrade budgets, not static queen-ray coverage."
+        }
+      ],
+      "proposalNeighbors": [
+        "C25 tactical units manually move/act; C20 buildings fixed and enemy flows autonomous."
+      ],
+      "risks": "Implementation must not reduce to best-damage tower spam; require ordinary winning alternatives and counterexample to same tower-only baseline.",
+      "status": "provisionally accepted by independent uniqueness and depth reviewers; defining-mechanic implementation gates and final remediated200 comparison outstanding"
+    },
+    {
+      "id": "C21",
+      "name": "Through and Through",
+      "core": "Place two linked oriented portals on surfaces; crossing transports position and rotates conserved velocity into the other portal normal.",
+      "stateActions": "Avatar position/velocity, portal pair surface/normal, gravity, keys and nonportal walls; move/jump, select surface for entry/exit portal.",
+      "decisions": "Use a long fall to gain exit momentum; choose portal orientation to convert vertical speed to horizontal reach; relocate pair after preserving a reachable escape route.",
+      "depth": "Three chambers require momentum fling, repeated traversal and safe pair relocation; portal surfaces constrained but at least two choices each.",
+      "winLoss": "Reach exit with key wins; fall into void/spikes loses life,3lives loses run.",
+      "controls": "Movement/jump buttons; portal color selection+surface buttons; fully step mode available. All actions have named touch buttons and Tab/Enter activation; game keyboard shortcuts operate only while board owns focus. Escape pauses; returning from background requires explicit resume.",
+      "accessibility": "Shape and text accompany color; adjustable pace and pause; reduced decorative motion; persistent controls and focus; concise live result announcements. Portals distinguished by A/B and facing arrows; momentum vector values and landing preview; no compulsory precise mouse aim.",
+      "qa": [
+        "Named fixture Fall to Fly: exit ledge6units away exceeds normal2unit jump; fall4units into floor portal and leave wall portal horizontally to reach ledge. Ordinary-input win; zero-speed entry must fail to bridge distance.",
+        "Misorient exit portal into marked spike wall: real collision/life loss;3losses terminal.",
+        "Repeated crossing conserves intended speed without numerical energy gain; doorway occupancy prevents immediate reentry loops."
+      ],
+      "existingNeighbors": [
+        {
+          "id": "portal-parcel",
+          "distinction": "No thrown remote beacon or position-swap command: a persistent linked surface pair changes trajectory topology and transports rotated momentum on contact."
+        },
+        {
+          "id": "gravity-boots",
+          "distinction": "Gravity direction fixed; portal normals transform velocity and require gravitational-energy planning."
+        }
+      ],
+      "proposalNeighbors": [
+        "C10 reverses object histories; C21 only transforms current spatial state. C04 cannot bridge required fling gap with jump alone."
+      ],
+      "risks": "High baseline-neighbor risk; reject if teleportation alone solves all chambers or conserved momentum is merely decorative.",
+      "status": "provisionally accepted by independent uniqueness and depth reviewers; defining-mechanic implementation gates and final remediated200 comparison outstanding"
+    },
+    {
+      "id": "C22",
+      "name": "Orchard Acrobat",
+      "core": "Move the head of a connected segmented creature; whole body falls rigidly under gravity unless any segment has support; fruit adds a segment.",
+      "stateActions": "Ordered body cells, head facing, fruit, supports and spikes; head moves one cardinal neighbor, body follows, then unsupported full body falls.",
+      "decisions": "Extend over a gap while retaining rear support; eat fruit to increase bridge span but avoid trapping length in pocket; route tail support before committing head.",
+      "depth": "Three islands require growth to bridge, rear-anchor pivot and deliberate whole-body fall; movement turn-based, never automatic.",
+      "winLoss": "Eat all fruit and put entire creature into exit wins; unsupported fall into void/spikes loses.",
+      "controls": "Directional buttons/arrows; Undo and Restart available. All actions have named touch buttons and Tab/Enter activation; game keyboard shortcuts operate only while board owns focus. Escape pauses; returning from background requires explicit resume.",
+      "accessibility": "Shape and text accompany color; adjustable pace and pause; reduced decorative motion; persistent controls and focus; concise live result announcements. Numbered head-to-tail cells and current supporting segments text; animate or step gravity; no twitch.",
+      "qa": [
+        "Named fixture Three-wide Chasm: length3 cannot bridge gap3 without growth; obtain side fruit to length4, keep tail on lip, cross and then lower whole body onto exit. Complete via ordinary steps.",
+        "Move last supported segment off lip above void: whole-body fall loses; undo restores exact segment order and fruit.",
+        "Holding one direction does not bypass gravity or self-collision."
+      ],
+      "existingNeighbors": [
+        {
+          "id": "velvet-snake",
+          "distinction": "Turn-based whole-body support/gravity and bridge length are core; no constantly moving timed survival snake."
+        },
+        {
+          "id": "boulder-burrow",
+          "distinction": "Player body is movable connected support geometry; terrain is not excavated and no falling autonomous boulders."
+        }
+      ],
+      "proposalNeighbors": [
+        "C11 bodies split/recombine mass; C22 permanently ordered body follows head and grows at fruit."
+      ],
+      "risks": "Could be judged snake variant if all levels play as flat mazes; required unsupported bridging/gravity fixtures essential.",
+      "status": "provisionally accepted by independent uniqueness and depth reviewers; defining-mechanic implementation gates and final remediated200 comparison outstanding"
+    },
+    {
+      "id": "C23",
+      "name": "Borrowed Shade",
+      "core": "Move a lamp so object shadows project onto a wall as solid traversable platforms; occluder depth and lamp position change shadow reach and connectivity.",
+      "stateActions": "2D lamp position in front-plane, fixed occluders at distinct depths, wall shadow intervals/platforms, avatar position; move lamp on rail, walk/jump avatar.",
+      "decisions": "Raise a near-object shadow to connect a ledge while distant shadow moves less; park avatar on permanent refuge before moving its supporting shadow; exploit occlusion merge/split.",
+      "depth": "Three rooms require different parallax magnifications and one shadow split to clear a hazard; no arbitrary draw-a-platform tool.",
+      "winLoss": "Collect2seals and reach high exit wins; moving away support above pit causes fall/life loss,3lives ends run.",
+      "controls": "Select Lamp/Avatar; arrows move chosen object; Jump and Step; touch mode tabs. All actions have named touch buttons and Tab/Enter activation; game keyboard shortcuts operate only while board owns focus. Escape pauses; returning from background requires explicit resume.",
+      "accessibility": "Shape and text accompany color; adjustable pace and pause; reduced decorative motion; persistent controls and focus; concise live result announcements. Text shadow endpoints, occluder depth and support relation; geometry preview before commit; colors redundant.",
+      "qa": [
+        "Named fixture Near/Far: two occluders at depths1and3 create different shadow displacements; win by moving lamp so one shadow touches refuge while other separates from hazard. Same shift cannot satisfy both simultaneously.",
+        "Move lamp while standing on unsupported shadow over pit: fall and life loss; verify stationary refuge remains safe.",
+        "Occluded overlapping shadows union correctly; no phantom double-height platform."
+      ],
+      "existingNeighbors": [
+        {
+          "id": "parallax-post",
+          "distinction": "Change light projection to alter traversable geometry while maintaining avatar support, not infer landmark depth/correspondence."
+        },
+        {
+          "id": "shadow-turn",
+          "distinction": "Coupled projected positions and live navigation, not independently rotate silhouettes to references."
+        }
+      ],
+      "proposalNeighbors": [
+        "C04 fixed/moving platforms follow predefined paths; C23 player constructs support using coupled projective geometry."
+      ],
+      "risks": "Potentially expensive readable geometry; simplify to wall-plane intervals and a2D lamp rail. Must make depth-dependent relative motion necessary.",
+      "status": "provisionally accepted by independent uniqueness and depth reviewers; defining-mechanic implementation gates and final remediated200 comparison outstanding"
+    },
+    {
+      "id": "C24",
+      "name": "After the Levee",
+      "core": "Excavate channels and build finite levees on a heightfield, then let a visible water front spread downhill and overflow low sills.",
+      "stateActions": "Grid terrain elevations, local water depth/volume, source pulse schedule, two target basins and village; dig one cell, deposit spoil elsewhere, advance simulation.",
+      "decisions": "Open upstream channel now versus preserve height for later diversion; use spoil to raise an unintended spill saddle; split finite pulse between basins without flooding village.",
+      "depth": "Three valleys with connected backwater and changing local levels; all elevations and pulse volumes visible.",
+      "winLoss": "Fill both basin marks and finish pulse with village dry wins; village flood or exhausted source with deficient basin loses.",
+      "controls": "Select cell, Dig/Deposit/Advance; keyboard grid. All actions have named touch buttons and Tab/Enter activation; game keyboard shortcuts operate only while board owns focus. Escape pauses; returning from background requires explicit resume.",
+      "accessibility": "Shape and text accompany color; adjustable pace and pause; reduced decorative motion; persistent controls and focus; concise live result announcements. Numeric elevation and water depth per cell, flow arrows and volume ledger; stepwise simulation, patterned wet cells.",
+      "qa": [
+        "Named fixture Saddle: west basin fills then overflows toward village unless its2-high saddle is raised using spoil from east channel; win by changing both linked locations before second pulse.",
+        "Dig village saddle first and Advance: front reaches village and loses; reset restores terrain and source.",
+        "Verify conservation of water/spoil after each ordinary action; no diagonal leaks through corner-only contact.",
+        "In Saddle fixture verify first basin intentionally inundates to target, then backwater rises enough to spill into second; simply blocking all spreading water must fail source-volume/target requirements."
+      ],
+      "existingNeighbors": [
+        {
+          "id": "reservoir",
+          "distinction": "Local changing free-surface geometry, spill thresholds and terrain edits determine evolving paths; no scalar release allocation."
+        },
+        {
+          "id": "river-capacity",
+          "distinction": "Network edges and capacities are not fixed allocations: cells flood, back up, and overtop based on mutable geometry."
+        },
+        {
+          "id": "firebreak",
+          "distinction": "Water is conserved and desired in target basins: free-surface levels back up, equalize and overtop sills; digging relocates conserved spoil. Fire fronts consume/spread and are contained, not redistributed to positive fill targets. Saddle fixture must need deliberate beneficial inundation and subsequent backwater diversion."
+        }
+      ],
+      "proposalNeighbors": [
+        "C08 structural stress on truss; C24 hydrostatic level and terrain shape."
+      ],
+      "risks": "Must coordinate D flow games. Simplified deterministic finite-volume model needs explicit conservation; static arrow-routing implementation rejected.",
+      "status": "provisionally accepted by independent uniqueness and depth reviewers; defining-mechanic implementation gates and final remediated200 comparison outstanding"
+    },
+    {
+      "id": "C25",
+      "name": "Crossfire Courtyard",
+      "core": "Command a3-member squad with action points, directional cover, suppression and reaction overwatch to extract a civilian across intersecting enemy fire lanes.",
+      "stateActions": "Unit positions/facing/AP, cover edges, enemy visible intent, overwatch cones, suppression and civilian location; move, fire, suppress, overwatch, escort.",
+      "decisions": "Spend AP to suppress overwatch before crossing; flank directional cover while teammate pins; maintain escort spacing rather than eliminate every enemy.",
+      "depth": "Three small maps with alternate flank routes and reinforcement timer; hit outcomes deterministic to emphasize visible tactics.",
+      "winLoss": "Civilian and2squad members reach extraction wins; civilian killed or squad below2 loses.",
+      "controls": "Select unit and action then target grid; keyboard roving targets. All actions have named touch buttons and Tab/Enter activation; game keyboard shortcuts operate only while board owns focus. Escape pauses; returning from background requires explicit resume.",
+      "accessibility": "Shape and text accompany color; adjustable pace and pause; reduced decorative motion; persistent controls and focus; concise live result announcements. Visible enemy intent, cover direction and exact hit consequence before commit; no hidden accuracy roll; concise combat log.",
+      "qa": [
+        "Named fixture Crossed Alley: enemy overwatch covers direct alley; suppress with unitA, cross civilian withB, flank withC. Win ordinary UI; moving civilian first must provoke visible reaction and loss.",
+        "Deliberately expose civilian in two intersecting cones: one reaction per eligible enemy, terminal loss with log.",
+        "Test cover protects front but not flank and suppress action trades damage for disabled reaction."
+      ],
+      "existingNeighbors": [
+        {
+          "id": "ricochet-duel",
+          "distinction": "Multi-unit AP coordination, directional cover and conditional reaction fire, not alternating single-body aim/shoot."
+        },
+        {
+          "id": "court-of-suits",
+          "distinction": "Spatial exposure and overlapping unit reactions determine consequence; no private-card timing against fixed foe cycle."
+        }
+      ],
+      "proposalNeighbors": [
+        "C20 fixed autonomous towers versus manually coordinated mobile squad and escort."
+      ],
+      "risks": "Must coordinate B tactical designs; overwatch and suppression must be necessary, not optional flavor over move+attack.",
+      "status": "provisionally accepted by independent uniqueness and depth reviewers; defining-mechanic implementation gates and final remediated200 comparison outstanding"
+    }
+  ],
+  "reviewNotes": [
+    "C16 remains rejected and is not counted. A10 already owns shifting-maze insertion, so rejected replacement was not added.",
+    "A owner explicitly withdrew A05 hinged-panel configuration design as overlap with C13; C13 retained pending final reviewer verdict.",
+    "B owner confirmed C20tower defense/C25tactical squad not duplicates of B regional support orders/Arimaa/Stratego. D owner confirmed no geometric fluid simulation duplicate.",
+    "C06 reversible-tether failure corrected to recoverable blocked attempt; no impossible terminal stranding claim. C09 free-preview/explicit-damaging-commit contract clarified.",
+    "All acceptance is design-provisional until final remediated200 baseline comparison and independent ordinary UI evidence after implementation authorization."
+  ],
+  "provisionallyAcceptedCount": 24,
+  "depthReviewGates": {
+    "C20": "Route/priority counterexample defeats tower spam.",
+    "C21": "Unavoidable conserved-momentum fling; teleport alone insufficient.",
+    "C22": "Support/body gravity bridge and fall mandatory; no flat snake-only solution.",
+    "C23": "Depth-dependent relative shadow movement mandatory; no scalar platform knob solution.",
+    "C24": "Conserved local dynamic water/spill topology mandatory; no static arrow-routing solution.",
+    "C25": "Suppression and overwatch reactions necessary for coordinated survival; generic move/attack insufficient."
+  }
+}

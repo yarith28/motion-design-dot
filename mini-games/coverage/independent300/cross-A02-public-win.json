@@ -1,0 +1,1548 @@
+{
+  "game": "corner-cabinet",
+  "provenance": "Independent ordinary UI play before source or solution inspection. Decisions from visible cube state and familiar physical cube algorithms; includes exploratory turns, Reset study, and failed certification.",
+  "actions": [
+    {
+      "op": "open",
+      "game": "A02",
+      "url": "http://127.0.0.1:8781/mini-games/construct-room/?game=corner-cabinet"
+    },
+    {
+      "op": "keychoose",
+      "name": "Open first study"
+    },
+    {
+      "op": "keychoose",
+      "name": "U counterclockwise \u21ba"
+    },
+    {
+      "op": "keychoose",
+      "name": "Reset study"
+    },
+    {
+      "op": "keychoose",
+      "name": "U clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "R face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "R clockwise \u21bb"
+    },
+    {
+      "op": "keychoose",
+      "name": "Undo"
+    },
+    {
+      "op": "keychoose",
+      "name": "R counterclockwise \u21ba"
+    },
+    {
+      "op": "keychoose",
+      "name": "Reset study"
+    },
+    {
+      "op": "click",
+      "name": "U face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "U clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "R face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "R clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "U face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "U counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "R face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "R counterclockwise \u21ba"
+    },
+    {
+      "op": "keychoose",
+      "name": "Certify study"
+    },
+    {
+      "op": "keychoose",
+      "name": "Next study \u2192"
+    },
+    {
+      "op": "click",
+      "name": "U face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "U counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "L face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "L counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "U face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "U clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "L face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "L clockwise \u21bb"
+    },
+    {
+      "op": "keychoose",
+      "name": "Certify study"
+    },
+    {
+      "op": "click",
+      "name": "U face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "U clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "R face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "R counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "D face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "D counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "R face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "R clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "D face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "D clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "R face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "R counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "D face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "D counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "R face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "R clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "D face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "D clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "U face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "U clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "R face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "R counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "D face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "D counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "R face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "R clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "D face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "D clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "R face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "R counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "D face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "D counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "R face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "R clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "D face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "D clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "R face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "R counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "D face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "D counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "R face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "R clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "D face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "D clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "R face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "R counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "D face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "D counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "R face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "R clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "D face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "D clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "R face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "R clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "U face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "U clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "R face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "R counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "U face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "U counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "R face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "R counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "F face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "F clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "R face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "R clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "R face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "R clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "U face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "U counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "R face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "R counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "U face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "U counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "R face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "R clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "U face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "U clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "R face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "R counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "F face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "F counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "U face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "U clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "U face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "U clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "R face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "R clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "U face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "U clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "R face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "R counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "U face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "U counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "R face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "R counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "F face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "F clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "R face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "R clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "R face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "R clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "U face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "U counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "R face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "R counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "U face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "U counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "R face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "R clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "U face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "U clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "R face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "R counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "F face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "F counterclockwise \u21ba"
+    },
+    {
+      "op": "keychoose",
+      "name": "Certify study"
+    },
+    {
+      "op": "keychoose",
+      "name": "Next study \u2192"
+    },
+    {
+      "op": "click",
+      "name": "L face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "L counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "U face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "U counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "L face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "L clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "U face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "U clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "L face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "L counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "U face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "U counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "L face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "L clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "U face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "U clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "L face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "L counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "U face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "U counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "L face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "L clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "U face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "U clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "L face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "L counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "U face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "U counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "L face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "L clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "U face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "U clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "L face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "L counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "U face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "U counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "L face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "L clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "U face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "U clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "U face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "U clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "R face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "R clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "U face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "U clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "R face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "R counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "U face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "U counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "R face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "R clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "U face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "U clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "R face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "R counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "U face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "U counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "R face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "R clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "U face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "U clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "R face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "R counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "U face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "U counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "U face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "U clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "U face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "U clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "B face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "B clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "U face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "U clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "B face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "B counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "U face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "U counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "B face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "B clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "U face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "U clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "B face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "B counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "U face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "U counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "B face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "B clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "U face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "U clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "B face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "B counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "U face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "U counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "U face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "U clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "R face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "R counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "D face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "D counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "R face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "R clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "D face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "D clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "R face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "R counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "D face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "D counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "R face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "R clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "D face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "D clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "R face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "R counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "D face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "D counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "R face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "R clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "D face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "D clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "R face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "R counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "D face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "D counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "R face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "R clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "D face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "D clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "U face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "U clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "R face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "R counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "D face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "D counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "R face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "R clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "D face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "D clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "R face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "R counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "D face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "D counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "R face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "R clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "D face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "D clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "R face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "R counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "D face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "D counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "R face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "R clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "D face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "D clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "R face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "R counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "D face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "D counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "R face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "R clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "D face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "D clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "U face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "U clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "R face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "R counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "D face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "D counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "R face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "R clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "D face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "D clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "R face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "R counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "D face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "D counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "R face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "R clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "D face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "D clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "R face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "R counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "D face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "D counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "R face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "R clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "D face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "D clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "R face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "R counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "D face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "D counterclockwise \u21ba"
+    },
+    {
+      "op": "click",
+      "name": "R face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "R clockwise \u21bb"
+    },
+    {
+      "op": "click",
+      "name": "D face",
+      "exact": false
+    },
+    {
+      "op": "keychoose",
+      "name": "D clockwise \u21bb"
+    },
+    {
+      "op": "keychoose",
+      "name": "Certify study"
+    }
+  ]
+}

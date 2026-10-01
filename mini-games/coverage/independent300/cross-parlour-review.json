@@ -1,0 +1,257 @@
+{
+  "passed": true,
+  "reviewer": "independent-construct-author",
+  "games": [
+    {
+      "designId": "B08",
+      "gameId": "corner-garden",
+      "room": "parlour-room",
+      "ordinaryBeforeSource": true,
+      "fullWin": true,
+      "naturalFailure": true,
+      "restart": true,
+      "nativeKeyboardWin": true,
+      "touchWin": true,
+      "touchFailure": true,
+      "meaningfulDecisions": "Placed large Bud/Fork shapes first to extend separate frontiers, used Tee at F3 to contest the house approach, and retained small pieces for later cavities. Won with domino2 unplaced against house square4; no legal domino orientation remained. A smallest-first cramped opening stranded fourteen cells and lost against house full-clear bonus. Opponent placements altered legal corners and trapped later shapes.",
+      "methods": [
+        "Initial full mouse win from visible shape offsets, corner rules and house moves; no source or routes read.",
+        "Independent smallest-first poor opening lost naturally; legally forced passes let house complete its inventory.",
+        "Full 29-control winning route repeated with native Tab/Enter and with touch-only taps at390px; complete49-control natural-loss route repeated by touch.",
+        "Restart tested after both outcomes; no overflow or browser errors observed.",
+        "Only after ordinary wins/failures and keyboard/touch replay, audited shape rotations/reflections, corner/edge legality, scoring and house placement decisions in engine.",
+        "Repeated complete native win and touch win/loss/restart in fresh contexts after final shared startup-loading guard; final fingerprints refreshed."
+      ],
+      "issues": [],
+      "runtimeHashes": {
+        "mini-games/parlour-room/corner-garden.mjs": "1dd8c6fbe67368585f2cf28554314e2e9b17a840261644128010e60e7ef95260",
+        "mini-games/parlour-room/core.mjs": "339407b8d279243a25622037f7a709a9998afbbc1945ca95a36106a37402c458",
+        "mini-games/parlour-room/game.js": "de78315740f63cc42963b31ca55e6058c565501ed5e11874a37b68ad8ad698b8",
+        "mini-games/parlour-room/room.css": "7b5baf1c1951e0906b8650ab805a8ef037fa564a5a384e70ef89bce11c17eabe",
+        "mini-games/parlour-room/index.html": "328f418fab77b773e534825d0b3c570598d361fd781ddfeb9e2408ea539cbd33"
+      },
+      "logFile": "mini-games/coverage/independent300/cross-parlour-B08-ordinary.jsonl",
+      "limits": [
+        "No physical phone or screen-reader test.",
+        "House is a bounded placement heuristic, not an optimal adversary."
+      ]
+    },
+    {
+      "designId": "B17",
+      "gameId": "ordered-harvest",
+      "room": "parlour-room",
+      "ordinaryBeforeSource": true,
+      "fullWin": true,
+      "naturalFailure": true,
+      "restart": true,
+      "nativeKeyboardWin": true,
+      "touchWin": true,
+      "touchFailure": true,
+      "meaningfulDecisions": "Removed Red/Speckled crops from future hand positions in exchange for Broad/Chickpea/Coffee matching established fields. Timed harvest at ten Broad and seven Chickpea before replacing fields, then shifted to Coffee for efficient late scoring. Finished14\u20137\u20136. Ignoring trades and repeatedly using the first available field stranded tiny harvests and lost0\u20132\u20132. Optional second planting advanced useful oldest cards; traded cards planted immediately instead of bypassing field constraints.",
+      "methods": [
+        "Full ordinary visible-rules win70 controls and natural no-trade loss26 controls before source access.",
+        "Full winning route repeated with native Tab/Enter and390px touch; full failure repeated touch, then restart.",
+        "Repeated source-matched replays after author fixed stale live phase announcements and cap boundary.",
+        "Scoped engine audit after ordinary play: immutable hand removal, immediate received crop planting, exact thresholds, two-pass deck and rival trade policy.",
+        "Repeated complete native win and touch win/loss/restart in fresh contexts after final shared startup-loading guard; final fingerprints refreshed."
+      ],
+      "issues": [],
+      "resolvedIssues": [
+        "Live status previously announced earlier phase during optional/received planting; author fixed and replays passed.",
+        "Source audit found16-turn boundary stopped after15; corrected to finish after completed16, terminal display clamped. Observed ordinary matches ended via deck exhaustion before this cap."
+      ],
+      "runtimeHashes": {
+        "mini-games/parlour-room/ordered-harvest.mjs": "35b7843e9234263df4356f740d53c4910bfd0a2fb64bc6a1fda47ab2a8d3c058",
+        "mini-games/parlour-room/core.mjs": "339407b8d279243a25622037f7a709a9998afbbc1945ca95a36106a37402c458",
+        "mini-games/parlour-room/game.js": "de78315740f63cc42963b31ca55e6058c565501ed5e11874a37b68ad8ad698b8",
+        "mini-games/parlour-room/room.css": "7b5baf1c1951e0906b8650ab805a8ef037fa564a5a384e70ef89bce11c17eabe",
+        "mini-games/parlour-room/index.html": "328f418fab77b773e534825d0b3c570598d361fd781ddfeb9e2408ea539cbd33"
+      },
+      "logFile": "mini-games/coverage/independent300/cross-parlour-B17-ordinary.jsonl",
+      "limits": [
+        "No physical phone or screen-reader test.",
+        "Trade rivals follow a disclosed bounded value policy, not optimal bargaining."
+      ]
+    },
+    {
+      "designId": "B18",
+      "gameId": "shared-seasons",
+      "room": "parlour-room",
+      "ordinaryBeforeSource": true,
+      "fullWin": true,
+      "naturalFailure": true,
+      "restart": true,
+      "nativeKeyboardWin": true,
+      "touchWin": true,
+      "touchFailure": true,
+      "meaningfulDecisions": "Built Studio then Wharf and Glassworks, sacrificed one shipment for cards to afford a Guild Hall, and delayed the sixth building until the shipping engine created a lead. Won 39\u201335; repeated Explore without development lost 14\u201338. Shared Develop phases also advanced the house, making end timing consequential.",
+      "methods": [
+        "Full ordinary 42-control win from public roles, hand and tableau, before source or solutions.",
+        "Independent Explore-heavy strategy lost naturally after twelve rounds in43 controls.",
+        "Full native Tab/Enter win and390px touch win/loss/restart repeated on corrected runtime; no overflow or browser errors.",
+        "Scoped source audit only after ordinary play verified role commitment, phase union, payment exclusion, shipping consumption and terminal scoring.",
+        "Repeated complete native win and touch win/loss/restart in fresh contexts after final shared startup-loading guard; final fingerprints refreshed."
+      ],
+      "issues": [],
+      "runtimeHashes": {
+        "mini-games/parlour-room/shared-seasons.mjs": "69f599c749c2034c71a9af3ab44f9528f697f9029aa71e1e67c10463c24682dc",
+        "mini-games/parlour-room/core.mjs": "339407b8d279243a25622037f7a709a9998afbbc1945ca95a36106a37402c458",
+        "mini-games/parlour-room/game.js": "de78315740f63cc42963b31ca55e6058c565501ed5e11874a37b68ad8ad698b8",
+        "mini-games/parlour-room/room.css": "7b5baf1c1951e0906b8650ab805a8ef037fa564a5a384e70ef89bce11c17eabe",
+        "mini-games/parlour-room/index.html": "328f418fab77b773e534825d0b3c570598d361fd781ddfeb9e2408ea539cbd33"
+      },
+      "logFile": "mini-games/coverage/independent300/cross-parlour-B18-ordinary.jsonl",
+      "limits": [
+        "No physical phone or screen-reader test.",
+        "House uses a predictable bounded role and building heuristic, not an optimal opponent."
+      ],
+      "resolvedIssues": [
+        "Terminal round display advanced past completed round; author moved terminal check before increment. Final keyboard and touch replays used corrected runtime."
+      ]
+    },
+    {
+      "designId": "B21",
+      "gameId": "roads-we-share",
+      "room": "parlour-room",
+      "ordinaryBeforeSource": true,
+      "fullWin": true,
+      "naturalFailure": true,
+      "restart": true,
+      "nativeKeyboardWin": true,
+      "touchWin": true,
+      "touchFailure": true,
+      "meaningfulDecisions": "Several ordinary losses exposed incompatible city closures, prematurely committed claimants, and the value of sharing a merged road. Third public deal won21\u201313 by closing a four-tile city, extending a separate six-tile road for partial scoring, and completing a second city. A default-deal poor geometry game lost13\u201319; improved but still losing17\u201318 games remain in logs.",
+      "methods": [
+        "Full ordinary win on third public deal, reached through Another deal twice; no source or solutions read.",
+        "Natural full losses on first and second public deals; retained all attempted strategies and failed clicks in raw evidence.",
+        "Full44-control win replayed with native Tab/Enter and390px taps on fresh runtime; default32-control failure replayed by touch; restarts passed with no overflow/errors.",
+        "Only afterward scoped source audit verified edge matching, connected-feature claim restrictions, majority/tie scoring, claimant return, incomplete-feature settlement and house placement heuristic.",
+        "Repeated complete native win and touch win/loss/restart in fresh contexts after final shared startup-loading guard; final fingerprints refreshed."
+      ],
+      "issues": [],
+      "runtimeHashes": {
+        "mini-games/parlour-room/roads-we-share.mjs": "f2a6275fc7466f171f61dd5f02cc02a4ffe32eee45a1cd4db4f722e6ea2cd745",
+        "mini-games/parlour-room/core.mjs": "339407b8d279243a25622037f7a709a9998afbbc1945ca95a36106a37402c458",
+        "mini-games/parlour-room/game.js": "de78315740f63cc42963b31ca55e6058c565501ed5e11874a37b68ad8ad698b8",
+        "mini-games/parlour-room/room.css": "7b5baf1c1951e0906b8650ab805a8ef037fa564a5a384e70ef89bce11c17eabe",
+        "mini-games/parlour-room/index.html": "328f418fab77b773e534825d0b3c570598d361fd781ddfeb9e2408ea539cbd33"
+      },
+      "logFile": "mini-games/coverage/independent300/cross-parlour-B21-ordinary.jsonl",
+      "limits": [
+        "No physical phone or screen-reader test.",
+        "House uses a bounded greedy feature heuristic. Ordinary default and second-deal wins are not claimed; winning evidence uses public third deal."
+      ],
+      "resolvedIssues": [
+        "Terminal remaining tile count displayed1 after stock ended; author corrected render count. Fresh keyboard/touch replays use final source."
+      ]
+    },
+    {
+      "designId": "B12",
+      "gameId": "crossgrain",
+      "room": "parlour-room",
+      "ordinaryBeforeSource": true,
+      "fullWin": true,
+      "naturalFailure": true,
+      "restart": true,
+      "nativeKeyboardWin": true,
+      "touchWin": true,
+      "touchFailure": true,
+      "meaningfulDecisions": "Built connected MINER/SHINE/FORGONE lines, used blank K in JUNK, and placed a double-letter X to score both AX and EX for34. Won179\u2013133 after rack deductions. A legitimate GEM opening followed by neglect/pass lost5\u2013207. The comprehensive public dictionary allowed normal word formation; rejected GI preserved tiles for undo and recovery.",
+      "methods": [
+        "Fresh full ordinary win (85 public controls) and natural loss (25) before any engine or solution access.",
+        "Full native Tab/Enter win,390px touch win and touch loss repeated on final runtime; restart, overflow and browser-error checks passed.",
+        "Scoped source audit only after ordinary outcomes/replays verified scoring, legal actions, opponent information boundaries and terminal handling."
+      ],
+      "issues": [],
+      "resolvedIssues": [
+        "Replaced repeatedly incomplete curated acceptance vocabulary with comprehensive ENABLE board-fit words, retaining a separate bounded familiar opponent search vocabulary.",
+        "Verified public prefix MINER confirms allowed and returns four matches;100-word pagination and native/touch navigation work."
+      ],
+      "runtimeHashes": {
+        "mini-games/parlour-room/crossgrain.mjs": "b6cec91f5e6b83ee2c91099475bda02bea37a2f865ba2243bdafcb631ad9645c",
+        "mini-games/parlour-room/core.mjs": "339407b8d279243a25622037f7a709a9998afbbc1945ca95a36106a37402c458",
+        "mini-games/parlour-room/game.js": "de78315740f63cc42963b31ca55e6058c565501ed5e11874a37b68ad8ad698b8",
+        "mini-games/parlour-room/room.css": "7b5baf1c1951e0906b8650ab805a8ef037fa564a5a384e70ef89bce11c17eabe",
+        "mini-games/parlour-room/index.html": "328f418fab77b773e534825d0b3c570598d361fd781ddfeb9e2408ea539cbd33",
+        "mini-games/parlour-room/lexicon.mjs": "c8d6e217a28845ded6b94f800428814ef91400a5e6da74322c49bb6200241bdc",
+        "mini-games/parlour-room/familiar-lexicon.mjs": "b036af89b0269d9125ac29fc31242fde5c73fe3072e3e6e74e4f76fff6369544"
+      },
+      "logFile": "mini-games/coverage/independent300/cross-parlour-B12-ordinary.jsonl",
+      "limits": [
+        "No physical phone or screen-reader test.",
+        "Opponent uses bounded heuristics, not optimal play."
+      ]
+    },
+    {
+      "designId": "B25",
+      "gameId": "four-houses",
+      "room": "parlour-room",
+      "ordinaryBeforeSource": true,
+      "fullWin": true,
+      "naturalFailure": true,
+      "restart": true,
+      "nativeKeyboardWin": true,
+      "touchWin": true,
+      "touchFailure": true,
+      "meaningfulDecisions": "Balanced four colors through shrine-supported internal leadership contests, external kingdom wars, temporary defeat and leader recovery. Exchanged dead cards for support, defended a tied war, and denied adjacent shrine entry. Won weakest scores2/3/6/8 versus0/0/1/3 in round15. Neglecting development after placing two leaders lost0/0/0/0 versus0/1/3/4. House actively displaced leaders, exchanged cards and recovered positions.",
+      "methods": [
+        "Fresh full ordinary win (79 public controls) and natural loss (53) before any engine or solution access.",
+        "Full native Tab/Enter win,390px touch win and touch loss repeated on final runtime; restart, overflow and browser-error checks passed.",
+        "Scoped source audit only after ordinary outcomes/replays verified scoring, legal actions, opponent information boundaries and terminal handling."
+      ],
+      "issues": [],
+      "resolvedIssues": [
+        "Full board now ends immediately after conflict resolution, removing meaningless passes to round24.",
+        "House now passes instead of donating points, exchanges for needed shrine support and seeks viable weak-color leader access. Fresh ordinary review used revised policies.",
+        "Terminal round display clamped24."
+      ],
+      "runtimeHashes": {
+        "mini-games/parlour-room/four-houses.mjs": "d41a9aab425ca217fc3d3e708458c5c1594283836aa31ae391fb867456286866",
+        "mini-games/parlour-room/core.mjs": "339407b8d279243a25622037f7a709a9998afbbc1945ca95a36106a37402c458",
+        "mini-games/parlour-room/game.js": "de78315740f63cc42963b31ca55e6058c565501ed5e11874a37b68ad8ad698b8",
+        "mini-games/parlour-room/room.css": "7b5baf1c1951e0906b8650ab805a8ef037fa564a5a384e70ef89bce11c17eabe",
+        "mini-games/parlour-room/index.html": "328f418fab77b773e534825d0b3c570598d361fd781ddfeb9e2408ea539cbd33"
+      },
+      "logFile": "mini-games/coverage/independent300/cross-parlour-B25-ordinary.jsonl",
+      "limits": [
+        "No physical phone or screen-reader test.",
+        "Opponent uses bounded heuristics, not optimal play."
+      ]
+    },
+    {
+      "designId": "B32",
+      "gameId": "passing-courses",
+      "room": "parlour-room",
+      "ordinaryBeforeSource": true,
+      "fullWin": true,
+      "naturalFailure": true,
+      "restart": true,
+      "nativeKeyboardWin": true,
+      "touchWin": true,
+      "touchFailure": true,
+      "meaningfulDecisions": "Initial full match lost31\u201334\u201320: two rival players took remaining triples before the hand returned, stranding a set. Revised round2 to complete a pair and collect dumplings, retained a second-place roll bonus and protected dessert majority; won36\u201329\u201320. Returned chopsticks to draft both pair cards from one hand, visibly returning an exploitable card into circulation. Rival drafting changed later availability and scoring.",
+      "methods": [
+        "Full three-round47-control ordinary loss followed by independently revised47-control win before reading engine or author routes.",
+        "Replayed full win through real native Tab/Enter, including selection of the second identically labeled Pair course button.",
+        "Repeated full win and full natural loss with touch-only taps at390px; restart, overflow and browser-error checks passed.",
+        "Scoped source audit after ordinary full outcomes verified simultaneous commitments use each rival own hand/tableau, alternating hand rotation, chopstick hand-size conservation, order-dependent sauce scoring, roll ties and terminal dessert adjustment."
+      ],
+      "issues": [],
+      "runtimeHashes": {
+        "mini-games/parlour-room/passing-courses.mjs": "69a896d9abc01c2c81b1213ff9e79b7400599fdd5b265971e0b549f1b0d98581",
+        "mini-games/parlour-room/core.mjs": "339407b8d279243a25622037f7a709a9998afbbc1945ca95a36106a37402c458",
+        "mini-games/parlour-room/game.js": "de78315740f63cc42963b31ca55e6058c565501ed5e11874a37b68ad8ad698b8",
+        "mini-games/parlour-room/room.css": "7b5baf1c1951e0906b8650ab805a8ef037fa564a5a384e70ef89bce11c17eabe",
+        "mini-games/parlour-room/index.html": "328f418fab77b773e534825d0b3c570598d361fd781ddfeb9e2408ea539cbd33"
+      },
+      "logFile": "mini-games/coverage/independent300/cross-parlour-B32-ordinary.jsonl",
+      "limits": [
+        "No physical phone or screen-reader test.",
+        "Rivals use a bounded card-value heuristic and draft one card per pick; they do not exercise the optional chopstick double-draft."
+      ]
+    }
+  ],
+  "limits": [
+    "B06/B10 transferred untouched to independent-uniqueness reviewer. Seven reviewed games are counted here."
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "scope": "Local planning artifact consistency only; no gameplay tests were run or claimed",
+  "baselineCommit": "fb1aabe76e6e2420ac68dce1941ffe8d940c924c",
+  "primaryCount": 100,
+  "familyCounts": {
+    "A": 14,
+    "B": 35,
+    "C": 24,
+    "D": 27
+  },
+  "reviewersAgreeOnAllPrimaryIds": true,
+  "reviewerHashesMatchFrozenDesigns": true,
+  "combinedSpecificationMatchesFamilyFiles": true,
+  "repositoryGitStatus": "clean",
+  "fingerprintedBaselineFilesUnchanged": true,
+  "runtimeCatalogEdits": false,
+  "commitPushPublicationPerformed": false,
+  "familyHashes": {
+    "a.json": "c8c4e6fdd2a0cfa5dd0f7ee0a727f076a7b9e75acd683f0ff6f8f25fb9f354ae",
+    "b.json": "3490597e0990fbcc88f0e41c9bd5be90967bb148c9cfaec1c6ca73ce8731050f",
+    "c.json": "f0a08c1ce403c34a77a814c81a3d35e398f1fa23c1fc628ff4ea7e99c51d9f25",
+    "d.json": "5a081a0930d3e5ceebef8c5a28ca9c40082f4b6f6b4a84297cd92e3e4fe6d1ad"
+  },
+  "nextRequiredAction": "Parent supplies verified remediated200 baseline and explicitly continues implementation; recheck overlap before any code changes."
+}

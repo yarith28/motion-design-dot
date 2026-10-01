@@ -1,0 +1,227 @@
+{
+  "passed": true,
+  "reviewer": "independent-uniqueness-parlour",
+  "games": [
+    {
+      "designId": "B23",
+      "gameId": "anchor-stacks",
+      "room": "parlour-room",
+      "status": "passed-independent-review",
+      "ordinaryBeforeSource": true,
+      "failureBeforeSource": true,
+      "fullWin": true,
+      "naturalFailure": true,
+      "restart": true,
+      "meaningfulDecisions": "A greedy tall capture lost its anchor-connected component. A second plan captured travelling anchors, built a recapture ladder, then vacated a bridge to delete six opposing/disconnected stacks. Native win13\u20130 followed a real0\u20134 loss; full touch replay won13\u20130.",
+      "issues": [],
+      "resolution": "Ordinary legal input wins, losses and restarts recorded.",
+      "logFile": "mini-games/coverage/independent300/uniqueness-B23-anchor-stacks-ordinary.jsonl",
+      "methods": [
+        "Public DOM and native Tab/Enter, no new source or authored routes",
+        "Full390px touchscreen-emulated replay of independently chosen actions"
+      ],
+      "limits": [
+        "No physical device or actual screen reader.",
+        "Only observed seeded matches are claimed; no exhaustive balance or expert-opponent guarantee."
+      ],
+      "sourceAuditComplete": true,
+      "runtimeHashes": {
+        "mini-games/parlour-room/anchor-stacks.mjs": "0edae1123af664d763cae5f20d0274c6aee56347c6c357099a5b2d3ab539be7f",
+        "mini-games/parlour-room/core.mjs": "339407b8d279243a25622037f7a709a9998afbbc1945ca95a36106a37402c458",
+        "mini-games/parlour-room/game.js": "de78315740f63cc42963b31ca55e6058c565501ed5e11874a37b68ad8ad698b8",
+        "mini-games/parlour-room/room.css": "7b5baf1c1951e0906b8650ab805a8ef037fa564a5a384e70ef89bce11c17eabe",
+        "mini-games/parlour-room/index.html": "328f418fab77b773e534825d0b3c570598d361fd781ddfeb9e2408ea539cbd33",
+        "mini-games/parlour-room/games.json": "2ca643577427733bb196101c550c6d8182271f2fc998d1a211ed2de121bc23b0"
+      },
+      "sourceSha256": "0edae1123af664d763cae5f20d0274c6aee56347c6c357099a5b2d3ab539be7f",
+      "sourceModule": "mini-games/parlour-room/anchor-stacks.mjs"
+    },
+    {
+      "designId": "B26",
+      "gameId": "carried-road",
+      "room": "parlour-room",
+      "status": "passed-independent-review",
+      "ordinaryBeforeSource": true,
+      "failureBeforeSource": true,
+      "fullWin": true,
+      "naturalFailure": true,
+      "restart": true,
+      "meaningfulDecisions": "Two straight road attempts lost to captures and an opposing completed road. Winning native match assembled mixed vertical stacks, used four-stone distributions2+2 to preserve own tops across three squares, redirected around a standing wall, protected a top-edge capstone and completed a branching road. Full touch replay66 actions. Opponent used multi-drop carries and defensive walls.",
+      "issues": [],
+      "resolution": "Ordinary legal input wins, losses and restarts recorded.",
+      "logFile": "mini-games/coverage/independent300/uniqueness-B26-carried-road-ordinary.jsonl",
+      "methods": [
+        "Public DOM and native Tab/Enter, no new source or authored routes",
+        "Full390px touchscreen-emulated replay of independently chosen actions"
+      ],
+      "limits": [
+        "No physical device or actual screen reader.",
+        "Only observed seeded matches are claimed; no exhaustive balance or expert-opponent guarantee."
+      ],
+      "sourceAuditComplete": true,
+      "runtimeHashes": {
+        "mini-games/parlour-room/carried-road.mjs": "a07e5b3350bb8de06091ca4c31e44d809f77ddfefb68ce23e04a3df0b7448965",
+        "mini-games/parlour-room/core.mjs": "339407b8d279243a25622037f7a709a9998afbbc1945ca95a36106a37402c458",
+        "mini-games/parlour-room/game.js": "de78315740f63cc42963b31ca55e6058c565501ed5e11874a37b68ad8ad698b8",
+        "mini-games/parlour-room/room.css": "7b5baf1c1951e0906b8650ab805a8ef037fa564a5a384e70ef89bce11c17eabe",
+        "mini-games/parlour-room/index.html": "328f418fab77b773e534825d0b3c570598d361fd781ddfeb9e2408ea539cbd33",
+        "mini-games/parlour-room/games.json": "2ca643577427733bb196101c550c6d8182271f2fc998d1a211ed2de121bc23b0"
+      },
+      "sourceSha256": "a07e5b3350bb8de06091ca4c31e44d809f77ddfefb68ce23e04a3df0b7448965",
+      "sourceModule": "mini-games/parlour-room/carried-road.mjs"
+    },
+    {
+      "designId": "B27",
+      "gameId": "masks-and-coins",
+      "room": "parlour-room",
+      "ordinaryBeforeSource": true,
+      "failureBeforeSource": true,
+      "fullWin": true,
+      "naturalFailure": true,
+      "restart": true,
+      "meaningfulDecisions": "Initial Aid-denial farming and accepting certain lethal loss were rejected. Revised731 full win used one risky Guard bluff, then accepted a later assassination and exposed Captain to retain Treasury income before an unchallengeable coup. New8650 exercised truthful-role proof/replacement;16569 exercised exchange, a wrong challenge, and a speculative lethal Assassin bluff. On final revision that bluff was challenged, costing the remaining influence and ending in real loss.24488 independently exercised catching a false Captain claim and the corrected lethal challenge.",
+      "issues": [
+        "Repeated blocked Aid initially allowed safe tax/coup farming.",
+        "House originally accepted a lethal assassination with no Guard rather than challenging its only survival chance.",
+        "Owner reported a keep/kept dispatch overlap during review."
+      ],
+      "resolution": "Owner added observed-block adaptation and challenge pressure, made lethal no-Guard challenges mandatory, and narrowed exchange selection dispatch. Final native731 and complete15-action touch win; actual16569 failure and restart verified on corrected build. Exchange completion observed before source.",
+      "logFile": "mini-games/coverage/independent300/uniqueness-B27-masks-and-coins-ordinary.jsonl",
+      "methods": [
+        "Public DOM and native Tab/Enter before source inspection",
+        "Complete390px touch win on final revision",
+        "Ordinary wrong-challenge and failed-bluff terminal loss; no solver or authored route"
+      ],
+      "limits": [
+        "Stochastic seeded opponent is not optimal; short wins on some deals do not establish robust winning strategy.",
+        "Negative16569 replay intentionally repeated an independently observed failed-risk line after the opponent correction.",
+        "No physical device or actual screen reader.",
+        "Only observed seeded matches are claimed; no exhaustive balance or expert-opponent guarantee."
+      ],
+      "status": "passed-independent-review",
+      "sourceAuditComplete": true,
+      "runtimeHashes": {
+        "mini-games/parlour-room/masks-and-coins.mjs": "fa3a5535cf6e3cf4e22c353910933627e74444f4888835e88736959863501aaa",
+        "mini-games/parlour-room/core.mjs": "339407b8d279243a25622037f7a709a9998afbbc1945ca95a36106a37402c458",
+        "mini-games/parlour-room/game.js": "de78315740f63cc42963b31ca55e6058c565501ed5e11874a37b68ad8ad698b8",
+        "mini-games/parlour-room/room.css": "7b5baf1c1951e0906b8650ab805a8ef037fa564a5a384e70ef89bce11c17eabe",
+        "mini-games/parlour-room/index.html": "328f418fab77b773e534825d0b3c570598d361fd781ddfeb9e2408ea539cbd33",
+        "mini-games/parlour-room/games.json": "2ca643577427733bb196101c550c6d8182271f2fc998d1a211ed2de121bc23b0"
+      },
+      "sourceSha256": "fa3a5535cf6e3cf4e22c353910933627e74444f4888835e88736959863501aaa",
+      "sourceModule": "mini-games/parlour-room/masks-and-coins.mjs"
+    },
+    {
+      "designId": "B28",
+      "gameId": "merging-estates",
+      "room": "parlour-room",
+      "status": "passed-independent-review",
+      "ordinaryBeforeSource": true,
+      "failureBeforeSource": true,
+      "fullWin": true,
+      "naturalFailure": true,
+      "restart": true,
+      "meaningfulDecisions": "Purchased seven of twelve Alder shares before growth locked majority, bought one Birch share for minority payout, established Cedar and used cash/majority timing around two mergers and refounding. Won117\u201370 on native and touch. Conserving cash and accepting founder shares without purchases lost64\u2013133 after ordinary settlement.",
+      "issues": [],
+      "resolution": "Ordinary legal input wins, losses and restarts recorded.",
+      "logFile": "mini-games/coverage/independent300/uniqueness-B28-merging-estates-ordinary.jsonl",
+      "methods": [
+        "Public DOM and native Tab/Enter, no new source or authored routes",
+        "Full390px touchscreen-emulated replay of independently chosen actions"
+      ],
+      "limits": [
+        "No physical device or actual screen reader.",
+        "Only observed seeded matches are claimed; no exhaustive balance or expert-opponent guarantee."
+      ],
+      "sourceAuditComplete": true,
+      "runtimeHashes": {
+        "mini-games/parlour-room/merging-estates.mjs": "a554dc9299b376ead1d97955a2ec6c2e697587ec687ea017ca0f0634c8737a9d",
+        "mini-games/parlour-room/core.mjs": "339407b8d279243a25622037f7a709a9998afbbc1945ca95a36106a37402c458",
+        "mini-games/parlour-room/game.js": "de78315740f63cc42963b31ca55e6058c565501ed5e11874a37b68ad8ad698b8",
+        "mini-games/parlour-room/room.css": "7b5baf1c1951e0906b8650ab805a8ef037fa564a5a384e70ef89bce11c17eabe",
+        "mini-games/parlour-room/index.html": "328f418fab77b773e534825d0b3c570598d361fd781ddfeb9e2408ea539cbd33",
+        "mini-games/parlour-room/games.json": "2ca643577427733bb196101c550c6d8182271f2fc998d1a211ed2de121bc23b0"
+      },
+      "sourceSha256": "a554dc9299b376ead1d97955a2ec6c2e697587ec687ea017ca0f0634c8737a9d",
+      "sourceModule": "mini-games/parlour-room/merging-estates.mjs"
+    },
+    {
+      "designId": "B29",
+      "gameId": "last-known-address",
+      "room": "parlour-room",
+      "status": "passed-independent-review",
+      "ordinaryBeforeSource": true,
+      "failureBeforeSource": true,
+      "fullWin": true,
+      "naturalFailure": true,
+      "restart": true,
+      "meaningfulDecisions": "Combined transport traces with occupied escape routes: opening bus narrowed toC3; ferry traces narrowedA2/B1, failedA2 visit identifiedB1, next ferry identifiedC4. Placed detectives atD3/B1/B4 so both remaining walking endpoints were covered byD3 after reveal. Capturedround4. Fixed perimeter patrol spent all walking tickets then held posts; fugitive escapedround16. Touch full capture confirmed.",
+      "issues": [
+        "Sightings falsely described as past immediately after fresh reveal."
+      ],
+      "resolution": "Timing wording corrected without movement change; final full touch replay verified a fresh reveal remains current until the next fugitive move.",
+      "logFile": "mini-games/coverage/independent300/uniqueness-B29-last-known-address-ordinary.jsonl",
+      "methods": [
+        "Public DOM and native Tab/Enter, no new source or authored routes",
+        "Full390px touchscreen-emulated replay of independently chosen actions"
+      ],
+      "limits": [
+        "No physical device or actual screen reader.",
+        "Only observed seeded matches are claimed; no exhaustive balance or expert-opponent guarantee."
+      ],
+      "sourceAuditComplete": true,
+      "runtimeHashes": {
+        "mini-games/parlour-room/last-known-address.mjs": "598011817e31ffe64880d04a702a9debc879c0fc7a304f3706fe374c233a866d",
+        "mini-games/parlour-room/core.mjs": "339407b8d279243a25622037f7a709a9998afbbc1945ca95a36106a37402c458",
+        "mini-games/parlour-room/game.js": "de78315740f63cc42963b31ca55e6058c565501ed5e11874a37b68ad8ad698b8",
+        "mini-games/parlour-room/room.css": "7b5baf1c1951e0906b8650ab805a8ef037fa564a5a384e70ef89bce11c17eabe",
+        "mini-games/parlour-room/index.html": "328f418fab77b773e534825d0b3c570598d361fd781ddfeb9e2408ea539cbd33",
+        "mini-games/parlour-room/games.json": "2ca643577427733bb196101c550c6d8182271f2fc998d1a211ed2de121bc23b0"
+      },
+      "sourceSha256": "598011817e31ffe64880d04a702a9debc879c0fc7a304f3706fe374c233a866d",
+      "sourceModule": "mini-games/parlour-room/last-known-address.mjs"
+    },
+    {
+      "designId": "B30",
+      "gameId": "crossed-programs",
+      "room": "parlour-room",
+      "status": "passed-independent-review",
+      "ordinaryBeforeSource": true,
+      "failureBeforeSource": true,
+      "fullWin": true,
+      "naturalFailure": true,
+      "restart": true,
+      "meaningfulDecisions": "Two complete competitive losses preceded a round12 exit. Accounted for persistent orientation, end-register belts and rotator, card retention, lower-priority movement and actual rival pushes. Replanned around body blocking atF2; a final left turn plus backward movement reached exit before rival push. Full83-action touch replay won. Earlier push accidentally delivered rival to exit, a genuine losing consequence.",
+      "issues": [],
+      "resolution": "Ordinary legal input wins, losses and restarts recorded.",
+      "logFile": "mini-games/coverage/independent300/uniqueness-B30-crossed-programs-ordinary.jsonl",
+      "methods": [
+        "Public DOM and native Tab/Enter, no new source or authored routes",
+        "Full390px touchscreen-emulated replay of independently chosen actions"
+      ],
+      "limits": [
+        "No physical device or actual screen reader.",
+        "Only observed seeded matches are claimed; no exhaustive balance or expert-opponent guarantee."
+      ],
+      "sourceAuditComplete": true,
+      "runtimeHashes": {
+        "mini-games/parlour-room/crossed-programs.mjs": "f1182d6b8f4f55826004c8eb4c0df83837588ce8827b1b9952cee1d831c200eb",
+        "mini-games/parlour-room/core.mjs": "339407b8d279243a25622037f7a709a9998afbbc1945ca95a36106a37402c458",
+        "mini-games/parlour-room/game.js": "de78315740f63cc42963b31ca55e6058c565501ed5e11874a37b68ad8ad698b8",
+        "mini-games/parlour-room/room.css": "7b5baf1c1951e0906b8650ab805a8ef037fa564a5a384e70ef89bce11c17eabe",
+        "mini-games/parlour-room/index.html": "328f418fab77b773e534825d0b3c570598d361fd781ddfeb9e2408ea539cbd33",
+        "mini-games/parlour-room/games.json": "2ca643577427733bb196101c550c6d8182271f2fc998d1a211ed2de121bc23b0"
+      },
+      "sourceSha256": "f1182d6b8f4f55826004c8eb4c0df83837588ce8827b1b9952cee1d831c200eb",
+      "sourceModule": "mini-games/parlour-room/crossed-programs.mjs"
+    }
+  ],
+  "pendingGames": [],
+  "limits": [
+    "Six transferred games: B23/B26\u2013B30; all completed ordinary wins and failures before their new engine source was read.",
+    "This file is a six-game appendix; main uniqueness-review.json includes these same entries. Do not count twice.",
+    "B27 initial builds rejected and corrected; final native/touch wins and failed lethal bluff are distinguished in notes.",
+    "Post-ordinary model fixtures are supplementary, never ordinary win evidence.",
+    "Shared parlour metadata hash refreshed after reviewing the six relevant entries against observed mechanics; six-entry snapshot saved. Other game metadata edits changed the whole-file hash; no reviewed engine/host/CSS changed."
+  ]
+}

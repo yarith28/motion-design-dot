@@ -1,0 +1,296 @@
+[
+  {
+    "id": "falling-orchard",
+    "name": "Falling Orchard",
+    "category": "puzzle",
+    "description": "Connected-group removal with gravity and column closure.",
+    "mechanic": "Connected-group removal with gravity and column closure.",
+    "rules": [
+      "Choose a connected group of at least two identical letters, then Remove. Letters fall and empty columns shift left.",
+      "Clear every letter in three different orchards. Leaving isolated letters with no legal group strands that branch; Undo is always available.",
+      "A large group is not always best. Small clearances can bring separated letters together."
+    ],
+    "controls": "Tap any labeled control, or Tab to it and use Enter or Space. Board selections expose their selected state. No dragging, timer or global shortcuts.",
+    "url": "construct-room/?game=falling-orchard",
+    "accent": "#b5c8a5",
+    "symbol": "\u25c7",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-key=\"cell-0\"]"
+    },
+    "designId": "A01"
+  },
+  {
+    "id": "turn-the-stack",
+    "name": "Turn the Stack",
+    "category": "puzzle",
+    "description": "Signed-prefix reversals with a tight, visible flip allowance.",
+    "mechanic": "Signed-prefix reversals with a tight, visible flip allowance.",
+    "rules": [
+      "Choose a boundary below a disc, then flip that entire top prefix. Its order reverses and every UP face becomes DOWN or vice versa.",
+      "Finish in order 1 upward from the top, all faces UP, within each study\u2019s allowance. The preview is exact.",
+      "A solved suffix is useful, but arranging every disc separately can exceed the allowance. Look for groups that already belong together."
+    ],
+    "controls": "Tap any labeled control, or Tab to it and use Enter or Space. Board selections expose their selected state. No dragging, timer or global shortcuts.",
+    "url": "construct-room/?game=turn-the-stack",
+    "accent": "#b5c8a5",
+    "symbol": "\u25c7",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-key=\"prefix-2\"]"
+    },
+    "designId": "A08"
+  },
+  {
+    "id": "unfair-circle",
+    "name": "An Unfair Circle",
+    "category": "puzzle",
+    "description": "Construct three equally valued dice with cyclic winning probabilities.",
+    "mechanic": "Construct three equally valued dice with cyclic winning probabilities.",
+    "rules": [
+      "Each die has six faces. Select two sockets to exchange their face tokens; tokens are conserved.",
+      "Make A beat B, B beat C and C beat A in at least the shown number of the 36 equally likely face pairs. All three dice must have the displayed total.",
+      "The exact comparison counts update after each exchange. Ties are not wins, and equal means alone do not establish the cycle."
+    ],
+    "controls": "Tap any labeled control, or Tab to it and use Enter or Space. Board selections expose their selected state. No dragging, timer or global shortcuts.",
+    "url": "construct-room/?game=unfair-circle",
+    "accent": "#b5c8a5",
+    "symbol": "\u25c7",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-key=\"face-0\"]"
+    },
+    "designId": "A13"
+  },
+  {
+    "id": "one-last-marble",
+    "name": "One Last Marble",
+    "designId": "A09",
+    "category": "puzzle",
+    "description": "Contact chains transfer momentum and reshape the next legal launches.",
+    "mechanic": "Contact chains transfer momentum and reshape the next legal launches.",
+    "rules": [
+      "Select a marble and direction. A legal fling needs at least one empty square before its first target.",
+      "The striker stops immediately before its target; the target continues, passing momentum through any further marbles. The final marble exits.",
+      "Leave exactly one marble. An adjacent target cannot be launched into. No legal launch with multiple marbles is a dead end; Undo recovers."
+    ],
+    "controls": "Tap labeled controls or Tab and activate with Enter or Space. No drag or timer. Selection and all essential board state are visible as text.",
+    "url": "construct-room/?game=one-last-marble",
+    "accent": "#b5c8a5",
+    "symbol": "\u25c7",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-key=\"marble-0\"]"
+    }
+  },
+  {
+    "id": "corner-cabinet",
+    "name": "Corner Cabinet",
+    "designId": "A02",
+    "category": "puzzle",
+    "description": "Restore a 2\u00d72 cube through coupled corner permutations and orientations.",
+    "mechanic": "Restore a 2\u00d72 cube through coupled corner permutations and orientations.",
+    "rules": [
+      "Select one of the six faces, then turn it clockwise or counterclockwise as viewed from outside. A turn carries four corner cubies and all their stickers.",
+      "Make each face uniform in letter color. Six panels and the corner table expose the entire state; there is no hidden back face.",
+      "Turns do not commute: changing their order changes the cube. An assembled face may need to be broken temporarily. Undo is available throughout."
+    ],
+    "controls": "Tap labeled controls or Tab and activate with Enter or Space. No drag or timer. Selection and all essential board state are visible as text.",
+    "url": "construct-room/?game=corner-cabinet",
+    "accent": "#b5c8a5",
+    "symbol": "\u25c7",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-key=\"cube-R\"]"
+    }
+  },
+  {
+    "id": "letter-conservatory",
+    "name": "Letter Conservatory",
+    "designId": "A14",
+    "category": "puzzle",
+    "description": "Choose bent word routes while reserving scarce letters for later contracts.",
+    "mechanic": "Choose bent word routes while reserving scarce letters for later contracts.",
+    "rules": [
+      "Build words by selecting neighboring tiles, including diagonals. Each tile can appear only once across all committed words.",
+      "Use up to four words from the visible complete lexicon to collect all four stars and earn 60 points. A length n word earns n\u00b2 points.",
+      "Reserve commits its tiles. Backtrack changes the current uncommitted route; Undo reverses the last committed word. Different routes for the same word can preserve different future options."
+    ],
+    "controls": "Tap labeled controls or Tab and activate with Enter or Space. No drag or timer. Selection and all essential board state are visible as text.",
+    "url": "construct-room/?game=letter-conservatory",
+    "accent": "#b5c8a5",
+    "symbol": "\u25c7",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-key=\"letter-0\"]"
+    }
+  },
+  {
+    "id": "compass-house",
+    "name": "Compass House",
+    "designId": "A04",
+    "category": "puzzle",
+    "description": "Construct exact points, lines and circles through reusable geometric dependencies.",
+    "mechanic": "Construct exact points, lines and circles through reusable geometric dependencies.",
+    "rules": [
+      "Line and Circle use two existing points. Circle selection is ordered: first center, then a point on its rim. Intersect uses two existing lines or circles and creates their actual intersections.",
+      "Every selectable point is given or constructed. You cannot guess an arbitrary pixel position; exact geometric predicates certify your answer.",
+      "Choose Select answer, select a named point or line appropriate to the goal, then Certify. Each study includes a geometric field note."
+    ],
+    "controls": "All tools, objects and coordinate increments are native buttons. Tap or use Tab and Enter/Space. Exact geometric values and provenance remain visible; no dragging or timing.",
+    "url": "construct-room/?game=compass-house",
+    "accent": "#b5c8a5",
+    "symbol": "\u25c7",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-key=\"point-A\"]"
+    }
+  },
+  {
+    "id": "fair-portions",
+    "name": "Fair Portions",
+    "designId": "A06",
+    "category": "puzzle",
+    "description": "Progressive guillotine cuts conserve weighted material and protected emblems.",
+    "mechanic": "Progressive guillotine cuts conserve weighted material and protected emblems.",
+    "rules": [
+      "Select one current piece. Set endpoints A and B in thirds of a unit, both on that piece\u2019s boundary, then commit one straight cut. The exact proposed masses are visible.",
+      "Create the requested number of equal-mass pieces with exactly one emblem each. A cut may not pass within 0.14 units of an emblem.",
+      "Each cut replaces one piece by two; it cannot cut several disconnected pieces at once. Undo reverses the complete cut. The second sheet has nonuniform density."
+    ],
+    "controls": "All tools, objects and coordinate increments are native buttons. Tap or use Tab and Enter/Space. Exact geometric values and provenance remain visible; no dragging or timing.",
+    "url": "construct-room/?game=fair-portions",
+    "accent": "#b5c8a5",
+    "symbol": "\u25c7",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-key=\"a-0-1\"]"
+    }
+  },
+  {
+    "id": "unfolding-house",
+    "name": "Unfolding House",
+    "designId": "A12",
+    "category": "puzzle",
+    "description": "Choose polyhedral seams whose actual flat embedding avoids overlaps and fits its stock.",
+    "mechanic": "Choose polyhedral seams whose actual flat embedding avoids overlaps and fits its stock.",
+    "rules": [
+      "Six named faces F,B,R,L,U,D form the displayed box. Retain five seams as hinges; cut the others.",
+      "Every face must remain connected to F, and its unfolded polygon must avoid all other faces and fit the stock rectangle. The flat preview uses the actual edge lengths.",
+      "A hinge tree can still overlap or be too wide. The last study includes a torn seam that cannot hold; choose another branching net."
+    ],
+    "controls": "Tap labeled controls or Tab and use Enter/Space. Diagrams have equivalent named state lists. Illegal local operations explain the obstruction; Undo always restores the prior study state.",
+    "url": "construct-room/?game=unfolding-house",
+    "accent": "#b5c8a5",
+    "symbol": "\u25c7",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-key=\"seam-0\"]"
+    }
+  },
+  {
+    "id": "gentle-unknot",
+    "name": "Gentle Unknot",
+    "designId": "A03",
+    "category": "puzzle",
+    "description": "Simplify closed braid diagrams while preserving their over-under knot topology.",
+    "mechanic": "Simplify closed braid diagrams while preserving their over-under knot topology.",
+    "rules": [
+      "A braid\u2019s bottom lane reconnects to its same-numbered top lane. Signed crossings say which adjacent strand passes over; read the diagram and numbered crossing list together.",
+      "Select a crossing to start a local move. Opposite consecutive crossings on the same lanes cancel; a same-sign a,b,a triple on adjacent lane pairs can slide to b,a,b.",
+      "Moving the closure seam rotates the crossing list without changing the closed knot. When the final strand meets the others exactly once at the final crossing, remove that free curl. Reach one strand and no crossings."
+    ],
+    "controls": "Tap labeled controls or Tab and use Enter/Space. Diagrams have equivalent named state lists. Illegal local operations explain the obstruction; Undo always restores the prior study state.",
+    "url": "construct-room/?game=gentle-unknot",
+    "accent": "#b5c8a5",
+    "symbol": "\u25c7",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-key=\"braid-slide\"]"
+    }
+  },
+  {
+    "id": "bonding-room",
+    "name": "Bonding Room",
+    "designId": "A11",
+    "category": "puzzle",
+    "description": "Assemble rigid molecules only after their changing footprints can reach the delivery dock.",
+    "mechanic": "Assemble rigid molecules only after their changing footprints can reach the delivery dock.",
+    "rules": [
+      "Select an atom to move its entire connected molecule one grid square. Every member must fit; molecules never rotate.",
+      "Touching atoms with free valence bond automatically after movement. Simultaneous contacts resolve in alphabetical pair order, shown by atom names.",
+      "Make exactly the displayed molecular graph and place every atom in the dock. A wrong permanent bond ends that branch; Undo restores the previous state."
+    ],
+    "controls": "Tap directional controls or use native keyboard Tab and Enter/Space. Whole components, active rules and positions are listed in visible text. Undo restores all coupled state.",
+    "url": "construct-room/?game=bonding-room",
+    "accent": "#b5c8a5",
+    "symbol": "\u25c7",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-key=\"bond-cell-4\"]"
+    }
+  },
+  {
+    "id": "words-that-move",
+    "name": "Words That Move",
+    "designId": "A07",
+    "category": "puzzle",
+    "description": "Move physical words to change control, collision and winning rules.",
+    "mechanic": "Move physical words to change control, collision and winning rules.",
+    "rules": [
+      "Contiguous horizontal or vertical NOUN\u2013IS\u2013PROPERTY sentences govern objects. Every word block is pushable; stone wall squares are permanent.",
+      "YOU controls every object of that noun. PUSH permits pushing, STOP blocks, and touching a WIN object with any YOU object wins. Properties combine when several sentences apply.",
+      "Every direction moves all controlled bodies, each blocked independently. Rules rebuild after the movement; losing every YOU rule strands you until Undo. No object is a goal without a current WIN rule."
+    ],
+    "controls": "Tap directional controls or use native keyboard Tab and Enter/Space. Whole components, active rules and positions are listed in visible text. Undo restores all coupled state.",
+    "url": "construct-room/?game=words-that-move",
+    "accent": "#b5c8a5",
+    "symbol": "\u25c7",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-key=\"world-dir-3\"]"
+    }
+  },
+  {
+    "id": "rooms-in-motion",
+    "name": "Rooms in Motion",
+    "designId": "A10",
+    "category": "puzzle",
+    "description": "Insert a spare room to displace a maze lane, its objectives and its traveler.",
+    "mechanic": "Insert a spare room to displace a maze lane, its objectives and its traveler.",
+    "rules": [
+      "Rotate the spare, then insert it at a row or column edge. The last tile is ejected as the new spare; every room and its contents shifts together. A traveler on the ejected room wraps to the new tile.",
+      "Walk through reciprocal corridor openings to visit the ordered room IDs, then return to home room 0. Objectives can wait on the spare until you reinsert them.",
+      "An insertion cannot immediately reverse the previous insertion on the same lane. Walking and rotation are free of the insertion budget; after the final insertion you may still finish walking."
+    ],
+    "controls": "Tap any control or use Tab with Enter/Space. All cells include readable positions/state; photo frames and corridor ports expose selected state. No drag or real-time input.",
+    "url": "construct-room/?game=rooms-in-motion",
+    "accent": "#b5c8a5",
+    "symbol": "\u25c7",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-key=\"insert-0\"]"
+    }
+  },
+  {
+    "id": "pocket-photograph",
+    "name": "Pocket Photograph",
+    "designId": "A16",
+    "category": "puzzle",
+    "description": "Capture live world patches, then replace terrain and copy uncollected keys to build your route.",
+    "mechanic": "Capture live world patches, then replace terrain and copy uncollected keys to build your route.",
+    "rules": [
+      "Choose frame mode and tap its top-left square. Capture stores the current 3\u00d73 terrain and objects in one photograph, spending an exposure. The avatar and anchored exit cannot be included.",
+      "Rotate the photograph if useful, choose its destination frame, then Paste. All nine cells replace the destination, including wall cells. The photograph is consumed; its source is unchanged.",
+      "Collect the requested keys and reach the exit. Keys can be copied before collection. The second study has a fixed wall stud that must remain wall. Undo reverses movement, captures and pastes."
+    ],
+    "controls": "Tap any control or use Tab with Enter/Space. All cells include readable positions/state; photo frames and corridor ports expose selected state. No drag or real-time input.",
+    "url": "construct-room/?game=pocket-photograph",
+    "accent": "#b5c8a5",
+    "symbol": "\u25c7",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-key=\"capture\"]"
+    }
+  }
+]

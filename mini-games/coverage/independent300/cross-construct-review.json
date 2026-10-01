@@ -1,0 +1,425 @@
+{
+  "passed": true,
+  "reviewer": "independent-motion-author",
+  "games": [
+    {
+      "designId": "A02",
+      "gameId": "corner-cabinet",
+      "room": "construct-room",
+      "ordinaryBeforeSource": true,
+      "fullWin": true,
+      "naturalFailure": true,
+      "restart": true,
+      "meaningfulDecisions": "Tracked corner positions and orientations across coupled face turns; repaired the lower layer, temporarily disrupted it during corner orientation, then permuted the top. Initial inverse-turn hypotheses and premature certification failed; Reset and Undo restored play. Genuine 2×2 cube mechanics, not independent face recoloring.",
+      "methods": [
+        "Full three-study ordinary public UI campaign before source or solutions; precise actions and rendered observations logged.",
+        "Source inspected only for this completed engine after full win; no game state injected or solver used.",
+        "mobile-touch full public-route replay, 343 actions; restart true, overflow false, errors 0",
+        "desktop-keyboard full public-route replay, 343 actions; restart true, overflow false, errors 0"
+      ],
+      "issues": [],
+      "runtimeHashes": {
+        "mini-games/construct-room/engines.js": "f74727bc36872bdc52ee56a8138f56f08e9121f60a67963bc8917e6313af9d0d",
+        "mini-games/construct-room/room.js": "1a3fbc9fb1ffdf2f2ade634058b0381c41ea462ea235cbc95f69ac2829c7c192",
+        "mini-games/construct-room/room.css": "905ef0b988045c7c3fbdeefaba291ed09324bd0476a1074a4d9fe8f4b82e44d3",
+        "mini-games/construct-room/index.html": "47778fb4053d58e114b316f97436598732989814cf5c2f66b0fe8b4447e5cfaa",
+        "mini-games/construct-room/games.json": "134e40b30a57e277c14dd57c5567aeebf9c7e0e5a0afc61be994b75a78fda527"
+      },
+      "logFile": "mini-games/coverage/independent300/cross-A02-ordinary.jsonl",
+      "publicWinFile": "mini-games/coverage/independent300/cross-A02-public-win.json",
+      "replayFile": "mini-games/coverage/independent300/cross-A02-replay.json",
+      "limits": [
+        "No physical phone or screen reader.",
+        "Failure is a recoverable rejected local operation/certification, not an invented terminal loss."
+      ]
+    },
+    {
+      "designId": "A03",
+      "gameId": "gentle-unknot",
+      "room": "construct-room",
+      "ordinaryBeforeSource": true,
+      "fullWin": true,
+      "naturalFailure": true,
+      "restart": true,
+      "meaningfulDecisions": "Used braid sliding to expose inverse pairs, moved closure seam to make final-strand removal legal, then reduced three diagrams to one loop. First attempted cancellation was rejected because it was not an inverse pair. Later diagrams required seam changes and local order planning; source uses genuine braid relations, not a target-word comparison.",
+      "methods": [
+        "Full three-study ordinary public UI campaign before source or solutions; precise actions and rendered observations logged.",
+        "Source inspected only for this completed engine after full win; no game state injected or solver used.",
+        "mobile-touch full public-route replay, 49 actions; restart true, overflow false, errors 0",
+        "desktop-keyboard full public-route replay, 49 actions; restart true, overflow false, errors 0"
+      ],
+      "issues": [],
+      "runtimeHashes": {
+        "mini-games/construct-room/engines.js": "f74727bc36872bdc52ee56a8138f56f08e9121f60a67963bc8917e6313af9d0d",
+        "mini-games/construct-room/room.js": "1a3fbc9fb1ffdf2f2ade634058b0381c41ea462ea235cbc95f69ac2829c7c192",
+        "mini-games/construct-room/room.css": "905ef0b988045c7c3fbdeefaba291ed09324bd0476a1074a4d9fe8f4b82e44d3",
+        "mini-games/construct-room/index.html": "47778fb4053d58e114b316f97436598732989814cf5c2f66b0fe8b4447e5cfaa",
+        "mini-games/construct-room/games.json": "134e40b30a57e277c14dd57c5567aeebf9c7e0e5a0afc61be994b75a78fda527"
+      },
+      "logFile": "mini-games/coverage/independent300/cross-A03-ordinary.jsonl",
+      "publicWinFile": "mini-games/coverage/independent300/cross-A03-public-win.json",
+      "replayFile": "mini-games/coverage/independent300/cross-A03-replay.json",
+      "limits": [
+        "No physical phone or screen reader.",
+        "Failure is a recoverable rejected local operation/certification, not an invented terminal loss."
+      ]
+    },
+    {
+      "designId": "A04",
+      "gameId": "compass-house",
+      "room": "construct-room",
+      "ordinaryBeforeSource": true,
+      "fullWin": true,
+      "naturalFailure": true,
+      "restart": true,
+      "meaningfulDecisions": "Constructed exact bisectors from equal-radius circles, reused two bisectors for circumcenter, then built the circle with diameter OP to obtain a perpendicular tangent contact. Premature certification with no answer was rejected. Choice of auxiliary constructions and their intersections is required; arbitrary coordinate guesses are unavailable.",
+      "methods": [
+        "Full three-study ordinary public UI campaign before source or solutions; precise actions and rendered observations logged.",
+        "Source inspected only for this completed engine after full win; no game state injected or solver used.",
+        "mobile-touch full public-route replay, 96 actions; restart true, overflow false, errors 0",
+        "desktop-keyboard full public-route replay, 96 actions; restart true, overflow false, errors 0"
+      ],
+      "issues": [],
+      "runtimeHashes": {
+        "mini-games/construct-room/engines.js": "f74727bc36872bdc52ee56a8138f56f08e9121f60a67963bc8917e6313af9d0d",
+        "mini-games/construct-room/room.js": "1a3fbc9fb1ffdf2f2ade634058b0381c41ea462ea235cbc95f69ac2829c7c192",
+        "mini-games/construct-room/room.css": "905ef0b988045c7c3fbdeefaba291ed09324bd0476a1074a4d9fe8f4b82e44d3",
+        "mini-games/construct-room/index.html": "47778fb4053d58e114b316f97436598732989814cf5c2f66b0fe8b4447e5cfaa",
+        "mini-games/construct-room/games.json": "134e40b30a57e277c14dd57c5567aeebf9c7e0e5a0afc61be994b75a78fda527"
+      },
+      "logFile": "mini-games/coverage/independent300/cross-A04-ordinary.jsonl",
+      "publicWinFile": "mini-games/coverage/independent300/cross-A04-public-win.json",
+      "replayFile": "mini-games/coverage/independent300/cross-A04-replay.json",
+      "limits": [
+        "No physical phone or screen reader.",
+        "Failure is a recoverable rejected local operation/certification, not an invented terminal loss."
+      ]
+    },
+    {
+      "designId": "A06",
+      "gameId": "fair-portions",
+      "room": "construct-room",
+      "ordinaryBeforeSource": true,
+      "fullWin": true,
+      "naturalFailure": true,
+      "restart": true,
+      "meaningfulDecisions": "Cut one chosen piece at a time while preserving one emblem per equal-mass portion. Replaced the uniform midpoint split with an 8/3 weighted-area division, then used two vertex-to-boundary cuts on the triangle. An initial boundary-only cut was naturally rejected. Source clips actual polygons and integrates the density regions.",
+      "methods": [
+        "Full three-study ordinary public UI campaign before source or solutions; precise actions and rendered observations logged.",
+        "Source inspected only for this completed engine after full win; no game state injected or solver used.",
+        "mobile-touch full public-route replay, 119 actions; restart true, overflow false, errors 0",
+        "desktop-keyboard full public-route replay, 119 actions; restart true, overflow false, errors 0"
+      ],
+      "issues": [],
+      "runtimeHashes": {
+        "mini-games/construct-room/engines.js": "f74727bc36872bdc52ee56a8138f56f08e9121f60a67963bc8917e6313af9d0d",
+        "mini-games/construct-room/room.js": "1a3fbc9fb1ffdf2f2ade634058b0381c41ea462ea235cbc95f69ac2829c7c192",
+        "mini-games/construct-room/room.css": "905ef0b988045c7c3fbdeefaba291ed09324bd0476a1074a4d9fe8f4b82e44d3",
+        "mini-games/construct-room/index.html": "47778fb4053d58e114b316f97436598732989814cf5c2f66b0fe8b4447e5cfaa",
+        "mini-games/construct-room/games.json": "134e40b30a57e277c14dd57c5567aeebf9c7e0e5a0afc61be994b75a78fda527"
+      },
+      "logFile": "mini-games/coverage/independent300/cross-A06-ordinary.jsonl",
+      "publicWinFile": "mini-games/coverage/independent300/cross-A06-public-win.json",
+      "replayFile": "mini-games/coverage/independent300/cross-A06-replay.json",
+      "limits": [
+        "No physical phone or screen reader.",
+        "Failure is a recoverable rejected local operation/certification, not an invented terminal loss."
+      ]
+    },
+    {
+      "designId": "A07",
+      "gameId": "words-that-move",
+      "room": "construct-room",
+      "ordinaryBeforeSource": true,
+      "fullWin": true,
+      "naturalFailure": true,
+      "restart": true,
+      "meaningfulDecisions": "Changed physical sentences to turn a rock into the goal, transfer control across an impassable partition, and finally retain two controlled nouns while one rewrote WIN and the other reached an isolated flag. A premature certification failed before source; a later post-source UI edge check removed every YOU rule and Undo restored control. Source dynamically rebuilds contiguous grammar and applies coupled pushes.",
+      "methods": [
+        "Full three-study ordinary public UI campaign before source or solutions; precise actions and rendered observations logged.",
+        "Source inspected only for this completed engine after full win; no game state injected or solver used.",
+        "mobile-touch full public-route replay, 45 actions; restart true, overflow false, errors 0",
+        "desktop-keyboard full public-route replay, 45 actions; restart true, overflow false, errors 0"
+      ],
+      "issues": [],
+      "runtimeHashes": {
+        "mini-games/construct-room/engines.js": "f74727bc36872bdc52ee56a8138f56f08e9121f60a67963bc8917e6313af9d0d",
+        "mini-games/construct-room/room.js": "1a3fbc9fb1ffdf2f2ade634058b0381c41ea462ea235cbc95f69ac2829c7c192",
+        "mini-games/construct-room/room.css": "905ef0b988045c7c3fbdeefaba291ed09324bd0476a1074a4d9fe8f4b82e44d3",
+        "mini-games/construct-room/index.html": "47778fb4053d58e114b316f97436598732989814cf5c2f66b0fe8b4447e5cfaa",
+        "mini-games/construct-room/games.json": "134e40b30a57e277c14dd57c5567aeebf9c7e0e5a0afc61be994b75a78fda527"
+      },
+      "logFile": "mini-games/coverage/independent300/cross-A07-ordinary.jsonl",
+      "publicWinFile": "mini-games/coverage/independent300/cross-A07-public-win.json",
+      "replayFile": "mini-games/coverage/independent300/cross-A07-replay.json",
+      "limits": [
+        "No physical phone or screen reader.",
+        "Failure is a recoverable rejected local operation/certification, not an invented terminal loss."
+      ]
+    },
+    {
+      "designId": "A09",
+      "gameId": "one-last-marble",
+      "room": "construct-room",
+      "ordinaryBeforeSource": true,
+      "fullWin": true,
+      "naturalFailure": true,
+      "restart": true,
+      "meaningfulDecisions": "Planned which striker direction preserves a future alignment, including multi-impact chains. Deliberately stranded two diagonal marbles and used Undo to recover. Later boards required moving one marble into a future row before removing its neighbor. Source transfers each contact chain and detects genuinely absent legal launches.",
+      "methods": [
+        "Full three-study ordinary public UI campaign before source or solutions; precise actions and rendered observations logged.",
+        "Source inspected only for this completed engine after full win; no game state injected or solver used.",
+        "mobile-touch full public-route replay, 42 actions; restart true, overflow false, errors 0",
+        "desktop-keyboard full public-route replay, 42 actions; restart true, overflow false, errors 0"
+      ],
+      "issues": [],
+      "runtimeHashes": {
+        "mini-games/construct-room/engines.js": "f74727bc36872bdc52ee56a8138f56f08e9121f60a67963bc8917e6313af9d0d",
+        "mini-games/construct-room/room.js": "1a3fbc9fb1ffdf2f2ade634058b0381c41ea462ea235cbc95f69ac2829c7c192",
+        "mini-games/construct-room/room.css": "905ef0b988045c7c3fbdeefaba291ed09324bd0476a1074a4d9fe8f4b82e44d3",
+        "mini-games/construct-room/index.html": "47778fb4053d58e114b316f97436598732989814cf5c2f66b0fe8b4447e5cfaa",
+        "mini-games/construct-room/games.json": "134e40b30a57e277c14dd57c5567aeebf9c7e0e5a0afc61be994b75a78fda527"
+      },
+      "logFile": "mini-games/coverage/independent300/cross-A09-ordinary.jsonl",
+      "publicWinFile": "mini-games/coverage/independent300/cross-A09-public-win.json",
+      "replayFile": "mini-games/coverage/independent300/cross-A09-replay.json",
+      "limits": [
+        "No physical phone or screen reader.",
+        "Failure is a recoverable rejected local operation/certification, not an invented terminal loss."
+      ]
+    },
+    {
+      "designId": "A10",
+      "gameId": "rooms-in-motion",
+      "room": "construct-room",
+      "ordinaryBeforeSource": true,
+      "fullWin": true,
+      "naturalFailure": true,
+      "restart": true,
+      "meaningfulDecisions": "Planned spare rotation and row/column insertion while tracking room IDs, their reciprocal ports, and the traveler. Used ejected-room wrapping to return to reinserted home; objectives temporarily sat on the spare. Banned reverse insertion was rejected, and an exhausted unproductive insertion budget failed certification before Reset recovery. Source shifts complete tiles and contents, with graph reachability for walks.",
+      "methods": [
+        "Full three-study ordinary public UI campaign before source or solutions; precise actions and rendered observations logged.",
+        "Source inspected only for this completed engine after full win; no game state injected or solver used.",
+        "mobile-touch full public-route replay, 56 actions; restart true, overflow false, errors 0",
+        "desktop-keyboard full public-route replay, 56 actions; restart true, overflow false, errors 0"
+      ],
+      "issues": [],
+      "runtimeHashes": {
+        "mini-games/construct-room/engines.js": "f74727bc36872bdc52ee56a8138f56f08e9121f60a67963bc8917e6313af9d0d",
+        "mini-games/construct-room/room.js": "1a3fbc9fb1ffdf2f2ade634058b0381c41ea462ea235cbc95f69ac2829c7c192",
+        "mini-games/construct-room/room.css": "905ef0b988045c7c3fbdeefaba291ed09324bd0476a1074a4d9fe8f4b82e44d3",
+        "mini-games/construct-room/index.html": "47778fb4053d58e114b316f97436598732989814cf5c2f66b0fe8b4447e5cfaa",
+        "mini-games/construct-room/games.json": "134e40b30a57e277c14dd57c5567aeebf9c7e0e5a0afc61be994b75a78fda527"
+      },
+      "logFile": "mini-games/coverage/independent300/cross-A10-ordinary.jsonl",
+      "publicWinFile": "mini-games/coverage/independent300/cross-A10-public-win.json",
+      "replayFile": "mini-games/coverage/independent300/cross-A10-replay.json",
+      "limits": [
+        "No physical phone or screen reader.",
+        "Failure is a recoverable rejected local operation/certification, not an invented terminal loss."
+      ]
+    },
+    {
+      "designId": "A11",
+      "gameId": "bonding-room",
+      "room": "construct-room",
+      "ordinaryBeforeSource": true,
+      "fullWin": true,
+      "naturalFailure": true,
+      "restart": true,
+      "meaningfulDecisions": "Transported atoms through narrow passages before assembling their full footprint, deliberately triggered a wrong A-C bond and recovered with Undo. Branched and offset studies required temporary parking and saturated terminal valence to avoid premature links. Final exact graph and dock geometry both matter; source moves whole components and automatically bonds legal contacts.",
+      "methods": [
+        "Full three-study ordinary public UI campaign before source or solutions; precise actions and rendered observations logged.",
+        "Source inspected only for this completed engine after full win; no game state injected or solver used.",
+        "mobile-touch full public-route replay, 79 actions; restart true, overflow false, errors 0",
+        "desktop-keyboard full public-route replay, 79 actions; restart true, overflow false, errors 0"
+      ],
+      "issues": [],
+      "runtimeHashes": {
+        "mini-games/construct-room/engines.js": "f74727bc36872bdc52ee56a8138f56f08e9121f60a67963bc8917e6313af9d0d",
+        "mini-games/construct-room/room.js": "1a3fbc9fb1ffdf2f2ade634058b0381c41ea462ea235cbc95f69ac2829c7c192",
+        "mini-games/construct-room/room.css": "905ef0b988045c7c3fbdeefaba291ed09324bd0476a1074a4d9fe8f4b82e44d3",
+        "mini-games/construct-room/index.html": "47778fb4053d58e114b316f97436598732989814cf5c2f66b0fe8b4447e5cfaa",
+        "mini-games/construct-room/games.json": "134e40b30a57e277c14dd57c5567aeebf9c7e0e5a0afc61be994b75a78fda527"
+      },
+      "logFile": "mini-games/coverage/independent300/cross-A11-ordinary.jsonl",
+      "publicWinFile": "mini-games/coverage/independent300/cross-A11-public-win.json",
+      "replayFile": "mini-games/coverage/independent300/cross-A11-replay.json",
+      "limits": [
+        "No physical phone or screen reader.",
+        "Failure is a recoverable rejected local operation/certification, not an invented terminal loss."
+      ]
+    },
+    {
+      "designId": "A12",
+      "gameId": "unfolding-house",
+      "room": "construct-room",
+      "ordinaryBeforeSource": true,
+      "fullWin": true,
+      "naturalFailure": true,
+      "restart": true,
+      "meaningfulDecisions": "Chose actual hinge trees, saw the cube net fail the elongated box stock at 6×3, relocated the back-face hinge, then rerouted a torn seam and rotated a 6×5 final net. All face polygons, overlap and stock bounds matter; source propagates actual face geometry rather than checking a stored seam solution.",
+      "methods": [
+        "Full three-study ordinary public UI campaign before source or solutions; precise actions and rendered observations logged.",
+        "Source inspected only for this completed engine after full win; no game state injected or solver used.",
+        "mobile-touch full public-route replay, 26 actions; restart true, overflow false, errors 0",
+        "desktop-keyboard full public-route replay, 26 actions; restart true, overflow false, errors 0"
+      ],
+      "issues": [],
+      "runtimeHashes": {
+        "mini-games/construct-room/engines.js": "f74727bc36872bdc52ee56a8138f56f08e9121f60a67963bc8917e6313af9d0d",
+        "mini-games/construct-room/room.js": "1a3fbc9fb1ffdf2f2ade634058b0381c41ea462ea235cbc95f69ac2829c7c192",
+        "mini-games/construct-room/room.css": "905ef0b988045c7c3fbdeefaba291ed09324bd0476a1074a4d9fe8f4b82e44d3",
+        "mini-games/construct-room/index.html": "47778fb4053d58e114b316f97436598732989814cf5c2f66b0fe8b4447e5cfaa",
+        "mini-games/construct-room/games.json": "134e40b30a57e277c14dd57c5567aeebf9c7e0e5a0afc61be994b75a78fda527"
+      },
+      "logFile": "mini-games/coverage/independent300/cross-A12-ordinary.jsonl",
+      "publicWinFile": "mini-games/coverage/independent300/cross-A12-public-win.json",
+      "replayFile": "mini-games/coverage/independent300/cross-A12-replay.json",
+      "limits": [
+        "No physical phone or screen reader.",
+        "Failure is a recoverable rejected local operation/certification, not an invented terminal loss."
+      ]
+    },
+    {
+      "designId": "A13",
+      "gameId": "unfair-circle",
+      "room": "construct-room",
+      "ordinaryBeforeSource": true,
+      "fullWin": true,
+      "naturalFailure": true,
+      "restart": true,
+      "meaningfulDecisions": "Allocated conserved face tokens to meet equal die sums and three simultaneous directional probability constraints. Used manual 36-pair counts and a known nontransitive-dice construction, then changed the distributions for later token pools; ties changed viable allocations. Initial unbalanced dice failed certification. Source counts actual comparisons and totals, not a stored partition.",
+      "methods": [
+        "Full three-study ordinary public UI campaign before source or solutions; precise actions and rendered observations logged.",
+        "Source inspected only for this completed engine after full win; no game state injected or solver used.",
+        "mobile-touch full public-route replay, 45 actions; restart true, overflow false, errors 0",
+        "desktop-keyboard full public-route replay, 45 actions; restart true, overflow false, errors 0"
+      ],
+      "issues": [],
+      "runtimeHashes": {
+        "mini-games/construct-room/engines.js": "f74727bc36872bdc52ee56a8138f56f08e9121f60a67963bc8917e6313af9d0d",
+        "mini-games/construct-room/room.js": "1a3fbc9fb1ffdf2f2ade634058b0381c41ea462ea235cbc95f69ac2829c7c192",
+        "mini-games/construct-room/room.css": "905ef0b988045c7c3fbdeefaba291ed09324bd0476a1074a4d9fe8f4b82e44d3",
+        "mini-games/construct-room/index.html": "47778fb4053d58e114b316f97436598732989814cf5c2f66b0fe8b4447e5cfaa",
+        "mini-games/construct-room/games.json": "134e40b30a57e277c14dd57c5567aeebf9c7e0e5a0afc61be994b75a78fda527"
+      },
+      "logFile": "mini-games/coverage/independent300/cross-A13-ordinary.jsonl",
+      "publicWinFile": "mini-games/coverage/independent300/cross-A13-public-win.json",
+      "replayFile": "mini-games/coverage/independent300/cross-A13-replay.json",
+      "limits": [
+        "No physical phone or screen reader.",
+        "Failure is a recoverable rejected local operation/certification, not an invented terminal loss."
+      ]
+    },
+    {
+      "designId": "A16",
+      "gameId": "pocket-photograph",
+      "room": "construct-room",
+      "ordinaryBeforeSource": true,
+      "fullWin": true,
+      "naturalFailure": true,
+      "restart": true,
+      "meaningfulDecisions": "Finite photographs overwrite traversable topology; crossed the first printed bridge before the second erased it, rotated the held capture around a fixed stud, and routed through all copied keys. Wasted exposures created a failed branch before reset.",
+      "methods": [
+        "Full three-study ordinary public UI campaign before source or solutions; precise actions and rendered observations logged.",
+        "Source inspected only for this completed engine after full win; no game state injected or solver used.",
+        "mobile-touch full public-route replay, 111 actions; restart true, overflow false, errors 0",
+        "desktop-keyboard full public-route replay, 111 actions; restart true, overflow false, errors 0"
+      ],
+      "issues": [],
+      "runtimeHashes": {
+        "mini-games/construct-room/engines.js": "f74727bc36872bdc52ee56a8138f56f08e9121f60a67963bc8917e6313af9d0d",
+        "mini-games/construct-room/room.js": "1a3fbc9fb1ffdf2f2ade634058b0381c41ea462ea235cbc95f69ac2829c7c192",
+        "mini-games/construct-room/room.css": "905ef0b988045c7c3fbdeefaba291ed09324bd0476a1074a4d9fe8f4b82e44d3",
+        "mini-games/construct-room/index.html": "47778fb4053d58e114b316f97436598732989814cf5c2f66b0fe8b4447e5cfaa",
+        "mini-games/construct-room/games.json": "134e40b30a57e277c14dd57c5567aeebf9c7e0e5a0afc61be994b75a78fda527"
+      },
+      "logFile": "mini-games/coverage/independent300/cross-A16-ordinary.jsonl",
+      "publicWinFile": "mini-games/coverage/independent300/cross-A16-public-win.json",
+      "replayFile": "mini-games/coverage/independent300/cross-A16-replay.json",
+      "limits": [
+        "No physical phone or screen reader.",
+        "Failure is a recoverable rejected local operation/certification, not an invented terminal loss."
+      ]
+    },
+    {
+      "designId": "B03",
+      "gameId": "four-step-menagerie",
+      "room": "parlour-room",
+      "passed": true,
+      "ordinaryBeforeSource": true,
+      "fullWin": true,
+      "naturalFailure": true,
+      "restart": true,
+      "meaningfulDecisions": "Deal8650 turn8 recovery after losing elephant and cat to enemy support-removal traps. Redirected camel left, pushed a cat onto B2 then removed its C2 support, preserving the rabbit path through B5 with friendly support. Four-step left-wing rabbit goal. First deal731 loss came from displacing an enemy cat into a central support chain that enabled its rabbit goal.",
+      "methods": [
+        "Fresh public native-keyboard ordinary win before reading any B03 source, solver or author route. Exact rendered observations preserved.",
+        "Scoped B03 source audit only after ordinary full win: real strength/freeze, sequential push/pull stages, simultaneous unsupported trap removal after each stage, goal/immobilization/repetition outcomes, responsive four-step opponent search.",
+        "mobile-touch full public winning route 50 controls, restart verified, errors 0, overflow false",
+        "desktop-keyboard full public winning route 50 controls, restart verified, errors 0, overflow false",
+        "mobile-touch natural losing route 36 controls, restart verified.",
+        "desktop-keyboard natural losing route 36 controls, restart verified."
+      ],
+      "issues": [],
+      "runtimeHashes": {
+        "mini-games/parlour-room/four-step-menagerie.mjs": "64916339953aded818fb2864fcd76cf6147110aa82e41363e25d946caf57ac3a",
+        "mini-games/parlour-room/core.mjs": "339407b8d279243a25622037f7a709a9998afbbc1945ca95a36106a37402c458",
+        "mini-games/parlour-room/game.js": "de78315740f63cc42963b31ca55e6058c565501ed5e11874a37b68ad8ad698b8",
+        "mini-games/parlour-room/room.css": "7b5baf1c1951e0906b8650ab805a8ef037fa564a5a384e70ef89bce11c17eabe",
+        "mini-games/parlour-room/index.html": "328f418fab77b773e534825d0b3c570598d361fd781ddfeb9e2408ea539cbd33",
+        "mini-games/parlour-room/games.json": "2ca643577427733bb196101c550c6d8182271f2fc998d1a211ed2de121bc23b0"
+      },
+      "logFile": "mini-games/coverage/independent300/cross-B03-ordinary.jsonl",
+      "publicWinFile": "mini-games/coverage/independent300/cross-B03-public-win.json",
+      "replayFile": "mini-games/coverage/independent300/cross-B03-replay.json",
+      "failureReplayFile": "mini-games/coverage/independent300/cross-B03-failure-replay.json",
+      "limits": [
+        "No physical phone or screen reader.",
+        "Full match win on public deal8650; default731 was a legitimate loss, not represented as a win.",
+        "Replay omits one inert Enter activation on an aria-disabled frozen unit; every gameplay transition is retained.",
+        "Search is bounded, so the opponent can miss longer tactics. No claim of expert-strength Arimaa or complete official rules."
+      ]
+    },
+    {
+      "designId": "B34",
+      "gameId": "river-stakes",
+      "room": "parlour-room",
+      "passed": true,
+      "ordinaryBeforeSource": true,
+      "fullWin": true,
+      "naturalFailure": true,
+      "restart": true,
+      "meaningfulDecisions": "Fresh eight-hand52–28 win on731: small value bets with pairs, called raises at favorable pot prices after observing a bluff, checked a board straight that did not improve private relative strength, folded weak draws, then protected a mathematically secure finite-match lead. House responses changed the price and future bankroll. Indiscriminate raising went bankrupt0–80 on8650; it won731, while passive fold/check drew40–40. Those outcomes are not misrepresented.",
+      "methods": [
+        "Fresh full ordinary public UI match before source, solver or author-route access; exact actions and visible observations logged.",
+        "Scoped source audit after ordinary win and natural failure: actual best-five-of-seven including ace-low straight and kickers; fair equity sampler reads only house private cards plus public board; fixed-limit raises, matched all-in refund and finite-hand settlement.",
+        "mobile-touch full public winning route 34 controls; restart verified; errors 0, overflow false",
+        "desktop-keyboard full public winning route 34 controls; restart verified; errors 0, overflow false",
+        "mobile-touch public natural-bankruptcy route 29 controls; restart verified.",
+        "desktop-keyboard public natural-bankruptcy route 29 controls; restart verified."
+      ],
+      "issues": [],
+      "runtimeHashes": {
+        "mini-games/parlour-room/river-stakes.mjs": "8d838e9a3113aa87747f0955162e77f980ffd87b1825b65ad1c7805feae85204",
+        "mini-games/parlour-room/core.mjs": "339407b8d279243a25622037f7a709a9998afbbc1945ca95a36106a37402c458",
+        "mini-games/parlour-room/game.js": "de78315740f63cc42963b31ca55e6058c565501ed5e11874a37b68ad8ad698b8",
+        "mini-games/parlour-room/room.css": "7b5baf1c1951e0906b8650ab805a8ef037fa564a5a384e70ef89bce11c17eabe",
+        "mini-games/parlour-room/index.html": "328f418fab77b773e534825d0b3c570598d361fd781ddfeb9e2408ea539cbd33",
+        "mini-games/parlour-room/games.json": "2ca643577427733bb196101c550c6d8182271f2fc998d1a211ed2de121bc23b0"
+      },
+      "logFile": "mini-games/coverage/independent300/cross-B34-ordinary.jsonl",
+      "publicWinFile": "mini-games/coverage/independent300/cross-B34-public-win.json",
+      "replayFile": "mini-games/coverage/independent300/cross-B34-replay.json",
+      "failureReplayFile": "mini-games/coverage/independent300/cross-B34-failure-replay.json",
+      "limits": [
+        "No physical phone or screen reader.",
+        "Chance affects results; one match win is not a statistical skill benchmark. Tested passive and indiscriminate policies are not universal guarantees.",
+        "Nonblocking: an all-in from flop reveals all five cards at showdown while street telemetry retains Flop. Complete revealed board and terminal outcome remain visible."
+      ]
+    }
+  ],
+  "limits": [
+    "Eleven assigned construct games plus fresh B03 and B34 reviews; A14 handled by root. No physical phone or screen reader."
+  ]
+}

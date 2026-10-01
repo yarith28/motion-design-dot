@@ -1,0 +1,192 @@
+[
+  {
+    "gameId": "elbow-room",
+    "passed": true,
+    "actions": 294,
+    "methods": "Reproduction through ordinary DOM buttons/keyboard of previously independent source-unexposed public win fixture; no source-guided moves.",
+    "lastText": "\u2733 Small Hours\nAll games \u2197\n\nA LITTLE ROOM TO EXPERIMENT\n\nElbow Room\n\nDrive a3-joint arm through obstacles while retaining a grasped payload; elbow configuration and swept link collisions matter.\n\nRestart all\nRetry this study\nPause\nACTION 293\n\nStudy 3/3 \u00b7 Action 293 \u00b7 Joint 3 \u00b7 Angles -90\u00b0, -30\u00b0, -240\u00b0 \u00b7 Gripper loaded \u00b7 Contacts 0/3\n\nGO\n\nComplete. All studies complete. Well played.\n\nFinish journeyn\nVisible board information\n\nFixed base2,6; link lengths2,1.7,1.3. Angles are relative to the previous link. Joint coordinates 2.00,6.00 \u2192 2.00,4.00 \u2192 1.15,2.53 \u2192 2.45,2.53. Pickup5.63,3.50; receiver2.28,2.61. Obstaclex3.9\u20134.70,y3.10\u20134.20. Whole swept links collide, not just gripper.\n\nField notes\nSelect one of three relative joints and rotate it by15\u00b0. A proximal joint moves every downstream link; the full sweep is collision-checked against walls.\nClose the gripper within0.55unit of the pickup. Carry the parcel to within0.6unit of the receiver, then Release. The payload needs extra clearance.\nThree obstacle contacts or a release away from the receiver loses. Clear three different pickup/receiver configurations. Joint coordinates and target positions appear below.\n\nTap named controls. Focus the board for displayed keyboard shortcuts. Escape pauses. Every action is turn-paced. Retry this study preserves earlier clears; Restart all begins at study one.\n\nEvery simulation advances only when you act. Take your time. You can inspect the board before committing, and restart any study.",
+    "runtimeHashes": {
+      "mini-games/motion-room/navigation.js": "4082d1165a9a412194f8378d6272b0755707e5e3811cb3c18aaac9ab130a79bb",
+      "mini-games/motion-room/room.css": "a34568abf16c13760d779c6ee8825375b5d3e45304bbef8d3711a00fa1273ff8",
+      "mini-games/motion-room/shared.js": "08cc3892b3daad10e53fb3a70aa86539b76c9de7dbb2caaba6163e3bad998a9e",
+      "mini-games/motion-room/packing.js": "68a90922ac600b01c12b1d78475ea49f86949bee66fa82d54249d46bd195b85c",
+      "mini-games/motion-room/room.js": "eb9a87a21caae9efb8c1c9861225eef140589cdacb9b588e64bec9ddee0fba61",
+      "mini-games/motion-room/games.json": "d61f237ad719e22de48c3f3c5790a353195c3a7aac242202ceec75409150ed2a",
+      "mini-games/motion-room/index.html": "566094cc303494e8ea4d122145529c90e0be4e572495f6823e92200c3612ce35",
+      "mini-games/motion-room/physics.js": "cc646acf5e28b9796fe068331ad637c234e44f2c7f6b0a664f109f962621b688",
+      "mini-games/motion-room/README.md": "367d54123b9711d43a775dfa2534bdd5b96108f77da163a916b280fd8cc11d87",
+      "mini-games/motion-room/tactics.js": "1bd3baaff7d02142fac5a6cb2d8fea8bf3636103c9ed6ff22e3ee3fa43500bc5"
+    }
+  },
+  {
+    "gameId": "common-meadow",
+    "passed": true,
+    "actions": 365,
+    "methods": "Reproduction through ordinary DOM buttons/keyboard of previously independent source-unexposed public win fixture; no source-guided moves.",
+    "lastText": "\u2733 Small Hours\nAll games \u2197\n\nA LITTLE ROOM TO EXPERIMENT\n\nCommon Meadow\n\nSteer a cohesive flock through gates using the shepherd\u2019s local repulsion, separation and persistent momentum.\n\nRestart all\nRetry this study\nPause\nACTION 364\n\nStudy 3/3 \u00b7 Action 364 \u00b7 Shepherd 8.5,2.5 \u00b7 Penned 7/7 \u00b7 Escaped 1/2 \u00b7 Whistle cooldown 0\n\nComplete. All studies complete. Well played.\n\nFinish journeyn\nVisible board information\n\nPen entrance at right edge x10.2, between y3.8and5.8. Sheep move away from you, cohere within2units and separate within0.6. Approach from outside the flock; Whistle expands pressure radius for one tick. Obstacle at7,5 size1\u00d71.5. Sheep .\n\nField notes\nMove the shepherd around a cohesive flock. Sheep repel away from you, separate from close neighbors and drift toward nearby companions. Every action advances one physical tick.\nWhistle briefly expands your pressure radius but then cools for six ticks. Approach from outside the flock; forcing its center can scatter the group.\nPen seven of eight sheep through the right-edge opening. Two escapes beyond the field make the quota impossible and lose. Clear three paddocks with different gate and obstacle geometry.\n\nTap named controls. Focus the board for displayed keyboard shortcuts. Escape pauses. Every action is turn-paced. Retry this study preserves earlier clears; Restart all begins at study one.\n\nEvery simulation advances only when you act. Take your time. You can inspect the board before committing, and restart any study.",
+    "runtimeHashes": {
+      "mini-games/motion-room/navigation.js": "4082d1165a9a412194f8378d6272b0755707e5e3811cb3c18aaac9ab130a79bb",
+      "mini-games/motion-room/room.css": "a34568abf16c13760d779c6ee8825375b5d3e45304bbef8d3711a00fa1273ff8",
+      "mini-games/motion-room/shared.js": "08cc3892b3daad10e53fb3a70aa86539b76c9de7dbb2caaba6163e3bad998a9e",
+      "mini-games/motion-room/packing.js": "68a90922ac600b01c12b1d78475ea49f86949bee66fa82d54249d46bd195b85c",
+      "mini-games/motion-room/room.js": "eb9a87a21caae9efb8c1c9861225eef140589cdacb9b588e64bec9ddee0fba61",
+      "mini-games/motion-room/games.json": "d61f237ad719e22de48c3f3c5790a353195c3a7aac242202ceec75409150ed2a",
+      "mini-games/motion-room/index.html": "566094cc303494e8ea4d122145529c90e0be4e572495f6823e92200c3612ce35",
+      "mini-games/motion-room/physics.js": "cc646acf5e28b9796fe068331ad637c234e44f2c7f6b0a664f109f962621b688",
+      "mini-games/motion-room/README.md": "367d54123b9711d43a775dfa2534bdd5b96108f77da163a916b280fd8cc11d87",
+      "mini-games/motion-room/tactics.js": "1bd3baaff7d02142fac5a6cb2d8fea8bf3636103c9ed6ff22e3ee3fa43500bc5"
+    }
+  },
+  {
+    "gameId": "folded-cuttings",
+    "passed": true,
+    "actions": 47,
+    "methods": "Reproduction through ordinary DOM buttons/keyboard of previously independent source-unexposed public win fixture; no source-guided moves.",
+    "lastText": "\u2733 Small Hours\nAll games \u2197\n\nA LITTLE ROOM TO EXPERIMENT\n\nFolded Cuttings\n\nFold layered paper and cut through selected stacks; unfolding reveals the combined effect of the complete fold history.\n\nRestart all\nRetry this study\nPause\nACTION 46\n\nStudy 3/3 \u00b7 Action 46 \u00b7 Creases 3/3 \u00b7 Cuts left 0 \u00b7 Cursor 7,6 \u00b7 UNFOLDED \u00b7 Failures 0/3\n\n\u25aa\n\u25aa\n\u25aa\n\u25aa\n\u25aa\n\u25aa\n\u25aa\n\u25aa\n\u25aa\n\u25aa\n\u25aa\n\u25aa\n\u25aa\n\u25aa\n\u25aa\n\u25cb\n\u25aa\n\u25aa\n\u25aa\n\u25aa\n\u25aa\n\u25aa\n\u25aa\n\u25aa\n\u25cb\n\u25cb\n\u25aa\n\u25aa\n\u25cb\n\u25cb\n\u25aa\n\u25aa\n\u25cb\n\u25cb\n\u25aa\n\u25aa\n\u25cb\n\u25cb\n\u25aa\n\u25aa\n\u25aa\n\u25aa\n\u25aa\n\u25aa\n\u25aa\n\u25aa\n\u25aa\n\u25aa\n\u25aa\n\u25aa\n\u25aa\n\u25aa\n\u25aa\n\u25aa\n\u25aa\n\u25cb\n\u25aa\n\u25aa\n\u25aa\n\u25aa\n\u25aa\n\u25aa\n\u25aa\n\u25aa\n\nComplete. All studies complete. Well played.\n\nFinish journeyn\nVisible board information\n\nOriginal8\u00d78sheet, coordinates0\u20137. Target holes 7,1; 0,3; 1,3; 4,3; 5,3; 0,4; 1,4; 4,4; 5,4; 7,6. Your holes 0,3; 1,3; 4,3; 5,3; 0,4; 1,4; 4,4; 5,4; 7,1; 7,6. Fold history x<3 then x<5 then y<4. Current selected stack contains original cells none. Fold maps coordinate v below crease c to2c\u22121\u2212v.\n\nField notes\nA folded sheet retains every original cell layer. Choose axis and crease 3, 4 or 5; Fold reflects all smaller coordinates to the other side. At most three folds per sheet. The first two sheets allow three cuts; the final sheet allows only two.\nSelect a folded square and Cut its entire layer stack. Preview unfolded shows correct holes as circles, extra holes as crosses, and still-needed holes as stars. Original target coordinates are listed below.\nCertify only when every target hole matches and remaining paper stays connected. Reset allows another construction while preserving failed certifications. Three failed certifications lose; clear three patterns.\n\nTap named controls. Focus the board for displayed keyboard shortcuts. Escape pauses. Every action is turn-paced. Retry this study preserves earlier clears; Restart all begins at study one.\n\nEvery simulation advances only when you act. Take your time. You can inspect the board before committing, and restart any study.",
+    "runtimeHashes": {
+      "mini-games/motion-room/navigation.js": "4082d1165a9a412194f8378d6272b0755707e5e3811cb3c18aaac9ab130a79bb",
+      "mini-games/motion-room/room.css": "a34568abf16c13760d779c6ee8825375b5d3e45304bbef8d3711a00fa1273ff8",
+      "mini-games/motion-room/shared.js": "08cc3892b3daad10e53fb3a70aa86539b76c9de7dbb2caaba6163e3bad998a9e",
+      "mini-games/motion-room/packing.js": "68a90922ac600b01c12b1d78475ea49f86949bee66fa82d54249d46bd195b85c",
+      "mini-games/motion-room/room.js": "eb9a87a21caae9efb8c1c9861225eef140589cdacb9b588e64bec9ddee0fba61",
+      "mini-games/motion-room/games.json": "d61f237ad719e22de48c3f3c5790a353195c3a7aac242202ceec75409150ed2a",
+      "mini-games/motion-room/index.html": "566094cc303494e8ea4d122145529c90e0be4e572495f6823e92200c3612ce35",
+      "mini-games/motion-room/physics.js": "cc646acf5e28b9796fe068331ad637c234e44f2c7f6b0a664f109f962621b688",
+      "mini-games/motion-room/README.md": "367d54123b9711d43a775dfa2534bdd5b96108f77da163a916b280fd8cc11d87",
+      "mini-games/motion-room/tactics.js": "1bd3baaff7d02142fac5a6cb2d8fea8bf3636103c9ed6ff22e3ee3fa43500bc5"
+    }
+  },
+  {
+    "gameId": "domino-relay",
+    "passed": true,
+    "actions": 53,
+    "methods": "Reproduction through ordinary DOM buttons/keyboard of previously independent source-unexposed public win fixture; no source-guided moves.",
+    "lastText": "\u2733 Small Hours\nAll games \u2197\n\nA LITTLE ROOM TO EXPERIMENT\n\nDomino Relay\n\nArrange hinged rods so gravity and contact impulses carry a knockdown across changing shelf heights.\n\nRestart all\nRetry this study\nPause\nACTION 52\n\nStudy 3/3 \u00b7 Action 52 \u00b7 Selected rod 3 \u00b7 Material 7.2/7.2 \u00b7 Failed releases 0/3 \u00b7 Replay 2.02s\n\nBELL\n0\n1\n2\n3\n4\n\nComplete. All studies complete. Well played.\n\nFinish journeyn\nVisible board information\n\nCoordinates: x right, y down. Fixed starter hinge 0,3 length1.8, initial angular speed1.8rad/s. Rod mass equals length; inertia is mass\u00d7length\u00b2/3. Gravity and a small upright spring detent act continuously; rods exchange angular momentum through tip-to-side contact, then settle at88degrees. Bell x8.1, y1\u20132.95. Raised shelf: x4.0\u20135.2 has hinge y2.4. Others stand at y3. Rods 0: hinge 0.0,3.0, length 1.8; 1: hinge 1.6,3.0, length 1.8; 2: hinge 3.2,3.0, length 1.8; 3: hinge 4.8,2.4, length 1.8; 4: hinge 6.4,3.0, length 1.8. Replay angles and angular speeds: 0: 88.2deg, 0.00rad/s; 1: 88.2deg, 0.00rad/s; 2: 85.7deg, 2.07rad/s; 3: 88.2deg, 0.00rad/s; 4: 65.8deg, 4.02rad/s First contacts 0\u21921 at0.47s, impulse3.95, height y2.11; 1\u21922 at0.83s, impulse5.26, height y2.12; 2\u21923 at1.13s, impulse10.63, height y2.12; 3\u21924 at1.60s, impulse2.17, height y1.51.\n\nField notes\nFour movable rods share a material allowance. Select a rod, move its hinge in 0.2 steps, and choose length 1.2, 1.8 or 2.4. Longer rods reach farther but have more rotational inertia. Numbered hinges must remain in order.\nRelease gives only the fixed starter an initial push. Gravity, an upright spring detent, and actual tip-to-side collision impulses determine which rods fall. A rod can miss over or under its neighbor, fall short, or fail to transfer enough motion.\nThe hanging bell at the far side must be struck. Three failed releases lose. Inspect the final angles and first-contact times; Earlier/Later replay frame shows the continuous simulation in 0.1-second steps. Raised shelves in later studies change contact heights.\n\nTap named controls. Focus the board for displayed keyboard shortcuts. Escape pauses. Every action is turn-paced. Retry this study preserves earlier clears; Restart all begins at study one.\n\nEvery simulation advances only when you act. Take your time. You can inspect the board before committing, and restart any study.",
+    "runtimeHashes": {
+      "mini-games/motion-room/navigation.js": "4082d1165a9a412194f8378d6272b0755707e5e3811cb3c18aaac9ab130a79bb",
+      "mini-games/motion-room/room.css": "a34568abf16c13760d779c6ee8825375b5d3e45304bbef8d3711a00fa1273ff8",
+      "mini-games/motion-room/shared.js": "08cc3892b3daad10e53fb3a70aa86539b76c9de7dbb2caaba6163e3bad998a9e",
+      "mini-games/motion-room/packing.js": "68a90922ac600b01c12b1d78475ea49f86949bee66fa82d54249d46bd195b85c",
+      "mini-games/motion-room/room.js": "eb9a87a21caae9efb8c1c9861225eef140589cdacb9b588e64bec9ddee0fba61",
+      "mini-games/motion-room/games.json": "d61f237ad719e22de48c3f3c5790a353195c3a7aac242202ceec75409150ed2a",
+      "mini-games/motion-room/index.html": "566094cc303494e8ea4d122145529c90e0be4e572495f6823e92200c3612ce35",
+      "mini-games/motion-room/physics.js": "cc646acf5e28b9796fe068331ad637c234e44f2c7f6b0a664f109f962621b688",
+      "mini-games/motion-room/README.md": "367d54123b9711d43a775dfa2534bdd5b96108f77da163a916b280fd8cc11d87",
+      "mini-games/motion-room/tactics.js": "1bd3baaff7d02142fac5a6cb2d8fea8bf3636103c9ed6ff22e3ee3fa43500bc5"
+    }
+  },
+  {
+    "gameId": "siding-stories",
+    "passed": true,
+    "actions": 117,
+    "methods": "Reproduction through ordinary DOM buttons/keyboard of previously independent source-unexposed public win fixture; no source-guided moves.",
+    "lastText": "\u2733 Small Hours\nAll games \u2197\n\nA LITTLE ROOM TO EXPERIMENT\n\nSiding Stories\n\nShunt coupled wagons through a track graph with sidings, switch points and directional locomotive access.\n\nRestart all\nRetry this study\nPause\nACTION 116\n\nStudy 3/3 \u00b7 Action 116 \u00b7 Train L@6 \u00b7 push \u00b7 Selected track 2\n\n1\n2\n3\n4\n5\n6\n7\n8\n9\nL\nA\nC\nB\n\nComplete. All studies complete. Well played.\n\nFinish journeyn\nVisible board information\n\nTrack links 1\u20132; 2\u20133; 3\u20134; 4\u20135; 2\u20136; 6\u20137; 7\u20134; 3\u20138; 8\u20139. Loose wagons A at5; C at1; B at9. Deliver A to5, B to9, C to1 then uncoupled locomotive to shed6. Pull moves locomotive into selected empty neighboring node and wagons follow; Reverse pushes tail into selected empty neighbor and each previous body moves into the next body's old node. Coupling always attaches to the rear; if several loose wagons are adjacent, the first eligible wagon in the displayed loose-wagon list is selected and named on the button. Blocked moves are recoverable failures; no arbitrary move limit.\n\nField notes\nCouple a loose wagon adjacent to the rear of the current train. Uncouple leaves the tail wagon in its present node. The train never changes wagon order while moving.\nPull moves the locomotive into a selected outgoing track; wagons follow. Reverse moves the tail first and the rest of the train follows backward. Use the upper loop to approach wagons from another end.\nDeliver each wagon to its assigned numbered siding, leave it uncoupled, then park the locomotive at shed6. Blocked moves are recoverable failures, not arbitrary penalties. Clear three manifests.\n\nTap named controls. Focus the board for displayed keyboard shortcuts. Escape pauses. Every action is turn-paced. Retry this study preserves earlier clears; Restart all begins at study one.\n\nEvery simulation advances only when you act. Take your time. You can inspect the board before committing, and restart any study.",
+    "runtimeHashes": {
+      "mini-games/motion-room/navigation.js": "4082d1165a9a412194f8378d6272b0755707e5e3811cb3c18aaac9ab130a79bb",
+      "mini-games/motion-room/room.css": "a34568abf16c13760d779c6ee8825375b5d3e45304bbef8d3711a00fa1273ff8",
+      "mini-games/motion-room/shared.js": "08cc3892b3daad10e53fb3a70aa86539b76c9de7dbb2caaba6163e3bad998a9e",
+      "mini-games/motion-room/packing.js": "68a90922ac600b01c12b1d78475ea49f86949bee66fa82d54249d46bd195b85c",
+      "mini-games/motion-room/room.js": "eb9a87a21caae9efb8c1c9861225eef140589cdacb9b588e64bec9ddee0fba61",
+      "mini-games/motion-room/games.json": "d61f237ad719e22de48c3f3c5790a353195c3a7aac242202ceec75409150ed2a",
+      "mini-games/motion-room/index.html": "566094cc303494e8ea4d122145529c90e0be4e572495f6823e92200c3612ce35",
+      "mini-games/motion-room/physics.js": "cc646acf5e28b9796fe068331ad637c234e44f2c7f6b0a664f109f962621b688",
+      "mini-games/motion-room/README.md": "367d54123b9711d43a775dfa2534bdd5b96108f77da163a916b280fd8cc11d87",
+      "mini-games/motion-room/tactics.js": "1bd3baaff7d02142fac5a6cb2d8fea8bf3636103c9ed6ff22e3ee3fa43500bc5"
+    }
+  },
+  {
+    "gameId": "across-the-current",
+    "passed": true,
+    "actions": 189,
+    "methods": "Reproduction through ordinary DOM buttons/keyboard of previously independent source-unexposed public win fixture; no source-guided moves.",
+    "lastText": "\u2733 Small Hours\nAll games \u2197\n\nA LITTLE ROOM TO EXPERIMENT\n\nAcross the Current\n\nCross alternating roads and rivers by discrete hops; moving logs carry the player in their reference frame between hops.\n\nRestart all\nRetry this study\nPause\nACTION 188\n\nStudy 3/3 \u00b7 Action 188 \u00b7 Position 4,7 \u00b7 Tick 63 \u00b7 Homes 4/4 \u00b7 Lives 3\n\n\u2713\n\u2713\n\u2713\n\u2713\n~\n~\n~\n\u2190\n\u2190\n\u2190\n\u2190\n~\n~\n\u2192\n\u2192\n\u2192\n\u2192\n~\n~\n~\n\u2192\n\u2192\n\u2190\n~\n~\n~\n\u2190\n\u2190\n\u2190\n\u2190\n~\nCAR\nCAR\n\u00b7\n\u00b7\n\u00b7\nCAR\nCAR\n\u00b7\n\u00b7\nCAR\nCAR\n\u00b7\n\u00b7\n\u00b7\nCAR\nCAR\n\u00b7\n\u00b7\nYOU\n\nComplete. All studies complete. Well played.\n\nFinish journeyn\nVisible board information\n\nCoordinates0\u20138 across,0\u20137 down. Start bank row7, refuge row4, homes at columns1,3,5,7 row0. Filled homes 5,3,1,7. Each move or wait first checks the destination against the displayed current tick: occupied car squares and water gaps are unsafe immediately. Then the tick advances. A log on the arrival row carries you one column in its direction, including when you just landed; a log you leave does not carry you. Cars are checked again after they move. Waiting uses the same two checks and log carry. Rows 1: log left, occupied columns 3,4,5,6; 2: log right, occupied columns 0,1,2,3,7,8; 3: log left, occupied columns 0,4,5,6,7; 5: car right, occupied columns 0,1,5,6; 6: car left, occupied columns 0,1,5,6.\n\nField notes\nHop or wait one tick. Roads contain moving vehicles; water is safe only on a log. Logs carry you one column each tick in their own direction.\nUse the refuge row4to plan. Four different home slots occupy columns1,3,5,7atrow0; a filled home cannot count twice.\nFill all four homes with at most two accidents. The third collision,drowning or off-board drift loses. Clear three starting traffic phases.\n\nTap named controls. Focus the board for displayed keyboard shortcuts. Escape pauses. Every action is turn-paced. Retry this study preserves earlier clears; Restart all begins at study one.\n\nEvery simulation advances only when you act. Take your time. You can inspect the board before committing, and restart any study.",
+    "runtimeHashes": {
+      "mini-games/motion-room/navigation.js": "4082d1165a9a412194f8378d6272b0755707e5e3811cb3c18aaac9ab130a79bb",
+      "mini-games/motion-room/room.css": "a34568abf16c13760d779c6ee8825375b5d3e45304bbef8d3711a00fa1273ff8",
+      "mini-games/motion-room/shared.js": "08cc3892b3daad10e53fb3a70aa86539b76c9de7dbb2caaba6163e3bad998a9e",
+      "mini-games/motion-room/packing.js": "68a90922ac600b01c12b1d78475ea49f86949bee66fa82d54249d46bd195b85c",
+      "mini-games/motion-room/room.js": "eb9a87a21caae9efb8c1c9861225eef140589cdacb9b588e64bec9ddee0fba61",
+      "mini-games/motion-room/games.json": "d61f237ad719e22de48c3f3c5790a353195c3a7aac242202ceec75409150ed2a",
+      "mini-games/motion-room/index.html": "566094cc303494e8ea4d122145529c90e0be4e572495f6823e92200c3612ce35",
+      "mini-games/motion-room/physics.js": "cc646acf5e28b9796fe068331ad637c234e44f2c7f6b0a664f109f962621b688",
+      "mini-games/motion-room/README.md": "367d54123b9711d43a775dfa2534bdd5b96108f77da163a916b280fd8cc11d87",
+      "mini-games/motion-room/tactics.js": "1bd3baaff7d02142fac5a6cb2d8fea8bf3636103c9ed6ff22e3ee3fa43500bc5"
+    }
+  },
+  {
+    "gameId": "watchtower-bend",
+    "passed": true,
+    "actions": 347,
+    "methods": "Reproduction through ordinary DOM buttons/keyboard of previously independent source-unexposed public win fixture; no source-guided moves.",
+    "lastText": "\u2733 Small Hours\nAll games \u2197\n\nA LITTLE ROOM TO EXPERIMENT\n\nWatchtower Bend\n\nBuild autonomous defenses along a branching route; tower positions reshape route length while mixed enemies have different targeting and armor vulnerabilities.\n\nRestart all\nRetry this study\nPause\nACTION 346\n\nStudy 3/3 \u00b7 Action 346 \u00b7 Wave 3/3 \u00b7 build phase \u00b7 Credits 11 \u00b7 Gate 4/5 \u00b7 Cursor 4,5 \u00b7 Route 10steps\n\nS2\nS2\nS2\nIN\n\u00b7\n\u00b7\nB2\n\u00b7\n\u00b7\n\u00b7\n\u00b7\nOUT\n\u00b7\n\u00b7\n\u00b7\nB2\n\nComplete. All studies complete. Well played.\n\nFinish journeyn\nVisible board information\n\nEntrance0,3; exit8,3. Fixed obstacles 3,1; 3,2; 5,4; 5,5. Current entrance-to-exit route 0,3 \u2192 1,3 \u2192 2,3 \u2192 2,4 \u2192 3,4 \u2192 4,4 \u2192 4,3 \u2192 5,3 \u2192 6,3 \u2192 7,3 \u2192 8,3. Bolt cost3,damage2,range2.5; ignores armor but shield carriers receive only20%bolt damage. Splash cost4,damage1to radius1.5around target,range2.2; armor reduces damage to minimum0.25; shield carriers take full splash damage. Slow cost3,range2.6; halves movement for3ticks. Upgrade3credits, maximum level2: bolt/splash gain damage and fire faster; slow gains range3.4 and duration5ticks. Mixed waves release one every3ticks; next wave 4 has 8enemies with HP7or9, fast everytick, armored carriers and shield carriers every2ticks. Towers 3,3:boltLv2; 4,2:splashLv2; 2,2:slowLv2; 4,5:boltLv2; 6,2:splashLv2. Enemies none.\n\nField notes\nPlace towers on the grid between waves. Towers also block enemy movement, but a route from IN to OUT must always remain. A rejected blockage costs nothing.\nBolt ignores armor, but shield carriers take only20%bolt damage. Splash hits groups and bypasses shields; armor resists it. Slow delays enemies. Upgrade for3credits; choose frontmost or weakest-target priority.\nHold three mixed waves with at least one of five gate integrity. Kills and cleared waves earn construction credits. Clear three valleys with different fixed obstacles.\n\nTap named controls. Focus the board for displayed keyboard shortcuts. Escape pauses. Every action is turn-paced. Retry this study preserves earlier clears; Restart all begins at study one.\n\nEvery simulation advances only when you act. Take your time. You can inspect the board before committing, and restart any study.",
+    "runtimeHashes": {
+      "mini-games/motion-room/navigation.js": "4082d1165a9a412194f8378d6272b0755707e5e3811cb3c18aaac9ab130a79bb",
+      "mini-games/motion-room/room.css": "a34568abf16c13760d779c6ee8825375b5d3e45304bbef8d3711a00fa1273ff8",
+      "mini-games/motion-room/shared.js": "08cc3892b3daad10e53fb3a70aa86539b76c9de7dbb2caaba6163e3bad998a9e",
+      "mini-games/motion-room/packing.js": "68a90922ac600b01c12b1d78475ea49f86949bee66fa82d54249d46bd195b85c",
+      "mini-games/motion-room/room.js": "eb9a87a21caae9efb8c1c9861225eef140589cdacb9b588e64bec9ddee0fba61",
+      "mini-games/motion-room/games.json": "d61f237ad719e22de48c3f3c5790a353195c3a7aac242202ceec75409150ed2a",
+      "mini-games/motion-room/index.html": "566094cc303494e8ea4d122145529c90e0be4e572495f6823e92200c3612ce35",
+      "mini-games/motion-room/physics.js": "cc646acf5e28b9796fe068331ad637c234e44f2c7f6b0a664f109f962621b688",
+      "mini-games/motion-room/README.md": "367d54123b9711d43a775dfa2534bdd5b96108f77da163a916b280fd8cc11d87",
+      "mini-games/motion-room/tactics.js": "1bd3baaff7d02142fac5a6cb2d8fea8bf3636103c9ed6ff22e3ee3fa43500bc5"
+    }
+  },
+  {
+    "gameId": "through-and-through",
+    "passed": true,
+    "actions": 89,
+    "methods": "Reproduction through ordinary DOM buttons/keyboard of previously independent source-unexposed public win fixture; no source-guided moves.",
+    "lastText": "\u2733 Small Hours\nAll games \u2197\n\nA LITTLE ROOM TO EXPERIMENT\n\nThrough and Through\n\nPlace two linked oriented portals on surfaces; crossing transports position and rotates conserved velocity into the other portal normal.\n\nRestart all\nRetry this study\nPause\nACTION 86\n\nStudy 3/3 \u00b7 Action 86 \u00b7 Position 10.29,0.70 \u00b7 Velocity 0.23,0.00 \u00b7 Lives 3 \u00b7 Portal B selected \u00b7 Fling achieved\n\n1\n2\n3\n4\nEXIT\n\nComplete. All studies complete. Well played.\n\nFinish journeyn\nVisible board information\n\nGravity adds0.12downward velocity each tick. Short jump impulse0.48cannot reach the final ledge. Portal surfaces 1:Pit floor at3,7, normal0,-1; 2:Launcher wall at5,5, normal1,0; 3:Momentum catch wall at9,6.8, normal-1,0; 4:Upper launch floor at9,5.8, normal0,-1. A=3, B=4. Platforms x0\u20132 at y3; x2\u20134 at y7; x8\u201311 at y1. Reach x10on the final right ledge after a horizontal fling. The high shelf needs a second momentum conversion: the catch wall accepts rightward motion and the upper floor sends it upward. Reanchor the pair during flight; placement freezes time. Pair placement does not advance time.\n\nField notes\nPlace portalAandBon two different named surfaces. Contacting one portal transforms your velocity into the other surface normal, preserving speed. Placement itself is free of time.\nAccelerate left/right or Coast one physics tick. A short jump cannot reach the high right ledge: gain speed falling into the pit-floor portal and redirect it horizontally.\nReach the right exit after a fling. In the final chamber, reanchor the portal pair during flight and convert horizontal speed into upward launch speed. Falling outside loses a life; three lives lose. Position and velocity remain visible.\n\nTap named controls. Focus the board for displayed keyboard shortcuts. Escape pauses. Every action is turn-paced. Retry this study preserves earlier clears; Restart all begins at study one.\n\nEvery simulation advances only when you act. Take your time. You can inspect the board before committing, and restart any study.",
+    "runtimeHashes": {
+      "mini-games/motion-room/navigation.js": "4082d1165a9a412194f8378d6272b0755707e5e3811cb3c18aaac9ab130a79bb",
+      "mini-games/motion-room/room.css": "a34568abf16c13760d779c6ee8825375b5d3e45304bbef8d3711a00fa1273ff8",
+      "mini-games/motion-room/shared.js": "08cc3892b3daad10e53fb3a70aa86539b76c9de7dbb2caaba6163e3bad998a9e",
+      "mini-games/motion-room/packing.js": "68a90922ac600b01c12b1d78475ea49f86949bee66fa82d54249d46bd195b85c",
+      "mini-games/motion-room/room.js": "eb9a87a21caae9efb8c1c9861225eef140589cdacb9b588e64bec9ddee0fba61",
+      "mini-games/motion-room/games.json": "d61f237ad719e22de48c3f3c5790a353195c3a7aac242202ceec75409150ed2a",
+      "mini-games/motion-room/index.html": "566094cc303494e8ea4d122145529c90e0be4e572495f6823e92200c3612ce35",
+      "mini-games/motion-room/physics.js": "cc646acf5e28b9796fe068331ad637c234e44f2c7f6b0a664f109f962621b688",
+      "mini-games/motion-room/README.md": "367d54123b9711d43a775dfa2534bdd5b96108f77da163a916b280fd8cc11d87",
+      "mini-games/motion-room/tactics.js": "1bd3baaff7d02142fac5a6cb2d8fea8bf3636103c9ed6ff22e3ee3fa43500bc5"
+    }
+  },
+  {
+    "gameId": "orchard-acrobat",
+    "passed": true,
+    "actions": 43,
+    "methods": "Reproduction through ordinary DOM buttons/keyboard of previously independent source-unexposed public win fixture; no source-guided moves.",
+    "lastText": "\u2733 Small Hours\nAll games \u2197\n\nA LITTLE ROOM TO EXPERIMENT\n\nOrchard Acrobat\n\nMove the head of a connected segmented creature; whole body falls rigidly under gravity unless any segment has support; fruit adds a segment.\n\nRestart all\nRetry this study\nPause\nACTION 42\n\nStudy 3/3 \u00b7 Action 42 \u00b7 Length 7 \u00b7 Fruit left 0 \u00b7 Head 10,1 \u00b7 Supports 4\n\n1\nHEAD\n2\n3\n6\n5\n4\n\nComplete. All studies complete. Well played.\n\nFinish journeyn\nVisible board information\n\nBoard11columns \u00d78rows, zero-based coordinates. Rocks 10,2; 0,5; 1,5; 2,5; 6,5; 7,5; 8,5; 9,5; 10,5. Ordered head-to-tail cells 10,1 \u2192 9,1 \u2192 9,2 \u2192 9,3 \u2192 9,4 \u2192 8,4 \u2192 7,4. Fruit none. Exit10,1. Any body cell above rock supports the whole connected body; otherwise all segments fall together until support or void. Growth keeps the old tail for that move; ordinary moves remove it.\nRow 1:\nRow 2:\nRow 3: #\nRow 4:\nRow 5:\nRow 6: # # # # # # # #\nRow 7:\nRow 8:\n\nField notes\nMove the head of an ordered connected creature; the remaining body follows. Fruit adds a segment by retaining the old tail that turn.\nAny segment directly above rock supports the whole body. When the last support is lost, all segments fall together until they find support or fall into the void.\nGather all fruit and reach the exit, which draws the connected body inside. Undo restores a nonterminal last step. Clear three islands requiring bridge length and support planning.\n\nTap named controls. Focus the board for displayed keyboard shortcuts. Escape pauses. Every action is turn-paced. Retry this study preserves earlier clears; Restart all begins at study one.\n\nEvery simulation advances only when you act. Take your time. You can inspect the board before committing, and restart any study.",
+    "runtimeHashes": {
+      "mini-games/motion-room/navigation.js": "4082d1165a9a412194f8378d6272b0755707e5e3811cb3c18aaac9ab130a79bb",
+      "mini-games/motion-room/room.css": "a34568abf16c13760d779c6ee8825375b5d3e45304bbef8d3711a00fa1273ff8",
+      "mini-games/motion-room/shared.js": "08cc3892b3daad10e53fb3a70aa86539b76c9de7dbb2caaba6163e3bad998a9e",
+      "mini-games/motion-room/packing.js": "68a90922ac600b01c12b1d78475ea49f86949bee66fa82d54249d46bd195b85c",
+      "mini-games/motion-room/room.js": "eb9a87a21caae9efb8c1c9861225eef140589cdacb9b588e64bec9ddee0fba61",
+      "mini-games/motion-room/games.json": "d61f237ad719e22de48c3f3c5790a353195c3a7aac242202ceec75409150ed2a",
+      "mini-games/motion-room/index.html": "566094cc303494e8ea4d122145529c90e0be4e572495f6823e92200c3612ce35",
+      "mini-games/motion-room/physics.js": "cc646acf5e28b9796fe068331ad637c234e44f2c7f6b0a664f109f962621b688",
+      "mini-games/motion-room/README.md": "367d54123b9711d43a775dfa2534bdd5b96108f77da163a916b280fd8cc11d87",
+      "mini-games/motion-room/tactics.js": "1bd3baaff7d02142fac5a6cb2d8fea8bf3636103c9ed6ff22e3ee3fa43500bc5"
+    }
+  },
+  {
+    "gameId": "crossfire-courtyard",
+    "passed": true,
+    "actions": 250,
+    "methods": "Reproduction through ordinary DOM buttons/keyboard of previously independent source-unexposed public win fixture; no source-guided moves.",
+    "lastText": "\u2733 Small Hours\nAll games \u2197\n\nA LITTLE ROOM TO EXPERIMENT\n\nCrossfire Courtyard\n\nCommand a3-member squad with action points, directional cover, suppression and reaction overwatch to extract a civilian across intersecting enemy fire lanes.\n\nRestart all\nRetry this study\nPause\nACTION 245\n\nStudy 3/3 \u00b7 Action 245 \u00b7 Suppression cartridges 0 \u00b7 Turn 21 \u00b7 Selected A \u00b7 AP 0 \u00b7 Civilian HP2 \u00b7 Extracted C,A\n\nEXITCIV\nB\n\nComplete. All studies complete. Well played.\n\nFinish journeyn\nVisible board information\n\nSquad A 7,0 HP2 AP0; B 3,2 HP2 AP2; C 7,0 HP2 AP2. Civilian7,0,HP2. Enemies X 5,2 HP0 suppressed0 reactionspent; Y 6,4 HP0 suppressed1 reactionspent. Walls 2,2; 4,3; 5,5. Enemy overwatch covers visible positions within5; first movement or unsuppressed hostile shot triggers2damage,1behind a wall on the incoming side. Suppression spends one shared cartridge and prevents reaction and response, but deals no damage. Only 7 cartridges in this courtyard; none regenerate. Reposition to open firing lanes before the supply runs out. Escort ON brings an adjacent civilian into your new square. Exit7,0.\n\nField notes\nSelect a squad member with two AP per turn. Move, fire, suppress or set overwatch. Enemies have deterministic visible reactions and a five-unit sight range blocked by walls. An unsuppressed hostile shot also triggers an available enemy reaction.\nSuppression deals no damage but disables enemy reaction and response. Directional cover reduces incoming damage. Escort ON moves an adjacent civilian with the selected unit. Suppression consumes a finite shared supply: eight cartridges in the first two courtyards and seven in the final one; none regenerate.\nExtract the civilian and at least two living squad members at7,0. Losing the civilian or dropping below two living squad members loses. End turn refreshes AP after enemy responses. Clear three courtyard layouts.\n\nTap named controls. Focus the board for displayed keyboard shortcuts. Escape pauses. Every action is turn-paced. Retry this study preserves earlier clears; Restart all begins at study one.\n\nEvery simulation advances only when you act. Take your time. You can inspect the board before committing, and restart any study.",
+    "runtimeHashes": {
+      "mini-games/motion-room/navigation.js": "4082d1165a9a412194f8378d6272b0755707e5e3811cb3c18aaac9ab130a79bb",
+      "mini-games/motion-room/room.css": "a34568abf16c13760d779c6ee8825375b5d3e45304bbef8d3711a00fa1273ff8",
+      "mini-games/motion-room/shared.js": "08cc3892b3daad10e53fb3a70aa86539b76c9de7dbb2caaba6163e3bad998a9e",
+      "mini-games/motion-room/packing.js": "68a90922ac600b01c12b1d78475ea49f86949bee66fa82d54249d46bd195b85c",
+      "mini-games/motion-room/room.js": "eb9a87a21caae9efb8c1c9861225eef140589cdacb9b588e64bec9ddee0fba61",
+      "mini-games/motion-room/games.json": "d61f237ad719e22de48c3f3c5790a353195c3a7aac242202ceec75409150ed2a",
+      "mini-games/motion-room/index.html": "566094cc303494e8ea4d122145529c90e0be4e572495f6823e92200c3612ce35",
+      "mini-games/motion-room/physics.js": "cc646acf5e28b9796fe068331ad637c234e44f2c7f6b0a664f109f962621b688",
+      "mini-games/motion-room/README.md": "367d54123b9711d43a775dfa2534bdd5b96108f77da163a916b280fd8cc11d87",
+      "mini-games/motion-room/tactics.js": "1bd3baaff7d02142fac5a6cb2d8fea8bf3636103c9ed6ff22e3ee3fa43500bc5"
+    }
+  }
+]

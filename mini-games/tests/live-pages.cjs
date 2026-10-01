@@ -7,7 +7,7 @@ const base=(process.env.LIVE_BASE_URL||'https://yarith28.github.io/motion-design
 const out=process.env.SCREENSHOT_DIR||'live-verification';fs.mkdirSync(out,{recursive:true});
 const inventory=JSON.parse(fs.readFileSync('mini-games/inventory.json','utf8'));
 const total=inventory.games.length;
-const expansionRooms=new Set(['systems-room','tabletop-room','puzzle-lab','kinetic-room','discovery-room']);
+const expansionRooms=new Set(['systems-room','tabletop-room','puzzle-lab','kinetic-room','discovery-room','construct-room','parlour-room','motion-room','workbench-room']);
 const categories=[...new Set(inventory.games.map(g=>g.category))];
 const categoryCount=c=>c==='all'?total:inventory.games.filter(g=>g.category===c).length;
 const games=['signal-run','double-take','pocket-orbit','good-order','afterglow','lantern-lines','tide-pool','word-weave','sky-stack','pebble-post'];
@@ -51,7 +51,7 @@ async function publishedFiles(){
   await catalogShot(page,`${out}/catalog-list-${mobile?'mobile':'desktop'}.png`);
   if(mobile){await page.setViewportSize({width:320,height:740});assert.equal(await page.evaluate(width=>document.documentElement.scrollWidth<=width,page.viewportSize().width),true);await page.setViewportSize({width:390,height:844})}
   for(const link of await page.locator('[data-category] a.cta').all()){const box=await link.boundingBox();assert.ok(box&&box.width>=40&&box.height>=32)}
-  await page.locator('[data-category="adventure"] a.cta[href="afterglow/"]').click();await page.waitForURL('**/afterglow/');await page.getByRole('link',{name:'All games',exact:false}).click();await page.waitForURL(base+'/mini-games/');assert.equal(await page.locator('#game-catalog').getAttribute('data-view'),'list');
+  await page.locator('[data-category="adventure"] a.cta[href="afterglow/"]').click();await page.waitForURL('**/afterglow/');await page.getByRole('link',{name:'All games',exact:false}).first().click();await page.waitForURL(base+'/mini-games/');assert.equal(await page.locator('#game-catalog').getAttribute('data-view'),'list');
   await gridButton.focus();await page.keyboard.press('Space');await page.reload();assert.equal(await page.locator('#game-catalog').getAttribute('data-view'),'grid');
   await page.locator('#game-search').fill('not-a-real-title-927');assert.equal(await page.locator('[data-category]:visible').count(),0);assert.equal(await page.locator('#empty-results').isVisible(),true);await page.locator('#clear-filters').click();assert.equal(await page.locator('[data-category]:visible').count(),total);
   await page.keyboard.press('/');assert.equal(await page.locator('#game-search').evaluate(e=>e===document.activeElement),true);await page.locator('#game-search').fill('Afterglow');assert.equal(await page.locator('[data-category]:visible').count(),1);await page.keyboard.press('Escape');assert.equal(await page.locator('[data-category]:visible').count(),total);
@@ -90,7 +90,7 @@ async function publishedFiles(){
     await page.screenshot({path:`${out}/afterglow-${mobile?'mobile':'desktop'}.png`,fullPage:true});
    }
    results.push({game:entry.id,viewport:mobile?'mobile':'desktop',url,status:response.status(),smoke:'passed'});
-   await page.getByRole('link',{name:'All games',exact:false}).click();await page.waitForURL(base+'/mini-games/');assert.equal(await page.locator('[data-category]:visible').count(),total);
+   await page.getByRole('link',{name:'All games',exact:false}).first().click();await page.waitForURL(base+'/mini-games/');assert.equal(await page.locator('[data-category]:visible').count(),total);
   }
   await context.close();
  }

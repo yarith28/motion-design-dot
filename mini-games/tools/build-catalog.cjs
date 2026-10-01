@@ -6,9 +6,10 @@ const old=[['signal-run','Signal Run','reflex'],['double-take','Double Take','me
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const games=rooms.flatMap(room=>{
  const data=JSON.parse(fs.readFileSync(path.join(root,room,'games.json')));
- const expected={'systems-room':20,'tabletop-room':20,'puzzle-lab':20,'kinetic-room':20,'discovery-room':20}[room]||15;
+ const expected={'systems-room':20,'tabletop-room':20,'puzzle-lab':20,'kinetic-room':20,'discovery-room':20,'construct-room':14,'parlour-room':35,'motion-room':24,'workbench-room':27}[room]||15;
  if(data.length!==expected)throw Error(room+' must have '+expected+' distinct games');
  if(!fs.existsSync(path.join(root,'coverage',room+'.json')))throw Error('Missing browser evidence for '+room);
+ if(['construct-room','parlour-room','motion-room','workbench-room'].includes(room))require('./evidence.cjs').expansionEvidence(room);
  return data.map(g=>({...g,family:room,status:'playable'}));
 });
 const all=[...old,...games];if(new Set(all.map(g=>g.id)).size!==all.length)throw Error('Duplicate game ids');

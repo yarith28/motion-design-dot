@@ -3,9 +3,9 @@
   "suite": "tabletop-room",
   "passed": true,
   "status": "passed",
-  "startedAt": "2026-10-01T06:45:57.967Z",
+  "startedAt": "2026-10-01T09:55:55.051Z",
   "source": {
-    "sha256": "480d327eafa6cca79930865b77cc214101d6d2264ca5006027a917472367f3d9",
+    "sha256": "25de301b7670df185e681698c6809044b7e01b177febcc1c18d08a9a355277bd",
     "files": [
       "catalog.css",
       "catalog.js",
@@ -23,6 +23,10 @@
       "tabletop-room/index.html",
       "tabletop-room/room.css",
       "tests/fixtures/baseline100.json",
+      "tests/fixtures/baseline200.json",
+      "tests/fixtures/parlour-b02-b05-paths.json",
+      "tests/fixtures/parlour-b13-guided-paths.json",
+      "tests/fixtures/parlour-paths.json",
       "tests/fixtures/tabletop-paths.json",
       "tests/tabletop-remediation.cjs",
       "tests/tabletop-room.cjs",
@@ -30,7 +34,7 @@
       "tools/run-suite.cjs"
     ]
   },
-  "requestedBaseURL": "http://127.0.0.1:8790",
+  "requestedBaseURL": "http://127.0.0.1:8781",
   "browser": {
     "engine": "Chromium",
     "version": "Chromium 151.0.7922.173 built on Debian GNU/Linux 13 (trixie)",
@@ -72,24 +76,24 @@
     "Solver completions do not establish human difficulty or accessibility."
   ],
   "servedRuntimeBefore": {
-    "baseURL": "http://127.0.0.1:8790",
+    "baseURL": "http://127.0.0.1:8781",
     "passed": true,
-    "sha256": "fa908bd8d8350e578dbc6b8620f38bb4ae2482d8dd7655035c2fc516f6c77156",
+    "sha256": "4d3b6577491a04f4640776b97654e318c0ce20c74cc4992dd2236cdd6cdf30de",
     "fileCount": 15,
-    "verifiedAt": "2026-10-01T06:45:58.349Z"
+    "verifiedAt": "2026-10-01T09:55:55.331Z"
   },
   "exitCode": 0,
   "signal": null,
   "sourceUnchanged": true,
   "servedRuntime": {
-    "baseURL": "http://127.0.0.1:8790",
+    "baseURL": "http://127.0.0.1:8781",
     "passed": true,
-    "sha256": "fa908bd8d8350e578dbc6b8620f38bb4ae2482d8dd7655035c2fc516f6c77156",
+    "sha256": "4d3b6577491a04f4640776b97654e318c0ce20c74cc4992dd2236cdd6cdf30de",
     "fileCount": 15,
-    "verifiedAt": "2026-10-01T06:47:44.926Z"
+    "verifiedAt": "2026-10-01T09:57:51.838Z"
   },
   "completionEvidence": {
-    "sha256": "a6605aa48659d8f04987af2df8a8e94f81b09b8b2341139c617965fca108f730",
+    "sha256": "318b752867fced13228b091544b8af308e59ddfa2aa548df3cabd0e5fcfd672c",
     "file": "coverage/tabletop-room.json",
     "cases": [
       {
@@ -786,5 +790,5 @@
       }
     ]
   },
-  "finishedAt": "2026-10-01T06:47:44.927Z"
+  "finishedAt": "2026-10-01T09:57:51.838Z"
 }

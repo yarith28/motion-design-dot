@@ -3,9 +3,9 @@
   "suite": "sky-stack",
   "passed": true,
   "status": "passed",
-  "startedAt": "2026-10-01T06:43:33.472Z",
+  "startedAt": "2026-10-01T09:53:51.247Z",
   "source": {
-    "sha256": "0a21c8045763618c401a5d161b3f07f559af3e97254bd457cb7611ba4d861cdf",
+    "sha256": "30db65d2db9cc5d9ba3525e6721418e6dc373ed2f50e1ff053ef699411ead7b9",
     "files": [
       "catalog.css",
       "catalog.js",
@@ -22,7 +22,7 @@
       "tools/run-suite.cjs"
     ]
   },
-  "requestedBaseURL": "http://127.0.0.1:8790",
+  "requestedBaseURL": "http://127.0.0.1:8781",
   "browser": {
     "engine": "Chromium",
     "version": "Chromium 151.0.7922.173 built on Debian GNU/Linux 13 (trixie)",
@@ -45,22 +45,22 @@
     "Solver completions do not establish human difficulty or accessibility."
   ],
   "servedRuntimeBefore": {
-    "baseURL": "http://127.0.0.1:8790",
+    "baseURL": "http://127.0.0.1:8781",
     "passed": true,
-    "sha256": "6192494a994991d67fe00188d949569bde5200739978f8ea269a4ee8660a519a",
+    "sha256": "fcd7c4fe9d4e2481296a9ce7546ba86a855c860d7d41ebb3d27013b09cdc8e51",
     "fileCount": 10,
-    "verifiedAt": "2026-10-01T06:43:33.583Z"
+    "verifiedAt": "2026-10-01T09:53:51.369Z"
   },
   "exitCode": 0,
   "signal": null,
   "sourceUnchanged": true,
   "servedRuntime": {
-    "baseURL": "http://127.0.0.1:8790",
+    "baseURL": "http://127.0.0.1:8781",
     "passed": true,
-    "sha256": "6192494a994991d67fe00188d949569bde5200739978f8ea269a4ee8660a519a",
+    "sha256": "fcd7c4fe9d4e2481296a9ce7546ba86a855c860d7d41ebb3d27013b09cdc8e51",
     "fileCount": 10,
-    "verifiedAt": "2026-10-01T06:43:46.932Z"
+    "verifiedAt": "2026-10-01T09:54:11.393Z"
   },
   "completionEvidence": null,
-  "finishedAt": "2026-10-01T06:43:46.933Z"
+  "finishedAt": "2026-10-01T09:54:11.394Z"
 }

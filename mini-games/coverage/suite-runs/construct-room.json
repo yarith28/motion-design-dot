@@ -1,0 +1,583 @@
+{
+  "schemaVersion": 2,
+  "suite": "construct-room",
+  "passed": true,
+  "status": "passed",
+  "startedAt": "2026-10-01T09:58:15.132Z",
+  "source": {
+    "sha256": "c06f0c714d4e9942e1f11b7649846c6a955f1d6b13817b848f00555eaed116c2",
+    "files": [
+      "catalog.css",
+      "catalog.js",
+      "common.js",
+      "construct-room/engines.js",
+      "construct-room/games.json",
+      "construct-room/index.html",
+      "construct-room/room.css",
+      "construct-room/room.js",
+      "index.html",
+      "inventory.json",
+      "play.css",
+      "styles.css",
+      "tests/construct-fixtures.json",
+      "tests/construct-room.cjs",
+      "tests/fixtures/baseline100.json",
+      "tests/fixtures/baseline200.json",
+      "tests/fixtures/parlour-b02-b05-paths.json",
+      "tests/fixtures/parlour-b13-guided-paths.json",
+      "tests/fixtures/parlour-paths.json",
+      "tests/fixtures/tabletop-paths.json",
+      "tools/evidence.cjs",
+      "tools/run-suite.cjs"
+    ]
+  },
+  "requestedBaseURL": "http://127.0.0.1:8781",
+  "browser": {
+    "engine": "Chromium",
+    "version": "Chromium 151.0.7922.173 built on Debian GNU/Linux 13 (trixie)",
+    "executable": "/usr/bin/chromium"
+  },
+  "scope": {
+    "desktopCompletion": true,
+    "mobileViewportCompletion": true,
+    "touchGameplayCompletion": false,
+    "touchControlSmoke": true,
+    "completionMeans": "winning full progression",
+    "method": "scripted UI; curated answers or board solvers",
+    "mobileMethod": "touch gameplay with scripted navigation/solvers"
+  },
+  "games": [
+    "falling-orchard",
+    "turn-the-stack",
+    "unfair-circle",
+    "one-last-marble",
+    "corner-cabinet",
+    "letter-conservatory",
+    "compass-house",
+    "fair-portions",
+    "unfolding-house",
+    "gentle-unknot",
+    "bonding-room",
+    "words-that-move",
+    "rooms-in-motion",
+    "pocket-photograph"
+  ],
+  "limits": [
+    "Mobile is Chromium viewport/touch emulation, not Safari or a physical device.",
+    "Solver completions do not establish human difficulty or accessibility."
+  ],
+  "servedRuntimeBefore": {
+    "baseURL": "http://127.0.0.1:8781",
+    "passed": true,
+    "sha256": "ec441c511ef09c15d707541786a9fc95fd4c8b6c8767ab1c08dca551d36af8b1",
+    "fileCount": 12,
+    "verifiedAt": "2026-10-01T09:58:15.298Z"
+  },
+  "exitCode": 0,
+  "signal": null,
+  "sourceUnchanged": true,
+  "servedRuntime": {
+    "baseURL": "http://127.0.0.1:8781",
+    "passed": true,
+    "sha256": "ec441c511ef09c15d707541786a9fc95fd4c8b6c8767ab1c08dca551d36af8b1",
+    "fileCount": 12,
+    "verifiedAt": "2026-10-01T10:00:45.504Z"
+  },
+  "completionEvidence": {
+    "sha256": "bbcf48db6aa3d075685203e8f42cff78cd44c7854d7c4c44a6fff08010379491",
+    "file": "coverage/construct-room.json",
+    "cases": [
+      {
+        "id": "falling-orchard",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "studiesCompleted": 3,
+        "edgeCases": [
+          "initial incomplete certificate rejected",
+          "native focused Space action retains usable focus",
+          "greedy removal reaches natural singleton dead-end; Undo recovers",
+          "three real studies won; completed certificate locked; full restart restores counters"
+        ],
+        "inputMethod": "Native keyboard Space smoke plus mouse clicks; source-authored and solver-guided public-control routes",
+        "touchOnly": false,
+        "completionType": "source-informed public UI replay",
+        "errors": []
+      },
+      {
+        "id": "falling-orchard",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "studiesCompleted": 3,
+        "edgeCases": [
+          "initial incomplete certificate rejected",
+          "greedy removal reaches natural singleton dead-end; Undo recovers",
+          "three real studies won; completed certificate locked; full restart restores counters"
+        ],
+        "inputMethod": "Touchscreen taps only; source-authored and solver-guided public-control routes",
+        "touchOnly": true,
+        "completionType": "source-informed public UI replay",
+        "errors": []
+      },
+      {
+        "id": "turn-the-stack",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "studiesCompleted": 3,
+        "edgeCases": [
+          "initial incomplete certificate rejected",
+          "native focused Space action retains usable focus",
+          "real flip allowance failure and recovery",
+          "three real studies won; completed certificate locked; full restart restores counters"
+        ],
+        "inputMethod": "Native keyboard Space smoke plus mouse clicks; source-authored and solver-guided public-control routes",
+        "touchOnly": false,
+        "completionType": "source-informed public UI replay",
+        "errors": []
+      },
+      {
+        "id": "turn-the-stack",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "studiesCompleted": 3,
+        "edgeCases": [
+          "initial incomplete certificate rejected",
+          "real flip allowance failure and recovery",
+          "three real studies won; completed certificate locked; full restart restores counters"
+        ],
+        "inputMethod": "Touchscreen taps only; source-authored and solver-guided public-control routes",
+        "touchOnly": true,
+        "completionType": "source-informed public UI replay",
+        "errors": []
+      },
+      {
+        "id": "unfair-circle",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "studiesCompleted": 3,
+        "edgeCases": [
+          "initial incomplete certificate rejected",
+          "native focused Space action retains usable focus",
+          "unequal means rejected; face swap undo restores shared inventory",
+          "three real studies won; completed certificate locked; full restart restores counters"
+        ],
+        "inputMethod": "Native keyboard Space smoke plus mouse clicks; source-authored and solver-guided public-control routes",
+        "touchOnly": false,
+        "completionType": "source-informed public UI replay",
+        "errors": []
+      },
+      {
+        "id": "unfair-circle",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "studiesCompleted": 3,
+        "edgeCases": [
+          "initial incomplete certificate rejected",
+          "unequal means rejected; face swap undo restores shared inventory",
+          "three real studies won; completed certificate locked; full restart restores counters"
+        ],
+        "inputMethod": "Touchscreen taps only; source-authored and solver-guided public-control routes",
+        "touchOnly": true,
+        "completionType": "source-informed public UI replay",
+        "errors": []
+      },
+      {
+        "id": "one-last-marble",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "studiesCompleted": 3,
+        "edgeCases": [
+          "initial incomplete certificate rejected",
+          "native focused Space action retains usable focus",
+          "launch without target refuses without consuming a marble",
+          "three real studies won; completed certificate locked; full restart restores counters"
+        ],
+        "inputMethod": "Native keyboard Space smoke plus mouse clicks; source-authored and solver-guided public-control routes",
+        "touchOnly": false,
+        "completionType": "source-informed public UI replay",
+        "errors": []
+      },
+      {
+        "id": "one-last-marble",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "studiesCompleted": 3,
+        "edgeCases": [
+          "initial incomplete certificate rejected",
+          "launch without target refuses without consuming a marble",
+          "three real studies won; completed certificate locked; full restart restores counters"
+        ],
+        "inputMethod": "Touchscreen taps only; source-authored and solver-guided public-control routes",
+        "touchOnly": true,
+        "completionType": "source-informed public UI replay",
+        "errors": []
+      },
+      {
+        "id": "corner-cabinet",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "studiesCompleted": 3,
+        "edgeCases": [
+          "initial incomplete certificate rejected",
+          "native focused Space action retains usable focus",
+          "four face turns restore exact visible state; still-unsolved cube rejected",
+          "three real studies won; completed certificate locked; full restart restores counters"
+        ],
+        "inputMethod": "Native keyboard Space smoke plus mouse clicks; source-authored and solver-guided public-control routes",
+        "touchOnly": false,
+        "completionType": "source-informed public UI replay",
+        "errors": []
+      },
+      {
+        "id": "corner-cabinet",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "studiesCompleted": 3,
+        "edgeCases": [
+          "initial incomplete certificate rejected",
+          "four face turns restore exact visible state; still-unsolved cube rejected",
+          "three real studies won; completed certificate locked; full restart restores counters"
+        ],
+        "inputMethod": "Touchscreen taps only; source-authored and solver-guided public-control routes",
+        "touchOnly": true,
+        "completionType": "source-informed public UI replay",
+        "errors": []
+      },
+      {
+        "id": "letter-conservatory",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "studiesCompleted": 3,
+        "edgeCases": [
+          "initial incomplete certificate rejected",
+          "native focused Space action retains usable focus",
+          "invalid word refuses without spending a word slot",
+          "three real studies won; completed certificate locked; full restart restores counters"
+        ],
+        "inputMethod": "Native keyboard Space smoke plus mouse clicks; source-authored and solver-guided public-control routes",
+        "touchOnly": false,
+        "completionType": "source-informed public UI replay",
+        "errors": []
+      },
+      {
+        "id": "letter-conservatory",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "studiesCompleted": 3,
+        "edgeCases": [
+          "initial incomplete certificate rejected",
+          "invalid word refuses without spending a word slot",
+          "three real studies won; completed certificate locked; full restart restores counters"
+        ],
+        "inputMethod": "Touchscreen taps only; source-authored and solver-guided public-control routes",
+        "touchOnly": true,
+        "completionType": "source-informed public UI replay",
+        "errors": []
+      },
+      {
+        "id": "compass-house",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "studiesCompleted": 3,
+        "edgeCases": [
+          "initial incomplete certificate rejected",
+          "native focused Space action retains usable focus",
+          "degenerate construction refuses with exact requirement",
+          "three real studies won; completed certificate locked; full restart restores counters"
+        ],
+        "inputMethod": "Native keyboard Space smoke plus mouse clicks; source-authored and solver-guided public-control routes",
+        "touchOnly": false,
+        "completionType": "source-informed public UI replay",
+        "errors": []
+      },
+      {
+        "id": "compass-house",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "studiesCompleted": 3,
+        "edgeCases": [
+          "initial incomplete certificate rejected",
+          "degenerate construction refuses with exact requirement",
+          "three real studies won; completed certificate locked; full restart restores counters"
+        ],
+        "inputMethod": "Touchscreen taps only; source-authored and solver-guided public-control routes",
+        "touchOnly": true,
+        "completionType": "source-informed public UI replay",
+        "errors": []
+      },
+      {
+        "id": "fair-portions",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "studiesCompleted": 3,
+        "edgeCases": [
+          "initial incomplete certificate rejected",
+          "native focused Space action retains usable focus",
+          "boundary-tangent cut rejected without material loss",
+          "three real studies won; completed certificate locked; full restart restores counters"
+        ],
+        "inputMethod": "Native keyboard Space smoke plus mouse clicks; source-authored and solver-guided public-control routes",
+        "touchOnly": false,
+        "completionType": "source-informed public UI replay",
+        "errors": []
+      },
+      {
+        "id": "fair-portions",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "studiesCompleted": 3,
+        "edgeCases": [
+          "initial incomplete certificate rejected",
+          "boundary-tangent cut rejected without material loss",
+          "three real studies won; completed certificate locked; full restart restores counters"
+        ],
+        "inputMethod": "Touchscreen taps only; source-authored and solver-guided public-control routes",
+        "touchOnly": true,
+        "completionType": "source-informed public UI replay",
+        "errors": []
+      },
+      {
+        "id": "unfolding-house",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "studiesCompleted": 3,
+        "edgeCases": [
+          "initial incomplete certificate rejected",
+          "native focused Space action retains usable focus",
+          "cyclic/excess hinge candidate rejected",
+          "three real studies won; completed certificate locked; full restart restores counters"
+        ],
+        "inputMethod": "Native keyboard Space smoke plus mouse clicks; source-authored and solver-guided public-control routes",
+        "touchOnly": false,
+        "completionType": "source-informed public UI replay",
+        "errors": []
+      },
+      {
+        "id": "unfolding-house",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "studiesCompleted": 3,
+        "edgeCases": [
+          "initial incomplete certificate rejected",
+          "cyclic/excess hinge candidate rejected",
+          "three real studies won; completed certificate locked; full restart restores counters"
+        ],
+        "inputMethod": "Touchscreen taps only; source-authored and solver-guided public-control routes",
+        "touchOnly": true,
+        "completionType": "source-informed public UI replay",
+        "errors": []
+      },
+      {
+        "id": "gentle-unknot",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "studiesCompleted": 3,
+        "edgeCases": [
+          "initial incomplete certificate rejected",
+          "native focused Space action retains usable focus",
+          "illegal topology cancellation refused; inverse pair insertion and cancellation preserve braid",
+          "three real studies won; completed certificate locked; full restart restores counters"
+        ],
+        "inputMethod": "Native keyboard Space smoke plus mouse clicks; source-authored and solver-guided public-control routes",
+        "touchOnly": false,
+        "completionType": "source-informed public UI replay",
+        "errors": []
+      },
+      {
+        "id": "gentle-unknot",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "studiesCompleted": 3,
+        "edgeCases": [
+          "initial incomplete certificate rejected",
+          "illegal topology cancellation refused; inverse pair insertion and cancellation preserve braid",
+          "three real studies won; completed certificate locked; full restart restores counters"
+        ],
+        "inputMethod": "Touchscreen taps only; source-authored and solver-guided public-control routes",
+        "touchOnly": true,
+        "completionType": "source-informed public UI replay",
+        "errors": []
+      },
+      {
+        "id": "bonding-room",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "studiesCompleted": 3,
+        "edgeCases": [
+          "initial incomplete certificate rejected",
+          "native focused Space action retains usable focus",
+          "wrong irreversible valence bond fails naturally; Undo restores atoms",
+          "three real studies won; completed certificate locked; full restart restores counters"
+        ],
+        "inputMethod": "Native keyboard Space smoke plus mouse clicks; source-authored and solver-guided public-control routes",
+        "touchOnly": false,
+        "completionType": "source-informed public UI replay",
+        "errors": []
+      },
+      {
+        "id": "bonding-room",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "studiesCompleted": 3,
+        "edgeCases": [
+          "initial incomplete certificate rejected",
+          "wrong irreversible valence bond fails naturally; Undo restores atoms",
+          "three real studies won; completed certificate locked; full restart restores counters"
+        ],
+        "inputMethod": "Touchscreen taps only; source-authored and solver-guided public-control routes",
+        "touchOnly": true,
+        "completionType": "source-informed public UI replay",
+        "errors": []
+      },
+      {
+        "id": "words-that-move",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "studiesCompleted": 3,
+        "edgeCases": [
+          "initial incomplete certificate rejected",
+          "native focused Space action retains usable focus",
+          "breaking every YOU rule produces recoverable no-control failure",
+          "three real studies won; completed certificate locked; full restart restores counters"
+        ],
+        "inputMethod": "Native keyboard Space smoke plus mouse clicks; source-authored and solver-guided public-control routes",
+        "touchOnly": false,
+        "completionType": "source-informed public UI replay",
+        "errors": []
+      },
+      {
+        "id": "words-that-move",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "studiesCompleted": 3,
+        "edgeCases": [
+          "initial incomplete certificate rejected",
+          "breaking every YOU rule produces recoverable no-control failure",
+          "three real studies won; completed certificate locked; full restart restores counters"
+        ],
+        "inputMethod": "Touchscreen taps only; source-authored and solver-guided public-control routes",
+        "touchOnly": true,
+        "completionType": "source-informed public UI replay",
+        "errors": []
+      },
+      {
+        "id": "rooms-in-motion",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "studiesCompleted": 3,
+        "edgeCases": [
+          "initial incomplete certificate rejected",
+          "native focused Space action retains usable focus",
+          "immediate reverse insertion rejected atomically",
+          "three real studies won; completed certificate locked; full restart restores counters"
+        ],
+        "inputMethod": "Native keyboard Space smoke plus mouse clicks; source-authored and solver-guided public-control routes",
+        "touchOnly": false,
+        "completionType": "source-informed public UI replay",
+        "errors": []
+      },
+      {
+        "id": "rooms-in-motion",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "studiesCompleted": 3,
+        "edgeCases": [
+          "initial incomplete certificate rejected",
+          "immediate reverse insertion rejected atomically",
+          "three real studies won; completed certificate locked; full restart restores counters"
+        ],
+        "inputMethod": "Touchscreen taps only; source-authored and solver-guided public-control routes",
+        "touchOnly": true,
+        "completionType": "source-informed public UI replay",
+        "errors": []
+      },
+      {
+        "id": "pocket-photograph",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "studiesCompleted": 3,
+        "edgeCases": [
+          "initial incomplete certificate rejected",
+          "native focused Space action retains usable focus",
+          "avatar capture refused; destructive wall prints exhaust cameras and strand the route; Undo recovers held photo",
+          "three real studies won; completed certificate locked; full restart restores counters"
+        ],
+        "inputMethod": "Native keyboard Space smoke plus mouse clicks; source-authored and solver-guided public-control routes",
+        "touchOnly": false,
+        "completionType": "source-informed public UI replay",
+        "errors": []
+      },
+      {
+        "id": "pocket-photograph",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "studiesCompleted": 3,
+        "edgeCases": [
+          "initial incomplete certificate rejected",
+          "avatar capture refused; destructive wall prints exhaust cameras and strand the route; Undo recovers held photo",
+          "three real studies won; completed certificate locked; full restart restores counters"
+        ],
+        "inputMethod": "Touchscreen taps only; source-authored and solver-guided public-control routes",
+        "touchOnly": true,
+        "completionType": "source-informed public UI replay",
+        "errors": []
+      }
+    ]
+  },
+  "finishedAt": "2026-10-01T10:00:45.508Z"
+}

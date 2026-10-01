@@ -1,0 +1,961 @@
+[
+  {
+    "id": "B01",
+    "name": "Breathing Room",
+    "core": "Adversarial group-liberty capture and living territory.",
+    "stateActions": "7\u00d77 intersections. Alternate placing stones or passing. Orthogonal groups with no empty neighboring liberty are removed after enemy captures resolve. Suicide prohibited; positional superko prevents repeat boards. Two consecutive passes enter explicit territory scoring with disputed groups played out, never guessed dead. Area = stones plus empty regions bordering only one side; compensation displayed before play.",
+    "decisions": "Connect threatened groups or sacrifice them for outside influence; start a capture race, invade, or secure two independent eyes. Occupying an empty point can save one group while taking a liberty from another.",
+    "depth": "Generated balanced opening studies plus full matches; opponent reads short liberty races and protects eyes. At least three ordinary victories must require saving a group, sacrificing stones, and playing a boundary dispute across separate starts.",
+    "winLoss": "Higher area after agreed double pass wins, equality draws; opponent area win is a natural loss. Resignation optional but never failure evidence.",
+    "controls": "Tap an intersection; preview liberty/capture consequences; Confirm placement. Arrow focus with Enter; separate Pass button.",
+    "accessibility": "Every point names coordinates/owner/group/liberty count. Region score table and captured-stone log; no color-only ownership.",
+    "qa": [
+      "Public practice capture: white C3 has B3/C2/C4 occupied by ink and D3 empty; place D3 and confirm removal before continuing a full match to scored victory.",
+      "Public life study: preserve two eyes against house pressure; independently play full match to win from shown rules, logging all moves.",
+      "Failure: invade a sealed region, permit capture, then finish double-pass scoring below house. Verify superko rejection does not consume turn.",
+      "For every acceptance run: fresh launch via visible catalog, only normal touch/click/keyboard input; no state injection, engine calls, hidden state or precomputed solution. Record seed/setup, input transcript, screenshots and exact source hash. At least one independent reviewer must win and another ordinary run must reach the natural loss. Restart and replay on 390px touch viewport and keyboard; verify focus/selected states/announcements. These are planned gates, not completion claims."
+    ],
+    "existingNeighbors": [
+      "reversi: entire no-liberty groups are removed, not ray-bracket color conversion; lasting vacancies and eye life dominate.",
+      "hex: connected groups are vulnerable and area is scored, not an irreversible edge-connection race."
+    ],
+    "proposalNeighbors": [
+      "B04 surrounds one queen using moving insects and sliding restrictions; B01 stones stay fixed except capture.",
+      "B25 uses political leaders, tile colors and conflict strength, not liberties."
+    ],
+    "risks": "Risk: tiny board solved opening or opaque dead-group adjudication. Must retain play-out and human-readable score breakdown; no release on AI-only reachability.",
+    "reviewStatus": "Conditionally accepted at DESIGN stage by independent uniqueness and depth reviewers; implementation, ordinary UI win/loss evidence, cross-portfolio freeze and remediated200 baseline recheck remain required. No gameplay implementation or passed QA claimed.",
+    "comparisonScope": "Compared against all 200 inventory mechanics/rules at design snapshot; nearest source checked in strategy-room/engines.mjs, tabletop-room/cards.mjs or boards.mjs and original game rules where relevant. Recheck remediated baseline before implementation."
+  },
+  {
+    "id": "B02",
+    "name": "Returned Banner",
+    "core": "Captured units become deployable reserves in royal tactics.",
+    "stateActions": "5\u00d75 board with king, rook, bishop, gold, silver and one single-step pawn per side (six units each). Human back row A5\u2013E5 is King, Gold, Silver, Bishop, Rook with pawn A4; house back row A1\u2013E1 is Rook, Bishop, Silver, Gold, King with pawn E2. Twelve occupied squares leave thirteen free at start. Piece moves fixed and illustrated. Capture demotes and transfers unit into captor reserve; drop replaces a move. Promotion available upon entering far row, with promoted movement printed. Pawn drops cannot share a file with own unpromoted pawn or give immediate mate; no self-check. Four repeated positions draw.",
+    "decisions": "Trade active material for a future drop, deny drop squares around king, promote a distant unit or recycle it through exchange. Captures change both armies instead of merely reducing material.",
+    "depth": "At least three starts with defensive interposition drops, fork drops and promotion tradeoffs; opponent must consider reserve checks and legal escapes.",
+    "winLoss": "Checkmate wins/losses; no legal move while not checked draws in this explicitly simplified ruleset. Public 100-turn draw bound.",
+    "controls": "Select board piece or reserve unit, destination, optional promotion, confirm; mobile button board and keyboard arrows/Enter/Escape.",
+    "accessibility": "Piece names rather than unfamiliar glyph only; attack map toggle, check announcement, reserve counts, legal-action descriptions.",
+    "qa": [
+      "Win: from a public training setup, capture a bishop, later drop it to check and force mate; repeat a full-start win with at least one useful drop.",
+      "Loss: ignore a visible reserve checking threat and allow house mate using only legal inputs; verify self-check moves and illegal pawn drops are rejected.",
+      "Inspect promotion choice and captured promoted-unit demotion using UI history.",
+      "For every acceptance run: fresh launch via visible catalog, only normal touch/click/keyboard input; no state injection, engine calls, hidden state or precomputed solution. Record seed/setup, input transcript, screenshots and exact source hash. At least one independent reviewer must win and another ordinary run must reach the natural loss. Restart and replay on 390px touch viewport and keyboard; verify focus/selected states/announcements. These are planned gates, not completion claims."
+    ],
+    "existingNeighbors": [
+      "borrowed-steps: movement cards circulate but units never enter redeployable reserve; B02 drops create new threats anywhere legal.",
+      "crown-and-guard: fixed asymmetric escape army lacks check, promotion and ownership-changing reserves."
+    ],
+    "proposalNeighbors": [
+      "B06 concealed ranks do not recycle captured units; B03 strength freezing has no reserve."
+    ],
+    "risks": "Rules and AI scope substantial. Must expose complete move/drop legality; layout balance is unverified design work.",
+    "reviewStatus": "Conditionally accepted at DESIGN stage by independent uniqueness and depth reviewers; implementation, ordinary UI win/loss evidence, cross-portfolio freeze and remediated200 baseline recheck remain required. No gameplay implementation or passed QA claimed.",
+    "comparisonScope": "Compared against all 200 inventory mechanics/rules at design snapshot; nearest source checked in strategy-room/engines.mjs, tabletop-room/cards.mjs or boards.mjs and original game rules where relevant. Recheck remediated baseline before implementation."
+  },
+  {
+    "id": "B03",
+    "name": "Four-Step Menagerie",
+    "core": "Four-action turns manipulate weaker enemies while support determines freezing and trap survival.",
+    "stateActions": "6\u00d76 board; each side owns elephant, camel, two cats and three rabbits. Orthogonal one-step moves; rabbits cannot step backward. A unit adjacent to stronger enemy and no friendly unit is frozen. Push or pull a weaker enemy costs two consecutive steps. Four marked traps capture any occupant lacking adjacent friendly support after each step. Up to four steps per turn; complete turn cannot repeat its starting position.",
+    "decisions": "Spend steps rescuing trap support, displacing a blocker, or escorting a rabbit. Push/pull can expose own support; first step survival matters before the second completes.",
+    "depth": "Openings vary trap approaches; include a study where three preparatory steps enable a fourth-step escape and one where spending all four steps is wrong. Search opponent complete compound turns.",
+    "winLoss": "First rabbit to far rank wins; lose if own rabbits gone or no legal turn; simultaneous trap removals resolve before goal check. Repetition draw.",
+    "controls": "Tap unit then Step/Push/Pull and target; remaining-step meter and End turn. Keyboard action list alternative to board.",
+    "accessibility": "Strength labels, frozen reasons, support links and each intermediate trap resolution announced; no timed multi-press gesture.",
+    "qa": [
+      "Win: play a visible trap-support puzzle by first unfreezing a cat, then pull blocker and send rabbit through; complete three varied full matches.",
+      "Loss: move the only supporter away from an occupied trap and observe own capture, then continue to rabbit elimination or opposing goal.",
+      "Reject half-completed two-step actions with insufficient budget and ensure UI preview does not hide intermediate captures.",
+      "For every acceptance run: fresh launch via visible catalog, only normal touch/click/keyboard input; no state injection, engine calls, hidden state or precomputed solution. Record seed/setup, input transcript, screenshots and exact source hash. At least one independent reviewer must win and another ordinary run must reach the natural loss. Restart and replay on 390px touch viewport and keyboard; verify focus/selected states/announcements. These are planned gates, not completion claims."
+    ],
+    "existingNeighbors": [
+      "marble-council: numerical inline group pushing/ejection replaced by individual strength, freezing, two-step pulling and trap support.",
+      "pawns: rabbits race but displacement and protection consume shared four-step turns; forward pawn spam must fail."
+    ],
+    "proposalNeighbors": [
+      "B02 capture-drop royal tactics has no freezing/support; B23 moves whole stacks by height without rank or step budget."
+    ],
+    "risks": "Highest tactical implementation risk. If reduced to one-step shove racing, reject; verified intermediate-step model and ordinary wins mandatory.",
+    "reviewStatus": "Conditionally accepted at DESIGN stage by independent uniqueness and depth reviewers; implementation, ordinary UI win/loss evidence, cross-portfolio freeze and remediated200 baseline recheck remain required. No gameplay implementation or passed QA claimed.",
+    "comparisonScope": "Compared against all 200 inventory mechanics/rules at design snapshot; nearest source checked in strategy-room/engines.mjs, tabletop-room/cards.mjs or boards.mjs and original game rules where relevant. Recheck remediated baseline before implementation."
+  },
+  {
+    "id": "B04",
+    "name": "Living Perimeter",
+    "core": "Move different crawling pieces around one connected hive to surround an opposing queen.",
+    "stateActions": "Hex cells start empty. Each player has queen, two ants, two beetles and two grasshoppers. Placement must touch own pieces and no enemy after opening; queen must be placed by fourth own turn. Thereafter move or place. Queen slides one perimeter step, ant any sliding perimeter path, grasshopper jumps a contiguous occupied line, beetle climbs one neighbor stack. Removing a piece may never split hive. Sliding cannot pass a two-neighbor pinch. Covered piece cannot move.",
+    "decisions": "Pin articulation pieces, climb to free a blocked route, choose which side of queen to close without disconnecting own mobility. Placing early secures future entry but consumes a movement turn.",
+    "depth": "Vary starting placements; at least two wins require different locomotion types. No universal nearest-queen greedy policy should dominate.",
+    "winLoss": "Surround all six neighbors of enemy queen to win; own queen surrounded loses; both simultaneously surrounded draws. Repetition draws.",
+    "controls": "Tap reserve/piece then legal destination; inspect selected path or jump; keyboard navigable cell list and confirm.",
+    "accessibility": "Axial coordinates, stack order, slide obstruction explanations and connected-component preview; distinct labeled insect shapes.",
+    "qa": [
+      "Win: use beetle to cover blocking piece, then grasshopper jump closes sixth queen neighbor in a public practice match; play an independent full-start victory.",
+      "Loss: expand away from own queen until house closes sixth neighbor; verify covered queen counts occupied neighbors consistently.",
+      "Attempt move of articulation ant and narrow-gap queen: both rejected without consuming turn.",
+      "For every acceptance run: fresh launch via visible catalog, only normal touch/click/keyboard input; no state injection, engine calls, hidden state or precomputed solution. Record seed/setup, input transcript, screenshots and exact source hash. At least one independent reviewer must win and another ordinary run must reach the natural loss. Restart and replay on 390px touch viewport and keyboard; verify focus/selected states/announcements. These are planned gates, not completion claims."
+    ],
+    "existingNeighbors": [
+      "joining-lines: connectivity is a permanent legality constraint on all pieces, not a terminal army goal; varied perimeter locomotion and queen surround drive decisions.",
+      "crown-and-guard: asymmetric rook escape/sandwich capture has no placement phase, stack cover or hive constraint."
+    ],
+    "proposalNeighbors": [
+      "B01 has stationary stones/liberty captures; B23 anchor deletion removes disconnected stacks rather than prohibiting a move."
+    ],
+    "risks": "Risk of huge ant destination set and inaccessible freeform hex board; provide finite visible coordinate list and bounded viewport.",
+    "reviewStatus": "Conditionally accepted at DESIGN stage by independent uniqueness and depth reviewers; implementation, ordinary UI win/loss evidence, cross-portfolio freeze and remediated200 baseline recheck remain required. No gameplay implementation or passed QA claimed.",
+    "comparisonScope": "Compared against all 200 inventory mechanics/rules at design snapshot; nearest source checked in strategy-room/engines.mjs, tabletop-room/cards.mjs or boards.mjs and original game rules where relevant. Recheck remediated baseline before implementation."
+  },
+  {
+    "id": "B05",
+    "name": "Homeward Pips",
+    "core": "Allocate two dice between blocking, hitting, escape and bearing off in an opposed race.",
+    "stateActions": "12-point circular track; seven checkers per side move opposite directions toward final three-point home board. Roll two six-sided dice, doubles four uses. Split dice or use sequentially on one checker; each intermediate landing legal. Two enemy checkers block a point; lone enemy is hit to bar. Bar checkers reenter before others move. Must use maximum available dice, and higher if only one can be used. Bear off only once all own checkers home; overshoot allowed only from farthest occupied point.",
+    "decisions": "Use roll to make safe blocks or race forward, expose a blot to attack a rival, and choose home-board timing. Hit changes future reentry obligations and can strand even a fast runner.",
+    "depth": "Seeded dice for reproducibility plus unseeded replay; opponent chooses complete legal roll assignments, never separate greedy die moves. Race and contact starts.",
+    "winLoss": "Bear off every checker first wins; house first loses. No stake/doubling system.",
+    "controls": "Roll button, choose checker and remaining die or highlighted landing; Undo whole uncommitted roll; Confirm turn. Keyboard equivalent.",
+    "accessibility": "Point counts, owners, bar and borne-off counts in text; dice numerical; list every complete legal turn as optional accessible mode.",
+    "qa": [
+      "Win: in a public contact start make a two-checker block, hit a blot, survive reentry and bear off all seven through UI.",
+      "Loss: deliberately leave repeated blots and complete house bear-off loss with deterministic visible dice replay.",
+      "Verify bar priority, maximum dice usage, doubles four moves and farthest-piece overshoot without hidden-state manipulation.",
+      "For every acceptance run: fresh launch via visible catalog, only normal touch/click/keyboard input; no state injection, engine calls, hidden state or precomputed solution. Record seed/setup, input transcript, screenshots and exact source hash. At least one independent reviewer must win and another ordinary run must reach the natural loss. Restart and replay on 390px touch viewport and keyboard; verify focus/selected states/announcements. These are planned gates, not completion claims."
+    ],
+    "existingNeighbors": [
+      "bank-the-roll: dice are allocated spatially under forced legality, not stop/bank risk.",
+      "pawns: random movement budgets, blocks, captures to bar and home bearing-off replace deterministic rank race."
+    ],
+    "proposalNeighbors": [
+      "B03 action budget is chosen deterministic steps and traps, not randomized dice allocation."
+    ],
+    "risks": "Chance can dominate short games; use seven checkers and multiple viable seeded contact starts, record wins across several seeds rather than one lucky race.",
+    "reviewStatus": "Conditionally accepted at DESIGN stage by independent uniqueness and depth reviewers; implementation, ordinary UI win/loss evidence, cross-portfolio freeze and remediated200 baseline recheck remain required. No gameplay implementation or passed QA claimed.",
+    "comparisonScope": "Compared against all 200 inventory mechanics/rules at design snapshot; nearest source checked in strategy-room/engines.mjs, tabletop-room/cards.mjs or boards.mjs and original game rules where relevant. Recheck remediated baseline before implementation."
+  },
+  {
+    "id": "B06",
+    "name": "Veiled Standard",
+    "core": "Concealed-rank combat turns movement history and sacrificial scouting into persistent tactical information.",
+    "stateActions": "6\u00d76 board with two lake cells. Each army: flag and two immobile mines, scout, miner, spy, and four ranked soldiers. Public composition; secret placement. Orthogonal one-step movement, scout may travel clear ray but reveals scout identity. Attack reveals both; higher rank survives, equal both remove, miner defuses mine, attacking spy beats highest soldier. Flag capture wins. Revealed identities remain known. Player places own army freely in back two rows before match.",
+    "decisions": "Probe with cheap pieces, infer immobile flags/mines, conceal strongest piece, trade a scout for knowledge or preserve miner for final entry. House receives only its legal observation history.",
+    "depth": "Different hidden deployments and nonomniscient probabilistic AI; full-match record must show informational sacrifice changes subsequent attack choice.",
+    "winLoss": "Capture opposing flag or leave opponent no movable unit wins; converse loses; 80 turns without capture draws.",
+    "controls": "Setup select piece/square; move select origin/destination and confirm attack. Keyboard grid and explicit legal-move list.",
+    "accessibility": "Hidden units called unknown with stable public identifiers; knowledge panel lists last movement/reveal. No accidental hidden rank in DOM or accessible name.",
+    "qa": [
+      "Win: ordinary play learns a mine, routes miner to defuse it, and captures flag; require victory on two independently shuffled deployments.",
+      "Loss: spend miner in an unfavorable rank attack, then lose own flag against legal house play.",
+      "Compare AI decisions under identical public histories but different player hidden placement; no hidden-state leak in text/DOM.",
+      "For every acceptance run: fresh launch via visible catalog, only normal touch/click/keyboard input; no state injection, engine calls, hidden state or precomputed solution. Record seed/setup, input transcript, screenshots and exact source hash. At least one independent reviewer must win and another ordinary run must reach the natural loss. Restart and replay on 390px touch viewport and keyboard; verify focus/selected states/announcements. These are planned gates, not completion claims."
+    ],
+    "existingNeighbors": [
+      "fleet: active enemy movement, sacrifices and rank-dependent combat replace static hit/miss spatial search.",
+      "borrowed-steps: imperfect information and asymmetric combat exceptions replace public movement-card tactics."
+    ],
+    "proposalNeighbors": [
+      "B16 hidden-own-hand cooperation is communication resource allocation, not enemy concealment."
+    ],
+    "risks": "AI knowledge isolation and layout fairness mandatory; never certify with omniscient house or predetermined easy flag route.",
+    "reviewStatus": "Conditionally accepted at DESIGN stage by independent uniqueness and depth reviewers; implementation, ordinary UI win/loss evidence, cross-portfolio freeze and remediated200 baseline recheck remain required. No gameplay implementation or passed QA claimed.",
+    "comparisonScope": "Compared against all 200 inventory mechanics/rules at design snapshot; nearest source checked in strategy-room/engines.mjs, tabletop-room/cards.mjs or boards.mjs and original game rules where relevant. Recheck remediated baseline before implementation."
+  },
+  {
+    "id": "B07",
+    "name": "Second Shuffle",
+    "core": "Build the future probability distribution of your hand through acquisition, thinning and shuffle timing.",
+    "stateActions": "Start ten cards: seven coin-1 and three inert seals. Each turn draw five; one action and one purchase, with explicit +action/+draw effects on market cards. Played/bought cards go to discard, reshuffled only when draw empty. Shared finite market includes coin upgrades, extra-action engines, draw, trash-up-to-two and victory cards that clog hands. Game ends on three emptied market piles or 20 turns; victory cards score.",
+    "decisions": "Buy immediate income or long-run engine, remove starting clutter versus score cards, time terminal-action density, and end match before opponent engine matures.",
+    "depth": "At least six interacting market sets, with no one universally best buy; cycles visible so purchase payoff can be planned. Compare thin engine and fast score strategies across markets.",
+    "winLoss": "Higher victory total wins; tie draws. Natural loss to stronger house deck, never survival HP.",
+    "controls": "Tap hand action, choose targets then resolve; buy market card, End turn; all selections keyboard buttons.",
+    "accessibility": "Draw/discard/deck counts, acquired-card history, effect stack and action/buy counters; no surprise automatic phase skipping.",
+    "qa": [
+      "Win: build draw-plus-extra-action chain, trash starting cards and beat house after multiple reshuffles; log purchase appearing in later ordinary hand.",
+      "Loss: buy only expensive terminal actions until hands jam, finish lower score; confirms acquisition choices have consequence.",
+      "Ordinary wins on contrasting markets; reject if buying highest affordable coin/VP every turn wins nearly all.",
+      "For every acceptance run: fresh launch via visible catalog, only normal touch/click/keyboard input; no state injection, engine calls, hidden state or precomputed solution. Record seed/setup, input transcript, screenshots and exact source hash. At least one independent reviewer must win and another ordinary run must reach the natural loss. Restart and replay on 390px touch viewport and keyboard; verify focus/selected states/announcements. These are planned gates, not completion claims."
+    ],
+    "existingNeighbors": [
+      "court-of-suits: fixed combat deck and HP timing do not let player change future deck composition or endgame scoring.",
+      "supply-web: deterministic production graph replaced by shuffled hand distribution, action bottlenecks and score-card dilution."
+    ],
+    "proposalNeighbors": [
+      "B18 uses permanent table effects plus hidden role selection, never reshuffles purchased cards."
+    ],
+    "risks": "Do not add cosmetic purchases to fixed-hand combat. Card interactions and tutorial must stay compact; named inspiration is not permission to copy art/text.",
+    "reviewStatus": "Conditionally accepted at DESIGN stage by independent uniqueness and depth reviewers; implementation, ordinary UI win/loss evidence, cross-portfolio freeze and remediated200 baseline recheck remain required. No gameplay implementation or passed QA claimed.",
+    "comparisonScope": "Compared against all 200 inventory mechanics/rules at design snapshot; nearest source checked in strategy-room/engines.mjs, tabletop-room/cards.mjs or boards.mjs and original game rules where relevant. Recheck remediated baseline before implementation."
+  },
+  {
+    "id": "B08",
+    "name": "Corner Garden",
+    "core": "Adversarial polyomino placement grows a frontier through corners while forbidding own edge contact.",
+    "stateActions": "10\u00d710 board; each player owns nine distinct polyominoes (1\u20135 cells, same set). First covers own start corner. Later placement must touch own corner and no own edge; enemy edge contact allowed, overlap forbidden. Rotate/reflect selected piece freely. Alternating turns; pass only without legal placement.",
+    "decisions": "Retain flexible small pieces to reach cavities, extend across board before rival closes lanes, or block a rival corner while preserving future own anchors.",
+    "depth": "Full set includes concave pieces and forked five-cell piece; multiple opening corners and mirrored starts. Need wins requiring both incursion and late small-piece bridge.",
+    "winLoss": "When both cannot place, fewer unplaced cells wins; equal draws. Empty inventory gives bonus two points disclosed at start.",
+    "controls": "Select shape, rotate/reflect buttons, tap anchor for ghost preview, Confirm; keyboard anchor arrows never implicitly commit.",
+    "accessibility": "Piece cell offsets and legal anchor list; patterned owners and coordinate labels; invalid placement names offending overlap/edge/corner.",
+    "qa": [
+      "Win: deploy a long piece across midpoint while holding monomino for a late corner bridge; finish with lower leftover area than house.",
+      "Loss: compactly fill starting corner so own frontier closes and house has fewer leftover cells.",
+      "Test legal enemy-edge contact and illegal own-edge contact through ordinary attempts, including reflected piece.",
+      "For every acceptance run: fresh launch via visible catalog, only normal touch/click/keyboard input; no state injection, engine calls, hidden state or precomputed solution. Record seed/setup, input transcript, screenshots and exact source hash. At least one independent reviewer must win and another ordinary run must reach the natural loss. Restart and replay on 390px touch viewport and keyboard; verify focus/selected states/announcements. These are planned gates, not completion claims."
+    ],
+    "existingNeighbors": [
+      "tangram-dock: competitive irreversible frontier expansion, unused-piece scoring and opponent interference replace exact-cover solo packing.",
+      "guild: placements have multi-cell geometry and nonlocal corner access rather than independent district claim/adjacency score."
+    ],
+    "proposalNeighbors": [
+      "B22 drafting to personal wall has no contested multi-cell board frontier; B21 tile features are edge-matched."
+    ],
+    "risks": "Risk of enumerated placement UI overload; provide ghost and accessible filtered legal anchors. Tiny layouts must not strand most pieces immediately.",
+    "reviewStatus": "Conditionally accepted at DESIGN stage by independent uniqueness and depth reviewers; implementation, ordinary UI win/loss evidence, cross-portfolio freeze and remediated200 baseline recheck remain required. No gameplay implementation or passed QA claimed.",
+    "comparisonScope": "Compared against all 200 inventory mechanics/rules at design snapshot; nearest source checked in strategy-room/engines.mjs, tabletop-room/cards.mjs or boards.mjs and original game rules where relevant. Recheck remediated baseline before implementation."
+  },
+  {
+    "id": "B09",
+    "name": "Gifted Traits",
+    "core": "Choose the piece your opponent must place; align one shared binary trait.",
+    "stateActions": "4\u00d74 board and sixteen unique pieces with four binary traits. On each turn place the piece gifted by rival, check a row/column/diagonal of four sharing any trait, then gift one unused piece. Traits all count equally; starting player first gifts. All used traits publicly displayed.",
+    "decisions": "Place to create a fork whose different completions poison all gifts, or extinguish future threats while choosing a safe remaining piece. Choosing location alone is only half a turn.",
+    "depth": "Full 16-piece set required. Training studies include a two-trait fork and a safe gift that looks visually similar to losing alternatives; opponent evaluates place+gift pairs.",
+    "winLoss": "Placing a completed common-trait line wins immediately; house does same; filled nonwinning board draws.",
+    "controls": "Select square, Confirm; then select gift, Confirm gift. Board arrows and labeled piece buttons.",
+    "accessibility": "Every piece spells four binary traits, line table marks shared traits; shape/color not sole signals.",
+    "qa": [
+      "Win: force a double threat then gift a piece whose every safe-looking placement concedes next move; complete full board match to win.",
+      "Loss: deliberately gift a piece matching three aligned traits and watch house take the winning square.",
+      "Verify player cannot choose own received piece and no win on a mixed-trait line.",
+      "For every acceptance run: fresh launch via visible catalog, only normal touch/click/keyboard input; no state injection, engine calls, hidden state or precomputed solution. Record seed/setup, input transcript, screenshots and exact source hash. At least one independent reviewer must win and another ordinary run must reach the natural loss. Restart and replay on 390px touch viewport and keyboard; verify focus/selected states/announcements. These are planned gates, not completion claims."
+    ],
+    "existingNeighbors": [
+      "four: freely selecting a column for identical own discs lacks adversarial choice of opponent piece and combinatorial safe-gift analysis.",
+      "three-of-a-kind: matching properties here is an adversarial placement/gifting trap, not searching a tableau for any valid triple."
+    ],
+    "proposalNeighbors": [
+      "B24 lets opponent choose a created parcel partition, but has no alignment or shared pool binary attributes."
+    ],
+    "risks": "Risk shared-trait win hard to perceive; show claim explanation. Reject if gift phase automated or full trait set omitted.",
+    "reviewStatus": "Conditionally accepted at DESIGN stage by independent uniqueness and depth reviewers; implementation, ordinary UI win/loss evidence, cross-portfolio freeze and remediated200 baseline recheck remain required. No gameplay implementation or passed QA claimed.",
+    "comparisonScope": "Compared against all 200 inventory mechanics/rules at design snapshot; nearest source checked in strategy-room/engines.mjs, tabletop-room/cards.mjs or boards.mjs and original game rules where relevant. Recheck remediated baseline before implementation."
+  },
+  {
+    "id": "B10",
+    "name": "Orders at Dusk",
+    "core": "Simultaneous movement and support orders produce contested borders and cuttable alliances.",
+    "stateActions": "Nine-region planar map, each of three factions with two armies and two supply centers; one human, two bots. Each spring/autumn secretly order every army Hold, Move adjacent, or Support a specified adjacent army holding/attacking reachable region. Simultaneous strength = one + uncut support; equal attacks bounce, swaps bounce, circular moves resolve. Any enemy attack from a region other than supported destination cuts support even if attack bounces. Dislodged army retreats to vacant allowed adjacent region or disbands. After autumn, centers set army count.",
+    "decisions": "Choose supported attacks versus attacks cutting support elsewhere; infer whether competing faction defends or expands. A feint can matter without winning its destination. New army location changes next season options.",
+    "depth": "Published exact adjudication examples, several balanced maps and bots that sometimes cooperate against leader using public board only. No chat or external multiplayer dependency.",
+    "winLoss": "Control five of nine centers at an autumn count wins; eliminated loses; after eight years most centers wins, ties draw.",
+    "controls": "Select army/order/target then Submit all orders; review editable slate. Sequential keyboard forms equivalent.",
+    "accessibility": "Before submission names owned orders only; after resolve animated or textual numbered explanation of cuts, strength, bounce and retreat.",
+    "qa": [
+      "Win: cut one enemy support with a sacrificial attack while two own units capture decisive center; reach five through normal UI.",
+      "Loss: unsupported simultaneous attack bounces, own center falls and eventual elimination completes.",
+      "Public adjudication studies cover circular movement, tied attacks, support cut and retreat collision without debug-state injection.",
+      "For every acceptance run: fresh launch via visible catalog, only normal touch/click/keyboard input; no state injection, engine calls, hidden state or precomputed solution. Record seed/setup, input transcript, screenshots and exact source hash. At least one independent reviewer must win and another ordinary run must reach the natural loss. Restart and replay on 390px touch viewport and keyboard; verify focus/selected states/announcements. These are planned gates, not completion claims."
+    ],
+    "existingNeighbors": [
+      "convoy-ledger: independent known lane thresholds replaced by mutually dependent opponent orders and support interruption.",
+      "sealed-bids: one-use rank contest replaced by persistent geography, several interacting orders and recruitment."
+    ],
+    "proposalNeighbors": [
+      "B18 simultaneous roles do not attack/cut each other or adjudicate territories; B25 conflicts sequential."
+    ],
+    "risks": "Adjudication complexity high; never conceal rules in prose or allow bots to observe submitted human orders. Cut scope/maps if needed without removing interactions.",
+    "reviewStatus": "Conditionally accepted at DESIGN stage by independent uniqueness and depth reviewers; implementation, ordinary UI win/loss evidence, cross-portfolio freeze and remediated200 baseline recheck remain required. No gameplay implementation or passed QA claimed.",
+    "comparisonScope": "Compared against all 200 inventory mechanics/rules at design snapshot; nearest source checked in strategy-room/engines.mjs, tabletop-room/cards.mjs or boards.mjs and original game rules where relevant. Recheck remediated baseline before implementation."
+  },
+  {
+    "id": "B11",
+    "name": "Almost a Word",
+    "core": "Adversarial prefix extension tries to force the opponent to complete a word.",
+    "stateActions": "Public finite dictionary of roughly 300 familiar words length 4\u20139, with definitions and prefix browser always available. Alternate appending one letter to shared fragment; making a complete dictionary word of length at least four loses a life. May challenge rival previous prefix; if no dictionary extension exists rival loses life, otherwise challenger loses and shortest valid extension is revealed. Reset fragment after each life; alternate opener.",
+    "decisions": "Choose prefix branches based on eventual completion parity and forced terminal words. Challenge is a transparent correction for invalid extension, not credited as strategic bluff: a rational dictionary-checking rival always challenges it. Mixed odd/even branching must carry the depth alone.",
+    "depth": "At least eight nontrivial prefix trees containing mixed parity branches and intermediate terminal words. Browser equalizes vocabulary knowledge but does not mark winning branches.",
+    "winLoss": "Reduce house from three lives to zero before own lives gone; challenge failure is natural loss path.",
+    "controls": "Onscreen alphabet or type single letter then Submit; Challenge separate confirmation. Full keyboard dictionary browser.",
+    "accessibility": "Fragment pronounced letter by letter, definitions readable, all actions untimed; no spelling-dependent voice recognition.",
+    "qa": [
+      "Win: use public prefix browser to select alternating parity branches and force three completions across different fragments.",
+      "Loss: complete a displayed four-letter dictionary word and later lose final life; separately issue mistaken challenge and verify extension explanation.",
+      "Try nonexistent prefix followed by house challenge; verify finite published dictionary is sole authority.",
+      "For every acceptance run: fresh launch via visible catalog, only normal touch/click/keyboard input; no state injection, engine calls, hidden state or precomputed solution. Record seed/setup, input transcript, screenshots and exact source hash. At least one independent reviewer must win and another ordinary run must reach the natural loss. Restart and replay on 390px touch viewport and keyboard; verify focus/selected states/announcements. These are planned gates, not completion claims."
+    ],
+    "existingNeighbors": [
+      "one-letter-away: neither fixed endpoints nor same-length substitution; adversarial append tree with losing terminals and challenge.",
+      "chain-reaction: whole supplied words are not arranged by endpoints; letters build a shared trap prefix."
+    ],
+    "proposalNeighbors": [
+      "B12 optimizes scored board word placement rather than avoiding dictionary terminals."
+    ],
+    "risks": "Can become solved tree lookup. Keep many branching starts, fair imperfect opponent and explicit dictionary; no invalid surprise words. Invalid-prefix bluff rejected by depth reviewer as dominated with public dictionary; removed from depth claim.",
+    "reviewStatus": "Conditionally accepted at DESIGN stage by independent uniqueness and depth reviewers; implementation, ordinary UI win/loss evidence, cross-portfolio freeze and remediated200 baseline recheck remain required. No gameplay implementation or passed QA claimed.",
+    "comparisonScope": "Compared against all 200 inventory mechanics/rules at design snapshot; nearest source checked in strategy-room/engines.mjs, tabletop-room/cards.mjs or boards.mjs and original game rules where relevant. Recheck remediated baseline before implementation."
+  },
+  {
+    "id": "B12",
+    "name": "Crossgrain",
+    "core": "Spend a shared letter rack to extend a scored crossing-word board against an opponent.",
+    "stateActions": "9\u00d79 board, seven-tile rack, finite public vocabulary searchable by prefix. Each turn place contiguous row/column word connecting existing board; every perpendicular cross-word must also be valid. Reuse existing letters, score all new words by letter values with one-use letter/word premiums. Blank chosen once at placement scores zero. Exchange selected tiles only with at least seven in bag, or pass. Draw replacements after commit.",
+    "decisions": "Cash a premium versus protect its access, keep flexible vowels versus expensive consonants, play a short hook forming several cross-words versus long main word, or exchange at tempo cost.",
+    "depth": "Balanced tile distributions, at least 500 curated words, opening and midgame layouts; house uses same dictionary and rack knowledge only.",
+    "winLoss": "Bag empty and one rack empty, or six combined passes, ends; subtract remaining rack values and transfer them on going out. Higher score wins; equal draw.",
+    "controls": "Select tile then square; Rotate word direction; Undo placement; explicit Check/Commit; typing fills selected lane. No drag required.",
+    "accessibility": "Coordinate grid, premium labels, formed-word score preview and blank identity; dictionary usable with keyboard/search.",
+    "qa": [
+      "Win: make a legal hook that forms two cross-words, conserve a blank for premium access and beat house in a complete match.",
+      "Loss: exchange or waste premium opportunities then finish below house; invalid perpendicular word must refuse commit without drawing.",
+      "Test premiums apply once, blanks zero and endgame rack subtraction through public score log.",
+      "For every acceptance run: fresh launch via visible catalog, only normal touch/click/keyboard input; no state injection, engine calls, hidden state or precomputed solution. Record seed/setup, input transcript, screenshots and exact source hash. At least one independent reviewer must win and another ordinary run must reach the natural loss. Restart and replay on 390px touch viewport and keyboard; verify focus/selected states/announcements. These are planned gates, not completion claims."
+    ],
+    "existingNeighbors": [
+      "crossings: open placement and multiple possible valid words compete for premiums; not a fixed clue answer grid.",
+      "word-weave: choice of rack subset, board geometry, scoring and opponent access replaces all-tile clue anagram."
+    ],
+    "proposalNeighbors": [
+      "B11 shared losing prefix tree; B12 private rack and additive board scoring."
+    ],
+    "risks": "Vocabulary size/AI response time and fairness substantial; cannot shrink to five clue words and claim replay depth.",
+    "reviewStatus": "Conditionally accepted at DESIGN stage by independent uniqueness and depth reviewers; implementation, ordinary UI win/loss evidence, cross-portfolio freeze and remediated200 baseline recheck remain required. No gameplay implementation or passed QA claimed.",
+    "comparisonScope": "Compared against all 200 inventory mechanics/rules at design snapshot; nearest source checked in strategy-room/engines.mjs, tabletop-room/cards.mjs or boards.mjs and original game rules where relevant. Recheck remediated baseline before implementation."
+  },
+  {
+    "id": "B13",
+    "name": "Patient Columns",
+    "core": "Uncover hidden tableau cards by reversible descending-color packing while promoting suit foundations carefully.",
+    "stateActions": "28-card deck ranks A\u20137 four suits; five tableau columns of 1\u20135 cards, only top face-up, rest stock. Build tableau alternating colors descending; move any exposed ordered suffix. Empty columns accept 7 only. Foundations ascend suit A\u20137. Draw one stock card to waste; one redeal only. Foundation top may return to tableau. New hidden tableau top flips immediately.",
+    "decisions": "Free hidden cards versus rush foundations, preserve a needed opposite-color link, choose which 7 occupies an empty column, and time stock cycle.",
+    "depth": "Generated seeds screened for legal solutions but not displayed; retain at least three independent ordinary solved deals with different empty-column choices. Full random mode labels potentially unsolvable deals honestly.",
+    "winLoss": "All 28 on foundations wins; after redeal, no stock movement or legal card movement constitutes blocked loss. Manual restart not counted loss.",
+    "controls": "Select exposed suffix start and destination; Draw/Redeal buttons; keyboard column action list.",
+    "accessibility": "Hidden card counts public but identities absent; card rank/suit/color text and legal destinations; announce auto-flips.",
+    "qa": [
+      "Win: complete an ordinary seeded deal after moving a foundation card back to tableau and exposing every hidden card.",
+      "Loss: choose wrong 7 for an empty column, exhaust both stock passes and reach genuine no-move state.",
+      "Verify moving nonordered suffix rejected and hidden identities never leak in DOM.",
+      "For every acceptance run: fresh launch via visible catalog, only normal touch/click/keyboard input; no state injection, engine calls, hidden state or precomputed solution. Record seed/setup, input transcript, screenshots and exact source hash. At least one independent reviewer must win and another ordinary run must reach the natural loss. Restart and replay on 390px touch viewport and keyboard; verify focus/selected states/announcements. These are planned gates, not completion claims."
+    ],
+    "existingNeighbors": [
+      "meld-atelier: descending spatial stacks and uncovering constrain availability, unlike draw/discard meld sets and deadwood.",
+      "crate-crane: cards admit ordered suffix moves and hidden information/foundation timing, not capacity-three homogeneous sorting."
+    ],
+    "proposalNeighbors": [
+      "B14 removes exposed pairs with geometric blocking, never builds rank/color stacks."
+    ],
+    "risks": "Solvable-model seed evidence insufficient; must play UI deals independently. Undo policy fixed and visible; do not call surrender a blocked loss.",
+    "reviewStatus": "Conditionally accepted at DESIGN stage by independent uniqueness and depth reviewers; implementation, ordinary UI win/loss evidence, cross-portfolio freeze and remediated200 baseline recheck remain required. No gameplay implementation or passed QA claimed.",
+    "comparisonScope": "Compared against all 200 inventory mechanics/rules at design snapshot; nearest source checked in strategy-room/engines.mjs, tabletop-room/cards.mjs or boards.mjs and original game rules where relevant. Recheck remediated baseline before implementation."
+  },
+  {
+    "id": "B14",
+    "name": "Twin Roofs",
+    "core": "Remove equal exposed tiles while managing three-dimensional blockers and duplicate-pair ambiguity.",
+    "stateActions": "Forty-eight tiles, twelve symbols four copies each, arranged on three explicit layers. Tile removable only if nothing covers it and left or right side has no tile at same layer. Select two removable identical tiles to remove together. No shuffle or arbitrary hint teleport; unlimited inspect/undo in practice, scored mode three undos. Known tile faces always visible in a layer list.",
+    "decisions": "Choose which two of four matching copies to consume, open useful side access versus uncover top support, avoid leaving a matching pair mutually blocked.",
+    "depth": "At least six layouts with verified removal witnesses; require starts where first legal pair choice matters and where topmost-first greedy play fails.",
+    "winLoss": "Clear all tiles wins; no matching removable pair with remaining tiles and no undo credit loses.",
+    "controls": "Tap tile then matching tile; select layers/exploded view; Enter keyboard selection, arrows within layer.",
+    "accessibility": "Every tile reports symbol, layer, coordinates, covering blockers, left/right freedom; accessible removal-pair list without answer guidance.",
+    "qa": [
+      "Win: complete a displayed layout by reserving one of four identical tiles to unlock the other copy later.",
+      "Loss: take tempting exposed matching copies that strand remaining pair, exhaust permitted undo and reach actual no-pair loss.",
+      "Verify covered tile cannot be selected and side freedom is based on same layer, not screen projection.",
+      "For every acceptance run: fresh launch via visible catalog, only normal touch/click/keyboard input; no state injection, engine calls, hidden state or precomputed solution. Record seed/setup, input transcript, screenshots and exact source hash. At least one independent reviewer must win and another ordinary run must reach the natural loss. Restart and replay on 390px touch viewport and keyboard; verify focus/selected states/announcements. These are planned gates, not completion claims."
+    ],
+    "existingNeighbors": [
+      "double-take: all faces known and topology governs access; no memory reveal/match cycle.",
+      "peg: pair identity and stacked side freedom replace jump geometry and intervening capture."
+    ],
+    "proposalNeighbors": [
+      "B13 uncovers hidden cards by descending chains, not simultaneous identical-tile deletion."
+    ],
+    "risks": "Risk obvious pair spam; reject layouts with interchangeable matching choices or all pairs exposed. Screen overlap cannot be sole source of difficulty.",
+    "reviewStatus": "Conditionally accepted at DESIGN stage by independent uniqueness and depth reviewers; implementation, ordinary UI win/loss evidence, cross-portfolio freeze and remediated200 baseline recheck remain required. No gameplay implementation or passed QA claimed.",
+    "comparisonScope": "Compared against all 200 inventory mechanics/rules at design snapshot; nearest source checked in strategy-room/engines.mjs, tabletop-room/cards.mjs or boards.mjs and original game rules where relevant. Recheck remediated baseline before implementation."
+  },
+  {
+    "id": "B15",
+    "name": "Ascending Expeditions",
+    "core": "Commit cards irreversibly to increasing suit routes while investment multipliers magnify unfinished projects.",
+    "stateActions": "Four expedition suits, cards 2\u201310 plus two investment cards each; hand six. On turn play one card to own expedition in nondecreasing rank (investment only before numbers) or discard to shared suit pile, then draw stock or any other discard pile top. Each started suit scores (sum numbers \u221220)\u00d7(1+investments), including negative totals; eight cards adds 15. Stock depletion ends after current turn. Round also ends after six consecutive turns drawing from discards without any new expedition placement; a visible stagnation counter resets on stock draw or expedition play. Complete repeated state including current side ends the round immediately at current scores. Both endings precede next draw.",
+    "decisions": "Wait for a missing low number versus begin earning, fund a risky expedition or consolidate, discard useful card knowing rival can take it, and control stock depletion by recycling discard draws.",
+    "depth": "Finite deck and visible played/discarded card history permit inference; opponent weighs own hand and shared discards without hidden deck access. Three-round match reshuffles.",
+    "winLoss": "Higher total across three rounds wins; lower loses, equal draw. Negative expedition scores can erase successes.",
+    "controls": "Choose hand card, destination expedition/discard, then draw source; keyboard buttons.",
+    "accessibility": "Each route shows current rank floor, break-even gap, investment count and projected score; color plus suit words.",
+    "qa": [
+      "Win: delay a high card to play lower follow-up, use one investment profitably and deny rival useful discard to win match.",
+      "Loss: invest in several suits then exhaust stock before reaching break-even; verify negative multiplier.",
+      "Reject descending placement; verify cannot redraw own just-discarded card in same turn.",
+      "For every acceptance run: fresh launch via visible catalog, only normal touch/click/keyboard input; no state injection, engine calls, hidden state or precomputed solution. Record seed/setup, input transcript, screenshots and exact source hash. At least one independent reviewer must win and another ordinary run must reach the natural loss. Restart and replay on 390px touch viewport and keyboard; verify focus/selected states/announcements. These are planned gates, not completion claims.",
+      "Cycle discard-to-discard choices without adding expedition cards; verify visible stagnation counter reaches six and scores current routes instead of allowing infinite play. An expedition placement resets that counter; repeated complete state still ends immediately."
+    ],
+    "existingNeighbors": [
+      "formation-flags: no three-card lane comparisons; ordered open-ended sequences, negative entry cost and shared-discard gifts determine strategy.",
+      "trade: no calendar buy/sell arbitrage; card availability and irreversible ordering govern delayed commitment."
+    ],
+    "proposalNeighbors": [
+      "B20 sells unordered sets with diminishing public payouts; B15 routes cannot liquidate or reorder."
+    ],
+    "risks": "Risk trivial highest-first strategy if thresholds too lenient. Must make low-card waiting and negative starts consequential without rigged draws.",
+    "reviewStatus": "Conditionally accepted at DESIGN stage by independent uniqueness and depth reviewers; implementation, ordinary UI win/loss evidence, cross-portfolio freeze and remediated200 baseline recheck remain required. No gameplay implementation or passed QA claimed.",
+    "comparisonScope": "Compared against all 200 inventory mechanics/rules at design snapshot; nearest source checked in strategy-room/engines.mjs, tabletop-room/cards.mjs or boards.mjs and original game rules where relevant. Recheck remediated baseline before implementation."
+  },
+  {
+    "id": "B16",
+    "name": "Letters We Cannot See",
+    "core": "Cooperate through scarce truthful hints while each player cannot see their own cards.",
+    "stateActions": "Two players human and transparent-policy bot, each four cards facing partner. Three suits ranks 1\u20135 with multiplicities 3/2/2/2/1. Build shared ascending suit stacks. On turn play own indexed card blind, discard to regain one of five hints, or spend hint naming suit/rank in partner hand: all matching cards indicated, all nonmatching excluded. Three wrong plays end game; completing rank 5 restores a hint. Deck empty grants one final turn each.",
+    "decisions": "Spend a hint to make a safe play, rescue a unique late-rank card from discard, or discard a known duplicate to fund later communication. Must reason from own accumulated positive and negative clues.",
+    "depth": "Bot follows published literal deduction: play logically certain next card; otherwise discard known useless/oldest least-risk card or give hint maximizing immediate safe play. No unstated conventions or secret own-hand reads.",
+    "winLoss": "Complete all fifteen ranks wins; three mistakes or final turn below fifteen loses. Seeded approachable mode and standard shuffled mode.",
+    "controls": "Select partner hint type/value or own card slot then Play/Discard confirmation; keyboard all buttons.",
+    "accessibility": "Own cards labeled only slot and known possibilities; partner cards names visible. Persistent inference log and remaining-card counts.",
+    "qa": [
+      "Win: complete fifteen through ordinary hints and discards, including a negative inference and saving a unique rank-5 from impending discard.",
+      "Loss: play a card known not next and accumulate third fuse; separately deck exhaustion below goal.",
+      "Inspect DOM and AI decision inputs to ensure neither sees own hidden card identity.",
+      "For every acceptance run: fresh launch via visible catalog, only normal touch/click/keyboard input; no state injection, engine calls, hidden state or precomputed solution. Record seed/setup, input transcript, screenshots and exact source hash. At least one independent reviewer must win and another ordinary run must reach the natural loss. Restart and replay on 390px touch viewport and keyboard; verify focus/selected states/announcements. These are planned gates, not completion claims."
+    ],
+    "existingNeighbors": [
+      "twenty-questions: questions do not merely identify a static target; hints alter another actor play/discard timing in shared sequence construction.",
+      "velvet-tricks: no trick comparison or suit following; constrained communication and irreversible shared mistakes."
+    ],
+    "proposalNeighbors": [
+      "B06 hides enemy units; B16 own hidden hand and cooperation define information asymmetry."
+    ],
+    "risks": "Perfect fifteen may require difficult deal knowledge; approachable seeds need independent UI wins, never bot oracle. Literal bot explanation mandatory.",
+    "reviewStatus": "Conditionally accepted at DESIGN stage by independent uniqueness and depth reviewers; implementation, ordinary UI win/loss evidence, cross-portfolio freeze and remediated200 baseline recheck remain required. No gameplay implementation or passed QA claimed.",
+    "comparisonScope": "Compared against all 200 inventory mechanics/rules at design snapshot; nearest source checked in strategy-room/engines.mjs, tabletop-room/cards.mjs or boards.mjs and original game rules where relevant. Recheck remediated baseline before implementation."
+  },
+  {
+    "id": "B17",
+    "name": "Ordered Harvest",
+    "core": "Trade away awkward future cards because hand order forces imminent planting and field replacement.",
+    "stateActions": "Two fields each hold one crop type; hand order immutable. Turn plant oldest card, optionally second oldest, reveal two market cards. Negotiate transfers of market cards and any hand cards with two bots using public wanted-crop offers; received cards must plant immediately, never enter hand. Player may exchange offered bundles, accept/refuse; bot follows public current-field value. Harvest a field anytime for threshold coin schedule, removing it. Draw three cards to hand tail. Two deck passes.",
+    "decisions": "Keep a nearly profitable field or harvest early to absorb compulsory crop; trade future awkward card before it reaches hand front; gift market crop to avoid destroying a valuable field. Trade can help rival but save more own loss.",
+    "depth": "Threshold economies vary by crop rarity; at least three market configurations force mutually beneficial trades rather than every offer accepted. Persistent fields link separate turns.",
+    "winLoss": "Most coins after final mandatory harvest wins; tie draws, lower total loses.",
+    "controls": "Plant/harvest buttons; select outgoing and offered incoming bundle then Propose; explicit order indices on hand. No real communication.",
+    "accessibility": "Hand oldest-to-newest list, field next threshold and trade net effects; bot acceptance reasons visible.",
+    "qa": [
+      "Win: trade a crop from middle of ordered hand, keep mature field through forced planting, then harvest above threshold and win match.",
+      "Loss: refuse all trade in a seeded teaching match, forced-plant incompatible crop and repeatedly harvest below payout; complete low-score loss.",
+      "Verify received crops cannot be parked in hand and hand cannot be reordered.",
+      "For every acceptance run: fresh launch via visible catalog, only normal touch/click/keyboard input; no state injection, engine calls, hidden state or precomputed solution. Record seed/setup, input transcript, screenshots and exact source hash. At least one independent reviewer must win and another ordinary run must reach the natural loss. Restart and replay on 390px touch viewport and keyboard; verify focus/selected states/announcements. These are planned gates, not completion claims."
+    ],
+    "existingNeighbors": [
+      "quiet-majority: binding crop transfers and forced ordered hand replace accumulating policy concessions to satisfy static votes.",
+      "orchard: harvest thresholds interact with compulsory incoming crop and adversarial exchange, not watering/ripening clock."
+    ],
+    "proposalNeighbors": [
+      "B20 free market exchange uses unordered hand with no compulsory planting; B17 ordering is defining necessity."
+    ],
+    "risks": "Bot bargaining can become deterministic vending; include rival opportunity costs and explanations, keep bundle menu bounded. No external chat or human negotiation required.",
+    "reviewStatus": "Conditionally accepted at DESIGN stage by independent uniqueness and depth reviewers; implementation, ordinary UI win/loss evidence, cross-portfolio freeze and remediated200 baseline recheck remain required. No gameplay implementation or passed QA claimed.",
+    "comparisonScope": "Compared against all 200 inventory mechanics/rules at design snapshot; nearest source checked in strategy-room/engines.mjs, tabletop-room/cards.mjs or boards.mjs and original game rules where relevant. Recheck remediated baseline before implementation."
+  },
+  {
+    "id": "B18",
+    "name": "Shared Seasons",
+    "core": "Select a phase secretly so every player acts in chosen phases, but only selectors receive its privilege.",
+    "stateActions": "Each player begins two tableau buildings and six cards; four round phases: Explore draw, Develop build, Produce stock, Ship consume. Human and bot simultaneously choose one; union executes in printed order, once per phase. Selector gets phase-specific bonus. Build by discarding other hand cards as payment; built buildings give permanent exact effects or storage. Production fills empty producers; shipping empties chosen stocks for cards or VP. Twelve rounds or six buildings ends.",
+    "decisions": "Choose a phase you need versus exploit a likely rival selection; retain useful building card or spend it to build another; produce now anticipating opponent shipping or deny free action by changing role.",
+    "depth": "Three market/deal sets, no random combat. Opponent role choice based on its own cards/public table before human submits. Any phase can be vital; repeat-one-role strategy must fail typical match.",
+    "winLoss": "VP tokens plus printed building VP higher than opponent wins; equal draw. Short rules table lists every building effect.",
+    "controls": "Role card selection and confirm; each phase opens explicit hand/payment/stock choices; keyboard forms.",
+    "accessibility": "Always show which phases fire, who gets privilege and why; cost preview names discarded cards; no hidden role reveal before commit.",
+    "qa": [
+      "Win: predict bot Produce, select Ship instead, then use shared production and privileged shipment to fund a winning diversified tableau.",
+      "Loss: repeatedly choose Develop with insufficient payment, let bot use own phases and finish lower VP.",
+      "At same visible initial state verify bot committed role cannot change after human selection; test both chose same role triggers phase only once.",
+      "For every acceptance run: fresh launch via visible catalog, only normal touch/click/keyboard input; no state injection, engine calls, hidden state or precomputed solution. Record seed/setup, input transcript, screenshots and exact source hash. At least one independent reviewer must win and another ordinary run must reach the natural loss. Restart and replay on 390px touch viewport and keyboard; verify focus/selected states/announcements. These are planned gates, not completion claims."
+    ],
+    "existingNeighbors": [
+      "workshop-shift: own exclusive station occupancy replaced by simultaneous role externalities giving rival actions.",
+      "supply-web: hand cards are both options and payment; selected shared phases, not automatic per-tick graph production."
+    ],
+    "proposalNeighbors": [
+      "B07 repeatedly shuffles acquired cards; B18 buildings stay active and strategic role piggyback drives turns.",
+      "B10 support orders resolve conflict; phases positively enable both players."
+    ],
+    "risks": "Collision risk with D resource designs; retain explicit role-piggyback and card-as-payment gates, not generic engine building.",
+    "reviewStatus": "Conditionally accepted at DESIGN stage by independent uniqueness and depth reviewers; implementation, ordinary UI win/loss evidence, cross-portfolio freeze and remediated200 baseline recheck remain required. No gameplay implementation or passed QA claimed.",
+    "comparisonScope": "Compared against all 200 inventory mechanics/rules at design snapshot; nearest source checked in strategy-room/engines.mjs, tabletop-room/cards.mjs or boards.mjs and original game rules where relevant. Recheck remediated baseline before implementation."
+  },
+  {
+    "id": "B19",
+    "name": "Pass the Burden",
+    "core": "Pay to refuse a penalty card, or take its accumulating coins and alter the cost of future consecutive cards.",
+    "stateActions": "Cards 3\u201325, six randomly omitted unseen, remaining shuffled; each player starts nine coins. Face-up card offered in turn; refuse places one own coin on it and passes offer; accept takes card and all coins, then reveals next. No coins forces acceptance. At end each consecutive run scores only its lowest card as penalty; subtract remaining coins. Own accepted cards public.",
+    "decisions": "Pay to avoid a high isolated card or take a funded burden, preserve refusal liquidity, accept a bridge that joins runs and removes a larger penalty, infer missing-card risk.",
+    "depth": "Three players (two bots) make cycling offers and liquidity visible; shuffled missing cards prevent certainty about completing every gap.",
+    "winLoss": "Lowest penalty wins; equal draws among tied players, higher loses. Ends deck empty.",
+    "controls": "Two buttons Accept and Pay one to pass; inspect own runs and all coin counts, keyboard native.",
+    "accessibility": "Current card, accumulated coins, each player run endpoints and projected delta of accepting explicitly printed.",
+    "qa": [
+      "Win: accept an initially unwanted 12 with coins, later 11 bridges existing 10 and 12 so run contributes only 10; complete lowest score.",
+      "Loss: pay until empty and be forced to accept high isolated card; finish highest penalty.",
+      "Verify taking bridge merges both runs once and all attached coins transfer, not vanish.",
+      "For every acceptance run: fresh launch via visible catalog, only normal touch/click/keyboard input; no state injection, engine calls, hidden state or precomputed solution. Record seed/setup, input transcript, screenshots and exact source hash. At least one independent reviewer must win and another ordinary run must reach the natural loss. Restart and replay on 390px touch viewport and keyboard; verify focus/selected states/announcements. These are planned gates, not completion claims."
+    ],
+    "existingNeighbors": [
+      "sealed-bids: no simultaneous rank bids or consumed bid hand; open sequential refusal drains liquid currency and creates persistent run complementarities.",
+      "carry-on: offers circulate among opponents and payments accumulate; card value depends on future neighbor sets, not fixed two-capacity acceptance."
+    ],
+    "proposalNeighbors": [
+      "B15 ordered suited investments have no pay-to-refuse market or lowest-of-run penalty."
+    ],
+    "risks": "Two-button UI can hide shallow tuning; require meaningful funded acceptance, run bridging and liquidity tradeoffs in ordinary matches.",
+    "reviewStatus": "Conditionally accepted at DESIGN stage by independent uniqueness and depth reviewers; implementation, ordinary UI win/loss evidence, cross-portfolio freeze and remediated200 baseline recheck remain required. No gameplay implementation or passed QA claimed.",
+    "comparisonScope": "Compared against all 200 inventory mechanics/rules at design snapshot; nearest source checked in strategy-room/engines.mjs, tabletop-room/cards.mjs or boards.mjs and original game rules where relevant. Recheck remediated baseline before implementation."
+  },
+  {
+    "id": "B20",
+    "name": "Market of Five",
+    "core": "Exchange with a shared replenishing market, then time unordered set sales against diminishing rewards.",
+    "stateActions": "Market five goods/camel cards, personal hand cap seven plus camel herd. Turn take one good, take all camels, exchange two or more own goods/camels for same number market goods, or sell a same-type set. Rare goods require at least two to sell. Public per-good reward stacks diminish with successive sales; set size 3/4/5 grants stated bonus. Sold cards leave. Market refills from deck; three depleted reward stacks or exhausted deck ends.",
+    "decisions": "Sell early for best per-card rewards or wait for set bonus, exchange unwanted goods/camels to change market mix, avoid giving rival an easy large set, and manage hand cap.",
+    "depth": "Opponent competes for market and reward stacks; multiple stock orders and reward curves require different sale sizes, not fixed calendar timing.",
+    "winLoss": "Higher coin total plus five-point larger camel herd bonus wins, equal draws.",
+    "controls": "Select market/cards, choose Take/Exchange/Sell and confirm preview; keyboard tile buttons.",
+    "accessibility": "Hand cap, exact exchange balance, visible reward stacks and bonus schedule; camel herd not hidden in hand.",
+    "qa": [
+      "Win: take camels, use them in a multi-good exchange, sell a large set before rival and finish ahead.",
+      "Loss: hoard past reward depletion and finish with worthless unsold goods while house wins.",
+      "Verify cannot exchange one-for-one, sell a rare singleton or exceed hand capacity; tied herd no bonus.",
+      "For every acceptance run: fresh launch via visible catalog, only normal touch/click/keyboard input; no state injection, engine calls, hidden state or precomputed solution. Record seed/setup, input transcript, screenshots and exact source hash. At least one independent reviewer must win and another ordinary run must reach the natural loss. Restart and replay on 390px touch viewport and keyboard; verify focus/selected states/announcements. These are planned gates, not completion claims."
+    ],
+    "existingNeighbors": [
+      "trade: adversarial shared market and decreasing supply of rewards with set-size bonuses, not public time-price arbitrage.",
+      "meld-atelier: sells uniform goods into competed rewards; no run/set validity puzzle or deadwood target."
+    ],
+    "proposalNeighbors": [
+      "B17 hand order and compulsory planting absent; B20 symmetric exchange/market denial.",
+      "B15 sequential rank commitments absent; B20 simultaneous unordered liquidation."
+    ],
+    "risks": "Most vulnerable to generic trade overlap if exchange and contested rewards weakened; keep both essential and test greedy sell/take policies.",
+    "reviewStatus": "Conditionally accepted at DESIGN stage by independent uniqueness and depth reviewers; implementation, ordinary UI win/loss evidence, cross-portfolio freeze and remediated200 baseline recheck remain required. No gameplay implementation or passed QA claimed.",
+    "comparisonScope": "Compared against all 200 inventory mechanics/rules at design snapshot; nearest source checked in strategy-room/engines.mjs, tabletop-room/cards.mjs or boards.mjs and original game rules where relevant. Recheck remediated baseline before implementation."
+  },
+  {
+    "id": "B21",
+    "name": "Roads We Share",
+    "core": "Extend edge-matched landscape features while limited claimants stay locked until feature closure.",
+    "stateActions": "Twenty-four square tiles have roads, city sides and fields; drawn tile rotates and must match every adjacent edge. After placement optionally put one of five claimants on an unclaimed connected road/city on that tile; cannot enter already claimed connected feature. Merging separately claimed features allowed. Completed road closed at junction/end both ends; city closed on every exposed city edge. Majority claimants score feature, ties all score; claimants return. End incomplete features score half rounded down.",
+    "decisions": "Close a small feature to recover claimant or extend for more points; merge competing claims for shared/majority score, deny completion by geometry, preserve claimant supply.",
+    "depth": "Seeded tile draws with several placements each, three distinct tile distributions. Need a comeback involving joining previously separate claimed features.",
+    "winLoss": "Higher feature score after tile stock ends wins, equal draw; house victory natural loss.",
+    "controls": "Rotate tile and select board coordinate with ghost edge preview, confirm, then claimant region or skip; keyboard region list.",
+    "accessibility": "Every tile states edge types and connected internal segments; feature ID, open ends, claimant count and projected score.",
+    "qa": [
+      "Win: merge two roads to gain majority, close merged road, reclaim pawn and use it again before finishing above house.",
+      "Loss: overcommit all five pawns to unfinishable cities and lose while rival cycles completed roads.",
+      "Reject illegal edge mismatch and direct claiming of already claimed connected feature; allow merging separately claimed features.",
+      "For every acceptance run: fresh launch via visible catalog, only normal touch/click/keyboard input; no state injection, engine calls, hidden state or precomputed solution. Record seed/setup, input transcript, screenshots and exact source hash. At least one independent reviewer must win and another ordinary run must reach the natural loss. Restart and replay on 390px touch viewport and keyboard; verify focus/selected states/announcements. These are planned gates, not completion claims."
+    ],
+    "existingNeighbors": [
+      "tile-weave: drawn irreversible tiles build competing scored regions with claimants, not rotating a complete network to universal connectivity.",
+      "guild: mobile claimant supply and feature closure replace independent plot ownership and local adjacency points."
+    ],
+    "proposalNeighbors": [
+      "B25 conflict leaders can be removed and points separate by color; B21 claimants locked until completion and merging does not combat."
+    ],
+    "risks": "Closure bookkeeping must expose topology; compact game should still permit claim competition and pawn reuse, not solitaire tile matching.",
+    "reviewStatus": "Conditionally accepted at DESIGN stage by independent uniqueness and depth reviewers; implementation, ordinary UI win/loss evidence, cross-portfolio freeze and remediated200 baseline recheck remain required. No gameplay implementation or passed QA claimed.",
+    "comparisonScope": "Compared against all 200 inventory mechanics/rules at design snapshot; nearest source checked in strategy-room/engines.mjs, tabletop-room/cards.mjs or boards.mjs and original game rules where relevant. Recheck remediated baseline before implementation."
+  },
+  {
+    "id": "B22",
+    "name": "Factory Mosaic",
+    "core": "A shared color draft creates unwanted leftovers that opponents can force into costly overflow.",
+    "stateActions": "Five factories each four tiles, plus center. Take all one color from one source; all other factory tiles move to center. Put taken color into exactly one of own pattern rows capacities 1\u20135, each single-color and only if corresponding wall row lacks it. Excess falls to floor, escalating penalty. First center taker gets next-round initiative and one penalty. End round completed rows move one tile to fixed matching wall position, score connected horizontal/vertical lengths; leftovers discard. End when any wall row full.",
+    "decisions": "Complete a short row now or load a long row for future adjacency, take center initiative at penalty, leave a large unwanted color lot to rival, or deliberately waste tiles to deny high score.",
+    "depth": "Five-color wall and five row sizes essential; opponent considers remainder composition and future floor pressure. Multiple draft seeds.",
+    "winLoss": "Wall score minus floor penalties plus stated row/column/color bonuses higher wins; ties draw.",
+    "controls": "Choose source/color then pattern row or floor; preview exact overflow and scoring. Keyboard sources and rows.",
+    "accessibility": "Colors accompanied by glyph/name, exact quantities, floor penalty schedule and wall coordinate labels.",
+    "qa": [
+      "Win: force house to take excess center lot, finish a row bridging horizontal/vertical wall neighbors and win full match.",
+      "Loss: repeatedly overfill large lots so floor deductions exceed tile points; complete lower-score result.",
+      "Verify leftovers move to center, cannot split one take across pattern rows, and partial rows persist to next round.",
+      "For every acceptance run: fresh launch via visible catalog, only normal touch/click/keyboard input; no state injection, engine calls, hidden state or precomputed solution. Record seed/setup, input transcript, screenshots and exact source hash. At least one independent reviewer must win and another ordinary run must reach the natural loss. Restart and replay on 390px touch viewport and keyboard; verify focus/selected states/announcements. These are planned gates, not completion claims."
+    ],
+    "existingNeighbors": [
+      "guild: shared-source bundle selection creates future opponents choices and personal staging constraints; not single-cell territory picking.",
+      "pigment-lab: no color overlay synthesis; economic draft/overflow and adjacency scoring determine choices."
+    ],
+    "proposalNeighbors": [
+      "B08 pieces physically occupy contested shared board; B22 fixed single tiles flow through personal row staging."
+    ],
+    "risks": "Distinct but rules UI dense; overflow prediction required. Reject implementation that chooses tiles independently without factory leftovers.",
+    "reviewStatus": "Conditionally accepted at DESIGN stage by independent uniqueness and depth reviewers; implementation, ordinary UI win/loss evidence, cross-portfolio freeze and remediated200 baseline recheck remain required. No gameplay implementation or passed QA claimed.",
+    "comparisonScope": "Compared against all 200 inventory mechanics/rules at design snapshot; nearest source checked in strategy-room/engines.mjs, tabletop-room/cards.mjs or boards.mjs and original game rules where relevant. Recheck remediated baseline before implementation."
+  },
+  {
+    "id": "B23",
+    "name": "Anchor Stacks",
+    "core": "Stack ownership moves exactly its height while vacated bridges can erase every disconnected component.",
+    "stateActions": "Hex board of 19 cells fully populated: eight counters each side and three neutral anchor counters. A stack owned by its top counter may move in straight line exactly its total height onto another occupied cell, carrying every layer. A surrounded stack cannot move; holes cannot be landing cells but may be crossed. After a move, remove every component not connected through occupied neighbors to at least one anchor-containing stack. Anchors travel when covered stacks move. Alternate until neither can move.",
+    "decisions": "Cover opposing stacks to seize height, maintain maneuverability as stacks lengthen, relocate anchors to preserve own component, cut a bridge sacrificing material while deleting larger enemy component.",
+    "depth": "Different neutral-anchor layouts; wins must include stack-top ownership change and a nontrivial disconnection, not merely jumping onto largest enemy.",
+    "winLoss": "Sum heights of controlled surviving stacks; higher wins, equal draws. Empty own controllable stack set can end early only if opponent has no future changes.",
+    "controls": "Select stack and legal landing; show exact ray/height and removed-component preview, Confirm. Keyboard list.",
+    "accessibility": "Stack layer counts/anchor count/top owner, movable reason and connectivity groups listed; preview removable cells in text.",
+    "qa": [
+      "Win: move height-two stack over a hole, cover enemy and later shift anchor to erase rival component; finish larger controlled height.",
+      "Loss: vacate own sole bridge and lose most material to disconnection, then complete scored loss.",
+      "Verify neutral anchor embedded in moving stack travels; surrounded stacks and empty landing cells rejected.",
+      "For every acceptance run: fresh launch via visible catalog, only normal touch/click/keyboard input; no state injection, engine calls, hidden state or precomputed solution. Record seed/setup, input transcript, screenshots and exact source hash. At least one independent reviewer must win and another ordinary run must reach the natural loss. Restart and replay on 390px touch viewport and keyboard; verify focus/selected states/announcements. These are planned gates, not completion claims."
+    ],
+    "existingNeighbors": [
+      "joining-lines: movement distance derives from moving stack height and ownership changes on stacking, not line population; connectivity controls removal not victory.",
+      "soft-sculpt: opposed mobile piles and ownership seizure replace solo edge cuts to target mass/torque."
+    ],
+    "proposalNeighbors": [
+      "B04 disconnecting hive move prohibited; B23 move legal and deletes disconnected components."
+    ],
+    "risks": "Strong disconnection shock can feel opaque; require full preview. 19-cell opening may be shallow; increase to 25 if ordinary play ends before meaningful anchor decision.",
+    "reviewStatus": "Conditionally accepted at DESIGN stage by independent uniqueness and depth reviewers; implementation, ordinary UI win/loss evidence, cross-portfolio freeze and remediated200 baseline recheck remain required. No gameplay implementation or passed QA claimed.",
+    "comparisonScope": "Compared against all 200 inventory mechanics/rules at design snapshot; nearest source checked in strategy-room/engines.mjs, tabletop-room/cards.mjs or boards.mjs and original game rules where relevant. Recheck remediated baseline before implementation."
+  },
+  {
+    "id": "B24",
+    "name": "The Other Half",
+    "core": "Cut a connected estate into two connected parcels, then opponent chooses first under asymmetric public utilities.",
+    "stateActions": "Fixed connected 4\u00d74 estate of terrain cells with public red/blue utility weights and one adjacency bonus per connected orchard pair. Across six rounds draw different estates and utility cards; players alternate divider/chooser. Divider selects subset; both parcels nonempty and orthogonally connected. Chooser freely selects either parcel, divider gets remainder. House chooser maximizes its own awarded utility minus opponent awarded utility, consistent with match score difference; human chooses freely. A player scores own utility only. Each has two once-per-match redraw tokens usable before division, replacing an estate at cost two points. All utilities and future two estate types visible.",
+    "decisions": "Balance rival score-difference choices without equalizing parcel area or own utility, use shape constraints to deny a high-value bundle, decide which round merits redraw rather than accept an adverse division. When choosing, own immediate score competes with withholding opponent score because match is score difference.",
+    "depth": "Curated varied estate graphs (not only square), utility asymmetries and adjacency bonuses prevent simple sorting. Both roles played, multiple near-optimal splits; house enumerates connected partitions with bounded difficulty.",
+    "winLoss": "Score difference over six rounds decides win/loss; equality draws. Invalid disconnected cut never commits.",
+    "controls": "Tap cells to toggle parcel A, preview both utilities/connectivity, Submit cut; chooser selects A/B. Keyboard grid plus list.",
+    "accessibility": "Each cell reports both player values, adjacency bonus, parcel membership; disconnected component labels; final allocation explained.",
+    "qa": [
+      "Win: submit a cut where rival preferred parcel leaves high own utility, use both roles and finish positive score difference.",
+      "Loss: split by equal area while ignoring rival-specific values across rounds and finish behind.",
+      "Test chooser takes maximum own-minus-rival outcome rather than blindly larger area; reject disconnected leftovers and all/none cuts.",
+      "For every acceptance run: fresh launch via visible catalog, only normal touch/click/keyboard input; no state injection, engine calls, hidden state or precomputed solution. Record seed/setup, input transcript, screenshots and exact source hash. At least one independent reviewer must win and another ordinary run must reach the natural loss. Restart and replay on 390px touch viewport and keyboard; verify focus/selected states/announcements. These are planned gates, not completion claims."
+    ],
+    "existingNeighbors": [
+      "sealed-bids: player constructs feasible alternatives and opponent chooses one, with no bid cards or hidden simultaneous rank.",
+      "parcel-survey: no hidden exact-area rectangular solution; asymmetric opponent utility and connected freeform division determine quality."
+    ],
+    "proposalNeighbors": [
+      "B09 offers one discrete piece to opponent; B24 creates coupled spatial bundles evaluated by two utility functions."
+    ],
+    "risks": "Potential overlap D partition/negotiation designs; two-player divide/choose must remain core. Redraw token secondary; uniqueness cannot rest on it.",
+    "reviewStatus": "Conditionally accepted at DESIGN stage by independent uniqueness and depth reviewers; implementation, ordinary UI win/loss evidence, cross-portfolio freeze and remediated200 baseline recheck remain required. No gameplay implementation or passed QA claimed.",
+    "comparisonScope": "Compared against all 200 inventory mechanics/rules at design snapshot; nearest source checked in strategy-room/engines.mjs, tabletop-room/cards.mjs or boards.mjs and original game rules where relevant. Recheck remediated baseline before implementation."
+  },
+  {
+    "id": "B25",
+    "name": "Four Houses",
+    "core": "Grow kingdoms but score the weakest of four cultures, using different rules for internal leadership disputes and external wars.",
+    "stateActions": "6\u00d76 land/river board; four tile colors and four leader types per side. Turn two actions: place tile from six-card hand (river color only on river), place/move a leader adjacent to shrine tile, or swap chosen hand tiles. Tile added to kingdom awards point of its color to same-color leader owner if present. Moving second same-color leader into existing kingdom triggers internal contest using adjacent shrines plus committed shrine hand tiles; loser leader removed. Connecting separate kingdoms containing rival same-color leaders triggers external contest using total matching-color tiles plus committed matching hand cards; loser leader and losing-color tiles removed, potentially splitting kingdom. Tied strength favors defender; commitments simultaneous.",
+    "decisions": "Build under opponent leader for board position, increase weakest score rather than strongest, start internal coup cheaply or prepare costly external war, keep matching hand cards for support instead of placing for immediate points.",
+    "depth": "At least three balanced river maps; economy must allow all four colors to score, and leader removal changes subsequent tile rewards. House evaluates score minimum and public/own-hand support without omniscient bids.",
+    "winLoss": "After 24 full turns or tile bag depleted, sort four scores ascending and compare lexicographically; higher weakest then next weakest wins. Equal draws.",
+    "controls": "Tile/leader selection then cell with kingdom/conflict preview; conflict support card selector and commit; keyboard ordered action forms.",
+    "accessibility": "Kingdom IDs and members, leaders, conflict type/strength components and four score track names; post-conflict split explanation.",
+    "qa": [
+      "Win: cultivate neglected color, win an internal shrine contest and later external color conflict, then finish higher minimum score.",
+      "Loss: maximize only one color while house balances; conclude lexicographic score loss despite higher total.",
+      "Ordinary UI verify internal defeat removes only leader, external defeat removes matching tiles and splits connectivity; bids must commit before reveal.",
+      "For every acceptance run: fresh launch via visible catalog, only normal touch/click/keyboard input; no state injection, engine calls, hidden state or precomputed solution. Record seed/setup, input transcript, screenshots and exact source hash. At least one independent reviewer must win and another ordinary run must reach the natural loss. Restart and replay on 390px touch viewport and keyboard; verify focus/selected states/announcements. These are planned gates, not completion claims."
+    ],
+    "existingNeighbors": [
+      "guild: changing political ownership, distinct conflict triggers/removal and weakest-culture goal replace passive adjacency territory points.",
+      "quiet-majority: territory-connected leaders and tile combat, not policy-level faction thresholds."
+    ],
+    "proposalNeighbors": [
+      "B21 connected features score on completion and return claimants; B25 leaders earn ongoing colored points and conflict can destroy terrain.",
+      "B10 hidden simultaneous army orders differ from local sequential kingdom growth and episodic support bids."
+    ],
+    "risks": "Largest rules burden in batch. May exceed mini-game readability; acceptance conditional on tutorial and ordinary first-time play. Do not cut to independent four-color point toggles.",
+    "reviewStatus": "Conditionally accepted at DESIGN stage by independent uniqueness and depth reviewers; implementation, ordinary UI win/loss evidence, cross-portfolio freeze and remediated200 baseline recheck remain required. No gameplay implementation or passed QA claimed.",
+    "comparisonScope": "Compared against all 200 inventory mechanics/rules at design snapshot; nearest source checked in strategy-room/engines.mjs, tabletop-room/cards.mjs or boards.mjs and original game rules where relevant. Recheck remediated baseline before implementation."
+  },
+  {
+    "id": "B26",
+    "name": "Carried Road",
+    "core": "A controlled stack can be carried and split along its path, changing road ownership and wall access.",
+    "stateActions": "5\u00d75 board; each side 15 flat/wall stones and one capstone. On turn place reserve flat or standing wall onto empty cell, or move a stack controlled by own top. Carry up to five top stones in original vertical order along one orthogonal ray, dropping at least one at each visited cell; must drop all carried stones. Cannot cross/land on wall or capstone, except lone final capstone can flatten standing wall. Flat tops and capstone tops connect own road between opposite edges; standing walls do not connect. Opening two turns place one rival flat on empty cell.",
+    "decisions": "Break own road temporarily to distribute buried stones, cap rival road, choose wall defense versus scoring flat, or use capstone to reopen blocked corridor. Drop partition changes several owners in one turn.",
+    "depth": "Several balanced opening layouts; must prove carry/drop split and capstone flattening change winning lines. Opponent checks immediate road threats after entire move.",
+    "winLoss": "Connect either opposite edge pair by own orthogonal flat/capstone tops wins; simultaneous roads favor mover. Full board or empty reserve without road: more top flats wins, equal draw.",
+    "controls": "Select stack, carry count, direction and ordered drop amounts; preview entire move then Confirm. Touch buttons and keyboard fields.",
+    "accessibility": "Every stack has top-to-bottom owner/type list; prospective road and flatten events in text; invalid path reason.",
+    "qa": [
+      "Win: carry three stones and split 1+2 to turn two road cells own-side, then complete connection after flattening a blocking wall.",
+      "Loss: distribute a buried rival stone onto an essential road cell, give rival connection and reach natural defeat.",
+      "Verify carry order conserved, standing walls do not score as road, capstone cannot be covered and incomplete drop plan cannot commit.",
+      "Acceptance evidence: independent complete ordinary-UI victory and natural loss from public fresh start; record setup/seed, visible action transcript, final screenshot and source hash. No engine calls, state injection, hidden information or solver-derived route. Verify restart plus390px touch and keyboard input; these tests are future gates, not claims."
+    ],
+    "existingNeighbors": [
+      "hex: stones are not permanent; stack transport redistributes ownership and standing walls/capstones change route legality.",
+      "marble-council: carrying and dropping vertical stacks replaces inline horizontal numerical pushes/ejection."
+    ],
+    "proposalNeighbors": [
+      "B23 distance equals full stack height and destination occupied; B26 selects carry amount and distributes along ray, scores road not surviving mass.",
+      "B08 placements expand only at corners and never move."
+    ],
+    "risks": "Tak-inspired rules can be large; mandatory visual move plan and full drop editor. Do not simplify to moving one top stone or uniqueness weakens.",
+    "reviewStatus": "Conditionally accepted at DESIGN stage by independent uniqueness and depth reviewers; implementation, ordinary UI win/loss evidence, cross-portfolio freeze and remediated200 baseline recheck remain required. No gameplay implementation or passed QA claimed.",
+    "comparisonScope": "Compared with full200 inventory, nearest tabletop/strategy rule implementations; remediated200 recheck required."
+  },
+  {
+    "id": "B27",
+    "name": "Masks and Coins",
+    "core": "Make role claims to take actions; opponents can challenge evidence or counterclaim a block before effects resolve.",
+    "stateActions": "Two players each two hidden influence cards from 15-card deck, three copies five roles; start two coins. Each turn Income +1 unchallengeable, Aid +2 blockable, Tax +3 claiming treasurer, Steal2 claiming captain, Exchange two cards with deck claiming envoy, Assassinate costing3 claiming assassin, or Coup costing7 unchallengeable. Steal blocked by captain/envoy; assassination blocked by guard; Aid blocked by treasurer. Roles need not be held to claim. A challenge reveals matching role if held then reshuffles/replaces it; challenger loses influence. Failed claimant loses influence and action cancels. Lost influence selected and exposed permanently. At10 coins must Coup.",
+    "decisions": "Choose costly certain attack or cheap bluff, challenge according to exposed role supply and action history, counterclaim block versus sacrifice influence, exchange to alter private resources without revealing identity.",
+    "depth": "Bots maintain public exposure counts and own cards plus action history, with mixed bluff probabilities stated qualitatively; no perfect hidden-hand access. Separate action challenge and block challenge windows.",
+    "winLoss": "Opponent zero influence wins; own zero loses. No cash stake or real-money framing. All challenge outcomes logged.",
+    "controls": "Action button, target where needed, Resolve response window; own influence-loss selection and exchange pick. Keyboard native.",
+    "accessibility": "Clear pending claimant, claimed role, whether challenge/block available, costs already paid and consequence tree; never hidden role in labels.",
+    "qa": [
+      "Win: identify a revealed-role shortage, challenge a false block, then fund unchallengeable final coup through ordinary match.",
+      "Loss: challenge a truthful role and expose own last influence, observing reshuffled proof card.",
+      "Verify truth proof is replaced, failed action cancels, failed block permits original action and AI behavior cannot condition on unseen cards.",
+      "Acceptance evidence: independent complete ordinary-UI victory and natural loss from public fresh start; record setup/seed, visible action transcript, final screenshot and source hash. No engine calls, state injection, hidden information or solver-derived route. Verify restart plus390px touch and keyboard input; these tests are future gates, not claims."
+    ],
+    "existingNeighbors": [
+      "hidden-dice: role-specific actions and blocks modify persistent money/influence before challenges; not monotone quantity claims with one challenge outcome.",
+      "quiet-majority: strategic dishonesty and private role evidence replace public deterministic concession thresholds."
+    ],
+    "proposalNeighbors": [
+      "B06 hidden rank discovered by spatial attack; B27 chooses explicit social claim/counterclaim.",
+      "B31 draw-choice effects require actual held card and cannot be falsely claimed."
+    ],
+    "risks": "Challenge trees easily confusing; compact response diagram mandatory. House cannot challenge every bluff through access to player roles.",
+    "reviewStatus": "Conditionally accepted at DESIGN stage by independent uniqueness and depth reviewers; implementation, ordinary UI win/loss evidence, cross-portfolio freeze and remediated200 baseline recheck remain required. No gameplay implementation or passed QA claimed.",
+    "comparisonScope": "Compared with full200 inventory, nearest tabletop/strategy rule implementations; remediated200 recheck required."
+  },
+  {
+    "id": "B28",
+    "name": "Merging Estates",
+    "core": "Spatial building growth triggers company mergers that revalue contested stock portfolios.",
+    "stateActions": "6\u00d76 lots, three companies, six secret lot tiles per player and refill bag. Turn place one tile, resolve adjacency: isolated remains independent; touching isolated cluster may found inactive company; touching one company expands; joining two or more active companies merges smaller into larger (placer breaks equal-size tie). Company size\u226510 is safe and cannot be merged out; tile joining two safe companies illegal. Merger pays fixed majority/minority bonuses to stockholders; defunct shares may sell at old price, trade two-for-one into survivor, or hold for refounding. Then buy up to three public available shares; prices depend on displayed size bands. Cash finite; stock finite. End when every company safe or one reaches18 after current turn. If a player has no legal tile, reveal and discard only permanently illegal safe-merger tiles, refill if possible, then pass placement and retain purchase phase. Two consecutive no-placement turns with no remaining drawable legal tile, bag empty with both hands exhausted, or a full board immediately triggers normal final settlement. Remaining temporary unplayable lots may not be secretly redrawn. Settlement also occurs after48 full turns as a displayed maximum.",
+    "decisions": "Place for growth or trigger merger when holding minority, buy rival company shares to anticipate payout, withhold a tile to change majority later, trade defunct shares into future leader versus realize cash.",
+    "depth": "At least three companies and minority payout essential; multiple lot distributions and stock holdings. Bots see their own tiles and public portfolio, not other private tiles.",
+    "winLoss": "Liquidate all shares at current size prices and payout final bonuses; highest cash wins, equal draw. Cash exhaustion limits action but not premature defeat.",
+    "controls": "Select lot tile/map, company founding choice or merger survivor, per-company sell/trade/hold controls and Buy phase; keyboard forms.",
+    "accessibility": "Company names/patterns and lots, shareholder table, price-band and payout previews; merger resolution list.",
+    "qa": [
+      "Win: acquire minority in small company, place merger tile, receive bonus and exchange holdings to win final valuation.",
+      "Loss: spend all cash on stranded isolated company while rival mergers compound payouts; finish lower wealth.",
+      "Verify equal-size chooser, safe-company illegality, two-for-one share conservation and payout ties through UI log.",
+      "Acceptance evidence: independent complete ordinary-UI victory and natural loss from public fresh start; record setup/seed, visible action transcript, final screenshot and source hash. No engine calls, state injection, hidden information or solver-derived route. Verify restart plus390px touch and keyboard input; these tests are future gates, not claims.",
+      "Public near-full board scenario with multiple sub10 companies: fill final lot and verify settlement. In a separate public safe-merger-blocked scenario, expose/discard permanently illegal tiles, exhaust possible refill and trigger no-placement settlement without softlock."
+    ],
+    "existingNeighbors": [
+      "trade: price changes endogenously from spatial company growth/mergers and share control rather than fixed day calendar.",
+      "growing-block: public portfolios and minority/majority merger rewards replace population/upkeep simulation."
+    ],
+    "proposalNeighbors": [
+      "B21 merged features score based on locked claimants, not traded shares; B28 holder need not own board tiles."
+    ],
+    "risks": "Long match/rules risk. Keep companies three and sizes tuned; must retain genuine merger portfolio choices rather than sole majority scoring.",
+    "reviewStatus": "Conditionally accepted at DESIGN stage by independent uniqueness and depth reviewers; implementation, ordinary UI win/loss evidence, cross-portfolio freeze and remediated200 baseline recheck remain required. No gameplay implementation or passed QA claimed.",
+    "comparisonScope": "Compared with full200 inventory, nearest tabletop/strategy rule implementations; remediated200 recheck required."
+  },
+  {
+    "id": "B29",
+    "name": "Last Known Address",
+    "core": "Coordinate a detective team to intercept a moving hidden fugitive whose transport traces constrain possible routes.",
+    "stateActions": "Public sixteen-station graph with three labeled route types: walk, bus and ferry. Three detectives start at fixed separated visible nodes; fugitive starts at an announced fourth node then immediately makes one hidden move. Each detective has8 walk,4 bus and2 ferry tickets. Each round move every detective once in chosen order (or stay free); occupied detective node cannot be entered by another. Human never sees fugitive current location unless landing on it captures. After all detectives act, fugitive chooses one legal adjacent typed edge not occupied by detective, using finite hidden tickets; used transport TYPE is always revealed, and actual endpoint revealed after rounds4,8,12. Fugitive never stays. Reveal its initial ticket totals12/6/4 and decrement types publicly. If no legal ticketed exit remains fugitive captured. Evasion bot responds to actual detective positions and past observations only, not uncommitted UI selection. Sixteen rounds total.",
+    "decisions": "Propagate possible hidden locations using mode traces, split detectives to cover candidate exit cuts or converge on revealed node, spend scarce shortcut ticket now versus retain interception capacity, and occupy a station to prevent future fugitive escape even when it is not a candidate current location.",
+    "depth": "At least three connected multitype maps and two fugitive policies. Maps include crossing bus/ferry cuts where a solo greedy pursuer fails; minimum two detectives needed for guaranteed interception in approachable studies. Public notebook may mark candidates manually but never expose true state. Capture must depend on constraining future movement, not merely clicking remaining candidates.",
+    "winLoss": "Detective lands on fugitive current station, or fugitive has no legal exit after detective moves: win. Fugitive finishes its sixteenth move uncaptured: loss. Ticket exhaustion can restrict detective movement but staying always legal.",
+    "controls": "Select detective, then adjacent station and route type; Confirm move; End team round only when each moved/stayed. Keyboard station list and route buttons. No timed reaction.",
+    "accessibility": "Station names and adjacency list, route symbols plus words, detective tickets, public mode history and reveal round counter; hidden location and actual candidate membership absent from DOM/accessibility tree. Candidate notebook labels are player hypotheses.",
+    "qa": [
+      "Win: from a public named interception study, use revealed bus trace to place one detective on ferry exit while others close two walking approaches; capture through ordinary complete team turns. Independent full-start victory on a second map required.",
+      "Loss: greedily chase last revealed station with all three detectives, exhaust shortcut tickets and allow fugitive to finish round16; observe revealed final route after terminal loss.",
+      "Test moving onto actual hidden station captures before fugitive response; occupying sole exit traps; illegal ticket choice does not consume turn; public station graph and mode history never leak true current position.",
+      "Acceptance: record normal-input fresh-start victory and natural evasion loss with setup, transcript, screenshot and source hash; no hidden-state inspection/solver routes. Verify390px touch, keyboard, restart."
+    ],
+    "existingNeighbors": [
+      "fleet: hidden target moves reactively every round; detective occupation cuts future legal movement, unlike static hit/miss search.",
+      "twenty-questions: actions reposition scarce-ticket agents and alter target transition options; they are not binary questions about a stationary catalogue.",
+      "lantern-heist: player coordinates pursuers with uncertainty about a reactive adversary, not a known-map avatar avoiding telegraphed patrols."
+    ],
+    "proposalNeighbors": [
+      "B06 hidden-rank pieces move on board and fight; B29 one position hidden, entire detective team coordinates route denial without ranked combat.",
+      "B10 all unit positions public and support resolves simultaneous territorial attacks; B29 sequential joint pursuit propagates uncertainty between periodic sightings."
+    ],
+    "risks": "Replaces rejected Halma-like constrained race B29 after independent uniqueness challenge. Need approachable maps proven by ordinary unaided UI play; exhaustive state search only secondary evidence. Bot must not flee using unrevealed human selection or route omniscience unavailable to fugitive. Ticket counts/map balance provisional. Independent reviewers confirmed replacement conditional on second-map unaided full capture and genuine reactive movement denial.",
+    "reviewStatus": "Conditionally accepted at DESIGN stage by independent uniqueness and depth reviewers; implementation, ordinary UI win/loss evidence, cross-portfolio freeze and remediated200 baseline recheck remain required. No gameplay implementation or passed QA claimed.",
+    "comparisonScope": "Full200 inventory compared; fleet/strategy movement rules and discovery active-identification neighbors checked; recheck final remediated200 and all proposals."
+  },
+  {
+    "id": "B30",
+    "name": "Crossed Programs",
+    "core": "Commit movement programs simultaneously, then resolve physical interference one register at a time.",
+    "stateActions": "7\u00d77 factory with pits, conveyors and rotators, two robots and three ordered checkpoints. Each round both receive five command cards from own identical cyclic deck (Forward1, Forward2, Back1, Left, Right, Wait), select three and order into registers. Each register lower printed priority robot moves first; forward can push opponent if next cell free, otherwise stops. Then all conveyors move simultaneously and rotators turn occupied robots. Finish entire three-register cycle, discard used and redraw. Opponent commits before human program reveal; checkpoints count only on robot movement/conveyor settling, pits reset robot to last checkpoint and lose one of three lives. Conveyor resolution is fixed: compute every robot conveyor destination from its post-command square; if two destinations coincide both stay; if a target is occupied by a robot that is not vacating, mover stays; swaps between vacating robots are allowed. Conveyor movement never pushes. Arrival on pit removes robot before rotators resolve; new checkpoint respawn occurs after register and cannot push another robot (occupied respawn waits offboard until free).",
+    "decisions": "Predict opponent occupancy, intentionally push or block a planned step, program orientation that compensates conveyor rotation, reserve needed command for next draw. A good solo route can fail because other robot moves first.",
+    "depth": "Three varied factories and public opponent recent program history; bot draws/knowledge isolated. Include mandatory shared bottleneck so independent shortest-route programs insufficient.",
+    "winLoss": "Visit all three checkpoints and exit before rival wins; lose if own lives zero or rival finishes. Simultaneous finish ties.",
+    "controls": "Tap command then register; reorder with Up/Down; preview only own unopposed trace marked hypothetical; Submit program, Step resolution/Skip animation.",
+    "accessibility": "Heading, register priority, command text and numbered resolution log, conveyor arrows with names; reduced motion explicit step mode.",
+    "qa": [
+      "Win: predict bottleneck, intentionally wait to let opponent become pivot, then push it aside and complete checkpoints through full race.",
+      "Loss: repeat solo shortest program into opponent blockage, fall into pit on downstream conveyor and exhaust lives.",
+      "Verify bot cannot change after reveal, push-chain blocking and conveyor collision simultaneous rule shown; no preview leaks opponent orders.",
+      "Acceptance evidence: independent complete ordinary-UI victory and natural loss from public fresh start; record setup/seed, visible action transcript, final screenshot and source hash. No engine calls, state injection, hidden information or solver-derived route. Verify restart plus390px touch and keyboard input; these tests are future gates, not claims.",
+      "Public factory studies exercise two belts aiming at same cell (both stay), belt swap (both move), destination occupied by nonmoving robot (blocked), and pit/respawn occupancy; compare register log to visible rules."
+    ],
+    "existingNeighbors": [
+      "rover-script: single freeform program through static maze lacks simultaneous opponent registers, priority collisions and hand resource.",
+      "two-couriers: player centrally controls both agents without hidden commitment or conveyor aftermath."
+    ],
+    "proposalNeighbors": [
+      "B10 simultaneous regional support strength has no command sequence or orientation/physics; B30 commits ordered local motion."
+    ],
+    "risks": "C may own delayed programming; recheck portfolio. Conveyor conflicts now fixed explicitly: same destination cancels; blocked nonvacating occupant stops; swaps allowed; no belt pushing. Need independent rule examples before implementation.",
+    "reviewStatus": "Conditionally accepted at DESIGN stage by independent uniqueness and depth reviewers; implementation, ordinary UI win/loss evidence, cross-portfolio freeze and remediated200 baseline recheck remain required. No gameplay implementation or passed QA claimed.",
+    "comparisonScope": "Compared with full200 inventory, nearest tabletop/strategy rule implementations; remediated200 recheck required."
+  },
+  {
+    "id": "B31",
+    "name": "One Last Card",
+    "core": "Draw one, retain one hidden identity, and use the discarded card to gather information or eliminate rivals.",
+    "stateActions": "Three players each hold one hidden card; deck ranks1\u20138 with multiplicities5/2/2/2/2/1/1/1 (sixteen cards). At turn draw second and play one for its printed effect:1 guess another hand rank excluding1 (correct eliminates);2 privately inspect other hand;3 compare hands privately (lower eliminated);4 shield until next turn;5 force target discard/redraw;6 exchange hands;7 no effect but must play if held with5 or6;8 played/discarded eliminates self. One undealt card hidden to prevent complete certainty. Eliminated cards public. When stock empty, highest retained rank among survivors earns token; last survivor earns immediately. First three tokens wins.",
+    "decisions": "Keep high rank for showdown but risk guess, use inspection now or shield future, choose forced redraw to remove dangerous high card, trade away exposed identity. Retained card is both win value and future action resource.",
+    "depth": "Bots maintain observation-based belief sets and private inspections; no access to other hidden hands. Multiple round deals and rank-count ledger support inference.",
+    "winLoss": "Three favor tokens wins; first rival to three loses; simultaneous threshold ties broken next round.",
+    "controls": "Choose played card, target, optional guessed rank; confirm warns forced high-card discard; keyboard buttons.",
+    "accessibility": "Own cards spelled out, opponents stable identities, known facts recorded privately; public discard ranks and protection duration visible.",
+    "qa": [
+      "Win: inspect an opponent, retain guess card across a turn, eliminate correctly, then earn third token in a full match.",
+      "Loss: play8 or force own8 discard then continue match to rival third token; test ordinary elimination consequence.",
+      "Verify forced7 rule, shield targeting and private inspection not added to public opponent knowledge.",
+      "Acceptance evidence: independent complete ordinary-UI victory and natural loss from public fresh start; record setup/seed, visible action transcript, final screenshot and source hash. No engine calls, state injection, hidden information or solver-derived route. Verify restart plus390px touch and keyboard input; these tests are future gates, not claims."
+    ],
+    "existingNeighbors": [
+      "court-of-suits: one retained secret identity and direct deduction/elimination, not damage/armor/healing against fixed HP intentions.",
+      "five-card-evening: card ranks are information/actions with elimination, not rank-combination redraw and stake payouts."
+    ],
+    "proposalNeighbors": [
+      "B27 role claims may lie without possessing cards; B31 effect only from actual played card and retaining one identity is central."
+    ],
+    "risks": "Luck across short rounds; match three tokens limits one-draw result. Must avoid omniscient rank guessing and expose posterior basis after reveal.",
+    "reviewStatus": "Conditionally accepted at DESIGN stage by independent uniqueness and depth reviewers; implementation, ordinary UI win/loss evidence, cross-portfolio freeze and remediated200 baseline recheck remain required. No gameplay implementation or passed QA claimed.",
+    "comparisonScope": "Compared with full200 inventory, nearest tabletop/strategy rule implementations; remediated200 recheck required."
+  },
+  {
+    "id": "B32",
+    "name": "Passing Courses",
+    "core": "Simultaneously draft from circulating hands; what you refuse becomes an opponent opportunity.",
+    "stateActions": "Three players each receive seven cards. Each chooses one face down, all reveal into scoring tableau and pass remaining hand left; repeat to exhaustion, three rounds with alternating direction. Six card families: pairs worth5; triples worth10; each dumpling increasing1/3/6/10/15; roll-icons most6/second3; sauce doubles next single nigiri2/3/4; desserts remain across rounds and majority+6/minority\u22126 at match end. A once-per-round chopstick card already drafted may be returned into passing hand to take two cards from current hand. Fixed public score reference.",
+    "decisions": "Select own set completion or deny rival almost-completed set; remember hand likely to return, delay a card you expect safe, use chopsticks to capture competing options at cost of returning an exploitable card.",
+    "depth": "At least three seats, nonlinear scoring and hand circulation essential. Hidden choices committed before reveal; bots infer only seen passing cards/public tableaux.",
+    "winLoss": "Most points after third-round dessert adjustment wins; equal draws, otherwise loss.",
+    "controls": "Tap chosen card(s), confirm pick; optional Use chopsticks toggle; keyboard cards.",
+    "accessibility": "Every hand card text names score relation, tableau current/potential score and received-from/pass-to player; no color-only types.",
+    "qa": [
+      "Win: remember a returning hand, delay sauce-compatible card, deny rival third matching card and complete full three-round win.",
+      "Loss: pick locally highest immediate values while giving rival repeated set completions, finish behind.",
+      "Verify last pick hands empty together, doubled nigiri only next one, dessert carries and returned chopsticks actually passed.",
+      "Acceptance evidence: independent complete ordinary-UI victory and natural loss from public fresh start; record setup/seed, visible action transcript, final screenshot and source hash. No engine calls, state injection, hidden information or solver-derived route. Verify restart plus390px touch and keyboard input; these tests are future gates, not claims."
+    ],
+    "existingNeighbors": [
+      "guild: hand circulation/private simultaneous draft determines which choices each rival can later take, not alternately claim public independent districts.",
+      "formation-flags: completed personal tableau sets score globally without opposed three-card lanes or random replacement after each play."
+    ],
+    "proposalNeighbors": [
+      "B22 public factory leftovers concentrate forced quantities; B32 circulating private hands and remembered future offers govern single-card choice."
+    ],
+    "risks": "Generic card drafting alone insufficient; require remembered returning hand, denial and chopstick two-pick timing in ordinary tests.",
+    "reviewStatus": "Conditionally accepted at DESIGN stage by independent uniqueness and depth reviewers; implementation, ordinary UI win/loss evidence, cross-portfolio freeze and remediated200 baseline recheck remain required. No gameplay implementation or passed QA claimed.",
+    "comparisonScope": "Compared with full200 inventory, nearest tabletop/strategy rule implementations; remediated200 recheck required."
+  },
+  {
+    "id": "B33",
+    "name": "A Stitch in Time",
+    "core": "Buy spatial patches whose time cost determines opponent turn count and whose income pays only when crossing shared milestones.",
+    "stateActions": "Each side empty7\u00d77 quilt, five buttons; shared circular market of18 distinct polyomino patches with printed price, time cost1\u20136 and income0\u20133. Marker selects next three available patches; buy one, pay price, rotate/reflect and fit without overlap, marker moves past bought position, own time pawn advances patch cost. Behind pawn always acts next (ties latest arrival), so same player may take consecutive turns. Every passed income milestone pays current sewn income. Instead advance to one beyond rival pawn gaining one button per step. First to cross each of three single-cell bonus milestones gets patch to place. End both reach final time24; score buttons minus2 per empty quilt cell.",
+    "decisions": "Choose awkward high-income piece early versus easy area fill, time a long purchase to collect income but surrender small-patch race, take several low-time turns to monopolize market, preserve gaps for expected shapes.",
+    "depth": "Time and spatial economy inseparable: cannot buy if shape does not fit, market movement changes opponent choices. Several market orders; at least one win requires repeated turns and one deliberately yields milestone bonus for long-term income.",
+    "winLoss": "Higher final score wins; equal draws. Cannot end early while behind unless advancing through rival, as action rule states.",
+    "controls": "Select one of next three patches, rotate/reflect, preview anchor, confirm purchase; separate Advance time button shows income and turn consequences.",
+    "accessibility": "Patch offsets, price/time/income names, timeline milestone list and predicted next actor; coordinate board and no drag.",
+    "qa": [
+      "Win: buy early income patch, take two consecutive short-time purchases, cross income threshold, then fill quilt efficiently and win.",
+      "Loss: buy only large cheap-area/high-time patches, give rival extra turns and miss income; finish with lower final score.",
+      "Verify crossing multiple milestones collects each once, overshoot time clipped to24, behind player acts and unavailable patch cannot be purchased.",
+      "Acceptance evidence: independent complete ordinary-UI victory and natural loss from public fresh start; record setup/seed, visible action transcript, final screenshot and source hash. No engine calls, state injection, hidden information or solver-derived route. Verify restart plus390px touch and keyboard input; these tests are future gates, not claims."
+    ],
+    "existingNeighbors": [
+      "tangram-dock: acquisition is constrained by shared market/currency/tempo, no supplied exact-cover solution.",
+      "workshop-shift: turns are endogenously allocated by time positions and spatial fit; no fixed identical shift workers."
+    ],
+    "proposalNeighbors": [
+      "B08 adversarial corner frontier placement has no currency/time/income; B33 personal exact board fit shapes market/tempo choices."
+    ],
+    "risks": "Parent suggested to replace pure tempo race, not add both. Reject if income/time optional and always largest area wins; budget balance unverified.",
+    "reviewStatus": "Conditionally accepted at DESIGN stage by independent uniqueness and depth reviewers; implementation, ordinary UI win/loss evidence, cross-portfolio freeze and remediated200 baseline recheck remain required. No gameplay implementation or passed QA claimed.",
+    "comparisonScope": "Compared with full200 inventory, nearest tabletop/strategy rule implementations; remediated200 recheck required."
+  },
+  {
+    "id": "B34",
+    "name": "River Stakes",
+    "core": "Reassess hidden-hand strength across shared card reveals and respond to opponent bets with fold, call or raise.",
+    "stateActions": "Two-player community-card poker with explicit simplified fixed-limit betting. Each starts40 chips, blinds1/2 alternate. Two private cards each; shared flop3, turn1, river1. Betting before flop/after each reveal, up to three raises per street, raise size2 preflop/flop and4 turn/river. Check if no owed bet, call matching owed, fold surrender pot, raise if affordable. Equal stacks; all-in caps contest to matched contribution, refund unmatched excess. Best five of seven using displayed standard rank table wins showdown; ties split. Eight hands or bankruptcy ends.",
+    "decisions": "Continue a draw when price warrants or fold mediocre made hand, bet value versus bluff based on public texture/opponent history, avoid raising a dominated hand, manage match lead and finite bankroll.",
+    "depth": "House samples plausible unseen holdings conditional on public history and its own cards, never player private hand; mixed aggression with reproducible seed. Include ordinary wins involving both fold and showdown, not all-in coin flip.",
+    "winLoss": "More chips after eight hands wins; fewer loses; equal draws. Bankruptcy terminal loss/win. No real money.",
+    "controls": "Check/Call/Fold/Raise buttons with exact resulting pot/contribution; optional hand-strength reference explains only visible player combination, not future odds oracle.",
+    "accessibility": "Card ranks/suits text, betting history and owed amount, community versus private group labels; pending street clear.",
+    "qa": [
+      "Win: fold a dominated-looking flop without losing rest of stack, later value-bet strong river and finish eight-hand profit.",
+      "Loss: call successive strong opposing bets with weak hand, lose bankroll via real showdown.",
+      "Verify cannot fold-check for free accidentally, raises capped, dealer blind alternation, split pots and unmatched all-in refund; AI unseen-card independence.",
+      "Acceptance evidence: independent complete ordinary-UI victory and natural loss from public fresh start; record setup/seed, visible action transcript, final screenshot and source hash. No engine calls, state injection, hidden information or solver-derived route. Verify restart plus390px touch and keyboard input; these tests are future gates, not claims."
+    ],
+    "existingNeighbors": [
+      "five-card-evening: stake fixed before hold/redraw and paid by a rank table; B34 response betting, folds, opponent pot contest and staged community revelations are the decision loop.",
+      "sealed-bids: repeated responsive wagers risk recoverable bankroll under evolving private evidence; no one-use ordinal bids/prize queue."
+    ],
+    "proposalNeighbors": [
+      "B27 challenges role truth directly and can prove it; B34 betting beliefs resolved only by fold/showdown and no action-role claims."
+    ],
+    "risks": "Most overlap-sensitive extra due poker name/ranking shared; distinct only if multi-street betting and folds dominate, never count different poker deal as novelty.",
+    "reviewStatus": "Conditionally accepted at DESIGN stage by independent uniqueness and depth reviewers; implementation, ordinary UI win/loss evidence, cross-portfolio freeze and remediated200 baseline recheck remain required. No gameplay implementation or passed QA claimed.",
+    "comparisonScope": "Compared with full200 inventory, nearest tabletop/strategy rule implementations; remediated200 recheck required."
+  },
+  {
+    "id": "B35",
+    "name": "Rings Leave Ripples",
+    "core": "Move a ring to leave a marker and flip crossed marker runs; scoring removes one of your own future movement bases.",
+    "stateActions": "Hexagonal radius3 board,37 intersections. Alternate placing four own rings on empty cells, then movement phase. On turn choose own ring, leave own marker on its origin, move along a straight hex axis. May cross any empty intersections before markers; after first marker must cross entire contiguous marker run and stop at first empty intersection. Cannot cross another ring. All crossed markers flip owner; empty-to-empty move allowed. Any four collinear consecutive same-owner markers create scoring row. Resolve every row before next move: row owner selects four consecutive markers to remove, then removes one own ring permanently and gains one seal. If both sides have rows, mover resolves their own first; removing markers can break rival row. Multiple own rows resolve one at a time with choice. Victory immediately at third seal.",
+    "decisions": "Choose ring origin that seeds a row while its landing enables a future crossing, flip an enemy threat without creating a stronger rival row elsewhere, choose which scoring markers/ring to remove to preserve future movement options. Scoring voluntarily reduces your mobile sources; greedy immediate row can leave a weaker remaining ring position.",
+    "depth": "Four movable bases plus persistent two-color markers create positioning and forced-flip plans. At least three starts after placement; ordinary wins must involve deliberate marker reversal and non-nearest ring removal. Opponent searches ring moves plus scoring-removal choices. A repeat maximum-distance flip policy must fail across starts.",
+    "winLoss": "First three seals wins; house three loses. If current player has no legal ring move before three seals, opponent wins. Threefold full-position repetition draws;100 completed ring moves without third seal draws with no score-based shortcut.",
+    "controls": "Select ring then legal landing; preview crossed run and rows. During scoring select row endpoints then ring to remove; explicit confirm for each. Keyboard axial-coordinate cell list.",
+    "accessibility": "Each intersection describes ring or marker owner and coordinate. Crossing-run list, qualifying row endpoints and remaining movement bases printed; owner patterns plus words; no timed resolution.",
+    "qa": [
+      "Win: create marker row by crossing and flipping a mixed run, remove a strategically selected own ring, then maneuver remaining rings to earn third seal in full ordinary match. Repeat independent victory from different placement.",
+      "Loss: greedily flip a run that completes opponent row, allow their third seal and verify natural terminal loss; separately choose poor own ring retirement and continue to house victory.",
+      "Public referee study: simultaneous rows resolve mover first, selected marker removal can cancel other row; forced stop after contiguous marker run and inability to cross ring verified by rejected UI attempts.",
+      "Acceptance only with ordinary public fresh-start input transcripts and win/loss screenshots at exact source hash, no hidden model calls or solver route. Verify390px touch, keyboard focus, restart and slow readable scoring phase.",
+      "Independent full three-seal victories from two different initial placements are required; first scoring row is insufficient. Each transcript must explain selected ring retirement and show later movement consequences."
+    ],
+    "existingNeighbors": [
+      "reversi: place a stationary disc and bracket-flip lines versus relocate mobile rings, leave markers, cross/flip mandatory runs and retire movement bases for points.",
+      "four: completing marker row is an intermediate claim that deletes its markers and an own movable ring; four aligned gravity discs immediately ending play lacks this movement economy.",
+      "joining-lines: ring movement depends on run topology, not whole-line population; row-removal score shrinks own action bases rather than army connectivity."
+    ],
+    "proposalNeighbors": [
+      "B09 gifted-trait placement ends at first row; B35 mobile bases generate/flips markers and retire across multiple scoring rows.",
+      "B26 carries ordered stacks for road formation; B35 cannot stack or carry and must flip crossed contiguous markers."
+    ],
+    "risks": "Compact board may yield forced immediate rows or cramped placement; expand radius to4 only if ordinary games lack multi-turn plans. Independent uniqueness and depth reviews conditionally accepted this design; compact-board balance unverified. Original rules/text/art required, mechanics inspiration only. Exact row resolution publicly specified; cannot simplify to Reversi with line bonuses.",
+    "reviewStatus": "Conditionally accepted at DESIGN stage by independent uniqueness and depth reviewers; implementation, ordinary UI win/loss evidence, cross-portfolio freeze and remediated200 baseline recheck remain required. No gameplay implementation or passed QA claimed.",
+    "comparisonScope": "Full200 mechanics considered; closest reversi/four/joining-lines source rules reviewed. Recheck final baseline."
+  }
+]

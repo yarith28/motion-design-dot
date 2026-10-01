@@ -1,0 +1,797 @@
+[
+  {
+    "id": "A01",
+    "name": "Falling Orchard",
+    "status": "conditionally accepted design by independent uniqueness and depth reviewers; implementation, ordinary-input play and remediated-baseline recheck pending",
+    "core": "Remove an orthogonally connected same-symbol group; unsupported cells fall and empty columns close, changing which future groups exist.",
+    "stateActions": "A visible 7\u00d77 symbol board, remaining cells and score. Preview any group of at least two; confirm removes it, settles columns downward, then slides empty columns left. Undo restores the complete prior board. No new cells spawn.",
+    "decisions": "Clear a cheap obstructing group to join separated larger groups, or preserve it as support so another group does not split. Removal order changes both adjacency and future legal actions.",
+    "depth": "Three authored boards require respectively vertical joining, horizontal column closure, and a sacrifice that temporarily lowers maximum available group size. Replay optimizes remaining cells and group-square score; no board may be solved by repeatedly taking the largest group.",
+    "winLoss": "Win by clearing the authored board. A nonempty board with no group of two is a natural dead end; offer undo or retry and label it explicitly.",
+    "controls": "Tap/click a cell to preview its group; Confirm removes. Arrow keys navigate cells, Enter previews, native button activation confirms. Separate undo/restart buttons; no global Space handler.",
+    "accessibility": "Each cell has a letter and texture, row/column label, selected-group membership and size. After collapse announce moved columns and remaining cells; provide a row text table. No timer or essential animation.",
+    "qa": [
+      "On the horizontal-join study, complete a full keyboard win using column closure; record public actions and visible board after every removal.",
+      "On a supplied losing branch, remove the tempting large group and continue until isolated singletons remain; verify natural dead-end, no false victory, and undo recovery.",
+      "Tap-only mobile: preview one group, cancel, preview another, remove once; ensure one activation produces one removal and focus survives collapse."
+    ],
+    "existingNeighbors": [
+      {
+        "id": "tide-pool",
+        "difference": "Flood fill recolors one permanently growing region; this removes arbitrary existing groups and gravity changes the board topology."
+      },
+      {
+        "id": "merge-garden",
+        "difference": "No directional mass slide, equal-pair fusion or spawn; irreversible selective removal and column collapse are the decisions."
+      }
+    ],
+    "proposalNeighbors": [
+      "C match-three: swaps must create a line; A01 selects an existing connected group. Cross-review needed so both are not implemented as generic click-to-delete clusters."
+    ],
+    "risks": [
+      "Curated complete-clear boards can be tedious if singleton traps are opaque; show preview and undo.",
+      "Recheck all 200 after remediation handoff; full baseline inventory reviewed, original ten inspected separately."
+    ],
+    "independentReview": {
+      "uniqueness": "/root/review_uniqueness: conditional design acceptance; A05 removed; A15 model revised and accepted",
+      "depth": "/root/review_depth: conditional design acceptance; A08 mandatory bound revised; A15 final nested study gate retained",
+      "limitations": "No runtime created, no ordinary-input execution performed for these unimplemented games; QA entries are required tests, not completed evidence."
+    },
+    "baselineScreen": {
+      "inventory": "/workspace/expansion-300-design/baseline-inventory.txt",
+      "entriesCompared": 200,
+      "method": "Compared core action/state/decision loop against full catalog; nearest matches documented per proposal. Read original ten rule HTML plus relevant spatial-room/room.js and puzzle-lab/engines.js, EXPANSION-200-DESIGNS.md and EXPANSION-200-REVIEW.md.",
+      "movingBaseline": "Existing 200 are undergoing remediation elsewhere. Recheck against verified published handoff before implementing or treating uniqueness as final."
+    }
+  },
+  {
+    "id": "A02",
+    "name": "Corner Cabinet",
+    "status": "conditionally accepted design by independent uniqueness and depth reviewers; implementation, ordinary-input play and remediated-baseline recheck pending",
+    "core": "Solve a 2\u00d72 twist cube by quarter-turning faces; each move simultaneously permutes and reorients several shared corner cubies.",
+    "stateActions": "Eight corner identities and orientations, six labeled face views. Choose face and clockwise/counterclockwise quarter-turn. View rotation changes camera only. Undo and restart available.",
+    "decisions": "Temporarily break an assembled face to place another corner; choose short commutator sequences that restore protected pieces while changing others. Greedily maximizing matching stickers can prevent progress.",
+    "depth": "Three reachable scrambles isolate corner orientation, permutation and their coupling; introductory move diagrams explain notation. Later scrambles must require interleaving at least three face axes and revisiting a previously matched face. Optional move record supports replay without a harsh timer.",
+    "winLoss": "All six faces uniform is success, independent of whole-cube orientation. Unsolved certification is a recoverable failure naming mismatched corner groups; no invented terminal loss.",
+    "controls": "Tap a face and explicit clockwise/counterclockwise buttons. Keyboard face buttons and native activation; optional letter shortcuts only when cube surface has focus. Complete unfolded net is always usable.",
+    "accessibility": "Letters and textures identify all six faces; describe each corner's identity, current slot and orientation in a table. No mandatory drag, 3D motion or color discrimination.",
+    "qa": [
+      "Complete every public scramble with ordinary face controls and no solver/state access; include a win that breaks and restores an already uniform face.",
+      "Turn one face from solved, certify and verify failure; four identical quarter-turns restore the exact state and certificate.",
+      "Rotate camera during a partial solve and verify cube state and move count do not change; test whole-cube-equivalent solved orientations."
+    ],
+    "existingNeighbors": [
+      {
+        "id": "cube-seal",
+        "difference": "That rotates one rigid cube by travel; stickers never permute relative to one another. Here cubies move internally and no travel board exists."
+      },
+      {
+        "id": "good-order",
+        "difference": "No vacancy or single-tile slide; noncommuting face turns simultaneously change corner orientation and permutation."
+      },
+      {
+        "id": "shadow-turn",
+        "difference": "Pieces are coupled across faces; independent reference matching cannot solve them."
+      }
+    ],
+    "proposalNeighbors": [
+      "A08 signed-prefix sorting operates on a linear stack; it lacks shared three-dimensional corner orientations. Both need independent action-level review."
+    ],
+    "risks": [
+      "Can overwhelm newcomers; short teachable scrambles and full net mandatory.",
+      "Do not replace the real corner model with six independent rotate-to-match dials."
+    ],
+    "independentReview": {
+      "uniqueness": "/root/review_uniqueness: conditional design acceptance; A05 removed; A15 model revised and accepted",
+      "depth": "/root/review_depth: conditional design acceptance; A08 mandatory bound revised; A15 final nested study gate retained",
+      "limitations": "No runtime created, no ordinary-input execution performed for these unimplemented games; QA entries are required tests, not completed evidence."
+    },
+    "baselineScreen": {
+      "inventory": "/workspace/expansion-300-design/baseline-inventory.txt",
+      "entriesCompared": 200,
+      "method": "Compared core action/state/decision loop against full catalog; nearest matches documented per proposal. Read original ten rule HTML plus relevant spatial-room/room.js and puzzle-lab/engines.js, EXPANSION-200-DESIGNS.md and EXPANSION-200-REVIEW.md.",
+      "movingBaseline": "Existing 200 are undergoing remediation elsewhere. Recheck against verified published handoff before implementing or treating uniqueness as final."
+    }
+  },
+  {
+    "id": "A03",
+    "name": "Gentle Unknot",
+    "status": "conditionally accepted design by independent uniqueness and depth reviewers; implementation, ordinary-input play and remediated-baseline recheck pending",
+    "core": "Simplify an unknot diagram through legal Reidemeister loop, bigon and strand-slide moves while preserving over/under topology.",
+    "stateActions": "An oriented closed strand with crossing identities and signed over/under visits. Select a local region and one legal move: remove/add curl, remove/add crossing pair, or slide a strand across a crossing. Every move updates the actual embedding and crossing log.",
+    "decisions": "A locally removable curl can expose a useful bigon, but some diagrams first require a crossing-preserving type-III slide or a temporary type-II addition. Reducing visible crossings immediately is not a universal policy.",
+    "depth": "Authored unknots introduce the three moves, then combine nested and interleaved obstructions. At least one later diagram has no immediate reducing move and needs rearrangement. No nontrivial knot is mislabeled solvable.",
+    "winLoss": "Win at a single crossing-free closed loop. An illegal strand-through-strand edit is refused with the exact obstruction; a failed simplification certificate remains recoverable. Optional challenge move budget only after untimed learning.",
+    "controls": "Select numbered local regions and choose a named move; touch uses large region buttons rather than precision pulling. Keyboard visits the same regions, previews before commit, and can undo.",
+    "accessibility": "Crossings carry IDs, explicit over/under labels and an ordered traversal list. A text explanation says which arcs and crossings each move changes. Reduced motion uses before/after diagrams.",
+    "qa": [
+      "Ordinary-input win on a diagram with no initially removable curl or bigon; record a necessary type-III move and later reduction.",
+      "Attempt cancellation of two crossings with incompatible over/under order; confirm refusal leaves the state identical.",
+      "Apply a valid move and inverse, then compare traversal/crossings and keyboard focus. Full screen-reader usability requires actual review, not just SVG labels."
+    ],
+    "existingNeighbors": [
+      {
+        "id": "loose-ends",
+        "difference": "Loose Ends swaps graph vertex locations and ignores crossing topology; this preserves knot type and manipulates over/under crossings with local topological laws."
+      }
+    ],
+    "proposalNeighbors": [
+      "A05 hinge movement preserves physical linkage rather than strand crossing topology; no shared engine is assumed."
+    ],
+    "risks": [
+      "Highest explanatory and geometry implementation risk in this batch; reject if legal moves are only opaque preauthored next-step buttons.",
+      "Need genuine branched local choices, verified topology and accessible arc descriptions before acceptance."
+    ],
+    "independentReview": {
+      "uniqueness": "/root/review_uniqueness: conditional design acceptance; A05 removed; A15 model revised and accepted",
+      "depth": "/root/review_depth: conditional design acceptance; A08 mandatory bound revised; A15 final nested study gate retained",
+      "limitations": "No runtime created, no ordinary-input execution performed for these unimplemented games; QA entries are required tests, not completed evidence."
+    },
+    "baselineScreen": {
+      "inventory": "/workspace/expansion-300-design/baseline-inventory.txt",
+      "entriesCompared": 200,
+      "method": "Compared core action/state/decision loop against full catalog; nearest matches documented per proposal. Read original ten rule HTML plus relevant spatial-room/room.js and puzzle-lab/engines.js, EXPANSION-200-DESIGNS.md and EXPANSION-200-REVIEW.md.",
+      "movingBaseline": "Existing 200 are undergoing remediation elsewhere. Recheck against verified published handoff before implementing or treating uniqueness as final."
+    }
+  },
+  {
+    "id": "A04",
+    "name": "Compass House",
+    "status": "conditionally accepted design by independent uniqueness and depth reviewers; implementation, ordinary-input play and remediated-baseline recheck pending",
+    "core": "Construct exact geometric objects from given points using an unmarked straightedge, fixed-radius transfer and circle intersections.",
+    "stateActions": "Given labeled points plus derived points, lines and circles with provenance. Choose Line through two points, Circle at a point through another point, or select an intersection. Arbitrary screen coordinates cannot create certified points.",
+    "decisions": "Choose reusable auxiliary circles and intersections so later constructions share work. Distinguish a geometric locus from a merely close visual guess, and use dependency chains to construct an otherwise unavailable point.",
+    "depth": "Progress from a perpendicular bisector to circumcenter and a tangent construction. Each later study must require multiple dependent constructions and offer more than one valid method; optional par encourages reuse, not one memorized button sequence.",
+    "winLoss": "Win when a derived object exactly meets the geometric target predicate. Invalid/degenerate constructions and a wrong submitted object produce precise recoverable failures; no coordinate-tolerance guessing or lives.",
+    "controls": "Select tool, then labeled objects by taps or keyboard list. Intersection candidates are separate buttons. Zoom is optional, and undo removes downstream dependents with an announced preview.",
+    "accessibility": "All objects have names and incidence/provenance text. Circle center/radius endpoints and intersection relations are readable. Do not rely on subtle line overlap, drag precision or color.",
+    "qa": [
+      "From points A and B, use equal-radius circles centered at A/B, select both intersections, draw their line, and certify the perpendicular bisector through ordinary controls.",
+      "On the circumcenter study, construct two side bisectors, select their intersection and certify; a visibly near but nonconstructed location must never be selectable as a certified point.",
+      "Submit AB as its own perpendicular bisector and verify explained failure. Try line A\u2013A and confirm no degenerate object or consumed step."
+    ],
+    "existingNeighbors": [
+      {
+        "id": "bilateral",
+        "difference": "Copies cells across a known seam; this derives new geometric loci through construction dependencies."
+      },
+      {
+        "id": "parcel-survey",
+        "difference": "That chooses rectangle corners on a fixed grid; this synthesizes points that do not initially exist."
+      }
+    ],
+    "proposalNeighbors": [
+      "A06 divides material by irreversible cuts, with no construction of auxiliary geometry."
+    ],
+    "risks": [
+      "Exact or robust symbolic geometric predicates are essential; accepting nearby clicks destroys the core.",
+      "Known geometry tasks need readable demonstrations and more than one nontrivial construction per game."
+    ],
+    "independentReview": {
+      "uniqueness": "/root/review_uniqueness: conditional design acceptance; A05 removed; A15 model revised and accepted",
+      "depth": "/root/review_depth: conditional design acceptance; A08 mandatory bound revised; A15 final nested study gate retained",
+      "limitations": "No runtime created, no ordinary-input execution performed for these unimplemented games; QA entries are required tests, not completed evidence."
+    },
+    "baselineScreen": {
+      "inventory": "/workspace/expansion-300-design/baseline-inventory.txt",
+      "entriesCompared": 200,
+      "method": "Compared core action/state/decision loop against full catalog; nearest matches documented per proposal. Read original ten rule HTML plus relevant spatial-room/room.js and puzzle-lab/engines.js, EXPANSION-200-DESIGNS.md and EXPANSION-200-REVIEW.md.",
+      "movingBaseline": "Existing 200 are undergoing remediation elsewhere. Recheck against verified published handoff before implementing or treating uniqueness as final."
+    }
+  },
+  {
+    "id": "A05",
+    "name": "Hinge Atlas",
+    "status": "rejected: same configuration-space core as C13 Elbow Room; excluded from accepted count",
+    "core": "Reconfigure a fixed chain of rigid hinged polygons through collision-free rotations until its union matches a target silhouette.",
+    "stateActions": "Rigid polygons joined at fixed vertex hinges; one anchored polygon. Select a hinge and rotate the downstream connected chain in discrete small increments. Swept polygons may not intersect obstacles or other panels. Connections cannot detach.",
+    "decisions": "Open a distant hinge to create clearance before rotating an inner hinge; choose an approach side and preserve room for the remaining chain. The same endpoint pose can be unreachable along an obstructed sweep.",
+    "depth": "Three hinge trees need respectively clearance, nesting and a temporary outward excursion. At least one final pose cannot be reached by setting each hinge directly to its final angle in either index order. Replay minimizes reversals and rotation distance.",
+    "winLoss": "Win at the target pose/silhouette within exact angle states. Collision attempts are natural recoverable failures; check explains uncovered and overlapping target regions. No terminal timer.",
+    "controls": "Choose hinge in a labeled diagram/list; rotate with \u2212/+ controls or arrows while rotation control has focus. Mobile uses large step buttons. Preview swept region before committing.",
+    "accessibility": "Number panels/hinges and announce angle, downstream members and collision partner. A numeric pose table accompanies the diagram; movement may be instant under reduced motion.",
+    "qa": [
+      "Complete the nesting study through ordinary controls, demonstrating an intermediate angle farther from the final target to create clearance.",
+      "Attempt the tempting direct inner-hinge turn and verify swept collision rejection, even when the final pose alone would not overlap.",
+      "Undo a multi-panel rotation and confirm every descendant returns, hinge anchors remain coincident and focus stays on the same hinge."
+    ],
+    "existingNeighbors": [
+      {
+        "id": "tangram-dock",
+        "difference": "Loose pieces can be freely repositioned; this maintains hinges and requires a continuous collision-free configuration path."
+      },
+      {
+        "id": "paper-trail",
+        "difference": "That folds a 1D strip to a layer order; this rotates rigid planar linked components around persistent hinges without stacking."
+      },
+      {
+        "id": "four-holds",
+        "difference": "That relocates independent support contacts under reach/fatigue; this moves a whole downstream rigid chain with swept collision."
+      }
+    ],
+    "proposalNeighbors": [
+      "C sheet-cut/fold candidate must stay inverse cut geometry, not articulated collision navigation."
+    ],
+    "risks": [
+      "Reject if collision checks only test endpoints or every hinge can simply match its target independently.",
+      "Nonvisual spatial usability must be honestly tested; text poses alone do not establish it.",
+      "Independent uniqueness reviewer confirmed duplicate C13. Keep record for exclusion, not implementation."
+    ]
+  },
+  {
+    "id": "A06",
+    "name": "Fair Portions",
+    "status": "conditionally accepted design by independent uniqueness and depth reviewers; implementation, ordinary-input play and remediated-baseline recheck pending",
+    "core": "Use a limited number of straight guillotine cuts on connected pieces of an irregular, nonuniform sheet to produce specified equal-mass portions with protected emblems.",
+    "stateActions": "A polygonal sheet with exact cellwise density and labeled protected emblems. Choose one existing piece and two boundary points from an explicit rational-coordinate lattice; preview a straight cut, then commit. Each cut replaces one piece by its two polygonal children. Cuts cannot cross an emblem.",
+    "decisions": "An early cut establishes which later cuts are even possible. Choose whether to split a future multi-portion region or isolate a finished portion; equal area is insufficient where density differs. Cutting one portion exactly can strand the remaining mass in an unsplittable shape.",
+    "depth": "Three studies: four equal portions from an L-sheet, unequal density with four portions, and emblem constraints requiring a non-greedy first cut. Display exact piece masses after preview; no hidden physics guessing.",
+    "winLoss": "Win with the requested portion count, exact mass per piece and one intact emblem each. Irreversible over-cut or remaining cut budget incapable of reaching the target count ends that attempt with undo/retry available.",
+    "controls": "Select piece and boundary point buttons, then Cut. Keyboard lists lattice points in perimeter order; touchscreen need not drag a thin line. Undo restores the parent polygon.",
+    "accessibility": "List piece vertices, rational mass, contained emblems and cut endpoints; use patterns and numeric density labels. Preview reports the two proposed masses and forbidden emblem intersection.",
+    "qa": [
+      "Complete all portions by ordinary endpoint selections, including one density study where equal-area slicing fails but equal-mass slicing succeeds.",
+      "Commit a legal first cut that strands an emblem with too much mass, then reach a natural unusable final partition; certify rejects and undo recovers.",
+      "Attempt a line tangent to a corner or passing through an emblem; verify no zero-area sliver, lost mass or accidental cut."
+    ],
+    "existingNeighbors": [
+      {
+        "id": "parcel-survey",
+        "difference": "Static axis-aligned rectangle cover from anchor counts; this progressively changes material topology through guillotine cuts of arbitrary polygon pieces and mass conservation."
+      },
+      {
+        "id": "fraction-mosaic",
+        "difference": "Places supplied intervals; this creates portions and their feasible future cuts."
+      }
+    ],
+    "proposalNeighbors": [
+      "A04 constructs auxiliary loci; A06 never adds reusable derived geometry. C cutting proposals require comparison before acceptance."
+    ],
+    "risks": [
+      "Potential overlap with C cutting game and Parcel Survey if reduced to selecting independent final regions.",
+      "Need coupled non-greedy authored instances; equal rectangles alone are rejected."
+    ],
+    "independentReview": {
+      "uniqueness": "/root/review_uniqueness: conditional design acceptance; A05 removed; A15 model revised and accepted",
+      "depth": "/root/review_depth: conditional design acceptance; A08 mandatory bound revised; A15 final nested study gate retained",
+      "limitations": "No runtime created, no ordinary-input execution performed for these unimplemented games; QA entries are required tests, not completed evidence."
+    },
+    "baselineScreen": {
+      "inventory": "/workspace/expansion-300-design/baseline-inventory.txt",
+      "entriesCompared": 200,
+      "method": "Compared core action/state/decision loop against full catalog; nearest matches documented per proposal. Read original ten rule HTML plus relevant spatial-room/room.js and puzzle-lab/engines.js, EXPANSION-200-DESIGNS.md and EXPANSION-200-REVIEW.md.",
+      "movingBaseline": "Existing 200 are undergoing remediation elsewhere. Recheck against verified published handoff before implementing or treating uniqueness as final."
+    }
+  },
+  {
+    "id": "A07",
+    "name": "Words That Move",
+    "status": "conditionally accepted design by independent uniqueness and depth reviewers; implementation, ordinary-input play and remediated-baseline recheck pending",
+    "core": "Push physical noun/property words into readable rules that dynamically change which objects move, block, transform and satisfy the goal.",
+    "stateActions": "Grid contains ordinary objects and movable words. Contiguous NOUN\u2013IS\u2013PROPERTY lines define rules simultaneously; YOU controls every object with that property, PUSH permits pushing, STOP blocks, WIN supplies goal contact. Each directional input resolves current rules, movement and then rebuilt rules.",
+    "decisions": "Break the current control or obstacle rule only after arranging a successor; move multiple controlled objects to transport words; turn a blocking object into a goal or a movable tool. Rule words themselves occupy and constrain space.",
+    "depth": "Three compact studies require changing an interaction, transferring control, and managing simultaneous control. No level may be solved while leaving the initial rule set unchanged. A fourth optional puzzle supports multiple semantic solutions.",
+    "winLoss": "Win when a YOU object touches a WIN object. No remaining YOU object or a sealed unreachable rule configuration is a recoverable dead end; always allow undo. No arbitrary move budget.",
+    "controls": "Directional touch pad or board-focused arrows; undo and restart buttons. Tab explores the board/rule list without taking a turn. No text typing required.",
+    "accessibility": "Every object and word has a visible text label. Live rule list announces added/removed rules and controlled-object locations. A text grid supports inspection without animation.",
+    "qa": [
+      "Ordinary-input win on each study, recording the changed rule that was necessary; a rule-frozen control run must be demonstrably unwinnable by authored topology, not merely fail a random probe.",
+      "Push YOU out of every valid rule, verify explicit no-control dead end, then undo restores control and all prior rules.",
+      "Build two simultaneous YOU rules and verify one action moves both consistently; a focused Undo button activated with Space undoes exactly once and does not move the board."
+    ],
+    "existingNeighbors": [
+      {
+        "id": "pebble-post",
+        "difference": "Sokoban has fixed player/box/goal behavior; rules here are physical manipulable objects and can change the action semantics and identity of the winning condition."
+      },
+      {
+        "id": "rewrite-press",
+        "difference": "String substitutions follow an external fixed rule list; these on-board sentences are executable rules governing the spatial world that moves them."
+      },
+      {
+        "id": "gate-foundry",
+        "difference": "Fixed circuit socket functions do not change the available movement actions or player identity."
+      }
+    ],
+    "proposalNeighbors": [
+      "D formal-rule manipulation must be symbolic proof/semantics, not spatial executable rule pushing."
+    ],
+    "risks": [
+      "Most complex state resolution in this batch; define simultaneous push conflicts, transformations and rule precedence explicitly before implementation.",
+      "Reject levels where only one trivial keyword swap is required or rule blocks act as decorative keys."
+    ],
+    "independentReview": {
+      "uniqueness": "/root/review_uniqueness: conditional design acceptance; A05 removed; A15 model revised and accepted",
+      "depth": "/root/review_depth: conditional design acceptance; A08 mandatory bound revised; A15 final nested study gate retained",
+      "limitations": "No runtime created, no ordinary-input execution performed for these unimplemented games; QA entries are required tests, not completed evidence."
+    },
+    "baselineScreen": {
+      "inventory": "/workspace/expansion-300-design/baseline-inventory.txt",
+      "entriesCompared": 200,
+      "method": "Compared core action/state/decision loop against full catalog; nearest matches documented per proposal. Read original ten rule HTML plus relevant spatial-room/room.js and puzzle-lab/engines.js, EXPANSION-200-DESIGNS.md and EXPANSION-200-REVIEW.md.",
+      "movingBaseline": "Existing 200 are undergoing remediation elsewhere. Recheck against verified published handoff before implementing or treating uniqueness as final."
+    }
+  },
+  {
+    "id": "A08",
+    "name": "Turn the Stack",
+    "status": "conditionally accepted design by independent uniqueness and depth reviewers; implementation, ordinary-input play and remediated-baseline recheck pending",
+    "core": "Sort distinct signed discs with a spatula that reverses and flips the entire top prefix of a stack.",
+    "stateActions": "A linear stack of seven to ten numbered discs, each face marked up/down. Select a cut below disc k; Flip reverses the first k entries and negates their orientations. No individual swaps, lifts or arbitrary reordering.",
+    "decisions": "Expose a desired disc, choose its orientation before sinking it into place, and avoid disturbing a completed suffix. A flip simultaneously changes order and face orientation of all affected discs.",
+    "depth": "Teach a one-disc orientation correction, then signed permutation with repeated access to deep discs. Later named challenge certification has a proven attainable flip limit below the fixed three-flips-per-disc routine; exploiting multi-disc substructure is mandatory. Offer untimed free practice separately. Author must show at least two distinct near-optimal plans and a genuine choice that changes attainable cost.",
+    "winLoss": "Win in increasing size with every marked face up within the named challenge flip limit. Wrong orientation/order or exceeding the limit yields a recoverable failed attempt; undo/retry available. Free practice is explicitly distinct from completing the challenge.",
+    "controls": "Tap a boundary or choose prefix length with numeric controls, then Flip. Keyboard boundaries are buttons; preview lists resulting prefix before commit. Undo supported.",
+    "accessibility": "Disc numbers and UP/DOWN text, not only shading. Announce selected prefix length and resulting top-to-bottom order. No dragging or speed requirement.",
+    "qa": [
+      "Complete a signed-stack fixture through native controls, including a necessary one-disc flip and a multi-disc reversal; record final order and orientations.",
+      "Submit correctly ordered discs with one face down; reject without calling it solved. Flip the same prefix twice and verify exact restoration.",
+      "On mobile select a deep boundary, change selection without flipping, then commit; only one operation and move increment occurs.",
+      "Complete the final challenge through ordinary UI within its displayed bound; separately play the straightforward isolate-each-largest-disc routine and verify it exhausts the bound before success. If both pass, tighten/re-author before acceptance."
+    ],
+    "existingNeighbors": [
+      {
+        "id": "crate-crane",
+        "difference": "That transfers one top item among capacity-limited stacks; here one action reverses and reorients an inseparable prefix and there are no destination stacks."
+      },
+      {
+        "id": "good-order",
+        "difference": "No blank-cell routing; operations affect a whole signed prefix."
+      },
+      {
+        "id": "gear-train",
+        "difference": "Adjacent swaps preserve each gear orientation; prefix reversal couples many positions and signs."
+      }
+    ],
+    "proposalNeighbors": [
+      "A02 also uses noncommuting permutations; reviewers must confirm signed-prefix planning feels different enough from face-turn corner restoration."
+    ],
+    "risks": [
+      "Potential algorithmic repetition. Reject a game consisting only of larger stacks solved by identical three-flips-per-disc routine; short optimal-par challenges must create genuine reuse decisions."
+    ],
+    "independentReview": {
+      "uniqueness": "/root/review_uniqueness: conditional design acceptance; A05 removed; A15 model revised and accepted",
+      "depth": "/root/review_depth: conditional design acceptance; A08 mandatory bound revised; A15 final nested study gate retained",
+      "limitations": "No runtime created, no ordinary-input execution performed for these unimplemented games; QA entries are required tests, not completed evidence."
+    },
+    "baselineScreen": {
+      "inventory": "/workspace/expansion-300-design/baseline-inventory.txt",
+      "entriesCompared": 200,
+      "method": "Compared core action/state/decision loop against full catalog; nearest matches documented per proposal. Read original ten rule HTML plus relevant spatial-room/room.js and puzzle-lab/engines.js, EXPANSION-200-DESIGNS.md and EXPANSION-200-REVIEW.md.",
+      "movingBaseline": "Existing 200 are undergoing remediation elsewhere. Recheck against verified published handoff before implementing or treating uniqueness as final."
+    }
+  },
+  {
+    "id": "A09",
+    "name": "One Last Marble",
+    "status": "conditionally accepted design by independent uniqueness and depth reviewers; implementation, ordinary-input play and remediated-baseline recheck pending",
+    "core": "Fling a marble along a row or column into a distant marble; impacts transfer motion along the line and eject the last marble, leaving the striker near contact.",
+    "stateActions": "Fixed grid containing marbles with empty spaces. Choose marble and cardinal direction. A launch is legal only if another marble lies beyond at least one gap. Motion propagates through collisions; exactly the outward final marble exits, and the others settle at their contact-adjacent positions.",
+    "decisions": "Choose which contact chain to alter so future launches retain a gap and align remaining marbles. An immediately available ejection can leave the survivors adjacent or diagonally isolated with no legal launch.",
+    "depth": "Three authored boards require horizontal-to-vertical setup, use of a multi-impact chain, and temporarily relocating the future final survivor. Every board needs order planning, not just any available elimination.",
+    "winLoss": "One marble remaining wins. Two or more marbles with no legal separated contact is a natural dead end; show why each potential direction fails, permit undo.",
+    "controls": "Select marble, then one of four direction buttons; keyboard grid focus and explicit directions. Preview the whole impact chain before commit. Animation may be skipped.",
+    "accessibility": "Number marbles and rows/columns; the preview lists each contact, final positions and ejected marble. Selection and legal direction states are explicit text.",
+    "qa": [
+      "Complete a board through ordinary inputs using a multi-impact chain that sets up a perpendicular later launch.",
+      "Follow the authored tempting first ejection into a no-launch terminal state; verify no victory with two marbles and undo restores a playable state.",
+      "Try launching into an adjacent marble and off the board without a target; both must leave all positions unchanged."
+    ],
+    "existingNeighbors": [
+      {
+        "id": "peg",
+        "difference": "Peg solitaire moves the jumper to a fixed empty destination and removes the jumped midpoint; impacts here transfer motion across variable gaps, relocate several pieces and eject the final contact."
+      },
+      {
+        "id": "ice-station",
+        "difference": "A lone slider stops against walls while collecting targets; collision transfer changes the population and geometry of all future actions."
+      }
+    ],
+    "proposalNeighbors": [
+      "C billiards/pool should retain continuous aim/friction; this is a discrete contact-transfer puzzle without aim strength."
+    ],
+    "risks": [
+      "Must not simplify into jump-over-an-adjacent-piece elimination, which would duplicate Peg.",
+      "Exact collision endpoint rules need diagrams and source-independent UI examples before coding."
+    ],
+    "independentReview": {
+      "uniqueness": "/root/review_uniqueness: conditional design acceptance; A05 removed; A15 model revised and accepted",
+      "depth": "/root/review_depth: conditional design acceptance; A08 mandatory bound revised; A15 final nested study gate retained",
+      "limitations": "No runtime created, no ordinary-input execution performed for these unimplemented games; QA entries are required tests, not completed evidence."
+    },
+    "baselineScreen": {
+      "inventory": "/workspace/expansion-300-design/baseline-inventory.txt",
+      "entriesCompared": 200,
+      "method": "Compared core action/state/decision loop against full catalog; nearest matches documented per proposal. Read original ten rule HTML plus relevant spatial-room/room.js and puzzle-lab/engines.js, EXPANSION-200-DESIGNS.md and EXPANSION-200-REVIEW.md.",
+      "movingBaseline": "Existing 200 are undergoing remediation elsewhere. Recheck against verified published handoff before implementing or treating uniqueness as final."
+    }
+  },
+  {
+    "id": "A10",
+    "name": "Rooms in Motion",
+    "status": "conditionally accepted design by independent uniqueness and depth reviewers; implementation, ordinary-input play and remediated-baseline recheck pending",
+    "core": "Insert a spare corridor tile at an outer lane to shift an entire maze row or column, ejecting the next spare, then traverse the newly connected passages.",
+    "stateActions": "A 5\u00d75 tiled maze, one spare tile, player and ordered objectives attached to tiles. Rotate spare, choose permitted insertion edge, shift line including any occupant/objectives, then move through any currently connected corridor component. Reverse insertion on the immediately previous lane is forbidden.",
+    "decisions": "Shift a target closer while preserving an escape route, carry the player with a displaced tile, and choose where to finish before the next insertion. The spare's outgoing shape constrains the next topology change.",
+    "depth": "Three studies require carrying a target, deliberate player displacement and cycling a useful corner tile through the spare. Authored insertion budgets allow multiple plans but rule out simply shifting one lane repeatedly.",
+    "winLoss": "Collect the ordered objectives and return home before the insertion budget is exhausted. Illegal insertion or disconnected walk is refused. Budget exhaustion is an explained loss with replay.",
+    "controls": "Rotate/insert buttons around board; movement by destination selection from reachable cells or arrow-by-arrow path. Keyboard list includes insertion ports. Walking and insertion phases clearly separated.",
+    "accessibility": "Each tile exposes corridor ports and coordinate, spare tile labeled, selected insertion announces which line and occupants will move. Text reachability list available.",
+    "qa": [
+      "Complete a full study through ordinary controls that moves the player with an inserted line and later uses the ejected spare to reconnect home.",
+      "Exhaust insertion budget while outside home and verify loss; restarting restores objective order and initial spare.",
+      "Try reversing the previous insertion and walking across an unconnected seam; reject without shifting tiles or advancing phase."
+    ],
+    "existingNeighbors": [
+      {
+        "id": "tile-weave",
+        "difference": "Rotates fixed pipe tiles to certify a global network; this displaces a whole lane, exchanges a spare and carries occupants before route traversal."
+      },
+      {
+        "id": "orbit-transfer",
+        "difference": "Routes in an existing fixed graph; here the action rebuilds the graph and relocates its contents."
+      }
+    ],
+    "proposalNeighbors": [
+      "C railway shunting acts on coupled vehicles along fixed tracks; A10 moves the tracks and rooms themselves."
+    ],
+    "risks": [
+      "If target collection works without inserting, the defining mechanic has failed. Every study must include initially disconnected required components.",
+      "C dynamic-maze candidates need final cross-batch check."
+    ],
+    "independentReview": {
+      "uniqueness": "/root/review_uniqueness: conditional design acceptance; A05 removed; A15 model revised and accepted",
+      "depth": "/root/review_depth: conditional design acceptance; A08 mandatory bound revised; A15 final nested study gate retained",
+      "limitations": "No runtime created, no ordinary-input execution performed for these unimplemented games; QA entries are required tests, not completed evidence."
+    },
+    "baselineScreen": {
+      "inventory": "/workspace/expansion-300-design/baseline-inventory.txt",
+      "entriesCompared": 200,
+      "method": "Compared core action/state/decision loop against full catalog; nearest matches documented per proposal. Read original ten rule HTML plus relevant spatial-room/room.js and puzzle-lab/engines.js, EXPANSION-200-DESIGNS.md and EXPANSION-200-REVIEW.md.",
+      "movingBaseline": "Existing 200 are undergoing remediation elsewhere. Recheck against verified published handoff before implementing or treating uniqueness as final."
+    }
+  },
+  {
+    "id": "A11",
+    "name": "Bonding Room",
+    "status": "conditionally accepted design by independent uniqueness and depth reviewers; implementation, ordinary-input play and remediated-baseline recheck pending",
+    "core": "Move atoms that automatically form persistent bonds on contact, turning separate movable objects into rigid molecules whose expanding footprint must navigate the room.",
+    "stateActions": "Atoms have explicit valence capacities and existing bonds. Select any connected molecule, translate it one grid unit if its entire footprint fits, then form every permitted adjacent bond under a documented deterministic order. Bonds cannot be cut; undo can reverse a move. Goal specifies molecular connectivity and delivery region.",
+    "decisions": "Choose assembly order and approach side so an early bond does not consume a valence needed later or create a shape too wide for an exit. A loose atom can pass a corridor before it becomes part of a larger rigid body.",
+    "depth": "Three studies require delayed assembly, branch attachment from a particular side and transporting components separately before final bonding. At least one wrong legal bond creates a provable valence dead end.",
+    "winLoss": "Win with the required connectivity and all product atoms in the dock. Wrong saturated connectivity or an undeliverable rigid product is a recoverable dead end; certify explains missing/extra bonds.",
+    "controls": "Select atom/molecule, use cardinal controls. Keyboard can select atoms from a list and move with focused direction controls. Preview candidate bonds and combined footprint before commit.",
+    "accessibility": "Atoms carry symbol, ID and capacity/used-valence text. Provide a bond adjacency list and footprint coordinates, with explicit selection of the whole connected molecule.",
+    "qa": [
+      "Win the narrow-exit study by moving separate components through before assembling them; no hidden-state solver or debug placement.",
+      "Make the available but wrong saturating bond, certify failure with exact obstructed target bond, undo and finish legitimately.",
+      "Select a bonded atom, move once and verify all atoms in that component translate equally; a collision by any member rejects the whole move."
+    ],
+    "existingNeighbors": [
+      {
+        "id": "pebble-post",
+        "difference": "Crates never join and player pushes individual objects; this directly moves whole connected components whose shape and future legal moves change irreversibly when they bond."
+      },
+      {
+        "id": "tangram-dock",
+        "difference": "Supplied loose shapes retain their identity; these shapes are created through valence-constrained contact and must navigate after assembly."
+      }
+    ],
+    "proposalNeighbors": [
+      "A05 preserves a fixed hinged connection graph and changes angles; A11 creates rigid connectivity with no articulation. D chemistry/recipe games must not duplicate spatial bonding."
+    ],
+    "risks": [
+      "Bond order cannot be ambiguous when several contacts form at once; deterministic rules and previews required.",
+      "Reject if moving single atoms to obvious final sockets suffices without planning an intermediate molecular footprint."
+    ],
+    "independentReview": {
+      "uniqueness": "/root/review_uniqueness: conditional design acceptance; A05 removed; A15 model revised and accepted",
+      "depth": "/root/review_depth: conditional design acceptance; A08 mandatory bound revised; A15 final nested study gate retained",
+      "limitations": "No runtime created, no ordinary-input execution performed for these unimplemented games; QA entries are required tests, not completed evidence."
+    },
+    "baselineScreen": {
+      "inventory": "/workspace/expansion-300-design/baseline-inventory.txt",
+      "entriesCompared": 200,
+      "method": "Compared core action/state/decision loop against full catalog; nearest matches documented per proposal. Read original ten rule HTML plus relevant spatial-room/room.js and puzzle-lab/engines.js, EXPANSION-200-DESIGNS.md and EXPANSION-200-REVIEW.md.",
+      "movingBaseline": "Existing 200 are undergoing remediation elsewhere. Recheck against verified published handoff before implementing or treating uniqueness as final."
+    }
+  },
+  {
+    "id": "A12",
+    "name": "Unfolding House",
+    "status": "conditionally accepted design by independent uniqueness and depth reviewers; implementation, ordinary-input play and remediated-baseline recheck pending",
+    "core": "Cut selected seams of a polyhedral surface, then unfold retained hinges into the plane without face overlap to create a usable single connected net.",
+    "stateActions": "A small polyhedron with labeled polygonal faces and seams. Toggle proposed cuts, choose a root face, and perform a preview unfold around retained edges. A retained cycle cannot flatten as a rigid net; disconnected faces are rejected. All face transforms derive from actual hinge geometry.",
+    "decisions": "A seam choice changes which entire subtree swings into which planar region. Retaining locally convenient attachments may place distant faces on top of one another or create a sheet too wide for the stock.",
+    "depth": "Start with a cube, then a stepped polycube surface and an asymmetric prism. Multiple valid nets accepted. Later stock outlines require net-shape planning, not merely finding any spanning tree.",
+    "winLoss": "Win with one connected nonoverlapping net inside the stock outline. Cycles, disconnected faces, overlap or overflow are concrete recoverable certification failures with involved faces named.",
+    "controls": "Seam list with cut/hinge state, root-face selector and Unfold button; no required 3D dragging. Keyboard and touch share the full face/seam list. Folded and flat diagrams shown side by side.",
+    "accessibility": "Face-edge adjacency and exact flat coordinates are exposed after preview. Cut edges use dashed strokes and words; overlapping face pairs announced. Reduced motion unfolds instantly.",
+    "qa": [
+      "Construct a valid cube net through seam controls, then complete the asymmetric stock-constrained study using a different tree shape.",
+      "Submit a connected seam tree that unfolds with face overlap; verify explicit overlap failure despite graph connectivity.",
+      "Retain a cycle, then disconnect a face in separate tests; each must explain the actual topology error and preserve editable selections."
+    ],
+    "existingNeighbors": [
+      {
+        "id": "copper-tree",
+        "difference": "Graph connectivity/cost alone determines success; here a hinge tree can still fail because its recursively transformed faces overlap or overflow real stock."
+      },
+      {
+        "id": "paper-trail",
+        "difference": "Existing fold action merges a 1D strip's layer stacks; this derives a 2D net by selecting seams of a 3D surface."
+      },
+      {
+        "id": "voxel-post",
+        "difference": "Infers occupancy from projection counts; this manipulates surface connectivity and its planar embedding."
+      }
+    ],
+    "proposalNeighbors": [
+      "A05 finds a collision-free configuration path of a fixed hinge chain; A12 chooses which surface seams remain and evaluates a fully flattened embedding. C paper-cut candidate must be checked."
+    ],
+    "risks": [
+      "Borderline graph-tree constraint variant unless spatial overlap and sheet fit drive most choices; independent review required.",
+      "Use exact small polyhedra; no generic freeform 3D mesh editor in the initial scope."
+    ],
+    "independentReview": {
+      "uniqueness": "/root/review_uniqueness: conditional design acceptance; A05 removed; A15 model revised and accepted",
+      "depth": "/root/review_depth: conditional design acceptance; A08 mandatory bound revised; A15 final nested study gate retained",
+      "limitations": "No runtime created, no ordinary-input execution performed for these unimplemented games; QA entries are required tests, not completed evidence."
+    },
+    "baselineScreen": {
+      "inventory": "/workspace/expansion-300-design/baseline-inventory.txt",
+      "entriesCompared": 200,
+      "method": "Compared core action/state/decision loop against full catalog; nearest matches documented per proposal. Read original ten rule HTML plus relevant spatial-room/room.js and puzzle-lab/engines.js, EXPANSION-200-DESIGNS.md and EXPANSION-200-REVIEW.md.",
+      "movingBaseline": "Existing 200 are undergoing remediation elsewhere. Recheck against verified published handoff before implementing or treating uniqueness as final."
+    }
+  },
+  {
+    "id": "A13",
+    "name": "An Unfair Circle",
+    "status": "conditionally accepted design by independent uniqueness and depth reviewers; implementation, ordinary-input play and remediated-baseline recheck pending",
+    "core": "Allocate a shared set of numbered faces among three dice so A beats B, B beats C and C beats A, despite equal mean values.",
+    "stateActions": "Eighteen face tokens: two copies of every value 1\u20139. Three six-face dice each need total30. Select two occupied face sockets to swap their tokens; every face participates in six comparisons against each neighboring die. Exact36-outcome win/tie/loss tables update publicly.",
+    "decisions": "Concentrate large values on a few faces to sacrifice many small losses for specific matchups, then repair the outgoing matchup without destroying the incoming one. Equal expected values cannot certify pairwise win probability. Every swap changes two coupled distributions.",
+    "depth": "The main cyclic challenge needs at least20 strictly winning pairs in each directed matchup, equal total30 and all18 tokens used. A tutorial contrasts mean with win probability; later authored token sets must change the attainable distribution pattern rather than scale the same solution. Multiple allocations and permutations are accepted.",
+    "winLoss": "Win when all three exact probability targets and equal-mean constraints hold. A wrong certification highlights a losing matchup or unequal total; recoverable failure, no luck-based pass or artificial lives.",
+    "controls": "Tap or focus two labeled face sockets to exchange; Cancel clears first selection. Tables are selectable/readable. No actual dice throwing needed to evaluate a design.",
+    "accessibility": "Each socket identifies die, face number and value. Outcome matrices list numerical comparisons, with readable totals and fractions20/36. Do not communicate odds solely through color or a chart.",
+    "qa": [
+      "Ordinary UI fixture win: allocate A=2,2,4,4,9,9; B=1,1,6,6,8,8; C=3,3,5,5,7,7 from shuffled public tokens. Verify each sum30 and each directed matchup exactly20/36.",
+      "Submit three identically distributed dice with equal means; the cycle target must fail. Swap a9 and1 in a winning design and verify both affected means/matchups recalculate.",
+      "Repeat win on mobile using only socket selection and swaps; verify same-value swaps do not corrupt token inventory."
+    ],
+    "existingNeighbors": [
+      {
+        "id": "six-columns",
+        "difference": "Rolls and commits random outcomes to score categories; this constructs the probability distributions themselves and optimizes a coupled nontransitive cycle."
+      },
+      {
+        "id": "fraction-balance",
+        "difference": "Independent weights sum to one target; here equal sums are necessary but insufficient and each full distribution faces two opposed stochastic-order constraints."
+      },
+      {
+        "id": "sealed-bids",
+        "difference": "Uses ranked one-use bids against hidden decisions; this is deterministic probability-distribution design, not bidding."
+      }
+    ],
+    "proposalNeighbors": [
+      "D statistical design must not separately build nontransitive distributions; full candidate comparison pending."
+    ],
+    "risks": [
+      "Could become a solved mathematical curiosity after one arrangement. Provide explainable alternative constructions and genuinely different token inventories, or accept a deliberately substantial single puzzle without false replay claims.",
+      "No independently tunable dice: conserve shared physical tokens and enforce the cyclic interaction."
+    ],
+    "independentReview": {
+      "uniqueness": "/root/review_uniqueness: conditional design acceptance; A05 removed; A15 model revised and accepted",
+      "depth": "/root/review_depth: conditional design acceptance; A08 mandatory bound revised; A15 final nested study gate retained",
+      "limitations": "No runtime created, no ordinary-input execution performed for these unimplemented games; QA entries are required tests, not completed evidence."
+    },
+    "baselineScreen": {
+      "inventory": "/workspace/expansion-300-design/baseline-inventory.txt",
+      "entriesCompared": 200,
+      "method": "Compared core action/state/decision loop against full catalog; nearest matches documented per proposal. Read original ten rule HTML plus relevant spatial-room/room.js and puzzle-lab/engines.js, EXPANSION-200-DESIGNS.md and EXPANSION-200-REVIEW.md.",
+      "movingBaseline": "Existing 200 are undergoing remediation elsewhere. Recheck against verified published handoff before implementing or treating uniqueness as final."
+    }
+  },
+  {
+    "id": "A14",
+    "name": "Letter Conservatory",
+    "status": "conditionally accepted design by independent uniqueness and depth reviewers; implementation, ordinary-input play and remediated-baseline recheck pending",
+    "core": "Partition a visible letter field into bent neighboring-letter word paths under a small word budget, collecting required marked cells without reusing a tile.",
+    "stateActions": "A4\u00d74 letter grid and public finite lexicon. Select an orthogonally or diagonally neighboring unused tile to extend a word; no cell repeats within or across submitted words. Submit a dictionary word of length3+ to reserve its cells; remaining cells stay in place. Up to four submitted words must cover all four marked tiles and reach a printed total score.",
+    "decisions": "A tempting long word may consume a central letter needed to reach another marked tile. Route the same word through different occurrences to preserve access, and decide whether to spend a word slot on short difficult corners or a long scoring route.",
+    "depth": "Authored boards need at least one ambiguous word path and two competing ways to spend a shared bridge letter. The full lexicon is searchable and small enough to inspect; later boards change adjacency and bottlenecks, not just clues. Score is length squared, but longest-first must fail at least one required study.",
+    "winLoss": "Win after up to four committed words cover every marked tile and meet score. A used-up word budget without both conditions is a natural failed attempt; undo any last submission. Invalid spelling/path is refused without spending a slot.",
+    "controls": "Tap successive tiles; keyboard arrows move focus and Enter appends. Separate Backtrack and Submit buttons. Lexicon is an accessible searchable list; no dragging or typing speed required.",
+    "accessibility": "Every tile shows letter, coordinate and marked/used status. Read the current path as coordinates and text. Lexicon and scoring are visible; no dependence on obscure undocumented vocabulary.",
+    "qa": [
+      "Complete an authored board through ordinary tile inputs, selecting the alternate route for one word to leave a marked corner reachable by a later word.",
+      "Commit the visible longest tempting word and use remaining slots to show the quota failure; undo and complete via a different route. If longest-first always suffices, reject the board.",
+      "Attempt to reuse a tile inside one word and after a previous submission; both refuse without removing letters or consuming a slot."
+    ],
+    "existingNeighbors": [
+      {
+        "id": "hidden-grove",
+        "difference": "Finds already listed words along one straight line; this builds branching adjacent paths and allocates shared tiles across chosen words."
+      },
+      {
+        "id": "word-weave",
+        "difference": "Permutes a supplied rack into one clue answer with no geometry or competing use across words."
+      },
+      {
+        "id": "alphabet-trail",
+        "difference": "A forced alphabetic Hamiltonian sequence has no lexical choice, alternate word segmentation or word-slot tradeoff."
+      }
+    ],
+    "proposalNeighbors": [
+      "B12 Scrabble places rack letters into crossing board words against an opponent; A14 consumes paths through a fixed board and has no placement, rack draw or opponent."
+    ],
+    "risks": [
+      "Borderline if reduced to free Boggle scoring with independent word finds. Keep consequential shared-tile commitments and ordinary-input evidence that route choice matters.",
+      "Public lexicon must include all accepted words and avoid obscure vocabulary as the main difficulty."
+    ],
+    "independentReview": {
+      "uniqueness": "/root/review_uniqueness: conditional design acceptance; A05 removed; A15 model revised and accepted",
+      "depth": "/root/review_depth: conditional design acceptance; A08 mandatory bound revised; A15 final nested study gate retained",
+      "limitations": "No runtime created, no ordinary-input execution performed for these unimplemented games; QA entries are required tests, not completed evidence."
+    },
+    "baselineScreen": {
+      "inventory": "/workspace/expansion-300-design/baseline-inventory.txt",
+      "entriesCompared": 200,
+      "method": "Compared core action/state/decision loop against full catalog; nearest matches documented per proposal. Read original ten rule HTML plus relevant spatial-room/room.js and puzzle-lab/engines.js, EXPANSION-200-DESIGNS.md and EXPANSION-200-REVIEW.md.",
+      "movingBaseline": "Existing 200 are undergoing remediation elsewhere. Recheck against verified published handoff before implementing or treating uniqueness as final."
+    }
+  },
+  {
+    "id": "A15",
+    "name": "Nested Rooms",
+    "status": "revise-reserve: excluded from primary inventory; root and both reviewers reopened depth acceptance",
+    "core": "Move container rooms in their parent room, enter them at another scale, and use their changed exit location to transport access through a nested spatial hierarchy.",
+    "stateActions": "Finite rooted hierarchy of at most four chambers; each child instance has exactly one physical parent container, never a shared portal or self-cycle. A one-cell container has WEST and EAST doors linked to labeled west/east boundary door squares in its persistent child map. From the parent square immediately west/east, Enter places the avatar on that matching child door. Leaving a child door emerges on the corresponding parent-neighbor square at the container CURRENT position, only if that square supports the avatar and is unoccupied. The parent container never moves while the avatar is inside. Cardinal Push from outside translates the container one cell on its rails; ordinary Walk cannot enter it. Rail-pit cells support containers but not avatars, and narrow-grate cells support avatars but not containers. Neither type teleports or changes when inspected. The avatar carries at most one relic across transitions; other objects cannot cross room boundaries. Undo restores every map and the current room. No context stack ambiguity: leaving always uses the unique current parent.",
+    "decisions": "Position a traversable room over a rail pit to connect previously separated safe parent squares, then navigate its actual interior to the opposite door. In later rooms choose among docking locations before entering and arrange a nested container to make its interior crossable; a useful exterior alignment can have an internally blocked exit. Relocating a child room changes physical adjacency, while its interior arrangement persists.",
+    "depth": "Intro teaches a movable room as a safe passage across a pit. Later studies offer two possible docks and an interior container that must be moved from the correct side before committing the outer room to a dock; one external alignment strands the return door. Final study carries a relic from a grandchild room through two independently relocated containers. All are finite rooted maps, not advertised as unbounded recursive space. Reject a final game that repeats only the one-box intro.",
+    "winLoss": "Win by carrying the marked relic to the outer exit. Leaving toward a pit, occupied square or wall is refused with exact parent coordinate; pushing onto a narrow grate is likewise refused. A blocked legal arrangement is a recoverable dead end, with global undo. No arbitrary recursion-depth loss.",
+    "controls": "Directional buttons and board-focused arrows; Enter room and Leave buttons are explicit at a portal. Breadcrumb entries inspect other rooms but do not teleport. Keyboard can read full parent/child maps.",
+    "accessibility": "Every room/container has a stable name and unique parent. Show the full child map, door-side labels, parent container coordinate and current proposed emergence squares. Rail pit and narrow grate have distinct symbols and explicit support descriptions. Announce transition and current breadcrumb; inspected map tabs never move the avatar.",
+    "qa": [
+      "Concrete public intro witness (coordinates x,y): outer7\u00d75 board is walls except corridor(0..6,2);(3,2) is a container-supporting rail pit and(4,2) is an avatar-only grate. Player starts(1,2), container at(2,2), exit(6,2). Child3\u00d73 has west door(0,1), east door(2,1), open route(0,1)\u2192(0,0)\u2192(1,0)\u2192(2,0)\u2192(2,1), every other cell wall. Via UI: Push east moves container to(3,2) and avatar to(2,2); Enter west; Up, Right, Right, Down; Leave east emerges at parent(4,2); Right, Right reaches exit. Every step is inspectable from visible maps.",
+      "Before shifting the intro container, enter its west door and navigate to east door; Leave east must refuse emergence at(3,2), the exposed rail pit. Return west, then perform the winning shift. Direct walk across pit and pushing the container from(3,2) onto grate(4,2) must both refuse.",
+      "Complete the final two-level study through ordinary UI, relocating both a parent and nested container and carrying the relic home. Record every room transition and its derived parent coordinate. No inspector teleport or fixed-graph shortcut may be used.",
+      "Undo after leaving a grandchild must restore current room, carried relic, nested container and outer container locations exactly; inspecting breadcrumbs must never change current room."
+    ],
+    "existingNeighbors": [
+      {
+        "id": "folded-world",
+        "difference": "Uses fixed room connections with rotated/reflected compass frames; this changes connections by relocating the rooms physical entrances in their parent maps."
+      },
+      {
+        "id": "pebble-post",
+        "difference": "Fixed boxes are only cargo and do not contain persistent playable spaces or change the avatar travel graph."
+      },
+      {
+        "id": "track-exchange",
+        "difference": "Separate fixed maps exchange inventory at fixed hubs; here room placement relocates emergence and access."
+      }
+    ],
+    "proposalNeighbors": [
+      "A07 changes executable movement rules; A15 keeps rules fixed while containment/entrance topology changes. A10 shifts corridor tiles on one scale and has no persistent nested contents."
+    ],
+    "risks": [
+      "Finite containment deliberately excludes paradoxical self-containing rooms and shared-instance portals. Model and witness are now explicit, but independently review the final multi-container study for genuine coupled choices.",
+      "A one-box crossing by itself is a tutorial, not the complete game. Author a nested case requiring interior preparation and docking choice, then ordinary-play it before acceptance.",
+      "Final review: finite door model is coherent, but current concrete witness can flatten to a movable bridge plus a fixed maze. Until a coupled later-state witness survives independent review, keep this uncounted. Parent selected B35 as replacement; no count-driven rescue."
+    ],
+    "independentReview": {
+      "uniqueness": "Mechanic model clarified, but full distinct nested interaction not yet demonstrated. Not accepted for primary count.",
+      "depth": "Intro proves portable-bridge behavior only. Need an explicit later fixture where persistent interior/container placement changes exterior docking options and exterior placement constrains interior access. A future-study promise is insufficient.",
+      "limitations": "Design only; no runtime or ordinary-input execution."
+    },
+    "baselineScreen": {
+      "inventory": "/workspace/expansion-300-design/baseline-inventory.txt",
+      "entriesCompared": 200,
+      "method": "Compared core action/state/decision loop against full catalog; nearest matches documented per proposal. Read original ten rule HTML plus relevant spatial-room/room.js and puzzle-lab/engines.js, EXPANSION-200-DESIGNS.md and EXPANSION-200-REVIEW.md.",
+      "movingBaseline": "Existing 200 are undergoing remediation elsewhere. Recheck against verified published handoff before implementing or treating uniqueness as final."
+    }
+  },
+  {
+    "id": "A16",
+    "name": "Pocket Photograph",
+    "status": "conditionally accepted design by independent uniqueness and depth reviewers; implementation, ordinary-input play and remediated-baseline recheck pending",
+    "core": "Capture an actual subregion of the current mutable board, then paste a rotated snapshot elsewhere to overwrite terrain and objects, changing where the avatar can travel and what remains copyable.",
+    "stateActions": "A grid avatar, terrain, boxes, keys and exit. Frame a fixed3\u00d73 region not containing the avatar, take a snapshot using one exposure, then rotate it and choose a destination patch. Paste atomically replaces every cell of that patch, including empty cells; consumes the photo. Keys/boxes can be copied, exits are anchored and protected. Two or three exposures per study; world movement between capture and paste remains possible.",
+    "decisions": "Choose what to preserve before crossing an irreversible boundary; capture mixed terrain and objects whose empty cells can erase barriers, while avoiding deletion of needed platforms. A useful photographed bridge may overwrite the key unless repositioned or rotated first.",
+    "depth": "Three studies require copying a bridge, relocating a key together with obstructive terrain and overwriting a barrier using snapshot emptiness. No study permits victory using only the initial board and movement. Required coupled multiple-cell replacement distinguishes stamping a ready-made solution.",
+    "winLoss": "Win by reaching the anchored exit with the required keys. Run out of exposures with no traversable completion or erase the only recoverable key source and the attempt is stranded; undo/retry always available. Pasting onto avatar or anchored exit is refused.",
+    "controls": "Select frame origin from coordinate buttons or grid taps, Capture, Rotate, then destination origin and Paste. Keyboard arrows move frame focus; movement mode is explicit. No precision camera drag.",
+    "accessibility": "Snapshot represented as a labeled3\u00d73 text grid and destination diff showing removed/added cells. Announce copied objects and terrain; color is decorative. Focus remains on destination after invalid paste.",
+    "qa": [
+      "Complete an ordinary-input study by photographing traversable and empty cells together, rotating the patch and using the overwritten route to reach the exit.",
+      "Paste the tempting bridge so it overwrites the only needed key source; demonstrate a natural stranded state and exact undo restoration of photo, exposure count and world.",
+      "Capture before moving a box, then move it and paste; the pasted patch must reflect capture-time state, not the current source. Attempt avatar overwrite and verify atomic refusal."
+    ],
+    "existingNeighbors": [
+      {
+        "id": "stamp-studio",
+        "difference": "Overlays fixed preauthored additive sets; this captures live changing world state and replaces both filled and empty cells, altering traversal and future capture options."
+      },
+      {
+        "id": "echo-steps",
+        "difference": "Replays a recorded avatar trajectory in time; this preserves and reproduces a spatial world region and has no autonomous ghost."
+      },
+      {
+        "id": "pigment-lab",
+        "difference": "Arranges supplied subtractive ink stencils; no source capture, material overwrite or avatar access planning."
+      }
+    ],
+    "proposalNeighbors": [
+      "A10 translates existing tile lanes while conserving their contents; A16 duplicates and destroys captured world material through replacement."
+    ],
+    "risks": [
+      "Must enforce snapshot semantics and atomic replacement, with clear protected cells. Arbitrary avatar cloning would introduce undefined control and is excluded.",
+      "Reject boards solvable by repeatedly stamping the same corridor without deciding source composition, orientation or destructive replacement."
+    ],
+    "independentReview": {
+      "uniqueness": "/root/review_uniqueness: conditional design acceptance; A05 removed; A15 model revised and accepted",
+      "depth": "/root/review_depth: conditional design acceptance; A08 mandatory bound revised; A15 final nested study gate retained",
+      "limitations": "No runtime created, no ordinary-input execution performed for these unimplemented games; QA entries are required tests, not completed evidence."
+    },
+    "baselineScreen": {
+      "inventory": "/workspace/expansion-300-design/baseline-inventory.txt",
+      "entriesCompared": 200,
+      "method": "Compared core action/state/decision loop against full catalog; nearest matches documented per proposal. Read original ten rule HTML plus relevant spatial-room/room.js and puzzle-lab/engines.js, EXPANSION-200-DESIGNS.md and EXPANSION-200-REVIEW.md.",
+      "movingBaseline": "Existing 200 are undergoing remediation elsewhere. Recheck against verified published handoff before implementing or treating uniqueness as final."
+    }
+  },
+  {
+    "id": "A17",
+    "name": "Two Little Loops",
+    "status": "reserve-revise: not in primary accepted inventory; simultaneous move/grab/bond/output rules must be frozen before implementation review",
+    "core": "Synthesize two cyclic spatial manipulator programs whose synchronized motions repeatedly assemble and deliver a small bonded product without collisions or stranded workpieces.",
+    "stateActions": "A bounded5\u00d75 reaction board has two rail-mounted manipulators with grasp/release states, two periodic atom sources, a bonding tile and an output port. Each arm has an editable cyclic tape of up to eight instructions: step N/E/S/W, grab, release or wait. Both advance one instruction per tick; held components translate with the gripper. At the bonding tile, compatible adjacent atoms join rigidly. The output accepts only the exact labeled product graph and removes it. Tape execution repeats automatically; sources replenish only after their previous atom is taken. Reset run preserves tapes.",
+    "decisions": "Pick tape lengths and waits so one arm can place a workpiece and clear the transfer square before the other grabs it. Align input pickup, bond timing and output removal across successive cycles; a program that makes one item may collide or deadlock on its second lap. Reuse movement in a short loop instead of spelling out three independent deliveries.",
+    "depth": "Three small workcells: handoff, two-part assembly and asymmetric source distance. Every main challenge requires at least three consecutive accepted outputs with both tapes genuinely repeated. At least one needs a deliberate wait or unequal phase to avoid a second-cycle collision. No one-arm program may reach both required sources and output under the physical rail restrictions.",
+    "winLoss": "Win after three correct products within the public tick limit. Simultaneous conflicting gripper destinations, swept component collision or wrong product at output stops the run with an exact timestamp and explanation. Deadlock/tick expiry fails naturally; edit and rerun without losing the program.",
+    "controls": "Select arm/tape slot, choose a named instruction button; insert/delete/edit before running. Step one tick, Run at chosen speed, Pause and Reset run are native buttons. No drag-only tape editing or real-time response needed.",
+    "accessibility": "Each tape is an ordered instruction list with current program counter. A per-tick text ledger shows gripper coordinates, held atom IDs, component bonds and output count. Collision announces both involved entities and the tick. Reduced motion uses discrete steps.",
+    "qa": [
+      "Using only public tape editors, build and run a three-output winning program that reuses both tapes for multiple cycles; record instruction sequences and visible tick ledger, without private state manipulation.",
+      "Remove the one essential wait from the validated program and run; it must fail on an explained collision or handoff error. Restore wait via UI and win again.",
+      "Test a program that delivers one item but collides on its second lap; it must not award success at the first output. Pause at the handoff, step once and verify exactly one simultaneous tick."
+    ],
+    "existingNeighbors": [
+      {
+        "id": "rover-script",
+        "difference": "A single finite navigation script collects one parcel; this synthesizes concurrent periodic programs, actual material handoffs and repeatable graph assembly across multiple cycles."
+      },
+      {
+        "id": "assembly-belt",
+        "difference": "Fixed linear belt stages advance after manual settings; manipulators choose spatial loops and must coordinate phase and moving component geometry."
+      },
+      {
+        "id": "echo-steps",
+        "difference": "One recorded path replays once to hold a gate; here both editable loops repeatedly manipulate and hand off material, with product connectivity and steady repeated output."
+      },
+      {
+        "id": "borrowed-time",
+        "difference": "Assigns abstract tasks to crews by readiness/duration; not simultaneous geometric execution or looping physical state."
+      }
+    ],
+    "proposalNeighbors": [
+      "B30 Crossed Programs uses hidden adversarial command commitment and card priority to race checkpoints; this has no opponent, card hand or initiative bidding and is cyclic production synthesis.",
+      "A11 Bonding Room directly translates components to assemble one target and has no programs or time; A17 depends on reusable concurrent phase and three-cycle correctness.",
+      "D finite-state transducer processes symbols and D Petri manually fires abstract transitions; here collision, held footprints and spatial handoff are indispensable."
+    ],
+    "risks": [
+      "Substantial implementation scope; reject if approximated by abstract counters or serial independently executed tapes.",
+      "Must explicitly specify simultaneous movement, grabs of the same atom, bond timing and output timing before code. Unspecified tie order can make visible plans unfair.",
+      "Reserve only. The primary15 candidates should not be weakened to fit an arbitrary overall count."
+    ],
+    "baselineScreen": {
+      "inventory": "/workspace/expansion-300-design/baseline-inventory.txt",
+      "entriesCompared": 200,
+      "method": "Compared core action/state/decision loop against full catalog; nearest matches documented per proposal. Read original ten rule HTML plus relevant spatial-room/room.js and puzzle-lab/engines.js, EXPANSION-200-DESIGNS.md and EXPANSION-200-REVIEW.md.",
+      "movingBaseline": "Existing 200 are undergoing remediation elsewhere. Recheck against verified published handoff before implementing or treating uniqueness as final."
+    }
+  }
+]

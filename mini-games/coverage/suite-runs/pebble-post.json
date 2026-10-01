@@ -3,9 +3,9 @@
   "suite": "pebble-post",
   "passed": true,
   "status": "passed",
-  "startedAt": "2026-10-01T06:43:38.644Z",
+  "startedAt": "2026-10-01T09:53:55.020Z",
   "source": {
-    "sha256": "884a5541fb713ab35c384918dae5edf8956a3c53d7883ffee3037c1c235ab77f",
+    "sha256": "84bfff02c8373f250ee887135fbe7ed550b76da0e3fc823ebac0708aca92cafb",
     "files": [
       "catalog.css",
       "catalog.js",
@@ -22,7 +22,7 @@
       "tools/run-suite.cjs"
     ]
   },
-  "requestedBaseURL": "http://127.0.0.1:8790",
+  "requestedBaseURL": "http://127.0.0.1:8781",
   "browser": {
     "engine": "Chromium",
     "version": "Chromium 151.0.7922.173 built on Debian GNU/Linux 13 (trixie)",
@@ -45,22 +45,22 @@
     "Solver completions do not establish human difficulty or accessibility."
   ],
   "servedRuntimeBefore": {
-    "baseURL": "http://127.0.0.1:8790",
+    "baseURL": "http://127.0.0.1:8781",
     "passed": true,
-    "sha256": "95a5abb6345a5eb1551f9839061f5c26e546f714bd609be950a1f45955f3cc96",
+    "sha256": "af99c6b322d63246fdb8ae80b42c6b856baac34a18c227557714cc9efc913799",
     "fileCount": 10,
-    "verifiedAt": "2026-10-01T06:43:38.768Z"
+    "verifiedAt": "2026-10-01T09:53:55.304Z"
   },
   "exitCode": 0,
   "signal": null,
   "sourceUnchanged": true,
   "servedRuntime": {
-    "baseURL": "http://127.0.0.1:8790",
+    "baseURL": "http://127.0.0.1:8781",
     "passed": true,
-    "sha256": "95a5abb6345a5eb1551f9839061f5c26e546f714bd609be950a1f45955f3cc96",
+    "sha256": "af99c6b322d63246fdb8ae80b42c6b856baac34a18c227557714cc9efc913799",
     "fileCount": 10,
-    "verifiedAt": "2026-10-01T06:43:52.978Z"
+    "verifiedAt": "2026-10-01T09:54:14.295Z"
   },
   "completionEvidence": null,
-  "finishedAt": "2026-10-01T06:43:52.978Z"
+  "finishedAt": "2026-10-01T09:54:14.295Z"
 }

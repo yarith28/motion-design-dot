@@ -16,11 +16,14 @@ concurrency:
 jobs:
   live-browser-check:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 55
     steps:
       - uses: actions/checkout@v4
       - name: Preserve the original collection and showcase
-        run: node mini-games/tests/preservation.cjs
+        run: |
+          node mini-games/tests/preservation.cjs
+          node mini-games/tests/preservation200.cjs
+          node mini-games/tests/expansion300-review-gate.cjs
       - name: Install test-only browser dependencies
         run: |
           npm install --prefix "$RUNNER_TEMP/pages-smoke" playwright@1.55.0
@@ -66,11 +69,11 @@ jobs:
           retention-days: 30
   new-game-completion:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 55
     strategy:
       fail-fast: false
       matrix:
-        room: [systems-room, tabletop-room, puzzle-lab, kinetic-room, discovery-room]
+        room: [systems-room, tabletop-room, puzzle-lab, kinetic-room, discovery-room, construct-room, parlour-room, motion-room, workbench-room]
     steps:
       - uses: actions/checkout@v4
       - name: Install test-only browser dependencies
@@ -87,6 +90,12 @@ jobs:
           python3 -m http.server 8790 --bind 127.0.0.1 > "$RUNNER_TEMP/server.log" 2>&1 &
           if [ "$ROOM" = "puzzle-lab" ]; then node mini-games/tests/puzzle-generation-regression.cjs; fi
           if [ "$ROOM" = "discovery-room" ]; then node mini-games/tests/discovery-design-properties.cjs; fi
+          if [ "$ROOM" = "motion-room" ]; then node mini-games/tests/motion-invariants.cjs; fi
+          if [ "$ROOM" = "parlour-room" ]; then
+            node mini-games/tests/parlour-rules.mjs
+            node mini-games/tests/parlour-b02-b05-rules.mjs
+            node mini-games/tests/parlour-market-estate-properties.cjs
+          fi
           node mini-games/tools/run-suite.cjs "$ROOM"
           node mini-games/tests/evidence-index.cjs
           node mini-games/tests/evidence-fresh.cjs

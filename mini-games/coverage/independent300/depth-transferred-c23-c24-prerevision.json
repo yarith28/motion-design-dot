@@ -1,0 +1,50 @@
+[
+  {
+    "designId": "C23",
+    "name": "Borrowed Shade",
+    "gameId": "borrowed-shade",
+    "room": "motion-room",
+    "ordinaryBeforeSource": true,
+    "fullWin": false,
+    "naturalFailure": false,
+    "restart": false,
+    "meaningfulDecisions": "Original studies1/2 cleared with isolatedfar-shadow shift/no lamp change.",
+    "issues": [
+      "Depthhold middle refuge removes near/far coupling; owner removed final refuge requiring jointlamp geometry, blindretry pending."
+    ],
+    "resolution": null,
+    "sourceSha256": null,
+    "runtimeHashes": {},
+    "logFile": "mini-games/coverage/independent300/depth-borrowed-shade-ordinary.jsonl",
+    "methods": [],
+    "limits": [
+      "Pending implementation/ordinary review.",
+      "Prior design QA fixtures were read during design review; matching tutorial traces cannot establish unaided completion."
+    ],
+    "passed": false
+  },
+  {
+    "designId": "C24",
+    "name": "After the Levee",
+    "gameId": "after-the-levee",
+    "room": "motion-room",
+    "ordinaryBeforeSource": true,
+    "fullWin": true,
+    "naturalFailure": false,
+    "restart": false,
+    "meaningfulDecisions": "Original full3win66actions usingidenticaltwo terrain edits perstudy: dig2,2, depositvillage6,4.",
+    "issues": [
+      "Depthhold universalvillage-raise and automaticbasin fill; owner redesign pending."
+    ],
+    "resolution": null,
+    "sourceSha256": null,
+    "runtimeHashes": {},
+    "logFile": "mini-games/coverage/independent300/depth-after-the-levee-ordinary.jsonl",
+    "methods": [],
+    "limits": [
+      "Pending implementation/ordinary review.",
+      "Prior design QA fixtures were read during design review; matching tutorial traces cannot establish unaided completion."
+    ],
+    "passed": false
+  }
+]

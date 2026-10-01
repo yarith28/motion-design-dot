@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "games": [
+    {
+      "designId": "B06",
+      "gameId": "veiled-standard",
+      "status": "resolved-see-final-manifest",
+      "ordinaryBeforeSource": true,
+      "fullWinObserved": true,
+      "naturalFailureAccepted": false,
+      "touchWinObserved": true,
+      "sourceRead": false,
+      "issues": [
+        "Deal731 ordinary fullwin ended fortunate flag guess. Counterfactual final mine branch caused real terminal loss but is not represented as blind natural losing strategy.",
+        "Deal8650 fresh fullwin exposed feeding weaker units next to publicly revealed Marshal, then last movable unit allowing immediate equal-trade loss. Owner correction pending."
+      ],
+      "logFile": "mini-games/coverage/independent300/uniqueness-B06-veiled-standard-ordinary.jsonl"
+    },
+    {
+      "designId": "B10",
+      "gameId": "orders-at-dusk",
+      "status": "resolved-see-final-manifest",
+      "ordinaryBeforeSource": true,
+      "fullWinObserved": true,
+      "naturalFailureAccepted": false,
+      "sourceRead": false,
+      "issues": [
+        "Both armies in each faction repeatedly self-bounce targeting same neutral square. Human takes B3 opening, holds/recruits, then holds through year8 to trivial3\u20132\u20132 win. Support and support-cut choices do not matter in observed fullmatch. Owner correction pending."
+      ],
+      "logFile": "mini-games/coverage/independent300/uniqueness-B10-orders-at-dusk-ordinary.jsonl"
+    }
+  ],
+  "supersededBy": "uniqueness-review.json final37",
+  "note": "Historical rejected-build findings preserved below; both corrected games completed ordinary review and source audit."
+}

@@ -3,9 +3,9 @@
   "suite": "kinetic-room",
   "passed": true,
   "status": "passed",
-  "startedAt": "2026-10-01T06:47:44.981Z",
+  "startedAt": "2026-10-01T09:56:58.731Z",
   "source": {
-    "sha256": "87bfe5415cfdc27ae2829c26456f8518c458703c7dffa92e9ad57dc3958d0039",
+    "sha256": "e732088e0b11a0220e2faa5df4ab6bd7c9972fa3b39311c4266fb43db57ee004",
     "files": [
       "catalog.css",
       "catalog.js",
@@ -20,6 +20,10 @@
       "play.css",
       "styles.css",
       "tests/fixtures/baseline100.json",
+      "tests/fixtures/baseline200.json",
+      "tests/fixtures/parlour-b02-b05-paths.json",
+      "tests/fixtures/parlour-b13-guided-paths.json",
+      "tests/fixtures/parlour-paths.json",
       "tests/fixtures/tabletop-paths.json",
       "tests/kinetic-plans.json",
       "tests/kinetic-remediation.cjs",
@@ -28,7 +32,7 @@
       "tools/run-suite.cjs"
     ]
   },
-  "requestedBaseURL": "http://127.0.0.1:8790",
+  "requestedBaseURL": "http://127.0.0.1:8781",
   "browser": {
     "engine": "Chromium",
     "version": "Chromium 151.0.7922.173 built on Debian GNU/Linux 13 (trixie)",
@@ -70,24 +74,24 @@
     "Solver completions do not establish human difficulty or accessibility."
   ],
   "servedRuntimeBefore": {
-    "baseURL": "http://127.0.0.1:8790",
+    "baseURL": "http://127.0.0.1:8781",
     "passed": true,
-    "sha256": "076d0e373a68b85193a776e0514e2f50d8c288154c8676c0e6b5721380cff9a9",
+    "sha256": "b52f2f4e506a862add2d16335cb3e58b175b54291670fbe9c7d70977f014003d",
     "fileCount": 12,
-    "verifiedAt": "2026-10-01T06:47:45.160Z"
+    "verifiedAt": "2026-10-01T09:56:58.989Z"
   },
   "exitCode": 0,
   "signal": null,
   "sourceUnchanged": true,
   "servedRuntime": {
-    "baseURL": "http://127.0.0.1:8790",
+    "baseURL": "http://127.0.0.1:8781",
     "passed": true,
-    "sha256": "076d0e373a68b85193a776e0514e2f50d8c288154c8676c0e6b5721380cff9a9",
+    "sha256": "b52f2f4e506a862add2d16335cb3e58b175b54291670fbe9c7d70977f014003d",
     "fileCount": 12,
-    "verifiedAt": "2026-10-01T06:49:45.766Z"
+    "verifiedAt": "2026-10-01T09:59:06.305Z"
   },
   "completionEvidence": {
-    "sha256": "32e9bc3019b33d772d3ac710e6d1d357c0b36eaa4128925d90bd84cd2ae83619",
+    "sha256": "4b385e83c52775a384afea95ffff6e0d1053984429cfe1d2b1fb6dedf4b29999",
     "file": "coverage/kinetic-room.json",
     "cases": [
       {
@@ -774,5 +778,5 @@
       }
     ]
   },
-  "finishedAt": "2026-10-01T06:49:45.767Z"
+  "finishedAt": "2026-10-01T09:59:06.306Z"
 }

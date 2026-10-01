@@ -1,0 +1,787 @@
+{
+  "provenance": "Full campaign planned through visible rules, positions, velocities and ferry phases before any implementation or solver inspection. These259 game actions plus Start are original ordinary keyboard UI observations; replay is source-independent but informed by the prior playthrough.",
+  "gameId": "step-and-spring",
+  "actions": [
+    {
+      "name": "Start",
+      "exact": true
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Jump / extend"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Jump / extend"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Jump / extend"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Step left"
+    },
+    {
+      "name": "Step left"
+    },
+    {
+      "name": "Step left"
+    },
+    {
+      "name": "Step left"
+    },
+    {
+      "name": "Step left"
+    },
+    {
+      "name": "Step left"
+    },
+    {
+      "name": "Jump / extend"
+    },
+    {
+      "name": "Step left"
+    },
+    {
+      "name": "Step left"
+    },
+    {
+      "name": "Step left"
+    },
+    {
+      "name": "Step left"
+    },
+    {
+      "name": "Step left"
+    },
+    {
+      "name": "Step left"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Jump / extend"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Jump / extend"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Next chamber"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Jump / extend"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Jump / extend"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Jump / extend"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Step left"
+    },
+    {
+      "name": "Step left"
+    },
+    {
+      "name": "Step left"
+    },
+    {
+      "name": "Step left"
+    },
+    {
+      "name": "Step left"
+    },
+    {
+      "name": "Step left"
+    },
+    {
+      "name": "Jump / extend"
+    },
+    {
+      "name": "Step left"
+    },
+    {
+      "name": "Step left"
+    },
+    {
+      "name": "Step left"
+    },
+    {
+      "name": "Step left"
+    },
+    {
+      "name": "Step left"
+    },
+    {
+      "name": "Step left"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Jump / extend"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Step left"
+    },
+    {
+      "name": "Step left"
+    },
+    {
+      "name": "Step left"
+    },
+    {
+      "name": "Step left"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Jump / extend"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Jump / extend"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Next chamber"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Jump / extend"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Jump / extend"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Jump / extend"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Step left"
+    },
+    {
+      "name": "Step left"
+    },
+    {
+      "name": "Step left"
+    },
+    {
+      "name": "Step left"
+    },
+    {
+      "name": "Step left"
+    },
+    {
+      "name": "Step left"
+    },
+    {
+      "name": "Jump / extend"
+    },
+    {
+      "name": "Step left"
+    },
+    {
+      "name": "Step left"
+    },
+    {
+      "name": "Step left"
+    },
+    {
+      "name": "Step left"
+    },
+    {
+      "name": "Step left"
+    },
+    {
+      "name": "Step left"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Jump / extend"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step left"
+    },
+    {
+      "name": "Step left"
+    },
+    {
+      "name": "Step left"
+    },
+    {
+      "name": "Step left"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Jump / extend"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Jump / extend"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Step right"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Coast one tick"
+    },
+    {
+      "name": "Next chamber"
+    }
+  ]
+}

@@ -1,0 +1,848 @@
+[
+  {
+    "id": "breathing-room",
+    "name": "Breathing Room",
+    "description": "Adversarial group-liberty capture and living territory.",
+    "mechanic": "Adversarial group-liberty capture and living territory.",
+    "rules": [
+      "7\u00d77 intersections. Alternate placing stones or passing. Orthogonal groups with no empty neighboring liberty are removed after enemy captures resolve. Suicide prohibited; positional superko prevents repeat boards. Two consecutive passes enter explicit territory scoring with disputed groups played out, never guessed dead. Area = stones plus empty regions bordering only one side; compensation displayed before play.",
+      "Higher area after consecutive passes wins; equal area draws."
+    ],
+    "controls": "Select an empty intersection to preview captures and liberties, then Confirm. Pass is separate. Board arrows move focus; Enter or Space activates a button.",
+    "accessibility": "Point labels include coordinates, owner, group and liberties. Area totals and capture history are written out.",
+    "decisions": "Connect threatened groups or sacrifice them for outside influence; start a capture race, invade, or secure two independent eyes. Occupying an empty point can save one group while taking a liberty from another.",
+    "category": "strategy",
+    "url": "parlour-room/?game=breathing-room",
+    "accent": "#cbdc9a",
+    "symbol": "\u25c8",
+    "family": "parlour-room",
+    "module": "breathing-room",
+    "designId": "B01",
+    "smoke": {
+      "actionSelector": "#play-area button[data-action]"
+    },
+    "previewSelector": "#play-area"
+  },
+  {
+    "id": "returned-banner",
+    "name": "Returned Banner",
+    "description": "Captured units become deployable reserves in royal tactics.",
+    "mechanic": "Captured units become deployable reserves in royal tactics.",
+    "rules": [
+      "5\u00d75 board with king, rook, bishop, gold, silver and one single-step pawn per side (six units each). In the default deal, human back row A5\u2013E5 is King, Gold, Silver, Bishop, Rook with pawn A4; house back row A1\u2013E1 is Rook, Bishop, Silver, Gold, King with pawn E2. That default opening has twelve occupied squares and thirteen free; Another deal may start with an advanced silver or a pawn in reserve. Piece moves fixed and illustrated. Capture demotes and transfers unit into captor reserve; drop replaces a move. Promotion available when entering or leaving the far row, with promoted movement printed. Pawn drops cannot share a file with own unpromoted pawn or give immediate mate; no self-check. Four repeated positions draw.",
+      "Checkmate wins/losses; no legal move while not checked draws in this explicitly simplified ruleset. Public 100-turn draw bound."
+    ],
+    "controls": "Select an own piece or reserve type, then choose a labeled legal move or drop. Promotion choices appear in the move list. All actions are native buttons.",
+    "accessibility": "Coordinates, full piece names, promotion status, reserve counts and legal move descriptions accompany the board.",
+    "decisions": "Trade active material for a future drop, deny drop squares around king, promote a distant unit or recycle it through exchange. Captures change both armies instead of merely reducing material.",
+    "category": "strategy",
+    "url": "parlour-room/?game=returned-banner",
+    "accent": "#cbdc9a",
+    "symbol": "\u25c8",
+    "family": "parlour-room",
+    "module": "returned-banner",
+    "designId": "B02",
+    "smoke": {
+      "actionSelector": "#play-area button[data-action]"
+    },
+    "previewSelector": "#play-area"
+  },
+  {
+    "id": "four-step-menagerie",
+    "name": "Four-Step Menagerie",
+    "description": "Four-action turns manipulate weaker enemies while support determines freezing and trap survival.",
+    "mechanic": "Four-action turns manipulate weaker enemies while support determines freezing and trap survival.",
+    "rules": [
+      "6\u00d76 board; each side owns elephant, camel, two cats and three rabbits. Orthogonal one-step moves; rabbits cannot step backward. A unit adjacent to stronger enemy and no friendly unit is frozen. Push or pull a weaker enemy costs two consecutive steps. Four marked traps capture any occupant lacking adjacent friendly support after each step. Up to four steps per turn; complete turn cannot repeat its starting position.",
+      "First rabbit to far rank wins; lose if own rabbits gone or no legal turn; simultaneous trap removals resolve before goal check. Repetition draw."
+    ],
+    "controls": "Select a unit and a listed step, push or pull. Undo an uncommitted action or End turn when ready. Use touch buttons or native keyboard activation.",
+    "accessibility": "Strength names, remaining steps, board coordinates, trap rules and individual action descriptions are available in text.",
+    "decisions": "Spend steps rescuing trap support, displacing a blocker, or escorting a rabbit. Push/pull can expose own support; first step survival matters before the second completes.",
+    "category": "strategy",
+    "url": "parlour-room/?game=four-step-menagerie",
+    "accent": "#cbdc9a",
+    "symbol": "\u25c8",
+    "family": "parlour-room",
+    "module": "four-step-menagerie",
+    "designId": "B03",
+    "smoke": {
+      "actionSelector": "#play-area button[data-action]"
+    },
+    "previewSelector": "#play-area"
+  },
+  {
+    "id": "living-perimeter",
+    "name": "Living Perimeter",
+    "description": "Move different crawling pieces around one connected hive to surround an opposing queen.",
+    "mechanic": "Move different crawling pieces around one connected hive to surround an opposing queen.",
+    "rules": [
+      "The first deal starts empty; Another deal can start with a visible midgame arrangement. Each player has queen, two ants, two beetles and two grasshoppers. Placement must touch own pieces and no enemy after opening; queen must be placed by fourth own turn. Thereafter move or place. Queen slides one perimeter step, ant any sliding perimeter path, grasshopper jumps a contiguous occupied line, beetle climbs one neighbor stack. Removing a piece may never split hive. Sliding cannot pass a two-neighbor pinch. Covered piece cannot move.",
+      "Surround all six neighbors of enemy queen to win; own queen surrounded loses; both simultaneously surrounded draws. Repetition draws."
+    ],
+    "controls": "Choose a reserve insect or exposed own stack, then a listed legal destination. Touch and keyboard use the same native buttons.",
+    "accessibility": "Axial coordinates, insect names, stack information and legal move descriptions accompany the hive; the movement rules are written out.",
+    "decisions": "Pin articulation pieces, climb to free a blocked route, choose which side of queen to close without disconnecting own mobility. Placing early secures future entry but consumes a movement turn.",
+    "category": "strategy",
+    "url": "parlour-room/?game=living-perimeter",
+    "accent": "#cbdc9a",
+    "symbol": "\u25c8",
+    "family": "parlour-room",
+    "module": "living-perimeter",
+    "designId": "B04",
+    "smoke": {
+      "actionSelector": "#play-area button[data-action]"
+    },
+    "previewSelector": "#play-area"
+  },
+  {
+    "id": "homeward-pips",
+    "name": "Homeward Pips",
+    "description": "Allocate two dice between blocking, hitting, escape and bearing off in an opposed race.",
+    "mechanic": "Allocate two dice between blocking, hitting, escape and bearing off in an opposed race.",
+    "rules": [
+      "12-point linear track; seven checkers per side move opposite directions toward final three-point home board. Roll two six-sided dice, doubles four uses. Split dice or use sequentially on one checker; each intermediate landing legal. Two enemy checkers block a point; lone enemy is hit to bar. Bar checkers reenter before others move. Must use maximum available dice, and higher if only one can be used. Bear off only once all own checkers home; overshoot allowed only from farthest occupied point.",
+      "Bear off every checker first wins; house first loses. No stake/doubling system."
+    ],
+    "controls": "Roll, choose legal moves, then Confirm turn. Undo resets the uncommitted roll. The optional complete-turn list offers every legal dice sequence.",
+    "accessibility": "Point ownership/counts, dice, bar, home and borne-off totals are text. Full turn plans provide an alternative to selecting each move.",
+    "decisions": "Use roll to make safe blocks or race forward, expose a blot to attack a rival, and choose home-board timing. Hit changes future reentry obligations and can strand even a fast runner.",
+    "category": "strategy",
+    "url": "parlour-room/?game=homeward-pips",
+    "accent": "#cbdc9a",
+    "symbol": "\u25c8",
+    "family": "parlour-room",
+    "module": "homeward-pips",
+    "designId": "B05",
+    "smoke": {
+      "actionSelector": "#play-area button[data-action]"
+    },
+    "previewSelector": "#play-area"
+  },
+  {
+    "id": "veiled-standard",
+    "name": "Veiled Standard",
+    "description": "Concealed-rank combat turns movement history and sacrificial scouting into persistent tactical information.",
+    "mechanic": "Concealed-rank combat turns movement history and sacrificial scouting into persistent tactical information.",
+    "rules": [
+      "6\u00d76 board with two lake cells. Each army: flag and two immobile mines, scout, miner, spy, and four ranked soldiers. Public composition; secret placement. Orthogonal one-step movement, scout may travel clear ray but reveals scout identity. Attack reveals both; higher rank survives, equal both remove, miner defuses mine, attacking spy beats highest soldier. Flag capture wins. Revealed identities remain known. Player places own army freely in back two rows before match.",
+      "Capture opposing flag or leave opponent no movable unit wins; converse loses; 80 turns without capture draws."
+    ],
+    "controls": "During setup select a unit and a destination to swap or relocate it. Deploy, then select an own unit and a listed move or attack; choosing the destination commits.",
+    "accessibility": "Hidden units have stable unknown identifiers. Coordinates, visible ranks, public composition, movement reveals and combat results are written out.",
+    "decisions": "Probe with cheap pieces, infer immobile flags/mines, conceal strongest piece, trade a scout for knowledge or preserve miner for final entry. House receives only its legal observation history.",
+    "category": "strategy",
+    "url": "parlour-room/?game=veiled-standard",
+    "accent": "#cbdc9a",
+    "symbol": "\u25c8",
+    "family": "parlour-room",
+    "module": "veiled-standard",
+    "designId": "B06",
+    "smoke": {
+      "actionSelector": "#play-area button[data-action]"
+    },
+    "previewSelector": "#play-area"
+  },
+  {
+    "id": "second-shuffle",
+    "name": "Second Shuffle",
+    "description": "Build the future probability distribution of your hand through acquisition, thinning and shuffle timing.",
+    "mechanic": "Build the future probability distribution of your hand through acquisition, thinning and shuffle timing.",
+    "rules": [
+      "Start ten cards: seven coin-1 and three inert seals. Each turn draw five; one action and one purchase, with explicit +action/+draw effects on market cards. Played/bought cards go to discard, reshuffled only when draw empty. Shared finite market includes coin upgrades, extra-action engines, draw, trash-up-to-two and victory cards that clog hands. Game ends on three emptied market piles or 20 turns; victory cards score.",
+      "Higher victory total wins; tie draws. Natural loss to stronger house deck, never survival HP."
+    ],
+    "controls": "Play a hand action, select trash targets where required, finish actions, then buy cards or end the turn. All choices use labeled buttons.",
+    "accessibility": "Hand effects, supply prices and victory values, phase counters, deck/discard counts and the turn log are text.",
+    "decisions": "Buy immediate income or long-run engine, remove starting clutter versus score cards, time terminal-action density, and end match before opponent engine matures.",
+    "category": "strategy",
+    "url": "parlour-room/?game=second-shuffle",
+    "accent": "#cbdc9a",
+    "symbol": "\u25c8",
+    "family": "parlour-room",
+    "module": "second-shuffle",
+    "designId": "B07",
+    "smoke": {
+      "actionSelector": "#play-area button[data-action]"
+    },
+    "previewSelector": "#play-area"
+  },
+  {
+    "id": "corner-garden",
+    "name": "Corner Garden",
+    "description": "Adversarial polyomino placement grows a frontier through corners while forbidding own edge contact.",
+    "mechanic": "Adversarial polyomino placement grows a frontier through corners while forbidding own edge contact.",
+    "rules": [
+      "10\u00d710 board; each player owns nine distinct polyominoes (1\u20135 cells, same set). First covers own start corner. Later placement must touch own corner and no own edge; enemy edge contact allowed, overlap forbidden. Rotate/reflect selected piece freely. Alternating turns; pass only without legal placement.",
+      "When both cannot place, fewer unplaced cells wins; equal draws. Empty inventory gives bonus two points disclosed at start."
+    ],
+    "controls": "Select a shape, cycle its rotations/reflections, choose an anchor preview, then Confirm placement. Legal anchors are also available as large buttons.",
+    "accessibility": "Shape cell offsets, orientation number, available anchors, coordinates and owner labels describe every placement without relying on color.",
+    "decisions": "Retain flexible small pieces to reach cavities, extend across board before rival closes lanes, or block a rival corner while preserving future own anchors.",
+    "category": "strategy",
+    "url": "parlour-room/?game=corner-garden",
+    "accent": "#cbdc9a",
+    "symbol": "\u25c8",
+    "family": "parlour-room",
+    "module": "corner-garden",
+    "designId": "B08",
+    "smoke": {
+      "actionSelector": "#play-area button[data-action]"
+    },
+    "previewSelector": "#play-area"
+  },
+  {
+    "id": "gifted-traits",
+    "name": "Gifted Traits",
+    "description": "Choose the piece your opponent must place; align one shared binary trait.",
+    "mechanic": "Choose the piece your opponent must place; align one shared binary trait.",
+    "rules": [
+      "4\u00d74 board and sixteen unique pieces with four binary traits. On each turn place the piece gifted by rival, check a row/column/diagonal of four sharing any trait, then gift one unused piece. Traits all count equally; starting player first gifts. All used traits publicly displayed.",
+      "Placing a completed common-trait line wins immediately; house does same; filled nonwinning board draws."
+    ],
+    "controls": "Choose the piece to give the house. When receiving a piece, choose its empty board square; each selection commits immediately.",
+    "accessibility": "Every piece names all four traits. A text census describes placed pieces and the board code legend explains the four bits.",
+    "decisions": "Place to create a fork whose different completions poison all gifts, or extinguish future threats while choosing a safe remaining piece. Choosing location alone is only half a turn.",
+    "category": "strategy",
+    "url": "parlour-room/?game=gifted-traits",
+    "accent": "#cbdc9a",
+    "symbol": "\u25c8",
+    "family": "parlour-room",
+    "module": "gifted-traits",
+    "designId": "B09",
+    "smoke": {
+      "actionSelector": "#play-area button[data-action]"
+    },
+    "previewSelector": "#play-area"
+  },
+  {
+    "id": "orders-at-dusk",
+    "name": "Orders at Dusk",
+    "description": "Simultaneous movement and support orders produce contested borders and cuttable alliances.",
+    "mechanic": "Simultaneous movement and support orders produce contested borders and cuttable alliances.",
+    "rules": [
+      "Nine-region planar map, each of three factions with two armies and two supply centers; one human, two bots. Each spring/autumn secretly order every army Hold, Move adjacent, or Support a specified army holding or attacking a region adjacent to the supporter. Simultaneous strength = one + uncut support; equal attacks bounce, swaps bounce, circular moves resolve. Any enemy attack from a region other than supported destination cuts support even if attack bounces. Dislodged army retreats to vacant allowed adjacent region or disbands. After autumn, centers set army count.",
+      "Control five of nine centers at an autumn count wins; after eight years most centers wins, ties draw."
+    ],
+    "controls": "Select an army and its order, revise the slate if needed, then Seal all orders. Retreat and recruitment choices use separate labeled buttons.",
+    "accessibility": "The own order slate stays visible; resolved orders name strength, cuts, bounces and retreats. Ownership and armies have text labels.",
+    "decisions": "Choose supported attacks versus attacks cutting support elsewhere; infer whether competing faction defends or expands. A feint can matter without winning its destination. New army location changes next season options.",
+    "category": "strategy",
+    "url": "parlour-room/?game=orders-at-dusk",
+    "accent": "#cbdc9a",
+    "symbol": "\u25c8",
+    "family": "parlour-room",
+    "module": "orders-at-dusk",
+    "designId": "B10",
+    "smoke": {
+      "actionSelector": "#play-area button[data-action]"
+    },
+    "previewSelector": "#play-area"
+  },
+  {
+    "id": "almost-a-word",
+    "name": "Almost a Word",
+    "description": "Adversarial prefix extension tries to force the opponent to complete a word.",
+    "mechanic": "Adversarial prefix extension tries to force the opponent to complete a word.",
+    "rules": [
+      "Public finite dictionary of the complete familiar-word list shown by the prefix browser, always available. Alternate appending one letter to shared fragment; making a complete dictionary word of length at least four loses a life. May challenge rival previous prefix; if no dictionary extension exists rival loses life, otherwise challenger loses and shortest valid extension is revealed. Reset fragment after each life; alternate opener. Each new fragment offers three initial letters from rich, mixed-length dictionary branches. The chosen initial is retired for this entire match: neither player may reuse it. The offered initial tray varies by deal.",
+      "Reduce house from three lives to zero before own lives gone; challenge failure is natural loss path."
+    ],
+    "controls": "Choose letters with the onscreen alphabet buttons, or focus them with the keyboard. Challenge and next-fragment actions are separate buttons. The dictionary browser is always available.",
+    "accessibility": "The fragment, offered initials, retired initials, lives and complete allowed-word list are text. No voice input or timer is required.",
+    "decisions": "Choose prefix branches based on eventual completion parity and forced terminal words. Challenge is a transparent correction for invalid extension, not credited as strategic bluff: a rational dictionary-checking rival always challenges it. Mixed odd/even branching must carry the depth alone.",
+    "category": "strategy",
+    "url": "parlour-room/?game=almost-a-word",
+    "accent": "#cbdc9a",
+    "symbol": "\u25c8",
+    "family": "parlour-room",
+    "module": "almost-a-word",
+    "designId": "B11",
+    "smoke": {
+      "actionSelector": "#play-area button[data-action]"
+    },
+    "previewSelector": "#play-area"
+  },
+  {
+    "id": "crossgrain",
+    "name": "Crossgrain",
+    "description": "Use your letter rack to extend a shared, scored crossing-word board against an opponent.",
+    "mechanic": "Use your letter rack to extend a shared, scored crossing-word board against an opponent.",
+    "rules": [
+      "9\u00d79 board, seven-tile rack, finite public vocabulary searchable by prefix. Each turn place contiguous row/column word connecting existing board; every perpendicular cross-word must also be valid. Reuse existing letters, score all new words by letter values with one-use letter/word premiums. Blank chosen once at placement scores zero. Exchange selected tiles only with at least seven in bag, or pass. Draw replacements after commit.",
+      "Bag empty and one rack empty, or six combined passes, ends; subtract remaining rack values and transfer them on going out. Higher score wins; equal draw.",
+      "A 36-combined-turn cap also closes the game with normal rack adjustments. Use the public dictionary browser buttons to inspect allowed words; all placement uses native buttons, with Tab/Enter keyboard access."
+    ],
+    "controls": "Choose a rack tile, choose a blank letter if needed, then choose its square. Undo edits placements; Check previews validity/score and Commit plays. Dictionary and exchange controls are native buttons.",
+    "accessibility": "Coordinates, premiums, rack values, blank letters and scored words are written out. Browse allowed words by prefix using labeled buttons.",
+    "decisions": "Cash a premium versus protect its access, keep flexible vowels versus expensive consonants, play a short hook forming several cross-words versus long main word, or exchange at tempo cost.",
+    "category": "strategy",
+    "url": "parlour-room/?game=crossgrain",
+    "accent": "#cbdc9a",
+    "symbol": "\u25c8",
+    "family": "parlour-room",
+    "module": "crossgrain",
+    "designId": "B12",
+    "smoke": {
+      "actionSelector": "#play-area button[data-action]"
+    },
+    "previewSelector": "#play-area"
+  },
+  {
+    "id": "patient-columns",
+    "name": "Patient Columns",
+    "description": "Uncover hidden tableau cards by reversible descending-color packing while promoting suit foundations carefully.",
+    "mechanic": "Uncover hidden tableau cards by reversible descending-color packing while promoting suit foundations carefully.",
+    "rules": [
+      "28-card deck ranks A\u20137 four suits; five tableau columns of 1\u20135 cards, only top face-up, rest stock. Build tableau alternating colors descending; move any exposed ordered suffix. Empty columns accept 7 only. Foundations ascend suit A\u20137. Draw one stock card to waste; one redeal only. Foundation top may return to tableau. New hidden tableau top flips immediately.",
+      "All 28 on foundations wins; after redeal, no stock movement or legal card movement constitutes blocked loss. Manual restart not counted loss."
+    ],
+    "controls": "Select a face-up card or ordered suffix, then a legal destination. Draw and the single Redeal have separate buttons.",
+    "accessibility": "Cards have rank/suit names; columns report hidden counts without exposing hidden identities. Foundations, waste and legal destinations are text.",
+    "decisions": "Free hidden cards versus rush foundations, preserve a needed opposite-color link, choose which 7 occupies an empty column, and time stock cycle.",
+    "category": "strategy",
+    "url": "parlour-room/?game=patient-columns",
+    "accent": "#cbdc9a",
+    "symbol": "\u25c8",
+    "family": "parlour-room",
+    "module": "patient-columns",
+    "designId": "B13",
+    "smoke": {
+      "actionSelector": "#play-area button[data-action]"
+    },
+    "previewSelector": "#play-area"
+  },
+  {
+    "id": "twin-roofs",
+    "name": "Twin Roofs",
+    "description": "Remove equal exposed tiles while managing three-dimensional blockers and duplicate-pair ambiguity.",
+    "mechanic": "Remove equal exposed tiles while managing three-dimensional blockers and duplicate-pair ambiguity.",
+    "rules": [
+      "Forty-eight tiles, twelve symbols four copies each, arranged on three explicit layers. Tile removable only if nothing covers it and left or right side has no tile at same layer. Select two removable identical tiles to remove together. No shuffle or arbitrary hint teleport; unlimited inspection and three undo credits per deal. Known tile faces always visible in a layer list.",
+      "Clear all tiles wins; no matching removable pair with remaining tiles and no undo credit loses."
+    ],
+    "controls": "Choose a layer to inspect, then select two free tiles with the same symbol. Undo restores the last pair while credits remain.",
+    "accessibility": "The complete layer list names every visible symbol, coordinate, layer and free/blocked state. Separate free-tile buttons support keyboard play.",
+    "decisions": "Choose which two of four matching copies to consume, open useful side access versus uncover top support, avoid leaving a matching pair mutually blocked.",
+    "category": "strategy",
+    "url": "parlour-room/?game=twin-roofs",
+    "accent": "#cbdc9a",
+    "symbol": "\u25c8",
+    "family": "parlour-room",
+    "module": "twin-roofs",
+    "designId": "B14",
+    "smoke": {
+      "actionSelector": "#play-area button[data-action]"
+    },
+    "previewSelector": "#play-area"
+  },
+  {
+    "id": "ascending-expeditions",
+    "name": "Ascending Expeditions",
+    "description": "Commit cards irreversibly to increasing suit routes while investment multipliers magnify unfinished projects.",
+    "mechanic": "Commit cards irreversibly to increasing suit routes while investment multipliers magnify unfinished projects.",
+    "rules": [
+      "Four expedition suits, cards 2\u201310 plus two investment cards each; hand six. On turn play one card to own expedition in nondecreasing rank (investment only before numbers) or discard to shared suit pile, then draw stock or any other discard pile top. Each started suit scores (sum numbers \u221220)\u00d7(1+investments), including negative totals; eight cards adds 15. Stock depletion ends after current turn. Round also ends after six consecutive turns drawing from discards without any new expedition placement; a visible stagnation counter resets on stock draw or expedition play. Six consecutive discard-only turns without a stock draw or expedition placement end the round before the next draw; a 70-turn cap also settles current scores.",
+      "Higher total across three rounds wins; lower loses, equal draw. Negative expedition scores can erase successes."
+    ],
+    "controls": "Select a hand card, play it to its expedition or discard it, then choose a stock/discard draw. All choices are buttons.",
+    "accessibility": "Each expedition lists its cards and calculated score. Suit names, discard tops, stock count and the no-progress counter are text.",
+    "decisions": "Wait for a missing low number versus begin earning, fund a risky expedition or consolidate, discard useful card knowing rival can take it, and control stock depletion by recycling discard draws.",
+    "category": "strategy",
+    "url": "parlour-room/?game=ascending-expeditions",
+    "accent": "#cbdc9a",
+    "symbol": "\u25c8",
+    "family": "parlour-room",
+    "module": "ascending-expeditions",
+    "designId": "B15",
+    "smoke": {
+      "actionSelector": "#play-area button[data-action]"
+    },
+    "previewSelector": "#play-area"
+  },
+  {
+    "id": "letters-we-cannot-see",
+    "name": "Letters We Cannot See",
+    "description": "Cooperate through scarce truthful hints while each player cannot see their own cards.",
+    "mechanic": "Cooperate through scarce truthful hints while each player cannot see their own cards.",
+    "rules": [
+      "Two players human and transparent-policy bot, each four cards facing partner. Three suits ranks 1\u20135 with multiplicities 3/2/2/2/1. Build shared ascending suit stacks. On turn play own indexed card blind, discard to regain one of five hints, or spend hint naming suit/rank in partner hand: all matching cards indicated, all nonmatching excluded. Three wrong plays end game; completing rank 5 restores a hint. Deck empty grants one final turn each.",
+      "Deliver at least twelve of fifteen ranks by the end of the final replies to win; all fifteen earns perfect correspondence. Reaching twelve early does not end the game. Three mistakes always lose; final delivery below twelve loses. Restart repeats the deal; Another deal creates a new shuffled deal."
+    ],
+    "controls": "Choose a truthful suit/rank hint for the house, or press Play/Discard for one of your concealed slots. Each labeled choice commits immediately.",
+    "accessibility": "Your slots show only legitimate possibilities; partner cards and hint restrictions are visible. Public discards, fuse/hint counts and the public card ceiling are written out.",
+    "decisions": "Spend a hint to make a safe play, rescue a unique late-rank card from discard, or discard a known duplicate to fund later communication. Must reason from own accumulated positive and negative clues.",
+    "category": "strategy",
+    "url": "parlour-room/?game=letters-we-cannot-see",
+    "accent": "#cbdc9a",
+    "symbol": "\u25c8",
+    "family": "parlour-room",
+    "module": "letters-we-cannot-see",
+    "designId": "B16",
+    "smoke": {
+      "actionSelector": "#play-area button[data-action]"
+    },
+    "previewSelector": "#play-area"
+  },
+  {
+    "id": "ordered-harvest",
+    "name": "Ordered Harvest",
+    "description": "Trade away awkward future cards because hand order forces imminent planting and field replacement.",
+    "mechanic": "Trade away awkward future cards because hand order forces imminent planting and field replacement.",
+    "rules": [
+      "Two fields each hold one crop type; hand order immutable. Turn plant oldest card, optionally second oldest, reveal two market cards. Negotiate transfers of market cards and any hand cards with two bots using public wanted-crop offers; received cards must plant immediately, never enter hand. Player may exchange a selected card for an offered crop, accept/refuse; bot follows public current-field value. Harvest a field anytime for threshold coin schedule, removing it. Draw three cards to hand tail. Two deck passes.",
+      "Most coins after final mandatory harvest wins; tie draws, lower total loses.",
+      "This compact market uses one-for-one counteroffers. A 16-human-turn cap also triggers the final harvest. Bots receive market crops and draw between your turns; all received crops plant immediately."
+    ],
+    "controls": "Plant in a field; optionally plant the second-oldest card. Select an offered hand/market card, then an accepted counteroffer or gift. Finish trades triggers required planting.",
+    "accessibility": "Hand positions are explicitly ordered. Fields, harvest thresholds, available counteroffers, trade policy and mandatory planting phases are text.",
+    "decisions": "Keep a nearly profitable field or harvest early to absorb compulsory crop; trade future awkward card before it reaches hand front; gift market crop to avoid destroying a valuable field. Trade can help rival but save more own loss.",
+    "category": "strategy",
+    "url": "parlour-room/?game=ordered-harvest",
+    "accent": "#cbdc9a",
+    "symbol": "\u25c8",
+    "family": "parlour-room",
+    "module": "ordered-harvest",
+    "designId": "B17",
+    "smoke": {
+      "actionSelector": "#play-area button[data-action]"
+    },
+    "previewSelector": "#play-area"
+  },
+  {
+    "id": "shared-seasons",
+    "name": "Shared Seasons",
+    "description": "Select a phase secretly so every player acts in chosen phases, but only selectors receive its privilege.",
+    "mechanic": "Select a phase secretly so every player acts in chosen phases, but only selectors receive its privilege.",
+    "rules": [
+      "Each player begins two tableau buildings and six cards; four round phases: Explore draw, Develop build, Produce stock, Ship consume. Human and bot simultaneously choose one; union executes in printed order, once per phase. Selector gets phase-specific bonus. Build by discarding other hand cards as payment; built buildings give permanent exact effects or storage. Production fills empty producers; shipping empties chosen stocks for cards or VP. Twelve rounds or six buildings ends.",
+      "VP tokens plus printed building VP higher than opponent wins; equal draw. Short rules table lists every building effect."
+    ],
+    "controls": "Choose a role to commit it. In development choose a building and payment cards, then confirm payment; shipping uses separate card-reward or point-reward buttons.",
+    "accessibility": "Building effects, printed costs/VP, goods, revealed roles, phase privileges and selected payments are written out.",
+    "decisions": "Choose a phase you need versus exploit a likely rival selection; retain useful building card or spend it to build another; produce now anticipating opponent shipping or deny free action by changing role.",
+    "category": "strategy",
+    "url": "parlour-room/?game=shared-seasons",
+    "accent": "#cbdc9a",
+    "symbol": "\u25c8",
+    "family": "parlour-room",
+    "module": "shared-seasons",
+    "designId": "B18",
+    "smoke": {
+      "actionSelector": "#play-area button[data-action]"
+    },
+    "previewSelector": "#play-area"
+  },
+  {
+    "id": "pass-the-burden",
+    "name": "Pass the Burden",
+    "description": "Pay to refuse a penalty card, or take its accumulating coins and alter the cost of future consecutive cards.",
+    "mechanic": "Pay to refuse a penalty card, or take its accumulating coins and alter the cost of future consecutive cards.",
+    "rules": [
+      "Cards 3\u201325, six randomly omitted unseen, remaining shuffled; each player starts nine coins. Face-up card offered in turn; refuse places one own coin on it and passes offer; accept takes card and all coins, then reveals next. No coins forces acceptance. At end each consecutive run scores only its lowest card as penalty; subtract remaining coins. Own accepted cards public.",
+      "Lowest penalty wins; equal draws among tied players, higher loses. Ends deck empty."
+    ],
+    "controls": "Take the current card and its coins, or pay one coin to pass. Both actions are native buttons.",
+    "accessibility": "The current card, pot, coins, accepted cards and running penalties are text.",
+    "decisions": "Pay to avoid a high isolated card or take a funded burden, preserve refusal liquidity, accept a bridge that joins runs and removes a larger penalty, infer missing-card risk.",
+    "category": "strategy",
+    "url": "parlour-room/?game=pass-the-burden",
+    "accent": "#cbdc9a",
+    "symbol": "\u25c8",
+    "family": "parlour-room",
+    "module": "pass-the-burden",
+    "designId": "B19",
+    "smoke": {
+      "actionSelector": "#play-area button[data-action]"
+    },
+    "previewSelector": "#play-area"
+  },
+  {
+    "id": "market-of-five",
+    "name": "Market of Five",
+    "description": "Exchange with a shared replenishing market, then time unordered set sales against diminishing rewards.",
+    "mechanic": "Exchange with a shared replenishing market, then time unordered set sales against diminishing rewards.",
+    "rules": [
+      "Market five goods/camel cards, personal hand cap seven plus camel herd. Turn take one good, take all camels, exchange two or more own goods/camels for same number market goods, or sell a same-type set. Rare goods require at least two to sell. Public per-good reward stacks diminish with successive sales; set size 3/4/5 grants stated bonus. Sold cards leave. Market refills from deck; three depleted reward stacks or exhausted deck ends. A 48-combined-turn limit also ends the match. An exchange cannot offer and receive the same goods type.",
+      "Higher coin total plus five-point larger camel herd bonus wins, equal draws."
+    ],
+    "controls": "Take a good or camels directly, choose a listed set sale, or select incoming/outgoing cards and camels before confirming an exchange.",
+    "accessibility": "Hand cap, exchange balance, camel herds, stock count, exact reward stacks and set bonuses are written out.",
+    "decisions": "Sell early for best per-card rewards or wait for set bonus, exchange unwanted goods/camels to change market mix, avoid giving rival an easy large set, and manage hand cap.",
+    "category": "strategy",
+    "url": "parlour-room/?game=market-of-five",
+    "accent": "#cbdc9a",
+    "symbol": "\u25c8",
+    "family": "parlour-room",
+    "module": "market-of-five",
+    "designId": "B20",
+    "smoke": {
+      "actionSelector": "#play-area button[data-action]"
+    },
+    "previewSelector": "#play-area"
+  },
+  {
+    "id": "roads-we-share",
+    "name": "Roads We Share",
+    "description": "Extend edge-matched landscape features while limited claimants stay locked until feature closure.",
+    "mechanic": "Extend edge-matched landscape features while limited claimants stay locked until feature closure.",
+    "rules": [
+      "Twenty-four square tiles have roads, city sides and fields; drawn tile rotates and must match every adjacent edge. After placement optionally put one of five claimants on an unclaimed connected road/city on that tile; cannot enter already claimed connected feature. Merging separately claimed features allowed. Completed road closed at junction/end both ends; city closed on every exposed city edge. Majority claimants score feature, ties all score; claimants return. End incomplete features score half rounded down.",
+      "Higher feature score after tile stock ends wins, equal draw; house victory natural loss."
+    ],
+    "controls": "Rotate the drawn tile, then choose a legal coordinate to place it. Claim an available road/city or leave it unclaimed.",
+    "accessibility": "Tiles name their four edge types. Claimed features list tile counts, open edges and claimant counts; scores and available pawns are text.",
+    "decisions": "Close a small feature to recover claimant or extend for more points; merge competing claims for shared/majority score, deny completion by geometry, preserve claimant supply.",
+    "category": "strategy",
+    "url": "parlour-room/?game=roads-we-share",
+    "accent": "#cbdc9a",
+    "symbol": "\u25c8",
+    "family": "parlour-room",
+    "module": "roads-we-share",
+    "designId": "B21",
+    "smoke": {
+      "actionSelector": "#play-area button[data-action]"
+    },
+    "previewSelector": "#play-area"
+  },
+  {
+    "id": "factory-mosaic",
+    "name": "Factory Mosaic",
+    "description": "A shared color draft creates unwanted leftovers that opponents can force into costly overflow.",
+    "mechanic": "A shared color draft creates unwanted leftovers that opponents can force into costly overflow.",
+    "rules": [
+      "Five factories each four tiles, plus center. Take all one color from one source; all other factory tiles move to center. Put taken color into exactly one of own pattern rows capacities 1\u20135, each single-color and only if corresponding wall row lacks it. Excess falls to floor, escalating penalty. First center taker gets next-round initiative and one penalty. End round completed rows move one tile to fixed matching wall position, score connected horizontal/vertical lengths; leftovers discard. End when any wall row full.",
+      "Wall score minus floor penalties plus stated row/column/color bonuses higher wins; ties draw.",
+      "A ten-round limit also closes the game with the normal bonuses."
+    ],
+    "controls": "Choose a source/color, then a pattern row or the floor. Labeled source and row buttons support touch and keyboard.",
+    "accessibility": "Tile colors have names; source quantities, pattern rows, wall state, floor counts, penalties and scores are written out.",
+    "decisions": "Complete a short row now or load a long row for future adjacency, take center initiative at penalty, leave a large unwanted color lot to rival, or deliberately waste tiles to deny high score.",
+    "category": "strategy",
+    "url": "parlour-room/?game=factory-mosaic",
+    "accent": "#cbdc9a",
+    "symbol": "\u25c8",
+    "family": "parlour-room",
+    "module": "factory-mosaic",
+    "designId": "B22",
+    "smoke": {
+      "actionSelector": "#play-area button[data-action]"
+    },
+    "previewSelector": "#play-area"
+  },
+  {
+    "id": "anchor-stacks",
+    "name": "Anchor Stacks",
+    "description": "Stack ownership moves exactly its height while vacated bridges can erase every disconnected component.",
+    "mechanic": "Stack ownership moves exactly its height while vacated bridges can erase every disconnected component.",
+    "rules": [
+      "Hex board of 19 cells fully populated: eight counters each side and three neutral anchor counters. A stack owned by its top counter may move in straight line exactly its total height onto another occupied cell, carrying every layer. A surrounded stack cannot move; holes cannot be landing cells but may be crossed. After a move, remove every component not connected through occupied neighbors to at least one anchor-containing stack. Anchors travel when covered stacks move. Alternate until neither can move.",
+      "Sum heights of controlled surviving stacks; higher wins, equal draws. Empty own controllable stack set can end early only if opponent has no future changes."
+    ],
+    "controls": "Select an exposed own stack, then a listed legal destination to commit its move. Pass appears only when no move is available.",
+    "accessibility": "The stack census gives coordinates and every layer from bottom to top, including anchors. Controlled heights and disconnections are reported in text.",
+    "decisions": "Cover opposing stacks to seize height, maintain maneuverability as stacks lengthen, relocate anchors to preserve own component, cut a bridge sacrificing material while deleting larger enemy component.",
+    "category": "strategy",
+    "url": "parlour-room/?game=anchor-stacks",
+    "accent": "#cbdc9a",
+    "symbol": "\u25c8",
+    "family": "parlour-room",
+    "module": "anchor-stacks",
+    "designId": "B23",
+    "smoke": {
+      "actionSelector": "#play-area button[data-action]"
+    },
+    "previewSelector": "#play-area"
+  },
+  {
+    "id": "the-other-half",
+    "name": "The Other Half",
+    "description": "Cut a connected estate into two connected parcels, then opponent chooses first under asymmetric public utilities.",
+    "mechanic": "Cut a connected estate into two connected parcels, then opponent chooses first under asymmetric public utilities.",
+    "rules": [
+      "Connected estate within a 4\u00d74 grid of terrain cells with public red/blue utility weights and one adjacency bonus per connected orchard pair. Across six rounds draw different estates and utility cards; players alternate divider/chooser. Divider selects subset; both parcels nonempty and orthogonally connected. Chooser freely selects either parcel, divider gets remainder. House chooser maximizes its own awarded utility minus opponent awarded utility, consistent with match score difference; human chooses freely. A player scores own utility only. Each has two once-per-match redraw tokens usable before division, replacing an estate at cost two points. All utilities and future two estate types visible. Only the divider may spend a redraw token, before touching the cut. The house may also redraw an unfavorable estate at a two-point cost; each side has two tokens.",
+      "Score difference over six rounds decides win/loss; equality draws. Invalid disconnected cut never commits."
+    ],
+    "controls": "Toggle cells for parcel A and inspect the utility/connectivity preview, then Submit. The chooser selects A or B. Redraw is available before beginning a cut.",
+    "accessibility": "Cell labels and parcel summaries give utilities and membership. Cut validation, allocation results, scores and redraw tokens are text.",
+    "decisions": "Balance rival score-difference choices without equalizing parcel area or own utility, use shape constraints to deny a high-value bundle, decide which round merits redraw rather than accept an adverse division. When choosing, own immediate score competes with withholding opponent score because match is score difference.",
+    "category": "strategy",
+    "url": "parlour-room/?game=the-other-half",
+    "accent": "#cbdc9a",
+    "symbol": "\u25c8",
+    "family": "parlour-room",
+    "module": "the-other-half",
+    "designId": "B24",
+    "smoke": {
+      "actionSelector": "#play-area button[data-action]"
+    },
+    "previewSelector": "#play-area"
+  },
+  {
+    "id": "four-houses",
+    "name": "Four Houses",
+    "description": "Grow kingdoms but score the weakest of four cultures, using different rules for internal leadership disputes and external wars.",
+    "mechanic": "Grow kingdoms but score the weakest of four cultures, using different rules for internal leadership disputes and external wars.",
+    "rules": [
+      "6\u00d76 land/river board; four tile colors and four leader types per side. Turn two actions: place tile from six-card hand (river color only on river), place/move a leader adjacent to shrine tile, or exchange the entire hand. Tile added to kingdom awards point of its color to same-color leader owner if present. Moving second same-color leader into existing kingdom triggers internal contest using adjacent shrines plus committed shrine hand tiles; loser leader removed. Connecting separate kingdoms containing rival same-color leaders triggers external contest using total matching-color tiles plus committed matching hand cards; loser leader and losing-color tiles removed, potentially splitting kingdom. Tied strength favors defender; commitments simultaneous.",
+      "After 24 full turns or tile bag depleted, sort four scores ascending and compare lexicographically; higher weakest then next weakest wins. Equal draws.",
+      "Canal tiles occupy river only; all other tiles occupy land. Exchange replaces your entire hand and costs one action. Tile placement pays after any conflict resolves.",
+      "When every board cell is occupied and all conflicts have resolved, the match settles immediately; no further placements are possible."
+    ],
+    "controls": "Choose a tile or leader, then a legal square. During a conflict choose support and Reveal commitments. Whole-hand exchange and Pass are separate actions.",
+    "accessibility": "Coordinates name tiles and leaders; hand counts, four score tracks, conflict type/base strength, support color and the conflict log are written out.",
+    "decisions": "Build under opponent leader for board position, increase weakest score rather than strongest, start internal coup cheaply or prepare costly external war, keep matching hand cards for support instead of placing for immediate points.",
+    "category": "strategy",
+    "url": "parlour-room/?game=four-houses",
+    "accent": "#cbdc9a",
+    "symbol": "\u25c8",
+    "family": "parlour-room",
+    "module": "four-houses",
+    "designId": "B25",
+    "smoke": {
+      "actionSelector": "#play-area button[data-action]"
+    },
+    "previewSelector": "#play-area"
+  },
+  {
+    "id": "carried-road",
+    "name": "Carried Road",
+    "description": "A controlled stack can be carried and split along its path, changing road ownership and wall access.",
+    "mechanic": "A controlled stack can be carried and split along its path, changing road ownership and wall access.",
+    "rules": [
+      "5\u00d75 board; each side 15 flat/wall stones and one capstone. On turn place reserve flat or standing wall onto empty cell, or move a stack controlled by own top. Carry up to five top stones in original vertical order along one orthogonal ray, dropping at least one at each visited cell; must drop all carried stones. Cannot cross/land on wall or capstone, except lone final capstone can flatten standing wall. Flat tops and capstone tops connect own road between opposite edges; standing walls do not connect. Opening two turns place one rival flat on empty cell.",
+      "Connect either opposite edge pair by own orthogonal flat/capstone tops wins; simultaneous roads favor mover. Full board or empty reserve without road: more top flats wins, equal draw."
+    ],
+    "controls": "Place a reserve type on an empty square, or select an own stack, carry count, direction and drop amounts. Commit a carry only after all stones are assigned; Cancel preserves the position.",
+    "accessibility": "Each stack lists owners/types from bottom to top. Carry plans, reserve counts, road rules and wall/capstone interactions are text.",
+    "decisions": "Break own road temporarily to distribute buried stones, cap rival road, choose wall defense versus scoring flat, or use capstone to reopen blocked corridor. Drop partition changes several owners in one turn.",
+    "category": "strategy",
+    "url": "parlour-room/?game=carried-road",
+    "accent": "#cbdc9a",
+    "symbol": "\u25c8",
+    "family": "parlour-room",
+    "module": "carried-road",
+    "designId": "B26",
+    "smoke": {
+      "actionSelector": "#play-area button[data-action]"
+    },
+    "previewSelector": "#play-area"
+  },
+  {
+    "id": "masks-and-coins",
+    "name": "Masks and Coins",
+    "description": "Make role claims to take actions; opponents can challenge evidence or counterclaim a block before effects resolve.",
+    "mechanic": "Make role claims to take actions; opponents can challenge evidence or counterclaim a block before effects resolve.",
+    "rules": [
+      "Two players each two hidden influence cards from 15-card deck, three copies five roles; start two coins. Each turn Income +1 unchallengeable, Aid +2 blockable, Tax +3 claiming treasurer, Steal2 claiming captain, Exchange two cards with deck claiming envoy, Assassinate costing3 claiming assassin, or Coup costing7 unchallengeable. Steal blocked by captain/envoy; assassination blocked by guard; Aid blocked by treasurer. Roles need not be held to claim. A challenge reveals matching role if held then reshuffles/replaces it; challenger loses influence. Failed claimant loses influence and action cancels. Lost influence selected and exposed permanently. At10 coins must Coup.",
+      "Opponent zero influence wins; own zero loses. No cash stake or real-money framing. All challenge outcomes logged."
+    ],
+    "controls": "Declare an action, then use the current challenge/block response buttons. Select exposed influence when losing it and select retained cards after an exchange.",
+    "accessibility": "Own roles, public exposed influence, coins, pending declarations, costs and challenge order are written out; opponent roles remain concealed.",
+    "decisions": "Choose costly certain attack or cheap bluff, challenge according to exposed role supply and action history, counterclaim block versus sacrifice influence, exchange to alter private resources without revealing identity.",
+    "category": "strategy",
+    "url": "parlour-room/?game=masks-and-coins",
+    "accent": "#cbdc9a",
+    "symbol": "\u25c8",
+    "family": "parlour-room",
+    "module": "masks-and-coins",
+    "designId": "B27",
+    "smoke": {
+      "actionSelector": "#play-area button[data-action]"
+    },
+    "previewSelector": "#play-area"
+  },
+  {
+    "id": "merging-estates",
+    "name": "Merging Estates",
+    "description": "Spatial building growth triggers company mergers that revalue contested stock portfolios.",
+    "mechanic": "Spatial building growth triggers company mergers that revalue contested stock portfolios.",
+    "rules": [
+      "6\u00d76 lots, three companies, six secret lot tiles per player and refill bag. Turn place one tile, resolve adjacency: isolated remains independent; touching isolated cluster may found inactive company; touching one company expands; joining two or more active companies merges smaller into larger (placer breaks equal-size tie). Company size\u226510 is safe and cannot be merged out; tile joining two safe companies illegal. Merger pays fixed majority/minority bonuses to stockholders; defunct shares may sell at old price, trade two-for-one into survivor, or hold for refounding. Then buy up to three public available shares; prices depend on displayed size bands. Cash finite; stock finite. End when every company safe or one reaches18 after current turn. If a player has no legal tile, reveal and discard only permanently illegal safe-merger tiles, refill if possible, then pass placement and retain purchase phase. Two consecutive no-placement turns with no remaining drawable legal tile, bag empty with both hands exhausted, or a full board immediately triggers normal final settlement. Remaining temporary unplayable lots may not be secretly redrawn. Settlement also occurs after48 full turns as a displayed maximum.",
+      "Liquidate all shares at current size prices and payout final bonuses; highest cash wins, equal draw. Cash exhaustion limits action but not premature defeat."
+    ],
+    "controls": "Choose a lot, resolve any founding/merger decisions, handle defunct shares, then buy shares or end the turn. All phases use labeled buttons.",
+    "accessibility": "Companies, lot coordinates, holdings, share prices, cash, merger payouts and phase instructions are text.",
+    "decisions": "Place for growth or trigger merger when holding minority, buy rival company shares to anticipate payout, withhold a tile to change majority later, trade defunct shares into future leader versus realize cash.",
+    "category": "strategy",
+    "url": "parlour-room/?game=merging-estates",
+    "accent": "#cbdc9a",
+    "symbol": "\u25c8",
+    "family": "parlour-room",
+    "module": "merging-estates",
+    "designId": "B28",
+    "smoke": {
+      "actionSelector": "#play-area button[data-action]"
+    },
+    "previewSelector": "#play-area"
+  },
+  {
+    "id": "last-known-address",
+    "name": "Last Known Address",
+    "description": "Coordinate a detective team to intercept a moving hidden fugitive whose transport traces constrain possible routes.",
+    "mechanic": "Coordinate a detective team to intercept a moving hidden fugitive whose transport traces constrain possible routes.",
+    "rules": [
+      "Public sixteen-station graph with three labeled route types: walk, bus and ferry. Three detectives start at fixed separated visible nodes; fugitive starts at an announced fourth node then immediately makes one hidden move. Each detective has8 walk,4 bus and2 ferry tickets. Each round move every detective once in chosen order (or stay free); occupied detective node cannot be entered by another. Human never sees fugitive current location unless landing on it captures. After all detectives act, fugitive chooses one legal adjacent typed edge not occupied by detective, using finite hidden tickets; used transport TYPE is always revealed, and actual endpoint revealed after rounds4,8,12. Fugitive never stays. Reveal its initial ticket totals12/6/4 and decrement types publicly. If no legal ticketed exit remains fugitive captured. Evasion bot responds to actual detective positions and past observations only, not uncommitted UI selection. Sixteen rounds total.",
+      "Detective lands on fugitive current station, or fugitive has no legal exit after detective moves: win. Fugitive finishes its sixteenth move uncaptured: loss. Ticket exhaustion can restrict detective movement but staying always legal."
+    ],
+    "controls": "Select a detective, then a listed route/station or Stay. Each detective acts once before End team round moves the fugitive.",
+    "accessibility": "The full travel graph, station coordinates, tickets, past sightings and transport traces are text. Current hidden fugitive position is not displayed.",
+    "decisions": "Propagate possible hidden locations using mode traces, split detectives to cover candidate exit cuts or converge on revealed node, spend scarce shortcut ticket now versus retain interception capacity, and occupy a station to prevent future fugitive escape even when it is not a candidate current location.",
+    "category": "strategy",
+    "url": "parlour-room/?game=last-known-address",
+    "accent": "#cbdc9a",
+    "symbol": "\u25c8",
+    "family": "parlour-room",
+    "module": "last-known-address",
+    "designId": "B29",
+    "smoke": {
+      "actionSelector": "#play-area button[data-action]"
+    },
+    "previewSelector": "#play-area"
+  },
+  {
+    "id": "crossed-programs",
+    "name": "Crossed Programs",
+    "description": "Commit movement programs simultaneously, then resolve physical interference one register at a time.",
+    "mechanic": "Commit movement programs simultaneously, then resolve physical interference one register at a time.",
+    "rules": [
+      "7\u00d77 factory with pits, conveyors and rotators, two robots and three ordered checkpoints. Each round both receive five command cards from own identical cyclic deck (Forward1, Forward2, Back1, Left, Right, Wait), select three and order into registers. Each register lower printed priority robot moves first; forward can push opponent if next cell free, otherwise stops. Then all conveyors move simultaneously and rotators turn occupied robots. Finish entire three-register cycle, discard used and redraw. Opponent commits before human program reveal; checkpoints count only on robot movement/conveyor settling, pits reset robot to last checkpoint and lose one of three lives. Conveyor resolution is fixed: compute every robot conveyor destination from its post-command square; if two destinations coincide both stay; if a target is occupied by a robot that is not vacating, mover stays; swaps between vacating robots are allowed. Conveyor movement never pushes. Arrival on pit removes robot before rotators resolve; new checkpoint respawn occurs after register and cannot push another robot (occupied respawn waits offboard until free).",
+      "Visit all three checkpoints and exit before rival wins; lose if own lives zero or rival finishes. Simultaneous finish ties.",
+      "The compact race ends in a draw after 24 programs. The exact course is D4\u2192B2\u2192F2\u2192D1; D4 also rotates robots clockwise after every register."
+    ],
+    "controls": "Add three command cards in register order; Remove last register edits the program. Seal it, then Resolve each register with a separate button.",
+    "accessibility": "Commands, priorities, heading, robot positions, checkpoint progress and each resolved register are described in text. Resolution is explicitly stepped.",
+    "decisions": "Predict opponent occupancy, intentionally push or block a planned step, program orientation that compensates conveyor rotation, reserve needed command for next draw. A good solo route can fail because other robot moves first.",
+    "category": "strategy",
+    "url": "parlour-room/?game=crossed-programs",
+    "accent": "#cbdc9a",
+    "symbol": "\u25c8",
+    "family": "parlour-room",
+    "module": "crossed-programs",
+    "designId": "B30",
+    "smoke": {
+      "actionSelector": "#play-area button[data-action]"
+    },
+    "previewSelector": "#play-area"
+  },
+  {
+    "id": "one-last-card",
+    "name": "One Last Card",
+    "description": "Draw one, retain one hidden identity, and use the discarded card to gather information or eliminate rivals.",
+    "mechanic": "Draw one, retain one hidden identity, and use the discarded card to gather information or eliminate rivals.",
+    "rules": [
+      "Three players each hold one hidden card; deck ranks1\u20138 with multiplicities5/2/2/2/2/1/1/1 (sixteen cards). At turn draw second and play one for its printed effect:1 guess another hand rank excluding1 (correct eliminates);2 privately inspect other hand;3 compare hands privately (lower eliminated);4 shield until next turn;5 force target discard/redraw;6 exchange hands;7 no effect but must play if held with5 or6;8 played/discarded eliminates self. One undealt card hidden to prevent complete certainty. Eliminated cards public. When stock empty, highest retained rank among survivors earns token; last survivor earns immediately. First three tokens wins.",
+      "Three favor tokens wins; first rival to three loses; simultaneous threshold ties broken next round. Tied highest survivors each earn a token; if the match lead at three is tied, continue until a unique leader."
+    ],
+    "controls": "Choose a card to play, then a target and guessed rank when its effect requires them. Other card effects resolve immediately.",
+    "accessibility": "Own card names/effects, public discards, protection, tokens and legitimate private inspection knowledge are text; unknown opposing cards stay concealed.",
+    "decisions": "Keep high rank for showdown but risk guess, use inspection now or shield future, choose forced redraw to remove dangerous high card, trade away exposed identity. Retained card is both win value and future action resource.",
+    "category": "strategy",
+    "url": "parlour-room/?game=one-last-card",
+    "accent": "#cbdc9a",
+    "symbol": "\u25c8",
+    "family": "parlour-room",
+    "module": "one-last-card",
+    "designId": "B31",
+    "smoke": {
+      "actionSelector": "#play-area button[data-action]"
+    },
+    "previewSelector": "#play-area"
+  },
+  {
+    "id": "passing-courses",
+    "name": "Passing Courses",
+    "description": "Simultaneously draft from circulating hands; what you refuse becomes an opponent opportunity.",
+    "mechanic": "Simultaneously draft from circulating hands; what you refuse becomes an opponent opportunity.",
+    "rules": [
+      "Three players each receive seven cards. Each chooses one face down, all reveal into scoring tableau and pass remaining hand left; repeat to exhaustion, three rounds with alternating direction. Six card families: pairs worth5; triples worth10; each dumpling increasing1/3/6/10/15; roll-icons most6/second3; sauce doubles next single nigiri2/3/4; desserts remain across rounds and majority+6/minority\u22126 at match end. A once-per-round chopstick card already drafted may be returned into passing hand to take two cards from current hand. Fixed public score reference. Tied roll places share that bonus rounded down. If all dessert counts tie, no dessert bonus or penalty applies.",
+      "Most points after third-round dessert adjustment wins; equal draws, otherwise loss."
+    ],
+    "controls": "Choose a card and Commit the pick. When available, use chopsticks to select two cards and return the chopsticks before committing.",
+    "accessibility": "Cards and score relationships have text names. Hands, tableaus, round scores and the public scoring reference are written out.",
+    "decisions": "Select own set completion or deny rival almost-completed set; remember hand likely to return, delay a card you expect safe, use chopsticks to capture competing options at cost of returning an exploitable card.",
+    "category": "strategy",
+    "url": "parlour-room/?game=passing-courses",
+    "accent": "#cbdc9a",
+    "symbol": "\u25c8",
+    "family": "parlour-room",
+    "module": "passing-courses",
+    "designId": "B32",
+    "smoke": {
+      "actionSelector": "#play-area button[data-action]"
+    },
+    "previewSelector": "#play-area"
+  },
+  {
+    "id": "a-stitch-in-time",
+    "name": "A Stitch in Time",
+    "description": "Buy spatial patches whose time cost determines opponent turn count and whose income pays only when crossing shared milestones.",
+    "mechanic": "Buy spatial patches whose time cost determines opponent turn count and whose income pays only when crossing shared milestones.",
+    "rules": [
+      "Each side empty7\u00d77 quilt, five buttons; shared circular market of18 distinct polyomino patches with printed price, time cost1\u20136 and income0\u20133. Marker selects next three available patches; buy one, pay price, rotate/reflect and fit without overlap, marker moves past bought position, own time pawn advances patch cost. Behind pawn always acts next (ties latest arrival), so same player may take consecutive turns. Every passed income milestone pays current sewn income. Instead advance to one beyond rival pawn gaining one button per step. First to cross each of three single-cell bonus milestones gets patch to place. End both reach final time24; score buttons minus2 per empty quilt cell.",
+      "Higher final score wins; equal draws. Cannot end early while behind unless advancing through rival, as action rule states."
+    ],
+    "controls": "Choose an offered patch, cycle rotation/reflection, select an anchor preview, then confirm the purchase. Advance time and earned single-cell placement use separate buttons.",
+    "accessibility": "Patch offsets, cost/time/income, market order, timeline milestones, quilt occupancy and current score estimates are text.",
+    "decisions": "Choose awkward high-income piece early versus easy area fill, time a long purchase to collect income but surrender small-patch race, take several low-time turns to monopolize market, preserve gaps for expected shapes.",
+    "category": "strategy",
+    "url": "parlour-room/?game=a-stitch-in-time",
+    "accent": "#cbdc9a",
+    "symbol": "\u25c8",
+    "family": "parlour-room",
+    "module": "a-stitch-in-time",
+    "designId": "B33",
+    "smoke": {
+      "actionSelector": "#play-area button[data-action]"
+    },
+    "previewSelector": "#play-area"
+  },
+  {
+    "id": "river-stakes",
+    "name": "River Stakes",
+    "description": "Reassess hidden-hand strength across shared card reveals and respond to opponent bets with fold, call or raise.",
+    "mechanic": "Reassess hidden-hand strength across shared card reveals and respond to opponent bets with fold, call or raise.",
+    "rules": [
+      "Two-player community-card poker with explicit simplified fixed-limit betting. Each starts40 chips, blinds1/2 alternate. Two private cards each; shared flop3, turn1, river1. Betting before flop/after each reveal, up to three raises per street, raise size2 preflop/flop and4 turn/river. Check if no owed bet, call matching owed, fold surrender pot, raise if affordable. Equal stacks; all-in caps contest to matched contribution, refund unmatched excess. Best five of seven using displayed standard rank table wins showdown; ties split. Eight hands or bankruptcy ends.",
+      "More chips after eight hands wins; fewer loses; equal draws. Bankruptcy terminal loss/win. No real money."
+    ],
+    "controls": "Use Check/Call, Fold or Raise. Buttons state the current cost. Deal next hand continues after a settled pot.",
+    "accessibility": "Cards have rank/suit names. Community cards, private hand, pot, owed amount, street, betting log and rank reference are text.",
+    "decisions": "Continue a draw when price warrants or fold mediocre made hand, bet value versus bluff based on public texture/opponent history, avoid raising a dominated hand, manage match lead and finite bankroll.",
+    "category": "strategy",
+    "url": "parlour-room/?game=river-stakes",
+    "accent": "#cbdc9a",
+    "symbol": "\u25c8",
+    "family": "parlour-room",
+    "module": "river-stakes",
+    "designId": "B34",
+    "smoke": {
+      "actionSelector": "#play-area button[data-action]"
+    },
+    "previewSelector": "#play-area"
+  },
+  {
+    "id": "rings-leave-ripples",
+    "name": "Rings Leave Ripples",
+    "description": "Move a ring to leave a marker and flip crossed marker runs; scoring removes one of your own future movement bases.",
+    "mechanic": "Move a ring to leave a marker and flip crossed marker runs; scoring removes one of your own future movement bases.",
+    "rules": [
+      "Hexagonal radius3 board,37 intersections. Alternate placing four own rings on empty cells, then movement phase. On turn choose own ring, leave own marker on its origin, move along a straight hex axis. May cross any empty intersections before markers; after first marker must cross entire contiguous marker run and stop at first empty intersection. Cannot cross another ring. All crossed markers flip owner; empty-to-empty move allowed. Any four collinear consecutive same-owner markers create scoring row. Resolve every row before next move: row owner selects four consecutive markers to remove, then removes one own ring permanently and gains one seal. If both sides have rows, mover resolves their own first; removing markers can break rival row. Multiple own rows resolve one at a time with choice. Victory immediately at third seal.",
+      "First three seals wins; house three loses. If current player has no legal ring move before three seals, opponent wins. Threefold full-position repetition draws;100 completed ring moves without third seal draws with no score-based shortcut."
+    ],
+    "controls": "Place rings, then select an own ring and its legal landing. When scoring choose a listed four-marker row, then a ring to retire; each selection commits.",
+    "accessibility": "Axial coordinates name owners and ring/marker state. Move labels give flip counts; qualifying rows, ring census and seal counts are text.",
+    "decisions": "Choose ring origin that seeds a row while its landing enables a future crossing, flip an enemy threat without creating a stronger rival row elsewhere, choose which scoring markers/ring to remove to preserve future movement options. Scoring voluntarily reduces your mobile sources; greedy immediate row can leave a weaker remaining ring position.",
+    "category": "strategy",
+    "url": "parlour-room/?game=rings-leave-ripples",
+    "accent": "#cbdc9a",
+    "symbol": "\u25c8",
+    "family": "parlour-room",
+    "module": "rings-leave-ripples",
+    "designId": "B35",
+    "smoke": {
+      "actionSelector": "#play-area button[data-action]"
+    },
+    "previewSelector": "#play-area"
+  }
+]

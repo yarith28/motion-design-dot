@@ -1,0 +1,22 @@
+Crossgrain English word list
+
+lexicon.mjs is derived from ENABLE (Enhanced North American Benchmark
+LEexicon), compiled by M. Cooper and Alan Beale and released into the public
+domain. The original declaration explicitly permits game designers to
+incorporate the list into their games.
+
+Public-domain declaration reproduced in LibreOffice's dictionary notices:
+https://api.libreoffice.org/share/readme/LICENSE.html
+Search that notice for "The ENABLE package".
+
+Downloaded source (2026-10-01):
+https://raw.githubusercontent.com/dolph/dictionary/master/enable1.txt
+Upstream source SHA-256:
+3f16130220645692ed49c7134e24a18504c2ca55b3c012f7290e3e77c63b1a89
+
+Local transformation: alphabetic entries of length 2 through 9 only (the
+board is 9 squares wide), uppercased, deduplicated and sorted. 105241 entries.
+No definitions or proprietary dictionary text are included.
+
+familiar-lexicon.mjs is the separate, locally curated opponent search
+vocabulary. Every proposed play must still validate against lexicon.mjs.

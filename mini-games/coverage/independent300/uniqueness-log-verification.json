@@ -1,0 +1,295 @@
+{
+  "verifiedAt": "2026-10-01T08:34:18.987577+00:00",
+  "games": [
+    {
+      "designId": "A01",
+      "logFile": "mini-games/coverage/independent300/uniqueness-A01-falling-orchard-ordinary.jsonl",
+      "logSha256": "a0838eb63e47e8aa7a363452eb830a37b08a44dd8dd927c8ebfa6da5a116a9e0",
+      "loggedActions": 178,
+      "firstLoggedCampaignWin": "2026-10-01T07:17:39.240Z",
+      "firstLoggedTerminalLoss": null,
+      "failureBeforeSource": true,
+      "lastAction": "2026-10-01T07:20:24.766Z"
+    },
+    {
+      "designId": "A08",
+      "logFile": "mini-games/coverage/independent300/uniqueness-A08-turn-the-stack-ordinary.jsonl",
+      "logSha256": "f7eda697f5f55dc4f0549f0787f4f9000a5e4566754598d560727debb400a510",
+      "loggedActions": 162,
+      "firstLoggedCampaignWin": "2026-10-01T07:41:29.204Z",
+      "firstLoggedTerminalLoss": null,
+      "failureBeforeSource": true,
+      "lastAction": "2026-10-01T07:41:49.959Z"
+    },
+    {
+      "designId": "D01",
+      "logFile": "mini-games/coverage/independent300/uniqueness-D01-pebble-engine-ordinary.jsonl",
+      "logSha256": "69ff9b0f82305af1a4b44b1a21e59841f58e3f09507eb39c8d0bdfe650c705ae",
+      "loggedActions": 117,
+      "firstLoggedCampaignWin": "2026-10-01T07:23:35.555Z",
+      "firstLoggedTerminalLoss": "2026-10-01T07:23:57.972Z",
+      "failureBeforeSource": true,
+      "lastAction": "2026-10-01T07:25:21.621Z"
+    },
+    {
+      "designId": "D02",
+      "logFile": "mini-games/coverage/independent300/uniqueness-D02-cache-hotel-ordinary.jsonl",
+      "logSha256": "d1d210901d16a322df0a2fe869ac5077cf4bb14e30d0f4e144ccbb8ce66003d4",
+      "loggedActions": 117,
+      "firstLoggedCampaignWin": "2026-10-01T07:26:35.668Z",
+      "firstLoggedTerminalLoss": "2026-10-01T07:26:56.267Z",
+      "failureBeforeSource": true,
+      "lastAction": "2026-10-01T07:31:40.096Z"
+    },
+    {
+      "designId": "D03",
+      "logFile": "mini-games/coverage/independent300/uniqueness-D03-heap-garden-ordinary.jsonl",
+      "logSha256": "ca084fd193e919f0ef6b3c559ef43cf847028060034800f108a145b6d1b59adc",
+      "loggedActions": 77,
+      "firstLoggedCampaignWin": "2026-10-01T07:28:08.456Z",
+      "firstLoggedTerminalLoss": "2026-10-01T07:28:29.778Z",
+      "failureBeforeSource": true,
+      "lastAction": "2026-10-01T07:33:18.090Z"
+    },
+    {
+      "designId": "D04",
+      "logFile": "mini-games/coverage/independent300/uniqueness-D04-ledger-race-ordinary.jsonl",
+      "logSha256": "ec4e3b09581e3d49b9dbee13c9aba0d86bb371f2cbab5c799f18f68f3ca9a7cb",
+      "loggedActions": 81,
+      "firstLoggedCampaignWin": "2026-10-01T07:29:39.650Z",
+      "firstLoggedTerminalLoss": "2026-10-01T07:30:06.605Z",
+      "failureBeforeSource": true,
+      "lastAction": "2026-10-01T08:33:02.426Z"
+    },
+    {
+      "designId": "D05",
+      "logFile": "mini-games/coverage/independent300/uniqueness-D05-receipt-route-ordinary.jsonl",
+      "logSha256": "ac174757eb04d2f52ff4209a8aa0c1201000eeb88c7ab15270f9c6127ed2888e",
+      "loggedActions": 118,
+      "firstLoggedCampaignWin": "2026-10-01T07:36:51.927Z",
+      "firstLoggedTerminalLoss": "2026-10-01T07:36:11.787Z",
+      "failureBeforeSource": true,
+      "lastAction": "2026-10-01T08:33:03.026Z"
+    },
+    {
+      "designId": "D06",
+      "logFile": "mini-games/coverage/independent300/uniqueness-D06-stack-kitchen-ordinary.jsonl",
+      "logSha256": "304405dfa3f6826b2c8ee4d13d5756fee0c9a203105f6c591d10f7abbb312be9",
+      "loggedActions": 70,
+      "firstLoggedCampaignWin": "2026-10-01T07:43:07.538Z",
+      "firstLoggedTerminalLoss": "2026-10-01T07:42:40.731Z",
+      "failureBeforeSource": true,
+      "lastAction": "2026-10-01T07:43:23.271Z"
+    },
+    {
+      "designId": "D07",
+      "logFile": "mini-games/coverage/independent300/uniqueness-D07-pattern-tailor-ordinary.jsonl",
+      "logSha256": "3dec6745ca8b201c4cf3054e5177c0d8037ba03db600389621361cf5bfb93514",
+      "loggedActions": 70,
+      "firstLoggedCampaignWin": "2026-10-01T07:44:26.664Z",
+      "firstLoggedTerminalLoss": "2026-10-01T07:43:57.879Z",
+      "failureBeforeSource": true,
+      "lastAction": "2026-10-01T08:33:03.675Z"
+    },
+    {
+      "designId": "D08",
+      "logFile": "mini-games/coverage/independent300/uniqueness-D08-bracket-workshop-ordinary.jsonl",
+      "logSha256": "b702e1389e27725cfa460c5c07fb237e9177af8056b921a4756cc25aeca52f6a",
+      "loggedActions": 153,
+      "firstLoggedCampaignWin": "2026-10-01T07:45:37.587Z",
+      "firstLoggedTerminalLoss": "2026-10-01T07:45:09.059Z",
+      "failureBeforeSource": true,
+      "lastAction": "2026-10-01T08:18:10.694Z"
+    },
+    {
+      "designId": "D09",
+      "logFile": "mini-games/coverage/independent300/uniqueness-D09-type-loom-ordinary.jsonl",
+      "logSha256": "708dbee34d930ad2987e75c37d89a3ac91335c43d693b25f08fa27b6aed34ba6",
+      "loggedActions": 65,
+      "firstLoggedCampaignWin": "2026-10-01T07:46:32.908Z",
+      "firstLoggedTerminalLoss": "2026-10-01T07:46:52.013Z",
+      "failureBeforeSource": true,
+      "lastAction": "2026-10-01T08:33:04.285Z"
+    },
+    {
+      "designId": "D10",
+      "logFile": "mini-games/coverage/independent300/uniqueness-D10-proof-lantern-ordinary.jsonl",
+      "logSha256": "1a19a3375615972a3574962e92feb03e34a0e7fc3af8951fc6230b291ef19cc2",
+      "loggedActions": 142,
+      "firstLoggedCampaignWin": "2026-10-01T07:49:01.702Z",
+      "firstLoggedTerminalLoss": "2026-10-01T07:49:28.039Z",
+      "failureBeforeSource": true,
+      "lastAction": "2026-10-01T08:33:04.881Z"
+    },
+    {
+      "designId": "D11",
+      "logFile": "mini-games/coverage/independent300/uniqueness-D11-table-confluence-ordinary.jsonl",
+      "logSha256": "70d647c32da3e4be2b149bc8a4f66aaa79c87883ebeb01ab3a39bd9424320207",
+      "loggedActions": 54,
+      "firstLoggedCampaignWin": "2026-10-01T07:50:50.386Z",
+      "firstLoggedTerminalLoss": "2026-10-01T07:50:23.850Z",
+      "failureBeforeSource": true,
+      "lastAction": "2026-10-01T08:33:05.474Z"
+    },
+    {
+      "designId": "D12",
+      "logFile": "mini-games/coverage/independent300/uniqueness-D12-branch-librarian-ordinary.jsonl",
+      "logSha256": "2eeaf2915b8402b7877e6bbf61d3054a5d49aa18b6c7c6ab360b6511c55caa7f",
+      "loggedActions": 41,
+      "firstLoggedCampaignWin": "2026-10-01T07:51:40.913Z",
+      "firstLoggedTerminalLoss": "2026-10-01T07:51:48.598Z",
+      "failureBeforeSource": true,
+      "lastAction": "2026-10-01T07:52:10.472Z"
+    },
+    {
+      "designId": "D13",
+      "logFile": "mini-games/coverage/independent300/uniqueness-D13-row-orchestra-ordinary.jsonl",
+      "logSha256": "3bcd6b1ce83beff8f3f530d1a5eac8ccebf25402060adf66b2f55604d41b4632",
+      "loggedActions": 104,
+      "firstLoggedCampaignWin": "2026-10-01T07:53:30.454Z",
+      "firstLoggedTerminalLoss": "2026-10-01T07:53:38.633Z",
+      "failureBeforeSource": true,
+      "lastAction": "2026-10-01T07:53:57.022Z"
+    },
+    {
+      "designId": "D14",
+      "logFile": "mini-games/coverage/independent300/uniqueness-D14-state-courier-ordinary.jsonl",
+      "logSha256": "50546c7233769726cf43f7bfb1168b9f054d27acfe06a4c5ebcee618b3b1efb8",
+      "loggedActions": 45,
+      "firstLoggedCampaignWin": "2026-10-01T07:54:52.567Z",
+      "firstLoggedTerminalLoss": "2026-10-01T07:54:25.085Z",
+      "failureBeforeSource": true,
+      "lastAction": "2026-10-01T08:33:06.090Z"
+    },
+    {
+      "designId": "D15",
+      "logFile": "mini-games/coverage/independent300/uniqueness-D15-compare-parade-ordinary.jsonl",
+      "logSha256": "692a701468c40e4e656b550a1d43af35d9f72ad25394a2100a3010921471c550",
+      "loggedActions": 113,
+      "firstLoggedCampaignWin": "2026-10-01T07:56:06.111Z",
+      "firstLoggedTerminalLoss": "2026-10-01T07:55:38.478Z",
+      "failureBeforeSource": true,
+      "lastAction": "2026-10-01T07:56:23.811Z"
+    },
+    {
+      "designId": "D16",
+      "logFile": "mini-games/coverage/independent300/uniqueness-D16-token-crucible-ordinary.jsonl",
+      "logSha256": "7ba40be3e824549c0184128fb565a77a183189240c00d896bf5a07cb3dfa9e9d",
+      "loggedActions": 45,
+      "firstLoggedCampaignWin": "2026-10-01T07:57:09.648Z",
+      "firstLoggedTerminalLoss": "2026-10-01T07:56:46.834Z",
+      "failureBeforeSource": true,
+      "lastAction": "2026-10-01T07:57:25.566Z"
+    },
+    {
+      "designId": "D17",
+      "logFile": "mini-games/coverage/independent300/uniqueness-D17-copy-ribbon-ordinary.jsonl",
+      "logSha256": "2a3d7934118d8cb170964f889151a988d598ae1d08fb6b972789fc063434c786",
+      "loggedActions": 85,
+      "firstLoggedCampaignWin": "2026-10-01T07:59:17.319Z",
+      "firstLoggedTerminalLoss": "2026-10-01T07:57:50.537Z",
+      "failureBeforeSource": true,
+      "lastAction": "2026-10-01T07:59:35.605Z"
+    },
+    {
+      "designId": "D18",
+      "logFile": "mini-games/coverage/independent300/uniqueness-D18-parallel-manuscripts-ordinary.jsonl",
+      "logSha256": "be2c8a12ec6d3e326d682a292c7b9b3db3ac2e94cd7f62eb04b4da44985e7b49",
+      "loggedActions": 76,
+      "firstLoggedCampaignWin": "2026-10-01T08:00:15.790Z",
+      "firstLoggedTerminalLoss": "2026-10-01T07:59:59.269Z",
+      "failureBeforeSource": true,
+      "lastAction": "2026-10-01T08:00:30.949Z"
+    },
+    {
+      "designId": "D19",
+      "logFile": "mini-games/coverage/independent300/uniqueness-D19-private-census-ordinary.jsonl",
+      "logSha256": "0d77c2d725e236b62b9183dedc16a215a3148a249664fa028c79708f6f20028e",
+      "loggedActions": 74,
+      "firstLoggedCampaignWin": "2026-10-01T08:01:20.155Z",
+      "firstLoggedTerminalLoss": "2026-10-01T08:00:59.067Z",
+      "failureBeforeSource": true,
+      "lastAction": "2026-10-01T08:33:06.702Z"
+    },
+    {
+      "designId": "D20",
+      "logFile": "mini-games/coverage/independent300/uniqueness-D20-tiny-soundbook-ordinary.jsonl",
+      "logSha256": "60e9110cf26fac8acecc99c8346131ab673524fd9403632d05c349f00a40bd52",
+      "loggedActions": 66,
+      "firstLoggedCampaignWin": "2026-10-01T08:02:27.929Z",
+      "firstLoggedTerminalLoss": "2026-10-01T08:20:12.731Z",
+      "failureBeforeSource": true,
+      "lastAction": "2026-10-01T08:20:38.564Z"
+    },
+    {
+      "designId": "D21",
+      "logFile": "mini-games/coverage/independent300/uniqueness-D21-agenda-garden-ordinary.jsonl",
+      "logSha256": "69eae57dc59dfe5c9314100efb73f9054da7fcc09be60ce79cc966c500971c18",
+      "loggedActions": 124,
+      "firstLoggedCampaignWin": "2026-10-01T08:03:24.346Z",
+      "firstLoggedTerminalLoss": "2026-10-01T08:03:01.451Z",
+      "failureBeforeSource": true,
+      "lastAction": "2026-10-01T08:21:41.899Z"
+    },
+    {
+      "designId": "D22",
+      "logFile": "mini-games/coverage/independent300/uniqueness-D22-causal-camera-ordinary.jsonl",
+      "logSha256": "5b9f3f427ee1076b9ea20dbc00ee67611be54b23a450fc85052be211fe6b8fe4",
+      "loggedActions": 81,
+      "firstLoggedCampaignWin": "2026-10-01T08:05:01.919Z",
+      "firstLoggedTerminalLoss": "2026-10-01T08:04:25.796Z",
+      "failureBeforeSource": true,
+      "lastAction": "2026-10-01T08:33:07.306Z"
+    },
+    {
+      "designId": "D23",
+      "logFile": "mini-games/coverage/independent300/uniqueness-D23-linked-orchard-ordinary.jsonl",
+      "logSha256": "eec031d2f96bcff1dd95ff18b86cd87921007ebf017e3cacbfcee922aa6fa821",
+      "loggedActions": 92,
+      "firstLoggedCampaignWin": "2026-10-01T08:07:30.721Z",
+      "firstLoggedTerminalLoss": "2026-10-01T08:07:43.280Z",
+      "failureBeforeSource": true,
+      "lastAction": "2026-10-01T08:33:08.000Z"
+    },
+    {
+      "designId": "D24",
+      "logFile": "mini-games/coverage/independent300/uniqueness-D24-clearing-circle-ordinary.jsonl",
+      "logSha256": "a61a35b926d065c01e3f0ac442d5a8e45e3ccac474845172038995dc9b2ac1e5",
+      "loggedActions": 45,
+      "firstLoggedCampaignWin": "2026-10-01T08:08:52.010Z",
+      "firstLoggedTerminalLoss": "2026-10-01T08:08:17.461Z",
+      "failureBeforeSource": true,
+      "lastAction": "2026-10-01T08:22:41.117Z"
+    },
+    {
+      "designId": "D25",
+      "logFile": "mini-games/coverage/independent300/uniqueness-D25-night-collector-ordinary.jsonl",
+      "logSha256": "c9d26efb81c9f2061c042f05f2f4124218810c415907f65469ec01a4f6fa19d0",
+      "loggedActions": 66,
+      "firstLoggedCampaignWin": "2026-10-01T08:09:57.899Z",
+      "firstLoggedTerminalLoss": "2026-10-01T08:26:14.215Z",
+      "failureBeforeSource": false,
+      "lastAction": "2026-10-01T08:33:58.434Z"
+    },
+    {
+      "designId": "D26",
+      "logFile": "mini-games/coverage/independent300/uniqueness-D26-gathering-grounds-ordinary.jsonl",
+      "logSha256": "d30db075edeeb4b125d09a11f662cd7327c07d91c030d83b7eb894e52f1f0470",
+      "loggedActions": 119,
+      "firstLoggedCampaignWin": "2026-10-01T08:12:00.175Z",
+      "firstLoggedTerminalLoss": "2026-10-01T08:10:56.733Z",
+      "failureBeforeSource": true,
+      "lastAction": "2026-10-01T08:33:09.290Z"
+    },
+    {
+      "designId": "D27",
+      "logFile": "mini-games/coverage/independent300/uniqueness-D27-loop-transit-ordinary.jsonl",
+      "logSha256": "54e2f853b4aaefb5163544a9250b8348e3f5bfb6cfe849122cc27cf27f373605",
+      "loggedActions": 258,
+      "firstLoggedCampaignWin": "2026-10-01T08:15:04.456Z",
+      "firstLoggedTerminalLoss": "2026-10-01T08:14:43.610Z",
+      "failureBeforeSource": true,
+      "lastAction": "2026-10-01T08:15:58.780Z"
+    }
+  ]
+}

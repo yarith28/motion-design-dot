@@ -1,0 +1,554 @@
+[
+  {
+    "id": "falling-foundry",
+    "name": "Falling Foundry",
+    "category": "reflex",
+    "description": "Rotate and translate falling tetrominoes into a persistent well; full rows disappear and overhang holes survive.",
+    "mechanic": "Rotate and translate falling tetrominoes into a persistent well; full rows disappear and overhang holes survive.",
+    "rules": [
+      "Fill complete rows in a six-column well. Rotate and slide a piece, then Drop to lock it; gravity moves only when you choose Lower or Drop.",
+      "Preview three upcoming pieces. Hold exchanges one piece once per placement. Rotation may shift up to two cells sideways to fit.",
+      "Clear six rows in each of three bag-seeded studies. A blocked spawn loses. Next study advances after a clear; Restart begins the journey."
+    ],
+    "controls": "Tap named controls. Focus the board for displayed keyboard shortcuts. Escape pauses. Every action is turn-paced. Retry this study preserves earlier clears; Restart all begins at study one.",
+    "url": "motion-room/?game=falling-foundry",
+    "accent": "#a9c7a4",
+    "symbol": "\u219d",
+    "family": "motion-room",
+    "status": "playable",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#inputs button:first-child"
+    },
+    "designId": "C01"
+  },
+  {
+    "id": "cascade-orchard",
+    "name": "Cascade Orchard",
+    "category": "reflex",
+    "description": "Swap adjacent symbols to create horizontal/vertical triples; simultaneous matches clear and gravity refills, with objectives embedded below layered blockers.",
+    "mechanic": "Swap adjacent symbols to create horizontal/vertical triples; simultaneous matches clear and gravity refills, with objectives embedded below layered blockers.",
+    "rules": [
+      "Select a cell, then an adjacent cell to exchange their numbers. A valid swap must make a line of at least three equal numbers; other swaps return free.",
+      "Matched cells disappear, columns fall and refill, and cascades continue. Stars mark buried tile layers: a match on that cell removes one layer.",
+      "Remove every marked layer within eight valid swaps. Clear three seeded studies. Arrow buttons move the outlined cursor; Select chooses it. Tap cells directly or use named controls."
+    ],
+    "controls": "Tap named controls. Focus the board for displayed keyboard shortcuts. Escape pauses. Every action is turn-paced. Retry this study preserves earlier clears; Restart all begins at study one.",
+    "url": "motion-room/?game=cascade-orchard",
+    "accent": "#a9c7a4",
+    "symbol": "\u219d",
+    "family": "motion-room",
+    "status": "playable",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#inputs button:first-child"
+    },
+    "designId": "C02"
+  },
+  {
+    "id": "bubble-canopy",
+    "name": "Bubble Canopy",
+    "category": "reflex",
+    "description": "Shoot a colored bubble to attach to a hex canopy; groups of 3+ pop and any cluster disconnected from ceiling drops.",
+    "mechanic": "Shoot a colored bubble to attach to a hex canopy; groups of 3+ pop and any cluster disconnected from ceiling drops.",
+    "rules": [
+      "Aim from \u221265\u00b0 left to 65\u00b0 right and Fire. Bubbles bounce off the side walls and attach to the first cluster they touch.",
+      "A connected group of at least three equal numbers pops. All bubbles without any ceiling connection then drop, even if their numbers differ.",
+      "Release every starred nest in each of three canopies. Shot budgets 4, 24 and 28; later nests are behind deeper four-color canopies. Reaching row 8 loses. Exchange the held bubble freely to plan support removals."
+    ],
+    "controls": "Tap named controls. Focus the board for displayed keyboard shortcuts. Escape pauses. Every action is turn-paced. Retry this study preserves earlier clears; Restart all begins at study one.",
+    "url": "motion-room/?game=bubble-canopy",
+    "accent": "#a9c7a4",
+    "symbol": "\u219d",
+    "family": "motion-room",
+    "status": "playable",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#inputs button:first-child"
+    },
+    "designId": "C03"
+  },
+  {
+    "id": "step-and-spring",
+    "name": "Step and Spring",
+    "category": "reflex",
+    "description": "Direct variable-height jumps with coyote-time and air steering over moving and one-way platforms; landing resets jump permission.",
+    "mechanic": "Direct variable-height jumps with coyote-time and air steering over moving and one-way platforms; landing resets jump permission.",
+    "rules": [
+      "Move left/right one simulation tick. Jump starts an upward impulse only while supported. Release jump shortens the arc; Coast lets momentum continue. All action buttons advance physics.",
+      "Platforms stop a descending character; Drop passes through a platform temporarily. A ferry carries you horizontally. The brown roof blocks high jumps through its span.",
+      "Collect K below the right deck, then reach the high EXIT. Spikes or falling cost one of three lives. Clear three ferry phases; all motion is turn-paced."
+    ],
+    "controls": "Tap named controls. Focus the board for displayed keyboard shortcuts. Escape pauses. Every action is turn-paced. Retry this study preserves earlier clears; Restart all begins at study one.",
+    "url": "motion-room/?game=step-and-spring",
+    "accent": "#a9c7a4",
+    "symbol": "\u219d",
+    "family": "motion-room",
+    "status": "playable",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#inputs button:first-child"
+    },
+    "designId": "C04"
+  },
+  {
+    "id": "lantern-lanes",
+    "name": "Lantern Lanes",
+    "category": "reflex",
+    "description": "Clear pellets in a maze while distinct pursuers chase; scarce power pellets reverse contact danger for a short interval.",
+    "mechanic": "Clear pellets in a maze while distinct pursuers chase; scarce power pellets reverse contact danger for a short interval.",
+    "rules": [
+      "Collect every dot in each of three mazes. Move one square per action; Wait also advances pursuers. Walls reject travel but time still advances.",
+      "A moves toward you every two turns. B patrols toward the central junction every three. Lightning capsules reverse danger for fourteen turns: touching a pursuer sends it home.",
+      "Three unpowered contacts lose. After a hit, you return to the center with four turns of immunity. Power capsules are scarce: save them for difficult routes."
+    ],
+    "controls": "Tap named controls. Focus the board for displayed keyboard shortcuts. Escape pauses. Every action is turn-paced. Retry this study preserves earlier clears; Restart all begins at study one.",
+    "url": "motion-room/?game=lantern-lanes",
+    "accent": "#a9c7a4",
+    "symbol": "\u219d",
+    "family": "motion-room",
+    "status": "playable",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#inputs button:first-child"
+    },
+    "designId": "C05"
+  },
+  {
+    "id": "threaded-return",
+    "name": "Threaded Return",
+    "category": "puzzle",
+    "description": "Navigate with a finite tether that wraps around posts; winding history changes reachable space even at the same avatar position.",
+    "mechanic": "Navigate with a finite tether that wraps around posts; winding history changes reachable space even at the same avatar position.",
+    "rules": [
+      "Move around square posts while attached to a finite tether at1,4. The rope retains the side on which you passed each post; reversing your route can unwind it.",
+      "Collect all numbered tags and return to the anchor. Slack and the rope contact path are shown. An attempted step beyond the available length is rejected without moving you.",
+      "There is no arbitrary move timer or terminal stranding claim: unwind and try another route after a blocked attempt. Clear three different tag arrangements."
+    ],
+    "controls": "Tap named controls. Focus the board for displayed keyboard shortcuts. Escape pauses. Every action is turn-paced. Retry this study preserves earlier clears; Restart all begins at study one.",
+    "url": "motion-room/?game=threaded-return",
+    "accent": "#a9c7a4",
+    "symbol": "\u219d",
+    "family": "motion-room",
+    "status": "playable",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#inputs button:first-child"
+    },
+    "designId": "C06"
+  },
+  {
+    "id": "magnetic-quartet",
+    "name": "Magnetic Quartet",
+    "category": "puzzle",
+    "description": "Manipulate two movable field sources to guide positive and negative charged pucks concurrently into separate traps.",
+    "mechanic": "Manipulate two movable field sources to guide positive and negative charged pucks concurrently into separate traps.",
+    "rules": [
+      "Move either magnet using direction buttons; switch selected magnet and invert its sign as needed. Pucks wait until you choose Advance physics.",
+      "Both sources act on both opposite-charge pucks through a softened inverse-square force. Like signs repel, opposite signs attract. Velocity persists with slight damping; the central shield reflects impacts.",
+      "Deliver each puck to the same-sign circular trap. Wrong-sign capture or leaving the field loses. Clear three geometrically different fields. Positions and velocities are available below."
+    ],
+    "controls": "Tap named controls. Focus the board for displayed keyboard shortcuts. Escape pauses. Every action is turn-paced. Retry this study preserves earlier clears; Restart all begins at study one.",
+    "url": "motion-room/?game=magnetic-quartet",
+    "accent": "#a9c7a4",
+    "symbol": "\u219d",
+    "family": "motion-room",
+    "status": "playable",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#inputs button:first-child"
+    },
+    "designId": "C07"
+  },
+  {
+    "id": "span-workshop",
+    "name": "Span Workshop",
+    "category": "puzzle",
+    "description": "Build a load-bearing truss from pinned joints and tension/compression members; a moving test cart changes stresses across the span.",
+    "mechanic": "Build a load-bearing truss from pinned joints and tension/compression members; a moving test cart changes stresses across the span.",
+    "rules": [
+      "Choose one of21possible joint pairs and build a beam or cable. Deck links1\u20132,2\u20133,3\u20134 are required for the cart. Remove or replace members freely within the material budget.",
+      "Pinned joints1and4support a real linear axial truss calculation. Beams carry tension/compression up to13; cables carry tension only up to9 and go slack in compression. Length determines material cost.",
+      "Load test moves the cart in half-unit steps. All steps must remain stable within0.7deflection and member capacity. Three failed tests lose; edit between tests. Clear three spans with different heights and loads."
+    ],
+    "controls": "Tap named controls. Focus the board for displayed keyboard shortcuts. Escape pauses. Every action is turn-paced. Retry this study preserves earlier clears; Restart all begins at study one.",
+    "url": "motion-room/?game=span-workshop",
+    "accent": "#a9c7a4",
+    "symbol": "\u219d",
+    "family": "motion-room",
+    "status": "playable",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#inputs button:first-child"
+    },
+    "designId": "C08"
+  },
+  {
+    "id": "corner-carry",
+    "name": "Corner Carry",
+    "category": "puzzle",
+    "description": "Translate and rotate a rigid asymmetric object through narrow corridors where its full swept shape must fit.",
+    "mechanic": "Translate and rotate a rigid asymmetric object through narrow corridors where its full swept shape must fit.",
+    "rules": [
+      "Choose a half-unit translation or15\u00b0rotation for a free swept-shape preview. Switch between handleAat0,0 andBat1,1 as rotation pivot. Only Commit changes the pose.",
+      "Clear previews are safe. A warned-contact Commit spends one of ten integrity and leaves the shape in place. No damage occurs for simply selecting or inspecting a move.",
+      "Move the whole L-shape into the displayed target origin and orientation. Its full rotating sweep must clear walls, not just its final pose. Later rooms change the doorway, pillar, and required final orientation."
+    ],
+    "controls": "Tap named controls. Focus the board for displayed keyboard shortcuts. Escape pauses. Every action is turn-paced. Retry this study preserves earlier clears; Restart all begins at study one.",
+    "url": "motion-room/?game=corner-carry",
+    "accent": "#a9c7a4",
+    "symbol": "\u219d",
+    "family": "motion-room",
+    "status": "playable",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#inputs button:first-child"
+    },
+    "designId": "C09"
+  },
+  {
+    "id": "borrowed-seconds",
+    "name": "Borrowed Seconds",
+    "category": "puzzle",
+    "description": "Rewind one selected moving object along its actual history while player and all other objects continue forward.",
+    "mechanic": "Rewind one selected moving object along its actual history while player and all other objects continue forward.",
+    "rules": [
+      "A lower and an upper platform record every position as forward time moves them east toward their displayed buffers. Lower moves every tick; upper moves once per2,3or4ticks in successive studies.",
+      "Select one platform and Rewind: it takes its own preceding recorded position while the other platform continues forward. A rider travels with its supporting platform; the key never rewinds.",
+      "Ride the lower platform to key8,5, transfer when platforms are within one column, and carry it to exit1,3 on the upper level. You have28rewind ticks and three lives. Empty-history rewinds are rejected."
+    ],
+    "controls": "Tap named controls. Focus the board for displayed keyboard shortcuts. Escape pauses. Every action is turn-paced. Retry this study preserves earlier clears; Restart all begins at study one.",
+    "url": "motion-room/?game=borrowed-seconds",
+    "accent": "#a9c7a4",
+    "symbol": "\u219d",
+    "family": "motion-room",
+    "status": "playable",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#inputs button:first-child"
+    },
+    "designId": "C10"
+  },
+  {
+    "id": "many-as-one",
+    "name": "Many as One",
+    "category": "puzzle",
+    "description": "Split conserved body mass into controllable cells, move through size restrictions, then merge to exert required weight.",
+    "mechanic": "Split conserved body mass into controllable cells, move through size restrictions, then merge to exert required weight.",
+    "rules": [
+      "Move the selected cell. Numbered wall passages admit only cells of at most that mass. Split places a chosen positive integer mass immediately to the right; at most four bodies exist.",
+      "Select other cells to route them independently. Adjacent cells merge. Simultaneously occupy both scales with their exact masses to latch the exit permanently.",
+      "After latching, merge all six mass at the exit. The drain destroys needed mass and loses. Clear three scale/passage arrangements."
+    ],
+    "controls": "Tap named controls. Focus the board for displayed keyboard shortcuts. Escape pauses. Every action is turn-paced. Retry this study preserves earlier clears; Restart all begins at study one.",
+    "url": "motion-room/?game=many-as-one",
+    "accent": "#a9c7a4",
+    "symbol": "\u219d",
+    "family": "motion-room",
+    "status": "playable",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#inputs button:first-child"
+    },
+    "designId": "C11"
+  },
+  {
+    "id": "crater-courtesy",
+    "name": "Crater Courtesy",
+    "category": "puzzle",
+    "description": "Alternate ballistic shots with an opponent on destructible terrain; excavation changes cover, support and future firing position.",
+    "mechanic": "Alternate ballistic shots with an opponent on destructible terrain; excavation changes cover, support and future firing position.",
+    "rules": [
+      "Set angle and power, then Fire; each shot follows gravity and excavates a crater in the persistent terrain. The opponent responds with a visible short,long,measured sequence.",
+      "Shells cause one direct damage within radius6. Dig shells excavate radius10but damage only through a fall. A tank falling more than5height also loses one hull.",
+      "Disable the opponent before your four hull or twelve shots run out. Relocate right to adjust your firing origin. Clear three ridge locations."
+    ],
+    "controls": "Tap named controls. Focus the board for displayed keyboard shortcuts. Escape pauses. Every action is turn-paced. Retry this study preserves earlier clears; Restart all begins at study one.",
+    "url": "motion-room/?game=crater-courtesy",
+    "accent": "#a9c7a4",
+    "symbol": "\u219d",
+    "family": "motion-room",
+    "status": "playable",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#inputs button:first-child"
+    },
+    "designId": "C12"
+  },
+  {
+    "id": "elbow-room",
+    "name": "Elbow Room",
+    "category": "puzzle",
+    "description": "Drive a3-joint arm through obstacles while retaining a grasped payload; elbow configuration and swept link collisions matter.",
+    "mechanic": "Drive a3-joint arm through obstacles while retaining a grasped payload; elbow configuration and swept link collisions matter.",
+    "rules": [
+      "Select one of three relative joints and rotate it by15\u00b0. A proximal joint moves every downstream link; the full sweep is collision-checked against walls.",
+      "Close the gripper within0.55unit of the pickup. Carry the parcel to within0.6unit of the receiver, then Release. The payload needs extra clearance.",
+      "Three obstacle contacts or a release away from the receiver loses. Clear three different pickup/receiver configurations. Joint coordinates and target positions appear below."
+    ],
+    "controls": "Tap named controls. Focus the board for displayed keyboard shortcuts. Escape pauses. Every action is turn-paced. Retry this study preserves earlier clears; Restart all begins at study one.",
+    "url": "motion-room/?game=elbow-room",
+    "accent": "#a9c7a4",
+    "symbol": "\u219d",
+    "family": "motion-room",
+    "status": "playable",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#inputs button:first-child"
+    },
+    "designId": "C13"
+  },
+  {
+    "id": "common-meadow",
+    "name": "Common Meadow",
+    "category": "puzzle",
+    "description": "Steer a cohesive flock through gates using the shepherd\u2019s local repulsion, separation and persistent momentum.",
+    "mechanic": "Coupled spatial flock herding with cohesion, separation, repulsion and momentum",
+    "rules": [
+      "Move the shepherd around a cohesive flock. Sheep repel away from you, separate from close neighbors and drift toward nearby companions. Every action advances one physical tick.",
+      "Whistle briefly expands your pressure radius but then cools for six ticks. Approach from outside the flock; forcing its center can scatter the group.",
+      "Pen seven of eight sheep through the right-edge opening. Two escapes beyond the field make the quota impossible and lose. Clear three paddocks with different gate and obstacle geometry."
+    ],
+    "controls": "Tap named controls. Focus the board for displayed keyboard shortcuts. Escape pauses. Every action is turn-paced. Retry this study preserves earlier clears; Restart all begins at study one.",
+    "url": "motion-room/?game=common-meadow",
+    "accent": "#a9c7a4",
+    "symbol": "\u219d",
+    "family": "motion-room",
+    "status": "playable",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#inputs button:first-child"
+    },
+    "designId": "C14"
+  },
+  {
+    "id": "folded-cuttings",
+    "name": "Folded Cuttings",
+    "category": "puzzle",
+    "description": "Fold layered paper and cut through selected stacks; unfolding reveals the combined effect of the complete fold history.",
+    "mechanic": "Cut one polygonal path through a folded sheet; unfolding duplicates each cut through the layer-transform history.",
+    "rules": [
+      "A folded sheet retains every original cell layer. Choose axis and crease 3, 4 or 5; Fold reflects all smaller coordinates to the other side. At most three folds per sheet. The first two sheets allow three cuts; the final sheet allows only two.",
+      "Select a folded square and Cut its entire layer stack. Preview unfolded shows correct holes as circles, extra holes as crosses, and still-needed holes as stars. Original target coordinates are listed below.",
+      "Certify only when every target hole matches and remaining paper stays connected. Reset allows another construction while preserving failed certifications. Three failed certifications lose; clear three patterns."
+    ],
+    "controls": "Tap named controls. Focus the board for displayed keyboard shortcuts. Escape pauses. Every action is turn-paced. Retry this study preserves earlier clears; Restart all begins at study one.",
+    "url": "motion-room/?game=folded-cuttings",
+    "accent": "#a9c7a4",
+    "symbol": "\u219d",
+    "family": "motion-room",
+    "status": "playable",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#inputs button:first-child"
+    },
+    "designId": "C15"
+  },
+  {
+    "id": "domino-relay",
+    "name": "Domino Relay",
+    "category": "puzzle",
+    "description": "Arrange hinged rods so gravity and contact impulses carry a knockdown across changing shelf heights.",
+    "mechanic": "Arrange hinged rods so gravity and contact impulses carry a knockdown across changing shelf heights.",
+    "rules": [
+      "Four movable rods share a material allowance. Select a rod, move its hinge in 0.2 steps, and choose length 1.2, 1.8 or 2.4. Longer rods reach farther but have more rotational inertia. Numbered hinges must remain in order.",
+      "Release gives only the fixed starter an initial push. Gravity, an upright spring detent, and actual tip-to-side collision impulses determine which rods fall. A rod can miss over or under its neighbor, fall short, or fail to transfer enough motion.",
+      "The hanging bell at the far side must be struck. Three failed releases lose. Inspect the final angles and first-contact times; Earlier/Later replay frame shows the continuous simulation in 0.1-second steps. Raised shelves in later studies change contact heights."
+    ],
+    "controls": "Tap named controls. Focus the board for displayed keyboard shortcuts. Escape pauses. Every action is turn-paced. Retry this study preserves earlier clears; Restart all begins at study one.",
+    "url": "motion-room/?game=domino-relay",
+    "accent": "#a9c7a4",
+    "symbol": "\u219d",
+    "family": "motion-room",
+    "status": "playable",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#inputs button:first-child"
+    },
+    "designId": "C17"
+  },
+  {
+    "id": "siding-stories",
+    "name": "Siding Stories",
+    "category": "puzzle",
+    "description": "Shunt coupled wagons through a track graph with sidings, switch points and directional locomotive access.",
+    "mechanic": "Shunt coupled wagons through a track graph with sidings, switch points and directional locomotive access.",
+    "rules": [
+      "Couple a loose wagon adjacent to the rear of the current train. Uncouple leaves the tail wagon in its present node. The train never changes wagon order while moving.",
+      "Pull moves the locomotive into a selected outgoing track; wagons follow. Reverse moves the tail first and the rest of the train follows backward. Use the upper loop to approach wagons from another end.",
+      "Deliver each wagon to its assigned numbered siding, leave it uncoupled, then park the locomotive at shed6. Blocked moves are recoverable failures, not arbitrary penalties. Clear three manifests."
+    ],
+    "controls": "Tap named controls. Focus the board for displayed keyboard shortcuts. Escape pauses. Every action is turn-paced. Retry this study preserves earlier clears; Restart all begins at study one.",
+    "url": "motion-room/?game=siding-stories",
+    "accent": "#a9c7a4",
+    "symbol": "\u219d",
+    "family": "motion-room",
+    "status": "playable",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#inputs button:first-child"
+    },
+    "designId": "C18"
+  },
+  {
+    "id": "across-the-current",
+    "name": "Across the Current",
+    "category": "reflex",
+    "description": "Cross alternating roads and rivers by discrete hops; moving logs carry the player in their reference frame between hops.",
+    "mechanic": "Cross alternating roads and rivers by discrete hops; moving logs carry the player in their reference frame between hops.",
+    "rules": [
+      "Hop or wait one tick. Roads contain moving vehicles; water is safe only on a log. Logs carry you one column each tick in their own direction.",
+      "Use the refuge row4to plan. Four different home slots occupy columns1,3,5,7atrow0; a filled home cannot count twice.",
+      "Fill all four homes with at most two accidents. The third collision,drowning or off-board drift loses. Clear three starting traffic phases."
+    ],
+    "controls": "Tap named controls. Focus the board for displayed keyboard shortcuts. Escape pauses. Every action is turn-paced. Retry this study preserves earlier clears; Restart all begins at study one.",
+    "url": "motion-room/?game=across-the-current",
+    "accent": "#a9c7a4",
+    "symbol": "\u219d",
+    "family": "motion-room",
+    "status": "playable",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#inputs button:first-child"
+    },
+    "designId": "C19"
+  },
+  {
+    "id": "watchtower-bend",
+    "name": "Watchtower Bend",
+    "category": "puzzle",
+    "description": "Build autonomous defenses along a branching route; tower positions reshape route length while mixed enemies have different targeting and armor vulnerabilities.",
+    "mechanic": "Build autonomous defenses along a branching route; tower positions reshape route length while mixed enemies have different targeting and armor vulnerabilities.",
+    "rules": [
+      "Place towers on the grid between waves. Towers also block enemy movement, but a route from IN to OUT must always remain. A rejected blockage costs nothing.",
+      "Bolt ignores armor, but shield carriers take only20%bolt damage. Splash hits groups and bypasses shields; armor resists it. Slow delays enemies. Upgrade for3credits; choose frontmost or weakest-target priority.",
+      "Hold three mixed waves with at least one of five gate integrity. Kills and cleared waves earn construction credits. Clear three valleys with different fixed obstacles."
+    ],
+    "controls": "Tap named controls. Focus the board for displayed keyboard shortcuts. Escape pauses. Every action is turn-paced. Retry this study preserves earlier clears; Restart all begins at study one.",
+    "url": "motion-room/?game=watchtower-bend",
+    "accent": "#a9c7a4",
+    "symbol": "\u219d",
+    "family": "motion-room",
+    "status": "playable",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#inputs button:first-child"
+    },
+    "designId": "C20"
+  },
+  {
+    "id": "through-and-through",
+    "name": "Through and Through",
+    "category": "puzzle",
+    "description": "Place two linked oriented portals on surfaces; crossing transports position and rotates conserved velocity into the other portal normal.",
+    "mechanic": "Place two linked oriented portals on surfaces; crossing transports position and rotates conserved velocity into the other portal normal.",
+    "rules": [
+      "Place portalAandBon two different named surfaces. Contacting one portal transforms your velocity into the other surface normal, preserving speed. Placement itself is free of time.",
+      "Accelerate left/right or Coast one physics tick. A short jump cannot reach the high right ledge: gain speed falling into the pit-floor portal and redirect it horizontally.",
+      "Reach the right exit after a fling. In the final chamber, reanchor the portal pair during flight and convert horizontal speed into upward launch speed. Falling outside loses a life; three lives lose. Position and velocity remain visible."
+    ],
+    "controls": "Tap named controls. Focus the board for displayed keyboard shortcuts. Escape pauses. Every action is turn-paced. Retry this study preserves earlier clears; Restart all begins at study one.",
+    "url": "motion-room/?game=through-and-through",
+    "accent": "#a9c7a4",
+    "symbol": "\u219d",
+    "family": "motion-room",
+    "status": "playable",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#inputs button:first-child"
+    },
+    "designId": "C21"
+  },
+  {
+    "id": "orchard-acrobat",
+    "name": "Orchard Acrobat",
+    "category": "puzzle",
+    "description": "Move the head of a connected segmented creature; whole body falls rigidly under gravity unless any segment has support; fruit adds a segment.",
+    "mechanic": "Move the head of a connected segmented creature; whole body falls rigidly under gravity unless any segment has support; fruit adds a segment.",
+    "rules": [
+      "Move the head of an ordered connected creature; the remaining body follows. Fruit adds a segment by retaining the old tail that turn.",
+      "Any segment directly above rock supports the whole body. When the last support is lost, all segments fall together until they find support or fall into the void.",
+      "Gather all fruit and reach the exit, which draws the connected body inside. Undo restores a nonterminal last step. Clear three islands requiring bridge length and support planning."
+    ],
+    "controls": "Tap named controls. Focus the board for displayed keyboard shortcuts. Escape pauses. Every action is turn-paced. Retry this study preserves earlier clears; Restart all begins at study one.",
+    "url": "motion-room/?game=orchard-acrobat",
+    "accent": "#a9c7a4",
+    "symbol": "\u219d",
+    "family": "motion-room",
+    "status": "playable",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#inputs button:first-child"
+    },
+    "designId": "C22"
+  },
+  {
+    "id": "borrowed-shade",
+    "name": "Borrowed Shade",
+    "category": "puzzle",
+    "description": "Move a lamp so object shadows project onto a wall as solid traversable platforms; occluder depth and lamp position change shadow reach and connectivity.",
+    "mechanic": "Move a lamp so object shadows project onto a wall as solid traversable platforms; occluder depth and lamp position change shadow reach and connectivity.",
+    "rules": [
+      "Move a lamp in front of two occluders at different depths. Their projected shadows become platforms on the wall; the nearer object shifts its shadow more.",
+      "Cycle a landing target and Jump to its center. The displayed reach test uses a fixed vertical impulse, gravity and horizontal speed limit; you cannot jump straight across the room.",
+      "Reposition light while standing on a permanent refuge. Moving your supporting shadow away causes a fall. The final arrangement has no middle refuge: one coupled projection must permit every transfer. Reach three exits; three falls lose."
+    ],
+    "controls": "Tap named controls. Focus the board for displayed keyboard shortcuts. Escape pauses. Every action is turn-paced. Retry this study preserves earlier clears; Restart all begins at study one.",
+    "url": "motion-room/?game=borrowed-shade",
+    "accent": "#a9c7a4",
+    "symbol": "\u219d",
+    "family": "motion-room",
+    "status": "playable",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#inputs button:first-child"
+    },
+    "designId": "C23"
+  },
+  {
+    "id": "after-the-levee",
+    "name": "After the Levee",
+    "category": "puzzle",
+    "description": "Excavate channels and build finite levees on a heightfield, then let a visible water front spread downhill and overflow low sills.",
+    "mechanic": "Excavate channels and build finite levees on a heightfield, then let a visible water front spread downhill and overflow low sills.",
+    "rules": [
+      "Dig lowers an interior cell by one and saves one spoil; Deposit spends it to raise a sill. Twelve successful earthworks per study. Boundary bedrock and occupied village foundations cannot be dug or buried.",
+      "Release two twelve-unit pulses, then Advance the conservative orthogonal flow. Water backs up and overtops sills; all injected volume stays in the grid.",
+      "Hold at least six units in each marked basin while village depth stays at most0.35. Certify after both pulses. Flooding the village loses; otherwise edit and settle further. Clear three saddle geometries."
+    ],
+    "controls": "Tap named controls. Focus the board for displayed keyboard shortcuts. Escape pauses. Every action is turn-paced. Retry this study preserves earlier clears; Restart all begins at study one.",
+    "url": "motion-room/?game=after-the-levee",
+    "accent": "#a9c7a4",
+    "symbol": "\u219d",
+    "family": "motion-room",
+    "status": "playable",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#inputs button:first-child"
+    },
+    "designId": "C24"
+  },
+  {
+    "id": "crossfire-courtyard",
+    "name": "Crossfire Courtyard",
+    "category": "puzzle",
+    "description": "Command a3-member squad with action points, directional cover, suppression and reaction overwatch to extract a civilian across intersecting enemy fire lanes.",
+    "mechanic": "Command a3-member squad with action points, directional cover, suppression and reaction overwatch to extract a civilian across intersecting enemy fire lanes.",
+    "rules": [
+      "Select a squad member with two AP per turn. Move, fire, suppress or set overwatch. Enemies have deterministic visible reactions and a five-unit sight range blocked by walls. An unsuppressed hostile shot also triggers an available enemy reaction.",
+      "Suppression deals no damage but disables enemy reaction and response. Directional cover reduces incoming damage. Escort ON moves an adjacent civilian with the selected unit. Suppression consumes a finite shared supply: eight cartridges in the first two courtyards and seven in the final one; none regenerate.",
+      "Extract the civilian and at least two living squad members at7,0. Losing the civilian or dropping below two living squad members loses. End turn refreshes AP after enemy responses. Clear three courtyard layouts."
+    ],
+    "controls": "Tap named controls. Focus the board for displayed keyboard shortcuts. Escape pauses. Every action is turn-paced. Retry this study preserves earlier clears; Restart all begins at study one.",
+    "url": "motion-room/?game=crossfire-courtyard",
+    "accent": "#a9c7a4",
+    "symbol": "\u219d",
+    "family": "motion-room",
+    "status": "playable",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#inputs button:first-child"
+    },
+    "designId": "C25"
+  }
+]

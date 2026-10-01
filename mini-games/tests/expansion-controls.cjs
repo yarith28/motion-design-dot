@@ -2,13 +2,14 @@
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 const engine=process.env.BROWSER_ENGINE||'chromium',browserType=require('playwright')[engine];
 const base=(process.env.BASE_URL||'http://127.0.0.1:8790').replace(/\/$/,'');
-const rooms=['systems-room','tabletop-room','puzzle-lab','kinetic-room','discovery-room'];
+const rooms=['systems-room','tabletop-room','puzzle-lab','kinetic-room','discovery-room','construct-room','parlour-room','motion-room','workbench-room'];
 const games=rooms.flatMap(room=>JSON.parse(fs.readFileSync(path.join(__dirname,'..',room,'games.json'))).map(g=>({...g,room})));
 (async()=>{
- assert.equal(games.length,100);assert.equal(new Set(games.map(g=>g.id)).size,100);
+ assert.equal(games.length,200);assert.equal(new Set(games.map(g=>g.id)).size,200);
  const browser=await browserType.launch({headless:true,...(engine==='webkit'?{}:{executablePath:process.env.CHROMIUM_PATH||'/usr/bin/chromium',args:['--no-sandbox']})});
  const cases=[],errors=[];
- const responsive=async(page,game,stage,mobile)=>{await page.evaluate(()=>document.fonts.ready);const viewport=page.viewportSize().width;const layout=await page.evaluate(width=>({width,visualWidth:innerWidth,clientWidth:document.documentElement.clientWidth,scroll:document.documentElement.scrollWidth,overflow:[...document.querySelectorAll('body *')].map(e=>({tag:e.tagName,id:e.id,class:e.className,left:e.getBoundingClientRect().left,right:e.getBoundingClientRect().right,width:e.getBoundingClientRect().width})).filter(e=>e.right>width+1||e.left< -1).slice(0,16)}),viewport);if(layout.scroll>layout.width+1){const dir=process.env.CONTROLS_REPORT_DIR||'live-verification';fs.mkdirSync(dir,{recursive:true});await page.screenshot({path:path.join(dir,'overflow-'+engine+'-'+game.id+'-'+(mobile?'mobile':'desktop')+'.png'),fullPage:true});}assert.ok(layout.scroll<=layout.width+1,`Responsive ${stage} ${game.id} ${mobile?'mobile':'desktop'}: ${JSON.stringify(layout)}`);};
+ const checkWidth=async(page,game,stage,mobile)=>{await page.evaluate(()=>document.fonts.ready);const viewport=page.viewportSize().width;const layout=await page.evaluate(width=>({width,visualWidth:innerWidth,clientWidth:document.documentElement.clientWidth,scroll:document.documentElement.scrollWidth,overflow:[...document.querySelectorAll('body *')].map(e=>({tag:e.tagName,id:e.id,class:e.className,left:e.getBoundingClientRect().left,right:e.getBoundingClientRect().right,width:e.getBoundingClientRect().width})).filter(e=>e.right>width+1||e.left< -1).slice(0,16)}),viewport);if(layout.scroll>layout.width+1){const dir=process.env.CONTROLS_REPORT_DIR||'live-verification';fs.mkdirSync(dir,{recursive:true});await page.screenshot({path:path.join(dir,'overflow-'+engine+'-'+game.id+'-'+(mobile?'mobile':'desktop')+'.png'),fullPage:true});}assert.ok(layout.scroll<=layout.width+1,`Responsive ${stage} ${game.id} ${mobile?'mobile':'desktop'}: ${JSON.stringify(layout)}`);};
+ const responsive=async(page,game,stage,mobile)=>{const original=page.viewportSize();for(const width of mobile?[320,390]:[original.width]){await page.setViewportSize({...original,width});await checkWidth(page,game,stage,mobile);}await page.setViewportSize(original);};
  try{
  for(const mobile of [false,true]){
   const context=await browser.newContext({viewport:mobile?{width:320,height:740}:{width:1280,height:900},hasTouch:mobile,isMobile:mobile,reducedMotion:'reduce'});
@@ -32,12 +33,12 @@ const games=rooms.flatMap(room=>JSON.parse(fs.readFileSync(path.join(__dirname,'
    assert.ok((await page.locator('#status').innerText()).trim().length>0);
    await responsive(page,game,'restart',mobile);
    assert.deepEqual(errors,[]);
-   cases.push({id:game.id,profile:mobile?'320px touch':'desktop keyboard',launch:true,gameAction:true,restart:true,focus:mobile?'not asserted':'retained after native Tab/Enter navigation',storage:mobile?'writes blocked':'reads blocked',reducedMotion:true});
+   cases.push({id:game.id,profile:mobile?'320px touch / 390px layout':'desktop keyboard',layoutWidths:mobile?[320,390]:[1280],launch:true,gameAction:true,restart:true,focus:mobile?'not asserted':'retained after native Tab/Enter navigation',storage:mobile?'writes blocked':'reads blocked',reducedMotion:true});
   }
   await context.close();
  }
- assert.equal(cases.length,200);
- const report={passed:true,sourceSha:process.env.GITHUB_SHA||null,engine,version:browser.version(),verifiedAt:new Date().toISOString(),base,cases,errors,scope:'One normal game action reached with actual Tab/Enter navigation, retained keyboard focus, touch activation, restart, 320px layout, blocked storage and reduced-motion preference in each new game. No full completion, physical device or screen-reader claim.'};
+ assert.equal(cases.length,400);
+ const report={passed:true,sourceSha:process.env.GITHUB_SHA||null,engine,version:browser.version(),verifiedAt:new Date().toISOString(),base,cases,errors,scope:'One normal game action reached with actual Tab/Enter navigation, retained keyboard focus, touch activation, restart, 320px and 390px layout, blocked storage and reduced-motion preference in each new game. No full completion, physical device or screen-reader claim.'};
  const dir=process.env.CONTROLS_REPORT_DIR||'live-verification';fs.mkdirSync(dir,{recursive:true});fs.writeFileSync(path.join(dir,'expansion-controls-'+engine+'.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify({passed:true,engine,version:browser.version(),cases:cases.length,scope:report.scope}));
  }finally{await browser.close();}
 })().catch(error=>{console.error(error);process.exitCode=1;});

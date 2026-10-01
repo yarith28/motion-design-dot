@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "total": 200,
+  "total": 300,
   "games": [
     {
       "id": "signal-run",
@@ -3995,6 +3995,2382 @@
       },
       "family": "discovery-room",
       "status": "playable"
+    },
+    {
+      "id": "falling-orchard",
+      "name": "Falling Orchard",
+      "category": "puzzle",
+      "description": "Connected-group removal with gravity and column closure.",
+      "mechanic": "Connected-group removal with gravity and column closure.",
+      "rules": [
+        "Choose a connected group of at least two identical letters, then Remove. Letters fall and empty columns shift left.",
+        "Clear every letter in three different orchards. Leaving isolated letters with no legal group strands that branch; Undo is always available.",
+        "A large group is not always best. Small clearances can bring separated letters together."
+      ],
+      "controls": "Tap any labeled control, or Tab to it and use Enter or Space. Board selections expose their selected state. No dragging, timer or global shortcuts.",
+      "url": "construct-room/?game=falling-orchard",
+      "accent": "#b5c8a5",
+      "symbol": "◇",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "[data-key=\"cell-0\"]"
+      },
+      "designId": "A01",
+      "family": "construct-room",
+      "status": "playable"
+    },
+    {
+      "id": "turn-the-stack",
+      "name": "Turn the Stack",
+      "category": "puzzle",
+      "description": "Signed-prefix reversals with a tight, visible flip allowance.",
+      "mechanic": "Signed-prefix reversals with a tight, visible flip allowance.",
+      "rules": [
+        "Choose a boundary below a disc, then flip that entire top prefix. Its order reverses and every UP face becomes DOWN or vice versa.",
+        "Finish in order 1 upward from the top, all faces UP, within each study’s allowance. The preview is exact.",
+        "A solved suffix is useful, but arranging every disc separately can exceed the allowance. Look for groups that already belong together."
+      ],
+      "controls": "Tap any labeled control, or Tab to it and use Enter or Space. Board selections expose their selected state. No dragging, timer or global shortcuts.",
+      "url": "construct-room/?game=turn-the-stack",
+      "accent": "#b5c8a5",
+      "symbol": "◇",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "[data-key=\"prefix-2\"]"
+      },
+      "designId": "A08",
+      "family": "construct-room",
+      "status": "playable"
+    },
+    {
+      "id": "unfair-circle",
+      "name": "An Unfair Circle",
+      "category": "puzzle",
+      "description": "Construct three equally valued dice with cyclic winning probabilities.",
+      "mechanic": "Construct three equally valued dice with cyclic winning probabilities.",
+      "rules": [
+        "Each die has six faces. Select two sockets to exchange their face tokens; tokens are conserved.",
+        "Make A beat B, B beat C and C beat A in at least the shown number of the 36 equally likely face pairs. All three dice must have the displayed total.",
+        "The exact comparison counts update after each exchange. Ties are not wins, and equal means alone do not establish the cycle."
+      ],
+      "controls": "Tap any labeled control, or Tab to it and use Enter or Space. Board selections expose their selected state. No dragging, timer or global shortcuts.",
+      "url": "construct-room/?game=unfair-circle",
+      "accent": "#b5c8a5",
+      "symbol": "◇",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "[data-key=\"face-0\"]"
+      },
+      "designId": "A13",
+      "family": "construct-room",
+      "status": "playable"
+    },
+    {
+      "id": "one-last-marble",
+      "name": "One Last Marble",
+      "designId": "A09",
+      "category": "puzzle",
+      "description": "Contact chains transfer momentum and reshape the next legal launches.",
+      "mechanic": "Contact chains transfer momentum and reshape the next legal launches.",
+      "rules": [
+        "Select a marble and direction. A legal fling needs at least one empty square before its first target.",
+        "The striker stops immediately before its target; the target continues, passing momentum through any further marbles. The final marble exits.",
+        "Leave exactly one marble. An adjacent target cannot be launched into. No legal launch with multiple marbles is a dead end; Undo recovers."
+      ],
+      "controls": "Tap labeled controls or Tab and activate with Enter or Space. No drag or timer. Selection and all essential board state are visible as text.",
+      "url": "construct-room/?game=one-last-marble",
+      "accent": "#b5c8a5",
+      "symbol": "◇",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "[data-key=\"marble-0\"]"
+      },
+      "family": "construct-room",
+      "status": "playable"
+    },
+    {
+      "id": "corner-cabinet",
+      "name": "Corner Cabinet",
+      "designId": "A02",
+      "category": "puzzle",
+      "description": "Restore a 2×2 cube through coupled corner permutations and orientations.",
+      "mechanic": "Restore a 2×2 cube through coupled corner permutations and orientations.",
+      "rules": [
+        "Select one of the six faces, then turn it clockwise or counterclockwise as viewed from outside. A turn carries four corner cubies and all their stickers.",
+        "Make each face uniform in letter color. Six panels and the corner table expose the entire state; there is no hidden back face.",
+        "Turns do not commute: changing their order changes the cube. An assembled face may need to be broken temporarily. Undo is available throughout."
+      ],
+      "controls": "Tap labeled controls or Tab and activate with Enter or Space. No drag or timer. Selection and all essential board state are visible as text.",
+      "url": "construct-room/?game=corner-cabinet",
+      "accent": "#b5c8a5",
+      "symbol": "◇",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "[data-key=\"cube-R\"]"
+      },
+      "family": "construct-room",
+      "status": "playable"
+    },
+    {
+      "id": "letter-conservatory",
+      "name": "Letter Conservatory",
+      "designId": "A14",
+      "category": "puzzle",
+      "description": "Choose bent word routes while reserving scarce letters for later contracts.",
+      "mechanic": "Choose bent word routes while reserving scarce letters for later contracts.",
+      "rules": [
+        "Build words by selecting neighboring tiles, including diagonals. Each tile can appear only once across all committed words.",
+        "Use up to four words from the visible complete lexicon to collect all four stars and earn 60 points. A length n word earns n² points.",
+        "Reserve commits its tiles. Backtrack changes the current uncommitted route; Undo reverses the last committed word. Different routes for the same word can preserve different future options."
+      ],
+      "controls": "Tap labeled controls or Tab and activate with Enter or Space. No drag or timer. Selection and all essential board state are visible as text.",
+      "url": "construct-room/?game=letter-conservatory",
+      "accent": "#b5c8a5",
+      "symbol": "◇",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "[data-key=\"letter-0\"]"
+      },
+      "family": "construct-room",
+      "status": "playable"
+    },
+    {
+      "id": "compass-house",
+      "name": "Compass House",
+      "designId": "A04",
+      "category": "puzzle",
+      "description": "Construct exact points, lines and circles through reusable geometric dependencies.",
+      "mechanic": "Construct exact points, lines and circles through reusable geometric dependencies.",
+      "rules": [
+        "Line and Circle use two existing points. Circle selection is ordered: first center, then a point on its rim. Intersect uses two existing lines or circles and creates their actual intersections.",
+        "Every selectable point is given or constructed. You cannot guess an arbitrary pixel position; exact geometric predicates certify your answer.",
+        "Choose Select answer, select a named point or line appropriate to the goal, then Certify. Each study includes a geometric field note."
+      ],
+      "controls": "All tools, objects and coordinate increments are native buttons. Tap or use Tab and Enter/Space. Exact geometric values and provenance remain visible; no dragging or timing.",
+      "url": "construct-room/?game=compass-house",
+      "accent": "#b5c8a5",
+      "symbol": "◇",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "[data-key=\"point-A\"]"
+      },
+      "family": "construct-room",
+      "status": "playable"
+    },
+    {
+      "id": "fair-portions",
+      "name": "Fair Portions",
+      "designId": "A06",
+      "category": "puzzle",
+      "description": "Progressive guillotine cuts conserve weighted material and protected emblems.",
+      "mechanic": "Progressive guillotine cuts conserve weighted material and protected emblems.",
+      "rules": [
+        "Select one current piece. Set endpoints A and B in thirds of a unit, both on that piece’s boundary, then commit one straight cut. The exact proposed masses are visible.",
+        "Create the requested number of equal-mass pieces with exactly one emblem each. A cut may not pass within 0.14 units of an emblem.",
+        "Each cut replaces one piece by two; it cannot cut several disconnected pieces at once. Undo reverses the complete cut. The second sheet has nonuniform density."
+      ],
+      "controls": "All tools, objects and coordinate increments are native buttons. Tap or use Tab and Enter/Space. Exact geometric values and provenance remain visible; no dragging or timing.",
+      "url": "construct-room/?game=fair-portions",
+      "accent": "#b5c8a5",
+      "symbol": "◇",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "[data-key=\"a-0-1\"]"
+      },
+      "family": "construct-room",
+      "status": "playable"
+    },
+    {
+      "id": "unfolding-house",
+      "name": "Unfolding House",
+      "designId": "A12",
+      "category": "puzzle",
+      "description": "Choose polyhedral seams whose actual flat embedding avoids overlaps and fits its stock.",
+      "mechanic": "Choose polyhedral seams whose actual flat embedding avoids overlaps and fits its stock.",
+      "rules": [
+        "Six named faces F,B,R,L,U,D form the displayed box. Retain five seams as hinges; cut the others.",
+        "Every face must remain connected to F, and its unfolded polygon must avoid all other faces and fit the stock rectangle. The flat preview uses the actual edge lengths.",
+        "A hinge tree can still overlap or be too wide. The last study includes a torn seam that cannot hold; choose another branching net."
+      ],
+      "controls": "Tap labeled controls or Tab and use Enter/Space. Diagrams have equivalent named state lists. Illegal local operations explain the obstruction; Undo always restores the prior study state.",
+      "url": "construct-room/?game=unfolding-house",
+      "accent": "#b5c8a5",
+      "symbol": "◇",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "[data-key=\"seam-0\"]"
+      },
+      "family": "construct-room",
+      "status": "playable"
+    },
+    {
+      "id": "gentle-unknot",
+      "name": "Gentle Unknot",
+      "designId": "A03",
+      "category": "puzzle",
+      "description": "Simplify closed braid diagrams while preserving their over-under knot topology.",
+      "mechanic": "Simplify closed braid diagrams while preserving their over-under knot topology.",
+      "rules": [
+        "A braid’s bottom lane reconnects to its same-numbered top lane. Signed crossings say which adjacent strand passes over; read the diagram and numbered crossing list together.",
+        "Select a crossing to start a local move. Opposite consecutive crossings on the same lanes cancel; a same-sign a,b,a triple on adjacent lane pairs can slide to b,a,b.",
+        "Moving the closure seam rotates the crossing list without changing the closed knot. When the final strand meets the others exactly once at the final crossing, remove that free curl. Reach one strand and no crossings."
+      ],
+      "controls": "Tap labeled controls or Tab and use Enter/Space. Diagrams have equivalent named state lists. Illegal local operations explain the obstruction; Undo always restores the prior study state.",
+      "url": "construct-room/?game=gentle-unknot",
+      "accent": "#b5c8a5",
+      "symbol": "◇",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "[data-key=\"braid-slide\"]"
+      },
+      "family": "construct-room",
+      "status": "playable"
+    },
+    {
+      "id": "bonding-room",
+      "name": "Bonding Room",
+      "designId": "A11",
+      "category": "puzzle",
+      "description": "Assemble rigid molecules only after their changing footprints can reach the delivery dock.",
+      "mechanic": "Assemble rigid molecules only after their changing footprints can reach the delivery dock.",
+      "rules": [
+        "Select an atom to move its entire connected molecule one grid square. Every member must fit; molecules never rotate.",
+        "Touching atoms with free valence bond automatically after movement. Simultaneous contacts resolve in alphabetical pair order, shown by atom names.",
+        "Make exactly the displayed molecular graph and place every atom in the dock. A wrong permanent bond ends that branch; Undo restores the previous state."
+      ],
+      "controls": "Tap directional controls or use native keyboard Tab and Enter/Space. Whole components, active rules and positions are listed in visible text. Undo restores all coupled state.",
+      "url": "construct-room/?game=bonding-room",
+      "accent": "#b5c8a5",
+      "symbol": "◇",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "[data-key=\"bond-cell-4\"]"
+      },
+      "family": "construct-room",
+      "status": "playable"
+    },
+    {
+      "id": "words-that-move",
+      "name": "Words That Move",
+      "designId": "A07",
+      "category": "puzzle",
+      "description": "Move physical words to change control, collision and winning rules.",
+      "mechanic": "Move physical words to change control, collision and winning rules.",
+      "rules": [
+        "Contiguous horizontal or vertical NOUN–IS–PROPERTY sentences govern objects. Every word block is pushable; stone wall squares are permanent.",
+        "YOU controls every object of that noun. PUSH permits pushing, STOP blocks, and touching a WIN object with any YOU object wins. Properties combine when several sentences apply.",
+        "Every direction moves all controlled bodies, each blocked independently. Rules rebuild after the movement; losing every YOU rule strands you until Undo. No object is a goal without a current WIN rule."
+      ],
+      "controls": "Tap directional controls or use native keyboard Tab and Enter/Space. Whole components, active rules and positions are listed in visible text. Undo restores all coupled state.",
+      "url": "construct-room/?game=words-that-move",
+      "accent": "#b5c8a5",
+      "symbol": "◇",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "[data-key=\"world-dir-3\"]"
+      },
+      "family": "construct-room",
+      "status": "playable"
+    },
+    {
+      "id": "rooms-in-motion",
+      "name": "Rooms in Motion",
+      "designId": "A10",
+      "category": "puzzle",
+      "description": "Insert a spare room to displace a maze lane, its objectives and its traveler.",
+      "mechanic": "Insert a spare room to displace a maze lane, its objectives and its traveler.",
+      "rules": [
+        "Rotate the spare, then insert it at a row or column edge. The last tile is ejected as the new spare; every room and its contents shifts together. A traveler on the ejected room wraps to the new tile.",
+        "Walk through reciprocal corridor openings to visit the ordered room IDs, then return to home room 0. Objectives can wait on the spare until you reinsert them.",
+        "An insertion cannot immediately reverse the previous insertion on the same lane. Walking and rotation are free of the insertion budget; after the final insertion you may still finish walking."
+      ],
+      "controls": "Tap any control or use Tab with Enter/Space. All cells include readable positions/state; photo frames and corridor ports expose selected state. No drag or real-time input.",
+      "url": "construct-room/?game=rooms-in-motion",
+      "accent": "#b5c8a5",
+      "symbol": "◇",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "[data-key=\"insert-0\"]"
+      },
+      "family": "construct-room",
+      "status": "playable"
+    },
+    {
+      "id": "pocket-photograph",
+      "name": "Pocket Photograph",
+      "designId": "A16",
+      "category": "puzzle",
+      "description": "Capture live world patches, then replace terrain and copy uncollected keys to build your route.",
+      "mechanic": "Capture live world patches, then replace terrain and copy uncollected keys to build your route.",
+      "rules": [
+        "Choose frame mode and tap its top-left square. Capture stores the current 3×3 terrain and objects in one photograph, spending an exposure. The avatar and anchored exit cannot be included.",
+        "Rotate the photograph if useful, choose its destination frame, then Paste. All nine cells replace the destination, including wall cells. The photograph is consumed; its source is unchanged.",
+        "Collect the requested keys and reach the exit. Keys can be copied before collection. The second study has a fixed wall stud that must remain wall. Undo reverses movement, captures and pastes."
+      ],
+      "controls": "Tap any control or use Tab with Enter/Space. All cells include readable positions/state; photo frames and corridor ports expose selected state. No drag or real-time input.",
+      "url": "construct-room/?game=pocket-photograph",
+      "accent": "#b5c8a5",
+      "symbol": "◇",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "[data-key=\"capture\"]"
+      },
+      "family": "construct-room",
+      "status": "playable"
+    },
+    {
+      "id": "breathing-room",
+      "name": "Breathing Room",
+      "description": "Adversarial group-liberty capture and living territory.",
+      "mechanic": "Adversarial group-liberty capture and living territory.",
+      "rules": [
+        "7×7 intersections. Alternate placing stones or passing. Orthogonal groups with no empty neighboring liberty are removed after enemy captures resolve. Suicide prohibited; positional superko prevents repeat boards. Two consecutive passes enter explicit territory scoring with disputed groups played out, never guessed dead. Area = stones plus empty regions bordering only one side; compensation displayed before play.",
+        "Higher area after consecutive passes wins; equal area draws."
+      ],
+      "controls": "Select an empty intersection to preview captures and liberties, then Confirm. Pass is separate. Board arrows move focus; Enter or Space activates a button.",
+      "accessibility": "Point labels include coordinates, owner, group and liberties. Area totals and capture history are written out.",
+      "decisions": "Connect threatened groups or sacrifice them for outside influence; start a capture race, invade, or secure two independent eyes. Occupying an empty point can save one group while taking a liberty from another.",
+      "category": "strategy",
+      "url": "parlour-room/?game=breathing-room",
+      "accent": "#cbdc9a",
+      "symbol": "◈",
+      "family": "parlour-room",
+      "module": "breathing-room",
+      "designId": "B01",
+      "smoke": {
+        "actionSelector": "#play-area button[data-action]"
+      },
+      "previewSelector": "#play-area",
+      "status": "playable"
+    },
+    {
+      "id": "returned-banner",
+      "name": "Returned Banner",
+      "description": "Captured units become deployable reserves in royal tactics.",
+      "mechanic": "Captured units become deployable reserves in royal tactics.",
+      "rules": [
+        "5×5 board with king, rook, bishop, gold, silver and one single-step pawn per side (six units each). In the default deal, human back row A5–E5 is King, Gold, Silver, Bishop, Rook with pawn A4; house back row A1–E1 is Rook, Bishop, Silver, Gold, King with pawn E2. That default opening has twelve occupied squares and thirteen free; Another deal may start with an advanced silver or a pawn in reserve. Piece moves fixed and illustrated. Capture demotes and transfers unit into captor reserve; drop replaces a move. Promotion available when entering or leaving the far row, with promoted movement printed. Pawn drops cannot share a file with own unpromoted pawn or give immediate mate; no self-check. Four repeated positions draw.",
+        "Checkmate wins/losses; no legal move while not checked draws in this explicitly simplified ruleset. Public 100-turn draw bound."
+      ],
+      "controls": "Select an own piece or reserve type, then choose a labeled legal move or drop. Promotion choices appear in the move list. All actions are native buttons.",
+      "accessibility": "Coordinates, full piece names, promotion status, reserve counts and legal move descriptions accompany the board.",
+      "decisions": "Trade active material for a future drop, deny drop squares around king, promote a distant unit or recycle it through exchange. Captures change both armies instead of merely reducing material.",
+      "category": "strategy",
+      "url": "parlour-room/?game=returned-banner",
+      "accent": "#cbdc9a",
+      "symbol": "◈",
+      "family": "parlour-room",
+      "module": "returned-banner",
+      "designId": "B02",
+      "smoke": {
+        "actionSelector": "#play-area button[data-action]"
+      },
+      "previewSelector": "#play-area",
+      "status": "playable"
+    },
+    {
+      "id": "four-step-menagerie",
+      "name": "Four-Step Menagerie",
+      "description": "Four-action turns manipulate weaker enemies while support determines freezing and trap survival.",
+      "mechanic": "Four-action turns manipulate weaker enemies while support determines freezing and trap survival.",
+      "rules": [
+        "6×6 board; each side owns elephant, camel, two cats and three rabbits. Orthogonal one-step moves; rabbits cannot step backward. A unit adjacent to stronger enemy and no friendly unit is frozen. Push or pull a weaker enemy costs two consecutive steps. Four marked traps capture any occupant lacking adjacent friendly support after each step. Up to four steps per turn; complete turn cannot repeat its starting position.",
+        "First rabbit to far rank wins; lose if own rabbits gone or no legal turn; simultaneous trap removals resolve before goal check. Repetition draw."
+      ],
+      "controls": "Select a unit and a listed step, push or pull. Undo an uncommitted action or End turn when ready. Use touch buttons or native keyboard activation.",
+      "accessibility": "Strength names, remaining steps, board coordinates, trap rules and individual action descriptions are available in text.",
+      "decisions": "Spend steps rescuing trap support, displacing a blocker, or escorting a rabbit. Push/pull can expose own support; first step survival matters before the second completes.",
+      "category": "strategy",
+      "url": "parlour-room/?game=four-step-menagerie",
+      "accent": "#cbdc9a",
+      "symbol": "◈",
+      "family": "parlour-room",
+      "module": "four-step-menagerie",
+      "designId": "B03",
+      "smoke": {
+        "actionSelector": "#play-area button[data-action]"
+      },
+      "previewSelector": "#play-area",
+      "status": "playable"
+    },
+    {
+      "id": "living-perimeter",
+      "name": "Living Perimeter",
+      "description": "Move different crawling pieces around one connected hive to surround an opposing queen.",
+      "mechanic": "Move different crawling pieces around one connected hive to surround an opposing queen.",
+      "rules": [
+        "The first deal starts empty; Another deal can start with a visible midgame arrangement. Each player has queen, two ants, two beetles and two grasshoppers. Placement must touch own pieces and no enemy after opening; queen must be placed by fourth own turn. Thereafter move or place. Queen slides one perimeter step, ant any sliding perimeter path, grasshopper jumps a contiguous occupied line, beetle climbs one neighbor stack. Removing a piece may never split hive. Sliding cannot pass a two-neighbor pinch. Covered piece cannot move.",
+        "Surround all six neighbors of enemy queen to win; own queen surrounded loses; both simultaneously surrounded draws. Repetition draws."
+      ],
+      "controls": "Choose a reserve insect or exposed own stack, then a listed legal destination. Touch and keyboard use the same native buttons.",
+      "accessibility": "Axial coordinates, insect names, stack information and legal move descriptions accompany the hive; the movement rules are written out.",
+      "decisions": "Pin articulation pieces, climb to free a blocked route, choose which side of queen to close without disconnecting own mobility. Placing early secures future entry but consumes a movement turn.",
+      "category": "strategy",
+      "url": "parlour-room/?game=living-perimeter",
+      "accent": "#cbdc9a",
+      "symbol": "◈",
+      "family": "parlour-room",
+      "module": "living-perimeter",
+      "designId": "B04",
+      "smoke": {
+        "actionSelector": "#play-area button[data-action]"
+      },
+      "previewSelector": "#play-area",
+      "status": "playable"
+    },
+    {
+      "id": "homeward-pips",
+      "name": "Homeward Pips",
+      "description": "Allocate two dice between blocking, hitting, escape and bearing off in an opposed race.",
+      "mechanic": "Allocate two dice between blocking, hitting, escape and bearing off in an opposed race.",
+      "rules": [
+        "12-point linear track; seven checkers per side move opposite directions toward final three-point home board. Roll two six-sided dice, doubles four uses. Split dice or use sequentially on one checker; each intermediate landing legal. Two enemy checkers block a point; lone enemy is hit to bar. Bar checkers reenter before others move. Must use maximum available dice, and higher if only one can be used. Bear off only once all own checkers home; overshoot allowed only from farthest occupied point.",
+        "Bear off every checker first wins; house first loses. No stake/doubling system."
+      ],
+      "controls": "Roll, choose legal moves, then Confirm turn. Undo resets the uncommitted roll. The optional complete-turn list offers every legal dice sequence.",
+      "accessibility": "Point ownership/counts, dice, bar, home and borne-off totals are text. Full turn plans provide an alternative to selecting each move.",
+      "decisions": "Use roll to make safe blocks or race forward, expose a blot to attack a rival, and choose home-board timing. Hit changes future reentry obligations and can strand even a fast runner.",
+      "category": "strategy",
+      "url": "parlour-room/?game=homeward-pips",
+      "accent": "#cbdc9a",
+      "symbol": "◈",
+      "family": "parlour-room",
+      "module": "homeward-pips",
+      "designId": "B05",
+      "smoke": {
+        "actionSelector": "#play-area button[data-action]"
+      },
+      "previewSelector": "#play-area",
+      "status": "playable"
+    },
+    {
+      "id": "veiled-standard",
+      "name": "Veiled Standard",
+      "description": "Concealed-rank combat turns movement history and sacrificial scouting into persistent tactical information.",
+      "mechanic": "Concealed-rank combat turns movement history and sacrificial scouting into persistent tactical information.",
+      "rules": [
+        "6×6 board with two lake cells. Each army: flag and two immobile mines, scout, miner, spy, and four ranked soldiers. Public composition; secret placement. Orthogonal one-step movement, scout may travel clear ray but reveals scout identity. Attack reveals both; higher rank survives, equal both remove, miner defuses mine, attacking spy beats highest soldier. Flag capture wins. Revealed identities remain known. Player places own army freely in back two rows before match.",
+        "Capture opposing flag or leave opponent no movable unit wins; converse loses; 80 turns without capture draws."
+      ],
+      "controls": "During setup select a unit and a destination to swap or relocate it. Deploy, then select an own unit and a listed move or attack; choosing the destination commits.",
+      "accessibility": "Hidden units have stable unknown identifiers. Coordinates, visible ranks, public composition, movement reveals and combat results are written out.",
+      "decisions": "Probe with cheap pieces, infer immobile flags/mines, conceal strongest piece, trade a scout for knowledge or preserve miner for final entry. House receives only its legal observation history.",
+      "category": "strategy",
+      "url": "parlour-room/?game=veiled-standard",
+      "accent": "#cbdc9a",
+      "symbol": "◈",
+      "family": "parlour-room",
+      "module": "veiled-standard",
+      "designId": "B06",
+      "smoke": {
+        "actionSelector": "#play-area button[data-action]"
+      },
+      "previewSelector": "#play-area",
+      "status": "playable"
+    },
+    {
+      "id": "second-shuffle",
+      "name": "Second Shuffle",
+      "description": "Build the future probability distribution of your hand through acquisition, thinning and shuffle timing.",
+      "mechanic": "Build the future probability distribution of your hand through acquisition, thinning and shuffle timing.",
+      "rules": [
+        "Start ten cards: seven coin-1 and three inert seals. Each turn draw five; one action and one purchase, with explicit +action/+draw effects on market cards. Played/bought cards go to discard, reshuffled only when draw empty. Shared finite market includes coin upgrades, extra-action engines, draw, trash-up-to-two and victory cards that clog hands. Game ends on three emptied market piles or 20 turns; victory cards score.",
+        "Higher victory total wins; tie draws. Natural loss to stronger house deck, never survival HP."
+      ],
+      "controls": "Play a hand action, select trash targets where required, finish actions, then buy cards or end the turn. All choices use labeled buttons.",
+      "accessibility": "Hand effects, supply prices and victory values, phase counters, deck/discard counts and the turn log are text.",
+      "decisions": "Buy immediate income or long-run engine, remove starting clutter versus score cards, time terminal-action density, and end match before opponent engine matures.",
+      "category": "strategy",
+      "url": "parlour-room/?game=second-shuffle",
+      "accent": "#cbdc9a",
+      "symbol": "◈",
+      "family": "parlour-room",
+      "module": "second-shuffle",
+      "designId": "B07",
+      "smoke": {
+        "actionSelector": "#play-area button[data-action]"
+      },
+      "previewSelector": "#play-area",
+      "status": "playable"
+    },
+    {
+      "id": "corner-garden",
+      "name": "Corner Garden",
+      "description": "Adversarial polyomino placement grows a frontier through corners while forbidding own edge contact.",
+      "mechanic": "Adversarial polyomino placement grows a frontier through corners while forbidding own edge contact.",
+      "rules": [
+        "10×10 board; each player owns nine distinct polyominoes (1–5 cells, same set). First covers own start corner. Later placement must touch own corner and no own edge; enemy edge contact allowed, overlap forbidden. Rotate/reflect selected piece freely. Alternating turns; pass only without legal placement.",
+        "When both cannot place, fewer unplaced cells wins; equal draws. Empty inventory gives bonus two points disclosed at start."
+      ],
+      "controls": "Select a shape, cycle its rotations/reflections, choose an anchor preview, then Confirm placement. Legal anchors are also available as large buttons.",
+      "accessibility": "Shape cell offsets, orientation number, available anchors, coordinates and owner labels describe every placement without relying on color.",
+      "decisions": "Retain flexible small pieces to reach cavities, extend across board before rival closes lanes, or block a rival corner while preserving future own anchors.",
+      "category": "strategy",
+      "url": "parlour-room/?game=corner-garden",
+      "accent": "#cbdc9a",
+      "symbol": "◈",
+      "family": "parlour-room",
+      "module": "corner-garden",
+      "designId": "B08",
+      "smoke": {
+        "actionSelector": "#play-area button[data-action]"
+      },
+      "previewSelector": "#play-area",
+      "status": "playable"
+    },
+    {
+      "id": "gifted-traits",
+      "name": "Gifted Traits",
+      "description": "Choose the piece your opponent must place; align one shared binary trait.",
+      "mechanic": "Choose the piece your opponent must place; align one shared binary trait.",
+      "rules": [
+        "4×4 board and sixteen unique pieces with four binary traits. On each turn place the piece gifted by rival, check a row/column/diagonal of four sharing any trait, then gift one unused piece. Traits all count equally; starting player first gifts. All used traits publicly displayed.",
+        "Placing a completed common-trait line wins immediately; house does same; filled nonwinning board draws."
+      ],
+      "controls": "Choose the piece to give the house. When receiving a piece, choose its empty board square; each selection commits immediately.",
+      "accessibility": "Every piece names all four traits. A text census describes placed pieces and the board code legend explains the four bits.",
+      "decisions": "Place to create a fork whose different completions poison all gifts, or extinguish future threats while choosing a safe remaining piece. Choosing location alone is only half a turn.",
+      "category": "strategy",
+      "url": "parlour-room/?game=gifted-traits",
+      "accent": "#cbdc9a",
+      "symbol": "◈",
+      "family": "parlour-room",
+      "module": "gifted-traits",
+      "designId": "B09",
+      "smoke": {
+        "actionSelector": "#play-area button[data-action]"
+      },
+      "previewSelector": "#play-area",
+      "status": "playable"
+    },
+    {
+      "id": "orders-at-dusk",
+      "name": "Orders at Dusk",
+      "description": "Simultaneous movement and support orders produce contested borders and cuttable alliances.",
+      "mechanic": "Simultaneous movement and support orders produce contested borders and cuttable alliances.",
+      "rules": [
+        "Nine-region planar map, each of three factions with two armies and two supply centers; one human, two bots. Each spring/autumn secretly order every army Hold, Move adjacent, or Support a specified army holding or attacking a region adjacent to the supporter. Simultaneous strength = one + uncut support; equal attacks bounce, swaps bounce, circular moves resolve. Any enemy attack from a region other than supported destination cuts support even if attack bounces. Dislodged army retreats to vacant allowed adjacent region or disbands. After autumn, centers set army count.",
+        "Control five of nine centers at an autumn count wins; after eight years most centers wins, ties draw."
+      ],
+      "controls": "Select an army and its order, revise the slate if needed, then Seal all orders. Retreat and recruitment choices use separate labeled buttons.",
+      "accessibility": "The own order slate stays visible; resolved orders name strength, cuts, bounces and retreats. Ownership and armies have text labels.",
+      "decisions": "Choose supported attacks versus attacks cutting support elsewhere; infer whether competing faction defends or expands. A feint can matter without winning its destination. New army location changes next season options.",
+      "category": "strategy",
+      "url": "parlour-room/?game=orders-at-dusk",
+      "accent": "#cbdc9a",
+      "symbol": "◈",
+      "family": "parlour-room",
+      "module": "orders-at-dusk",
+      "designId": "B10",
+      "smoke": {
+        "actionSelector": "#play-area button[data-action]"
+      },
+      "previewSelector": "#play-area",
+      "status": "playable"
+    },
+    {
+      "id": "almost-a-word",
+      "name": "Almost a Word",
+      "description": "Adversarial prefix extension tries to force the opponent to complete a word.",
+      "mechanic": "Adversarial prefix extension tries to force the opponent to complete a word.",
+      "rules": [
+        "Public finite dictionary of the complete familiar-word list shown by the prefix browser, always available. Alternate appending one letter to shared fragment; making a complete dictionary word of length at least four loses a life. May challenge rival previous prefix; if no dictionary extension exists rival loses life, otherwise challenger loses and shortest valid extension is revealed. Reset fragment after each life; alternate opener. Each new fragment offers three initial letters from rich, mixed-length dictionary branches. The chosen initial is retired for this entire match: neither player may reuse it. The offered initial tray varies by deal.",
+        "Reduce house from three lives to zero before own lives gone; challenge failure is natural loss path."
+      ],
+      "controls": "Choose letters with the onscreen alphabet buttons, or focus them with the keyboard. Challenge and next-fragment actions are separate buttons. The dictionary browser is always available.",
+      "accessibility": "The fragment, offered initials, retired initials, lives and complete allowed-word list are text. No voice input or timer is required.",
+      "decisions": "Choose prefix branches based on eventual completion parity and forced terminal words. Challenge is a transparent correction for invalid extension, not credited as strategic bluff: a rational dictionary-checking rival always challenges it. Mixed odd/even branching must carry the depth alone.",
+      "category": "strategy",
+      "url": "parlour-room/?game=almost-a-word",
+      "accent": "#cbdc9a",
+      "symbol": "◈",
+      "family": "parlour-room",
+      "module": "almost-a-word",
+      "designId": "B11",
+      "smoke": {
+        "actionSelector": "#play-area button[data-action]"
+      },
+      "previewSelector": "#play-area",
+      "status": "playable"
+    },
+    {
+      "id": "crossgrain",
+      "name": "Crossgrain",
+      "description": "Use your letter rack to extend a shared, scored crossing-word board against an opponent.",
+      "mechanic": "Use your letter rack to extend a shared, scored crossing-word board against an opponent.",
+      "rules": [
+        "9×9 board, seven-tile rack, finite public vocabulary searchable by prefix. Each turn place contiguous row/column word connecting existing board; every perpendicular cross-word must also be valid. Reuse existing letters, score all new words by letter values with one-use letter/word premiums. Blank chosen once at placement scores zero. Exchange selected tiles only with at least seven in bag, or pass. Draw replacements after commit.",
+        "Bag empty and one rack empty, or six combined passes, ends; subtract remaining rack values and transfer them on going out. Higher score wins; equal draw.",
+        "A 36-combined-turn cap also closes the game with normal rack adjustments. Use the public dictionary browser buttons to inspect allowed words; all placement uses native buttons, with Tab/Enter keyboard access."
+      ],
+      "controls": "Choose a rack tile, choose a blank letter if needed, then choose its square. Undo edits placements; Check previews validity/score and Commit plays. Dictionary and exchange controls are native buttons.",
+      "accessibility": "Coordinates, premiums, rack values, blank letters and scored words are written out. Browse allowed words by prefix using labeled buttons.",
+      "decisions": "Cash a premium versus protect its access, keep flexible vowels versus expensive consonants, play a short hook forming several cross-words versus long main word, or exchange at tempo cost.",
+      "category": "strategy",
+      "url": "parlour-room/?game=crossgrain",
+      "accent": "#cbdc9a",
+      "symbol": "◈",
+      "family": "parlour-room",
+      "module": "crossgrain",
+      "designId": "B12",
+      "smoke": {
+        "actionSelector": "#play-area button[data-action]"
+      },
+      "previewSelector": "#play-area",
+      "status": "playable"
+    },
+    {
+      "id": "patient-columns",
+      "name": "Patient Columns",
+      "description": "Uncover hidden tableau cards by reversible descending-color packing while promoting suit foundations carefully.",
+      "mechanic": "Uncover hidden tableau cards by reversible descending-color packing while promoting suit foundations carefully.",
+      "rules": [
+        "28-card deck ranks A–7 four suits; five tableau columns of 1–5 cards, only top face-up, rest stock. Build tableau alternating colors descending; move any exposed ordered suffix. Empty columns accept 7 only. Foundations ascend suit A–7. Draw one stock card to waste; one redeal only. Foundation top may return to tableau. New hidden tableau top flips immediately.",
+        "All 28 on foundations wins; after redeal, no stock movement or legal card movement constitutes blocked loss. Manual restart not counted loss."
+      ],
+      "controls": "Select a face-up card or ordered suffix, then a legal destination. Draw and the single Redeal have separate buttons.",
+      "accessibility": "Cards have rank/suit names; columns report hidden counts without exposing hidden identities. Foundations, waste and legal destinations are text.",
+      "decisions": "Free hidden cards versus rush foundations, preserve a needed opposite-color link, choose which 7 occupies an empty column, and time stock cycle.",
+      "category": "strategy",
+      "url": "parlour-room/?game=patient-columns",
+      "accent": "#cbdc9a",
+      "symbol": "◈",
+      "family": "parlour-room",
+      "module": "patient-columns",
+      "designId": "B13",
+      "smoke": {
+        "actionSelector": "#play-area button[data-action]"
+      },
+      "previewSelector": "#play-area",
+      "status": "playable"
+    },
+    {
+      "id": "twin-roofs",
+      "name": "Twin Roofs",
+      "description": "Remove equal exposed tiles while managing three-dimensional blockers and duplicate-pair ambiguity.",
+      "mechanic": "Remove equal exposed tiles while managing three-dimensional blockers and duplicate-pair ambiguity.",
+      "rules": [
+        "Forty-eight tiles, twelve symbols four copies each, arranged on three explicit layers. Tile removable only if nothing covers it and left or right side has no tile at same layer. Select two removable identical tiles to remove together. No shuffle or arbitrary hint teleport; unlimited inspection and three undo credits per deal. Known tile faces always visible in a layer list.",
+        "Clear all tiles wins; no matching removable pair with remaining tiles and no undo credit loses."
+      ],
+      "controls": "Choose a layer to inspect, then select two free tiles with the same symbol. Undo restores the last pair while credits remain.",
+      "accessibility": "The complete layer list names every visible symbol, coordinate, layer and free/blocked state. Separate free-tile buttons support keyboard play.",
+      "decisions": "Choose which two of four matching copies to consume, open useful side access versus uncover top support, avoid leaving a matching pair mutually blocked.",
+      "category": "strategy",
+      "url": "parlour-room/?game=twin-roofs",
+      "accent": "#cbdc9a",
+      "symbol": "◈",
+      "family": "parlour-room",
+      "module": "twin-roofs",
+      "designId": "B14",
+      "smoke": {
+        "actionSelector": "#play-area button[data-action]"
+      },
+      "previewSelector": "#play-area",
+      "status": "playable"
+    },
+    {
+      "id": "ascending-expeditions",
+      "name": "Ascending Expeditions",
+      "description": "Commit cards irreversibly to increasing suit routes while investment multipliers magnify unfinished projects.",
+      "mechanic": "Commit cards irreversibly to increasing suit routes while investment multipliers magnify unfinished projects.",
+      "rules": [
+        "Four expedition suits, cards 2–10 plus two investment cards each; hand six. On turn play one card to own expedition in nondecreasing rank (investment only before numbers) or discard to shared suit pile, then draw stock or any other discard pile top. Each started suit scores (sum numbers −20)×(1+investments), including negative totals; eight cards adds 15. Stock depletion ends after current turn. Round also ends after six consecutive turns drawing from discards without any new expedition placement; a visible stagnation counter resets on stock draw or expedition play. Six consecutive discard-only turns without a stock draw or expedition placement end the round before the next draw; a 70-turn cap also settles current scores.",
+        "Higher total across three rounds wins; lower loses, equal draw. Negative expedition scores can erase successes."
+      ],
+      "controls": "Select a hand card, play it to its expedition or discard it, then choose a stock/discard draw. All choices are buttons.",
+      "accessibility": "Each expedition lists its cards and calculated score. Suit names, discard tops, stock count and the no-progress counter are text.",
+      "decisions": "Wait for a missing low number versus begin earning, fund a risky expedition or consolidate, discard useful card knowing rival can take it, and control stock depletion by recycling discard draws.",
+      "category": "strategy",
+      "url": "parlour-room/?game=ascending-expeditions",
+      "accent": "#cbdc9a",
+      "symbol": "◈",
+      "family": "parlour-room",
+      "module": "ascending-expeditions",
+      "designId": "B15",
+      "smoke": {
+        "actionSelector": "#play-area button[data-action]"
+      },
+      "previewSelector": "#play-area",
+      "status": "playable"
+    },
+    {
+      "id": "letters-we-cannot-see",
+      "name": "Letters We Cannot See",
+      "description": "Cooperate through scarce truthful hints while each player cannot see their own cards.",
+      "mechanic": "Cooperate through scarce truthful hints while each player cannot see their own cards.",
+      "rules": [
+        "Two players human and transparent-policy bot, each four cards facing partner. Three suits ranks 1–5 with multiplicities 3/2/2/2/1. Build shared ascending suit stacks. On turn play own indexed card blind, discard to regain one of five hints, or spend hint naming suit/rank in partner hand: all matching cards indicated, all nonmatching excluded. Three wrong plays end game; completing rank 5 restores a hint. Deck empty grants one final turn each.",
+        "Deliver at least twelve of fifteen ranks by the end of the final replies to win; all fifteen earns perfect correspondence. Reaching twelve early does not end the game. Three mistakes always lose; final delivery below twelve loses. Restart repeats the deal; Another deal creates a new shuffled deal."
+      ],
+      "controls": "Choose a truthful suit/rank hint for the house, or press Play/Discard for one of your concealed slots. Each labeled choice commits immediately.",
+      "accessibility": "Your slots show only legitimate possibilities; partner cards and hint restrictions are visible. Public discards, fuse/hint counts and the public card ceiling are written out.",
+      "decisions": "Spend a hint to make a safe play, rescue a unique late-rank card from discard, or discard a known duplicate to fund later communication. Must reason from own accumulated positive and negative clues.",
+      "category": "strategy",
+      "url": "parlour-room/?game=letters-we-cannot-see",
+      "accent": "#cbdc9a",
+      "symbol": "◈",
+      "family": "parlour-room",
+      "module": "letters-we-cannot-see",
+      "designId": "B16",
+      "smoke": {
+        "actionSelector": "#play-area button[data-action]"
+      },
+      "previewSelector": "#play-area",
+      "status": "playable"
+    },
+    {
+      "id": "ordered-harvest",
+      "name": "Ordered Harvest",
+      "description": "Trade away awkward future cards because hand order forces imminent planting and field replacement.",
+      "mechanic": "Trade away awkward future cards because hand order forces imminent planting and field replacement.",
+      "rules": [
+        "Two fields each hold one crop type; hand order immutable. Turn plant oldest card, optionally second oldest, reveal two market cards. Negotiate transfers of market cards and any hand cards with two bots using public wanted-crop offers; received cards must plant immediately, never enter hand. Player may exchange a selected card for an offered crop, accept/refuse; bot follows public current-field value. Harvest a field anytime for threshold coin schedule, removing it. Draw three cards to hand tail. Two deck passes.",
+        "Most coins after final mandatory harvest wins; tie draws, lower total loses.",
+        "This compact market uses one-for-one counteroffers. A 16-human-turn cap also triggers the final harvest. Bots receive market crops and draw between your turns; all received crops plant immediately."
+      ],
+      "controls": "Plant in a field; optionally plant the second-oldest card. Select an offered hand/market card, then an accepted counteroffer or gift. Finish trades triggers required planting.",
+      "accessibility": "Hand positions are explicitly ordered. Fields, harvest thresholds, available counteroffers, trade policy and mandatory planting phases are text.",
+      "decisions": "Keep a nearly profitable field or harvest early to absorb compulsory crop; trade future awkward card before it reaches hand front; gift market crop to avoid destroying a valuable field. Trade can help rival but save more own loss.",
+      "category": "strategy",
+      "url": "parlour-room/?game=ordered-harvest",
+      "accent": "#cbdc9a",
+      "symbol": "◈",
+      "family": "parlour-room",
+      "module": "ordered-harvest",
+      "designId": "B17",
+      "smoke": {
+        "actionSelector": "#play-area button[data-action]"
+      },
+      "previewSelector": "#play-area",
+      "status": "playable"
+    },
+    {
+      "id": "shared-seasons",
+      "name": "Shared Seasons",
+      "description": "Select a phase secretly so every player acts in chosen phases, but only selectors receive its privilege.",
+      "mechanic": "Select a phase secretly so every player acts in chosen phases, but only selectors receive its privilege.",
+      "rules": [
+        "Each player begins two tableau buildings and six cards; four round phases: Explore draw, Develop build, Produce stock, Ship consume. Human and bot simultaneously choose one; union executes in printed order, once per phase. Selector gets phase-specific bonus. Build by discarding other hand cards as payment; built buildings give permanent exact effects or storage. Production fills empty producers; shipping empties chosen stocks for cards or VP. Twelve rounds or six buildings ends.",
+        "VP tokens plus printed building VP higher than opponent wins; equal draw. Short rules table lists every building effect."
+      ],
+      "controls": "Choose a role to commit it. In development choose a building and payment cards, then confirm payment; shipping uses separate card-reward or point-reward buttons.",
+      "accessibility": "Building effects, printed costs/VP, goods, revealed roles, phase privileges and selected payments are written out.",
+      "decisions": "Choose a phase you need versus exploit a likely rival selection; retain useful building card or spend it to build another; produce now anticipating opponent shipping or deny free action by changing role.",
+      "category": "strategy",
+      "url": "parlour-room/?game=shared-seasons",
+      "accent": "#cbdc9a",
+      "symbol": "◈",
+      "family": "parlour-room",
+      "module": "shared-seasons",
+      "designId": "B18",
+      "smoke": {
+        "actionSelector": "#play-area button[data-action]"
+      },
+      "previewSelector": "#play-area",
+      "status": "playable"
+    },
+    {
+      "id": "pass-the-burden",
+      "name": "Pass the Burden",
+      "description": "Pay to refuse a penalty card, or take its accumulating coins and alter the cost of future consecutive cards.",
+      "mechanic": "Pay to refuse a penalty card, or take its accumulating coins and alter the cost of future consecutive cards.",
+      "rules": [
+        "Cards 3–25, six randomly omitted unseen, remaining shuffled; each player starts nine coins. Face-up card offered in turn; refuse places one own coin on it and passes offer; accept takes card and all coins, then reveals next. No coins forces acceptance. At end each consecutive run scores only its lowest card as penalty; subtract remaining coins. Own accepted cards public.",
+        "Lowest penalty wins; equal draws among tied players, higher loses. Ends deck empty."
+      ],
+      "controls": "Take the current card and its coins, or pay one coin to pass. Both actions are native buttons.",
+      "accessibility": "The current card, pot, coins, accepted cards and running penalties are text.",
+      "decisions": "Pay to avoid a high isolated card or take a funded burden, preserve refusal liquidity, accept a bridge that joins runs and removes a larger penalty, infer missing-card risk.",
+      "category": "strategy",
+      "url": "parlour-room/?game=pass-the-burden",
+      "accent": "#cbdc9a",
+      "symbol": "◈",
+      "family": "parlour-room",
+      "module": "pass-the-burden",
+      "designId": "B19",
+      "smoke": {
+        "actionSelector": "#play-area button[data-action]"
+      },
+      "previewSelector": "#play-area",
+      "status": "playable"
+    },
+    {
+      "id": "market-of-five",
+      "name": "Market of Five",
+      "description": "Exchange with a shared replenishing market, then time unordered set sales against diminishing rewards.",
+      "mechanic": "Exchange with a shared replenishing market, then time unordered set sales against diminishing rewards.",
+      "rules": [
+        "Market five goods/camel cards, personal hand cap seven plus camel herd. Turn take one good, take all camels, exchange two or more own goods/camels for same number market goods, or sell a same-type set. Rare goods require at least two to sell. Public per-good reward stacks diminish with successive sales; set size 3/4/5 grants stated bonus. Sold cards leave. Market refills from deck; three depleted reward stacks or exhausted deck ends. A 48-combined-turn limit also ends the match. An exchange cannot offer and receive the same goods type.",
+        "Higher coin total plus five-point larger camel herd bonus wins, equal draws."
+      ],
+      "controls": "Take a good or camels directly, choose a listed set sale, or select incoming/outgoing cards and camels before confirming an exchange.",
+      "accessibility": "Hand cap, exchange balance, camel herds, stock count, exact reward stacks and set bonuses are written out.",
+      "decisions": "Sell early for best per-card rewards or wait for set bonus, exchange unwanted goods/camels to change market mix, avoid giving rival an easy large set, and manage hand cap.",
+      "category": "strategy",
+      "url": "parlour-room/?game=market-of-five",
+      "accent": "#cbdc9a",
+      "symbol": "◈",
+      "family": "parlour-room",
+      "module": "market-of-five",
+      "designId": "B20",
+      "smoke": {
+        "actionSelector": "#play-area button[data-action]"
+      },
+      "previewSelector": "#play-area",
+      "status": "playable"
+    },
+    {
+      "id": "roads-we-share",
+      "name": "Roads We Share",
+      "description": "Extend edge-matched landscape features while limited claimants stay locked until feature closure.",
+      "mechanic": "Extend edge-matched landscape features while limited claimants stay locked until feature closure.",
+      "rules": [
+        "Twenty-four square tiles have roads, city sides and fields; drawn tile rotates and must match every adjacent edge. After placement optionally put one of five claimants on an unclaimed connected road/city on that tile; cannot enter already claimed connected feature. Merging separately claimed features allowed. Completed road closed at junction/end both ends; city closed on every exposed city edge. Majority claimants score feature, ties all score; claimants return. End incomplete features score half rounded down.",
+        "Higher feature score after tile stock ends wins, equal draw; house victory natural loss."
+      ],
+      "controls": "Rotate the drawn tile, then choose a legal coordinate to place it. Claim an available road/city or leave it unclaimed.",
+      "accessibility": "Tiles name their four edge types. Claimed features list tile counts, open edges and claimant counts; scores and available pawns are text.",
+      "decisions": "Close a small feature to recover claimant or extend for more points; merge competing claims for shared/majority score, deny completion by geometry, preserve claimant supply.",
+      "category": "strategy",
+      "url": "parlour-room/?game=roads-we-share",
+      "accent": "#cbdc9a",
+      "symbol": "◈",
+      "family": "parlour-room",
+      "module": "roads-we-share",
+      "designId": "B21",
+      "smoke": {
+        "actionSelector": "#play-area button[data-action]"
+      },
+      "previewSelector": "#play-area",
+      "status": "playable"
+    },
+    {
+      "id": "factory-mosaic",
+      "name": "Factory Mosaic",
+      "description": "A shared color draft creates unwanted leftovers that opponents can force into costly overflow.",
+      "mechanic": "A shared color draft creates unwanted leftovers that opponents can force into costly overflow.",
+      "rules": [
+        "Five factories each four tiles, plus center. Take all one color from one source; all other factory tiles move to center. Put taken color into exactly one of own pattern rows capacities 1–5, each single-color and only if corresponding wall row lacks it. Excess falls to floor, escalating penalty. First center taker gets next-round initiative and one penalty. End round completed rows move one tile to fixed matching wall position, score connected horizontal/vertical lengths; leftovers discard. End when any wall row full.",
+        "Wall score minus floor penalties plus stated row/column/color bonuses higher wins; ties draw.",
+        "A ten-round limit also closes the game with the normal bonuses."
+      ],
+      "controls": "Choose a source/color, then a pattern row or the floor. Labeled source and row buttons support touch and keyboard.",
+      "accessibility": "Tile colors have names; source quantities, pattern rows, wall state, floor counts, penalties and scores are written out.",
+      "decisions": "Complete a short row now or load a long row for future adjacency, take center initiative at penalty, leave a large unwanted color lot to rival, or deliberately waste tiles to deny high score.",
+      "category": "strategy",
+      "url": "parlour-room/?game=factory-mosaic",
+      "accent": "#cbdc9a",
+      "symbol": "◈",
+      "family": "parlour-room",
+      "module": "factory-mosaic",
+      "designId": "B22",
+      "smoke": {
+        "actionSelector": "#play-area button[data-action]"
+      },
+      "previewSelector": "#play-area",
+      "status": "playable"
+    },
+    {
+      "id": "anchor-stacks",
+      "name": "Anchor Stacks",
+      "description": "Stack ownership moves exactly its height while vacated bridges can erase every disconnected component.",
+      "mechanic": "Stack ownership moves exactly its height while vacated bridges can erase every disconnected component.",
+      "rules": [
+        "Hex board of 19 cells fully populated: eight counters each side and three neutral anchor counters. A stack owned by its top counter may move in straight line exactly its total height onto another occupied cell, carrying every layer. A surrounded stack cannot move; holes cannot be landing cells but may be crossed. After a move, remove every component not connected through occupied neighbors to at least one anchor-containing stack. Anchors travel when covered stacks move. Alternate until neither can move.",
+        "Sum heights of controlled surviving stacks; higher wins, equal draws. Empty own controllable stack set can end early only if opponent has no future changes."
+      ],
+      "controls": "Select an exposed own stack, then a listed legal destination to commit its move. Pass appears only when no move is available.",
+      "accessibility": "The stack census gives coordinates and every layer from bottom to top, including anchors. Controlled heights and disconnections are reported in text.",
+      "decisions": "Cover opposing stacks to seize height, maintain maneuverability as stacks lengthen, relocate anchors to preserve own component, cut a bridge sacrificing material while deleting larger enemy component.",
+      "category": "strategy",
+      "url": "parlour-room/?game=anchor-stacks",
+      "accent": "#cbdc9a",
+      "symbol": "◈",
+      "family": "parlour-room",
+      "module": "anchor-stacks",
+      "designId": "B23",
+      "smoke": {
+        "actionSelector": "#play-area button[data-action]"
+      },
+      "previewSelector": "#play-area",
+      "status": "playable"
+    },
+    {
+      "id": "the-other-half",
+      "name": "The Other Half",
+      "description": "Cut a connected estate into two connected parcels, then opponent chooses first under asymmetric public utilities.",
+      "mechanic": "Cut a connected estate into two connected parcels, then opponent chooses first under asymmetric public utilities.",
+      "rules": [
+        "Connected estate within a 4×4 grid of terrain cells with public red/blue utility weights and one adjacency bonus per connected orchard pair. Across six rounds draw different estates and utility cards; players alternate divider/chooser. Divider selects subset; both parcels nonempty and orthogonally connected. Chooser freely selects either parcel, divider gets remainder. House chooser maximizes its own awarded utility minus opponent awarded utility, consistent with match score difference; human chooses freely. A player scores own utility only. Each has two once-per-match redraw tokens usable before division, replacing an estate at cost two points. All utilities and future two estate types visible. Only the divider may spend a redraw token, before touching the cut. The house may also redraw an unfavorable estate at a two-point cost; each side has two tokens.",
+        "Score difference over six rounds decides win/loss; equality draws. Invalid disconnected cut never commits."
+      ],
+      "controls": "Toggle cells for parcel A and inspect the utility/connectivity preview, then Submit. The chooser selects A or B. Redraw is available before beginning a cut.",
+      "accessibility": "Cell labels and parcel summaries give utilities and membership. Cut validation, allocation results, scores and redraw tokens are text.",
+      "decisions": "Balance rival score-difference choices without equalizing parcel area or own utility, use shape constraints to deny a high-value bundle, decide which round merits redraw rather than accept an adverse division. When choosing, own immediate score competes with withholding opponent score because match is score difference.",
+      "category": "strategy",
+      "url": "parlour-room/?game=the-other-half",
+      "accent": "#cbdc9a",
+      "symbol": "◈",
+      "family": "parlour-room",
+      "module": "the-other-half",
+      "designId": "B24",
+      "smoke": {
+        "actionSelector": "#play-area button[data-action]"
+      },
+      "previewSelector": "#play-area",
+      "status": "playable"
+    },
+    {
+      "id": "four-houses",
+      "name": "Four Houses",
+      "description": "Grow kingdoms but score the weakest of four cultures, using different rules for internal leadership disputes and external wars.",
+      "mechanic": "Grow kingdoms but score the weakest of four cultures, using different rules for internal leadership disputes and external wars.",
+      "rules": [
+        "6×6 land/river board; four tile colors and four leader types per side. Turn two actions: place tile from six-card hand (river color only on river), place/move a leader adjacent to shrine tile, or exchange the entire hand. Tile added to kingdom awards point of its color to same-color leader owner if present. Moving second same-color leader into existing kingdom triggers internal contest using adjacent shrines plus committed shrine hand tiles; loser leader removed. Connecting separate kingdoms containing rival same-color leaders triggers external contest using total matching-color tiles plus committed matching hand cards; loser leader and losing-color tiles removed, potentially splitting kingdom. Tied strength favors defender; commitments simultaneous.",
+        "After 24 full turns or tile bag depleted, sort four scores ascending and compare lexicographically; higher weakest then next weakest wins. Equal draws.",
+        "Canal tiles occupy river only; all other tiles occupy land. Exchange replaces your entire hand and costs one action. Tile placement pays after any conflict resolves.",
+        "When every board cell is occupied and all conflicts have resolved, the match settles immediately; no further placements are possible."
+      ],
+      "controls": "Choose a tile or leader, then a legal square. During a conflict choose support and Reveal commitments. Whole-hand exchange and Pass are separate actions.",
+      "accessibility": "Coordinates name tiles and leaders; hand counts, four score tracks, conflict type/base strength, support color and the conflict log are written out.",
+      "decisions": "Build under opponent leader for board position, increase weakest score rather than strongest, start internal coup cheaply or prepare costly external war, keep matching hand cards for support instead of placing for immediate points.",
+      "category": "strategy",
+      "url": "parlour-room/?game=four-houses",
+      "accent": "#cbdc9a",
+      "symbol": "◈",
+      "family": "parlour-room",
+      "module": "four-houses",
+      "designId": "B25",
+      "smoke": {
+        "actionSelector": "#play-area button[data-action]"
+      },
+      "previewSelector": "#play-area",
+      "status": "playable"
+    },
+    {
+      "id": "carried-road",
+      "name": "Carried Road",
+      "description": "A controlled stack can be carried and split along its path, changing road ownership and wall access.",
+      "mechanic": "A controlled stack can be carried and split along its path, changing road ownership and wall access.",
+      "rules": [
+        "5×5 board; each side 15 flat/wall stones and one capstone. On turn place reserve flat or standing wall onto empty cell, or move a stack controlled by own top. Carry up to five top stones in original vertical order along one orthogonal ray, dropping at least one at each visited cell; must drop all carried stones. Cannot cross/land on wall or capstone, except lone final capstone can flatten standing wall. Flat tops and capstone tops connect own road between opposite edges; standing walls do not connect. Opening two turns place one rival flat on empty cell.",
+        "Connect either opposite edge pair by own orthogonal flat/capstone tops wins; simultaneous roads favor mover. Full board or empty reserve without road: more top flats wins, equal draw."
+      ],
+      "controls": "Place a reserve type on an empty square, or select an own stack, carry count, direction and drop amounts. Commit a carry only after all stones are assigned; Cancel preserves the position.",
+      "accessibility": "Each stack lists owners/types from bottom to top. Carry plans, reserve counts, road rules and wall/capstone interactions are text.",
+      "decisions": "Break own road temporarily to distribute buried stones, cap rival road, choose wall defense versus scoring flat, or use capstone to reopen blocked corridor. Drop partition changes several owners in one turn.",
+      "category": "strategy",
+      "url": "parlour-room/?game=carried-road",
+      "accent": "#cbdc9a",
+      "symbol": "◈",
+      "family": "parlour-room",
+      "module": "carried-road",
+      "designId": "B26",
+      "smoke": {
+        "actionSelector": "#play-area button[data-action]"
+      },
+      "previewSelector": "#play-area",
+      "status": "playable"
+    },
+    {
+      "id": "masks-and-coins",
+      "name": "Masks and Coins",
+      "description": "Make role claims to take actions; opponents can challenge evidence or counterclaim a block before effects resolve.",
+      "mechanic": "Make role claims to take actions; opponents can challenge evidence or counterclaim a block before effects resolve.",
+      "rules": [
+        "Two players each two hidden influence cards from 15-card deck, three copies five roles; start two coins. Each turn Income +1 unchallengeable, Aid +2 blockable, Tax +3 claiming treasurer, Steal2 claiming captain, Exchange two cards with deck claiming envoy, Assassinate costing3 claiming assassin, or Coup costing7 unchallengeable. Steal blocked by captain/envoy; assassination blocked by guard; Aid blocked by treasurer. Roles need not be held to claim. A challenge reveals matching role if held then reshuffles/replaces it; challenger loses influence. Failed claimant loses influence and action cancels. Lost influence selected and exposed permanently. At10 coins must Coup.",
+        "Opponent zero influence wins; own zero loses. No cash stake or real-money framing. All challenge outcomes logged."
+      ],
+      "controls": "Declare an action, then use the current challenge/block response buttons. Select exposed influence when losing it and select retained cards after an exchange.",
+      "accessibility": "Own roles, public exposed influence, coins, pending declarations, costs and challenge order are written out; opponent roles remain concealed.",
+      "decisions": "Choose costly certain attack or cheap bluff, challenge according to exposed role supply and action history, counterclaim block versus sacrifice influence, exchange to alter private resources without revealing identity.",
+      "category": "strategy",
+      "url": "parlour-room/?game=masks-and-coins",
+      "accent": "#cbdc9a",
+      "symbol": "◈",
+      "family": "parlour-room",
+      "module": "masks-and-coins",
+      "designId": "B27",
+      "smoke": {
+        "actionSelector": "#play-area button[data-action]"
+      },
+      "previewSelector": "#play-area",
+      "status": "playable"
+    },
+    {
+      "id": "merging-estates",
+      "name": "Merging Estates",
+      "description": "Spatial building growth triggers company mergers that revalue contested stock portfolios.",
+      "mechanic": "Spatial building growth triggers company mergers that revalue contested stock portfolios.",
+      "rules": [
+        "6×6 lots, three companies, six secret lot tiles per player and refill bag. Turn place one tile, resolve adjacency: isolated remains independent; touching isolated cluster may found inactive company; touching one company expands; joining two or more active companies merges smaller into larger (placer breaks equal-size tie). Company size≥10 is safe and cannot be merged out; tile joining two safe companies illegal. Merger pays fixed majority/minority bonuses to stockholders; defunct shares may sell at old price, trade two-for-one into survivor, or hold for refounding. Then buy up to three public available shares; prices depend on displayed size bands. Cash finite; stock finite. End when every company safe or one reaches18 after current turn. If a player has no legal tile, reveal and discard only permanently illegal safe-merger tiles, refill if possible, then pass placement and retain purchase phase. Two consecutive no-placement turns with no remaining drawable legal tile, bag empty with both hands exhausted, or a full board immediately triggers normal final settlement. Remaining temporary unplayable lots may not be secretly redrawn. Settlement also occurs after48 full turns as a displayed maximum.",
+        "Liquidate all shares at current size prices and payout final bonuses; highest cash wins, equal draw. Cash exhaustion limits action but not premature defeat."
+      ],
+      "controls": "Choose a lot, resolve any founding/merger decisions, handle defunct shares, then buy shares or end the turn. All phases use labeled buttons.",
+      "accessibility": "Companies, lot coordinates, holdings, share prices, cash, merger payouts and phase instructions are text.",
+      "decisions": "Place for growth or trigger merger when holding minority, buy rival company shares to anticipate payout, withhold a tile to change majority later, trade defunct shares into future leader versus realize cash.",
+      "category": "strategy",
+      "url": "parlour-room/?game=merging-estates",
+      "accent": "#cbdc9a",
+      "symbol": "◈",
+      "family": "parlour-room",
+      "module": "merging-estates",
+      "designId": "B28",
+      "smoke": {
+        "actionSelector": "#play-area button[data-action]"
+      },
+      "previewSelector": "#play-area",
+      "status": "playable"
+    },
+    {
+      "id": "last-known-address",
+      "name": "Last Known Address",
+      "description": "Coordinate a detective team to intercept a moving hidden fugitive whose transport traces constrain possible routes.",
+      "mechanic": "Coordinate a detective team to intercept a moving hidden fugitive whose transport traces constrain possible routes.",
+      "rules": [
+        "Public sixteen-station graph with three labeled route types: walk, bus and ferry. Three detectives start at fixed separated visible nodes; fugitive starts at an announced fourth node then immediately makes one hidden move. Each detective has8 walk,4 bus and2 ferry tickets. Each round move every detective once in chosen order (or stay free); occupied detective node cannot be entered by another. Human never sees fugitive current location unless landing on it captures. After all detectives act, fugitive chooses one legal adjacent typed edge not occupied by detective, using finite hidden tickets; used transport TYPE is always revealed, and actual endpoint revealed after rounds4,8,12. Fugitive never stays. Reveal its initial ticket totals12/6/4 and decrement types publicly. If no legal ticketed exit remains fugitive captured. Evasion bot responds to actual detective positions and past observations only, not uncommitted UI selection. Sixteen rounds total.",
+        "Detective lands on fugitive current station, or fugitive has no legal exit after detective moves: win. Fugitive finishes its sixteenth move uncaptured: loss. Ticket exhaustion can restrict detective movement but staying always legal."
+      ],
+      "controls": "Select a detective, then a listed route/station or Stay. Each detective acts once before End team round moves the fugitive.",
+      "accessibility": "The full travel graph, station coordinates, tickets, past sightings and transport traces are text. Current hidden fugitive position is not displayed.",
+      "decisions": "Propagate possible hidden locations using mode traces, split detectives to cover candidate exit cuts or converge on revealed node, spend scarce shortcut ticket now versus retain interception capacity, and occupy a station to prevent future fugitive escape even when it is not a candidate current location.",
+      "category": "strategy",
+      "url": "parlour-room/?game=last-known-address",
+      "accent": "#cbdc9a",
+      "symbol": "◈",
+      "family": "parlour-room",
+      "module": "last-known-address",
+      "designId": "B29",
+      "smoke": {
+        "actionSelector": "#play-area button[data-action]"
+      },
+      "previewSelector": "#play-area",
+      "status": "playable"
+    },
+    {
+      "id": "crossed-programs",
+      "name": "Crossed Programs",
+      "description": "Commit movement programs simultaneously, then resolve physical interference one register at a time.",
+      "mechanic": "Commit movement programs simultaneously, then resolve physical interference one register at a time.",
+      "rules": [
+        "7×7 factory with pits, conveyors and rotators, two robots and three ordered checkpoints. Each round both receive five command cards from own identical cyclic deck (Forward1, Forward2, Back1, Left, Right, Wait), select three and order into registers. Each register lower printed priority robot moves first; forward can push opponent if next cell free, otherwise stops. Then all conveyors move simultaneously and rotators turn occupied robots. Finish entire three-register cycle, discard used and redraw. Opponent commits before human program reveal; checkpoints count only on robot movement/conveyor settling, pits reset robot to last checkpoint and lose one of three lives. Conveyor resolution is fixed: compute every robot conveyor destination from its post-command square; if two destinations coincide both stay; if a target is occupied by a robot that is not vacating, mover stays; swaps between vacating robots are allowed. Conveyor movement never pushes. Arrival on pit removes robot before rotators resolve; new checkpoint respawn occurs after register and cannot push another robot (occupied respawn waits offboard until free).",
+        "Visit all three checkpoints and exit before rival wins; lose if own lives zero or rival finishes. Simultaneous finish ties.",
+        "The compact race ends in a draw after 24 programs. The exact course is D4→B2→F2→D1; D4 also rotates robots clockwise after every register."
+      ],
+      "controls": "Add three command cards in register order; Remove last register edits the program. Seal it, then Resolve each register with a separate button.",
+      "accessibility": "Commands, priorities, heading, robot positions, checkpoint progress and each resolved register are described in text. Resolution is explicitly stepped.",
+      "decisions": "Predict opponent occupancy, intentionally push or block a planned step, program orientation that compensates conveyor rotation, reserve needed command for next draw. A good solo route can fail because other robot moves first.",
+      "category": "strategy",
+      "url": "parlour-room/?game=crossed-programs",
+      "accent": "#cbdc9a",
+      "symbol": "◈",
+      "family": "parlour-room",
+      "module": "crossed-programs",
+      "designId": "B30",
+      "smoke": {
+        "actionSelector": "#play-area button[data-action]"
+      },
+      "previewSelector": "#play-area",
+      "status": "playable"
+    },
+    {
+      "id": "one-last-card",
+      "name": "One Last Card",
+      "description": "Draw one, retain one hidden identity, and use the discarded card to gather information or eliminate rivals.",
+      "mechanic": "Draw one, retain one hidden identity, and use the discarded card to gather information or eliminate rivals.",
+      "rules": [
+        "Three players each hold one hidden card; deck ranks1–8 with multiplicities5/2/2/2/2/1/1/1 (sixteen cards). At turn draw second and play one for its printed effect:1 guess another hand rank excluding1 (correct eliminates);2 privately inspect other hand;3 compare hands privately (lower eliminated);4 shield until next turn;5 force target discard/redraw;6 exchange hands;7 no effect but must play if held with5 or6;8 played/discarded eliminates self. One undealt card hidden to prevent complete certainty. Eliminated cards public. When stock empty, highest retained rank among survivors earns token; last survivor earns immediately. First three tokens wins.",
+        "Three favor tokens wins; first rival to three loses; simultaneous threshold ties broken next round. Tied highest survivors each earn a token; if the match lead at three is tied, continue until a unique leader."
+      ],
+      "controls": "Choose a card to play, then a target and guessed rank when its effect requires them. Other card effects resolve immediately.",
+      "accessibility": "Own card names/effects, public discards, protection, tokens and legitimate private inspection knowledge are text; unknown opposing cards stay concealed.",
+      "decisions": "Keep high rank for showdown but risk guess, use inspection now or shield future, choose forced redraw to remove dangerous high card, trade away exposed identity. Retained card is both win value and future action resource.",
+      "category": "strategy",
+      "url": "parlour-room/?game=one-last-card",
+      "accent": "#cbdc9a",
+      "symbol": "◈",
+      "family": "parlour-room",
+      "module": "one-last-card",
+      "designId": "B31",
+      "smoke": {
+        "actionSelector": "#play-area button[data-action]"
+      },
+      "previewSelector": "#play-area",
+      "status": "playable"
+    },
+    {
+      "id": "passing-courses",
+      "name": "Passing Courses",
+      "description": "Simultaneously draft from circulating hands; what you refuse becomes an opponent opportunity.",
+      "mechanic": "Simultaneously draft from circulating hands; what you refuse becomes an opponent opportunity.",
+      "rules": [
+        "Three players each receive seven cards. Each chooses one face down, all reveal into scoring tableau and pass remaining hand left; repeat to exhaustion, three rounds with alternating direction. Six card families: pairs worth5; triples worth10; each dumpling increasing1/3/6/10/15; roll-icons most6/second3; sauce doubles next single nigiri2/3/4; desserts remain across rounds and majority+6/minority−6 at match end. A once-per-round chopstick card already drafted may be returned into passing hand to take two cards from current hand. Fixed public score reference. Tied roll places share that bonus rounded down. If all dessert counts tie, no dessert bonus or penalty applies.",
+        "Most points after third-round dessert adjustment wins; equal draws, otherwise loss."
+      ],
+      "controls": "Choose a card and Commit the pick. When available, use chopsticks to select two cards and return the chopsticks before committing.",
+      "accessibility": "Cards and score relationships have text names. Hands, tableaus, round scores and the public scoring reference are written out.",
+      "decisions": "Select own set completion or deny rival almost-completed set; remember hand likely to return, delay a card you expect safe, use chopsticks to capture competing options at cost of returning an exploitable card.",
+      "category": "strategy",
+      "url": "parlour-room/?game=passing-courses",
+      "accent": "#cbdc9a",
+      "symbol": "◈",
+      "family": "parlour-room",
+      "module": "passing-courses",
+      "designId": "B32",
+      "smoke": {
+        "actionSelector": "#play-area button[data-action]"
+      },
+      "previewSelector": "#play-area",
+      "status": "playable"
+    },
+    {
+      "id": "a-stitch-in-time",
+      "name": "A Stitch in Time",
+      "description": "Buy spatial patches whose time cost determines opponent turn count and whose income pays only when crossing shared milestones.",
+      "mechanic": "Buy spatial patches whose time cost determines opponent turn count and whose income pays only when crossing shared milestones.",
+      "rules": [
+        "Each side empty7×7 quilt, five buttons; shared circular market of18 distinct polyomino patches with printed price, time cost1–6 and income0–3. Marker selects next three available patches; buy one, pay price, rotate/reflect and fit without overlap, marker moves past bought position, own time pawn advances patch cost. Behind pawn always acts next (ties latest arrival), so same player may take consecutive turns. Every passed income milestone pays current sewn income. Instead advance to one beyond rival pawn gaining one button per step. First to cross each of three single-cell bonus milestones gets patch to place. End both reach final time24; score buttons minus2 per empty quilt cell.",
+        "Higher final score wins; equal draws. Cannot end early while behind unless advancing through rival, as action rule states."
+      ],
+      "controls": "Choose an offered patch, cycle rotation/reflection, select an anchor preview, then confirm the purchase. Advance time and earned single-cell placement use separate buttons.",
+      "accessibility": "Patch offsets, cost/time/income, market order, timeline milestones, quilt occupancy and current score estimates are text.",
+      "decisions": "Choose awkward high-income piece early versus easy area fill, time a long purchase to collect income but surrender small-patch race, take several low-time turns to monopolize market, preserve gaps for expected shapes.",
+      "category": "strategy",
+      "url": "parlour-room/?game=a-stitch-in-time",
+      "accent": "#cbdc9a",
+      "symbol": "◈",
+      "family": "parlour-room",
+      "module": "a-stitch-in-time",
+      "designId": "B33",
+      "smoke": {
+        "actionSelector": "#play-area button[data-action]"
+      },
+      "previewSelector": "#play-area",
+      "status": "playable"
+    },
+    {
+      "id": "river-stakes",
+      "name": "River Stakes",
+      "description": "Reassess hidden-hand strength across shared card reveals and respond to opponent bets with fold, call or raise.",
+      "mechanic": "Reassess hidden-hand strength across shared card reveals and respond to opponent bets with fold, call or raise.",
+      "rules": [
+        "Two-player community-card poker with explicit simplified fixed-limit betting. Each starts40 chips, blinds1/2 alternate. Two private cards each; shared flop3, turn1, river1. Betting before flop/after each reveal, up to three raises per street, raise size2 preflop/flop and4 turn/river. Check if no owed bet, call matching owed, fold surrender pot, raise if affordable. Equal stacks; all-in caps contest to matched contribution, refund unmatched excess. Best five of seven using displayed standard rank table wins showdown; ties split. Eight hands or bankruptcy ends.",
+        "More chips after eight hands wins; fewer loses; equal draws. Bankruptcy terminal loss/win. No real money."
+      ],
+      "controls": "Use Check/Call, Fold or Raise. Buttons state the current cost. Deal next hand continues after a settled pot.",
+      "accessibility": "Cards have rank/suit names. Community cards, private hand, pot, owed amount, street, betting log and rank reference are text.",
+      "decisions": "Continue a draw when price warrants or fold mediocre made hand, bet value versus bluff based on public texture/opponent history, avoid raising a dominated hand, manage match lead and finite bankroll.",
+      "category": "strategy",
+      "url": "parlour-room/?game=river-stakes",
+      "accent": "#cbdc9a",
+      "symbol": "◈",
+      "family": "parlour-room",
+      "module": "river-stakes",
+      "designId": "B34",
+      "smoke": {
+        "actionSelector": "#play-area button[data-action]"
+      },
+      "previewSelector": "#play-area",
+      "status": "playable"
+    },
+    {
+      "id": "rings-leave-ripples",
+      "name": "Rings Leave Ripples",
+      "description": "Move a ring to leave a marker and flip crossed marker runs; scoring removes one of your own future movement bases.",
+      "mechanic": "Move a ring to leave a marker and flip crossed marker runs; scoring removes one of your own future movement bases.",
+      "rules": [
+        "Hexagonal radius3 board,37 intersections. Alternate placing four own rings on empty cells, then movement phase. On turn choose own ring, leave own marker on its origin, move along a straight hex axis. May cross any empty intersections before markers; after first marker must cross entire contiguous marker run and stop at first empty intersection. Cannot cross another ring. All crossed markers flip owner; empty-to-empty move allowed. Any four collinear consecutive same-owner markers create scoring row. Resolve every row before next move: row owner selects four consecutive markers to remove, then removes one own ring permanently and gains one seal. If both sides have rows, mover resolves their own first; removing markers can break rival row. Multiple own rows resolve one at a time with choice. Victory immediately at third seal.",
+        "First three seals wins; house three loses. If current player has no legal ring move before three seals, opponent wins. Threefold full-position repetition draws;100 completed ring moves without third seal draws with no score-based shortcut."
+      ],
+      "controls": "Place rings, then select an own ring and its legal landing. When scoring choose a listed four-marker row, then a ring to retire; each selection commits.",
+      "accessibility": "Axial coordinates name owners and ring/marker state. Move labels give flip counts; qualifying rows, ring census and seal counts are text.",
+      "decisions": "Choose ring origin that seeds a row while its landing enables a future crossing, flip an enemy threat without creating a stronger rival row elsewhere, choose which scoring markers/ring to remove to preserve future movement options. Scoring voluntarily reduces your mobile sources; greedy immediate row can leave a weaker remaining ring position.",
+      "category": "strategy",
+      "url": "parlour-room/?game=rings-leave-ripples",
+      "accent": "#cbdc9a",
+      "symbol": "◈",
+      "family": "parlour-room",
+      "module": "rings-leave-ripples",
+      "designId": "B35",
+      "smoke": {
+        "actionSelector": "#play-area button[data-action]"
+      },
+      "previewSelector": "#play-area",
+      "status": "playable"
+    },
+    {
+      "id": "falling-foundry",
+      "name": "Falling Foundry",
+      "category": "reflex",
+      "description": "Rotate and translate falling tetrominoes into a persistent well; full rows disappear and overhang holes survive.",
+      "mechanic": "Rotate and translate falling tetrominoes into a persistent well; full rows disappear and overhang holes survive.",
+      "rules": [
+        "Fill complete rows in a six-column well. Rotate and slide a piece, then Drop to lock it; gravity moves only when you choose Lower or Drop.",
+        "Preview three upcoming pieces. Hold exchanges one piece once per placement. Rotation may shift up to two cells sideways to fit.",
+        "Clear six rows in each of three bag-seeded studies. A blocked spawn loses. Next study advances after a clear; Restart begins the journey."
+      ],
+      "controls": "Tap named controls. Focus the board for displayed keyboard shortcuts. Escape pauses. Every action is turn-paced. Retry this study preserves earlier clears; Restart all begins at study one.",
+      "url": "motion-room/?game=falling-foundry",
+      "accent": "#a9c7a4",
+      "symbol": "↝",
+      "family": "motion-room",
+      "status": "playable",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#inputs button:first-child"
+      },
+      "designId": "C01"
+    },
+    {
+      "id": "cascade-orchard",
+      "name": "Cascade Orchard",
+      "category": "reflex",
+      "description": "Swap adjacent symbols to create horizontal/vertical triples; simultaneous matches clear and gravity refills, with objectives embedded below layered blockers.",
+      "mechanic": "Swap adjacent symbols to create horizontal/vertical triples; simultaneous matches clear and gravity refills, with objectives embedded below layered blockers.",
+      "rules": [
+        "Select a cell, then an adjacent cell to exchange their numbers. A valid swap must make a line of at least three equal numbers; other swaps return free.",
+        "Matched cells disappear, columns fall and refill, and cascades continue. Stars mark buried tile layers: a match on that cell removes one layer.",
+        "Remove every marked layer within eight valid swaps. Clear three seeded studies. Arrow buttons move the outlined cursor; Select chooses it. Tap cells directly or use named controls."
+      ],
+      "controls": "Tap named controls. Focus the board for displayed keyboard shortcuts. Escape pauses. Every action is turn-paced. Retry this study preserves earlier clears; Restart all begins at study one.",
+      "url": "motion-room/?game=cascade-orchard",
+      "accent": "#a9c7a4",
+      "symbol": "↝",
+      "family": "motion-room",
+      "status": "playable",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#inputs button:first-child"
+      },
+      "designId": "C02"
+    },
+    {
+      "id": "bubble-canopy",
+      "name": "Bubble Canopy",
+      "category": "reflex",
+      "description": "Shoot a colored bubble to attach to a hex canopy; groups of 3+ pop and any cluster disconnected from ceiling drops.",
+      "mechanic": "Shoot a colored bubble to attach to a hex canopy; groups of 3+ pop and any cluster disconnected from ceiling drops.",
+      "rules": [
+        "Aim from −65° left to 65° right and Fire. Bubbles bounce off the side walls and attach to the first cluster they touch.",
+        "A connected group of at least three equal numbers pops. All bubbles without any ceiling connection then drop, even if their numbers differ.",
+        "Release every starred nest in each of three canopies. Shot budgets 4, 24 and 28; later nests are behind deeper four-color canopies. Reaching row 8 loses. Exchange the held bubble freely to plan support removals."
+      ],
+      "controls": "Tap named controls. Focus the board for displayed keyboard shortcuts. Escape pauses. Every action is turn-paced. Retry this study preserves earlier clears; Restart all begins at study one.",
+      "url": "motion-room/?game=bubble-canopy",
+      "accent": "#a9c7a4",
+      "symbol": "↝",
+      "family": "motion-room",
+      "status": "playable",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#inputs button:first-child"
+      },
+      "designId": "C03"
+    },
+    {
+      "id": "step-and-spring",
+      "name": "Step and Spring",
+      "category": "reflex",
+      "description": "Direct variable-height jumps with coyote-time and air steering over moving and one-way platforms; landing resets jump permission.",
+      "mechanic": "Direct variable-height jumps with coyote-time and air steering over moving and one-way platforms; landing resets jump permission.",
+      "rules": [
+        "Move left/right one simulation tick. Jump starts an upward impulse only while supported. Release jump shortens the arc; Coast lets momentum continue. All action buttons advance physics.",
+        "Platforms stop a descending character; Drop passes through a platform temporarily. A ferry carries you horizontally. The brown roof blocks high jumps through its span.",
+        "Collect K below the right deck, then reach the high EXIT. Spikes or falling cost one of three lives. Clear three ferry phases; all motion is turn-paced."
+      ],
+      "controls": "Tap named controls. Focus the board for displayed keyboard shortcuts. Escape pauses. Every action is turn-paced. Retry this study preserves earlier clears; Restart all begins at study one.",
+      "url": "motion-room/?game=step-and-spring",
+      "accent": "#a9c7a4",
+      "symbol": "↝",
+      "family": "motion-room",
+      "status": "playable",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#inputs button:first-child"
+      },
+      "designId": "C04"
+    },
+    {
+      "id": "lantern-lanes",
+      "name": "Lantern Lanes",
+      "category": "reflex",
+      "description": "Clear pellets in a maze while distinct pursuers chase; scarce power pellets reverse contact danger for a short interval.",
+      "mechanic": "Clear pellets in a maze while distinct pursuers chase; scarce power pellets reverse contact danger for a short interval.",
+      "rules": [
+        "Collect every dot in each of three mazes. Move one square per action; Wait also advances pursuers. Walls reject travel but time still advances.",
+        "A moves toward you every two turns. B patrols toward the central junction every three. Lightning capsules reverse danger for fourteen turns: touching a pursuer sends it home.",
+        "Three unpowered contacts lose. After a hit, you return to the center with four turns of immunity. Power capsules are scarce: save them for difficult routes."
+      ],
+      "controls": "Tap named controls. Focus the board for displayed keyboard shortcuts. Escape pauses. Every action is turn-paced. Retry this study preserves earlier clears; Restart all begins at study one.",
+      "url": "motion-room/?game=lantern-lanes",
+      "accent": "#a9c7a4",
+      "symbol": "↝",
+      "family": "motion-room",
+      "status": "playable",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#inputs button:first-child"
+      },
+      "designId": "C05"
+    },
+    {
+      "id": "threaded-return",
+      "name": "Threaded Return",
+      "category": "puzzle",
+      "description": "Navigate with a finite tether that wraps around posts; winding history changes reachable space even at the same avatar position.",
+      "mechanic": "Navigate with a finite tether that wraps around posts; winding history changes reachable space even at the same avatar position.",
+      "rules": [
+        "Move around square posts while attached to a finite tether at1,4. The rope retains the side on which you passed each post; reversing your route can unwind it.",
+        "Collect all numbered tags and return to the anchor. Slack and the rope contact path are shown. An attempted step beyond the available length is rejected without moving you.",
+        "There is no arbitrary move timer or terminal stranding claim: unwind and try another route after a blocked attempt. Clear three different tag arrangements."
+      ],
+      "controls": "Tap named controls. Focus the board for displayed keyboard shortcuts. Escape pauses. Every action is turn-paced. Retry this study preserves earlier clears; Restart all begins at study one.",
+      "url": "motion-room/?game=threaded-return",
+      "accent": "#a9c7a4",
+      "symbol": "↝",
+      "family": "motion-room",
+      "status": "playable",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#inputs button:first-child"
+      },
+      "designId": "C06"
+    },
+    {
+      "id": "magnetic-quartet",
+      "name": "Magnetic Quartet",
+      "category": "puzzle",
+      "description": "Manipulate two movable field sources to guide positive and negative charged pucks concurrently into separate traps.",
+      "mechanic": "Manipulate two movable field sources to guide positive and negative charged pucks concurrently into separate traps.",
+      "rules": [
+        "Move either magnet using direction buttons; switch selected magnet and invert its sign as needed. Pucks wait until you choose Advance physics.",
+        "Both sources act on both opposite-charge pucks through a softened inverse-square force. Like signs repel, opposite signs attract. Velocity persists with slight damping; the central shield reflects impacts.",
+        "Deliver each puck to the same-sign circular trap. Wrong-sign capture or leaving the field loses. Clear three geometrically different fields. Positions and velocities are available below."
+      ],
+      "controls": "Tap named controls. Focus the board for displayed keyboard shortcuts. Escape pauses. Every action is turn-paced. Retry this study preserves earlier clears; Restart all begins at study one.",
+      "url": "motion-room/?game=magnetic-quartet",
+      "accent": "#a9c7a4",
+      "symbol": "↝",
+      "family": "motion-room",
+      "status": "playable",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#inputs button:first-child"
+      },
+      "designId": "C07"
+    },
+    {
+      "id": "span-workshop",
+      "name": "Span Workshop",
+      "category": "puzzle",
+      "description": "Build a load-bearing truss from pinned joints and tension/compression members; a moving test cart changes stresses across the span.",
+      "mechanic": "Build a load-bearing truss from pinned joints and tension/compression members; a moving test cart changes stresses across the span.",
+      "rules": [
+        "Choose one of21possible joint pairs and build a beam or cable. Deck links1–2,2–3,3–4 are required for the cart. Remove or replace members freely within the material budget.",
+        "Pinned joints1and4support a real linear axial truss calculation. Beams carry tension/compression up to13; cables carry tension only up to9 and go slack in compression. Length determines material cost.",
+        "Load test moves the cart in half-unit steps. All steps must remain stable within0.7deflection and member capacity. Three failed tests lose; edit between tests. Clear three spans with different heights and loads."
+      ],
+      "controls": "Tap named controls. Focus the board for displayed keyboard shortcuts. Escape pauses. Every action is turn-paced. Retry this study preserves earlier clears; Restart all begins at study one.",
+      "url": "motion-room/?game=span-workshop",
+      "accent": "#a9c7a4",
+      "symbol": "↝",
+      "family": "motion-room",
+      "status": "playable",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#inputs button:first-child"
+      },
+      "designId": "C08"
+    },
+    {
+      "id": "corner-carry",
+      "name": "Corner Carry",
+      "category": "puzzle",
+      "description": "Translate and rotate a rigid asymmetric object through narrow corridors where its full swept shape must fit.",
+      "mechanic": "Translate and rotate a rigid asymmetric object through narrow corridors where its full swept shape must fit.",
+      "rules": [
+        "Choose a half-unit translation or15°rotation for a free swept-shape preview. Switch between handleAat0,0 andBat1,1 as rotation pivot. Only Commit changes the pose.",
+        "Clear previews are safe. A warned-contact Commit spends one of ten integrity and leaves the shape in place. No damage occurs for simply selecting or inspecting a move.",
+        "Move the whole L-shape into the displayed target origin and orientation. Its full rotating sweep must clear walls, not just its final pose. Later rooms change the doorway, pillar, and required final orientation."
+      ],
+      "controls": "Tap named controls. Focus the board for displayed keyboard shortcuts. Escape pauses. Every action is turn-paced. Retry this study preserves earlier clears; Restart all begins at study one.",
+      "url": "motion-room/?game=corner-carry",
+      "accent": "#a9c7a4",
+      "symbol": "↝",
+      "family": "motion-room",
+      "status": "playable",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#inputs button:first-child"
+      },
+      "designId": "C09"
+    },
+    {
+      "id": "borrowed-seconds",
+      "name": "Borrowed Seconds",
+      "category": "puzzle",
+      "description": "Rewind one selected moving object along its actual history while player and all other objects continue forward.",
+      "mechanic": "Rewind one selected moving object along its actual history while player and all other objects continue forward.",
+      "rules": [
+        "A lower and an upper platform record every position as forward time moves them east toward their displayed buffers. Lower moves every tick; upper moves once per2,3or4ticks in successive studies.",
+        "Select one platform and Rewind: it takes its own preceding recorded position while the other platform continues forward. A rider travels with its supporting platform; the key never rewinds.",
+        "Ride the lower platform to key8,5, transfer when platforms are within one column, and carry it to exit1,3 on the upper level. You have28rewind ticks and three lives. Empty-history rewinds are rejected."
+      ],
+      "controls": "Tap named controls. Focus the board for displayed keyboard shortcuts. Escape pauses. Every action is turn-paced. Retry this study preserves earlier clears; Restart all begins at study one.",
+      "url": "motion-room/?game=borrowed-seconds",
+      "accent": "#a9c7a4",
+      "symbol": "↝",
+      "family": "motion-room",
+      "status": "playable",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#inputs button:first-child"
+      },
+      "designId": "C10"
+    },
+    {
+      "id": "many-as-one",
+      "name": "Many as One",
+      "category": "puzzle",
+      "description": "Split conserved body mass into controllable cells, move through size restrictions, then merge to exert required weight.",
+      "mechanic": "Split conserved body mass into controllable cells, move through size restrictions, then merge to exert required weight.",
+      "rules": [
+        "Move the selected cell. Numbered wall passages admit only cells of at most that mass. Split places a chosen positive integer mass immediately to the right; at most four bodies exist.",
+        "Select other cells to route them independently. Adjacent cells merge. Simultaneously occupy both scales with their exact masses to latch the exit permanently.",
+        "After latching, merge all six mass at the exit. The drain destroys needed mass and loses. Clear three scale/passage arrangements."
+      ],
+      "controls": "Tap named controls. Focus the board for displayed keyboard shortcuts. Escape pauses. Every action is turn-paced. Retry this study preserves earlier clears; Restart all begins at study one.",
+      "url": "motion-room/?game=many-as-one",
+      "accent": "#a9c7a4",
+      "symbol": "↝",
+      "family": "motion-room",
+      "status": "playable",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#inputs button:first-child"
+      },
+      "designId": "C11"
+    },
+    {
+      "id": "crater-courtesy",
+      "name": "Crater Courtesy",
+      "category": "puzzle",
+      "description": "Alternate ballistic shots with an opponent on destructible terrain; excavation changes cover, support and future firing position.",
+      "mechanic": "Alternate ballistic shots with an opponent on destructible terrain; excavation changes cover, support and future firing position.",
+      "rules": [
+        "Set angle and power, then Fire; each shot follows gravity and excavates a crater in the persistent terrain. The opponent responds with a visible short,long,measured sequence.",
+        "Shells cause one direct damage within radius6. Dig shells excavate radius10but damage only through a fall. A tank falling more than5height also loses one hull.",
+        "Disable the opponent before your four hull or twelve shots run out. Relocate right to adjust your firing origin. Clear three ridge locations."
+      ],
+      "controls": "Tap named controls. Focus the board for displayed keyboard shortcuts. Escape pauses. Every action is turn-paced. Retry this study preserves earlier clears; Restart all begins at study one.",
+      "url": "motion-room/?game=crater-courtesy",
+      "accent": "#a9c7a4",
+      "symbol": "↝",
+      "family": "motion-room",
+      "status": "playable",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#inputs button:first-child"
+      },
+      "designId": "C12"
+    },
+    {
+      "id": "elbow-room",
+      "name": "Elbow Room",
+      "category": "puzzle",
+      "description": "Drive a3-joint arm through obstacles while retaining a grasped payload; elbow configuration and swept link collisions matter.",
+      "mechanic": "Drive a3-joint arm through obstacles while retaining a grasped payload; elbow configuration and swept link collisions matter.",
+      "rules": [
+        "Select one of three relative joints and rotate it by15°. A proximal joint moves every downstream link; the full sweep is collision-checked against walls.",
+        "Close the gripper within0.55unit of the pickup. Carry the parcel to within0.6unit of the receiver, then Release. The payload needs extra clearance.",
+        "Three obstacle contacts or a release away from the receiver loses. Clear three different pickup/receiver configurations. Joint coordinates and target positions appear below."
+      ],
+      "controls": "Tap named controls. Focus the board for displayed keyboard shortcuts. Escape pauses. Every action is turn-paced. Retry this study preserves earlier clears; Restart all begins at study one.",
+      "url": "motion-room/?game=elbow-room",
+      "accent": "#a9c7a4",
+      "symbol": "↝",
+      "family": "motion-room",
+      "status": "playable",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#inputs button:first-child"
+      },
+      "designId": "C13"
+    },
+    {
+      "id": "common-meadow",
+      "name": "Common Meadow",
+      "category": "puzzle",
+      "description": "Steer a cohesive flock through gates using the shepherd’s local repulsion, separation and persistent momentum.",
+      "mechanic": "Coupled spatial flock herding with cohesion, separation, repulsion and momentum",
+      "rules": [
+        "Move the shepherd around a cohesive flock. Sheep repel away from you, separate from close neighbors and drift toward nearby companions. Every action advances one physical tick.",
+        "Whistle briefly expands your pressure radius but then cools for six ticks. Approach from outside the flock; forcing its center can scatter the group.",
+        "Pen seven of eight sheep through the right-edge opening. Two escapes beyond the field make the quota impossible and lose. Clear three paddocks with different gate and obstacle geometry."
+      ],
+      "controls": "Tap named controls. Focus the board for displayed keyboard shortcuts. Escape pauses. Every action is turn-paced. Retry this study preserves earlier clears; Restart all begins at study one.",
+      "url": "motion-room/?game=common-meadow",
+      "accent": "#a9c7a4",
+      "symbol": "↝",
+      "family": "motion-room",
+      "status": "playable",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#inputs button:first-child"
+      },
+      "designId": "C14"
+    },
+    {
+      "id": "folded-cuttings",
+      "name": "Folded Cuttings",
+      "category": "puzzle",
+      "description": "Fold layered paper and cut through selected stacks; unfolding reveals the combined effect of the complete fold history.",
+      "mechanic": "Cut one polygonal path through a folded sheet; unfolding duplicates each cut through the layer-transform history.",
+      "rules": [
+        "A folded sheet retains every original cell layer. Choose axis and crease 3, 4 or 5; Fold reflects all smaller coordinates to the other side. At most three folds per sheet. The first two sheets allow three cuts; the final sheet allows only two.",
+        "Select a folded square and Cut its entire layer stack. Preview unfolded shows correct holes as circles, extra holes as crosses, and still-needed holes as stars. Original target coordinates are listed below.",
+        "Certify only when every target hole matches and remaining paper stays connected. Reset allows another construction while preserving failed certifications. Three failed certifications lose; clear three patterns."
+      ],
+      "controls": "Tap named controls. Focus the board for displayed keyboard shortcuts. Escape pauses. Every action is turn-paced. Retry this study preserves earlier clears; Restart all begins at study one.",
+      "url": "motion-room/?game=folded-cuttings",
+      "accent": "#a9c7a4",
+      "symbol": "↝",
+      "family": "motion-room",
+      "status": "playable",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#inputs button:first-child"
+      },
+      "designId": "C15"
+    },
+    {
+      "id": "domino-relay",
+      "name": "Domino Relay",
+      "category": "puzzle",
+      "description": "Arrange hinged rods so gravity and contact impulses carry a knockdown across changing shelf heights.",
+      "mechanic": "Arrange hinged rods so gravity and contact impulses carry a knockdown across changing shelf heights.",
+      "rules": [
+        "Four movable rods share a material allowance. Select a rod, move its hinge in 0.2 steps, and choose length 1.2, 1.8 or 2.4. Longer rods reach farther but have more rotational inertia. Numbered hinges must remain in order.",
+        "Release gives only the fixed starter an initial push. Gravity, an upright spring detent, and actual tip-to-side collision impulses determine which rods fall. A rod can miss over or under its neighbor, fall short, or fail to transfer enough motion.",
+        "The hanging bell at the far side must be struck. Three failed releases lose. Inspect the final angles and first-contact times; Earlier/Later replay frame shows the continuous simulation in 0.1-second steps. Raised shelves in later studies change contact heights."
+      ],
+      "controls": "Tap named controls. Focus the board for displayed keyboard shortcuts. Escape pauses. Every action is turn-paced. Retry this study preserves earlier clears; Restart all begins at study one.",
+      "url": "motion-room/?game=domino-relay",
+      "accent": "#a9c7a4",
+      "symbol": "↝",
+      "family": "motion-room",
+      "status": "playable",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#inputs button:first-child"
+      },
+      "designId": "C17"
+    },
+    {
+      "id": "siding-stories",
+      "name": "Siding Stories",
+      "category": "puzzle",
+      "description": "Shunt coupled wagons through a track graph with sidings, switch points and directional locomotive access.",
+      "mechanic": "Shunt coupled wagons through a track graph with sidings, switch points and directional locomotive access.",
+      "rules": [
+        "Couple a loose wagon adjacent to the rear of the current train. Uncouple leaves the tail wagon in its present node. The train never changes wagon order while moving.",
+        "Pull moves the locomotive into a selected outgoing track; wagons follow. Reverse moves the tail first and the rest of the train follows backward. Use the upper loop to approach wagons from another end.",
+        "Deliver each wagon to its assigned numbered siding, leave it uncoupled, then park the locomotive at shed6. Blocked moves are recoverable failures, not arbitrary penalties. Clear three manifests."
+      ],
+      "controls": "Tap named controls. Focus the board for displayed keyboard shortcuts. Escape pauses. Every action is turn-paced. Retry this study preserves earlier clears; Restart all begins at study one.",
+      "url": "motion-room/?game=siding-stories",
+      "accent": "#a9c7a4",
+      "symbol": "↝",
+      "family": "motion-room",
+      "status": "playable",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#inputs button:first-child"
+      },
+      "designId": "C18"
+    },
+    {
+      "id": "across-the-current",
+      "name": "Across the Current",
+      "category": "reflex",
+      "description": "Cross alternating roads and rivers by discrete hops; moving logs carry the player in their reference frame between hops.",
+      "mechanic": "Cross alternating roads and rivers by discrete hops; moving logs carry the player in their reference frame between hops.",
+      "rules": [
+        "Hop or wait one tick. Roads contain moving vehicles; water is safe only on a log. Logs carry you one column each tick in their own direction.",
+        "Use the refuge row4to plan. Four different home slots occupy columns1,3,5,7atrow0; a filled home cannot count twice.",
+        "Fill all four homes with at most two accidents. The third collision,drowning or off-board drift loses. Clear three starting traffic phases."
+      ],
+      "controls": "Tap named controls. Focus the board for displayed keyboard shortcuts. Escape pauses. Every action is turn-paced. Retry this study preserves earlier clears; Restart all begins at study one.",
+      "url": "motion-room/?game=across-the-current",
+      "accent": "#a9c7a4",
+      "symbol": "↝",
+      "family": "motion-room",
+      "status": "playable",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#inputs button:first-child"
+      },
+      "designId": "C19"
+    },
+    {
+      "id": "watchtower-bend",
+      "name": "Watchtower Bend",
+      "category": "puzzle",
+      "description": "Build autonomous defenses along a branching route; tower positions reshape route length while mixed enemies have different targeting and armor vulnerabilities.",
+      "mechanic": "Build autonomous defenses along a branching route; tower positions reshape route length while mixed enemies have different targeting and armor vulnerabilities.",
+      "rules": [
+        "Place towers on the grid between waves. Towers also block enemy movement, but a route from IN to OUT must always remain. A rejected blockage costs nothing.",
+        "Bolt ignores armor, but shield carriers take only20%bolt damage. Splash hits groups and bypasses shields; armor resists it. Slow delays enemies. Upgrade for3credits; choose frontmost or weakest-target priority.",
+        "Hold three mixed waves with at least one of five gate integrity. Kills and cleared waves earn construction credits. Clear three valleys with different fixed obstacles."
+      ],
+      "controls": "Tap named controls. Focus the board for displayed keyboard shortcuts. Escape pauses. Every action is turn-paced. Retry this study preserves earlier clears; Restart all begins at study one.",
+      "url": "motion-room/?game=watchtower-bend",
+      "accent": "#a9c7a4",
+      "symbol": "↝",
+      "family": "motion-room",
+      "status": "playable",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#inputs button:first-child"
+      },
+      "designId": "C20"
+    },
+    {
+      "id": "through-and-through",
+      "name": "Through and Through",
+      "category": "puzzle",
+      "description": "Place two linked oriented portals on surfaces; crossing transports position and rotates conserved velocity into the other portal normal.",
+      "mechanic": "Place two linked oriented portals on surfaces; crossing transports position and rotates conserved velocity into the other portal normal.",
+      "rules": [
+        "Place portalAandBon two different named surfaces. Contacting one portal transforms your velocity into the other surface normal, preserving speed. Placement itself is free of time.",
+        "Accelerate left/right or Coast one physics tick. A short jump cannot reach the high right ledge: gain speed falling into the pit-floor portal and redirect it horizontally.",
+        "Reach the right exit after a fling. In the final chamber, reanchor the portal pair during flight and convert horizontal speed into upward launch speed. Falling outside loses a life; three lives lose. Position and velocity remain visible."
+      ],
+      "controls": "Tap named controls. Focus the board for displayed keyboard shortcuts. Escape pauses. Every action is turn-paced. Retry this study preserves earlier clears; Restart all begins at study one.",
+      "url": "motion-room/?game=through-and-through",
+      "accent": "#a9c7a4",
+      "symbol": "↝",
+      "family": "motion-room",
+      "status": "playable",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#inputs button:first-child"
+      },
+      "designId": "C21"
+    },
+    {
+      "id": "orchard-acrobat",
+      "name": "Orchard Acrobat",
+      "category": "puzzle",
+      "description": "Move the head of a connected segmented creature; whole body falls rigidly under gravity unless any segment has support; fruit adds a segment.",
+      "mechanic": "Move the head of a connected segmented creature; whole body falls rigidly under gravity unless any segment has support; fruit adds a segment.",
+      "rules": [
+        "Move the head of an ordered connected creature; the remaining body follows. Fruit adds a segment by retaining the old tail that turn.",
+        "Any segment directly above rock supports the whole body. When the last support is lost, all segments fall together until they find support or fall into the void.",
+        "Gather all fruit and reach the exit, which draws the connected body inside. Undo restores a nonterminal last step. Clear three islands requiring bridge length and support planning."
+      ],
+      "controls": "Tap named controls. Focus the board for displayed keyboard shortcuts. Escape pauses. Every action is turn-paced. Retry this study preserves earlier clears; Restart all begins at study one.",
+      "url": "motion-room/?game=orchard-acrobat",
+      "accent": "#a9c7a4",
+      "symbol": "↝",
+      "family": "motion-room",
+      "status": "playable",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#inputs button:first-child"
+      },
+      "designId": "C22"
+    },
+    {
+      "id": "borrowed-shade",
+      "name": "Borrowed Shade",
+      "category": "puzzle",
+      "description": "Move a lamp so object shadows project onto a wall as solid traversable platforms; occluder depth and lamp position change shadow reach and connectivity.",
+      "mechanic": "Move a lamp so object shadows project onto a wall as solid traversable platforms; occluder depth and lamp position change shadow reach and connectivity.",
+      "rules": [
+        "Move a lamp in front of two occluders at different depths. Their projected shadows become platforms on the wall; the nearer object shifts its shadow more.",
+        "Cycle a landing target and Jump to its center. The displayed reach test uses a fixed vertical impulse, gravity and horizontal speed limit; you cannot jump straight across the room.",
+        "Reposition light while standing on a permanent refuge. Moving your supporting shadow away causes a fall. The final arrangement has no middle refuge: one coupled projection must permit every transfer. Reach three exits; three falls lose."
+      ],
+      "controls": "Tap named controls. Focus the board for displayed keyboard shortcuts. Escape pauses. Every action is turn-paced. Retry this study preserves earlier clears; Restart all begins at study one.",
+      "url": "motion-room/?game=borrowed-shade",
+      "accent": "#a9c7a4",
+      "symbol": "↝",
+      "family": "motion-room",
+      "status": "playable",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#inputs button:first-child"
+      },
+      "designId": "C23"
+    },
+    {
+      "id": "after-the-levee",
+      "name": "After the Levee",
+      "category": "puzzle",
+      "description": "Excavate channels and build finite levees on a heightfield, then let a visible water front spread downhill and overflow low sills.",
+      "mechanic": "Excavate channels and build finite levees on a heightfield, then let a visible water front spread downhill and overflow low sills.",
+      "rules": [
+        "Dig lowers an interior cell by one and saves one spoil; Deposit spends it to raise a sill. Twelve successful earthworks per study. Boundary bedrock and occupied village foundations cannot be dug or buried.",
+        "Release two twelve-unit pulses, then Advance the conservative orthogonal flow. Water backs up and overtops sills; all injected volume stays in the grid.",
+        "Hold at least six units in each marked basin while village depth stays at most0.35. Certify after both pulses. Flooding the village loses; otherwise edit and settle further. Clear three saddle geometries."
+      ],
+      "controls": "Tap named controls. Focus the board for displayed keyboard shortcuts. Escape pauses. Every action is turn-paced. Retry this study preserves earlier clears; Restart all begins at study one.",
+      "url": "motion-room/?game=after-the-levee",
+      "accent": "#a9c7a4",
+      "symbol": "↝",
+      "family": "motion-room",
+      "status": "playable",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#inputs button:first-child"
+      },
+      "designId": "C24"
+    },
+    {
+      "id": "crossfire-courtyard",
+      "name": "Crossfire Courtyard",
+      "category": "puzzle",
+      "description": "Command a3-member squad with action points, directional cover, suppression and reaction overwatch to extract a civilian across intersecting enemy fire lanes.",
+      "mechanic": "Command a3-member squad with action points, directional cover, suppression and reaction overwatch to extract a civilian across intersecting enemy fire lanes.",
+      "rules": [
+        "Select a squad member with two AP per turn. Move, fire, suppress or set overwatch. Enemies have deterministic visible reactions and a five-unit sight range blocked by walls. An unsuppressed hostile shot also triggers an available enemy reaction.",
+        "Suppression deals no damage but disables enemy reaction and response. Directional cover reduces incoming damage. Escort ON moves an adjacent civilian with the selected unit. Suppression consumes a finite shared supply: eight cartridges in the first two courtyards and seven in the final one; none regenerate.",
+        "Extract the civilian and at least two living squad members at7,0. Losing the civilian or dropping below two living squad members loses. End turn refreshes AP after enemy responses. Clear three courtyard layouts."
+      ],
+      "controls": "Tap named controls. Focus the board for displayed keyboard shortcuts. Escape pauses. Every action is turn-paced. Retry this study preserves earlier clears; Restart all begins at study one.",
+      "url": "motion-room/?game=crossfire-courtyard",
+      "accent": "#a9c7a4",
+      "symbol": "↝",
+      "family": "motion-room",
+      "status": "playable",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#inputs button:first-child"
+      },
+      "designId": "C25"
+    },
+    {
+      "id": "pebble-engine",
+      "name": "Pebble Engine",
+      "category": "puzzle",
+      "description": "DAG pebbling with recomputation under a live-register cap.",
+      "mechanic": "DAG pebbling with recomputation under a live-register cap",
+      "rules": [
+        "Compute a result only while all of its predecessors occupy registers, with a free register for the new value. Loading a source also costs one calculation. Erase results freely; erased values must be computed again when needed.",
+        "Keep shared results for later branches while freeing enough space for new results. Each study shows its own register and calculation limits.",
+        "Compute the single final result F within both limits. Spending the calculation allowance before F loses. Three different dependency graphs await."
+      ],
+      "controls": "Tap labeled controls or use Tab then Enter / Space. Undo, Reset study and Restart all are native buttons. There is no timer and no required dragging.",
+      "url": "workbench-room/?game=pebble-engine",
+      "accent": "#e6c481",
+      "symbol": "⌘",
+      "family": "workbench-room",
+      "status": "playable",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#board button:not(:disabled)"
+      },
+      "designId": "D01"
+    },
+    {
+      "id": "cache-hotel",
+      "name": "Cache Hotel",
+      "category": "puzzle",
+      "description": "Offline cache replacement with dirty writeback and unequal page sizes.",
+      "mechanic": "Offline cache replacement with dirty writeback and unequal page sizes",
+      "rules": [
+        "A visible request tape reads and writes named pages. On a miss choose resident pages to evict; dirty pages require costly writeback. Prefetch is disallowed.",
+        "Trade future reuse against eviction size and dirty cost; several small pages can beat one large page.",
+        "Serve the whole tape below I/O budget; first required transfer exceeding budget loses."
+      ],
+      "controls": "Tap labeled controls or use Tab then Enter / Space. Undo, Reset study and Restart all are native buttons. There is no timer and no required dragging.",
+      "url": "workbench-room/?game=cache-hotel",
+      "accent": "#e6c481",
+      "symbol": "⌘",
+      "family": "workbench-room",
+      "status": "playable",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#board button:not(:disabled)"
+      },
+      "designId": "D02"
+    },
+    {
+      "id": "heap-garden",
+      "name": "Heap Garden",
+      "category": "puzzle",
+      "description": "Contiguous storage allocation and compaction around pinned blocks.",
+      "mechanic": "Contiguous storage allocation and compaction around pinned blocks",
+      "rules": [
+        "Place each incoming block into a contiguous free interval. Select a movable existing block and choose a new leftmost address to relocate it; the moved block’s size is charged against the relocation budget.",
+        "The entire allocation/free/pin event tape is visible. Allocating a request automatically runs the following frees and pins before the next request. A pinned block cannot move, so an early placement can block a later allocation.",
+        "Finish the tape within the relocation budget. Attempting an unplaceable request commits to failure; exceeding relocation budget also loses. Undo or Reset is available before committing."
+      ],
+      "controls": "Tap labeled controls or use Tab then Enter / Space. Undo, Reset study and Restart all are native buttons. There is no timer and no required dragging.",
+      "url": "workbench-room/?game=heap-garden",
+      "accent": "#e6c481",
+      "symbol": "⌘",
+      "family": "workbench-room",
+      "status": "playable",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#board button:not(:disabled)"
+      },
+      "designId": "D03"
+    },
+    {
+      "id": "ledger-race",
+      "name": "Ledger Race",
+      "category": "puzzle",
+      "description": "Concurrent execution counterexample construction.",
+      "mechanic": "Concurrent execution counterexample construction",
+      "rules": [
+        "Advance one instruction of either displayed program. Each program preserves its own instruction order; reads save private values that do not update when shared memory changes.",
+        "Construct a complete execution that violates the study’s stated invariant. Later studies include coupled duty records and a ready flag published before its payload.",
+        "A completed trace exhibiting the requested anomaly wins the study. A completed trace preserving the invariant fails that attempt. Three different examples await. Undo works before either program pair completes."
+      ],
+      "controls": "Tap labeled controls or use Tab then Enter / Space. Undo, Reset study and Restart all are native buttons. There is no timer and no required dragging.",
+      "url": "workbench-room/?game=ledger-race",
+      "accent": "#e6c481",
+      "symbol": "⌘",
+      "family": "workbench-room",
+      "status": "playable",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#board button:not(:disabled)"
+      },
+      "designId": "D04"
+    },
+    {
+      "id": "receipt-route",
+      "name": "Receipt Route",
+      "category": "puzzle",
+      "description": "Reliable ordered delivery over duplicate/loss channels.",
+      "mechanic": "Reliable ordered delivery over duplicate/loss channels",
+      "rules": [
+        "Choose a data packet or cumulative acknowledgment to send; each advances a public channel tape that may lose, delay or duplicate it. Sender window and receiver buffer are finite.",
+        "Retransmit useful missing sequence numbers, advance acknowledgments, and avoid window deadlock and buffer overflow.",
+        "Deliver the four, five or six numbered parcels shown for the study exactly once and acknowledge them within the transmission allowance. Budget exhaustion or receiver overflow loses."
+      ],
+      "controls": "Tap labeled controls or use Tab then Enter / Space. Undo, Reset study and Restart all are native buttons. There is no timer and no required dragging.",
+      "url": "workbench-room/?game=receipt-route",
+      "accent": "#e6c481",
+      "symbol": "⌘",
+      "family": "workbench-room",
+      "status": "playable",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#board button:not(:disabled)"
+      },
+      "designId": "D05"
+    },
+    {
+      "id": "stack-kitchen",
+      "name": "Stack Kitchen",
+      "category": "puzzle",
+      "description": "Reusable stack-program synthesis across input families.",
+      "mechanic": "Reusable stack-program synthesis across input families",
+      "rules": [
+        "Build a short instruction ribbon from input, duplicate, swap, arithmetic, conditional-skip and output. Run against all visible trays of numeric ingredients.",
+        "Reuse intermediate stack values and branch on inputs while preventing underflow; one program must handle contrasting cases.",
+        "Every input tray produces the required output under instruction and runtime bounds; malformed execution or counterexample is a failed trial, three failed trials lose."
+      ],
+      "controls": "Tap labeled controls or use Tab then Enter / Space. Undo, Reset study and Restart all are native buttons. There is no timer and no required dragging.",
+      "url": "workbench-room/?game=stack-kitchen",
+      "accent": "#e6c481",
+      "symbol": "⌘",
+      "family": "workbench-room",
+      "status": "playable",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#board button:not(:disabled)"
+      },
+      "designId": "D06"
+    },
+    {
+      "id": "pattern-tailor",
+      "designId": "D07",
+      "name": "Pattern Tailor",
+      "category": "puzzle",
+      "description": "Bounded regular-expression composition from complete language specification.",
+      "mechanic": "Bounded regular-expression composition from complete language specification",
+      "rules": [
+        "Assemble literal, union, concatenation and repetition blocks into a syntax tree. The alphabet, maximum word length, complete written language rule and sample words are public; certification checks every word within that bound.",
+        "Factor repeated structure to fit the block budget without admitting near-miss words.",
+        "Exact language match within block budget wins; a wrong certification reveals a concrete false positive/negative, three failed certifications lose."
+      ],
+      "controls": "Tap labeled controls or use Tab then Enter / Space. Undo, Reset study and Restart all are native buttons. There is no timer and no required dragging.",
+      "url": "workbench-room/?game=pattern-tailor",
+      "accent": "#e6c481",
+      "symbol": "⌘",
+      "family": "workbench-room",
+      "status": "playable",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#board button:not(:disabled)"
+      }
+    },
+    {
+      "id": "bracket-workshop",
+      "designId": "D08",
+      "name": "Bracket Workshop",
+      "category": "puzzle",
+      "description": "Shift-reduce parsing with semantic attachment ambiguity.",
+      "mechanic": "Shift-reduce parsing with semantic attachment ambiguity",
+      "rules": [
+        "Shift the next input token onto the bounded stack, reduce a top number to an expression, or combine only the top expression–operator–expression into a larger tree. Operators carry no automatic precedence: your reductions determine attachment.",
+        "Reach the displayed semantic value. The target tree is not shown, and every valid grouping with the correct value is accepted. Shifting too far can fill the stack before an accessible reduction; reducing too early can lock in the wrong grouping.",
+        "Consume the complete input and close the parse. A wrong final value or unfinished grouping loses; a full stack with no legal reduction is a deadlock. Three studies culminate in six operands sharing five stack spaces."
+      ],
+      "controls": "Tap labeled controls or use Tab then Enter / Space. Undo, Reset study and Restart all are native buttons. There is no timer and no required dragging.",
+      "url": "workbench-room/?game=bracket-workshop",
+      "accent": "#e6c481",
+      "symbol": "⌘",
+      "family": "workbench-room",
+      "status": "playable",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#board button:not(:disabled)"
+      }
+    },
+    {
+      "id": "type-loom",
+      "designId": "D09",
+      "name": "Type Loom",
+      "category": "puzzle",
+      "description": "Structured type inference with shared unknowns and expression sockets.",
+      "mechanic": "Structured type inference with shared unknowns and expression sockets",
+      "rules": [
+        "Choose an empty expression socket, then a physical function or value card. Every card must be used once. MAP, APPLY, PAIR and COMPOSE create two ordered child sockets.",
+        "Each card starts with fresh unknown types. A repeated X inside one card must unify with the same structure everywhere; constraints propagate through connected sockets and the target. The live audit explains conflicts.",
+        "Complete every socket and certify the required type. Any valid fully typed tree is accepted. Three failed certifications end the attempt; Undo revises a placement before closure."
+      ],
+      "controls": "Tap labeled controls or use Tab then Enter / Space. Undo, Reset study and Restart all are native buttons. There is no timer and no required dragging.",
+      "url": "workbench-room/?game=type-loom",
+      "accent": "#e6c481",
+      "symbol": "⌘",
+      "family": "workbench-room",
+      "status": "playable",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#board button:not(:disabled)"
+      }
+    },
+    {
+      "id": "proof-lantern",
+      "designId": "D10",
+      "name": "Proof Lantern",
+      "category": "puzzle",
+      "description": "Natural deduction with nested assumptions and discharge.",
+      "mechanic": "Natural deduction with nested assumptions and discharge",
+      "rules": [
+        "Open an assumption box; apply implication, conjunction and disjunction rules to available facts; close boxes to discharge assumptions.",
+        "Choose when to split cases and which temporary hypothesis will create a reusable implication without leaking its local facts.",
+        "Derive the target with all temporary assumptions discharged and certify it within the proof-line allowance. Adding another assumption or derived fact beyond that allowance loses; three failed goal certifications also lose. Undo and reset are available."
+      ],
+      "controls": "Tap labeled controls or use Tab then Enter / Space. Undo, Reset study and Restart all are native buttons. There is no timer and no required dragging.",
+      "url": "workbench-room/?game=proof-lantern",
+      "accent": "#e6c481",
+      "symbol": "⌘",
+      "family": "workbench-room",
+      "status": "playable",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#board button:not(:disabled)"
+      }
+    },
+    {
+      "id": "table-confluence",
+      "designId": "D11",
+      "name": "Table Confluence",
+      "category": "puzzle",
+      "description": "Relational query composition under bag semantics.",
+      "mechanic": "Relational query composition under bag semantics",
+      "rules": [
+        "Compose a pipeline using the displayed filter, join, grouping and duplicate-removal operators on small visible tables. Inspect each intermediate result and its row count.",
+        "Place grouping and duplicate removal before or after joins to get correct multiplicities without excessive intermediate rows.",
+        "All result bags match and peak intermediate size fits memory cap; failed certification consumes one of three trials."
+      ],
+      "controls": "Tap labeled controls or use Tab then Enter / Space. Undo, Reset study and Restart all are native buttons. There is no timer and no required dragging.",
+      "url": "workbench-room/?game=table-confluence",
+      "accent": "#e6c481",
+      "symbol": "⌘",
+      "family": "workbench-room",
+      "status": "playable",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#board button:not(:disabled)"
+      }
+    },
+    {
+      "id": "branch-librarian",
+      "designId": "D12",
+      "name": "Branch Librarian",
+      "category": "puzzle",
+      "description": "Binary-search-tree rotations under weighted access costs.",
+      "mechanic": "Binary-search-tree rotations under weighted access costs",
+      "rules": [
+        "Rotate a chosen node left to promote its right child, or right to promote its left child. The intermediate subtree transfers automatically, preserving numeric search order.",
+        "Search cost is the sum of frequency times depth, with root depth one. A rotation changes several depths; a locally attractive promotion can worsen another frequent key.",
+        "Reach the shown cost threshold within each study’s rotation budget. Spending the last rotation above target loses. Certify early when ready; three failed certifications also end the attempt."
+      ],
+      "controls": "Tap labeled controls or use Tab then Enter / Space. Undo, Reset study and Restart all are native buttons. There is no timer and no required dragging.",
+      "url": "workbench-room/?game=branch-librarian",
+      "accent": "#e6c481",
+      "symbol": "⌘",
+      "family": "workbench-room",
+      "status": "playable",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#board button:not(:disabled)"
+      }
+    },
+    {
+      "id": "row-orchestra",
+      "designId": "D13",
+      "name": "Row Orchestra",
+      "category": "puzzle",
+      "description": "Elementary row operations with bounded coefficient growth.",
+      "mechanic": "Elementary row operations with bounded coefficient growth",
+      "rules": [
+        "Swap equations, scale a row by an allowed rational, or add a multiple of one row to another. All operations apply to the whole augmented row.",
+        "Choose pivots that eliminate variables while controlling fractions and coefficient-size ceiling.",
+        "Reach displayed canonical solved form without coefficient overflow within operations; overflow or spent budget fails."
+      ],
+      "controls": "Tap labeled controls or use Tab then Enter / Space. Undo, Reset study and Restart all are native buttons. There is no timer and no required dragging.",
+      "url": "workbench-room/?game=row-orchestra",
+      "accent": "#e6c481",
+      "symbol": "⌘",
+      "family": "workbench-room",
+      "status": "playable",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#board button:not(:disabled)"
+      }
+    },
+    {
+      "id": "state-courier",
+      "designId": "D14",
+      "name": "State Courier",
+      "category": "puzzle",
+      "description": "Finite-state transducer construction for history-dependent output.",
+      "mechanic": "Finite-state transducer construction for history-dependent output",
+      "rules": [
+        "Assign input-conditioned next states and emitted bits in the displayed fixed two- or three-state machine. Runs begin in the marked start state and process the public input tapes.",
+        "Use state to distinguish input histories that need different future output, and reuse a state when the same future behavior is appropriate.",
+        "All outputs for every declared finite input tape match; counterexample on wrong certification, three trials lose."
+      ],
+      "controls": "Tap labeled controls or use Tab then Enter / Space. Undo, Reset study and Restart all are native buttons. There is no timer and no required dragging.",
+      "url": "workbench-room/?game=state-courier",
+      "accent": "#e6c481",
+      "symbol": "⌘",
+      "family": "workbench-room",
+      "status": "playable",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#board button:not(:disabled)"
+      }
+    },
+    {
+      "id": "compare-parade",
+      "designId": "D15",
+      "name": "Compare Parade",
+      "category": "puzzle",
+      "description": "Oblivious comparison-network wiring with depth and fanout constraints.",
+      "mechanic": "Oblivious comparison-network wiring with depth and fanout constraints",
+      "rules": [
+        "Place a compare-exchange bridge between two lanes in a chosen stage. All bridges in a stage run simultaneously; a lane may join at most one bridge per stage.",
+        "Balance comparison count against depth; nonadjacent exchanges route extrema, and a swap can disrupt another test case.",
+        "All permutations sorted within bridge/depth budgets; failed certification reveals counterexample, three trials fail."
+      ],
+      "controls": "Tap labeled controls or use Tab then Enter / Space. Undo, Reset study and Restart all are native buttons. There is no timer and no required dragging.",
+      "url": "workbench-room/?game=compare-parade",
+      "accent": "#e6c481",
+      "symbol": "⌘",
+      "family": "workbench-room",
+      "status": "playable",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#board button:not(:disabled)"
+      }
+    },
+    {
+      "id": "token-crucible",
+      "designId": "D16",
+      "name": "Token Crucible",
+      "category": "puzzle",
+      "description": "Petri-net reachability with reversible catalysts and irreversible token consumption.",
+      "mechanic": "Petri-net reachability with reversible catalysts and irreversible token consumption",
+      "rules": [
+        "Fire an enabled transition only when all input places have required tokens; catalysts return, other tokens transform. Capacities and inhibitor arcs can disable transitions.",
+        "Avoid consuming a shared catalyst path too early; temporarily clear a place to enable inhibited reactions and regenerate scarce tokens.",
+        "Reach exact token distribution within firings; a nongoal deadlock or action exhaustion loses."
+      ],
+      "controls": "Tap labeled controls or use Tab then Enter / Space. Undo, Reset study and Restart all are native buttons. There is no timer and no required dragging.",
+      "url": "workbench-room/?game=token-crucible",
+      "accent": "#e6c481",
+      "symbol": "⌘",
+      "family": "workbench-room",
+      "status": "playable",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#board button:not(:disabled)"
+      }
+    },
+    {
+      "id": "copy-ribbon",
+      "designId": "D17",
+      "name": "Copy Ribbon",
+      "category": "puzzle",
+      "description": "Sliding-window LZ compression using literal and overlapping back-references.",
+      "mechanic": "Sliding-window LZ compression using literal and overlapping back-references",
+      "rules": [
+        "At the next uncovered symbol choose literal, or a distance/length reference into the already decoded sliding window. Emitting a reference reproduces symbols sequentially, including overlaps.",
+        "Choose token boundaries and literal versus reference costs: a longest reference can skip the start of a cheaper following match. At the same decoded cursor the window is identical regardless of prior tokenization; no false history-retention claim.",
+        "Encode exact entire public ribbon under bit budget; wrong reference or insufficient remaining bits loses."
+      ],
+      "controls": "Tap labeled controls or use Tab then Enter / Space. Undo, Reset study and Restart all are native buttons. There is no timer and no required dragging.",
+      "url": "workbench-room/?game=copy-ribbon",
+      "accent": "#e6c481",
+      "symbol": "⌘",
+      "family": "workbench-room",
+      "status": "playable",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#board button:not(:disabled)"
+      }
+    },
+    {
+      "id": "parallel-manuscripts",
+      "designId": "D18",
+      "name": "Parallel Manuscripts",
+      "category": "puzzle",
+      "description": "Sequence alignment with affine gap runs and anchor constraints.",
+      "mechanic": "Sequence alignment with affine gap runs and anchor constraints",
+      "rules": [
+        "Advance two cursors by match/substitute, insert, or delete; opening a gap costs more than extending it. Certain annotated anchors must align.",
+        "Choose whether to continue a gap or pay to reopen later; locally matching characters can cause an expensive downstream displacement.",
+        "Consume both ribbons under edit budget and align every anchor; impossible budget/anchor completion loses."
+      ],
+      "controls": "Tap labeled controls or use Tab then Enter / Space. Undo, Reset study and Restart all are native buttons. There is no timer and no required dragging.",
+      "url": "workbench-room/?game=parallel-manuscripts",
+      "accent": "#e6c481",
+      "symbol": "⌘",
+      "family": "workbench-room",
+      "status": "playable",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#board button:not(:disabled)"
+      }
+    },
+    {
+      "id": "private-census",
+      "designId": "D19",
+      "name": "Private Census",
+      "category": "puzzle",
+      "description": "Cohort privacy through hierarchical generalization and limited suppression.",
+      "mechanic": "Cohort privacy through hierarchical generalization and limited suppression",
+      "rules": [
+        "Generalize selected cells up public category trees or suppress records. Rows sharing released quasi-identifiers form cohorts; every cohort must contain at least k rows and diverse outcomes.",
+        "Merge vulnerable cohorts without erasing too much utility; generalizing one row alone may create a new singleton.",
+        "Publish a table whose cohorts meet the displayed size and diversity requirements within the information-loss budget. An invalid publication, including an over-budget one, consumes a trial; three failed publications lose."
+      ],
+      "controls": "Tap labeled controls or use Tab then Enter / Space. Undo, Reset study and Restart all are native buttons. There is no timer and no required dragging.",
+      "url": "workbench-room/?game=private-census",
+      "accent": "#e6c481",
+      "symbol": "⌘",
+      "family": "workbench-room",
+      "status": "playable",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#board button:not(:disabled)"
+      }
+    },
+    {
+      "id": "tiny-soundbook",
+      "designId": "D20",
+      "name": "Tiny Soundbook",
+      "category": "puzzle",
+      "description": "Rate-distortion quantizer construction with contiguous decision regions.",
+      "mechanic": "Rate-distortion quantizer construction with contiguous decision regions",
+      "rules": [
+        "Choose boundaries between sorted amplitudes to create the exact requested number of contiguous bins. Adjust each bin’s reproduction level and prefix-code length. All occurrence frequencies are visible.",
+        "Distortion is the occurrence-weighted sum of squared reconstruction errors. Bit cost is the occurrence-weighted sum of code lengths. Moving a boundary changes both costs, while code lengths must satisfy the prefix-capacity inequality.",
+        "Meet bin count, distortion, bandwidth and prefix capacity together, then certify. Three failed audits end an attempt. The soundbook is entirely numeric; hearing is never required."
+      ],
+      "controls": "Tap labeled controls or use Tab then Enter / Space. Undo, Reset study and Restart all are native buttons. There is no timer and no required dragging.",
+      "url": "workbench-room/?game=tiny-soundbook",
+      "accent": "#e6c481",
+      "symbol": "⌘",
+      "family": "workbench-room",
+      "status": "playable",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#board button:not(:disabled)"
+      }
+    },
+    {
+      "id": "agenda-garden",
+      "designId": "D21",
+      "name": "Agenda Garden",
+      "category": "strategy",
+      "description": "Pairwise majority agenda construction under cyclic preferences.",
+      "mechanic": "Pairwise majority agenda construction under cyclic preferences",
+      "rules": [
+        "Choose two remaining motions and hold a majority vote using the complete public voter rankings. Winner survives, loser is permanently eliminated. The pairwise comparison table is a readable equivalent of the rankings.",
+        "Make the named compromise the final survivor. Cyclic majorities mean changing the sequence of pairings can change the outcome without changing any preference. Later studies give one motion an explicit first-round bye.",
+        "Eliminating the target motion immediately loses. Survive all pairwise votes to win. Selection is free; holding a vote is irreversible except through Undo before a terminal outcome."
+      ],
+      "controls": "Tap labeled controls or use Tab then Enter / Space. Undo, Reset study and Restart all are native buttons. There is no timer and no required dragging.",
+      "url": "workbench-room/?game=agenda-garden",
+      "accent": "#e6c481",
+      "symbol": "⌘",
+      "family": "workbench-room",
+      "status": "playable",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#board button:not(:disabled)"
+      }
+    },
+    {
+      "id": "causal-camera",
+      "designId": "D22",
+      "name": "Causal Camera",
+      "category": "puzzle",
+      "description": "Consistent distributed snapshot reconstruction with in-transit messages.",
+      "mechanic": "Consistent distributed snapshot reconstruction with in-transit messages",
+      "rules": [
+        "Three process timelines show local sends and receives. Select a cut before the first event or after any event on each timeline. The snapshot includes each process prefix and every sent-but-not-yet-received message. Moving a cut costs its change in event position; mark the in-transit messages.",
+        "A desired received event forces its send into another process prefix, potentially forcing a third event; exclude later sends without excluding necessary earlier receipts. Count in-transit assets instead of losing them between local totals.",
+        "Certify a causally consistent snapshot satisfying the milestones and conserved total. Orphan receives, missing transit assets or unmet milestones consume a certification trial; three failures lose. Exceeding the cut-edit allowance loses immediately."
+      ],
+      "controls": "Tap labeled controls or use Tab then Enter / Space. Undo, Reset study and Restart all are native buttons. There is no timer and no required dragging.",
+      "url": "workbench-room/?game=causal-camera",
+      "accent": "#e6c481",
+      "symbol": "⌘",
+      "family": "workbench-room",
+      "status": "playable",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#board button:not(:disabled)"
+      }
+    },
+    {
+      "id": "linked-orchard",
+      "designId": "D23",
+      "name": "Linked Orchard",
+      "category": "strategy",
+      "description": "Selective breeding with linked chromosome crossover.",
+      "mechanic": "Selective breeding with linked chromosome crossover",
+      "rules": [
+        "Select two visible diploid parents and a permitted crossover boundary for each gamete; create offspring, retain at most four plants, discard the rest. Linked homologs and every offspring genotype remain inspectable.",
+        "Preserve complementary linked alleles, breed useful intermediate homologs and free nursery space without discarding the last copy of a required allele.",
+        "Breed the exact target double homolog within the birth allowance. Spending the allowance without success or discarding the last retained copy of a required allele loses. A full nursery must be cleared before another birth."
+      ],
+      "controls": "Tap labeled controls or use Tab then Enter / Space. Undo, Reset study and Restart all are native buttons. There is no timer and no required dragging.",
+      "url": "workbench-room/?game=linked-orchard",
+      "accent": "#e6c481",
+      "symbol": "⌘",
+      "family": "workbench-room",
+      "status": "playable",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#board button:not(:disabled)"
+      }
+    },
+    {
+      "id": "clearing-circle",
+      "designId": "D24",
+      "name": "Clearing Circle",
+      "category": "strategy",
+      "description": "Debt clearing with endogenous default cascades and limited bridge liquidity.",
+      "mechanic": "Debt clearing with endogenous default cascades and limited bridge liquidity",
+      "rules": [
+        "Allocate the limited bridge cash among nodes in the displayed debt network. Injections can be withdrawn before committing; debts, protected nodes and total allowance are all public.",
+        "Commit to run proportional clearing: a node pays the smaller of its total debts and cash plus incoming payments. Its payment is split proportionally among creditors. Repeated passes reach a fixed point, so one injection can propagate through a cycle.",
+        "Every protected node must pay its full obligations. A protected default loses that attempt; full protected settlement wins. Three different ledgers include a fork and unprotected obligations competing for incoming payments. This is a mathematical toy, not financial advice."
+      ],
+      "controls": "Tap labeled controls or use Tab then Enter / Space. Undo, Reset study and Restart all are native buttons. There is no timer and no required dragging.",
+      "url": "workbench-room/?game=clearing-circle",
+      "accent": "#e6c481",
+      "symbol": "⌘",
+      "family": "workbench-room",
+      "status": "playable",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#board button:not(:disabled)"
+      }
+    },
+    {
+      "id": "night-collector",
+      "designId": "D25",
+      "name": "Night Collector",
+      "category": "puzzle",
+      "description": "Incremental tracing garbage collection during visible pointer mutation.",
+      "mechanic": "Incremental tracing garbage collection during visible pointer mutation",
+      "rules": [
+        "Roots, heap objects and pointer fields are visible. The root begins gray. Scan gray objects, apply the write barrier or sweep white objects; advancing permits the next announced program pointer mutation.",
+        "Choose scan order and write barriers to keep reachable objects safe within the collector-action allowance. The barrier reserve is limited; distinguish unreachable cycles from live objects.",
+        "Complete a safe sweep freeing the required cells within the collector-action allowance. An unsafe sweep or exceeding that allowance loses."
+      ],
+      "controls": "Tap labeled controls or use Tab then Enter / Space. Undo, Reset study and Restart all are native buttons. There is no timer and no required dragging.",
+      "url": "workbench-room/?game=night-collector",
+      "accent": "#e6c481",
+      "symbol": "⌘",
+      "family": "workbench-room",
+      "status": "playable",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#board button:not(:disabled)"
+      }
+    },
+    {
+      "id": "gathering-grounds",
+      "designId": "D26",
+      "name": "Gathering Grounds",
+      "category": "strategy",
+      "description": "Finite-horizon bandit exploration versus productive exploitation.",
+      "mechanic": "Finite-horizon bandit exploration versus productive exploitation",
+      "rules": [
+        "Each day harvest one of three teaching beds or four later-study beds, initially unknown. Harvest earns actual baskets and reveals that bed’s current yield; displayed history persists. Beds have public process classes (stable, depleting, recovering), but which class belongs where is initially unknown. A costly soil survey reveals process class without yielding baskets.",
+        "Spend scarce days learning a potentially superior bed or keep collecting known yield; revisit recovering beds after rest, and stop exploiting a depleting bed before it is exhausted.",
+        "Earn the basket quota by the fixed final day; falling short loses. Each study uses a fixed authored bed assignment with no random outcomes after play begins. Use observations and the public process rules to decide what to harvest next."
+      ],
+      "controls": "Tap labeled controls or use Tab then Enter / Space. Undo, Reset study and Restart all are native buttons. There is no timer and no required dragging.",
+      "url": "workbench-room/?game=gathering-grounds",
+      "accent": "#e6c481",
+      "symbol": "⌘",
+      "family": "workbench-room",
+      "status": "playable",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#board button:not(:disabled)"
+      }
+    },
+    {
+      "id": "loop-transit",
+      "designId": "D27",
+      "name": "Loop Transit",
+      "category": "strategy",
+      "description": "Passenger service topology design with autonomous transfers and finite fleet.",
+      "mechanic": "Passenger service topology design with autonomous transfers and finite fleet",
+      "rules": [
+        "Draw cyclic train lines over the visible physical track, then allocate the finite train fleet. Repeated stations allow integrated branch detours; two-station shuttles are also valid. Each train holds two riders.",
+        "Advance one pulse to add scheduled demand, move each train one edge, alight riders and board waiting passengers following a shortest service route. Transferring riders cannot board again until the next pulse. Actual onboard destinations, queues and train positions remain visible.",
+        "Deliver the quota before closing without overflowing a platform. Empty lines can be replaced freely; removing an occupied line spends the one relocation token and returns its riders to their current station. The final study includes a public track closure/opening requiring service redesign."
+      ],
+      "controls": "Tap labeled controls or use Tab then Enter / Space. Undo, Reset study and Restart all are native buttons. There is no timer and no required dragging.",
+      "url": "workbench-room/?game=loop-transit",
+      "accent": "#e6c481",
+      "symbol": "⌘",
+      "family": "workbench-room",
+      "status": "playable",
+      "smoke": {
+        "startSelector": "#start",
+        "actionSelector": "#board button:not(:disabled)"
+      }
     }
   ]
 }

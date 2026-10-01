@@ -1,0 +1,60 @@
+{
+  "passed": true,
+  "reviewer": "independent-workbench-author",
+  "purpose": "Supplemental fresh final-version ordinary challenge; excluded from main100 deduplicated manifest. Reviewer had never read packing.js or C02/C03 authored routes.",
+  "games": [
+    {
+      "designId": "C02",
+      "gameId": "cascade-orchard",
+      "ordinaryBeforeSource": true,
+      "fullWin": true,
+      "passed": true,
+      "meaningfulDecisions": "Won all3 studies with5,7,5 valid swaps. Used matches to change lower columns before subsequent objective matches; deliberately made vertical clears to create bottom-row cascades, and cleared multiple separated marked tiles through falling support. Invalid nonmatching swaps returned free, as described.",
+      "runtimeHashes": {
+        "mini-games/motion-room/packing.js": "68a90922ac600b01c12b1d78475ea49f86949bee66fa82d54249d46bd195b85c",
+        "mini-games/motion-room/shared.js": "08cc3892b3daad10e53fb3a70aa86539b76c9de7dbb2caaba6163e3bad998a9e",
+        "mini-games/motion-room/room.js": "eb9a87a21caae9efb8c1c9861225eef140589cdacb9b588e64bec9ddee0fba61",
+        "mini-games/motion-room/index.html": "566094cc303494e8ea4d122145529c90e0be4e572495f6823e92200c3612ce35",
+        "mini-games/motion-room/room.css": "b1c6606ea4f8bd14bc7f4c6e3f6c76a38c2a942004815a7a1b69258b744fbba9",
+        "mini-games/motion-room/games.json": "f83a3e655f8f5673886df4de6e829467af95cbf4d71d023dde55e94cdb9ce980"
+      },
+      "logFile": "mini-games/coverage/independent300/C02-fresh-ordinary.jsonl",
+      "limits": [
+        "One final-version campaign, native focused Enter on public controls. No source, authored traces or solver consulted.",
+        "No terminal failure was needed for this supplemental challenge; root owns separate full keyboard/touch/failure regression."
+      ],
+      "methods": [
+        "CSS-only binding refresh after independent all24-game fixed320px/390px layout audit: mini-games/coverage/independent300/motion-mobile-layout-audit.json. Keyboard hints wrap onto separate lines;44px control minimum retained. All non-CSS runtime hashes unchanged; original gameplay provenance retained. This is not a new blind gameplay claim."
+      ]
+    },
+    {
+      "designId": "C03",
+      "gameId": "bubble-canopy",
+      "ordinaryBeforeSource": true,
+      "fullWin": true,
+      "passed": true,
+      "meaningfulDecisions": "Won3studies in3,12,19shots. Later ceiling nests required clearing obstructing lower support, storing useful colors, opening side access and reflected shots. Final study needed deliberate two-shot same-color ceiling bridge after exposing a bank route; left nest required removing its obstructing lower pair first. Recovered from actual row8-overcrowding loss and separate budget-exhaustion loss with1nest remaining.",
+      "runtimeHashes": {
+        "mini-games/motion-room/packing.js": "68a90922ac600b01c12b1d78475ea49f86949bee66fa82d54249d46bd195b85c",
+        "mini-games/motion-room/shared.js": "08cc3892b3daad10e53fb3a70aa86539b76c9de7dbb2caaba6163e3bad998a9e",
+        "mini-games/motion-room/room.js": "eb9a87a21caae9efb8c1c9861225eef140589cdacb9b588e64bec9ddee0fba61",
+        "mini-games/motion-room/index.html": "566094cc303494e8ea4d122145529c90e0be4e572495f6823e92200c3612ce35",
+        "mini-games/motion-room/room.css": "b1c6606ea4f8bd14bc7f4c6e3f6c76a38c2a942004815a7a1b69258b744fbba9",
+        "mini-games/motion-room/games.json": "f83a3e655f8f5673886df4de6e829467af95cbf4d71d023dde55e94cdb9ce980"
+      },
+      "logFile": "mini-games/coverage/independent300/C03-fresh-ordinary.jsonl",
+      "limits": [
+        "First study retried an unproductive opening; finalstudy required two failed attempts and learned ordinary retries. No source, authored traces or solver consulted.",
+        "Final attempt reused self-discovered public opening, then independently changed bank-route order; this is ordinary learning, not a claim of first-attempt success.",
+        "Supplemental native focused Enter controls in390px browser; root owns separate full Tab/touch regression."
+      ],
+      "methods": [
+        "CSS-only binding refresh after independent all24-game fixed320px/390px layout audit: mini-games/coverage/independent300/motion-mobile-layout-audit.json. Keyboard hints wrap onto separate lines;44px control minimum retained. All non-CSS runtime hashes unchanged; original gameplay provenance retained. This is not a new blind gameplay claim."
+      ]
+    }
+  ],
+  "limits": [
+    "No implementation/source audit performed by this supplemental reviewer; root retains that separate audit.",
+    "Public DOM text and named controls only; no hidden state, simulations, route search or console gameplay injection."
+  ]
+}

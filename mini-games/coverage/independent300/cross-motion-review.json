@@ -1,0 +1,620 @@
+{
+  "passed": true,
+  "reviewer": "independent-workbench-author",
+  "games": [
+    {
+      "designId": "C04",
+      "gameId": "step-and-spring",
+      "room": "motion-room",
+      "ordinaryBeforeSource": true,
+      "fullWin": true,
+      "naturalFailure": true,
+      "failureKind": "terminal loss",
+      "restart": true,
+      "meaningfulDecisions": "Variable jump height, visible velocity, ferry phase and ceiling changed the safe landing route. Collected the lower key then returned to the middle platform, rode the moving ferry and reached the high exit. Walking without jumping exhausted lives.",
+      "methods": [
+        "Ordinary full three-study public-control play using focused native Enter, before reading source, authored solutions or solver output.",
+        "Full native Tab-to-control plus Enter replay from the independently derived public route.",
+        "Full390px touch-only replay plus natural failure and restart.",
+        "CSS-only binding refresh after independent all24-game fixed320px/390px layout audit: mini-games/coverage/independent300/motion-mobile-layout-audit.json. Keyboard hints wrap onto separate lines;44px control minimum retained. All non-CSS runtime hashes unchanged; original gameplay provenance retained. This is not a new blind gameplay claim."
+      ],
+      "issues": [],
+      "runtimeHashes": {
+        "mini-games/motion-room/navigation.js": "4082d1165a9a412194f8378d6272b0755707e5e3811cb3c18aaac9ab130a79bb",
+        "mini-games/motion-room/room.js": "eb9a87a21caae9efb8c1c9861225eef140589cdacb9b588e64bec9ddee0fba61",
+        "mini-games/motion-room/shared.js": "08cc3892b3daad10e53fb3a70aa86539b76c9de7dbb2caaba6163e3bad998a9e",
+        "mini-games/motion-room/room.css": "b1c6606ea4f8bd14bc7f4c6e3f6c76a38c2a942004815a7a1b69258b744fbba9",
+        "mini-games/motion-room/index.html": "566094cc303494e8ea4d122145529c90e0be4e572495f6823e92200c3612ce35",
+        "mini-games/motion-room/games.json": "f83a3e655f8f5673886df4de6e829467af95cbf4d71d023dde55e94cdb9ce980"
+      },
+      "logFile": "mini-games/coverage/independent300/cross-C04-ordinary.jsonl",
+      "replayLogs": [
+        "mini-games/coverage/independent300/C04-keyboard-tab-replay.jsonl",
+        "mini-games/coverage/independent300/C04-mobile-touch-replay.jsonl"
+      ],
+      "publicActionTrace": "mini-games/coverage/independent300/c04-public-actions.json",
+      "limits": [
+        "No Release/Drop action was required by the observed winning route.",
+        "Replays are informed by earlier ordinary play, not fresh unaided solves.",
+        "Chromium emulation, not physical-device or screen-reader certification."
+      ],
+      "sourceAudit": {
+        "passed": true,
+        "timing": "After ordinary three-study wins and before final source-bound replay",
+        "scope": "Game-specific engine functions plus shared terminal helpers; reviewed actual transitions against public rules.",
+        "findings": "Variable gravity during hold/release, moving ferry carry, key persistence and three-life terminal transitions match the public model.",
+        "finalRefresh": "Full keyboard/touch win/failure/restart replays repeated after later unrelated engines and shared metadata changed whole-file hashes; reviewed C04\u201312 engine blocks unchanged."
+      },
+      "metadataOnlyRebind": {
+        "previousHash": "d61f237ad719e22de48c3f3c5790a353195c3a7aac242202ceec75409150ed2a",
+        "currentHash": "f83a3e655f8f5673886df4de6e829467af95cbf4d71d023dde55e94cdb9ce980",
+        "reason": "C03 spacing-only public guide cleanup after replay; no engine, controls or substantive rules changed. Owner freeze confirmed."
+      }
+    },
+    {
+      "designId": "C05",
+      "gameId": "lantern-lanes",
+      "room": "motion-room",
+      "ordinaryBeforeSource": true,
+      "fullWin": true,
+      "naturalFailure": true,
+      "failureKind": "terminal loss",
+      "restart": true,
+      "meaningfulDecisions": "Planned dot coverage around two differently paced pursuers, used limited power windows and recovered from a contact in study2. Each maze required a route adjustment; waiting at the central junction exhausted lives.",
+      "methods": [
+        "Ordinary full three-study public-control play using focused native Enter, before reading source, authored solutions or solver output.",
+        "Full native Tab-to-control plus Enter replay from the independently derived public route.",
+        "Full390px touch-only replay plus natural failure and restart.",
+        "CSS-only binding refresh after independent all24-game fixed320px/390px layout audit: mini-games/coverage/independent300/motion-mobile-layout-audit.json. Keyboard hints wrap onto separate lines;44px control minimum retained. All non-CSS runtime hashes unchanged; original gameplay provenance retained. This is not a new blind gameplay claim."
+      ],
+      "issues": [],
+      "runtimeHashes": {
+        "mini-games/motion-room/navigation.js": "4082d1165a9a412194f8378d6272b0755707e5e3811cb3c18aaac9ab130a79bb",
+        "mini-games/motion-room/room.js": "eb9a87a21caae9efb8c1c9861225eef140589cdacb9b588e64bec9ddee0fba61",
+        "mini-games/motion-room/shared.js": "08cc3892b3daad10e53fb3a70aa86539b76c9de7dbb2caaba6163e3bad998a9e",
+        "mini-games/motion-room/room.css": "b1c6606ea4f8bd14bc7f4c6e3f6c76a38c2a942004815a7a1b69258b744fbba9",
+        "mini-games/motion-room/index.html": "566094cc303494e8ea4d122145529c90e0be4e572495f6823e92200c3612ce35",
+        "mini-games/motion-room/games.json": "f83a3e655f8f5673886df4de6e829467af95cbf4d71d023dde55e94cdb9ce980"
+      },
+      "logFile": "mini-games/coverage/independent300/cross-C05-ordinary.jsonl",
+      "replayLogs": [
+        "mini-games/coverage/independent300/C05-keyboard-tab-replay.jsonl",
+        "mini-games/coverage/independent300/C05-mobile-touch-replay.jsonl"
+      ],
+      "publicActionTrace": "mini-games/coverage/independent300/c05-public-actions.json",
+      "limits": [
+        "Original ordinary win preceded corrected text pellet coordinates; final source-matched replays verify corrected UI.",
+        "Replays are informed by earlier ordinary play, not fresh unaided solves.",
+        "Chromium emulation, not physical-device or screen-reader certification."
+      ],
+      "sourceAudit": {
+        "passed": true,
+        "timing": "After ordinary three-study wins and before final source-bound replay",
+        "scope": "Game-specific engine functions plus shared terminal helpers; reviewed actual transitions against public rules.",
+        "findings": "Two pursuers have distinct BFS timing; power and invulnerability windows are actual state. Terminal guard now prevents a second collision from continuing an ended turn.",
+        "finalRefresh": "Full keyboard/touch win/failure/restart replays repeated after later unrelated engines and shared metadata changed whole-file hashes; reviewed C04\u201312 engine blocks unchanged."
+      },
+      "metadataOnlyRebind": {
+        "previousHash": "d61f237ad719e22de48c3f3c5790a353195c3a7aac242202ceec75409150ed2a",
+        "currentHash": "f83a3e655f8f5673886df4de6e829467af95cbf4d71d023dde55e94cdb9ce980",
+        "reason": "C03 spacing-only public guide cleanup after replay; no engine, controls or substantive rules changed. Owner freeze confirmed."
+      }
+    },
+    {
+      "designId": "C06",
+      "gameId": "threaded-return",
+      "room": "motion-room",
+      "ordinaryBeforeSource": true,
+      "fullWin": true,
+      "naturalFailure": true,
+      "failureKind": "recoverable rope-length rejection",
+      "restart": true,
+      "meaningfulDecisions": "Collected tags via opposite sides of posts. A direct return exceeded available rope; backtracking unwound the path and restored slack. Different tag arrangements changed which side to traverse first.",
+      "methods": [
+        "Ordinary full three-study public-control play using focused native Enter, before reading source, authored solutions or solver output.",
+        "Full native Tab-to-control plus Enter replay from the independently derived public route.",
+        "Full390px touch-only replay plus natural failure and restart.",
+        "CSS-only binding refresh after independent all24-game fixed320px/390px layout audit: mini-games/coverage/independent300/motion-mobile-layout-audit.json. Keyboard hints wrap onto separate lines;44px control minimum retained. All non-CSS runtime hashes unchanged; original gameplay provenance retained. This is not a new blind gameplay claim."
+      ],
+      "issues": [],
+      "runtimeHashes": {
+        "mini-games/motion-room/navigation.js": "4082d1165a9a412194f8378d6272b0755707e5e3811cb3c18aaac9ab130a79bb",
+        "mini-games/motion-room/room.js": "eb9a87a21caae9efb8c1c9861225eef140589cdacb9b588e64bec9ddee0fba61",
+        "mini-games/motion-room/shared.js": "08cc3892b3daad10e53fb3a70aa86539b76c9de7dbb2caaba6163e3bad998a9e",
+        "mini-games/motion-room/room.css": "b1c6606ea4f8bd14bc7f4c6e3f6c76a38c2a942004815a7a1b69258b744fbba9",
+        "mini-games/motion-room/index.html": "566094cc303494e8ea4d122145529c90e0be4e572495f6823e92200c3612ce35",
+        "mini-games/motion-room/games.json": "f83a3e655f8f5673886df4de6e829467af95cbf4d71d023dde55e94cdb9ce980"
+      },
+      "logFile": "mini-games/coverage/independent300/cross-C06-ordinary.jsonl",
+      "replayLogs": [
+        "mini-games/coverage/independent300/C06-keyboard-tab-replay.jsonl",
+        "mini-games/coverage/independent300/C06-mobile-touch-replay.jsonl"
+      ],
+      "publicActionTrace": "mini-games/coverage/independent300/c06-public-actions.json",
+      "limits": [
+        "Failure is explicitly a recoverable rope-length rejection, not a terminal loss.",
+        "Original final-study action batch lost its log when the completion control was renamed; public state and subsequent completion were recorded. Full final keyboard/touch replays verify the reconstructed route.",
+        "Replays are informed by earlier ordinary play, not fresh unaided solves.",
+        "Chromium emulation, not physical-device or screen-reader certification."
+      ],
+      "sourceAudit": {
+        "passed": true,
+        "timing": "After ordinary three-study wins and before final source-bound replay",
+        "scope": "Game-specific engine functions plus shared terminal helpers; reviewed actual transitions against public rules.",
+        "findings": "Rope uses a simplified piecewise polyline and corner-side checks. Overlength moves reject without changing position; reverse traversal restores available length.",
+        "finalRefresh": "Full keyboard/touch win/failure/restart replays repeated after later unrelated engines and shared metadata changed whole-file hashes; reviewed C04\u201312 engine blocks unchanged."
+      },
+      "metadataOnlyRebind": {
+        "previousHash": "d61f237ad719e22de48c3f3c5790a353195c3a7aac242202ceec75409150ed2a",
+        "currentHash": "f83a3e655f8f5673886df4de6e829467af95cbf4d71d023dde55e94cdb9ce980",
+        "reason": "C03 spacing-only public guide cleanup after replay; no engine, controls or substantive rules changed. Owner freeze confirmed."
+      }
+    },
+    {
+      "designId": "C07",
+      "gameId": "magnetic-quartet",
+      "room": "motion-room",
+      "ordinaryBeforeSource": true,
+      "fullWin": true,
+      "naturalFailure": true,
+      "failureKind": "terminal loss",
+      "restart": true,
+      "meaningfulDecisions": "Used public positions and velocities to redirect and brake both coupled charges. Final swapped traps required holding one charge near its source while delivering the other, then redirecting the remaining charge around the shield. Wrong pole choice drove a charge out of the field.",
+      "methods": [
+        "Ordinary full three-study public-control play using focused native Enter, before reading source, authored solutions or solver output.",
+        "Full native Tab-to-control plus Enter replay from the independently derived public route.",
+        "Full390px touch-only replay plus natural failure and restart.",
+        "CSS-only binding refresh after independent all24-game fixed320px/390px layout audit: mini-games/coverage/independent300/motion-mobile-layout-audit.json. Keyboard hints wrap onto separate lines;44px control minimum retained. All non-CSS runtime hashes unchanged; original gameplay provenance retained. This is not a new blind gameplay claim."
+      ],
+      "issues": [],
+      "runtimeHashes": {
+        "mini-games/motion-room/physics.js": "cc646acf5e28b9796fe068331ad637c234e44f2c7f6b0a664f109f962621b688",
+        "mini-games/motion-room/room.js": "eb9a87a21caae9efb8c1c9861225eef140589cdacb9b588e64bec9ddee0fba61",
+        "mini-games/motion-room/shared.js": "08cc3892b3daad10e53fb3a70aa86539b76c9de7dbb2caaba6163e3bad998a9e",
+        "mini-games/motion-room/room.css": "b1c6606ea4f8bd14bc7f4c6e3f6c76a38c2a942004815a7a1b69258b744fbba9",
+        "mini-games/motion-room/index.html": "566094cc303494e8ea4d122145529c90e0be4e572495f6823e92200c3612ce35",
+        "mini-games/motion-room/games.json": "f83a3e655f8f5673886df4de6e829467af95cbf4d71d023dde55e94cdb9ce980"
+      },
+      "logFile": "mini-games/coverage/independent300/cross-C07-ordinary.jsonl",
+      "replayLogs": [
+        "mini-games/coverage/independent300/C07-keyboard-tab-replay.jsonl",
+        "mini-games/coverage/independent300/C07-mobile-touch-replay.jsonl"
+      ],
+      "publicActionTrace": "mini-games/coverage/independent300/c07-public-actions.json",
+      "limits": [
+        "Replays are informed by earlier ordinary play, not fresh unaided solves.",
+        "Chromium emulation, not physical-device or screen-reader certification."
+      ],
+      "sourceAudit": {
+        "passed": true,
+        "timing": "After ordinary three-study wins and before final source-bound replay",
+        "scope": "Game-specific engine functions plus shared terminal helpers; reviewed actual transitions against public rules.",
+        "findings": "Softened inverse-square force vectors, velocity damping, charge interaction and shields are actual dynamics. Final implementation substeps motion at no more than0.08 units per axis, checking shields/traps throughout to prevent tunneling.",
+        "finalRefresh": "Full keyboard/touch win/failure/restart replays repeated after later unrelated engines and shared metadata changed whole-file hashes; reviewed C04\u201312 engine blocks unchanged."
+      },
+      "metadataOnlyRebind": {
+        "previousHash": "d61f237ad719e22de48c3f3c5790a353195c3a7aac242202ceec75409150ed2a",
+        "currentHash": "f83a3e655f8f5673886df4de6e829467af95cbf4d71d023dde55e94cdb9ce980",
+        "reason": "C03 spacing-only public guide cleanup after replay; no engine, controls or substantive rules changed. Owner freeze confirmed."
+      }
+    },
+    {
+      "designId": "C08",
+      "gameId": "span-workshop",
+      "room": "motion-room",
+      "ordinaryBeforeSource": true,
+      "fullWin": true,
+      "naturalFailure": true,
+      "failureKind": "terminal loss",
+      "restart": true,
+      "meaningfulDecisions": "Designed a triangulated span with tension-only deck cables. Revised final upward wind destabilized the original design; changing two left deck cables to compression-capable beams carried all cart positions within the material limit. Three bad structural tests produced a terminal failure.",
+      "methods": [
+        "Ordinary full three-study public-control play using focused native Enter, before reading source, authored solutions or solver output.",
+        "Full native Tab-to-control plus Enter replay from the independently derived public route.",
+        "Full390px touch-only replay plus natural failure and restart.",
+        "CSS-only binding refresh after independent all24-game fixed320px/390px layout audit: mini-games/coverage/independent300/motion-mobile-layout-audit.json. Keyboard hints wrap onto separate lines;44px control minimum retained. All non-CSS runtime hashes unchanged; original gameplay provenance retained. This is not a new blind gameplay claim."
+      ],
+      "issues": [],
+      "runtimeHashes": {
+        "mini-games/motion-room/physics.js": "cc646acf5e28b9796fe068331ad637c234e44f2c7f6b0a664f109f962621b688",
+        "mini-games/motion-room/room.js": "eb9a87a21caae9efb8c1c9861225eef140589cdacb9b588e64bec9ddee0fba61",
+        "mini-games/motion-room/shared.js": "08cc3892b3daad10e53fb3a70aa86539b76c9de7dbb2caaba6163e3bad998a9e",
+        "mini-games/motion-room/room.css": "b1c6606ea4f8bd14bc7f4c6e3f6c76a38c2a942004815a7a1b69258b744fbba9",
+        "mini-games/motion-room/index.html": "566094cc303494e8ea4d122145529c90e0be4e572495f6823e92200c3612ce35",
+        "mini-games/motion-room/games.json": "f83a3e655f8f5673886df4de6e829467af95cbf4d71d023dde55e94cdb9ce980"
+      },
+      "logFile": "mini-games/coverage/independent300/cross-C08-ordinary.jsonl",
+      "replayLogs": [
+        "mini-games/coverage/independent300/C08-keyboard-tab-replay.jsonl",
+        "mini-games/coverage/independent300/C08-mobile-touch-replay.jsonl"
+      ],
+      "publicActionTrace": "mini-games/coverage/independent300/c08-public-actions.json",
+      "limits": [
+        "Independent ordinary review rejected the original identical-layout finale; acceptance refers to the revised wind load case.",
+        "Replays are informed by earlier ordinary play, not fresh unaided solves.",
+        "Chromium emulation, not physical-device or screen-reader certification."
+      ],
+      "sourceAudit": {
+        "passed": true,
+        "timing": "After ordinary three-study wins and before final source-bound replay",
+        "scope": "Game-specific engine functions plus shared terminal helpers; reviewed actual transitions against public rules.",
+        "findings": "Assembles axial stiffness matrices, solves constrained joint displacements, interpolates moving loads and removes compression cables. Removed slack cables now have zero reported/checked force. This is a simplified linear axial truss model, not an engineering certification simulator.",
+        "finalRefresh": "Full keyboard/touch win/failure/restart replays repeated after later unrelated engines and shared metadata changed whole-file hashes; reviewed C04\u201312 engine blocks unchanged."
+      },
+      "metadataOnlyRebind": {
+        "previousHash": "d61f237ad719e22de48c3f3c5790a353195c3a7aac242202ceec75409150ed2a",
+        "currentHash": "f83a3e655f8f5673886df4de6e829467af95cbf4d71d023dde55e94cdb9ce980",
+        "reason": "C03 spacing-only public guide cleanup after replay; no engine, controls or substantive rules changed. Owner freeze confirmed."
+      }
+    },
+    {
+      "designId": "C09",
+      "gameId": "corner-carry",
+      "room": "motion-room",
+      "ordinaryBeforeSource": true,
+      "fullWin": true,
+      "naturalFailure": true,
+      "failureKind": "terminal loss",
+      "restart": true,
+      "meaningfulDecisions": "Turned the asymmetric footprint to fit the narrow passage, then positioned it in open space before rotating to each different final orientation. One premature boundary move lost integrity; repeated warned contacts exhausted it.",
+      "methods": [
+        "Ordinary full three-study public-control play using focused native Enter, before reading source, authored solutions or solver output.",
+        "Full native Tab-to-control plus Enter replay from the independently derived public route.",
+        "Full390px touch-only replay plus natural failure and restart.",
+        "CSS-only binding refresh after independent all24-game fixed320px/390px layout audit: mini-games/coverage/independent300/motion-mobile-layout-audit.json. Keyboard hints wrap onto separate lines;44px control minimum retained. All non-CSS runtime hashes unchanged; original gameplay provenance retained. This is not a new blind gameplay claim."
+      ],
+      "issues": [],
+      "runtimeHashes": {
+        "mini-games/motion-room/navigation.js": "4082d1165a9a412194f8378d6272b0755707e5e3811cb3c18aaac9ab130a79bb",
+        "mini-games/motion-room/room.js": "eb9a87a21caae9efb8c1c9861225eef140589cdacb9b588e64bec9ddee0fba61",
+        "mini-games/motion-room/shared.js": "08cc3892b3daad10e53fb3a70aa86539b76c9de7dbb2caaba6163e3bad998a9e",
+        "mini-games/motion-room/room.css": "b1c6606ea4f8bd14bc7f4c6e3f6c76a38c2a942004815a7a1b69258b744fbba9",
+        "mini-games/motion-room/index.html": "566094cc303494e8ea4d122145529c90e0be4e572495f6823e92200c3612ce35",
+        "mini-games/motion-room/games.json": "f83a3e655f8f5673886df4de6e829467af95cbf4d71d023dde55e94cdb9ce980"
+      },
+      "logFile": "mini-games/coverage/independent300/cross-C09-ordinary.jsonl",
+      "replayLogs": [
+        "mini-games/coverage/independent300/C09-keyboard-tab-replay.jsonl",
+        "mini-games/coverage/independent300/C09-mobile-touch-replay.jsonl"
+      ],
+      "publicActionTrace": "mini-games/coverage/independent300/c09-public-actions.json",
+      "limits": [
+        "Alternate handle pivot was not needed in the observed winning route.",
+        "Replays are informed by earlier ordinary play, not fresh unaided solves.",
+        "Chromium emulation, not physical-device or screen-reader certification."
+      ],
+      "sourceAudit": {
+        "passed": true,
+        "timing": "After ordinary three-study wins and before final source-bound replay",
+        "scope": "Game-specific engine functions plus shared terminal helpers; reviewed actual transitions against public rules.",
+        "findings": "Actual rotated L-shaped footprint and sampled swept moves determine wall contact. Sixteen movement substeps and polygon sampling are approximate geometry, not analytic continuous collision.",
+        "finalRefresh": "Full keyboard/touch win/failure/restart replays repeated after later unrelated engines and shared metadata changed whole-file hashes; reviewed C04\u201312 engine blocks unchanged."
+      },
+      "metadataOnlyRebind": {
+        "previousHash": "d61f237ad719e22de48c3f3c5790a353195c3a7aac242202ceec75409150ed2a",
+        "currentHash": "f83a3e655f8f5673886df4de6e829467af95cbf4d71d023dde55e94cdb9ce980",
+        "reason": "C03 spacing-only public guide cleanup after replay; no engine, controls or substantive rules changed. Owner freeze confirmed."
+      }
+    },
+    {
+      "designId": "C10",
+      "gameId": "borrowed-seconds",
+      "room": "motion-room",
+      "ordinaryBeforeSource": true,
+      "fullWin": true,
+      "naturalFailure": true,
+      "failureKind": "terminal loss",
+      "restart": true,
+      "meaningfulDecisions": "Final shortened upper track prevented the original wait-at-buffers transfer. Rewound the lower platform while the upper continued forward to make a rendezvous, then rewound the upper history with the collected key. Unsupported steps exhausted lives.",
+      "methods": [
+        "Ordinary full three-study public-control play using focused native Enter, before reading source, authored solutions or solver output.",
+        "Full native Tab-to-control plus Enter replay from the independently derived public route.",
+        "Full390px touch-only replay plus natural failure and restart.",
+        "CSS-only binding refresh after independent all24-game fixed320px/390px layout audit: mini-games/coverage/independent300/motion-mobile-layout-audit.json. Keyboard hints wrap onto separate lines;44px control minimum retained. All non-CSS runtime hashes unchanged; original gameplay provenance retained. This is not a new blind gameplay claim."
+      ],
+      "issues": [],
+      "runtimeHashes": {
+        "mini-games/motion-room/navigation.js": "4082d1165a9a412194f8378d6272b0755707e5e3811cb3c18aaac9ab130a79bb",
+        "mini-games/motion-room/room.js": "eb9a87a21caae9efb8c1c9861225eef140589cdacb9b588e64bec9ddee0fba61",
+        "mini-games/motion-room/shared.js": "08cc3892b3daad10e53fb3a70aa86539b76c9de7dbb2caaba6163e3bad998a9e",
+        "mini-games/motion-room/room.css": "b1c6606ea4f8bd14bc7f4c6e3f6c76a38c2a942004815a7a1b69258b744fbba9",
+        "mini-games/motion-room/index.html": "566094cc303494e8ea4d122145529c90e0be4e572495f6823e92200c3612ce35",
+        "mini-games/motion-room/games.json": "f83a3e655f8f5673886df4de6e829467af95cbf4d71d023dde55e94cdb9ce980"
+      },
+      "logFile": "mini-games/coverage/independent300/cross-C10-ordinary.jsonl",
+      "replayLogs": [
+        "mini-games/coverage/independent300/C10-keyboard-tab-replay.jsonl",
+        "mini-games/coverage/independent300/C10-mobile-touch-replay.jsonl"
+      ],
+      "publicActionTrace": "mini-games/coverage/independent300/c10-public-actions.json",
+      "limits": [
+        "Independent ordinary review rejected the original buffer-wait routine; acceptance refers to the revised upper-track endpoint.",
+        "Replays are informed by earlier ordinary play, not fresh unaided solves.",
+        "Chromium emulation, not physical-device or screen-reader certification."
+      ],
+      "sourceAudit": {
+        "passed": true,
+        "timing": "After ordinary three-study wins and before final source-bound replay",
+        "scope": "Game-specific engine functions plus shared terminal helpers; reviewed actual transitions against public rules.",
+        "findings": "Platforms store separate real position histories; rewinding one advances the other. Charge-zero rewind now rejects without advancing simulation clock or platform state; confirmed through public controls after source audit.",
+        "followupLog": "mini-games/coverage/independent300/cross-motion-source-audit-followups.json",
+        "finalRefresh": "Full keyboard/touch win/failure/restart replays repeated after later unrelated engines and shared metadata changed whole-file hashes; reviewed C04\u201312 engine blocks unchanged."
+      },
+      "metadataOnlyRebind": {
+        "previousHash": "d61f237ad719e22de48c3f3c5790a353195c3a7aac242202ceec75409150ed2a",
+        "currentHash": "f83a3e655f8f5673886df4de6e829467af95cbf4d71d023dde55e94cdb9ce980",
+        "reason": "C03 spacing-only public guide cleanup after replay; no engine, controls or substantive rules changed. Owner freeze confirmed."
+      }
+    },
+    {
+      "designId": "C11",
+      "gameId": "many-as-one",
+      "room": "motion-room",
+      "ordinaryBeforeSource": true,
+      "fullWin": true,
+      "naturalFailure": true,
+      "failureKind": "terminal loss",
+      "restart": true,
+      "meaningfulDecisions": "Final scales require masses larger than any passage. Transported smaller bodies, split on the far side and moved the donor away before merging the required scale masses, then reunited all mass at the exit. Entering the drain caused terminal loss.",
+      "methods": [
+        "Ordinary full three-study public-control play using focused native Enter, before reading source, authored solutions or solver output.",
+        "Full native Tab-to-control plus Enter replay from the independently derived public route.",
+        "Full390px touch-only replay plus natural failure and restart.",
+        "CSS-only binding refresh after independent all24-game fixed320px/390px layout audit: mini-games/coverage/independent300/motion-mobile-layout-audit.json. Keyboard hints wrap onto separate lines;44px control minimum retained. All non-CSS runtime hashes unchanged; original gameplay provenance retained. This is not a new blind gameplay claim."
+      ],
+      "issues": [],
+      "runtimeHashes": {
+        "mini-games/motion-room/navigation.js": "4082d1165a9a412194f8378d6272b0755707e5e3811cb3c18aaac9ab130a79bb",
+        "mini-games/motion-room/room.js": "eb9a87a21caae9efb8c1c9861225eef140589cdacb9b588e64bec9ddee0fba61",
+        "mini-games/motion-room/shared.js": "08cc3892b3daad10e53fb3a70aa86539b76c9de7dbb2caaba6163e3bad998a9e",
+        "mini-games/motion-room/room.css": "b1c6606ea4f8bd14bc7f4c6e3f6c76a38c2a942004815a7a1b69258b744fbba9",
+        "mini-games/motion-room/index.html": "566094cc303494e8ea4d122145529c90e0be4e572495f6823e92200c3612ce35",
+        "mini-games/motion-room/games.json": "f83a3e655f8f5673886df4de6e829467af95cbf4d71d023dde55e94cdb9ce980"
+      },
+      "logFile": "mini-games/coverage/independent300/cross-C11-ordinary.jsonl",
+      "replayLogs": [
+        "mini-games/coverage/independent300/C11-keyboard-tab-replay.jsonl",
+        "mini-games/coverage/independent300/C11-mobile-touch-replay.jsonl"
+      ],
+      "publicActionTrace": "mini-games/coverage/independent300/c11-public-actions.json",
+      "limits": [
+        "Independent ordinary review rejected the original direct-scale split finale; acceptance refers to required pre-latch merging.",
+        "Replays are informed by earlier ordinary play, not fresh unaided solves.",
+        "Chromium emulation, not physical-device or screen-reader certification."
+      ],
+      "sourceAudit": {
+        "passed": true,
+        "timing": "After ordinary three-study wins and before final source-bound replay",
+        "scope": "Game-specific engine functions plus shared terminal helpers; reviewed actual transitions against public rules.",
+        "findings": "Integer mass is conserved across split/merge, passage limits are enforced. Final public followups confirm split into drain loses and overcapacity merge rejects while preserving two bodies and total mass6.",
+        "followupLog": "mini-games/coverage/independent300/cross-motion-source-audit-followups.json",
+        "finalRefresh": "Full keyboard/touch win/failure/restart replays repeated after later unrelated engines and shared metadata changed whole-file hashes; reviewed C04\u201312 engine blocks unchanged."
+      },
+      "metadataOnlyRebind": {
+        "previousHash": "d61f237ad719e22de48c3f3c5790a353195c3a7aac242202ceec75409150ed2a",
+        "currentHash": "f83a3e655f8f5673886df4de6e829467af95cbf4d71d023dde55e94cdb9ce980",
+        "reason": "C03 spacing-only public guide cleanup after replay; no engine, controls or substantive rules changed. Owner freeze confirmed."
+      }
+    },
+    {
+      "designId": "C12",
+      "gameId": "crater-courtesy",
+      "room": "motion-room",
+      "ordinaryBeforeSource": true,
+      "fullWin": true,
+      "naturalFailure": true,
+      "failureKind": "terminal loss",
+      "restart": true,
+      "meaningfulDecisions": "Used visible trajectory impacts and changed terrain heights to revise aiming. The final taller ridge made the earlier aim overshoot; adjusting power and accounting for the excavated target crater completed the duel. Repeated high-angle misses exhausted ammunition.",
+      "methods": [
+        "Ordinary full three-study public-control play using focused native Enter, before reading source, authored solutions or solver output.",
+        "Full native Tab-to-control plus Enter replay from the independently derived public route.",
+        "Full390px touch-only replay plus natural failure and restart.",
+        "CSS-only binding refresh after independent all24-game fixed320px/390px layout audit: mini-games/coverage/independent300/motion-mobile-layout-audit.json. Keyboard hints wrap onto separate lines;44px control minimum retained. All non-CSS runtime hashes unchanged; original gameplay provenance retained. This is not a new blind gameplay claim."
+      ],
+      "issues": [],
+      "runtimeHashes": {
+        "mini-games/motion-room/tactics.js": "1bd3baaff7d02142fac5a6cb2d8fea8bf3636103c9ed6ff22e3ee3fa43500bc5",
+        "mini-games/motion-room/room.js": "eb9a87a21caae9efb8c1c9861225eef140589cdacb9b588e64bec9ddee0fba61",
+        "mini-games/motion-room/shared.js": "08cc3892b3daad10e53fb3a70aa86539b76c9de7dbb2caaba6163e3bad998a9e",
+        "mini-games/motion-room/room.css": "b1c6606ea4f8bd14bc7f4c6e3f6c76a38c2a942004815a7a1b69258b744fbba9",
+        "mini-games/motion-room/index.html": "566094cc303494e8ea4d122145529c90e0be4e572495f6823e92200c3612ce35",
+        "mini-games/motion-room/games.json": "f83a3e655f8f5673886df4de6e829467af95cbf4d71d023dde55e94cdb9ce980"
+      },
+      "logFile": "mini-games/coverage/independent300/cross-C12-ordinary.jsonl",
+      "replayLogs": [
+        "mini-games/coverage/independent300/C12-keyboard-tab-replay.jsonl",
+        "mini-games/coverage/independent300/C12-mobile-touch-replay.jsonl"
+      ],
+      "publicActionTrace": "mini-games/coverage/independent300/c12-public-actions.json",
+      "limits": [
+        "Dig ammunition and relocation were not necessary for the observed winning route.",
+        "Accepted version resolves enemy self-damage immediately and displays both impact coordinates; original version had a late terminal check.",
+        "Replays are informed by earlier ordinary play, not fresh unaided solves.",
+        "Chromium emulation, not physical-device or screen-reader certification."
+      ],
+      "sourceAudit": {
+        "passed": true,
+        "timing": "After ordinary three-study wins and before final source-bound replay",
+        "scope": "Game-specific engine functions plus shared terminal helpers; reviewed actual transitions against public rules.",
+        "findings": "Ballistic time steps, terrain excavation, blast/support-collapse damage and enemy reply determine outcomes. Enemy self-damage terminal check runs immediately; free relocation and support-collapse rules are now accurately described.",
+        "finalRefresh": "Full keyboard/touch win/failure/restart replays repeated after later unrelated engines and shared metadata changed whole-file hashes; reviewed C04\u201312 engine blocks unchanged."
+      },
+      "metadataOnlyRebind": {
+        "previousHash": "d61f237ad719e22de48c3f3c5790a353195c3a7aac242202ceec75409150ed2a",
+        "currentHash": "f83a3e655f8f5673886df4de6e829467af95cbf4d71d023dde55e94cdb9ce980",
+        "reason": "C03 spacing-only public guide cleanup after replay; no engine, controls or substantive rules changed. Owner freeze confirmed."
+      }
+    },
+    {
+      "designId": "B05",
+      "gameId": "homeward-pips",
+      "meaningfulDecisions": "First ordinary731 match won7\u20131 on turn11: built two-checker home blocks, used a bar reentry plus second die to hit a blot, retained blocked enemy entries, recovered after an exposed runner was hit, and sequenced exact/overshoot bearing off. Public greedy most-forward-checker policy lost0\u20137 on turn11 despite the same initial deal.",
+      "methods": [
+        "Reasoned public native Enter full win before source/solver/author routes.",
+        "Public visible legal-move bad policy for contrasting full loss; no hidden state/search.",
+        "Final full native Tab/Enter and390px touch win/loss/restart replays; separate post-source same-dice undo regression."
+      ],
+      "sourceAudit": {
+        "passed": true,
+        "timing": "After ordinary full win/loss/restart",
+        "scope": "Checker conservation, hit/bar transfer, bar-first source restriction, blocked landing, doubles, complete-roll maximum-use and higher-die filtering, home-only and farthest-overshoot bearing off, confirm/undo, house terminal order. Minor linear-track and borne-off wording corrected before final replay."
+      },
+      "limits": [
+        "One initial deal independently won; no claim of optimal play or winning every seed.",
+        "Dice affect outcomes; winning policy and deliberately poor policy are separate recorded matches.",
+        "Final replays reuse ordinary decisions; undo regression is source-informed supplemental evidence.",
+        "Chromium native keyboard/touch emulation, not physical-device or screen-reader certification."
+      ],
+      "room": "parlour-room",
+      "ordinaryBeforeSource": true,
+      "fullWin": true,
+      "naturalFailure": true,
+      "restart": true,
+      "issues": [],
+      "runtimeHashes": {
+        "mini-games/parlour-room/homeward-pips.mjs": "ee4020f1656b7848ce49d0927a5d2492f09c5ecb160c39bc2efd99132eec42b1",
+        "mini-games/parlour-room/game.js": "de78315740f63cc42963b31ca55e6058c565501ed5e11874a37b68ad8ad698b8",
+        "mini-games/parlour-room/core.mjs": "339407b8d279243a25622037f7a709a9998afbbc1945ca95a36106a37402c458",
+        "mini-games/parlour-room/room.css": "7b5baf1c1951e0906b8650ab805a8ef037fa564a5a384e70ef89bce11c17eabe",
+        "mini-games/parlour-room/index.html": "328f418fab77b773e534825d0b3c570598d361fd781ddfeb9e2408ea539cbd33",
+        "mini-games/parlour-room/games.json": "2ca643577427733bb196101c550c6d8182271f2fc998d1a211ed2de121bc23b0"
+      },
+      "logFile": "mini-games/coverage/independent300/cross-B05-ordinary.jsonl",
+      "replayLogs": [
+        "mini-games/coverage/independent300/B05-keyboard-tab-replay.jsonl",
+        "mini-games/coverage/independent300/B05-mobile-touch-replay.jsonl"
+      ],
+      "publicActionTrace": "mini-games/coverage/independent300/b05-win-public-actions.json"
+    },
+    {
+      "designId": "B04",
+      "gameId": "living-perimeter",
+      "room": "parlour-room",
+      "ordinaryBeforeSource": true,
+      "fullWin": true,
+      "naturalFailure": true,
+      "restart": true,
+      "meaningfulDecisions": "Multiple opening and first-midgame losses exposed articulation pins, covered-piece immobility and dangerous queen escape gates. Second midgame16569 won at Turn17: climbed two beetles above house queen to constrain house actions; moved ants around placement exclusions; after grasshopper relocation freed the opponent, moved a second beetle to create an alternate connection and free own grasshopper; finally left the covering stack to occupy the sixth neighboring hex.",
+      "methods": [
+        "Public UI native focused Enter exploration across three opening arrangements, before reading source or authored solutions.",
+        "Ordinary completed win on16569 and completed losses on731/8650; same-deal restart observed.",
+        "Full native Tab/Enter and390px touch replays of independently derived win16569 and natural opening loss731, with restart after each."
+      ],
+      "issues": [],
+      "runtimeHashes": {
+        "mini-games/parlour-room/living-perimeter.mjs": "272d1c0f1e3c572efd18f681ef5ba529faa96414bc6d355a61931c197b34785d",
+        "mini-games/parlour-room/game.js": "de78315740f63cc42963b31ca55e6058c565501ed5e11874a37b68ad8ad698b8",
+        "mini-games/parlour-room/core.mjs": "339407b8d279243a25622037f7a709a9998afbbc1945ca95a36106a37402c458",
+        "mini-games/parlour-room/room.css": "7b5baf1c1951e0906b8650ab805a8ef037fa564a5a384e70ef89bce11c17eabe",
+        "mini-games/parlour-room/index.html": "328f418fab77b773e534825d0b3c570598d361fd781ddfeb9e2408ea539cbd33",
+        "mini-games/parlour-room/games.json": "2ca643577427733bb196101c550c6d8182271f2fc998d1a211ed2de121bc23b0"
+      },
+      "logFile": "mini-games/coverage/independent300/cross-B04-ordinary.jsonl",
+      "replayLogs": [
+        "mini-games/coverage/independent300/B04-keyboard-tab-replay.jsonl",
+        "mini-games/coverage/independent300/B04-mobile-touch-replay.jsonl"
+      ],
+      "publicActionTrace": "mini-games/coverage/independent300/b04-win-public-actions.json",
+      "sourceAudit": {
+        "passed": true,
+        "timing": "After ordinary full win, natural full losses and restart",
+        "scope": "Connected occupied hive before/after movement; true axial neighbors and gate heights; ant perimeter search, straight occupied-line jumps, reserve contact and queen deadline; stacked-queen surround, legal pass, terminal checks and repetition tracking. Initial position repetition count corrected following audit."
+      },
+      "limits": [
+        "Independent win is on the second midgame16569; empty opening731 and first midgame8650 were played extensively but not independently won.",
+        "The winning lock temporarily forced opponent passes, then enemy movement resumed; no claim that this opponent is equally strong in all arrangements.",
+        "Replays use earlier ordinary decisions and are not fresh unaided solves.",
+        "Chromium keyboard/touch emulation, not physical device or screen-reader certification."
+      ]
+    },
+    {
+      "designId": "B22",
+      "gameId": "factory-mosaic",
+      "room": "parlour-room",
+      "ordinaryBeforeSource": true,
+      "fullWin": true,
+      "naturalFailure": true,
+      "restart": true,
+      "meaningfulDecisions": "First source-free match won53\u201349 across five rounds: built a column, reserved long patterns, denied house completion colors, accepted selected overflow and left the house unwanted lots. A separate legal discard policy lost0\u201363.",
+      "methods": [
+        "Fresh ordinary public-UI focused Enter match before any runtime, authored solution or solver was read.",
+        "Full native Tab/Enter and390px touch replays of the independently derived55-action winning route.",
+        "Legal bad-draft loss, same-deal reset and outcome checks on both input modes."
+      ],
+      "issues": [],
+      "runtimeHashes": {
+        "mini-games/parlour-room/factory-mosaic.mjs": "eca21903b531bc2117aa50dd68378b51417c6946e3b8b731a3de4f1378dd7052",
+        "mini-games/parlour-room/game.js": "de78315740f63cc42963b31ca55e6058c565501ed5e11874a37b68ad8ad698b8",
+        "mini-games/parlour-room/core.mjs": "339407b8d279243a25622037f7a709a9998afbbc1945ca95a36106a37402c458",
+        "mini-games/parlour-room/room.css": "7b5baf1c1951e0906b8650ab805a8ef037fa564a5a384e70ef89bce11c17eabe",
+        "mini-games/parlour-room/index.html": "328f418fab77b773e534825d0b3c570598d361fd781ddfeb9e2408ea539cbd33",
+        "mini-games/parlour-room/games.json": "2ca643577427733bb196101c550c6d8182271f2fc998d1a211ed2de121bc23b0"
+      },
+      "logFile": "mini-games/coverage/independent300/cross-B22-ordinary.jsonl",
+      "replayLogs": [
+        "mini-games/coverage/independent300/B22-keyboard-tab-replay.jsonl",
+        "mini-games/coverage/independent300/B22-mobile-touch-replay.jsonl"
+      ],
+      "publicActionTrace": "mini-games/coverage/independent300/b22-public-actions.json",
+      "sourceAudit": {
+        "passed": true,
+        "timing": "After first source-free ordinary win/loss/restart",
+        "scope": "Draft conservation, pattern completion, adjacency score, penalties/bonuses, corrected house nonfull-row eligibility, shared action and terminal guards."
+      },
+      "limits": [
+        "Only deal731 independently played to a win; no claim of winning every seed.",
+        "The losing policy deliberately discards legal drafts; winning proof is a separate actual53\u201349 match.",
+        "Replays are informed by earlier ordinary play, not new unaided solves.",
+        "Chromium touch emulation and native keyboard navigation, not physical device or screen reader."
+      ]
+    },
+    {
+      "designId": "B15",
+      "gameId": "ascending-expeditions",
+      "meaningfulDecisions": "Ordered investment/ascending commitments, withholding high cards from an invested opponent, drawing useful shared low cards before advancing own route, and avoiding irreversible unprofitable late routes. Reasoned three-round policy won83:23; naive high-card commit/discard policy lost-116:6 on same deal.",
+      "methods": [
+        "Original full three-round ordinary win83:-17 and loss-116:2 before source or authored routes.",
+        "Original audit found late house investment impossible to repay; owner fixed public-stock/turn-cap horizon.",
+        "Revised public full win83:23 and loss-116:6 followed original audit; native Tab/Enter and390px touch routes repeated final runtime."
+      ],
+      "sourceAudit": {
+        "passed": true,
+        "timing": "After original ordinary complete matches; revised horizon inspected after revised public full win.",
+        "scope": "Card conservation and hand/draw transfers, monotonic ranks and investments before numbers, score/debt multipliers and eight-card bonus, just-discarded-suit restriction, final-stock/no-progress/turn-cap termination. AI uses own hand/public stock count, rejects newly opened/invested routes with impossible optimistic repayment horizon, permits higher scoring last-turn card instead of waiting for lower one; no hidden deck values read."
+      },
+      "limits": [
+        "One deal over three rounds independently reasoned; no claim of optimal play or winning every seed.",
+        "Final revised AI follow-up is post-source, with original source-blind route unchanged; original ordinary provenance is retained rather than relabeled.",
+        "Poor-policy loss is separate from reasoned win.",
+        "Chromium native keyboard/touch emulation, not physical-device or screen-reader certification."
+      ],
+      "room": "parlour-room",
+      "ordinaryBeforeSource": true,
+      "fullWin": true,
+      "naturalFailure": true,
+      "restart": true,
+      "issues": [],
+      "runtimeHashes": {
+        "mini-games/parlour-room/ascending-expeditions.mjs": "b81f09c4baab5ac19e61292f8d3863dacf9801286bd1b5531723a058f1e72ec8",
+        "mini-games/parlour-room/game.js": "de78315740f63cc42963b31ca55e6058c565501ed5e11874a37b68ad8ad698b8",
+        "mini-games/parlour-room/core.mjs": "339407b8d279243a25622037f7a709a9998afbbc1945ca95a36106a37402c458",
+        "mini-games/parlour-room/room.css": "7b5baf1c1951e0906b8650ab805a8ef037fa564a5a384e70ef89bce11c17eabe",
+        "mini-games/parlour-room/index.html": "328f418fab77b773e534825d0b3c570598d361fd781ddfeb9e2408ea539cbd33",
+        "mini-games/parlour-room/games.json": "2ca643577427733bb196101c550c6d8182271f2fc998d1a211ed2de121bc23b0"
+      },
+      "logFile": "mini-games/coverage/independent300/cross-B15-ordinary.jsonl",
+      "replayLogs": [
+        "mini-games/coverage/independent300/B15-keyboard-tab-replay.jsonl",
+        "mini-games/coverage/independent300/B15-mobile-touch-replay.jsonl"
+      ],
+      "publicActionTrace": "mini-games/coverage/independent300/b15-win-public-actions.json",
+      "revisionFollowupLog": "mini-games/coverage/independent300/cross-B15-final-followup.jsonl"
+    }
+  ],
+  "limits": [
+    "Ordinary motion-room play preceded all implementation reading; scoped source audit followed those wins. No authored solutions or solver routes were used.",
+    "Runtime hashes bind final full keyboard/touch replays; initial exploratory runs sometimes preceded explicitly documented revisions.",
+    "No claim of exhaustive optimality, physical-device testing, or screen-reader certification."
+  ]
+}

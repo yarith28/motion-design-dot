@@ -49,7 +49,7 @@ async function win(page,touch=false,choices=['power','orbs']){
  const page=await browser.newPage({viewport:{width:1440,height:1150}});await setup(page);
  await page.goto(base+'/mini-games/');assert.equal(await page.locator('[data-category]:visible').count(),inventory.length);
  await page.locator('[data-filter="adventure"]').click();assert.equal(await page.locator('[data-category]:visible').count(),categoryCount('adventure'));
- await page.getByRole('link',{name:'Enter the night garden'}).click();await page.screenshot({path:out+'/intro-desktop.png',fullPage:true});
+ await page.getByRole('link',{name:'Enter the night garden'}).click();await page.waitForFunction(()=>typeof window.probe==='function');await page.screenshot({path:out+'/intro-desktop.png',fullPage:true});
  assert.equal((await page.evaluate(()=>probe())).audio,null);
  await page.locator('#begin').click();await page.locator('#sound').click();assert.equal((await page.evaluate(()=>probe())).sound,true);
  await page.locator('#sound').click();assert.equal((await page.evaluate(()=>probe())).sound,false);
@@ -69,7 +69,7 @@ async function win(page,touch=false,choices=['power','orbs']){
  // Recalling a fresh volley sacrifices the turn. Eventually exhaust rescue and lose.
  let rescued=false;for(let i=0;i<12;i++){let p=await page.evaluate(()=>probe());if(p.mode==='lost')break;await page.locator('#launch').click();await page.locator('#recall').click();p=await page.evaluate(()=>probe());if(p.saves===0)rescued=true}
  assert.equal((await page.evaluate(()=>probe())).mode,'lost');assert.equal(rescued,true);await page.screenshot({path:out+'/loss-desktop.png',fullPage:true});
- await page.getByRole('link',{name:'All games',exact:false}).click();await page.getByRole('link',{name:'Enter the night garden'}).click();assert.equal(await page.locator('#best').innerText(),best);
+ await page.getByRole('link',{name:'All games',exact:false}).click();await page.getByRole('link',{name:'Enter the night garden'}).click();await page.waitForFunction(()=>typeof window.probe==='function');assert.equal(await page.locator('#best').innerText(),best);
  let mobileScore;
  for(const failure of ['read','write']){
   const context=await browser.newContext({viewport:{width:390,height:844},isMobile:true,hasTouch:true,deviceScaleFactor:2,reducedMotion:'reduce'});

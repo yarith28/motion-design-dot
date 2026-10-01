@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "phase": "post-ordinary-source-audit",
+  "checks": [
+    "Attack from outside supported destination cuts support even when attack bounces; supported invasion then fails",
+    "Attack originating at supported destination preserves support under the stated exception",
+    "Editing a public human order does not reseal or alter opponents’ committed orders",
+    "Swapping an unrevealed distant human rank for a mine does not change the tested house choice"
+  ],
+  "limits": [
+    "Hand-built states test narrow structural properties only, never ordinary win reachability.",
+    "Orders uses its stated simplified swap/support rules; no claim of complete Diplomacy rules equivalence."
+  ]
+}

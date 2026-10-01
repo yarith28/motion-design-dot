@@ -1,0 +1,442 @@
+{
+  "passed": true,
+  "records": [
+    {
+      "designId": "C04",
+      "gameId": "step-and-spring",
+      "mode": "keyboard-tab",
+      "fullWin": true,
+      "naturalFailure": true,
+      "restart": true,
+      "touchOnly": false,
+      "runtimeHashes": {
+        "mini-games/motion-room/navigation.js": "4082d1165a9a412194f8378d6272b0755707e5e3811cb3c18aaac9ab130a79bb",
+        "mini-games/motion-room/room.js": "eb9a87a21caae9efb8c1c9861225eef140589cdacb9b588e64bec9ddee0fba61",
+        "mini-games/motion-room/shared.js": "08cc3892b3daad10e53fb3a70aa86539b76c9de7dbb2caaba6163e3bad998a9e",
+        "mini-games/motion-room/room.css": "a34568abf16c13760d779c6ee8825375b5d3e45304bbef8d3711a00fa1273ff8",
+        "mini-games/motion-room/index.html": "566094cc303494e8ea4d122145529c90e0be4e572495f6823e92200c3612ce35",
+        "mini-games/motion-room/games.json": "f83a3e655f8f5673886df4de6e829467af95cbf4d71d023dde55e94cdb9ce980"
+      },
+      "logFile": "mini-games/coverage/independent300/C04-keyboard-tab-replay.jsonl",
+      "provenance": "Replay of independent ordinary UI-derived route; no implementation, solver, hidden game state or solution file inspected.",
+      "metadataOnlyRebind": {
+        "previousHash": "d61f237ad719e22de48c3f3c5790a353195c3a7aac242202ceec75409150ed2a",
+        "currentHash": "f83a3e655f8f5673886df4de6e829467af95cbf4d71d023dde55e94cdb9ce980",
+        "reason": "C03 spacing-only public guide cleanup after replay; no engine, controls or substantive rules changed. Owner freeze confirmed."
+      }
+    },
+    {
+      "designId": "C04",
+      "gameId": "step-and-spring",
+      "mode": "mobile-touch",
+      "fullWin": true,
+      "naturalFailure": true,
+      "restart": true,
+      "touchOnly": true,
+      "runtimeHashes": {
+        "mini-games/motion-room/navigation.js": "4082d1165a9a412194f8378d6272b0755707e5e3811cb3c18aaac9ab130a79bb",
+        "mini-games/motion-room/room.js": "eb9a87a21caae9efb8c1c9861225eef140589cdacb9b588e64bec9ddee0fba61",
+        "mini-games/motion-room/shared.js": "08cc3892b3daad10e53fb3a70aa86539b76c9de7dbb2caaba6163e3bad998a9e",
+        "mini-games/motion-room/room.css": "a34568abf16c13760d779c6ee8825375b5d3e45304bbef8d3711a00fa1273ff8",
+        "mini-games/motion-room/index.html": "566094cc303494e8ea4d122145529c90e0be4e572495f6823e92200c3612ce35",
+        "mini-games/motion-room/games.json": "f83a3e655f8f5673886df4de6e829467af95cbf4d71d023dde55e94cdb9ce980"
+      },
+      "logFile": "mini-games/coverage/independent300/C04-mobile-touch-replay.jsonl",
+      "provenance": "Replay of independent ordinary UI-derived route; no implementation, solver, hidden game state or solution file inspected.",
+      "metadataOnlyRebind": {
+        "previousHash": "d61f237ad719e22de48c3f3c5790a353195c3a7aac242202ceec75409150ed2a",
+        "currentHash": "f83a3e655f8f5673886df4de6e829467af95cbf4d71d023dde55e94cdb9ce980",
+        "reason": "C03 spacing-only public guide cleanup after replay; no engine, controls or substantive rules changed. Owner freeze confirmed."
+      }
+    },
+    {
+      "designId": "C05",
+      "gameId": "lantern-lanes",
+      "mode": "keyboard-tab",
+      "fullWin": true,
+      "naturalFailure": true,
+      "restart": true,
+      "touchOnly": false,
+      "runtimeHashes": {
+        "mini-games/motion-room/navigation.js": "4082d1165a9a412194f8378d6272b0755707e5e3811cb3c18aaac9ab130a79bb",
+        "mini-games/motion-room/room.js": "eb9a87a21caae9efb8c1c9861225eef140589cdacb9b588e64bec9ddee0fba61",
+        "mini-games/motion-room/shared.js": "08cc3892b3daad10e53fb3a70aa86539b76c9de7dbb2caaba6163e3bad998a9e",
+        "mini-games/motion-room/room.css": "a34568abf16c13760d779c6ee8825375b5d3e45304bbef8d3711a00fa1273ff8",
+        "mini-games/motion-room/index.html": "566094cc303494e8ea4d122145529c90e0be4e572495f6823e92200c3612ce35",
+        "mini-games/motion-room/games.json": "f83a3e655f8f5673886df4de6e829467af95cbf4d71d023dde55e94cdb9ce980"
+      },
+      "logFile": "mini-games/coverage/independent300/C05-keyboard-tab-replay.jsonl",
+      "provenance": "Replay of independent ordinary UI-derived route; no implementation, solver, hidden game state or solution file inspected.",
+      "metadataOnlyRebind": {
+        "previousHash": "d61f237ad719e22de48c3f3c5790a353195c3a7aac242202ceec75409150ed2a",
+        "currentHash": "f83a3e655f8f5673886df4de6e829467af95cbf4d71d023dde55e94cdb9ce980",
+        "reason": "C03 spacing-only public guide cleanup after replay; no engine, controls or substantive rules changed. Owner freeze confirmed."
+      }
+    },
+    {
+      "designId": "C05",
+      "gameId": "lantern-lanes",
+      "mode": "mobile-touch",
+      "fullWin": true,
+      "naturalFailure": true,
+      "restart": true,
+      "touchOnly": true,
+      "runtimeHashes": {
+        "mini-games/motion-room/navigation.js": "4082d1165a9a412194f8378d6272b0755707e5e3811cb3c18aaac9ab130a79bb",
+        "mini-games/motion-room/room.js": "eb9a87a21caae9efb8c1c9861225eef140589cdacb9b588e64bec9ddee0fba61",
+        "mini-games/motion-room/shared.js": "08cc3892b3daad10e53fb3a70aa86539b76c9de7dbb2caaba6163e3bad998a9e",
+        "mini-games/motion-room/room.css": "a34568abf16c13760d779c6ee8825375b5d3e45304bbef8d3711a00fa1273ff8",
+        "mini-games/motion-room/index.html": "566094cc303494e8ea4d122145529c90e0be4e572495f6823e92200c3612ce35",
+        "mini-games/motion-room/games.json": "f83a3e655f8f5673886df4de6e829467af95cbf4d71d023dde55e94cdb9ce980"
+      },
+      "logFile": "mini-games/coverage/independent300/C05-mobile-touch-replay.jsonl",
+      "provenance": "Replay of independent ordinary UI-derived route; no implementation, solver, hidden game state or solution file inspected.",
+      "metadataOnlyRebind": {
+        "previousHash": "d61f237ad719e22de48c3f3c5790a353195c3a7aac242202ceec75409150ed2a",
+        "currentHash": "f83a3e655f8f5673886df4de6e829467af95cbf4d71d023dde55e94cdb9ce980",
+        "reason": "C03 spacing-only public guide cleanup after replay; no engine, controls or substantive rules changed. Owner freeze confirmed."
+      }
+    },
+    {
+      "designId": "C06",
+      "gameId": "threaded-return",
+      "mode": "keyboard-tab",
+      "fullWin": true,
+      "naturalFailure": true,
+      "restart": true,
+      "touchOnly": false,
+      "runtimeHashes": {
+        "mini-games/motion-room/navigation.js": "4082d1165a9a412194f8378d6272b0755707e5e3811cb3c18aaac9ab130a79bb",
+        "mini-games/motion-room/room.js": "eb9a87a21caae9efb8c1c9861225eef140589cdacb9b588e64bec9ddee0fba61",
+        "mini-games/motion-room/shared.js": "08cc3892b3daad10e53fb3a70aa86539b76c9de7dbb2caaba6163e3bad998a9e",
+        "mini-games/motion-room/room.css": "a34568abf16c13760d779c6ee8825375b5d3e45304bbef8d3711a00fa1273ff8",
+        "mini-games/motion-room/index.html": "566094cc303494e8ea4d122145529c90e0be4e572495f6823e92200c3612ce35",
+        "mini-games/motion-room/games.json": "f83a3e655f8f5673886df4de6e829467af95cbf4d71d023dde55e94cdb9ce980"
+      },
+      "logFile": "mini-games/coverage/independent300/C06-keyboard-tab-replay.jsonl",
+      "provenance": "Replay of independent ordinary UI-derived route; no implementation, solver, hidden game state or solution file inspected.",
+      "metadataOnlyRebind": {
+        "previousHash": "d61f237ad719e22de48c3f3c5790a353195c3a7aac242202ceec75409150ed2a",
+        "currentHash": "f83a3e655f8f5673886df4de6e829467af95cbf4d71d023dde55e94cdb9ce980",
+        "reason": "C03 spacing-only public guide cleanup after replay; no engine, controls or substantive rules changed. Owner freeze confirmed."
+      }
+    },
+    {
+      "designId": "C06",
+      "gameId": "threaded-return",
+      "mode": "mobile-touch",
+      "fullWin": true,
+      "naturalFailure": true,
+      "restart": true,
+      "touchOnly": true,
+      "runtimeHashes": {
+        "mini-games/motion-room/navigation.js": "4082d1165a9a412194f8378d6272b0755707e5e3811cb3c18aaac9ab130a79bb",
+        "mini-games/motion-room/room.js": "eb9a87a21caae9efb8c1c9861225eef140589cdacb9b588e64bec9ddee0fba61",
+        "mini-games/motion-room/shared.js": "08cc3892b3daad10e53fb3a70aa86539b76c9de7dbb2caaba6163e3bad998a9e",
+        "mini-games/motion-room/room.css": "a34568abf16c13760d779c6ee8825375b5d3e45304bbef8d3711a00fa1273ff8",
+        "mini-games/motion-room/index.html": "566094cc303494e8ea4d122145529c90e0be4e572495f6823e92200c3612ce35",
+        "mini-games/motion-room/games.json": "f83a3e655f8f5673886df4de6e829467af95cbf4d71d023dde55e94cdb9ce980"
+      },
+      "logFile": "mini-games/coverage/independent300/C06-mobile-touch-replay.jsonl",
+      "provenance": "Replay of independent ordinary UI-derived route; no implementation, solver, hidden game state or solution file inspected.",
+      "metadataOnlyRebind": {
+        "previousHash": "d61f237ad719e22de48c3f3c5790a353195c3a7aac242202ceec75409150ed2a",
+        "currentHash": "f83a3e655f8f5673886df4de6e829467af95cbf4d71d023dde55e94cdb9ce980",
+        "reason": "C03 spacing-only public guide cleanup after replay; no engine, controls or substantive rules changed. Owner freeze confirmed."
+      }
+    },
+    {
+      "designId": "C07",
+      "gameId": "magnetic-quartet",
+      "mode": "keyboard-tab",
+      "fullWin": true,
+      "naturalFailure": true,
+      "restart": true,
+      "touchOnly": false,
+      "runtimeHashes": {
+        "mini-games/motion-room/physics.js": "cc646acf5e28b9796fe068331ad637c234e44f2c7f6b0a664f109f962621b688",
+        "mini-games/motion-room/room.js": "eb9a87a21caae9efb8c1c9861225eef140589cdacb9b588e64bec9ddee0fba61",
+        "mini-games/motion-room/shared.js": "08cc3892b3daad10e53fb3a70aa86539b76c9de7dbb2caaba6163e3bad998a9e",
+        "mini-games/motion-room/room.css": "a34568abf16c13760d779c6ee8825375b5d3e45304bbef8d3711a00fa1273ff8",
+        "mini-games/motion-room/index.html": "566094cc303494e8ea4d122145529c90e0be4e572495f6823e92200c3612ce35",
+        "mini-games/motion-room/games.json": "f83a3e655f8f5673886df4de6e829467af95cbf4d71d023dde55e94cdb9ce980"
+      },
+      "logFile": "mini-games/coverage/independent300/C07-keyboard-tab-replay.jsonl",
+      "provenance": "Replay of independent ordinary UI-derived route; no implementation, solver, hidden game state or solution file inspected.",
+      "metadataOnlyRebind": {
+        "previousHash": "d61f237ad719e22de48c3f3c5790a353195c3a7aac242202ceec75409150ed2a",
+        "currentHash": "f83a3e655f8f5673886df4de6e829467af95cbf4d71d023dde55e94cdb9ce980",
+        "reason": "C03 spacing-only public guide cleanup after replay; no engine, controls or substantive rules changed. Owner freeze confirmed."
+      }
+    },
+    {
+      "designId": "C07",
+      "gameId": "magnetic-quartet",
+      "mode": "mobile-touch",
+      "fullWin": true,
+      "naturalFailure": true,
+      "restart": true,
+      "touchOnly": true,
+      "runtimeHashes": {
+        "mini-games/motion-room/physics.js": "cc646acf5e28b9796fe068331ad637c234e44f2c7f6b0a664f109f962621b688",
+        "mini-games/motion-room/room.js": "eb9a87a21caae9efb8c1c9861225eef140589cdacb9b588e64bec9ddee0fba61",
+        "mini-games/motion-room/shared.js": "08cc3892b3daad10e53fb3a70aa86539b76c9de7dbb2caaba6163e3bad998a9e",
+        "mini-games/motion-room/room.css": "a34568abf16c13760d779c6ee8825375b5d3e45304bbef8d3711a00fa1273ff8",
+        "mini-games/motion-room/index.html": "566094cc303494e8ea4d122145529c90e0be4e572495f6823e92200c3612ce35",
+        "mini-games/motion-room/games.json": "f83a3e655f8f5673886df4de6e829467af95cbf4d71d023dde55e94cdb9ce980"
+      },
+      "logFile": "mini-games/coverage/independent300/C07-mobile-touch-replay.jsonl",
+      "provenance": "Replay of independent ordinary UI-derived route; no implementation, solver, hidden game state or solution file inspected.",
+      "metadataOnlyRebind": {
+        "previousHash": "d61f237ad719e22de48c3f3c5790a353195c3a7aac242202ceec75409150ed2a",
+        "currentHash": "f83a3e655f8f5673886df4de6e829467af95cbf4d71d023dde55e94cdb9ce980",
+        "reason": "C03 spacing-only public guide cleanup after replay; no engine, controls or substantive rules changed. Owner freeze confirmed."
+      }
+    },
+    {
+      "designId": "C08",
+      "gameId": "span-workshop",
+      "mode": "keyboard-tab",
+      "fullWin": true,
+      "naturalFailure": true,
+      "restart": true,
+      "touchOnly": false,
+      "runtimeHashes": {
+        "mini-games/motion-room/physics.js": "cc646acf5e28b9796fe068331ad637c234e44f2c7f6b0a664f109f962621b688",
+        "mini-games/motion-room/room.js": "eb9a87a21caae9efb8c1c9861225eef140589cdacb9b588e64bec9ddee0fba61",
+        "mini-games/motion-room/shared.js": "08cc3892b3daad10e53fb3a70aa86539b76c9de7dbb2caaba6163e3bad998a9e",
+        "mini-games/motion-room/room.css": "a34568abf16c13760d779c6ee8825375b5d3e45304bbef8d3711a00fa1273ff8",
+        "mini-games/motion-room/index.html": "566094cc303494e8ea4d122145529c90e0be4e572495f6823e92200c3612ce35",
+        "mini-games/motion-room/games.json": "f83a3e655f8f5673886df4de6e829467af95cbf4d71d023dde55e94cdb9ce980"
+      },
+      "logFile": "mini-games/coverage/independent300/C08-keyboard-tab-replay.jsonl",
+      "provenance": "Replay of independent ordinary UI-derived route; no implementation, solver, hidden game state or solution file inspected.",
+      "metadataOnlyRebind": {
+        "previousHash": "d61f237ad719e22de48c3f3c5790a353195c3a7aac242202ceec75409150ed2a",
+        "currentHash": "f83a3e655f8f5673886df4de6e829467af95cbf4d71d023dde55e94cdb9ce980",
+        "reason": "C03 spacing-only public guide cleanup after replay; no engine, controls or substantive rules changed. Owner freeze confirmed."
+      }
+    },
+    {
+      "designId": "C08",
+      "gameId": "span-workshop",
+      "mode": "mobile-touch",
+      "fullWin": true,
+      "naturalFailure": true,
+      "restart": true,
+      "touchOnly": true,
+      "runtimeHashes": {
+        "mini-games/motion-room/physics.js": "cc646acf5e28b9796fe068331ad637c234e44f2c7f6b0a664f109f962621b688",
+        "mini-games/motion-room/room.js": "eb9a87a21caae9efb8c1c9861225eef140589cdacb9b588e64bec9ddee0fba61",
+        "mini-games/motion-room/shared.js": "08cc3892b3daad10e53fb3a70aa86539b76c9de7dbb2caaba6163e3bad998a9e",
+        "mini-games/motion-room/room.css": "a34568abf16c13760d779c6ee8825375b5d3e45304bbef8d3711a00fa1273ff8",
+        "mini-games/motion-room/index.html": "566094cc303494e8ea4d122145529c90e0be4e572495f6823e92200c3612ce35",
+        "mini-games/motion-room/games.json": "f83a3e655f8f5673886df4de6e829467af95cbf4d71d023dde55e94cdb9ce980"
+      },
+      "logFile": "mini-games/coverage/independent300/C08-mobile-touch-replay.jsonl",
+      "provenance": "Replay of independent ordinary UI-derived route; no implementation, solver, hidden game state or solution file inspected.",
+      "metadataOnlyRebind": {
+        "previousHash": "d61f237ad719e22de48c3f3c5790a353195c3a7aac242202ceec75409150ed2a",
+        "currentHash": "f83a3e655f8f5673886df4de6e829467af95cbf4d71d023dde55e94cdb9ce980",
+        "reason": "C03 spacing-only public guide cleanup after replay; no engine, controls or substantive rules changed. Owner freeze confirmed."
+      }
+    },
+    {
+      "designId": "C09",
+      "gameId": "corner-carry",
+      "mode": "keyboard-tab",
+      "fullWin": true,
+      "naturalFailure": true,
+      "restart": true,
+      "touchOnly": false,
+      "runtimeHashes": {
+        "mini-games/motion-room/navigation.js": "4082d1165a9a412194f8378d6272b0755707e5e3811cb3c18aaac9ab130a79bb",
+        "mini-games/motion-room/room.js": "eb9a87a21caae9efb8c1c9861225eef140589cdacb9b588e64bec9ddee0fba61",
+        "mini-games/motion-room/shared.js": "08cc3892b3daad10e53fb3a70aa86539b76c9de7dbb2caaba6163e3bad998a9e",
+        "mini-games/motion-room/room.css": "a34568abf16c13760d779c6ee8825375b5d3e45304bbef8d3711a00fa1273ff8",
+        "mini-games/motion-room/index.html": "566094cc303494e8ea4d122145529c90e0be4e572495f6823e92200c3612ce35",
+        "mini-games/motion-room/games.json": "f83a3e655f8f5673886df4de6e829467af95cbf4d71d023dde55e94cdb9ce980"
+      },
+      "logFile": "mini-games/coverage/independent300/C09-keyboard-tab-replay.jsonl",
+      "provenance": "Replay of independent ordinary UI-derived route; no implementation, solver, hidden game state or solution file inspected.",
+      "metadataOnlyRebind": {
+        "previousHash": "d61f237ad719e22de48c3f3c5790a353195c3a7aac242202ceec75409150ed2a",
+        "currentHash": "f83a3e655f8f5673886df4de6e829467af95cbf4d71d023dde55e94cdb9ce980",
+        "reason": "C03 spacing-only public guide cleanup after replay; no engine, controls or substantive rules changed. Owner freeze confirmed."
+      }
+    },
+    {
+      "designId": "C09",
+      "gameId": "corner-carry",
+      "mode": "mobile-touch",
+      "fullWin": true,
+      "naturalFailure": true,
+      "restart": true,
+      "touchOnly": true,
+      "runtimeHashes": {
+        "mini-games/motion-room/navigation.js": "4082d1165a9a412194f8378d6272b0755707e5e3811cb3c18aaac9ab130a79bb",
+        "mini-games/motion-room/room.js": "eb9a87a21caae9efb8c1c9861225eef140589cdacb9b588e64bec9ddee0fba61",
+        "mini-games/motion-room/shared.js": "08cc3892b3daad10e53fb3a70aa86539b76c9de7dbb2caaba6163e3bad998a9e",
+        "mini-games/motion-room/room.css": "a34568abf16c13760d779c6ee8825375b5d3e45304bbef8d3711a00fa1273ff8",
+        "mini-games/motion-room/index.html": "566094cc303494e8ea4d122145529c90e0be4e572495f6823e92200c3612ce35",
+        "mini-games/motion-room/games.json": "f83a3e655f8f5673886df4de6e829467af95cbf4d71d023dde55e94cdb9ce980"
+      },
+      "logFile": "mini-games/coverage/independent300/C09-mobile-touch-replay.jsonl",
+      "provenance": "Replay of independent ordinary UI-derived route; no implementation, solver, hidden game state or solution file inspected.",
+      "metadataOnlyRebind": {
+        "previousHash": "d61f237ad719e22de48c3f3c5790a353195c3a7aac242202ceec75409150ed2a",
+        "currentHash": "f83a3e655f8f5673886df4de6e829467af95cbf4d71d023dde55e94cdb9ce980",
+        "reason": "C03 spacing-only public guide cleanup after replay; no engine, controls or substantive rules changed. Owner freeze confirmed."
+      }
+    },
+    {
+      "designId": "C10",
+      "gameId": "borrowed-seconds",
+      "mode": "keyboard-tab",
+      "fullWin": true,
+      "naturalFailure": true,
+      "restart": true,
+      "touchOnly": false,
+      "runtimeHashes": {
+        "mini-games/motion-room/navigation.js": "4082d1165a9a412194f8378d6272b0755707e5e3811cb3c18aaac9ab130a79bb",
+        "mini-games/motion-room/room.js": "eb9a87a21caae9efb8c1c9861225eef140589cdacb9b588e64bec9ddee0fba61",
+        "mini-games/motion-room/shared.js": "08cc3892b3daad10e53fb3a70aa86539b76c9de7dbb2caaba6163e3bad998a9e",
+        "mini-games/motion-room/room.css": "a34568abf16c13760d779c6ee8825375b5d3e45304bbef8d3711a00fa1273ff8",
+        "mini-games/motion-room/index.html": "566094cc303494e8ea4d122145529c90e0be4e572495f6823e92200c3612ce35",
+        "mini-games/motion-room/games.json": "f83a3e655f8f5673886df4de6e829467af95cbf4d71d023dde55e94cdb9ce980"
+      },
+      "logFile": "mini-games/coverage/independent300/C10-keyboard-tab-replay.jsonl",
+      "provenance": "Replay of independent ordinary UI-derived route; no implementation, solver, hidden game state or solution file inspected.",
+      "metadataOnlyRebind": {
+        "previousHash": "d61f237ad719e22de48c3f3c5790a353195c3a7aac242202ceec75409150ed2a",
+        "currentHash": "f83a3e655f8f5673886df4de6e829467af95cbf4d71d023dde55e94cdb9ce980",
+        "reason": "C03 spacing-only public guide cleanup after replay; no engine, controls or substantive rules changed. Owner freeze confirmed."
+      }
+    },
+    {
+      "designId": "C10",
+      "gameId": "borrowed-seconds",
+      "mode": "mobile-touch",
+      "fullWin": true,
+      "naturalFailure": true,
+      "restart": true,
+      "touchOnly": true,
+      "runtimeHashes": {
+        "mini-games/motion-room/navigation.js": "4082d1165a9a412194f8378d6272b0755707e5e3811cb3c18aaac9ab130a79bb",
+        "mini-games/motion-room/room.js": "eb9a87a21caae9efb8c1c9861225eef140589cdacb9b588e64bec9ddee0fba61",
+        "mini-games/motion-room/shared.js": "08cc3892b3daad10e53fb3a70aa86539b76c9de7dbb2caaba6163e3bad998a9e",
+        "mini-games/motion-room/room.css": "a34568abf16c13760d779c6ee8825375b5d3e45304bbef8d3711a00fa1273ff8",
+        "mini-games/motion-room/index.html": "566094cc303494e8ea4d122145529c90e0be4e572495f6823e92200c3612ce35",
+        "mini-games/motion-room/games.json": "f83a3e655f8f5673886df4de6e829467af95cbf4d71d023dde55e94cdb9ce980"
+      },
+      "logFile": "mini-games/coverage/independent300/C10-mobile-touch-replay.jsonl",
+      "provenance": "Replay of independent ordinary UI-derived route; no implementation, solver, hidden game state or solution file inspected.",
+      "metadataOnlyRebind": {
+        "previousHash": "d61f237ad719e22de48c3f3c5790a353195c3a7aac242202ceec75409150ed2a",
+        "currentHash": "f83a3e655f8f5673886df4de6e829467af95cbf4d71d023dde55e94cdb9ce980",
+        "reason": "C03 spacing-only public guide cleanup after replay; no engine, controls or substantive rules changed. Owner freeze confirmed."
+      }
+    },
+    {
+      "designId": "C11",
+      "gameId": "many-as-one",
+      "mode": "keyboard-tab",
+      "fullWin": true,
+      "naturalFailure": true,
+      "restart": true,
+      "touchOnly": false,
+      "runtimeHashes": {
+        "mini-games/motion-room/navigation.js": "4082d1165a9a412194f8378d6272b0755707e5e3811cb3c18aaac9ab130a79bb",
+        "mini-games/motion-room/room.js": "eb9a87a21caae9efb8c1c9861225eef140589cdacb9b588e64bec9ddee0fba61",
+        "mini-games/motion-room/shared.js": "08cc3892b3daad10e53fb3a70aa86539b76c9de7dbb2caaba6163e3bad998a9e",
+        "mini-games/motion-room/room.css": "a34568abf16c13760d779c6ee8825375b5d3e45304bbef8d3711a00fa1273ff8",
+        "mini-games/motion-room/index.html": "566094cc303494e8ea4d122145529c90e0be4e572495f6823e92200c3612ce35",
+        "mini-games/motion-room/games.json": "f83a3e655f8f5673886df4de6e829467af95cbf4d71d023dde55e94cdb9ce980"
+      },
+      "logFile": "mini-games/coverage/independent300/C11-keyboard-tab-replay.jsonl",
+      "provenance": "Replay of independent ordinary UI-derived route; no implementation, solver, hidden game state or solution file inspected.",
+      "metadataOnlyRebind": {
+        "previousHash": "d61f237ad719e22de48c3f3c5790a353195c3a7aac242202ceec75409150ed2a",
+        "currentHash": "f83a3e655f8f5673886df4de6e829467af95cbf4d71d023dde55e94cdb9ce980",
+        "reason": "C03 spacing-only public guide cleanup after replay; no engine, controls or substantive rules changed. Owner freeze confirmed."
+      }
+    },
+    {
+      "designId": "C11",
+      "gameId": "many-as-one",
+      "mode": "mobile-touch",
+      "fullWin": true,
+      "naturalFailure": true,
+      "restart": true,
+      "touchOnly": true,
+      "runtimeHashes": {
+        "mini-games/motion-room/navigation.js": "4082d1165a9a412194f8378d6272b0755707e5e3811cb3c18aaac9ab130a79bb",
+        "mini-games/motion-room/room.js": "eb9a87a21caae9efb8c1c9861225eef140589cdacb9b588e64bec9ddee0fba61",
+        "mini-games/motion-room/shared.js": "08cc3892b3daad10e53fb3a70aa86539b76c9de7dbb2caaba6163e3bad998a9e",
+        "mini-games/motion-room/room.css": "a34568abf16c13760d779c6ee8825375b5d3e45304bbef8d3711a00fa1273ff8",
+        "mini-games/motion-room/index.html": "566094cc303494e8ea4d122145529c90e0be4e572495f6823e92200c3612ce35",
+        "mini-games/motion-room/games.json": "f83a3e655f8f5673886df4de6e829467af95cbf4d71d023dde55e94cdb9ce980"
+      },
+      "logFile": "mini-games/coverage/independent300/C11-mobile-touch-replay.jsonl",
+      "provenance": "Replay of independent ordinary UI-derived route; no implementation, solver, hidden game state or solution file inspected.",
+      "metadataOnlyRebind": {
+        "previousHash": "d61f237ad719e22de48c3f3c5790a353195c3a7aac242202ceec75409150ed2a",
+        "currentHash": "f83a3e655f8f5673886df4de6e829467af95cbf4d71d023dde55e94cdb9ce980",
+        "reason": "C03 spacing-only public guide cleanup after replay; no engine, controls or substantive rules changed. Owner freeze confirmed."
+      }
+    },
+    {
+      "designId": "C12",
+      "gameId": "crater-courtesy",
+      "mode": "keyboard-tab",
+      "fullWin": true,
+      "naturalFailure": true,
+      "restart": true,
+      "touchOnly": false,
+      "runtimeHashes": {
+        "mini-games/motion-room/tactics.js": "1bd3baaff7d02142fac5a6cb2d8fea8bf3636103c9ed6ff22e3ee3fa43500bc5",
+        "mini-games/motion-room/room.js": "eb9a87a21caae9efb8c1c9861225eef140589cdacb9b588e64bec9ddee0fba61",
+        "mini-games/motion-room/shared.js": "08cc3892b3daad10e53fb3a70aa86539b76c9de7dbb2caaba6163e3bad998a9e",
+        "mini-games/motion-room/room.css": "a34568abf16c13760d779c6ee8825375b5d3e45304bbef8d3711a00fa1273ff8",
+        "mini-games/motion-room/index.html": "566094cc303494e8ea4d122145529c90e0be4e572495f6823e92200c3612ce35",
+        "mini-games/motion-room/games.json": "f83a3e655f8f5673886df4de6e829467af95cbf4d71d023dde55e94cdb9ce980"
+      },
+      "logFile": "mini-games/coverage/independent300/C12-keyboard-tab-replay.jsonl",
+      "provenance": "Replay of independent ordinary UI-derived route; no implementation, solver, hidden game state or solution file inspected.",
+      "metadataOnlyRebind": {
+        "previousHash": "d61f237ad719e22de48c3f3c5790a353195c3a7aac242202ceec75409150ed2a",
+        "currentHash": "f83a3e655f8f5673886df4de6e829467af95cbf4d71d023dde55e94cdb9ce980",
+        "reason": "C03 spacing-only public guide cleanup after replay; no engine, controls or substantive rules changed. Owner freeze confirmed."
+      }
+    },
+    {
+      "designId": "C12",
+      "gameId": "crater-courtesy",
+      "mode": "mobile-touch",
+      "fullWin": true,
+      "naturalFailure": true,
+      "restart": true,
+      "touchOnly": true,
+      "runtimeHashes": {
+        "mini-games/motion-room/tactics.js": "1bd3baaff7d02142fac5a6cb2d8fea8bf3636103c9ed6ff22e3ee3fa43500bc5",
+        "mini-games/motion-room/room.js": "eb9a87a21caae9efb8c1c9861225eef140589cdacb9b588e64bec9ddee0fba61",
+        "mini-games/motion-room/shared.js": "08cc3892b3daad10e53fb3a70aa86539b76c9de7dbb2caaba6163e3bad998a9e",
+        "mini-games/motion-room/room.css": "a34568abf16c13760d779c6ee8825375b5d3e45304bbef8d3711a00fa1273ff8",
+        "mini-games/motion-room/index.html": "566094cc303494e8ea4d122145529c90e0be4e572495f6823e92200c3612ce35",
+        "mini-games/motion-room/games.json": "f83a3e655f8f5673886df4de6e829467af95cbf4d71d023dde55e94cdb9ce980"
+      },
+      "logFile": "mini-games/coverage/independent300/C12-mobile-touch-replay.jsonl",
+      "provenance": "Replay of independent ordinary UI-derived route; no implementation, solver, hidden game state or solution file inspected.",
+      "metadataOnlyRebind": {
+        "previousHash": "d61f237ad719e22de48c3f3c5790a353195c3a7aac242202ceec75409150ed2a",
+        "currentHash": "f83a3e655f8f5673886df4de6e829467af95cbf4d71d023dde55e94cdb9ce980",
+        "reason": "C03 spacing-only public guide cleanup after replay; no engine, controls or substantive rules changed. Owner freeze confirmed."
+      }
+    }
+  ],
+  "limits": [
+    "Native Tab+Enter and Chromium touch emulation; no physical phone/screenreader.",
+    "C06 failure is a recoverable rope-length rejection, not a terminal loss.",
+    "Routes informed by earlier ordinary play, not new unaided solves."
+  ]
+}

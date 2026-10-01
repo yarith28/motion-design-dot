@@ -1,0 +1,65 @@
+{
+  "verifiedAt": "2026-10-01T09:09:42.436863+00:00",
+  "games": [
+    {
+      "designId": "B23",
+      "firstLoggedWin": "2026-10-01T08:36:40.265Z",
+      "firstLoggedLoss": "2026-10-01T08:35:47.900Z",
+      "logFile": "mini-games/coverage/independent300/uniqueness-B23-anchor-stacks-ordinary.jsonl",
+      "logSha256": "292362cb6c91df4a6282593205cb185656d7989638d1f6e4f55e8208624ce6ff",
+      "actions": 56,
+      "ordinaryBeforeSource": true,
+      "failureBeforeSource": true
+    },
+    {
+      "designId": "B26",
+      "firstLoggedWin": "2026-10-01T08:43:16.067Z",
+      "firstLoggedLoss": "2026-10-01T08:39:58.385Z",
+      "logFile": "mini-games/coverage/independent300/uniqueness-B26-carried-road-ordinary.jsonl",
+      "logSha256": "0dc717bb1add0443ac8405e4a67f8a6d4d26db8f11fe4f4bac502a7ced31b898",
+      "actions": 214,
+      "ordinaryBeforeSource": true,
+      "failureBeforeSource": true
+    },
+    {
+      "designId": "B28",
+      "firstLoggedWin": "2026-10-01T08:47:56.684Z",
+      "firstLoggedLoss": "2026-10-01T08:49:09.309Z",
+      "logFile": "mini-games/coverage/independent300/uniqueness-B28-merging-estates-ordinary.jsonl",
+      "logSha256": "851cfa1201311de7bb89b868b281b37615cb47e07e99c559381edba01dc4154a",
+      "actions": 162,
+      "ordinaryBeforeSource": true,
+      "failureBeforeSource": true
+    },
+    {
+      "designId": "B29",
+      "firstLoggedWin": "2026-10-01T08:50:53.975Z",
+      "firstLoggedLoss": "2026-10-01T08:51:34.294Z",
+      "logFile": "mini-games/coverage/independent300/uniqueness-B29-last-known-address-ordinary.jsonl",
+      "logSha256": "ba83d6776c8a97035306e185de97aa3b91e6da61503e9cd51cc8028d44275f3c",
+      "actions": 214,
+      "ordinaryBeforeSource": true,
+      "failureBeforeSource": true
+    },
+    {
+      "designId": "B30",
+      "firstLoggedWin": "2026-10-01T09:00:56.397Z",
+      "firstLoggedLoss": "2026-10-01T08:55:36.497Z",
+      "logFile": "mini-games/coverage/independent300/uniqueness-B30-crossed-programs-ordinary.jsonl",
+      "logSha256": "d983d2b48f52ed8bb09d3e16d202b805e7b677cf88f93ee83e6bd512c9d33fe3",
+      "actions": 531,
+      "ordinaryBeforeSource": true,
+      "failureBeforeSource": true
+    },
+    {
+      "designId": "B27",
+      "firstLoggedWin": "2026-10-01T08:45:16.545Z",
+      "firstLoggedLoss": "2026-10-01T09:07:36.214Z",
+      "logFile": "mini-games/coverage/independent300/uniqueness-B27-masks-and-coins-ordinary.jsonl",
+      "logSha256": "40bc1f2d41e00b45bf8c07b80cef250e5db6eb3aa192aa6492a85dc9eb00c9d3",
+      "actions": 95,
+      "ordinaryBeforeSource": true,
+      "failureBeforeSource": true
+    }
+  ]
+}

@@ -1,0 +1,851 @@
+{
+  "review": "independent-depth",
+  "baseline": "fb1aabe76e6e2420ac68dce1941ffe8d940c924c",
+  "status": "Final written-design depth review:100 conditional primary candidates (A14+B35+C24+D27); A05/C16 rejected, A15 withheld revise-reserve, A17 withheld reserve pending transition specification. No implementation authorized or empirically certified.",
+  "games": [
+    {
+      "id": "A01",
+      "name": "Falling Orchard",
+      "disposition": "conditional",
+      "gate": "Horizontal Join: ordinary win must use empty-column closure and sacrifice a larger immediate group. Greedy large-group branch leaves genuine isolated-singleton dead end; undo and recover. Alternate board requires vertical join; no new cells or theme-only match variation.",
+      "evidence": "Independent written-design review only; ordinary wins, failure/recovery, balance and access untested.",
+      "ordinaryInput": "Visible rules/state and public controls only, no first-review solution/solver/probe access. Keyboard-only and touch-only complete run, natural failure/recovery, restart; shared README applies."
+    },
+    {
+      "id": "A02",
+      "name": "Corner Cabinet",
+      "disposition": "conditional",
+      "gate": "Corner Revisit: complete all scrambles including one requiring three face axes and breaking/restoring a solved face. Wrong certificate explains remaining cubies; four equal turns and camera-only rotation preserve correct invariants. Actual independent ordinary completion needed, not algorithm pasted from hidden solution.",
+      "evidence": "Independent written-design review only; ordinary wins, failure/recovery, balance and access untested.",
+      "ordinaryInput": "Visible rules/state and public controls only, no first-review solution/solver/probe access. Keyboard-only and touch-only complete run, natural failure/recovery, restart; shared README applies."
+    },
+    {
+      "id": "A03",
+      "name": "Gentle Unknot",
+      "disposition": "conditional",
+      "gate": "Blocked Unknot: later diagram has no direct reducing move; win requires topology-preserving strand slide and then reductions. Illegal over/under cancellation yields explained unchanged state; inverse move restores crossing traversal. Needs validated embedding and accessible region selection; crossing-count decrement buttons are unacceptable.",
+      "evidence": "Independent written-design review only; ordinary wins, failure/recovery, balance and access untested.",
+      "ordinaryInput": "Visible rules/state and public controls only, no first-review solution/solver/probe access. Keyboard-only and touch-only complete run, natural failure/recovery, restart; shared README applies."
+    },
+    {
+      "id": "A04",
+      "name": "Compass House",
+      "disposition": "conditional",
+      "gate": "Shared Circumcenter: construct and certify through derived intersections, with subsequent tangent challenge requiring selecting/reusing dependencies. Wrong AB certificate and degenerate A-A line fail visibly; repair succeeds. Accept multiple exact constructions, and prevent coordinate-tolerance guessing.",
+      "evidence": "Independent written-design review only; ordinary wins, failure/recovery, balance and access untested.",
+      "ordinaryInput": "Visible rules/state and public controls only, no first-review solution/solver/probe access. Keyboard-only and touch-only complete run, natural failure/recovery, restart; shared README applies."
+    },
+    {
+      "id": "A05",
+      "name": "Hinge Atlas",
+      "disposition": "rejected-duplicate",
+      "gate": "Withdrawn after cross-review against C13 Elbow Room: shared articulated-chain configuration-space planning. Retain history only; not an accepted slot.",
+      "evidence": "Independent written-design review only; ordinary wins, failure/recovery, balance and access untested.",
+      "ordinaryInput": "Visible rules/state and public controls only, no first-review solution/solver/probe access. Keyboard-only and touch-only complete run, natural failure/recovery, restart; shared README applies."
+    },
+    {
+      "id": "A06",
+      "name": "Fair Portions",
+      "disposition": "conditional",
+      "gate": "Dense Emblem: equal-area greedy first cut strands mass/emblem; meaningful equal-mass cut sequence completes portions under shared cut budget. Wrong legal first cut produces invalid final partition and undo recovery. Tangency cannot create zero-mass/area children; exact masses conserve.",
+      "evidence": "Independent written-design review only; ordinary wins, failure/recovery, balance and access untested.",
+      "ordinaryInput": "Visible rules/state and public controls only, no first-review solution/solver/probe access. Keyboard-only and touch-only complete run, natural failure/recovery, restart; shared README applies."
+    },
+    {
+      "id": "A07",
+      "name": "Words That Move",
+      "disposition": "conditional",
+      "gate": "Transfer Control: all three ordinary wins require actual rule changes, including successor YOU and multiple controlled bodies. Push last YOU out to produce explicit no-control dead end, undo and recover. Frozen-rule reachability must be structurally impossible in authored studies, not just unobserved.",
+      "evidence": "Independent written-design review only; ordinary wins, failure/recovery, balance and access untested.",
+      "ordinaryInput": "Visible rules/state and public controls only, no first-review solution/solver/probe access. Keyboard-only and touch-only complete run, natural failure/recovery, restart; shared README applies."
+    },
+    {
+      "id": "A08",
+      "name": "Turn the Stack",
+      "disposition": "conditional",
+      "gate": "Signed Shortcut: require later visible move-bound certification forcing structure-aware prefix reversals over independent disc-by-disc routine. Ordinary UI complete both order and orientation within bound; wrong face or over-bound certification fails recoverably; reverse same prefix twice restores exact state.",
+      "evidence": "Independent written-design review only; ordinary wins, failure/recovery, balance and access untested.",
+      "ordinaryInput": "Visible rules/state and public controls only, no first-review solution/solver/probe access. Keyboard-only and touch-only complete run, natural failure/recovery, restart; shared README applies."
+    },
+    {
+      "id": "A09",
+      "name": "One Last Marble",
+      "disposition": "conditional",
+      "gate": "Perpendicular Impact: win requires multi-impact row chain positioning a later column hit. Tempting first ejection creates no-launch dead end with multiple survivors; undo/retry succeeds. Adjacent-target and no-target launches rejected without state changes.",
+      "evidence": "Independent written-design review only; ordinary wins, failure/recovery, balance and access untested.",
+      "ordinaryInput": "Visible rules/state and public controls only, no first-review solution/solver/probe access. Keyboard-only and touch-only complete run, natural failure/recovery, restart; shared README applies."
+    },
+    {
+      "id": "A10",
+      "name": "Rooms in Motion",
+      "disposition": "conditional",
+      "gate": "Carried Corner: win requires player displacement by insertion and later useful ejected spare to reconnect home. Repeated same-lane shifts exhaust budget; natural failure then restart. Immediate reverse insertion and disconnected movement must be rejected without consuming phase.",
+      "evidence": "Independent written-design review only; ordinary wins, failure/recovery, balance and access untested.",
+      "ordinaryInput": "Visible rules/state and public controls only, no first-review solution/solver/probe access. Keyboard-only and touch-only complete run, natural failure/recovery, restart; shared README applies."
+    },
+    {
+      "id": "A11",
+      "name": "Bonding Room",
+      "disposition": "conditional",
+      "gate": "Narrow Product: move separate components through corridor before permanent bonding and delivery. Plausible early bond saturates wrong valence and fails certificate; undo and repair. Whole connected molecule rigidly moves/collides; deterministic simultaneous bond choice must be exposed before commitment.",
+      "evidence": "Independent written-design review only; ordinary wins, failure/recovery, balance and access untested.",
+      "ordinaryInput": "Visible rules/state and public controls only, no first-review solution/solver/probe access. Keyboard-only and touch-only complete run, natural failure/recovery, restart; shared README applies."
+    },
+    {
+      "id": "A12",
+      "name": "Unfolding House",
+      "disposition": "conditional",
+      "gate": "Stock Net: valid connected seam tree can still overlap or overflow stock; construct alternate shape fitting asymmetric stock. Certify overlapping tree, retained cycle and disconnected face separately, receive named failures, repair and win. Graph spanning-tree test alone insufficient.",
+      "evidence": "Independent written-design review only; ordinary wins, failure/recovery, balance and access untested.",
+      "ordinaryInput": "Visible rules/state and public controls only, no first-review solution/solver/probe access. Keyboard-only and touch-only complete run, natural failure/recovery, restart; shared README applies."
+    },
+    {
+      "id": "A13",
+      "name": "An Unfair Circle",
+      "disposition": "conditional",
+      "gate": "Equal Means, Cyclic Odds: construct conserved-token dice satisfying three20/36 pairwise wins and sum30 each. Published author example is a teaching witness, not independent play evidence. First reviewer needs a different unexposed token challenge: equal means alone fails, coupled repair wins, ordinary retry; replay cannot just reuse same distribution pattern.",
+      "evidence": "Independent written-design review only; no gameplay, balance or accessibility certification.",
+      "ordinaryInput": "First reviewer sees rules/public state only, no hidden solution/source/solver/probe. Keyboard-only and touch-only full win, natural failure/recovery and retry; README access/input gates apply."
+    },
+    {
+      "id": "A14",
+      "name": "Letter Conservatory",
+      "disposition": "conditional",
+      "gate": "Shared Bridge Letter: ordinary board completion routes one word through alternate duplicate letters to preserve another marked corner under four-word cap. Longest-first commitment strands coverage/score, undo/retry succeeds. All dictionary entries public; fixed-board independent Boggle word finds do not qualify.",
+      "evidence": "Independent written-design review only; no gameplay, balance or accessibility certification.",
+      "ordinaryInput": "First reviewer sees rules/public state only, no hidden solution/source/solver/probe. Keyboard-only and touch-only full win, natural failure/recovery and retry; README access/input gates apply."
+    },
+    {
+      "id": "A15",
+      "name": "Nested Rooms",
+      "disposition": "revise-reserve",
+      "gate": "Withheld from primary100. Explicit dual-door intro proves a movable bridge, but later persistent nested-state coupling lacks a concrete authored witness. Require interior manipulation to change usable outer docking/return options and outer positioning to constrain subsequent interior choices, not independent box bridge plus fixed maze. Root prefers lower-complexity B35 primary.",
+      "evidence": "Independent written-design review only; no gameplay, balance or accessibility certification.",
+      "ordinaryInput": "First reviewer sees rules/public state only, no hidden solution/source/solver/probe. Keyboard-only and touch-only full win, natural failure/recovery and retry; README access/input gates apply."
+    },
+    {
+      "id": "A16",
+      "name": "Pocket Photograph",
+      "disposition": "conditional",
+      "gate": "Destructive Bridge: capture mixed terrain/emptiness, move source world, rotate/paste capture-time snapshot to open route and win. Tempting patch erases only key source, causing documented stranded failure; undo restores world/photo/exposure exactly. Later choice must need source composition and destructive placement, not repeated corridor stamping.",
+      "evidence": "Independent written-design review only; no gameplay, balance or accessibility certification.",
+      "ordinaryInput": "First reviewer sees rules/public state only, no hidden solution/source/solver/probe. Keyboard-only and touch-only full win, natural failure/recovery and retry; README access/input gates apply."
+    },
+    {
+      "id": "A17",
+      "name": "Two Little Loops",
+      "disposition": "revise-reserve",
+      "gate": "Withheld reserve: promising repeated dual-manipulator loop but simultaneous move/grab/bond/output ordering remains unspecified. Fix referee order first; ordinary three-output repeated-lap win, essential-wait removal collision and second-cycle false-completion test then required. Not primary100.",
+      "evidence": "Written-design depth review only; no implemented gameplay verification.",
+      "ordinaryInput": "Visible tape editor, public board and per-tick log only. Keyboard/touch win, failure and rerun; README gates apply."
+    },
+    {
+      "id": "B01",
+      "name": "Breathing Room",
+      "disposition": "conditional",
+      "gate": "Two Eyes / Boundary Dispute: full ordinary scored wins across starts must include group rescue/sacrifice and disputed-territory play-out. Bad invasion captured then full scored loss; restart. Area/compensation explicit, no guessed dead stones; superko rejection preserves turn.",
+      "evidence": "Independent written-design review only; ordinary wins, failure/recovery, balance and access untested.",
+      "ordinaryInput": "Visible rules/state and public controls only, no first-review solution/solver/probe access. Keyboard-only and touch-only complete run, natural failure/recovery, restart; shared README applies."
+    },
+    {
+      "id": "B02",
+      "name": "Returned Banner",
+      "disposition": "conditional",
+      "gate": "Reserve Interposition: compact initial board must permit meaningful movement/capture; win full start with captured-unit drop and promotion tradeoff. Ignore visible reserve threat for house checkmate, restart. No-self-check/pawn-drop legality and demotion visible; mate studies alone cannot certify full match.",
+      "evidence": "Independent written-design review only; ordinary wins, failure/recovery, balance and access untested.",
+      "ordinaryInput": "Visible rules/state and public controls only, no first-review solution/solver/probe access. Keyboard-only and touch-only complete run, natural failure/recovery, restart; shared README applies."
+    },
+    {
+      "id": "B03",
+      "name": "Four-Step Menagerie",
+      "disposition": "conditional",
+      "gate": "Trap Support: ordinary full win uses multi-step preparation, unfreeze and displacement while intermediate captures apply. Remove sole support for own trap loss then finish natural opponent goal. Two-step push/pull requires enough budget and must not bypass intermediate rules.",
+      "evidence": "Independent written-design review only; ordinary wins, failure/recovery, balance and access untested.",
+      "ordinaryInput": "Visible rules/state and public controls only, no first-review solution/solver/probe access. Keyboard-only and touch-only complete run, natural failure/recovery, restart; shared README applies."
+    },
+    {
+      "id": "B04",
+      "name": "Living Perimeter",
+      "disposition": "conditional",
+      "gate": "Covered Queen: win uses at least two locomotion types plus connected-hive/pinch constraints. Expansion leaves own queen surrounded for natural loss; restart. Illegal articulation/pinch move has explanation and consumes no turn.",
+      "evidence": "Independent written-design review only; ordinary wins, failure/recovery, balance and access untested.",
+      "ordinaryInput": "Visible rules/state and public controls only, no first-review solution/solver/probe access. Keyboard-only and touch-only complete run, natural failure/recovery, restart; shared README applies."
+    },
+    {
+      "id": "B05",
+      "name": "Homeward Pips",
+      "disposition": "conditional",
+      "gate": "Contact Race: ordinary full win must block, hit, reenter and bear off; alternate race start changes optimal dice assignment. Repeated blots lead to completed house bear-off loss. Maximum dice, higher-only and doubles obligations fully enforced, not voluntary shortcuts.",
+      "evidence": "Independent written-design review only; ordinary wins, failure/recovery, balance and access untested.",
+      "ordinaryInput": "Visible rules/state and public controls only, no first-review solution/solver/probe access. Keyboard-only and touch-only complete run, natural failure/recovery, restart; shared README applies."
+    },
+    {
+      "id": "B06",
+      "name": "Veiled Standard",
+      "disposition": "conditional",
+      "gate": "Known Mine: win two hidden deployments through information sacrifice, miner preservation and learned attack route. Wasted miner enables natural flag loss and restart. AI and DOM cannot expose private identities; identical public histories must not secretly alter opponent information.",
+      "evidence": "Independent written-design review only; ordinary wins, failure/recovery, balance and access untested.",
+      "ordinaryInput": "Visible rules/state and public controls only, no first-review solution/solver/probe access. Keyboard-only and touch-only complete run, natural failure/recovery, restart; shared README applies."
+    },
+    {
+      "id": "B07",
+      "name": "Second Shuffle",
+      "disposition": "conditional",
+      "gate": "Engine Then Score: full wins on contrasting markets use future reshuffle effects, thinning and action-density choices. Terminal-action-only deck jams and loses at normal score. Highest-affordable coin/VP policy must fail substantive market; purchased card entering later hand visibly demonstrated.",
+      "evidence": "Independent written-design review only; ordinary wins, failure/recovery, balance and access untested.",
+      "ordinaryInput": "Visible rules/state and public controls only, no first-review solution/solver/probe access. Keyboard-only and touch-only complete run, natural failure/recovery, restart; shared README applies."
+    },
+    {
+      "id": "B08",
+      "name": "Corner Garden",
+      "disposition": "conditional",
+      "gate": "Late Corner: win preserving small bridge piece while extending frontier into rival space. Compact local filling strands inventory for scored loss; restart. Rotations/reflections, enemy-edge legality and own-edge prohibition clear through accessible cells.",
+      "evidence": "Independent written-design review only; ordinary wins, failure/recovery, balance and access untested.",
+      "ordinaryInput": "Visible rules/state and public controls only, no first-review solution/solver/probe access. Keyboard-only and touch-only complete run, natural failure/recovery, restart; shared README applies."
+    },
+    {
+      "id": "B09",
+      "name": "Gifted Traits",
+      "disposition": "conditional",
+      "gate": "Two-Trait Fork: full match win depends on placement AND gifting to constrain rival future turns; gift matching trait to line of three yields immediate natural loss. All four binary traits need textual discriminators; player cannot select received piece.",
+      "evidence": "Independent written-design review only; ordinary wins, failure/recovery, balance and access untested.",
+      "ordinaryInput": "Visible rules/state and public controls only, no first-review solution/solver/probe access. Keyboard-only and touch-only complete run, natural failure/recovery, restart; shared README applies."
+    },
+    {
+      "id": "B10",
+      "name": "Orders at Dusk",
+      "disposition": "conditional",
+      "gate": "Cut Support: full win uses a sacrificial attack cutting support elsewhere, then captures decisive centers. Unsupported order bounces and eventual elimination yields natural loss. Public studies must expose cycle/swap/retreat resolution, and bots precommit without reading player secret orders.",
+      "evidence": "Independent written-design review only; ordinary wins, failure/recovery, balance and access untested.",
+      "ordinaryInput": "Visible rules/state and public controls only, no first-review solution/solver/probe access. Keyboard-only and touch-only complete run, natural failure/recovery, restart; shared README applies."
+    },
+    {
+      "id": "B11",
+      "name": "Almost a Word",
+      "disposition": "conditional",
+      "gate": "Prefix Parity: ordinary full win forces completions across varied branching prefixes using public finite dictionary. Complete valid word or issue incorrect challenge to lose lives and retry. With always-available prefix browser, bluff is not credible depth; branching parity strategy must remain substantive alone.",
+      "evidence": "Independent written-design review only; ordinary wins, failure/recovery, balance and access untested.",
+      "ordinaryInput": "Visible rules/state and public controls only, no first-review solution/solver/probe access. Keyboard-only and touch-only complete run, natural failure/recovery, restart; shared README applies."
+    },
+    {
+      "id": "B12",
+      "name": "Crossgrain",
+      "disposition": "conditional",
+      "gate": "Double Hook: full win uses perpendicular word constraints, premium timing and rack preservation; waste/exchange route finishes scored loss. Invalid cross-word does not commit/draw; premium and blank accounting visible. Dictionary browser ensures vocabulary scope known.",
+      "evidence": "Independent written-design review only; ordinary wins, failure/recovery, balance and access untested.",
+      "ordinaryInput": "Visible rules/state and public controls only, no first-review solution/solver/probe access. Keyboard-only and touch-only complete run, natural failure/recovery, restart; shared README applies."
+    },
+    {
+      "id": "B13",
+      "name": "Patient Columns",
+      "disposition": "conditional",
+      "gate": "Returned Foundation: independent full-deal win requires returning foundation card and exposing concealed columns. Wrong seven allocation reaches no-move state after allowed stock passes; retry. Curated approachable deals require public-input win proof; do not claim every shuffled deal winnable.",
+      "evidence": "Independent written-design review only; ordinary wins, failure/recovery, balance and access untested.",
+      "ordinaryInput": "Visible rules/state and public controls only, no first-review solution/solver/probe access. Keyboard-only and touch-only complete run, natural failure/recovery, restart; shared README applies."
+    },
+    {
+      "id": "B14",
+      "name": "Twin Roofs",
+      "disposition": "conditional",
+      "gate": "Fourth Copy: full board clear needs reserving accessible matching copy for future blockage. Tempting exposed pair strands remaining identical tiles, exhausting allowed undo then dead end. Layer list must expose identities without falsely allowing covered/blocked selection.",
+      "evidence": "Independent written-design review only; ordinary wins, failure/recovery, balance and access untested.",
+      "ordinaryInput": "Visible rules/state and public controls only, no first-review solution/solver/probe access. Keyboard-only and touch-only complete run, natural failure/recovery, restart; shared README applies."
+    },
+    {
+      "id": "B15",
+      "name": "Ascending Expeditions",
+      "disposition": "conditional",
+      "gate": "Late Investment: ordinary full-match win uses delay, investments and shared discard denial; overinvestment yields multiplied negative-score loss. Deliberately recycle discards to trigger six-turn no-progress or repeated-state settlement, then retry. Draw clock remains consequential without endless play; illegal descending placement and own discard redraw rejected.",
+      "evidence": "Independent written-design review only; ordinary wins, failure/recovery, balance and access untested.",
+      "ordinaryInput": "Visible rules/state and public controls only, no first-review solution/solver/probe access. Keyboard-only and touch-only complete run, natural failure/recovery, restart; shared README applies."
+    },
+    {
+      "id": "B16",
+      "name": "Letters We Cannot See",
+      "disposition": "conditional",
+      "gate": "Rescue the Five: independent approachable full15 win with literal partner must include negative inference and saving unique late rank. Third known-wrong play and below-goal deck exhaustion separately fail. Perfect15 difficulty, partner policy and deal fairness are hard empirical gates; losses or solver routes insufficient.",
+      "evidence": "Independent written-design review only; ordinary wins, failure/recovery, balance and access untested.",
+      "ordinaryInput": "Visible rules/state and public controls only, no first-review solution/solver/probe access. Keyboard-only and touch-only complete run, natural failure/recovery, restart; shared README applies."
+    },
+    {
+      "id": "B17",
+      "name": "Ordered Harvest",
+      "disposition": "conditional",
+      "gate": "Forced Front: trade middle-hand crop to preserve valuable field, then harvest profitably and win. Refuse-all teaching route incurs early forced harvest and full scored loss. Trades require actual mutual exchange decisions, received plants immediate, immutable hand enforced.",
+      "evidence": "Independent written-design review only; ordinary wins, failure/recovery, balance and access untested.",
+      "ordinaryInput": "Visible rules/state and public controls only, no first-review solution/solver/probe access. Keyboard-only and touch-only complete run, natural failure/recovery, restart; shared README applies."
+    },
+    {
+      "id": "B18",
+      "name": "Shared Seasons",
+      "disposition": "conditional",
+      "gate": "Predict Produce: win by selecting Ship while rival precommits Produce, benefiting from shared phases and card-as-payment tradeoff. Single-role policy loses full score. Same role executes once; bot role never changes in response to hidden human choice.",
+      "evidence": "Independent written-design review only; ordinary wins, failure/recovery, balance and access untested.",
+      "ordinaryInput": "Visible rules/state and public controls only, no first-review solution/solver/probe access. Keyboard-only and touch-only complete run, natural failure/recovery, restart; shared README applies."
+    },
+    {
+      "id": "B19",
+      "name": "Pass the Burden",
+      "disposition": "conditional",
+      "gate": "Funded Bridge: full lowest-penalty win requires cash liquidity and accepting bridge to merge two runs. Spend refusal coins to zero, forced isolated acceptance leads natural scored loss. Attached coins transfer exactly once; hidden omissions cannot be read by opponent.",
+      "evidence": "Independent written-design review only; ordinary wins, failure/recovery, balance and access untested.",
+      "ordinaryInput": "Visible rules/state and public controls only, no first-review solution/solver/probe access. Keyboard-only and touch-only complete run, natural failure/recovery, restart; shared README applies."
+    },
+    {
+      "id": "B20",
+      "name": "Market of Five",
+      "disposition": "conditional",
+      "gate": "Camel Exchange: full win uses market-changing exchange, reward-stack timing and set-size tension. Hoarding loses unsold goods after depletion for natural loss. Independent buy-low/sell-high schedule insufficient; rival-access denial must change useful choice.",
+      "evidence": "Independent written-design review only; ordinary wins, failure/recovery, balance and access untested.",
+      "ordinaryInput": "Visible rules/state and public controls only, no first-review solution/solver/probe access. Keyboard-only and touch-only complete run, natural failure/recovery, restart; shared README applies."
+    },
+    {
+      "id": "B21",
+      "name": "Roads We Share",
+      "disposition": "conditional",
+      "gate": "Merged Majority: win by joining independently claimed features, completing, recovering claimant and reusing it. All claimants stranded in unfinished features yields natural scored loss. Connected-feature legality, closure and majority must derive from actual tile topology.",
+      "evidence": "Independent written-design review only; ordinary wins, failure/recovery, balance and access untested.",
+      "ordinaryInput": "Visible rules/state and public controls only, no first-review solution/solver/probe access. Keyboard-only and touch-only complete run, natural failure/recovery, restart; shared README applies."
+    },
+    {
+      "id": "B22",
+      "name": "Factory Mosaic",
+      "disposition": "conditional",
+      "gate": "Forced Floor: complete full match using center leftovers to force opponent overflow and wall adjacency bridge score. Repeated overfill loses through floor penalties. Shared draft changes opponent options; leftover routing and partial rows persist exactly.",
+      "evidence": "Independent written-design review only; ordinary wins, failure/recovery, balance and access untested.",
+      "ordinaryInput": "Visible rules/state and public controls only, no first-review solution/solver/probe access. Keyboard-only and touch-only complete run, natural failure/recovery, restart; shared README applies."
+    },
+    {
+      "id": "B23",
+      "name": "Anchor Stacks",
+      "disposition": "conditional",
+      "gate": "Moving Anchor: win with height-two jump, top-ownership capture and anchor relocation deleting a component. Vacate own bridge for natural material collapse and final loss. Embedded anchor travels and exact-height mobility changes future choices; largest-stack capture alone insufficient.",
+      "evidence": "Independent written-design review only; ordinary wins, failure/recovery, balance and access untested.",
+      "ordinaryInput": "Visible rules/state and public controls only, no first-review solution/solver/probe access. Keyboard-only and touch-only complete run, natural failure/recovery, restart; shared README applies."
+    },
+    {
+      "id": "B24",
+      "name": "The Other Half",
+      "disposition": "conditional",
+      "gate": "Asymmetric Divide: full six-round win uses utility-aware connected cut and both chooser/divider roles; equal-area routine loses scored match. Choice model must consistently optimize own-minus-opponent score, not contradictory own-only preferences. Redraw budget links rounds; no disconnected remainder permitted.",
+      "evidence": "Independent written-design review only; ordinary wins, failure/recovery, balance and access untested.",
+      "ordinaryInput": "Visible rules/state and public controls only, no first-review solution/solver/probe access. Keyboard-only and touch-only complete run, natural failure/recovery, restart; shared README applies."
+    },
+    {
+      "id": "B25",
+      "name": "Four Houses",
+      "disposition": "conditional",
+      "gate": "Weakest Culture: full win requires neglected-color cultivation and both internal shrine and external color conflict in useful contexts. Maximize-one-color policy loses despite higher sum. Small board must genuinely support both conflict models; conditional source correctness alone cannot substitute ordinary comprehensibility.",
+      "evidence": "Independent written-design review only; ordinary wins, failure/recovery, balance and access untested.",
+      "ordinaryInput": "Visible rules/state and public controls only, no first-review solution/solver/probe access. Keyboard-only and touch-only complete run, natural failure/recovery, restart; shared README applies."
+    },
+    {
+      "id": "B26",
+      "name": "Carried Road",
+      "disposition": "conditional",
+      "gate": "Split Road: ordinary full win carries stack and splits drops to alter multiple ownership cells, then capstone-flattens necessary wall. Dropping buried enemy top onto essential road enables natural defeat; restart. Preserve vertical carry order and enforce complete legal drop plan before commit.",
+      "evidence": "Independent written-design review only; no gameplay, balance or accessibility certification.",
+      "ordinaryInput": "First reviewer sees rules/public state only, no hidden solution/source/solver/probe. Keyboard-only and touch-only full win, natural failure/recovery and retry; README access/input gates apply."
+    },
+    {
+      "id": "B27",
+      "name": "Masks and Coins",
+      "disposition": "conditional",
+      "gate": "Exposed Role: full ordinary win combines public-card inference/challenge and eventual funded coup; challenge truthful role loses final influence naturally. Separate action/block challenge windows correctly resolve proof replacement and cancellation. Bots cannot read hidden player roles; bluff decisions must change outcomes.",
+      "evidence": "Independent written-design review only; no gameplay, balance or accessibility certification.",
+      "ordinaryInput": "First reviewer sees rules/public state only, no hidden solution/source/solver/probe. Keyboard-only and touch-only full win, natural failure/recovery and retry; README access/input gates apply."
+    },
+    {
+      "id": "B28",
+      "name": "Merging Estates",
+      "disposition": "conditional",
+      "gate": "Minority Merger: full match win anticipates merger payout and two-for-one trade, stranded investment yields scored loss. Ordinary full-board/no-legal-placement study must settle under final rules (and48-turn maximum), not hang; safe merger, payout ties and finite shares visible. Hidden tiles cannot inform opponent beyond legal observations.",
+      "evidence": "Independent written-design review only; no gameplay, balance or accessibility certification.",
+      "ordinaryInput": "First reviewer sees rules/public state only, no hidden solution/source/solver/probe. Keyboard-only and touch-only full win, natural failure/recovery and retry; README access/input gates apply."
+    },
+    {
+      "id": "B29",
+      "name": "Last Known Address",
+      "disposition": "conditional",
+      "gate": "Typed Interception: ordinary full-start capture on second16-node map requires ticket conservation and three-detective exit cuts based on public transport trace, not guided study alone. All-three greedy pursuit exhausts shortcuts and fugitive survives16 rounds for loss; restart. Hidden current position absent from DOM; occupied sole exit traps, landing captures before response. Bot responds only committed/public detective positions.",
+      "evidence": "Independent written-design review only; no gameplay, balance or accessibility certification.",
+      "ordinaryInput": "First reviewer sees rules/public state only, no hidden solution/source/solver/probe. Keyboard-only and touch-only full win, natural failure/recovery and retry; README access/input gates apply."
+    },
+    {
+      "id": "B30",
+      "name": "Crossed Programs",
+      "disposition": "conditional",
+      "gate": "Shared Bottleneck: simultaneous full race win depends on predicting opponent occupancy, waiting/pushing and conveyor orientation, not independent solo program. Solo-shortest routine meets blockage and pit losses. Precommit both programs; fixed priority, push chain and simultaneous conveyor collision must be fully specified.",
+      "evidence": "Independent written-design review only; no gameplay, balance or accessibility certification.",
+      "ordinaryInput": "First reviewer sees rules/public state only, no hidden solution/source/solver/probe. Keyboard-only and touch-only full win, natural failure/recovery and retry; README access/input gates apply."
+    },
+    {
+      "id": "B31",
+      "name": "One Last Card",
+      "disposition": "conditional",
+      "gate": "Known Identity: full three-token victory preserves guess after private inspection then later eliminates correctly; own rank8 discard eliminates and rival eventually wins match. Mandatory7, shields, redraw and private knowledge isolate correctly; retained card has both future-effect and showdown value.",
+      "evidence": "Independent written-design review only; no gameplay, balance or accessibility certification.",
+      "ordinaryInput": "First reviewer sees rules/public state only, no hidden solution/source/solver/probe. Keyboard-only and touch-only full win, natural failure/recovery and retry; README access/input gates apply."
+    },
+    {
+      "id": "B32",
+      "name": "Passing Courses",
+      "disposition": "conditional",
+      "gate": "Returning Hand: full draft-match win remembers hand, delays safe card and denies rival set; immediate-value picking feeds rival completions for natural scored loss. Choices precommit, hand direction/last-pick synchronized, chopsticks returned, desserts persist; no independent static selection loop.",
+      "evidence": "Independent written-design review only; no gameplay, balance or accessibility certification.",
+      "ordinaryInput": "First reviewer sees rules/public state only, no hidden solution/source/solver/probe. Keyboard-only and touch-only full win, natural failure/recovery and retry; README access/input gates apply."
+    },
+    {
+      "id": "B33",
+      "name": "A Stitch in Time",
+      "disposition": "conditional",
+      "gate": "Early Income: full win combines awkward income patch, repeated short-time turns and later spatial fit; cheap-area/high-time route loses income/tempo race. Multi-milestone payout occurs once each, market motion changes rival options. Clock, currency and geometry must all constrain useful choices.",
+      "evidence": "Independent written-design review only; no gameplay, balance or accessibility certification.",
+      "ordinaryInput": "First reviewer sees rules/public state only, no hidden solution/source/solver/probe. Keyboard-only and touch-only full win, natural failure/recovery and retry; README access/input gates apply."
+    },
+    {
+      "id": "B34",
+      "name": "River Stakes",
+      "disposition": "conditional",
+      "gate": "Fold Then Value: full eight-hand ordinary win includes genuine fold and profitable later showdown decisions as shared information arrives; weak repeated calls lead natural bankroll loss. No all-in coin-flip-only proof. Fixed-limit rounds, matched all-in/refunds and hidden-hand independent bot are mandatory.",
+      "evidence": "Independent written-design review only; no gameplay, balance or accessibility certification.",
+      "ordinaryInput": "First reviewer sees rules/public state only, no hidden solution/source/solver/probe. Keyboard-only and touch-only full win, natural failure/recovery and retry; README access/input gates apply."
+    },
+    {
+      "id": "B35",
+      "name": "Rings Leave Ripples",
+      "disposition": "conditional",
+      "gate": "Retired Ring: full ordinary third-seal win must use forced mixed-run flips and strategically select scoring-row/ring removal to preserve future mobility; repeat independent win from different placement. Greedy flip creates rival third row for natural loss. Public referee study verifies forced landing after markers, no ring crossing and mover-first row cancellation. Compact37-cell balance remains empirical gate.",
+      "evidence": "Independent written-design depth review only; no empirical win/loss or access certification.",
+      "ordinaryInput": "Public fresh-start keyboard/touch input, no first-review source/solver/probe/solution; complete wins, natural loss and restart. Shared README requirements apply."
+    },
+    {
+      "id": "C01",
+      "name": "Falling Foundry",
+      "disposition": "conditional",
+      "gate": "Buried Cavity: fair visible next-three bag must require lateral placement, two rotations and hold to clear ten rows. Win using public controls; build a tower to blocked-spawn failure; restart a different bag requiring another cavity strategy. Hold must matter rather than be a checklist action.",
+      "evidence": "Independent written-design review only; ordinary play, balance and accessibility untested.",
+      "ordinaryInput": "First reviewer uses displayed rules/state and public input only. Keyboard-only and touch-only complete wins, natural failure/recovery and restart; shared README gates apply."
+    },
+    {
+      "id": "C02",
+      "name": "Cascade Orchard",
+      "disposition": "conditional",
+      "gate": "Lower Blocker: win eighteen-swap board where two-stage cascade is necessary and simultaneous intersecting matches count once. Legal locally rewarding swaps exhaust budget without clearing buried blocker; retry from reset through UI. Visible refill stream must let reviewer plan rather than guess.",
+      "evidence": "Independent written-design review only; ordinary play, balance and accessibility untested.",
+      "ordinaryInput": "First reviewer uses displayed rules/state and public input only. Keyboard-only and touch-only complete wins, natural failure/recovery and restart; shared README gates apply."
+    },
+    {
+      "id": "C03",
+      "name": "Bubble Canopy",
+      "disposition": "conditional",
+      "gate": "Hanging Nest: canopy requires bank shot and preparatory support removal; win by disconnecting marked nests. Attach plausible but ineffective bubbles until danger/shot failure, restart. Prevent direct-color greedy policy solving every canopy.",
+      "evidence": "Independent written-design review only; ordinary play, balance and accessibility untested.",
+      "ordinaryInput": "First reviewer uses displayed rules/state and public input only. Keyboard-only and touch-only complete wins, natural failure/recovery and restart; shared README gates apply."
+    },
+    {
+      "id": "C04",
+      "name": "Step and Spring",
+      "disposition": "conditional",
+      "gate": "Low Roof / Ferry Deck: complete three chambers requiring short jump, moving-platform carry and drop-through. Walk off edge for natural life/run failure and retry from documented checkpoint. Full touch controls must permit intended simultaneous direction/jump without finger overlap; disclose timing access limits.",
+      "evidence": "Independent written-design review only; ordinary play, balance and accessibility untested.",
+      "ordinaryInput": "First reviewer uses displayed rules/state and public input only. Keyboard-only and touch-only complete wins, natural failure/recovery and restart; shared README gates apply."
+    },
+    {
+      "id": "C05",
+      "name": "Lantern Lanes",
+      "disposition": "conditional",
+      "gate": "Late Power: maze must make power pickup timing and return for stragglers consequential; show enemy contact while powered, then risk transition and full clear. Unpowered collision consumes exactly one life per immunity period; lose run and retry a different layout. Repeated perimeter sweep must not solve all maps.",
+      "evidence": "Independent written-design review only; ordinary play, balance and accessibility untested.",
+      "ordinaryInput": "First reviewer uses displayed rules/state and public input only. Keyboard-only and touch-only complete wins, natural failure/recovery and restart; shared README gates apply."
+    },
+    {
+      "id": "C06",
+      "name": "Threaded Return",
+      "disposition": "conditional",
+      "gate": "Twin Posts: same avatar tile after distinct winding has distinct slack; win needs reverse unwinding to reach left tag. Overlength step is honest failed action with unchanged state and deficit explanation, recover by reversing. No concession or fictitious permanent-stranding claim.",
+      "evidence": "Independent written-design review only; ordinary play, balance and accessibility untested.",
+      "ordinaryInput": "First reviewer uses displayed rules/state and public input only. Keyboard-only and touch-only complete wins, natural failure/recovery and restart; shared README gates apply."
+    },
+    {
+      "id": "C07",
+      "name": "Magnetic Quartet",
+      "disposition": "conditional",
+      "gate": "Opposite Traps: one field adjustment must affect two uncaptured opposite charges; win requires shielding one and cancelling another velocity. Greedy closest-puck steering sends another into wrong irreversible trap, causing explained loss; restart. Ticks/field changes must remain inspectable through accessible state.",
+      "evidence": "Independent written-design review only; ordinary play, balance and accessibility untested.",
+      "ordinaryInput": "First reviewer uses displayed rules/state and public input only. Keyboard-only and touch-only complete wins, natural failure/recovery and restart; shared README gates apply."
+    },
+    {
+      "id": "C08",
+      "name": "Span Workshop",
+      "disposition": "conditional",
+      "gate": "Moving Load: UI construct and test truss, with at least one member changing tension/compression as cart crosses. Unsupported/cable-substitution design fails at a visible load location; repair and complete with alternate valid construction. Real load transfer must govern collapse, not a hidden prescribed graph.",
+      "evidence": "Independent written-design review only; ordinary play, balance and accessibility untested.",
+      "ordinaryInput": "First reviewer uses displayed rules/state and public input only. Keyboard-only and touch-only complete wins, natural failure/recovery and restart; shared README gates apply."
+    },
+    {
+      "id": "C09",
+      "name": "Corner Carry",
+      "disposition": "conditional",
+      "gate": "Dogleg Door: direct center rotation sweeps corner despite fitting endpoint; back out and use end pivot to win. Preview10 colliding moves leaves integrity unchanged; explicit warned Commit loses exactly1, ten loses run; restart. Native key repeat must not multiply one commit.",
+      "evidence": "Independent written-design review only; ordinary play, balance and accessibility untested.",
+      "ordinaryInput": "First reviewer uses displayed rules/state and public input only. Keyboard-only and touch-only complete wins, natural failure/recovery and restart; shared README gates apply."
+    },
+    {
+      "id": "C10",
+      "name": "Borrowed Seconds",
+      "disposition": "conditional",
+      "gate": "Reverse Ferry: exit with nonrewound key while platform rewinds and hazard continues forward. Wrong object/history interval causes crushing/fall, consumes life and restores documented checkpoint/history; win retry. Exhausted history cannot freeze global time or manufacture charge.",
+      "evidence": "Independent written-design review only; ordinary play, balance and accessibility untested.",
+      "ordinaryInput": "First reviewer uses displayed rules/state and public input only. Keyboard-only and touch-only complete wins, natural failure/recovery and restart; shared README gates apply."
+    },
+    {
+      "id": "C11",
+      "name": "Many as One",
+      "disposition": "conditional",
+      "gate": "Divided Gate: required simultaneous scale masses force split allocation, then exit requires recombination; win preserving total mass. Drain indispensable mass for explicit deficit loss; restart. Must demonstrate split changes navigability and merged weight changes gate legality, not just multiple-courier moves.",
+      "evidence": "Independent written-design review only; ordinary play, balance and accessibility untested.",
+      "ordinaryInput": "First reviewer uses displayed rules/state and public input only. Keyboard-only and touch-only complete wins, natural failure/recovery and restart; shared README gates apply."
+    },
+    {
+      "id": "C12",
+      "name": "Crater Courtesy",
+      "disposition": "conditional",
+      "gate": "Support Shot: ordinary aiming win includes crater changing later firing/support geometry; a miss exposes own foundation to fall/damage loss and restart. Default opponent must have observed legitimate reviewer wins, not just source solver or competitive losses. Destructible terrain must change useful choices beyond Ricochet Duel.",
+      "evidence": "Independent written-design review only; ordinary play, balance and accessibility untested.",
+      "ordinaryInput": "First reviewer uses displayed rules/state and public input only. Keyboard-only and touch-only complete wins, natural failure/recovery and restart; shared README gates apply."
+    },
+    {
+      "id": "C13",
+      "name": "Elbow Room",
+      "disposition": "conditional",
+      "gate": "Elbow Switch: deliver three parcels via joint buttons with required inverse-kinematic branch change and retraction. Endpoint-clear middle-link sweep hits obstacle; unsafe release naturally loses parcel/run; retry. Payload collision, joint selection focus and no movement on selection are mandatory.",
+      "evidence": "Independent written-design review only; ordinary play, balance and accessibility untested.",
+      "ordinaryInput": "First reviewer uses displayed rules/state and public input only. Keyboard-only and touch-only complete wins, natural failure/recovery and restart; shared README gates apply."
+    },
+    {
+      "id": "C14",
+      "name": "Common Meadow",
+      "disposition": "conditional",
+      "gate": "Straggler Gate: win by recovering isolated sheep and regrouping before narrow passage; wrong shepherd approach drives three over marked escape edge for natural loss. Constant whistle and fixed circle must fail at least one nontrivial map; retry altered gate approach.",
+      "evidence": "Independent written-design review only; ordinary play, balance and accessibility untested.",
+      "ordinaryInput": "First reviewer uses displayed rules/state and public input only. Keyboard-only and touch-only complete wins, natural failure/recovery and restart; shared README gates apply."
+    },
+    {
+      "id": "C15",
+      "name": "Folded Cuttings",
+      "disposition": "conditional",
+      "gate": "Asymmetric Bridges: win by choosing folds and one cut that duplicates holes while preserving connectivity. Reverse fold order changes result; sever protected bridge for failed sheet and repair/retry. Final geometry must accept alternative valid cut/fold constructions rather than hidden target sequence.",
+      "evidence": "Independent written-design review only; ordinary play, balance and accessibility untested.",
+      "ordinaryInput": "First reviewer uses displayed rules/state and public input only. Keyboard-only and touch-only complete wins, natural failure/recovery and restart; shared README gates apply."
+    },
+    {
+      "id": "C16",
+      "name": "Call and Return",
+      "disposition": "reject-reserve",
+      "gate": "Reject pure sequence reproduction: meaningful strategic choice and coupled state are absent in current draft. Correct recall with longer/random sequences cannot satisfy this task depth standard. Reserve, not accepted slot.",
+      "evidence": "Independent written-design review only; ordinary play, balance and accessibility untested.",
+      "ordinaryInput": "First reviewer uses displayed rules/state and public input only. Keyboard-only and touch-only complete wins, natural failure/recovery and restart; shared README gates apply."
+    },
+    {
+      "id": "C17",
+      "name": "Domino Relay",
+      "disposition": "conditional",
+      "gate": "Paired Bells: successful branching cascade needs intentional path-length difference to synchronize triggers. Remove bridge for halted natural test; incorrect arrival timing fails pair then UI repair wins. Simultaneous strikes fire domino once, and timing cannot be replaced by static reachability.",
+      "evidence": "Independent written-design review only; ordinary play, balance and accessibility untested.",
+      "ordinaryInput": "First reviewer uses displayed rules/state and public input only. Keyboard-only and touch-only complete wins, natural failure/recovery and restart; shared README gates apply."
+    },
+    {
+      "id": "C18",
+      "name": "Siding Stories",
+      "disposition": "conditional",
+      "gate": "Run-Around Yard: win must reorder physical coupled wagons through finite siding and locomotive-end access, with reversing and two uncouplings. Invalid under-wagon switch change is rejected; explicit buffer overrun creates natural failure; restart. Mere stack transfers cannot substitute for track occupancy.",
+      "evidence": "Independent written-design review only; ordinary play, balance and accessibility untested.",
+      "ordinaryInput": "First reviewer uses displayed rules/state and public input only. Keyboard-only and touch-only complete wins, natural failure/recovery and restart; shared README gates apply."
+    },
+    {
+      "id": "C19",
+      "name": "Across the Current",
+      "disposition": "conditional",
+      "gate": "Opposed Currents: win four distinct homes using required wait while carried and transfer across opposite currents. Remain on log until edge drift consumes life and eventually run; retry with different home order. Holding forward and a fixed timing cycle must fail substantive layouts.",
+      "evidence": "Independent written-design review only; ordinary play, balance and accessibility untested.",
+      "ordinaryInput": "First reviewer uses displayed rules/state and public input only. Keyboard-only and touch-only complete wins, natural failure/recovery and restart; shared README gates apply."
+    },
+    {
+      "id": "C20",
+      "name": "Watchtower Bend",
+      "disposition": "conditional",
+      "gate": "Forked Pass: win with either longer slow route or armor kill zone under budget, visible wave/priority decisions. Blocking all routes is rejected/refunded; splash-only against armor leaks five and loses. Replay priority changes outcome; same-tower spam cannot solve all waves.",
+      "evidence": "Independent revised/new written-design review only; no empirical gameplay or accessibility certification.",
+      "ordinaryInput": "First reviewer visible rules/state and public controls only, no solver/probe/source solution. Keyboard-only and touch-only full win, natural failure/recovery and restart; README gates apply."
+    },
+    {
+      "id": "C21",
+      "name": "Through and Through",
+      "disposition": "conditional",
+      "gate": "Fall to Fly: six-unit ledge beyond normal jump requires four-unit fall transformed to horizontal velocity through oriented portal. Zero-speed teleport fails reach; wrong orientation causes spikes/life/run loss and restart. Energy must not grow under repeated portals; pair relocation needed later.",
+      "evidence": "Independent revised/new written-design review only; no empirical gameplay or accessibility certification.",
+      "ordinaryInput": "First reviewer visible rules/state and public controls only, no solver/probe/source solution. Keyboard-only and touch-only full win, natural failure/recovery and restart; README gates apply."
+    },
+    {
+      "id": "C22",
+      "name": "Orchard Acrobat",
+      "disposition": "conditional",
+      "gate": "Three-Wide Chasm: length3 unsupported midway, fruit grows4 to preserve rear support and bridge before whole-body landing. Move last support over void for natural fall loss, undo restores fruit and body order. Later gravity/body support choices required beyond flat Snake routing.",
+      "evidence": "Independent revised/new written-design review only; no empirical gameplay or accessibility certification.",
+      "ordinaryInput": "First reviewer visible rules/state and public controls only, no solver/probe/source solution. Keyboard-only and touch-only full win, natural failure/recovery and restart; README gates apply."
+    },
+    {
+      "id": "C23",
+      "name": "Borrowed Shade",
+      "disposition": "conditional",
+      "gate": "Near/Far: different occluder depths produce unequal shadow shifts; use permanent refuge then adjust support to reach seals. Moving shadow away under avatar causes fall/life loss; restart. One scalar independent platform alignment cannot solve coupled-depth fixtures; geometric union and support text required.",
+      "evidence": "Independent revised/new written-design review only; no empirical gameplay or accessibility certification.",
+      "ordinaryInput": "First reviewer visible rules/state and public controls only, no solver/probe/source solution. Keyboard-only and touch-only full win, natural failure/recovery and restart; README gates apply."
+    },
+    {
+      "id": "C24",
+      "name": "After the Levee",
+      "disposition": "conditional",
+      "gate": "Saddle: dig east channel and use its spoil to raise village spill saddle before second source pulse; fill both target basins while village dry. Dig village saddle then advance causes natural flood loss, restart. Conserve water/spoil with visible backwater and beneficial fill; no static flow-arrow replacement.",
+      "evidence": "Independent revised/new written-design review only; no empirical gameplay or accessibility certification.",
+      "ordinaryInput": "First reviewer visible rules/state and public controls only, no solver/probe/source solution. Keyboard-only and touch-only full win, natural failure/recovery and restart; README gates apply."
+    },
+    {
+      "id": "C25",
+      "name": "Crossfire Courtyard",
+      "disposition": "conditional",
+      "gate": "Crossed Alley: suppress overwatch with A, escort with B, flank with C; coordinated ordinary win. Civilian crosses first into visible reaction and dies; restart. Directional cover/reaction eligibility and damage-for-suppression tradeoff must govern decisions; generic attack spam must fail.",
+      "evidence": "Independent revised/new written-design review only; no empirical gameplay or accessibility certification.",
+      "ordinaryInput": "First reviewer visible rules/state and public controls only, no solver/probe/source solution. Keyboard-only and touch-only full win, natural failure/recovery and restart; README gates apply."
+    },
+    {
+      "id": "D01",
+      "name": "Pebble Engine",
+      "disposition": "conditional",
+      "gate": "Diamond Register: three-register graph must force deletion and recomputation, with both retaining everything and deleting every available value missing the compute cap. UI win retains expensive reuse; failure overspends cheap-parent recomputation; retry uses a different graph.",
+      "evidence": "Independent written-design review only; no empirical win, failure, balance, or access certification.",
+      "ordinaryInput": "Visible rules and public controls only; first review before source, solution, solver or probe exposure. Both keyboard-only and touch-only full run plus natural failure and restart. Shared README controls/a11y gates apply."
+    },
+    {
+      "id": "D02",
+      "name": "Cache Hotel",
+      "disposition": "conditional",
+      "gate": "Dirty Return: public tape must defeat both largest-page and furthest-next-use eviction because dirty cost interacts with size. Win by retaining a dirty reused page; natural I/O cap failure after premature eviction; retry a tape where retaining it is instead wrong.",
+      "evidence": "Independent written-design review only; no empirical win, failure, balance, or access certification.",
+      "ordinaryInput": "Visible rules and public controls only; first review before source, solution, solver or probe exposure. Both keyboard-only and touch-only full run plus natural failure and restart. Shared README controls/a11y gates apply."
+    },
+    {
+      "id": "D03",
+      "name": "Heap Garden",
+      "disposition": "conditional",
+      "gate": "Pinned Bridge: 12-address tape with two frees, a future pinned separator and a necessary paid move. Complete all requests; cause fragmentation failure through a legal earlier placement; restart clears pin and allocation state. No relocation directly through occupied ranges.",
+      "evidence": "Independent written-design review only; no empirical win, failure, balance, or access certification.",
+      "ordinaryInput": "Visible rules and public controls only; first review before source, solution, solver or probe exposure. Both keyboard-only and touch-only full run plus natural failure and restart. Shared README controls/a11y gates apply."
+    },
+    {
+      "id": "D04",
+      "name": "Ledger Race",
+      "disposition": "conditional",
+      "gate": "Lost Update / Write Skew: construct actual per-program instruction interleaving retaining stale local registers, then repair with one lock/fence and certify all legal traces. Serial completion fails witness goal; bad repair yields public counterexample. Later two-variable/check-act cases must require different choices, not repeated alternate-click lost update.",
+      "evidence": "Independent written-design review only; no empirical win, failure, balance, or access certification.",
+      "ordinaryInput": "Visible rules and public controls only; first review before source, solution, solver or probe exposure. Both keyboard-only and touch-only full run plus natural failure and restart. Shared README controls/a11y gates apply."
+    },
+    {
+      "id": "D05",
+      "name": "Receipt Route",
+      "disposition": "conditional",
+      "gate": "Lost Receipt: loss/duplicate tape must make lowest-unacknowledged resend plus immediate ACK miss transmission cap on at least one instance. Win must use selective packet/ACK order with exactly-once delivery; waste legal resends to exhaust cap, restart and complete with changed tape.",
+      "evidence": "Independent written-design review only; no empirical win, failure, balance, or access certification.",
+      "ordinaryInput": "Visible rules and public controls only; first review before source, solution, solver or probe exposure. Both keyboard-only and touch-only full run plus natural failure and restart. Shared README controls/a11y gates apply."
+    },
+    {
+      "id": "D06",
+      "name": "Stack Kitchen",
+      "disposition": "conditional",
+      "gate": "Absolute Difference: one program must handle both pair orders, zero and negative inputs, requiring data-dependent flow and stack reuse. Premature binary operation yields underflow; reviewer repairs through UI and passes all disclosed cases. Repeated fixed recipe must fail a contrasting input family.",
+      "evidence": "Independent written-design review only; no empirical win, failure, balance, or access certification.",
+      "ordinaryInput": "Visible rules and public controls only; first review before source, solution, solver or probe exposure. Both keyboard-only and touch-only full run plus natural failure and restart. Shared README controls/a11y gates apply."
+    },
+    {
+      "id": "D07",
+      "name": "Pattern Tailor",
+      "disposition": "conditional",
+      "gate": "Near-Miss Grammar: named finite universe must need nested repetition/union and budgeted factoring rather than listing words. Win all public cases; deliberately broaden repetition and receive concrete forbidden-word witness; fix by editing same tree, then repeat on different language.",
+      "evidence": "Independent written-design review only; no empirical win, failure, balance, or access certification.",
+      "ordinaryInput": "Visible rules and public controls only; first review before source, solution, solver or probe exposure. Both keyboard-only and touch-only full run plus natural failure and restart. Shared README controls/a11y gates apply."
+    },
+    {
+      "id": "D08",
+      "name": "Bracket Workshop",
+      "disposition": "conditional",
+      "gate": "Ambiguous Attachment: same public phrase permits two syntactically valid parse trees with different requested meanings. Winning run delays a legal reduction; greedy reduction reaches wrong valid interpretation and fails; restart requires different attachment under changed target. Not merely arithmetic parenthesization.",
+      "evidence": "Independent written-design review only; no empirical win, failure, balance, or access certification.",
+      "ordinaryInput": "Visible rules and public controls only; first review before source, solution, solver or probe exposure. Both keyboard-only and touch-only full run plus natural failure and restart. Shared README controls/a11y gates apply."
+    },
+    {
+      "id": "D09",
+      "name": "Type Loom",
+      "disposition": "conditional",
+      "gate": "Shared Element: repeated type variable must propagate through two independently placed expressions and force a nonlocal revision. Complete valid pipeline; make a legal edit that creates occurs-check failure, inspect named cyclic constraint, repair through UI. One-socket matching is insufficient.",
+      "evidence": "Independent written-design review only; no empirical win, failure, balance, or access certification.",
+      "ordinaryInput": "Visible rules and public controls only; first review before source, solution, solver or probe exposure. Both keyboard-only and touch-only full run plus natural failure and restart. Shared README controls/a11y gates apply."
+    },
+    {
+      "id": "D10",
+      "name": "Proof Lantern",
+      "disposition": "conditional",
+      "gate": "Scoped Cases: six-line A\u2192B,B\u2192C teaching proof introduces discharge; later disjunction requires separate scopes and reusable implication. Complete within line bound, waste allowance on irrelevant legal assumptions to fail naturally, restart. Closed-scope fact rejection remains separate invalid-input coverage.",
+      "evidence": "Independent written-design review only; no empirical win, failure, balance, or access certification.",
+      "ordinaryInput": "Visible rules and public controls only; first review before source, solution, solver or probe exposure. Both keyboard-only and touch-only full run plus natural failure and restart. Shared README controls/a11y gates apply."
+    },
+    {
+      "id": "D11",
+      "name": "Table Confluence",
+      "disposition": "conditional",
+      "gate": "Duplicate Tags: joined rows multiply cardinality; group/distinct placement must change result and resource use. Win correct grouped report within cap; make plausible early join and show named duplicated order/overcount before failure; repair pipeline through UI.",
+      "evidence": "Independent written-design review only; no empirical win, failure, balance, or access certification.",
+      "ordinaryInput": "Visible rules and public controls only; first review before source, solution, solver or probe exposure. Both keyboard-only and touch-only full run plus natural failure and restart. Shared README controls/a11y gates apply."
+    },
+    {
+      "id": "D12",
+      "name": "Branch Librarian",
+      "disposition": "conditional",
+      "gate": "Double Rotation: public tree must require temporary cost increase within rotation budget, defeating greedy improving-only rotations. Finish threshold; oscillate legal edge to exhaust budget; restart a different frequency pattern requiring a different target shape.",
+      "evidence": "Independent written-design review only; no empirical win, failure, balance, or access certification.",
+      "ordinaryInput": "Visible rules and public controls only; first review before source, solution, solver or probe exposure. Both keyboard-only and touch-only full run plus natural failure and restart. Shared README controls/a11y gates apply."
+    },
+    {
+      "id": "D13",
+      "name": "Row Orchestra",
+      "disposition": "conditional",
+      "gate": "Cheap Pivot: three equations must make pivot order affect bounded coefficient growth. Win through row swap and elimination; legal alternative pivot/scaling exceeds visible bound; restart alternate system where original cheap-pivot rule is inadequate. Whole augmented row updates must be inspectable.",
+      "evidence": "Independent written-design review only; no empirical win, failure, balance, or access certification.",
+      "ordinaryInput": "Visible rules and public controls only; first review before source, solution, solver or probe exposure. Both keyboard-only and touch-only full run plus natural failure and restart. Shared README controls/a11y gates apply."
+    },
+    {
+      "id": "D14",
+      "name": "State Courier",
+      "disposition": "conditional",
+      "gate": "Remember Then Reset: identical next symbol after different histories must need different emitted outputs; at least one task requires more than toggle/reset trivia. Win all displayed history families; merge required states and inspect shortest output counterexample, then fix through UI.",
+      "evidence": "Independent written-design review only; no empirical win, failure, balance, or access certification.",
+      "ordinaryInput": "Visible rules and public controls only; first review before source, solution, solver or probe exposure. Both keyboard-only and touch-only full run plus natural failure and restart. Shared README controls/a11y gates apply."
+    },
+    {
+      "id": "D15",
+      "name": "Compare Parade",
+      "disposition": "conditional",
+      "gate": "Four-Lane Cross: UI-built network must sort all permutations under both comparison and depth caps. Complete five-comparator network; omit essential middle comparator and inspect concrete unsorted witness; add conflict on occupied lane to test invalid action; alternate task changes lane/stage constraints.",
+      "evidence": "Independent written-design review only; no empirical win, failure, balance, or access certification.",
+      "ordinaryInput": "Visible rules and public controls only; first review before source, solution, solver or probe exposure. Both keyboard-only and touch-only full run plus natural failure and restart. Shared README controls/a11y gates apply."
+    },
+    {
+      "id": "D16",
+      "name": "Token Crucible",
+      "disposition": "conditional",
+      "gate": "Inhibited Catalyst: challenge must require emptying an inhibitor and regenerating catalyst through a cycle. Win exact marking; consume shared token on plausible wrong branch to enter genuine nongoal deadlock; restart. Forward recipe chain alone does not qualify.",
+      "evidence": "Independent written-design review only; no empirical win, failure, balance, or access certification.",
+      "ordinaryInput": "Visible rules and public controls only; first review before source, solution, solver or probe exposure. Both keyboard-only and touch-only full run plus natural failure and restart. Shared README controls/a11y gates apply."
+    },
+    {
+      "id": "D17",
+      "name": "Copy Ribbon",
+      "disposition": "conditional",
+      "gate": "Non-Greedy Ribbon aabaaaa: literal3/reference4 cost, window6,max reference4, budget16; four literals then distance1 length3 fits16, earliest longest-match parse costs17. Reproduce visible-input contrast and wrong-reference mismatch, restart altered repeat structure. Window at same decoded cursor is identical regardless of parsing.",
+      "evidence": "Independent written-design review only; no empirical win, failure, balance, or access certification.",
+      "ordinaryInput": "Visible rules and public controls only; first review before source, solution, solver or probe exposure. Both keyboard-only and touch-only full run plus natural failure and restart. Shared README controls/a11y gates apply."
+    },
+    {
+      "id": "D18",
+      "name": "Parallel Manuscripts",
+      "disposition": "conditional",
+      "gate": "Repeated Anchor: repeated symbols allow multiple locally plausible alignments; one long affine gap beats two opens and greedy equal-symbol alignment fails downstream anchor/budget. Complete alignment, fail plausible greedy route, restart with different anchored motif.",
+      "evidence": "Independent written-design review only; no empirical win, failure, balance, or access certification.",
+      "ordinaryInput": "Visible rules and public controls only; first review before source, solution, solver or probe exposure. Both keyboard-only and touch-only full run plus natural failure and restart. Shared README controls/a11y gates apply."
+    },
+    {
+      "id": "D19",
+      "name": "Private Census",
+      "disposition": "conditional",
+      "gate": "Split Cohort: six-row public table needs coordinated generalization across at least two attributes; one row edit creates a new singleton. Publish valid diverse cohorts below utility cap; fail explained publication and repair. Accept alternate valid groupings, not hidden answer table.",
+      "evidence": "Independent written-design review only; no empirical win, failure, balance, or access certification.",
+      "ordinaryInput": "Visible rules and public controls only; first review before source, solution, solver or probe exposure. Both keyboard-only and touch-only full run plus natural failure and restart. Shared README controls/a11y gates apply."
+    },
+    {
+      "id": "D20",
+      "name": "Tiny Soundbook",
+      "disposition": "conditional",
+      "gate": "Uneven Levels: public amplitude weights must force changing boundaries and code allocation together; equal bins and frequency-only codes each violate one cap. Win both caps; show a plausible single-budget optimization failing the other, then repair. Full numerical deltas must avoid requiring audio.",
+      "evidence": "Independent written-design review only; no empirical win, failure, balance, or access certification.",
+      "ordinaryInput": "Visible rules and public controls only; first review before source, solution, solver or probe exposure. Both keyboard-only and touch-only full run plus natural failure and restart. Shared README controls/a11y gates apply."
+    },
+    {
+      "id": "D21",
+      "name": "Agenda Garden",
+      "disposition": "conditional",
+      "gate": "Protected Agenda: five-to-seven motion instance with constrained early pairings, not three-node RPS lesson. Win target via an indirect elimination chain; legal premature pairing eliminates target and loses; changed rankings require different agenda on replay.",
+      "evidence": "Independent written-design review only; no empirical win, failure, balance, or access certification.",
+      "ordinaryInput": "Visible rules and public controls only; first review before source, solution, solver or probe exposure. Both keyboard-only and touch-only full run plus natural failure and restart. Shared README controls/a11y gates apply."
+    },
+    {
+      "id": "D22",
+      "name": "Causal Camera",
+      "disposition": "conditional",
+      "gate": "Causal Chain: select timeline prefixes and count assets in transit; A-after-send/B-before-receive snapshot preserves3 tokens, orphan B-receive without A-send fails. Later three-process milestone constraints must force prefix cascades and competing rollback choices; ordinary win, explained failed certificate, edit/retry required.",
+      "evidence": "Independent written-design review only; no empirical win, failure, balance, or access certification.",
+      "ordinaryInput": "Visible rules and public controls only; first review before source, solution, solver or probe exposure. Both keyboard-only and touch-only full run plus natural failure and restart. Shared README controls/a11y gates apply."
+    },
+    {
+      "id": "D23",
+      "name": "Linked Orchard",
+      "disposition": "conditional",
+      "gate": "Recessive Carrier: target must require an apparently inferior carrier intermediate and at least two crossovers/generations under four-slot nursery. Win exact genotype; discard final necessary allele carrier causing explained irreversible loss; restart using a different linked-locus arrangement.",
+      "evidence": "Independent written-design review only; no empirical win, failure, balance, or access certification.",
+      "ordinaryInput": "Visible rules and public controls only; first review before source, solution, solver or probe exposure. Both keyboard-only and touch-only full run plus natural failure and restart. Shared README controls/a11y gates apply."
+    },
+    {
+      "id": "D24",
+      "name": "Clearing Circle",
+      "disposition": "conditional",
+      "gate": "Feedback Cycle: publicly show settlement iterations and a liquidity placement that causes several downstream payments. Win by rescuing bottleneck; plausible biggest-deficit/isolated-sink injection causes protected default. Replay must change useful funding node and be compared with remediated Safe Return.",
+      "evidence": "Independent written-design review only; no empirical win, failure, balance, or access certification.",
+      "ordinaryInput": "Visible rules and public controls only; first review before source, solution, solver or probe exposure. Both keyboard-only and touch-only full run plus natural failure and restart. Shared README controls/a11y gates apply."
+    },
+    {
+      "id": "D25",
+      "name": "Night Collector",
+      "disposition": "conditional",
+      "gate": "Root Reattachment: announced mutation occurs between marking and sweep, requiring ordering/barrier choice. Collect unreachable cycle safely; skip relevant barrier then sweep newly reachable white object for natural safety failure; restart and win. Always-barrier/scan-first routine must be insufficient under reserve/work cap.",
+      "evidence": "Independent written-design review only; no empirical win, failure, balance, or access certification.",
+      "ordinaryInput": "Visible rules and public controls only; first review before source, solution, solver or probe exposure. Both keyboard-only and touch-only full run plus natural failure and restart. Shared README controls/a11y gates apply."
+    },
+    {
+      "id": "D26",
+      "name": "Gathering Grounds",
+      "disposition": "conditional",
+      "gate": "Unknown Harvest: six-day stable-bed lesson contrasts productive exploration plus rich exploitation with known-poor repetition; later depleting/recovering scenario makes current-best-only fail. Win quota with public history only, fail poor harvest policy and retry across every allowed assignment. Information must affect later real reward, no decorative harvest/guess-the-rule finale.",
+      "evidence": "Independent revised/new written-design review only; no empirical gameplay or accessibility certification.",
+      "ordinaryInput": "First reviewer visible rules/state and public controls only, no solver/probe/source solution. Keyboard-only and touch-only full win, natural failure/recovery and restart; README gates apply."
+    },
+    {
+      "id": "D27",
+      "name": "Loop Transit",
+      "disposition": "conditional",
+      "gate": "Ring and Branch: draw ring plus C\u2013E shuttle, allocate two trains and deliver transfer demand while counting onboard destinations and one-pulse transfer wait. Put both on ring to overflow E naturally; reset. Later changing demand must require reroute/fleet redistribution, not merely add all offered lines.",
+      "evidence": "Independent revised/new written-design review only; no empirical gameplay or accessibility certification.",
+      "ordinaryInput": "First reviewer visible rules/state and public controls only, no solver/probe/source solution. Keyboard-only and touch-only full win, natural failure/recovery and restart; README gates apply."
+    }
+  ],
+  "sourceHashes": {
+    "a.json": "c8c4e6fdd2a0cfa5dd0f7ee0a727f076a7b9e75acd683f0ff6f8f25fb9f354ae",
+    "b.json": "3490597e0990fbcc88f0e41c9bd5be90967bb148c9cfaec1c6ca73ce8731050f",
+    "c.json": "f0a08c1ce403c34a77a814c81a3d35e398f1fa23c1fc628ff4ea7e99c51d9f25",
+    "d.json": "5a081a0930d3e5ceebef8c5a28ca9c40082f4b6f6b4a84297cd92e3e4fe6d1ad"
+  },
+  "counts": {
+    "conditional": 100,
+    "rejected-duplicate": 1,
+    "revise-reserve": 2,
+    "reject-reserve": 1
+  }
+}

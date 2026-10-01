@@ -2,7 +2,15 @@
 
 Review remediation: [changes and verification scope](REMEDIATION-200.md) · [independent follow-up](REMEDIATION-200-REVIEW.md).
 
-A small, expandable browser arcade with 200 playable games. The catalog is `index.html`, with working All / Adventure / Reflex / Memory / Puzzle / Strategy filters. Every displayed game is playable.
+A small, expandable browser arcade with 300 playable games. The catalog is `index.html`, with working All / Adventure / Reflex / Memory / Puzzle / Strategy filters. Every displayed game is playable.
+
+## The 300-game expansion
+
+The next 100 games occupy four rooms: Construction (14), Parlour (35), Motion (24), and Workbench (27). The [design inventory](EXPANSION-300-DESIGNS.md), [corrected-baseline comparison](EXPANSION-300-BASELINE-RECHECK.md), and [verification record](EXPANSION-300-VERIFICATION.md) distinguish independent ordinary play from authored regression paths and disclose review limits. The release status is recorded in that verification document.
+
+Every addition requires a full ordinary-input win, meaningful decisions, a natural failure or explicitly recoverable puzzle failure, native keyboard and emulated-touch checks, and source-bound review evidence. Seven primary reports cover exactly 100 distinct games. Revised games are retested; source-exposed revisions and guided failure paths remain explicitly labeled. `tests/expansion300-review-gate.cjs` rejects incomplete or stale reports.
+
+`tests/preservation200.cjs` preserves the corrected 200-game baseline, including all 305 runtime files. Full regression evidence spans 24 registered suites; each of the nine expansion-room suites requires winning primary paths on both desktop and mobile profiles. Additional losing or alternate-deal paths cannot substitute for those wins. Deployment checks cover 600 catalog route/reset cases and Chromium/WebKit control regressions.
 
 ## The 200-game expansion
 
@@ -20,7 +28,7 @@ The original 100 entries and game runtime files, catalog interaction code, and `
 
 See the [release verification record](EXPANSION-200-VERIFICATION.md) for exact scopes and evidence links.
 
-`coverage/index.json` is the current aggregate, not a historical README claim. A successful suite must match current runtime/test/fixture bytes, verify served assets before and after execution, and produce fresh complete per-game evidence. Missing, stale, failed, contradictory or partial evidence fails the gate. The runner refuses to label WebKit execution as Chromium. New suites distinguish desktop, mobile viewport, touch-only gameplay and mixed input per game. Competitive tabletop terminal results may be losses or draws; solitaire progressions must win.
+`coverage/index.json` is the current aggregate, not a historical README claim. A successful suite must match current runtime/test/fixture bytes, verify served assets before and after execution, and produce fresh complete per-game evidence. Missing, stale, failed, contradictory or partial evidence fails the gate. The runner refuses to label WebKit execution as Chromium. New suites distinguish desktop, mobile viewport, touch-only gameplay and mixed input per game. All expansion primary paths must win; losses and draws are separately labeled variants. Original strategy-room terminal coverage retains its disclosed narrower scope.
 
 Full-game checks use rendered-state solvers, read-only probes or source-derived legal plans. They establish reachable outcomes and tested rules, not unaided difficulty. Ordinary-input review is a separate, explicitly sampled category. No physical iPhone, screen-reader user study or blanket deep-polish claim is made. Some games have authored scenarios; others generate or shuffle new studies/deals.
 
@@ -38,7 +46,7 @@ node mini-games/tests/preservation.cjs
 node mini-games/tests/expansion-controls.cjs
 ```
 
-The GitHub workflow checks the exact pushed commit: full new-game Chromium suites, published byte equality and 400 catalog route/reset cases, followed by original issue regressions and new-game control checks in Chromium and WebKit. Browser-engine checks are not physical-device certification. Two legacy suites, Word Weave and Pebble Post, are now correctly classified as mixed mobile input because their winning paths include mouse check/undo actions.
+The GitHub workflow checks the exact pushed commit: full new-game Chromium suites, published byte equality and 600 catalog route/reset cases, followed by original issue regressions and new-game control checks in Chromium and WebKit. Browser-engine checks are not physical-device certification. Two legacy suites, Word Weave and Pebble Post, are now correctly classified as mixed mobile input because their winning paths include mouse check/undo actions.
 
 ## Play locally
 

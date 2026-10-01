@@ -1,0 +1,1996 @@
+{
+  "status": "FINAL DESIGN REVIEW: 100 conditional acceptances, 2 rejections, 2 uncounted reserve revisions. NO implementation acceptance or publication authorization.",
+  "fileHashes": {
+    "a.json": "c8c4e6fdd2a0cfa5dd0f7ee0a727f076a7b9e75acd683f0ff6f8f25fb9f354ae",
+    "b.json": "3490597e0990fbcc88f0e41c9bd5be90967bb148c9cfaec1c6ca73ce8731050f",
+    "c.json": "f0a08c1ce403c34a77a814c81a3d35e398f1fa23c1fc628ff4ea7e99c51d9f25",
+    "d.json": "5a081a0930d3e5ceebef8c5a28ca9c40082f4b6f6b4a84297cd92e3e4fe6d1ad"
+  },
+  "primaryIds": [
+    "A01",
+    "A02",
+    "A03",
+    "A04",
+    "A06",
+    "A07",
+    "A08",
+    "A09",
+    "A10",
+    "A11",
+    "A12",
+    "A13",
+    "A14",
+    "A16",
+    "B01",
+    "B02",
+    "B03",
+    "B04",
+    "B05",
+    "B06",
+    "B07",
+    "B08",
+    "B09",
+    "B10",
+    "B11",
+    "B12",
+    "B13",
+    "B14",
+    "B15",
+    "B16",
+    "B17",
+    "B18",
+    "B19",
+    "B20",
+    "B21",
+    "B22",
+    "B23",
+    "B24",
+    "B25",
+    "B26",
+    "B27",
+    "B28",
+    "B29",
+    "B30",
+    "B31",
+    "B32",
+    "B33",
+    "B34",
+    "B35",
+    "C01",
+    "C02",
+    "C03",
+    "C04",
+    "C05",
+    "C06",
+    "C07",
+    "C08",
+    "C09",
+    "C10",
+    "C11",
+    "C12",
+    "C13",
+    "C14",
+    "C15",
+    "C17",
+    "C18",
+    "C19",
+    "C20",
+    "C21",
+    "C22",
+    "C23",
+    "C24",
+    "C25",
+    "D01",
+    "D02",
+    "D03",
+    "D04",
+    "D05",
+    "D06",
+    "D07",
+    "D08",
+    "D09",
+    "D10",
+    "D11",
+    "D12",
+    "D13",
+    "D14",
+    "D15",
+    "D16",
+    "D17",
+    "D18",
+    "D19",
+    "D20",
+    "D21",
+    "D22",
+    "D23",
+    "D24",
+    "D25",
+    "D26",
+    "D27"
+  ],
+  "count": 100,
+  "items": [
+    {
+      "id": "A01",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "tide-pool",
+        "merge-garden"
+      ],
+      "strongestProposedNeighbors": [
+        "C02",
+        "C03"
+      ],
+      "rationale": "Remove existing connected groups then gravity/column closure changes future adjacency; cannot swap to create groups or add cells.",
+      "requiredChanges": "Retain defining transitions; complete challenge fixture and final baseline comparison."
+    },
+    {
+      "id": "A02",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "cube-seal",
+        "good-order"
+      ],
+      "strongestProposedNeighbors": [
+        "A08"
+      ],
+      "rationale": "Noncommuting face turns permute and orient shared cubies without spatial cube travel; face-local correctness can require deliberate destruction.",
+      "requiredChanges": "Retain defining transitions; complete challenge fixture and final baseline comparison."
+    },
+    {
+      "id": "A03",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "loose-ends"
+      ],
+      "strongestProposedNeighbors": [
+        "C06"
+      ],
+      "rationale": "Reidemeister moves preserve over/under knot topology while changing diagram; vertex-position swaps that alter crossing identity are illegal.",
+      "requiredChanges": "Retain defining transitions; complete challenge fixture and final baseline comparison."
+    },
+    {
+      "id": "A04",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "rover-script",
+        "gate-foundry"
+      ],
+      "strongestProposedNeighbors": [
+        "D10"
+      ],
+      "rationale": "Construct geometric loci and exact intersections with provenance; no coordinate approximation, discrete inference application or fixed-gate fitting.",
+      "requiredChanges": "Retain defining transitions; complete challenge fixture and final baseline comparison."
+    },
+    {
+      "id": "A05",
+      "status": "reject",
+      "strongestExistingNeighbors": [
+        "paper-trail",
+        "four-holds"
+      ],
+      "strongestProposedNeighbors": [
+        "C13",
+        "C09"
+      ],
+      "rationale": "Select joint and rotate downstream connected rigid panels through swept collisions: same core as C13 despite silhouette rather than payload goal.",
+      "requiredChanges": "Replace duplicate joint-configuration loop; changing final goal cannot separate from C13."
+    },
+    {
+      "id": "A06",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "fraction-mosaic",
+        "tangram-dock"
+      ],
+      "strongestProposedNeighbors": [
+        "B24",
+        "C15"
+      ],
+      "rationale": "Irreversible guillotine hierarchy changes which future cuts exist with exact density and protected emblems; no opponent choose-first utility game.",
+      "requiredChanges": "Retain defining transitions; complete challenge fixture and final baseline comparison."
+    },
+    {
+      "id": "A07",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "pebble-post",
+        "twin-steps",
+        "phase-walk"
+      ],
+      "strongestProposedNeighbors": [
+        "A11"
+      ],
+      "rationale": "Physical rule text alters control, blocking and victory semantics; mandatory changing rules means fixed Sokoban route is insufficient.",
+      "requiredChanges": "Retain defining transitions; complete challenge fixture and final baseline comparison."
+    },
+    {
+      "id": "A08",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "crate-crane",
+        "good-order"
+      ],
+      "strongestProposedNeighbors": [
+        "A02"
+      ],
+      "rationale": "Whole prefix reversal simultaneously permutes and inverts signed discs; neither individual blank swap nor top transfer can model the actual action.",
+      "requiredChanges": "Retain defining transitions; complete challenge fixture and final baseline comparison."
+    },
+    {
+      "id": "A09",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "peg",
+        "marble-council"
+      ],
+      "strongestProposedNeighbors": [
+        "A01"
+      ],
+      "rationale": "Fling transfers motion through nonlocal collision chain and repositions multiple survivors; unlike one jumping peg/remove midpoint. Mandatory multi-impact scenario needed.",
+      "requiredChanges": "Retain defining transitions; complete challenge fixture and final baseline comparison."
+    },
+    {
+      "id": "A10",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "tile-weave",
+        "good-order",
+        "folded-world"
+      ],
+      "strongestProposedNeighbors": [
+        "D27"
+      ],
+      "rationale": "Insertion shifts whole maze row including occupants/objectives and ejects future spare, then traverses changed connectivity; fixed-tile rotation cannot substitute.",
+      "requiredChanges": "Retain defining transitions; complete challenge fixture and final baseline comparison."
+    },
+    {
+      "id": "A11",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "pebble-post",
+        "tangram-dock"
+      ],
+      "strongestProposedNeighbors": [
+        "C11",
+        "C09"
+      ],
+      "rationale": "Irreversible automatic valence bonds change movable component geometry and consume future bonding capacity; no mass redistribution or predefined rigid object.",
+      "requiredChanges": "Retain defining transitions; complete challenge fixture and final baseline comparison."
+    },
+    {
+      "id": "A12",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "copper-tree",
+        "paper-trail",
+        "soft-sculpt"
+      ],
+      "strongestProposedNeighbors": [
+        "C15"
+      ],
+      "rationale": "Choose retained surface hinges and geometric flattening must yield connected nonoverlapping net fitting stock; spanning-tree legality alone insufficient.",
+      "requiredChanges": "Retain defining transitions; complete challenge fixture and final baseline comparison."
+    },
+    {
+      "id": "A13",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "fraction-balance",
+        "six-columns"
+      ],
+      "strongestProposedNeighbors": [
+        "D20",
+        "D21"
+      ],
+      "rationale": "Conserve shared die faces while satisfying three coupled cyclic pairwise outcome distributions; equal means insufficient and each swap changes two matchups.",
+      "requiredChanges": "Retain defining transitions and ordinary-input QA; recheck final baseline."
+    },
+    {
+      "id": "A14",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "hidden-grove",
+        "alphabet-trail",
+        "cable-loom"
+      ],
+      "strongestProposedNeighbors": [
+        "B12"
+      ],
+      "rationale": "Consume fixed-field tiles across chosen lexical paths and word slots; route ambiguity controls future marked access, unlike straight listed word search or forced alphabet path.",
+      "requiredChanges": "Retain defining transitions and ordinary-input QA; recheck final baseline."
+    },
+    {
+      "id": "A15",
+      "status": "reserve_revise",
+      "strongestExistingNeighbors": [
+        "folded-world",
+        "pebble-post",
+        "track-exchange"
+      ],
+      "strongestProposedNeighbors": [
+        "A10",
+        "C21"
+      ],
+      "rationale": "Finite parent and west/east emergence ambiguity repaired, but provided intro is a movable bridge with independent child maze. Genuine nested persistent-state/docking coupling remains unproved by concrete later fixture.",
+      "requiredChanges": "Uncounted reserve. Supply coupled nested fixture where treating child as always-open bridge loses a necessary decision, then obtain renewed independent review."
+    },
+    {
+      "id": "A16",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "stamp-studio",
+        "pigment-lab",
+        "echo-steps"
+      ],
+      "strongestProposedNeighbors": [
+        "A10",
+        "C10"
+      ],
+      "rationale": "Capture live spatial state then overwrite with rotated snapshot including empty cells; preserves past material and destructively changes future traversal, not fixed additive stamps.",
+      "requiredChanges": "Retain defining transitions and ordinary-input QA; recheck final baseline."
+    },
+    {
+      "id": "A17",
+      "status": "reserve_revise",
+      "strongestExistingNeighbors": [
+        "rover-script",
+        "assembly-belt",
+        "echo-steps",
+        "borrowed-time"
+      ],
+      "strongestProposedNeighbors": [
+        "B30",
+        "A11",
+        "D06",
+        "D14",
+        "D16"
+      ],
+      "rationale": "Concurrent periodic manipulators with material handoff and repeated physical assembly are plausibly distinct from adversarial register racing and abstract program synthesis, but simultaneous grab/bond/output timing still unfrozen.",
+      "requiredChanges": "Uncounted reserve. Freeze simultaneous interaction semantics and provide nontrivial multi-cycle fixture before renewed independent acceptance."
+    },
+    {
+      "id": "B01",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "reversi",
+        "hex"
+      ],
+      "strongestProposedNeighbors": [
+        "B04"
+      ],
+      "rationale": "Liberty-connected capture, eyes and territory settlement; placement changes group survival rather than bracket conversion or edge connection.",
+      "requiredChanges": "Retain defining transitions in implementation; recheck final remediation baseline and perform ordinary-input QA."
+    },
+    {
+      "id": "B02",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "borrowed-steps",
+        "crown-and-guard",
+        "draught-garden"
+      ],
+      "strongestProposedNeighbors": [
+        "B03"
+      ],
+      "rationale": "Captured units enter captor reserves and redeploy through drops, altering attack resources rather than simple material attrition.",
+      "requiredChanges": "Retain defining transitions in implementation; recheck final remediation baseline and perform ordinary-input QA."
+    },
+    {
+      "id": "B03",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "marble-council",
+        "pawns"
+      ],
+      "strongestProposedNeighbors": [
+        "B02",
+        "C25"
+      ],
+      "rationale": "Four-step turn budgeting, strength freezing and stepwise trap support combine forced displacement; not group-count ejection or single pawn step.",
+      "requiredChanges": "Retain defining transitions in implementation; recheck final remediation baseline and perform ordinary-input QA."
+    },
+    {
+      "id": "B04",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "joining-lines",
+        "siege"
+      ],
+      "strongestProposedNeighbors": [
+        "B01"
+      ],
+      "rationale": "Single-hive connectivity constrains distinct crawling movement and surrounding queen; existing line-distance movement and ray-blocking traps cannot simulate.",
+      "requiredChanges": "Retain defining transitions in implementation; recheck final remediation baseline and perform ordinary-input QA."
+    },
+    {
+      "id": "B05",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "pawns",
+        "bank-the-roll"
+      ],
+      "strongestProposedNeighbors": [
+        "B03"
+      ],
+      "rationale": "Dice partition among movable checkers with blot hits, reentry obligations and bearing off; random roll is movement resource not accumulated push-luck score.",
+      "requiredChanges": "Retain defining transitions in implementation; recheck final remediation baseline and perform ordinary-input QA."
+    },
+    {
+      "id": "B06",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "fleet",
+        "lantern-heist"
+      ],
+      "strongestProposedNeighbors": [
+        "B02"
+      ],
+      "rationale": "Hidden ranks persist through mobile adversarial combat and scouting sacrifices; observations alter tactical risk while opposing flag can move behind defenders.",
+      "requiredChanges": "Retain defining transitions in implementation; recheck final remediation baseline and perform ordinary-input QA."
+    },
+    {
+      "id": "B07",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "court-of-suits",
+        "workshop-shift"
+      ],
+      "strongestProposedNeighbors": [
+        "B18"
+      ],
+      "rationale": "Acquire/thin cards to alter future hand probability across reshuffles; deck composition future economy differs current hand combat or assigned workers.",
+      "requiredChanges": "Retain defining transitions in implementation; recheck final remediation baseline and perform ordinary-input QA."
+    },
+    {
+      "id": "B08",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "tangram-dock",
+        "guild"
+      ],
+      "strongestProposedNeighbors": [
+        "B21"
+      ],
+      "rationale": "Adversarial corner-only growing frontier with finite polyomino stock and no own-edge contact; opponent blockage replaces static exact packing.",
+      "requiredChanges": "Retain defining transitions in implementation; recheck final remediation baseline and perform ordinary-input QA."
+    },
+    {
+      "id": "B09",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "four",
+        "three-of-a-kind"
+      ],
+      "strongestProposedNeighbors": [
+        "B06"
+      ],
+      "rationale": "Opponent gifts the piece you must place, then you constrain their next choice; shared-trait line and poisonous remaining gifts alter alignment strategy.",
+      "requiredChanges": "Retain defining transitions in implementation; recheck final remediation baseline and perform ordinary-input QA."
+    },
+    {
+      "id": "B10",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "two-couriers",
+        "crown-and-guard"
+      ],
+      "strongestProposedNeighbors": [
+        "C25"
+      ],
+      "rationale": "Simultaneous secret support orders, support cutting and contested adjudication; attack can succeed by cutting elsewhere even while bouncing.",
+      "requiredChanges": "Retain defining transitions in implementation; recheck final remediation baseline and perform ordinary-input QA."
+    },
+    {
+      "id": "B11",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "chain-reaction",
+        "last-letter"
+      ],
+      "strongestProposedNeighbors": [
+        "B12"
+      ],
+      "rationale": "Adversarial prefix parity and costly challenge govern extension; no fixed endpoint chain or hidden-word letter identification.",
+      "requiredChanges": "Retain defining transitions in implementation; recheck final remediation baseline and perform ordinary-input QA."
+    },
+    {
+      "id": "B12",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "crossings",
+        "word-weave"
+      ],
+      "strongestProposedNeighbors": [
+        "B11"
+      ],
+      "rationale": "Persistent competitive board grows with shared crossings, rack economy, premium denial and exchange tempo; not filling known clue answers.",
+      "requiredChanges": "Retain defining transitions in implementation; recheck final remediation baseline and perform ordinary-input QA."
+    },
+    {
+      "id": "B13",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "crate-crane",
+        "meld-atelier"
+      ],
+      "strongestProposedNeighbors": [
+        "B14"
+      ],
+      "rationale": "Hidden tableau uncover, ordered alternating-color suffixes and suit foundations compete with finite stock traversal; sorting-only policy insufficient.",
+      "requiredChanges": "Retain defining transitions in implementation; recheck final remediation baseline and perform ordinary-input QA."
+    },
+    {
+      "id": "B14",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "double-take",
+        "peg"
+      ],
+      "strongestProposedNeighbors": [
+        "B13"
+      ],
+      "rationale": "All-visible pair selection removes geometric blockers with four-copy ambiguity; no memory flips and no jumping pawn elimination.",
+      "requiredChanges": "Retain defining transitions in implementation; recheck final remediation baseline and perform ordinary-input QA."
+    },
+    {
+      "id": "B15",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "formation-flags",
+        "last-hand"
+      ],
+      "strongestProposedNeighbors": [
+        "B20"
+      ],
+      "rationale": "Increasing irreversible expedition rank investments and opponent-fed discard draw create risk of unfinished negative routes; lane formation poker absent.",
+      "requiredChanges": "Retain defining transitions in implementation; recheck final remediation baseline and perform ordinary-input QA."
+    },
+    {
+      "id": "B16",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "twenty-questions",
+        "velvet-tricks"
+      ],
+      "strongestProposedNeighbors": [
+        "B31"
+      ],
+      "rationale": "Own hand hidden from self, truthful partner hints consume shared turns/resources and support cooperative ordered plays; not active hypothesis quiz.",
+      "requiredChanges": "Retain defining transitions in implementation; recheck final remediation baseline and perform ordinary-input QA."
+    },
+    {
+      "id": "B17",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "orchard",
+        "meld-atelier"
+      ],
+      "strongestProposedNeighbors": [
+        "B20"
+      ],
+      "rationale": "Immutable hand order forces imminent planting; trade/gift can remove future liability at cost of helping opponent, coupling fields across turns.",
+      "requiredChanges": "Retain defining transitions in implementation; recheck final remediation baseline and perform ordinary-input QA."
+    },
+    {
+      "id": "B18",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "workshop-shift",
+        "supply-web"
+      ],
+      "strongestProposedNeighbors": [
+        "B07"
+      ],
+      "rationale": "Simultaneous phase choice yields shared follow actions and selector privilege; cards serve both potential buildings and payment opportunity cost.",
+      "requiredChanges": "Retain defining transitions in implementation; recheck final remediation baseline and perform ordinary-input QA."
+    },
+    {
+      "id": "B19",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "sealed-bids",
+        "bank-the-roll"
+      ],
+      "strongestProposedNeighbors": [
+        "B20"
+      ],
+      "rationale": "Pay to refuse accumulating penalty card, run-bridging changes accepted scores and finite refusal liquidity; no ranked one-use bid contest.",
+      "requiredChanges": "Retain defining transitions in implementation; recheck final remediation baseline and perform ordinary-input QA."
+    },
+    {
+      "id": "B20",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "trade",
+        "reorder-point"
+      ],
+      "strongestProposedNeighbors": [
+        "B15",
+        "B17"
+      ],
+      "rationale": "Common-market nonlinear bundle exchange and diminishing rival-contested sale tokens make endogenous scarcity; public fixed price forecast absent.",
+      "requiredChanges": "Retain defining transitions in implementation; recheck final remediation baseline and perform ordinary-input QA."
+    },
+    {
+      "id": "B21",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "tile-weave",
+        "guild"
+      ],
+      "strongestProposedNeighbors": [
+        "B08"
+      ],
+      "rationale": "Grow matched landscape, lock limited claimants until feature closure and merge prior claims; no fixed network solving or one-cell territory draft.",
+      "requiredChanges": "Retain defining transitions in implementation; recheck final remediation baseline and perform ordinary-input QA."
+    },
+    {
+      "id": "B22",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "guild",
+        "formation-flags"
+      ],
+      "strongestProposedNeighbors": [
+        "B32"
+      ],
+      "rationale": "Take all one color and push leftovers to shared center, constrained rows create involuntary overflow and wall adjacency scores; drafting remainder is central.",
+      "requiredChanges": "Retain defining transitions in implementation; recheck final remediation baseline and perform ordinary-input QA."
+    },
+    {
+      "id": "B23",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "joining-lines",
+        "soft-sculpt"
+      ],
+      "strongestProposedNeighbors": [
+        "B03"
+      ],
+      "rationale": "Top-controlled exact-height stack travel changes mobility and moves anchors; component cut simultaneously eliminates stacks in adversarial game.",
+      "requiredChanges": "Retain defining transitions in implementation; recheck final remediation baseline and perform ordinary-input QA."
+    },
+    {
+      "id": "B24",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "guild",
+        "fraction-mosaic"
+      ],
+      "strongestProposedNeighbors": [
+        "A06"
+      ],
+      "rationale": "Divider designs two connected parcels and chooser takes first under asymmetric utility; minimax division differs solo exact-mass guillotine hierarchy.",
+      "requiredChanges": "Retain defining transitions in implementation; recheck final remediation baseline and perform ordinary-input QA."
+    },
+    {
+      "id": "B25",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "guild",
+        "quiet-majority"
+      ],
+      "strongestProposedNeighbors": [
+        "B01",
+        "B21"
+      ],
+      "rationale": "Two distinct internal/external conflict scopes and weakest-culture score alter territorial incentives; expanding any high-scoring district not sufficient.",
+      "requiredChanges": "Retain defining transitions in implementation; recheck final remediation baseline and perform ordinary-input QA."
+    },
+    {
+      "id": "B26",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "hex",
+        "marble-council"
+      ],
+      "strongestProposedNeighbors": [
+        "B23",
+        "B08"
+      ],
+      "rationale": "Carry part of a controlled stack and partition drops along path redistributes road ownership; differs exact-height whole-stack jumps scored by surviving mass.",
+      "requiredChanges": "Retain essential interdependent decisions; final baseline comparison and ordinary-input evidence required."
+    },
+    {
+      "id": "B27",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "hidden-dice",
+        "quiet-majority"
+      ],
+      "strongestProposedNeighbors": [
+        "B31",
+        "B34"
+      ],
+      "rationale": "Unverified role claims trigger persistent actions/counterclaims and challenge branches; not monotonically rising aggregate dice bid.",
+      "requiredChanges": "Retain essential interdependent decisions; final baseline comparison and ordinary-input evidence required."
+    },
+    {
+      "id": "B28",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "trade",
+        "growing-block"
+      ],
+      "strongestProposedNeighbors": [
+        "B21",
+        "B20"
+      ],
+      "rationale": "Spatial mergers revalue separate public stock portfolios and minority payouts; share holder need not own any tile, unlike locked feature claimant.",
+      "requiredChanges": "Retain essential interdependent decisions; final baseline comparison and ordinary-input evidence required."
+    },
+    {
+      "id": "B29",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "fleet",
+        "twenty-questions",
+        "lantern-heist"
+      ],
+      "strongestProposedNeighbors": [
+        "B06",
+        "B10"
+      ],
+      "rationale": "Replaced Halma-like race with hidden mobile fugitive. Detective station occupation removes future target exits; transport traces update moving possibilities and scarce-ticket team interception controls transition space.",
+      "requiredChanges": "Use genuinely reactive hidden fugitive and required multi-detective route denial; ordinary visible-history win required, no hidden-position DOM leaks."
+    },
+    {
+      "id": "B30",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "rover-script",
+        "two-couriers"
+      ],
+      "strongestProposedNeighbors": [
+        "B10",
+        "D06"
+      ],
+      "rationale": "Simultaneous hidden register programs resolve priority pushes and conveyors; opponent changes a committed route, unlike solo static command path.",
+      "requiredChanges": "Retain essential interdependent decisions; final baseline comparison and ordinary-input evidence required."
+    },
+    {
+      "id": "B31",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "court-of-suits",
+        "five-card-evening"
+      ],
+      "strongestProposedNeighbors": [
+        "B27",
+        "B16"
+      ],
+      "rationale": "Retain one hidden identity while discarding actual-card information/elimination effects; no free role claim bluff or rank-combination redraw.",
+      "requiredChanges": "Retain essential interdependent decisions; final baseline comparison and ordinary-input evidence required."
+    },
+    {
+      "id": "B32",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "guild",
+        "formation-flags"
+      ],
+      "strongestProposedNeighbors": [
+        "B22",
+        "B15"
+      ],
+      "rationale": "Private hands circulate and return; choosing one defines rival future options, with nonlinear sets and deliberate delay/denial distinct public all-color quantity draft.",
+      "requiredChanges": "Retain essential interdependent decisions; final baseline comparison and ordinary-input evidence required."
+    },
+    {
+      "id": "B33",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "tangram-dock",
+        "workshop-shift"
+      ],
+      "strongestProposedNeighbors": [
+        "B08",
+        "B18"
+      ],
+      "rationale": "Patch cost advances time pawn; behind player acts repeatedly and crossing milestones funds future acquisition. Spatial fit and endogenous turn economy coupled.",
+      "requiredChanges": "Retain essential interdependent decisions; final baseline comparison and ordinary-input evidence required."
+    },
+    {
+      "id": "B34",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "five-card-evening",
+        "sealed-bids"
+      ],
+      "strongestProposedNeighbors": [
+        "B27"
+      ],
+      "rationale": "Core is responsive fold/call/raise under private opposing strength and staged shared reveals; baseline pre-stakes own draw hand then pays fixed rank table, with no response betting.",
+      "requiredChanges": "Retain essential interdependent decisions; final baseline comparison and ordinary-input evidence required."
+    },
+    {
+      "id": "B35",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "reversi",
+        "four",
+        "joining-lines"
+      ],
+      "strongestProposedNeighbors": [
+        "B09",
+        "B26"
+      ],
+      "rationale": "Mobile rings leave markers then cross/flip forced runs; scoring deletes markers and voluntarily retires one own ring, shrinking future action bases across three scores. Neither stationary bracket placement nor first-line alignment has this economy.",
+      "requiredChanges": "Ring-retirement choice must alter later useful moves; require non-greedy removal and full ordinary match victory. Keep explicit simultaneous row-resolution order."
+    },
+    {
+      "id": "C01",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "sky-stack",
+        "tangram-dock"
+      ],
+      "strongestProposedNeighbors": [
+        "C02"
+      ],
+      "rationale": "Sequential falling polyomino geometry, persistent cavities and row deletion differ timed slab overlap and supplied-piece packing.",
+      "requiredChanges": "Retain defining transitions in implementation; recheck final remediation baseline and perform ordinary-input QA."
+    },
+    {
+      "id": "C02",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "tide-pool",
+        "merge-garden"
+      ],
+      "strongestProposedNeighbors": [
+        "A01",
+        "C03"
+      ],
+      "rationale": "Exchange neighbors to form matches, cascade gravity and unlock blockers; no recoloring connected region or equal-number sliding.",
+      "requiredChanges": "Retain defining transitions in implementation; recheck final remediation baseline and perform ordinary-input QA."
+    },
+    {
+      "id": "C03",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "afterglow",
+        "soft-sculpt"
+      ],
+      "strongestProposedNeighbors": [
+        "C02",
+        "A01"
+      ],
+      "rationale": "Shot places persistent colored node, pop group disconnects ceiling support; differs destructive repeated-hit volleys or static bond cuts.",
+      "requiredChanges": "Retain defining transitions in implementation; recheck final remediation baseline and perform ordinary-input QA."
+    },
+    {
+      "id": "C04",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "gravity-boots",
+        "kite-flight",
+        "rope-skip"
+      ],
+      "strongestProposedNeighbors": [
+        "C19",
+        "C10"
+      ],
+      "rationale": "Ground-reset variable jump, air steering and one-way platform routing require controllable jump arcs, not gravity switching or periodic single obstacle.",
+      "requiredChanges": "Retain defining transitions in implementation; recheck final remediation baseline and perform ordinary-input QA."
+    },
+    {
+      "id": "C05",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "lantern-heist",
+        "velvet-snake"
+      ],
+      "strongestProposedNeighbors": [
+        "C14"
+      ],
+      "rationale": "Persistent maze sweep under chasing agents and temporary reversal of contact danger; stealth sight/decoy and growing self-tail absent.",
+      "requiredChanges": "Retain defining transitions in implementation; recheck final remediation baseline and perform ordinary-input QA."
+    },
+    {
+      "id": "C06",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "cable-loom",
+        "orbit-transfer"
+      ],
+      "strongestProposedNeighbors": [
+        "C09",
+        "A03"
+      ],
+      "rationale": "Tether winding history changes reachable set at same coordinates; route may retrace to unwind, not unique-cell visitation.",
+      "requiredChanges": "Retain defining transitions in implementation; recheck final remediation baseline and perform ordinary-input QA."
+    },
+    {
+      "id": "C07",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "twin-steps",
+        "balance-beam"
+      ],
+      "strongestProposedNeighbors": [
+        "C14"
+      ],
+      "rationale": "Multiple signed pucks respond indirectly to superposed field/inertia; opposite-sign bodies prevent independent position controls.",
+      "requiredChanges": "Retain defining transitions in implementation; recheck final remediation baseline and perform ordinary-input QA."
+    },
+    {
+      "id": "C08",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "balance-mobile",
+        "soft-sculpt"
+      ],
+      "strongestProposedNeighbors": [
+        "C17"
+      ],
+      "rationale": "Construct structural stress paths under moving load, tension/compression differences; not static torque equality or support cuts.",
+      "requiredChanges": "Retain defining transitions in implementation; recheck final remediation baseline and perform ordinary-input QA."
+    },
+    {
+      "id": "C09",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "trailer-yard",
+        "safe-passage"
+      ],
+      "strongestProposedNeighbors": [
+        "C13",
+        "A05"
+      ],
+      "rationale": "Holonomic rigid polygon motion and chosen pivot sweep through orientation bottlenecks; no tractor articulation or fixed-axis sliding.",
+      "requiredChanges": "Retain defining transitions in implementation; recheck final remediation baseline and perform ordinary-input QA."
+    },
+    {
+      "id": "C10",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "echo-steps",
+        "portal-parcel"
+      ],
+      "strongestProposedNeighbors": [
+        "C04"
+      ],
+      "rationale": "Selectively reverse object history while avatar/world proceed forward; no recorded second avatar or position swap.",
+      "requiredChanges": "Retain defining transitions in implementation; recheck final remediation baseline and perform ordinary-input QA."
+    },
+    {
+      "id": "C11",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "track-exchange",
+        "measured-pour"
+      ],
+      "strongestProposedNeighbors": [
+        "C07"
+      ],
+      "rationale": "Conserved body mass split/merge changes geometry and simultaneous fixture capacity; neither transferring objects nor jug amounts.",
+      "requiredChanges": "Retain defining transitions in implementation; recheck final remediation baseline and perform ordinary-input QA."
+    },
+    {
+      "id": "C12",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "moon-basket",
+        "ricochet-duel",
+        "fuse-garden"
+      ],
+      "strongestProposedNeighbors": [
+        "C03"
+      ],
+      "rationale": "Ballistics deform support terrain and future shot origins under opponent response; terrain consequence required beyond another aim/power target.",
+      "requiredChanges": "Retain defining transitions in implementation; recheck final remediation baseline and perform ordinary-input QA."
+    },
+    {
+      "id": "C13",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "four-holds",
+        "trailer-yard"
+      ],
+      "strongestProposedNeighbors": [
+        "C09"
+      ],
+      "rationale": "Proximal joints transform all distal links with swept collisions; endpoint-only independent regrips cannot solve intended cells.",
+      "requiredChanges": "Retain defining transitions in implementation; recheck final remediation baseline and perform ordinary-input QA."
+    },
+    {
+      "id": "C14",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "marsh-balance",
+        "lantern-heist"
+      ],
+      "strongestProposedNeighbors": [
+        "C07",
+        "C05"
+      ],
+      "rationale": "Indirect repulsion interacts with autonomous flock cohesion/separation and gate approach; different from signed inertial pucks if regrouping mandatory.",
+      "requiredChanges": "Retain defining transitions in implementation; recheck final remediation baseline and perform ordinary-input QA."
+    },
+    {
+      "id": "C15",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "paper-trail",
+        "pigment-lab"
+      ],
+      "strongestProposedNeighbors": [
+        "A12",
+        "A06"
+      ],
+      "rationale": "Cuts duplicate through chosen fold transform histories on unfolding; goal geometric topology, not layer order or additive stencil overlay.",
+      "requiredChanges": "Retain defining transitions in implementation; recheck final remediation baseline and perform ordinary-input QA."
+    },
+    {
+      "id": "C16",
+      "status": "reject",
+      "strongestExistingNeighbors": [
+        "double-take",
+        "second-look"
+      ],
+      "strongestProposedNeighbors": [],
+      "rationale": "Temporal sequence recall differs pair-location memory, but explicitly offers no consequential decision beyond recall; inadequate requested depth.",
+      "requiredChanges": "Replace with consequential decision mechanic or leave uncounted reserve."
+    },
+    {
+      "id": "C17",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "tile-weave",
+        "mirror-mail"
+      ],
+      "strongestProposedNeighbors": [
+        "C08"
+      ],
+      "rationale": "One-shot directional propagation with branch travel-delay synchronization must govern layout; otherwise another connectivity-rotation puzzle.",
+      "requiredChanges": "Retain defining transitions in implementation; recheck final remediation baseline and perform ordinary-input QA."
+    },
+    {
+      "id": "C18",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "crate-crane",
+        "safe-passage"
+      ],
+      "strongestProposedNeighbors": [
+        "A08",
+        "A11"
+      ],
+      "rationale": "Coupled train order and locomotive access through switches force run-around and reversible chains; A09 withdrawn by owner coordination.",
+      "requiredChanges": "Retain defining transitions in implementation; recheck final remediation baseline and perform ordinary-input QA."
+    },
+    {
+      "id": "C19",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "signal-run",
+        "gravity-boots"
+      ],
+      "strongestProposedNeighbors": [
+        "C04"
+      ],
+      "rationale": "Moving support reference frame transports waiting player among opposing currents; distinct-home ordering and transport required, not discrete-control variant.",
+      "requiredChanges": "Retain defining transitions in implementation; recheck final remediation baseline and perform ordinary-input QA."
+    },
+    {
+      "id": "C20",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "lantern-defense",
+        "towers",
+        "firebreak"
+      ],
+      "strongestProposedNeighbors": [
+        "C25"
+      ],
+      "rationale": "Persistent autonomous tower investment, route shaping and armor/priority interaction differ manual intercept or static ray coverage.",
+      "requiredChanges": "Retain defining transitions in implementation; recheck final remediation baseline and perform ordinary-input QA."
+    },
+    {
+      "id": "C21",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "portal-parcel",
+        "gravity-boots"
+      ],
+      "strongestProposedNeighbors": [
+        "C04",
+        "C10"
+      ],
+      "rationale": "Two oriented anchored portals rotate conserved entry momentum on contact; required fall-to-fling cannot be solved by existing beacon position swap.",
+      "requiredChanges": "Retain defining transitions in implementation; recheck final remediation baseline and perform ordinary-input QA."
+    },
+    {
+      "id": "C22",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "velvet-snake",
+        "boulder-burrow"
+      ],
+      "strongestProposedNeighbors": [
+        "C11"
+      ],
+      "rationale": "Whole connected body gravity/support and fruit-mediated bridging replace perpetual flat snake survival; support occupancy must govern puzzles.",
+      "requiredChanges": "Retain defining transitions in implementation; recheck final remediation baseline and perform ordinary-input QA."
+    },
+    {
+      "id": "C23",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "parallax-post",
+        "shadow-turn"
+      ],
+      "strongestProposedNeighbors": [
+        "C04",
+        "C07"
+      ],
+      "rationale": "Player-controlled projection geometry creates/withdraws avatar support with depth-dependent motion; not passive depth inference or fixed platform travel.",
+      "requiredChanges": "Retain defining transitions in implementation; recheck final remediation baseline and perform ordinary-input QA."
+    },
+    {
+      "id": "C24",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "firebreak",
+        "reservoir",
+        "river-capacity"
+      ],
+      "strongestProposedNeighbors": [
+        "D24"
+      ],
+      "rationale": "Mutable local elevations and conservative free-surface overflow fill useful basins and threaten village; must differ barrier containment of spreading fire.",
+      "requiredChanges": "Retain defining transitions in implementation; recheck final remediation baseline and perform ordinary-input QA."
+    },
+    {
+      "id": "C25",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "ricochet-duel",
+        "court-of-suits"
+      ],
+      "strongestProposedNeighbors": [
+        "B10",
+        "B03",
+        "C20"
+      ],
+      "rationale": "Multi-unit AP, conditional overwatch reaction and directional suppression enable spatial escort; unlike simultaneous support orders or fixed enemy timing.",
+      "requiredChanges": "Retain defining transitions in implementation; recheck final remediation baseline and perform ordinary-input QA."
+    },
+    {
+      "id": "D01",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "borrowed-time",
+        "rover-script"
+      ],
+      "strongestProposedNeighbors": [
+        "D02",
+        "D12",
+        "D16"
+      ],
+      "rationale": "Destroy/recompute prerequisite values to fit live registers; a topological no-deletion schedule fails intended diamonds.",
+      "requiredChanges": "Retain defining transitions in implementation; recheck final remediation baseline and perform ordinary-input QA."
+    },
+    {
+      "id": "D02",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "carry-on",
+        "reorder-point"
+      ],
+      "strongestProposedNeighbors": [
+        "D01",
+        "D03",
+        "D17"
+      ],
+      "rationale": "Forced request misses, unequal page residency and dirty writeback make retrospective eviction different from online profit knapsack.",
+      "requiredChanges": "Retain defining transitions in implementation; recheck final remediation baseline and perform ordinary-input QA."
+    },
+    {
+      "id": "D03",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "tangram-dock",
+        "safe-passage"
+      ],
+      "strongestProposedNeighbors": [
+        "D02",
+        "D25"
+      ],
+      "rationale": "Dynamic allocate/free lifetimes create fragmentation around pinned blocks; continuous resizing/address occupancy not a fixed packing target.",
+      "requiredChanges": "Retain defining transitions in implementation; recheck final remediation baseline and perform ordinary-input QA."
+    },
+    {
+      "id": "D04",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "borrowed-time",
+        "archive-edit",
+        "signal-cabinet"
+      ],
+      "strongestProposedNeighbors": [
+        "D05",
+        "D22"
+      ],
+      "rationale": "Construct interleavings to demonstrate stale-read invariant failures, then repair with lock; serial trace deliberately fails witness goal. Distinct from job scheduling and patch merging.",
+      "requiredChanges": "Witness execution must preserve actual local registers and per-program order; later non-lost-update case needed."
+    },
+    {
+      "id": "D05",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "assembly-belt",
+        "two-couriers"
+      ],
+      "strongestProposedNeighbors": [
+        "D04",
+        "D22"
+      ],
+      "rationale": "Sequence-window protocol: lost acknowledgments and duplicated deliveries alter sender/receiver knowledge and legal sends; not physical parcel scheduling.",
+      "requiredChanges": "Retain defining transitions in implementation; recheck final remediation baseline and perform ordinary-input QA."
+    },
+    {
+      "id": "D06",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "rover-script",
+        "rewrite-press",
+        "gate-foundry"
+      ],
+      "strongestProposedNeighbors": [
+        "D08",
+        "D11",
+        "D14"
+      ],
+      "rationale": "Reusable program must manage mutable stack and conditional flow across contrasting inputs; not one route or sequence rewrite.",
+      "requiredChanges": "Retain defining transitions in implementation; recheck final remediation baseline and perform ordinary-input QA."
+    },
+    {
+      "id": "D07",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "gate-foundry",
+        "specimen-rule"
+      ],
+      "strongestProposedNeighbors": [
+        "D06",
+        "D14"
+      ],
+      "rationale": "Construct nested union/concat/repetition language syntax from a fully supplied specification; no hidden hypothesis discovery.",
+      "requiredChanges": "Retain defining transitions in implementation; recheck final remediation baseline and perform ordinary-input QA."
+    },
+    {
+      "id": "D08",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "rewrite-press",
+        "sentence-studio"
+      ],
+      "strongestProposedNeighbors": [
+        "D06",
+        "D10"
+      ],
+      "rationale": "Shift consumes queue and top-only reduction retains semantic parse tree; irreversible attachment choice differs arbitrary substring replacement.",
+      "requiredChanges": "Retain defining transitions in implementation; recheck final remediation baseline and perform ordinary-input QA."
+    },
+    {
+      "id": "D09",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "gate-foundry",
+        "honest-company"
+      ],
+      "strongestProposedNeighbors": [
+        "D10",
+        "D11"
+      ],
+      "rationale": "Binding shared structural type variables propagates globally with scope and occurs-check constraints; not independent gate selection.",
+      "requiredChanges": "Retain defining transitions in implementation; recheck final remediation baseline and perform ordinary-input QA."
+    },
+    {
+      "id": "D10",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "honest-company",
+        "gate-foundry"
+      ],
+      "strongestProposedNeighbors": [
+        "D08",
+        "D09"
+      ],
+      "rationale": "Temporary assumption scope and discharge build a derivation; truth assignment alone cannot establish scoped proof.",
+      "requiredChanges": "Retain defining transitions in implementation; recheck final remediation baseline and perform ordinary-input QA."
+    },
+    {
+      "id": "D11",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "rover-script",
+        "gate-foundry"
+      ],
+      "strongestProposedNeighbors": [
+        "D06",
+        "D19"
+      ],
+      "rationale": "Bag-valued joins/grouping change cardinality and peak rows; reusable cross-fixture relational query differs scalar stack program.",
+      "requiredChanges": "Retain defining transitions in implementation; recheck final remediation baseline and perform ordinary-input QA."
+    },
+    {
+      "id": "D12",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "prefix-press",
+        "loose-ends"
+      ],
+      "strongestProposedNeighbors": [
+        "D01",
+        "D21"
+      ],
+      "rationale": "Rotate existing ordered tree preserving key order; optimize weighted lookup depths, unlike merging prefix trees or uncrossing coordinates.",
+      "requiredChanges": "Retain defining transitions in implementation; recheck final remediation baseline and perform ordinary-input QA."
+    },
+    {
+      "id": "D13",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "wave-desk",
+        "make-24"
+      ],
+      "strongestProposedNeighbors": [
+        "D09"
+      ],
+      "rationale": "Whole augmented-row operations preserve solution set and transform coupled equations; not choosing independent basis amplitudes.",
+      "requiredChanges": "Retain defining transitions in implementation; recheck final remediation baseline and perform ordinary-input QA."
+    },
+    {
+      "id": "D14",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "gate-foundry",
+        "rover-script"
+      ],
+      "strongestProposedNeighbors": [
+        "D07",
+        "D06"
+      ],
+      "rationale": "Persistent finite state causes history-dependent emitted output; not finite-language membership or stateless truth table.",
+      "requiredChanges": "Retain defining transitions in implementation; recheck final remediation baseline and perform ordinary-input QA."
+    },
+    {
+      "id": "D15",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "gate-foundry",
+        "good-order"
+      ],
+      "strongestProposedNeighbors": [
+        "D14",
+        "D06"
+      ],
+      "rationale": "Wire compare-swap lane pairs across disjoint parallel stages to sort every permutation; invent routing, not choose functions in fixed DAG.",
+      "requiredChanges": "Retain defining transitions in implementation; recheck final remediation baseline and perform ordinary-input QA."
+    },
+    {
+      "id": "D16",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "supply-web",
+        "measured-pour",
+        "safety-ferry"
+      ],
+      "strongestProposedNeighbors": [
+        "D01",
+        "D24"
+      ],
+      "rationale": "Cyclic consumed-token transitions, inhibitor places and catalysts introduce irreversible deadlocks; differs expanding auto-production chain.",
+      "requiredChanges": "Retain defining transitions in implementation; recheck final remediation baseline and perform ordinary-input QA."
+    },
+    {
+      "id": "D17",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "prefix-press",
+        "rewrite-press"
+      ],
+      "strongestProposedNeighbors": [
+        "D02",
+        "D18"
+      ],
+      "rationale": "Sequential LZ token parsing with overlapping references; corrected exact aabaaaa cost fixture demonstrates greedy longest reference failure.",
+      "requiredChanges": "Ensure fixture token costs and decoded window semantics match design; retain ordinary-input trace gate."
+    },
+    {
+      "id": "D18",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "one-letter-away",
+        "rewrite-press"
+      ],
+      "strongestProposedNeighbors": [
+        "D17"
+      ],
+      "rationale": "Two cursor alignment with affine gap continuity and anchors accumulates correspondence cost; source strings remain unchanged.",
+      "requiredChanges": "Retain defining transitions in implementation; recheck final remediation baseline and perform ordinary-input QA."
+    },
+    {
+      "id": "D19",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "equal-measure",
+        "mutual-match"
+      ],
+      "strongestProposedNeighbors": [
+        "D11",
+        "D20"
+      ],
+      "rationale": "Hierarchical generalization changes equivalence classes and privacy/utility jointly; not fixed row-value assignment or query output.",
+      "requiredChanges": "Retain defining transitions in implementation; recheck final remediation baseline and perform ordinary-input QA."
+    },
+    {
+      "id": "D20",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "prefix-press",
+        "wave-desk",
+        "estimation-studio"
+      ],
+      "strongestProposedNeighbors": [
+        "D19"
+      ],
+      "rationale": "Quantizer boundaries change distortion and coding probability together; lossy bin allocation needed beyond optimal prefix coding.",
+      "requiredChanges": "Retain defining transitions in implementation; recheck final remediation baseline and perform ordinary-input QA."
+    },
+    {
+      "id": "D21",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "quiet-majority",
+        "make-24"
+      ],
+      "strongestProposedNeighbors": [
+        "B24",
+        "D12"
+      ],
+      "rationale": "Choose elimination agenda under fixed cyclic pairwise preferences; no concessions or adjustable preferences.",
+      "requiredChanges": "Retain defining transitions in implementation; recheck final remediation baseline and perform ordinary-input QA."
+    },
+    {
+      "id": "D22",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "safety-ferry",
+        "archive-edit",
+        "signal-cabinet"
+      ],
+      "strongestProposedNeighbors": [
+        "D04",
+        "D05"
+      ],
+      "rationale": "Redesigned Causal Camera chooses causally closed process prefixes with in-transit messages, not fixed atomic swap protocol. Cut coupling and rollback objective differ D04 execution construction.",
+      "requiredChanges": "Require a later three-process forced-prefix cascade with several feasible cuts and nontrivial rollback choice."
+    },
+    {
+      "id": "D23",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "orchard",
+        "factor-loom"
+      ],
+      "strongestProposedNeighbors": [
+        "D17"
+      ],
+      "rationale": "Cross homolog chromosomes, maintain recessive carriers and limited breeding stock over generations; not numeric factor or growth timing selection.",
+      "requiredChanges": "Retain defining transitions in implementation; recheck final remediation baseline and perform ordinary-input QA."
+    },
+    {
+      "id": "D24",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "river-capacity",
+        "safe-return",
+        "supply-web"
+      ],
+      "strongestProposedNeighbors": [
+        "D16"
+      ],
+      "rationale": "Funding decisions trigger autonomous proportional settlement fixedpoint and defaults; not direct flow assignment or simple returns.",
+      "requiredChanges": "Retain defining transitions in implementation; recheck final remediation baseline and perform ordinary-input QA."
+    },
+    {
+      "id": "D25",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "circuit-break",
+        "borrowed-time"
+      ],
+      "strongestProposedNeighbors": [
+        "D03",
+        "D01"
+      ],
+      "rationale": "Reachability changes during tracing; barriers preserve live objects before irreversible sweep, rather than merely pack known-live blocks.",
+      "requiredChanges": "Retain defining transitions in implementation; recheck final remediation baseline and perform ordinary-input QA."
+    },
+    {
+      "id": "D26",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "orchard",
+        "specimen-rule",
+        "twenty-questions"
+      ],
+      "strongestProposedNeighbors": [
+        "D02"
+      ],
+      "rationale": "Harvest produces payoff while revealing uncertain process; finite-horizon exploration costs foregone productive turns, with no final identification answer.",
+      "requiredChanges": "Retain defining transitions in implementation; recheck final remediation baseline and perform ordinary-input QA."
+    },
+    {
+      "id": "D27",
+      "status": "conditional_accept",
+      "strongestExistingNeighbors": [
+        "two-couriers",
+        "elevator-night",
+        "junction-nine",
+        "river-capacity"
+      ],
+      "strongestProposedNeighbors": [
+        "A10",
+        "D24"
+      ],
+      "rationale": "Design cyclic service topology and fleet; autonomous passenger transfers and train phase create bottlenecks beyond direct dispatch or scalar flow.",
+      "requiredChanges": "Retain defining transitions in implementation; recheck final remediation baseline and perform ordinary-input QA."
+    }
+  ],
+  "comparisonCoverage": {
+    "baselineIds": [
+      "signal-run",
+      "double-take",
+      "pocket-orbit",
+      "good-order",
+      "afterglow",
+      "lantern-lines",
+      "tide-pool",
+      "word-weave",
+      "sky-stack",
+      "pebble-post",
+      "tangram-dock",
+      "mirror-mail",
+      "bilateral",
+      "shadow-turn",
+      "loose-ends",
+      "gear-train",
+      "measured-pour",
+      "rover-script",
+      "paper-trail",
+      "pigment-lab",
+      "cable-loom",
+      "balance-mobile",
+      "crate-crane",
+      "orbit-transfer",
+      "stamp-studio",
+      "minefield",
+      "picross-post",
+      "ninefold",
+      "equal-measure",
+      "taller-tales",
+      "code-cabinet",
+      "seat-at-table",
+      "sky-view",
+      "bridgewater",
+      "loop-letter",
+      "tent-pitch",
+      "pearl-route",
+      "tile-weave",
+      "safe-passage",
+      "cross-sums",
+      "make-24",
+      "merge-garden",
+      "bit-lanterns",
+      "fraction-balance",
+      "matchstick-equation",
+      "factor-loom",
+      "clockwork",
+      "fraction-mosaic",
+      "precedence-lab",
+      "estimation-studio",
+      "ratio-mixer",
+      "sequence-detective",
+      "decimal-market",
+      "digit-forge",
+      "coordinate-courier",
+      "hidden-grove",
+      "one-letter-away",
+      "last-letter",
+      "crossings",
+      "wordbreak",
+      "secret-post",
+      "center-letter",
+      "odd-company",
+      "alphabet-trail",
+      "sentence-studio",
+      "compound-works",
+      "rhyme-lines",
+      "vowel-weather",
+      "chain-reaction",
+      "proofreader",
+      "reversi",
+      "four",
+      "kalah",
+      "nim",
+      "fences",
+      "peg",
+      "pawns",
+      "fleet",
+      "guild",
+      "orchard",
+      "bridge",
+      "hex",
+      "towers",
+      "siege",
+      "trade",
+      "velvet-snake",
+      "rally-club",
+      "paper-links",
+      "moon-basket",
+      "quiet-curl",
+      "kite-flight",
+      "soft-landing",
+      "star-tow",
+      "garden-guard",
+      "beat-post",
+      "pinball-pocket",
+      "rope-skip",
+      "table-bowls",
+      "balance-beam",
+      "harbor-catch",
+      "junction-nine",
+      "assembly-belt",
+      "marsh-balance",
+      "reorder-point",
+      "workshop-shift",
+      "signal-cabinet",
+      "cold-chain",
+      "reservoir",
+      "power-desk",
+      "carry-on",
+      "quiet-majority",
+      "safe-return",
+      "firebreak",
+      "kiln-house",
+      "two-couriers",
+      "elevator-night",
+      "supply-web",
+      "growing-block",
+      "borrowed-time",
+      "convoy-ledger",
+      "velvet-tricks",
+      "twenty-one",
+      "meld-atelier",
+      "five-card-evening",
+      "last-hand",
+      "scopa-shelf",
+      "domino-parlour",
+      "bank-the-roll",
+      "six-columns",
+      "hidden-dice",
+      "sealed-bids",
+      "thirty-one-lane",
+      "formation-flags",
+      "crown-and-guard",
+      "draught-garden",
+      "borrowed-steps",
+      "marble-council",
+      "joining-lines",
+      "terrace-duel",
+      "court-of-suits",
+      "mutual-match",
+      "ice-station",
+      "cube-seal",
+      "knight-exchange",
+      "map-inks",
+      "circuit-break",
+      "copper-tree",
+      "river-capacity",
+      "honest-company",
+      "gate-foundry",
+      "rewrite-press",
+      "twin-steps",
+      "seed-tomorrow",
+      "voxel-post",
+      "hitori-harbor",
+      "island-census",
+      "parcel-survey",
+      "arrow-audit",
+      "parity-repair",
+      "safety-ferry",
+      "vector-rally",
+      "border-bloom",
+      "lantern-heist",
+      "boulder-burrow",
+      "fuse-garden",
+      "quiet-foil",
+      "four-holds",
+      "trailer-yard",
+      "gravity-boots",
+      "portal-parcel",
+      "echo-steps",
+      "phase-walk",
+      "wind-sail",
+      "scissor-lift",
+      "ricochet-duel",
+      "soft-sculpt",
+      "spring-courier",
+      "shatter-belt",
+      "lantern-defense",
+      "little-walkers",
+      "ray-archive",
+      "false-weight",
+      "three-of-a-kind",
+      "second-look",
+      "fog-journal",
+      "prefix-press",
+      "transit-observatory",
+      "specimen-rule",
+      "causal-lab",
+      "parallax-post",
+      "wave-desk",
+      "twenty-questions",
+      "scent-trail",
+      "fossil-brush",
+      "archive-edit",
+      "lens-library",
+      "invisible-ink",
+      "clockmaker-cabinet",
+      "track-exchange",
+      "folded-world"
+    ],
+    "baselineCount": 200,
+    "proposalIds": [
+      "A01",
+      "A02",
+      "A03",
+      "A04",
+      "A05",
+      "A06",
+      "A07",
+      "A08",
+      "A09",
+      "A10",
+      "A11",
+      "A12",
+      "A13",
+      "A14",
+      "A15",
+      "A16",
+      "A17",
+      "B01",
+      "B02",
+      "B03",
+      "B04",
+      "B05",
+      "B06",
+      "B07",
+      "B08",
+      "B09",
+      "B10",
+      "B11",
+      "B12",
+      "B13",
+      "B14",
+      "B15",
+      "B16",
+      "B17",
+      "B18",
+      "B19",
+      "B20",
+      "B21",
+      "B22",
+      "B23",
+      "B24",
+      "B25",
+      "B26",
+      "B27",
+      "B28",
+      "B29",
+      "B30",
+      "B31",
+      "B32",
+      "B33",
+      "B34",
+      "B35",
+      "C01",
+      "C02",
+      "C03",
+      "C04",
+      "C05",
+      "C06",
+      "C07",
+      "C08",
+      "C09",
+      "C10",
+      "C11",
+      "C12",
+      "C13",
+      "C14",
+      "C15",
+      "C16",
+      "C17",
+      "C18",
+      "C19",
+      "C20",
+      "C21",
+      "C22",
+      "C23",
+      "C24",
+      "C25",
+      "D01",
+      "D02",
+      "D03",
+      "D04",
+      "D05",
+      "D06",
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D14",
+      "D15",
+      "D16",
+      "D17",
+      "D18",
+      "D19",
+      "D20",
+      "D21",
+      "D22",
+      "D23",
+      "D24",
+      "D25",
+      "D26",
+      "D27"
+    ],
+    "primaryPairCount": 4950,
+    "method": "All 200 baseline mechanic/rule signatures, omitted original-ten source rules, full proposal records and strongest-neighbor source checks reviewed. All proposals screened within these clusters and across clusters for action/state equivalence; strongest cross-cluster conflicts are explicit in per-ID neighbors. Cluster assignment is review trace, not proof by genre or an algorithmic uniqueness metric.",
+    "clusters": {
+      "space_geometry_topology": [
+        "A02",
+        "A03",
+        "A04",
+        "A05",
+        "A06",
+        "A08",
+        "A09",
+        "A10",
+        "A11",
+        "A12",
+        "A15",
+        "A16",
+        "C06",
+        "C08",
+        "C09",
+        "C11",
+        "C13",
+        "C15",
+        "C17",
+        "C18",
+        "C21",
+        "C23",
+        "C24",
+        "D03",
+        "D12"
+      ],
+      "groups_and_grid_change": [
+        "A01",
+        "A07",
+        "A14",
+        "B08",
+        "B21",
+        "B22",
+        "B33",
+        "C01",
+        "C02",
+        "C03",
+        "C22"
+      ],
+      "action_motion_control": [
+        "C04",
+        "C05",
+        "C07",
+        "C10",
+        "C12",
+        "C14",
+        "C19",
+        "C20",
+        "C25"
+      ],
+      "board_adversaries": [
+        "B01",
+        "B02",
+        "B03",
+        "B04",
+        "B05",
+        "B06",
+        "B09",
+        "B10",
+        "B23",
+        "B24",
+        "B25",
+        "B26",
+        "B29",
+        "B30",
+        "B35"
+      ],
+      "cards_word_economy_information": [
+        "B07",
+        "B11",
+        "B12",
+        "B13",
+        "B14",
+        "B15",
+        "B16",
+        "B17",
+        "B18",
+        "B19",
+        "B20",
+        "B27",
+        "B28",
+        "B31",
+        "B32",
+        "B34",
+        "C16"
+      ],
+      "synthesis_symbolic_algorithms": [
+        "A13",
+        "A17",
+        "D01",
+        "D02",
+        "D04",
+        "D05",
+        "D06",
+        "D07",
+        "D08",
+        "D09",
+        "D10",
+        "D11",
+        "D13",
+        "D14",
+        "D15",
+        "D16",
+        "D17",
+        "D18",
+        "D19",
+        "D20",
+        "D21",
+        "D22",
+        "D23",
+        "D24",
+        "D25",
+        "D26",
+        "D27"
+      ]
+    },
+    "importantCrossClusterComparisons": [
+      "A05/C13 rejected despite different task labels",
+      "A01/C02/C03 remove-existing vs swap-create vs shoot-attach/support-drop",
+      "A10/D27 moving maze topology vs autonomous service-cycle topology",
+      "A11/C11 rigid valence assembly vs conserved mass split/merge",
+      "A13/D20/D21 probability distributions vs rate-distortion bins vs agenda elimination",
+      "A14/B12 consumed fixed-grid paths vs growing rack-placement crossings",
+      "A15/C21/A10 portable/nested traversal needs more than relocated passages; A15 reserve",
+      "A17/B30/D06/D16 repeated physical concurrent synthesis vs hidden adversarial registers vs stack code vs manual conserved-token firing",
+      "B08/B33 geometric frontier denial vs endogenous time/income acquisition",
+      "B21/B28 feature claim mergers vs independently traded stock portfolios",
+      "B22/B32 concentrated public color leftovers vs circulating private chosen-card hands",
+      "B27/B31/B34 role truth claims vs actual discarded-card identities vs response wagers under staged evidence",
+      "B10/C25 simultaneous support adjudication vs AP/reaction suppression escort",
+      "C07/C14 opposite-charge inertial field vs autonomous flock cohesion",
+      "C24/D24 conserved geographic surface levels vs proportional debt settlement equilibrium",
+      "D07/D14 regex language membership vs history-dependent emitted stream",
+      "D01/D02/D03/D25 recomputable registers vs requested residency vs address fragmentation vs dynamic reachability/reclamation"
+    ]
+  }
+}

@@ -2,7 +2,7 @@
 const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
 const root=path.resolve(__dirname,'..');
 const original={browser:['signal-run'],'signal-mobile-complete':['signal-run'],collection:['double-take','good-order','pocket-orbit'],afterglow:['afterglow'],'lantern-lines':['lantern-lines'],'tide-pool':['tide-pool'],'word-weave':['word-weave'],'sky-stack':['sky-stack'],'pebble-post':['pebble-post']};
-const expansionRooms=['systems-room','tabletop-room','puzzle-lab','kinetic-room','discovery-room'];
+const expansionRooms=['systems-room','tabletop-room','puzzle-lab','kinetic-room','discovery-room','construct-room','parlour-room','motion-room','workbench-room'];
 const rooms=['spatial-room','logic-room','number-room','word-room','strategy-room','arcade-room',...expansionRooms];
 const helpers={afterglow:['afterglow-engine'], 'spatial-room':['gear-depth','balance-depth'],'word-room':['word-room-edges']};
 const suites=Object.fromEntries([...Object.entries(original),...rooms.map(id=>[id,[id]])].map(([id,dirs])=>[id,{id,dirs,tests:[id,...(helpers[id]||[])]}]));

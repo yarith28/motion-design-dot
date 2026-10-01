@@ -3,9 +3,9 @@
   "suite": "systems-room",
   "passed": true,
   "status": "passed",
-  "startedAt": "2026-10-01T06:51:22.364Z",
+  "startedAt": "2026-10-01T09:55:37.680Z",
   "source": {
-    "sha256": "641d2bca3f94b1bdafe59c81fadfcaaaa01cfdedc225ca2b7f2f19004615d1d9",
+    "sha256": "3f4b75a8334234b17f179f8c468159eb870668a5c2ae5eab9ace4fc0f7acde60",
     "files": [
       "catalog.css",
       "catalog.js",
@@ -41,6 +41,10 @@
       "systems-room/two-couriers.mjs",
       "systems-room/workshop-shift.mjs",
       "tests/fixtures/baseline100.json",
+      "tests/fixtures/baseline200.json",
+      "tests/fixtures/parlour-b02-b05-paths.json",
+      "tests/fixtures/parlour-b13-guided-paths.json",
+      "tests/fixtures/parlour-paths.json",
       "tests/fixtures/tabletop-paths.json",
       "tests/systems-depth.mjs",
       "tests/systems-paths.json",
@@ -51,7 +55,7 @@
       "tools/run-suite.cjs"
     ]
   },
-  "requestedBaseURL": "http://127.0.0.1:8790",
+  "requestedBaseURL": "http://127.0.0.1:8781",
   "browser": {
     "engine": "Chromium",
     "version": "Chromium 151.0.7922.173 built on Debian GNU/Linux 13 (trixie)",
@@ -93,21 +97,21 @@
     "Solver completions do not establish human difficulty or accessibility."
   ],
   "servedRuntimeBefore": {
-    "baseURL": "http://127.0.0.1:8790",
+    "baseURL": "http://127.0.0.1:8781",
     "passed": true,
-    "sha256": "0601d09d6008cc4d33073138dec5361e2f6af51bab7fdba0d78e985ca0ed4432",
+    "sha256": "978f11d5b16f07ce61480023e2796914cfc8b01c85398f9e1059b009ed7c7f82",
     "fileCount": 33,
-    "verifiedAt": "2026-10-01T06:51:22.482Z"
+    "verifiedAt": "2026-10-01T09:55:37.956Z"
   },
   "exitCode": 0,
   "signal": null,
   "sourceUnchanged": true,
   "servedRuntime": {
-    "baseURL": "http://127.0.0.1:8790",
+    "baseURL": "http://127.0.0.1:8781",
     "passed": true,
-    "sha256": "0601d09d6008cc4d33073138dec5361e2f6af51bab7fdba0d78e985ca0ed4432",
+    "sha256": "978f11d5b16f07ce61480023e2796914cfc8b01c85398f9e1059b009ed7c7f82",
     "fileCount": 33,
-    "verifiedAt": "2026-10-01T06:52:11.575Z"
+    "verifiedAt": "2026-10-01T09:56:58.638Z"
   },
   "completionEvidence": {
     "sha256": "3f5c72fe60f0c5a22ffec93d8fc6682df3c9eae8c04f9ef3bcba4f81b051948d",
@@ -915,5 +919,5 @@
       }
     ]
   },
-  "finishedAt": "2026-10-01T06:52:11.577Z"
+  "finishedAt": "2026-10-01T09:56:58.642Z"
 }

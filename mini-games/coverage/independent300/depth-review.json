@@ -1,0 +1,877 @@
+{
+  "scope": "18 retained games after explicit transfers; only concrete per-game passes count.",
+  "baseline": "e78396ddd2c64c1b779bfaf2633dfd111637b1fb",
+  "status": "Complete:18 retained independent reviews passed after ordinary wins, actual failed attempts/losses, input checks and final source-bound replays.",
+  "games": [
+    {
+      "designId": "B09",
+      "name": "Gifted Traits",
+      "gameId": "gifted-traits",
+      "room": "parlour-room",
+      "ordinaryBeforeSource": true,
+      "fullWin": true,
+      "naturalFailure": true,
+      "restart": true,
+      "meaningfulDecisions": "Manual390touch firstmatch lost by overlooking tall anti-diagonal when placingB4. Retry instead blocked it with shortD1, then C1 placement created multiple trait threats; gave sole safe tall-square-solid-striped piece; house necessarily left a winning round Ccolumn. Full14piece win, nativeTab+Enter/Space replay reproduced loss/retry/win.",
+      "issues": [],
+      "resolution": "Post-play source confirms immediate winning placements, evaluation of safe future gifts, public-only threat checks and all four binary traits counted; AI is responsive rather than fixed placements.",
+      "sourceSha256": "480b304a198778ba67ee946d9c5e48f5691af02691b546bceb787d748007c503",
+      "runtimeHashes": {
+        "mini-games/parlour-room/gifted-traits.mjs": "480b304a198778ba67ee946d9c5e48f5691af02691b546bceb787d748007c503",
+        "mini-games/parlour-room/game.js": "de78315740f63cc42963b31ca55e6058c565501ed5e11874a37b68ad8ad698b8",
+        "mini-games/parlour-room/core.mjs": "339407b8d279243a25622037f7a709a9998afbbc1945ca95a36106a37402c458",
+        "mini-games/parlour-room/room.css": "7b5baf1c1951e0906b8650ab805a8ef037fa564a5a384e70ef89bce11c17eabe",
+        "mini-games/parlour-room/index.html": "328f418fab77b773e534825d0b3c570598d361fd781ddfeb9e2408ea539cbd33",
+        "mini-games/parlour-room/games.json": "2ca643577427733bb196101c550c6d8182271f2fc998d1a211ed2de121bc23b0"
+      },
+      "logFile": "mini-games/coverage/independent300/depth-gifted-traits-ordinary.jsonl",
+      "methods": [
+        "Manual publicboard reasoning with visible traitnames before any source.",
+        "390touch natural loss/retry/fullwin; desktop nativekeyboard fullreplay.",
+        "Post-play module sourceaudit.",
+        "Final sharedhost loading/cache-guard version full own-route touch replay passed; engine/core byte hashes unchanged from original scoped audit. Evidence depth-parlour-final-freeze-replays.json. Sharedhost audited for allowed-action dispatch, focus and startup readiness."
+      ],
+      "limits": [
+        "Only defaultseed731 independently completed; otherseed policies not certified.",
+        "No physicaldevice/screenreader."
+      ],
+      "passed": true,
+      "metadataEntrySha256": "83c29ba98cb0f87c2198b5cc1d601458ddfe4731bb38c13cf1e6b77687ace4cc"
+    },
+    {
+      "designId": "B11",
+      "name": "Almost a Word",
+      "gameId": "almost-a-word",
+      "room": "parlour-room",
+      "ordinaryBeforeSource": true,
+      "fullWin": true,
+      "naturalFailure": true,
+      "restart": true,
+      "meaningfulDecisions": "Revised tray retires used initial, removes repeated ZERO exploit. Fresh ordinary revised touch match: APPLE cost own life; chose LU over competing L branches to force LUCKY; chose REC from mixed RE branch to force RECALL; BL\u2192BLEN forced BLEND. Won2lives versus0house. Different prefix/parity choices necessary; fixed Z/R opening no longer offered.",
+      "issues": [
+        "Resolved: repeated Z/R guaranteed3\u20132win in prerevision match.",
+        "Resolved: dictionary size/definitions promise mismatch."
+      ],
+      "resolution": "Owner replaced unlimited repeated openings with seeded tray of rich mixed-length branches and match-wide retirement. Retested complete touch and native keyboard wins plus natural wrong-challenge0\u20133loss; post-play source confirms public dictionary parity AI with probabilistic mistakes, no independent-loop shortcut.",
+      "sourceSha256": "5e77ffe1fbf33289c6b50ee863da374bae9fa8e88a853da552f8fba97f15501a",
+      "runtimeHashes": {
+        "mini-games/parlour-room/almost-a-word.mjs": "5e77ffe1fbf33289c6b50ee863da374bae9fa8e88a853da552f8fba97f15501a",
+        "mini-games/parlour-room/game.js": "de78315740f63cc42963b31ca55e6058c565501ed5e11874a37b68ad8ad698b8",
+        "mini-games/parlour-room/core.mjs": "339407b8d279243a25622037f7a709a9998afbbc1945ca95a36106a37402c458",
+        "mini-games/parlour-room/room.css": "7b5baf1c1951e0906b8650ab805a8ef037fa564a5a384e70ef89bce11c17eabe",
+        "mini-games/parlour-room/index.html": "328f418fab77b773e534825d0b3c570598d361fd781ddfeb9e2408ea539cbd33",
+        "mini-games/parlour-room/games.json": "2ca643577427733bb196101c550c6d8182271f2fc998d1a211ed2de121bc23b0"
+      },
+      "logFile": "mini-games/coverage/independent300/depth-almost-a-word-ordinary.jsonl",
+      "methods": [
+        "Revised390px touch-only full win from visible dictionary, no game source or solver read.",
+        "Desktop native Tab+Enter/Space full replay of own observed revised win.",
+        "Terminal Space restart; three knowingly wrong public-prefix challenges caused genuine0\u20133loss.",
+        "Source inspected after revised ordinary win and failure.",
+        "Final sharedhost loading/cache-guard version full own-route touch replay passed; engine/core byte hashes unchanged from original scoped audit. Evidence depth-parlour-final-freeze-replays.json. Sharedhost audited for allowed-action dispatch, focus and startup readiness."
+      ],
+      "limits": [
+        "Prior failed implementation logs preserved in same log; only revised run after opening-tray text qualifies final acceptance.",
+        "Keyboard replay uses reviewer-observed touch path, not independently rediscovered strategy."
+      ],
+      "passed": true,
+      "metadataEntrySha256": "35ff1f06c78644d8b333eaf8dc68d23a68fcccc63a15587feb850bf0a2cd00ca"
+    },
+    {
+      "designId": "B14",
+      "name": "Twin Roofs",
+      "gameId": "twin-roofs",
+      "room": "parlour-room",
+      "ordinaryBeforeSource": true,
+      "fullWin": true,
+      "naturalFailure": true,
+      "restart": true,
+      "meaningfulDecisions": "Revised731 full48-tile ordinary touch win with all3 undo credits intact, nativeTab/Enter/Space49-input replay. Chose cross-layer Kite pair to keep copies available; removed Fan E2/C2 to uncover lower Kite, then layered dependencies. Fresh8650 random visible-pair policy naturally stranded4 tiles in cover cycle; undo credits cannot repair earlier wrong decisions.",
+      "issues": [
+        "Original generator allowed shallow almost-universal removals and Another deal crashed on stranded construction; both withheld until revised."
+      ],
+      "resolution": "Revised generator new deal8650 initialized cleanly, actual wrong pair order blocked; after3 undo/repeat last pair terminal natural loss4tiles/0credits, retry restored48tiles/3credits. Source after revised fullwin confirms witnessed solvability and rejection unless alternative orders can block.",
+      "sourceSha256": "7d0a86b387052d350369bec409c8272527f3980ebd24a957863a003a4c504c5f",
+      "runtimeHashes": {
+        "mini-games/parlour-room/twin-roofs.mjs": "7d0a86b387052d350369bec409c8272527f3980ebd24a957863a003a4c504c5f",
+        "mini-games/parlour-room/game.js": "de78315740f63cc42963b31ca55e6058c565501ed5e11874a37b68ad8ad698b8",
+        "mini-games/parlour-room/core.mjs": "339407b8d279243a25622037f7a709a9998afbbc1945ca95a36106a37402c458",
+        "mini-games/parlour-room/room.css": "7b5baf1c1951e0906b8650ab805a8ef037fa564a5a384e70ef89bce11c17eabe",
+        "mini-games/parlour-room/index.html": "328f418fab77b773e534825d0b3c570598d361fd781ddfeb9e2408ea539cbd33",
+        "mini-games/parlour-room/games.json": "2ca643577427733bb196101c550c6d8182271f2fc998d1a211ed2de121bc23b0"
+      },
+      "logFile": "mini-games/coverage/independent300/depth-twin-roofs-ordinary.jsonl",
+      "methods": [
+        "Manual public layer-list reasoning; no revised source/solution before full win. Old generator source had been read during prior failed review.",
+        "390px actual touch full win; native desktop Tab/Enter/Space full replay.",
+        "Fresh public deal, seeded random visible-free-pair policy as deliberately poor strategy; four-tile cover deadlock, credit exhaustion, retry.",
+        "Scoped source audit after wins.",
+        "Final sharedhost loading/cache-guard version full own-route touch replay passed; engine/core byte hashes unchanged from original scoped audit. Evidence depth-parlour-final-freeze-replays.json. Sharedhost audited for allowed-action dispatch, focus and startup readiness."
+      ],
+      "limits": [
+        "Three undo credits spent replaying same last pair to verify terminal boundary; the original deadlock itself arose naturally from alternative choices.",
+        "Only default manual win and one fresh-deal natural blockage independently tested; generator600attempt cap remains theoretical failure boundary."
+      ],
+      "passed": true,
+      "metadataEntrySha256": "250679b80a3f3728f0bf15ce9de3b9d0242d4b911dc25eb5540e55a71e51a5b0"
+    },
+    {
+      "designId": "B16",
+      "name": "Letters We Cannot See",
+      "gameId": "letters-we-cannot-see",
+      "room": "parlour-room",
+      "ordinaryBeforeSource": true,
+      "fullWin": true,
+      "naturalFailure": true,
+      "restart": true,
+      "meaningfulDecisions": "Full ordinary12/15 final-reply win after multiple failed UI attempts7/9/9/11. Combined literal Cedar/rank2 hints to synchronize Cedar1\u21922; identified redundant ranks to fund hints; preserved high Cedar card until rank5; chose risk plays with remaining fuses; late corrected rank3 hint exposed safe Amber/Blue3 options and Blue3\u2192houseBlue4 chain. No single repeated action works.",
+      "issues": [
+        "Perfect15-only calibration and partner last-copy sacrifice/hint starvation withheld.",
+        "Hint evaluator ignored publicly exhausted identities, missing safe rank3 hint even though UI excluded Cedar3.",
+        "Terminal copy-count ceiling wording implied further goal attainability."
+      ],
+      "resolution": "Main goal12 after all final replies with perfect15 distinction; partner protects last copies, prioritizes newly safe human hints, applies public count eliminations; terminal copy ceiling explicit. Corrected full390touch win, nativeTab/Enter/Space22-input replay, fresh0/15 three-fuse loss and restart. Scoped source audit after win confirms no hidden-own-card use by partner choice.",
+      "sourceSha256": "423dee4a701b3d86c1fffa06d37f5bdcefcbd4d1b21c117481fb47f583290890",
+      "runtimeHashes": {
+        "mini-games/parlour-room/letters-we-cannot-see.mjs": "423dee4a701b3d86c1fffa06d37f5bdcefcbd4d1b21c117481fb47f583290890",
+        "mini-games/parlour-room/game.js": "de78315740f63cc42963b31ca55e6058c565501ed5e11874a37b68ad8ad698b8",
+        "mini-games/parlour-room/core.mjs": "339407b8d279243a25622037f7a709a9998afbbc1945ca95a36106a37402c458",
+        "mini-games/parlour-room/room.css": "7b5baf1c1951e0906b8650ab805a8ef037fa564a5a384e70ef89bce11c17eabe",
+        "mini-games/parlour-room/index.html": "328f418fab77b773e534825d0b3c570598d361fd781ddfeb9e2408ea539cbd33",
+        "mini-games/parlour-room/games.json": "2ca643577427733bb196101c550c6d8182271f2fc998d1a211ed2de121bc23b0"
+      },
+      "logFile": "mini-games/coverage/independent300/depth-letters-we-cannot-see-ordinary.jsonl",
+      "methods": [
+        "Repeated ordinary defaultdeal learning; source and author routes unread until full revised win.",
+        "Actual390touch fullwin and native keyboard22-input replay.",
+        "Multiple genuine stock/fuse losses during learning, latestrevision blind play3fuse loss/retry.",
+        "Postwin source audit hidden-information boundaries, public-count domains, final-turn accounting and target12.",
+        "Final sharedhost loading/cache-guard version full own-route touch replay passed; engine/core byte hashes unchanged from original scoped audit. Evidence depth-parlour-final-freeze-replays.json. Sharedhost audited for allowed-action dispatch, focus and startup readiness."
+      ],
+      "limits": [
+        "Defaultdeal win benefited from prior failed UI attempts and included risk choices; not a claimed first-try deduction-only perfect score.",
+        "Perfect15 remains unproved independently; current main goal12 is full ordinary win."
+      ],
+      "passed": true,
+      "metadataEntrySha256": "80b76d13b8c65dfecd394b8cc6c6f612de55a3ffe62d7630d46f24decbc34826"
+    },
+    {
+      "designId": "B19",
+      "name": "Pass the Burden",
+      "gameId": "pass-the-burden",
+      "room": "parlour-room",
+      "ordinaryBeforeSource": true,
+      "fullWin": true,
+      "naturalFailure": true,
+      "restart": true,
+      "meaningfulDecisions": "Initial731loss19vs11 demonstrated rival bridge14 joining13\u201316. Fresh-deal touch loss38vs29 punished speculative missing bridges and coin exhaustion.731retry won3vs34/26: delayed25 until pot21 to secure liquidity; took24 immediately with next rival broke; delayed useful23 to pot13 while rivals could pay. Distinct public coin/run states dictated take versus refuse, and opponent accepted bridges/low-liquidity offers.",
+      "issues": [],
+      "resolution": "Source review after ordinary runs confirms finite shuffled deck, correct lowest-run scoring, public-state-only AI, no hidden future reads. No blocking defect observed.",
+      "sourceSha256": "04aff60e261a26e4e0e8f0c898ae59792402c053ba3147b6f0cefa7cd2c6c828",
+      "runtimeHashes": {
+        "mini-games/parlour-room/pass-the-burden.mjs": "04aff60e261a26e4e0e8f0c898ae59792402c053ba3147b6f0cefa7cd2c6c828",
+        "mini-games/parlour-room/game.js": "de78315740f63cc42963b31ca55e6058c565501ed5e11874a37b68ad8ad698b8",
+        "mini-games/parlour-room/core.mjs": "339407b8d279243a25622037f7a709a9998afbbc1945ca95a36106a37402c458",
+        "mini-games/parlour-room/room.css": "7b5baf1c1951e0906b8650ab805a8ef037fa564a5a384e70ef89bce11c17eabe",
+        "mini-games/parlour-room/index.html": "328f418fab77b773e534825d0b3c570598d361fd781ddfeb9e2408ea539cbd33",
+        "mini-games/parlour-room/games.json": "2ca643577427733bb196101c550c6d8182271f2fc998d1a211ed2de121bc23b0"
+      },
+      "logFile": "mini-games/coverage/independent300/depth-pass-the-burden-ordinary.jsonl",
+      "methods": [
+        "Two ordinary complete losses, then touch-only390px full win from learned visible play; no solver/source before win.",
+        "Complete desktop keyboard replay of own observed winning run using Tab plus alternating native Enter/Space; successful3/34/26.",
+        "Terminal Space on focused retry restored starting state without duplicate action.",
+        "Game/core/host source inspected only after these ordinary runs.",
+        "Final sharedhost loading/cache-guard version full own-route touch replay passed; engine/core byte hashes unchanged from original scoped audit. Evidence depth-parlour-final-freeze-replays.json. Sharedhost audited for allowed-action dispatch, focus and startup readiness."
+      ],
+      "limits": [
+        "No physical touch device or screen reader session.",
+        "Keyboard win replays reviewer-observed touch choices, not independently rediscovered strategy.",
+        "Winning retry reuses previously observed deal; new unseen deals not guaranteed winnable or uniformly balanced.",
+        "Second ordinary touch deal was seed8650 (Another deal increments7919), not732."
+      ],
+      "passed": true,
+      "metadataEntrySha256": "05e6dda5632100d7e5e06cbad6beb5915b01800a648a6dca9d66b89eebb1c768"
+    },
+    {
+      "designId": "B20",
+      "name": "Market of Five",
+      "gameId": "market-of-five",
+      "room": "parlour-room",
+      "ordinaryBeforeSource": true,
+      "fullWin": true,
+      "naturalFailure": true,
+      "restart": true,
+      "meaningfulDecisions": "First manually reasoned default731 match won75\u201367: house preempted top Ruby rewards, exchanging three camels secured bulk sets but replenished rival herd, seven-card cap forced sales, batching five Leather earned bonus, early Gold sale beat rival to top tokens, preserving camel majority added5 at closure. Immediate single-card cashout policy lost40\u201367 naturally at48turns.",
+      "issues": [],
+      "resolution": "No blocking defect found. Post-play source audit confirms house decisions use its own hand/public market and reward stacks, no player private hand or unseen deck. Exchanges conserve cards, selection spends no turn, rare minimum and hand cap enforced by action availability.",
+      "sourceSha256": "2a04ae3f7e42729b9479ddc14e3d2d131b2185a5494e209f29cfcdfadd9be48e",
+      "runtimeHashes": {
+        "mini-games/parlour-room/market-of-five.mjs": "2a04ae3f7e42729b9479ddc14e3d2d131b2185a5494e209f29cfcdfadd9be48e",
+        "mini-games/parlour-room/game.js": "de78315740f63cc42963b31ca55e6058c565501ed5e11874a37b68ad8ad698b8",
+        "mini-games/parlour-room/core.mjs": "339407b8d279243a25622037f7a709a9998afbbc1945ca95a36106a37402c458",
+        "mini-games/parlour-room/room.css": "7b5baf1c1951e0906b8650ab805a8ef037fa564a5a384e70ef89bce11c17eabe",
+        "mini-games/parlour-room/index.html": "328f418fab77b773e534825d0b3c570598d361fd781ddfeb9e2408ea539cbd33",
+        "mini-games/parlour-room/games.json": "2ca643577427733bb196101c550c6d8182271f2fc998d1a211ed2de121bc23b0"
+      },
+      "logFile": "mini-games/coverage/independent300/depth-market-of-five-ordinary.jsonl",
+      "methods": [
+        "Public DOM and manual first desktop match before source.",
+        "Clean full native Tab+Enter/Space replay and390px touch replay of reviewer-discovered route both75\u201367. No horizontal overflow.",
+        "Public-only immediate-cashout policy produced natural40\u201367 loss; terminal retry reset opening.",
+        "Source audit after all ordinary play.",
+        "Final sharedhost loading/cache-guard version full own-route touch replay passed; engine/core byte hashes unchanged from original scoped audit. Evidence depth-parlour-final-freeze-replays.json. Sharedhost audited for allowed-action dispatch, focus and startup readiness."
+      ],
+      "limits": [
+        "One mistaken first-run request remained pending and later gathered a camel; clean keyboard/touch reruns reproduced completed action order.",
+        "Defaultdeal only; physical device/screenreader not tested."
+      ],
+      "passed": true,
+      "metadataEntrySha256": "b76791078e40a17d4c2e368ab9eda96270246531f2df8b22fad74a0d563268c4"
+    },
+    {
+      "designId": "B24",
+      "name": "The Other Half",
+      "gameId": "the-other-half",
+      "room": "parlour-room",
+      "ordinaryBeforeSource": true,
+      "fullWin": true,
+      "naturalFailure": true,
+      "restart": true,
+      "meaningfulDecisions": "Corrected default731touch match won168\u2013164 with no redraw. Manually combined public cell weights while preserving both regions connectivity; first cut exchanged central stone for pond, third cut separated orchard pair to avoid bonus skew, final5-cell parcel intentionally accepted\u22122 to retain match lead. Chose B on meaningful\u00b13 offers. Straight singleton cuts and poor choices lost98\u2013227 after restart.",
+      "issues": [
+        "Resolved global valuation lottery and near-oracle draw ceiling."
+      ],
+      "resolution": "Balanced terrain counts give equal total base values; bounded coherent house partition search leaves genuine exploitable choices. Retested new fulltouchwin and nativekeyboard replaywin, deliberate naturalcorrectedloss and restart. Source inspected only afterward; connectivity, utility, alternating roles and endings coherent.",
+      "sourceSha256": "560950764888803019bbf98ac4c8fb33e8699a5ae6152dc86d5944a3b91b390b",
+      "runtimeHashes": {
+        "mini-games/parlour-room/the-other-half.mjs": "560950764888803019bbf98ac4c8fb33e8699a5ae6152dc86d5944a3b91b390b",
+        "mini-games/parlour-room/game.js": "de78315740f63cc42963b31ca55e6058c565501ed5e11874a37b68ad8ad698b8",
+        "mini-games/parlour-room/core.mjs": "339407b8d279243a25622037f7a709a9998afbbc1945ca95a36106a37402c458",
+        "mini-games/parlour-room/room.css": "7b5baf1c1951e0906b8650ab805a8ef037fa564a5a384e70ef89bce11c17eabe",
+        "mini-games/parlour-room/index.html": "328f418fab77b773e534825d0b3c570598d361fd781ddfeb9e2408ea539cbd33",
+        "mini-games/parlour-room/games.json": "2ca643577427733bb196101c550c6d8182271f2fc998d1a211ed2de121bc23b0"
+      },
+      "logFile": "mini-games/coverage/independent300/depth-the-other-half-ordinary.jsonl",
+      "methods": [
+        "Manual public-value arithmetic and public allocation preview only, no solver/source before corrected win.",
+        "390px touch-only fullwin168\u2013164; desktop Tab+Enter/Space replay of own observed actions.",
+        "Corrected singleton partitions plus poor chooser actions produced natural98\u2013227loss; native terminalSpace restart.",
+        "Post-play source review of module and sharedhost.",
+        "Final sharedhost loading/cache-guard version full own-route touch replay passed; engine/core byte hashes unchanged from original scoped audit. Evidence depth-parlour-final-freeze-replays.json. Sharedhost audited for allowed-action dispatch, focus and startup readiness."
+      ],
+      "limits": [
+        "Old prerevision full loss and partial8650run retained honestly in same log.",
+        "Keyboard win uses own observed touch route.",
+        "Only corrected defaultdeal independently completed; other deals not certified allwinnable."
+      ],
+      "passed": true,
+      "metadataEntrySha256": "59b079d08597698909e7140fd8deb846c0287bc988991dc776ebad867fa447f7"
+    },
+    {
+      "designId": "B31",
+      "name": "One Last Card",
+      "gameId": "one-last-card",
+      "room": "parlour-room",
+      "ordinaryBeforeSource": true,
+      "fullWin": true,
+      "naturalFailure": true,
+      "restart": true,
+      "meaningfulDecisions": "Retain useful rank while spending inspection/protection; avoid comparing a weak retained card against unknown high ranks; use Redraw against dangerous retained identity; infer final Crown from public losing6 comparison while holding7. Final fresh16569 match3/0/0 won without source or author route. Earlier731 weaker choices lost and8650 apparent win was rejected for missing exchange knowledge.",
+      "issues": [
+        "Ordinary3/1/2win at round6 relied on house knowingly comparing retained5 into inspected7 despite useful Redrawalternative.",
+        "Postsource AI can guessknown1 though player Guess excludes1.",
+        "Fresh revised AI ordinary default731 natural2/3/1 loss; anotherdeal8650 full3/2/1 win held: June guessed3 after exchanging own8 into my hand, suggesting missing legitimate exchange knowledge. Owner notified."
+      ],
+      "resolution": "Owner corrected knowingly losing comparison/illegal Guess1, then both-party exchange and equal-comparison memory. Fresh16569 full ordinary touch3/0/0 win after final fix,25-button native Tab/Enter/Space replay. Final731 public poor-retention/blind-comparison policy naturally lost0/1/3 after33inputs without Crown self-discard; reproduced and Retry reset round1/tokens0. Revised source read only after final ordinary fullwin.",
+      "sourceSha256": "ea547fed5486c8ad7cac53d45820809005da5990796c6b249baab68d6bd63861",
+      "runtimeHashes": {
+        "mini-games/parlour-room/one-last-card.mjs": "ea547fed5486c8ad7cac53d45820809005da5990796c6b249baab68d6bd63861",
+        "mini-games/parlour-room/core.mjs": "339407b8d279243a25622037f7a709a9998afbbc1945ca95a36106a37402c458",
+        "mini-games/parlour-room/game.js": "de78315740f63cc42963b31ca55e6058c565501ed5e11874a37b68ad8ad698b8",
+        "mini-games/parlour-room/room.css": "7b5baf1c1951e0906b8650ab805a8ef037fa564a5a384e70ef89bce11c17eabe",
+        "mini-games/parlour-room/index.html": "328f418fab77b773e534825d0b3c570598d361fd781ddfeb9e2408ea539cbd33",
+        "mini-games/parlour-room/games.json": "2ca643577427733bb196101c550c6d8182271f2fc998d1a211ed2de121bc23b0"
+      },
+      "logFile": "mini-games/coverage/independent300/depth-one-last-card-ordinary.jsonl",
+      "methods": [
+        "Fresh post-fix16569 source-unexposed ordinary fullmatch via390px touch; log preserves prior rejected versions.",
+        "25-button native Tab/Enter/Space fullwin reproduction, no overflow.",
+        "Public DOM-only adverse strategy for natural fullmatch loss: spend highest non-Crown effect, retain low rank, blind comparisons and Guess2; no surrender or hidden-state access.",
+        "Scoped final source audit verifies nonomniscient own-hand/public-discard/legitimate-memory policy, exchange knowledge of both participants, comparison memory, token and reserve accounting."
+      ],
+      "limits": [
+        "Old game source had been audited after an earlier rejected win; final revised source was not read until the fresh final fullwin. No author routes were used.",
+        "Fresh16569 win includes chance and informed public deductions; not a claim every deal is strategically winnable.",
+        "Failure policy deliberately makes poor ordinary decisions; it is not a naturally occurring expert loss or a surrender."
+      ],
+      "passed": true,
+      "metadataEntrySha256": "d89e3c17d931e0517d2902875621c0171767b7ac09af7b2595434c18b22c0062"
+    },
+    {
+      "designId": "C13",
+      "name": "Elbow Room",
+      "gameId": "elbow-room",
+      "room": "motion-room",
+      "ordinaryBeforeSource": true,
+      "fullWin": true,
+      "naturalFailure": true,
+      "restart": true,
+      "meaningfulDecisions": "Corrected3study full keyboardwin293actions zero contacts before source, then390touchfullreplay. Folded wrist before elbow to avoid leftwall, retracted wholechain for shoulder sweep, unfolded on right to collect, refolded carrying parcel and transferred to upper-left receivers. Moving elbow directly struck wall and failed naturally3contacts; retry-current preservedstudy3 and global restart resetstudy1.",
+      "issues": [
+        "Original study2 unreachable first-link sweep independently found and author-confirmed; corrected obstacle geometry.",
+        "Minor visible floating point bounds awaiting formatting."
+      ],
+      "resolution": "Correctedgeometry ordinary fullwin all3 without authorroute. Post-play source shows actual cumulative-angle kinematics,15intermediate-angle sweep samples across30points perlink and larger carriedpayload obstacle margin. No other blocker identified.",
+      "sourceSha256": "cc646acf5e28b9796fe068331ad637c234e44f2c7f6b0a664f109f962621b688",
+      "runtimeHashes": {
+        "mini-games/motion-room/physics.js": "cc646acf5e28b9796fe068331ad637c234e44f2c7f6b0a664f109f962621b688",
+        "mini-games/motion-room/room.js": "eb9a87a21caae9efb8c1c9861225eef140589cdacb9b588e64bec9ddee0fba61",
+        "mini-games/motion-room/shared.js": "08cc3892b3daad10e53fb3a70aa86539b76c9de7dbb2caaba6163e3bad998a9e",
+        "mini-games/motion-room/room.css": "b1c6606ea4f8bd14bc7f4c6e3f6c76a38c2a942004815a7a1b69258b744fbba9",
+        "mini-games/motion-room/index.html": "566094cc303494e8ea4d122145529c90e0be4e572495f6823e92200c3612ce35",
+        "mini-games/motion-room/games.json": "f83a3e655f8f5673886df4de6e829467af95cbf4d71d023dde55e94cdb9ce980"
+      },
+      "logFile": "mini-games/coverage/independent300/depth-elbow-room-ordinary.jsonl",
+      "methods": [
+        "Manual visible-coordinate geometry reasoning and keyboardinput before source; no hidden poses or solver.",
+        "390touch fullreplay of own route, nooverflow; natural contactloss/retry/globalreset.",
+        "Scoped sourceinspection onlyelbow IIFE afterfullwin; sharedhost reviewed.",
+        "Final freeze full ordinary-derived fixture replay passed; evidence mini-games/coverage/independent300/depth-motion-final-freeze-replays.json. Scoped mechanics re-read after shared-module changes; C21 approaching-only portal correction and C25 finite ammo/dead-unit reaction corrections included. Other reviewed mechanics unchanged.",
+        "Metadata rebound after owner explicit C03-only spacing cleanup; no reviewed game mechanics changed.",
+        "CSS-only binding refresh after independent all24-game fixed320px/390px layout audit: mini-games/coverage/independent300/motion-mobile-layout-audit.json. Keyboard hints wrap onto separate lines;44px control minimum retained. All non-CSS runtime hashes unchanged; original gameplay provenance retained. This is not a new blind gameplay claim."
+      ],
+      "limits": [
+        "Threefixed authored workcells; no randomized replay claimed.",
+        "Touch replay own keyboard-discovered route; no physicaldevice/screenreader."
+      ],
+      "passed": true,
+      "metadataEntrySha256": "8f4321f0350f0573c372856683cc0bac7c701bb7a3f5f7f6372d5d5680f24d5c"
+    },
+    {
+      "designId": "C14",
+      "name": "Common Meadow",
+      "gameId": "common-meadow",
+      "room": "motion-room",
+      "ordinaryBeforeSource": true,
+      "fullWin": true,
+      "naturalFailure": true,
+      "restart": true,
+      "meaningfulDecisions": "Completed all3paddocks through manual touch,364actions with true rescues. Late corrections failed naturally; early braking/going around flock preserved stragglers. Third recovery steered from right to brake escape, below to regroup, then left/above to deliver final sheep. Full nativeTab+Enter/Space replay same complete result. Retry-current preserved study3 and reset it.",
+      "issues": [
+        "Resolved duplicate escaped-ID counting at simultaneous two-boundary crossing.",
+        "Added essential velocity state and correct retry-current control."
+      ],
+      "resolution": "Owner deduplicated loss bookkeeping without force changes. Fresh390touch full364action win on corrected runtime and natural53action2escape loss/retry-current confirmed. Source review real coupled cohesion/separation, momentum, repulsion and obstacle rebound; no hardcoded path.",
+      "sourceSha256": "cc646acf5e28b9796fe068331ad637c234e44f2c7f6b0a664f109f962621b688",
+      "runtimeHashes": {
+        "mini-games/motion-room/physics.js": "cc646acf5e28b9796fe068331ad637c234e44f2c7f6b0a664f109f962621b688",
+        "mini-games/motion-room/room.js": "eb9a87a21caae9efb8c1c9861225eef140589cdacb9b588e64bec9ddee0fba61",
+        "mini-games/motion-room/shared.js": "08cc3892b3daad10e53fb3a70aa86539b76c9de7dbb2caaba6163e3bad998a9e",
+        "mini-games/motion-room/room.css": "b1c6606ea4f8bd14bc7f4c6e3f6c76a38c2a942004815a7a1b69258b744fbba9",
+        "mini-games/motion-room/index.html": "566094cc303494e8ea4d122145529c90e0be4e572495f6823e92200c3612ce35",
+        "mini-games/motion-room/games.json": "f83a3e655f8f5673886df4de6e829467af95cbf4d71d023dde55e94cdb9ce980"
+      },
+      "logFile": "mini-games/coverage/independent300/depth-common-meadow-ordinary.jsonl",
+      "methods": [
+        "All3ordinary touchwin before source/solver, old earlier failures retained.",
+        "Nativekeyboard fullwin replay reviewer-derived path, public fixture depth-common-meadow-public-win.json.",
+        "Post-source scoped review physics.js common-meadow IIFE and sharedhost only; untouched game source not read.",
+        "Final freeze full ordinary-derived fixture replay passed; evidence mini-games/coverage/independent300/depth-motion-final-freeze-replays.json. Scoped mechanics re-read after shared-module changes; C21 approaching-only portal correction and C25 finite ammo/dead-unit reaction corrections included. Other reviewed mechanics unchanged.",
+        "Metadata rebound after owner explicit C03-only spacing cleanup; no reviewed game mechanics changed.",
+        "CSS-only binding refresh after independent all24-game fixed320px/390px layout audit: mini-games/coverage/independent300/motion-mobile-layout-audit.json. Keyboard hints wrap onto separate lines;44px control minimum retained. All non-CSS runtime hashes unchanged; original gameplay provenance retained. This is not a new blind gameplay claim."
+      ],
+      "limits": [
+        "Keyboard fullwin on immediately previous physics-identical runtime; finaldedup/text revision fulltouchwin+loss retested.",
+        "Threefixedpaddocks only; no physicaldevice/screenreader."
+      ],
+      "passed": true,
+      "metadataEntrySha256": "954e358ba01898953f36b2d1e7ee2f08c49118b36f8b288a40d67b845f869c1d"
+    },
+    {
+      "designId": "C15",
+      "name": "Folded Cuttings",
+      "gameId": "folded-cuttings",
+      "room": "motion-room",
+      "ordinaryBeforeSource": true,
+      "fullWin": true,
+      "naturalFailure": true,
+      "restart": true,
+      "meaningfulDecisions": "Revised final2cut budget required composing x<3 thenx<5 before y<4, merging8selected originalcells while preserving remote2hole stack. Original2foldindependent shortcut exhausted3cuts and is no longer valid. Manual keyboardfullwin46actions then390touchfullreplay before source. Reversing xfoldorder produced extra+missingholes withsamecutlocations; failedcertification three times naturallylost, retry-current preservedstudy3.",
+      "issues": [
+        "Originalfinal3cutbudget allowed sameindependentorthogonalfolds as tutorial; revised2cutbudget makes sequentialfoldhistory necessary.",
+        "Misleading polygonalpath description corrected toactual stackcutmechanic."
+      ],
+      "resolution": "Revised challenge ordinaryfullwin and wrong-orderfailure; sourceafterward confirms actualoriginalcell layertransform composition, completeexacthole comparison and connectedremainingpaper check.",
+      "sourceSha256": "68a90922ac600b01c12b1d78475ea49f86949bee66fa82d54249d46bd195b85c",
+      "runtimeHashes": {
+        "mini-games/motion-room/packing.js": "68a90922ac600b01c12b1d78475ea49f86949bee66fa82d54249d46bd195b85c",
+        "mini-games/motion-room/room.js": "eb9a87a21caae9efb8c1c9861225eef140589cdacb9b588e64bec9ddee0fba61",
+        "mini-games/motion-room/shared.js": "08cc3892b3daad10e53fb3a70aa86539b76c9de7dbb2caaba6163e3bad998a9e",
+        "mini-games/motion-room/room.css": "b1c6606ea4f8bd14bc7f4c6e3f6c76a38c2a942004815a7a1b69258b744fbba9",
+        "mini-games/motion-room/index.html": "566094cc303494e8ea4d122145529c90e0be4e572495f6823e92200c3612ce35",
+        "mini-games/motion-room/games.json": "f83a3e655f8f5673886df4de6e829467af95cbf4d71d023dde55e94cdb9ce980"
+      },
+      "logFile": "mini-games/coverage/independent300/depth-folded-cuttings-ordinary.jsonl",
+      "methods": [
+        "Publictargetcoordinates and stackpreview reasoning only before revisedfullwin.",
+        "Nativeboardkeyboard fullwin then390touchreplay,nooverflow.",
+        "Wrongfoldorder produced observablemismatch; threefailedcertifications terminal; retrystudy reset.",
+        "Scopedpostplay sourceaudit onlyfolded-cuttings IIFE.",
+        "Final freeze full ordinary-derived fixture replay passed; evidence mini-games/coverage/independent300/depth-motion-final-freeze-replays.json. Scoped mechanics re-read after shared-module changes; C21 approaching-only portal correction and C25 finite ammo/dead-unit reaction corrections included. Other reviewed mechanics unchanged.",
+        "Metadata rebound after owner explicit C03-only spacing cleanup; no reviewed game mechanics changed.",
+        "CSS-only binding refresh after independent all24-game fixed320px/390px layout audit: mini-games/coverage/independent300/motion-mobile-layout-audit.json. Keyboard hints wrap onto separate lines;44px control minimum retained. All non-CSS runtime hashes unchanged; original gameplay provenance retained. This is not a new blind gameplay claim."
+      ],
+      "limits": [
+        "Threefixedsheets; expert can solve quickly, finalfoldorderconstraint supplies distinctdepth.",
+        "Touchrun replays ownordinarykeyboard solution; no physicaldevice/screenreader."
+      ],
+      "passed": true,
+      "metadataEntrySha256": "3c4cb11329fa02c8c5d2cd1940910a09269229d6f24ec5b8792c7e8cdc074218"
+    },
+    {
+      "designId": "C17",
+      "name": "Domino Relay",
+      "gameId": "domino-relay",
+      "room": "motion-room",
+      "ordinaryBeforeSource": true,
+      "fullWin": true,
+      "naturalFailure": true,
+      "restart": true,
+      "meaningfulDecisions": "Physical redesign ordinary keyboard full campaign in52 actions, including default first release failing because starter tip passes above short rod. Changed rod1 spacing to1.4; studies1/2 allocate scarce long rods differently to match contact heights and bell reach. Third uses1.6-spaced equal1.8 rods across raised shelf. Visible geometry and contact times explain outcome; no source or author route read before win.",
+      "issues": [
+        "Original directed propagation implementation withheld as insufficient physical distinction; replaced with actual angular dynamics and tip-side impulses."
+      ],
+      "resolution": "New physical version independently won all3 studies via keyboard then53-input390px touch replay; default3-release natural loss and retry-current/global restart verified. Scoped source audit afterward confirms gravity, detent, inertia, geometric contact and impulse calculation, rather than prescribed graph transitions.",
+      "sourceSha256": "68a90922ac600b01c12b1d78475ea49f86949bee66fa82d54249d46bd195b85c",
+      "runtimeHashes": {
+        "mini-games/motion-room/packing.js": "68a90922ac600b01c12b1d78475ea49f86949bee66fa82d54249d46bd195b85c",
+        "mini-games/motion-room/room.js": "eb9a87a21caae9efb8c1c9861225eef140589cdacb9b588e64bec9ddee0fba61",
+        "mini-games/motion-room/shared.js": "08cc3892b3daad10e53fb3a70aa86539b76c9de7dbb2caaba6163e3bad998a9e",
+        "mini-games/motion-room/room.css": "b1c6606ea4f8bd14bc7f4c6e3f6c76a38c2a942004815a7a1b69258b744fbba9",
+        "mini-games/motion-room/index.html": "566094cc303494e8ea4d122145529c90e0be4e572495f6823e92200c3612ce35",
+        "mini-games/motion-room/games.json": "f83a3e655f8f5673886df4de6e829467af95cbf4d71d023dde55e94cdb9ce980"
+      },
+      "logFile": "mini-games/coverage/independent300/depth-domino-relay-ordinary.jsonl",
+      "methods": [
+        "Public geometry reasoning before source, complete keyboard campaign.",
+        "390px touch replay of own ordinary-derived route, no overflow.",
+        "Default layout3 failed physical launches; retry current retains study3, global restart resets1.",
+        "Scoped domino IIFE source audit only after full wins.",
+        "Final freeze full ordinary-derived fixture replay passed; evidence mini-games/coverage/independent300/depth-motion-final-freeze-replays.json. Scoped mechanics re-read after shared-module changes; C21 approaching-only portal correction and C25 finite ammo/dead-unit reaction corrections included. Other reviewed mechanics unchanged.",
+        "Metadata rebound after owner explicit C03-only spacing cleanup; no reviewed game mechanics changed.",
+        "CSS-only binding refresh after independent all24-game fixed320px/390px layout audit: mini-games/coverage/independent300/motion-mobile-layout-audit.json. Keyboard hints wrap onto separate lines;44px control minimum retained. All non-CSS runtime hashes unchanged; original gameplay provenance retained. This is not a new blind gameplay claim."
+      ],
+      "limits": [
+        "Simplified rigid rod model with tip-side collision and discrete timestep, not general-purpose physics.",
+        "Three authored shelf/budget studies; input replay is own route, not independent strategy discovery."
+      ],
+      "passed": true,
+      "metadataEntrySha256": "026dafb41758c8de3284e82c1242d3fd5dc36d1a8b143e65a154c4d993f70239"
+    },
+    {
+      "designId": "C18",
+      "name": "Siding Stories",
+      "gameId": "siding-stories",
+      "room": "motion-room",
+      "ordinaryBeforeSource": true,
+      "fullWin": true,
+      "naturalFailure": true,
+      "restart": true,
+      "meaningfulDecisions": "Manual3manifest keyboardwin116actions before source,390touchfullreplay. Thirdmanifest formed L+B+A+C chain, parked C9 temporarily, backed A5, recoupled C behind B, usedloop and tailfirst movement to deliverC1 thenB9. Occupied deliveredA1 blocked plannedtrack onfirststudy, corrected by selectingalternatebranch.",
+      "issues": [
+        "Auto-coupling ties were opaque nearestrear label; action now namesactualwagon/node and displays firsteligible loose-list rule."
+      ],
+      "resolution": "Finaltargetlabel verified inUI and fullkeyboard116action replay afterchange. Sourceaudited onlyafterfullwin; chainshift/order, rearadjacency, uncoupling andtargets coherent.",
+      "sourceSha256": "4082d1165a9a412194f8378d6272b0755707e5e3811cb3c18aaac9ab130a79bb",
+      "runtimeHashes": {
+        "mini-games/motion-room/navigation.js": "4082d1165a9a412194f8378d6272b0755707e5e3811cb3c18aaac9ab130a79bb",
+        "mini-games/motion-room/room.js": "eb9a87a21caae9efb8c1c9861225eef140589cdacb9b588e64bec9ddee0fba61",
+        "mini-games/motion-room/shared.js": "08cc3892b3daad10e53fb3a70aa86539b76c9de7dbb2caaba6163e3bad998a9e",
+        "mini-games/motion-room/room.css": "b1c6606ea4f8bd14bc7f4c6e3f6c76a38c2a942004815a7a1b69258b744fbba9",
+        "mini-games/motion-room/index.html": "566094cc303494e8ea4d122145529c90e0be4e572495f6823e92200c3612ce35",
+        "mini-games/motion-room/games.json": "f83a3e655f8f5673886df4de6e829467af95cbf4d71d023dde55e94cdb9ce980"
+      },
+      "logFile": "mini-games/coverage/independent300/depth-siding-stories-ordinary.jsonl",
+      "methods": [
+        "Publicgraph andtrainposition reasoning, nohiddenstate/source before firstfullwin.",
+        "Nativeboardkeyboardfullwin plus390touchreplay,nooverflow; finalcopyrevision fullkeyboardreplay.",
+        "Actualoccupied-track failedattempt required reroute; retry-current preservedstudy3 then globalrestartresetstudy1.",
+        "Scopedpostplay sourceaudit sidingsIIFE.",
+        "Final freeze full ordinary-derived fixture replay passed; evidence mini-games/coverage/independent300/depth-motion-final-freeze-replays.json. Scoped mechanics re-read after shared-module changes; C21 approaching-only portal correction and C25 finite ammo/dead-unit reaction corrections included. Other reviewed mechanics unchanged.",
+        "Metadata rebound after owner explicit C03-only spacing cleanup; no reviewed game mechanics changed.",
+        "CSS-only binding refresh after independent all24-game fixed320px/390px layout audit: mini-games/coverage/independent300/motion-mobile-layout-audit.json. Keyboard hints wrap onto separate lines;44px control minimum retained. All non-CSS runtime hashes unchanged; original gameplay provenance retained. This is not a new blind gameplay claim."
+      ],
+      "limits": [
+        "NaturalFailure means recoverable planningblockage, notterminal loss; rules have noarbitrarymovecap. Parent explicitlyaccepted this interpretation.",
+        "Threefixedmanifests ononegraph; replayownroute forinputverification."
+      ],
+      "passed": true,
+      "metadataEntrySha256": "47d1cdbcabe8eb3fbfd6e919a3238adce835016af6246a094c75c19e0a44c2e0"
+    },
+    {
+      "designId": "C19",
+      "name": "Across the Current",
+      "gameId": "across-the-current",
+      "room": "motion-room",
+      "ordinaryBeforeSource": true,
+      "fullWin": true,
+      "naturalFailure": true,
+      "restart": true,
+      "meaningfulDecisions": "Ordinary keyboard full12-home campaign188actions after initial natural3accident loss. Predicted both pre/post traffic positions; used refuge to change phase, waited on moving logs to target homes, and deliberately retreated from right-moving upper log to lower left-moving log before final home7. First2 studies share a workable route, third phase requires different crossing timing.",
+      "issues": [
+        "Initial notes did not explain pre/post traffic checks and arrival-row carry; owner added exact public timing without changing mechanics."
+      ],
+      "resolution": "All3 studies cleared with3lives each; fresh390touch189input fullreplay on clarified version, natural4-Up3accident failure, retry-current preserved3, globalreset1. Scoped source audit confirms displayed periodic traffic, actual arrival-log drift, two car checks and distinct filled homes.",
+      "sourceSha256": "4082d1165a9a412194f8378d6272b0755707e5e3811cb3c18aaac9ab130a79bb",
+      "runtimeHashes": {
+        "mini-games/motion-room/navigation.js": "4082d1165a9a412194f8378d6272b0755707e5e3811cb3c18aaac9ab130a79bb",
+        "mini-games/motion-room/room.js": "eb9a87a21caae9efb8c1c9861225eef140589cdacb9b588e64bec9ddee0fba61",
+        "mini-games/motion-room/shared.js": "08cc3892b3daad10e53fb3a70aa86539b76c9de7dbb2caaba6163e3bad998a9e",
+        "mini-games/motion-room/room.css": "b1c6606ea4f8bd14bc7f4c6e3f6c76a38c2a942004815a7a1b69258b744fbba9",
+        "mini-games/motion-room/index.html": "566094cc303494e8ea4d122145529c90e0be4e572495f6823e92200c3612ce35",
+        "mini-games/motion-room/games.json": "f83a3e655f8f5673886df4de6e829467af95cbf4d71d023dde55e94cdb9ce980"
+      },
+      "logFile": "mini-games/coverage/independent300/depth-across-the-current-ordinary.jsonl",
+      "methods": [
+        "Manual public-coordinate/time reasoning before any source/owner solution.",
+        "Native board keyboard full campaign,390px touch complete replay with nooverflow.",
+        "Both initial unaided accident loss and finalrevision terminal loss/retry.",
+        "Scoped source audit after first fullwin.",
+        "Final freeze full ordinary-derived fixture replay passed; evidence mini-games/coverage/independent300/depth-motion-final-freeze-replays.json. Scoped mechanics re-read after shared-module changes; C21 approaching-only portal correction and C25 finite ammo/dead-unit reaction corrections included. Other reviewed mechanics unchanged.",
+        "Metadata rebound after owner explicit C03-only spacing cleanup; no reviewed game mechanics changed.",
+        "CSS-only binding refresh after independent all24-game fixed320px/390px layout audit: mini-games/coverage/independent300/motion-mobile-layout-audit.json. Keyboard hints wrap onto separate lines;44px control minimum retained. All non-CSS runtime hashes unchanged; original gameplay provenance retained. This is not a new blind gameplay claim."
+      ],
+      "limits": [
+        "Three authored traffic phases on same crossing; firsttwo admit same route, final requires adaptation.",
+        "Turn-paced simulation rather than real-time reflex; intended accessible mechanic."
+      ],
+      "passed": true,
+      "metadataEntrySha256": "529d0a000fcaa713c8e39d0cfd38ebabf1dcc9e0b1359af260361c8c5921a3d1"
+    },
+    {
+      "designId": "C20",
+      "name": "Watchtower Bend",
+      "gameId": "watchtower-bend",
+      "room": "motion-room",
+      "ordinaryBeforeSource": true,
+      "fullWin": true,
+      "naturalFailure": true,
+      "restart": true,
+      "meaningfulDecisions": "Three valleys required tower positions that reshape the enemy route, mixed damage against shields and armor, and investment versus sale/reposition. A poor northern setup in valley2 leaked three, leaving gate2/5; relocating splash/slow to actual southern route recovered the remaining waves. Final gates5/5,2/5,4/5.",
+      "issues": [
+        "SlowLv2 no-op found source afterwin; owner corrected radius/duration, finalreplaypending."
+      ],
+      "resolution": "Essential fixed-obstacle/route text added. Source audit found slowLv2 charged credits without effect; corrected range2.6\u21923.4 and duration3\u21925. Latest full347-input touch replay passed unchanged route, no overflow. Latest empty-defense24tick natural gate0 failure and both retry scopes verified.",
+      "sourceSha256": "1bd3baaff7d02142fac5a6cb2d8fea8bf3636103c9ed6ff22e3ee3fa43500bc5",
+      "runtimeHashes": {
+        "mini-games/motion-room/tactics.js": "1bd3baaff7d02142fac5a6cb2d8fea8bf3636103c9ed6ff22e3ee3fa43500bc5",
+        "mini-games/motion-room/room.js": "eb9a87a21caae9efb8c1c9861225eef140589cdacb9b588e64bec9ddee0fba61",
+        "mini-games/motion-room/shared.js": "08cc3892b3daad10e53fb3a70aa86539b76c9de7dbb2caaba6163e3bad998a9e",
+        "mini-games/motion-room/room.css": "b1c6606ea4f8bd14bc7f4c6e3f6c76a38c2a942004815a7a1b69258b744fbba9",
+        "mini-games/motion-room/index.html": "566094cc303494e8ea4d122145529c90e0be4e572495f6823e92200c3612ce35",
+        "mini-games/motion-room/games.json": "f83a3e655f8f5673886df4de6e829467af95cbf4d71d023dde55e94cdb9ce980"
+      },
+      "logFile": "mini-games/coverage/independent300/depth-watchtower-bend-ordinary.jsonl",
+      "methods": [
+        "Ordinary346-key fullcampaign before source; source-unexposed state text and board only.",
+        "390px full347-input touch replay after slow correction; own independently derived route, not author solution.",
+        "Scoped source audit only Watchtower IIFE: actual BFS route, targeting, shield/armor and effective slow upgrade.",
+        "Final freeze full ordinary-derived fixture replay passed; evidence mini-games/coverage/independent300/depth-motion-final-freeze-replays.json. Scoped mechanics re-read after shared-module changes; C21 approaching-only portal correction and C25 finite ammo/dead-unit reaction corrections included. Other reviewed mechanics unchanged.",
+        "Metadata rebound after owner explicit C03-only spacing cleanup; no reviewed game mechanics changed.",
+        "CSS-only binding refresh after independent all24-game fixed320px/390px layout audit: mini-games/coverage/independent300/motion-mobile-layout-audit.json. Keyboard hints wrap onto separate lines;44px control minimum retained. All non-CSS runtime hashes unchanged; original gameplay provenance retained. This is not a new blind gameplay claim."
+      ],
+      "limits": [],
+      "passed": true,
+      "metadataEntrySha256": "dbca74f138d03cf8c049bdcfedabc8ad42b254724fe499c40c7afcc78dcfb03f"
+    },
+    {
+      "designId": "C21",
+      "name": "Through and Through",
+      "gameId": "through-and-through",
+      "room": "motion-room",
+      "ordinaryBeforeSource": true,
+      "fullWin": true,
+      "naturalFailure": true,
+      "restart": true,
+      "meaningfulDecisions": "Final high shelf requires a horizontal fling then reanchoring catch-wall/upward-floor pair during flight. Too little horizontal speed peaked below shelf; placing upper floor early intercepted the wrong side. Delaying that placement, accelerating before catch, and correcting retained lateral velocity during ascent reached the shelf. First two studies teach one conversion.",
+      "issues": [
+        "Original three-study identical route was too shallow; held until final geometry required two conversions."
+      ],
+      "resolution": "Revised final unaided ordinary win after two failed approaches, then complete89-planned-input touch replay (redundant post-clear directional input skipped). Current21-input leftward three-fall natural loss; retry-current and global reset verified. Final approaching-surface-only portal tolerance correction rechecked with full own touch route.",
+      "sourceSha256": "4082d1165a9a412194f8378d6272b0755707e5e3811cb3c18aaac9ab130a79bb",
+      "runtimeHashes": {
+        "mini-games/motion-room/navigation.js": "4082d1165a9a412194f8378d6272b0755707e5e3811cb3c18aaac9ab130a79bb",
+        "mini-games/motion-room/room.js": "eb9a87a21caae9efb8c1c9861225eef140589cdacb9b588e64bec9ddee0fba61",
+        "mini-games/motion-room/shared.js": "08cc3892b3daad10e53fb3a70aa86539b76c9de7dbb2caaba6163e3bad998a9e",
+        "mini-games/motion-room/room.css": "b1c6606ea4f8bd14bc7f4c6e3f6c76a38c2a942004815a7a1b69258b744fbba9",
+        "mini-games/motion-room/index.html": "566094cc303494e8ea4d122145529c90e0be4e572495f6823e92200c3612ce35",
+        "mini-games/motion-room/games.json": "f83a3e655f8f5673886df4de6e829467af95cbf4d71d023dde55e94cdb9ce980"
+      },
+      "logFile": "mini-games/coverage/independent300/depth-through-and-through-ordinary.jsonl",
+      "methods": [
+        "Public keyboard ordinary entire campaign before source.",
+        "390px touch replay of own discovered route; no overflow.",
+        "Scoped source after win confirms normal/tangent velocity rotation, plane crossing, gravity, actual platforms and finite lives.",
+        "Final freeze full ordinary-derived fixture replay passed; evidence mini-games/coverage/independent300/depth-motion-final-freeze-replays.json. Scoped mechanics re-read after shared-module changes; C21 approaching-only portal correction and C25 finite ammo/dead-unit reaction corrections included. Other reviewed mechanics unchanged.",
+        "Metadata rebound after owner explicit C03-only spacing cleanup; no reviewed game mechanics changed.",
+        "CSS-only binding refresh after independent all24-game fixed320px/390px layout audit: mini-games/coverage/independent300/motion-mobile-layout-audit.json. Keyboard hints wrap onto separate lines;44px control minimum retained. All non-CSS runtime hashes unchanged; original gameplay provenance retained. This is not a new blind gameplay claim."
+      ],
+      "limits": [
+        "First two tutorial studies share a route; final materially changes required strategy.",
+        "Touch replay uses own previously discovered route; no author solution."
+      ],
+      "passed": true,
+      "metadataEntrySha256": "8eabaeb5a4a0204c948b1eecb39ab641aa6e0a24a0e815df5795508cbd3632a2"
+    },
+    {
+      "designId": "C22",
+      "name": "Orchard Acrobat",
+      "gameId": "orchard-acrobat",
+      "room": "motion-room",
+      "ordinaryBeforeSource": true,
+      "fullWin": true,
+      "naturalFailure": true,
+      "restart": true,
+      "meaningfulDecisions": "Revised final required collecting elevated fruit behind the starting head while tail remained supported, returning around own body, growing to bridge the gap, climbing a second elevated branch and descending around occupied body to gather the last fruit, then climbing the high exit. Moving a short body upward across the gap instead caused whole-body void loss.",
+      "issues": [
+        "Original third study solved by all-right; held until branched fruit and elevated exit required growth/support planning."
+      ],
+      "resolution": "Revised42-key fullcampaign ordinary win before source;43-input390px touch replay. Four-step premature gap crossing naturally lost support and fell; study3 retry and global reset verified.",
+      "sourceSha256": "4082d1165a9a412194f8378d6272b0755707e5e3811cb3c18aaac9ab130a79bb",
+      "runtimeHashes": {
+        "mini-games/motion-room/navigation.js": "4082d1165a9a412194f8378d6272b0755707e5e3811cb3c18aaac9ab130a79bb",
+        "mini-games/motion-room/room.js": "eb9a87a21caae9efb8c1c9861225eef140589cdacb9b588e64bec9ddee0fba61",
+        "mini-games/motion-room/shared.js": "08cc3892b3daad10e53fb3a70aa86539b76c9de7dbb2caaba6163e3bad998a9e",
+        "mini-games/motion-room/room.css": "b1c6606ea4f8bd14bc7f4c6e3f6c76a38c2a942004815a7a1b69258b744fbba9",
+        "mini-games/motion-room/index.html": "566094cc303494e8ea4d122145529c90e0be4e572495f6823e92200c3612ce35",
+        "mini-games/motion-room/games.json": "f83a3e655f8f5673886df4de6e829467af95cbf4d71d023dde55e94cdb9ce980"
+      },
+      "logFile": "mini-games/coverage/independent300/depth-orchard-acrobat-ordinary.jsonl",
+      "methods": [
+        "Public coordinate and support planning only before fullcampaign win.",
+        "Touch complete own-route replay; all essential rock/body/fruit coordinates available as text.",
+        "Scoped source audit after win confirms head-to-tail occupancy, tail exception, fruit growth and rigid gravity until actual rock support.",
+        "Full43-button native Tab/Enter/Space replay also completed.",
+        "Final freeze full ordinary-derived fixture replay passed; evidence mini-games/coverage/independent300/depth-motion-final-freeze-replays.json. Scoped mechanics re-read after shared-module changes; C21 approaching-only portal correction and C25 finite ammo/dead-unit reaction corrections included. Other reviewed mechanics unchanged.",
+        "Metadata rebound after owner explicit C03-only spacing cleanup; no reviewed game mechanics changed.",
+        "CSS-only binding refresh after independent all24-game fixed320px/390px layout audit: mini-games/coverage/independent300/motion-mobile-layout-audit.json. Keyboard hints wrap onto separate lines;44px control minimum retained. All non-CSS runtime hashes unchanged; original gameplay provenance retained. This is not a new blind gameplay claim."
+      ],
+      "limits": [
+        "Two simple teaching studies; final provides substantive branched planning.",
+        "Own replay route is prior ordinary evidence, not a new blind completion."
+      ],
+      "passed": true,
+      "metadataEntrySha256": "7891d633f2dec46b6e199b714336e0607ed434bbf0b0a88d46446799e3e8cfaf"
+    },
+    {
+      "designId": "C25",
+      "name": "Crossfire Courtyard",
+      "gameId": "crossfire-courtyard",
+      "room": "motion-room",
+      "ordinaryBeforeSource": true,
+      "fullWin": true,
+      "naturalFailure": true,
+      "restart": true,
+      "meaningfulDecisions": "Final finite7-cartridge courtyard required keeping civilian sheltered, focusing Y before X, moving squad through blocked firing lanes, then exhausting suppression and using healthy A to absorb the last reaction while B/C finished X. All three survived atHP2. Initial positioning attempts ran out of useful firing lanes; moving civilian early exposed it. Extraction required clearing occupied paths and handing escort between units.",
+      "issues": [
+        "Unlimited suppression held because one unit could indefinitely disable both enemies.",
+        "Owner corrected dead-unit reaction waste and dead escorts before final replay."
+      ],
+      "resolution": "Finite8/8/7-cartridge version ordinary fullcampaign won before source. Latest runtime full250-planned-input touch replay and246 actual native Tab/Enter/Space button replay passed; ignored post-clear keys omitted in touch. Three unattended enemy responses naturally killed B/C; stage3 retry and global reset verified.",
+      "sourceSha256": "1bd3baaff7d02142fac5a6cb2d8fea8bf3636103c9ed6ff22e3ee3fa43500bc5",
+      "runtimeHashes": {
+        "mini-games/motion-room/tactics.js": "1bd3baaff7d02142fac5a6cb2d8fea8bf3636103c9ed6ff22e3ee3fa43500bc5",
+        "mini-games/motion-room/room.js": "eb9a87a21caae9efb8c1c9861225eef140589cdacb9b588e64bec9ddee0fba61",
+        "mini-games/motion-room/shared.js": "08cc3892b3daad10e53fb3a70aa86539b76c9de7dbb2caaba6163e3bad998a9e",
+        "mini-games/motion-room/room.css": "b1c6606ea4f8bd14bc7f4c6e3f6c76a38c2a942004815a7a1b69258b744fbba9",
+        "mini-games/motion-room/index.html": "566094cc303494e8ea4d122145529c90e0be4e572495f6823e92200c3612ce35",
+        "mini-games/motion-room/games.json": "f83a3e655f8f5673886df4de6e829467af95cbf4d71d023dde55e94cdb9ce980"
+      },
+      "logFile": "mini-games/coverage/independent300/depth-crossfire-courtyard-ordinary.jsonl",
+      "methods": [
+        "Ordinary keyboard fullcampaign before scoped source; final involved two replanned positioning attempts.",
+        "390px touch fullcampaign, zero overflow, native Tab/Enter/Space fullcampaign.",
+        "Scoped source confirms actual LoS, finiteAP/ammo, reaction budget, living-unit checks, occupied enemy movement, public state and extraction conditions.",
+        "Final freeze full ordinary-derived fixture replay passed; evidence mini-games/coverage/independent300/depth-motion-final-freeze-replays.json. Scoped mechanics re-read after shared-module changes; C21 approaching-only portal correction and C25 finite ammo/dead-unit reaction corrections included. Other reviewed mechanics unchanged.",
+        "Metadata rebound after owner explicit C03-only spacing cleanup; no reviewed game mechanics changed.",
+        "CSS-only binding refresh after independent all24-game fixed320px/390px layout audit: mini-games/coverage/independent300/motion-mobile-layout-audit.json. Keyboard hints wrap onto separate lines;44px control minimum retained. All non-CSS runtime hashes unchanged; original gameplay provenance retained. This is not a new blind gameplay claim."
+      ],
+      "limits": [
+        "Only two deterministic enemies per authored courtyard; no stochastic replay claim.",
+        "Source was read after ordinary win but before latest touch/keyboard reproduction. No author solution used."
+      ],
+      "passed": true,
+      "metadataEntrySha256": "d75a22d5ff22d68849f7ccdb9e0c7eb018bad01a2f632a61663c43dc3de89d86"
+    }
+  ],
+  "passed": true,
+  "reviewer": "independent-depth",
+  "limits": [
+    "Chromium keyboard and emulated390px touch only; no physical device or assistive-technology session.",
+    "Prior design QA was seen; full ordinary campaigns and unprovided decisions, not matching tutorial fixtures alone, establish these wins.",
+    "Replays reproduce independently discovered public routes; they are not additional blind strategy discoveries.",
+    "Raw logs preserve rejected prior revisions, failed attempts and occasional context-navigation records. Final freeze artifacts and per-game resolution identify accepted runs.",
+    "C18 has recoverable planning failure rather than a terminal loss; explicitly described in its record."
+  ],
+  "delegatedGames": [
+    {
+      "designId": "B01",
+      "reviewer": "root"
+    },
+    {
+      "designId": "B07",
+      "reviewer": "root"
+    },
+    {
+      "designId": "B13",
+      "reviewer": "root"
+    },
+    {
+      "designId": "B22",
+      "reviewer": "root"
+    },
+    {
+      "designId": "B06",
+      "reviewer": "cross-parlour"
+    },
+    {
+      "designId": "B08",
+      "reviewer": "cross-parlour"
+    },
+    {
+      "designId": "B10",
+      "reviewer": "cross-parlour"
+    },
+    {
+      "designId": "B12",
+      "reviewer": "cross-parlour"
+    },
+    {
+      "designId": "B17",
+      "reviewer": "cross-parlour"
+    },
+    {
+      "designId": "B18",
+      "reviewer": "cross-parlour"
+    },
+    {
+      "designId": "B21",
+      "reviewer": "cross-parlour"
+    },
+    {
+      "designId": "B25",
+      "reviewer": "cross-parlour"
+    },
+    {
+      "designId": "B23",
+      "gameId": "anchor-stacks",
+      "reviewer": "independent-uniqueness",
+      "reason": "Parent authorized transfer before ordinary play/source inspection; reviewer confirmed."
+    },
+    {
+      "designId": "B26",
+      "gameId": "carried-road",
+      "reviewer": "independent-uniqueness",
+      "reason": "Parent authorized transfer before ordinary play/source inspection; reviewer confirmed."
+    },
+    {
+      "designId": "B27",
+      "gameId": "masks-and-coins",
+      "reviewer": "independent-uniqueness",
+      "reason": "Parent authorized transfer before ordinary play/source inspection; reviewer confirmed."
+    },
+    {
+      "designId": "B28",
+      "gameId": "merging-estates",
+      "reviewer": "independent-uniqueness",
+      "reason": "Parent authorized transfer before ordinary play/source inspection; reviewer confirmed."
+    },
+    {
+      "designId": "B29",
+      "gameId": "last-known-address",
+      "reviewer": "independent-uniqueness",
+      "reason": "Parent authorized transfer before ordinary play/source inspection; reviewer confirmed."
+    },
+    {
+      "designId": "B30",
+      "gameId": "crossed-programs",
+      "reviewer": "independent-uniqueness",
+      "reason": "Parent authorized transfer before ordinary play/source inspection; reviewer confirmed."
+    },
+    {
+      "designId": "B02",
+      "gameId": "returned-banner",
+      "reviewer": "root-independent",
+      "reason": "Parent confirmed transfer untouched."
+    },
+    {
+      "designId": "B03",
+      "gameId": "four-step-menagerie",
+      "reviewer": "root-independent",
+      "reason": "Parent confirmed transfer untouched."
+    },
+    {
+      "designId": "B04",
+      "gameId": "living-perimeter",
+      "reviewer": "root-independent",
+      "reason": "Parent confirmed transfer untouched."
+    },
+    {
+      "designId": "C23",
+      "gameId": "borrowed-shade",
+      "reviewer": "parlour-motion",
+      "report": "parlour-motion-review.json",
+      "reason": "Fresh redesigned final studies; receiving reviewer confirms sources/routes unread. Prior holds archived separately."
+    },
+    {
+      "designId": "C24",
+      "gameId": "after-the-levee",
+      "reviewer": "parlour-motion",
+      "report": "parlour-motion-review.json",
+      "reason": "Fresh redesigned final studies; receiving reviewer confirms sources/routes unread. Prior holds archived separately."
+    },
+    {
+      "designId": "B05",
+      "gameId": "homeward-pips",
+      "reviewer": "cross-motion",
+      "report": "cross-motion-review.json",
+      "reason": "Untouched ordinary/source, confirmed transfer to D."
+    },
+    {
+      "designId": "B15",
+      "gameId": "ascending-expeditions",
+      "reviewer": "cross-motion",
+      "report": "cross-motion-review.json",
+      "reason": "Untouched ordinary/source, confirmed transfer to D."
+    },
+    {
+      "designId": "B35",
+      "gameId": "rings-leave-ripples",
+      "reviewer": "root-independent",
+      "report": "root-review.json",
+      "reason": "Untouched/source-unread transfer confirmed."
+    },
+    {
+      "designId": "B33",
+      "gameId": "a-stitch-in-time",
+      "reviewer": "root-independent",
+      "report": "root-review.json",
+      "reason": "Receiving reviewer fresh/source-unexposed. Depth stopped at seat for B33 and hand2 flop for B34; no source/fullwin."
+    },
+    {
+      "designId": "B34",
+      "gameId": "river-stakes",
+      "reviewer": "cross-parlour",
+      "report": "cross-parlour-review.json",
+      "reason": "Receiving reviewer fresh/source-unexposed. Depth stopped at seat for B33 and hand2 flop for B34; no source/fullwin."
+    },
+    {
+      "designId": "B32",
+      "gameId": "passing-courses",
+      "reviewer": "cross-parlour",
+      "report": "cross-parlour-review.json",
+      "reason": "Untouched/source-unread receiving reviewer A confirmed; depth only opened rules."
+    }
+  ]
+}

@@ -3,9 +3,9 @@
   "suite": "spatial-room",
   "passed": true,
   "status": "passed",
-  "startedAt": "2026-10-01T06:43:41.115Z",
+  "startedAt": "2026-10-01T09:54:02.240Z",
   "source": {
-    "sha256": "5bb0f7ce59adfa6d31e439f25c1264830dffcb10428737da121c830beb03594d",
+    "sha256": "691c1d256928cdc6a67434def5a274297d457373c50c28db45426e31030e0ac5",
     "files": [
       "catalog.css",
       "catalog.js",
@@ -26,7 +26,7 @@
       "tools/run-suite.cjs"
     ]
   },
-  "requestedBaseURL": "http://127.0.0.1:8790",
+  "requestedBaseURL": "http://127.0.0.1:8781",
   "browser": {
     "engine": "Chromium",
     "version": "Chromium 151.0.7922.173 built on Debian GNU/Linux 13 (trixie)",
@@ -63,22 +63,22 @@
     "Solver completions do not establish human difficulty or accessibility."
   ],
   "servedRuntimeBefore": {
-    "baseURL": "http://127.0.0.1:8790",
+    "baseURL": "http://127.0.0.1:8781",
     "passed": true,
-    "sha256": "fb3b7b9a1a42e088235b9a234d5be6bf2df5fda36b8ffc3fc068afffd803e2eb",
+    "sha256": "a3640552bc1c122760a855beb79af02fb144d8c98c073ff6a01daabcd40a70f5",
     "fileCount": 12,
-    "verifiedAt": "2026-10-01T06:43:41.258Z"
+    "verifiedAt": "2026-10-01T09:54:02.461Z"
   },
   "exitCode": 0,
   "signal": null,
   "sourceUnchanged": true,
   "servedRuntime": {
-    "baseURL": "http://127.0.0.1:8790",
+    "baseURL": "http://127.0.0.1:8781",
     "passed": true,
-    "sha256": "fb3b7b9a1a42e088235b9a234d5be6bf2df5fda36b8ffc3fc068afffd803e2eb",
+    "sha256": "a3640552bc1c122760a855beb79af02fb144d8c98c073ff6a01daabcd40a70f5",
     "fileCount": 12,
-    "verifiedAt": "2026-10-01T06:44:22.522Z"
+    "verifiedAt": "2026-10-01T09:54:58.510Z"
   },
   "completionEvidence": null,
-  "finishedAt": "2026-10-01T06:44:22.522Z"
+  "finishedAt": "2026-10-01T09:54:58.511Z"
 }

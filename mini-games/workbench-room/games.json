@@ -1,0 +1,623 @@
+[
+  {
+    "id": "pebble-engine",
+    "name": "Pebble Engine",
+    "category": "puzzle",
+    "description": "DAG pebbling with recomputation under a live-register cap.",
+    "mechanic": "DAG pebbling with recomputation under a live-register cap",
+    "rules": [
+      "Compute a result only while all of its predecessors occupy registers, with a free register for the new value. Loading a source also costs one calculation. Erase results freely; erased values must be computed again when needed.",
+      "Keep shared results for later branches while freeing enough space for new results. Each study shows its own register and calculation limits.",
+      "Compute the single final result F within both limits. Spending the calculation allowance before F loses. Three different dependency graphs await."
+    ],
+    "controls": "Tap labeled controls or use Tab then Enter / Space. Undo, Reset study and Restart all are native buttons. There is no timer and no required dragging.",
+    "url": "workbench-room/?game=pebble-engine",
+    "accent": "#e6c481",
+    "symbol": "⌘",
+    "family": "workbench-room",
+    "status": "playable",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board button:not(:disabled)"
+    },
+    "designId": "D01"
+  },
+  {
+    "id": "cache-hotel",
+    "name": "Cache Hotel",
+    "category": "puzzle",
+    "description": "Offline cache replacement with dirty writeback and unequal page sizes.",
+    "mechanic": "Offline cache replacement with dirty writeback and unequal page sizes",
+    "rules": [
+      "A visible request tape reads and writes named pages. On a miss choose resident pages to evict; dirty pages require costly writeback. Prefetch is disallowed.",
+      "Trade future reuse against eviction size and dirty cost; several small pages can beat one large page.",
+      "Serve the whole tape below I/O budget; first required transfer exceeding budget loses."
+    ],
+    "controls": "Tap labeled controls or use Tab then Enter / Space. Undo, Reset study and Restart all are native buttons. There is no timer and no required dragging.",
+    "url": "workbench-room/?game=cache-hotel",
+    "accent": "#e6c481",
+    "symbol": "⌘",
+    "family": "workbench-room",
+    "status": "playable",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board button:not(:disabled)"
+    },
+    "designId": "D02"
+  },
+  {
+    "id": "heap-garden",
+    "name": "Heap Garden",
+    "category": "puzzle",
+    "description": "Contiguous storage allocation and compaction around pinned blocks.",
+    "mechanic": "Contiguous storage allocation and compaction around pinned blocks",
+    "rules": [
+      "Place each incoming block into a contiguous free interval. Select a movable existing block and choose a new leftmost address to relocate it; the moved block’s size is charged against the relocation budget.",
+      "The entire allocation/free/pin event tape is visible. Allocating a request automatically runs the following frees and pins before the next request. A pinned block cannot move, so an early placement can block a later allocation.",
+      "Finish the tape within the relocation budget. Attempting an unplaceable request commits to failure; exceeding relocation budget also loses. Undo or Reset is available before committing."
+    ],
+    "controls": "Tap labeled controls or use Tab then Enter / Space. Undo, Reset study and Restart all are native buttons. There is no timer and no required dragging.",
+    "url": "workbench-room/?game=heap-garden",
+    "accent": "#e6c481",
+    "symbol": "⌘",
+    "family": "workbench-room",
+    "status": "playable",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board button:not(:disabled)"
+    },
+    "designId": "D03"
+  },
+  {
+    "id": "ledger-race",
+    "name": "Ledger Race",
+    "category": "puzzle",
+    "description": "Concurrent execution counterexample construction.",
+    "mechanic": "Concurrent execution counterexample construction",
+    "rules": [
+      "Advance one instruction of either displayed program. Each program preserves its own instruction order; reads save private values that do not update when shared memory changes.",
+      "Construct a complete execution that violates the study’s stated invariant. Later studies include coupled duty records and a ready flag published before its payload.",
+      "A completed trace exhibiting the requested anomaly wins the study. A completed trace preserving the invariant fails that attempt. Three different examples await. Undo works before either program pair completes."
+    ],
+    "controls": "Tap labeled controls or use Tab then Enter / Space. Undo, Reset study and Restart all are native buttons. There is no timer and no required dragging.",
+    "url": "workbench-room/?game=ledger-race",
+    "accent": "#e6c481",
+    "symbol": "⌘",
+    "family": "workbench-room",
+    "status": "playable",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board button:not(:disabled)"
+    },
+    "designId": "D04"
+  },
+  {
+    "id": "receipt-route",
+    "name": "Receipt Route",
+    "category": "puzzle",
+    "description": "Reliable ordered delivery over duplicate/loss channels.",
+    "mechanic": "Reliable ordered delivery over duplicate/loss channels",
+    "rules": [
+      "Choose a data packet or cumulative acknowledgment to send; each advances a public channel tape that may lose, delay or duplicate it. Sender window and receiver buffer are finite.",
+      "Retransmit useful missing sequence numbers, advance acknowledgments, and avoid window deadlock and buffer overflow.",
+      "Deliver the four, five or six numbered parcels shown for the study exactly once and acknowledge them within the transmission allowance. Budget exhaustion or receiver overflow loses."
+    ],
+    "controls": "Tap labeled controls or use Tab then Enter / Space. Undo, Reset study and Restart all are native buttons. There is no timer and no required dragging.",
+    "url": "workbench-room/?game=receipt-route",
+    "accent": "#e6c481",
+    "symbol": "⌘",
+    "family": "workbench-room",
+    "status": "playable",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board button:not(:disabled)"
+    },
+    "designId": "D05"
+  },
+  {
+    "id": "stack-kitchen",
+    "name": "Stack Kitchen",
+    "category": "puzzle",
+    "description": "Reusable stack-program synthesis across input families.",
+    "mechanic": "Reusable stack-program synthesis across input families",
+    "rules": [
+      "Build a short instruction ribbon from input, duplicate, swap, arithmetic, conditional-skip and output. Run against all visible trays of numeric ingredients.",
+      "Reuse intermediate stack values and branch on inputs while preventing underflow; one program must handle contrasting cases.",
+      "Every input tray produces the required output under instruction and runtime bounds; malformed execution or counterexample is a failed trial, three failed trials lose."
+    ],
+    "controls": "Tap labeled controls or use Tab then Enter / Space. Undo, Reset study and Restart all are native buttons. There is no timer and no required dragging.",
+    "url": "workbench-room/?game=stack-kitchen",
+    "accent": "#e6c481",
+    "symbol": "⌘",
+    "family": "workbench-room",
+    "status": "playable",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board button:not(:disabled)"
+    },
+    "designId": "D06"
+  },
+  {
+    "id": "pattern-tailor",
+    "designId": "D07",
+    "name": "Pattern Tailor",
+    "category": "puzzle",
+    "description": "Bounded regular-expression composition from complete language specification.",
+    "mechanic": "Bounded regular-expression composition from complete language specification",
+    "rules": [
+      "Assemble literal, union, concatenation and repetition blocks into a syntax tree. The alphabet, maximum word length, complete written language rule and sample words are public; certification checks every word within that bound.",
+      "Factor repeated structure to fit the block budget without admitting near-miss words.",
+      "Exact language match within block budget wins; a wrong certification reveals a concrete false positive/negative, three failed certifications lose."
+    ],
+    "controls": "Tap labeled controls or use Tab then Enter / Space. Undo, Reset study and Restart all are native buttons. There is no timer and no required dragging.",
+    "url": "workbench-room/?game=pattern-tailor",
+    "accent": "#e6c481",
+    "symbol": "⌘",
+    "family": "workbench-room",
+    "status": "playable",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board button:not(:disabled)"
+    }
+  },
+  {
+    "id": "bracket-workshop",
+    "designId": "D08",
+    "name": "Bracket Workshop",
+    "category": "puzzle",
+    "description": "Shift-reduce parsing with semantic attachment ambiguity.",
+    "mechanic": "Shift-reduce parsing with semantic attachment ambiguity",
+    "rules": [
+      "Shift the next input token onto the bounded stack, reduce a top number to an expression, or combine only the top expression–operator–expression into a larger tree. Operators carry no automatic precedence: your reductions determine attachment.",
+      "Reach the displayed semantic value. The target tree is not shown, and every valid grouping with the correct value is accepted. Shifting too far can fill the stack before an accessible reduction; reducing too early can lock in the wrong grouping.",
+      "Consume the complete input and close the parse. A wrong final value or unfinished grouping loses; a full stack with no legal reduction is a deadlock. Three studies culminate in six operands sharing five stack spaces."
+    ],
+    "controls": "Tap labeled controls or use Tab then Enter / Space. Undo, Reset study and Restart all are native buttons. There is no timer and no required dragging.",
+    "url": "workbench-room/?game=bracket-workshop",
+    "accent": "#e6c481",
+    "symbol": "⌘",
+    "family": "workbench-room",
+    "status": "playable",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board button:not(:disabled)"
+    }
+  },
+  {
+    "id": "type-loom",
+    "designId": "D09",
+    "name": "Type Loom",
+    "category": "puzzle",
+    "description": "Structured type inference with shared unknowns and expression sockets.",
+    "mechanic": "Structured type inference with shared unknowns and expression sockets",
+    "rules": [
+      "Choose an empty expression socket, then a physical function or value card. Every card must be used once. MAP, APPLY, PAIR and COMPOSE create two ordered child sockets.",
+      "Each card starts with fresh unknown types. A repeated X inside one card must unify with the same structure everywhere; constraints propagate through connected sockets and the target. The live audit explains conflicts.",
+      "Complete every socket and certify the required type. Any valid fully typed tree is accepted. Three failed certifications end the attempt; Undo revises a placement before closure."
+    ],
+    "controls": "Tap labeled controls or use Tab then Enter / Space. Undo, Reset study and Restart all are native buttons. There is no timer and no required dragging.",
+    "url": "workbench-room/?game=type-loom",
+    "accent": "#e6c481",
+    "symbol": "⌘",
+    "family": "workbench-room",
+    "status": "playable",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board button:not(:disabled)"
+    }
+  },
+  {
+    "id": "proof-lantern",
+    "designId": "D10",
+    "name": "Proof Lantern",
+    "category": "puzzle",
+    "description": "Natural deduction with nested assumptions and discharge.",
+    "mechanic": "Natural deduction with nested assumptions and discharge",
+    "rules": [
+      "Open an assumption box; apply implication, conjunction and disjunction rules to available facts; close boxes to discharge assumptions.",
+      "Choose when to split cases and which temporary hypothesis will create a reusable implication without leaking its local facts.",
+      "Derive the target with all temporary assumptions discharged and certify it within the proof-line allowance. Adding another assumption or derived fact beyond that allowance loses; three failed goal certifications also lose. Undo and reset are available."
+    ],
+    "controls": "Tap labeled controls or use Tab then Enter / Space. Undo, Reset study and Restart all are native buttons. There is no timer and no required dragging.",
+    "url": "workbench-room/?game=proof-lantern",
+    "accent": "#e6c481",
+    "symbol": "⌘",
+    "family": "workbench-room",
+    "status": "playable",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board button:not(:disabled)"
+    }
+  },
+  {
+    "id": "table-confluence",
+    "designId": "D11",
+    "name": "Table Confluence",
+    "category": "puzzle",
+    "description": "Relational query composition under bag semantics.",
+    "mechanic": "Relational query composition under bag semantics",
+    "rules": [
+      "Compose a pipeline using the displayed filter, join, grouping and duplicate-removal operators on small visible tables. Inspect each intermediate result and its row count.",
+      "Place grouping and duplicate removal before or after joins to get correct multiplicities without excessive intermediate rows.",
+      "All result bags match and peak intermediate size fits memory cap; failed certification consumes one of three trials."
+    ],
+    "controls": "Tap labeled controls or use Tab then Enter / Space. Undo, Reset study and Restart all are native buttons. There is no timer and no required dragging.",
+    "url": "workbench-room/?game=table-confluence",
+    "accent": "#e6c481",
+    "symbol": "⌘",
+    "family": "workbench-room",
+    "status": "playable",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board button:not(:disabled)"
+    }
+  },
+  {
+    "id": "branch-librarian",
+    "designId": "D12",
+    "name": "Branch Librarian",
+    "category": "puzzle",
+    "description": "Binary-search-tree rotations under weighted access costs.",
+    "mechanic": "Binary-search-tree rotations under weighted access costs",
+    "rules": [
+      "Rotate a chosen node left to promote its right child, or right to promote its left child. The intermediate subtree transfers automatically, preserving numeric search order.",
+      "Search cost is the sum of frequency times depth, with root depth one. A rotation changes several depths; a locally attractive promotion can worsen another frequent key.",
+      "Reach the shown cost threshold within each study’s rotation budget. Spending the last rotation above target loses. Certify early when ready; three failed certifications also end the attempt."
+    ],
+    "controls": "Tap labeled controls or use Tab then Enter / Space. Undo, Reset study and Restart all are native buttons. There is no timer and no required dragging.",
+    "url": "workbench-room/?game=branch-librarian",
+    "accent": "#e6c481",
+    "symbol": "⌘",
+    "family": "workbench-room",
+    "status": "playable",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board button:not(:disabled)"
+    }
+  },
+  {
+    "id": "row-orchestra",
+    "designId": "D13",
+    "name": "Row Orchestra",
+    "category": "puzzle",
+    "description": "Elementary row operations with bounded coefficient growth.",
+    "mechanic": "Elementary row operations with bounded coefficient growth",
+    "rules": [
+      "Swap equations, scale a row by an allowed rational, or add a multiple of one row to another. All operations apply to the whole augmented row.",
+      "Choose pivots that eliminate variables while controlling fractions and coefficient-size ceiling.",
+      "Reach displayed canonical solved form without coefficient overflow within operations; overflow or spent budget fails."
+    ],
+    "controls": "Tap labeled controls or use Tab then Enter / Space. Undo, Reset study and Restart all are native buttons. There is no timer and no required dragging.",
+    "url": "workbench-room/?game=row-orchestra",
+    "accent": "#e6c481",
+    "symbol": "⌘",
+    "family": "workbench-room",
+    "status": "playable",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board button:not(:disabled)"
+    }
+  },
+  {
+    "id": "state-courier",
+    "designId": "D14",
+    "name": "State Courier",
+    "category": "puzzle",
+    "description": "Finite-state transducer construction for history-dependent output.",
+    "mechanic": "Finite-state transducer construction for history-dependent output",
+    "rules": [
+      "Assign input-conditioned next states and emitted bits in the displayed fixed two- or three-state machine. Runs begin in the marked start state and process the public input tapes.",
+      "Use state to distinguish input histories that need different future output, and reuse a state when the same future behavior is appropriate.",
+      "All outputs for every declared finite input tape match; counterexample on wrong certification, three trials lose."
+    ],
+    "controls": "Tap labeled controls or use Tab then Enter / Space. Undo, Reset study and Restart all are native buttons. There is no timer and no required dragging.",
+    "url": "workbench-room/?game=state-courier",
+    "accent": "#e6c481",
+    "symbol": "⌘",
+    "family": "workbench-room",
+    "status": "playable",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board button:not(:disabled)"
+    }
+  },
+  {
+    "id": "compare-parade",
+    "designId": "D15",
+    "name": "Compare Parade",
+    "category": "puzzle",
+    "description": "Oblivious comparison-network wiring with depth and fanout constraints.",
+    "mechanic": "Oblivious comparison-network wiring with depth and fanout constraints",
+    "rules": [
+      "Place a compare-exchange bridge between two lanes in a chosen stage. All bridges in a stage run simultaneously; a lane may join at most one bridge per stage.",
+      "Balance comparison count against depth; nonadjacent exchanges route extrema, and a swap can disrupt another test case.",
+      "All permutations sorted within bridge/depth budgets; failed certification reveals counterexample, three trials fail."
+    ],
+    "controls": "Tap labeled controls or use Tab then Enter / Space. Undo, Reset study and Restart all are native buttons. There is no timer and no required dragging.",
+    "url": "workbench-room/?game=compare-parade",
+    "accent": "#e6c481",
+    "symbol": "⌘",
+    "family": "workbench-room",
+    "status": "playable",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board button:not(:disabled)"
+    }
+  },
+  {
+    "id": "token-crucible",
+    "designId": "D16",
+    "name": "Token Crucible",
+    "category": "puzzle",
+    "description": "Petri-net reachability with reversible catalysts and irreversible token consumption.",
+    "mechanic": "Petri-net reachability with reversible catalysts and irreversible token consumption",
+    "rules": [
+      "Fire an enabled transition only when all input places have required tokens; catalysts return, other tokens transform. Capacities and inhibitor arcs can disable transitions.",
+      "Avoid consuming a shared catalyst path too early; temporarily clear a place to enable inhibited reactions and regenerate scarce tokens.",
+      "Reach exact token distribution within firings; a nongoal deadlock or action exhaustion loses."
+    ],
+    "controls": "Tap labeled controls or use Tab then Enter / Space. Undo, Reset study and Restart all are native buttons. There is no timer and no required dragging.",
+    "url": "workbench-room/?game=token-crucible",
+    "accent": "#e6c481",
+    "symbol": "⌘",
+    "family": "workbench-room",
+    "status": "playable",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board button:not(:disabled)"
+    }
+  },
+  {
+    "id": "copy-ribbon",
+    "designId": "D17",
+    "name": "Copy Ribbon",
+    "category": "puzzle",
+    "description": "Sliding-window LZ compression using literal and overlapping back-references.",
+    "mechanic": "Sliding-window LZ compression using literal and overlapping back-references",
+    "rules": [
+      "At the next uncovered symbol choose literal, or a distance/length reference into the already decoded sliding window. Emitting a reference reproduces symbols sequentially, including overlaps.",
+      "Choose token boundaries and literal versus reference costs: a longest reference can skip the start of a cheaper following match. At the same decoded cursor the window is identical regardless of prior tokenization; no false history-retention claim.",
+      "Encode exact entire public ribbon under bit budget; wrong reference or insufficient remaining bits loses."
+    ],
+    "controls": "Tap labeled controls or use Tab then Enter / Space. Undo, Reset study and Restart all are native buttons. There is no timer and no required dragging.",
+    "url": "workbench-room/?game=copy-ribbon",
+    "accent": "#e6c481",
+    "symbol": "⌘",
+    "family": "workbench-room",
+    "status": "playable",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board button:not(:disabled)"
+    }
+  },
+  {
+    "id": "parallel-manuscripts",
+    "designId": "D18",
+    "name": "Parallel Manuscripts",
+    "category": "puzzle",
+    "description": "Sequence alignment with affine gap runs and anchor constraints.",
+    "mechanic": "Sequence alignment with affine gap runs and anchor constraints",
+    "rules": [
+      "Advance two cursors by match/substitute, insert, or delete; opening a gap costs more than extending it. Certain annotated anchors must align.",
+      "Choose whether to continue a gap or pay to reopen later; locally matching characters can cause an expensive downstream displacement.",
+      "Consume both ribbons under edit budget and align every anchor; impossible budget/anchor completion loses."
+    ],
+    "controls": "Tap labeled controls or use Tab then Enter / Space. Undo, Reset study and Restart all are native buttons. There is no timer and no required dragging.",
+    "url": "workbench-room/?game=parallel-manuscripts",
+    "accent": "#e6c481",
+    "symbol": "⌘",
+    "family": "workbench-room",
+    "status": "playable",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board button:not(:disabled)"
+    }
+  },
+  {
+    "id": "private-census",
+    "designId": "D19",
+    "name": "Private Census",
+    "category": "puzzle",
+    "description": "Cohort privacy through hierarchical generalization and limited suppression.",
+    "mechanic": "Cohort privacy through hierarchical generalization and limited suppression",
+    "rules": [
+      "Generalize selected cells up public category trees or suppress records. Rows sharing released quasi-identifiers form cohorts; every cohort must contain at least k rows and diverse outcomes.",
+      "Merge vulnerable cohorts without erasing too much utility; generalizing one row alone may create a new singleton.",
+      "Publish a table whose cohorts meet the displayed size and diversity requirements within the information-loss budget. An invalid publication, including an over-budget one, consumes a trial; three failed publications lose."
+    ],
+    "controls": "Tap labeled controls or use Tab then Enter / Space. Undo, Reset study and Restart all are native buttons. There is no timer and no required dragging.",
+    "url": "workbench-room/?game=private-census",
+    "accent": "#e6c481",
+    "symbol": "⌘",
+    "family": "workbench-room",
+    "status": "playable",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board button:not(:disabled)"
+    }
+  },
+  {
+    "id": "tiny-soundbook",
+    "designId": "D20",
+    "name": "Tiny Soundbook",
+    "category": "puzzle",
+    "description": "Rate-distortion quantizer construction with contiguous decision regions.",
+    "mechanic": "Rate-distortion quantizer construction with contiguous decision regions",
+    "rules": [
+      "Choose boundaries between sorted amplitudes to create the exact requested number of contiguous bins. Adjust each bin’s reproduction level and prefix-code length. All occurrence frequencies are visible.",
+      "Distortion is the occurrence-weighted sum of squared reconstruction errors. Bit cost is the occurrence-weighted sum of code lengths. Moving a boundary changes both costs, while code lengths must satisfy the prefix-capacity inequality.",
+      "Meet bin count, distortion, bandwidth and prefix capacity together, then certify. Three failed audits end an attempt. The soundbook is entirely numeric; hearing is never required."
+    ],
+    "controls": "Tap labeled controls or use Tab then Enter / Space. Undo, Reset study and Restart all are native buttons. There is no timer and no required dragging.",
+    "url": "workbench-room/?game=tiny-soundbook",
+    "accent": "#e6c481",
+    "symbol": "⌘",
+    "family": "workbench-room",
+    "status": "playable",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board button:not(:disabled)"
+    }
+  },
+  {
+    "id": "agenda-garden",
+    "designId": "D21",
+    "name": "Agenda Garden",
+    "category": "strategy",
+    "description": "Pairwise majority agenda construction under cyclic preferences.",
+    "mechanic": "Pairwise majority agenda construction under cyclic preferences",
+    "rules": [
+      "Choose two remaining motions and hold a majority vote using the complete public voter rankings. Winner survives, loser is permanently eliminated. The pairwise comparison table is a readable equivalent of the rankings.",
+      "Make the named compromise the final survivor. Cyclic majorities mean changing the sequence of pairings can change the outcome without changing any preference. Later studies give one motion an explicit first-round bye.",
+      "Eliminating the target motion immediately loses. Survive all pairwise votes to win. Selection is free; holding a vote is irreversible except through Undo before a terminal outcome."
+    ],
+    "controls": "Tap labeled controls or use Tab then Enter / Space. Undo, Reset study and Restart all are native buttons. There is no timer and no required dragging.",
+    "url": "workbench-room/?game=agenda-garden",
+    "accent": "#e6c481",
+    "symbol": "⌘",
+    "family": "workbench-room",
+    "status": "playable",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board button:not(:disabled)"
+    }
+  },
+  {
+    "id": "causal-camera",
+    "designId": "D22",
+    "name": "Causal Camera",
+    "category": "puzzle",
+    "description": "Consistent distributed snapshot reconstruction with in-transit messages.",
+    "mechanic": "Consistent distributed snapshot reconstruction with in-transit messages",
+    "rules": [
+      "Three process timelines show local sends and receives. Select a cut before the first event or after any event on each timeline. The snapshot includes each process prefix and every sent-but-not-yet-received message. Moving a cut costs its change in event position; mark the in-transit messages.",
+      "A desired received event forces its send into another process prefix, potentially forcing a third event; exclude later sends without excluding necessary earlier receipts. Count in-transit assets instead of losing them between local totals.",
+      "Certify a causally consistent snapshot satisfying the milestones and conserved total. Orphan receives, missing transit assets or unmet milestones consume a certification trial; three failures lose. Exceeding the cut-edit allowance loses immediately."
+    ],
+    "controls": "Tap labeled controls or use Tab then Enter / Space. Undo, Reset study and Restart all are native buttons. There is no timer and no required dragging.",
+    "url": "workbench-room/?game=causal-camera",
+    "accent": "#e6c481",
+    "symbol": "⌘",
+    "family": "workbench-room",
+    "status": "playable",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board button:not(:disabled)"
+    }
+  },
+  {
+    "id": "linked-orchard",
+    "designId": "D23",
+    "name": "Linked Orchard",
+    "category": "strategy",
+    "description": "Selective breeding with linked chromosome crossover.",
+    "mechanic": "Selective breeding with linked chromosome crossover",
+    "rules": [
+      "Select two visible diploid parents and a permitted crossover boundary for each gamete; create offspring, retain at most four plants, discard the rest. Linked homologs and every offspring genotype remain inspectable.",
+      "Preserve complementary linked alleles, breed useful intermediate homologs and free nursery space without discarding the last copy of a required allele.",
+      "Breed the exact target double homolog within the birth allowance. Spending the allowance without success or discarding the last retained copy of a required allele loses. A full nursery must be cleared before another birth."
+    ],
+    "controls": "Tap labeled controls or use Tab then Enter / Space. Undo, Reset study and Restart all are native buttons. There is no timer and no required dragging.",
+    "url": "workbench-room/?game=linked-orchard",
+    "accent": "#e6c481",
+    "symbol": "⌘",
+    "family": "workbench-room",
+    "status": "playable",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board button:not(:disabled)"
+    }
+  },
+  {
+    "id": "clearing-circle",
+    "designId": "D24",
+    "name": "Clearing Circle",
+    "category": "strategy",
+    "description": "Debt clearing with endogenous default cascades and limited bridge liquidity.",
+    "mechanic": "Debt clearing with endogenous default cascades and limited bridge liquidity",
+    "rules": [
+      "Allocate the limited bridge cash among nodes in the displayed debt network. Injections can be withdrawn before committing; debts, protected nodes and total allowance are all public.",
+      "Commit to run proportional clearing: a node pays the smaller of its total debts and cash plus incoming payments. Its payment is split proportionally among creditors. Repeated passes reach a fixed point, so one injection can propagate through a cycle.",
+      "Every protected node must pay its full obligations. A protected default loses that attempt; full protected settlement wins. Three different ledgers include a fork and unprotected obligations competing for incoming payments. This is a mathematical toy, not financial advice."
+    ],
+    "controls": "Tap labeled controls or use Tab then Enter / Space. Undo, Reset study and Restart all are native buttons. There is no timer and no required dragging.",
+    "url": "workbench-room/?game=clearing-circle",
+    "accent": "#e6c481",
+    "symbol": "⌘",
+    "family": "workbench-room",
+    "status": "playable",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board button:not(:disabled)"
+    }
+  },
+  {
+    "id": "night-collector",
+    "designId": "D25",
+    "name": "Night Collector",
+    "category": "puzzle",
+    "description": "Incremental tracing garbage collection during visible pointer mutation.",
+    "mechanic": "Incremental tracing garbage collection during visible pointer mutation",
+    "rules": [
+      "Roots, heap objects and pointer fields are visible. The root begins gray. Scan gray objects, apply the write barrier or sweep white objects; advancing permits the next announced program pointer mutation.",
+      "Choose scan order and write barriers to keep reachable objects safe within the collector-action allowance. The barrier reserve is limited; distinguish unreachable cycles from live objects.",
+      "Complete a safe sweep freeing the required cells within the collector-action allowance. An unsafe sweep or exceeding that allowance loses."
+    ],
+    "controls": "Tap labeled controls or use Tab then Enter / Space. Undo, Reset study and Restart all are native buttons. There is no timer and no required dragging.",
+    "url": "workbench-room/?game=night-collector",
+    "accent": "#e6c481",
+    "symbol": "⌘",
+    "family": "workbench-room",
+    "status": "playable",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board button:not(:disabled)"
+    }
+  },
+  {
+    "id": "gathering-grounds",
+    "designId": "D26",
+    "name": "Gathering Grounds",
+    "category": "strategy",
+    "description": "Finite-horizon bandit exploration versus productive exploitation.",
+    "mechanic": "Finite-horizon bandit exploration versus productive exploitation",
+    "rules": [
+      "Each day harvest one of three teaching beds or four later-study beds, initially unknown. Harvest earns actual baskets and reveals that bed’s current yield; displayed history persists. Beds have public process classes (stable, depleting, recovering), but which class belongs where is initially unknown. A costly soil survey reveals process class without yielding baskets.",
+      "Spend scarce days learning a potentially superior bed or keep collecting known yield; revisit recovering beds after rest, and stop exploiting a depleting bed before it is exhausted.",
+      "Earn the basket quota by the fixed final day; falling short loses. Each study uses a fixed authored bed assignment with no random outcomes after play begins. Use observations and the public process rules to decide what to harvest next."
+    ],
+    "controls": "Tap labeled controls or use Tab then Enter / Space. Undo, Reset study and Restart all are native buttons. There is no timer and no required dragging.",
+    "url": "workbench-room/?game=gathering-grounds",
+    "accent": "#e6c481",
+    "symbol": "⌘",
+    "family": "workbench-room",
+    "status": "playable",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board button:not(:disabled)"
+    }
+  },
+  {
+    "id": "loop-transit",
+    "designId": "D27",
+    "name": "Loop Transit",
+    "category": "strategy",
+    "description": "Passenger service topology design with autonomous transfers and finite fleet.",
+    "mechanic": "Passenger service topology design with autonomous transfers and finite fleet",
+    "rules": [
+      "Draw cyclic train lines over the visible physical track, then allocate the finite train fleet. Repeated stations allow integrated branch detours; two-station shuttles are also valid. Each train holds two riders.",
+      "Advance one pulse to add scheduled demand, move each train one edge, alight riders and board waiting passengers following a shortest service route. Transferring riders cannot board again until the next pulse. Actual onboard destinations, queues and train positions remain visible.",
+      "Deliver the quota before closing without overflowing a platform. Empty lines can be replaced freely; removing an occupied line spends the one relocation token and returns its riders to their current station. The final study includes a public track closure/opening requiring service redesign."
+    ],
+    "controls": "Tap labeled controls or use Tab then Enter / Space. Undo, Reset study and Restart all are native buttons. There is no timer and no required dragging.",
+    "url": "workbench-room/?game=loop-transit",
+    "accent": "#e6c481",
+    "symbol": "⌘",
+    "family": "workbench-room",
+    "status": "playable",
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board button:not(:disabled)"
+    }
+  }
+]

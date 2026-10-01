@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "records": [
+    {
+      "mode": "keyboard-tab",
+      "fullWin": true,
+      "naturalFailure": true,
+      "restart": true,
+      "runtimeHashes": {
+        "mini-games/parlour-room/ascending-expeditions.mjs": "b81f09c4baab5ac19e61292f8d3863dacf9801286bd1b5531723a058f1e72ec8",
+        "mini-games/parlour-room/game.js": "de78315740f63cc42963b31ca55e6058c565501ed5e11874a37b68ad8ad698b8",
+        "mini-games/parlour-room/core.mjs": "339407b8d279243a25622037f7a709a9998afbbc1945ca95a36106a37402c458",
+        "mini-games/parlour-room/room.css": "7b5baf1c1951e0906b8650ab805a8ef037fa564a5a384e70ef89bce11c17eabe",
+        "mini-games/parlour-room/index.html": "328f418fab77b773e534825d0b3c570598d361fd781ddfeb9e2408ea539cbd33",
+        "mini-games/parlour-room/games.json": "2ca643577427733bb196101c550c6d8182271f2fc998d1a211ed2de121bc23b0"
+      },
+      "logFile": "mini-games/coverage/independent300/B15-keyboard-tab-replay.jsonl"
+    },
+    {
+      "mode": "mobile-touch",
+      "fullWin": true,
+      "naturalFailure": true,
+      "restart": true,
+      "runtimeHashes": {
+        "mini-games/parlour-room/ascending-expeditions.mjs": "b81f09c4baab5ac19e61292f8d3863dacf9801286bd1b5531723a058f1e72ec8",
+        "mini-games/parlour-room/game.js": "de78315740f63cc42963b31ca55e6058c565501ed5e11874a37b68ad8ad698b8",
+        "mini-games/parlour-room/core.mjs": "339407b8d279243a25622037f7a709a9998afbbc1945ca95a36106a37402c458",
+        "mini-games/parlour-room/room.css": "7b5baf1c1951e0906b8650ab805a8ef037fa564a5a384e70ef89bce11c17eabe",
+        "mini-games/parlour-room/index.html": "328f418fab77b773e534825d0b3c570598d361fd781ddfeb9e2408ea539cbd33",
+        "mini-games/parlour-room/games.json": "2ca643577427733bb196101c550c6d8182271f2fc998d1a211ed2de121bc23b0"
+      },
+      "logFile": "mini-games/coverage/independent300/B15-mobile-touch-replay.jsonl"
+    }
+  ]
+}

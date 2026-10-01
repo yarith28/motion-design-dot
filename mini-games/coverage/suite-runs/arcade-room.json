@@ -3,9 +3,9 @@
   "suite": "arcade-room",
   "passed": true,
   "status": "passed",
-  "startedAt": "2026-10-01T06:45:15.080Z",
+  "startedAt": "2026-10-01T09:55:26.307Z",
   "source": {
-    "sha256": "cc16b279b4fb9fa8e62c984fa28a5cadf1e7d308a621fe39733a7a7dd627a689",
+    "sha256": "d5a62d4c426b7c1c6097fbd5bca0ee84d0a730201671943cd4efb0be3ddc251a",
     "files": [
       "arcade-room/games.json",
       "arcade-room/index.html",
@@ -23,7 +23,7 @@
       "tools/run-suite.cjs"
     ]
   },
-  "requestedBaseURL": "http://127.0.0.1:8790",
+  "requestedBaseURL": "http://127.0.0.1:8781",
   "browser": {
     "engine": "Chromium",
     "version": "Chromium 151.0.7922.173 built on Debian GNU/Linux 13 (trixie)",
@@ -60,22 +60,22 @@
     "Solver completions do not establish human difficulty or accessibility."
   ],
   "servedRuntimeBefore": {
-    "baseURL": "http://127.0.0.1:8790",
+    "baseURL": "http://127.0.0.1:8781",
     "passed": true,
-    "sha256": "1135d5438112d5871cda9dfee58fcfd6857cb2c85234fd1e0d165ec12a02c7b1",
+    "sha256": "f03e28160345d8e88cbf9a59bad562fc55d2e6fea10634bd8cedbef6e28a1da8",
     "fileCount": 11,
-    "verifiedAt": "2026-10-01T06:45:15.570Z"
+    "verifiedAt": "2026-10-01T09:55:26.496Z"
   },
   "exitCode": 0,
   "signal": null,
   "sourceUnchanged": true,
   "servedRuntime": {
-    "baseURL": "http://127.0.0.1:8790",
+    "baseURL": "http://127.0.0.1:8781",
     "passed": true,
-    "sha256": "1135d5438112d5871cda9dfee58fcfd6857cb2c85234fd1e0d165ec12a02c7b1",
+    "sha256": "f03e28160345d8e88cbf9a59bad562fc55d2e6fea10634bd8cedbef6e28a1da8",
     "fileCount": 11,
-    "verifiedAt": "2026-10-01T06:50:39.508Z"
+    "verifiedAt": "2026-10-01T10:02:32.932Z"
   },
   "completionEvidence": null,
-  "finishedAt": "2026-10-01T06:50:39.508Z"
+  "finishedAt": "2026-10-01T10:02:32.933Z"
 }

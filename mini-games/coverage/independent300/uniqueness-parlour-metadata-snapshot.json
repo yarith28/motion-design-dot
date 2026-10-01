@@ -1,0 +1,150 @@
+{
+  "reason": "Post-ordinary audit snapshot of six reviewed entries; ongoing other-game metadata corrections may change whole-file SHA without changing these entries.",
+  "games": [
+    {
+      "id": "anchor-stacks",
+      "name": "Anchor Stacks",
+      "description": "Stack ownership moves exactly its height while vacated bridges can erase every disconnected component.",
+      "mechanic": "Stack ownership moves exactly its height while vacated bridges can erase every disconnected component.",
+      "rules": [
+        "Hex board of 19 cells fully populated: eight counters each side and three neutral anchor counters. A stack owned by its top counter may move in straight line exactly its total height onto another occupied cell, carrying every layer. A surrounded stack cannot move; holes cannot be landing cells but may be crossed. After a move, remove every component not connected through occupied neighbors to at least one anchor-containing stack. Anchors travel when covered stacks move. Alternate until neither can move.",
+        "Sum heights of controlled surviving stacks; higher wins, equal draws. Empty own controllable stack set can end early only if opponent has no future changes."
+      ],
+      "controls": "Select an exposed own stack, then a listed legal destination to commit its move. Pass appears only when no move is available.",
+      "accessibility": "The stack census gives coordinates and every layer from bottom to top, including anchors. Controlled heights and disconnections are reported in text.",
+      "decisions": "Cover opposing stacks to seize height, maintain maneuverability as stacks lengthen, relocate anchors to preserve own component, cut a bridge sacrificing material while deleting larger enemy component.",
+      "category": "strategy",
+      "url": "parlour-room/?game=anchor-stacks",
+      "accent": "#cbdc9a",
+      "symbol": "\u25c8",
+      "family": "parlour-room",
+      "module": "anchor-stacks",
+      "designId": "B23",
+      "smoke": {
+        "actionSelector": "#play-area button[data-action]"
+      },
+      "previewSelector": "#play-area"
+    },
+    {
+      "id": "carried-road",
+      "name": "Carried Road",
+      "description": "A controlled stack can be carried and split along its path, changing road ownership and wall access.",
+      "mechanic": "A controlled stack can be carried and split along its path, changing road ownership and wall access.",
+      "rules": [
+        "5\u00d75 board; each side 15 flat/wall stones and one capstone. On turn place reserve flat or standing wall onto empty cell, or move a stack controlled by own top. Carry up to five top stones in original vertical order along one orthogonal ray, dropping at least one at each visited cell; must drop all carried stones. Cannot cross/land on wall or capstone, except lone final capstone can flatten standing wall. Flat tops and capstone tops connect own road between opposite edges; standing walls do not connect. Opening two turns place one rival flat on empty cell.",
+        "Connect either opposite edge pair by own orthogonal flat/capstone tops wins; simultaneous roads favor mover. Full board or empty reserve without road: more top flats wins, equal draw."
+      ],
+      "controls": "Place a reserve type on an empty square, or select an own stack, carry count, direction and drop amounts. Commit a carry only after all stones are assigned; Cancel preserves the position.",
+      "accessibility": "Each stack lists owners/types from bottom to top. Carry plans, reserve counts, road rules and wall/capstone interactions are text.",
+      "decisions": "Break own road temporarily to distribute buried stones, cap rival road, choose wall defense versus scoring flat, or use capstone to reopen blocked corridor. Drop partition changes several owners in one turn.",
+      "category": "strategy",
+      "url": "parlour-room/?game=carried-road",
+      "accent": "#cbdc9a",
+      "symbol": "\u25c8",
+      "family": "parlour-room",
+      "module": "carried-road",
+      "designId": "B26",
+      "smoke": {
+        "actionSelector": "#play-area button[data-action]"
+      },
+      "previewSelector": "#play-area"
+    },
+    {
+      "id": "masks-and-coins",
+      "name": "Masks and Coins",
+      "description": "Make role claims to take actions; opponents can challenge evidence or counterclaim a block before effects resolve.",
+      "mechanic": "Make role claims to take actions; opponents can challenge evidence or counterclaim a block before effects resolve.",
+      "rules": [
+        "Two players each two hidden influence cards from 15-card deck, three copies five roles; start two coins. Each turn Income +1 unchallengeable, Aid +2 blockable, Tax +3 claiming treasurer, Steal2 claiming captain, Exchange two cards with deck claiming envoy, Assassinate costing3 claiming assassin, or Coup costing7 unchallengeable. Steal blocked by captain/envoy; assassination blocked by guard; Aid blocked by treasurer. Roles need not be held to claim. A challenge reveals matching role if held then reshuffles/replaces it; challenger loses influence. Failed claimant loses influence and action cancels. Lost influence selected and exposed permanently. At10 coins must Coup.",
+        "Opponent zero influence wins; own zero loses. No cash stake or real-money framing. All challenge outcomes logged."
+      ],
+      "controls": "Declare an action, then use the current challenge/block response buttons. Select exposed influence when losing it and select retained cards after an exchange.",
+      "accessibility": "Own roles, public exposed influence, coins, pending declarations, costs and challenge order are written out; opponent roles remain concealed.",
+      "decisions": "Choose costly certain attack or cheap bluff, challenge according to exposed role supply and action history, counterclaim block versus sacrifice influence, exchange to alter private resources without revealing identity.",
+      "category": "strategy",
+      "url": "parlour-room/?game=masks-and-coins",
+      "accent": "#cbdc9a",
+      "symbol": "\u25c8",
+      "family": "parlour-room",
+      "module": "masks-and-coins",
+      "designId": "B27",
+      "smoke": {
+        "actionSelector": "#play-area button[data-action]"
+      },
+      "previewSelector": "#play-area"
+    },
+    {
+      "id": "merging-estates",
+      "name": "Merging Estates",
+      "description": "Spatial building growth triggers company mergers that revalue contested stock portfolios.",
+      "mechanic": "Spatial building growth triggers company mergers that revalue contested stock portfolios.",
+      "rules": [
+        "6\u00d76 lots, three companies, six secret lot tiles per player and refill bag. Turn place one tile, resolve adjacency: isolated remains independent; touching isolated cluster may found inactive company; touching one company expands; joining two or more active companies merges smaller into larger (placer breaks equal-size tie). Company size\u226510 is safe and cannot be merged out; tile joining two safe companies illegal. Merger pays fixed majority/minority bonuses to stockholders; defunct shares may sell at old price, trade two-for-one into survivor, or hold for refounding. Then buy up to three public available shares; prices depend on displayed size bands. Cash finite; stock finite. End when every company safe or one reaches18 after current turn. If a player has no legal tile, reveal and discard only permanently illegal safe-merger tiles, refill if possible, then pass placement and retain purchase phase. Two consecutive no-placement turns with no remaining drawable legal tile, bag empty with both hands exhausted, or a full board immediately triggers normal final settlement. Remaining temporary unplayable lots may not be secretly redrawn. Settlement also occurs after48 full turns as a displayed maximum.",
+        "Liquidate all shares at current size prices and payout final bonuses; highest cash wins, equal draw. Cash exhaustion limits action but not premature defeat."
+      ],
+      "controls": "Choose a lot, resolve any founding/merger decisions, handle defunct shares, then buy shares or end the turn. All phases use labeled buttons.",
+      "accessibility": "Companies, lot coordinates, holdings, share prices, cash, merger payouts and phase instructions are text.",
+      "decisions": "Place for growth or trigger merger when holding minority, buy rival company shares to anticipate payout, withhold a tile to change majority later, trade defunct shares into future leader versus realize cash.",
+      "category": "strategy",
+      "url": "parlour-room/?game=merging-estates",
+      "accent": "#cbdc9a",
+      "symbol": "\u25c8",
+      "family": "parlour-room",
+      "module": "merging-estates",
+      "designId": "B28",
+      "smoke": {
+        "actionSelector": "#play-area button[data-action]"
+      },
+      "previewSelector": "#play-area"
+    },
+    {
+      "id": "last-known-address",
+      "name": "Last Known Address",
+      "description": "Coordinate a detective team to intercept a moving hidden fugitive whose transport traces constrain possible routes.",
+      "mechanic": "Coordinate a detective team to intercept a moving hidden fugitive whose transport traces constrain possible routes.",
+      "rules": [
+        "Public sixteen-station graph with three labeled route types: walk, bus and ferry. Three detectives start at fixed separated visible nodes; fugitive starts at an announced fourth node then immediately makes one hidden move. Each detective has8 walk,4 bus and2 ferry tickets. Each round move every detective once in chosen order (or stay free); occupied detective node cannot be entered by another. Human never sees fugitive current location unless landing on it captures. After all detectives act, fugitive chooses one legal adjacent typed edge not occupied by detective, using finite hidden tickets; used transport TYPE is always revealed, and actual endpoint revealed after rounds4,8,12. Fugitive never stays. Reveal its initial ticket totals12/6/4 and decrement types publicly. If no legal ticketed exit remains fugitive captured. Evasion bot responds to actual detective positions and past observations only, not uncommitted UI selection. Sixteen rounds total.",
+        "Detective lands on fugitive current station, or fugitive has no legal exit after detective moves: win. Fugitive finishes its sixteenth move uncaptured: loss. Ticket exhaustion can restrict detective movement but staying always legal."
+      ],
+      "controls": "Select a detective, then a listed route/station or Stay. Each detective acts once before End team round moves the fugitive.",
+      "accessibility": "The full travel graph, station coordinates, tickets, past sightings and transport traces are text. Current hidden fugitive position is not displayed.",
+      "decisions": "Propagate possible hidden locations using mode traces, split detectives to cover candidate exit cuts or converge on revealed node, spend scarce shortcut ticket now versus retain interception capacity, and occupy a station to prevent future fugitive escape even when it is not a candidate current location.",
+      "category": "strategy",
+      "url": "parlour-room/?game=last-known-address",
+      "accent": "#cbdc9a",
+      "symbol": "\u25c8",
+      "family": "parlour-room",
+      "module": "last-known-address",
+      "designId": "B29",
+      "smoke": {
+        "actionSelector": "#play-area button[data-action]"
+      },
+      "previewSelector": "#play-area"
+    },
+    {
+      "id": "crossed-programs",
+      "name": "Crossed Programs",
+      "description": "Commit movement programs simultaneously, then resolve physical interference one register at a time.",
+      "mechanic": "Commit movement programs simultaneously, then resolve physical interference one register at a time.",
+      "rules": [
+        "7\u00d77 factory with pits, conveyors and rotators, two robots and three ordered checkpoints. Each round both receive five command cards from own identical cyclic deck (Forward1, Forward2, Back1, Left, Right, Wait), select three and order into registers. Each register lower printed priority robot moves first; forward can push opponent if next cell free, otherwise stops. Then all conveyors move simultaneously and rotators turn occupied robots. Finish entire three-register cycle, discard used and redraw. Opponent commits before human program reveal; checkpoints count only on robot movement/conveyor settling, pits reset robot to last checkpoint and lose one of three lives. Conveyor resolution is fixed: compute every robot conveyor destination from its post-command square; if two destinations coincide both stay; if a target is occupied by a robot that is not vacating, mover stays; swaps between vacating robots are allowed. Conveyor movement never pushes. Arrival on pit removes robot before rotators resolve; new checkpoint respawn occurs after register and cannot push another robot (occupied respawn waits offboard until free).",
+        "Visit all three checkpoints and exit before rival wins; lose if own lives zero or rival finishes. Simultaneous finish ties.",
+        "The compact race ends in a draw after 24 programs. The exact course is D4\u2192B2\u2192F2\u2192D1; D4 also rotates robots clockwise after every register."
+      ],
+      "controls": "Add three command cards in register order; Remove last register edits the program. Seal it, then Resolve each register with a separate button.",
+      "accessibility": "Commands, priorities, heading, robot positions, checkpoint progress and each resolved register are described in text. Resolution is explicitly stepped.",
+      "decisions": "Predict opponent occupancy, intentionally push or block a planned step, program orientation that compensates conveyor rotation, reserve needed command for next draw. A good solo route can fail because other robot moves first.",
+      "category": "strategy",
+      "url": "parlour-room/?game=crossed-programs",
+      "accent": "#cbdc9a",
+      "symbol": "\u25c8",
+      "family": "parlour-room",
+      "module": "crossed-programs",
+      "designId": "B30",
+      "smoke": {
+        "actionSelector": "#play-area button[data-action]"
+      },
+      "previewSelector": "#play-area"
+    }
+  ]
+}

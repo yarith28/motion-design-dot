@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "games": [
+    {
+      "designId": "B06",
+      "gameId": "veiled-standard",
+      "logSha256": "2bb835eb7bd6660536075988253db20026924cd3a87488bbcb6b3f47f10bab31",
+      "records": 450,
+      "winRecords": 9,
+      "lossRecords": 4,
+      "scope": "Includes rejected build and final campaigns; chronology and accepted deal outcomes are distinguished in main manifest."
+    },
+    {
+      "designId": "B10",
+      "gameId": "orders-at-dusk",
+      "logSha256": "1f4153e435351b68f0badf8c1f23313f91a00346763a05bbebbe18fd344148bf",
+      "records": 329,
+      "winRecords": 5,
+      "lossRecords": 2,
+      "scope": "Includes rejected build and final campaigns; chronology and accepted deal outcomes are distinguished in main manifest."
+    }
+  ]
+}
