@@ -1,0 +1,304 @@
+[
+  {
+    "id": "draught-garden",
+    "step": 0,
+    "choices": [
+      "Select B5",
+      "Select D5",
+      "Select F5"
+    ],
+    "state": "Turn 1\nYou 6 pieces\nHouse 6 pieces"
+  },
+  {
+    "id": "draught-garden",
+    "step": 1,
+    "choices": [
+      "Select B5",
+      "Select D5",
+      "Select F5",
+      "Move to A4",
+      "Move to C4"
+    ],
+    "state": "Turn 1\nYou 6 pieces\nHouse 6 pieces"
+  },
+  {
+    "id": "draught-garden",
+    "step": 2,
+    "choices": [
+      "Select D5",
+      "Select F5",
+      "Select A6",
+      "Select C6"
+    ],
+    "state": "Turn 2\nYou 6 pieces\nHouse 6 pieces"
+  },
+  {
+    "id": "draught-garden",
+    "step": 3,
+    "choices": [
+      "Select D5",
+      "Select F5",
+      "Select A6",
+      "Select C6",
+      "Move to C4",
+      "Move to E4"
+    ],
+    "state": "Turn 2\nYou 6 pieces\nHouse 6 pieces"
+  },
+  {
+    "id": "draught-garden",
+    "focus": "Select C6",
+    "overflow": 320,
+    "status": "House moves B3 → D5."
+  },
+  {
+    "id": "crown-and-guard",
+    "step": 0,
+    "choices": [
+      "Select D3",
+      "Select C4",
+      "Select E4",
+      "Select D5"
+    ],
+    "state": "Turn 1\nYou 5 pieces\nHouse 8 pieces"
+  },
+  {
+    "id": "crown-and-guard",
+    "step": 1,
+    "choices": [
+      "Select D3",
+      "Select C4",
+      "Select E4",
+      "Select D5",
+      "Move to D2",
+      "Move to E3",
+      "Move to F3",
+      "Move to C3",
+      "Move to B3",
+      "Move to A3"
+    ],
+    "state": "Turn 1\nYou 5 pieces\nHouse 8 pieces"
+  },
+  {
+    "id": "crown-and-guard",
+    "step": 2,
+    "choices": [
+      "Select C4",
+      "Select E4",
+      "Select D5"
+    ],
+    "state": "Turn 2\nYou 4 pieces\nHouse 8 pieces"
+  },
+  {
+    "id": "crown-and-guard",
+    "step": 3,
+    "choices": [
+      "Select C4",
+      "Select E4",
+      "Select D5",
+      "Move to C3",
+      "Move to C2",
+      "Move to C5",
+      "Move to C6",
+      "Move to C7",
+      "Move to B4"
+    ],
+    "state": "Turn 2\nYou 4 pieces\nHouse 8 pieces"
+  },
+  {
+    "id": "crown-and-guard",
+    "focus": "Select C3",
+    "overflow": 320,
+    "status": "You moved C4 → C3. House A4 → C4."
+  },
+  {
+    "id": "marble-council",
+    "step": 0,
+    "choices": [
+      "Select marble -3, 2",
+      "Select marble -2, 2",
+      "Select marble -1, 2",
+      "Select marble 0, 2",
+      "Select marble 1, 2",
+      "Select marble -3, 3",
+      "Select marble -2, 3",
+      "Select marble -1, 3",
+      "Select marble 0, 3"
+    ],
+    "state": "You eject 0/3\nHouse 0/3\nTurn 0/50"
+  },
+  {
+    "id": "marble-council",
+    "step": 1,
+    "choices": [
+      "Select marble -3, 2",
+      "Select marble -2, 2",
+      "Select marble -1, 2",
+      "Select marble 0, 2",
+      "Select marble 1, 2",
+      "Select marble -3, 3",
+      "Select marble -2, 3",
+      "Select marble -1, 3",
+      "Select marble 0, 3"
+    ],
+    "state": "You eject 0/3\nHouse 0/3\nTurn 0/50"
+  },
+  {
+    "id": "marble-council",
+    "step": 2,
+    "choices": [
+      "Select marble -3, 2",
+      "Select marble -2, 2",
+      "Select marble -1, 2",
+      "Select marble 0, 2",
+      "Select marble 1, 2",
+      "Select marble -3, 3",
+      "Select marble -2, 3",
+      "Select marble -1, 3",
+      "Select marble 0, 3"
+    ],
+    "state": "You eject 0/3\nHouse 0/3\nTurn 0/50"
+  },
+  {
+    "id": "marble-council",
+    "step": 3,
+    "choices": [
+      "Select marble -3, 2",
+      "Select marble -2, 2",
+      "Select marble -1, 2",
+      "Select marble 0, 2",
+      "Select marble 1, 2",
+      "Select marble -3, 3",
+      "Select marble -2, 3",
+      "Select marble -1, 3",
+      "Select marble 0, 3"
+    ],
+    "state": "You eject 0/3\nHouse 0/3\nTurn 0/50"
+  },
+  {
+    "id": "marble-council",
+    "focus": "Select marble -3, 2",
+    "overflow": 320,
+    "status": "Your move. Take your time."
+  },
+  {
+    "id": "joining-lines",
+    "step": 0,
+    "choices": [
+      "Select B1",
+      "Select C1",
+      "Select D1",
+      "Select E1",
+      "Select B6",
+      "Select C6",
+      "Select D6",
+      "Select E6"
+    ],
+    "state": "Turn 1\nYou 8 pieces\nHouse 8 pieces"
+  },
+  {
+    "id": "joining-lines",
+    "step": 1,
+    "choices": [
+      "Select B1",
+      "Select C1",
+      "Select D1",
+      "Select E1",
+      "Select B6",
+      "Select C6",
+      "Select D6",
+      "Select E6",
+      "Move to F1",
+      "Move to D3",
+      "Move to B3"
+    ],
+    "state": "Turn 1\nYou 8 pieces\nHouse 8 pieces"
+  },
+  {
+    "id": "joining-lines",
+    "step": 2,
+    "choices": [
+      "Select C1",
+      "Select D1",
+      "Select E1",
+      "Select F1",
+      "Select B6",
+      "Select C6",
+      "Select D6",
+      "Select E6"
+    ],
+    "state": "Turn 2\nYou 8 pieces\nHouse 8 pieces"
+  },
+  {
+    "id": "joining-lines",
+    "step": 3,
+    "choices": [
+      "Select C1",
+      "Select D1",
+      "Select E1",
+      "Select F1",
+      "Select B6",
+      "Select C6",
+      "Select D6",
+      "Select E6",
+      "Move to E3",
+      "Move to C3",
+      "Move to A3"
+    ],
+    "state": "Turn 2\nYou 8 pieces\nHouse 8 pieces"
+  },
+  {
+    "id": "joining-lines",
+    "focus": "Select D1",
+    "overflow": 320,
+    "status": "You moved C1 → E3. House E4 → B4."
+  },
+  {
+    "id": "terrace-duel",
+    "step": 0,
+    "choices": [
+      "Select A5",
+      "Select E5"
+    ],
+    "state": "Turn 1\nYou 2 pieces\nHouse 2 pieces"
+  },
+  {
+    "id": "terrace-duel",
+    "step": 1,
+    "choices": [
+      "Select A5",
+      "Select E5",
+      "Move to A4",
+      "Move to B4",
+      "Move to B5"
+    ],
+    "state": "Turn 1\nYou 2 pieces\nHouse 2 pieces"
+  },
+  {
+    "id": "terrace-duel",
+    "step": 2,
+    "choices": [
+      "Build at A3",
+      "Build at B3",
+      "Build at B4",
+      "Build at B5",
+      "Build at A5"
+    ],
+    "state": "Turn 1\nYou 2 pieces\nHouse 2 pieces"
+  },
+  {
+    "id": "terrace-duel",
+    "step": 3,
+    "choices": [
+      "Select A4",
+      "Select E5"
+    ],
+    "state": "Turn 2\nYou 2 pieces\nHouse 2 pieces"
+  },
+  {
+    "id": "terrace-duel",
+    "focus": "Select A4",
+    "overflow": 320,
+    "status": "House moves to B2 and builds at B1."
+  }
+]

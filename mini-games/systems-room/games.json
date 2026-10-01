@@ -204,7 +204,7 @@
     "name": "Quiet Majority",
     "category": "strategy",
     "description": "Find a coalition that can live with the same promise.",
-    "mechanic": "Coalition bargaining with irrevocable concessions, faction vetoes and public counteroffers.",
+    "mechanic": "Weighted coalition planning with permanent policy concessions, temporary grants and changing public approval thresholds.",
     "rules": [
       "Negotiate three bills with 15 council seats. Each bill needs 11 yes votes. Harbor, Garden, Clinic and Guild have public policy weights and approval thresholds. One point of any policy helps some factions and can upset another.",
       "Each bill allows four negotiations. Add one Harbor/Garden/Clinic policy for 1 treasury, or promise a faction a 2-point approval grant for 2 treasury. Grants expire after the vote; policy levels carry into later bills. You may vote early.",
@@ -223,14 +223,14 @@
     "id": "safe-return",
     "name": "Safe Return",
     "category": "strategy",
-    "description": "Write a little insurance, and keep enough in reserve.",
-    "mechanic": "Correlated-risk underwriting across a forecast cycle with capital exposure constraints.",
+    "description": "Keep capital available for tomorrow while today’s policies settle.",
+    "mechanic": "Collateral-constrained underwriting with overlapping policy durations, correlated claims and changing future quotes.",
     "rules": [
-      "Write one three-day insurance policy per day, or decline. Premiums arrive immediately; every active policy pays its listed loss on every matching weather day. New policies cover today and the next two days.",
-      "Weather is public for the next four days. Multiple policies of one type share the same risk: a flood can hit every insured house together. Policies expire after their third payout check. Keep positive capital after each day.",
-      "Finish twelve days with at least 45 free capital and at least 7 policies written. At closing, each remaining policy-day reserves 4 capital; only capital above that reserve counts. Start with 20 capital. New policies cost no cash upfront, but collect claims after their premium. Avoid leaving active exposure in the last-day accounts."
+      "Each day accept one insurance quote or decline. Homes cover 3 days, boats 2, farms 4, including today. Premium arrives now; every active policy pays its listed loss on every matching weather day. The complete weather and quote calendar is public.",
+      "Before accepting, free capital must cover collateral: homes 22, boats 16, farms 18. Free capital is total capital minus all active collateral. A new premium cannot fund its own collateral. Collateral is locked until that policy finishes its last daily claim check; overlapping policies compete for the same capital. Claims can push free capital below zero, but total capital must stay positive.",
+      "Start with 24 capital. In 10 days write at least 5 policies and reach the scenario’s free-capital target. Collateral still locked at closing does not count toward the target. A longer contract may block a valuable later quote. Restart repeats this scenario; choose the other scenario for a different weather and quote schedule."
     ],
-    "controls": "Tap the labeled actions, or use Tab and Enter / Space. Arrow keys move between actions. Nothing advances while you are away.",
+    "controls": "Tap the labeled actions, or use Tab and Enter / Space. Arrow keys move between actions. Nothing advances while you are away. Scenario changes start a different plan; Restart repeats the selected scenario.",
     "url": "systems-room/?game=safe-return",
     "accent": "#d0bfd4",
     "symbol": "⌂",
@@ -307,7 +307,7 @@
     "mechanic": "Capacity-constrained elevator dispatch with passenger queues and ride deadlines.",
     "rules": [
       "Carry eight passengers through a five-floor building. Move one floor per tick, or open doors. Door opening first unloads arriving passengers, then boards the oldest waiting passengers up to capacity 2. Moving does not board or unload.",
-      "Every passenger has a release time and delivery deadline. Passengers appear at their release tick. A passenger still waiting or riding when their deadline passes is missed and leaves. The destination of everyone aboard is visible.",
+      "Every passenger has a release time and delivery deadline. Passengers appear at their release tick. A passenger still waiting or riding at the end of their due tick is missed and leaves. A passenger due at tick 11 must be unloaded by the end of action 11; action 12 is too late. The destination of everyone aboard is visible.",
       "Deliver at least 7 passengers within 28 ticks. Two missed passengers end the shift. You cannot choose which passenger boards: oldest first, so route and door timing determine the load."
     ],
     "controls": "Tap the labeled actions, or use Tab and Enter / Space. Arrow keys move between actions. Nothing advances while you are away.",
@@ -383,14 +383,14 @@
     "id": "convoy-ledger",
     "name": "Convoy Ledger",
     "category": "strategy",
-    "description": "Spread the escorts carefully. Bring every ship home.",
-    "mechanic": "Persistent escort allocation across simultaneous threatened shipping lanes.",
+    "description": "Protect today’s cargo without stranding tomorrow’s escorts.",
+    "mechanic": "Multi-wave escort dispatch with simultaneous lane packing, voyage return times and permanent casualties.",
     "rules": [
-      "Dispatch five convoys across three lanes. Each lane shows threat and cargo value. Allocate your six escorts one at a time; then sail all lanes together. Each escort cancels one threat. You can recall an allocation before sailing.",
-      "If a lane has any uncovered threat, that lane loses its cargo and one assigned escort (if present). A fully protected lane delivers all cargo. After sailing, surviving escorts return and one replacement joins, up to six.",
-      "Deliver at least 58 cargo across five waves. You may deliberately abandon a low-value lane to fully protect the others. Splitting escorts thinly can lose every cargo and shrink the fleet for later waves."
+      "Seven waves each have three cargo lanes. Assign your six escorts, then sail all lanes together. A lane delivers only if assigned escorts meet its printed threat. Assignments can be recalled until sailing. The full threat, cargo and trip-length calendar is public.",
+      "A protected lane delivers its cargo immediately, but its escorts stay away for the printed number of waves, including the departure wave. A 1-wave trip returns before the next allocation; a 3-wave trip skips the next two allocations. The return ledger shows exactly when escorts come home. Escorts cannot serve two lanes at once.",
+      "Meet the scenario’s cargo target in seven waves. There are no replacement escorts. Underprotected lanes lose all cargo and one assigned escort permanently; the others return after that lane’s trip. Partial cover offers no cargo benefit, so abandon a lane with zero escorts if you cannot protect it. Long voyages can deny protection to tomorrow’s more valuable cargo. Restart repeats the scenario; the other scenario changes trip priorities."
     ],
-    "controls": "Tap the labeled actions, or use Tab and Enter / Space. Arrow keys move between actions. Nothing advances while you are away.",
+    "controls": "Tap the labeled actions, or use Tab and Enter / Space. Arrow keys move between actions. Nothing advances while you are away. Scenario changes start a different plan; Restart repeats the selected scenario.",
     "url": "systems-room/?game=convoy-ledger",
     "accent": "#d0bfd4",
     "symbol": "⚓",

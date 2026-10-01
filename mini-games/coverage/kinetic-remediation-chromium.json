@@ -1,0 +1,249 @@
+{
+  "browser": "chromium",
+  "passed": true,
+  "cases": [
+    {
+      "id": "lantern-heist",
+      "profile": "keyboard",
+      "check": "actual Start→Space+restart+native Space",
+      "passed": true
+    },
+    {
+      "id": "boulder-burrow",
+      "profile": "keyboard",
+      "check": "actual Start→Space+restart+native Space",
+      "passed": true
+    },
+    {
+      "id": "fuse-garden",
+      "profile": "keyboard",
+      "check": "actual Start→Space+restart+native Space",
+      "passed": true
+    },
+    {
+      "id": "quiet-foil",
+      "profile": "keyboard",
+      "check": "actual Start→Space+restart+native Space",
+      "passed": true
+    },
+    {
+      "id": "four-holds",
+      "profile": "keyboard",
+      "check": "actual Start→Space+restart+native Space",
+      "passed": true
+    },
+    {
+      "id": "gravity-boots",
+      "profile": "keyboard",
+      "check": "actual Start→Space+restart+native Space",
+      "passed": true
+    },
+    {
+      "id": "portal-parcel",
+      "profile": "keyboard",
+      "check": "actual Start→Space+restart+native Space",
+      "passed": true
+    },
+    {
+      "id": "echo-steps",
+      "profile": "keyboard",
+      "check": "actual Start→Space+restart+native Space",
+      "passed": true
+    },
+    {
+      "id": "wind-sail",
+      "profile": "keyboard",
+      "check": "actual Start→Space+restart+native Space",
+      "passed": true
+    },
+    {
+      "id": "scissor-lift",
+      "profile": "keyboard",
+      "check": "actual Start→Space+restart+native Space",
+      "passed": true
+    },
+    {
+      "id": "ricochet-duel",
+      "profile": "keyboard",
+      "check": "actual Start→Space+restart+native Space",
+      "passed": true
+    },
+    {
+      "id": "spring-courier",
+      "profile": "keyboard",
+      "check": "actual Start→Space+restart+native Space",
+      "passed": true
+    },
+    {
+      "id": "shatter-belt",
+      "profile": "keyboard",
+      "check": "actual Start→Space+restart+native Space",
+      "passed": true
+    },
+    {
+      "id": "lantern-defense",
+      "profile": "keyboard",
+      "check": "actual Start→Space+restart+native Space",
+      "passed": true
+    },
+    {
+      "id": "little-walkers",
+      "profile": "keyboard",
+      "check": "actual Start→Space+restart+native Space",
+      "passed": true
+    },
+    {
+      "id": "quiet-foil",
+      "profile": "keyboard",
+      "check": "full win/loss/terminal lock/restart",
+      "passed": true
+    },
+    {
+      "id": "phase-walk",
+      "profile": "keyboard",
+      "check": "full win/loss/terminal lock/restart",
+      "passed": true
+    },
+    {
+      "id": "scissor-lift",
+      "profile": "keyboard",
+      "check": "full win/loss/terminal lock/restart",
+      "passed": true
+    },
+    {
+      "id": "soft-sculpt",
+      "profile": "keyboard",
+      "check": "full win/loss/terminal lock/restart",
+      "passed": true
+    },
+    {
+      "profile": "keyboard",
+      "check": "foil old/spam/stall policies; phase anchor undo; cargo geometry; readable live sculpture list+contained zoom; essential text",
+      "passed": true
+    },
+    {
+      "id": "lantern-heist",
+      "profile": "emulated-touch",
+      "check": "touch action+restart+native Space",
+      "passed": true
+    },
+    {
+      "id": "boulder-burrow",
+      "profile": "emulated-touch",
+      "check": "touch action+restart+native Space",
+      "passed": true
+    },
+    {
+      "id": "fuse-garden",
+      "profile": "emulated-touch",
+      "check": "touch action+restart+native Space",
+      "passed": true
+    },
+    {
+      "id": "quiet-foil",
+      "profile": "emulated-touch",
+      "check": "touch action+restart+native Space",
+      "passed": true
+    },
+    {
+      "id": "four-holds",
+      "profile": "emulated-touch",
+      "check": "touch action+restart+native Space",
+      "passed": true
+    },
+    {
+      "id": "gravity-boots",
+      "profile": "emulated-touch",
+      "check": "touch action+restart+native Space",
+      "passed": true
+    },
+    {
+      "id": "portal-parcel",
+      "profile": "emulated-touch",
+      "check": "touch action+restart+native Space",
+      "passed": true
+    },
+    {
+      "id": "echo-steps",
+      "profile": "emulated-touch",
+      "check": "touch action+restart+native Space",
+      "passed": true
+    },
+    {
+      "id": "wind-sail",
+      "profile": "emulated-touch",
+      "check": "touch action+restart+native Space",
+      "passed": true
+    },
+    {
+      "id": "scissor-lift",
+      "profile": "emulated-touch",
+      "check": "touch action+restart+native Space",
+      "passed": true
+    },
+    {
+      "id": "ricochet-duel",
+      "profile": "emulated-touch",
+      "check": "touch action+restart+native Space",
+      "passed": true
+    },
+    {
+      "id": "spring-courier",
+      "profile": "emulated-touch",
+      "check": "touch action+restart+native Space",
+      "passed": true
+    },
+    {
+      "id": "shatter-belt",
+      "profile": "emulated-touch",
+      "check": "touch action+restart+native Space",
+      "passed": true
+    },
+    {
+      "id": "lantern-defense",
+      "profile": "emulated-touch",
+      "check": "touch action+restart+native Space",
+      "passed": true
+    },
+    {
+      "id": "little-walkers",
+      "profile": "emulated-touch",
+      "check": "touch action+restart+native Space",
+      "passed": true
+    },
+    {
+      "id": "quiet-foil",
+      "profile": "emulated-touch",
+      "check": "full win/loss/terminal lock/restart",
+      "passed": true
+    },
+    {
+      "id": "phase-walk",
+      "profile": "emulated-touch",
+      "check": "full win/loss/terminal lock/restart",
+      "passed": true
+    },
+    {
+      "id": "scissor-lift",
+      "profile": "emulated-touch",
+      "check": "full win/loss/terminal lock/restart",
+      "passed": true
+    },
+    {
+      "id": "soft-sculpt",
+      "profile": "emulated-touch",
+      "check": "full win/loss/terminal lock/restart",
+      "passed": true
+    },
+    {
+      "profile": "emulated-touch",
+      "check": "foil old/spam/stall policies; phase anchor undo; cargo geometry; readable live sculpture list+contained zoom; essential text",
+      "passed": true
+    }
+  ],
+  "limits": [
+    "Touch is browser emulation, not a physical-device test.",
+    "No screenreader session.",
+    "Terminal paths are source-derived and replayed through public inputs, not unaided difficulty evidence."
+  ]
+}

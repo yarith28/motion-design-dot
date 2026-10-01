@@ -4,7 +4,7 @@
     "coreLoop": "Ranked preference stability",
     "nearestExisting": "seat-at-table",
     "decisiveDistinction": "Assignments are judged by reciprocal incentives and blocking pairs, rather than positional clues.",
-    "depth": "Three escalating studies with procedural instances or different topology. Full checks, undo and study retry.",
+    "depth": "Three studies with procedural instances or different topology. Full checks, undo and study retry. No guarantee of monotonically increasing human difficulty.",
     "nearestNew": "honest-company",
     "review": "Mechanic inventory independently challenged; Sokoban and Flood-It rejected and replaced. Source/UI review underway.",
     "newNeighborDistinction": "Pairing stability is tested against two ranked preference lists; Honest Company assigns truth values against statements."
@@ -14,7 +14,7 @@
     "coreLoop": "Stop-to-stop momentum routing",
     "nearestExisting": "coordinate-courier",
     "decisiveDistinction": "A move travels until collision; the player plans stopping points and approach directions.",
-    "depth": "Three escalating studies with procedural instances or different topology. Full checks, undo and study retry.",
+    "depth": "Three studies with procedural instances or different topology. Full checks, undo and study retry. No guarantee of monotonically increasing human difficulty.",
     "nearestNew": "twin-steps",
     "review": "Mechanic inventory independently challenged; Sokoban and Flood-It rejected and replaced. Source/UI review underway.",
     "newNeighborDistinction": "One skater commits to a full slide and sweeps seals; Twin Steps moves two oppositely coupled agents one cell each."
@@ -24,7 +24,7 @@
     "coreLoop": "Coupled cube orientation and position",
     "nearestExisting": "shadow-turn",
     "decisiveDistinction": "Rotation is coupled to grid travel, with six-face orientation persisting between goals.",
-    "depth": "Three escalating studies with procedural instances or different topology. Full checks, undo and study retry.",
+    "depth": "Three studies with procedural instances or different topology. Full checks, undo and study retry. No guarantee of monotonically increasing human difficulty.",
     "nearestNew": "ice-station",
     "review": "Mechanic inventory independently challenged; Sokoban and Flood-It rejected and replaced. Source/UI review underway.",
     "newNeighborDistinction": "Cube rolls update six-face orientation and require ordered bottom-face matches; Ice Station only considers stop geometry and swept pickups."
@@ -34,7 +34,7 @@
     "coreLoop": "Occupancy constrained knight permutation",
     "nearestExisting": "pawns",
     "decisiveDistinction": "Single-player swapping through L-shaped jumps, no captures or opponent.",
-    "depth": "Three escalating studies with procedural instances or different topology. Full checks, undo and study retry.",
+    "depth": "Three studies with procedural instances or different topology. Full checks, undo and study retry. No guarantee of monotonically increasing human difficulty.",
     "nearestNew": "twin-steps",
     "review": "Mechanic inventory independently challenged; Sokoban and Flood-It rejected and replaced. Source/UI review underway.",
     "newNeighborDistinction": "Select and move one of several same-color pieces through occupied knight graph; Twin Steps drives two agents simultaneously."
@@ -44,7 +44,7 @@
     "coreLoop": "Graph vertex coloring",
     "nearestExisting": "towers",
     "decisiveDistinction": "Adjacency inequality coloring, rather than ray coverage or set placement.",
-    "depth": "Three escalating studies with procedural instances or different topology. Full checks, undo and study retry.",
+    "depth": "Each new graph is connected and contains a triangle, requiring all three inks. Seven/eight/nine vertices; no claim of monotonic human difficulty.",
     "nearestNew": "circuit-break",
     "review": "Mechanic inventory independently challenged; Sokoban and Flood-It rejected and replaced. Source/UI review underway.",
     "newNeighborDistinction": "Assign colors subject to local inequality on retained graph; Circuit Break removes vertices to separate terminals."
@@ -54,7 +54,7 @@
     "coreLoop": "Budgeted vertex cut",
     "nearestExisting": "bridgewater",
     "decisiveDistinction": "Delete intermediary vertices to separate marked terminals under a strict cut budget.",
-    "depth": "Three escalating studies with procedural instances or different topology. Full checks, undo and study retry.",
+    "depth": "Generated connected graphs with exact minimum vertex cut 1/2/3 and terminal degrees above budget. Bounded attempts; separately validated channel fallback. Minimum cut size does not prove cognitive difficulty.",
     "nearestNew": "copper-tree",
     "review": "Mechanic inventory independently challenged; Sokoban and Flood-It rejected and replaced. Source/UI review underway.",
     "newNeighborDistinction": "Remove a budgeted vertex cut to disconnect specific terminals; Copper Tree selects weighted edges to connect all vertices."
@@ -64,7 +64,7 @@
     "coreLoop": "Minimum spanning tree construction",
     "nearestExisting": "bridgewater",
     "decisiveDistinction": "Edge costs and global acyclic cost optimality replace per-vertex degree clues.",
-    "depth": "Three escalating studies with procedural instances or different topology. Full checks, undo and study retry.",
+    "depth": "Three studies with procedural instances or different topology. Full checks, undo and study retry. No guarantee of monotonically increasing human difficulty.",
     "nearestNew": "river-capacity",
     "review": "Mechanic inventory independently challenged; Sokoban and Flood-It rejected and replaced. Source/UI review underway.",
     "newNeighborDistinction": "Optimize undirected edge selection with acyclicity and minimum cost; River Capacity allocates conserved integer flow along directed capacities."
@@ -74,7 +74,7 @@
     "coreLoop": "Conserved capacitated network flow",
     "nearestExisting": "orbit-transfer",
     "decisiveDistinction": "Allocate simultaneous integer flows with conservation and capacities rather than choose a route.",
-    "depth": "Three escalating studies with procedural instances or different topology. Full checks, undo and study retry.",
+    "depth": "Generated branching DAGs with varying topology/capacities, minimum delivery 3/4/5 and a strictly internal bottleneck. Bounded generation with validated fallback; not a measured human difficulty guarantee.",
     "nearestNew": "copper-tree",
     "review": "Mechanic inventory independently challenged; Sokoban and Flood-It rejected and replaced. Source/UI review underway.",
     "newNeighborDistinction": "Solve capacity plus conservation at intermediate basins; Copper Tree chooses a minimum weighted connected tree."
@@ -84,7 +84,7 @@
     "coreLoop": "Self-referential truth assignment",
     "nearestExisting": "seat-at-table",
     "decisiveDistinction": "Simultaneous Boolean statements must agree with each speaker\u2019s truth status.",
-    "depth": "Three escalating studies with procedural instances or different topology. Full checks, undo and study retry.",
+    "depth": "Three studies with procedural instances or different topology. Full checks, undo and study retry. No guarantee of monotonically increasing human difficulty.",
     "nearestNew": "gate-foundry",
     "review": "Mechanic inventory independently challenged; Sokoban and Flood-It rejected and replaced. Source/UI review underway.",
     "newNeighborDistinction": "Assign one Boolean nature per interdependent speaker; Gate Foundry chooses operators to satisfy every input of a feed-forward truth table."
@@ -94,17 +94,17 @@
     "coreLoop": "Truth table circuit synthesis",
     "nearestExisting": "lantern-lines",
     "decisiveDistinction": "Choose Boolean functions inside a feed-forward circuit and satisfy all truth-table rows.",
-    "depth": "Three escalating studies with procedural instances or different topology. Full checks, undo and study retry.",
+    "depth": "Three studies with procedural instances or different topology. Full checks, undo and study retry. No guarantee of monotonically increasing human difficulty.",
     "nearestNew": "seed-tomorrow",
     "review": "Mechanic inventory independently challenged; Sokoban and Flood-It rejected and replaced. Source/UI review underway.",
-    "newNeighborDistinction": "Synthesize logic functions across all input rows; Seed Tomorrow selects initial cells under one fixed temporal evolution rule."
+    "newNeighborDistinction": "Synthesize static logic operators across all input rows; Seed Tomorrow interleaves plant/prune interventions with explicit nonlinear growth days."
   },
   {
     "id": "rewrite-press",
     "coreLoop": "Bounded substring rewriting",
     "nearestExisting": "wordbreak",
     "decisiveDistinction": "Consume and produce substrings through stateful rules with order-sensitive application.",
-    "depth": "Three escalating studies with procedural instances or different topology. Full checks, undo and study retry.",
+    "depth": "Three studies with procedural instances or different topology. Full checks, undo and study retry. No guarantee of monotonically increasing human difficulty.",
     "nearestNew": "gate-foundry",
     "review": "Mechanic inventory independently challenged; Sokoban and Flood-It rejected and replaced. Source/UI review underway.",
     "newNeighborDistinction": "Apply order-sensitive substring production rules to transform one ribbon; Gate Foundry configures static gates for all possible inputs."
@@ -114,27 +114,27 @@
     "coreLoop": "Mirrored simultaneous maze navigation",
     "nearestExisting": "coordinate-courier",
     "decisiveDistinction": "A shared action drives two independently blocked agents in opposite directions.",
-    "depth": "Three escalating studies with procedural instances or different topology. Full checks, undo and study retry.",
+    "depth": "Three studies with procedural instances or different topology. Full checks, undo and study retry. No guarantee of monotonically increasing human difficulty.",
     "nearestNew": "ice-station",
     "review": "Mechanic inventory independently challenged; Sokoban and Flood-It rejected and replaced. Source/UI review underway.",
     "newNeighborDistinction": "Shared mirrored controls couple two blocked walkers; Ice Station commits one skater to an entire stop-to-stop trajectory."
   },
   {
     "id": "seed-tomorrow",
-    "coreLoop": "Inverse cellular evolution",
+    "coreLoop": "Timed intervention in nonlinear cellular growth",
     "nearestExisting": "lantern-lines",
-    "decisiveDistinction": "Choose an initial condition, then reason through multi-step cellular time evolution.",
-    "depth": "Three escalating studies with procedural instances or different topology. Full checks, undo and study retry.",
+    "decisiveDistinction": "Choose when to intervene in a fixed evolving state, with nonlinear survival/birth and explicit advance-day actions; actions are not a commutative toggle subset.",
+    "depth": "Three generated studies require minimum 2/3/4 interventions across 3/4/5 days. Every chosen target has at least one first-day choice that cannot meet the target within budget. All targets have indexed live/empty text, a preview, full day history and Undo.",
     "nearestNew": "parity-repair",
     "review": "Mechanic inventory independently challenged; Sokoban and Flood-It rejected and replaced. Source/UI review underway.",
-    "newNeighborDistinction": "Infer initial seeds through repeated temporal evolution; Parity Repair infers sparse corruption from fixed overlapping checksums."
+    "newNeighborDistinction": "Temporal plant/prune choices intervene between nonlinear growth steps; Parity Repair edits a static sparse corruption against fixed linear checksums."
   },
   {
     "id": "voxel-post",
     "coreLoop": "Orthogonal projection reconstruction",
     "nearestExisting": "shadow-turn",
     "decisiveDistinction": "Infer 3D occupancy from axis line sums, rather than rotate visible silhouettes.",
-    "depth": "Three escalating studies with procedural instances or different topology. Full checks, undo and study retry.",
+    "depth": "Three studies with procedural instances or different topology. Full checks, undo and study retry. No guarantee of monotonically increasing human difficulty.",
     "nearestNew": "parcel-survey",
     "review": "Mechanic inventory independently challenged; Sokoban and Flood-It rejected and replaced. Source/UI review underway.",
     "newNeighborDistinction": "Solve 3D binary occupancy against orthogonal line sums; Parcel Survey partitions a plane into anchored rectangles."
@@ -144,7 +144,7 @@
     "coreLoop": "Duplicate elimination with connectivity",
     "nearestExisting": "equal-measure",
     "decisiveDistinction": "Remove duplicate row/column values while keeping a connected unshaded graph.",
-    "depth": "Three escalating studies with procedural instances or different topology. Full checks, undo and study retry.",
+    "depth": "Three studies with procedural instances or different topology. Full checks, undo and study retry. No guarantee of monotonically increasing human difficulty.",
     "nearestNew": "island-census",
     "review": "Mechanic inventory independently challenged; Sokoban and Flood-It rejected and replaced. Source/UI review underway.",
     "newNeighborDistinction": "Delete repeated symbols with nonadjacent shade and connected remaining cells; Island Census grows numbered land components with connected sea and forbids sea squares."
@@ -154,7 +154,7 @@
     "coreLoop": "Island size and sea connectivity deduction",
     "nearestExisting": "picross-post",
     "decisiveDistinction": "Connected component sizes and sea topology replace line-run constraints.",
-    "depth": "Three escalating studies with procedural instances or different topology. Full checks, undo and study retry.",
+    "depth": "Three studies with procedural instances or different topology. Full checks, undo and study retry. No guarantee of monotonically increasing human difficulty.",
     "nearestNew": "hitori-harbor",
     "review": "Mechanic inventory independently challenged; Sokoban and Flood-It rejected and replaced. Source/UI review underway.",
     "newNeighborDistinction": "Satisfy numbered connected island sizes and sea topology, rather than removing row/column duplicates."
@@ -164,7 +164,7 @@
     "coreLoop": "Anchored rectangle partition",
     "nearestExisting": "tangram-dock",
     "decisiveDistinction": "Derive rectangular regions from anchored area clues, rather than place supplied pieces.",
-    "depth": "Three escalating studies with procedural instances or different topology. Full checks, undo and study retry.",
+    "depth": "Three studies with procedural instances or different topology. Full checks, undo and study retry. No guarantee of monotonically increasing human difficulty.",
     "nearestNew": "voxel-post",
     "review": "Mechanic inventory independently challenged; Sokoban and Flood-It rejected and replaced. Source/UI review underway.",
     "newNeighborDistinction": "Draw rectangles around area anchors to partition every planar cell; Voxel Post toggles voxels against axis projections."
@@ -174,7 +174,7 @@
     "coreLoop": "Minimum feedback arc reversal",
     "nearestExisting": "orbit-transfer",
     "decisiveDistinction": "Break all directed cycles with budgeted edge reversals, not route traversal.",
-    "depth": "Three escalating studies with procedural instances or different topology. Full checks, undo and study retry.",
+    "depth": "Three studies with procedural instances or different topology. Full checks, undo and study retry. No guarantee of monotonically increasing human difficulty.",
     "nearestNew": "copper-tree",
     "review": "Mechanic inventory independently challenged; Sokoban and Flood-It rejected and replaced. Source/UI review underway.",
     "newNeighborDistinction": "Reverse existing directed edges to remove all directed cycles under edit budget; Copper Tree chooses undirected edges with minimum cost to connect vertices."
@@ -184,17 +184,17 @@
     "coreLoop": "Constrained multi-bit syndrome correction",
     "nearestExisting": "bit-lanterns",
     "decisiveDistinction": "Infer multiple errors from overlapping parity constraints under an edit budget.",
-    "depth": "Three escalating studies with procedural instances or different topology. Full checks, undo and study retry.",
+    "depth": "Three studies with procedural instances or different topology. Full checks, undo and study retry. No guarantee of monotonically increasing human difficulty.",
     "nearestNew": "seed-tomorrow",
     "review": "Mechanic inventory independently challenged; Sokoban and Flood-It rejected and replaced. Source/UI review underway.",
-    "newNeighborDistinction": "Locate limited multi-bit errors using row/column/wrapping-diagonal parity; Seed Tomorrow reconstructs a full seed row from temporal evolution."
+    "newNeighborDistinction": "Locate limited corruption using static row/column/wrapping-diagonal parity; Seed Tomorrow chooses intervention timing during nonlinear evolving growth."
   },
   {
     "id": "safety-ferry",
     "coreLoop": "Safety invariant river transport",
     "nearestExisting": "measured-pour",
     "decisiveDistinction": "Cargo transport preserves pairwise bank safety in the ferryman\u2019s absence.",
-    "depth": "Three escalating studies with procedural instances or different topology. Full checks, undo and study retry.",
+    "depth": "Generated compatibility graphs, verified minimum crossing counts 7/9/11 with 5/6/8 passengers and capacity 2/2/3. Bounded generation with validated fallbacks; shortest-path growth is not a claim about measured human difficulty.",
     "nearestNew": "circuit-break",
     "review": "Mechanic inventory independently challenged; Sokoban and Flood-It rejected and replaced. Source/UI review underway.",
     "newNeighborDistinction": "Transport cargo between banks while preserving safety only on the unattended bank; Circuit Break permanently disables a static relay cut."

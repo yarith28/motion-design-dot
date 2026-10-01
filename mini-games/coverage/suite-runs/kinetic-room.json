@@ -3,9 +3,9 @@
   "suite": "kinetic-room",
   "passed": true,
   "status": "passed",
-  "startedAt": "2026-10-01T04:11:55.842Z",
+  "startedAt": "2026-10-01T06:47:44.981Z",
   "source": {
-    "sha256": "33dd30156e2a76bc7e63024547648bca502c1547eebc20531a7401b2065ab220",
+    "sha256": "87bfe5415cfdc27ae2829c26456f8518c458703c7dffa92e9ad57dc3958d0039",
     "files": [
       "catalog.css",
       "catalog.js",
@@ -22,6 +22,7 @@
       "tests/fixtures/baseline100.json",
       "tests/fixtures/tabletop-paths.json",
       "tests/kinetic-plans.json",
+      "tests/kinetic-remediation.cjs",
       "tests/kinetic-room.cjs",
       "tools/evidence.cjs",
       "tools/run-suite.cjs"
@@ -71,9 +72,9 @@
   "servedRuntimeBefore": {
     "baseURL": "http://127.0.0.1:8790",
     "passed": true,
-    "sha256": "ca86834f834ec60ddc980ab4fec464bdc8929c9c99ab07be192866c5495489d4",
+    "sha256": "076d0e373a68b85193a776e0514e2f50d8c288154c8676c0e6b5721380cff9a9",
     "fileCount": 12,
-    "verifiedAt": "2026-10-01T04:11:55.971Z"
+    "verifiedAt": "2026-10-01T06:47:45.160Z"
   },
   "exitCode": 0,
   "signal": null,
@@ -81,12 +82,12 @@
   "servedRuntime": {
     "baseURL": "http://127.0.0.1:8790",
     "passed": true,
-    "sha256": "ca86834f834ec60ddc980ab4fec464bdc8929c9c99ab07be192866c5495489d4",
+    "sha256": "076d0e373a68b85193a776e0514e2f50d8c288154c8676c0e6b5721380cff9a9",
     "fileCount": 12,
-    "verifiedAt": "2026-10-01T04:13:34.517Z"
+    "verifiedAt": "2026-10-01T06:49:45.766Z"
   },
   "completionEvidence": {
-    "sha256": "09106aba684ef637071424f7981171d48c233ce580a9e4169f3273cd732150dc",
+    "sha256": "32e9bc3019b33d772d3ac710e6d1d357c0b36eaa4128925d90bd84cd2ae83619",
     "file": "coverage/kinetic-room.json",
     "cases": [
       {
@@ -172,7 +173,7 @@
           "restart after both win and loss restores initial state",
           "320px layout has no horizontal overflow",
           "text board description present",
-          "decoy consumes one charge and starts finite distraction"
+          "distraction consumes one charge and briefly interrupts sight"
         ],
         "inputMethod": "Native Enter activation of focused public buttons for full solver-derived win and loss; arrow input verified inert after terminal."
       },
@@ -189,7 +190,7 @@
           "restart after both win and loss restores initial state",
           "320px layout has no horizontal overflow",
           "text board description present",
-          "decoy consumes one charge and starts finite distraction"
+          "distraction consumes one charge and briefly interrupts sight"
         ],
         "inputMethod": "Only public button touchscreen taps, including the complete solver-derived winning and losing action paths."
       },
@@ -773,5 +774,5 @@
       }
     ]
   },
-  "finishedAt": "2026-10-01T04:13:34.518Z"
+  "finishedAt": "2026-10-01T06:49:45.767Z"
 }

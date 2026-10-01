@@ -2,3 +2,4 @@
 /* The shared play stylesheet gives status bars a dark background. Keep this
    room's message foreground/background pair explicit for readable contrast. */
 .desk .game-message{background:#e6eadc;color:#173f37;border-radius:8px;padding:13px;margin:14px 0;font-size:14px;text-align:left}
+.play-heading{flex-wrap:wrap;gap:14px}.play-heading label{display:flex;flex-direction:column;gap:5px;font-size:12px;max-width:100%}#scenario{max-width:100%;min-height:44px;border:1px solid #a9b8a2;border-radius:6px;padding:8px;background:#faf9f2;color:#184b4a;font:inherit}#scenario:focus-visible{outline:3px solid #a55634;outline-offset:3px}

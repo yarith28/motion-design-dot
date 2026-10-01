@@ -26,8 +26,8 @@
     "mechanic": "Five-round blackjack with hit, stand, double and a finite chip stack.",
     "rules": [
       "Start with 20 chips. Each of five hands costs a 2-chip stake. Aces count 11 or 1; faces count 10. The dealer shows one card and stands at 17, including soft 17.",
-      "Hit for another card or stand. Double is available only on your first decision, costs another 2 chips and deals exactly one card. Above 21 loses. A two-card 21 pays 3:2; other wins pay 1:1. Ties return the stake.",
-      "Finish five hands with more than 20 chips to win. The dealer hole card stays hidden until you stand or bust."
+      "Hit for another card or stand. Double is available only on your first decision, costs another 2 chips and deals exactly one card. Above 21 loses. A two-card 21 pays 3:2; other wins pay 1:1. Ties return the stake. A two-card blackjack beats every non-blackjack hand, including a drawn 21. Two blackjacks push. Opening blackjacks settle immediately.",
+      "Finish five hands with more than 20 chips to win. The dealer hole card stays hidden until the hand settles."
     ],
     "controls": "Tap or click cards, board squares and labeled actions. Tab moves focus; Enter or Space activates. Arrow keys move between neighboring controls. No timing or dragging required.",
     "url": "tabletop-room/?game=twenty-one",

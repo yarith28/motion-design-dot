@@ -14,7 +14,7 @@ const games=rooms.flatMap(room=>JSON.parse(fs.readFileSync(path.join(__dirname,'
   const context=await browser.newContext({viewport:mobile?{width:320,height:740}:{width:1280,height:900},hasTouch:mobile,isMobile:mobile,reducedMotion:'reduce'});
   await context.addInitScript(mode=>{if(mode==='read')Object.defineProperty(window,'localStorage',{get(){throw Error('blocked storage')}});else Storage.prototype.setItem=()=>{throw Error('quota')};},mobile?'write':'read');
   const page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));
-  const activate=async selector=>{const control=page.locator(selector).first();if(mobile)await control.tap();else{await control.focus();await page.keyboard.press('Enter');}};
+  const activate=async selector=>{const control=page.locator(selector).first();if(mobile)await control.tap();else{let tabs=0;while(!await control.evaluate(e=>e===document.activeElement)&&tabs++<600)await page.keyboard.press('Tab');assert.ok(tabs<=600,'Control reachable by real Tab navigation: '+selector);await page.keyboard.press('Enter');}};
   for(const game of games){
    const response=await page.goto(base+'/mini-games/'+game.url);assert.equal(response.status(),200);
    await page.waitForSelector('body[data-game-ready="true"]');await page.evaluate(()=>document.fonts.ready);assert.equal(await page.locator('body').getAttribute('data-game-id'),game.id);
@@ -32,12 +32,12 @@ const games=rooms.flatMap(room=>JSON.parse(fs.readFileSync(path.join(__dirname,'
    assert.ok((await page.locator('#status').innerText()).trim().length>0);
    await responsive(page,game,'restart',mobile);
    assert.deepEqual(errors,[]);
-   cases.push({id:game.id,profile:mobile?'320px touch':'desktop keyboard',launch:true,gameAction:true,restart:true,focus:mobile?'not asserted':'retained',storage:mobile?'writes blocked':'reads blocked',reducedMotion:true});
+   cases.push({id:game.id,profile:mobile?'320px touch':'desktop keyboard',launch:true,gameAction:true,restart:true,focus:mobile?'not asserted':'retained after native Tab/Enter navigation',storage:mobile?'writes blocked':'reads blocked',reducedMotion:true});
   }
   await context.close();
  }
  assert.equal(cases.length,200);
- const report={passed:true,sourceSha:process.env.GITHUB_SHA||null,engine,version:browser.version(),verifiedAt:new Date().toISOString(),base,cases,errors,scope:'One normal game action, keyboard focus, touch activation, restart, 320px layout, blocked storage and reduced-motion preference in each new game. No full completion, physical device or screen-reader claim.'};
+ const report={passed:true,sourceSha:process.env.GITHUB_SHA||null,engine,version:browser.version(),verifiedAt:new Date().toISOString(),base,cases,errors,scope:'One normal game action reached with actual Tab/Enter navigation, retained keyboard focus, touch activation, restart, 320px layout, blocked storage and reduced-motion preference in each new game. No full completion, physical device or screen-reader claim.'};
  const dir=process.env.CONTROLS_REPORT_DIR||'live-verification';fs.mkdirSync(dir,{recursive:true});fs.writeFileSync(path.join(dir,'expansion-controls-'+engine+'.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify({passed:true,engine,version:browser.version(),cases:cases.length,scope:report.scope}));
  }finally{await browser.close();}
 })().catch(error=>{console.error(error);process.exitCode=1;});

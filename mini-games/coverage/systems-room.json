@@ -230,8 +230,8 @@
       "touchOnly": false,
       "inputMethod": "Keyboard focus + Enter activation on actual controls; source-derived solution replay",
       "ordinaryInput": "Unsolved first available control activated, focus and restart checked; no unaided completion claim",
-      "winActions": 12,
-      "lossActions": 12,
+      "winActions": 10,
+      "lossActions": 10,
       "edgeCases": [
         "Deliberate failure route reaches loss through UI",
         "Terminal controls unavailable",
@@ -311,7 +311,7 @@
       "inputMethod": "Keyboard focus + Enter activation on actual controls; source-derived solution replay",
       "ordinaryInput": "Unsolved first available control activated, focus and restart checked; no unaided completion claim",
       "winActions": 23,
-      "lossActions": 13,
+      "lossActions": 12,
       "edgeCases": [
         "Deliberate failure route reaches loss through UI",
         "Terminal controls unavailable",
@@ -390,8 +390,8 @@
       "touchOnly": false,
       "inputMethod": "Keyboard focus + Enter activation on actual controls; source-derived solution replay",
       "ordinaryInput": "Unsolved first available control activated, focus and restart checked; no unaided completion claim",
-      "winActions": 32,
-      "lossActions": 5,
+      "winActions": 35,
+      "lossActions": 7,
       "edgeCases": [
         "Deliberate failure route reaches loss through UI",
         "Terminal controls unavailable",
@@ -630,8 +630,8 @@
       "touchOnly": true,
       "inputMethod": "Touch-only taps on actual onscreen controls; source-derived solution replay",
       "ordinaryInput": "Unsolved first available control activated, focus and restart checked; no unaided completion claim",
-      "winActions": 12,
-      "lossActions": 12,
+      "winActions": 10,
+      "lossActions": 10,
       "edgeCases": [
         "Deliberate failure route reaches loss through UI",
         "Terminal controls unavailable",
@@ -711,7 +711,7 @@
       "inputMethod": "Touch-only taps on actual onscreen controls; source-derived solution replay",
       "ordinaryInput": "Unsolved first available control activated, focus and restart checked; no unaided completion claim",
       "winActions": 23,
-      "lossActions": 13,
+      "lossActions": 12,
       "edgeCases": [
         "Deliberate failure route reaches loss through UI",
         "Terminal controls unavailable",
@@ -790,8 +790,8 @@
       "touchOnly": true,
       "inputMethod": "Touch-only taps on actual onscreen controls; source-derived solution replay",
       "ordinaryInput": "Unsolved first available control activated, focus and restart checked; no unaided completion claim",
-      "winActions": 32,
-      "lossActions": 5,
+      "winActions": 35,
+      "lossActions": 7,
       "edgeCases": [
         "Deliberate failure route reaches loss through UI",
         "Terminal controls unavailable",
@@ -807,5 +807,5 @@
     "Mobile viewport and touch events are Chromium emulation, not a physical phone or screenreader test.",
     "WebKit is covered separately by the repository expansion-controls CI suite; this file tests Chromium full rounds."
   ],
-  "sourceHash": "c76c5eadea4bf08415da06e1c646e5b336b64202b422cf135c26250c731e483c"
+  "sourceHash": "a22cfe328d1b452046db0e30336d600f854c74fea63352c974fe8446650f8bb7"
 }

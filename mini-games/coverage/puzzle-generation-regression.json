@@ -1,0 +1,19 @@
+{
+  "suite": "puzzle-generation-regression",
+  "passed": true,
+  "randomCases": 300,
+  "deterministicCases": 15,
+  "validatedFallbackCases": 9,
+  "gardenFallbackSeedCases": 3,
+  "limits": [
+    "Finite-state guarantees measure reachability and minimum interventions/cut/crossings, not human difficulty.",
+    "Random sample plus deterministic fallback paths; not exhaustive generator seeds."
+  ],
+  "timings": {
+    "seed-tomorrow": 1227,
+    "circuit-break": 1075,
+    "river-capacity": 26,
+    "safety-ferry": 4372,
+    "map-inks": 9
+  }
+}

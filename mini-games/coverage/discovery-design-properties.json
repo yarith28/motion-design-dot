@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "sourceSha256": "e1afe642f5a37af31903a5dc4d4e971a1d7250a2d4c9554847d7654b01a92abe",
+  "durationMs": 4218,
+  "records": [
+    {
+      "property": "200 seeds: Archive minimum budget, >=2 viable subsets, every winning set uses dependencies, graph variety",
+      "passed": true,
+      "uniqueGraphs": 200
+    },
+    {
+      "property": "200 seeds: Prototype minimum budget, >=2 geometric solutions, randomized candidate order",
+      "passed": true,
+      "firstNAccidentalWins": 15
+    },
+    {
+      "property": "Relay and held-signal topology requires key transfer before crank retrieval, then crank transfer; held-signal gate separates Bo from key",
+      "passed": true
+    },
+    {
+      "property": "30 independent bounded-source inversions prove >=2 compatible lens models per generated image; two sparse measurements distinguish installed model within energy budget",
+      "passed": true
+    },
+    {
+      "property": "All63 two-fault/topology combinations have a diagnostic-and-repair strategy within3spares and10battery, including masked faults",
+      "passed": true,
+      "worstBattery": 6
+    }
+  ],
+  "limits": [
+    "Source-level seeded generator and graph-cut properties; not browser or ordinary-play evidence.",
+    "Actual win/loss and control flows tested separately in discovery-room.cjs and discovery-remediation.cjs."
+  ]
+}

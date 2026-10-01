@@ -1,6 +1,6 @@
 {
   "target": 200,
-  "phase": "200 implemented, independently reviewed and source-matched locally verified; exact-commit publication workflow required",
+  "phase": "200 existing games remediated after independent review; exact-commit publication workflow required",
   "publicationRule": "Implemented playable entries are linked in the catalog; source-matched verification is tracked independently in coverage/index.json. Planned inventory is not playable.",
   "collections": [
     {
@@ -99,5 +99,12 @@
     "runtimeFiles": 66,
     "test": "tests/preservation.cjs",
     "verifiedBaselineWorkflow": "https://github.com/yarith28/motion-design-dot/actions/runs/36805539459"
+  },
+  "remediation": {
+    "baseline": "fb1aabe76e6e2420ac68dce1941ffe8d940c924c",
+    "scope": "Existing200 only; controls, correctness, varied gameplay and evidence fixes",
+    "report": "REMEDIATION-200.md",
+    "independentReview": "REMEDIATION-200-REVIEW.md",
+    "publication": "Consult exact-commit Verify live arcade and Pages workflow results; prior deployment records do not certify this remediation."
   }
 }

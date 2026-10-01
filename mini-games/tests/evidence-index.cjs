@@ -29,6 +29,7 @@ try{
   const report=run().report;assert.equal(report.games.find(g=>g.id===game)?.touchGameplayCompletion,false,'mixed mobile input is not touch-only');
   fs.writeFileSync(file,before);fs.writeFileSync(runFile,JSON.stringify(records[id]));
  }
+ for(const id of E.expansionRooms){const file=path.join(root,'coverage',id+'.json'),before=fs.readFileSync(file),report=JSON.parse(before);for(const outcome of ['loss','draw']){report.cases[0].outcome=outcome;fs.writeFileSync(file,JSON.stringify(report));assert.throws(()=>E.expansionEvidence(id),/primary winning path required/,'terminal loss or draw must not certify primary winning reachability');}fs.writeFileSync(file,before);}
  const otherEngine=spawnSync(process.execPath,[path.join(root,'tools/run-suite.cjs'),'kinetic-room'],{env:{...process.env,BROWSER_ENGINE:'webkit'},encoding:'utf8'});assert.equal(otherEngine.status,2,'WebKit cannot receive a Chromium attestation');
  console.log('Evidence index: missing, failed, stale, malformed, legacy, documentation-only and input-scope fixtures passed.');
 }finally{fs.rmSync(temp,{recursive:true,force:true});}

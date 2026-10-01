@@ -123,12 +123,12 @@
     "id": "transit-observatory",
     "name": "Transit Observatory",
     "category": "puzzle",
-    "description": "Choose observation times, eliminate period/phase hypotheses, identify three transiting worlds within an observation budget.",
-    "mechanic": "Active temporal sampling to resolve orbital aliases",
+    "description": "Nonadaptive observation-schedule design and orbital decoding",
+    "mechanic": "Nonadaptive observation-schedule design and orbital decoding",
     "rules": [
-      "A planet appears when time modulo its period equals its phase. Every candidate orbit is listed. Choose a time and observe whether a transit occurs.",
-      "Identify period and phase uniquely in at most six observations. Clear three skies. A premature or wrong claim costs an observation.",
-      "Times range 0\u201359. Repeated observations provide no new information and still use a charge."
+      "Choose a batch of available observation times that distinguishes every listed orbit. Each world transits when time modulo period equals phase.",
+      "The exposure limit is the minimum feasible for this candidate catalog and window. Launch only after planning; ambiguous schedules spend one of three review credits.",
+      "Decode the completed binary observation report by entering period and phase. Three campaigns have different candidate domains and observing windows."
     ],
     "controls": "Tap or click controls; Tab then Enter / Space. Arrow keys move within grids.",
     "url": "discovery-room/?game=transit-observatory",
@@ -143,12 +143,12 @@
     "id": "specimen-rule",
     "name": "Specimen Rule",
     "category": "puzzle",
-    "description": "Construct specimens to query membership, then correctly classify unseen specimens",
-    "mechanic": "Active hypothesis testing of a hidden grammar",
+    "description": "Compress labeled specimens into a nearest-prototype classifier",
+    "mechanic": "Compress labeled specimens into a nearest-prototype classifier",
     "rules": [
-      "The hidden rule accepts or rejects three-number specimens. The complete set of possible rules appears beside the bench.",
-      "Set three values from 1\u20134 and run experiments. Then identify the rule and classify four fresh specimens. Clear two studies.",
-      "Experiments cost one of eight charges. An incorrect rule claim costs two. Holdout answers cannot be changed after submitting."
+      "Select three or four training prototypes from eight labeled specimens. Each reference inherits the label of its nearest selected prototype by Manhattan distance: |X difference| + |Y difference|.",
+      "If equally near prototypes disagree, the result is ambiguous. Match all twelve printed reference labels within the prototype budget. Adding or removing one prototype can change several predictions.",
+      "Every slot is necessary and at least two valid prototype sets exist. Three incorrect audits end the study; complete three different feature landscapes."
     ],
     "controls": "Tap or click controls; Tab then Enter / Space. Arrow keys move within grids.",
     "url": "discovery-room/?game=specimen-rule",
@@ -163,12 +163,12 @@
     "id": "causal-lab",
     "name": "Causal Lab",
     "category": "puzzle",
-    "description": "Toggle interventions and observe propagated effects",
-    "mechanic": "Intervention-based causal circuit diagnosis",
+    "description": "Diagnose and repair changing causal networks",
+    "mechanic": "Diagnose and repair changing causal networks",
     "rules": [
-      "One wire in the displayed acyclic machine is broken. Set the two input switches and measure the four lamp outputs.",
-      "A lamp lights if ANY working incoming wire carries power. Direct interventions let you force one intermediate lamp off before measurement.",
-      "Use at most six measurements to locate the broken wire. Clear three machines; wrong diagnoses cost two measurements."
+      "Two directed links fail in each network. Lamps use OR of incoming signals. Toggle A/B and optionally clamp C, D or E off; compare measured and healthy outputs.",
+      "Measurements cost one battery, or two with a clamp. Installing any replacement costs one of three spare links and changes subsequent measurements.",
+      "Restore all sixteen input/clamp acceptance conditions. Failed audits reveal a counterexample and spend a shared review credit. Repair three different topologies."
     ],
     "controls": "Tap or click controls; Tab then Enter / Space. Arrow keys move within grids.",
     "url": "discovery-room/?game=causal-lab",
@@ -223,12 +223,12 @@
     "id": "twenty-questions",
     "name": "Question Orchard",
     "category": "puzzle",
-    "description": "Choose balanced property questions to identify multiple hidden objects within a shared query budget, with visible candidate elimination.",
-    "mechanic": "Adaptive binary decision-tree construction",
+    "description": "Construct full-catalog binary decision trees",
+    "mechanic": "Construct full-catalog binary decision trees",
     "rules": [
-      "A secret specimen belongs to a twelve-card catalog drawn from 32 possible combinations of five traits. The manifest supplies one known trait. Ask about any trait to eliminate impossible candidates.",
-      "Identify four specimens using at most twelve questions total. Catalogs change, so traits can split candidates unevenly. Plan a question tree: every initial catalog can be solved within three well-chosen questions.",
-      "Each new specimen comes with one free known property. Wrong identification costs two questions; candidate cards can be selected at any time."
+      "Build a tree that identifies all six catalog specimens; there is no hidden target. Each specimen has four binary traits.",
+      "Select an unlabeled leaf, assign a question, then assign specimen labels to final leaves. Each path permits at most three questions. Constant questions cannot split a leaf.",
+      "An audit checks every specimen. Incorrect routing costs one of three credits; incomplete trees may be edited freely. Clear three different catalogs."
     ],
     "controls": "Tap or click controls; Tab then Enter / Space. Arrow keys move within grids.",
     "url": "discovery-room/?game=twenty-questions",
@@ -283,12 +283,12 @@
     "id": "archive-edit",
     "name": "Archive Edit",
     "category": "puzzle",
-    "description": "Choose a limited set of dependent patches, then resolve their conflicting edits into a publishable document.",
-    "mechanic": "Version-control branching and selective merge",
+    "description": "Generated dependency-constrained patch selection and conflict resolution",
+    "mechanic": "Generated dependency-constrained patch selection and conflict resolution",
     "rules": [
-      "Seven alternative commits edit five fields from a common base. Only three cherry-picks fit each release, and some require a named predecessor. Inspect every delta and choose a compatible subset.",
-      "A field changed from the base creates a conflict when another patch changes it differently. Choose current or incoming; resolve all conflicts to finish applying the patch.",
-      "Meet all five requirements and publish. Reset this release restores the copy and three-pick budget but preserves review credits. Three failed publications end the study; clear three different patch graphs."
+      "Choose a compatible set from eight patches with varying edits and dependencies. Each release permits three or four picks.",
+      "At a merge conflict, choose current or incoming value. The final working copy must match all five requirements; multiple feasible patch sets exist.",
+      "Reset a release to revise your plan without changing its graph. Incorrect publication spends a review credit. Complete three independently generated releases."
     ],
     "controls": "Tap or click controls; Tab then Enter / Space. Arrow keys move within grids.",
     "url": "discovery-room/?game=archive-edit",
@@ -303,12 +303,12 @@
     "id": "lens-library",
     "name": "Lens Library",
     "category": "puzzle",
-    "description": "Inspect blurred samples, infer the neighborhood blur kernel via calibration probes, then choose an inverse reconstruction to recover an image.",
-    "mechanic": "Convolution model identification and deblurring",
+    "description": "Calibrate an unknown lens and reconstruct an ambiguous blurred ring",
+    "mechanic": "Calibrate an unknown lens and reconstruct an ambiguous blurred ring",
     "rules": [
-      "A hidden blur averages each pixel with either its left neighbor, right neighbor, or both. Edges wrap.",
-      "Send a single bright calibration pixel through the lens and inspect its output to infer the kernel. Then select the sharp source whose predicted blur matches the observed image.",
-      "Clear four plates with six charges. Calibrations cost one; wrong restorations cost two. The three candidate source images are shown numerically."
+      "Identify the installed lens using player-designed binary calibration inputs and one sensor readout per exposure. Cost is one energy plus one per lit input pixel.",
+      "The observed image has at least two valid source/lens explanations. Reconstruct six source pixels, each an integer from zero to four; equivalent sources are accepted when they match every observed output through the installed lens.",
+      "The ring wraps at both ends. Printed left/center/right weights determine convolution. Three incorrect certifications end the study; reconstruct three plates."
     ],
     "controls": "Tap or click controls; Tab then Enter / Space. Arrow keys move within grids.",
     "url": "discovery-room/?game=lens-library",
@@ -343,12 +343,12 @@
     "id": "clockmaker-cabinet",
     "name": "Clockmaker\u2019s Cabinet",
     "category": "adventure",
-    "description": "Explore connected rooms, collect and combine objects, change machinery states and unlock the exit through causal item-use chains.",
-    "mechanic": "Inventory-combination escape adventure",
+    "description": "Three distinct causal inventory adventures",
+    "mechanic": "Three distinct causal inventory adventures",
     "rules": [
-      "Explore the workshop, greenhouse and clock tower. Collect objects, select an inventory item, then use it on a fixture or combine it with another item.",
-      "Repair the clock and unlock the front door. Physical clues explain object uses; experimenting on an incompatible fixture costs one of six patience marks.",
-      "There is no timer. A notebook records discoveries and completed machinery. Restart rebuilds the entire escape room."
+      "Choose an adventure from the selector: a stopped clock, storm observatory or flooded cellar. Their item dependencies and access conditions differ.",
+      "Collect items, select an inventory item, then use a fixture. The stopped-clock tools must be combined; the storm has independent power and optics branches; the cellar opens after pumping.",
+      "Read clues, prepare the exit mechanism and choose its setting. Six incompatible actions end the adventure. Restart or change adventure clears all progress."
     ],
     "controls": "Tap or click controls; Tab then Enter / Space. Arrow keys move within grids.",
     "url": "discovery-room/?game=clockmaker-cabinet",
@@ -356,19 +356,19 @@
     "symbol": "\u2315",
     "smoke": {
       "startSelector": "#start",
-      "actionSelector": "#board button:has-text(\"Desk\")"
+      "actionSelector": "#board button"
     }
   },
   {
     "id": "track-exchange",
     "name": "Track Exchange",
     "category": "adventure",
-    "description": "Navigate complementary gate and water routes, then exchange the objects each explorer needs to escape.",
-    "mechanic": "Asymmetric two-character exploration and object transfer",
+    "description": "Cooperative cargo exchange, staged relay and held-signal routes",
+    "mechanic": "Cooperative cargo exchange, staged relay and held-signal routes",
     "rules": [
-      "Switch control between Ada and Bo on separate maps. Ada must collect the iron key to pass her gate; Bo can cross the mandatory water band and collect the crank.",
-      "Each explorer must stand at H before transferring or exchanging carried objects. Ada needs Bo\u2019s crank for her exit; Bo needs Ada\u2019s iron key. Neither can finish alone.",
-      "Bring both explorers to E and unlock each exit within fifty successful moves. Blocked movement and invalid object use cost nothing."
+      "Choose Crossed cargo, Two-stage relay or Held signal. Each route changes the coordination problem, not only the map.",
+      "Ada cannot cross water; Bo can. Both must reach their H cells to transfer cargo. Some gates consume a key and stay open; Held signal requires Ada to remain on S while Bo passes.",
+      "Reach both E exits with the printed requirements before the move budget runs out. Changing scenario resets the route."
     ],
     "controls": "Tap or click controls; Tab then Enter / Space. Arrow keys move within grids.",
     "url": "discovery-room/?game=track-exchange",
@@ -376,7 +376,7 @@
     "symbol": "\u2315",
     "smoke": {
       "startSelector": "#start",
-      "actionSelector": "#board button:has-text(\"South\")"
+      "actionSelector": "#board button"
     }
   },
   {

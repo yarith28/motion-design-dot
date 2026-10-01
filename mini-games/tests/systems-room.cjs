@@ -22,9 +22,11 @@ const failureChoice=(id,s,legal)=>({'junction-nine':'p0','assembly-belt':'gap','
  s=step('cold-chain',start('cold-chain'),'cool-1');assert.ok(!legal('cold-chain',s).includes('parfait'),'One chilled tick is insufficient for parfait milk');
  s=step('power-desk',start('power-desk'),'2-reserve');assert.equal(s.out,0,'Cold turbine has a startup delay');assert.equal(s.charge,4);
  s=step('quiet-majority',start('quiet-majority'),'p0');s=step('quiet-majority',s,'g2');s=step('quiet-majority',s,'vote');assert.equal(s.policy[0],2,'Policy commitments persist across bills');assert.deepEqual(s.promises,[0,0,0,0],'Grants expire after the vote');
- s=start('safe-return');for(let i=0;i<3;i++)s=step('safe-return',s,'farm');assert.equal(s.active.length,2,'Three-day policy expires after third payout check');assert.equal(s.cash,41);
+ s=step('safe-return',start('safe-return'),'farm');assert.ok(!legal('safe-return',s).includes('home'),'Outstanding collateral blocks another premium-funded policy');for(let i=0;i<3;i++)s=step('safe-return',s,'decline');assert.equal(s.active.length,0,'Four-day farm expires only after its fourth claim check');assert.equal(s.cash,27);
  s=start('firebreak');for(let i=0;i<3;i++)s=step('firebreak',s,'end');assert.equal(s.cells[3],'fire','Unprotected forecast lightning ignites after spread three');
  s=step('elevator-night',start('elevator-night'),'doors');assert.equal(s.people.filter(x=>x.status==='aboard').length,1);s=step('elevator-night',s,'doors');assert.equal(s.served,0,'Opening doors on origin does not deliver passenger');
+ // Delivery deadlines are inclusive end-of-action, consistent with Signal Cabinet.
+ for(const due of [11,12,13]){let lift=start('elevator-night');lift.people[0].due=due;for(let i=0;i<7;i++)lift=step('elevator-night',lift,'doors');for(let i=0;i<4;i++)lift=step('elevator-night',lift,'up');lift=step('elevator-night',lift,'doors');assert.equal(lift.people[0].status,due===11?'missed':'delivered','Delivery on/before due tick is accepted; later delivery is missed');}
  s=step('supply-web',start('supply-web'),'b4');assert.equal(s.made,0,'Assembly alone cannot run without enough ore/timber');s=step('supply-web',s,'run');assert.equal(s.made,1,'Upstream output feeds downstream within same tick');
  s=step('growing-block',start('growing-block'),'lot-0');assert.equal(s.land[0].pop,0,'Isolated home does not attract residents');assert.equal(s.land[5].pop,2,'Home beside park grows');
  // Independent yearly calculation: all homes migrate before any shop collects.

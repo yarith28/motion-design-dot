@@ -10,7 +10,7 @@
       "Each control adds \u22121, 0 or +1 to horizontal and vertical velocity, capped at \u00b12. Your car then travels that entire velocity. Coast keeps it unchanged.",
       "The whole swept path must stay on the pale track. Brake with acceleration opposite your velocity before a corner. The line forecasts a coast."
     ],
-    "controls": "Use the on-screen action buttons, or their displayed keyboard shortcuts. All simulations advance only when you act; selection and aim controls are free where noted.",
+    "controls": "Start or Restart focuses the board: use the displayed keyboard shortcuts there. Tab to a button and Enter or Space activates that focused button. All actions also have touch buttons.",
     "url": "kinetic-room/?game=vector-rally",
     "accent": "#b9c9a6",
     "symbol": "\u2197",
@@ -30,7 +30,7 @@
       "Moving onto blank ground draws an exposed trail. Rejoin any safe tile to seal the line and fill the region that does not contain the spark.",
       "The spark bounces off claimed ground. If it touches your exposed trail, or you cross your own trail, the attempt ends. Use the board description for its direction. The two gardens share a 180-action allowance."
     ],
-    "controls": "Use the on-screen action buttons, or their displayed keyboard shortcuts. All simulations advance only when you act; selection and aim controls are free where noted.",
+    "controls": "Start or Restart focuses the board: use the displayed keyboard shortcuts there. Tab to a button and Enter or Space activates that focused button. All actions also have touch buttons.",
     "url": "kinetic-room/?game=border-bloom",
     "accent": "#b9c9a6",
     "symbol": "\u25a7",
@@ -43,14 +43,14 @@
     "id": "lantern-heist",
     "name": "Lantern Heist",
     "category": "strategy",
-    "description": "Steal seals while avoiding rotating patrol sightlines; lure guards with a noise decoy, then reach the exit.",
-    "mechanic": "Steal seals while avoiding rotating patrol sightlines; lure guards with a noise decoy, then reach the exit.",
+    "description": "Steal seals past rotating sentry beams; spend a distraction to interrupt their sight, then reach the exit.",
+    "mechanic": "Steal seals past rotating sentry beams; spend a distraction to interrupt their sight, then reach the exit.",
     "rules": [
       "Collect three \u25c6 seals, then reach E at the upper right within 80 actions. Walls block movement and lantern beams.",
       "Each guard turns clockwise after every action; its arrow and pale beam show the NEXT sweep. Sight reaches three clear squares. Being seen ends the attempt.",
-      "Three decoys interrupt sight for three actions apiece. Wait safely behind walls to change the guard phase, or use a decoy to cross a watched corridor."
+      "Three distractions interrupt every sentry\u2019s sight for three actions apiece. They do not move the sentries. Wait safely behind walls to change the beam phase, or spend a distraction to cross a watched corridor."
     ],
-    "controls": "Use the on-screen action buttons, or their displayed keyboard shortcuts. All simulations advance only when you act; selection and aim controls are free where noted.",
+    "controls": "Start or Restart focuses the board: use the displayed keyboard shortcuts there. Tab to a button and Enter or Space activates that focused button. All actions also have touch buttons.",
     "url": "kinetic-room/?game=lantern-heist",
     "accent": "#b9c9a6",
     "symbol": "\u25d0",
@@ -70,7 +70,7 @@
       "After every action, boulders fall one empty square. A boulder on rock or masonry rolls sideways if both the neighboring cell and the cell below it are empty.",
       "A falling boulder crushes you. Soil supports rocks until excavated: approach gems from the side, and keep an escape route open. Ninety actions are available."
     ],
-    "controls": "Use the on-screen action buttons, or their displayed keyboard shortcuts. All simulations advance only when you act; selection and aim controls are free where noted.",
+    "controls": "Start or Restart focuses the board: use the displayed keyboard shortcuts there. Tab to a button and Enter or Space activates that focused button. All actions also have touch buttons.",
     "url": "kinetic-room/?game=boulder-burrow",
     "accent": "#b9c9a6",
     "symbol": "\u25c6",
@@ -90,7 +90,7 @@
       "A planted bomb burns for four actions, including the planting action. Its blast reaches two cells in each cardinal direction. Masonry stops it; a crate absorbs the blast.",
       "Lit bombs block walking; up to two may burn at once. A blast ignites other bombs immediately. Shelter behind a corner before the fuse expires\u2014any blast reaching you ends the attempt."
     ],
-    "controls": "Use the on-screen action buttons, or their displayed keyboard shortcuts. All simulations advance only when you act; selection and aim controls are free where noted.",
+    "controls": "Start or Restart focuses the board: use the displayed keyboard shortcuts there. Tab to a button and Enter or Space activates that focused button. All actions also have touch buttons.",
     "url": "kinetic-room/?game=fuse-garden",
     "accent": "#b9c9a6",
     "symbol": "\u2733",
@@ -103,14 +103,14 @@
     "id": "quiet-foil",
     "name": "Quiet Foil",
     "category": "strategy",
-    "description": "Manage distance and stamina against telegraphed thrusts; parry to open a riposte or retreat to recover.",
-    "mechanic": "Manage distance and stamina against telegraphed thrusts; parry to open a riposte or retreat to recover.",
+    "description": "Read three opponents with different reach and rhythm; defend incoming attacks, manage stamina and take the initiative.",
+    "mechanic": "Read three opponents with different reach and rhythm; defend incoming attacks, manage stamina and take the initiative.",
     "rules": [
-      "Score five touches before suffering four. Thrust costs two stamina and reaches distance one or two; recovery restores two, up to six.",
-      "The displayed opponent intent executes after your action. Advance closes distance; thrust attacks; guard blocks ordinary attacks; recover and feint leave openings.",
-      "Parry costs one stamina. Parrying a thrust creates a one-action riposte for two touches. Parrying a feint instead drains two extra stamina. Move or recover when too far away."
+      "Win three bouts with four touches each before taking three hits in a bout. The visible next intent resolves after movement: thrust reaches distance 2; lunge reaches 3 and then closes the distance. You have 120 actions across all bouts.",
+      "Thrust and parry cost two stamina; recovery restores two, up to six. Your thrust reaches distance 1\u20132. An enemy attack interrupts an unprotected strike: step beyond its reach or parry. Guard blocks ordinary strikes.",
+      "A successful parry opens a one-action riposte for two touches, with initiative over the next attack. Feints punish unnecessary parries by draining two extra stamina. Each opponent has a distinct pattern listed in the board description. Next bout restores life and stamina."
     ],
-    "controls": "Use the on-screen action buttons, or their displayed keyboard shortcuts. All simulations advance only when you act; selection and aim controls are free where noted.",
+    "controls": "Start or Restart focuses the board: use the displayed keyboard shortcuts there. Tab to a button and Enter or Space activates that focused button. All actions also have touch buttons.",
     "url": "kinetic-room/?game=quiet-foil",
     "accent": "#b9c9a6",
     "symbol": "\u2694",
@@ -130,7 +130,7 @@
       "Hands remain above all feet, every hand-to-foot reach is at most 4.2 units, paired hands and paired feet stay within two rows, and feet stay within four columns. Occupied or missing holds cannot be used.",
       "A move costs one fatigue; repeating the same limb costs two. Invalid regrips also cost one. Chalk restores four only when feet share a row. Reach twelve fatigue and your grip fails."
     ],
-    "controls": "Use the on-screen action buttons, or their displayed keyboard shortcuts. All simulations advance only when you act; selection and aim controls are free where noted.",
+    "controls": "Start or Restart focuses the board: use the displayed keyboard shortcuts there. Tab to a button and Enter or Space activates that focused button. All actions also have touch buttons.",
     "url": "kinetic-room/?game=four-holds",
     "accent": "#b9c9a6",
     "symbol": "\u2318",
@@ -150,7 +150,7 @@
       "Choose a left, straight or right wheel angle, then drive forward or backward. Wheel selection takes no time. Driving changes tractor heading and pulls or pushes the articulated trailer.",
       "Bodies cannot touch walls or crates. A hitch angle above about 66 degrees jackknifes. Reverse in small corrections; you have 100 driving actions."
     ],
-    "controls": "Use the on-screen action buttons, or their displayed keyboard shortcuts. All simulations advance only when you act; selection and aim controls are free where noted.",
+    "controls": "Start or Restart focuses the board: use the displayed keyboard shortcuts there. Tab to a button and Enter or Space activates that focused button. All actions also have touch buttons.",
     "url": "kinetic-room/?game=trailer-yard",
     "accent": "#b9c9a6",
     "symbol": "\u21b6",
@@ -170,7 +170,7 @@
       "Left and right add sideways velocity, capped at 0.75. Brake retains only one quarter of lateral drift. Flip reverses gravity and resets vertical speed.",
       "Floors, ceilings and ledges catch the boots; ^ spikes end the attempt. Keep lateral drift under control when flipping between surfaces."
     ],
-    "controls": "Use the on-screen action buttons, or their displayed keyboard shortcuts. All simulations advance only when you act; selection and aim controls are free where noted.",
+    "controls": "Start or Restart focuses the board: use the displayed keyboard shortcuts there. Tab to a button and Enter or Space activates that focused button. All actions also have touch buttons.",
     "url": "kinetic-room/?game=gravity-boots",
     "accent": "#b9c9a6",
     "symbol": "\u2195",
@@ -190,7 +190,7 @@
       "Throw sends a beacon upward and sideways. It bounces off walls and ceilings. Let fly advances the simulation without changing your position deliberately.",
       "Swap moves you to the beacon and returns it to your hand. You then fall gently, so exchange above safe ground. A spike landing ends the run; only one beacon can be deployed at a time."
     ],
-    "controls": "Use the on-screen action buttons, or their displayed keyboard shortcuts. All simulations advance only when you act; selection and aim controls are free where noted.",
+    "controls": "Start or Restart focuses the board: use the displayed keyboard shortcuts there. Tab to a button and Enter or Space activates that focused button. All actions also have touch buttons.",
     "url": "kinetic-room/?game=portal-parcel",
     "accent": "#b9c9a6",
     "symbol": "\u25c7",
@@ -210,7 +210,7 @@
       "The gate G opens only while the echo stands on P at (3,2). Record enough waiting on the plate to let your present self cross.",
       "During replay collect the \u25c6 key beyond the gate and reach E. If the echo ends before you pass the gate, the attempt fails. Erase starts a new tape."
     ],
-    "controls": "Use the on-screen action buttons, or their displayed keyboard shortcuts. All simulations advance only when you act; selection and aim controls are free where noted.",
+    "controls": "Start or Restart focuses the board: use the displayed keyboard shortcuts there. Tab to a button and Enter or Space activates that focused button. All actions also have touch buttons.",
     "url": "kinetic-room/?game=echo-steps",
     "accent": "#b9c9a6",
     "symbol": "\u25cc",
@@ -223,14 +223,14 @@
     "id": "phase-walk",
     "name": "Phase Walk",
     "category": "strategy",
-    "description": "Change between three material phases to pass selective walls; phase anchors restrict where you may change.",
-    "mechanic": "Change between three material phases to pass selective walls; phase anchors restrict where you may change.",
+    "description": "Choose routes through a loop of phase doors, conserve one-use anchors and collect seals in their required materials.",
+    "mechanic": "Choose routes through a loop of phase doors, conserve one-use anchors and collect seals in their required materials.",
     "rules": [
-      "Collect three \u25c6 material seals and reach E within 90 turns. Solid # masonry blocks every phase.",
-      "A, B and C walls can be passed only while you are in their matching phase. Other open ground is always traversable.",
-      "Change phase only on an o anchor, S or E. Phase cycles A \u2192 B \u2192 C \u2192 A. Plan which anchor you can reach after passing a selective wall."
+      "Collect three seals: (2,1) requires B, (6,1) requires C, and (10,6) requires A. Reach E at (10,1) in phase B within 110 actions. Coordinates start at zero. Each pair of neighboring chambers has two doors with different phase requirements.",
+      "A, B and C doors admit only their matching phase. On an unused o anchor, Change phase cycles A \u2192 B \u2192 C \u2192 A and consumes that anchor. A spent anchor becomes \u00b7 floor. Start S and exit E can cycle repeatedly.",
+      "Plan the seal order and preserve an anchor for the return journey. Undo restores your previous move, phase, seals and consumed anchor, so a mistaken commitment can be reconsidered before the action budget is spent."
     ],
-    "controls": "Use the on-screen action buttons, or their displayed keyboard shortcuts. All simulations advance only when you act; selection and aim controls are free where noted.",
+    "controls": "Start or Restart focuses the board: use the displayed keyboard shortcuts there. Tab to a button and Enter or Space activates that focused button. All actions also have touch buttons.",
     "url": "kinetic-room/?game=phase-walk",
     "accent": "#b9c9a6",
     "symbol": "\u25c8",
@@ -250,7 +250,7 @@
       "Turning changes heading by 45 degrees, then sails one step. Holding course keeps heading. Changing trim also advances the boat.",
       "Due north is the no-go heading and stalls. NW and NE make upwind progress with tight trim; other headings favor loose trim. Tack across the wind and leave room for turns."
     ],
-    "controls": "Use the on-screen action buttons, or their displayed keyboard shortcuts. All simulations advance only when you act; selection and aim controls are free where noted.",
+    "controls": "Start or Restart focuses the board: use the displayed keyboard shortcuts there. Tab to a button and Enter or Space activates that focused button. All actions also have touch buttons.",
     "url": "kinetic-room/?game=wind-sail",
     "accent": "#b9c9a6",
     "symbol": "\u2248",
@@ -263,14 +263,14 @@
     "id": "scissor-lift",
     "name": "Scissor Lift",
     "category": "strategy",
-    "description": "Drive a telescoping vehicle under ceilings, raise its deck to receive freight, then carry and unload at elevated docks.",
-    "mechanic": "Drive a telescoping vehicle under ceilings, raise its deck to receive freight, then carry and unload at elevated docks.",
+    "description": "Route three differently shaped loads through a low ground arch or an open trench, keeping the entire cargo envelope clear.",
+    "mechanic": "Route three differently shaped loads through a low ground arch or an open trench, keeping the entire cargo envelope clear.",
     "rules": [
-      "Complete three freight orders. Collect at the indicated column and height, then unload at the destination. Transfer requires sway at most one.",
-      "Deck height ranges from one to five. Low beams at columns 4\u20136 have clearance below height three; column 7 requires height below four. Driving or raising into a beam ends the attempt.",
-      "Driving above height two adds sway; reversing adds one more. Stabilize reduces sway by three, lowering reduces one. At eight sway the platform topples. Lower freight before crossing the arch."
+      "Deliver three loads from ground-aisle docks. Hanging lamps extend 1 unit below the deck; stacked crates extend 1 above; long pendulums extend 2 below. Inspect all orders in the board description before collecting. Transfer needs the exact dock column and height, with sway at most 1.",
+      "In the ground aisle, the load bottom must stay at height 1 or higher. Ceilings are at height 3 in columns 4\u20136 and height 4 in column 7. Over the open trench, wheels run along the edges and cargo may hang down to \u22121; ceilings are at height 3 in columns 4, 5 and 7, and height 2 in column 6. The complete load must stay strictly below each ceiling. Change aisles only at columns 3 or 8.",
+      "Deck height ranges from 1 to 5. Driving above height 2 adds sway; reversing adds 1. Raising loaded cargo adds 1; lowering reduces 1; Stabilize reduces 3. At 8 sway the lift topples. Match both cargo dimensions and aisle geometry. You have 115 actions."
     ],
-    "controls": "Use the on-screen action buttons, or their displayed keyboard shortcuts. All simulations advance only when you act; selection and aim controls are free where noted.",
+    "controls": "Start or Restart focuses the board: use the displayed keyboard shortcuts there. Tab to a button and Enter or Space activates that focused button. All actions also have touch buttons.",
     "url": "kinetic-room/?game=scissor-lift",
     "accent": "#b9c9a6",
     "symbol": "\u219f",
@@ -290,7 +290,7 @@
       "The dotted sight reflects off the outer room and central pillar, up to four bounces. The enemy shield turns a quarter-turn after every action; its front blocks shots.",
       "A highlighted column fires on the next action. Step away to evade it while choosing a new shot origin. Angle zero points right, ninety points down."
     ],
-    "controls": "Use the on-screen action buttons, or their displayed keyboard shortcuts. All simulations advance only when you act; selection and aim controls are free where noted.",
+    "controls": "Start or Restart focuses the board: use the displayed keyboard shortcuts there. Tab to a button and Enter or Space activates that focused button. All actions also have touch buttons.",
     "url": "kinetic-room/?game=ricochet-duel",
     "accent": "#b9c9a6",
     "symbol": "\u2197",
@@ -310,7 +310,7 @@
       "Select a numbered bond, then cut it. Any component without a surviving path to node zero falls permanently. Redundant bonds can keep a cut group hanging. A starred protected weight must remain.",
       "Only four cuts per study are available. Find a connected balanced remainder, then Next study. Restart returns to study one. The text board description lists every weight, arm and bond."
     ],
-    "controls": "Use the on-screen action buttons, or their displayed keyboard shortcuts. All simulations advance only when you act; selection and aim controls are free where noted.",
+    "controls": "Start or Restart focuses the board: use the displayed keyboard shortcuts there. Tab to a button and Enter or Space activates that focused button. All actions also have touch buttons.",
     "url": "kinetic-room/?game=soft-sculpt",
     "accent": "#b9c9a6",
     "symbol": "\u25a5",
@@ -330,7 +330,7 @@
       "While attached, pump left or right to build angular momentum. Release keeps the tangent velocity of your swing. Coasting lets gravity shape the arc.",
       "While airborne, Catch attaches to the nearest unused anchor between 0.7 and 3.6 units away, preserving tangential momentum. Missing the landing pad, water, or leaving the rigging ends the attempt."
     ],
-    "controls": "Use the on-screen action buttons, or their displayed keyboard shortcuts. All simulations advance only when you act; selection and aim controls are free where noted.",
+    "controls": "Start or Restart focuses the board: use the displayed keyboard shortcuts there. Tab to a button and Enter or Space activates that focused button. All actions also have touch buttons.",
     "url": "kinetic-room/?game=spring-courier",
     "accent": "#b9c9a6",
     "symbol": "\u2312",
@@ -350,7 +350,7 @@
       "Rotate freely in 22.5-degree steps; firing, thrusting, drifting and shielding advance the field. Beams hit the first rock on their forward line.",
       "Thrust and recoil change your drift; space wraps at the edges. Three shield pulses block collisions for one step each. Aim at nearby fragments before they close in."
     ],
-    "controls": "Use the on-screen action buttons, or their displayed keyboard shortcuts. All simulations advance only when you act; selection and aim controls are free where noted.",
+    "controls": "Start or Restart focuses the board: use the displayed keyboard shortcuts there. Tab to a button and Enter or Space activates that focused button. All actions also have touch buttons.",
     "url": "kinetic-room/?game=shatter-belt",
     "accent": "#b9c9a6",
     "symbol": "\u2727",
@@ -370,7 +370,7 @@
       "Each interceptor grows from a small burst to a wide circle before fading. Place it ahead of a projectile rather than directly on its current position.",
       "Intercepted projectiles start secondary explosions that can chain together. You have twelve interceptors. Bases stand at columns 2, 6 and 10; two lost bases end the defense."
     ],
-    "controls": "Use the on-screen action buttons, or their displayed keyboard shortcuts. All simulations advance only when you act; selection and aim controls are free where noted.",
+    "controls": "Start or Restart focuses the board: use the displayed keyboard shortcuts there. Tab to a button and Enter or Space activates that focused button. All actions also have touch buttons.",
     "url": "kinetic-room/?game=lantern-defense",
     "accent": "#b9c9a6",
     "symbol": "\u2604",
@@ -390,7 +390,7 @@
       "Select a walker, then assign a job without advancing time. Builder lays four floor cells ahead but stops at X walls; digger breaks those walls; blocker reverses approaching walkers. Release returns a blocker to walking.",
       "Each rescue has two builder kits, two digger kits and one blocker kit. In the second rescue prepare BOTH approaches before the following crowds arrive. You may select and assign several workers before advancing. Two falls make the quota impossible."
     ],
-    "controls": "Use the on-screen action buttons, or their displayed keyboard shortcuts. All simulations advance only when you act; selection and aim controls are free where noted.",
+    "controls": "Start or Restart focuses the board: use the displayed keyboard shortcuts there. Tab to a button and Enter or Space activates that focused button. All actions also have touch buttons.",
     "url": "kinetic-room/?game=little-walkers",
     "accent": "#b9c9a6",
     "symbol": "\u265f",

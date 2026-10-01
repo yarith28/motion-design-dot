@@ -1,0 +1,206 @@
+[
+  {
+    "command": {
+      "url": "discovery-room/?game=transit-observatory"
+    },
+    "text": "✳ small hours\nAll games ↗\n\nThe Discovery Room / Field notes after dark\n\nTransit Observatory\nRestart\n\nNonadaptive observation-schedule design and orbital decoding\n\nFIELD STUDY\nCampaign 1/3 · 3 review credits · 0/4 exposures\n\nPlan a batch schedule BEFORE opening the telescope. Every listed orbit must produce a different transit pattern: this schedule must identify any of the six worlds, not just a lucky target.\n\nWorld\tPeriod\tPhase\nA\t6\t5\nB\t4\t0\nC\t3\t2\nD\t4\t1\nE\t7\t4\nF\t5\t4\n\nAvailable observing times. A transit occurs when time modulo period equals phase. Each selected time costs one exposure.\n\nTime 2\nTime 3\nTime 8\nTime 11\nTime 13\nTime 18\nTime 20\nTime 21\nTime 27\nTime 33\nLaunch scheduled observations\n\nYour instruments are ready.\n\nField guide\nChoose a batch of available observation times that distinguishes every listed orbit. Each world transits when time modulo period equals phase.\nThe exposure limit is the minimum feasible for this candidate catalog and window. Launch only after planning; ambiguous schedules spend one of three review credits.\nDecode the completed binary observation report by entering period and phase. Three campaigns have different candidate domains and observing windows.\n\nNo timer. Every control works with touch or Tab + Enter / Space. Restart returns to a fresh expedition.\n\nOther discoveries\nSmall Hours · A little room for play"
+  },
+  {
+    "command": {
+      "tap": [
+        "^Time 8$",
+        "^Time 11$",
+        "^Time 13$",
+        "^Time 18$",
+        "^Launch scheduled observations$"
+      ]
+    },
+    "text": "✳ small hours\nAll games ↗\n\nThe Discovery Room / Field notes after dark\n\nTransit Observatory\nRestart\n\nNonadaptive observation-schedule design and orbital decoding\n\nFIELD STUDY\nCampaign 1/3 · 3 review credits · 4/4 exposures\n\nPlan a batch schedule BEFORE opening the telescope. Every listed orbit must produce a different transit pattern: this schedule must identify any of the six worlds, not just a lucky target.\n\nWorld\tPeriod\tPhase\nA\t6\t5\nB\t4\t0\nC\t3\t2\nD\t4\t1\nE\t7\t4\nF\t5\t4\nObserved time\tTransit (1=yes, 0=no)\n8\t1\n11\t0\n13\t0\n18\t0\nInferred period Inferred phase Submit orbit\n\nThe batch is complete. Decode the recorded transit pattern.\n\nField guide\nChoose a batch of available observation times that distinguishes every listed orbit. Each world transits when time modulo period equals phase.\nThe exposure limit is the minimum feasible for this candidate catalog and window. Launch only after planning; ambiguous schedules spend one of three review credits.\nDecode the completed binary observation report by entering period and phase. Three campaigns have different candidate domains and observing windows.\n\nNo timer. Every control works with touch or Tab + Enter / Space. Restart returns to a fresh expedition.\n\nOther discoveries\nSmall Hours · A little room for play"
+  },
+  {
+    "command": {
+      "fill": [
+        [
+          "Inferred period",
+          4
+        ],
+        [
+          "Inferred phase",
+          0
+        ]
+      ],
+      "tap": [
+        "^Submit orbit$"
+      ]
+    },
+    "text": "✳ small hours\nAll games ↗\n\nThe Discovery Room / Field notes after dark\n\nTransit Observatory\nRestart\n\nNonadaptive observation-schedule design and orbital decoding\n\nFIELD STUDY\nCampaign 1/3 · 2 review credits · 4/4 exposures\n\nPlan a batch schedule BEFORE opening the telescope. Every listed orbit must produce a different transit pattern: this schedule must identify any of the six worlds, not just a lucky target.\n\nWorld\tPeriod\tPhase\nA\t6\t5\nB\t4\t0\nC\t3\t2\nD\t4\t1\nE\t7\t4\nF\t5\t4\nObserved time\tTransit (1=yes, 0=no)\n8\t1\n11\t0\n13\t0\n18\t0\nInferred period Inferred phase Submit orbit\n\nThat orbit does not reproduce the recorded pattern. Check each scheduled time.\n\nField guide\nChoose a batch of available observation times that distinguishes every listed orbit. Each world transits when time modulo period equals phase.\nThe exposure limit is the minimum feasible for this candidate catalog and window. Launch only after planning; ambiguous schedules spend one of three review credits.\nDecode the completed binary observation report by entering period and phase. Three campaigns have different candidate domains and observing windows.\n\nNo timer. Every control works with touch or Tab + Enter / Space. Restart returns to a fresh expedition.\n\nOther discoveries\nSmall Hours · A little room for play"
+  },
+  {
+    "command": {
+      "tap": [
+        "^Submit orbit$"
+      ]
+    },
+    "text": "✳ small hours\nAll games ↗\n\nThe Discovery Room / Field notes after dark\n\nTransit Observatory\nRestart\n\nNonadaptive observation-schedule design and orbital decoding\n\nFIELD STUDY\nCampaign 2/3 · 2 review credits · 0/4 exposures\n\nPlan a batch schedule BEFORE opening the telescope. Every listed orbit must produce a different transit pattern: this schedule must identify any of the six worlds, not just a lucky target.\n\nWorld\tPeriod\tPhase\nA\t6\t2\nB\t6\t3\nC\t4\t2\nD\t7\t3\nE\t6\t0\nF\t5\t3\n\nAvailable observing times. A transit occurs when time modulo period equals phase. Each selected time costs one exposure.\n\nTime 1\nTime 3\nTime 6\nTime 10\nTime 12\nTime 13\nTime 26\nTime 30\nTime 32\nTime 33\nLaunch scheduled observations\n\nOrbit confirmed. A new candidate domain and observing window await.\n\nField guide\nChoose a batch of available observation times that distinguishes every listed orbit. Each world transits when time modulo period equals phase.\nThe exposure limit is the minimum feasible for this candidate catalog and window. Launch only after planning; ambiguous schedules spend one of three review credits.\nDecode the completed binary observation report by entering period and phase. Three campaigns have different candidate domains and observing windows.\n\nNo timer. Every control works with touch or Tab + Enter / Space. Restart returns to a fresh expedition.\n\nOther discoveries\nSmall Hours · A little room for play"
+  },
+  {
+    "command": {
+      "url": "puzzle-lab/?game=safety-ferry"
+    },
+    "text": "✳\nsmall hours\n← All games\n\nSMALL HOURS / THE PUZZLE LABORATORY\n\nSafety Ferry\n\nFerry a delicate company across without leaving trouble behind.\n\nSTUDY\n1 / 3\nEDITS\n0\nCHECKS\n0\nFerry on near bank · capacity 2 · crossings 0 · shortest safe journey 7\nNever leave together without you: Hare + Beetle | Hare + Grain | Beetle + Finch | Beetle + Goose | Finch + Grain\nNear bank: Hare, Beetle, Finch, Grain, Goose\nFar bank: empty\nHare\nNear bank\nBeetle\nNear bank\nFinch\nNear bank\nGrain\nNear bank\nGoose\nNear bank\nSail across\nUndo\nReset study\nCheck study\n\nStudy 1: Ferry a delicate company across without leaving trouble behind.\n\nSAFETY INVARIANT RIVER TRANSPORT\n\nA different way\nto think.\nSelect cargo on the ferry’s current bank, then Sail. Capacity limits how many can ride; empty crossings are allowed.\nPairs listed as incompatible may never share a bank without the ferryman.\nBring everyone to the far bank. Unsafe crossings are refused with an explanation. New compatibility graphs have verified shortest journeys of 7, 9 and 11 crossings; the final ferry carries three. Undo reverses a safe crossing.\n\nTap buttons or use Tab and Enter / Space. Direction games also support arrow keys. Undo, Reset study and Restart are always available.\n\nNo timer. A check explains what still needs attention. Undo and Reset study keep earlier studies; Restart begins all three again.\n\nRestart journey\nBack to the collection ↗"
+  },
+  {
+    "command": {
+      "tap": [
+        "^Beetle",
+        "^Grain",
+        "^Sail across$",
+        "^Sail across$",
+        "^Hare",
+        "^Finch",
+        "^Sail across$",
+        "^Beetle",
+        "^Grain",
+        "^Sail across$",
+        "^Beetle",
+        "^Goose",
+        "^Sail across$",
+        "^Beetle",
+        "^Sail across$",
+        "^Beetle",
+        "^Grain",
+        "^Sail across$",
+        "^Check study$"
+      ]
+    },
+    "text": "✳\nsmall hours\n← All games\n\nSMALL HOURS / THE PUZZLE LABORATORY\n\nSafety Ferry\n\nFerry a delicate company across without leaving trouble behind.\n\nSTUDY\n1 / 3\nEDITS\n7\nCHECKS\n1\nFerry on far bank · capacity 2 · crossings 7 · shortest safe journey 7\nNever leave together without you: Hare + Beetle | Hare + Grain | Beetle + Finch | Beetle + Goose | Finch + Grain\nNear bank: empty\nFar bank: Hare, Beetle, Finch, Grain, Goose\nHare\nFar bank\nBeetle\nFar bank\nFinch\nFar bank\nGrain\nFar bank\nGoose\nFar bank\nSail across\nUndo\nReset study\nCheck study\n\nStudy 1 complete.\n\nStudy complete.\n\nEvery condition agrees. The next study offers a different challenge.\n\nNext study →\n\nSAFETY INVARIANT RIVER TRANSPORT\n\nA different way\nto think.\nSelect cargo on the ferry’s current bank, then Sail. Capacity limits how many can ride; empty crossings are allowed.\nPairs listed as incompatible may never share a bank without the ferryman.\nBring everyone to the far bank. Unsafe crossings are refused with an explanation. New compatibility graphs have verified shortest journeys of 7, 9 and 11 crossings; the final ferry carries three. Undo reverses a safe crossing.\n\nTap buttons or use Tab and Enter / Space. Direction games also support arrow keys. Undo, Reset study and Restart are always available.\n\nNo timer. A check explains what still needs attention. Undo and Reset study keep earlier studies; Restart begins all three again.\n\nRestart journey\nBack to the collection ↗"
+  },
+  {
+    "command": {
+      "url": "discovery-room/?game=archive-edit"
+    },
+    "text": "✳ small hours\nAll games ↗\n\nThe Discovery Room / Field notes after dark\n\nArchive Edit\nRestart\n\nGenerated dependency-constrained patch selection and conflict resolution\n\nFIELD STUDY\nRelease 1/3 · 4 review credits · 3/3 picks left\n\nChoose up to 3 of eight patches. Dependencies and edits vary each release; more than one viable patch set exists. Conflicting edits let you preserve either value, but every chosen patch uses a pick. Plan the entire dependency closure before applying.\n\nField\tBase\tWorking copy\tRequired\nStatus\tDRAFT\tDRAFT\tFINAL\nRegion\tNORTH\tNORTH\tSOUTH\nSize\tSMALL\tSMALL\tLARGE\nMaterial\tPAPER\tPAPER\tCLOTH\nSignature\tUNSIGNED\tUNSIGNED\tSIGNED\n\nPatch A: Material → CLOTH; Signature → VOID. Requires: none.\n\nCherry-pick Patch A\n\nPatch B: Signature → SIGNED. Requires: none.\n\nCherry-pick Patch B\n\nPatch C: Region → UPHILL; Size → LARGE; Signature → SIGNED. Requires: Patch B.\n\nCherry-pick Patch C\n\nPatch D: Region → SOUTH; Material → CLOTH; Signature → SIGNED. Requires: none.\n\nCherry-pick Patch D\n\nPatch E: Signature → SIGNED; Material → CLOTH. Requires: none.\n\nCherry-pick Patch E\n\nPatch F: Region → SOUTH; Status → FINAL; Size → LARGE. Requires: Patch A.\n\nCherry-pick Patch F\n\nPatch G: Region → SOUTH; Size → TINY. Requires: none.\n\nCherry-pick Patch G\n\nPatch H: Region → SOUTH; Status → FINAL. Requires: none.\n\nCherry-pick Patch H\nPublish releaseReset this release\n\nYour instruments are ready.\n\nField guide\nChoose a compatible set from eight patches with varying edits and dependencies. Each release permits three or four picks.\nAt a merge conflict, choose current or incoming value. The final working copy must match all five requirements; multiple feasible patch sets exist.\nReset a release to revise your plan without changing its graph. Incorrect publication spends a review credit. Complete three independently generated releases.\n\nNo timer. Every control works with touch or Tab + Enter / Space. Restart returns to a fresh expedition.\n\nOther discoveries\nSmall Hours · A little room for play"
+  },
+  {
+    "command": {
+      "tap": [
+        "^Cherry-pick Patch A$",
+        "^Cherry-pick Patch F$",
+        "^Cherry-pick Patch B$",
+        "^Use incoming$",
+        "^Publish release$"
+      ]
+    },
+    "text": "✳ small hours\nAll games ↗\n\nThe Discovery Room / Field notes after dark\n\nArchive Edit\nRestart\n\nGenerated dependency-constrained patch selection and conflict resolution\n\nFIELD STUDY\nRelease 2/3 · 4 review credits · 3/3 picks left\n\nChoose up to 3 of eight patches. Dependencies and edits vary each release; more than one viable patch set exists. Conflicting edits let you preserve either value, but every chosen patch uses a pick. Plan the entire dependency closure before applying.\n\nField\tBase\tWorking copy\tRequired\nStatus\tDRAFT\tDRAFT\tSEALED\nRegion\tNORTH\tNORTH\tEAST\nSize\tSMALL\tSMALL\tMEDIUM\nMaterial\tPAPER\tPAPER\tWOOD\nSignature\tUNSIGNED\tUNSIGNED\tSTAMPED\n\nPatch A: Material → WOOD. Requires: none.\n\nCherry-pick Patch A\n\nPatch B: Region → EAST. Requires: none.\n\nCherry-pick Patch B\n\nPatch C: Region → UPHILL; Material → WOOD. Requires: none.\n\nCherry-pick Patch C\n\nPatch D: Status → SEALED; Signature → STAMPED. Requires: none.\n\nCherry-pick Patch D\n\nPatch E: Region → EAST; Signature → VOID; Size → MEDIUM. Requires: Patch D.\n\nCherry-pick Patch E\n\nPatch F: Signature → STAMPED; Material → TIN; Region → EAST. Requires: Patch A.\n\nCherry-pick Patch F\n\nPatch G: Status → SEALED; Signature → STAMPED; Material → WOOD. Requires: Patch F.\n\nCherry-pick Patch G\n\nPatch H: Size → MEDIUM; Material → WOOD; Region → EAST. Requires: Patch F.\n\nCherry-pick Patch H\nPublish releaseReset this release\n\nRelease accepted. A different patch graph awaits.\n\nField guide\nChoose a compatible set from eight patches with varying edits and dependencies. Each release permits three or four picks.\nAt a merge conflict, choose current or incoming value. The final working copy must match all five requirements; multiple feasible patch sets exist.\nReset a release to revise your plan without changing its graph. Incorrect publication spends a review credit. Complete three independently generated releases.\n\nNo timer. Every control works with touch or Tab + Enter / Space. Restart returns to a fresh expedition.\n\nOther discoveries\nSmall Hours · A little room for play"
+  },
+  {
+    "command": {
+      "tap": [
+        "^Cherry-pick Patch A$",
+        "^Cherry-pick Patch D$",
+        "^Cherry-pick Patch E$",
+        "^Keep current$",
+        "^Publish release$"
+      ]
+    },
+    "text": "✳ small hours\nAll games ↗\n\nThe Discovery Room / Field notes after dark\n\nArchive Edit\nRestart\n\nGenerated dependency-constrained patch selection and conflict resolution\n\nFIELD STUDY\nRelease 3/3 · 4 review credits · 4/4 picks left\n\nChoose up to 4 of eight patches. Dependencies and edits vary each release; more than one viable patch set exists. Conflicting edits let you preserve either value, but every chosen patch uses a pick. Plan the entire dependency closure before applying.\n\nField\tBase\tWorking copy\tRequired\nStatus\tDRAFT\tDRAFT\tPUBLIC\nRegion\tNORTH\tNORTH\tWEST\nSize\tSMALL\tSMALL\tTALL\nMaterial\tPAPER\tPAPER\tGLASS\nSignature\tUNSIGNED\tUNSIGNED\tVERIFIED\n\nPatch A: Region → WEST. Requires: none.\n\nCherry-pick Patch A\n\nPatch B: Size → TINY; Material → GLASS. Requires: none.\n\nCherry-pick Patch B\n\nPatch C: Signature → VERIFIED; Size → TALL. Requires: none.\n\nCherry-pick Patch C\n\nPatch D: Material → TIN. Requires: Patch C.\n\nCherry-pick Patch D\n\nPatch E: Status → PUBLIC. Requires: Patch C.\n\nCherry-pick Patch E\n\nPatch F: Status → OBSOLETE; Material → GLASS. Requires: none.\n\nCherry-pick Patch F\n\nPatch G: Size → TALL; Material → GLASS. Requires: none.\n\nCherry-pick Patch G\n\nPatch H: Size → TALL. Requires: Patch C.\n\nCherry-pick Patch H\nPublish releaseReset this release\n\nRelease accepted. A different patch graph awaits.\n\nField guide\nChoose a compatible set from eight patches with varying edits and dependencies. Each release permits three or four picks.\nAt a merge conflict, choose current or incoming value. The final working copy must match all five requirements; multiple feasible patch sets exist.\nReset a release to revise your plan without changing its graph. Incorrect publication spends a review credit. Complete three independently generated releases.\n\nNo timer. Every control works with touch or Tab + Enter / Space. Restart returns to a fresh expedition.\n\nOther discoveries\nSmall Hours · A little room for play"
+  },
+  {
+    "command": {
+      "tap": [
+        "^Cherry-pick Patch A$",
+        "^Cherry-pick Patch C$",
+        "^Cherry-pick Patch E$",
+        "^Cherry-pick Patch G$",
+        "^Publish release$"
+      ]
+    },
+    "text": "✳ small hours\nAll games ↗\n\nThe Discovery Room / Field notes after dark\n\nArchive Edit\nRestart\n\nGenerated dependency-constrained patch selection and conflict resolution\n\nFIELD STUDY\nComplete\n\nChoose up to 4 of eight patches. Dependencies and edits vary each release; more than one viable patch set exists. Conflicting edits let you preserve either value, but every chosen patch uses a pick. Plan the entire dependency closure before applying.\n\nField\tBase\tWorking copy\tRequired\nStatus\tDRAFT\tPUBLIC\tPUBLIC\nRegion\tNORTH\tWEST\tWEST\nSize\tSMALL\tTALL\tTALL\nMaterial\tPAPER\tGLASS\tGLASS\nSignature\tUNSIGNED\tVERIFIED\tVERIFIED\n\nPatch A: Region → WEST. Requires: none.\n\nCherry-pick Patch A\n\nPatch B: Size → TINY; Material → GLASS. Requires: none.\n\nCherry-pick Patch B\n\nPatch C: Signature → VERIFIED; Size → TALL. Requires: none.\n\nCherry-pick Patch C\n\nPatch D: Material → TIN. Requires: Patch C.\n\nCherry-pick Patch D\n\nPatch E: Status → PUBLIC. Requires: Patch C.\n\nCherry-pick Patch E\n\nPatch F: Status → OBSOLETE; Material → GLASS. Requires: none.\n\nCherry-pick Patch F\n\nPatch G: Size → TALL; Material → GLASS. Requires: none.\n\nCherry-pick Patch G\n\nPatch H: Size → TALL. Requires: Patch C.\n\nCherry-pick Patch H\nPublish releaseReset this release\nStart a fresh study\n\nStudy complete. Three independently generated dependency graphs reconciled.\n\nField guide\nChoose a compatible set from eight patches with varying edits and dependencies. Each release permits three or four picks.\nAt a merge conflict, choose current or incoming value. The final working copy must match all five requirements; multiple feasible patch sets exist.\nReset a release to revise your plan without changing its graph. Incorrect publication spends a review credit. Complete three independently generated releases.\n\nNo timer. Every control works with touch or Tab + Enter / Space. Restart returns to a fresh expedition.\n\nOther discoveries\nSmall Hours · A little room for play"
+  },
+  {
+    "command": {
+      "url": "discovery-room/?game=lens-library"
+    },
+    "text": "✳ small hours\nAll games ↗\n\nThe Discovery Room / Field notes after dark\n\nLens Library\nRestart\n\nDesign sparse calibration probes and reconstruct blurred rings\n\nFIELD STUDY\nPlate 1/3 · 8 probe energy · 3 restoration credits\n\nIdentify the physically installed lens AND reconstruct a six-pixel source, with integer values 0–4. The observed plate has at least two valid lens/source explanations: calibration resolves that uncertainty. Any source that reproduces the entire plate with the installed lens is accepted.\n\nThe ring wraps: pixel 1 has pixel 6 on its left, and pixel 6 has pixel 1 on its right. Each output is left×left weight + center×center weight + right×right weight.\n\nLens\tleft weight\tcenter weight\tright weight\nL\t0.5\t0.5\t0\nR\t0\t0.5\t0.5\nB\t0.25\t0.5\t0.25\nLL\t0.75\t0.25\t0\nRR\t0\t0.25\t0.75\nI\t0\t1\t0\n\nObserved blurred plate: 3 · 2 · 0.5 · 2 · 3 · 2.5\n\nDesign a binary calibration input and choose ONE sensor pixel to read. Every lit input costs one energy, plus one for exposure; flat patterns cannot distinguish normalized lenses.\n\nPixel 1: 0\nPixel 2: 0\nPixel 3: 0\nPixel 4: 0\nPixel 5: 0\nPixel 6: 0\nSensor 1\nSensor 2\nSensor 3\nSensor 4\nSensor 5\nSensor 6\n\nNext calibration cost: 1 energy.\n\nExpose calibration\n\nInstalled lens hypothesis:\n\nUse lens L\nUse lens R\nUse lens B\nUse lens LL\nUse lens RR\nUse lens I\n\nReconstruct the source. Edits are free; the table previews your chosen lens.\n\nPixel\tYour source\tObserved output\tYour output\n1\t0\t3\t0\n2\t0\t2\t0\n3\t0\t0.5\t0\n4\t0\t2\t0\n5\t0\t3\t0\n6\t0\t2.5\t0\nDecrease source 1\nIncrease source 1\n\nSource pixel 1: 0\n\nDecrease source 2\nIncrease source 2\n\nSource pixel 2: 0\n\nDecrease source 3\nIncrease source 3\n\nSource pixel 3: 0\n\nDecrease source 4\nIncrease source 4\n\nSource pixel 4: 0\n\nDecrease source 5\nIncrease source 5\n\nSource pixel 5: 0\n\nDecrease source 6\nIncrease source 6\n\nSource pixel 6: 0\n\nCertify reconstruction\n\nSelected: Sensor 6 · Use lens L\n\nYour instruments are ready.\n\nField guide\nSix possible lenses apply printed left/center/right weights to a six-pixel ring. Choose lit calibration pixels and one sensor position per exposure.\nEach exposure costs one energy plus one per lit pixel. A flat pattern may be ambiguous; compare informative sparse probes before choosing a source and lens.\nRestore three plates. Every source/kernel output is distinct, and incorrect restoration spends one of three credits. Calibration measurements and source samples are all visible text.\n\nNo timer. Every control works with touch or Tab + Enter / Space. Restart returns to a fresh expedition.\n\nOther discoveries\nSmall Hours · A little room for play"
+  },
+  {
+    "command": {
+      "tap": [
+        "^Pixel 2: 0$",
+        "^Sensor 1$",
+        "^Expose calibration$"
+      ]
+    },
+    "text": "✳ small hours\nAll games ↗\n\nThe Discovery Room / Field notes after dark\n\nLens Library\nRestart\n\nDesign sparse calibration probes and reconstruct blurred rings\n\nFIELD STUDY\nPlate 1/3 · 6 probe energy · 3 restoration credits\n\nIdentify the physically installed lens AND reconstruct a six-pixel source, with integer values 0–4. The observed plate has at least two valid lens/source explanations: calibration resolves that uncertainty. Any source that reproduces the entire plate with the installed lens is accepted.\n\nThe ring wraps: pixel 1 has pixel 6 on its left, and pixel 6 has pixel 1 on its right. Each output is left×left weight + center×center weight + right×right weight.\n\nLens\tleft weight\tcenter weight\tright weight\nL\t0.5\t0.5\t0\nR\t0\t0.5\t0.5\nB\t0.25\t0.5\t0.25\nLL\t0.75\t0.25\t0\nRR\t0\t0.25\t0.75\nI\t0\t1\t0\n\nObserved blurred plate: 3 · 2 · 0.5 · 2 · 3 · 2.5\n\nDesign a binary calibration input and choose ONE sensor pixel to read. Every lit input costs one energy, plus one for exposure; flat patterns cannot distinguish normalized lenses.\n\nPixel 1: 0\nPixel 2: 1\nPixel 3: 0\nPixel 4: 0\nPixel 5: 0\nPixel 6: 0\nSensor 1\nSensor 2\nSensor 3\nSensor 4\nSensor 5\nSensor 6\n\nNext calibration cost: 2 energy.\n\nExpose calibration\n\nInstalled lens hypothesis:\n\nUse lens L\nUse lens R\nUse lens B\nUse lens LL\nUse lens RR\nUse lens I\n\nReconstruct the source. Edits are free; the table previews your chosen lens.\n\nPixel\tYour source\tObserved output\tYour output\n1\t0\t3\t0\n2\t0\t2\t0\n3\t0\t0.5\t0\n4\t0\t2\t0\n5\t0\t3\t0\n6\t0\t2.5\t0\nDecrease source 1\nIncrease source 1\n\nSource pixel 1: 0\n\nDecrease source 2\nIncrease source 2\n\nSource pixel 2: 0\n\nDecrease source 3\nIncrease source 3\n\nSource pixel 3: 0\n\nDecrease source 4\nIncrease source 4\n\nSource pixel 4: 0\n\nDecrease source 5\nIncrease source 5\n\nSource pixel 5: 0\n\nDecrease source 6\nIncrease source 6\n\nSource pixel 6: 0\n\nCertify reconstruction\n\nProbe [0,1,0,0,0,0], sensor 1 → 0 (cost 2)\n\nSelected: Pixel 2: 1 · Sensor 1 · Use lens L\n\nProbe [0,1,0,0,0,0], sensor 1 → 0 (cost 2)\n\nField guide\nSix possible lenses apply printed left/center/right weights to a six-pixel ring. Choose lit calibration pixels and one sensor position per exposure.\nEach exposure costs one energy plus one per lit pixel. A flat pattern may be ambiguous; compare informative sparse probes before choosing a source and lens.\nRestore three plates. Every source/kernel output is distinct, and incorrect restoration spends one of three credits. Calibration measurements and source samples are all visible text.\n\nNo timer. Every control works with touch or Tab + Enter / Space. Restart returns to a fresh expedition.\n\nOther discoveries\nSmall Hours · A little room for play"
+  },
+  {
+    "command": {
+      "tap": [
+        "^Sensor 2$",
+        "^Expose calibration$"
+      ]
+    },
+    "text": "✳ small hours\nAll games ↗\n\nThe Discovery Room / Field notes after dark\n\nLens Library\nRestart\n\nDesign sparse calibration probes and reconstruct blurred rings\n\nFIELD STUDY\nPlate 1/3 · 4 probe energy · 3 restoration credits\n\nIdentify the physically installed lens AND reconstruct a six-pixel source, with integer values 0–4. The observed plate has at least two valid lens/source explanations: calibration resolves that uncertainty. Any source that reproduces the entire plate with the installed lens is accepted.\n\nThe ring wraps: pixel 1 has pixel 6 on its left, and pixel 6 has pixel 1 on its right. Each output is left×left weight + center×center weight + right×right weight.\n\nLens\tleft weight\tcenter weight\tright weight\nL\t0.5\t0.5\t0\nR\t0\t0.5\t0.5\nB\t0.25\t0.5\t0.25\nLL\t0.75\t0.25\t0\nRR\t0\t0.25\t0.75\nI\t0\t1\t0\n\nObserved blurred plate: 3 · 2 · 0.5 · 2 · 3 · 2.5\n\nDesign a binary calibration input and choose ONE sensor pixel to read. Every lit input costs one energy, plus one for exposure; flat patterns cannot distinguish normalized lenses.\n\nPixel 1: 0\nPixel 2: 1\nPixel 3: 0\nPixel 4: 0\nPixel 5: 0\nPixel 6: 0\nSensor 1\nSensor 2\nSensor 3\nSensor 4\nSensor 5\nSensor 6\n\nNext calibration cost: 2 energy.\n\nExpose calibration\n\nInstalled lens hypothesis:\n\nUse lens L\nUse lens R\nUse lens B\nUse lens LL\nUse lens RR\nUse lens I\n\nReconstruct the source. Edits are free; the table previews your chosen lens.\n\nPixel\tYour source\tObserved output\tYour output\n1\t0\t3\t0\n2\t0\t2\t0\n3\t0\t0.5\t0\n4\t0\t2\t0\n5\t0\t3\t0\n6\t0\t2.5\t0\nDecrease source 1\nIncrease source 1\n\nSource pixel 1: 0\n\nDecrease source 2\nIncrease source 2\n\nSource pixel 2: 0\n\nDecrease source 3\nIncrease source 3\n\nSource pixel 3: 0\n\nDecrease source 4\nIncrease source 4\n\nSource pixel 4: 0\n\nDecrease source 5\nIncrease source 5\n\nSource pixel 5: 0\n\nDecrease source 6\nIncrease source 6\n\nSource pixel 6: 0\n\nCertify reconstruction\n\nProbe [0,1,0,0,0,0], sensor 2 → 0.5 (cost 2)\n\nProbe [0,1,0,0,0,0], sensor 1 → 0 (cost 2)\n\nSelected: Pixel 2: 1 · Sensor 2 · Use lens L\n\nProbe [0,1,0,0,0,0], sensor 2 → 0.5 (cost 2)\n\nField guide\nSix possible lenses apply printed left/center/right weights to a six-pixel ring. Choose lit calibration pixels and one sensor position per exposure.\nEach exposure costs one energy plus one per lit pixel. A flat pattern may be ambiguous; compare informative sparse probes before choosing a source and lens.\nRestore three plates. Every source/kernel output is distinct, and incorrect restoration spends one of three credits. Calibration measurements and source samples are all visible text.\n\nNo timer. Every control works with touch or Tab + Enter / Space. Restart returns to a fresh expedition.\n\nOther discoveries\nSmall Hours · A little room for play"
+  },
+  {
+    "command": {
+      "tap": [
+        "^Increase source 1$",
+        "^Increase source 1$",
+        "^Increase source 1$",
+        "^Increase source 1$",
+        "^Increase source 3$",
+        "^Increase source 4$",
+        "^Increase source 4$",
+        "^Increase source 4$",
+        "^Increase source 5$",
+        "^Increase source 5$",
+        "^Increase source 5$",
+        "^Increase source 6$",
+        "^Increase source 6$",
+        "^Certify reconstruction$"
+      ]
+    },
+    "text": "✳ small hours\nAll games ↗\n\nThe Discovery Room / Field notes after dark\n\nLens Library\nRestart\n\nDesign sparse calibration probes and reconstruct blurred rings\n\nFIELD STUDY\nPlate 2/3 · 8 probe energy · 3 restoration credits\n\nIdentify the physically installed lens AND reconstruct a six-pixel source, with integer values 0–4. The observed plate has at least two valid lens/source explanations: calibration resolves that uncertainty. Any source that reproduces the entire plate with the installed lens is accepted.\n\nThe ring wraps: pixel 1 has pixel 6 on its left, and pixel 6 has pixel 1 on its right. Each output is left×left weight + center×center weight + right×right weight.\n\nLens\tleft weight\tcenter weight\tright weight\nL\t0.5\t0.5\t0\nR\t0\t0.5\t0.5\nB\t0.25\t0.5\t0.25\nLL\t0.75\t0.25\t0\nRR\t0\t0.25\t0.75\nI\t0\t1\t0\n\nObserved blurred plate: 2 · 1.5 · 1.5 · 0.5 · 1 · 2.5\n\nDesign a binary calibration input and choose ONE sensor pixel to read. Every lit input costs one energy, plus one for exposure; flat patterns cannot distinguish normalized lenses.\n\nPixel 1: 0\nPixel 2: 0\nPixel 3: 0\nPixel 4: 0\nPixel 5: 0\nPixel 6: 0\nSensor 1\nSensor 2\nSensor 3\nSensor 4\nSensor 5\nSensor 6\n\nNext calibration cost: 1 energy.\n\nExpose calibration\n\nInstalled lens hypothesis:\n\nUse lens L\nUse lens R\nUse lens B\nUse lens LL\nUse lens RR\nUse lens I\n\nReconstruct the source. Edits are free; the table previews your chosen lens.\n\nPixel\tYour source\tObserved output\tYour output\n1\t0\t2\t0\n2\t0\t1.5\t0\n3\t0\t1.5\t0\n4\t0\t0.5\t0\n5\t0\t1\t0\n6\t0\t2.5\t0\nDecrease source 1\nIncrease source 1\n\nSource pixel 1: 0\n\nDecrease source 2\nIncrease source 2\n\nSource pixel 2: 0\n\nDecrease source 3\nIncrease source 3\n\nSource pixel 3: 0\n\nDecrease source 4\nIncrease source 4\n\nSource pixel 4: 0\n\nDecrease source 5\nIncrease source 5\n\nSource pixel 5: 0\n\nDecrease source 6\nIncrease source 6\n\nSource pixel 6: 0\n\nCertify reconstruction\n\nSelected: Sensor 1 · Use lens L\n\nReconstruction verified. A new ambiguous plate is ready.\n\nField guide\nSix possible lenses apply printed left/center/right weights to a six-pixel ring. Choose lit calibration pixels and one sensor position per exposure.\nEach exposure costs one energy plus one per lit pixel. A flat pattern may be ambiguous; compare informative sparse probes before choosing a source and lens.\nRestore three plates. Every source/kernel output is distinct, and incorrect restoration spends one of three credits. Calibration measurements and source samples are all visible text.\n\nNo timer. Every control works with touch or Tab + Enter / Space. Restart returns to a fresh expedition.\n\nOther discoveries\nSmall Hours · A little room for play"
+  },
+  {
+    "command": {
+      "url": "discovery-room/?game=specimen-rule"
+    },
+    "text": "✳ small hours\nAll games ↗\n\nThe Discovery Room / Field notes after dark\n\nSpecimen Rule\nRestart\n\nLearn and synthesize a compact relational classifier\n\nFIELD STUDY\nField model 1/3 · 0/3 prototypes · 3 audits\n\nCompress a labeled collection into a small nearest-neighbor classifier. Select training prototypes; each reference specimen takes the label of its closest selected prototype. Distance = absolute feature-X difference + absolute feature-Y difference (Manhattan distance). If equally near prototypes disagree, the prediction is ambiguous.\n\nChoose exactly 3 of eight prototypes to classify all twelve reference specimens. Every slot is needed; at least two different valid prototype sets exist. Adding one prototype can move several classification boundaries.\n\nPrototype A: (0,3) accept\nPrototype B: (5,4) reject\nPrototype C: (5,3) accept\nPrototype D: (2,0) accept\nPrototype E: (5,0) accept\nPrototype F: (4,4) reject\nPrototype G: (3,4) reject\nPrototype H: (6,2) accept\nRef\tX\tY\tRequired\tPredicted\tNearest / distance\n1\t0\t0\taccept\tambiguous\t—\n2\t1\t5\taccept\tambiguous\t—\n3\t0\t5\taccept\tambiguous\t—\n4\t6\t4\treject\tambiguous\t—\n5\t6\t1\taccept\tambiguous\t—\n6\t5\t1\taccept\tambiguous\t—\n7\t4\t2\taccept\tambiguous\t—\n8\t6\t0\taccept\tambiguous\t—\n9\t0\t6\taccept\tambiguous\t—\n10\t6\t6\treject\tambiguous\t—\n11\t1\t0\taccept\tambiguous\t—\n12\t3\t6\treject\tambiguous\t—\nAudit prototype classifierClear prototypes\n\nYour instruments are ready.\n\nField guide\nRead labeled training triples and build a classifier from two different relations joined by AND, OR or XOR.\nRising: first < middle < last. Outer equal: first = last. Even sum: total divisible by two. Middle peak: middle greater than both neighbors.\nValidate against all 64 triples. Incorrect programs reveal a counterexample and cost one of four credits. Equivalent correct programs are accepted; learn three classifiers.\n\nNo timer. Every control works with touch or Tab + Enter / Space. Restart returns to a fresh expedition.\n\nOther discoveries\nSmall Hours · A little room for play"
+  },
+  {
+    "command": {
+      "tap": [
+        "^Prototype A:",
+        "^Prototype B:",
+        "^Prototype C:",
+        "^Audit prototype classifier$"
+      ]
+    },
+    "text": "✳ small hours\nAll games ↗\n\nThe Discovery Room / Field notes after dark\n\nSpecimen Rule\nRestart\n\nLearn and synthesize a compact relational classifier\n\nFIELD STUDY\nField model 2/3 · 0/4 prototypes · 3 audits\n\nCompress a labeled collection into a small nearest-neighbor classifier. Select training prototypes; each reference specimen takes the label of its closest selected prototype. Distance = absolute feature-X difference + absolute feature-Y difference (Manhattan distance). If equally near prototypes disagree, the prediction is ambiguous.\n\nChoose exactly 4 of eight prototypes to classify all twelve reference specimens. Every slot is needed; at least two different valid prototype sets exist. Adding one prototype can move several classification boundaries.\n\nPrototype A: (6,6) accept\nPrototype B: (5,1) reject\nPrototype C: (4,0) accept\nPrototype D: (1,4) reject\nPrototype E: (6,5) accept\nPrototype F: (0,4) reject\nPrototype G: (5,3) reject\nPrototype H: (1,0) accept\nRef\tX\tY\tRequired\tPredicted\tNearest / distance\n1\t3\t0\taccept\tambiguous\t—\n2\t0\t0\taccept\tambiguous\t—\n3\t5\t5\taccept\tambiguous\t—\n4\t2\t2\treject\tambiguous\t—\n5\t1\t5\treject\tambiguous\t—\n6\t4\t5\taccept\tambiguous\t—\n7\t3\t4\treject\tambiguous\t—\n8\t4\t6\taccept\tambiguous\t—\n9\t0\t1\treject\tambiguous\t—\n10\t6\t1\treject\tambiguous\t—\n11\t3\t3\treject\tambiguous\t—\n12\t5\t2\treject\tambiguous\t—\nAudit prototype classifierClear prototypes\n\nEvery reference classified correctly. A different feature landscape awaits.\n\nField guide\nRead labeled training triples and build a classifier from two different relations joined by AND, OR or XOR.\nRising: first < middle < last. Outer equal: first = last. Even sum: total divisible by two. Middle peak: middle greater than both neighbors.\nValidate against all 64 triples. Incorrect programs reveal a counterexample and cost one of four credits. Equivalent correct programs are accepted; learn three classifiers.\n\nNo timer. Every control works with touch or Tab + Enter / Space. Restart returns to a fresh expedition.\n\nOther discoveries\nSmall Hours · A little room for play"
+  },
+  {
+    "command": {
+      "tap": [
+        "^Prototype B:",
+        "^Prototype C:",
+        "^Prototype D:",
+        "^Prototype E:",
+        "^Audit prototype classifier$"
+      ]
+    },
+    "text": "✳ small hours\nAll games ↗\n\nThe Discovery Room / Field notes after dark\n\nSpecimen Rule\nRestart\n\nLearn and synthesize a compact relational classifier\n\nFIELD STUDY\nField model 3/3 · 0/3 prototypes · 3 audits\n\nCompress a labeled collection into a small nearest-neighbor classifier. Select training prototypes; each reference specimen takes the label of its closest selected prototype. Distance = absolute feature-X difference + absolute feature-Y difference (Manhattan distance). If equally near prototypes disagree, the prediction is ambiguous.\n\nChoose exactly 3 of eight prototypes to classify all twelve reference specimens. Every slot is needed; at least two different valid prototype sets exist. Adding one prototype can move several classification boundaries.\n\nPrototype A: (6,1) accept\nPrototype B: (3,0) reject\nPrototype C: (2,0) accept\nPrototype D: (1,0) accept\nPrototype E: (2,1) accept\nPrototype F: (1,3) accept\nPrototype G: (0,0) accept\nPrototype H: (6,0) accept\nRef\tX\tY\tRequired\tPredicted\tNearest / distance\n1\t0\t5\taccept\tambiguous\t—\n2\t6\t4\taccept\tambiguous\t—\n3\t0\t2\taccept\tambiguous\t—\n4\t3\t5\treject\tambiguous\t—\n5\t1\t1\taccept\tambiguous\t—\n6\t0\t4\taccept\tambiguous\t—\n7\t1\t4\taccept\tambiguous\t—\n8\t5\t6\taccept\tambiguous\t—\n9\t3\t6\treject\tambiguous\t—\n10\t0\t3\taccept\tambiguous\t—\n11\t5\t5\taccept\tambiguous\t—\n12\t3\t1\treject\tambiguous\t—\nAudit prototype classifierClear prototypes\n\nEvery reference classified correctly. A different feature landscape awaits.\n\nField guide\nRead labeled training triples and build a classifier from two different relations joined by AND, OR or XOR.\nRising: first < middle < last. Outer equal: first = last. Even sum: total divisible by two. Middle peak: middle greater than both neighbors.\nValidate against all 64 triples. Incorrect programs reveal a counterexample and cost one of four credits. Equivalent correct programs are accepted; learn three classifiers.\n\nNo timer. Every control works with touch or Tab + Enter / Space. Restart returns to a fresh expedition.\n\nOther discoveries\nSmall Hours · A little room for play"
+  },
+  {
+    "command": {
+      "tap": [
+        "^Prototype A:",
+        "^Prototype B:",
+        "^Prototype D:",
+        "^Audit prototype classifier$"
+      ]
+    },
+    "text": "✳ small hours\nAll games ↗\n\nThe Discovery Room / Field notes after dark\n\nSpecimen Rule\nRestart\n\nLearn and synthesize a compact relational classifier\n\nFIELD STUDY\nComplete\n\nCompress a labeled collection into a small nearest-neighbor classifier. Select training prototypes; each reference specimen takes the label of its closest selected prototype. Distance = absolute feature-X difference + absolute feature-Y difference (Manhattan distance). If equally near prototypes disagree, the prediction is ambiguous.\n\nChoose exactly 3 of eight prototypes to classify all twelve reference specimens. Every slot is needed; at least two different valid prototype sets exist. Adding one prototype can move several classification boundaries.\n\nPrototype A: (6,1) accept\nPrototype B: (3,0) reject\nPrototype C: (2,0) accept\nPrototype D: (1,0) accept\nPrototype E: (2,1) accept\nPrototype F: (1,3) accept\nPrototype G: (0,0) accept\nPrototype H: (6,0) accept\nRef\tX\tY\tRequired\tPredicted\tNearest / distance\n1\t0\t5\taccept\taccept\tD / 6\n2\t6\t4\taccept\taccept\tA / 3\n3\t0\t2\taccept\taccept\tD / 3\n4\t3\t5\treject\treject\tB / 5\n5\t1\t1\taccept\taccept\tD / 1\n6\t0\t4\taccept\taccept\tD / 5\n7\t1\t4\taccept\taccept\tD / 4\n8\t5\t6\taccept\taccept\tA / 6\n9\t3\t6\treject\treject\tB / 6\n10\t0\t3\taccept\taccept\tD / 4\n11\t5\t5\taccept\taccept\tA / 5\n12\t3\t1\treject\treject\tB / 1\nAudit prototype classifierClear prototypes\nStart a fresh study\n\nSelected: Prototype A: (6,1) accept · Prototype B: (3,0) reject · Prototype D: (1,0) accept\n\nStudy complete. Three collections compressed into complete geometric classifiers.\n\nField guide\nRead labeled training triples and build a classifier from two different relations joined by AND, OR or XOR.\nRising: first < middle < last. Outer equal: first = last. Even sum: total divisible by two. Middle peak: middle greater than both neighbors.\nValidate against all 64 triples. Incorrect programs reveal a counterexample and cost one of four credits. Equivalent correct programs are accepted; learn three classifiers.\n\nNo timer. Every control works with touch or Tab + Enter / Space. Restart returns to a fresh expedition.\n\nOther discoveries\nSmall Hours · A little room for play"
+  }
+]

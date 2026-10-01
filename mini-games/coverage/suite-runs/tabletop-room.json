@@ -3,9 +3,9 @@
   "suite": "tabletop-room",
   "passed": true,
   "status": "passed",
-  "startedAt": "2026-10-01T04:10:46.824Z",
+  "startedAt": "2026-10-01T06:45:57.967Z",
   "source": {
-    "sha256": "f84473ee6d99cdf7c825d6392b6e47c4258a94ed64c51a3c73f06c297d3af003",
+    "sha256": "480d327eafa6cca79930865b77cc214101d6d2264ca5006027a917472367f3d9",
     "files": [
       "catalog.css",
       "catalog.js",
@@ -24,6 +24,7 @@
       "tabletop-room/room.css",
       "tests/fixtures/baseline100.json",
       "tests/fixtures/tabletop-paths.json",
+      "tests/tabletop-remediation.cjs",
       "tests/tabletop-room.cjs",
       "tools/evidence.cjs",
       "tools/run-suite.cjs"
@@ -40,7 +41,7 @@
     "mobileViewportCompletion": true,
     "touchGameplayCompletion": false,
     "touchControlSmoke": true,
-    "completionMeans": "terminal result; competitive losses and draws count",
+    "completionMeans": "winning full progression",
     "method": "scripted UI; curated answers or board solvers",
     "mobileMethod": "touch gameplay with scripted navigation/solvers"
   },
@@ -73,9 +74,9 @@
   "servedRuntimeBefore": {
     "baseURL": "http://127.0.0.1:8790",
     "passed": true,
-    "sha256": "9b659f2b412578422a0198ac4c47d9b47712e356faae82cb15d049402f800405",
+    "sha256": "fa908bd8d8350e578dbc6b8620f38bb4ae2482d8dd7655035c2fc516f6c77156",
     "fileCount": 15,
-    "verifiedAt": "2026-10-01T04:10:46.988Z"
+    "verifiedAt": "2026-10-01T06:45:58.349Z"
   },
   "exitCode": 0,
   "signal": null,
@@ -83,12 +84,12 @@
   "servedRuntime": {
     "baseURL": "http://127.0.0.1:8790",
     "passed": true,
-    "sha256": "9b659f2b412578422a0198ac4c47d9b47712e356faae82cb15d049402f800405",
+    "sha256": "fa908bd8d8350e578dbc6b8620f38bb4ae2482d8dd7655035c2fc516f6c77156",
     "fileCount": 15,
-    "verifiedAt": "2026-10-01T04:11:55.797Z"
+    "verifiedAt": "2026-10-01T06:47:44.926Z"
   },
   "completionEvidence": {
-    "sha256": "c6ae69de2d9da0ba1fa85590b55a4c7966963ca3bb7edc9258593c57cc5fc5f9",
+    "sha256": "a6605aa48659d8f04987af2df8a8e94f81b09b8b2341139c617965fca108f730",
     "file": "coverage/tabletop-room.json",
     "cases": [
       {
@@ -266,7 +267,7 @@
         "profile": "desktop",
         "variant": "main",
         "passed": true,
-        "outcome": "loss",
+        "outcome": "win",
         "restart": true,
         "edgeCases": [
           "invalid engine action is inert",
@@ -276,14 +277,14 @@
         "inputMethod": "Keyboard Space for first action, pointer clicks for remaining actions",
         "touchOnly": false,
         "classification": "source-planned UI-input reachability replay",
-        "actions": 45
+        "actions": 49
       },
       {
         "id": "scopa-shelf",
         "profile": "mobile-touch",
         "variant": "main",
         "passed": true,
-        "outcome": "loss",
+        "outcome": "win",
         "restart": true,
         "edgeCases": [
           "invalid engine action is inert",
@@ -293,7 +294,7 @@
         "inputMethod": "Playwright touchscreen taps for every gameplay action",
         "touchOnly": true,
         "classification": "source-planned UI-input reachability replay",
-        "actions": 45
+        "actions": 49
       },
       {
         "id": "domino-parlour",
@@ -409,7 +410,7 @@
           "terminal gameplay controls removed",
           "repeat restart restores opening"
         ],
-        "inputMethod": "Keyboard Space for first action, pointer clicks for remaining actions",
+        "inputMethod": "Keyboard Space, pointer clicks and native selectOption quantity entry",
         "touchOnly": false,
         "classification": "source-planned UI-input reachability replay",
         "actions": 17
@@ -426,8 +427,8 @@
           "terminal gameplay controls removed",
           "repeat restart restores opening"
         ],
-        "inputMethod": "Playwright touchscreen taps for every gameplay action",
-        "touchOnly": true,
+        "inputMethod": "Playwright touchscreen taps plus programmatic native selectOption quantity entry",
+        "touchOnly": false,
         "classification": "source-planned UI-input reachability replay",
         "actions": 17
       },
@@ -436,7 +437,7 @@
         "profile": "desktop",
         "variant": "main",
         "passed": true,
-        "outcome": "loss",
+        "outcome": "win",
         "restart": true,
         "edgeCases": [
           "invalid engine action is inert",
@@ -453,7 +454,7 @@
         "profile": "mobile-touch",
         "variant": "main",
         "passed": true,
-        "outcome": "loss",
+        "outcome": "win",
         "restart": true,
         "edgeCases": [
           "invalid engine action is inert",
@@ -470,7 +471,7 @@
         "profile": "desktop",
         "variant": "main",
         "passed": true,
-        "outcome": "loss",
+        "outcome": "win",
         "restart": true,
         "edgeCases": [
           "invalid engine action is inert",
@@ -487,7 +488,7 @@
         "profile": "mobile-touch",
         "variant": "main",
         "passed": true,
-        "outcome": "loss",
+        "outcome": "win",
         "restart": true,
         "edgeCases": [
           "invalid engine action is inert",
@@ -504,7 +505,7 @@
         "profile": "desktop",
         "variant": "main",
         "passed": true,
-        "outcome": "loss",
+        "outcome": "win",
         "restart": true,
         "edgeCases": [
           "invalid engine action is inert",
@@ -514,14 +515,14 @@
         "inputMethod": "Keyboard Space for first action, pointer clicks for remaining actions",
         "touchOnly": false,
         "classification": "source-planned UI-input reachability replay",
-        "actions": 24
+        "actions": 18
       },
       {
         "id": "formation-flags",
         "profile": "mobile-touch",
         "variant": "main",
         "passed": true,
-        "outcome": "loss",
+        "outcome": "win",
         "restart": true,
         "edgeCases": [
           "invalid engine action is inert",
@@ -531,14 +532,14 @@
         "inputMethod": "Playwright touchscreen taps for every gameplay action",
         "touchOnly": true,
         "classification": "source-planned UI-input reachability replay",
-        "actions": 24
+        "actions": 18
       },
       {
         "id": "crown-and-guard",
         "profile": "desktop",
         "variant": "main",
         "passed": true,
-        "outcome": "loss",
+        "outcome": "win",
         "restart": true,
         "edgeCases": [
           "invalid engine action is inert",
@@ -549,14 +550,14 @@
         "inputMethod": "Keyboard Space for first action, pointer clicks for remaining actions",
         "touchOnly": false,
         "classification": "source-planned UI-input reachability replay",
-        "actions": 22
+        "actions": 8
       },
       {
         "id": "crown-and-guard",
         "profile": "mobile-touch",
         "variant": "main",
         "passed": true,
-        "outcome": "loss",
+        "outcome": "win",
         "restart": true,
         "edgeCases": [
           "invalid engine action is inert",
@@ -567,158 +568,14 @@
         "inputMethod": "Playwright touchscreen taps for every gameplay action",
         "touchOnly": true,
         "classification": "source-planned UI-input reachability replay",
-        "actions": 22
+        "actions": 8
       },
       {
         "id": "draught-garden",
         "profile": "desktop",
         "variant": "main",
         "passed": true,
-        "outcome": "loss",
-        "restart": true,
-        "edgeCases": [
-          "invalid engine action is inert",
-          "terminal gameplay controls removed",
-          "repeat restart restores opening",
-          "unavailable board square is inert"
-        ],
-        "inputMethod": "Keyboard Space for first action, pointer clicks for remaining actions",
-        "touchOnly": false,
-        "classification": "source-planned UI-input reachability replay",
-        "actions": 24
-      },
-      {
-        "id": "draught-garden",
-        "profile": "mobile-touch",
-        "variant": "main",
-        "passed": true,
-        "outcome": "loss",
-        "restart": true,
-        "edgeCases": [
-          "invalid engine action is inert",
-          "terminal gameplay controls removed",
-          "repeat restart restores opening",
-          "unavailable board square is inert"
-        ],
-        "inputMethod": "Playwright touchscreen taps for every gameplay action",
-        "touchOnly": true,
-        "classification": "source-planned UI-input reachability replay",
-        "actions": 24
-      },
-      {
-        "id": "borrowed-steps",
-        "profile": "desktop",
-        "variant": "main",
-        "passed": true,
-        "outcome": "loss",
-        "restart": true,
-        "edgeCases": [
-          "invalid engine action is inert",
-          "terminal gameplay controls removed",
-          "repeat restart restores opening",
-          "unavailable board square is inert"
-        ],
-        "inputMethod": "Keyboard Space for first action, pointer clicks for remaining actions",
-        "touchOnly": false,
-        "classification": "source-planned UI-input reachability replay",
-        "actions": 14
-      },
-      {
-        "id": "borrowed-steps",
-        "profile": "mobile-touch",
-        "variant": "main",
-        "passed": true,
-        "outcome": "loss",
-        "restart": true,
-        "edgeCases": [
-          "invalid engine action is inert",
-          "terminal gameplay controls removed",
-          "repeat restart restores opening",
-          "unavailable board square is inert"
-        ],
-        "inputMethod": "Playwright touchscreen taps for every gameplay action",
-        "touchOnly": true,
-        "classification": "source-planned UI-input reachability replay",
-        "actions": 14
-      },
-      {
-        "id": "marble-council",
-        "profile": "desktop",
-        "variant": "main",
-        "passed": true,
-        "outcome": "loss",
-        "restart": true,
-        "edgeCases": [
-          "invalid engine action is inert",
-          "terminal gameplay controls removed",
-          "repeat restart restores opening",
-          "unavailable board square is inert"
-        ],
-        "inputMethod": "Keyboard Space for first action, pointer clicks for remaining actions",
-        "touchOnly": false,
-        "classification": "source-planned UI-input reachability replay",
-        "actions": 24
-      },
-      {
-        "id": "marble-council",
-        "profile": "mobile-touch",
-        "variant": "main",
-        "passed": true,
-        "outcome": "loss",
-        "restart": true,
-        "edgeCases": [
-          "invalid engine action is inert",
-          "terminal gameplay controls removed",
-          "repeat restart restores opening",
-          "unavailable board square is inert"
-        ],
-        "inputMethod": "Playwright touchscreen taps for every gameplay action",
-        "touchOnly": true,
-        "classification": "source-planned UI-input reachability replay",
-        "actions": 24
-      },
-      {
-        "id": "joining-lines",
-        "profile": "desktop",
-        "variant": "main",
-        "passed": true,
-        "outcome": "loss",
-        "restart": true,
-        "edgeCases": [
-          "invalid engine action is inert",
-          "terminal gameplay controls removed",
-          "repeat restart restores opening",
-          "unavailable board square is inert"
-        ],
-        "inputMethod": "Keyboard Space for first action, pointer clicks for remaining actions",
-        "touchOnly": false,
-        "classification": "source-planned UI-input reachability replay",
-        "actions": 22
-      },
-      {
-        "id": "joining-lines",
-        "profile": "mobile-touch",
-        "variant": "main",
-        "passed": true,
-        "outcome": "loss",
-        "restart": true,
-        "edgeCases": [
-          "invalid engine action is inert",
-          "terminal gameplay controls removed",
-          "repeat restart restores opening",
-          "unavailable board square is inert"
-        ],
-        "inputMethod": "Playwright touchscreen taps for every gameplay action",
-        "touchOnly": true,
-        "classification": "source-planned UI-input reachability replay",
-        "actions": 22
-      },
-      {
-        "id": "terrace-duel",
-        "profile": "desktop",
-        "variant": "main",
-        "passed": true,
-        "outcome": "loss",
+        "outcome": "win",
         "restart": true,
         "edgeCases": [
           "invalid engine action is inert",
@@ -732,11 +589,11 @@
         "actions": 18
       },
       {
-        "id": "terrace-duel",
+        "id": "draught-garden",
         "profile": "mobile-touch",
         "variant": "main",
         "passed": true,
-        "outcome": "loss",
+        "outcome": "win",
         "restart": true,
         "edgeCases": [
           "invalid engine action is inert",
@@ -748,6 +605,150 @@
         "touchOnly": true,
         "classification": "source-planned UI-input reachability replay",
         "actions": 18
+      },
+      {
+        "id": "borrowed-steps",
+        "profile": "desktop",
+        "variant": "main",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "edgeCases": [
+          "invalid engine action is inert",
+          "terminal gameplay controls removed",
+          "repeat restart restores opening",
+          "unavailable board square is inert"
+        ],
+        "inputMethod": "Keyboard Space for first action, pointer clicks for remaining actions",
+        "touchOnly": false,
+        "classification": "source-planned UI-input reachability replay",
+        "actions": 10
+      },
+      {
+        "id": "borrowed-steps",
+        "profile": "mobile-touch",
+        "variant": "main",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "edgeCases": [
+          "invalid engine action is inert",
+          "terminal gameplay controls removed",
+          "repeat restart restores opening",
+          "unavailable board square is inert"
+        ],
+        "inputMethod": "Playwright touchscreen taps for every gameplay action",
+        "touchOnly": true,
+        "classification": "source-planned UI-input reachability replay",
+        "actions": 10
+      },
+      {
+        "id": "marble-council",
+        "profile": "desktop",
+        "variant": "main",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "edgeCases": [
+          "invalid engine action is inert",
+          "terminal gameplay controls removed",
+          "repeat restart restores opening",
+          "unavailable board square is inert"
+        ],
+        "inputMethod": "Keyboard Space for first action, pointer clicks for remaining actions",
+        "touchOnly": false,
+        "classification": "source-planned UI-input reachability replay",
+        "actions": 100
+      },
+      {
+        "id": "marble-council",
+        "profile": "mobile-touch",
+        "variant": "main",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "edgeCases": [
+          "invalid engine action is inert",
+          "terminal gameplay controls removed",
+          "repeat restart restores opening",
+          "unavailable board square is inert"
+        ],
+        "inputMethod": "Playwright touchscreen taps for every gameplay action",
+        "touchOnly": true,
+        "classification": "source-planned UI-input reachability replay",
+        "actions": 100
+      },
+      {
+        "id": "joining-lines",
+        "profile": "desktop",
+        "variant": "main",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "edgeCases": [
+          "invalid engine action is inert",
+          "terminal gameplay controls removed",
+          "repeat restart restores opening",
+          "unavailable board square is inert"
+        ],
+        "inputMethod": "Keyboard Space for first action, pointer clicks for remaining actions",
+        "touchOnly": false,
+        "classification": "source-planned UI-input reachability replay",
+        "actions": 8
+      },
+      {
+        "id": "joining-lines",
+        "profile": "mobile-touch",
+        "variant": "main",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "edgeCases": [
+          "invalid engine action is inert",
+          "terminal gameplay controls removed",
+          "repeat restart restores opening",
+          "unavailable board square is inert"
+        ],
+        "inputMethod": "Playwright touchscreen taps for every gameplay action",
+        "touchOnly": true,
+        "classification": "source-planned UI-input reachability replay",
+        "actions": 8
+      },
+      {
+        "id": "terrace-duel",
+        "profile": "desktop",
+        "variant": "main",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "edgeCases": [
+          "invalid engine action is inert",
+          "terminal gameplay controls removed",
+          "repeat restart restores opening",
+          "unavailable board square is inert"
+        ],
+        "inputMethod": "Keyboard Space for first action, pointer clicks for remaining actions",
+        "touchOnly": false,
+        "classification": "source-planned UI-input reachability replay",
+        "actions": 35
+      },
+      {
+        "id": "terrace-duel",
+        "profile": "mobile-touch",
+        "variant": "main",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "edgeCases": [
+          "invalid engine action is inert",
+          "terminal gameplay controls removed",
+          "repeat restart restores opening",
+          "unavailable board square is inert"
+        ],
+        "inputMethod": "Playwright touchscreen taps for every gameplay action",
+        "touchOnly": true,
+        "classification": "source-planned UI-input reachability replay",
+        "actions": 35
       },
       {
         "id": "court-of-suits",
@@ -785,5 +786,5 @@
       }
     ]
   },
-  "finishedAt": "2026-10-01T04:11:55.798Z"
+  "finishedAt": "2026-10-01T06:47:44.927Z"
 }

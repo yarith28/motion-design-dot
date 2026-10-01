@@ -229,7 +229,7 @@
       "edgeCases": [
         "initial incomplete study rejected",
         "keyboard activation retains visible control focus",
-        "legal edit undo restores original model and failed check",
+        "pending intervention commits only on advance; whole-day undo restores time, budget and history",
         "all three studies complete and completed study locked"
       ],
       "inputMethod": "Mouse clicks plus ordinary keyboard Space action; solver-guided legal UI inputs",
@@ -577,7 +577,7 @@
       "studiesCompleted": 3,
       "edgeCases": [
         "initial incomplete study rejected",
-        "legal edit undo restores original model and failed check",
+        "pending intervention commits only on advance; whole-day undo restores time, budget and history",
         "all three studies complete and completed study locked"
       ],
       "inputMethod": "Touchscreen taps only; solver-guided legal UI inputs",
@@ -705,11 +705,12 @@
       "errors": []
     }
   ],
-  "sourceHash": "d1c8e171e98d2e19058733d07a7691c855098a05be06b2b1659282aa4cdf9771",
+  "sourceHash": "637c6d24469a7b33204e13fe1f34fffda316e18da6de3a97f7e5fdebb502f681",
   "limits": [
     "Completion is solver-guided reachability through real UI inputs, based on read-only state snapshots injected only in tests.",
     "Ordinary-input checks cover explicit invalid actions, keyboard focus and restart; they do not establish human difficulty or independent solve quality.",
     "Mobile-touch uses Chromium touch emulation. No physical phone or actual screenreader test.",
     "Three studies per game; random instances may admit multiple valid solutions. No claim of exhaustive play-space testing."
-  ]
+  ],
+  "scope": "full puzzle manifest"
 }

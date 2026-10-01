@@ -123,7 +123,7 @@
     "rules": [
       "Tap relay nodes to take them offline, or tap again to restore them.",
       "Signals travel both ways along every listed wire. Protect every archive from every transmitter.",
-      "Transmitters and archives cannot be removed. Stay within the relay budget; Check traces a surviving leak."
+      "Terminals cannot be removed. Each new network has a verified minimum relay budget of one, two or three; neither terminal can be isolated simply by removing all its direct neighbors within that budget."
     ],
     "controls": "Tap buttons or use Tab and Enter / Space. Direction games also support arrow keys. Undo, Reset study and Restart are always available.",
     "url": "puzzle-lab/?game=circuit-break",
@@ -169,7 +169,7 @@
     "rules": [
       "Each channel button cycles its flow from zero to its printed capacity.",
       "At every intermediate basin, total water in must equal total water out.",
-      "Deliver the target flow from S to T. Check points to a basin that leaks or creates water."
+      "Deliver the target flow from S to T through a freshly generated branching network. An internal bottleneck limits delivery; Check points to a basin that leaks or creates water."
     ],
     "controls": "Tap buttons or use Tab and Enter / Space. Direction games also support arrow keys. Undo, Reset study and Restart are always available.",
     "url": "puzzle-lab/?game=river-capacity",
@@ -279,14 +279,14 @@
     "id": "seed-tomorrow",
     "name": "Seed Tomorrow",
     "category": "puzzle",
-    "description": "Plant the beginning of a pattern you can only see tomorrow.",
-    "mechanic": "Inverse cellular evolution",
+    "description": "Tend a changing garden one day at a time, choosing when to plant or prune.",
+    "mechanic": "Timed intervention in nonlinear cellular growth",
     "rules": [
-      "Toggle seeds in the top row. Each next cell is alive only when exactly one of its left and right neighbors was alive.",
-      "The row wraps at its ends. Middle cells do not count as their own neighbors.",
-      "After the printed number of days, the row must match the target. The timeline updates with every seed."
+      "The initial garden is fixed. Each day choose at most one cell to plant or prune, or wait; then Advance one day. Your total intervention budget is limited.",
+      "Growth happens simultaneously: a living cell survives with exactly one living neighbor; an empty cell grows only with two living neighbors. Left and right ends wrap. The rule table and next-day preview show every outcome.",
+      "Match the indexed final target after all days. Timing matters: Undo reverses a whole day, including its intervention and budget. Reset restores this study; Restart generates a new journey."
     ],
-    "controls": "Tap buttons or use Tab and Enter / Space. Direction games also support arrow keys. Undo, Reset study and Restart are always available.",
+    "controls": "Tap a cell to select or cancel its intervention, then Advance one day. Tab and Enter / Space work on every control. Target and history identify every cell as live or empty.",
     "url": "puzzle-lab/?game=seed-tomorrow",
     "accent": "#dec39c",
     "symbol": "\u25c7",
@@ -445,7 +445,7 @@
     "rules": [
       "Select cargo on the ferry\u2019s current bank, then Sail. Capacity limits how many can ride; empty crossings are allowed.",
       "Pairs listed as incompatible may never share a bank without the ferryman.",
-      "Bring everyone to the far bank. Unsafe crossings are refused with an explanation; Undo reverses a safe crossing."
+      "Bring everyone to the far bank. Unsafe crossings are refused with an explanation. New compatibility graphs have verified shortest journeys of 7, 9 and 11 crossings; the final ferry carries three. Undo reverses a safe crossing."
     ],
     "controls": "Tap buttons or use Tab and Enter / Space. Direction games also support arrow keys. Undo, Reset study and Restart are always available.",
     "url": "puzzle-lab/?game=safety-ferry",

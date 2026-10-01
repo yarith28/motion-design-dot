@@ -1,12 +1,12 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-01T04:37:25.892Z",
+  "generatedAt": "2026-10-01T06:52:20.016Z",
   "total": 200,
   "verified": 200,
   "desktopCompletions": 200,
   "mobileViewportCompletions": 200,
-  "touchGameplayCompletions": 149,
-  "limits": "Current successful suite runs only; source content hashes exclude generated coverage and documentation. Mobile viewport completion is not touch-only completion or iPhone/Safari certification. Solvers may inspect hidden answers and use virtual time. Competitive strategy terminal results can be losses. Live route/reset checks and ordinary-play samples are separate.",
+  "touchGameplayCompletions": 147,
+  "limits": "Current successful suite runs only; source content hashes exclude generated coverage and documentation. Mobile viewport completion is not touch-only completion or iPhone/Safari certification. Solvers may inspect hidden answers and use virtual time. Original strategy-room terminal results can be losses; all 100 additions require winning primary paths in both profiles. Failure variants and ordinary-play samples are separately labeled. Live route/reset checks and ordinary-play samples are separate.",
   "games": [
     {
       "id": "signal-run",
@@ -3162,7 +3162,7 @@
           "mobileViewportCompletion": true,
           "touchGameplayCompletion": true,
           "touchControlSmoke": true,
-          "completionMeans": "desktop: loss; mobile-touch: loss",
+          "completionMeans": "desktop: win; mobile-touch: win",
           "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
           "mobileMethod": "Playwright touchscreen taps for every gameplay action"
         }
@@ -3251,7 +3251,7 @@
       "status": "verified",
       "fullCompletionDesktop": true,
       "fullCompletionMobileViewport": true,
-      "touchGameplayCompletion": true,
+      "touchGameplayCompletion": false,
       "evidence": [
         "coverage/suite-runs/tabletop-room.json"
       ],
@@ -3260,11 +3260,11 @@
           "suite": "tabletop-room",
           "desktopCompletion": true,
           "mobileViewportCompletion": true,
-          "touchGameplayCompletion": true,
+          "touchGameplayCompletion": false,
           "touchControlSmoke": true,
           "completionMeans": "desktop: win; mobile-touch: win",
           "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
-          "mobileMethod": "Playwright touchscreen taps for every gameplay action"
+          "mobileMethod": "Playwright touchscreen taps plus programmatic native selectOption quantity entry"
         }
       ],
       "unverifiedSuites": []
@@ -3287,7 +3287,7 @@
           "mobileViewportCompletion": true,
           "touchGameplayCompletion": true,
           "touchControlSmoke": true,
-          "completionMeans": "desktop: loss; mobile-touch: loss",
+          "completionMeans": "desktop: win; mobile-touch: win",
           "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
           "mobileMethod": "Playwright touchscreen taps for every gameplay action"
         }
@@ -3312,7 +3312,7 @@
           "mobileViewportCompletion": true,
           "touchGameplayCompletion": true,
           "touchControlSmoke": true,
-          "completionMeans": "desktop: loss; mobile-touch: loss",
+          "completionMeans": "desktop: win; mobile-touch: win",
           "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
           "mobileMethod": "Playwright touchscreen taps for every gameplay action"
         }
@@ -3337,7 +3337,7 @@
           "mobileViewportCompletion": true,
           "touchGameplayCompletion": true,
           "touchControlSmoke": true,
-          "completionMeans": "desktop: loss; mobile-touch: loss",
+          "completionMeans": "desktop: win; mobile-touch: win",
           "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
           "mobileMethod": "Playwright touchscreen taps for every gameplay action"
         }
@@ -3362,7 +3362,7 @@
           "mobileViewportCompletion": true,
           "touchGameplayCompletion": true,
           "touchControlSmoke": true,
-          "completionMeans": "desktop: loss; mobile-touch: loss",
+          "completionMeans": "desktop: win; mobile-touch: win",
           "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
           "mobileMethod": "Playwright touchscreen taps for every gameplay action"
         }
@@ -3387,7 +3387,7 @@
           "mobileViewportCompletion": true,
           "touchGameplayCompletion": true,
           "touchControlSmoke": true,
-          "completionMeans": "desktop: loss; mobile-touch: loss",
+          "completionMeans": "desktop: win; mobile-touch: win",
           "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
           "mobileMethod": "Playwright touchscreen taps for every gameplay action"
         }
@@ -3412,7 +3412,7 @@
           "mobileViewportCompletion": true,
           "touchGameplayCompletion": true,
           "touchControlSmoke": true,
-          "completionMeans": "desktop: loss; mobile-touch: loss",
+          "completionMeans": "desktop: win; mobile-touch: win",
           "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
           "mobileMethod": "Playwright touchscreen taps for every gameplay action"
         }
@@ -3437,7 +3437,7 @@
           "mobileViewportCompletion": true,
           "touchGameplayCompletion": true,
           "touchControlSmoke": true,
-          "completionMeans": "desktop: loss; mobile-touch: loss",
+          "completionMeans": "desktop: win; mobile-touch: win",
           "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
           "mobileMethod": "Playwright touchscreen taps for every gameplay action"
         }
@@ -3462,7 +3462,7 @@
           "mobileViewportCompletion": true,
           "touchGameplayCompletion": true,
           "touchControlSmoke": true,
-          "completionMeans": "desktop: loss; mobile-touch: loss",
+          "completionMeans": "desktop: win; mobile-touch: win",
           "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
           "mobileMethod": "Playwright touchscreen taps for every gameplay action"
         }
@@ -3487,7 +3487,7 @@
           "mobileViewportCompletion": true,
           "touchGameplayCompletion": true,
           "touchControlSmoke": true,
-          "completionMeans": "desktop: loss; mobile-touch: loss",
+          "completionMeans": "desktop: win; mobile-touch: win",
           "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
           "mobileMethod": "Playwright touchscreen taps for every gameplay action"
         }
@@ -4701,7 +4701,7 @@
       "status": "verified",
       "fullCompletionDesktop": true,
       "fullCompletionMobileViewport": true,
-      "touchGameplayCompletion": false,
+      "touchGameplayCompletion": true,
       "evidence": [
         "coverage/suite-runs/discovery-room.json"
       ],
@@ -4710,11 +4710,11 @@
           "suite": "discovery-room",
           "desktopCompletion": true,
           "mobileViewportCompletion": true,
-          "touchGameplayCompletion": false,
+          "touchGameplayCompletion": true,
           "touchControlSmoke": true,
           "completionMeans": "desktop: win; mobile-touch: win",
           "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
-          "mobileMethod": "Touch buttons plus programmatic native field fill/select"
+          "mobileMethod": "Touchscreen tap on all gameplay buttons"
         }
       ],
       "unverifiedSuites": []
@@ -4951,7 +4951,7 @@
       "status": "verified",
       "fullCompletionDesktop": true,
       "fullCompletionMobileViewport": true,
-      "touchGameplayCompletion": true,
+      "touchGameplayCompletion": false,
       "evidence": [
         "coverage/suite-runs/discovery-room.json"
       ],
@@ -4960,11 +4960,11 @@
           "suite": "discovery-room",
           "desktopCompletion": true,
           "mobileViewportCompletion": true,
-          "touchGameplayCompletion": true,
+          "touchGameplayCompletion": false,
           "touchControlSmoke": true,
           "completionMeans": "desktop: win; mobile-touch: win",
           "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
-          "mobileMethod": "Touchscreen tap on all gameplay buttons"
+          "mobileMethod": "Touch buttons plus programmatic native field fill/select"
         }
       ],
       "unverifiedSuites": []
@@ -4976,7 +4976,7 @@
       "status": "verified",
       "fullCompletionDesktop": true,
       "fullCompletionMobileViewport": true,
-      "touchGameplayCompletion": true,
+      "touchGameplayCompletion": false,
       "evidence": [
         "coverage/suite-runs/discovery-room.json"
       ],
@@ -4985,11 +4985,11 @@
           "suite": "discovery-room",
           "desktopCompletion": true,
           "mobileViewportCompletion": true,
-          "touchGameplayCompletion": true,
+          "touchGameplayCompletion": false,
           "touchControlSmoke": true,
           "completionMeans": "desktop: win; mobile-touch: win",
           "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
-          "mobileMethod": "Touchscreen tap on all gameplay buttons"
+          "mobileMethod": "Touch buttons plus programmatic native field fill/select"
         }
       ],
       "unverifiedSuites": []

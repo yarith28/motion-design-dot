@@ -1,0 +1,136 @@
+{
+  "suite": "tabletop-remediation",
+  "browser": "chromium",
+  "base": "http://127.0.0.1:8790",
+  "testedAt": "2026-10-01T06:45:44.276Z",
+  "passed": true,
+  "cases": [
+    {
+      "id": "crown-and-guard",
+      "profile": "desktop",
+      "largeEquivalentControls": true,
+      "focus": true,
+      "restart": true
+    },
+    {
+      "id": "draught-garden",
+      "profile": "desktop",
+      "largeEquivalentControls": true,
+      "focus": true,
+      "restart": true
+    },
+    {
+      "id": "borrowed-steps",
+      "profile": "desktop",
+      "largeEquivalentControls": true,
+      "focus": true,
+      "restart": true
+    },
+    {
+      "id": "marble-council",
+      "profile": "desktop",
+      "largeEquivalentControls": true,
+      "focus": true,
+      "restart": true
+    },
+    {
+      "id": "joining-lines",
+      "profile": "desktop",
+      "largeEquivalentControls": true,
+      "focus": true,
+      "restart": true
+    },
+    {
+      "id": "terrace-duel",
+      "profile": "desktop",
+      "largeEquivalentControls": true,
+      "focus": true,
+      "restart": true
+    },
+    {
+      "id": "hidden-dice",
+      "profile": "desktop",
+      "quantityFaceControls": true,
+      "inputMethod": "Clicks or emulated taps plus programmatic native selectOption field entry",
+      "touchOnly": false,
+      "focus": true,
+      "restart": true
+    },
+    {
+      "id": "draught-garden",
+      "profile": "desktop",
+      "bothKingNamesAndAbilities": true
+    },
+    {
+      "id": "twenty-one",
+      "profile": "desktop",
+      "naturalBeatsNonNatural": true
+    },
+    {
+      "id": "crown-and-guard",
+      "profile": "touch-emulated",
+      "largeEquivalentControls": true,
+      "focus": true,
+      "restart": true
+    },
+    {
+      "id": "draught-garden",
+      "profile": "touch-emulated",
+      "largeEquivalentControls": true,
+      "focus": true,
+      "restart": true
+    },
+    {
+      "id": "borrowed-steps",
+      "profile": "touch-emulated",
+      "largeEquivalentControls": true,
+      "focus": true,
+      "restart": true
+    },
+    {
+      "id": "marble-council",
+      "profile": "touch-emulated",
+      "largeEquivalentControls": true,
+      "focus": true,
+      "restart": true
+    },
+    {
+      "id": "joining-lines",
+      "profile": "touch-emulated",
+      "largeEquivalentControls": true,
+      "focus": true,
+      "restart": true
+    },
+    {
+      "id": "terrace-duel",
+      "profile": "touch-emulated",
+      "largeEquivalentControls": true,
+      "focus": true,
+      "restart": true
+    },
+    {
+      "id": "hidden-dice",
+      "profile": "touch-emulated",
+      "quantityFaceControls": true,
+      "inputMethod": "Clicks or emulated taps plus programmatic native selectOption field entry",
+      "touchOnly": false,
+      "focus": true,
+      "restart": true
+    },
+    {
+      "id": "draught-garden",
+      "profile": "touch-emulated",
+      "bothKingNamesAndAbilities": true
+    },
+    {
+      "id": "twenty-one",
+      "profile": "touch-emulated",
+      "naturalBeatsNonNatural": true
+    }
+  ],
+  "limits": [
+    "Public UI activation uses real browser clicks or emulated touchscreen taps; Hidden Dice quantity selection uses programmatic native selectOption field entry, a mixed input path. No physical-phone claim.",
+    "Accessible-name assertions do not replace a screen-reader session.",
+    "These regressions are separate from full winning-route reachability evidence."
+  ]
+}

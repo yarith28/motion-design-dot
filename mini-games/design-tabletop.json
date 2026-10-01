@@ -12,7 +12,7 @@
         "Play one card per trick. You must follow the lead suit if you can; otherwise any card is legal. Spades are trump. Highest trump wins; without trump, highest card of the lead suit wins.",
         "The trick winner leads next. Your eight-card hand and the house hand exhaust together. Win at least five tricks; four is a draw. The house conserves high cards when it cannot win."
       ],
-      "reviewStatus": "Independent reviewer accepted core mechanic after all20 source reviews; full source-planned desktop/touch terminal coverage passed.",
+      "reviewStatus": "Independent source review accepted distinct mechanics. Remediation adds required player-winning main routes for every game; loss routes remain separately labelled. See coverage for source-matched execution status, not unassisted mastery.",
       "nearestExisting": "code-cabinet",
       "nearestNew": "last-hand"
     },
@@ -24,12 +24,13 @@
       "distinction": "A shared finite deck, flexible ace valuation and dealer comparison replace a repeat-until-bust race.",
       "depth": [
         "Start with 20 chips. Each of five hands costs a 2-chip stake. Aces count 11 or 1; faces count 10. The dealer shows one card and stands at 17, including soft 17.",
-        "Hit for another card or stand. Double is available only on your first decision, costs another 2 chips and deals exactly one card. Above 21 loses. A two-card 21 pays 3:2; other wins pay 1:1. Ties return the stake.",
-        "Finish five hands with more than 20 chips to win. The dealer hole card stays hidden until you stand or bust."
+        "Hit for another card or stand. Double is available only on your first decision, costs another 2 chips and deals exactly one card. Above 21 loses. A two-card 21 pays 3:2; other wins pay 1:1. Ties return the stake. A two-card blackjack beats every non-blackjack hand, including a drawn 21. Two blackjacks push. Opening blackjacks settle immediately.",
+        "Finish five hands with more than 20 chips to win. The dealer hole card stays hidden until the hand settles."
       ],
-      "reviewStatus": "Independent reviewer accepted core mechanic after all20 source reviews; full source-planned desktop/touch terminal coverage passed.",
+      "reviewStatus": "Independent source review accepted distinct mechanics. Remediation adds required player-winning main routes for every game; loss routes remain separately labelled. See coverage for source-matched execution status, not unassisted mastery.",
       "nearestExisting": "trade",
-      "nearestNew": "bank-the-roll"
+      "nearestNew": "bank-the-roll",
+      "reviewNotes": "Natural blackjack resolves before dealer draws and outranks drawn21; both naturals push. Opening naturals settle immediately. Payout/priority regressions include a public UI45-new-deal route."
     },
     {
       "id": "meld-atelier",
@@ -42,7 +43,7 @@
         "Select cards to build a meld; Lay meld removes it permanently. Remaining cards are deadwood: ace 1, numbers their rank, faces 10. Melds may be laid only after drawing.",
         "After discarding, knock at 10 or less deadwood to win. You have twelve draws. On the final discard, more than 10 deadwood loses. Plan overlapping runs and sets before committing."
       ],
-      "reviewStatus": "Independent reviewer accepted core mechanic after all20 source reviews; full source-planned desktop/touch terminal coverage passed.",
+      "reviewStatus": "Independent source review accepted distinct mechanics. Remediation adds required player-winning main routes for every game; loss routes remain separately labelled. See coverage for source-matched execution status, not unassisted mastery.",
       "nearestExisting": "chain-reaction",
       "nearestNew": "five-card-evening"
     },
@@ -54,10 +55,10 @@
       "distinction": "A scarce shared redraw budget and stake allocation across hands; no runs/sets removal or discard market.",
       "depth": [
         "Play five hands from fresh shuffled decks. Choose a 1-, 2- or 3-chip stake, then select cards to hold and draw replacements once for free.",
-        "You have three extra redraws for the entire evening. After the free draw, either settle or spend an extra redraw, choosing held cards again. Pair pays 1\u00d7 stake, two pair 2\u00d7, trips 3\u00d7, straight 4\u00d7, flush 5\u00d7, full house 7\u00d7, four 12\u00d7, straight flush 20\u00d7. Payout includes the stake; high card returns nothing.",
+        "You have three extra redraws for the entire evening. After the free draw, either settle or spend an extra redraw, choosing held cards again. Pair pays 1× stake, two pair 2×, trips 3×, straight 4×, flush 5×, full house 7×, four 12×, straight flush 20×. Payout includes the stake; high card returns nothing.",
         "Start with 12 chips. End above 12 to win; going broke ends early. Aces are high, except A-2-3-4-5 is a straight. The ranking table stays visible."
       ],
-      "reviewStatus": "Independent reviewer accepted core mechanic after all20 source reviews; full source-planned desktop/touch terminal coverage passed.",
+      "reviewStatus": "Independent source review accepted distinct mechanics. Remediation adds required player-winning main routes for every game; loss routes remain separately labelled. See coverage for source-matched execution status, not unassisted mastery.",
       "nearestExisting": "trade",
       "nearestNew": "meld-atelier"
     },
@@ -72,7 +73,7 @@
         "Pass to give the other player a fresh lead. The house may pass too. A fresh lead may be a single, pair or triple. The house prefers shedding groups and keeps strong cards for contested leads.",
         "First to empty their ten-card hand wins. You can deselect cards before playing. Pass is unavailable when you hold a fresh lead."
       ],
-      "reviewStatus": "Independent reviewer accepted core mechanic after all20 source reviews; full source-planned desktop/touch terminal coverage passed.",
+      "reviewStatus": "Independent source review accepted distinct mechanics. Remediation adds required player-winning main routes for every game; loss routes remain separately labelled. See coverage for source-matched execution status, not unassisted mastery.",
       "nearestExisting": "nim",
       "nearestNew": "velvet-tricks"
     },
@@ -85,9 +86,9 @@
       "depth": [
         "Select a hand card, then table cards whose ranks sum to its rank. If the table has any single exact-rank match, you must capture exactly one such card.",
         "If any capture exists you must take one; otherwise Lay card places your card on the table. Clearing the table earns a sweep, except on the final play. Three-card hands refill until the 40-card deck is exhausted.",
-        "Each captured card is one point, each sweep five. Last capturer gathers remaining table cards. Beat the house total. Ranks run 1\u201310 in four suits."
+        "Each captured card is one point, each sweep five. Last capturer gathers remaining table cards. Beat the house total. Ranks run 1–10 in four suits."
       ],
-      "reviewStatus": "Independent reviewer accepted core mechanic after all20 source reviews; full source-planned desktop/touch terminal coverage passed.",
+      "reviewStatus": "Independent source review accepted distinct mechanics. Remediation adds required player-winning main routes for every game; loss routes remain separately labelled. See coverage for source-matched execution status, not unassisted mastery.",
       "nearestExisting": "make-24",
       "nearestNew": "thirty-one-lane"
     },
@@ -102,7 +103,7 @@
         "If no tile fits, draw from the boneyard. A drawn playable tile may be used immediately. When the boneyard is empty, pass. The house follows the same rules.",
         "Empty your hand first. If both players pass, lower total pips wins. All 28 double-six tiles appear once; inspect both ends before committing."
       ],
-      "reviewStatus": "Independent reviewer accepted core mechanic after all20 source reviews; full source-planned desktop/touch terminal coverage passed.",
+      "reviewStatus": "Independent source review accepted distinct mechanics. Remediation adds required player-winning main routes for every game; loss routes remain separately labelled. See coverage for source-matched execution status, not unassisted mastery.",
       "nearestExisting": "chain-reaction",
       "nearestNew": "last-hand"
     },
@@ -113,11 +114,11 @@
       "nearestNeighbor": "Six Columns",
       "distinction": "The decision is when to stop accumulating exposed risk, not which dice/category combination to reserve.",
       "depth": [
-        "Roll one die. A 2\u20136 adds to this turn; a 1 loses the entire unbanked turn and passes play. Bank saves your turn and passes play.",
+        "Roll one die. A 2–6 adds to this turn; a 1 loses the entire unbanked turn and passes play. Bank saves your turn and passes play.",
         "The house banks at 14 turn points, or when it reaches the goal. First to bank 60 points wins. Banking zero is unavailable.",
         "There is no real-time pressure. The die is rolled anew after every decision; previous results do not change its odds."
       ],
-      "reviewStatus": "Independent reviewer accepted core mechanic after all20 source reviews; full source-planned desktop/touch terminal coverage passed.",
+      "reviewStatus": "Independent source review accepted distinct mechanics. Remediation adds required player-winning main routes for every game; loss routes remain separately labelled. See coverage for source-matched execution status, not unassisted mastery.",
       "nearestExisting": "tide-pool",
       "nearestNew": "six-columns"
     },
@@ -132,7 +133,7 @@
         "Categories: Ones scores ones; Sixes scores sixes; Three of a kind scores all dice if any three match; Full house scores 25 for a pair plus a triple; Straight scores 30 for five consecutive values; Chance scores all dice.",
         "Fill all six rows and total at least 75. A category can score zero, so preserve flexible rows for awkward rolls. No bonuses or wild cards."
       ],
-      "reviewStatus": "Independent reviewer accepted core mechanic after all20 source reviews; full source-planned desktop/touch terminal coverage passed.",
+      "reviewStatus": "Independent source review accepted distinct mechanics. Remediation adds required player-winning main routes for every game; loss routes remain separately labelled. See coverage for source-matched execution status, not unassisted mastery.",
       "nearestExisting": "make-24",
       "nearestNew": "bank-the-roll"
     },
@@ -147,9 +148,10 @@
         "Raise by increasing quantity, or keeping quantity and increasing face. Challenge the current house bid instead if you think it is false.",
         "Reveal all dice on a challenge. If the claim is true the challenger loses a die; otherwise the bidder loses one. A new round is rolled and you open. Remove all house dice before losing yours. House bids use its own dice and uncertainty."
       ],
-      "reviewStatus": "Independent reviewer accepted core mechanic after all20 source reviews; full source-planned desktop/touch terminal coverage passed.",
+      "reviewStatus": "Independent source review accepted distinct mechanics. Remediation adds required player-winning main routes for every game; loss routes remain separately labelled. See coverage for source-matched execution status, not unassisted mastery.",
       "nearestExisting": "code-cabinet",
-      "nearestNew": "sealed-bids"
+      "nearestNew": "sealed-bids",
+      "reviewNotes": "Legal quantities use a native select, followed by at most six face buttons. Increasing bids and challenges retain their original rules and opponent policy."
     },
     {
       "id": "sealed-bids",
@@ -158,11 +160,11 @@
       "nearestNeighbor": "Trading Day",
       "distinction": "Irrecoverable simultaneous bids and opponent denial, without money, inventory or buy/sell price arbitrage.",
       "depth": [
-        "You and the house each hold bidding cards 1\u201310. Ten prizes, valued 1\u201310, arrive in a shuffled public queue.",
+        "You and the house each hold bidding cards 1–10. Ten prizes, valued 1–10, arrive in a shuffled public queue.",
         "Choose one bid without seeing the house bid. Higher bid wins the prize pot; both bid cards are spent. A tie carries the pot into the next prize.",
         "Most prize points after ten rounds wins. If the final round ties, divide its pot equally. The house values large prizes and conserves expensive bids for later."
       ],
-      "reviewStatus": "Independent reviewer accepted core mechanic after all20 source reviews; full source-planned desktop/touch terminal coverage passed.",
+      "reviewStatus": "Independent source review accepted distinct mechanics. Remediation adds required player-winning main routes for every game; loss routes remain separately labelled. See coverage for source-matched execution status, not unassisted mastery.",
       "nearestExisting": "trade",
       "nearestNew": "hidden-dice"
     },
@@ -177,7 +179,7 @@
         "Consecutive equal ranks score 2 for a pair, 6 for a triple, 12 for four. The longest trailing sequence of 3 or more distinct consecutive ranks scores its length, in any order. Both bonuses may combine with a total bonus.",
         "When neither can play, the last player earns 1 (unless they made 31) and count resets. Ten cards each; most pegging points wins. This is pegging only, with no hand-counting stage."
       ],
-      "reviewStatus": "Independent reviewer accepted core mechanic after all20 source reviews; full source-planned desktop/touch terminal coverage passed.",
+      "reviewStatus": "Independent source review accepted distinct mechanics. Remediation adds required player-winning main routes for every game; loss routes remain separately labelled. See coverage for source-matched execution status, not unassisted mastery.",
       "nearestExisting": "make-24",
       "nearestNew": "twenty-one"
     },
@@ -189,10 +191,10 @@
       "distinction": "Each lane compares a committed poker formation, with hand/refill uncertainty rather than static numeric district/adjacency scoring.",
       "depth": [
         "Play a card from your five-card hand to one of five flags. Each side can commit three cards at each flag. Draw a replacement from the shared deck after playing.",
-        "Once both sides have three cards, compare formations: straight flush, three of a kind, flush, straight, then sum. Ties within a rank compare total, then favor the first side to complete. Ranks 1\u20139 in four suits.",
+        "Once both sides have three cards, compare formations: straight flush, three of a kind, flush, straight, then sum. Ties within a rank compare total, then favor the first side to complete. Ranks 1–9 in four suits.",
         "Win three flags. Cards cannot move once committed. When no cards remain, empty places stay empty; more cards wins an incomplete flag, then formation strength."
       ],
-      "reviewStatus": "Independent reviewer accepted core mechanic after all20 source reviews; full source-planned desktop/touch terminal coverage passed.",
+      "reviewStatus": "Independent source review accepted distinct mechanics. Remediation adds required player-winning main routes for every game; loss routes remain separately labelled. See coverage for source-matched execution status, not unassisted mastery.",
       "nearestExisting": "guild",
       "nearestNew": "five-card-evening"
     },
@@ -207,9 +209,10 @@
         "After moving, capture an adjacent enemy caught between your piece and another friendly piece, a corner or the empty throne. The crown is captured only when all four adjacent directions are attackers or the edge.",
         "Escape with the crown onto any corner. The house wins by surrounding the crown or leaving you without a move. After 80 turns, attackers hold the siege."
       ],
-      "reviewStatus": "Independent reviewer accepted core mechanic after all20 source reviews; full source-planned desktop/touch terminal coverage passed.",
+      "reviewStatus": "Independent source review accepted distinct mechanics. Remediation adds required player-winning main routes for every game; loss routes remain separately labelled. See coverage for source-matched execution status, not unassisted mastery.",
       "nearestExisting": "pawns",
-      "nearestNew": "borrowed-steps"
+      "nearestNew": "borrowed-steps",
+      "controlReview": "Spatial board retained with equivalent labelled48px source/destination/build controls. Promoted draughts use king labels with backward-movement information. Physical-phone and screen-reader validation remain outside automated coverage."
     },
     {
       "id": "draught-garden",
@@ -222,9 +225,10 @@
         "After a jump, continue with the same piece while another capture is possible. Reaching the far row crowns a king and ends that capture turn; kings can step and capture backward.",
         "Capture all opposing pieces or leave the house no legal move. Forty turns without a capture or promotion is a draw. The house prefers captures and promotion. The match also draws after 160 full turns."
       ],
-      "reviewStatus": "Independent reviewer accepted core mechanic after all20 source reviews; full source-planned desktop/touch terminal coverage passed.",
+      "reviewStatus": "Independent source review accepted distinct mechanics. Remediation adds required player-winning main routes for every game; loss routes remain separately labelled. See coverage for source-matched execution status, not unassisted mastery.",
       "nearestExisting": "peg",
-      "nearestNew": "crown-and-guard"
+      "nearestNew": "crown-and-guard",
+      "controlReview": "Spatial board retained with equivalent labelled48px source/destination/build controls. Promoted draughts use king labels with backward-movement information. Physical-phone and screen-reader validation remain outside automated coverage."
     },
     {
       "id": "borrowed-steps",
@@ -237,9 +241,10 @@
         "A move captures an enemy on its destination. After moving, exchange your used card for the spare, so the house may receive it next.",
         "Capture the house master or move your master onto its central home temple. The house has the same goals. Eighty turns is a draw."
       ],
-      "reviewStatus": "Independent reviewer accepted core mechanic after all20 source reviews; full source-planned desktop/touch terminal coverage passed.",
+      "reviewStatus": "Independent source review accepted distinct mechanics. Remediation adds required player-winning main routes for every game; loss routes remain separately labelled. See coverage for source-matched execution status, not unassisted mastery.",
       "nearestExisting": "pawns",
-      "nearestNew": "crown-and-guard"
+      "nearestNew": "crown-and-guard",
+      "controlReview": "Spatial board retained with equivalent labelled48px source/destination/build controls. Promoted draughts use king labels with backward-movement information. Physical-phone and screen-reader validation remain outside automated coverage."
     },
     {
       "id": "marble-council",
@@ -252,9 +257,10 @@
         "A group may push one or two opposing marbles only if it outnumbers them and the space beyond is empty or off the board. Friendly marbles may never leave the board.",
         "Eject three opposing marbles to win. House uses the same rules. Fifty full turns without three ejections is decided by ejections, then central presence."
       ],
-      "reviewStatus": "Independent reviewer accepted core mechanic after all20 source reviews; full source-planned desktop/touch terminal coverage passed.",
+      "reviewStatus": "Independent source review accepted distinct mechanics. Remediation adds required player-winning main routes for every game; loss routes remain separately labelled. See coverage for source-matched execution status, not unassisted mastery.",
       "nearestExisting": "reversi",
-      "nearestNew": "draught-garden"
+      "nearestNew": "draught-garden",
+      "controlReview": "Spatial board retained with equivalent labelled48px source/destination/build controls. Promoted draughts use king labels with backward-movement information. Physical-phone and screen-reader validation remain outside automated coverage."
     },
     {
       "id": "joining-lines",
@@ -267,9 +273,10 @@
         "You may jump over friendly pieces, never enemies. You may land on an enemy to capture, but never on a friendly piece. House follows identical rules.",
         "Connect every remaining piece of your color through orthogonal or diagonal neighbors to win. If both connect on a move, the mover wins. Eighty turns is a draw."
       ],
-      "reviewStatus": "Independent reviewer accepted core mechanic after all20 source reviews; full source-planned desktop/touch terminal coverage passed.",
+      "reviewStatus": "Independent source review accepted distinct mechanics. Remediation adds required player-winning main routes for every game; loss routes remain separately labelled. See coverage for source-matched execution status, not unassisted mastery.",
       "nearestExisting": "hex",
-      "nearestNew": "marble-council"
+      "nearestNew": "marble-council",
+      "controlReview": "Spatial board retained with equivalent labelled48px source/destination/build controls. Promoted draughts use king labels with backward-movement information. Physical-phone and screen-reader validation remain outside automated coverage."
     },
     {
       "id": "terrace-duel",
@@ -282,9 +289,10 @@
         "After moving, build one level on any neighboring empty square. Towers begin at zero. Building on level three creates a dome.",
         "Move up onto level three to win immediately. The house moves and builds by the same rules. If you have no legal move, you lose."
       ],
-      "reviewStatus": "Independent reviewer accepted core mechanic after all20 source reviews; full source-planned desktop/touch terminal coverage passed.",
+      "reviewStatus": "Independent source review accepted distinct mechanics. Remediation adds required player-winning main routes for every game; loss routes remain separately labelled. See coverage for source-matched execution status, not unassisted mastery.",
       "nearestExisting": "siege",
-      "nearestNew": "crown-and-guard"
+      "nearestNew": "crown-and-guard",
+      "controlReview": "Spatial board retained with equivalent labelled48px source/destination/build controls. Promoted draughts use king labels with backward-movement information. Physical-phone and screen-reader validation remain outside automated coverage."
     },
     {
       "id": "court-of-suits",
@@ -295,9 +303,9 @@
       "depth": [
         "Defeat three court foes with 16, 22 and 28 health. Their base attacks deal 2, 3 and 4. Every foe cycles through Brace (3 armor, base attack), Heavy strike (no armor, base +4 attack), then Quick strike (no armor, base attack). The next intent is always visible.",
         "Play one card each turn. Its rank is damage, reduced by current armor. Clubs double damage before armor; spades reduce this attack by their rank; hearts heal that rank up to 20; diamonds draw two extra. Every turn draws a replacement. Save defense for heavy strikes and use the brace to prepare your hand.",
-        "A surviving foe retaliates. Defeating one skips its attack, heals you 3 and draws two cards; the next begins with Brace. Lose at zero health or an empty hand before all foes fall. Your finite deck contains ranks 1\u20136 in four suits."
+        "A surviving foe retaliates. Defeating one skips its attack, heals you 3 and draws two cards; the next begins with Brace. Lose at zero health or an empty hand before all foes fall. Your finite deck contains ranks 1–6 in four suits."
       ],
-      "reviewStatus": "Independent reviewer accepted core mechanic after all20 source reviews; full source-planned desktop/touch terminal coverage passed.",
+      "reviewStatus": "Independent source review accepted distinct mechanics. Remediation adds required player-winning main routes for every game; loss routes remain separately labelled. See coverage for source-matched execution status, not unassisted mastery.",
       "nearestExisting": "orchard",
       "nearestNew": "meld-atelier",
       "qualityRevision": "Reviewer found raw highest-damage play won980/1000 seeded rounds; revised armor/heavy/quick intent cycle cut it to19/1000 in independent review. This metric does not establish all seeds are winnable."

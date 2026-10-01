@@ -1,15 +1,16 @@
 {
   "passed": true,
   "browser": "chromium",
-  "generatedAt": "2026-10-01T04:11:56.260Z",
+  "generatedAt": "2026-10-01T06:47:45.572Z",
   "sourceHashes": {
-    "kinetic-room/index.html": "d1131a11c4fbeff3247b224fd3b72cfb8cfc432942d135d8f9141aa321d87697",
-    "kinetic-room/room.css": "80f3074174a3677f89bd696f0fbe5e826ee6ba5df59251edea5afe976bd0d6d5",
-    "kinetic-room/room.js": "af16e64f43a586c92206cde1a6616589d05d3cdb6daba8bfe72c354a0b36fc77",
-    "kinetic-room/engines.js": "14eb7264b2b6d3bfa4438ff76b92f3a425302a57e6f1ff61c0068269a4407078",
-    "kinetic-room/games.json": "c81ce617821fa29d574d469e97090546809961681255ee7111f86514b6a86367",
-    "tests/kinetic-room.cjs": "f403a5da7e8b48fa93cc40df801812c2c10584512e39aba12ecfdb8a7a6ac4d1",
-    "tests/kinetic-plans.json": "a60adedba6e0038ec51518d9919f330838919b91b15969126407a945c4349484"
+    "kinetic-room/index.html": "761b6a9d790d7aadd1039e379c652cba1f96b888db116a49ca2f12c221c7e797",
+    "kinetic-room/room.css": "b257eb8e3667e38eb460db9b498d94b5a597e1a1bd65719ac098adfbfbf43666",
+    "kinetic-room/room.js": "00a362b32a78e1950a50f60c668972ece5367d6c24ee72809b997d4bec5d7c4a",
+    "kinetic-room/engines.js": "149ca8818ddcfe84fa167db55a4407b865c6baf678992b7feea5a356f59e4c4c",
+    "kinetic-room/games.json": "2b2453caa56c0f5557a02be22fc27fabeebc226627cbbf886c25726e7ff91514",
+    "tests/kinetic-room.cjs": "fa71d9b48017b307dfd6c46925e678512fdcf50c7590eb3e0eab1329be6cf0b9",
+    "tests/kinetic-plans.json": "47e865adcecec94b8b0261a67ffb9e718b1468ee2e99618a9d969c3e7b7104c2",
+    "tests/kinetic-remediation.cjs": "f7cf5a92a31a75a77b1dbb8edd1eccfa86c985febf1fb68c906e86d2930f556d"
   },
   "cases": [
     {
@@ -60,7 +61,7 @@
         "restart after both win and loss restores initial state",
         "320px layout has no horizontal overflow",
         "text board description present",
-        "decoy consumes one charge and starts finite distraction"
+        "distraction consumes one charge and briefly interrupts sight"
       ],
       "inputMethod": "Native Enter activation of focused public buttons for full solver-derived win and loss; arrow input verified inert after terminal."
     },
@@ -401,7 +402,7 @@
         "restart after both win and loss restores initial state",
         "320px layout has no horizontal overflow",
         "text board description present",
-        "decoy consumes one charge and starts finite distraction"
+        "distraction consumes one charge and briefly interrupts sight"
       ],
       "inputMethod": "Only public button touchscreen taps, including the complete solver-derived winning and losing action paths."
     },

@@ -38,7 +38,7 @@ jobs:
         run: |
           set -o pipefail
           export CHROMIUM_PATH="$(node -e "process.stdout.write(require('playwright').chromium.executablePath())")"
-          for suite in resume-focus number-room-review-regressions spatial-accessibility review-arcade-strategy expansion-controls; do
+          for suite in resume-focus number-room-review-regressions spatial-accessibility review-arcade-strategy expansion-controls systems-remediation tabletop-remediation puzzle-remediation kinetic-remediation discovery-remediation; do
             node "mini-games/tests/$suite.cjs" | tee "live-verification/fix-$suite-chromium.log"
           done
       - name: Install WebKit for browser-engine regression checks
@@ -52,7 +52,7 @@ jobs:
           BROWSER_ENGINE: webkit
         run: |
           set -o pipefail
-          for suite in resume-focus number-room-review-regressions spatial-accessibility review-arcade-strategy expansion-controls; do
+          for suite in resume-focus number-room-review-regressions spatial-accessibility review-arcade-strategy expansion-controls systems-remediation tabletop-remediation puzzle-remediation kinetic-remediation discovery-remediation; do
             node "mini-games/tests/$suite.cjs" | tee "live-verification/fix-$suite-webkit.log"
           done
       - name: Save live verification evidence
@@ -60,8 +60,10 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: live-arcade-verification
-          path: live-verification/
-          retention-days: 7
+          path: |
+            live-verification/
+            mini-games/coverage/*-remediation-*.json
+          retention-days: 30
   new-game-completion:
     runs-on: ubuntu-latest
     timeout-minutes: 25
@@ -83,6 +85,8 @@ jobs:
         run: |
           export CHROMIUM_PATH="$(node -e "process.stdout.write(require('playwright').chromium.executablePath())")"
           python3 -m http.server 8790 --bind 127.0.0.1 > "$RUNNER_TEMP/server.log" 2>&1 &
+          if [ "$ROOM" = "puzzle-lab" ]; then node mini-games/tests/puzzle-generation-regression.cjs; fi
+          if [ "$ROOM" = "discovery-room" ]; then node mini-games/tests/discovery-design-properties.cjs; fi
           node mini-games/tools/run-suite.cjs "$ROOM"
           node mini-games/tests/evidence-index.cjs
           node mini-games/tests/evidence-fresh.cjs
@@ -95,4 +99,6 @@ jobs:
           path: |
             mini-games/coverage/${{ matrix.room }}.json
             mini-games/coverage/suite-runs/${{ matrix.room }}.json
-          retention-days: 7
+            mini-games/coverage/puzzle-generation-regression.json
+            mini-games/coverage/discovery-design-properties.json
+          retention-days: 30

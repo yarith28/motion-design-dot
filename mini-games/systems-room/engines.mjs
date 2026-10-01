@@ -19,7 +19,7 @@ import * as city from './growing-block.mjs';
 import * as project from './borrowed-time.mjs';
 import * as convoy from './convoy-ledger.mjs';
 export const engines={'junction-nine':junction,'assembly-belt':assembly,'marsh-balance':marsh,'reorder-point':reorder,'workshop-shift':workshop,'signal-cabinet':signal,'cold-chain':cold,reservoir,'power-desk':power,'carry-on':carry,'quiet-majority':council,'safe-return':insurance,firebreak:fire,'kiln-house':kiln,'two-couriers':couriers,'elevator-night':elevator,'supply-web':supply,'growing-block':city,'borrowed-time':project,'convoy-ledger':convoy};
-export const start=id=>engines[id].init();
+export const start=(id,scenario=0)=>engines[id].init(scenario);
 export const choices=(id,s)=>s.done?[]:engines[id].choices(s);
 export const legal=(id,s)=>choices(id,s).map(a=>a.id);
 export function step(id,s,a){if(!legal(id,s).includes(a))return s;let next=structuredClone(s);engines[id].apply(next,a);return next;}

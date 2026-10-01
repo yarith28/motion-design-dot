@@ -26,3 +26,20 @@
   .heading{flex-wrap:wrap}
   .heading #restart{flex-shrink:0}
 }
+/* Selection state is text as well as color; native buttons expose aria-pressed. */
+.selection-summary{font-size:14px;line-height:1.6;color:#f4dba8;overflow-wrap:anywhere}
+.grid .panel{min-width:0;overflow-wrap:anywhere;padding:8px;text-align:center}
+@media(max-width:760px){
+ body[data-game-id="transit-observatory"] .workbench,
+ body[data-game-id="twenty-questions"] .workbench,
+ body[data-game-id="specimen-rule"] .workbench,
+ body[data-game-id="lens-library"] .workbench{min-width:0}
+ body[data-game-id="transit-observatory"] table,
+ body[data-game-id="twenty-questions"] table,
+ body[data-game-id="specimen-rule"] table,
+ body[data-game-id="lens-library"] table{table-layout:fixed}
+ body[data-game-id="transit-observatory"] th,body[data-game-id="transit-observatory"] td,
+ body[data-game-id="twenty-questions"] th,body[data-game-id="twenty-questions"] td,
+ body[data-game-id="specimen-rule"] th,body[data-game-id="specimen-rule"] td,
+ body[data-game-id="lens-library"] th,body[data-game-id="lens-library"] td{padding:7px 3px;overflow-wrap:anywhere}
+}

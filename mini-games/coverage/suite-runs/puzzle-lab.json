@@ -3,9 +3,9 @@
   "suite": "puzzle-lab",
   "passed": true,
   "status": "passed",
-  "startedAt": "2026-10-01T04:11:18.201Z",
+  "startedAt": "2026-10-01T06:47:01.984Z",
   "source": {
-    "sha256": "fcaa4f3b0a13711b759f31aeb19c263dbf2287987f758f73b1584f0ead77afc9",
+    "sha256": "4cb1d22e3d087524210dfc44029835b28a18053554bf7e5dcfce09197c6053d7",
     "files": [
       "catalog.css",
       "catalog.js",
@@ -22,7 +22,9 @@
       "styles.css",
       "tests/fixtures/baseline100.json",
       "tests/fixtures/tabletop-paths.json",
+      "tests/puzzle-generation-regression.cjs",
       "tests/puzzle-lab.cjs",
+      "tests/puzzle-remediation.cjs",
       "tools/evidence.cjs",
       "tools/run-suite.cjs"
     ]
@@ -71,9 +73,9 @@
   "servedRuntimeBefore": {
     "baseURL": "http://127.0.0.1:8790",
     "passed": true,
-    "sha256": "c68ce36460c330f344dbcba9db433f24ed5f807a9e9d5720eff96df431f1cbd9",
+    "sha256": "f643594da0bbb00c6ccd174e0bbef812f8bfce7f57c76ed82b4339debfd49b85",
     "fileCount": 13,
-    "verifiedAt": "2026-10-01T04:11:18.321Z"
+    "verifiedAt": "2026-10-01T06:47:02.094Z"
   },
   "exitCode": 0,
   "signal": null,
@@ -81,12 +83,12 @@
   "servedRuntime": {
     "baseURL": "http://127.0.0.1:8790",
     "passed": true,
-    "sha256": "c68ce36460c330f344dbcba9db433f24ed5f807a9e9d5720eff96df431f1cbd9",
+    "sha256": "f643594da0bbb00c6ccd174e0bbef812f8bfce7f57c76ed82b4339debfd49b85",
     "fileCount": 13,
-    "verifiedAt": "2026-10-01T04:13:08.470Z"
+    "verifiedAt": "2026-10-01T06:49:10.871Z"
   },
   "completionEvidence": {
-    "sha256": "0d07317bcc0013889992ac66ce936f0ab64a223a82bff894a5558e82bb5c1e41",
+    "sha256": "b75f363f34f09f82a50df9a8623d5aced334fd0386e2d5823e97993fa69b32ac",
     "file": "coverage/puzzle-lab.json",
     "cases": [
       {
@@ -521,7 +523,7 @@
         "edgeCases": [
           "initial incomplete study rejected",
           "keyboard activation retains visible control focus",
-          "legal edit undo restores original model and failed check",
+          "pending intervention commits only on advance; whole-day undo restores time, budget and history",
           "all three studies complete and completed study locked"
         ],
         "inputMethod": "Mouse clicks plus ordinary keyboard Space action; solver-guided legal UI inputs",
@@ -538,7 +540,7 @@
         "studiesCompleted": 3,
         "edgeCases": [
           "initial incomplete study rejected",
-          "legal edit undo restores original model and failed check",
+          "pending intervention commits only on advance; whole-day undo restores time, budget and history",
           "all three studies complete and completed study locked"
         ],
         "inputMethod": "Touchscreen taps only; solver-guided legal UI inputs",
@@ -793,5 +795,5 @@
       }
     ]
   },
-  "finishedAt": "2026-10-01T04:13:08.470Z"
+  "finishedAt": "2026-10-01T06:49:10.872Z"
 }

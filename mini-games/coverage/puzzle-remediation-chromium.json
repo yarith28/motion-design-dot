@@ -1,0 +1,114 @@
+{
+  "suite": "puzzle-remediation",
+  "browser": "chromium",
+  "passed": true,
+  "cases": [
+    {
+      "id": "seed-tomorrow",
+      "profile": "desktop",
+      "passed": true,
+      "checks": [
+        "indexed live/empty target/current/preview",
+        "noncommitting selection",
+        "explicit time/budget progression",
+        "history and whole-day undo",
+        "premature/final failure checks",
+        "no overrun past horizon",
+        "keyboard focus remains after activation"
+      ]
+    },
+    {
+      "id": "circuit-break",
+      "profile": "desktop",
+      "passed": true,
+      "checks": [
+        "terminal protection",
+        "overbudget rejection",
+        "keyboard focus remains after activation"
+      ]
+    },
+    {
+      "id": "river-capacity",
+      "profile": "desktop",
+      "passed": true,
+      "checks": [
+        "directed channel labels",
+        "conservation violation rejected",
+        "keyboard focus remains after activation"
+      ]
+    },
+    {
+      "id": "safety-ferry",
+      "profile": "desktop",
+      "passed": true,
+      "checks": [
+        "unsafe crossing reason",
+        "capacity enforced",
+        "visible shortest journey",
+        "keyboard focus remains after activation"
+      ]
+    },
+    {
+      "id": "map-inks",
+      "profile": "desktop",
+      "passed": true,
+      "checks": [
+        "monochrome graph rejected",
+        "keyboard focus remains after activation"
+      ]
+    },
+    {
+      "id": "seed-tomorrow",
+      "profile": "emulated-touch-320",
+      "passed": true,
+      "checks": [
+        "indexed live/empty target/current/preview",
+        "noncommitting selection",
+        "explicit time/budget progression",
+        "history and whole-day undo",
+        "premature/final failure checks",
+        "no overrun past horizon"
+      ]
+    },
+    {
+      "id": "circuit-break",
+      "profile": "emulated-touch-320",
+      "passed": true,
+      "checks": [
+        "terminal protection",
+        "overbudget rejection"
+      ]
+    },
+    {
+      "id": "river-capacity",
+      "profile": "emulated-touch-320",
+      "passed": true,
+      "checks": [
+        "directed channel labels",
+        "conservation violation rejected"
+      ]
+    },
+    {
+      "id": "safety-ferry",
+      "profile": "emulated-touch-320",
+      "passed": true,
+      "checks": [
+        "unsafe crossing reason",
+        "capacity enforced",
+        "visible shortest journey"
+      ]
+    },
+    {
+      "id": "map-inks",
+      "profile": "emulated-touch-320",
+      "passed": true,
+      "checks": [
+        "monochrome graph rejected"
+      ]
+    }
+  ],
+  "limits": [
+    "Public UI interactions test rules, errors and reset; full solver-guided wins are recorded separately.",
+    "Touchscreen is browser emulation, not physical phone testing. No actual screen reader test."
+  ]
+}

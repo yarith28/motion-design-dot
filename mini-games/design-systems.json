@@ -105,7 +105,7 @@
     {
       "id": "quiet-majority",
       "name": "Quiet Majority",
-      "core": "Coalition bargaining with irrevocable concessions, faction vetoes and public counteroffers.",
+      "core": "Weighted coalition planning with permanent policy concessions, temporary grants and changing public approval thresholds.",
       "nearestNeighbor": "Border Guild",
       "distinction": "Choose binding policy concessions satisfying conflicting factions, no territory draft.",
       "status": "implemented-and-ui-verified",
@@ -115,12 +115,16 @@
     {
       "id": "safe-return",
       "name": "Safe Return",
-      "core": "Correlated-risk underwriting across a forecast cycle with capital exposure constraints.",
+      "core": "Collateral-constrained underwriting with overlapping policy durations, correlated claims and changing future quotes.",
       "nearestNeighbor": "Trading Day",
-      "distinction": "Premium versus correlated contingent loss, not inventory arbitrage.",
-      "status": "implemented-and-ui-verified",
+      "distinction": "Commit collateral across different policy lifetimes while correlated claims and future quotes compete for capital.",
+      "status": "implemented-awaiting-source-matched-verification",
       "nearestNew": "carry-on",
-      "newDistinction": "Insurance accumulates correlated contingent liabilities lasting three days; Carry On makes irrevocable physical-capacity acceptance choices without future payouts."
+      "newDistinction": "Outstanding liabilities lock reusable capital across days; Carry On instead accumulates fixed expedition items.",
+      "scenarios": [
+        "Storm window",
+        "Long dry season"
+      ]
     },
     {
       "id": "firebreak",
@@ -195,12 +199,16 @@
     {
       "id": "convoy-ledger",
       "name": "Convoy Ledger",
-      "core": "Persistent escort allocation across simultaneous threatened shipping lanes.",
+      "core": "Multi-wave escort dispatch with simultaneous lane packing, voyage return times and permanent casualties.",
       "nearestNeighbor": "Hidden Fleet",
-      "distinction": "Visible-threat defense allocation and fleet attrition, not spatial search.",
-      "status": "implemented-and-ui-verified",
+      "distinction": "Dispatch shared escorts on different voyage lengths, balancing simultaneous lane coverage against future availability.",
+      "status": "implemented-awaiting-source-matched-verification",
       "nearestNew": "safe-return",
-      "newDistinction": "Convoy makes simultaneous route-protection allocations with persistent escort losses; insurance accepts overlapping correlated liabilities and manages capital through forecast events."
+      "newDistinction": "Multiple lanes compete in a single allocation, and escorts return after different voyages; insurance selects one contract and settles correlated weather liabilities.",
+      "scenarios": [
+        "Island circuit",
+        "Storm evacuation"
+      ]
     }
   ],
   "verification": {

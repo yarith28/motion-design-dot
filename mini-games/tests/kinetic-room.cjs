@@ -2,7 +2,7 @@
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
 const{chromium,webkit}=require('playwright');const root=path.resolve(__dirname,'..'),base=process.env.BASE_URL||'http://127.0.0.1:8790',engine=process.env.BROWSER_ENGINE||'chromium';
 const games=JSON.parse(fs.readFileSync(path.join(root,'kinetic-room/games.json'))),plans=JSON.parse(fs.readFileSync(path.join(__dirname,'kinetic-plans.json'))),coverageFile=path.join(root,'coverage/kinetic-room.json');
-const sourceFiles=['kinetic-room/index.html','kinetic-room/room.css','kinetic-room/room.js','kinetic-room/engines.js','kinetic-room/games.json','tests/kinetic-room.cjs','tests/kinetic-plans.json'];
+const sourceFiles=['kinetic-room/index.html','kinetic-room/room.css','kinetic-room/room.js','kinetic-room/engines.js','kinetic-room/games.json','tests/kinetic-room.cjs','tests/kinetic-plans.json','tests/kinetic-remediation.cjs'];
 const sourceHashes=Object.fromEntries(sourceFiles.map(f=>[f,crypto.createHash('sha256').update(fs.readFileSync(path.join(root,f))).digest('hex')]));
 const coverage={passed:false,browser:engine,generatedAt:new Date().toISOString(),sourceHashes,cases:[],limits:['Win paths were derived by simulation search and replayed using ordinary public UI controls; they establish reachability, not unaided human difficulty or polish.','Desktop uses native keyboard button activation. Mobile-touch uses only touchscreen taps for all gameplay.','Mobile touch is browser emulation at 390×844; every game also checks a 320px viewport. No physical phone or screenreader session was performed.','No gameplay state hooks or state mutations are used by this browser suite.','This file covers the selected browser engine only; separate CI evidence is required for another engine.']};
 const save=()=>fs.writeFileSync(coverageFile,JSON.stringify(coverage,null,2)+'\n');save();
@@ -10,7 +10,7 @@ const failures={ 'vector-rally':'track edge','border-bloom':'exposed trail','lan
 const edgeTests={
 'vector-rally':{actions:['coast'],text:'Velocity 0,0',name:'coasting from rest preserves zero velocity'},
 'border-bloom':{actions:['left'],text:'frame is solid',status:true,name:'frame boundary rejects movement'},
-'lantern-heist':{actions:['decoy'],text:'Decoys 2 · Distraction 2',name:'decoy consumes one charge and starts finite distraction'},
+'lantern-heist':{actions:['decoy'],text:'Distractions 2 · Distraction 2',name:'distraction consumes one charge and briefly interrupts sight'},
 'boulder-burrow':{actions:['up'],text:'Solid stone',status:true,name:'wall cannot be excavated'},
 'fuse-garden':{actions:['bomb','bomb'],text:'already has a fuse',status:true,name:'cannot plant duplicate fuse on occupied square'},
 'quiet-foil':{actions:['thrust'],text:'Out of reach',status:true,name:'thrust outside range consumes stamina without scoring'},

@@ -22,12 +22,12 @@
   {
     "id": "lantern-heist",
     "name": "Lantern Heist",
-    "coreLoop": "Steal seals while avoiding rotating patrol sightlines; lure guards with a noise decoy, then reach the exit.",
+    "coreLoop": "Steal seals past rotating sentry beams; spend a distraction to interrupt their sight, then reach the exit.",
     "nearestExisting": "Rover Script",
     "decisiveDifference": "Direct stealth movement against clocked enemy visibility and distraction, rather than queued single-agent commands.",
     "qualityPlan": "Deterministic simulation with visible state; keyboard and touch controls; restart and terminal state; UI-input solution and failure checks.",
     "nearestNew": "echo-steps",
-    "newDifference": "Visibility/patrol phase versus recording cooperative movement."
+    "newDifference": "Rotating visibility phase versus recording cooperative movement."
   },
   {
     "id": "boulder-burrow",
@@ -52,7 +52,7 @@
   {
     "id": "quiet-foil",
     "name": "Quiet Foil",
-    "coreLoop": "Manage distance and stamina against telegraphed thrusts; parry to open a riposte or retreat to recover.",
+    "coreLoop": "Read three opponents with different reach and rhythm; defend incoming attacks, manage stamina and take the initiative.",
     "nearestExisting": "Rope Skip",
     "decisiveDifference": "Opponent state, spacing, resource and initiative decisions rather than periodic timing.",
     "qualityPlan": "Deterministic simulation with visible state; keyboard and touch controls; restart and terminal state; UI-input solution and failure checks.",
@@ -107,12 +107,12 @@
     "decisiveDifference": "Two simultaneous time-offset bodies and pressure-plate cooperation rather than single-agent queued route.",
     "qualityPlan": "Deterministic simulation with visible state; keyboard and touch controls; restart and terminal state; UI-input solution and failure checks.",
     "nearestNew": "lantern-heist",
-    "newDifference": "Recorded simultaneous cooperation versus adversarial patrol surveillance."
+    "newDifference": "Recorded simultaneous cooperation versus rotating sentry surveillance."
   },
   {
     "id": "phase-walk",
     "name": "Phase Walk",
-    "coreLoop": "Change between three material phases to pass selective walls; phase anchors restrict where you may change.",
+    "coreLoop": "Choose routes through a loop of phase doors, conserve one-use anchors and collect seals in their required materials.",
     "nearestExisting": "Orbit Transfer",
     "decisiveDifference": "State-dependent physical passability with restricted phase transitions, not graph-edge routing.",
     "qualityPlan": "Deterministic simulation with visible state; keyboard and touch controls; restart and terminal state; UI-input solution and failure checks.",
@@ -132,7 +132,7 @@
   {
     "id": "scissor-lift",
     "name": "Scissor Lift",
-    "coreLoop": "Drive a telescoping vehicle under ceilings, raise its deck to receive freight, then carry and unload at elevated docks.",
+    "coreLoop": "Route three differently shaped loads through a low ground arch or an open trench, keeping the entire cargo envelope clear.",
     "nearestExisting": "Sky Stack",
     "decisiveDifference": "Vehicle clearance, changing geometry, and loaded-height safety rather than dropping blocks.",
     "qualityPlan": "Deterministic simulation with visible state; keyboard and touch controls; restart and terminal state; UI-input solution and failure checks.",

@@ -1,0 +1,39 @@
+{
+  "game": "causal-lab",
+  "mode": "independent visible-rule play; no new engine/test/solver source inspected before inputs",
+  "browser": "system Chromium via Playwright",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "input": "mouse button clicks and native selectOption; not touch-only",
+  "result": "first of three repair networks passed; full journey not completed in this sample",
+  "observations": [
+    {
+      "input": "A1 B0, no clamp",
+      "measured": "1011",
+      "healthy": "1111",
+      "decision": "Replace A \u2192 D"
+    },
+    {
+      "input": "A0 B1, no clamp after first repair",
+      "measured": "1011",
+      "healthy": "1011"
+    },
+    {
+      "input": "A0 B1, E clamped",
+      "measured": "1000",
+      "healthy": "1001",
+      "decision": "Replace B \u2192 F"
+    },
+    "Run acceptance audit advanced to Repair 2/3"
+  ],
+  "feedback": [
+    "Explicit C/D/E/F output labels needed",
+    "History should identify machine revision/replacements at observation time"
+  ],
+  "limits": [
+    "Development snapshot; owner subsequently refining output labels/history",
+    "No physical device, screenreader or full ordinary journey claim"
+  ]
+}

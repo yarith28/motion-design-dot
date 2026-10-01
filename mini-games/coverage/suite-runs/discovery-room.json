@@ -3,9 +3,9 @@
   "suite": "discovery-room",
   "passed": true,
   "status": "passed",
-  "startedAt": "2026-10-01T04:35:49.453Z",
+  "startedAt": "2026-10-01T06:47:29.199Z",
   "source": {
-    "sha256": "768a55d121efed348f4fcf0a07941187838ad2b871dd7229866229ef3da2194b",
+    "sha256": "1bcaaa483a59d776c917d620aa76aaa2f07f56cab582610b25118af742006d87",
     "files": [
       "catalog.css",
       "catalog.js",
@@ -18,6 +18,8 @@
       "inventory.json",
       "play.css",
       "styles.css",
+      "tests/discovery-design-properties.cjs",
+      "tests/discovery-remediation.cjs",
       "tests/discovery-room.cjs",
       "tests/fixtures/baseline100.json",
       "tests/fixtures/tabletop-paths.json",
@@ -69,9 +71,9 @@
   "servedRuntimeBefore": {
     "baseURL": "http://127.0.0.1:8790",
     "passed": true,
-    "sha256": "57da3e7c6270a9c25493ecd761ac5f48eba4b2f8f22830d511646d5cbc43bdf4",
+    "sha256": "1016f977893e65e4ae8d9c2a4f22acb10ba77007bc756d620b16c53d7f52617c",
     "fileCount": 11,
-    "verifiedAt": "2026-10-01T04:35:49.561Z"
+    "verifiedAt": "2026-10-01T06:47:29.357Z"
   },
   "exitCode": 0,
   "signal": null,
@@ -79,12 +81,12 @@
   "servedRuntime": {
     "baseURL": "http://127.0.0.1:8790",
     "passed": true,
-    "sha256": "57da3e7c6270a9c25493ecd761ac5f48eba4b2f8f22830d511646d5cbc43bdf4",
+    "sha256": "1016f977893e65e4ae8d9c2a4f22acb10ba77007bc756d620b16c53d7f52617c",
     "fileCount": 11,
-    "verifiedAt": "2026-10-01T04:36:55.050Z"
+    "verifiedAt": "2026-10-01T06:49:23.673Z"
   },
   "completionEvidence": {
-    "sha256": "9d72e1a6858440ce9fd7b87b9efaa99980f837ed46688f709927b8b2291ecd5b",
+    "sha256": "ebe69d66925d7dff111b6147b3ce562584f8f4f1f176460984f80d62eb8c4eb4",
     "file": "coverage/discovery-room.json",
     "cases": [
       {
@@ -275,7 +277,7 @@
         "restart": true,
         "edgeCases": [
           "Asserted invalid-action guard or resource-exhaustion loss before restart",
-          "Adaptive public-hypothesis temporal sampling, uniqueness required",
+          "Constructed a nonadaptive separating schedule for every candidate, then decoded the actual record",
           "Restart clears terminal outcome"
         ],
         "touchOnly": false,
@@ -290,7 +292,7 @@
         "restart": true,
         "edgeCases": [
           "Asserted invalid-action guard or resource-exhaustion loss before restart",
-          "Adaptive public-hypothesis temporal sampling, uniqueness required",
+          "Constructed a nonadaptive separating schedule for every candidate, then decoded the actual record",
           "Restart clears terminal outcome"
         ],
         "touchOnly": false,
@@ -305,7 +307,7 @@
         "restart": true,
         "edgeCases": [
           "Asserted invalid-action guard or resource-exhaustion loss before restart",
-          "Constructed distinguishing experiments and classified unseen specimens",
+          "Selected scarce geometric prototypes whose nearest-neighbor regions classify every reference without conflicting ties",
           "Restart clears terminal outcome"
         ],
         "touchOnly": false,
@@ -320,11 +322,11 @@
         "restart": true,
         "edgeCases": [
           "Asserted invalid-action guard or resource-exhaustion loss before restart",
-          "Constructed distinguishing experiments and classified unseen specimens",
+          "Selected scarce geometric prototypes whose nearest-neighbor regions classify every reference without conflicting ties",
           "Restart clears terminal outcome"
         ],
-        "touchOnly": false,
-        "inputMethod": "Touch buttons plus programmatic native field fill/select",
+        "touchOnly": true,
+        "inputMethod": "Touchscreen tap on all gameplay buttons",
         "verification": "solver-driven UI, visible evidence only"
       },
       {
@@ -335,7 +337,7 @@
         "restart": true,
         "edgeCases": [
           "Asserted invalid-action guard or resource-exhaustion loss before restart",
-          "Interventions distinguish every surviving wire hypothesis",
+          "Diagnosed and repaired changing networks, including masked faults exposed by an intermediate repair",
           "Restart clears terminal outcome"
         ],
         "touchOnly": false,
@@ -350,7 +352,7 @@
         "restart": true,
         "edgeCases": [
           "Asserted invalid-action guard or resource-exhaustion loss before restart",
-          "Interventions distinguish every surviving wire hypothesis",
+          "Diagnosed and repaired changing networks, including masked faults exposed by an intermediate repair",
           "Restart clears terminal outcome"
         ],
         "touchOnly": false,
@@ -425,7 +427,7 @@
         "restart": true,
         "edgeCases": [
           "Asserted invalid-action guard or resource-exhaustion loss before restart",
-          "Optimal adaptive questions for correlated trait catalogs under shared budget",
+          "Built explicit question nodes and labeled leaves to route every catalog specimen within depth three",
           "Restart clears terminal outcome"
         ],
         "touchOnly": false,
@@ -440,7 +442,7 @@
         "restart": true,
         "edgeCases": [
           "Asserted invalid-action guard or resource-exhaustion loss before restart",
-          "Optimal adaptive questions for correlated trait catalogs under shared budget",
+          "Built explicit question nodes and labeled leaves to route every catalog specimen within depth three",
           "Restart clears terminal outcome"
         ],
         "touchOnly": true,
@@ -515,7 +517,7 @@
         "restart": true,
         "edgeCases": [
           "Asserted invalid-action guard or resource-exhaustion loss before restart",
-          "Solved visible dependent patch subset/order under three-pick budget and both conflict choices",
+          "Solved independently generated patch subsets with variable dependencies, pick budgets and conflicts",
           "Restart clears terminal outcome"
         ],
         "touchOnly": false,
@@ -530,7 +532,7 @@
         "restart": true,
         "edgeCases": [
           "Asserted invalid-action guard or resource-exhaustion loss before restart",
-          "Solved visible dependent patch subset/order under three-pick budget and both conflict choices",
+          "Solved independently generated patch subsets with variable dependencies, pick budgets and conflicts",
           "Restart clears terminal outcome"
         ],
         "touchOnly": true,
@@ -545,7 +547,7 @@
         "restart": true,
         "edgeCases": [
           "Asserted invalid-action guard or resource-exhaustion loss before restart",
-          "Calibration kernel plus forward reconstruction identifies source",
+          "Designed sparse calibration probes, identified the installed lens and reconstructed all six source samples",
           "Restart clears terminal outcome"
         ],
         "touchOnly": false,
@@ -560,7 +562,7 @@
         "restart": true,
         "edgeCases": [
           "Asserted invalid-action guard or resource-exhaustion loss before restart",
-          "Calibration kernel plus forward reconstruction identifies source",
+          "Designed sparse calibration probes, identified the installed lens and reconstructed all six source samples",
           "Restart clears terminal outcome"
         ],
         "touchOnly": true,
@@ -605,7 +607,7 @@
         "restart": true,
         "edgeCases": [
           "Asserted invalid-action guard or resource-exhaustion loss before restart",
-          "Causal item combination, fixture repair, winding, setting and escape chain",
+          "Completed all three materially different inventory dependency scenarios, including independent storm branches and staged cellar access",
           "Restart clears terminal outcome"
         ],
         "touchOnly": false,
@@ -620,11 +622,11 @@
         "restart": true,
         "edgeCases": [
           "Asserted invalid-action guard or resource-exhaustion loss before restart",
-          "Causal item combination, fixture repair, winding, setting and escape chain",
+          "Completed all three materially different inventory dependency scenarios, including independent storm branches and staged cellar access",
           "Restart clears terminal outcome"
         ],
-        "touchOnly": true,
-        "inputMethod": "Touchscreen tap on all gameplay buttons",
+        "touchOnly": false,
+        "inputMethod": "Touch buttons plus programmatic native field fill/select",
         "verification": "solver-driven UI, visible evidence only"
       },
       {
@@ -635,7 +637,7 @@
         "restart": true,
         "edgeCases": [
           "Asserted invalid-action guard or resource-exhaustion loss before restart",
-          "Key-gate chokepoint and water crossing precede simultaneous hatch exchange and both escapes",
+          "Completed crossed cargo, two-stage key/crank relay, and held-signal coordination scenarios",
           "Restart clears terminal outcome"
         ],
         "touchOnly": false,
@@ -650,11 +652,11 @@
         "restart": true,
         "edgeCases": [
           "Asserted invalid-action guard or resource-exhaustion loss before restart",
-          "Key-gate chokepoint and water crossing precede simultaneous hatch exchange and both escapes",
+          "Completed crossed cargo, two-stage key/crank relay, and held-signal coordination scenarios",
           "Restart clears terminal outcome"
         ],
-        "touchOnly": true,
-        "inputMethod": "Touchscreen tap on all gameplay buttons",
+        "touchOnly": false,
+        "inputMethod": "Touch buttons plus programmatic native field fill/select",
         "verification": "solver-driven UI, visible evidence only"
       },
       {
@@ -689,5 +691,5 @@
       }
     ]
   },
-  "finishedAt": "2026-10-01T04:36:55.051Z"
+  "finishedAt": "2026-10-01T06:49:23.674Z"
 }

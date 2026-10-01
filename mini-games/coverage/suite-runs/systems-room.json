@@ -3,9 +3,9 @@
   "suite": "systems-room",
   "passed": true,
   "status": "passed",
-  "startedAt": "2026-10-01T04:10:18.413Z",
+  "startedAt": "2026-10-01T06:51:22.364Z",
   "source": {
-    "sha256": "25039d46c832c2395aad87ea103354e35daa73d645cbd2922f4e7426b2db538e",
+    "sha256": "641d2bca3f94b1bdafe59c81fadfcaaaa01cfdedc225ca2b7f2f19004615d1d9",
     "files": [
       "catalog.css",
       "catalog.js",
@@ -42,8 +42,11 @@
       "systems-room/workshop-shift.mjs",
       "tests/fixtures/baseline100.json",
       "tests/fixtures/tabletop-paths.json",
+      "tests/systems-depth.mjs",
       "tests/systems-paths.json",
+      "tests/systems-remediation.cjs",
       "tests/systems-room.cjs",
+      "tests/systems-scenarios.json",
       "tools/evidence.cjs",
       "tools/run-suite.cjs"
     ]
@@ -92,9 +95,9 @@
   "servedRuntimeBefore": {
     "baseURL": "http://127.0.0.1:8790",
     "passed": true,
-    "sha256": "7d4fa8c6d1038a506261d23d63ac46598c7a8fdfba7a3068f9d00e6cda43b141",
+    "sha256": "0601d09d6008cc4d33073138dec5361e2f6af51bab7fdba0d78e985ca0ed4432",
     "fileCount": 33,
-    "verifiedAt": "2026-10-01T04:10:18.608Z"
+    "verifiedAt": "2026-10-01T06:51:22.482Z"
   },
   "exitCode": 0,
   "signal": null,
@@ -102,12 +105,12 @@
   "servedRuntime": {
     "baseURL": "http://127.0.0.1:8790",
     "passed": true,
-    "sha256": "7d4fa8c6d1038a506261d23d63ac46598c7a8fdfba7a3068f9d00e6cda43b141",
+    "sha256": "0601d09d6008cc4d33073138dec5361e2f6af51bab7fdba0d78e985ca0ed4432",
     "fileCount": 33,
-    "verifiedAt": "2026-10-01T04:11:18.153Z"
+    "verifiedAt": "2026-10-01T06:52:11.575Z"
   },
   "completionEvidence": {
-    "sha256": "bf31626c21d7e78f320107e119b64a5e1535d43503c08ea735dce0c855164517",
+    "sha256": "3f5c72fe60f0c5a22ffec93d8fc6682df3c9eae8c04f9ef3bcba4f81b051948d",
     "file": "coverage/systems-room.json",
     "cases": [
       {
@@ -559,8 +562,8 @@
         "touchOnly": false,
         "inputMethod": "Keyboard focus + Enter activation on actual controls; source-derived solution replay",
         "ordinaryInput": "Unsolved first available control activated, focus and restart checked; no unaided completion claim",
-        "winActions": 12,
-        "lossActions": 12,
+        "winActions": 10,
+        "lossActions": 10,
         "edgeCases": [
           "Deliberate failure route reaches loss through UI",
           "Terminal controls unavailable",
@@ -579,8 +582,8 @@
         "touchOnly": true,
         "inputMethod": "Touch-only taps on actual onscreen controls; source-derived solution replay",
         "ordinaryInput": "Unsolved first available control activated, focus and restart checked; no unaided completion claim",
-        "winActions": 12,
-        "lossActions": 12,
+        "winActions": 10,
+        "lossActions": 10,
         "edgeCases": [
           "Deliberate failure route reaches loss through UI",
           "Terminal controls unavailable",
@@ -720,7 +723,7 @@
         "inputMethod": "Keyboard focus + Enter activation on actual controls; source-derived solution replay",
         "ordinaryInput": "Unsolved first available control activated, focus and restart checked; no unaided completion claim",
         "winActions": 23,
-        "lossActions": 13,
+        "lossActions": 12,
         "edgeCases": [
           "Deliberate failure route reaches loss through UI",
           "Terminal controls unavailable",
@@ -740,7 +743,7 @@
         "inputMethod": "Touch-only taps on actual onscreen controls; source-derived solution replay",
         "ordinaryInput": "Unsolved first available control activated, focus and restart checked; no unaided completion claim",
         "winActions": 23,
-        "lossActions": 13,
+        "lossActions": 12,
         "edgeCases": [
           "Deliberate failure route reaches loss through UI",
           "Terminal controls unavailable",
@@ -879,8 +882,8 @@
         "touchOnly": false,
         "inputMethod": "Keyboard focus + Enter activation on actual controls; source-derived solution replay",
         "ordinaryInput": "Unsolved first available control activated, focus and restart checked; no unaided completion claim",
-        "winActions": 32,
-        "lossActions": 5,
+        "winActions": 35,
+        "lossActions": 7,
         "edgeCases": [
           "Deliberate failure route reaches loss through UI",
           "Terminal controls unavailable",
@@ -899,8 +902,8 @@
         "touchOnly": true,
         "inputMethod": "Touch-only taps on actual onscreen controls; source-derived solution replay",
         "ordinaryInput": "Unsolved first available control activated, focus and restart checked; no unaided completion claim",
-        "winActions": 32,
-        "lossActions": 5,
+        "winActions": 35,
+        "lossActions": 7,
         "edgeCases": [
           "Deliberate failure route reaches loss through UI",
           "Terminal controls unavailable",
@@ -912,5 +915,5 @@
       }
     ]
   },
-  "finishedAt": "2026-10-01T04:11:18.154Z"
+  "finishedAt": "2026-10-01T06:52:11.577Z"
 }

@@ -1962,7 +1962,7 @@
       "name": "Quiet Majority",
       "category": "strategy",
       "description": "Find a coalition that can live with the same promise.",
-      "mechanic": "Coalition bargaining with irrevocable concessions, faction vetoes and public counteroffers.",
+      "mechanic": "Weighted coalition planning with permanent policy concessions, temporary grants and changing public approval thresholds.",
       "rules": [
         "Negotiate three bills with 15 council seats. Each bill needs 11 yes votes. Harbor, Garden, Clinic and Guild have public policy weights and approval thresholds. One point of any policy helps some factions and can upset another.",
         "Each bill allows four negotiations. Add one Harbor/Garden/Clinic policy for 1 treasury, or promise a faction a 2-point approval grant for 2 treasury. Grants expire after the vote; policy levels carry into later bills. You may vote early.",
@@ -1983,14 +1983,14 @@
       "id": "safe-return",
       "name": "Safe Return",
       "category": "strategy",
-      "description": "Write a little insurance, and keep enough in reserve.",
-      "mechanic": "Correlated-risk underwriting across a forecast cycle with capital exposure constraints.",
+      "description": "Keep capital available for tomorrow while today’s policies settle.",
+      "mechanic": "Collateral-constrained underwriting with overlapping policy durations, correlated claims and changing future quotes.",
       "rules": [
-        "Write one three-day insurance policy per day, or decline. Premiums arrive immediately; every active policy pays its listed loss on every matching weather day. New policies cover today and the next two days.",
-        "Weather is public for the next four days. Multiple policies of one type share the same risk: a flood can hit every insured house together. Policies expire after their third payout check. Keep positive capital after each day.",
-        "Finish twelve days with at least 45 free capital and at least 7 policies written. At closing, each remaining policy-day reserves 4 capital; only capital above that reserve counts. Start with 20 capital. New policies cost no cash upfront, but collect claims after their premium. Avoid leaving active exposure in the last-day accounts."
+        "Each day accept one insurance quote or decline. Homes cover 3 days, boats 2, farms 4, including today. Premium arrives now; every active policy pays its listed loss on every matching weather day. The complete weather and quote calendar is public.",
+        "Before accepting, free capital must cover collateral: homes 22, boats 16, farms 18. Free capital is total capital minus all active collateral. A new premium cannot fund its own collateral. Collateral is locked until that policy finishes its last daily claim check; overlapping policies compete for the same capital. Claims can push free capital below zero, but total capital must stay positive.",
+        "Start with 24 capital. In 10 days write at least 5 policies and reach the scenario’s free-capital target. Collateral still locked at closing does not count toward the target. A longer contract may block a valuable later quote. Restart repeats this scenario; choose the other scenario for a different weather and quote schedule."
       ],
-      "controls": "Tap the labeled actions, or use Tab and Enter / Space. Arrow keys move between actions. Nothing advances while you are away.",
+      "controls": "Tap the labeled actions, or use Tab and Enter / Space. Arrow keys move between actions. Nothing advances while you are away. Scenario changes start a different plan; Restart repeats the selected scenario.",
       "url": "systems-room/?game=safe-return",
       "accent": "#d0bfd4",
       "symbol": "⌂",
@@ -2075,7 +2075,7 @@
       "mechanic": "Capacity-constrained elevator dispatch with passenger queues and ride deadlines.",
       "rules": [
         "Carry eight passengers through a five-floor building. Move one floor per tick, or open doors. Door opening first unloads arriving passengers, then boards the oldest waiting passengers up to capacity 2. Moving does not board or unload.",
-        "Every passenger has a release time and delivery deadline. Passengers appear at their release tick. A passenger still waiting or riding when their deadline passes is missed and leaves. The destination of everyone aboard is visible.",
+        "Every passenger has a release time and delivery deadline. Passengers appear at their release tick. A passenger still waiting or riding at the end of their due tick is missed and leaves. A passenger due at tick 11 must be unloaded by the end of action 11; action 12 is too late. The destination of everyone aboard is visible.",
         "Deliver at least 7 passengers within 28 ticks. Two missed passengers end the shift. You cannot choose which passenger boards: oldest first, so route and door timing determine the load."
       ],
       "controls": "Tap the labeled actions, or use Tab and Enter / Space. Arrow keys move between actions. Nothing advances while you are away.",
@@ -2159,14 +2159,14 @@
       "id": "convoy-ledger",
       "name": "Convoy Ledger",
       "category": "strategy",
-      "description": "Spread the escorts carefully. Bring every ship home.",
-      "mechanic": "Persistent escort allocation across simultaneous threatened shipping lanes.",
+      "description": "Protect today’s cargo without stranding tomorrow’s escorts.",
+      "mechanic": "Multi-wave escort dispatch with simultaneous lane packing, voyage return times and permanent casualties.",
       "rules": [
-        "Dispatch five convoys across three lanes. Each lane shows threat and cargo value. Allocate your six escorts one at a time; then sail all lanes together. Each escort cancels one threat. You can recall an allocation before sailing.",
-        "If a lane has any uncovered threat, that lane loses its cargo and one assigned escort (if present). A fully protected lane delivers all cargo. After sailing, surviving escorts return and one replacement joins, up to six.",
-        "Deliver at least 58 cargo across five waves. You may deliberately abandon a low-value lane to fully protect the others. Splitting escorts thinly can lose every cargo and shrink the fleet for later waves."
+        "Seven waves each have three cargo lanes. Assign your six escorts, then sail all lanes together. A lane delivers only if assigned escorts meet its printed threat. Assignments can be recalled until sailing. The full threat, cargo and trip-length calendar is public.",
+        "A protected lane delivers its cargo immediately, but its escorts stay away for the printed number of waves, including the departure wave. A 1-wave trip returns before the next allocation; a 3-wave trip skips the next two allocations. The return ledger shows exactly when escorts come home. Escorts cannot serve two lanes at once.",
+        "Meet the scenario’s cargo target in seven waves. There are no replacement escorts. Underprotected lanes lose all cargo and one assigned escort permanently; the others return after that lane’s trip. Partial cover offers no cargo benefit, so abandon a lane with zero escorts if you cannot protect it. Long voyages can deny protection to tomorrow’s more valuable cargo. Restart repeats the scenario; the other scenario changes trip priorities."
       ],
-      "controls": "Tap the labeled actions, or use Tab and Enter / Space. Arrow keys move between actions. Nothing advances while you are away.",
+      "controls": "Tap the labeled actions, or use Tab and Enter / Space. Arrow keys move between actions. Nothing advances while you are away. Scenario changes start a different plan; Restart repeats the selected scenario.",
       "url": "systems-room/?game=convoy-ledger",
       "accent": "#d0bfd4",
       "symbol": "⚓",
@@ -2206,8 +2206,8 @@
       "mechanic": "Five-round blackjack with hit, stand, double and a finite chip stack.",
       "rules": [
         "Start with 20 chips. Each of five hands costs a 2-chip stake. Aces count 11 or 1; faces count 10. The dealer shows one card and stands at 17, including soft 17.",
-        "Hit for another card or stand. Double is available only on your first decision, costs another 2 chips and deals exactly one card. Above 21 loses. A two-card 21 pays 3:2; other wins pay 1:1. Ties return the stake.",
-        "Finish five hands with more than 20 chips to win. The dealer hole card stays hidden until you stand or bust."
+        "Hit for another card or stand. Double is available only on your first decision, costs another 2 chips and deals exactly one card. Above 21 loses. A two-card 21 pays 3:2; other wins pay 1:1. Ties return the stake. A two-card blackjack beats every non-blackjack hand, including a drawn 21. Two blackjacks push. Opening blackjacks settle immediately.",
+        "Finish five hands with more than 20 chips to win. The dealer hole card stays hidden until the hand settles."
       ],
       "controls": "Tap or click cards, board squares and labeled actions. Tab moves focus; Enter or Space activates. Arrow keys move between neighboring controls. No timing or dragging required.",
       "url": "tabletop-room/?game=twenty-one",
@@ -2750,7 +2750,7 @@
       "rules": [
         "Tap relay nodes to take them offline, or tap again to restore them.",
         "Signals travel both ways along every listed wire. Protect every archive from every transmitter.",
-        "Transmitters and archives cannot be removed. Stay within the relay budget; Check traces a surviving leak."
+        "Terminals cannot be removed. Each new network has a verified minimum relay budget of one, two or three; neither terminal can be isolated simply by removing all its direct neighbors within that budget."
       ],
       "controls": "Tap buttons or use Tab and Enter / Space. Direction games also support arrow keys. Undo, Reset study and Restart are always available.",
       "url": "puzzle-lab/?game=circuit-break",
@@ -2800,7 +2800,7 @@
       "rules": [
         "Each channel button cycles its flow from zero to its printed capacity.",
         "At every intermediate basin, total water in must equal total water out.",
-        "Deliver the target flow from S to T. Check points to a basin that leaks or creates water."
+        "Deliver the target flow from S to T through a freshly generated branching network. An internal bottleneck limits delivery; Check points to a basin that leaks or creates water."
       ],
       "controls": "Tap buttons or use Tab and Enter / Space. Direction games also support arrow keys. Undo, Reset study and Restart are always available.",
       "url": "puzzle-lab/?game=river-capacity",
@@ -2920,14 +2920,14 @@
       "id": "seed-tomorrow",
       "name": "Seed Tomorrow",
       "category": "puzzle",
-      "description": "Plant the beginning of a pattern you can only see tomorrow.",
-      "mechanic": "Inverse cellular evolution",
+      "description": "Tend a changing garden one day at a time, choosing when to plant or prune.",
+      "mechanic": "Timed intervention in nonlinear cellular growth",
       "rules": [
-        "Toggle seeds in the top row. Each next cell is alive only when exactly one of its left and right neighbors was alive.",
-        "The row wraps at its ends. Middle cells do not count as their own neighbors.",
-        "After the printed number of days, the row must match the target. The timeline updates with every seed."
+        "The initial garden is fixed. Each day choose at most one cell to plant or prune, or wait; then Advance one day. Your total intervention budget is limited.",
+        "Growth happens simultaneously: a living cell survives with exactly one living neighbor; an empty cell grows only with two living neighbors. Left and right ends wrap. The rule table and next-day preview show every outcome.",
+        "Match the indexed final target after all days. Timing matters: Undo reverses a whole day, including its intervention and budget. Reset restores this study; Restart generates a new journey."
       ],
-      "controls": "Tap buttons or use Tab and Enter / Space. Direction games also support arrow keys. Undo, Reset study and Restart are always available.",
+      "controls": "Tap a cell to select or cancel its intervention, then Advance one day. Tab and Enter / Space work on every control. Target and history identify every cell as live or empty.",
       "url": "puzzle-lab/?game=seed-tomorrow",
       "accent": "#dec39c",
       "symbol": "◇",
@@ -3100,7 +3100,7 @@
       "rules": [
         "Select cargo on the ferry’s current bank, then Sail. Capacity limits how many can ride; empty crossings are allowed.",
         "Pairs listed as incompatible may never share a bank without the ferryman.",
-        "Bring everyone to the far bank. Unsafe crossings are refused with an explanation; Undo reverses a safe crossing."
+        "Bring everyone to the far bank. Unsafe crossings are refused with an explanation. New compatibility graphs have verified shortest journeys of 7, 9 and 11 crossings; the final ferry carries three. Undo reverses a safe crossing."
       ],
       "controls": "Tap buttons or use Tab and Enter / Space. Direction games also support arrow keys. Undo, Reset study and Restart are always available.",
       "url": "puzzle-lab/?game=safety-ferry",
@@ -3127,7 +3127,7 @@
         "Each control adds −1, 0 or +1 to horizontal and vertical velocity, capped at ±2. Your car then travels that entire velocity. Coast keeps it unchanged.",
         "The whole swept path must stay on the pale track. Brake with acceleration opposite your velocity before a corner. The line forecasts a coast."
       ],
-      "controls": "Use the on-screen action buttons, or their displayed keyboard shortcuts. All simulations advance only when you act; selection and aim controls are free where noted.",
+      "controls": "Start or Restart focuses the board: use the displayed keyboard shortcuts there. Tab to a button and Enter or Space activates that focused button. All actions also have touch buttons.",
       "url": "kinetic-room/?game=vector-rally",
       "accent": "#b9c9a6",
       "symbol": "↗",
@@ -3149,7 +3149,7 @@
         "Moving onto blank ground draws an exposed trail. Rejoin any safe tile to seal the line and fill the region that does not contain the spark.",
         "The spark bounces off claimed ground. If it touches your exposed trail, or you cross your own trail, the attempt ends. Use the board description for its direction. The two gardens share a 180-action allowance."
       ],
-      "controls": "Use the on-screen action buttons, or their displayed keyboard shortcuts. All simulations advance only when you act; selection and aim controls are free where noted.",
+      "controls": "Start or Restart focuses the board: use the displayed keyboard shortcuts there. Tab to a button and Enter or Space activates that focused button. All actions also have touch buttons.",
       "url": "kinetic-room/?game=border-bloom",
       "accent": "#b9c9a6",
       "symbol": "▧",
@@ -3164,14 +3164,14 @@
       "id": "lantern-heist",
       "name": "Lantern Heist",
       "category": "strategy",
-      "description": "Steal seals while avoiding rotating patrol sightlines; lure guards with a noise decoy, then reach the exit.",
-      "mechanic": "Steal seals while avoiding rotating patrol sightlines; lure guards with a noise decoy, then reach the exit.",
+      "description": "Steal seals past rotating sentry beams; spend a distraction to interrupt their sight, then reach the exit.",
+      "mechanic": "Steal seals past rotating sentry beams; spend a distraction to interrupt their sight, then reach the exit.",
       "rules": [
         "Collect three ◆ seals, then reach E at the upper right within 80 actions. Walls block movement and lantern beams.",
         "Each guard turns clockwise after every action; its arrow and pale beam show the NEXT sweep. Sight reaches three clear squares. Being seen ends the attempt.",
-        "Three decoys interrupt sight for three actions apiece. Wait safely behind walls to change the guard phase, or use a decoy to cross a watched corridor."
+        "Three distractions interrupt every sentry’s sight for three actions apiece. They do not move the sentries. Wait safely behind walls to change the beam phase, or spend a distraction to cross a watched corridor."
       ],
-      "controls": "Use the on-screen action buttons, or their displayed keyboard shortcuts. All simulations advance only when you act; selection and aim controls are free where noted.",
+      "controls": "Start or Restart focuses the board: use the displayed keyboard shortcuts there. Tab to a button and Enter or Space activates that focused button. All actions also have touch buttons.",
       "url": "kinetic-room/?game=lantern-heist",
       "accent": "#b9c9a6",
       "symbol": "◐",
@@ -3193,7 +3193,7 @@
         "After every action, boulders fall one empty square. A boulder on rock or masonry rolls sideways if both the neighboring cell and the cell below it are empty.",
         "A falling boulder crushes you. Soil supports rocks until excavated: approach gems from the side, and keep an escape route open. Ninety actions are available."
       ],
-      "controls": "Use the on-screen action buttons, or their displayed keyboard shortcuts. All simulations advance only when you act; selection and aim controls are free where noted.",
+      "controls": "Start or Restart focuses the board: use the displayed keyboard shortcuts there. Tab to a button and Enter or Space activates that focused button. All actions also have touch buttons.",
       "url": "kinetic-room/?game=boulder-burrow",
       "accent": "#b9c9a6",
       "symbol": "◆",
@@ -3215,7 +3215,7 @@
         "A planted bomb burns for four actions, including the planting action. Its blast reaches two cells in each cardinal direction. Masonry stops it; a crate absorbs the blast.",
         "Lit bombs block walking; up to two may burn at once. A blast ignites other bombs immediately. Shelter behind a corner before the fuse expires—any blast reaching you ends the attempt."
       ],
-      "controls": "Use the on-screen action buttons, or their displayed keyboard shortcuts. All simulations advance only when you act; selection and aim controls are free where noted.",
+      "controls": "Start or Restart focuses the board: use the displayed keyboard shortcuts there. Tab to a button and Enter or Space activates that focused button. All actions also have touch buttons.",
       "url": "kinetic-room/?game=fuse-garden",
       "accent": "#b9c9a6",
       "symbol": "✳",
@@ -3230,14 +3230,14 @@
       "id": "quiet-foil",
       "name": "Quiet Foil",
       "category": "strategy",
-      "description": "Manage distance and stamina against telegraphed thrusts; parry to open a riposte or retreat to recover.",
-      "mechanic": "Manage distance and stamina against telegraphed thrusts; parry to open a riposte or retreat to recover.",
+      "description": "Read three opponents with different reach and rhythm; defend incoming attacks, manage stamina and take the initiative.",
+      "mechanic": "Read three opponents with different reach and rhythm; defend incoming attacks, manage stamina and take the initiative.",
       "rules": [
-        "Score five touches before suffering four. Thrust costs two stamina and reaches distance one or two; recovery restores two, up to six.",
-        "The displayed opponent intent executes after your action. Advance closes distance; thrust attacks; guard blocks ordinary attacks; recover and feint leave openings.",
-        "Parry costs one stamina. Parrying a thrust creates a one-action riposte for two touches. Parrying a feint instead drains two extra stamina. Move or recover when too far away."
+        "Win three bouts with four touches each before taking three hits in a bout. The visible next intent resolves after movement: thrust reaches distance 2; lunge reaches 3 and then closes the distance. You have 120 actions across all bouts.",
+        "Thrust and parry cost two stamina; recovery restores two, up to six. Your thrust reaches distance 1–2. An enemy attack interrupts an unprotected strike: step beyond its reach or parry. Guard blocks ordinary strikes.",
+        "A successful parry opens a one-action riposte for two touches, with initiative over the next attack. Feints punish unnecessary parries by draining two extra stamina. Each opponent has a distinct pattern listed in the board description. Next bout restores life and stamina."
       ],
-      "controls": "Use the on-screen action buttons, or their displayed keyboard shortcuts. All simulations advance only when you act; selection and aim controls are free where noted.",
+      "controls": "Start or Restart focuses the board: use the displayed keyboard shortcuts there. Tab to a button and Enter or Space activates that focused button. All actions also have touch buttons.",
       "url": "kinetic-room/?game=quiet-foil",
       "accent": "#b9c9a6",
       "symbol": "⚔",
@@ -3259,7 +3259,7 @@
         "Hands remain above all feet, every hand-to-foot reach is at most 4.2 units, paired hands and paired feet stay within two rows, and feet stay within four columns. Occupied or missing holds cannot be used.",
         "A move costs one fatigue; repeating the same limb costs two. Invalid regrips also cost one. Chalk restores four only when feet share a row. Reach twelve fatigue and your grip fails."
       ],
-      "controls": "Use the on-screen action buttons, or their displayed keyboard shortcuts. All simulations advance only when you act; selection and aim controls are free where noted.",
+      "controls": "Start or Restart focuses the board: use the displayed keyboard shortcuts there. Tab to a button and Enter or Space activates that focused button. All actions also have touch buttons.",
       "url": "kinetic-room/?game=four-holds",
       "accent": "#b9c9a6",
       "symbol": "⌘",
@@ -3281,7 +3281,7 @@
         "Choose a left, straight or right wheel angle, then drive forward or backward. Wheel selection takes no time. Driving changes tractor heading and pulls or pushes the articulated trailer.",
         "Bodies cannot touch walls or crates. A hitch angle above about 66 degrees jackknifes. Reverse in small corrections; you have 100 driving actions."
       ],
-      "controls": "Use the on-screen action buttons, or their displayed keyboard shortcuts. All simulations advance only when you act; selection and aim controls are free where noted.",
+      "controls": "Start or Restart focuses the board: use the displayed keyboard shortcuts there. Tab to a button and Enter or Space activates that focused button. All actions also have touch buttons.",
       "url": "kinetic-room/?game=trailer-yard",
       "accent": "#b9c9a6",
       "symbol": "↶",
@@ -3303,7 +3303,7 @@
         "Left and right add sideways velocity, capped at 0.75. Brake retains only one quarter of lateral drift. Flip reverses gravity and resets vertical speed.",
         "Floors, ceilings and ledges catch the boots; ^ spikes end the attempt. Keep lateral drift under control when flipping between surfaces."
       ],
-      "controls": "Use the on-screen action buttons, or their displayed keyboard shortcuts. All simulations advance only when you act; selection and aim controls are free where noted.",
+      "controls": "Start or Restart focuses the board: use the displayed keyboard shortcuts there. Tab to a button and Enter or Space activates that focused button. All actions also have touch buttons.",
       "url": "kinetic-room/?game=gravity-boots",
       "accent": "#b9c9a6",
       "symbol": "↕",
@@ -3325,7 +3325,7 @@
         "Throw sends a beacon upward and sideways. It bounces off walls and ceilings. Let fly advances the simulation without changing your position deliberately.",
         "Swap moves you to the beacon and returns it to your hand. You then fall gently, so exchange above safe ground. A spike landing ends the run; only one beacon can be deployed at a time."
       ],
-      "controls": "Use the on-screen action buttons, or their displayed keyboard shortcuts. All simulations advance only when you act; selection and aim controls are free where noted.",
+      "controls": "Start or Restart focuses the board: use the displayed keyboard shortcuts there. Tab to a button and Enter or Space activates that focused button. All actions also have touch buttons.",
       "url": "kinetic-room/?game=portal-parcel",
       "accent": "#b9c9a6",
       "symbol": "◇",
@@ -3347,7 +3347,7 @@
         "The gate G opens only while the echo stands on P at (3,2). Record enough waiting on the plate to let your present self cross.",
         "During replay collect the ◆ key beyond the gate and reach E. If the echo ends before you pass the gate, the attempt fails. Erase starts a new tape."
       ],
-      "controls": "Use the on-screen action buttons, or their displayed keyboard shortcuts. All simulations advance only when you act; selection and aim controls are free where noted.",
+      "controls": "Start or Restart focuses the board: use the displayed keyboard shortcuts there. Tab to a button and Enter or Space activates that focused button. All actions also have touch buttons.",
       "url": "kinetic-room/?game=echo-steps",
       "accent": "#b9c9a6",
       "symbol": "◌",
@@ -3362,14 +3362,14 @@
       "id": "phase-walk",
       "name": "Phase Walk",
       "category": "strategy",
-      "description": "Change between three material phases to pass selective walls; phase anchors restrict where you may change.",
-      "mechanic": "Change between three material phases to pass selective walls; phase anchors restrict where you may change.",
+      "description": "Choose routes through a loop of phase doors, conserve one-use anchors and collect seals in their required materials.",
+      "mechanic": "Choose routes through a loop of phase doors, conserve one-use anchors and collect seals in their required materials.",
       "rules": [
-        "Collect three ◆ material seals and reach E within 90 turns. Solid # masonry blocks every phase.",
-        "A, B and C walls can be passed only while you are in their matching phase. Other open ground is always traversable.",
-        "Change phase only on an o anchor, S or E. Phase cycles A → B → C → A. Plan which anchor you can reach after passing a selective wall."
+        "Collect three seals: (2,1) requires B, (6,1) requires C, and (10,6) requires A. Reach E at (10,1) in phase B within 110 actions. Coordinates start at zero. Each pair of neighboring chambers has two doors with different phase requirements.",
+        "A, B and C doors admit only their matching phase. On an unused o anchor, Change phase cycles A → B → C → A and consumes that anchor. A spent anchor becomes · floor. Start S and exit E can cycle repeatedly.",
+        "Plan the seal order and preserve an anchor for the return journey. Undo restores your previous move, phase, seals and consumed anchor, so a mistaken commitment can be reconsidered before the action budget is spent."
       ],
-      "controls": "Use the on-screen action buttons, or their displayed keyboard shortcuts. All simulations advance only when you act; selection and aim controls are free where noted.",
+      "controls": "Start or Restart focuses the board: use the displayed keyboard shortcuts there. Tab to a button and Enter or Space activates that focused button. All actions also have touch buttons.",
       "url": "kinetic-room/?game=phase-walk",
       "accent": "#b9c9a6",
       "symbol": "◈",
@@ -3391,7 +3391,7 @@
         "Turning changes heading by 45 degrees, then sails one step. Holding course keeps heading. Changing trim also advances the boat.",
         "Due north is the no-go heading and stalls. NW and NE make upwind progress with tight trim; other headings favor loose trim. Tack across the wind and leave room for turns."
       ],
-      "controls": "Use the on-screen action buttons, or their displayed keyboard shortcuts. All simulations advance only when you act; selection and aim controls are free where noted.",
+      "controls": "Start or Restart focuses the board: use the displayed keyboard shortcuts there. Tab to a button and Enter or Space activates that focused button. All actions also have touch buttons.",
       "url": "kinetic-room/?game=wind-sail",
       "accent": "#b9c9a6",
       "symbol": "≈",
@@ -3406,14 +3406,14 @@
       "id": "scissor-lift",
       "name": "Scissor Lift",
       "category": "strategy",
-      "description": "Drive a telescoping vehicle under ceilings, raise its deck to receive freight, then carry and unload at elevated docks.",
-      "mechanic": "Drive a telescoping vehicle under ceilings, raise its deck to receive freight, then carry and unload at elevated docks.",
+      "description": "Route three differently shaped loads through a low ground arch or an open trench, keeping the entire cargo envelope clear.",
+      "mechanic": "Route three differently shaped loads through a low ground arch or an open trench, keeping the entire cargo envelope clear.",
       "rules": [
-        "Complete three freight orders. Collect at the indicated column and height, then unload at the destination. Transfer requires sway at most one.",
-        "Deck height ranges from one to five. Low beams at columns 4–6 have clearance below height three; column 7 requires height below four. Driving or raising into a beam ends the attempt.",
-        "Driving above height two adds sway; reversing adds one more. Stabilize reduces sway by three, lowering reduces one. At eight sway the platform topples. Lower freight before crossing the arch."
+        "Deliver three loads from ground-aisle docks. Hanging lamps extend 1 unit below the deck; stacked crates extend 1 above; long pendulums extend 2 below. Inspect all orders in the board description before collecting. Transfer needs the exact dock column and height, with sway at most 1.",
+        "In the ground aisle, the load bottom must stay at height 1 or higher. Ceilings are at height 3 in columns 4–6 and height 4 in column 7. Over the open trench, wheels run along the edges and cargo may hang down to −1; ceilings are at height 3 in columns 4, 5 and 7, and height 2 in column 6. The complete load must stay strictly below each ceiling. Change aisles only at columns 3 or 8.",
+        "Deck height ranges from 1 to 5. Driving above height 2 adds sway; reversing adds 1. Raising loaded cargo adds 1; lowering reduces 1; Stabilize reduces 3. At 8 sway the lift topples. Match both cargo dimensions and aisle geometry. You have 115 actions."
       ],
-      "controls": "Use the on-screen action buttons, or their displayed keyboard shortcuts. All simulations advance only when you act; selection and aim controls are free where noted.",
+      "controls": "Start or Restart focuses the board: use the displayed keyboard shortcuts there. Tab to a button and Enter or Space activates that focused button. All actions also have touch buttons.",
       "url": "kinetic-room/?game=scissor-lift",
       "accent": "#b9c9a6",
       "symbol": "↟",
@@ -3435,7 +3435,7 @@
         "The dotted sight reflects off the outer room and central pillar, up to four bounces. The enemy shield turns a quarter-turn after every action; its front blocks shots.",
         "A highlighted column fires on the next action. Step away to evade it while choosing a new shot origin. Angle zero points right, ninety points down."
       ],
-      "controls": "Use the on-screen action buttons, or their displayed keyboard shortcuts. All simulations advance only when you act; selection and aim controls are free where noted.",
+      "controls": "Start or Restart focuses the board: use the displayed keyboard shortcuts there. Tab to a button and Enter or Space activates that focused button. All actions also have touch buttons.",
       "url": "kinetic-room/?game=ricochet-duel",
       "accent": "#b9c9a6",
       "symbol": "↗",
@@ -3457,7 +3457,7 @@
         "Select a numbered bond, then cut it. Any component without a surviving path to node zero falls permanently. Redundant bonds can keep a cut group hanging. A starred protected weight must remain.",
         "Only four cuts per study are available. Find a connected balanced remainder, then Next study. Restart returns to study one. The text board description lists every weight, arm and bond."
       ],
-      "controls": "Use the on-screen action buttons, or their displayed keyboard shortcuts. All simulations advance only when you act; selection and aim controls are free where noted.",
+      "controls": "Start or Restart focuses the board: use the displayed keyboard shortcuts there. Tab to a button and Enter or Space activates that focused button. All actions also have touch buttons.",
       "url": "kinetic-room/?game=soft-sculpt",
       "accent": "#b9c9a6",
       "symbol": "▥",
@@ -3479,7 +3479,7 @@
         "While attached, pump left or right to build angular momentum. Release keeps the tangent velocity of your swing. Coasting lets gravity shape the arc.",
         "While airborne, Catch attaches to the nearest unused anchor between 0.7 and 3.6 units away, preserving tangential momentum. Missing the landing pad, water, or leaving the rigging ends the attempt."
       ],
-      "controls": "Use the on-screen action buttons, or their displayed keyboard shortcuts. All simulations advance only when you act; selection and aim controls are free where noted.",
+      "controls": "Start or Restart focuses the board: use the displayed keyboard shortcuts there. Tab to a button and Enter or Space activates that focused button. All actions also have touch buttons.",
       "url": "kinetic-room/?game=spring-courier",
       "accent": "#b9c9a6",
       "symbol": "⌒",
@@ -3501,7 +3501,7 @@
         "Rotate freely in 22.5-degree steps; firing, thrusting, drifting and shielding advance the field. Beams hit the first rock on their forward line.",
         "Thrust and recoil change your drift; space wraps at the edges. Three shield pulses block collisions for one step each. Aim at nearby fragments before they close in."
       ],
-      "controls": "Use the on-screen action buttons, or their displayed keyboard shortcuts. All simulations advance only when you act; selection and aim controls are free where noted.",
+      "controls": "Start or Restart focuses the board: use the displayed keyboard shortcuts there. Tab to a button and Enter or Space activates that focused button. All actions also have touch buttons.",
       "url": "kinetic-room/?game=shatter-belt",
       "accent": "#b9c9a6",
       "symbol": "✧",
@@ -3523,7 +3523,7 @@
         "Each interceptor grows from a small burst to a wide circle before fading. Place it ahead of a projectile rather than directly on its current position.",
         "Intercepted projectiles start secondary explosions that can chain together. You have twelve interceptors. Bases stand at columns 2, 6 and 10; two lost bases end the defense."
       ],
-      "controls": "Use the on-screen action buttons, or their displayed keyboard shortcuts. All simulations advance only when you act; selection and aim controls are free where noted.",
+      "controls": "Start or Restart focuses the board: use the displayed keyboard shortcuts there. Tab to a button and Enter or Space activates that focused button. All actions also have touch buttons.",
       "url": "kinetic-room/?game=lantern-defense",
       "accent": "#b9c9a6",
       "symbol": "☄",
@@ -3545,7 +3545,7 @@
         "Select a walker, then assign a job without advancing time. Builder lays four floor cells ahead but stops at X walls; digger breaks those walls; blocker reverses approaching walkers. Release returns a blocker to walking.",
         "Each rescue has two builder kits, two digger kits and one blocker kit. In the second rescue prepare BOTH approaches before the following crowds arrive. You may select and assign several workers before advancing. Two falls make the quota impossible."
       ],
-      "controls": "Use the on-screen action buttons, or their displayed keyboard shortcuts. All simulations advance only when you act; selection and aim controls are free where noted.",
+      "controls": "Start or Restart focuses the board: use the displayed keyboard shortcuts there. Tab to a button and Enter or Space activates that focused button. All actions also have touch buttons.",
       "url": "kinetic-room/?game=little-walkers",
       "accent": "#b9c9a6",
       "symbol": "♟",
@@ -3692,12 +3692,12 @@
       "id": "transit-observatory",
       "name": "Transit Observatory",
       "category": "puzzle",
-      "description": "Choose observation times, eliminate period/phase hypotheses, identify three transiting worlds within an observation budget.",
-      "mechanic": "Active temporal sampling to resolve orbital aliases",
+      "description": "Nonadaptive observation-schedule design and orbital decoding",
+      "mechanic": "Nonadaptive observation-schedule design and orbital decoding",
       "rules": [
-        "A planet appears when time modulo its period equals its phase. Every candidate orbit is listed. Choose a time and observe whether a transit occurs.",
-        "Identify period and phase uniquely in at most six observations. Clear three skies. A premature or wrong claim costs an observation.",
-        "Times range 0–59. Repeated observations provide no new information and still use a charge."
+        "Choose a batch of available observation times that distinguishes every listed orbit. Each world transits when time modulo period equals phase.",
+        "The exposure limit is the minimum feasible for this candidate catalog and window. Launch only after planning; ambiguous schedules spend one of three review credits.",
+        "Decode the completed binary observation report by entering period and phase. Three campaigns have different candidate domains and observing windows."
       ],
       "controls": "Tap or click controls; Tab then Enter / Space. Arrow keys move within grids.",
       "url": "discovery-room/?game=transit-observatory",
@@ -3714,12 +3714,12 @@
       "id": "specimen-rule",
       "name": "Specimen Rule",
       "category": "puzzle",
-      "description": "Construct specimens to query membership, then correctly classify unseen specimens",
-      "mechanic": "Active hypothesis testing of a hidden grammar",
+      "description": "Compress labeled specimens into a nearest-prototype classifier",
+      "mechanic": "Compress labeled specimens into a nearest-prototype classifier",
       "rules": [
-        "The hidden rule accepts or rejects three-number specimens. The complete set of possible rules appears beside the bench.",
-        "Set three values from 1–4 and run experiments. Then identify the rule and classify four fresh specimens. Clear two studies.",
-        "Experiments cost one of eight charges. An incorrect rule claim costs two. Holdout answers cannot be changed after submitting."
+        "Select three or four training prototypes from eight labeled specimens. Each reference inherits the label of its nearest selected prototype by Manhattan distance: |X difference| + |Y difference|.",
+        "If equally near prototypes disagree, the result is ambiguous. Match all twelve printed reference labels within the prototype budget. Adding or removing one prototype can change several predictions.",
+        "Every slot is necessary and at least two valid prototype sets exist. Three incorrect audits end the study; complete three different feature landscapes."
       ],
       "controls": "Tap or click controls; Tab then Enter / Space. Arrow keys move within grids.",
       "url": "discovery-room/?game=specimen-rule",
@@ -3736,12 +3736,12 @@
       "id": "causal-lab",
       "name": "Causal Lab",
       "category": "puzzle",
-      "description": "Toggle interventions and observe propagated effects",
-      "mechanic": "Intervention-based causal circuit diagnosis",
+      "description": "Diagnose and repair changing causal networks",
+      "mechanic": "Diagnose and repair changing causal networks",
       "rules": [
-        "One wire in the displayed acyclic machine is broken. Set the two input switches and measure the four lamp outputs.",
-        "A lamp lights if ANY working incoming wire carries power. Direct interventions let you force one intermediate lamp off before measurement.",
-        "Use at most six measurements to locate the broken wire. Clear three machines; wrong diagnoses cost two measurements."
+        "Two directed links fail in each network. Lamps use OR of incoming signals. Toggle A/B and optionally clamp C, D or E off; compare measured and healthy outputs.",
+        "Measurements cost one battery, or two with a clamp. Installing any replacement costs one of three spare links and changes subsequent measurements.",
+        "Restore all sixteen input/clamp acceptance conditions. Failed audits reveal a counterexample and spend a shared review credit. Repair three different topologies."
       ],
       "controls": "Tap or click controls; Tab then Enter / Space. Arrow keys move within grids.",
       "url": "discovery-room/?game=causal-lab",
@@ -3802,12 +3802,12 @@
       "id": "twenty-questions",
       "name": "Question Orchard",
       "category": "puzzle",
-      "description": "Choose balanced property questions to identify multiple hidden objects within a shared query budget, with visible candidate elimination.",
-      "mechanic": "Adaptive binary decision-tree construction",
+      "description": "Construct full-catalog binary decision trees",
+      "mechanic": "Construct full-catalog binary decision trees",
       "rules": [
-        "A secret specimen belongs to a twelve-card catalog drawn from 32 possible combinations of five traits. The manifest supplies one known trait. Ask about any trait to eliminate impossible candidates.",
-        "Identify four specimens using at most twelve questions total. Catalogs change, so traits can split candidates unevenly. Plan a question tree: every initial catalog can be solved within three well-chosen questions.",
-        "Each new specimen comes with one free known property. Wrong identification costs two questions; candidate cards can be selected at any time."
+        "Build a tree that identifies all six catalog specimens; there is no hidden target. Each specimen has four binary traits.",
+        "Select an unlabeled leaf, assign a question, then assign specimen labels to final leaves. Each path permits at most three questions. Constant questions cannot split a leaf.",
+        "An audit checks every specimen. Incorrect routing costs one of three credits; incomplete trees may be edited freely. Clear three different catalogs."
       ],
       "controls": "Tap or click controls; Tab then Enter / Space. Arrow keys move within grids.",
       "url": "discovery-room/?game=twenty-questions",
@@ -3868,12 +3868,12 @@
       "id": "archive-edit",
       "name": "Archive Edit",
       "category": "puzzle",
-      "description": "Choose a limited set of dependent patches, then resolve their conflicting edits into a publishable document.",
-      "mechanic": "Version-control branching and selective merge",
+      "description": "Generated dependency-constrained patch selection and conflict resolution",
+      "mechanic": "Generated dependency-constrained patch selection and conflict resolution",
       "rules": [
-        "Seven alternative commits edit five fields from a common base. Only three cherry-picks fit each release, and some require a named predecessor. Inspect every delta and choose a compatible subset.",
-        "A field changed from the base creates a conflict when another patch changes it differently. Choose current or incoming; resolve all conflicts to finish applying the patch.",
-        "Meet all five requirements and publish. Reset this release restores the copy and three-pick budget but preserves review credits. Three failed publications end the study; clear three different patch graphs."
+        "Choose a compatible set from eight patches with varying edits and dependencies. Each release permits three or four picks.",
+        "At a merge conflict, choose current or incoming value. The final working copy must match all five requirements; multiple feasible patch sets exist.",
+        "Reset a release to revise your plan without changing its graph. Incorrect publication spends a review credit. Complete three independently generated releases."
       ],
       "controls": "Tap or click controls; Tab then Enter / Space. Arrow keys move within grids.",
       "url": "discovery-room/?game=archive-edit",
@@ -3890,12 +3890,12 @@
       "id": "lens-library",
       "name": "Lens Library",
       "category": "puzzle",
-      "description": "Inspect blurred samples, infer the neighborhood blur kernel via calibration probes, then choose an inverse reconstruction to recover an image.",
-      "mechanic": "Convolution model identification and deblurring",
+      "description": "Calibrate an unknown lens and reconstruct an ambiguous blurred ring",
+      "mechanic": "Calibrate an unknown lens and reconstruct an ambiguous blurred ring",
       "rules": [
-        "A hidden blur averages each pixel with either its left neighbor, right neighbor, or both. Edges wrap.",
-        "Send a single bright calibration pixel through the lens and inspect its output to infer the kernel. Then select the sharp source whose predicted blur matches the observed image.",
-        "Clear four plates with six charges. Calibrations cost one; wrong restorations cost two. The three candidate source images are shown numerically."
+        "Identify the installed lens using player-designed binary calibration inputs and one sensor readout per exposure. Cost is one energy plus one per lit input pixel.",
+        "The observed image has at least two valid source/lens explanations. Reconstruct six source pixels, each an integer from zero to four; equivalent sources are accepted when they match every observed output through the installed lens.",
+        "The ring wraps at both ends. Printed left/center/right weights determine convolution. Three incorrect certifications end the study; reconstruct three plates."
       ],
       "controls": "Tap or click controls; Tab then Enter / Space. Arrow keys move within grids.",
       "url": "discovery-room/?game=lens-library",
@@ -3934,12 +3934,12 @@
       "id": "clockmaker-cabinet",
       "name": "Clockmaker’s Cabinet",
       "category": "adventure",
-      "description": "Explore connected rooms, collect and combine objects, change machinery states and unlock the exit through causal item-use chains.",
-      "mechanic": "Inventory-combination escape adventure",
+      "description": "Three distinct causal inventory adventures",
+      "mechanic": "Three distinct causal inventory adventures",
       "rules": [
-        "Explore the workshop, greenhouse and clock tower. Collect objects, select an inventory item, then use it on a fixture or combine it with another item.",
-        "Repair the clock and unlock the front door. Physical clues explain object uses; experimenting on an incompatible fixture costs one of six patience marks.",
-        "There is no timer. A notebook records discoveries and completed machinery. Restart rebuilds the entire escape room."
+        "Choose an adventure from the selector: a stopped clock, storm observatory or flooded cellar. Their item dependencies and access conditions differ.",
+        "Collect items, select an inventory item, then use a fixture. The stopped-clock tools must be combined; the storm has independent power and optics branches; the cellar opens after pumping.",
+        "Read clues, prepare the exit mechanism and choose its setting. Six incompatible actions end the adventure. Restart or change adventure clears all progress."
       ],
       "controls": "Tap or click controls; Tab then Enter / Space. Arrow keys move within grids.",
       "url": "discovery-room/?game=clockmaker-cabinet",
@@ -3947,7 +3947,7 @@
       "symbol": "⌕",
       "smoke": {
         "startSelector": "#start",
-        "actionSelector": "#board button:has-text(\"Desk\")"
+        "actionSelector": "#board button"
       },
       "family": "discovery-room",
       "status": "playable"
@@ -3956,12 +3956,12 @@
       "id": "track-exchange",
       "name": "Track Exchange",
       "category": "adventure",
-      "description": "Navigate complementary gate and water routes, then exchange the objects each explorer needs to escape.",
-      "mechanic": "Asymmetric two-character exploration and object transfer",
+      "description": "Cooperative cargo exchange, staged relay and held-signal routes",
+      "mechanic": "Cooperative cargo exchange, staged relay and held-signal routes",
       "rules": [
-        "Switch control between Ada and Bo on separate maps. Ada must collect the iron key to pass her gate; Bo can cross the mandatory water band and collect the crank.",
-        "Each explorer must stand at H before transferring or exchanging carried objects. Ada needs Bo’s crank for her exit; Bo needs Ada’s iron key. Neither can finish alone.",
-        "Bring both explorers to E and unlock each exit within fifty successful moves. Blocked movement and invalid object use cost nothing."
+        "Choose Crossed cargo, Two-stage relay or Held signal. Each route changes the coordination problem, not only the map.",
+        "Ada cannot cross water; Bo can. Both must reach their H cells to transfer cargo. Some gates consume a key and stay open; Held signal requires Ada to remain on S while Bo passes.",
+        "Reach both E exits with the printed requirements before the move budget runs out. Changing scenario resets the route."
       ],
       "controls": "Tap or click controls; Tab then Enter / Space. Arrow keys move within grids.",
       "url": "discovery-room/?game=track-exchange",
@@ -3969,7 +3969,7 @@
       "symbol": "⌕",
       "smoke": {
         "startSelector": "#start",
-        "actionSelector": "#board button:has-text(\"South\")"
+        "actionSelector": "#board button"
       },
       "family": "discovery-room",
       "status": "playable"

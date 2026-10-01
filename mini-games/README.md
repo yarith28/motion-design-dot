@@ -1,5 +1,7 @@
 # Small Hours
 
+Review remediation: [changes and verification scope](REMEDIATION-200.md) · [independent follow-up](REMEDIATION-200-REVIEW.md).
+
 A small, expandable browser arcade with 200 playable games. The catalog is `index.html`, with working All / Adventure / Reflex / Memory / Puzzle / Strategy filters. Every displayed game is playable.
 
 ## The 200-game expansion
