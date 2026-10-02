@@ -1,4 +1,5 @@
-const APP_VERSION="kitchen-cats-static-v5";
+const APP_VERSION="kitchen-cats-20261002-0512";
+const APP_CACHE_PREFIX="kitchen-cats-";
 const CACHE=`${APP_VERSION}-precache`;
 const ASSETS=[
  "./","./index.html","./style.css","./app.js","./game-core.js","./multiplayer-session.js","./experimental-multiplayer.js","./webrtc-transport.js","./manifest.json",
@@ -7,14 +8,29 @@ const ASSETS=[
 ];
 self.addEventListener("install",event=>{
  event.waitUntil((async()=>{
-  try { const c=await caches.open(CACHE); await c.addAll(ASSETS); }
-  catch(e){ self.registration.active?.postMessage({type:"CACHE_FAILED",error:String(e)}); throw e; }
+  const c=await caches.open(CACHE);
+  await Promise.all(ASSETS.map(async asset=>{
+    const response=await fetch(new Request(asset,{cache:"reload"}));
+    if(!response.ok) throw new Error(`Failed ${asset}: ${response.status}`);
+    await c.put(asset,response);
+  }));
  })());
 });
-self.addEventListener("activate",event=>event.waitUntil((async()=>{for(const k of await caches.keys()) if(!k.startsWith(APP_VERSION)) await caches.delete(k); await self.clients.claim(); for (const c of await self.clients.matchAll()) c.postMessage({type:"CACHE_UPDATED"});})()));
-self.addEventListener("message",event=>{if(event.data?.type==="SKIP_WAITING") self.skipWaiting();});
+self.addEventListener("activate",event=>event.waitUntil((async()=>{
+ for(const key of await caches.keys()){
+   if(key.startsWith(APP_CACHE_PREFIX) && key!==CACHE) await caches.delete(key);
+ }
+ await self.clients.claim();
+ for(const client of await self.clients.matchAll({type:"window"})) client.postMessage({type:"CACHE_UPDATED",version:APP_VERSION});
+})()));
+self.addEventListener("message",event=>{
+ if(event.data?.type==="SKIP_WAITING") self.skipWaiting();
+});
 self.addEventListener("fetch",event=>{
  const u=new URL(event.request.url);
- if(u.origin!==location.origin)return;
- event.respondWith(caches.match(event.request).then(r=>r||fetch(event.request)));
+ if(event.request.method!=="GET" || !u.href.startsWith(self.registration.scope)) return;
+ event.respondWith((async()=>{
+   const cached=await caches.match(event.request);
+   return cached || fetch(event.request);
+ })());
 });
