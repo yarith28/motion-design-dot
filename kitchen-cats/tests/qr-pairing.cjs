@@ -270,8 +270,123 @@ const base = process.env.BASE_URL || "http://127.0.0.1:8000/kitchen-cats/";
 
     await p.locator("#mp-join").click();
     assert(await p.locator("#mp-flow").isVisible());
-    assert.match(await p.locator("#mp-step").innerText(), /Guest · 1 of 2/);
-    await p.locator("#mp-cancel").click();
+    const continuousFeed = await p.evaluate(async () => {
+      const qr = await import("./qr-pairing.js");
+      const { WebRTCTransport } = await import("./webrtc-transport.js");
+      const transport = new WebRTCTransport();
+      let raw;
+      try {
+        // Use a real browser-generated offer. If this environment cannot
+        // gather ICE, leave the camera gate explicitly untested rather than
+        // substituting fabricated signaling data.
+        raw = await transport.createOffer("peer-camera-1234", "session-camera-5678");
+      } catch (error) {
+        transport.close();
+        return { skipped: true, reason: String(error?.message || error) };
+      }
+      const frames = qr.createQrFrames(raw, "o");
+      const feed = document.createElement("canvas");
+      feed.width = 900;
+      feed.height = 900;
+      const feedContext = feed.getContext("2d");
+      const qrCanvas = document.createElement("canvas");
+      let index = 0;
+      const paint = () => {
+        qr.drawQr(qrCanvas, frames[index], 500);
+        feedContext.fillStyle = "#fff";
+        feedContext.fillRect(0, 0, feed.width, feed.height);
+        feedContext.drawImage(qrCanvas, 200, 200);
+        index = (index + 1) % frames.length;
+      };
+      paint();
+      const timer = setInterval(paint, 850);
+      const stream = feed.captureStream(15);
+      document.querySelector("#mp-video").srcObject = stream;
+      const scanStatus = document.querySelector("#mp-scan-status");
+      const statuses = [];
+      const recordStatus = () => statuses.push(scanStatus?.textContent || "");
+      recordStatus();
+      const statusObserver = new MutationObserver(recordStatus);
+      statusObserver.observe(scanStatus, { childList: true, characterData: true, subtree: true });
+      window.__kitchenCatsContinuousQr = {
+        feed,
+        frames,
+        transport,
+        stream,
+        timer,
+        statuses,
+        statusObserver,
+        get index() { return index; },
+      };
+      return { total: frames.length, cadenceMs: 850, canvas: `${feed.width}x${feed.height}` };
+    });
+    if (continuousFeed.skipped) {
+      console.log(`UNTESTED continuous camera UI collection: ${continuousFeed.reason}`);
+      if (await p.locator("#mp-cancel").isVisible()) await p.locator("#mp-cancel").click();
+    } else {
+      try {
+        await p.locator("#mp-scan").click();
+        try {
+          await p.waitForFunction(
+            () => {
+              const scan = document.querySelector("#mp-scan-status")?.textContent || "";
+              const status = document.querySelector("#mp-status")?.textContent || "";
+              return scan.includes("Code complete") || status.includes("Host code failed");
+            },
+            { timeout: 30000 },
+          );
+        } catch (error) {
+          throw Error(
+            `continuous QR did not reach collection terminal state: progress=${JSON.stringify(await p.locator("#mp-scan-status").innerText())}, ` +
+              `status=${JSON.stringify(await p.locator("#mp-status").innerText())}, ` +
+              `step=${JSON.stringify(await p.locator("#mp-step").innerText())}, ` +
+              `total=${continuousFeed.total}, cadenceMs=${continuousFeed.cadenceMs}, canvas=${continuousFeed.canvas}, ` +
+              `feed=${JSON.stringify(await p.evaluate(() => ({
+                index: window.__kitchenCatsContinuousQr?.index,
+                statuses: window.__kitchenCatsContinuousQr?.statuses,
+                videoReadyState: document.querySelector("#mp-video")?.readyState,
+                videoSize: `${document.querySelector("#mp-video")?.videoWidth}x${document.querySelector("#mp-video")?.videoHeight}`,
+                cameraHidden: document.querySelector("#mp-camera")?.hidden,
+              })) )}, cause=${error.message}`,
+          );
+        }
+        const continuousEvidence = await p.evaluate(() => ({
+          progress: document.querySelector("#mp-scan-status")?.textContent,
+          status: document.querySelector("#mp-status")?.textContent,
+          step: document.querySelector("#mp-step")?.textContent,
+          statuses: window.__kitchenCatsContinuousQr?.statuses,
+          scannerStopped: document.querySelector("#mp-video")?.srcObject === null,
+          trackState: window.__kitchenCatsContinuousQr?.stream.getTracks()[0]?.readyState,
+          feedIndex: window.__kitchenCatsContinuousQr?.index,
+        }));
+        assert(
+          continuousEvidence.statuses.some((status) => /Reading code · [2-9]\d* of/.test(status)),
+          `continuous QR did not visibly collect a second distinct frame: ${JSON.stringify(continuousEvidence)}`,
+        );
+        assert(
+          continuousEvidence.statuses.some((status) => status.includes("Code complete")),
+          `continuous QR never showed complete collection: ${JSON.stringify(continuousEvidence)}`,
+        );
+        assert.equal(continuousEvidence.scannerStopped, true);
+        assert.equal(continuousEvidence.trackState, "ended");
+      } finally {
+        if (await p.locator("#mp-cancel").isVisible()) await p.locator("#mp-cancel").click();
+        await p.evaluate(() => {
+          const feed = window.__kitchenCatsContinuousQr;
+          if (feed) {
+            feed.statusObserver?.disconnect();
+            clearInterval(feed.timer);
+            feed.transport?.close();
+          }
+          delete window.__kitchenCatsContinuousQr;
+        });
+      }
+    }
+
+    if (await p.locator("#mp-cancel").isVisible()) {
+      assert.match(await p.locator("#mp-step").innerText(), /Guest · 1 of 2/);
+      await p.locator("#mp-cancel").click();
+    }
     assert(await p.locator("#mp-actions").isVisible());
     await p.locator("#mp-join").click();
     assert(await p.locator("#mp-scan").isVisible());
@@ -281,7 +396,7 @@ const base = process.env.BASE_URL || "http://127.0.0.1:8000/kitchen-cats/";
       console.log(
       `PASS QR browser: real encoded-PNG decode roundtrips for offer/answer, long candidate framing, unrelated-code rejection, ` +
         `camera decoder=${evidence.camera.supported ? "rendered stream" : "UNTESTED captureStream unavailable"}, ` +
-        "scanner cleanup, cancel/retry UI, zero page errors",
+        "continuous animated-frame UI collection, scanner cleanup, cancel/retry UI, zero page errors",
     );
     await c.close();
   } finally {

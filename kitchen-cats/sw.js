@@ -1,4 +1,4 @@
-const VERSION = "kitchen-cats-20261002-r23-final";
+const VERSION = "kitchen-cats-20261002-r24-qr-live-frames";
 const PREFIX = "kitchen-cats-";
 const CACHE = VERSION + "-precache";
 const ASSETS = [
