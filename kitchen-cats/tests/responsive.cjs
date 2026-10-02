@@ -78,7 +78,10 @@ async function assertVisibleAndContained(page, label) {
         );
       });
       await p.evaluate(() => window.dispatchEvent(new Event("orientationchange")));
-      assert.equal(await p.locator("#stick-knob").evaluate((el) => el.style.transform), "translate(0,0)");
+      assert.match(
+        await p.locator("#stick-knob").evaluate((el) => el.style.transform),
+        /^translate\(0(?:px)?, 0(?:px)?\)$/,
+      );
 
       const portrait = { width: landscape.height, height: landscape.width };
       await p.setViewportSize(portrait);
