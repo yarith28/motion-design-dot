@@ -1,0 +1,774 @@
+[
+  {
+    "id": "lamp-ward",
+    "name": "Lamp Ward",
+    "category": "puzzle",
+    "url": "constraint-room/?game=lamp-ward",
+    "mechanic": "Place mutually non-seeing lamps whose blocked orthogonal rays illuminate every open square.",
+    "description": "Light every open square without letting two lamps see each other.",
+    "rules": [
+      "Tap a white square to cycle lamp \u2192 excluded \u2192 clear. Every open square must be illuminated horizontally or vertically; walls stop the light.",
+      "Two lamps cannot see each other. Every numbered wall needs exactly that many edge-adjacent lamps.",
+      "Check validates light coverage and wall counts. Undo or Reset recovers a failed study; complete all three studies."
+    ],
+    "controls": "Tap or click labeled native controls; Tab and Enter/Space work throughout. No drag gesture or keyboard-only action is required. Undo and Reset recover finite studies; Restart repeats a replay seed or creates a new run.",
+    "accent": "#d6dfbe",
+    "symbol": "\u25c7",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Optional fresh seed-generated studies continue after each solve with a cumulative score. A failed Check or stranded route ends the stream; Bank and end run preserves the score. Finite studies retain Undo and Reset.",
+      "difficultyCap": "6\u00d76"
+    },
+    "nearestExisting": [
+      {
+        "id": "towers",
+        "difference": "Obstacles stop rays and lamps may not light one another; the player selects light sources, rather than moving a beam or maximizing queen coverage."
+      },
+      {
+        "id": "mirror-mail",
+        "difference": "Obstacles stop rays and lamps may not light one another; the player selects light sources, rather than moving a beam or maximizing queen coverage."
+      }
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board [data-action^=\"cell:\"]:not(:disabled)"
+    },
+    "sourceModule": "shading.mjs"
+  },
+  {
+    "id": "star-charter",
+    "name": "Star Charter",
+    "category": "puzzle",
+    "url": "constraint-room/?game=star-charter",
+    "mechanic": "Choose one star in each row, column and irregular region while reserving a non-touching king neighborhood.",
+    "description": "Place stars across intersecting regions without letting them touch.",
+    "rules": [
+      "Tap a square to cycle star \u2192 excluded \u2192 unknown. Lettered regions remain visible.",
+      "Place exactly one star in every row, column and connected region. Stars cannot touch, including diagonally.",
+      "Check explains a quota or contact failure. Undo or Reset keeps earlier studies; finish three boards."
+    ],
+    "controls": "Tap or click labeled native controls; Tab and Enter/Space work throughout. No drag gesture or keyboard-only action is required. Undo and Reset recover finite studies; Restart repeats a replay seed or creates a new run.",
+    "accent": "#b9d8c8",
+    "symbol": "\u25a7",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Optional fresh seed-generated studies continue after each solve with a cumulative score. A failed Check or stranded route ends the stream; Bank and end run preserves the score. Finite studies retain Undo and Reset.",
+      "difficultyCap": "7\u00d77"
+    },
+    "nearestExisting": [
+      {
+        "id": "tent-pitch",
+        "difference": "No tree matching or row count alone: competing irregular regions impose a global transversal with diagonal exclusion."
+      },
+      {
+        "id": "map-inks",
+        "difference": "No tree matching or row count alone: competing irregular regions impose a global transversal with diagonal exclusion."
+      }
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board [data-action^=\"cell:\"]:not(:disabled)"
+    },
+    "sourceModule": "shading.mjs"
+  },
+  {
+    "id": "magnet-ledger",
+    "name": "Magnet Ledger",
+    "category": "puzzle",
+    "url": "constraint-room/?game=magnet-ledger",
+    "mechanic": "Orient bipolar domino magnets or leave their slots empty to meet signed marginal counts without equal-pole contact.",
+    "description": "Turn paired magnets until every line has the right positive and negative poles.",
+    "rules": [
+      "Each numbered slot is one domino. Tap either half to cycle empty \u2192 positive/negative \u2192 negative/positive \u2192 excluded.",
+      "Meet the positive and negative quotas for every row and column. Equal poles on different magnets may not share an edge.",
+      "Empty and excluded slots contain no poles. Check explains a mismatch; Undo or Reset recovers before continuing all three boards."
+    ],
+    "controls": "Tap or click labeled native controls; Tab and Enter/Space work throughout. No drag gesture or keyboard-only action is required. Undo and Reset recover finite studies; Restart repeats a replay seed or creates a new run.",
+    "accent": "#ead4af",
+    "symbol": "\u2733",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Optional fresh seed-generated studies continue after each solve with a cumulative score. A failed Check or stranded route ends the stream; Bank and end run preserves the score. Finite studies retain Undo and Reset.",
+      "difficultyCap": "6\u00d76, eighteen paired slots"
+    },
+    "nearestExisting": [
+      {
+        "id": "equal-measure",
+        "difference": "Positive and negative values are paired spatially in indivisible domino slots; the decision includes omission and orientation, not independent binary assignment or torque."
+      },
+      {
+        "id": "balance-mobile",
+        "difference": "Positive and negative values are paired spatially in indivisible domino slots; the decision includes omission and orientation, not independent binary assignment or torque."
+      }
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"slot:0\"]"
+    },
+    "sourceModule": "placement.mjs"
+  },
+  {
+    "id": "region-census",
+    "name": "Region Census",
+    "category": "puzzle",
+    "url": "constraint-room/?game=region-census",
+    "mechanic": "Assign size labels so connected equal-number components contain exactly that many cells.",
+    "description": "Build connected regions whose size agrees with every label.",
+    "rules": [
+      "Choose a size1\u20136, then label cells. Given labels stay fixed; Erase clears an editable square.",
+      "Every maximal edge-connected group of equal labels must contain exactly that many squares. Shapes can bend and equal-sized regions must remain separate.",
+      "Label every cell, then Check. Alternate partitions are accepted; Undo or Reset recovers a failed study. Finish all three."
+    ],
+    "controls": "Tap or click labeled native controls; Tab and Enter/Space work throughout. No drag gesture or keyboard-only action is required. Undo and Reset recover finite studies; Restart repeats a replay seed or creates a new run.",
+    "accent": "#d3c8e4",
+    "symbol": "\u2197",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Optional fresh seed-generated studies continue after each solve with a cumulative score. A failed Check or stranded route ends the stream; Bank and end run preserves the score. Finite studies retain Undo and Reset.",
+      "difficultyCap": "5\u00d75 or nine tiles, depending on the mechanic"
+    },
+    "nearestExisting": [
+      {
+        "id": "island-census",
+        "difference": "Every cell belongs to a freely shaped region and a label is its component size; there is no sea, fixed one-clue island or rectangle shape."
+      },
+      {
+        "id": "parcel-survey",
+        "difference": "Every cell belongs to a freely shaped region and a label is its component size; there is no sea, fixed one-clue island or rectangle shape."
+      }
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board [data-action^=\"cell:\"]:not(:disabled)"
+    },
+    "sourceModule": "shading.mjs"
+  },
+  {
+    "id": "mosaic-ring",
+    "name": "Mosaic Ring",
+    "category": "puzzle",
+    "url": "constraint-room/?game=mosaic-ring",
+    "mechanic": "Read cyclic runs around clue cells to build a single connected dark mosaic.",
+    "description": "Read the rings of clues to uncover one connected mosaic.",
+    "rules": [
+      "Tap non-clue cells to cycle dark \u2192 light \u2192 unknown. Numbered clue cells are fixed light.",
+      "Each clue lists the lengths of consecutive dark runs around its eight neighbors in circular order, with a light gap between runs. The listed order does not matter.",
+      "All dark squares must connect by edges and no2\u00d72 may be fully dark. Assign every square then Check; Undo or Reset recovers."
+    ],
+    "controls": "Tap or click labeled native controls; Tab and Enter/Space work throughout. No drag gesture or keyboard-only action is required. Undo and Reset recover finite studies; Restart repeats a replay seed or creates a new run.",
+    "accent": "#d6dfbe",
+    "symbol": "\u25c7",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Optional fresh seed-generated studies continue after each solve with a cumulative score. A failed Check or stranded route ends the stream; Bank and end run preserves the score. Finite studies retain Undo and Reset.",
+      "difficultyCap": "5\u00d75 or nine tiles, depending on the mechanic"
+    },
+    "nearestExisting": [
+      {
+        "id": "picross-post",
+        "difference": "Clues constrain eight-neighbor circular runs, not linear row runs or duplicate elimination, with global dark connectivity."
+      },
+      {
+        "id": "hitori-harbor",
+        "difference": "Clues constrain eight-neighbor circular runs, not linear row runs or duplicate elimination, with global dark connectivity."
+      }
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board [data-action^=\"cell:\"]:not(:disabled)"
+    },
+    "sourceModule": "shading.mjs"
+  },
+  {
+    "id": "sight-garden",
+    "name": "Sight Garden",
+    "category": "puzzle",
+    "url": "constraint-room/?game=sight-garden",
+    "mechanic": "Shade blockers to make each numbered white cell see exactly its quota of white squares along straight rays.",
+    "description": "Place shade where it gives each number exactly the right view.",
+    "rules": [
+      "Tap editable cells to cycle shaded \u2192 white \u2192 unknown. Numbered squares remain white.",
+      "A number counts itself plus all visible white squares along the four straight directions. The first shaded square stops each ray.",
+      "Shaded squares cannot share an edge, and all white squares must connect. Assign all squares then Check; finish three studies with Undo/Reset recovery."
+    ],
+    "controls": "Tap or click labeled native controls; Tab and Enter/Space work throughout. No drag gesture or keyboard-only action is required. Undo and Reset recover finite studies; Restart repeats a replay seed or creates a new run.",
+    "accent": "#b9d8c8",
+    "symbol": "\u25a7",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Optional fresh seed-generated studies continue after each solve with a cumulative score. A failed Check or stranded route ends the stream; Bank and end run preserves the score. Finite studies retain Undo and Reset.",
+      "difficultyCap": "5\u00d75 or nine tiles, depending on the mechanic"
+    },
+    "nearestExisting": [
+      {
+        "id": "sky-view",
+        "difference": "The values count visible empty cells in four rays terminated by blockers; no height permutation or tower-placement budget."
+      },
+      {
+        "id": "towers",
+        "difference": "The values count visible empty cells in four rays terminated by blockers; no height permutation or tower-placement budget."
+      }
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board [data-action^=\"cell:\"]:not(:disabled)"
+    },
+    "sourceModule": "shading.mjs"
+  },
+  {
+    "id": "diagonal-grove",
+    "name": "Diagonal Grove",
+    "category": "puzzle",
+    "url": "constraint-room/?game=diagonal-grove",
+    "mechanic": "Choose one diagonal per square so numbered lattice vertices get their degree without forming any diagonal cycle.",
+    "description": "Join numbered points with diagonals while keeping every path free of loops.",
+    "rules": [
+      "Each square needs one diagonal. Tap once to set slash; subsequent taps turn between slash and backslash.",
+      "Numbers at lattice vertices count diagonals touching that point. Dots impose no degree constraint. No closed diagonal cycle is allowed.",
+      "The diagram and coordinate table show every public clue. Check explains a degree or cycle failure; Undo or Reset recovers. Complete three groves."
+    ],
+    "controls": "Tap or click labeled native controls; Tab and Enter/Space work throughout. No drag gesture or keyboard-only action is required. Undo and Reset recover finite studies; Restart repeats a replay seed or creates a new run.",
+    "accent": "#ead4af",
+    "symbol": "\u2733",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Optional fresh seed-generated studies continue after each solve with a cumulative score. A failed Check or stranded route ends the stream; Bank and end run preserves the score. Finite studies retain Undo and Reset.",
+      "difficultyCap": "4\u00d74"
+    },
+    "nearestExisting": [
+      {
+        "id": "loop-letter",
+        "difference": "Every cell holds exactly one diagonal; the sought structure is acyclic rather than a closed orthogonal loop or point-position untangling."
+      },
+      {
+        "id": "loose-ends",
+        "difference": "Every cell holds exactly one diagonal; the sought structure is acyclic rather than a closed orthogonal loop or point-position untangling."
+      }
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board [data-action^=\"cell:\"]:not(:disabled)"
+    },
+    "sourceModule": "paths.mjs"
+  },
+  {
+    "id": "thermometer-hall",
+    "name": "Thermometer Hall",
+    "category": "puzzle",
+    "url": "constraint-room/?game=thermometer-hall",
+    "mechanic": "Set each bent thermometer\u2019s prefix length so row and column fill quotas agree.",
+    "description": "Fill bent thermometers from their bulbs to balance every row and column.",
+    "rules": [
+      "Each letter identifies one disjoint thermometer; its\u25cf bulb is segment1. Tap a numbered segment to fill from the bulb through that segment.",
+      "Fluid always forms a prefix with no gaps. Drain empties a whole selected tube. Exact row and column filled-square totals are listed.",
+      "Meet every total then Check. Undo or Reset recovers a failed allocation; finish three studies."
+    ],
+    "controls": "Tap or click labeled native controls; Tab and Enter/Space work throughout. No drag gesture or keyboard-only action is required. Undo and Reset recover finite studies; Restart repeats a replay seed or creates a new run.",
+    "accent": "#d3c8e4",
+    "symbol": "\u2197",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Optional fresh seed-generated studies continue after each solve with a cumulative score. A failed Check or stranded route ends the stream; Bank and end run preserves the score. Finite studies retain Undo and Reset.",
+      "difficultyCap": "5\u00d75 or nine tiles, depending on the mechanic"
+    },
+    "nearestExisting": [
+      {
+        "id": "picross-post",
+        "difference": "Filling follows a rooted path prefix and an edit affects its downstream suffix; this is order-constrained liquid-length allocation rather than free binary marking."
+      },
+      {
+        "id": "equal-measure",
+        "difference": "Filling follows a rooted path prefix and an edit affects its downstream suffix; this is order-constrained liquid-length allocation rather than free binary marking."
+      }
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"tube:0:1\"]"
+    },
+    "sourceModule": "placement.mjs"
+  },
+  {
+    "id": "compass-estate",
+    "name": "Compass Estate",
+    "category": "puzzle",
+    "url": "constraint-room/?game=compass-estate",
+    "mechanic": "Extend four straight non-overlapping arms from numbered hubs until every square has an owner.",
+    "description": "Stretch straight arms from each hub to share the whole estate.",
+    "rules": [
+      "Select a lettered hub, then tap another square in its row or column to set the endpoint of that straight arm. A hub includes its own square.",
+      "Arms cannot pass through another hub or estate. Retract a selected arm to free contested land. Each hub needs exactly its printed area.",
+      "Cover every square once, then Check. No bends or rectangles are required. Undo or Reset recovers; complete three surveys."
+    ],
+    "controls": "Tap or click labeled native controls; Tab and Enter/Space work throughout. No drag gesture or keyboard-only action is required. Undo and Reset recover finite studies; Restart repeats a replay seed or creates a new run.",
+    "accent": "#d6dfbe",
+    "symbol": "\u25c7",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Optional fresh seed-generated studies continue after each solve with a cumulative score. A failed Check or stranded route ends the stream; Bank and end run preserves the score. Finite studies retain Undo and Reset.",
+      "difficultyCap": "5\u00d75 or nine tiles, depending on the mechanic"
+    },
+    "nearestExisting": [
+      {
+        "id": "parcel-survey",
+        "difference": "Region shape is a cross of independently adjustable straight rays; hubs consume a shared lattice and area clues constrain sums of arms, not rectangles or endpoint paths."
+      },
+      {
+        "id": "pearl-route",
+        "difference": "Region shape is a cross of independently adjustable straight rays; hubs consume a shared lattice and area clues constrain sums of arms, not rectangles or endpoint paths."
+      }
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"hub:1\"]"
+    },
+    "sourceModule": "placement.mjs"
+  },
+  {
+    "id": "fleet-blueprint",
+    "name": "Fleet Blueprint",
+    "category": "puzzle",
+    "url": "constraint-room/?game=fleet-blueprint",
+    "mechanic": "Deduce an entire separated fleet from public row/column totals, ship lengths and partial hull/water clues.",
+    "description": "Reconstruct a separated fleet from its public counts and hull clues.",
+    "rules": [
+      "The complete fleet lengths and row/column hull counts are public. Tap editable squares to cycle hull \u2192 water \u2192 unknown; fixed clues cannot change.",
+      "Each ship is a straight connected horizontal or vertical hull. Separate ships cannot touch, even diagonally. Every listed length must appear exactly once per inventory entry.",
+      "Assign every square and Check the blueprint. Undo or Reset recovers; solve three fleets."
+    ],
+    "controls": "Tap or click labeled native controls; Tab and Enter/Space work throughout. No drag gesture or keyboard-only action is required. Undo and Reset recover finite studies; Restart repeats a replay seed or creates a new run.",
+    "accent": "#b9d8c8",
+    "symbol": "\u25a7",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Optional fresh seed-generated studies continue after each solve with a cumulative score. A failed Check or stranded route ends the stream; Bank and end run preserves the score. Finite studies retain Undo and Reset.",
+      "difficultyCap": "6\u00d76, four ships"
+    },
+    "nearestExisting": [
+      {
+        "id": "fleet",
+        "difference": "No hidden shots: freely mark and retract a whole fleet and identify each connected hull\u2019s shape/length; global fleet inventory is a placement constraint."
+      },
+      {
+        "id": "tent-pitch",
+        "difference": "No hidden shots: freely mark and retract a whole fleet and identify each connected hull\u2019s shape/length; global fleet inventory is a placement constraint."
+      }
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board [data-action^=\"cell:\"]:not(:disabled)"
+    },
+    "sourceModule": "placement.mjs"
+  },
+  {
+    "id": "shade-detour",
+    "name": "Shade Detour",
+    "category": "puzzle",
+    "url": "constraint-room/?game=shade-detour",
+    "mechanic": "Choose arrow-counted blocked cells while routing one loop through every remaining non-clue cell.",
+    "description": "Deduce the blocked squares and draw one loop through everything left.",
+    "rules": [
+      "Use Shade/white marks to cycle cells between shaded, white and unknown. Arrow cells are fixed obstacles; each arrow counts shaded cells farther along its direction.",
+      "Use Draw loop edges, then tap two neighboring non-shaded cells to add/remove their link. Each remaining non-clue cell needs exactly two links, all in one loop.",
+      "Shaded cells cannot touch by edge and cannot carry loop links. Check explains an arrow, degree or connectivity failure; Undo or Reset recovers."
+    ],
+    "controls": "Tap or click labeled native controls; Tab and Enter/Space work throughout. No drag gesture or keyboard-only action is required. Undo and Reset recover finite studies; Restart repeats a replay seed or creates a new run.",
+    "accent": "#ead4af",
+    "symbol": "\u2733",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Optional fresh seed-generated studies continue after each solve with a cumulative score. A failed Check or stranded route ends the stream; Bank and end run preserves the score. Finite studies retain Undo and Reset.",
+      "difficultyCap": "5\u00d75 or nine tiles, depending on the mechanic"
+    },
+    "nearestExisting": [
+      {
+        "id": "loop-letter",
+        "difference": "Blocked-cell deduction and loop construction are coupled: choosing which cells the loop omits changes its topology, while directional arrow clues constrain those omissions."
+      },
+      {
+        "id": "cable-loom",
+        "difference": "Blocked-cell deduction and loop construction are coupled: choosing which cells the loop omits changes its topology, while directional arrow clues constrain those omissions."
+      },
+      {
+        "id": "minefield",
+        "difference": "Blocked-cell deduction and loop construction are coupled: choosing which cells the loop omits changes its topology, while directional arrow clues constrain those omissions."
+      }
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board [data-action^=\"cell:\"]:not(:disabled)"
+    },
+    "sourceModule": "paths.mjs"
+  },
+  {
+    "id": "quiet-rooms",
+    "name": "Quiet Rooms",
+    "category": "puzzle",
+    "url": "constraint-room/?game=quiet-rooms",
+    "mechanic": "Allocate shaded cells to room quotas without splitting white space or permitting a straight white view across more than two rooms.",
+    "description": "Place shade to keep each room quiet and the white corridors connected.",
+    "rules": [
+      "Tap cells to cycle shaded \u2192 white \u2192 unknown. Each lettered room needs its listed number of shaded cells.",
+      "Shaded cells cannot share an edge. All white cells must stay connected by edges.",
+      "No uninterrupted horizontal or vertical white run may pass through more than two rooms. Assign every square then Check; Undo or Reset recovers across three studies."
+    ],
+    "controls": "Tap or click labeled native controls; Tab and Enter/Space work throughout. No drag gesture or keyboard-only action is required. Undo and Reset recover finite studies; Restart repeats a replay seed or creates a new run.",
+    "accent": "#d3c8e4",
+    "symbol": "\u2197",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Optional fresh seed-generated studies continue after each solve with a cumulative score. A failed Check or stranded route ends the stream; Bank and end run preserves the score. Finite studies retain Undo and Reset.",
+      "difficultyCap": "5\u00d75 or nine tiles, depending on the mechanic"
+    },
+    "nearestExisting": [
+      {
+        "id": "hitori-harbor",
+        "difference": "Regions prescribe black counts and boundaries constrain white sightlines; neither duplicate numbers nor island areas determine cells."
+      },
+      {
+        "id": "island-census",
+        "difference": "Regions prescribe black counts and boundaries constrain white sightlines; neither duplicate numbers nor island areas determine cells."
+      }
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board [data-action^=\"cell:\"]:not(:disabled)"
+    },
+    "sourceModule": "composition.mjs"
+  },
+  {
+    "id": "four-forms",
+    "name": "Four Forms",
+    "category": "puzzle",
+    "url": "constraint-room/?game=four-forms",
+    "mechanic": "Choose one four-cell tetromino subset inside each region so the selected pieces join without same-shape neighbors.",
+    "description": "Choose four-cell shapes inside regions and join them into one careful patchwork.",
+    "rules": [
+      "Choose four squares inside each lettered region by cycling selected \u2192 excluded \u2192 unknown. They must form an I, L, T or S tetromino, including rotations and reflections.",
+      "All selected pieces must join as one edge-connected group; no2\u00d72 can be fully selected. Pieces in touching regions must have different shapes.",
+      "Check shows the first shape/contact/connectivity failure. Undo or Reset recovers; choose valid selections on three changing region boards."
+    ],
+    "controls": "Tap or click labeled native controls; Tab and Enter/Space work throughout. No drag gesture or keyboard-only action is required. Undo and Reset recover finite studies; Restart repeats a replay seed or creates a new run.",
+    "accent": "#d6dfbe",
+    "symbol": "\u25c7",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Optional fresh seed-generated studies continue after each solve with a cumulative score. A failed Check or stranded route ends the stream; Bank and end run preserves the score. Finite studies retain Undo and Reset.",
+      "difficultyCap": "6\u00d76, four regions"
+    },
+    "nearestExisting": [
+      {
+        "id": "tangram-dock",
+        "difference": "Shapes are discovered inside fixed regions rather than placed from inventory; shape classification and global contact exclusions govern selection."
+      },
+      {
+        "id": "a-stitch-in-time",
+        "difference": "Shapes are discovered inside fixed regions rather than placed from inventory; shape classification and global contact exclusions govern selection."
+      }
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board [data-action^=\"cell:\"]:not(:disabled)"
+    },
+    "sourceModule": "placement.mjs"
+  },
+  {
+    "id": "domino-register",
+    "name": "Domino Register",
+    "category": "puzzle",
+    "url": "constraint-room/?game=domino-register",
+    "mechanic": "Partition a numbered grid into adjacent pairs, using each unordered number-pair exactly once.",
+    "description": "Pair neighboring numbers while using every domino combination once.",
+    "rules": [
+      "Tap an unpaired square, then an edge-neighbor to form a domino. Tap a paired square to remove that domino. Selecting the same unpaired square again cancels.",
+      "Cover the numbered grid with dominoes. Each unordered pair in the public inventory must appear exactly once, so0\u20131 and1\u20130 use the same domino.",
+      "Check explains an unpaired cell or duplicate pair. Undo or Reset recovers; solve three shuffled number grids."
+    ],
+    "controls": "Tap or click labeled native controls; Tab and Enter/Space work throughout. No drag gesture or keyboard-only action is required. Undo and Reset recover finite studies; Restart repeats a replay seed or creates a new run.",
+    "accent": "#b9d8c8",
+    "symbol": "\u25a7",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Optional fresh seed-generated studies continue after each solve with a cumulative score. A failed Check or stranded route ends the stream; Bank and end run preserves the score. Finite studies retain Undo and Reset.",
+      "difficultyCap": "double-three set"
+    },
+    "nearestExisting": [
+      {
+        "id": "tangram-dock",
+        "difference": "Dominoes are boundaries chosen between fixed digits, and the inventory is every unordered value pair rather than cargo shapes or endpoint shedding."
+      },
+      {
+        "id": "domino-parlour",
+        "difference": "Dominoes are boundaries chosen between fixed digits, and the inventory is every unordered value pair rather than cargo shapes or endpoint shedding."
+      }
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board [data-action^=\"cell:\"]:not(:disabled)"
+    },
+    "sourceModule": "placement.mjs"
+  },
+  {
+    "id": "weighted-weft",
+    "name": "Weighted Weft",
+    "category": "puzzle",
+    "url": "constraint-room/?game=weighted-weft",
+    "mechanic": "Choose binary squares so row totals use column positions as weights and column totals use row positions as weights.",
+    "description": "Choose squares whose row and column weights add up to the right totals.",
+    "rules": [
+      "Tap squares to cycle included \u2192 excluded \u2192 unknown. An included square contributes its column number to its row and its row number to its column.",
+      "Match every listed weighted row and column total. Coordinates are1-based and there are no digit-placement or run-order rules.",
+      "Assign all squares then Check. Alternate satisfying patterns are accepted. Undo or Reset recovers; finish three wefts."
+    ],
+    "controls": "Tap or click labeled native controls; Tab and Enter/Space work throughout. No drag gesture or keyboard-only action is required. Undo and Reset recover finite studies; Restart repeats a replay seed or creates a new run.",
+    "accent": "#ead4af",
+    "symbol": "\u2733",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Optional fresh seed-generated studies continue after each solve with a cumulative score. A failed Check or stranded route ends the stream; Bank and end run preserves the score. Finite studies retain Undo and Reset.",
+      "difficultyCap": "5\u00d75, with position weights1\u20135"
+    },
+    "nearestExisting": [
+      {
+        "id": "cross-sums",
+        "difference": "Each square is a binary subset inclusion and its weight depends on its coordinate. No digit assignment or uniqueness, no run ordering, no XOR parity repair or minimum-change budget."
+      },
+      {
+        "id": "parity-repair",
+        "difference": "Each square is a binary subset inclusion and its weight depends on its coordinate. No digit assignment or uniqueness, no run ordering, no XOR parity repair or minimum-change budget."
+      },
+      {
+        "id": "picross-post",
+        "difference": "Each square is a binary subset inclusion and its weight depends on its coordinate. No digit assignment or uniqueness, no run ordering, no XOR parity repair or minimum-change budget."
+      }
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board [data-action^=\"cell:\"]:not(:disabled)"
+    },
+    "sourceModule": "composition.mjs"
+  },
+  {
+    "id": "once-through",
+    "name": "Once Through",
+    "category": "puzzle",
+    "url": "constraint-room/?game=once-through",
+    "mechanic": "Traverse every undirected bridge exactly once, choosing when to cross fragile connector edges.",
+    "description": "Cross every bridge once and save a route to the final station.",
+    "rules": [
+      "Start at the highlighted station and cross an unused bridge using a destination button. Bridges are consumed after crossing; stations may be visited repeatedly. Crossing drawn lines connect only at numbered stations.",
+      "Use every bridge exactly once and finish at the marked exit. Choosing the wrong bridge too early can strand unused bridges.",
+      "A stranded route is a recoverable loss: Undo reopens its last bridge; Reset repeats the same graph. Finish three routes."
+    ],
+    "controls": "Tap or click labeled native controls; Tab and Enter/Space work throughout. No drag gesture or keyboard-only action is required. Undo and Reset recover finite studies; Restart repeats a replay seed or creates a new run.",
+    "accent": "#d3c8e4",
+    "symbol": "\u2197",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Optional fresh seed-generated studies continue after each solve with a cumulative score. A failed Check or stranded route ends the stream; Bank and end run preserves the score. Finite studies retain Undo and Reset.",
+      "difficultyCap": "eight stations"
+    },
+    "nearestExisting": [
+      {
+        "id": "cable-loom",
+        "difference": "The resource consumed is an edge, and vertices may be revisited; bridge ordering creates dead ends unlike visiting every vertex once."
+      },
+      {
+        "id": "orbit-transfer",
+        "difference": "The resource consumed is an edge, and vertices may be revisited; bridge ordering creates dead ends unlike visiting every vertex once."
+      }
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board [data-action^=\"node:\"]:not(:disabled)"
+    },
+    "sourceModule": "paths.mjs"
+  },
+  {
+    "id": "cyclic-courtyard",
+    "name": "Cyclic Courtyard",
+    "category": "puzzle",
+    "url": "constraint-room/?game=cyclic-courtyard",
+    "mechanic": "Shift whole rows or columns with wraparound to restore a scrambled tile permutation.",
+    "description": "Shift wrapping rows and columns to bring nine tiles back into order.",
+    "rules": [
+      "Restore tiles1\u20139 in reading order. A row arrow shifts that entire row one place with wraparound; a column arrow shifts a whole column.",
+      "Rows and columns intersect, so shifting one line can disturb another. Reach the target before the shown shift allowance runs out.",
+      "Each starting arrangement comes from legal shifts. Undo or Reset recovers a spent allowance; complete three progressively deeper scrambles."
+    ],
+    "controls": "Tap or click labeled native controls; Tab and Enter/Space work throughout. No drag gesture or keyboard-only action is required. Undo and Reset recover finite studies; Restart repeats a replay seed or creates a new run.",
+    "accent": "#d6dfbe",
+    "symbol": "\u25c7",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Optional fresh seed-generated studies continue after each solve with a cumulative score. A failed Check or stranded route ends the stream; Bank and end run preserves the score. Finite studies retain Undo and Reset.",
+      "difficultyCap": "3\u00d73, at most ten scrambling shifts"
+    },
+    "nearestExisting": [
+      {
+        "id": "good-order",
+        "difference": "A move affects a full line and wraps around; there is no empty tile or cube-face orientation. Intersecting line cycles force deliberate commutator planning."
+      },
+      {
+        "id": "corner-cabinet",
+        "difference": "A move affects a full line and wraps around; there is no empty tile or cube-face orientation. Intersecting line cycles force deliberate commutator planning."
+      }
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"shift:row:0:1\"]"
+    },
+    "sourceModule": "paths.mjs"
+  },
+  {
+    "id": "seam-quilt",
+    "name": "Seam Quilt",
+    "category": "puzzle",
+    "url": "constraint-room/?game=seam-quilt",
+    "mechanic": "Place and rotate edge-labeled tiles so neighboring seams agree and the required boundary labels face outward.",
+    "description": "Place and turn numbered tiles until all their seams agree.",
+    "rules": [
+      "Select a tile from the tray, rotate it clockwise if needed, then choose a board slot. Selecting an already placed tile lifts it; placing over another tile returns that tile to the tray.",
+      "Use every tile once. Neighboring seam numbers must match, and outside-facing edges must match the listed boundary labels. North/South labels run left to right; East/West labels run top to bottom.",
+      "Tile labels show north, east, south and west. Check explains a mismatched seam; Undo or Reset recovers. Complete three quilts."
+    ],
+    "controls": "Tap or click labeled native controls; Tab and Enter/Space work throughout. No drag gesture or keyboard-only action is required. Undo and Reset recover finite studies; Restart repeats a replay seed or creates a new run.",
+    "accent": "#b9d8c8",
+    "symbol": "\u25a7",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Optional fresh seed-generated studies continue after each solve with a cumulative score. A failed Check or stranded route ends the stream; Bank and end run preserves the score. Finite studies retain Undo and Reset.",
+      "difficultyCap": "5\u00d75 or nine tiles, depending on the mechanic"
+    },
+    "nearestExisting": [
+      {
+        "id": "tile-weave",
+        "difference": "Tile identity and placement are variables, and matching means edge-symbol equality; no pipe connectivity or footprint packing."
+      },
+      {
+        "id": "tangram-dock",
+        "difference": "Tile identity and placement are variables, and matching means edge-symbol equality; no pipe connectivity or footprint packing."
+      }
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"tile:1\"]"
+    },
+    "sourceModule": "composition.mjs"
+  },
+  {
+    "id": "exclusive-print",
+    "name": "Exclusive Print",
+    "category": "puzzle",
+    "url": "constraint-room/?game=exclusive-print",
+    "mechanic": "Select overlapping plates so each requested cell receives exactly one coat while blank cells receive none.",
+    "description": "Combine printing plates without giving any square an extra coat.",
+    "rules": [
+      "Each lettered plate has a visible square pattern. Toggle plates to combine them; the main board shows actual coat counts.",
+      "Every target\u25a0 square needs exactly one coat; each blank\u25cb square needs none. Overlap adds coats and cannot erase ink. Use no more than the plate budget.",
+      "Check explains an overprint, missing coat or budget failure. Undo or Reset recovers; choose exact covers for three prints."
+    ],
+    "controls": "Tap or click labeled native controls; Tab and Enter/Space work throughout. No drag gesture or keyboard-only action is required. Undo and Reset recover finite studies; Restart repeats a replay seed or creates a new run.",
+    "accent": "#ead4af",
+    "symbol": "\u2733",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Optional fresh seed-generated studies continue after each solve with a cumulative score. A failed Check or stranded route ends the stream; Bank and end run preserves the score. Finite studies retain Undo and Reset.",
+      "difficultyCap": "5\u00d75 or nine tiles, depending on the mechanic"
+    },
+    "nearestExisting": [
+      {
+        "id": "stamp-studio",
+        "difference": "Overlap is destructive overprinting rather than harmless union or canceling XOR; exact multiplicities and plate quotas require a disjoint exact-cover decision."
+      },
+      {
+        "id": "parity-repair",
+        "difference": "Overlap is destructive overprinting rather than harmless union or canceling XOR; exact multiplicities and plate quotas require a disjoint exact-cover decision."
+      }
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"plate:0\"]"
+    },
+    "sourceModule": "composition.mjs"
+  },
+  {
+    "id": "window-tally",
+    "name": "Window Tally",
+    "category": "puzzle",
+    "url": "constraint-room/?game=window-tally",
+    "mechanic": "Reconstruct a shaded picture from overlapping 3\u00d73 local counts, including the clue square itself.",
+    "description": "Reconstruct a picture from overlapping local counts.",
+    "rules": [
+      "A clue counts filled cells in its clipped3\u00d73 window, including itself. Clue cells are editable and their numbers stay visible.",
+      "Tap each square to cycle filled \u2192 empty \u2192 unknown. All overlapping public local totals must agree; any matching reconstruction is accepted.",
+      "Assign every square then Check. Undo or Reset recovers; solve three pictures."
+    ],
+    "controls": "Tap or click labeled native controls; Tab and Enter/Space work throughout. No drag gesture or keyboard-only action is required. Undo and Reset recover finite studies; Restart repeats a replay seed or creates a new run.",
+    "accent": "#d3c8e4",
+    "symbol": "\u2197",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Optional fresh seed-generated studies continue after each solve with a cumulative score. A failed Check or stranded route ends the stream; Bank and end run preserves the score. Finite studies retain Undo and Reset.",
+      "difficultyCap": "5\u00d75 or nine tiles, depending on the mechanic"
+    },
+    "nearestExisting": [
+      {
+        "id": "minefield",
+        "difference": "All clues are public and there is no chance-based reveal or mine penalty; local sums overlap around every chosen clue and constrain a freely editable binary picture."
+      },
+      {
+        "id": "picross-post",
+        "difference": "All clues are public and there is no chance-based reveal or mine penalty; local sums overlap around every chosen clue and constrain a freely editable binary picture."
+      },
+      {
+        "id": "parity-repair",
+        "difference": "All clues are public and there is no chance-based reveal or mine penalty; local sums overlap around every chosen clue and constrain a freely editable binary picture."
+      }
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board [data-action^=\"cell:\"]:not(:disabled)"
+    },
+    "sourceModule": "composition.mjs"
+  }
+]

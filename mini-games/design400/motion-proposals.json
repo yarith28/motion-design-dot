@@ -1,0 +1,426 @@
+{
+  "owner": "motion_additions",
+  "room": "field-room",
+  "baseline": "c96ec5e39669d330ac761d98a335afe44c34a977",
+  "inventoryCount": 300,
+  "status": "implemented; 20 cleared distinct mechanics; final runtime and verification in field-room",
+  "sourceNeighborsInspected": [
+    "arcade-room/room.js",
+    "kinetic-room/engines.js",
+    "motion-room/shared.js",
+    "motion-room/physics.js",
+    "motion-room/navigation.js"
+  ],
+  "games": [
+    {
+      "id": "ninepin-line",
+      "name": "Ninepin Line",
+      "definingDecision": "Choose ball entry position and hook spin to trade direct pocket impact against useful pin-to-pin momentum; the second ball must convert the actual remaining rack.",
+      "nearestExisting": [
+        {
+          "id": "table-bowls",
+          "differentiator": "Pins fall when collision impulse or motion exceeds a threshold. Ball hook bends its lane trajectory, and a two-ball frame preserves the actual standing rack."
+        },
+        {
+          "id": "one-last-marble",
+          "differentiator": "Simulated variable-angle impacts and spin through a full rack replace deterministic legal contact chains."
+        }
+      ],
+      "controls": "Native offset, aim, launch speed and hook sliders; Roll simulates a delivery. All gameplay actions use native keyboard or touch controls.",
+      "finite": "Three finite studies. Each challenge has three nine-pin frames. Score the shown total pinfall target; each frame allows two deliveries and retains the actual standing pins for the second ball.",
+      "endless": "Seeded rack offsets, lane-hook factors and pinfall quotas vary each three-frame challenge; failed quota ends the cumulative tour.",
+      "failureChallenge": "Clear all three challenges for a finite campaign. A gutter/weak delivery uses its ball. Failing the three-frame quota ends the challenge. Reset challenge or Restart game restores the appropriate start.",
+      "levelStrategy": "Three studies shift the rack, widen its spacing, change lane hook factor and raise quotas from 22 to 24 pins. The second delivery retains standing pins."
+    },
+    {
+      "id": "batters-window",
+      "name": "Batter’s Window",
+      "definingDecision": "Read the visible curved pitch, choose when it intersects bat reach, and set pull/center/push contact orientation to place the outgoing ball away from fielders.",
+      "nearestExisting": [
+        {
+          "id": "pocket-orbit",
+          "differentiator": "Timing changes both contact quality and the resulting flight into a guarded field; orientation and pitcher trajectory are coupled decisions rather than one timing arc."
+        },
+        {
+          "id": "moon-basket",
+          "differentiator": "The incoming moving pitch supplies contact position/velocity; the player chooses contact rather than launching a stationary ball with angle and power."
+        }
+      ],
+      "controls": "Native bat orientation slider; Advance pitch and Swing. All gameplay actions use native keyboard or touch controls.",
+      "finite": "Three finite studies. Make three safe hits within six pitches in each of three field alignments. The open outgoing-angle sector is marked on the field.",
+      "endless": "Seeded pitch speed/curvature sequences and continuously varied open field sectors; a failed six-pitch quota ends the run.",
+      "failureChallenge": "A miss, late pitch or guarded outgoing hit uses a pitch. Six pitches without three safe hits loses. Use Reset challenge or Restart game to retry.",
+      "levelStrategy": "Three open-sector angles and varying pitch-speed/curve sequences require different contact timing and bat orientation."
+    },
+    {
+      "id": "crease-keeper",
+      "name": "Crease Keeper",
+      "definingDecision": "Choose a starting position and stance, then commit a high or low dive at the right beat to cover a visibly curving shot within finite reach.",
+      "nearestExisting": [
+        {
+          "id": "lantern-defense",
+          "differentiator": "One keeper combines initial position, committed finite dive reach and high/low coverage; there are no launched expanding blast zones."
+        },
+        {
+          "id": "rally-club",
+          "differentiator": "Each curving shot requires one committed interception with a fixed goal-line deadline, rather than continuous paddle repositioning."
+        }
+      ],
+      "controls": "Native starting-position slider; high/low stance, Begin shot, committed left/right high/low dive, Advance. All gameplay actions use native keyboard or touch controls.",
+      "finite": "Three finite studies. Save at least four of six shots in each of three keeper sets. Final target, height and curvature are shown before every shot.",
+      "endless": "Seeded target offsets, curves and alternating high/low shots. Every generated set requires four of six saves; failure ends the run.",
+      "failureChallenge": "The shot reaches the goal at beat eight. Save only within 0.6 horizontally with matching height. Too many conceded shots lose the set. Reset challenge or Restart game retries.",
+      "levelStrategy": "Three sets increase final target width and curvature, with alternating high/low shot heights. Saves are evaluated at the goal-line beat."
+    },
+    {
+      "id": "last-second-pass",
+      "name": "Last Second Pass",
+      "definingDecision": "Move off-ball teammates before sending a physical pass so a receiver can arrive while a defender cannot intercept; possession, passing lanes and the offside line constrain the route to goal.",
+      "nearestExisting": [
+        {
+          "id": "two-couriers",
+          "differentiator": "Possession transfers by a swept ball that defenders can intercept; teammates support the next pass and a goal requires onside reception, not parcel pickup/delivery."
+        },
+        {
+          "id": "crossfire-courtyard",
+          "differentiator": "Nonviolent possession and offside/receiver movement replace AP shooting, cover, health and suppression."
+        }
+      ],
+      "controls": "Choose controlled player and receiver, move/wait, Pass and Shoot; native keyboard/touch buttons. All gameplay actions use native keyboard or touch controls.",
+      "finite": "Three finite studies. Score once in each of three attacking formations before 35 attack beats. Select a teammate to move and a different player as receiver. The training combination needs at least two completed passes involving all three teammates before a shot.",
+      "endless": "Do not ship an endless toggle initially: a repeating hand-authored possession is not adequate replay. A future generator needs validated reachable onside attacks and defender diversity.",
+      "failureChallenge": "A tackle, intercepted pass or offside reception ends the attack. Defenders and all teammate coordinates are visible. Reset challenge or Restart game restores the formation.",
+      "levelStrategy": "Three authored defender formations require a two-pass combination using all three teammates. The offside boundary stays at x8."
+    },
+    {
+      "id": "court-rotation",
+      "name": "Court Rotation",
+      "definingDecision": "Allocate a three-contact airborne rally across player roles: receive to a setter, place a set, and choose a spike lane after observing blocker commitment.",
+      "nearestExisting": [
+        {
+          "id": "rally-club",
+          "differentiator": "Three different team contacts and illegal repeated-player contacts impose spatial setup before an offensive hit; no direct paddle return."
+        },
+        {
+          "id": "last-second-pass",
+          "differentiator": "The ball cannot be held, gravity/apex height governs contact and only three touches are available; possession routing and offside are absent."
+        }
+      ],
+      "controls": "Choose player, move/advance flight, Bump, high/quick Set and line/cross Spike. All gameplay actions use native keyboard or touch controls.",
+      "finite": "Three finite studies. Win three different airborne rallies: receive with Bump, direct the second contact with Set, then Spike as the third contact. Consecutive contacts by the same player are a fault.",
+      "endless": "Seeded initial serve height and team offset alter contact timing and blocker commitment. Each generated rally must be won.",
+      "failureChallenge": "Set height and position change the attacker’s contact window. Read the blocker’s committed line/cross lane and clear net height 1.65. Ground contact, an illegal fourth touch or a block loses; reset or restart to retry.",
+      "levelStrategy": "Three different team offsets and serve heights change airborne contact timing; setter position commits the blocker to line or cross."
+    },
+    {
+      "id": "velodrome-draft",
+      "name": "Velodrome Draft",
+      "definingDecision": "Choose effort and lane while using an opponent’s slipstream to conserve energy, then spend that reserve to overtake; outer lanes reduce forward race progress.",
+      "nearestExisting": [
+        {
+          "id": "vector-rally",
+          "differentiator": "Draft position and lane-specific distance couple energy strategy to opponent traffic; no integer acceleration maze or swept wall path."
+        },
+        {
+          "id": "wind-sail",
+          "differentiator": "Moving slipstreams are created by rival riders and changes of lane trade distance against drag; wind heading/sail trim do not exist."
+        }
+      ],
+      "controls": "Inside/outside lane changes, Coast/Cruise/Sprint effort, Ride one second. All gameplay actions use native keyboard or touch controls.",
+      "finite": "Three finite studies. Win each of three races by crossing the distance line ahead of both rivals. Their next speeds and surge beats are public.",
+      "endless": "Optional match series: seeded race length, rival pace and surge beats create fresh races, each starting with a restored race reserve. Scores accumulate between won races; a defeat, contact or exhausted reserve ends the series.",
+      "failureChallenge": "Changing lanes costs speed and contacting an overlapping rider loses. Exhausted energy at very low pace or a rival finishing first loses. Reset challenge or Restart game begins again.",
+      "levelStrategy": "Three races increase length and rival pace, change surge timing, and retain visible rival-state forecasts."
+    },
+    {
+      "id": "clutch-circuit",
+      "name": "Clutch Circuit",
+      "definingDecision": "Shift a manual gearbox to keep engine RPM in its useful band as gradients and corner caps change load; shifts interrupt drive while brakes trade speed for brake/engine heat.",
+      "nearestExisting": [
+        {
+          "id": "vector-rally",
+          "differentiator": "Engine torque curve, gear ratio, shift lag and heat replace direct integer acceleration choice; the road is longitudinal rather than an acceleration grid."
+        },
+        {
+          "id": "velodrome-draft",
+          "differentiator": "No opponent drafting/energy bank. Mechanical gear selection and thermal constraints determine achievable speed."
+        }
+      ],
+      "controls": "Shift up/down, full/low throttle, Drive and Brake for one second. All gameplay actions use native keyboard or touch controls.",
+      "finite": "Three finite studies. Finish three manual-drive road stages within each time gate. The complete road gradients, lengths and corner speed caps are listed.",
+      "endless": "Seeded grades, straight lengths and corner speed caps create new finite road sections. A mechanical failure or time-gate miss ends the run.",
+      "failureChallenge": "RPM above 8100, excessive heat or crossing a corner faster than its cap plus 1.1 loses. Brake before the corner and avoid high-gear lugging. Reset challenge or Restart game retries.",
+      "levelStrategy": "Four road sections combine straight acceleration, an uphill cap, downhill cooling and a tighter final corner; later studies tighten grades/caps and length."
+    },
+    {
+      "id": "ribbon-relay",
+      "name": "Ribbon Relay",
+      "definingDecision": "Accelerate the outgoing runner while controlling the incoming runner so both occupy the exchange zone at similar speed before transferring the baton.",
+      "nearestExisting": [
+        {
+          "id": "vector-rally",
+          "differentiator": "Two independent runner position and velocity states must meet inside an exchange zone with gap and speed-difference limits; the successful transfer ends that handoff challenge."
+        },
+        {
+          "id": "track-exchange",
+          "differentiator": "Continuous speed matching and moving handoff geometry replace graph-based cooperative cargo exchange and held signals."
+        }
+      ],
+      "controls": "Accelerate/ease either runner, advance both, Transfer baton. All gameplay actions use native keyboard or touch controls.",
+      "finite": "Three finite studies. Complete three baton exchanges. Both runners must be inside the marked exchange zone, within 1.5m and within 2m/s at the moment of transfer.",
+      "endless": "Seeded exchange positions, runner speeds and outgoing gradient vary the next handoff. A baton drop or zone exit ends the run.",
+      "failureChallenge": "A bad transfer drops the baton. Leaving the zone or exceeding 13 beats also loses. Speed up the outgoing runner at a useful cue, then match the incoming speed. Reset challenge or Restart game retries.",
+      "levelStrategy": "Three handoffs vary incoming speed, outgoing starting position and zone; the last also reduces outgoing speed through a gradient."
+    },
+    {
+      "id": "two-oars",
+      "name": "Two Oars",
+      "definingDecision": "Time each oar’s independent pull/recovery to create forward impulse or yaw while managing current drift and asymmetric fatigue.",
+      "nearestExisting": [
+        {
+          "id": "wind-sail",
+          "differentiator": "Differential rowing impulses and separate recovery phases drive rotation; no sail polar, wind heading or tacking."
+        },
+        {
+          "id": "trailer-yard",
+          "differentiator": "One rigid hull on moving water has impulse steering and oar recovery, rather than reversed articulated vehicle geometry."
+        }
+      ],
+      "controls": "Pull left/right/both oars and Recover/drift; native keyboard/touch buttons. All gameplay actions use native keyboard or touch controls.",
+      "finite": "Three finite studies. Navigate through all three ordered gates, then reach x15 on each of three river reaches. The entire hull must clear gates and banks.",
+      "endless": "Seeded gate offsets and cross-current drift produce new river reaches. Each has a bounded width and three ordered gates; bank/missed gate/fatigue ends the run.",
+      "failureChallenge": "Each action is 0.5s. The hull extends 0.8 ahead/behind its center; angular velocity persists. Bank contact, missed gate, excessive fatigue or 100-beat exhaustion loses. Reset challenge or Restart game restores the river.",
+      "levelStrategy": "Three river reaches move the ordered gates, narrow the openings and vary cross-current drift. Full bow/stern clearance is required."
+    },
+    {
+      "id": "cable-carrier",
+      "name": "Cable Carrier",
+      "definingDecision": "Accelerate an overhead trolley and change cable length to cancel actual suspended-load oscillation before fitting the load into a receiver.",
+      "nearestExisting": [
+        {
+          "id": "scissor-lift",
+          "differentiator": "Continuous angle/angular velocity and moving support forces replace a scalar sway counter. Braking at the wrong oscillation phase increases the swing."
+        },
+        {
+          "id": "elbow-room",
+          "differentiator": "A flexible suspended pendulum responds dynamically to trolley acceleration rather than rigid joint configurations."
+        },
+        {
+          "id": "spring-courier",
+          "differentiator": "The attachment stays fixed to a moving trolley and must be settled for delivery; no jumping between anchors or pendulum release."
+        }
+      ],
+      "controls": "Accelerate trolley left/right, Brake, Coast, Shorten/Lengthen cable, Detach. All gameplay actions use native keyboard or touch controls.",
+      "finite": "Three finite studies. Settle three fragile suspended loads into their receivers. Trolley acceleration drives a real modeled pendulum; rope length changes also alter its angular velocity.",
+      "endless": "Seeded receiver positions across three obstacle families change the required sway cancellation and rope length. Unsafe detach/contact ends the run.",
+      "failureChallenge": "Detach only within receiver radius 0.55, payload speed below 0.55 and angular speed below 0.24. Contact, unsafe detach or 140 beats loses. Reset challenge or Restart game restores the load.",
+      "levelStrategy": "The teaching route has no obstacles; the second has a floor obstacle and shorter receiver height; the third pairs hanging and floor obstacles."
+    },
+    {
+      "id": "thermal-route",
+      "name": "Thermal Route",
+      "definingDecision": "Convert finite height into glide distance, then turn inside spatial thermal columns to recover height; airspeed and bank actions change sink and lift exposure.",
+      "nearestExisting": [
+        {
+          "id": "kite-flight",
+          "differentiator": "There is no hold-to-rise engine. Lift exists only inside spatial thermal columns; speed changes the glide ratio and banking increases sink."
+        },
+        {
+          "id": "soft-landing",
+          "differentiator": "Unpowered horizontal route/altitude energy planning replaces thrust/fuel landing control."
+        },
+        {
+          "id": "wind-sail",
+          "differentiator": "Three-dimensional altitude reserve and thermal dwell govern the route, not surface sail-heading propulsion."
+        }
+      ],
+      "controls": "Slow/best-glide/fast trim, Bank left/right and Level wings; native keyboard/touch buttons. All gameplay actions use native keyboard or touch controls.",
+      "finite": "Three finite studies. Reach the three ordered air gates in each of three unpowered routes. Gates have visible position/radius and minimum height. Height is the only flight reserve.",
+      "endless": "Seeded air-gate and thermal-column offsets create new height-planning routes. Height depletion or corridor exit ends the run.",
+      "failureChallenge": "Zero height, leaving the 0–21 by 0–20 corridor or 90 beats loses. Plan the path through lift before aiming for a distant gate. Reset challenge or Restart game retries.",
+      "levelStrategy": "Three routes offset thermals and ordered gates across the flight corridor; later turns require height reserve and spatial lift planning."
+    },
+    {
+      "id": "belay-line",
+      "name": "Belay Line",
+      "definingDecision": "Coordinate controlled descent with rope feed/take-up and friction braking, keeping enough slack for movement without creating a shock-loaded fall.",
+      "nearestExisting": [
+        {
+          "id": "threaded-return",
+          "differentiator": "Slack and elastic tension alter downward velocity and anchor force; there is no wrapping history or horizontal reach puzzle."
+        },
+        {
+          "id": "four-holds",
+          "differentiator": "A descending rope-bound body and belayer control replace individual limb placement/support."
+        }
+      ],
+      "controls": "High/low brake, Feed/Take rope, left/right body positioning, descend, Step onto ledge. All gameplay actions use native keyboard or touch controls.",
+      "finite": "Three finite studies. Reach three descending ledges on each of three rope routes. Each ledge requires vertical distance below 0.5, horizontal reach below 0.4 and speed below 0.9.",
+      "endless": "Seeded ledge horizontal offsets and descent heights change rope feed, braking and ledge alignment. Unsafe force or missed route ends the run.",
+      "failureChallenge": "Tension over 14, descending past the final ledge or 160 beats loses. Secure a ledge, then Feed to continue. Use the high brake before arrival; Reset challenge or Restart game retries.",
+      "levelStrategy": "Three ledges require decreasing height with controlled speed; later studies offset their horizontal positions. Elastic tension and slack are simulated."
+    },
+    {
+      "id": "vault-runway",
+      "name": "Vault Runway",
+      "definingDecision": "Build runway speed, choose the pole’s plant timing/grip, and release its stored bending energy at a useful rotation angle to clear a bar.",
+      "nearestExisting": [
+        {
+          "id": "step-and-spring",
+          "differentiator": "Takeoff follows an elastic rotating pole whose stored bend energy and plant point determine the trajectory; no freely repeated platform jump."
+        },
+        {
+          "id": "spring-courier",
+          "differentiator": "Runway translation is captured into deforming-pole spring energy before release; there is no fixed hanging pendulum or anchor chain."
+        }
+      ],
+      "controls": "Native pole-grip slider, Accelerate/Ease runway, Plant, Advance pole/flight, Release. All gameplay actions use native keyboard or touch controls.",
+      "finite": "Three finite studies. Clear three different bars and land in the pit x11–15.5. Accelerate on the runway, then Plant within x7.4–8.6 at speed at least 3.",
+      "endless": "Seeded bar heights between 2.1 and 2.9 require fresh grip/release choices. Failed plant, bar or landing ends the meet.",
+      "failureChallenge": "Choose when to Release; flight then follows gravity. Missing the plant box, buckling, crossing the bar too low or landing outside the pit loses. Reset challenge or Restart game retries.",
+      "levelStrategy": "The same plant box and pit support bars at 2.1, 2.45 and 2.8. Approach speed, grip and pole-release timing must clear each bar."
+    },
+    {
+      "id": "tucked-landing",
+      "name": "Tucked Landing",
+      "definingDecision": "Tuck and extend during a dive to change rotational inertia while angular momentum is conserved, then align the body before water entry.",
+      "nearestExisting": [
+        {
+          "id": "soft-landing",
+          "differentiator": "No thruster or freely commanded rotation. Changing body inertia changes angular speed, and the score requires a specified number of turns before aligned entry."
+        },
+        {
+          "id": "vault-runway",
+          "differentiator": "Airborne conserved angular momentum and body-shape switching replace planted-pole elastic takeoff and release timing."
+        }
+      ],
+      "controls": "Native horizontal launch-speed slider, Launch, Tuck/Extend and Advance flight. All gameplay actions use native keyboard or touch controls.",
+      "finite": "Three finite studies. Complete the specified half-, full- then double-turn dive with entry angle within 0.30rad and landing position within 0.55 of the marked water target.",
+      "endless": "Seeded half/full/double-turn dive requirements and water targets create new entry combinations. A poor entry ends the meet.",
+      "failureChallenge": "Advance flight is 0.1s; gravity changes the remaining flight time. Water entry checks both accumulated rotation and horizontal placement. A poor entry loses; Reset challenge or Restart game retries.",
+      "levelStrategy": "Half-, full- and double-turn dives change launch height, angular momentum and entry target; tuck/extension timing controls conserved momentum."
+    },
+    {
+      "id": "wave-trim",
+      "name": "Wave Trim",
+      "definingDecision": "Steer relative to a moving curved wave face: descending the face builds board speed, while climbing/carving spends it to reach gates before the crest passes.",
+      "nearestExisting": [
+        {
+          "id": "balance-beam",
+          "differentiator": "A two-dimensional moving wave supplies position-dependent acceleration, and carving changes heading/drag; the goal is route gates rather than centering on a tilting beam."
+        },
+        {
+          "id": "wind-sail",
+          "differentiator": "Wave-face position supplies gravitational propulsion with crest-relative motion, not wind/sail trim."
+        }
+      ],
+      "controls": "Back/neutral/forward trim, Carve up/down and Hold heading. All gameplay actions use native keyboard or touch controls.",
+      "finite": "Three finite studies. Carve through three ordered wave gates in each of three moving wave faces. Gate vertical tolerance is 0.8.",
+      "endless": "Seeded gate heights and wave phase create new carve paths. A wipeout or missed gate ends the tour.",
+      "failureChallenge": "Keep face depth 0.35–4.8 and stay ahead of the closing crest. Missing a gate, crest contact, flat-water stall or 32 beats loses. Reset challenge or Restart game retries.",
+      "levelStrategy": "A broad teaching path becomes alternating-height gates with different moving-wave phases. Persistent heading must be unwound."
+    },
+    {
+      "id": "ripple-skimmer",
+      "name": "Ripple Skimmer",
+      "definingDecision": "Choose a flat stone’s launch angle, plate tilt, speed and stabilizing spin so the specified final water skip lands inside a marked interval.",
+      "nearestExisting": [
+        {
+          "id": "moon-basket",
+          "differentiator": "Stone plate tilt/spin determine a succession of water-entry skips and energy losses; success is not a single ballistic crossing."
+        },
+        {
+          "id": "quiet-curl",
+          "differentiator": "Repeated airborne/water impact transitions replace continuous sliding friction and resting proximity."
+        }
+      ],
+      "controls": "Native plate tilt, launch angle, power and spin sliders; Throw simulates skips. All gameplay actions use native keyboard or touch controls.",
+      "finite": "Three finite studies. Within six throws, make the specified consecutive skip count with the final required contact inside the marked interval. Complete three different water/skip contracts.",
+      "endless": "Seeded ripple phase, contact interval and skip quota create new water contracts. Six failed throws ends the pond tour.",
+      "failureChallenge": "The final specified skip must hit the interval; earlier/later water contacts or airborne distance do not count. Steep incidence or insufficient speed sinks the stone. Six failed throws loses; Reset challenge or Restart game restores the contract.",
+      "levelStrategy": "Three contracts require the third, fourth or fifth water skip at progressively different marked contact intervals; ripple phase also varies."
+    },
+    {
+      "id": "spin-passage",
+      "name": "Spin Passage",
+      "definingDecision": "Apply torque to a spinning top whose tilt direction precesses, anticipating where its contact point will drift before friction drains the spin reserve.",
+      "nearestExisting": [
+        {
+          "id": "balance-beam",
+          "differentiator": "Spin angular momentum and precession rotate the effect of lean over time; there is no controlled board tilt or restoring marble position."
+        },
+        {
+          "id": "star-tow",
+          "differentiator": "Torque changes top orientation through precession while surface contact drives drift; no propulsion/brake spacecraft controls."
+        }
+      ],
+      "controls": "North/south/east/west torque, Coast and recharge on a pad. All gameplay actions use native keyboard or touch controls.",
+      "finite": "Three finite studies. Guide a spinning top through all three ordered seals on each of three tables before its axis becomes unstable. Avoid the raised central obstruction.",
+      "endless": "Seeded seal offsets alter the torque route around a fixed obstacle with unchanged physical limits. Toppling or missed stability ends the run.",
+      "failureChallenge": "Toppling at tilt over 0.65, spin below 4, collision or leaving the table loses. Spin up only inside a marked pad; recharging preserves tilt and drift. Reset challenge or Restart game retries.",
+      "levelStrategy": "Three seal routes offset seal positions around a fixed obstacle and recharge pads; spin reserve and precession affect control."
+    },
+    {
+      "id": "cascade-hands",
+      "name": "Cascade Hands",
+      "definingDecision": "Choose throw height and catch/throw order across independently flying balls so each hand becomes free before the next descending ball arrives.",
+      "nearestExisting": [
+        {
+          "id": "harbor-catch",
+          "differentiator": "Several conserved airborne balls compete for two one-ball hands; a catch changes the future schedule through chosen toss height and cross-hand destination."
+        },
+        {
+          "id": "beat-post",
+          "differentiator": "The player creates the future timing pattern by throwing, and ball trajectories/hand occupancy constrain later decisions; notes are not an externally supplied rhythm."
+        }
+      ],
+      "controls": "Native throw-height slider, left/right-hand Throw and Catch, Advance air. All gameplay actions use native keyboard or touch controls.",
+      "finite": "Three finite studies. Reach the catch quota in two-, three- then four-ball cascades. Each hand holds only one ball; every cross throw targets the opposite hand.",
+      "endless": "Seeded ball count, initial airborne phases and catch quota create new timing schedules. Three drops ends the cascade.",
+      "failureChallenge": "Free a hand by throwing before its next arrival. Three drops or 200 beats loses. A dropped ball can be picked up with an empty hand. Reset challenge or Restart game restores the complete pattern.",
+      "levelStrategy": "Two-, three- and four-ball patterns create distinct hand-capacity and arrival constraints; varying throw heights create the schedule."
+    },
+    {
+      "id": "ice-rescue",
+      "name": "Ice Rescue",
+      "definingDecision": "Plan outbound and loaded return routes across ice whose support degrades with each pressure exposure; spreading weight reduces damage while costing actions in a moving current.",
+      "nearestExisting": [
+        {
+          "id": "boulder-burrow",
+          "differentiator": "Every traversed surface loses load-bearing support according to carried weight; there is no excavated soil or falling rock."
+        },
+        {
+          "id": "border-bloom",
+          "differentiator": "The route damages the safe terrain instead of claiming permanent safe territory, and the loaded return changes which cells remain traversable."
+        }
+      ],
+      "controls": "Spread/stand stance, four-direction steps, Wait and Pick up/Set down traveler. All gameplay actions use native keyboard or touch controls.",
+      "finite": "Three finite studies. Reach the traveler, pick them up, return to home (0,3), then Set down. Complete three lakes with different weak bridges, water holes and current.",
+      "endless": "Do not ship an endless toggle initially: extending fixed lakes needs a generator that proves both outbound and heavier return routes survive cumulative pressure.",
+      "failureChallenge": "Open water, exhausted support or the action allowance loses. The heavier return can break an outbound route. The exact remaining support of every tile is visible. Reset challenge or Restart game restores the lake.",
+      "levelStrategy": "Three authored lakes alter weakened cells and current. The single rescued traveler increases return pressure; ice never heals."
+    },
+    {
+      "id": "breathing-lane",
+      "name": "Breathing Lane",
+      "definingDecision": "Coordinate stroke recovery, diving depth and surface breaths: submerged streamlining improves pace but expends oxygen, while breath posture adds drag and interrupts arm propulsion.",
+      "nearestExisting": [
+        {
+          "id": "kite-flight",
+          "differentiator": "Forward progress comes from alternating recoverable strokes with depth-dependent drag/oxygen; there is no single lift control through scrolling gates."
+        },
+        {
+          "id": "two-oars",
+          "differentiator": "Depth, mouth position and respiration constrain locomotion; left/right oar yaw and rigid surface hulls are absent."
+        }
+      ],
+      "controls": "Arm stroke, Leg kick, Pitch down/up, Breathe, Glide/recover and Scull. All gameplay actions use native keyboard or touch controls.",
+      "finite": "Three finite studies. Finish three swimming lengths through their ordered depth gates (tolerance 0.6). Plan surface breaths between submerged gates.",
+      "endless": "Seeded gate depths and length families change stroke/oxygen routing. A failed depth gate or exhausted swimmer ends the run.",
+      "failureChallenge": "A breath needs depth below 0.42, restores oxygen and reduces speed. Oxygen exhaustion, excessive fatigue, floor contact, missed gate or 90 beats loses. Reset challenge or Restart game retries.",
+      "levelStrategy": "Three lengths increase distance and vary depth gates. The advanced route needs an actual breath between submerged gates."
+    }
+  ],
+  "implementationArtifact": "field-room/games.json",
+  "verificationArtifact": "coverage/field-room.json"
+}

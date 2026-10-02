@@ -3,9 +3,9 @@
   "suite": "afterglow",
   "passed": true,
   "status": "passed",
-  "startedAt": "2026-10-01T09:54:29.596Z",
+  "startedAt": "2026-10-02T19:56:09.360Z",
   "source": {
-    "sha256": "ae9dfba771d190935c2ba3221daefacfcf1aba936998685d4ee558c214292e46",
+    "sha256": "6570098d71aa57de63b37f09e4e264630f635d7e63d891b863e8b966589b8368",
     "files": [
       "afterglow/engine.js",
       "afterglow/game.css",
@@ -24,7 +24,7 @@
       "tools/run-suite.cjs"
     ]
   },
-  "requestedBaseURL": "http://127.0.0.1:8781",
+  "requestedBaseURL": "http://127.0.0.1:8790",
   "browser": {
     "engine": "Chromium",
     "version": "Chromium 151.0.7922.173 built on Debian GNU/Linux 13 (trixie)",
@@ -47,22 +47,22 @@
     "Solver completions do not establish human difficulty or accessibility."
   ],
   "servedRuntimeBefore": {
-    "baseURL": "http://127.0.0.1:8781",
+    "baseURL": "http://127.0.0.1:8790",
     "passed": true,
-    "sha256": "e99353163159a42d7d8822177bb2a5e124c447a84472f499b724abb6461ec2bc",
+    "sha256": "7f55db3c62d8fddd46aa1dcb0a7e815bd8e9cc233d9e682c40b2d336487d0160",
     "fileCount": 11,
-    "verifiedAt": "2026-10-01T09:54:29.835Z"
+    "verifiedAt": "2026-10-02T19:56:09.689Z"
   },
   "exitCode": 0,
   "signal": null,
   "sourceUnchanged": true,
   "servedRuntime": {
-    "baseURL": "http://127.0.0.1:8781",
+    "baseURL": "http://127.0.0.1:8790",
     "passed": true,
-    "sha256": "e99353163159a42d7d8822177bb2a5e124c447a84472f499b724abb6461ec2bc",
+    "sha256": "7f55db3c62d8fddd46aa1dcb0a7e815bd8e9cc233d9e682c40b2d336487d0160",
     "fileCount": 11,
-    "verifiedAt": "2026-10-01T09:55:24.830Z"
+    "verifiedAt": "2026-10-02T19:56:53.976Z"
   },
   "completionEvidence": null,
-  "finishedAt": "2026-10-01T09:55:24.853Z"
+  "finishedAt": "2026-10-02T19:56:53.976Z"
 }

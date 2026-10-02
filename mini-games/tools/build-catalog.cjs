@@ -1,15 +1,18 @@
 /* Build static cards from playable room manifests. No runtime/build dependency. */
 const fs=require('node:fs'),path=require('node:path');
 const root=path.resolve(__dirname,'..');
-const rooms=process.argv.slice(2);
+// --prepare builds a local candidate for integration tests. Publication must use
+// the normal evidence-checked build and the release gate after source freezes.
+const preparing=process.argv.includes('--prepare');
+const rooms=process.argv.slice(2).filter(arg=>arg!=='--prepare');
 const old=[['signal-run','Signal Run','reflex'],['double-take','Double Take','memory'],['pocket-orbit','Pocket Orbit','reflex'],['good-order','Good Order','puzzle'],['afterglow','Afterglow','adventure'],['lantern-lines','Lantern Lines','puzzle'],['tide-pool','Tide Pool','strategy'],['word-weave','Word Weave','puzzle'],['sky-stack','Sky Stack','reflex'],['pebble-post','Pebble Post','strategy']].map(([id,name,category])=>({id,name,category,url:id+'/',family:'original',status:'playable'}));
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const games=rooms.flatMap(room=>{
  const data=JSON.parse(fs.readFileSync(path.join(root,room,'games.json')));
- const expected={'systems-room':20,'tabletop-room':20,'puzzle-lab':20,'kinetic-room':20,'discovery-room':20,'construct-room':14,'parlour-room':35,'motion-room':24,'workbench-room':27}[room]||15;
+ const expected={'systems-room':20,'tabletop-room':20,'puzzle-lab':20,'kinetic-room':20,'discovery-room':20,'construct-room':14,'parlour-room':35,'motion-room':24,'workbench-room':27,'constraint-room':20,'field-room':20,'signal-lab':20,'commons-room':20,'atelier-room':20}[room]||15;
  if(data.length!==expected)throw Error(room+' must have '+expected+' distinct games');
- if(!fs.existsSync(path.join(root,'coverage',room+'.json')))throw Error('Missing browser evidence for '+room);
- if(['construct-room','parlour-room','motion-room','workbench-room'].includes(room))require('./evidence.cjs').expansionEvidence(room);
+ if(!preparing&&!fs.existsSync(path.join(root,'coverage',room+'.json')))throw Error('Missing browser evidence for '+room);
+ if(!preparing&&['construct-room','parlour-room','motion-room','workbench-room','constraint-room','field-room','signal-lab','commons-room','atelier-room'].includes(room))require('./evidence.cjs').expansionEvidence(room);
  return data.map(g=>({...g,family:room,status:'playable'}));
 });
 const all=[...old,...games];if(new Set(all.map(g=>g.id)).size!==all.length)throw Error('Duplicate game ids');
@@ -32,4 +35,4 @@ html=html.replace(/\b(?:Ten|\d+) little games:[^"]*/,`${all.length} little games
 fs.writeFileSync(path.join(root,'index.html'),html);
 fs.writeFileSync(path.join(root,'inventory.json'),JSON.stringify({version:1,total:all.length,games:all},null,2)+'\n');
 const readme=path.join(root,'README.md');fs.writeFileSync(readme,fs.readFileSync(readme,'utf8').replace(/with (?:ten|\d+) (?:finished|playable) games/,`with ${all.length} playable games`));
-console.log(`Generated ${all.length} playable entries from ${rooms.length} playable rooms.`);
+console.log(`${preparing?'Prepared local candidate; publication checks remain required. ':''}Generated ${all.length} playable entries from ${rooms.length} playable rooms.`);

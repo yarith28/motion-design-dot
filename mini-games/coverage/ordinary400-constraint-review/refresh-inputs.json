@@ -1,0 +1,2955 @@
+[
+  {
+    "id": "cable-carrier",
+    "commands": [
+      {
+        "cmd": "open",
+        "room": "field-room",
+        "id": "cable-carrier"
+      },
+      {
+        "cmd": "note",
+        "scope": "Current-source refresh using own prior ordinary-input route; this is learned-route replay, not a second naive play.",
+        "text": "All native mechanic inputs here use touchscreen taps. Original unaided play retained separately; no engine/planner imported or hidden state observed."
+      },
+      {
+        "cmd": "click",
+        "selector": "#start",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"detach\"]",
+        "touch": true
+      },
+      {
+        "cmd": "shot",
+        "name": "refresh-loss-stage0-action2"
+      },
+      {
+        "cmd": "click",
+        "selector": "#reset",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"right\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"right\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"right\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"brake\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"brake\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"brake\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"right\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"right\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"brake\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"brake\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"right\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"brake\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"right\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"brake\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"brake\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"brake\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"detach\"]",
+        "touch": true
+      },
+      {
+        "cmd": "shot",
+        "name": "refresh-study-win-stage0-action66"
+      },
+      {
+        "cmd": "click",
+        "selector": "#next",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"hoist\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"hoist\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"hoist\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"right\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"right\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"right\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"brake\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"brake\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"brake\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"right\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"right\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"right\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"brake\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"brake\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"brake\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"detach\"]",
+        "touch": true
+      },
+      {
+        "cmd": "shot",
+        "name": "refresh-study-win-stage1-action140"
+      },
+      {
+        "cmd": "click",
+        "selector": "#next",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"right\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"right\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "shot",
+        "name": "refresh-loss-stage2-action151"
+      },
+      {
+        "cmd": "click",
+        "selector": "#reset",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"right\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"right\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"brake\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"brake\"]",
+        "touch": true
+      },
+      {
+        "cmd": "shot",
+        "name": "refresh-loss-stage2-action162"
+      },
+      {
+        "cmd": "click",
+        "selector": "#reset",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"right\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"hoist\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"hoist\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"hoist\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"right\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"brake\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"brake\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"lower\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"lower\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"lower\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"coast\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"detach\"]",
+        "touch": true
+      },
+      {
+        "cmd": "shot",
+        "name": "refresh-win-stage2-action242"
+      },
+      {
+        "cmd": "click",
+        "selector": "#restart",
+        "touch": true
+      },
+      {
+        "cmd": "note",
+        "fullCampaignWin": true,
+        "text": "Refreshed all3 finite studies and natural loss/recovery against the current source bytes using native touch controls."
+      }
+    ]
+  },
+  {
+    "id": "thermal-route",
+    "commands": [
+      {
+        "cmd": "open",
+        "room": "field-room",
+        "id": "thermal-route"
+      },
+      {
+        "cmd": "note",
+        "scope": "Current-source refresh using own prior ordinary-input route; this is learned-route replay, not a second naive play.",
+        "text": "All native mechanic inputs here use touchscreen taps. Original unaided play retained separately; no engine/planner imported or hidden state observed."
+      },
+      {
+        "cmd": "click",
+        "selector": "#start",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"right\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"right\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"right\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"right\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"right\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"right\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"right\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"right\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"right\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"right\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"right\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"right\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"right\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"right\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"right\"]",
+        "touch": true
+      },
+      {
+        "cmd": "shot",
+        "name": "refresh-loss-stage0-action16"
+      },
+      {
+        "cmd": "click",
+        "selector": "#reset",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"level\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"level\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"level\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"level\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"level\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"level\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"level\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"level\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"level\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"level\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"level\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"level\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"level\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"level\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"level\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"level\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"level\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"level\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"level\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"level\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"level\"]",
+        "touch": true
+      },
+      {
+        "cmd": "shot",
+        "name": "refresh-study-win-stage0-action38"
+      },
+      {
+        "cmd": "click",
+        "selector": "#next",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"left\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"level\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"level\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"level\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"level\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"level\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"level\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"level\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"right\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"right\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"right\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"level\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"level\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"level\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"level\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"level\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"level\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"left\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"left\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"level\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"level\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"level\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"level\"]",
+        "touch": true
+      },
+      {
+        "cmd": "shot",
+        "name": "refresh-study-win-stage1-action62"
+      },
+      {
+        "cmd": "click",
+        "selector": "#next",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"right\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"level\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"level\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"level\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"level\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"level\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"level\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"level\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"left\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"left\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"left\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"level\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"level\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"level\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"level\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"level\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"level\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"right\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"right\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"level\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"level\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"level\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"level\"]",
+        "touch": true
+      },
+      {
+        "cmd": "shot",
+        "name": "refresh-win-stage2-action86"
+      },
+      {
+        "cmd": "click",
+        "selector": "#restart",
+        "touch": true
+      },
+      {
+        "cmd": "note",
+        "fullCampaignWin": true,
+        "text": "Refreshed all3 finite studies and natural loss/recovery against the current source bytes using native touch controls."
+      }
+    ]
+  },
+  {
+    "id": "cam-workshop",
+    "commands": [
+      {
+        "cmd": "open",
+        "room": "atelier-room",
+        "id": "cam-workshop"
+      },
+      {
+        "cmd": "note",
+        "scope": "Current-source refresh using own prior ordinary-input route; this is learned-route replay, not a second naive play.",
+        "text": "All native mechanic inputs here use touchscreen taps. Original unaided play retained separately; no engine/planner imported or hidden state observed."
+      },
+      {
+        "cmd": "click",
+        "selector": "#start",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"cut\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"test\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "#reset",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"test\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"test\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"test\"]",
+        "touch": true
+      },
+      {
+        "cmd": "shot",
+        "name": "refresh-loss-stage0-action7"
+      },
+      {
+        "cmd": "click",
+        "selector": "#reset",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"sector:0\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"cut\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"cut\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"sector:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"cut\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"sector:2\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"cut\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"sector:3\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"cut\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"cut\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"sector:4\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"cut\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"cut\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"cut\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"sector:5\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"cut\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"cut\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"cut\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"sector:6\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"cut\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"cut\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"sector:7\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"cut\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"cut\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"test\"]",
+        "touch": true
+      },
+      {
+        "cmd": "shot",
+        "name": "refresh-study-win-stage0-action33"
+      },
+      {
+        "cmd": "click",
+        "selector": "#next",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"sector:0\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"cut\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"sector:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"sector:2\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"cut\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"sector:3\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"cut\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"cut\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"sector:4\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"cut\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"cut\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"sector:5\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"cut\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"cut\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"cut\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"sector:6\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"cut\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"cut\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"sector:7\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"cut\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"phase:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"test\"]",
+        "touch": true
+      },
+      {
+        "cmd": "shot",
+        "name": "refresh-study-win-stage1-action57"
+      },
+      {
+        "cmd": "click",
+        "selector": "#next",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"sector:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"cut\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"cut\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"sector:2\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"cut\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"sector:3\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"sector:4\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"cut\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"sector:5\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"cut\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"cut\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"sector:6\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"cut\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"cut\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"sector:7\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"cut\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"cut\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"cut\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"phase:3\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"test\"]",
+        "touch": true
+      },
+      {
+        "cmd": "shot",
+        "name": "refresh-win-stage2-action78"
+      },
+      {
+        "cmd": "click",
+        "selector": "#restart",
+        "touch": true
+      },
+      {
+        "cmd": "note",
+        "fullCampaignWin": true,
+        "text": "Refreshed all3 finite studies and natural loss/recovery against the current source bytes using native touch controls."
+      }
+    ]
+  },
+  {
+    "id": "interlock-cabinet",
+    "commands": [
+      {
+        "cmd": "open",
+        "room": "atelier-room",
+        "id": "interlock-cabinet"
+      },
+      {
+        "cmd": "note",
+        "scope": "Current-source refresh using own prior ordinary-input route; this is learned-route replay, not a second naive play.",
+        "text": "All native mechanic inputs here use touchscreen taps. Original unaided play retained separately; no engine/planner imported or hidden state observed."
+      },
+      {
+        "cmd": "click",
+        "selector": "#start",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"move:0:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"piece:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"move:1:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"move:1:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"move:1:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"move:1:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"piece:0\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"move:0:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"move:0:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"move:0:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"move:0:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "shot",
+        "name": "refresh-study-win-stage0-action12"
+      },
+      {
+        "cmd": "click",
+        "selector": "#next",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"move:0:-1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"move:0:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"move:0:-1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"move:0:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"move:0:-1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"move:0:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"move:0:-1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"move:0:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"move:0:-1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"move:0:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"move:0:-1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"move:0:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"move:0:-1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"move:0:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"move:0:-1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"move:0:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "shot",
+        "name": "refresh-loss-stage1-action29"
+      },
+      {
+        "cmd": "click",
+        "selector": "#reset",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"piece:2\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"move:2:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"move:2:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"piece:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"move:1:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"move:1:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"move:1:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"move:1:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"piece:0\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"move:0:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"move:0:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"move:0:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"move:0:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "shot",
+        "name": "refresh-study-win-stage1-action43"
+      },
+      {
+        "cmd": "click",
+        "selector": "#next",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"piece:2\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"move:2:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"move:1:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"move:1:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"move:2:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"move:2:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"move:2:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"move:2:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"piece:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"move:1:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"move:1:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"move:1:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"move:1:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"piece:0\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"move:0:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"move:0:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"move:0:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"move:0:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"piece:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"move:1:-1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"move:1:-1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"piece:2\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"move:1:-1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"move:1:-1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"move:2:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"move:2:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"piece:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"move:1:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"move:1:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"move:1:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"move:1:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"move:1:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"piece:0\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"move:0:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"move:0:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"move:0:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"move:0:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "shot",
+        "name": "refresh-win-stage2-action81"
+      },
+      {
+        "cmd": "click",
+        "selector": "#restart",
+        "touch": true
+      },
+      {
+        "cmd": "note",
+        "fullCampaignWin": true,
+        "text": "Refreshed all3 finite studies and natural loss/recovery against the current source bytes using native touch controls."
+      }
+    ]
+  },
+  {
+    "id": "vented-cast",
+    "commands": [
+      {
+        "cmd": "open",
+        "room": "atelier-room",
+        "id": "vented-cast"
+      },
+      {
+        "cmd": "note",
+        "scope": "Current-source refresh using own prior ordinary-input route; this is learned-route replay, not a second naive play.",
+        "text": "All native mechanic inputs here use touchscreen taps. Original unaided play retained separately; no engine/planner imported or hidden state observed."
+      },
+      {
+        "cmd": "click",
+        "selector": "#start",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"fill:10\"]",
+        "touch": true
+      },
+      {
+        "cmd": "shot",
+        "name": "refresh-loss-stage0-action2"
+      },
+      {
+        "cmd": "click",
+        "selector": "#reset",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"vent:0\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"vent:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"fill:10\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"fill:11\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"fill:12\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"gate:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"fill:14\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"fill:13\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"fill:6\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"fill:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"vent:0\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"fill:8\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"fill:3\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"vent:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"finish\"]",
+        "touch": true
+      },
+      {
+        "cmd": "shot",
+        "name": "refresh-study-win-stage0-action18"
+      },
+      {
+        "cmd": "click",
+        "selector": "#next",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"vent:0\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"vent:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"vent:2\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"fill:10\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"fill:11\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"fill:12\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"gate:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"fill:14\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"fill:13\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"fill:18\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"fill:23\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"vent:2\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"fill:6\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"fill:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"vent:0\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"fill:8\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"fill:3\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"vent:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"finish\"]",
+        "touch": true
+      },
+      {
+        "cmd": "shot",
+        "name": "refresh-study-win-stage1-action38"
+      },
+      {
+        "cmd": "click",
+        "selector": "#next",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"vent:0\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"vent:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"vent:2\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"vent:3\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"fill:10\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"fill:11\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"fill:12\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"gate:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"fill:14\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"fill:13\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"fill:18\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"fill:23\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"vent:2\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"fill:16\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"fill:21\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"vent:3\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"fill:6\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"fill:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"vent:0\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"fill:8\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"fill:3\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"vent:1\"]",
+        "touch": true
+      },
+      {
+        "cmd": "click",
+        "selector": "[data-action=\"finish\"]",
+        "touch": true
+      },
+      {
+        "cmd": "shot",
+        "name": "refresh-win-stage2-action62"
+      },
+      {
+        "cmd": "click",
+        "selector": "#restart",
+        "touch": true
+      },
+      {
+        "cmd": "note",
+        "fullCampaignWin": true,
+        "text": "Refreshed all3 finite studies and natural loss/recovery against the current source bytes using native touch controls."
+      }
+    ]
+  }
+]

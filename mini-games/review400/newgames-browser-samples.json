@@ -1,0 +1,3161 @@
+{
+  "sourceFiles": [
+    {
+      "path": "mini-games/journey/journey.mjs",
+      "sha256": "86a92fbd52ee7f5d34fd01225120feb74a336dd499a11e9e4780cf8f1f207872"
+    },
+    {
+      "path": "mini-games/journey/journey.css",
+      "sha256": "e77e387075c86ad3addcf7220c9eeabfc06fec45987116205b75ed50cac83e67"
+    },
+    {
+      "path": "mini-games/constraint-room/composition.mjs",
+      "sha256": "3c162dadd84b270ffdcc1b621c5cd206f9b25c86c9e4c6be16281369c3afcc88"
+    },
+    {
+      "path": "mini-games/constraint-room/core.mjs",
+      "sha256": "50ddbd0ce4b018d5d4f8d5226cb2c0498ad255cdb5ea72a622c776e96e376d4f"
+    },
+    {
+      "path": "mini-games/constraint-room/engines.mjs",
+      "sha256": "4082f9df2026481a94481b53b91efcbbaa2505f7db5af4e0faab81c128c3f159"
+    },
+    {
+      "path": "mini-games/constraint-room/games.json",
+      "sha256": "fd77df512fc0a68aa0909605ec89ecd0543b8da04c2abc1306010676be0b9b58"
+    },
+    {
+      "path": "mini-games/constraint-room/index.html",
+      "sha256": "8fff2e81e827c8baf40130306cd9a78f0a8817c2f462bbd47a193c9cc255693c"
+    },
+    {
+      "path": "mini-games/constraint-room/paths.mjs",
+      "sha256": "ababc5a8501f49ed7b2572cfb389b7a50d0aa2232e0292ccfb545222ce768a6e"
+    },
+    {
+      "path": "mini-games/constraint-room/placement.mjs",
+      "sha256": "f95a0b3a4656cdf1e466af281a526d665adb83b9861fad74f8e910bdd12ccfa5"
+    },
+    {
+      "path": "mini-games/constraint-room/room.css",
+      "sha256": "a8ba65d82bd35a02e6b1d2408509a0de523dbe67ebdbe6b9ede990eccb73798b"
+    },
+    {
+      "path": "mini-games/constraint-room/room.mjs",
+      "sha256": "13c14eac08066ae7a5cc786764034b852e4835e42729f86c81b6af584795f1e6"
+    },
+    {
+      "path": "mini-games/constraint-room/shading.mjs",
+      "sha256": "014b963cc4b1b0606afa3886eff21e06705cdebb0317a86d06f5876bee832ee5"
+    },
+    {
+      "path": "mini-games/signal-lab/certificates.mjs",
+      "sha256": "691703ae117fe13d11457c6717f05703425025b51a38a54ee9b812856cf815ae"
+    },
+    {
+      "path": "mini-games/signal-lab/choices.mjs",
+      "sha256": "7cb9ba1f96e397224da9ccf51bc80eea64ba3eb2b00a5766e4412d6fedcc53f0"
+    },
+    {
+      "path": "mini-games/signal-lab/common.mjs",
+      "sha256": "715a4f3c691b2b0344164f628888217f44a26db66553d7f247f4675c25edb45b"
+    },
+    {
+      "path": "mini-games/signal-lab/engines.mjs",
+      "sha256": "22e8ab3bfb96f39636af4bf37c79e83de8bd3a2fd89f84fac441fc5fb64217d3"
+    },
+    {
+      "path": "mini-games/signal-lab/games.json",
+      "sha256": "22502b9164edd3850c8ba13247bd2e147c2d9a35bbca0963023bfc4fc607c746"
+    },
+    {
+      "path": "mini-games/signal-lab/index.html",
+      "sha256": "1b9afc478035ca5b0a657cb8a449d489dfbff993cd4876385a9d7ef2e6a26d9e"
+    },
+    {
+      "path": "mini-games/signal-lab/machines.mjs",
+      "sha256": "48752fe864e1a966c8eb74f9d10dd89e3d04e5f473c1383447bc49ddc7e47319"
+    },
+    {
+      "path": "mini-games/signal-lab/measures.mjs",
+      "sha256": "2ba22bdc128bd13dd9a5345658e2170a00031366d69eb4e542332f71f8581102"
+    },
+    {
+      "path": "mini-games/signal-lab/room.mjs",
+      "sha256": "94e42820a57c9120b6fc84ba5c061803c48d6e870f25501965eb127c7912d15b"
+    },
+    {
+      "path": "mini-games/signal-lab/signals.mjs",
+      "sha256": "1768ec132caaf705d9e317d1403fd069dc6df55ad2d607ad1a37fa118a8f2256"
+    },
+    {
+      "path": "mini-games/commons-room/collective-games.mjs",
+      "sha256": "9a1846df16c5aa672ae146aad6c356bddb43c62b809d1ea06fa53466b4f82d1a"
+    },
+    {
+      "path": "mini-games/commons-room/core.mjs",
+      "sha256": "82b48f343419f849567708a28f99b082b31cf11001d163ce24740fa102212e89"
+    },
+    {
+      "path": "mini-games/commons-room/engines.mjs",
+      "sha256": "4d89bec88b903d4c0927e2c3d13864f2f527d53f8b48adbbe143bb51249d90d4"
+    },
+    {
+      "path": "mini-games/commons-room/games.json",
+      "sha256": "8cc77ccfe86f28376ac0c9b4e04172e0486586867766d1081baa3364b88257d4"
+    },
+    {
+      "path": "mini-games/commons-room/index.html",
+      "sha256": "1b9afc478035ca5b0a657cb8a449d489dfbff993cd4876385a9d7ef2e6a26d9e"
+    },
+    {
+      "path": "mini-games/commons-room/living-ledgers.mjs",
+      "sha256": "b4f4cf71c2960c3d4a550377bf31242cd6a0924dd58ad5a4df6172865c454554"
+    },
+    {
+      "path": "mini-games/commons-room/market-games.mjs",
+      "sha256": "9e2effa3aa231ffcf6ab7802fc7e0532d5bf280c37134041ddfb2231d8118206"
+    },
+    {
+      "path": "mini-games/commons-room/opposed-boards.mjs",
+      "sha256": "4b2a53fc2fdac95ba5fb6cefd0b636bb40808c716bb8ad4b6cd2f56216571ace"
+    },
+    {
+      "path": "mini-games/commons-room/room.mjs",
+      "sha256": "908ac9439d545eeebef28d5942aa28a956a18f2f5665ee4366af74515f908674"
+    },
+    {
+      "path": "mini-games/field-room/balance.mjs",
+      "sha256": "9e9ea3e988f13b5b7ddc82c0f5d90d5f2ed05188ce29b317c3dcd7f1f2318af9"
+    },
+    {
+      "path": "mini-games/field-room/core.mjs",
+      "sha256": "426aecd3bac2e6499c8f60de2d435c4ffba9783677e2429f9f44f14244fda771"
+    },
+    {
+      "path": "mini-games/field-room/engines.mjs",
+      "sha256": "cf3f2c0a24339ebd54cf6e9ae802d6362b946fbda107bfb33d297c6f961041ba"
+    },
+    {
+      "path": "mini-games/field-room/flow.mjs",
+      "sha256": "380ad34cdca8a7d5c4ec9821323b9b74d1624aa5183c3fa00870ae5e7b892a2d"
+    },
+    {
+      "path": "mini-games/field-room/games.json",
+      "sha256": "f7721b6618a6e648747551ae22ec7f07c5323b9581d0eb3fefcd11437a421447"
+    },
+    {
+      "path": "mini-games/field-room/index.html",
+      "sha256": "1b9afc478035ca5b0a657cb8a449d489dfbff993cd4876385a9d7ef2e6a26d9e"
+    },
+    {
+      "path": "mini-games/field-room/room.mjs",
+      "sha256": "7df98438c0a2e0e0c36a3c3235c7cc96fb9d5b20c086c45a22b3c1c70101611f"
+    },
+    {
+      "path": "mini-games/field-room/sports.mjs",
+      "sha256": "5a3eb053f75082c0d6bfcf04bad9ea7491557dcf07d81a4638228034604a3cc1"
+    },
+    {
+      "path": "mini-games/field-room/travel.mjs",
+      "sha256": "ebd20dfa4db6da33a0f137cfe7df65648765889ce4e8936b8ccb68ce207320f0"
+    },
+    {
+      "path": "mini-games/atelier-room/construction.mjs",
+      "sha256": "1bb74ab6726408edd47aee2dd8424e42363a6776de21eee91b81070887d8a854"
+    },
+    {
+      "path": "mini-games/atelier-room/core.mjs",
+      "sha256": "e740adf8959d2c26716dd2ae43a78147b7d7012a09a9398ea80e4327c03552ad"
+    },
+    {
+      "path": "mini-games/atelier-room/engines.mjs",
+      "sha256": "3d1bc05fcb6d011d59dc6a1b3c4707d416afc3084a93ad181f5b7f4e9eaaa018"
+    },
+    {
+      "path": "mini-games/atelier-room/games.json",
+      "sha256": "38871197bf03c4e6cd1b2abfd4812f9f274f813e23d701cbee383e31540bca2b"
+    },
+    {
+      "path": "mini-games/atelier-room/index.html",
+      "sha256": "1b9afc478035ca5b0a657cb8a449d489dfbff993cd4876385a9d7ef2e6a26d9e"
+    },
+    {
+      "path": "mini-games/atelier-room/materials.mjs",
+      "sha256": "a9b0d4761b2b27b6b662cf37bba0977ad8bab1a5268f4a572bc210a18f6cbf57"
+    },
+    {
+      "path": "mini-games/atelier-room/mechanical.mjs",
+      "sha256": "8ba9b2761189778553043c2c155e125543c49c58416d9ffcd8c3f87f32279de6"
+    },
+    {
+      "path": "mini-games/atelier-room/optics.mjs",
+      "sha256": "b43762adafd6c99db3ef49e005c3ccbfc9eadb0e8545564ac48a2d0bf5f5f039"
+    },
+    {
+      "path": "mini-games/atelier-room/room.mjs",
+      "sha256": "d9a3cba2043d7e5c6c406c2cbae764a1c96f17e8e5af05f9ef6b3465d2b29e8c"
+    }
+  ],
+  "sourceUnchanged": true,
+  "verifiedAt": "2026-10-02T19:59:23.389Z",
+  "scope": "Independent ordinary input samples and exact-seed restart for100 new games using native touch controls. Three actions per game are not a full campaign or endless playthrough. Overflow is recorded for owner remediation, not ignored.",
+  "browserVersion": "151.0.7922.173",
+  "cases": [
+    {
+      "id": "lamp-ward",
+      "family": "constraint-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "cell:0",
+          "label": "·",
+          "pressed": null
+        },
+        {
+          "action": "cell:0",
+          "label": "☀",
+          "pressed": null
+        },
+        {
+          "action": "cell:0",
+          "label": "×",
+          "pressed": null
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Square cleared.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "star-charter",
+      "family": "constraint-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "cell:0",
+          "label": "D ·",
+          "pressed": "false"
+        },
+        {
+          "action": "cell:1",
+          "label": "D ·",
+          "pressed": "false"
+        },
+        {
+          "action": "cell:2",
+          "label": "B ·",
+          "pressed": "false"
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Cell 3: filled.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "magnet-ledger",
+      "family": "constraint-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "slot:0",
+          "label": "1 ·",
+          "pressed": "false"
+        },
+        {
+          "action": "slot:2",
+          "label": "3 ·",
+          "pressed": "false"
+        },
+        {
+          "action": "slot:3",
+          "label": "4 ·",
+          "pressed": "false"
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Slot 4: positive then negative.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "region-census",
+      "family": "constraint-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "cell:1",
+          "label": "·",
+          "pressed": null
+        },
+        {
+          "action": "cell:1",
+          "label": "1",
+          "pressed": null
+        },
+        {
+          "action": "cell:1",
+          "label": "1",
+          "pressed": null
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Cell 2 labeled 1.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "mosaic-ring",
+      "family": "constraint-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "cell:1",
+          "label": "·",
+          "pressed": null
+        },
+        {
+          "action": "cell:1",
+          "label": "■",
+          "pressed": null
+        },
+        {
+          "action": "cell:1",
+          "label": "×",
+          "pressed": null
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Cell 2: unknown.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "sight-garden",
+      "family": "constraint-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "cell:0",
+          "label": "·",
+          "pressed": null
+        },
+        {
+          "action": "cell:0",
+          "label": "■",
+          "pressed": null
+        },
+        {
+          "action": "cell:0",
+          "label": "×",
+          "pressed": null
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Cell 1: unknown.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "diagonal-grove",
+      "family": "constraint-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "cell:0",
+          "label": "?",
+          "pressed": null
+        },
+        {
+          "action": "cell:0",
+          "label": "/",
+          "pressed": null
+        },
+        {
+          "action": "cell:0",
+          "label": "\\",
+          "pressed": null
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Diagonal turned. Match the neighboring vertex degrees.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "thermometer-hall",
+      "family": "constraint-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "tube:3:1",
+          "label": "D● ·",
+          "pressed": "false"
+        },
+        {
+          "action": "tube:3:2",
+          "label": "D2 ·",
+          "pressed": "false"
+        },
+        {
+          "action": "tube:3:3",
+          "label": "D3 ·",
+          "pressed": "false"
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Thermometer D filled through segment 3.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "compass-estate",
+      "family": "constraint-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "cell:1",
+          "label": "·",
+          "pressed": "false"
+        },
+        {
+          "action": "cell:1",
+          "label": "A",
+          "pressed": "false"
+        },
+        {
+          "action": "cell:1",
+          "label": "A",
+          "pressed": "false"
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Hub A E arm set to 1.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "fleet-blueprint",
+      "family": "constraint-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "cell:1",
+          "label": "·",
+          "pressed": null
+        },
+        {
+          "action": "cell:1",
+          "label": "■",
+          "pressed": null
+        },
+        {
+          "action": "cell:1",
+          "label": "≈",
+          "pressed": null
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Cell 2: unknown.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "shade-detour",
+      "family": "constraint-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "cell:2",
+          "label": "·",
+          "pressed": "false"
+        },
+        {
+          "action": "cell:2",
+          "label": "■",
+          "pressed": "false"
+        },
+        {
+          "action": "cell:2",
+          "label": "×",
+          "pressed": "false"
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Cell 3: unknown.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "quiet-rooms",
+      "family": "constraint-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "cell:0",
+          "label": "A·",
+          "pressed": "false"
+        },
+        {
+          "action": "cell:1",
+          "label": "B·",
+          "pressed": "false"
+        },
+        {
+          "action": "cell:2",
+          "label": "C·",
+          "pressed": "false"
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Cell 3: filled.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "four-forms",
+      "family": "constraint-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "cell:0",
+          "label": "B·",
+          "pressed": "false"
+        },
+        {
+          "action": "cell:1",
+          "label": "B·",
+          "pressed": "false"
+        },
+        {
+          "action": "cell:2",
+          "label": "B·",
+          "pressed": "false"
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Cell 3: filled.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "domino-register",
+      "family": "constraint-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "cell:0",
+          "label": "0·",
+          "pressed": "false"
+        },
+        {
+          "action": "cell:1",
+          "label": "0·",
+          "pressed": "false"
+        },
+        {
+          "action": "cell:2",
+          "label": "0·",
+          "pressed": "false"
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Cell 3 selected; choose an edge-neighbor.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "weighted-weft",
+      "family": "constraint-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "cell:0",
+          "label": "·",
+          "pressed": "false"
+        },
+        {
+          "action": "cell:1",
+          "label": "·",
+          "pressed": "false"
+        },
+        {
+          "action": "cell:2",
+          "label": "·",
+          "pressed": "false"
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Cell 3: filled.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "once-through",
+      "family": "constraint-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "node:0",
+          "label": "Station 1",
+          "pressed": null
+        },
+        {
+          "action": "node:5",
+          "label": "Station 6",
+          "pressed": null
+        },
+        {
+          "action": "node:1",
+          "label": "Station 2",
+          "pressed": null
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Arrived at station 2. 5 bridges remain.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "cyclic-courtyard",
+      "family": "constraint-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "shift:row:0:-1",
+          "label": "Row 1 ←",
+          "pressed": null
+        },
+        {
+          "action": "shift:row:0:-1",
+          "label": "Row 1 ←",
+          "pressed": null
+        },
+        {
+          "action": "shift:row:0:-1",
+          "label": "Row 1 ←",
+          "pressed": null
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "7 shifts remain. Rows and columns wrap around.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "seam-quilt",
+      "family": "constraint-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "cell:0",
+          "label": "Slot 1",
+          "pressed": null
+        },
+        {
+          "action": "cell:0",
+          "label": "1\n3 A 3\n4",
+          "pressed": null
+        },
+        {
+          "action": "cell:0",
+          "label": "1\n3 A 3\n4",
+          "pressed": null
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Tile A placed in slot 1.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "exclusive-print",
+      "family": "constraint-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "plate:0",
+          "label": "A · 5 cells",
+          "pressed": "false"
+        },
+        {
+          "action": "plate:1",
+          "label": "B · 5 cells",
+          "pressed": "false"
+        },
+        {
+          "action": "plate:2",
+          "label": "C · 4 cells",
+          "pressed": "false"
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Plate C added. Overlap produces extra coats.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "window-tally",
+      "family": "constraint-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "cell:0",
+          "label": "1\n·",
+          "pressed": "false"
+        },
+        {
+          "action": "cell:1",
+          "label": "2\n·",
+          "pressed": "false"
+        },
+        {
+          "action": "cell:2",
+          "label": "1\n·",
+          "pressed": "false"
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Cell 3: filled.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "reset-post",
+      "family": "signal-lab",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "P",
+          "label": "Send P",
+          "pressed": null
+        },
+        {
+          "action": "P",
+          "label": "Send P",
+          "pressed": null
+        },
+        {
+          "action": "P",
+          "label": "Send P",
+          "pressed": null
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "P leaves 3 possible stations: A, C, B.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "quotient-quay",
+      "family": "signal-lab",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "group-0",
+          "label": "A",
+          "pressed": "false"
+        },
+        {
+          "action": "group-1",
+          "label": "B",
+          "pressed": "false"
+        },
+        {
+          "action": "group-2",
+          "label": "C",
+          "pressed": "false"
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Read the challenge and choose a control. Restart begins a fresh campaign; finite studies also offer Undo and Reset.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "cutback-case",
+      "family": "signal-lab",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "event-0",
+          "label": "1: index",
+          "pressed": "true"
+        },
+        {
+          "action": "event-0",
+          "label": "1: index",
+          "pressed": "false"
+        },
+        {
+          "action": "event-0",
+          "label": "1: index",
+          "pressed": "true"
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Read the challenge and choose a control. Restart begins a fresh campaign; finite studies also offer Undo and Reset.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "clause-kiln",
+      "family": "signal-lab",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "clause-0",
+          "label": "#1: B OR A",
+          "pressed": "false"
+        },
+        {
+          "action": "clause-1",
+          "label": "#2: ¬A",
+          "pressed": "false"
+        },
+        {
+          "action": "clause-2",
+          "label": "#3: ¬B",
+          "pressed": "false"
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Read the challenge and choose a control. Restart begins a fresh campaign; finite studies also offer Undo and Reset.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "wraparound-witness",
+      "family": "signal-lab",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "run",
+          "label": "Execute input witness",
+          "pressed": null
+        },
+        {
+          "action": "run",
+          "label": "Execute input witness",
+          "pressed": null
+        },
+        {
+          "action": "run",
+          "label": "Execute input witness",
+          "pressed": null
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "loss",
+      "status": "The three review credits are spent. The branch sequence differs from the requested trace. Compare signed and unsigned meanings in the execution record.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "branch-weather",
+      "family": "signal-lab",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "state-0",
+          "label": "A",
+          "pressed": "false"
+        },
+        {
+          "action": "state-1",
+          "label": "B",
+          "pressed": "false"
+        },
+        {
+          "action": "state-2",
+          "label": "C",
+          "pressed": "false"
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Read the challenge and choose a control. Restart begins a fresh campaign; finite studies also offer Undo and Reset.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "phase-paper",
+      "family": "signal-lab",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "H-0",
+          "label": "H on bit 0",
+          "pressed": null
+        },
+        {
+          "action": "H-0",
+          "label": "H on bit 0",
+          "pressed": null
+        },
+        {
+          "action": "H-0",
+          "label": "H on bit 0",
+          "pressed": null
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Gate applied to amplitudes, before squaring them into probabilities.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "rotation-index",
+      "family": "signal-lab",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "row-0",
+          "label": "Row 1: $1",
+          "pressed": "false"
+        },
+        {
+          "action": "row-0",
+          "label": "Row 1: $1",
+          "pressed": "false"
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "loss",
+      "status": "That is a different occurrence. Stable rank, not just equal letter, determines the correct next row.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "shared-secret",
+      "family": "signal-lab",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "share-0",
+          "label": "Share 1 at x=2",
+          "pressed": "false"
+        },
+        {
+          "action": "share-1",
+          "label": "Share 2 at x=1",
+          "pressed": "false"
+        },
+        {
+          "action": "release",
+          "label": "Release reconstructed secret",
+          "pressed": null
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "The selected weighted basis does not isolate the constant. All nonconstant powers must cancel modulo the field. Review credits remaining: 2.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "crossed-channel",
+      "family": "signal-lab",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "wire-1",
+          "label": "Source B → Mixer (1 left)",
+          "pressed": "false"
+        },
+        {
+          "action": "wire-0",
+          "label": "Source A → Mixer (1 left)",
+          "pressed": "false"
+        },
+        {
+          "action": "wire-1",
+          "label": "Source B → Mixer (1 left)",
+          "pressed": "false"
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Read the challenge and choose a control. Restart begins a fresh campaign; finite studies also offer Undo and Reset.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "quorum-garden",
+      "family": "signal-lab",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "team-1",
+          "label": "Read 2 []",
+          "pressed": "false"
+        },
+        {
+          "action": "team-0",
+          "label": "Read 1 []",
+          "pressed": "false"
+        },
+        {
+          "action": "team-1",
+          "label": "Read 2 []",
+          "pressed": "false"
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Read the challenge and choose a control. Restart begins a fresh campaign; finite studies also offer Undo and Reset.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "bound-names",
+      "family": "signal-lab",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "binder-l",
+          "label": "Binder x at l",
+          "pressed": "false"
+        },
+        {
+          "action": "binder-lb",
+          "label": "Binder y at lb",
+          "pressed": "false"
+        },
+        {
+          "action": "binder-l",
+          "label": "Binder x at l",
+          "pressed": "false"
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Read the challenge and choose a control. Restart begins a fresh campaign; finite studies also offer Undo and Reset.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "separating-line",
+      "family": "signal-lab",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "certify",
+          "label": "Certify separating line",
+          "pressed": null
+        },
+        {
+          "action": "certify",
+          "label": "Certify separating line",
+          "pressed": null
+        },
+        {
+          "action": "certify",
+          "label": "Certify separating line",
+          "pressed": null
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "loss",
+      "status": "The three review credits are spent. Point 1 is on the wrong side or too close. Moving the boundary affects the entire cloud.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "hall-window",
+      "family": "signal-lab",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "job-0",
+          "label": "A",
+          "pressed": "false"
+        },
+        {
+          "action": "job-1",
+          "label": "B",
+          "pressed": "false"
+        },
+        {
+          "action": "job-2",
+          "label": "C",
+          "pressed": "false"
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "The worker union counts a worker once even if several jobs can use them.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "empty-language",
+      "family": "signal-lab",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "derive-0",
+          "label": "C → ε",
+          "pressed": null
+        },
+        {
+          "action": "derive-1",
+          "label": "G → B",
+          "pressed": null
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "loss",
+      "status": "G has an unproved dependency. A terminal or an ungrounded cycle cannot become empty.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "credit-method",
+      "family": "signal-lab",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "charge-2",
+          "label": "Charge 2",
+          "pressed": "false"
+        },
+        {
+          "action": "charge-1",
+          "label": "Charge 1",
+          "pressed": "false"
+        },
+        {
+          "action": "charge-2",
+          "label": "Charge 2",
+          "pressed": "false"
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Read the challenge and choose a control. Restart begins a fresh campaign; finite studies also offer Undo and Reset.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "interval-post",
+      "family": "signal-lab",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "letter-0",
+          "label": "Encode A",
+          "pressed": null
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "loss",
+      "status": "The encoded letter differs from the dispatch. Later intervals cannot restore an earlier wrong symbol.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "pruning-room",
+      "family": "signal-lab",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "leaf-0",
+          "label": "Leaf 1: hidden",
+          "pressed": null
+        },
+        {
+          "action": "leaf-1",
+          "label": "Leaf 2: hidden",
+          "pressed": null
+        },
+        {
+          "action": "leaf-2",
+          "label": "Leaf 3: hidden",
+          "pressed": null
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Leaf exposed; lower and upper bounds propagate through alternating choices.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "privacy-dials",
+      "family": "signal-lab",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "count-0-0",
+          "label": "Input A → report A: 0/6",
+          "pressed": null
+        },
+        {
+          "action": "count-0-0",
+          "label": "Input A → report A: 1/6",
+          "pressed": null
+        },
+        {
+          "action": "count-0-0",
+          "label": "Input A → report A: 2/6",
+          "pressed": null
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Count changed; row normalization, all likelihood ratios and utility update together.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "divisor-house",
+      "family": "signal-lab",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "up-0",
+          "label": "District A +1 seat",
+          "pressed": null
+        },
+        {
+          "action": "down-0",
+          "label": "District A −1 seat",
+          "pressed": null
+        },
+        {
+          "action": "up-0",
+          "label": "District A +1 seat",
+          "pressed": null
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Read the challenge and choose a control. Restart begins a fresh campaign; finite studies also offer Undo and Reset.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "tide-and-retreat",
+      "family": "commons-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "square-15",
+          "label": "A4 ●",
+          "pressed": "false"
+        },
+        {
+          "action": "move-15-10-approach",
+          "label": "approach to A3 · capture 2",
+          "pressed": null
+        },
+        {
+          "action": "move-10-6-approach",
+          "label": "approach to B2 · capture 1",
+          "pressed": null
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "approach: A3 → B2; 1 captured. Continue with this pawn, changing direction and avoiding visited intersections, or finish the chain.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "spore-council",
+      "family": "commons-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "square-20",
+          "label": "A5 ●",
+          "pressed": "false"
+        },
+        {
+          "action": "square-10",
+          "label": "A3 ·",
+          "pressed": "false"
+        },
+        {
+          "action": "square-21",
+          "label": "B5 ●",
+          "pressed": "false"
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "House clones C1 → B2.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "shared-comet",
+      "family": "commons-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "square-6",
+          "label": "B2 ·",
+          "pressed": "false"
+        },
+        {
+          "action": "square-20",
+          "label": "A5 ●",
+          "pressed": "false"
+        },
+        {
+          "action": "square-5",
+          "label": "A2 ·",
+          "pressed": "false"
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "House slides comet to E2, then blocker D1 → A4.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "socket-skirmish",
+      "family": "commons-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "square-20",
+          "label": "A5 ● [E]",
+          "pressed": "false"
+        },
+        {
+          "action": "square-21",
+          "label": "B5 ·",
+          "pressed": "false"
+        },
+        {
+          "action": "square-21",
+          "label": "B5 ● [E]",
+          "pressed": "false"
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "House moves A1 → A2.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "cannon-council",
+      "family": "commons-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "square-15",
+          "label": "A4 ●",
+          "pressed": "false"
+        },
+        {
+          "action": "move-15-10-move",
+          "label": "move A3",
+          "pressed": null
+        },
+        {
+          "action": "square-16",
+          "label": "B4 ●",
+          "pressed": "false"
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "House capture: B2 → A3.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "bloom-cauldron",
+      "family": "commons-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "draw",
+          "label": "Draw one ingredient",
+          "pressed": null
+        },
+        {
+          "action": "draw",
+          "label": "Draw one ingredient",
+          "pressed": null
+        },
+        {
+          "action": "draw",
+          "label": "Draw one ingredient",
+          "pressed": null
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Drew white: pot value 6, white hazards 1/4.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "three-fronts",
+      "family": "commons-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "more-0",
+          "label": "+ Field A",
+          "pressed": null
+        },
+        {
+          "action": "less-0",
+          "label": "− Field A",
+          "pressed": null
+        },
+        {
+          "action": "more-0",
+          "label": "+ Field A",
+          "pressed": null
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Rival orders are concealed until both deployments lock; its public response policy uses your preceding deployment.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "package-yard",
+      "family": "commons-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "select-1",
+          "label": "A+B",
+          "pressed": "false"
+        },
+        {
+          "action": "select-0",
+          "label": "C+D+E+F",
+          "pressed": "false"
+        },
+        {
+          "action": "select-1",
+          "label": "A+B",
+          "pressed": "false"
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Choose mutually exclusive package offers. At most one of your offers can win; house offers may coexist if their lots do not overlap.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "falling-hammer",
+      "family": "commons-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "stop",
+          "label": "Stop clock and buy for 12",
+          "pressed": null
+        },
+        {
+          "action": "stop",
+          "label": "Stop clock and buy for 12",
+          "pressed": null
+        },
+        {
+          "action": "wait",
+          "label": "Wait: price drops one; rival may stop",
+          "pressed": null
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Clock now 11. Rival has not stopped; reservation range narrows.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "orderbook-wharf",
+      "family": "commons-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "sell",
+          "label": "Offer to sell",
+          "pressed": "false"
+        },
+        {
+          "action": "buy",
+          "label": "Bid to buy",
+          "pressed": "false"
+        },
+        {
+          "action": "sell",
+          "label": "Offer to sell",
+          "pressed": "false"
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Post a limit order, then advance the announced taker. Live orders reserve cash or stock.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "many-hands",
+      "family": "commons-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "give-1",
+          "label": "Direct pledge 1",
+          "pressed": "false"
+        },
+        {
+          "action": "give-0",
+          "label": "Direct pledge 0",
+          "pressed": "false"
+        },
+        {
+          "action": "give-1",
+          "label": "Direct pledge 1",
+          "pressed": "false"
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Choose a direct contribution and a matching pledge. Both rivals respond to these public commitments.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "congestion-crossing",
+      "family": "commons-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "more-0",
+          "label": "+ Route A",
+          "pressed": null
+        },
+        {
+          "action": "less-0",
+          "label": "− Route A",
+          "pressed": null
+        },
+        {
+          "action": "more-0",
+          "label": "+ Route A",
+          "pressed": null
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Both fleets choose route splits. Road cost depends on the total units using it, including both directions through the cross-link.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "price-of-plenty",
+      "family": "commons-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "output-1",
+          "label": "Output 1",
+          "pressed": "false"
+        },
+        {
+          "action": "output-0",
+          "label": "Output 0",
+          "pressed": "false"
+        },
+        {
+          "action": "output-1",
+          "label": "Output 1",
+          "pressed": "false"
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Choose quantity before the rival responds to yesterday. Combined output sets price=max(0, demand−2×combined output).",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "bargain-at-closing",
+      "family": "commons-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "less",
+          "label": "Your share −1",
+          "pressed": null
+        },
+        {
+          "action": "less",
+          "label": "Your share −1",
+          "pressed": null
+        },
+        {
+          "action": "less",
+          "label": "Your share −1",
+          "pressed": null
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Make the first offer. Rejection shrinks the pie by2 and brings a counteroffer.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "last-applicant",
+      "family": "commons-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "interview",
+          "label": "Interview next · fee1",
+          "pressed": null
+        },
+        {
+          "action": "interview",
+          "label": "Let current depart; interview next · fee1",
+          "pressed": null
+        },
+        {
+          "action": "interview",
+          "label": "Let current depart; interview next · fee1",
+          "pressed": null
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Interview 3: quality 9. Hiring now nets 6; earlier applicants have gone.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "seasonal-ledger",
+      "family": "commons-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "field-1",
+          "label": "Field 2: fallow · N4",
+          "pressed": "false"
+        },
+        {
+          "action": "field-0",
+          "label": "Field 1: fallow · N5",
+          "pressed": "false"
+        },
+        {
+          "action": "field-1",
+          "label": "Field 2: fallow · N4",
+          "pressed": "false"
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Plan all six crops, then harvest together. Every field must retain at least1 nitrogen after harvest.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "permit-and-progress",
+      "family": "commons-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "output-0-1",
+          "label": "Plant 1 output 1",
+          "pressed": "false"
+        },
+        {
+          "action": "output-0-0",
+          "label": "Plant 1 output 0",
+          "pressed": "false"
+        },
+        {
+          "action": "output-0-1",
+          "label": "Plant 1 output 1",
+          "pressed": "false"
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Six permits are already in the bank. Retrofits cost7 and take effect after this period; output remains dirty today.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "school-of-shoals",
+      "family": "commons-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "effort-0-1",
+          "label": "Ground 1 effort 1",
+          "pressed": "false"
+        },
+        {
+          "action": "effort-0-0",
+          "label": "Ground 1 effort 0",
+          "pressed": "false"
+        },
+        {
+          "action": "effort-0-1",
+          "label": "Ground 1 effort 1",
+          "pressed": "false"
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Keep at least5 breeding fish after all catches. Patrol enforces rival quota1 per ground, but costs3 and limits your fleet to4.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "promised-tomorrow",
+      "family": "commons-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "partner-1",
+          "label": "Partner 2 grudge",
+          "pressed": "false"
+        },
+        {
+          "action": "partner-0",
+          "label": "Partner 1 reciprocal",
+          "pressed": "false"
+        },
+        {
+          "action": "partner-1",
+          "label": "Partner 2 grudge",
+          "pressed": "false"
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Repeated cooperation pays both actors; defection tempts with a larger immediate payoff, while each partner remembers it.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "maturity-garden",
+      "family": "commons-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "advance",
+          "label": "Advance one settlement date",
+          "pressed": null
+        },
+        {
+          "action": "advance",
+          "label": "Advance one settlement date",
+          "pressed": null
+        },
+        {
+          "action": "advance",
+          "label": "Advance one settlement date",
+          "pressed": null
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Date3: 0 maturities paid0; liability0 settled; cash18.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "ninepin-line",
+      "family": "field-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "roll",
+          "label": "Roll ball · simulate delivery",
+          "pressed": null
+        },
+        {
+          "action": "roll",
+          "label": "Roll ball · simulate delivery",
+          "pressed": null
+        },
+        {
+          "action": "roll",
+          "label": "Roll ball · simulate delivery",
+          "pressed": null
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Delivery 1: 8 of nine pins down; 1 remain in this rack.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "batters-window",
+      "family": "field-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "advance",
+          "label": "Advance pitch one beat",
+          "pressed": null
+        },
+        {
+          "action": "advance",
+          "label": "Advance pitch one beat",
+          "pressed": null
+        },
+        {
+          "action": "advance",
+          "label": "Advance pitch one beat",
+          "pressed": null
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Pitch now 9.00 from the plate; bat reach is 1.8–4.2. Advance is one pitch beat.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "crease-keeper",
+      "family": "field-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "launch",
+          "label": "Begin the shown shot",
+          "pressed": null
+        },
+        {
+          "action": "advance",
+          "label": "Advance shot one beat",
+          "pressed": null
+        },
+        {
+          "action": "advance",
+          "label": "Advance shot one beat",
+          "pressed": null
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Shot beat 2/8. Ball x -1.95. Choose a dive before the goal line.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "last-second-pass",
+      "family": "field-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "select:1",
+          "label": "Control player 2",
+          "pressed": "false"
+        },
+        {
+          "action": "select:0",
+          "label": "Control player 1",
+          "pressed": "false"
+        },
+        {
+          "action": "select:1",
+          "label": "Control player 2",
+          "pressed": "false"
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Inspect the field, then choose a control. Physics advances only when the named action says so.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "court-rotation",
+      "family": "field-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "advance",
+          "label": "Advance ball · 0.2s",
+          "pressed": null
+        },
+        {
+          "action": "advance",
+          "label": "Advance ball · 0.2s",
+          "pressed": null
+        },
+        {
+          "action": "advance",
+          "label": "Advance ball · 0.2s",
+          "pressed": null
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Airborne ball at x1.57, height 1.60; vertical velocity -3.00.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "velodrome-draft",
+      "family": "field-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "ride",
+          "label": "Ride one second",
+          "pressed": null
+        },
+        {
+          "action": "ride",
+          "label": "Ride one second",
+          "pressed": null
+        },
+        {
+          "action": "ride",
+          "label": "Ride one second",
+          "pressed": null
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Draft reduced drag and effort cost. Effort cost 0.5; gap to lead 4.69.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "clutch-circuit",
+      "family": "field-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "up",
+          "label": "Shift up · 1s",
+          "pressed": null
+        },
+        {
+          "action": "up",
+          "label": "Shift up · 1s",
+          "pressed": null
+        },
+        {
+          "action": "up",
+          "label": "Shift up · 1s",
+          "pressed": null
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Gear 4, RPM 1377, speed 3.97. Segment 1; plan braking before the next cap.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "ribbon-relay",
+      "family": "field-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "advance",
+          "label": "Both runners coast · 1 beat",
+          "pressed": null
+        },
+        {
+          "action": "advance",
+          "label": "Both runners coast · 1 beat",
+          "pressed": null
+        },
+        {
+          "action": "advance",
+          "label": "Both runners coast · 1 beat",
+          "pressed": null
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Incoming 18.00 at 6.00; outgoing 12.00 at 0.00. Pass within 14–30.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "two-oars",
+      "family": "field-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "left",
+          "label": "Pull left oar · 0.5s",
+          "pressed": null
+        },
+        {
+          "action": "left",
+          "label": "Pull left oar · 0.5s",
+          "pressed": null
+        },
+        {
+          "action": "left",
+          "label": "Pull left oar · 0.5s",
+          "pressed": null
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Oar impulse applied. Heading 0.20, bow/stern clearance 2.75.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "cable-carrier",
+      "family": "field-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "coast",
+          "label": "Coast pendulum · 0.4s",
+          "pressed": null
+        },
+        {
+          "action": "coast",
+          "label": "Coast pendulum · 0.4s",
+          "pressed": null
+        },
+        {
+          "action": "coast",
+          "label": "Coast pendulum · 0.4s",
+          "pressed": null
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Pendulum angle 0.00, angular speed 0.00. Trolley acceleration 0.00 alters swing phase; changing length also changes angular speed.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "thermal-route",
+      "family": "field-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "level",
+          "label": "Level wings · fly 1 beat",
+          "pressed": null
+        },
+        {
+          "action": "level",
+          "label": "Level wings · fly 1 beat",
+          "pressed": null
+        },
+        {
+          "action": "level",
+          "label": "Level wings · fly 1 beat",
+          "pressed": null
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Thermal lift 1.05; sink 0.27, net height change 0.78.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "belay-line",
+      "family": "field-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "low",
+          "label": "Low friction brake",
+          "pressed": "false"
+        },
+        {
+          "action": "high",
+          "label": "High friction brake",
+          "pressed": "false"
+        },
+        {
+          "action": "low",
+          "label": "Low friction brake",
+          "pressed": "false"
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Belay friction set to 0.3. It acts only when the rope is taut.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "vault-runway",
+      "family": "field-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "plant",
+          "label": "Plant the elastic pole now",
+          "pressed": null
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "loss",
+      "status": "The pole missed the plant box or had insufficient approach speed.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "tucked-landing",
+      "family": "field-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "launch",
+          "label": "Launch dive",
+          "pressed": null
+        },
+        {
+          "action": "advance",
+          "label": "Advance flight · 0.1s",
+          "pressed": null
+        },
+        {
+          "action": "advance",
+          "label": "Advance flight · 0.1s",
+          "pressed": null
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Height 4.32, angle 0.19; extended inertia 2, angular speed 0.95.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "wave-trim",
+      "family": "field-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "trim:-1",
+          "label": "Trim back/up face",
+          "pressed": "false"
+        },
+        {
+          "action": "trim:0",
+          "label": "Neutral trim",
+          "pressed": "false"
+        },
+        {
+          "action": "trim:-1",
+          "label": "Trim back/up face",
+          "pressed": "false"
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Inspect the field, then choose a control. Physics advances only when the named action says so.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "ripple-skimmer",
+      "family": "field-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "throw",
+          "label": "Throw · simulate all skips",
+          "pressed": null
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "study-win",
+      "status": "Throw 1: 3 skips, final required contact/distance 20.18. Target interval reached with sufficient skips.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "spin-passage",
+      "family": "field-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "coast",
+          "label": "No torque · 1 beat",
+          "pressed": null
+        },
+        {
+          "action": "coast",
+          "label": "No torque · 1 beat",
+          "pressed": null
+        },
+        {
+          "action": "coast",
+          "label": "No torque · 1 beat",
+          "pressed": null
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Torque coast; tilt axis (0.00,0.00) precesses 0.12 rad per beat. Contact drift 0.00,0.00.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "cascade-hands",
+      "family": "field-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "advance",
+          "label": "Advance all balls · 0.25s",
+          "pressed": null
+        },
+        {
+          "action": "advance",
+          "label": "Advance all balls · 0.25s",
+          "pressed": null
+        },
+        {
+          "action": "advance",
+          "label": "Advance all balls · 0.25s",
+          "pressed": null
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Inspect the field, then choose a control. Physics advances only when the named action says so.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "ice-rescue",
+      "family": "field-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "spread",
+          "label": "Spread weight",
+          "pressed": "false"
+        },
+        {
+          "action": "left",
+          "label": "Step left",
+          "pressed": null
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "loss",
+      "status": "The traveler stepped into open water or beyond the lake.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "breathing-lane",
+      "family": "field-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "glide",
+          "label": "Glide / recover · 0.4s",
+          "pressed": null
+        },
+        {
+          "action": "glide",
+          "label": "Glide / recover · 0.4s",
+          "pressed": null
+        },
+        {
+          "action": "glide",
+          "label": "Glide / recover · 0.4s",
+          "pressed": null
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Swim beat: depth 0.06, oxygen 17.34, recovery 0, fatigue 0.00.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "cam-workshop",
+      "family": "atelier-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "sector:1",
+          "label": "Sector 2 · radius 3",
+          "pressed": "false"
+        },
+        {
+          "action": "sector:0",
+          "label": "Sector 1 · radius 3",
+          "pressed": "false"
+        },
+        {
+          "action": "sector:1",
+          "label": "Sector 2 · radius 3",
+          "pressed": "false"
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Cam radius is 0–3 at eight sectors. The roller reads the sum of two neighboring radii. Cut stock, then align follower B.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "common-cut",
+      "family": "atelier-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "cut:0:1",
+          "label": "Cut 1 ↔ 2",
+          "pressed": null
+        },
+        {
+          "action": "cut:0:1",
+          "label": "Cut 1 ↔ 2",
+          "pressed": null
+        },
+        {
+          "action": "cut:0:1",
+          "label": "Cut 1 ↔ 2",
+          "pressed": null
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Nest every part before freezing the layout and cutting.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "interlock-cabinet",
+      "family": "atelier-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "piece:1",
+          "label": "Solid B",
+          "pressed": "false"
+        },
+        {
+          "action": "piece:0",
+          "label": "Solid A",
+          "pressed": "false"
+        },
+        {
+          "action": "piece:1",
+          "label": "Solid B",
+          "pressed": "false"
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Two solids: A exits +X and B exits +Y. Move whole rigid pieces without overlap; every occupied voxel must pass the exit to withdraw.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "pressure-gallery",
+      "family": "atelier-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "pump",
+          "label": "Pump one conserved fluid unit",
+          "pressed": null
+        },
+        {
+          "action": "pump",
+          "label": "Pump one conserved fluid unit",
+          "pressed": null
+        },
+        {
+          "action": "pump",
+          "label": "Pump one conserved fluid unit",
+          "pressed": null
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "One fluid unit entered output 1; stroke is 3.00.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "shrink-fit",
+      "family": "atelier-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "ring:1",
+          "label": "Ring B",
+          "pressed": "false"
+        },
+        {
+          "action": "ring:0",
+          "label": "Ring A",
+          "pressed": "false"
+        },
+        {
+          "action": "ring:1",
+          "label": "Ring B",
+          "pressed": "false"
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Each part expands bore by 0.1 per temperature unit. Heating adds ten units; every other operation cools all parts by two. Slide rings over the entry shoulder before cooling locks their fit.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "vented-cast",
+      "family": "atelier-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "vent:0",
+          "label": "Vent cell 2 closed",
+          "pressed": "false"
+        },
+        {
+          "action": "vent:1",
+          "label": "Vent cell 4 closed",
+          "pressed": "false"
+        },
+        {
+          "action": "gate:1",
+          "label": "Inject gate cell 15",
+          "pressed": "false"
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Liquid grows only from the active gate or an existing liquid neighbor. Every remaining gas component needs an open vent. A filled open vent leaks one resin unit per later injection.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "drawplate",
+      "family": "atelier-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "draw:0",
+          "label": "Draw to 75.0% area",
+          "pressed": null
+        },
+        {
+          "action": "draw:0",
+          "label": "Draw to 75.0% area",
+          "pressed": null
+        },
+        {
+          "action": "draw:0",
+          "label": "Draw to 75.0% area",
+          "pressed": null
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "loss",
+      "status": "Work hardening exceeded65; anneal before this irreversible reduction.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "wet-paper",
+      "family": "atelier-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "cell:0",
+          "label": "R1 C1 dry",
+          "pressed": null
+        },
+        {
+          "action": "cell:0",
+          "label": "R1 C1 wet2",
+          "pressed": null
+        },
+        {
+          "action": "cell:0",
+          "label": "R1 C1 wet2",
+          "pressed": null
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "loss",
+      "status": "The water stock is exhausted.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "sand-table",
+      "family": "atelier-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "column:0",
+          "label": "Drop column 1",
+          "pressed": "false"
+        },
+        {
+          "action": "column:1",
+          "label": "Drop column 2",
+          "pressed": "false"
+        },
+        {
+          "action": "column:0",
+          "label": "Drop column 1",
+          "pressed": "false"
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "A scoop contains three conserved grains. Without a baffle, neighboring height difference above one avalanches until stable. Install only two baffles; lifting one can suddenly bury a protected opening.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "crack-compass",
+      "family": "atelier-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "advance",
+          "label": "Advance one stress-driven fracture",
+          "pressed": null
+        },
+        {
+          "action": "advance",
+          "label": "Advance one stress-driven fracture",
+          "pressed": null
+        },
+        {
+          "action": "advance",
+          "label": "Advance one stress-driven fracture",
+          "pressed": null
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Bond 5 fractured at stress 6.75; new tip node 4.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "pulley-bay",
+      "family": "atelier-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "strand:0:2",
+          "label": "Load 1: 2 strands",
+          "pressed": "false"
+        },
+        {
+          "action": "strand:0:1",
+          "label": "Load 1: 1 strands",
+          "pressed": "false"
+        },
+        {
+          "action": "strand:0:2",
+          "label": "Load 1: 2 strands",
+          "pressed": "false"
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Choose support strands for each moving pulley. One input rope stroke moves output i by stroke ÷ strands i, while hand force is the sum of load ÷ strands.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "clutch-dock",
+      "family": "atelier-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "clutch:0",
+          "label": "Clutch 1 open",
+          "pressed": "false"
+        },
+        {
+          "action": "clutch:1",
+          "label": "Clutch 2 open",
+          "pressed": "false"
+        },
+        {
+          "action": "drive",
+          "label": "Motor pulse +2",
+          "pressed": null
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "The stationary load needs 2 starting impulse; the motor can supply only two. Spin the disconnected flywheel first.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "lens-craft",
+      "family": "atelier-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "socket:0",
+          "label": "Place selected at socket 1",
+          "pressed": null
+        },
+        {
+          "action": "lift:0",
+          "label": "Lift socket 1",
+          "pressed": null
+        },
+        {
+          "action": "socket:0",
+          "label": "Place selected at socket 1",
+          "pressed": null
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "A lens changes ray angle by −power × ray height. Between lenses height advances by angle × distance. Use every glass card, focus every source bundle, and retain the required image orientation.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "polarization-stage",
+      "family": "atelier-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "rotate:0",
+          "label": "Rotate element 1 P from 0°",
+          "pressed": null
+        },
+        {
+          "action": "rotate:0",
+          "label": "Rotate element 1 P from 45°",
+          "pressed": null
+        },
+        {
+          "action": "rotate:0",
+          "label": "Rotate element 1 P from 90°",
+          "pressed": null
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "P polarizers discard the perpendicular component. Q quarter-wave plates delay it by a quarter cycle. Order changes phase, ellipse and intensity; the same stack must serve both input beams.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "seal-shop",
+      "family": "atelier-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "tighten",
+          "label": "Tighten one turn",
+          "pressed": null
+        },
+        {
+          "action": "tighten",
+          "label": "Tighten one turn",
+          "pressed": null
+        },
+        {
+          "action": "tighten",
+          "label": "Tighten one turn",
+          "pressed": null
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Preload redistributed to neighboring sectors; inspect all sectors before pressure testing.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "capstan-crossing",
+      "family": "atelier-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "post:1",
+          "label": "Post 2 factor 3",
+          "pressed": "false"
+        },
+        {
+          "action": "post:0",
+          "label": "Post 1 factor 2",
+          "pressed": "false"
+        },
+        {
+          "action": "post:1",
+          "label": "Post 2 factor 3",
+          "pressed": "false"
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Each full wrap multiplies static holding capacity by the post factor, but multiplies release drag too. Find a route strong enough to hold and light enough to lower.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "spring-form",
+      "family": "atelier-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "station:1",
+          "label": "Station 2",
+          "pressed": "false"
+        },
+        {
+          "action": "station:0",
+          "label": "Station 1",
+          "pressed": "false"
+        },
+        {
+          "action": "station:1",
+          "label": "Station 2",
+          "pressed": "false"
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "A die overbends by its springback allowance. After release, plastic angle = press angle − signed springback. Earlier bends can block tool approach to enclosed stations.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "vacuum-patch",
+      "family": "atelier-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "pump",
+          "label": "Pump one vacuum pressure step",
+          "pressed": null
+        },
+        {
+          "action": "pump",
+          "label": "Pump one vacuum pressure step",
+          "pressed": null
+        },
+        {
+          "action": "pump",
+          "label": "Pump one vacuum pressure step",
+          "pressed": null
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Pump cannot hold pressure: 4 exposed leaks remain.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "mill-fixture",
+      "family": "atelier-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "axis:0:-1",
+          "label": "Approach −X",
+          "pressed": "false"
+        },
+        {
+          "action": "axis:0:1",
+          "label": "Approach +X",
+          "pressed": "false"
+        },
+        {
+          "action": "axis:0:-1",
+          "label": "Approach −X",
+          "pressed": "false"
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Cut only marked cavity voxels, with an unobstructed tool ray from the selected outer axis. A clamped face cannot be cut. Retain connected stock while moving between permitted fixture faces.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "sound-splice",
+      "family": "atelier-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "cut:0:2",
+          "label": "Ribbon 1 cut after phoneme 2",
+          "pressed": "false"
+        },
+        {
+          "action": "cut:0:1",
+          "label": "Ribbon 1 cut after phoneme 1",
+          "pressed": "false"
+        },
+        {
+          "action": "cut:0:2",
+          "label": "Ribbon 1 cut after phoneme 2",
+          "pressed": "false"
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Select two persistent words and a cut after phoneme1 or2 in each. Exchange suffixes. BOTH new ribbons must be words in the visible dictionary, and the target positions matter.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    }
+  ]
+}

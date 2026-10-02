@@ -1,0 +1,50 @@
+{
+  "passed": true,
+  "sourceHash": "2426f9470720cc32aee7b44db5776493d4be9c8350eb9f591a3298561bd21491",
+  "sourceFiles": [
+    {
+      "path": "mini-games/journey/journey.mjs",
+      "sha256": "86a92fbd52ee7f5d34fd01225120feb74a336dd499a11e9e4780cf8f1f207872"
+    },
+    {
+      "path": "mini-games/journey/journey.css",
+      "sha256": "e77e387075c86ad3addcf7220c9eeabfc06fec45987116205b75ed50cac83e67"
+    },
+    {
+      "path": "mini-games/field-room/index.html",
+      "sha256": "1b9afc478035ca5b0a657cb8a449d489dfbff993cd4876385a9d7ef2e6a26d9e"
+    },
+    {
+      "path": "mini-games/tests/journey.cjs",
+      "sha256": "4d8197aa3e2b4c77f3f62af9dc232de5e51a13160dd84928d7e1adfcaa08ab53"
+    }
+  ],
+  "sourceUnchanged": true,
+  "verifiedAt": "2026-10-02T19:37:56.274Z",
+  "engine": "chromium",
+  "browserVersion": "151.0.7922.173",
+  "cases": [
+    {
+      "profile": "desktop",
+      "passed": true,
+      "scope": "Test-only engines verify lifecycle, finite/endless score banking, exact-seed replay, failure/undo, resets, unavailable links, real-time pause/blur/held-input clearing and 320px layout."
+    },
+    {
+      "profile": "mobile-touch",
+      "passed": true,
+      "scope": "Test-only engines verify lifecycle, finite/endless score banking, exact-seed replay, failure/undo, resets, unavailable links, real-time pause/blur/held-input clearing and 320px layout."
+    },
+    {
+      "profile": "storage-read",
+      "passed": true
+    },
+    {
+      "profile": "storage-write",
+      "passed": true
+    }
+  ],
+  "limits": [
+    "Synthetic game engines are test-only and do not attest any playable-game rules or difficulty.",
+    "Touch is browser emulation, not a physical device."
+  ]
+}

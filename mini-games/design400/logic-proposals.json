@@ -1,0 +1,365 @@
+[
+  {
+    "id": "lamp-ward",
+    "name": "Lamp Ward",
+    "definingDecision": "Place mutually non-seeing lamps whose blocked orthogonal rays illuminate every open square.",
+    "nearestExisting": [
+      "towers",
+      "mirror-mail"
+    ],
+    "differentiator": "Obstacles stop rays and lamps may not light one another; the player selects light sources, rather than moving a beam or maximizing queen coverage.",
+    "controls": "Tap a white square to cycle lamp / excluded / empty.",
+    "finiteDesign": "Three escalating studies; every study must satisfy the actual validator. Preserve the finite journey and score each completion.",
+    "endlessDesign": "Optional Study stream: generate another certified solvable board after each completion, retain cumulative score and solved count, cap size/complexity at a usable mobile level; Stop stream banks the run. ",
+    "failureChallenge": "Invalid Check explains an exact violated condition without destroying edits. Puzzle failure is recoverable with Undo/Reset; no arbitrary timer or forced loss.",
+    "validation": "Every white square lit, no lamp sees another, and numbered walls have exact adjacent lamp counts.",
+    "generationLevelStrategy": "Generate wall layouts and a nonattacking covering lamp set; derive optional numbered walls. Reject trivial one-lamp layouts.",
+    "category": "puzzle",
+    "sourceNeighborsInspected": true
+  },
+  {
+    "id": "star-charter",
+    "name": "Star Charter",
+    "definingDecision": "Choose one star in each row, column and irregular region while reserving a non-touching king neighborhood.",
+    "nearestExisting": [
+      "tent-pitch",
+      "map-inks"
+    ],
+    "differentiator": "No tree matching or row count alone: competing irregular regions impose a global transversal with diagonal exclusion.",
+    "controls": "Tap square to cycle star / excluded / empty.",
+    "finiteDesign": "Three escalating studies; every study must satisfy the actual validator. Preserve the finite journey and score each completion.",
+    "endlessDesign": "Optional Study stream: generate another certified solvable board after each completion, retain cumulative score and solved count, cap size/complexity at a usable mobile level; Stop stream banks the run. ",
+    "failureChallenge": "Invalid Check explains an exact violated condition without destroying edits. Puzzle failure is recoverable with Undo/Reset; no arbitrary timer or forced loss.",
+    "validation": "One star per row, column and region; stars cannot touch, including diagonally.",
+    "generationLevelStrategy": "Construct non-touching permutation positions, grow connected regions each containing one star; remove easy givens as levels grow.",
+    "category": "puzzle",
+    "sourceNeighborsInspected": true
+  },
+  {
+    "id": "magnet-ledger",
+    "name": "Magnet Ledger",
+    "definingDecision": "Orient bipolar domino magnets or leave their slots empty to meet signed marginal counts without equal-pole contact.",
+    "nearestExisting": [
+      "equal-measure",
+      "balance-mobile"
+    ],
+    "differentiator": "Positive and negative values are paired spatially in indivisible domino slots; the decision includes omission and orientation, not independent binary assignment or torque.",
+    "controls": "Tap a domino slot to cycle empty / +\u2212 / \u2212+ / excluded.",
+    "finiteDesign": "Three escalating studies; every study must satisfy the actual validator. Preserve the finite journey and score each completion.",
+    "endlessDesign": "Optional Study stream: generate another certified solvable board after each completion, retain cumulative score and solved count, cap size/complexity at a usable mobile level; Stop stream banks the run. ",
+    "failureChallenge": "Invalid Check explains an exact violated condition without destroying edits. Puzzle failure is recoverable with Undo/Reset; no arbitrary timer or forced loss.",
+    "validation": "Exact positive and negative row/column totals and no equal poles in edge-adjacent cells.",
+    "generationLevelStrategy": "Tile a board with marked domino slots, construct valid pole orientations with some empty slots, derive all margins; later slots alternate direction.",
+    "category": "puzzle",
+    "sourceNeighborsInspected": true
+  },
+  {
+    "id": "region-census",
+    "name": "Region Census",
+    "definingDecision": "Assign size labels so connected equal-number components contain exactly that many cells.",
+    "nearestExisting": [
+      "island-census",
+      "parcel-survey"
+    ],
+    "differentiator": "Every cell belongs to a freely shaped region and a label is its component size; there is no sea, fixed one-clue island or rectangle shape.",
+    "controls": "Choose a size then tap cells; givens are fixed.",
+    "finiteDesign": "Three escalating studies; every study must satisfy the actual validator. Preserve the finite journey and score each completion.",
+    "endlessDesign": "Optional Study stream: generate another certified solvable board after each completion, retain cumulative score and solved count, cap size/complexity at a usable mobile level; Stop stream banks the run. ",
+    "failureChallenge": "Invalid Check explains an exact violated condition without destroying edits. Puzzle failure is recoverable with Undo/Reset; no arbitrary timer or forced loss.",
+    "validation": "Each maximal equal-valued orthogonal component has exactly its printed size.",
+    "generationLevelStrategy": "Construct a diverse full-board connected partition; merge adjacent same-size components or reject; reveal sparse anchored labels.",
+    "category": "puzzle",
+    "sourceNeighborsInspected": true
+  },
+  {
+    "id": "mosaic-ring",
+    "name": "Mosaic Ring",
+    "definingDecision": "Read cyclic runs around clue cells to build a single connected dark mosaic.",
+    "nearestExisting": [
+      "picross-post",
+      "hitori-harbor"
+    ],
+    "differentiator": "Clues constrain eight-neighbor circular runs, not linear row runs or duplicate elimination, with global dark connectivity.",
+    "controls": "Tap non-clue square to cycle dark / light / unknown.",
+    "finiteDesign": "Three escalating studies; every study must satisfy the actual validator. Preserve the finite journey and score each completion.",
+    "endlessDesign": "Optional Study stream: generate another certified solvable board after each completion, retain cumulative score and solved count, cap size/complexity at a usable mobile level; Stop stream banks the run. ",
+    "failureChallenge": "Invalid Check explains an exact violated condition without destroying edits. Puzzle failure is recoverable with Undo/Reset; no arbitrary timer or forced loss.",
+    "validation": "Every circular clue matches, dark cells connect, and no 2\u00d72 is completely dark.",
+    "generationLevelStrategy": "Build connected dark paths with branches and no2\u00d72; place ring clues in light cells; expose sufficient constraints without exposing answer.",
+    "category": "puzzle",
+    "sourceNeighborsInspected": true
+  },
+  {
+    "id": "sight-garden",
+    "name": "Sight Garden",
+    "definingDecision": "Shade blockers to make each numbered white cell see exactly its quota of white squares along straight rays.",
+    "nearestExisting": [
+      "sky-view",
+      "towers"
+    ],
+    "differentiator": "The values count visible empty cells in four rays terminated by blockers; no height permutation or tower-placement budget.",
+    "controls": "Tap non-clue square to cycle shaded / white / unknown.",
+    "finiteDesign": "Three escalating studies; every study must satisfy the actual validator. Preserve the finite journey and score each completion.",
+    "endlessDesign": "Optional Study stream: generate another certified solvable board after each completion, retain cumulative score and solved count, cap size/complexity at a usable mobile level; Stop stream banks the run. ",
+    "failureChallenge": "Invalid Check explains an exact violated condition without destroying edits. Puzzle failure is recoverable with Undo/Reset; no arbitrary timer or forced loss.",
+    "validation": "Numbers count self plus visible white squares; shaded squares cannot touch by edge and all white squares stay connected.",
+    "generationLevelStrategy": "Construct nonadjacent black cells with connected white complement; derive visibility clues in white cells and progressively thin them.",
+    "category": "puzzle",
+    "sourceNeighborsInspected": true
+  },
+  {
+    "id": "diagonal-grove",
+    "name": "Diagonal Grove",
+    "definingDecision": "Choose one diagonal per square so numbered lattice vertices get their degree without forming any diagonal cycle.",
+    "nearestExisting": [
+      "loop-letter",
+      "loose-ends"
+    ],
+    "differentiator": "Every cell holds exactly one diagonal; the sought structure is acyclic rather than a closed orthogonal loop or point-position untangling.",
+    "controls": "Tap a square to toggle slash direction; Check explains a degree or cycle.",
+    "finiteDesign": "Three escalating studies; every study must satisfy the actual validator. Preserve the finite journey and score each completion.",
+    "endlessDesign": "Optional Study stream: generate another certified solvable board after each completion, retain cumulative score and solved count, cap size/complexity at a usable mobile level; Stop stream banks the run. ",
+    "failureChallenge": "Invalid Check explains an exact violated condition without destroying edits. Puzzle failure is recoverable with Undo/Reset; no arbitrary timer or forced loss.",
+    "validation": "All numbered vertex degrees match and no loop of diagonals exists.",
+    "generationLevelStrategy": "Sample diagonal forests with degree clues; increase grid size and remove some vertex clues. Test every construction with union-find.",
+    "category": "puzzle",
+    "sourceNeighborsInspected": true
+  },
+  {
+    "id": "thermometer-hall",
+    "name": "Thermometer Hall",
+    "definingDecision": "Set each bent thermometer\u2019s prefix length so row and column fill quotas agree.",
+    "nearestExisting": [
+      "picross-post",
+      "equal-measure"
+    ],
+    "differentiator": "Filling follows a rooted path prefix and an edit affects its downstream suffix; this is order-constrained liquid-length allocation rather than free binary marking.",
+    "controls": "Select a bulb or stem square to set that tube\u2019s filled prefix; empty control drains selected tube.",
+    "finiteDesign": "Three escalating studies; every study must satisfy the actual validator. Preserve the finite journey and score each completion.",
+    "endlessDesign": "Optional Study stream: generate another certified solvable board after each completion, retain cumulative score and solved count, cap size/complexity at a usable mobile level; Stop stream banks the run. ",
+    "failureChallenge": "Invalid Check explains an exact violated condition without destroying edits. Puzzle failure is recoverable with Undo/Reset; no arbitrary timer or forced loss.",
+    "validation": "Fill counts match every row and column; a tube cannot contain a gap before a filled segment.",
+    "generationLevelStrategy": "Partition board into disjoint bent paths with labeled bulbs, choose varied prefix lengths, derive counts; later tubes traverse several rows.",
+    "category": "puzzle",
+    "sourceNeighborsInspected": true
+  },
+  {
+    "id": "compass-estate",
+    "name": "Compass Estate",
+    "definingDecision": "Extend four straight non-overlapping arms from numbered hubs until every square has an owner.",
+    "nearestExisting": [
+      "parcel-survey",
+      "pearl-route"
+    ],
+    "differentiator": "Region shape is a cross of independently adjustable straight rays; hubs consume a shared lattice and area clues constrain sums of arms, not rectangles or endpoint paths.",
+    "controls": "Select hub then a same-row/column cell to set an arm endpoint; retract with hub controls.",
+    "finiteDesign": "Three escalating studies; every study must satisfy the actual validator. Preserve the finite journey and score each completion.",
+    "endlessDesign": "Optional Study stream: generate another certified solvable board after each completion, retain cumulative score and solved count, cap size/complexity at a usable mobile level; Stop stream banks the run. Authored template transformations alone are insufficient: add multiple structurally different certified templates before claiming a broad stream.",
+    "failureChallenge": "Invalid Check explains an exact violated condition without destroying edits. Puzzle failure is recoverable with Undo/Reset; no arbitrary timer or forced loss.",
+    "validation": "Each hub owns exactly its stated area including itself, with no overlap and no uncovered square.",
+    "generationLevelStrategy": "Author several cross partitions, transform them and vary compatible arm allocation; verify exact-cover arm solutions before release.",
+    "category": "puzzle",
+    "sourceNeighborsInspected": true
+  },
+  {
+    "id": "fleet-blueprint",
+    "name": "Fleet Blueprint",
+    "definingDecision": "Deduce an entire separated fleet from public row/column totals, ship lengths and partial hull/water clues.",
+    "nearestExisting": [
+      "fleet",
+      "tent-pitch"
+    ],
+    "differentiator": "No hidden shots: freely mark and retract a whole fleet and identify each connected hull\u2019s shape/length; global fleet inventory is a placement constraint.",
+    "controls": "Tap cell to cycle hull / water / unknown; fixed clues remain fixed.",
+    "finiteDesign": "Three escalating studies; every study must satisfy the actual validator. Preserve the finite journey and score each completion.",
+    "endlessDesign": "Optional Study stream: generate another certified solvable board after each completion, retain cumulative score and solved count, cap size/complexity at a usable mobile level; Stop stream banks the run. ",
+    "failureChallenge": "Invalid Check explains an exact violated condition without destroying edits. Puzzle failure is recoverable with Undo/Reset; no arbitrary timer or forced loss.",
+    "validation": "Ship components are straight, have exactly the fleet lengths, never touch diagonally or by side, and meet all margins.",
+    "generationLevelStrategy": "Construct separated straight ships with known inventory; derive row/column totals and selected clues. Later boards have repeated short ships.",
+    "category": "puzzle",
+    "sourceNeighborsInspected": true
+  },
+  {
+    "id": "shade-detour",
+    "name": "Shade Detour",
+    "definingDecision": "Choose arrow-counted blocked cells while routing one loop through every remaining non-clue cell.",
+    "nearestExisting": [
+      "loop-letter",
+      "cable-loom",
+      "minefield"
+    ],
+    "differentiator": "Blocked-cell deduction and loop construction are coupled: choosing which cells the loop omits changes its topology, while directional arrow clues constrain those omissions.",
+    "controls": "Tap cells to shade or unshade, and tap neighboring cell-pair edges to toggle loop segments.",
+    "finiteDesign": "Three escalating studies; every study must satisfy the actual validator. Preserve the finite journey and score each completion.",
+    "endlessDesign": "Optional Study stream: generate another certified solvable board after each completion, retain cumulative score and solved count, cap size/complexity at a usable mobile level; Stop stream banks the run. Authored template transformations alone are insufficient: add multiple structurally different certified templates before claiming a broad stream.",
+    "failureChallenge": "Invalid Check explains an exact violated condition without destroying edits. Puzzle failure is recoverable with Undo/Reset; no arbitrary timer or forced loss.",
+    "validation": "Each arrow sees exactly its shade count; shades are nonadjacent, and all unshaded non-clue cells have degree two in one connected loop.",
+    "generationLevelStrategy": "Author solver-checked loop/shade boards and generate reflected/rotated clue variants; expand with independently checked loop templates.",
+    "category": "puzzle",
+    "sourceNeighborsInspected": true
+  },
+  {
+    "id": "quiet-rooms",
+    "name": "Quiet Rooms",
+    "definingDecision": "Allocate shaded cells to room quotas without splitting white space or permitting a straight white view across more than two rooms.",
+    "nearestExisting": [
+      "hitori-harbor",
+      "island-census"
+    ],
+    "differentiator": "Regions prescribe black counts and boundaries constrain white sightlines; neither duplicate numbers nor island areas determine cells.",
+    "controls": "Tap cells to cycle shade / white / unknown; room borders and region counts are always visible.",
+    "finiteDesign": "Three escalating studies; every study must satisfy the actual validator. Preserve the finite journey and score each completion.",
+    "endlessDesign": "Optional Study stream: generate another certified solvable board after each completion, retain cumulative score and solved count, cap size/complexity at a usable mobile level; Stop stream banks the run. ",
+    "failureChallenge": "Invalid Check explains an exact violated condition without destroying edits. Puzzle failure is recoverable with Undo/Reset; no arbitrary timer or forced loss.",
+    "validation": "Each room shade quota matches; shades are edge-nonadjacent; whites connect; each uninterrupted white run crosses at most two regions.",
+    "generationLevelStrategy": "Construct valid room partitions and shade masks; derive quotas; include long runs whose interruption requires deliberate boundary planning.",
+    "category": "puzzle",
+    "sourceNeighborsInspected": true
+  },
+  {
+    "id": "four-forms",
+    "name": "Four Forms",
+    "definingDecision": "Choose one four-cell tetromino subset inside each region so the selected pieces join without same-shape neighbors.",
+    "nearestExisting": [
+      "tangram-dock",
+      "a-stitch-in-time"
+    ],
+    "differentiator": "Shapes are discovered inside fixed regions rather than placed from inventory; shape classification and global contact exclusions govern selection.",
+    "controls": "Tap region cells to toggle selected / excluded; Check identifies shape and connectivity issues.",
+    "finiteDesign": "Three escalating studies; every study must satisfy the actual validator. Preserve the finite journey and score each completion.",
+    "endlessDesign": "Optional Study stream: generate another certified solvable board after each completion, retain cumulative score and solved count, cap size/complexity at a usable mobile level; Stop stream banks the run. Authored template transformations alone are insufficient: add multiple structurally different certified templates before claiming a broad stream.",
+    "failureChallenge": "Invalid Check explains an exact violated condition without destroying edits. Puzzle failure is recoverable with Undo/Reset; no arbitrary timer or forced loss.",
+    "validation": "Exactly four selected cells per region form L, I, T or S; selected pieces connect, no2\u00d72 dark block, and touching regions cannot use the same shape up to rotation/reflection.",
+    "generationLevelStrategy": "Author region boards around diverse connected tetromino arrangements; solver-check all shape classes and provide escalating contacts.",
+    "category": "puzzle",
+    "sourceNeighborsInspected": true
+  },
+  {
+    "id": "domino-register",
+    "name": "Domino Register",
+    "definingDecision": "Partition a numbered grid into adjacent pairs, using each unordered number-pair exactly once.",
+    "nearestExisting": [
+      "tangram-dock",
+      "domino-parlour"
+    ],
+    "differentiator": "Dominoes are boundaries chosen between fixed digits, and the inventory is every unordered value pair rather than cargo shapes or endpoint shedding.",
+    "controls": "Tap neighboring squares to join/remove a domino; choose another square to change the first endpoint.",
+    "finiteDesign": "Three escalating studies; every study must satisfy the actual validator. Preserve the finite journey and score each completion.",
+    "endlessDesign": "Optional Study stream: generate another certified solvable board after each completion, retain cumulative score and solved count, cap size/complexity at a usable mobile level; Stop stream banks the run. ",
+    "failureChallenge": "Invalid Check explains an exact violated condition without destroying edits. Puzzle failure is recoverable with Undo/Reset; no arbitrary timer or forced loss.",
+    "validation": "Cover all cells once and use every printed pair in the inventory once, with no duplicate pair.",
+    "generationLevelStrategy": "Shuffle a full double-two or double-three domino set into constructive tilings, randomize orientations and derive fixed digit grid; ensure ambiguity remains meaningful.",
+    "category": "puzzle",
+    "sourceNeighborsInspected": true
+  },
+  {
+    "id": "weighted-weft",
+    "name": "Weighted Weft",
+    "definingDecision": "Choose binary squares so row totals use column positions as weights and column totals use row positions as weights.",
+    "nearestExisting": [
+      "cross-sums",
+      "parity-repair",
+      "picross-post"
+    ],
+    "differentiator": "Each square is a binary subset inclusion and its weight depends on its coordinate. No digit assignment or uniqueness, no run ordering, no XOR parity repair or minimum-change budget.",
+    "controls": "Tap square to cycle filled / empty / unknown; row and column weighted sums update live.",
+    "finiteDesign": "Three escalating studies; every study must satisfy the actual validator. Preserve the finite journey and score each completion.",
+    "endlessDesign": "Optional generated study stream with capped6\u00d76 boards, seed-varied binary targets, cumulative solved score and player bank control.",
+    "failureChallenge": "Invalid Check explains the first weighted marginal mismatch without destroying edits; Undo and Reset recover.",
+    "validation": "Every row weighted sum and every column weighted sum matches after all squares are assigned.",
+    "generationLevelStrategy": "Generate nonuniform binary patterns and derive weighted marginals; accept every satisfying alternate pattern. Grow4\u21925\u21926 and cap endless at6.",
+    "category": "puzzle",
+    "sourceNeighborsInspected": true
+  },
+  {
+    "id": "once-through",
+    "name": "Once Through",
+    "definingDecision": "Traverse every undirected bridge exactly once, choosing when to cross fragile connector edges.",
+    "nearestExisting": [
+      "cable-loom",
+      "orbit-transfer"
+    ],
+    "differentiator": "The resource consumed is an edge, and vertices may be revisited; bridge ordering creates dead ends unlike visiting every vertex once.",
+    "controls": "Tap an adjacent reachable station to cross its unused edge. Undo reopens the last edge.",
+    "finiteDesign": "Three escalating studies; every study must satisfy the actual validator. Preserve the finite journey and score each completion.",
+    "endlessDesign": "Optional Study stream: generate another certified solvable board after each completion, retain cumulative score and solved count, cap size/complexity at a usable mobile level; Stop stream banks the run. ",
+    "failureChallenge": "Invalid Check explains an exact violated condition without destroying edits. Move budget exhausted or no legal continuation yields recoverable loss with Undo/Reset.",
+    "validation": "Use all bridges and finish at the marked exit; running out of legal unused edges early is a recoverable loss.",
+    "generationLevelStrategy": "Generate connected Eulerian graphs with exactly zero or two odd vertices; scramble spatial layout and certify a full trail with Hierholzer.",
+    "category": "puzzle",
+    "sourceNeighborsInspected": true
+  },
+  {
+    "id": "cyclic-courtyard",
+    "name": "Cyclic Courtyard",
+    "definingDecision": "Shift whole rows or columns with wraparound to restore a scrambled tile permutation.",
+    "nearestExisting": [
+      "good-order",
+      "corner-cabinet"
+    ],
+    "differentiator": "A move affects a full line and wraps around; there is no empty tile or cube-face orientation. Intersecting line cycles force deliberate commutator planning.",
+    "controls": "Select row/column arrows or keyboard direction after selecting a line; cells show unique target numbers.",
+    "finiteDesign": "Three escalating studies; every study must satisfy the actual validator. Preserve the finite journey and score each completion.",
+    "endlessDesign": "Optional Study stream: generate another certified solvable board after each completion, retain cumulative score and solved count, cap size/complexity at a usable mobile level; Stop stream banks the run. ",
+    "failureChallenge": "Invalid Check explains an exact violated condition without destroying edits. Move budget exhausted or no legal continuation yields recoverable loss with Undo/Reset.",
+    "validation": "Match target permutation within a generous certified move budget; Undo restores the full affected line.",
+    "generationLevelStrategy": "Scramble solved boards with legal alternating line shifts without immediate inverses; record certificate, use increasing sizes/depths, reject solved starts.",
+    "category": "puzzle",
+    "sourceNeighborsInspected": true
+  },
+  {
+    "id": "seam-quilt",
+    "name": "Seam Quilt",
+    "definingDecision": "Place and rotate edge-labeled tiles so neighboring seams agree and the required boundary labels face outward.",
+    "nearestExisting": [
+      "tile-weave",
+      "tangram-dock"
+    ],
+    "differentiator": "Tile identity and placement are variables, and matching means edge-symbol equality; no pipe connectivity or footprint packing.",
+    "controls": "Select an unplaced tile, rotate it, then tap a board slot; selecting a placed tile lifts it.",
+    "finiteDesign": "Three escalating studies; every study must satisfy the actual validator. Preserve the finite journey and score each completion.",
+    "endlessDesign": "Optional Study stream: generate another certified solvable board after each completion, retain cumulative score and solved count, cap size/complexity at a usable mobile level; Stop stream banks the run. ",
+    "failureChallenge": "Invalid Check explains an exact violated condition without destroying edits. Puzzle failure is recoverable with Undo/Reset; no arbitrary timer or forced loss.",
+    "validation": "Every tile used exactly once, all seams match, and specified border symbols agree.",
+    "generationLevelStrategy": "Generate solved edge-label arrays then independent tile rotations/shuffle; include repeated labels to require multi-edge deduction, reject symmetric trivial tiles.",
+    "category": "puzzle",
+    "sourceNeighborsInspected": true
+  },
+  {
+    "id": "exclusive-print",
+    "name": "Exclusive Print",
+    "definingDecision": "Select overlapping plates so each requested cell receives exactly one coat while blank cells receive none.",
+    "nearestExisting": [
+      "stamp-studio",
+      "parity-repair"
+    ],
+    "differentiator": "Overlap is destructive overprinting rather than harmless union or canceling XOR; exact multiplicities and plate quotas require a disjoint exact-cover decision.",
+    "controls": "Toggle labeled plate buttons; board shows 0 / 1 / 2+ coats numerically.",
+    "finiteDesign": "Three escalating studies; every study must satisfy the actual validator. Preserve the finite journey and score each completion.",
+    "endlessDesign": "Optional Study stream: generate another certified solvable board after each completion, retain cumulative score and solved count, cap size/complexity at a usable mobile level; Stop stream banks the run. ",
+    "failureChallenge": "Invalid Check explains an exact violated condition without destroying edits. Puzzle failure is recoverable with Undo/Reset; no arbitrary timer or forced loss.",
+    "validation": "Target cells have exactly one coat, blank cells zero, and at most the given plate budget is used.",
+    "generationLevelStrategy": "Construct disjoint cover plates and intersecting decoys; use exact-cover solver to certify minimum budget and nontrivial mutually excluding choices.",
+    "category": "puzzle",
+    "sourceNeighborsInspected": true
+  },
+  {
+    "id": "window-tally",
+    "name": "Window Tally",
+    "definingDecision": "Reconstruct a shaded picture from overlapping 3\u00d73 local counts, including the clue square itself.",
+    "nearestExisting": [
+      "minefield",
+      "picross-post",
+      "parity-repair"
+    ],
+    "differentiator": "All clues are public and there is no chance-based reveal or mine penalty; local sums overlap around every chosen clue and constrain a freely editable binary picture.",
+    "controls": "Tap square to cycle filled / empty / unknown; clue text stays visible regardless of fill.",
+    "finiteDesign": "Three escalating studies; every study must satisfy the actual validator. Preserve the finite journey and score each completion.",
+    "endlessDesign": "Optional Study stream: generate another certified solvable board after each completion, retain cumulative score and solved count, cap size/complexity at a usable mobile level; Stop stream banks the run. ",
+    "failureChallenge": "Invalid Check explains an exact violated condition without destroying edits. Puzzle failure is recoverable with Undo/Reset; no arbitrary timer or forced loss.",
+    "validation": "Every public local count matches after every cell is assigned.",
+    "generationLevelStrategy": "Generate nonuniform binary pictures and greedily remove neighborhood clues while tracking valid solutions; accept every matching reconstruction, not hidden answer equality.",
+    "category": "puzzle",
+    "sourceNeighborsInspected": true
+  }
+]

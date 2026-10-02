@@ -1,0 +1,1271 @@
+{
+  "schemaVersion": 2,
+  "suite": "signal-lab",
+  "passed": true,
+  "status": "passed",
+  "startedAt": "2026-10-02T20:15:58.431Z",
+  "source": {
+    "sha256": "10d176adf4d746901702d64b60fa18389ecd83937ba73c65de992a9f0ca1e9e3",
+    "files": [
+      "catalog.css",
+      "catalog.js",
+      "common.js",
+      "index.html",
+      "inventory.json",
+      "journey/journey.css",
+      "journey/journey.mjs",
+      "play.css",
+      "signal-lab/certificates.mjs",
+      "signal-lab/choices.mjs",
+      "signal-lab/common.mjs",
+      "signal-lab/engines.mjs",
+      "signal-lab/games.json",
+      "signal-lab/index.html",
+      "signal-lab/machines.mjs",
+      "signal-lab/measures.mjs",
+      "signal-lab/room.mjs",
+      "signal-lab/signals.mjs",
+      "styles.css",
+      "tests/fixtures/baseline100.json",
+      "tests/fixtures/baseline200.json",
+      "tests/fixtures/baseline300.json",
+      "tests/fixtures/parlour-b02-b05-paths.json",
+      "tests/fixtures/parlour-b13-guided-paths.json",
+      "tests/fixtures/parlour-paths.json",
+      "tests/fixtures/tabletop-paths.json",
+      "tests/journey.cjs",
+      "tests/signal-lab-paths.json",
+      "tests/signal-lab-plans.mjs",
+      "tests/signal-lab-regressions.mjs",
+      "tests/signal-lab.cjs",
+      "tests/signal-mobile-complete.cjs",
+      "tools/evidence.cjs",
+      "tools/run-suite.cjs"
+    ]
+  },
+  "requestedBaseURL": "http://127.0.0.1:8790",
+  "browser": {
+    "engine": "Chromium",
+    "version": "Chromium 151.0.7922.173 built on Debian GNU/Linux 13 (trixie)",
+    "executable": "/usr/bin/chromium"
+  },
+  "scope": {
+    "desktopCompletion": true,
+    "mobileViewportCompletion": true,
+    "touchGameplayCompletion": false,
+    "touchControlSmoke": true,
+    "completionMeans": "winning full progression",
+    "method": "scripted UI; curated answers or board solvers",
+    "mobileMethod": "touch gameplay with scripted navigation/solvers"
+  },
+  "games": [
+    "reset-post",
+    "quotient-quay",
+    "cutback-case",
+    "clause-kiln",
+    "wraparound-witness",
+    "branch-weather",
+    "phase-paper",
+    "rotation-index",
+    "shared-secret",
+    "crossed-channel",
+    "quorum-garden",
+    "bound-names",
+    "separating-line",
+    "hall-window",
+    "empty-language",
+    "credit-method",
+    "interval-post",
+    "pruning-room",
+    "privacy-dials",
+    "divisor-house"
+  ],
+  "limits": [
+    "Mobile is Chromium viewport/touch emulation, not Safari or a physical device.",
+    "Solver completions do not establish human difficulty or accessibility."
+  ],
+  "servedRuntimeBefore": {
+    "baseURL": "http://127.0.0.1:8790",
+    "passed": true,
+    "sha256": "bc6e5fae660ad814778505762f427aa3f300d5137bbf41915338c286882cdc73",
+    "fileCount": 19,
+    "verifiedAt": "2026-10-02T20:15:58.588Z"
+  },
+  "exitCode": 0,
+  "signal": null,
+  "sourceUnchanged": true,
+  "servedRuntime": {
+    "baseURL": "http://127.0.0.1:8790",
+    "passed": true,
+    "sha256": "bc6e5fae660ad814778505762f427aa3f300d5137bbf41915338c286882cdc73",
+    "fileCount": 19,
+    "verifiedAt": "2026-10-02T20:19:55.997Z"
+  },
+  "completionEvidence": {
+    "sha256": "4329900f93c3589afffdf6aedb8faf79b9892e0896b78c9762c1c03015cb3623",
+    "file": "coverage/signal-lab.json",
+    "cases": [
+      {
+        "id": "reset-post",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "finiteStudiesCompleted": 3,
+        "restart": true,
+        "touchOnly": false,
+        "inputMethod": "Keyboard focus and Enter on native buttons; Home/ArrowRight on native sliders; source-informed routes through every campaign study.",
+        "winActions": 29,
+        "lossActions": 4,
+        "edgeCases": [
+          "All3finite studies completed via real controls",
+          "Natural loss/restart and terminal controls disabled",
+          "Finite Undo/Reset restore rendered state and preserve chapter",
+          "Positive score/personal best and clean Play again",
+          "No page errors; document bounds at desktop/390px/320px",
+          "Mechanic-specific pure regressions separately cover all20ids"
+        ],
+        "optionalMode": {
+          "supported": true,
+          "kind": "challenge-stream",
+          "completedChallenges": 2,
+          "freshChallenges": true,
+          "scoreAccumulated": true,
+          "terminalRecovery": true,
+          "playerEndRun": true,
+          "lateStageProperties": true,
+          "lateStageScope": "24pure-model generation samples including stages17and250; browser coverage plays first2generated challenges then real failure/restart."
+        }
+      },
+      {
+        "id": "reset-post",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "finiteStudiesCompleted": 3,
+        "restart": true,
+        "touchOnly": true,
+        "inputMethod": "Touchscreen taps on actual native buttons and slider tracks; source-informed routes through every campaign study. Mode setup uses native selectOption.",
+        "winActions": 29,
+        "lossActions": 4,
+        "edgeCases": [
+          "All3finite studies completed via real controls",
+          "Natural loss/restart and terminal controls disabled",
+          "Finite Undo/Reset restore rendered state and preserve chapter",
+          "Positive score/personal best and clean Play again",
+          "No page errors; document bounds at desktop/390px/320px",
+          "Mechanic-specific pure regressions separately cover all20ids"
+        ],
+        "optionalMode": {
+          "supported": true,
+          "kind": "challenge-stream",
+          "completedChallenges": 2,
+          "freshChallenges": true,
+          "scoreAccumulated": true,
+          "terminalRecovery": true,
+          "playerEndRun": true,
+          "lateStageProperties": true,
+          "lateStageScope": "24pure-model generation samples including stages17and250; browser coverage plays first2generated challenges then real failure/restart."
+        }
+      },
+      {
+        "id": "quotient-quay",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "finiteStudiesCompleted": 3,
+        "restart": true,
+        "touchOnly": false,
+        "inputMethod": "Keyboard focus and Enter on native buttons; Home/ArrowRight on native sliders; source-informed routes through every campaign study.",
+        "winActions": 27,
+        "lossActions": 9,
+        "edgeCases": [
+          "All3finite studies completed via real controls",
+          "Natural loss/restart and terminal controls disabled",
+          "Finite Undo/Reset restore rendered state and preserve chapter",
+          "Positive score/personal best and clean Play again",
+          "No page errors; document bounds at desktop/390px/320px",
+          "Mechanic-specific pure regressions separately cover all20ids"
+        ],
+        "optionalMode": {
+          "supported": true,
+          "kind": "challenge-stream",
+          "completedChallenges": 2,
+          "freshChallenges": true,
+          "scoreAccumulated": true,
+          "terminalRecovery": true,
+          "playerEndRun": true,
+          "lateStageProperties": true,
+          "lateStageScope": "24pure-model generation samples including stages17and250; browser coverage plays first2generated challenges then real failure/restart."
+        }
+      },
+      {
+        "id": "quotient-quay",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "finiteStudiesCompleted": 3,
+        "restart": true,
+        "touchOnly": true,
+        "inputMethod": "Touchscreen taps on actual native buttons and slider tracks; source-informed routes through every campaign study. Mode setup uses native selectOption.",
+        "winActions": 27,
+        "lossActions": 9,
+        "edgeCases": [
+          "All3finite studies completed via real controls",
+          "Natural loss/restart and terminal controls disabled",
+          "Finite Undo/Reset restore rendered state and preserve chapter",
+          "Positive score/personal best and clean Play again",
+          "No page errors; document bounds at desktop/390px/320px",
+          "Mechanic-specific pure regressions separately cover all20ids"
+        ],
+        "optionalMode": {
+          "supported": true,
+          "kind": "challenge-stream",
+          "completedChallenges": 2,
+          "freshChallenges": true,
+          "scoreAccumulated": true,
+          "terminalRecovery": true,
+          "playerEndRun": true,
+          "lateStageProperties": true,
+          "lateStageScope": "24pure-model generation samples including stages17and250; browser coverage plays first2generated challenges then real failure/restart."
+        }
+      },
+      {
+        "id": "cutback-case",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "finiteStudiesCompleted": 3,
+        "restart": true,
+        "touchOnly": false,
+        "inputMethod": "Keyboard focus and Enter on native buttons; Home/ArrowRight on native sliders; source-informed routes through every campaign study.",
+        "winActions": 24,
+        "lossActions": 31,
+        "edgeCases": [
+          "All3finite studies completed via real controls",
+          "Natural loss/restart and terminal controls disabled",
+          "Finite Undo/Reset restore rendered state and preserve chapter",
+          "Positive score/personal best and clean Play again",
+          "No page errors; document bounds at desktop/390px/320px",
+          "Mechanic-specific pure regressions separately cover all20ids"
+        ],
+        "optionalMode": {
+          "supported": true,
+          "kind": "challenge-stream",
+          "completedChallenges": 2,
+          "freshChallenges": true,
+          "scoreAccumulated": true,
+          "terminalRecovery": true,
+          "playerEndRun": true,
+          "lateStageProperties": true,
+          "lateStageScope": "24pure-model generation samples including stages17and250; browser coverage plays first2generated challenges then real failure/restart."
+        }
+      },
+      {
+        "id": "cutback-case",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "finiteStudiesCompleted": 3,
+        "restart": true,
+        "touchOnly": true,
+        "inputMethod": "Touchscreen taps on actual native buttons and slider tracks; source-informed routes through every campaign study. Mode setup uses native selectOption.",
+        "winActions": 24,
+        "lossActions": 31,
+        "edgeCases": [
+          "All3finite studies completed via real controls",
+          "Natural loss/restart and terminal controls disabled",
+          "Finite Undo/Reset restore rendered state and preserve chapter",
+          "Positive score/personal best and clean Play again",
+          "No page errors; document bounds at desktop/390px/320px",
+          "Mechanic-specific pure regressions separately cover all20ids"
+        ],
+        "optionalMode": {
+          "supported": true,
+          "kind": "challenge-stream",
+          "completedChallenges": 2,
+          "freshChallenges": true,
+          "scoreAccumulated": true,
+          "terminalRecovery": true,
+          "playerEndRun": true,
+          "lateStageProperties": true,
+          "lateStageScope": "24pure-model generation samples including stages17and250; browser coverage plays first2generated challenges then real failure/restart."
+        }
+      },
+      {
+        "id": "clause-kiln",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "finiteStudiesCompleted": 3,
+        "restart": true,
+        "touchOnly": false,
+        "inputMethod": "Keyboard focus and Enter on native buttons; Home/ArrowRight on native sliders; source-informed routes through every campaign study.",
+        "winActions": 32,
+        "lossActions": 12,
+        "edgeCases": [
+          "All3finite studies completed via real controls",
+          "Natural loss/restart and terminal controls disabled",
+          "Finite Undo/Reset restore rendered state and preserve chapter",
+          "Positive score/personal best and clean Play again",
+          "No page errors; document bounds at desktop/390px/320px",
+          "Mechanic-specific pure regressions separately cover all20ids"
+        ],
+        "optionalMode": {
+          "supported": false
+        }
+      },
+      {
+        "id": "clause-kiln",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "finiteStudiesCompleted": 3,
+        "restart": true,
+        "touchOnly": true,
+        "inputMethod": "Touchscreen taps on actual native buttons and slider tracks; source-informed routes through every campaign study. Mode setup uses native selectOption.",
+        "winActions": 32,
+        "lossActions": 12,
+        "edgeCases": [
+          "All3finite studies completed via real controls",
+          "Natural loss/restart and terminal controls disabled",
+          "Finite Undo/Reset restore rendered state and preserve chapter",
+          "Positive score/personal best and clean Play again",
+          "No page errors; document bounds at desktop/390px/320px",
+          "Mechanic-specific pure regressions separately cover all20ids"
+        ],
+        "optionalMode": {
+          "supported": false
+        }
+      },
+      {
+        "id": "wraparound-witness",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "finiteStudiesCompleted": 3,
+        "restart": true,
+        "touchOnly": false,
+        "inputMethod": "Keyboard focus and Enter on native buttons; Home/ArrowRight on native sliders; source-informed routes through every campaign study.",
+        "winActions": 9,
+        "lossActions": 5,
+        "edgeCases": [
+          "All3finite studies completed via real controls",
+          "Natural loss/restart and terminal controls disabled",
+          "Finite Undo/Reset restore rendered state and preserve chapter",
+          "Positive score/personal best and clean Play again",
+          "No page errors; document bounds at desktop/390px/320px",
+          "Mechanic-specific pure regressions separately cover all20ids"
+        ],
+        "optionalMode": {
+          "supported": true,
+          "kind": "challenge-stream",
+          "completedChallenges": 2,
+          "freshChallenges": true,
+          "scoreAccumulated": true,
+          "terminalRecovery": true,
+          "playerEndRun": true,
+          "lateStageProperties": true,
+          "lateStageScope": "24pure-model generation samples including stages17and250; browser coverage plays first2generated challenges then real failure/restart."
+        }
+      },
+      {
+        "id": "wraparound-witness",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "finiteStudiesCompleted": 3,
+        "restart": true,
+        "touchOnly": true,
+        "inputMethod": "Touchscreen taps on actual native buttons and slider tracks; source-informed routes through every campaign study. Mode setup uses native selectOption.",
+        "winActions": 9,
+        "lossActions": 5,
+        "edgeCases": [
+          "All3finite studies completed via real controls",
+          "Natural loss/restart and terminal controls disabled",
+          "Finite Undo/Reset restore rendered state and preserve chapter",
+          "Positive score/personal best and clean Play again",
+          "No page errors; document bounds at desktop/390px/320px",
+          "Mechanic-specific pure regressions separately cover all20ids"
+        ],
+        "optionalMode": {
+          "supported": true,
+          "kind": "challenge-stream",
+          "completedChallenges": 2,
+          "freshChallenges": true,
+          "scoreAccumulated": true,
+          "terminalRecovery": true,
+          "playerEndRun": true,
+          "lateStageProperties": true,
+          "lateStageScope": "24pure-model generation samples including stages17and250; browser coverage plays first2generated challenges then real failure/restart."
+        }
+      },
+      {
+        "id": "branch-weather",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "finiteStudiesCompleted": 3,
+        "restart": true,
+        "touchOnly": false,
+        "inputMethod": "Keyboard focus and Enter on native buttons; Home/ArrowRight on native sliders; source-informed routes through every campaign study.",
+        "winActions": 36,
+        "lossActions": 3,
+        "edgeCases": [
+          "All3finite studies completed via real controls",
+          "Natural loss/restart and terminal controls disabled",
+          "Finite Undo/Reset restore rendered state and preserve chapter",
+          "Positive score/personal best and clean Play again",
+          "No page errors; document bounds at desktop/390px/320px",
+          "Mechanic-specific pure regressions separately cover all20ids"
+        ],
+        "optionalMode": {
+          "supported": true,
+          "kind": "challenge-stream",
+          "completedChallenges": 2,
+          "freshChallenges": true,
+          "scoreAccumulated": true,
+          "terminalRecovery": true,
+          "playerEndRun": true,
+          "lateStageProperties": true,
+          "lateStageScope": "24pure-model generation samples including stages17and250; browser coverage plays first2generated challenges then real failure/restart."
+        }
+      },
+      {
+        "id": "branch-weather",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "finiteStudiesCompleted": 3,
+        "restart": true,
+        "touchOnly": true,
+        "inputMethod": "Touchscreen taps on actual native buttons and slider tracks; source-informed routes through every campaign study. Mode setup uses native selectOption.",
+        "winActions": 36,
+        "lossActions": 3,
+        "edgeCases": [
+          "All3finite studies completed via real controls",
+          "Natural loss/restart and terminal controls disabled",
+          "Finite Undo/Reset restore rendered state and preserve chapter",
+          "Positive score/personal best and clean Play again",
+          "No page errors; document bounds at desktop/390px/320px",
+          "Mechanic-specific pure regressions separately cover all20ids"
+        ],
+        "optionalMode": {
+          "supported": true,
+          "kind": "challenge-stream",
+          "completedChallenges": 2,
+          "freshChallenges": true,
+          "scoreAccumulated": true,
+          "terminalRecovery": true,
+          "playerEndRun": true,
+          "lateStageProperties": true,
+          "lateStageScope": "24pure-model generation samples including stages17and250; browser coverage plays first2generated challenges then real failure/restart."
+        }
+      },
+      {
+        "id": "phase-paper",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "finiteStudiesCompleted": 3,
+        "restart": true,
+        "touchOnly": false,
+        "inputMethod": "Keyboard focus and Enter on native buttons; Home/ArrowRight on native sliders; source-informed routes through every campaign study.",
+        "winActions": 11,
+        "lossActions": 3,
+        "edgeCases": [
+          "All3finite studies completed via real controls",
+          "Natural loss/restart and terminal controls disabled",
+          "Finite Undo/Reset restore rendered state and preserve chapter",
+          "Positive score/personal best and clean Play again",
+          "No page errors; document bounds at desktop/390px/320px",
+          "Mechanic-specific pure regressions separately cover all20ids"
+        ],
+        "optionalMode": {
+          "supported": true,
+          "kind": "challenge-stream",
+          "completedChallenges": 2,
+          "freshChallenges": true,
+          "scoreAccumulated": true,
+          "terminalRecovery": true,
+          "playerEndRun": true,
+          "lateStageProperties": true,
+          "lateStageScope": "24pure-model generation samples including stages17and250; browser coverage plays first2generated challenges then real failure/restart."
+        }
+      },
+      {
+        "id": "phase-paper",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "finiteStudiesCompleted": 3,
+        "restart": true,
+        "touchOnly": true,
+        "inputMethod": "Touchscreen taps on actual native buttons and slider tracks; source-informed routes through every campaign study. Mode setup uses native selectOption.",
+        "winActions": 11,
+        "lossActions": 3,
+        "edgeCases": [
+          "All3finite studies completed via real controls",
+          "Natural loss/restart and terminal controls disabled",
+          "Finite Undo/Reset restore rendered state and preserve chapter",
+          "Positive score/personal best and clean Play again",
+          "No page errors; document bounds at desktop/390px/320px",
+          "Mechanic-specific pure regressions separately cover all20ids"
+        ],
+        "optionalMode": {
+          "supported": true,
+          "kind": "challenge-stream",
+          "completedChallenges": 2,
+          "freshChallenges": true,
+          "scoreAccumulated": true,
+          "terminalRecovery": true,
+          "playerEndRun": true,
+          "lateStageProperties": true,
+          "lateStageScope": "24pure-model generation samples including stages17and250; browser coverage plays first2generated challenges then real failure/restart."
+        }
+      },
+      {
+        "id": "rotation-index",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "finiteStudiesCompleted": 3,
+        "restart": true,
+        "touchOnly": false,
+        "inputMethod": "Keyboard focus and Enter on native buttons; Home/ArrowRight on native sliders; source-informed routes through every campaign study.",
+        "winActions": 21,
+        "lossActions": 1,
+        "edgeCases": [
+          "All3finite studies completed via real controls",
+          "Natural loss/restart and terminal controls disabled",
+          "Finite Undo/Reset restore rendered state and preserve chapter",
+          "Positive score/personal best and clean Play again",
+          "No page errors; document bounds at desktop/390px/320px",
+          "Mechanic-specific pure regressions separately cover all20ids"
+        ],
+        "optionalMode": {
+          "supported": true,
+          "kind": "challenge-stream",
+          "completedChallenges": 2,
+          "freshChallenges": true,
+          "scoreAccumulated": true,
+          "terminalRecovery": true,
+          "playerEndRun": true,
+          "lateStageProperties": true,
+          "lateStageScope": "24pure-model generation samples including stages17and250; browser coverage plays first2generated challenges then real failure/restart."
+        }
+      },
+      {
+        "id": "rotation-index",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "finiteStudiesCompleted": 3,
+        "restart": true,
+        "touchOnly": true,
+        "inputMethod": "Touchscreen taps on actual native buttons and slider tracks; source-informed routes through every campaign study. Mode setup uses native selectOption.",
+        "winActions": 21,
+        "lossActions": 1,
+        "edgeCases": [
+          "All3finite studies completed via real controls",
+          "Natural loss/restart and terminal controls disabled",
+          "Finite Undo/Reset restore rendered state and preserve chapter",
+          "Positive score/personal best and clean Play again",
+          "No page errors; document bounds at desktop/390px/320px",
+          "Mechanic-specific pure regressions separately cover all20ids"
+        ],
+        "optionalMode": {
+          "supported": true,
+          "kind": "challenge-stream",
+          "completedChallenges": 2,
+          "freshChallenges": true,
+          "scoreAccumulated": true,
+          "terminalRecovery": true,
+          "playerEndRun": true,
+          "lateStageProperties": true,
+          "lateStageScope": "24pure-model generation samples including stages17and250; browser coverage plays first2generated challenges then real failure/restart."
+        }
+      },
+      {
+        "id": "shared-secret",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "finiteStudiesCompleted": 3,
+        "restart": true,
+        "touchOnly": false,
+        "inputMethod": "Keyboard focus and Enter on native buttons; Home/ArrowRight on native sliders; source-informed routes through every campaign study.",
+        "winActions": 19,
+        "lossActions": 3,
+        "edgeCases": [
+          "All3finite studies completed via real controls",
+          "Natural loss/restart and terminal controls disabled",
+          "Finite Undo/Reset restore rendered state and preserve chapter",
+          "Positive score/personal best and clean Play again",
+          "No page errors; document bounds at desktop/390px/320px",
+          "Mechanic-specific pure regressions separately cover all20ids"
+        ],
+        "optionalMode": {
+          "supported": true,
+          "kind": "challenge-stream",
+          "completedChallenges": 2,
+          "freshChallenges": true,
+          "scoreAccumulated": true,
+          "terminalRecovery": true,
+          "playerEndRun": true,
+          "lateStageProperties": true,
+          "lateStageScope": "24pure-model generation samples including stages17and250; browser coverage plays first2generated challenges then real failure/restart."
+        }
+      },
+      {
+        "id": "shared-secret",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "finiteStudiesCompleted": 3,
+        "restart": true,
+        "touchOnly": true,
+        "inputMethod": "Touchscreen taps on actual native buttons and slider tracks; source-informed routes through every campaign study. Mode setup uses native selectOption.",
+        "winActions": 19,
+        "lossActions": 3,
+        "edgeCases": [
+          "All3finite studies completed via real controls",
+          "Natural loss/restart and terminal controls disabled",
+          "Finite Undo/Reset restore rendered state and preserve chapter",
+          "Positive score/personal best and clean Play again",
+          "No page errors; document bounds at desktop/390px/320px",
+          "Mechanic-specific pure regressions separately cover all20ids"
+        ],
+        "optionalMode": {
+          "supported": true,
+          "kind": "challenge-stream",
+          "completedChallenges": 2,
+          "freshChallenges": true,
+          "scoreAccumulated": true,
+          "terminalRecovery": true,
+          "playerEndRun": true,
+          "lateStageProperties": true,
+          "lateStageScope": "24pure-model generation samples including stages17and250; browser coverage plays first2generated challenges then real failure/restart."
+        }
+      },
+      {
+        "id": "crossed-channel",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "finiteStudiesCompleted": 3,
+        "restart": true,
+        "touchOnly": false,
+        "inputMethod": "Keyboard focus and Enter on native buttons; Home/ArrowRight on native sliders; source-informed routes through every campaign study.",
+        "winActions": 102,
+        "lossActions": 18,
+        "edgeCases": [
+          "All3finite studies completed via real controls",
+          "Natural loss/restart and terminal controls disabled",
+          "Finite Undo/Reset restore rendered state and preserve chapter",
+          "Positive score/personal best and clean Play again",
+          "No page errors; document bounds at desktop/390px/320px",
+          "Mechanic-specific pure regressions separately cover all20ids"
+        ],
+        "optionalMode": {
+          "supported": false
+        }
+      },
+      {
+        "id": "crossed-channel",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "finiteStudiesCompleted": 3,
+        "restart": true,
+        "touchOnly": true,
+        "inputMethod": "Touchscreen taps on actual native buttons and slider tracks; source-informed routes through every campaign study. Mode setup uses native selectOption.",
+        "winActions": 102,
+        "lossActions": 18,
+        "edgeCases": [
+          "All3finite studies completed via real controls",
+          "Natural loss/restart and terminal controls disabled",
+          "Finite Undo/Reset restore rendered state and preserve chapter",
+          "Positive score/personal best and clean Play again",
+          "No page errors; document bounds at desktop/390px/320px",
+          "Mechanic-specific pure regressions separately cover all20ids"
+        ],
+        "optionalMode": {
+          "supported": false
+        }
+      },
+      {
+        "id": "quorum-garden",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "finiteStudiesCompleted": 3,
+        "restart": true,
+        "touchOnly": false,
+        "inputMethod": "Keyboard focus and Enter on native buttons; Home/ArrowRight on native sliders; source-informed routes through every campaign study.",
+        "winActions": 75,
+        "lossActions": 15,
+        "edgeCases": [
+          "All3finite studies completed via real controls",
+          "Natural loss/restart and terminal controls disabled",
+          "Finite Undo/Reset restore rendered state and preserve chapter",
+          "Positive score/personal best and clean Play again",
+          "No page errors; document bounds at desktop/390px/320px",
+          "Mechanic-specific pure regressions separately cover all20ids"
+        ],
+        "optionalMode": {
+          "supported": true,
+          "kind": "challenge-stream",
+          "completedChallenges": 2,
+          "freshChallenges": true,
+          "scoreAccumulated": true,
+          "terminalRecovery": true,
+          "playerEndRun": true,
+          "lateStageProperties": true,
+          "lateStageScope": "24pure-model generation samples including stages17and250; browser coverage plays first2generated challenges then real failure/restart."
+        }
+      },
+      {
+        "id": "quorum-garden",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "finiteStudiesCompleted": 3,
+        "restart": true,
+        "touchOnly": true,
+        "inputMethod": "Touchscreen taps on actual native buttons and slider tracks; source-informed routes through every campaign study. Mode setup uses native selectOption.",
+        "winActions": 75,
+        "lossActions": 15,
+        "edgeCases": [
+          "All3finite studies completed via real controls",
+          "Natural loss/restart and terminal controls disabled",
+          "Finite Undo/Reset restore rendered state and preserve chapter",
+          "Positive score/personal best and clean Play again",
+          "No page errors; document bounds at desktop/390px/320px",
+          "Mechanic-specific pure regressions separately cover all20ids"
+        ],
+        "optionalMode": {
+          "supported": true,
+          "kind": "challenge-stream",
+          "completedChallenges": 2,
+          "freshChallenges": true,
+          "scoreAccumulated": true,
+          "terminalRecovery": true,
+          "playerEndRun": true,
+          "lateStageProperties": true,
+          "lateStageScope": "24pure-model generation samples including stages17and250; browser coverage plays first2generated challenges then real failure/restart."
+        }
+      },
+      {
+        "id": "bound-names",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "finiteStudiesCompleted": 3,
+        "restart": true,
+        "touchOnly": false,
+        "inputMethod": "Keyboard focus and Enter on native buttons; Home/ArrowRight on native sliders; source-informed routes through every campaign study.",
+        "winActions": 12,
+        "lossActions": 1,
+        "edgeCases": [
+          "All3finite studies completed via real controls",
+          "Natural loss/restart and terminal controls disabled",
+          "Finite Undo/Reset restore rendered state and preserve chapter",
+          "Positive score/personal best and clean Play again",
+          "No page errors; document bounds at desktop/390px/320px",
+          "Mechanic-specific pure regressions separately cover all20ids"
+        ],
+        "optionalMode": {
+          "supported": false
+        }
+      },
+      {
+        "id": "bound-names",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "finiteStudiesCompleted": 3,
+        "restart": true,
+        "touchOnly": true,
+        "inputMethod": "Touchscreen taps on actual native buttons and slider tracks; source-informed routes through every campaign study. Mode setup uses native selectOption.",
+        "winActions": 12,
+        "lossActions": 1,
+        "edgeCases": [
+          "All3finite studies completed via real controls",
+          "Natural loss/restart and terminal controls disabled",
+          "Finite Undo/Reset restore rendered state and preserve chapter",
+          "Positive score/personal best and clean Play again",
+          "No page errors; document bounds at desktop/390px/320px",
+          "Mechanic-specific pure regressions separately cover all20ids"
+        ],
+        "optionalMode": {
+          "supported": false
+        }
+      },
+      {
+        "id": "separating-line",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "finiteStudiesCompleted": 3,
+        "restart": true,
+        "touchOnly": false,
+        "inputMethod": "Keyboard focus and Enter on native buttons; Home/ArrowRight on native sliders; source-informed routes through every campaign study.",
+        "winActions": 9,
+        "lossActions": 5,
+        "edgeCases": [
+          "All3finite studies completed via real controls",
+          "Natural loss/restart and terminal controls disabled",
+          "Finite Undo/Reset restore rendered state and preserve chapter",
+          "Positive score/personal best and clean Play again",
+          "No page errors; document bounds at desktop/390px/320px",
+          "Mechanic-specific pure regressions separately cover all20ids"
+        ],
+        "optionalMode": {
+          "supported": true,
+          "kind": "challenge-stream",
+          "completedChallenges": 2,
+          "freshChallenges": true,
+          "scoreAccumulated": true,
+          "terminalRecovery": true,
+          "playerEndRun": true,
+          "lateStageProperties": true,
+          "lateStageScope": "24pure-model generation samples including stages17and250; browser coverage plays first2generated challenges then real failure/restart."
+        }
+      },
+      {
+        "id": "separating-line",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "finiteStudiesCompleted": 3,
+        "restart": true,
+        "touchOnly": true,
+        "inputMethod": "Touchscreen taps on actual native buttons and slider tracks; source-informed routes through every campaign study. Mode setup uses native selectOption.",
+        "winActions": 9,
+        "lossActions": 5,
+        "edgeCases": [
+          "All3finite studies completed via real controls",
+          "Natural loss/restart and terminal controls disabled",
+          "Finite Undo/Reset restore rendered state and preserve chapter",
+          "Positive score/personal best and clean Play again",
+          "No page errors; document bounds at desktop/390px/320px",
+          "Mechanic-specific pure regressions separately cover all20ids"
+        ],
+        "optionalMode": {
+          "supported": true,
+          "kind": "challenge-stream",
+          "completedChallenges": 2,
+          "freshChallenges": true,
+          "scoreAccumulated": true,
+          "terminalRecovery": true,
+          "playerEndRun": true,
+          "lateStageProperties": true,
+          "lateStageScope": "24pure-model generation samples including stages17and250; browser coverage plays first2generated challenges then real failure/restart."
+        }
+      },
+      {
+        "id": "hall-window",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "finiteStudiesCompleted": 3,
+        "restart": true,
+        "touchOnly": false,
+        "inputMethod": "Keyboard focus and Enter on native buttons; Home/ArrowRight on native sliders; source-informed routes through every campaign study.",
+        "winActions": 12,
+        "lossActions": 4,
+        "edgeCases": [
+          "All3finite studies completed via real controls",
+          "Natural loss/restart and terminal controls disabled",
+          "Finite Undo/Reset restore rendered state and preserve chapter",
+          "Positive score/personal best and clean Play again",
+          "No page errors; document bounds at desktop/390px/320px",
+          "Mechanic-specific pure regressions separately cover all20ids"
+        ],
+        "optionalMode": {
+          "supported": true,
+          "kind": "challenge-stream",
+          "completedChallenges": 2,
+          "freshChallenges": true,
+          "scoreAccumulated": true,
+          "terminalRecovery": true,
+          "playerEndRun": true,
+          "lateStageProperties": true,
+          "lateStageScope": "24pure-model generation samples including stages17and250; browser coverage plays first2generated challenges then real failure/restart."
+        }
+      },
+      {
+        "id": "hall-window",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "finiteStudiesCompleted": 3,
+        "restart": true,
+        "touchOnly": true,
+        "inputMethod": "Touchscreen taps on actual native buttons and slider tracks; source-informed routes through every campaign study. Mode setup uses native selectOption.",
+        "winActions": 12,
+        "lossActions": 4,
+        "edgeCases": [
+          "All3finite studies completed via real controls",
+          "Natural loss/restart and terminal controls disabled",
+          "Finite Undo/Reset restore rendered state and preserve chapter",
+          "Positive score/personal best and clean Play again",
+          "No page errors; document bounds at desktop/390px/320px",
+          "Mechanic-specific pure regressions separately cover all20ids"
+        ],
+        "optionalMode": {
+          "supported": true,
+          "kind": "challenge-stream",
+          "completedChallenges": 2,
+          "freshChallenges": true,
+          "scoreAccumulated": true,
+          "terminalRecovery": true,
+          "playerEndRun": true,
+          "lateStageProperties": true,
+          "lateStageScope": "24pure-model generation samples including stages17and250; browser coverage plays first2generated challenges then real failure/restart."
+        }
+      },
+      {
+        "id": "empty-language",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "finiteStudiesCompleted": 3,
+        "restart": true,
+        "touchOnly": false,
+        "inputMethod": "Keyboard focus and Enter on native buttons; Home/ArrowRight on native sliders; source-informed routes through every campaign study.",
+        "winActions": 16,
+        "lossActions": 4,
+        "edgeCases": [
+          "All3finite studies completed via real controls",
+          "Natural loss/restart and terminal controls disabled",
+          "Finite Undo/Reset restore rendered state and preserve chapter",
+          "Positive score/personal best and clean Play again",
+          "No page errors; document bounds at desktop/390px/320px",
+          "Mechanic-specific pure regressions separately cover all20ids"
+        ],
+        "optionalMode": {
+          "supported": false
+        }
+      },
+      {
+        "id": "empty-language",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "finiteStudiesCompleted": 3,
+        "restart": true,
+        "touchOnly": true,
+        "inputMethod": "Touchscreen taps on actual native buttons and slider tracks; source-informed routes through every campaign study. Mode setup uses native selectOption.",
+        "winActions": 16,
+        "lossActions": 4,
+        "edgeCases": [
+          "All3finite studies completed via real controls",
+          "Natural loss/restart and terminal controls disabled",
+          "Finite Undo/Reset restore rendered state and preserve chapter",
+          "Positive score/personal best and clean Play again",
+          "No page errors; document bounds at desktop/390px/320px",
+          "Mechanic-specific pure regressions separately cover all20ids"
+        ],
+        "optionalMode": {
+          "supported": false
+        }
+      },
+      {
+        "id": "credit-method",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "finiteStudiesCompleted": 3,
+        "restart": true,
+        "touchOnly": false,
+        "inputMethod": "Keyboard focus and Enter on native buttons; Home/ArrowRight on native sliders; source-informed routes through every campaign study.",
+        "winActions": 41,
+        "lossActions": 5,
+        "edgeCases": [
+          "All3finite studies completed via real controls",
+          "Natural loss/restart and terminal controls disabled",
+          "Finite Undo/Reset restore rendered state and preserve chapter",
+          "Positive score/personal best and clean Play again",
+          "No page errors; document bounds at desktop/390px/320px",
+          "Mechanic-specific pure regressions separately cover all20ids"
+        ],
+        "optionalMode": {
+          "supported": true,
+          "kind": "challenge-stream",
+          "completedChallenges": 2,
+          "freshChallenges": true,
+          "scoreAccumulated": true,
+          "terminalRecovery": true,
+          "playerEndRun": true,
+          "lateStageProperties": true,
+          "lateStageScope": "24pure-model generation samples including stages17and250; browser coverage plays first2generated challenges then real failure/restart."
+        }
+      },
+      {
+        "id": "credit-method",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "finiteStudiesCompleted": 3,
+        "restart": true,
+        "touchOnly": true,
+        "inputMethod": "Touchscreen taps on actual native buttons and slider tracks; source-informed routes through every campaign study. Mode setup uses native selectOption.",
+        "winActions": 41,
+        "lossActions": 5,
+        "edgeCases": [
+          "All3finite studies completed via real controls",
+          "Natural loss/restart and terminal controls disabled",
+          "Finite Undo/Reset restore rendered state and preserve chapter",
+          "Positive score/personal best and clean Play again",
+          "No page errors; document bounds at desktop/390px/320px",
+          "Mechanic-specific pure regressions separately cover all20ids"
+        ],
+        "optionalMode": {
+          "supported": true,
+          "kind": "challenge-stream",
+          "completedChallenges": 2,
+          "freshChallenges": true,
+          "scoreAccumulated": true,
+          "terminalRecovery": true,
+          "playerEndRun": true,
+          "lateStageProperties": true,
+          "lateStageScope": "24pure-model generation samples including stages17and250; browser coverage plays first2generated challenges then real failure/restart."
+        }
+      },
+      {
+        "id": "interval-post",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "finiteStudiesCompleted": 3,
+        "restart": true,
+        "touchOnly": false,
+        "inputMethod": "Keyboard focus and Enter on native buttons; Home/ArrowRight on native sliders; source-informed routes through every campaign study.",
+        "winActions": 30,
+        "lossActions": 1,
+        "edgeCases": [
+          "All3finite studies completed via real controls",
+          "Natural loss/restart and terminal controls disabled",
+          "Finite Undo/Reset restore rendered state and preserve chapter",
+          "Positive score/personal best and clean Play again",
+          "No page errors; document bounds at desktop/390px/320px",
+          "Mechanic-specific pure regressions separately cover all20ids"
+        ],
+        "optionalMode": {
+          "supported": true,
+          "kind": "challenge-stream",
+          "completedChallenges": 2,
+          "freshChallenges": true,
+          "scoreAccumulated": true,
+          "terminalRecovery": true,
+          "playerEndRun": true,
+          "lateStageProperties": true,
+          "lateStageScope": "24pure-model generation samples including stages17and250; browser coverage plays first2generated challenges then real failure/restart."
+        }
+      },
+      {
+        "id": "interval-post",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "finiteStudiesCompleted": 3,
+        "restart": true,
+        "touchOnly": true,
+        "inputMethod": "Touchscreen taps on actual native buttons and slider tracks; source-informed routes through every campaign study. Mode setup uses native selectOption.",
+        "winActions": 30,
+        "lossActions": 1,
+        "edgeCases": [
+          "All3finite studies completed via real controls",
+          "Natural loss/restart and terminal controls disabled",
+          "Finite Undo/Reset restore rendered state and preserve chapter",
+          "Positive score/personal best and clean Play again",
+          "No page errors; document bounds at desktop/390px/320px",
+          "Mechanic-specific pure regressions separately cover all20ids"
+        ],
+        "optionalMode": {
+          "supported": true,
+          "kind": "challenge-stream",
+          "completedChallenges": 2,
+          "freshChallenges": true,
+          "scoreAccumulated": true,
+          "terminalRecovery": true,
+          "playerEndRun": true,
+          "lateStageProperties": true,
+          "lateStageScope": "24pure-model generation samples including stages17and250; browser coverage plays first2generated challenges then real failure/restart."
+        }
+      },
+      {
+        "id": "pruning-room",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "finiteStudiesCompleted": 3,
+        "restart": true,
+        "touchOnly": false,
+        "inputMethod": "Keyboard focus and Enter on native buttons; Home/ArrowRight on native sliders; source-informed routes through every campaign study.",
+        "winActions": 25,
+        "lossActions": 5,
+        "edgeCases": [
+          "All3finite studies completed via real controls",
+          "Natural loss/restart and terminal controls disabled",
+          "Finite Undo/Reset restore rendered state and preserve chapter",
+          "Positive score/personal best and clean Play again",
+          "No page errors; document bounds at desktop/390px/320px",
+          "Mechanic-specific pure regressions separately cover all20ids"
+        ],
+        "optionalMode": {
+          "supported": true,
+          "kind": "challenge-stream",
+          "completedChallenges": 2,
+          "freshChallenges": true,
+          "scoreAccumulated": true,
+          "terminalRecovery": true,
+          "playerEndRun": true,
+          "lateStageProperties": true,
+          "lateStageScope": "24pure-model generation samples including stages17and250; browser coverage plays first2generated challenges then real failure/restart."
+        }
+      },
+      {
+        "id": "pruning-room",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "finiteStudiesCompleted": 3,
+        "restart": true,
+        "touchOnly": true,
+        "inputMethod": "Touchscreen taps on actual native buttons and slider tracks; source-informed routes through every campaign study. Mode setup uses native selectOption.",
+        "winActions": 25,
+        "lossActions": 5,
+        "edgeCases": [
+          "All3finite studies completed via real controls",
+          "Natural loss/restart and terminal controls disabled",
+          "Finite Undo/Reset restore rendered state and preserve chapter",
+          "Positive score/personal best and clean Play again",
+          "No page errors; document bounds at desktop/390px/320px",
+          "Mechanic-specific pure regressions separately cover all20ids"
+        ],
+        "optionalMode": {
+          "supported": true,
+          "kind": "challenge-stream",
+          "completedChallenges": 2,
+          "freshChallenges": true,
+          "scoreAccumulated": true,
+          "terminalRecovery": true,
+          "playerEndRun": true,
+          "lateStageProperties": true,
+          "lateStageScope": "24pure-model generation samples including stages17and250; browser coverage plays first2generated challenges then real failure/restart."
+        }
+      },
+      {
+        "id": "privacy-dials",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "finiteStudiesCompleted": 3,
+        "restart": true,
+        "touchOnly": false,
+        "inputMethod": "Keyboard focus and Enter on native buttons; Home/ArrowRight on native sliders; source-informed routes through every campaign study.",
+        "winActions": 63,
+        "lossActions": 15,
+        "edgeCases": [
+          "All3finite studies completed via real controls",
+          "Natural loss/restart and terminal controls disabled",
+          "Finite Undo/Reset restore rendered state and preserve chapter",
+          "Positive score/personal best and clean Play again",
+          "No page errors; document bounds at desktop/390px/320px",
+          "Mechanic-specific pure regressions separately cover all20ids"
+        ],
+        "optionalMode": {
+          "supported": false
+        }
+      },
+      {
+        "id": "privacy-dials",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "finiteStudiesCompleted": 3,
+        "restart": true,
+        "touchOnly": true,
+        "inputMethod": "Touchscreen taps on actual native buttons and slider tracks; source-informed routes through every campaign study. Mode setup uses native selectOption.",
+        "winActions": 63,
+        "lossActions": 15,
+        "edgeCases": [
+          "All3finite studies completed via real controls",
+          "Natural loss/restart and terminal controls disabled",
+          "Finite Undo/Reset restore rendered state and preserve chapter",
+          "Positive score/personal best and clean Play again",
+          "No page errors; document bounds at desktop/390px/320px",
+          "Mechanic-specific pure regressions separately cover all20ids"
+        ],
+        "optionalMode": {
+          "supported": false
+        }
+      },
+      {
+        "id": "divisor-house",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "finiteStudiesCompleted": 3,
+        "restart": true,
+        "touchOnly": false,
+        "inputMethod": "Keyboard focus and Enter on native buttons; Home/ArrowRight on native sliders; source-informed routes through every campaign study.",
+        "winActions": 21,
+        "lossActions": 9,
+        "edgeCases": [
+          "All3finite studies completed via real controls",
+          "Natural loss/restart and terminal controls disabled",
+          "Finite Undo/Reset restore rendered state and preserve chapter",
+          "Positive score/personal best and clean Play again",
+          "No page errors; document bounds at desktop/390px/320px",
+          "Mechanic-specific pure regressions separately cover all20ids"
+        ],
+        "optionalMode": {
+          "supported": true,
+          "kind": "challenge-stream",
+          "completedChallenges": 2,
+          "freshChallenges": true,
+          "scoreAccumulated": true,
+          "terminalRecovery": true,
+          "playerEndRun": true,
+          "lateStageProperties": true,
+          "lateStageScope": "24pure-model generation samples including stages17and250; browser coverage plays first2generated challenges then real failure/restart."
+        }
+      },
+      {
+        "id": "divisor-house",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "finiteStudiesCompleted": 3,
+        "restart": true,
+        "touchOnly": true,
+        "inputMethod": "Touchscreen taps on actual native buttons and slider tracks; source-informed routes through every campaign study. Mode setup uses native selectOption.",
+        "winActions": 21,
+        "lossActions": 9,
+        "edgeCases": [
+          "All3finite studies completed via real controls",
+          "Natural loss/restart and terminal controls disabled",
+          "Finite Undo/Reset restore rendered state and preserve chapter",
+          "Positive score/personal best and clean Play again",
+          "No page errors; document bounds at desktop/390px/320px",
+          "Mechanic-specific pure regressions separately cover all20ids"
+        ],
+        "optionalMode": {
+          "supported": true,
+          "kind": "challenge-stream",
+          "completedChallenges": 2,
+          "freshChallenges": true,
+          "scoreAccumulated": true,
+          "terminalRecovery": true,
+          "playerEndRun": true,
+          "lateStageProperties": true,
+          "lateStageScope": "24pure-model generation samples including stages17and250; browser coverage plays first2generated challenges then real failure/restart."
+        }
+      }
+    ]
+  },
+  "finishedAt": "2026-10-02T20:19:55.998Z"
+}

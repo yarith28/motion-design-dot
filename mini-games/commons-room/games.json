@@ -1,0 +1,825 @@
+[
+  {
+    "id": "tide-and-retreat",
+    "name": "Tide and Retreat",
+    "category": "strategy",
+    "url": "commons-room/?game=tide-and-retreat",
+    "mechanic": "Move along connected intersections and choose approach or withdrawal to capture the contiguous enemy line in front of or behind the mover; a capture chain cannot revisit an intersection or repeat its preceding direction.",
+    "description": "Move along connected intersections and choose approach or withdrawal to capture the contiguous enemy line in front of or behind the mover; a capture chain cannot revisit an intersection or repeat its preceding direction.",
+    "rules": [
+      "Select a friendly pawn. If any capture exists, a capture is compulsory. Diagonal edges are available only at intersections whose row-plus-column parity is even.",
+      "Move one intersection to sweep a contiguous enemy line either ahead (approach) or behind (withdrawal). A capture chain uses the same pawn, never revisits an intersection and changes its preceding direction. You may finish a continuation early.",
+      "Capture every enemy pawn to win. Elimination or no legal friendly move loses. After 48 full turns material decides; equal material favors the defending house. Complete three positions; Reset retries a position and Restart begins the campaign."
+    ],
+    "controls": "Tap labeled native controls, or Tab then Enter/Space. No dragging or keyboard-only action. Undo and Reset are available in finite campaigns; Restart begins a fresh run.",
+    "accent": "#c8d5a8",
+    "symbol": "\u2667",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "design": "A won capture match opens a newly seeded 5\u00d75 position with 6\u20138 friendly pawns and one fewer rival pawn, varied placements, and seeded rival tie choices. Pawns and chain histories reset each match; completed match scores bank until defeat.",
+      "difficultyCap": "Board 5\u00d75;48-turn settlement;6\u20138 friendly starting pawns; fixed bounded tactical reply policy.",
+      "kind": "match-series"
+    },
+    "nearestExisting": [
+      {
+        "id": "draught-garden",
+        "difference": "No jump-over capture, promotion or diagonal checker lanes: one adjacent move can sweep a whole line on either side, and chain-direction/history constraints change continuations."
+      }
+    ],
+    "source": [
+      "commons-room/opposed-boards.mjs",
+      "commons-room/core.mjs",
+      "commons-room/engines.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board button:not(:disabled)"
+    }
+  },
+  {
+    "id": "spore-council",
+    "name": "Spore Council",
+    "category": "strategy",
+    "url": "commons-room/?game=spore-council",
+    "mechanic": "Clone to an adjacent square or jump two squares leaving the source empty; every adjacent enemy around the landing becomes yours. Cloning grows material but may expose a conversion cluster.",
+    "description": "Clone to an adjacent square or jump two squares leaving the source empty; every adjacent enemy around the landing becomes yours. Cloning grows material but may expose a conversion cluster.",
+    "rules": [
+      "Select a friendly colony and an empty landing. A one-square Chebyshev move clones it; a two-square move jumps and empties the source. Rocks cannot be used.",
+      "Every enemy touching the landing in any of eight directions becomes friendly. A side without a landing passes; the game ends when neither can move, one side is eliminated or 60 full turns expire.",
+      "Finish with more living pieces than the house; an equal count holds its defense. Complete three boards. Reset restores the current board; Restart begins all three."
+    ],
+    "controls": "Tap labeled native controls, or Tab then Enter/Space. No dragging or keyboard-only action. Undo and Reset are available in finite campaigns; Restart begins a fresh run.",
+    "accent": "#c8d5a8",
+    "symbol": "\u2667",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "design": "A won colony match opens a new 5\u00d75 field with freshly seeded 1\u20134 rocks among interior squares. Both sides restart with five pawns on their opposing home rows. Match results remain visible before continuing; accumulated scores end on defeat.",
+      "difficultyCap": "Board 5\u00d75;1\u20134 interior rocks;60-turn settlement; fixed bounded two-step rival evaluation.",
+      "kind": "match-series"
+    },
+    "nearestExisting": [
+      {
+        "id": "reversi",
+        "difference": "Moves originate from existing pieces, with an irreversible clone-versus-jump choice; conversion touches all eight neighbors and never requires bracketed rays."
+      }
+    ],
+    "source": [
+      "commons-room/opposed-boards.mjs",
+      "commons-room/core.mjs",
+      "commons-room/engines.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board button:not(:disabled)"
+    }
+  },
+  {
+    "id": "shared-comet",
+    "name": "Shared Comet",
+    "category": "strategy",
+    "url": "commons-room/?game=shared-comet",
+    "mechanic": "First slide the shared neutral comet as far as possible along a clear ray, then slide one of your blockers; plan where the opponent will be forced to send that same comet.",
+    "description": "First slide the shared neutral comet as far as possible along a clear ray, then slide one of your blockers; plan where the opponent will be forced to send that same comet.",
+    "rules": [
+      "Slide the shared comet to the furthest empty endpoint of a row, column or diagonal. Then select and similarly slide one of your friendly blockers. You must complete both actions.",
+      "The bottom edge wins for you and the top edge wins for the house, even if the other player moved the comet there. A complete turn trapping the comet wins; a comet move leaving no friendly blocker move loses.",
+      "Win three different blocker formations. The house holds a40-turn defensive deadline. Reset retries this formation; Restart begins the whole campaign."
+    ],
+    "controls": "Tap labeled native controls, or Tab then Enter/Space. No dragging or keyboard-only action. Undo and Reset are available in finite campaigns; Restart begins a fresh run.",
+    "accent": "#c8d5a8",
+    "symbol": "\u2667",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "design": "A won comet match opens a new seeded blocker arrangement: one blocker from each home row moves forward, and the center is selected to exclude an immediate home-edge slide. Blockers and turn counters reset while completed-match score accumulates.",
+      "difficultyCap": "Board 5\u00d75;40-turn deadline; fixed number of blockers and bounded rival turn evaluation.",
+      "kind": "match-series"
+    },
+    "nearestExisting": [
+      {
+        "id": "siege",
+        "difference": "A shared compulsory neutral piece determines immediate home-edge victories; blockers move without permanently closing squares or shooting arrows."
+      }
+    ],
+    "source": [
+      "commons-room/opposed-boards.mjs",
+      "commons-room/core.mjs",
+      "commons-room/engines.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board button:not(:disabled)"
+    }
+  },
+  {
+    "id": "socket-skirmish",
+    "name": "Socket Skirmish",
+    "category": "strategy",
+    "url": "commons-room/?game=socket-skirmish",
+    "mechanic": "Spend a turn fitting a directional movement pod to a piece or execute a straight jump using one of its installed directions; jumped opposing pieces and their pods become captured reserves.",
+    "description": "Spend a turn fitting a directional movement pod to a piece or execute a straight jump using one of its installed directions; jumped opposing pieces and their pods become captured reserves.",
+    "rules": [
+      "Each pawn has its own installed compass directions. An installed direction permits one step to an empty square or a jump over an adjacent enemy into the next empty square.",
+      "A capture recycles the captured pawn\u2019s pods into your finite reserve. Installing one unused direction spends a full turn. Enter the enemy home or capture its last pawn to win.",
+      "Protect your home and keep legal moves or installation options. Forty full turns decide by material, with ties favoring the house. Complete three studies; Reset and Restart preserve their usual scope."
+    ],
+    "controls": "Tap labeled native controls, or Tab then Enter/Space. No dragging or keyboard-only action. Undo and Reset are available in finite campaigns; Restart begins a fresh run.",
+    "accent": "#c8d5a8",
+    "symbol": "\u2667",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "design": "Each won match is followed by new seeded pawn positions and home squares on the same 5\u00d75 field. The fixed 6/5 spare-pod budgets and initial hardware families reset for each match; installed directions and captured hardware do not carry between matches.",
+      "difficultyCap": "Board 5\u00d75;three starting pawns per side;40-turn settlement; eight possible directions per pawn.",
+      "kind": "match-series"
+    },
+    "nearestExisting": [
+      {
+        "id": "borrowed-steps",
+        "difference": "Movement permissions are persistent player-built directions attached to individual pieces, purchased using finite pods; no exchanged communal movement cards."
+      },
+      {
+        "id": "returned-banner",
+        "difference": "Capture recycles movement hardware, while opponent pieces remain captured and cannot be redeployed as units."
+      }
+    ],
+    "source": [
+      "commons-room/opposed-boards.mjs",
+      "commons-room/core.mjs",
+      "commons-room/engines.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board button:not(:disabled)"
+    }
+  },
+  {
+    "id": "cannon-council",
+    "name": "Cannon Council",
+    "category": "strategy",
+    "url": "commons-room/?game=cannon-council",
+    "mechanic": "Three aligned soldiers form a cannon. Reposition the formation by shifting its rear soldier to the front, or bombard beyond an empty muzzle gap; ordinary soldiers fight at short range.",
+    "description": "Three aligned soldiers form a cannon. Reposition the formation by shifting its rear soldier to the front, or bombard beyond an empty muzzle gap; ordinary soldiers fight at short range.",
+    "rules": [
+      "A soldier steps forward or diagonally forward into an empty or enemy square; it may also capture an enemy soldier immediately to its left or right. Towns are stationary.",
+      "Three consecutive friendly soldiers form a cannon along any compass line. Shift the rear soldier beyond the front, or bombard an enemy two or three squares beyond the front, with an empty muzzle square and no intervening blocker.",
+      "Destroy the rival town or last soldier before losing your own. Forty turns settle by material with house-favored ties. Win three positions; Reset retries one and Restart begins all three."
+    ],
+    "controls": "Tap labeled native controls, or Tab then Enter/Space. No dragging or keyboard-only action. Undo and Reset are available in finite campaigns; Restart begins a fresh run.",
+    "accent": "#c8d5a8",
+    "symbol": "\u2667",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "design": "Each won battle opens newly seeded six-versus-five soldier positions around the same two fixed towns. Formations evolve through play, then reset for the next match; victories bank score and a defeat ends the series.",
+      "difficultyCap": "Board 5\u00d75;fixed towns C5/C1;40-turn settlement; bounded tactical opponent.",
+      "kind": "match-series"
+    },
+    "nearestExisting": [
+      {
+        "id": "crossfire-courtyard",
+        "difference": "Attack range and legal translation arise from an emergent aligned three-piece formation, with no action-point pool, directional cover, suppression, or overwatch."
+      }
+    ],
+    "source": [
+      "commons-room/opposed-boards.mjs",
+      "commons-room/core.mjs",
+      "commons-room/engines.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board button:not(:disabled)"
+    }
+  },
+  {
+    "id": "bloom-cauldron",
+    "name": "Bloom Cauldron",
+    "category": "strategy",
+    "url": "commons-room/?game=bloom-cauldron",
+    "mechanic": "Build a persistent bag of ingredients, then draw without replacement into a growing pot; colored ingredients multiply earlier colors, while too many white hazards spoil the batch. Stop drawing before buying improvements.",
+    "description": "Build a persistent bag of ingredients, then draw without replacement into a growing pot; colored ingredients multiply earlier colors, while too many white hazards spoil the batch. Stop drawing before buying improvements.",
+    "rules": [
+      "The bag starts with four white hazards, two greens, one red and one blue. Draw without replacement: whites add 1, greens 2, blues 3 and reds 2 plus up to 3 earlier greens. Four whites spill the batch and cost 6. A blue directly after another blue earns one additional coin of pot value.",
+      "Bottle after at least one colored draw. A completed public recipe adds 3 coins, or 4 for a blue pair. After each market buy one permanent ingredient, remove one white for 6, or keep the coins. The white minimum is 2.",
+      "Across three markets reach the shown treasury target and bottle at least two solvent batches. Bankruptcy loses immediately. Win three brewing studies; Reset repeats the current seeded study and Restart the campaign."
+    ],
+    "controls": "Tap labeled native controls, or Tab then Enter/Space. No dragging or keyboard-only action. Undo and Reset are available in finite campaigns; Restart begins a fresh run.",
+    "accent": "#c8d5a8",
+    "symbol": "\u2667",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "design": "New seeded three-market brewing studies shuffle fresh bag orders and choose one of three public recipes. Bag purchases persist across that study\u2019s markets, then a new study starts from the initial bag; completed-study scores bank until a lost study.",
+      "difficultyCap": "Eight-ingredient initial bag;three markets per study; treasury quota rises only through study 3 and then caps 34.",
+      "kind": "challenge-stream"
+    },
+    "nearestExisting": [
+      {
+        "id": "second-shuffle",
+        "difference": "No hand/action/treasure deck loop: a pot accumulates spatial position and interactions as a bag is exhausted; stopping trades expected gain against a hazard threshold, and purchases alter future draw probabilities."
+      },
+      {
+        "id": "bank-the-roll",
+        "difference": "Player changes the probability distribution permanently and resolves color-combination effects; no memoryless single-die repeated wager."
+      }
+    ],
+    "source": [
+      "commons-room/market-games.mjs",
+      "commons-room/core.mjs",
+      "commons-room/engines.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board button:not(:disabled)"
+    }
+  },
+  {
+    "id": "three-fronts",
+    "name": "Three Fronts",
+    "category": "strategy",
+    "url": "commons-room/?game=three-fronts",
+    "mechanic": "Allocate one finite force simultaneously across three independently valued battlefields; concentration wins locally but concedes others, and rival allocations adapt to your revealed previous pattern.",
+    "description": "Allocate one finite force simultaneously across three independently valued battlefields; concentration wins locally but concedes others, and rival allocations adapt to your revealed previous pattern.",
+    "rules": [
+      "Partition every available force unit among three simultaneous valued fields. A greater local deployment wins that field\u2019s value; equal deployments give neither side points.",
+      "The rival uses its shown counter, avoidance or rotating response to your PRECEDING deployment. Orders for the current round remain concealed until you lock yours. Each unit belongs to exactly one field.",
+      "Win more field points after five deployments; a tied match holds the house defense. Complete three matches. Reset and Restart restore force, history and scores."
+    ],
+    "controls": "Tap labeled native controls, or Tab then Enter/Space. No dragging or keyboard-only action. Undo and Reset are available in finite campaigns; Restart begins a fresh run.",
+    "accent": "#c8d5a8",
+    "symbol": "\u2667",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "design": "Five-round matches settle and show their results. A win opens a newly seeded match with changed field values and one of three public rival response classes. Allocations and match points reset, while completed-match scores bank until a match loss.",
+      "difficultyCap": "Three fields;force budget caps 11;five rounds; rival policies use only the preceding deployment.",
+      "kind": "match-series"
+    },
+    "nearestExisting": [
+      {
+        "id": "sealed-bids",
+        "difference": "Each decision partitions a total budget across simultaneous multiple contests; there is no one-use ranked card for one sequential prize."
+      },
+      {
+        "id": "convoy-ledger",
+        "difference": "Opponent optimizes competing deployment under the same force conservation, without voyage schedules, escorts, cargo packing or permanent casualties."
+      }
+    ],
+    "source": [
+      "commons-room/market-games.mjs",
+      "commons-room/core.mjs",
+      "commons-room/engines.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board button:not(:disabled)"
+    }
+  },
+  {
+    "id": "package-yard",
+    "name": "Package Yard",
+    "category": "strategy",
+    "url": "commons-room/?game=package-yard",
+    "mechanic": "Submit mutually exclusive bids for complementary bundles of lots; the clearing auction selects a disjoint collection of bids maximizing revenue, so winning one desired lot can block a higher-value package.",
+    "description": "Submit mutually exclusive bids for complementary bundles of lots; the clearing auction selects a disjoint collection of bids maximizing revenue, so winning one desired lot can block a higher-value package.",
+    "rules": [
+      "Include any number of package offers, each with a bid up to 22. Your offers are mutually exclusive: at most one can be awarded, while compatible house packages may coexist.",
+      "Clearing chooses a set with no overlapping lots that maximizes total bid revenue. Older house offers win equal-revenue ties. Your utility is the awarded package\u2019s public contract value minus your own bid.",
+      "Meet the accumulated utility target over three auctions. Win three independent studies; Reset clears one study and Restart begins the campaign."
+    ],
+    "controls": "Tap labeled native controls, or Tab then Enter/Space. No dragging or keyboard-only action. Undo and Reset are available in finite campaigns; Restart begins a fresh run.",
+    "accent": "#c8d5a8",
+    "symbol": "\u2667",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "design": "Each study contains three freshly seeded competing package-bid books and a shuffled order of the same six contract options. Six lots, contract values and exclusive-offer rules remain fixed; auction books change rather than wrapping authored studies.",
+      "difficultyCap": "Six lots;at most eleven candidate offers;three auctions; utility quota caps 10.",
+      "kind": "challenge-stream"
+    },
+    "nearestExisting": [
+      {
+        "id": "sealed-bids",
+        "difference": "Overlapping multi-lot packages, complementarity, and exclusive bid sets require combinatorial market clearing; individual high-card comparison cannot resolve allocations."
+      },
+      {
+        "id": "decimal-market",
+        "difference": "Prices and allocations emerge competitively from a bid book instead of buying at fixed posted item prices."
+      }
+    ],
+    "source": [
+      "commons-room/market-games.mjs",
+      "commons-room/core.mjs",
+      "commons-room/engines.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"more\"]"
+    }
+  },
+  {
+    "id": "falling-hammer",
+    "name": "Falling Hammer",
+    "category": "strategy",
+    "url": "commons-room/?game=falling-hammer",
+    "mechanic": "Wait as a Dutch auction clock lowers its price, or stop it now before a rival with a behavioral reservation policy takes the lot; preserve liquidity for later complementary objects.",
+    "description": "Wait as a Dutch auction clock lowers its price, or stop it now before a rival with a behavioral reservation policy takes the lot; preserve liquidity for later complementary objects.",
+    "rules": [
+      "Every lot opens at price 12. Stop to buy at the displayed price or wait one tick. Waiting lowers the price 1, then lets the rival stop if its seeded private reservation is reached.",
+      "All lot values and reservation ranges are public. Purchases spend your finite 24 coins, preventing double use on later lots. A collection containing amber and teal earns a closing bonus 8.",
+      "After four lots meet cash plus printed collection values plus the two-color bonus target. Complete three auctions; Reset repeats the current seeded clock order and Restart begins all three."
+    ],
+    "controls": "Tap labeled native controls, or Tab then Enter/Space. No dragging or keyboard-only action. Undo and Reset are available in finite campaigns; Restart begins a fresh run.",
+    "accent": "#c8d5a8",
+    "symbol": "\u2667",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "design": "Each new four-lot study seeds lot order, printed values 10\u201314 and private rival reservations inside the public 3\u20137 ranges. The amber/teal bonus remains fixed 8. Cash and collection reset after a won study; banked score persists until failure.",
+      "difficultyCap": "Four lots;clock 12 descending by 1;starting cash 24; target caps 40.",
+      "kind": "challenge-stream"
+    },
+    "nearestExisting": [
+      {
+        "id": "sealed-bids",
+        "difference": "Timing against a descending price clock, public valuation intervals and irreversible stop decisions replace simultaneous sealed rank bids."
+      },
+      {
+        "id": "trade",
+        "difference": "The player chooses the purchase stopping time, an opponent can preempt, and object-specific complementary value replaces a public commodity calendar."
+      }
+    ],
+    "source": [
+      "commons-room/market-games.mjs",
+      "commons-room/core.mjs",
+      "commons-room/engines.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board button:not(:disabled)"
+    }
+  },
+  {
+    "id": "orderbook-wharf",
+    "name": "Orderbook Wharf",
+    "category": "strategy",
+    "url": "commons-room/?game=orderbook-wharf",
+    "mechanic": "Post buy or sell limit orders at chosen prices, compete for time-priority fills, cancel scarce orders, and decide whether to cross the spread before future demand arrives.",
+    "description": "Post buy or sell limit orders at chosen prices, compete for time-priority fills, cancel scarce orders, and decide whether to cross the spread before future demand arrives.",
+    "rules": [
+      "Choose buy or sell, a limit price 1\u201310 and quantity 1\u20133. Up to three personal live orders reserve their cash or stock; cancel to release that reserve.",
+      "Advance the announced taker pulse. Best prices fill first, then earlier timestamps. A house quote one step inside the taker limit competes for fills; unfilled quantities remain live.",
+      "After six pulses deliver three units at 8 each and retain the cash target. Extra unsold stock has no payout. Complete three market studies; Reset clears one and Restart all."
+    ],
+    "controls": "Tap labeled native controls, or Tab then Enter/Space. No dragging or keyboard-only action. Undo and Reset are available in finite campaigns; Restart begins a fresh run.",
+    "accent": "#c8d5a8",
+    "symbol": "\u2667",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "design": "Each new market seeds six taker limit prices around the fixed buy/sell and quantity schedule. Competing house quotes follow those limits. The three-unit delivery obligation and initial cash remain fixed; live orders reset for a new study.",
+      "difficultyCap": "Six pulses;three personal live orders;quantity 1\u20133;limit prices 1\u201310;cash goal caps 20.",
+      "kind": "challenge-stream"
+    },
+    "nearestExisting": [
+      {
+        "id": "trade",
+        "difference": "No automatic execution at one public day's price: price-time priority and player-selected limit prices determine whether an order fills and how inventory exposure persists."
+      },
+      {
+        "id": "market-of-five",
+        "difference": "Orders trade homogeneous units against a bid/ask book, rather than exchanging set-collection cards from a replenishing market."
+      }
+    ],
+    "source": [
+      "commons-room/market-games.mjs",
+      "commons-room/core.mjs",
+      "commons-room/engines.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"post\"]"
+    }
+  },
+  {
+    "id": "many-hands",
+    "name": "Many Hands",
+    "category": "strategy",
+    "url": "commons-room/?game=many-hands",
+    "mechanic": "Contribute part of a personal budget to a threshold public project, pledge conditional matching to change other contributors' incentives, or reserve funds; project benefits are shared even by noncontributors.",
+    "description": "Contribute part of a personal budget to a threshold public project, pledge conditional matching to change other contributors' incentives, or reserve funds; project benefits are shared even by noncontributors.",
+    "rules": [
+      "Choose a direct contribution 0\u20136 and a matching cap 0\u20133. In finite campaigns rival A gives 3 if your direct commitment is at least 2, otherwise 1; rival B gives 3 if your matching cap is at least 2, otherwise 1. Generated studies display their seeded response amounts. Each has a finite reserve.",
+      "Your matching equals the smaller of your cap and rivals\u2019 combined contributions. Meet each threshold; success pays the displayed shared benefit (3 in finite campaigns). Failed contributions either refund or remain spent, as explicitly shown.",
+      "Fund all three projects and retain your private-reserve floor. Complete three communities with distinct thresholds/refund rules. Reset retries a community and Restart begins all three."
+    ],
+    "controls": "Tap labeled native controls, or Tab then Enter/Space. No dragging or keyboard-only action. Undo and Reset are available in finite campaigns; Restart begins a fresh run.",
+    "accent": "#c8d5a8",
+    "symbol": "\u2667",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "design": "Each new community seeds project thresholds, treasury, rival matching-response amounts and budgets, and shared benefits. Contributors\u2019 responses remain public and deterministic; reserves reset between communities, while successful-study score banks.",
+      "difficultyCap": "Three projects;direct contribution 0\u20136;matching cap 0\u20133;reserve floor caps 10.",
+      "kind": "challenge-stream"
+    },
+    "nearestExisting": [
+      {
+        "id": "quiet-majority",
+        "difference": "Actors spend their own scarce funds on a threshold contribution game with conditional matching and refund rules; there are no council seat weights, policies or bought approval."
+      }
+    ],
+    "source": [
+      "commons-room/collective-games.mjs",
+      "commons-room/core.mjs",
+      "commons-room/engines.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"give-1\"]"
+    }
+  },
+  {
+    "id": "congestion-crossing",
+    "name": "Congestion Crossing",
+    "category": "strategy",
+    "url": "commons-room/?game=congestion-crossing",
+    "mechanic": "Split a fleet among routes whose traversal costs depend on the combined simultaneous load of your fleet and a self-routing rival; an individually shorter road may make every user's journey longer.",
+    "description": "Split a fleet among routes whose traversal costs depend on the combined simultaneous load of your fleet and a self-routing rival; an individually shorter road may make every user's journey longer.",
+    "rules": [
+      "Allocate four fleet units among three routes. Every shared road costs its shown base plus slope times BOTH fleets\u2019 total use. Individual route length alone does not determine cost.",
+      "The house optimizes its next split against your preceding split, initially 2/2/0. Dispatch simultaneously; the resulting combined loads price every unit on each route. The public five-day calendar adds temporary costs to specific roads, changing useful routes.",
+      "Keep five days\u2019 cumulative travel cost within the charter budget. Exceeding it loses immediately. Complete three road networks; Reset and Restart restore load history and budget."
+    ],
+    "controls": "Tap labeled native controls, or Tab then Enter/Space. No dragging or keyboard-only action. Undo and Reset are available in finite campaigns; Restart begins a fresh run.",
+    "accent": "#c8d5a8",
+    "symbol": "\u2667",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "design": "New studies seed road base costs and a five-day schedule of temporary cost additions. Four units per fleet remain fixed; rival routing uses the player\u2019s preceding split. The travel budget is bounded by a public balanced-split benchmark, with score rewarding improvement.",
+      "difficultyCap": "Three routes/five roads;four units per fleet;five days;three bounded road-slope families.",
+      "kind": "challenge-stream"
+    },
+    "nearestExisting": [
+      {
+        "id": "loop-transit",
+        "difference": "Players select simultaneous splittable route flow under load-dependent costs; there is no line topology design, train simulation, queue capacity or passenger transfer."
+      },
+      {
+        "id": "junction-nine",
+        "difference": "No temporal phase scheduling: route choices create endogenous travel times even when every route remains open."
+      }
+    ],
+    "source": [
+      "commons-room/collective-games.mjs",
+      "commons-room/core.mjs",
+      "commons-room/engines.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board button:not(:disabled)"
+    }
+  },
+  {
+    "id": "price-of-plenty",
+    "name": "Price of Plenty",
+    "category": "strategy",
+    "url": "commons-room/?game=price-of-plenty",
+    "mechanic": "Choose production quantity before a rival chooses its own; the combined output sets a downward-sloping market price, so individually expanding can destroy joint profit. Capacity investment competes with present production.",
+    "description": "Choose production quantity before a rival chooses its own; the combined output sets a downward-sloping market price, so individually expanding can destroy joint profit. Capacity investment competes with present production.",
+    "rules": [
+      "Choose quantity 0 through capacity. The rival follows the displayed best-response, mirror or aggressive policy using your PRECEDING output. Combined output sets price=max(0, demand intercept\u22122\u00d7total output).",
+      "Every unit costs 3 before its sale, even at price 0. An 8-capital investment adds 1 capacity after that round\u2019s market, up to 5; it competes with present production funding.",
+      "Reach the closing-capital target after six markets. Bankruptcy or missing the target loses. Complete three rival-policy studies; Reset retries one and Restart all."
+    ],
+    "controls": "Tap labeled native controls, or Tab then Enter/Space. No dragging or keyboard-only action. Undo and Reset are available in finite campaigns; Restart begins a fresh run.",
+    "accent": "#c8d5a8",
+    "symbol": "\u2667",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "design": "New six-round markets seed inverse-demand intercepts and rotate three public rival-policy families. Each study resets capital and capacity. Cumulative study score continues until bankruptcy or a missed profit quota.",
+      "difficultyCap": "Six markets;capacity 3 initially, maximum 5;three-unit rival capacity; capped study targets.",
+      "kind": "challenge-stream"
+    },
+    "nearestExisting": [
+      {
+        "id": "reorder-point",
+        "difference": "Market price is endogenous to rival output and there is no customer-order calendar, shipping pipeline, shelf stock or lost-demand simulation."
+      },
+      {
+        "id": "supply-web",
+        "difference": "A single competitive quantity market with a responsive rival replaces a multi-node material-flow production network."
+      }
+    ],
+    "source": [
+      "commons-room/collective-games.mjs",
+      "commons-room/core.mjs",
+      "commons-room/engines.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"market\"]"
+    }
+  },
+  {
+    "id": "bargain-at-closing",
+    "name": "Bargain at Closing",
+    "category": "strategy",
+    "url": "commons-room/?game=bargain-at-closing",
+    "mechanic": "Offer an allocation of a common pie, accept the rival's counteroffer or reject to retain bargaining rights while the pie shrinks; each party values immediate and delayed shares differently.",
+    "description": "Offer an allocation of a common pie, accept the rival's counteroffer or reject to retain bargaining rights while the pie shrinks; each party values immediate and delayed shares differently.",
+    "rules": [
+      "Propose your share of the common pie. The rival needs max(outside option, ceiling(current required fraction \u00d7 pie)). Its required fractions for zero, one and two rejections are public; its initial outside option 3 falls 1 per rejection, floor 1.",
+      "Rejection removes 2 from the surplus and yields a rival counteroffer. Accept it or reject again for a final offer. Delaying may improve your share because the rival loses patience, but it destroys shared surplus. Three rejections close without agreement.",
+      "Reach the total payoff target across three negotiations. Complete three discount/reservation studies; Reset retries the current study and Restart begins all negotiations."
+    ],
+    "controls": "Tap labeled native controls, or Tab then Enter/Space. No dragging or keyboard-only action. Undo and Reset are available in finite campaigns; Restart begins a fresh run.",
+    "accent": "#c8d5a8",
+    "symbol": "\u2667",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "design": "New studies seed three opening pies and rotate three declining reservation-fraction schedules. The rival\u2019s initial outside option remains 3 and falls with rejections. Negotiations still close after three rejections, preserving finite agreements and failures.",
+      "difficultyCap": "Three negotiations;opening pies 12\u201320;at most three rejections each; capped payoff quotas.",
+      "kind": "challenge-stream"
+    },
+    "nearestExisting": [
+      {
+        "id": "quiet-majority",
+        "difference": "Two-party alternating offers, shrinking surplus and credible counteroffers replace multi-faction policy concessions and majority voting."
+      },
+      {
+        "id": "the-other-half",
+        "difference": "No spatial parcel cutting or chooser priority: the same divisible surplus is renegotiated under time discount and bilateral rejection."
+      }
+    ],
+    "source": [
+      "commons-room/collective-games.mjs",
+      "commons-room/core.mjs",
+      "commons-room/engines.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board button:not(:disabled)"
+    }
+  },
+  {
+    "id": "last-applicant",
+    "name": "Last Applicant",
+    "category": "strategy",
+    "url": "commons-room/?game=last-applicant",
+    "mechanic": "Inspect applicants in irreversible order and stop once to hire; previous candidates cannot be recalled, while inspection cost and a public quality distribution determine the value of waiting.",
+    "description": "Inspect applicants in irreversible order and stop once to hire; previous candidates cannot be recalled, while inspection cost and a public quality distribution determine the value of waiting.",
+    "rules": [
+      "For each of three vacancies, applicants are a seeded permutation of qualities 3 through 9. Interview costs 1, reveals the next quality and permanently releases the previous candidate.",
+      "Hire exactly one current candidate; earlier applicants cannot be recalled. Hired net quality is quality minus all interview fees for that vacancy. The agency guarantees at least one candidate could net 6, without locating it.",
+      "Reach the three-vacancy total target. Declining the final applicant loses that vacancy and study. Complete three hiring campaigns; Reset repeats one campaign and Restart all."
+    ],
+    "controls": "Tap labeled native controls, or Tab then Enter/Space. No dragging or keyboard-only action. Undo and Reset are available in finite campaigns; Restart begins a fresh run.",
+    "accent": "#c8d5a8",
+    "symbol": "\u2667",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "design": "Each new hiring campaign independently shuffles three seven-applicant urns. Every interview still costs 1 and recall remains impossible; candidate orders satisfy the publicly disclosed net-quality 6 availability guarantee.",
+      "difficultyCap": "Three vacancies;seven unique qualities 3\u20139 each;target caps 18;bounded generation rejection.",
+      "kind": "challenge-stream"
+    },
+    "nearestExisting": [
+      {
+        "id": "gathering-grounds",
+        "difference": "One irreversible stopping choice ends the search; every candidate leaves forever, and there is no repeated productive arm exploitation or recovery."
+      },
+      {
+        "id": "carry-on",
+        "difference": "No multidimensional packing or accumulating accepted set: select exactly one candidate and surrender all later opportunities."
+      }
+    ],
+    "source": [
+      "commons-room/collective-games.mjs",
+      "commons-room/core.mjs",
+      "commons-room/engines.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board button:not(:disabled)"
+    }
+  },
+  {
+    "id": "seasonal-ledger",
+    "name": "Seasonal Ledger",
+    "category": "strategy",
+    "url": "commons-room/?game=seasonal-ledger",
+    "mechanic": "Assign crops to fields across seasons: legumes restore nitrogen, cereals consume it, consecutive species build pests, and a neighboring companion crop changes yield. Future soil and pest states depend on each field's actual rotation history.",
+    "description": "Assign crops to fields across seasons: legumes restore nitrogen, cereals consume it, consecutive species build pests, and a neighboring companion crop changes yield. Future soil and pest states depend on each field's actual rotation history.",
+    "rules": [
+      "Plan six simultaneous field crops per season. Fallow restores 1 nitrogen, legume 2, cereal consumes 2 and root 1; soil caps at 8 and every field must retain at least 1 after harvest.",
+      "Base yields are 0/2/5/3. Cereal beside legume or root beside cereal adds 1. Repeating a nonfallow species adds 1 pest; changing removes 1. Every pest subtracts 2 yield, floor 0. Rotation histories stay with fields.",
+      "Multiply seasonal yield by the public market price and meet the four-season harvest target without damaging protected soil. Complete three farms; Reset restores one farm and Restart the campaign."
+    ],
+    "controls": "Tap labeled native controls, or Tab then Enter/Space. No dragging or keyboard-only action. Undo and Reset are available in finite campaigns; Restart begins a fresh run.",
+    "accent": "#c8d5a8",
+    "symbol": "\u2667",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "design": "New four-season farms seed six initial soil values and the order of the public 2/3/3/4 price calendar. Crop rules stay fixed; rotation histories persist within a farm, then reset on a fresh farm while completed score banks.",
+      "difficultyCap": "Six fields;four seasons;nitrogen cap 8;fixed endless harvest target 220.",
+      "kind": "challenge-stream"
+    },
+    "nearestExisting": [
+      {
+        "id": "orchard",
+        "difference": "No identical saplings ripening after actions: discrete crop species have persistent field-specific nutrient/pest effects and spatial companionship, with seasons harvested simultaneously."
+      },
+      {
+        "id": "growing-block",
+        "difference": "Agronomic rotation history and yield constraints replace population migration, tax income and urban zoning externalities."
+      },
+      {
+        "id": "linked-orchard",
+        "difference": "Crops are management choices, not genetic homologs, mating or crossover."
+      }
+    ],
+    "source": [
+      "commons-room/living-ledgers.mjs",
+      "commons-room/core.mjs",
+      "commons-room/engines.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"crop-1\"]"
+    }
+  },
+  {
+    "id": "permit-and-progress",
+    "name": "Permit and Progress",
+    "category": "strategy",
+    "url": "commons-room/?game=permit-and-progress",
+    "mechanic": "Bank scarce emission permits across compliance periods, sell surplus into a competitive price schedule or spend capital to retrofit production; selling a permit today can force expensive future abatement when allowance supply tightens.",
+    "description": "Bank scarce emission permits across compliance periods, sell surplus into a competitive price schedule or spend capital to retrofit production; selling a permit today can force expensive future abatement when allowance supply tightens.",
+    "rules": [
+      "Two plants have capacity 3 each, costs 1/2 per unit and initial emissions 2/1 per unit. All goods sell 4. Satisfy every announced delivery using permits that are consumed once per emitted unit.",
+      "Trade banked permits at the public ask/bid spread, or retrofit a plant for 7. A retrofit reduces emissions 1 beginning NEXT period. Grants arrive once at the beginning of each period; the first grant is already banked.",
+      "Cover all emissions and upfront production costs, meet deliveries and reach the five-period closing-cash target. A breach loses immediately. Complete three charters; Reset retries one and Restart all."
+    ],
+    "controls": "Tap labeled native controls, or Tab then Enter/Space. No dragging or keyboard-only action. Undo and Reset are available in finite campaigns; Restart begins a fresh run.",
+    "accent": "#c8d5a8",
+    "symbol": "\u2667",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "design": "New five-period charters seed delivery order, cap allocations and permit prices. Two plants retain their fixed production rules; retrofit and permit-bank state reset per charter. Completed charter score banks until delivery, capital or emission compliance fails.",
+      "difficultyCap": "Five periods;two plants of capacity 3;one retrofit per plant;cash quota caps 48.",
+      "kind": "challenge-stream"
+    },
+    "nearestExisting": [
+      {
+        "id": "power-desk",
+        "difference": "Compliance tokens are conserved and transferable across periods, while irreversible retrofits change per-unit emissions; no unit startup, ramp, battery or energy balancing."
+      },
+      {
+        "id": "trade",
+        "difference": "Goods are legal rights consumed by production obligations and carried across tightening caps; player can alter future consumption through retrofits."
+      }
+    ],
+    "source": [
+      "commons-room/living-ledgers.mjs",
+      "commons-room/core.mjs",
+      "commons-room/engines.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"buy\"]"
+    }
+  },
+  {
+    "id": "school-of-shoals",
+    "name": "School of Shoals",
+    "category": "strategy",
+    "url": "commons-room/?game=school-of-shoals",
+    "mechanic": "Choose extraction and an enforceable shared quota for renewable fisheries while autonomous rivals react to their own last catch and your enforcement; taking more now can lower spawning and ruin everyone's later catch.",
+    "description": "Choose extraction and an enforceable shared quota for renewable fisheries while autonomous rivals react to their own last catch and your enforcement; taking more now can lower spawning and ruin everyone's later catch.",
+    "rules": [
+      "Allocate effort 0\u20133 to each shared ground. Your fleet catches first, then rivals. Catch earns the public seasonal price (2 throughout finite campaigns); effort costs 1. Patrol costs 3, caps your fleet at 4 and enforces one rival catch per ground.",
+      "At least 5 fish must survive ALL catches before breeding. Otherwise the ground collapses. Growth=min(ground cap,floor(breeders/2)), stock cap 24. Finite ground caps are 4; generated caps are displayed. Rivals raise effort after a full catch and lower it after shortfall.",
+      "After six seasons meet community catch and private cash targets with both grounds alive. Complete three cooperative charters; Reset retries one and Restart all."
+    ],
+    "controls": "Tap labeled native controls, or Tab then Enter/Space. No dragging or keyboard-only action. Undo and Reset are available in finite campaigns; Restart begins a fresh run.",
+    "accent": "#c8d5a8",
+    "symbol": "\u2667",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "design": "New fisheries seed starting stocks, rival starting effort, per-ground growth caps 4\u20135 and a six-season public fish-price calendar 2\u20133. Shared-resource state persists across seasons, then resets between charters; score banks until collapse or quota failure.",
+      "difficultyCap": "Two grounds;stock cap 24;breeding minimum 5;six seasons;owned fleet cap 6, or 4 when patrolling.",
+      "kind": "challenge-stream"
+    },
+    "nearestExisting": [
+      {
+        "id": "marsh-balance",
+        "difference": "A common-pool rivalry with strategic extraction, costly enforceable quotas and stock-dependent recruitment replaces centralized predator/prey relocations and fixed intervention choices."
+      },
+      {
+        "id": "harbor-catch",
+        "difference": "No physical cast timing: fish stock is a shared dynamic resource allocated among competing harvesters."
+      }
+    ],
+    "source": [
+      "commons-room/living-ledgers.mjs",
+      "commons-room/core.mjs",
+      "commons-room/engines.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"patrol\"]"
+    }
+  },
+  {
+    "id": "promised-tomorrow",
+    "name": "Promised Tomorrow",
+    "category": "strategy",
+    "url": "commons-room/?game=promised-tomorrow",
+    "mechanic": "Choose cooperation or defection in repeated bilateral exchanges, offer a costly apology to repair trust, and decide whether to switch partners; rivals maintain different observable retaliation and forgiveness memories.",
+    "description": "Choose cooperation or defection in repeated bilateral exchanges, offer a costly apology to repair trust, and decide whether to switch partners; rivals maintain different observable retaliation and forgiveness memories.",
+    "rules": [
+      "Choose a partner then cooperate or defect for eight exchanges. Mutual cooperation pays 3 each, defection against cooperation pays 5 to the defector, mutual defection 1 and betrayed cooperation 0. Seeded endless payoffs are displayed.",
+      "Reciprocal partners copy your last action, Grudge retaliates after betrayal, and Generous forgives one incoming defection. Changing partner costs 1; an apology costs 2 and restores cooperative memory.",
+      "Meet both total benefit and reciprocal-cooperation targets. Complete three communities. Reset restores all memories in the current community and Restart the campaign."
+    ],
+    "controls": "Tap labeled native controls, or Tab then Enter/Space. No dragging or keyboard-only action. Undo and Reset are available in finite campaigns; Restart begins a fresh run.",
+    "accent": "#c8d5a8",
+    "symbol": "\u2667",
+    "stages": 3,
+    "endless": {
+      "supported": false,
+      "reason": "The current partner-memory model has only18 seeded configurations. Repeating these short trust studies would provide too little meaningful endless variety; the finite community campaign is preserved.",
+      "design": "A future endless design needs evolving partner memories and broader generated payoff structures rather than resetting this same small cast."
+    },
+    "nearestExisting": [
+      {
+        "id": "masks-and-coins",
+        "difference": "No role claim, hidden card evidence or challenge mechanic: published exchange payoffs and opponent memory make current temptation alter future cooperation."
+      },
+      {
+        "id": "quiet-majority",
+        "difference": "Pairwise repeated trust games replace multi-party vote thresholds and permanent policy concessions."
+      }
+    ],
+    "source": [
+      "commons-room/living-ledgers.mjs",
+      "commons-room/core.mjs",
+      "commons-room/engines.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"cooperate\"]"
+    }
+  },
+  {
+    "id": "maturity-garden",
+    "name": "Maturity Garden",
+    "category": "strategy",
+    "url": "commons-room/?game=maturity-garden",
+    "mechanic": "Build a ladder of zero-coupon claims whose maturity dates match mandatory cash outflows; selling early exposes duration-sensitive prices, while buying a higher long-term return can leave an earlier liability unfunded.",
+    "description": "Build a ladder of zero-coupon claims whose maturity dates match mandatory cash outflows; selling early exposes duration-sensitive prices, while buying a higher long-term return can leave an earlier liability unfunded.",
+    "rules": [
+      "Buy claims paying 10 at a chosen date one, two or three settlements away. The public curve prices each remaining duration. At most four claims may be held; no claim can mature after closing.",
+      "Early sale receives the current remaining-duration ask minus 1 and removes the promised payment. At each date maturities pay first, then that date\u2019s liability must be covered by available cash.",
+      "Pay every dated liability and retain the closing-cash floor. Illiquid later claims cannot rescue a missed payment. Complete three ledgers; Reset retries one and Restart all."
+    ],
+    "controls": "Tap labeled native controls, or Tab then Enter/Space. No dragging or keyboard-only action. Undo and Reset are available in finite campaigns; Restart begins a fresh run.",
+    "accent": "#c8d5a8",
+    "symbol": "\u2667",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "design": "New six-date ledgers seed positive discount curves and move each of three liabilities within its two-date window. Starting endless cash 31 provides feasible liquidity choices; claims and cash reset after a ledger, while completed score banks until a missed settlement or closing-cash target.",
+      "difficultyCap": "Six dates;four active claims;durations 1\u20133;face value 10;buy prices 6\u20139;bounded liabilities 8\u201312.",
+      "kind": "challenge-stream"
+    },
+    "nearestExisting": [
+      {
+        "id": "safe-return",
+        "difference": "No underwriting premiums, weather losses or reserved collateral: fixed maturity cashflows, dated liabilities and early-sale discount prices determine liquidity."
+      },
+      {
+        "id": "trade",
+        "difference": "Assets expire into deterministic dated payouts and prices follow remaining duration, rather than an identical commodity price calendar."
+      }
+    ],
+    "source": [
+      "commons-room/living-ledgers.mjs",
+      "commons-room/core.mjs",
+      "commons-room/engines.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board button:not(:disabled)"
+    }
+  }
+]

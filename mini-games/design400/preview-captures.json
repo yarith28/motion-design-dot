@@ -1,0 +1,4460 @@
+{
+  "version": 1,
+  "scope": "Direct opening-board screenshot previews; presentation evidence, not gameplay completion.",
+  "seed": 20261002,
+  "viewport": {
+    "width": 726,
+    "height": 1400
+  },
+  "oldGamesProtected": 300,
+  "captures": [
+    {
+      "id": "cam-workshop",
+      "room": "atelier-room",
+      "url": "atelier-room/?game=cam-workshop&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board canvas",
+      "clip": {
+        "x": 43,
+        "y": 456,
+        "width": 640,
+        "height": 420
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 420
+      },
+      "sourceFiles": [
+        "atelier-room/construction.mjs",
+        "atelier-room/core.mjs",
+        "atelier-room/engines.mjs",
+        "atelier-room/games.json",
+        "atelier-room/index.html",
+        "atelier-room/materials.mjs",
+        "atelier-room/mechanical.mjs",
+        "atelier-room/optics.mjs",
+        "atelier-room/room.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "f9553eff1715088951292befba5113eadf0b9873d0be69635cf72c3cdaf0cb94",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "4ba678ce180c27c750feec620c514e6cfbe9cda084820e9f142b3298c6377ef1",
+      "capturedAt": "2026-10-02T19:55:37.238Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "capstan-crossing",
+      "room": "atelier-room",
+      "url": "atelier-room/?game=capstan-crossing&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board canvas",
+      "clip": {
+        "x": 43,
+        "y": 456,
+        "width": 640,
+        "height": 420
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 420
+      },
+      "sourceFiles": [
+        "atelier-room/construction.mjs",
+        "atelier-room/core.mjs",
+        "atelier-room/engines.mjs",
+        "atelier-room/games.json",
+        "atelier-room/index.html",
+        "atelier-room/materials.mjs",
+        "atelier-room/mechanical.mjs",
+        "atelier-room/optics.mjs",
+        "atelier-room/room.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "f9553eff1715088951292befba5113eadf0b9873d0be69635cf72c3cdaf0cb94",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "03e9bebd582b1a03153c36606a1d293fb2270e533b09b9d337118c8a151d1cf0",
+      "capturedAt": "2026-10-02T19:55:41.048Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "clutch-dock",
+      "room": "atelier-room",
+      "url": "atelier-room/?game=clutch-dock&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board canvas",
+      "clip": {
+        "x": 43,
+        "y": 456,
+        "width": 640,
+        "height": 420
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 420
+      },
+      "sourceFiles": [
+        "atelier-room/construction.mjs",
+        "atelier-room/core.mjs",
+        "atelier-room/engines.mjs",
+        "atelier-room/games.json",
+        "atelier-room/index.html",
+        "atelier-room/materials.mjs",
+        "atelier-room/mechanical.mjs",
+        "atelier-room/optics.mjs",
+        "atelier-room/room.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "f9553eff1715088951292befba5113eadf0b9873d0be69635cf72c3cdaf0cb94",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "24df5b50124a959e45ee84378fb3450461999e34a754d4336519edf0034413ff",
+      "capturedAt": "2026-10-02T19:55:40.054Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "common-cut",
+      "room": "atelier-room",
+      "url": "atelier-room/?game=common-cut&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board canvas",
+      "clip": {
+        "x": 43,
+        "y": 456,
+        "width": 640,
+        "height": 420
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 420
+      },
+      "sourceFiles": [
+        "atelier-room/construction.mjs",
+        "atelier-room/core.mjs",
+        "atelier-room/engines.mjs",
+        "atelier-room/games.json",
+        "atelier-room/index.html",
+        "atelier-room/materials.mjs",
+        "atelier-room/mechanical.mjs",
+        "atelier-room/optics.mjs",
+        "atelier-room/room.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "f9553eff1715088951292befba5113eadf0b9873d0be69635cf72c3cdaf0cb94",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "9072ed41b805efb803eaba089ba74fe11c47ad534016f2f9f2cf999c5b8ee76a",
+      "capturedAt": "2026-10-02T19:55:37.518Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "crack-compass",
+      "room": "atelier-room",
+      "url": "atelier-room/?game=crack-compass&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board canvas",
+      "clip": {
+        "x": 43,
+        "y": 456,
+        "width": 640,
+        "height": 420
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 420
+      },
+      "sourceFiles": [
+        "atelier-room/construction.mjs",
+        "atelier-room/core.mjs",
+        "atelier-room/engines.mjs",
+        "atelier-room/games.json",
+        "atelier-room/index.html",
+        "atelier-room/materials.mjs",
+        "atelier-room/mechanical.mjs",
+        "atelier-room/optics.mjs",
+        "atelier-room/room.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "f9553eff1715088951292befba5113eadf0b9873d0be69635cf72c3cdaf0cb94",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "6bc05e36873ef7e13e1093b01116a0a95867453e8a28d50e2620b7915a04ce38",
+      "capturedAt": "2026-10-02T19:55:39.553Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "drawplate",
+      "room": "atelier-room",
+      "url": "atelier-room/?game=drawplate&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board canvas",
+      "clip": {
+        "x": 43,
+        "y": 456,
+        "width": 640,
+        "height": 420
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 420
+      },
+      "sourceFiles": [
+        "atelier-room/construction.mjs",
+        "atelier-room/core.mjs",
+        "atelier-room/engines.mjs",
+        "atelier-room/games.json",
+        "atelier-room/index.html",
+        "atelier-room/materials.mjs",
+        "atelier-room/mechanical.mjs",
+        "atelier-room/optics.mjs",
+        "atelier-room/room.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "f9553eff1715088951292befba5113eadf0b9873d0be69635cf72c3cdaf0cb94",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "9406e03e4e602c01870012bccfaf954e965fb3882bcab4594157c66474a8b7cb",
+      "capturedAt": "2026-10-02T19:55:38.757Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "interlock-cabinet",
+      "room": "atelier-room",
+      "url": "atelier-room/?game=interlock-cabinet&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board canvas",
+      "clip": {
+        "x": 43,
+        "y": 456,
+        "width": 640,
+        "height": 420
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 420
+      },
+      "sourceFiles": [
+        "atelier-room/construction.mjs",
+        "atelier-room/core.mjs",
+        "atelier-room/engines.mjs",
+        "atelier-room/games.json",
+        "atelier-room/index.html",
+        "atelier-room/materials.mjs",
+        "atelier-room/mechanical.mjs",
+        "atelier-room/optics.mjs",
+        "atelier-room/room.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "f9553eff1715088951292befba5113eadf0b9873d0be69635cf72c3cdaf0cb94",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "7417f066d29658a54b9ac1165b967d5b377ae35dad9d94b85eb3732a0ab02a85",
+      "capturedAt": "2026-10-02T19:55:37.768Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "lens-craft",
+      "room": "atelier-room",
+      "url": "atelier-room/?game=lens-craft&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board canvas",
+      "clip": {
+        "x": 43,
+        "y": 456,
+        "width": 640,
+        "height": 420
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 420
+      },
+      "sourceFiles": [
+        "atelier-room/construction.mjs",
+        "atelier-room/core.mjs",
+        "atelier-room/engines.mjs",
+        "atelier-room/games.json",
+        "atelier-room/index.html",
+        "atelier-room/materials.mjs",
+        "atelier-room/mechanical.mjs",
+        "atelier-room/optics.mjs",
+        "atelier-room/room.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "f9553eff1715088951292befba5113eadf0b9873d0be69635cf72c3cdaf0cb94",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "c09fdf7fdecde8b558631069a6a047aea2d601a37df4c5af14d6b111410da3f4",
+      "capturedAt": "2026-10-02T19:55:40.306Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "mill-fixture",
+      "room": "atelier-room",
+      "url": "atelier-room/?game=mill-fixture&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board canvas",
+      "clip": {
+        "x": 43,
+        "y": 456,
+        "width": 640,
+        "height": 420
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 420
+      },
+      "sourceFiles": [
+        "atelier-room/construction.mjs",
+        "atelier-room/core.mjs",
+        "atelier-room/engines.mjs",
+        "atelier-room/games.json",
+        "atelier-room/index.html",
+        "atelier-room/materials.mjs",
+        "atelier-room/mechanical.mjs",
+        "atelier-room/optics.mjs",
+        "atelier-room/room.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "f9553eff1715088951292befba5113eadf0b9873d0be69635cf72c3cdaf0cb94",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "c12831a93d4ac5275f4e44c5df02c4d986e54a6e1a8c20adad7d71387aeec0fd",
+      "capturedAt": "2026-10-02T19:55:41.799Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "polarization-stage",
+      "room": "atelier-room",
+      "url": "atelier-room/?game=polarization-stage&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board canvas",
+      "clip": {
+        "x": 43,
+        "y": 456,
+        "width": 640,
+        "height": 420
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 420
+      },
+      "sourceFiles": [
+        "atelier-room/construction.mjs",
+        "atelier-room/core.mjs",
+        "atelier-room/engines.mjs",
+        "atelier-room/games.json",
+        "atelier-room/index.html",
+        "atelier-room/materials.mjs",
+        "atelier-room/mechanical.mjs",
+        "atelier-room/optics.mjs",
+        "atelier-room/room.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "f9553eff1715088951292befba5113eadf0b9873d0be69635cf72c3cdaf0cb94",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "c9329e55aea46f029921a55e3121acff8176fa16f1dc934718579332eaf35087",
+      "capturedAt": "2026-10-02T19:55:40.537Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "pressure-gallery",
+      "room": "atelier-room",
+      "url": "atelier-room/?game=pressure-gallery&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board canvas",
+      "clip": {
+        "x": 43,
+        "y": 456,
+        "width": 640,
+        "height": 420
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 420
+      },
+      "sourceFiles": [
+        "atelier-room/construction.mjs",
+        "atelier-room/core.mjs",
+        "atelier-room/engines.mjs",
+        "atelier-room/games.json",
+        "atelier-room/index.html",
+        "atelier-room/materials.mjs",
+        "atelier-room/mechanical.mjs",
+        "atelier-room/optics.mjs",
+        "atelier-room/room.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "f9553eff1715088951292befba5113eadf0b9873d0be69635cf72c3cdaf0cb94",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "138a55bd3dbfd9a055d228612003a83b68c72aa5b1511ee1c7b319086a25705a",
+      "capturedAt": "2026-10-02T19:55:38.020Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "pulley-bay",
+      "room": "atelier-room",
+      "url": "atelier-room/?game=pulley-bay&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board canvas",
+      "clip": {
+        "x": 43,
+        "y": 456,
+        "width": 640,
+        "height": 420
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 420
+      },
+      "sourceFiles": [
+        "atelier-room/construction.mjs",
+        "atelier-room/core.mjs",
+        "atelier-room/engines.mjs",
+        "atelier-room/games.json",
+        "atelier-room/index.html",
+        "atelier-room/materials.mjs",
+        "atelier-room/mechanical.mjs",
+        "atelier-room/optics.mjs",
+        "atelier-room/room.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "f9553eff1715088951292befba5113eadf0b9873d0be69635cf72c3cdaf0cb94",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "b7e62b79d295559db9b4bed1473faacab62134b8ec8d475ba4adf26bece635b5",
+      "capturedAt": "2026-10-02T19:55:39.803Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "sand-table",
+      "room": "atelier-room",
+      "url": "atelier-room/?game=sand-table&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board canvas",
+      "clip": {
+        "x": 43,
+        "y": 456,
+        "width": 640,
+        "height": 420
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 420
+      },
+      "sourceFiles": [
+        "atelier-room/construction.mjs",
+        "atelier-room/core.mjs",
+        "atelier-room/engines.mjs",
+        "atelier-room/games.json",
+        "atelier-room/index.html",
+        "atelier-room/materials.mjs",
+        "atelier-room/mechanical.mjs",
+        "atelier-room/optics.mjs",
+        "atelier-room/room.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "f9553eff1715088951292befba5113eadf0b9873d0be69635cf72c3cdaf0cb94",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "027c2d0aadbe414c9b2331a13df9dc5e3dcf1332af237a6ea8368038bbdf9a8c",
+      "capturedAt": "2026-10-02T19:55:39.268Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "seal-shop",
+      "room": "atelier-room",
+      "url": "atelier-room/?game=seal-shop&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board canvas",
+      "clip": {
+        "x": 43,
+        "y": 456,
+        "width": 640,
+        "height": 420
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 420
+      },
+      "sourceFiles": [
+        "atelier-room/construction.mjs",
+        "atelier-room/core.mjs",
+        "atelier-room/engines.mjs",
+        "atelier-room/games.json",
+        "atelier-room/index.html",
+        "atelier-room/materials.mjs",
+        "atelier-room/mechanical.mjs",
+        "atelier-room/optics.mjs",
+        "atelier-room/room.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "f9553eff1715088951292befba5113eadf0b9873d0be69635cf72c3cdaf0cb94",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "83188e30f6e11ef2dd951355d002be87fec647e2f82d62874c016ad84ca483a4",
+      "capturedAt": "2026-10-02T19:55:40.791Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "shrink-fit",
+      "room": "atelier-room",
+      "url": "atelier-room/?game=shrink-fit&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board canvas",
+      "clip": {
+        "x": 43,
+        "y": 456,
+        "width": 640,
+        "height": 420
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 420
+      },
+      "sourceFiles": [
+        "atelier-room/construction.mjs",
+        "atelier-room/core.mjs",
+        "atelier-room/engines.mjs",
+        "atelier-room/games.json",
+        "atelier-room/index.html",
+        "atelier-room/materials.mjs",
+        "atelier-room/mechanical.mjs",
+        "atelier-room/optics.mjs",
+        "atelier-room/room.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "f9553eff1715088951292befba5113eadf0b9873d0be69635cf72c3cdaf0cb94",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "aa123069cb0ea22f8908fd2fdd01b49d73d6fa2f3d4ed3d9f70b0001813dd2a7",
+      "capturedAt": "2026-10-02T19:55:38.253Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "sound-splice",
+      "room": "atelier-room",
+      "url": "atelier-room/?game=sound-splice&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board canvas",
+      "clip": {
+        "x": 43,
+        "y": 456,
+        "width": 640,
+        "height": 420
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 420
+      },
+      "sourceFiles": [
+        "atelier-room/construction.mjs",
+        "atelier-room/core.mjs",
+        "atelier-room/engines.mjs",
+        "atelier-room/games.json",
+        "atelier-room/index.html",
+        "atelier-room/materials.mjs",
+        "atelier-room/mechanical.mjs",
+        "atelier-room/optics.mjs",
+        "atelier-room/room.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "f9553eff1715088951292befba5113eadf0b9873d0be69635cf72c3cdaf0cb94",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "f9b4931a75585999cb1601bfb6927b6dec4dac17e93979ea7b96ab70403f0b71",
+      "capturedAt": "2026-10-02T19:55:42.020Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "spring-form",
+      "room": "atelier-room",
+      "url": "atelier-room/?game=spring-form&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board canvas",
+      "clip": {
+        "x": 43,
+        "y": 456,
+        "width": 640,
+        "height": 420
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 420
+      },
+      "sourceFiles": [
+        "atelier-room/construction.mjs",
+        "atelier-room/core.mjs",
+        "atelier-room/engines.mjs",
+        "atelier-room/games.json",
+        "atelier-room/index.html",
+        "atelier-room/materials.mjs",
+        "atelier-room/mechanical.mjs",
+        "atelier-room/optics.mjs",
+        "atelier-room/room.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "f9553eff1715088951292befba5113eadf0b9873d0be69635cf72c3cdaf0cb94",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "9bf5fbcdb7c36e16ee9246cfd4c96ad1041b54857d1feaba6b64d776337e189e",
+      "capturedAt": "2026-10-02T19:55:41.284Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "vacuum-patch",
+      "room": "atelier-room",
+      "url": "atelier-room/?game=vacuum-patch&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board canvas",
+      "clip": {
+        "x": 43,
+        "y": 456,
+        "width": 640,
+        "height": 420
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 420
+      },
+      "sourceFiles": [
+        "atelier-room/construction.mjs",
+        "atelier-room/core.mjs",
+        "atelier-room/engines.mjs",
+        "atelier-room/games.json",
+        "atelier-room/index.html",
+        "atelier-room/materials.mjs",
+        "atelier-room/mechanical.mjs",
+        "atelier-room/optics.mjs",
+        "atelier-room/room.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "f9553eff1715088951292befba5113eadf0b9873d0be69635cf72c3cdaf0cb94",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "60e5e0f881d5e8a32bbcce4e87cfcfc304e07c1d4e1af4a29ae2882ce7c6bdea",
+      "capturedAt": "2026-10-02T19:55:41.547Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "vented-cast",
+      "room": "atelier-room",
+      "url": "atelier-room/?game=vented-cast&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board canvas",
+      "clip": {
+        "x": 43,
+        "y": 456,
+        "width": 640,
+        "height": 420
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 420
+      },
+      "sourceFiles": [
+        "atelier-room/construction.mjs",
+        "atelier-room/core.mjs",
+        "atelier-room/engines.mjs",
+        "atelier-room/games.json",
+        "atelier-room/index.html",
+        "atelier-room/materials.mjs",
+        "atelier-room/mechanical.mjs",
+        "atelier-room/optics.mjs",
+        "atelier-room/room.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "f9553eff1715088951292befba5113eadf0b9873d0be69635cf72c3cdaf0cb94",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "5042c828edd7be578d1c8fa49e4d7483bd019b9dfe34d6033db86df2b1b508ff",
+      "capturedAt": "2026-10-02T19:55:38.518Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "wet-paper",
+      "room": "atelier-room",
+      "url": "atelier-room/?game=wet-paper&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board canvas",
+      "clip": {
+        "x": 43,
+        "y": 456,
+        "width": 640,
+        "height": 420
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 420
+      },
+      "sourceFiles": [
+        "atelier-room/construction.mjs",
+        "atelier-room/core.mjs",
+        "atelier-room/engines.mjs",
+        "atelier-room/games.json",
+        "atelier-room/index.html",
+        "atelier-room/materials.mjs",
+        "atelier-room/mechanical.mjs",
+        "atelier-room/optics.mjs",
+        "atelier-room/room.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "f9553eff1715088951292befba5113eadf0b9873d0be69635cf72c3cdaf0cb94",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "c0b93499b8701b9e804a108cbeffeb5cfdac44f71ddcf0273ae986e6fa4ffee6",
+      "capturedAt": "2026-10-02T19:55:39.038Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "bargain-at-closing",
+      "room": "commons-room",
+      "url": "commons-room/?game=bargain-at-closing&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board .table-wrap",
+      "clip": {
+        "x": 43,
+        "y": 687,
+        "width": 640,
+        "height": 420
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 420
+      },
+      "sourceFiles": [
+        "commons-room/collective-games.mjs",
+        "commons-room/core.mjs",
+        "commons-room/engines.mjs",
+        "commons-room/games.json",
+        "commons-room/index.html",
+        "commons-room/living-ledgers.mjs",
+        "commons-room/market-games.mjs",
+        "commons-room/opposed-boards.mjs",
+        "commons-room/room.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "e41e7550095c8fff27f9516786d634f4d3194fbcecfb8e86a53ef5e872ae0aa7",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "18d36e09ac8061e3f1e6675bcafad54922e18ec74837cb8e38dadb26b2edc912",
+      "capturedAt": "2026-10-02T19:55:35.427Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "bloom-cauldron",
+      "room": "commons-room",
+      "url": "commons-room/?game=bloom-cauldron&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board .table-wrap",
+      "clip": {
+        "x": 43,
+        "y": 596,
+        "width": 640,
+        "height": 420
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 420
+      },
+      "sourceFiles": [
+        "commons-room/collective-games.mjs",
+        "commons-room/core.mjs",
+        "commons-room/engines.mjs",
+        "commons-room/games.json",
+        "commons-room/index.html",
+        "commons-room/living-ledgers.mjs",
+        "commons-room/market-games.mjs",
+        "commons-room/opposed-boards.mjs",
+        "commons-room/room.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "e41e7550095c8fff27f9516786d634f4d3194fbcecfb8e86a53ef5e872ae0aa7",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "b28fc52c9a3b8acbf21037ca4db0b9f906d0ffdd4660431f13c5d33bdcaaf3da",
+      "capturedAt": "2026-10-02T19:55:33.385Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "cannon-council",
+      "room": "commons-room",
+      "url": "commons-room/?game=cannon-council&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board .game-grid",
+      "clip": {
+        "x": 43,
+        "y": 596,
+        "width": 640,
+        "height": 480
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 480
+      },
+      "sourceFiles": [
+        "commons-room/collective-games.mjs",
+        "commons-room/core.mjs",
+        "commons-room/engines.mjs",
+        "commons-room/games.json",
+        "commons-room/index.html",
+        "commons-room/living-ledgers.mjs",
+        "commons-room/market-games.mjs",
+        "commons-room/opposed-boards.mjs",
+        "commons-room/room.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "e41e7550095c8fff27f9516786d634f4d3194fbcecfb8e86a53ef5e872ae0aa7",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "bc6903c630dbaca8b15f323f50885a63a4639c701fcd83c0d44d99fc2c5b12de",
+      "capturedAt": "2026-10-02T19:55:33.200Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "congestion-crossing",
+      "room": "commons-room",
+      "url": "commons-room/?game=congestion-crossing&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board .table-wrap",
+      "clip": {
+        "x": 43,
+        "y": 571,
+        "width": 640,
+        "height": 760
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 760
+      },
+      "sourceFiles": [
+        "commons-room/collective-games.mjs",
+        "commons-room/core.mjs",
+        "commons-room/engines.mjs",
+        "commons-room/games.json",
+        "commons-room/index.html",
+        "commons-room/living-ledgers.mjs",
+        "commons-room/market-games.mjs",
+        "commons-room/opposed-boards.mjs",
+        "commons-room/room.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "e41e7550095c8fff27f9516786d634f4d3194fbcecfb8e86a53ef5e872ae0aa7",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "8b737cc54ac7b53aa56dcafe158510965b18e6a08e30013aaace7a803ffb2fef",
+      "capturedAt": "2026-10-02T19:55:34.811Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "falling-hammer",
+      "room": "commons-room",
+      "url": "commons-room/?game=falling-hammer&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board .table-wrap",
+      "clip": {
+        "x": 43,
+        "y": 571,
+        "width": 640,
+        "height": 420
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 420
+      },
+      "sourceFiles": [
+        "commons-room/collective-games.mjs",
+        "commons-room/core.mjs",
+        "commons-room/engines.mjs",
+        "commons-room/games.json",
+        "commons-room/index.html",
+        "commons-room/living-ledgers.mjs",
+        "commons-room/market-games.mjs",
+        "commons-room/opposed-boards.mjs",
+        "commons-room/room.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "e41e7550095c8fff27f9516786d634f4d3194fbcecfb8e86a53ef5e872ae0aa7",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "1bb7b7f5b0c920131db81e941a97a52802f9a8bed95cf15eac16480dba11e8cb",
+      "capturedAt": "2026-10-02T19:55:34.036Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "last-applicant",
+      "room": "commons-room",
+      "url": "commons-room/?game=last-applicant&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board",
+      "clip": {
+        "x": 43,
+        "y": 504,
+        "width": 640,
+        "height": 420
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 420
+      },
+      "sourceFiles": [
+        "commons-room/collective-games.mjs",
+        "commons-room/core.mjs",
+        "commons-room/engines.mjs",
+        "commons-room/games.json",
+        "commons-room/index.html",
+        "commons-room/living-ledgers.mjs",
+        "commons-room/market-games.mjs",
+        "commons-room/opposed-boards.mjs",
+        "commons-room/room.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "e41e7550095c8fff27f9516786d634f4d3194fbcecfb8e86a53ef5e872ae0aa7",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "2937ba4e9a03eac1a097c82bebcaaa1c8afe4deda036e341e3afb3569c023643",
+      "capturedAt": "2026-10-02T19:55:35.674Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "many-hands",
+      "room": "commons-room",
+      "url": "commons-room/?game=many-hands&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board .buttons",
+      "clip": {
+        "x": 43,
+        "y": 660,
+        "width": 640,
+        "height": 420
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 420
+      },
+      "sourceFiles": [
+        "commons-room/collective-games.mjs",
+        "commons-room/core.mjs",
+        "commons-room/engines.mjs",
+        "commons-room/games.json",
+        "commons-room/index.html",
+        "commons-room/living-ledgers.mjs",
+        "commons-room/market-games.mjs",
+        "commons-room/opposed-boards.mjs",
+        "commons-room/room.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "e41e7550095c8fff27f9516786d634f4d3194fbcecfb8e86a53ef5e872ae0aa7",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "6d8c0d22621460032392359b6729ac3f3e7444af8603f60b8d1c34857ff4c511",
+      "capturedAt": "2026-10-02T19:55:34.585Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "maturity-garden",
+      "room": "commons-room",
+      "url": "commons-room/?game=maturity-garden&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board .table-wrap",
+      "clip": {
+        "x": 43,
+        "y": 571,
+        "width": 640,
+        "height": 540
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 540
+      },
+      "sourceFiles": [
+        "commons-room/collective-games.mjs",
+        "commons-room/core.mjs",
+        "commons-room/engines.mjs",
+        "commons-room/games.json",
+        "commons-room/index.html",
+        "commons-room/living-ledgers.mjs",
+        "commons-room/market-games.mjs",
+        "commons-room/opposed-boards.mjs",
+        "commons-room/room.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "e41e7550095c8fff27f9516786d634f4d3194fbcecfb8e86a53ef5e872ae0aa7",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "a7d69005156f52a6898338428a93da6f49c367c8e940ae7de164ed44ee4de12c",
+      "capturedAt": "2026-10-02T19:55:36.964Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "orderbook-wharf",
+      "room": "commons-room",
+      "url": "commons-room/?game=orderbook-wharf&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board .table-wrap",
+      "clip": {
+        "x": 43,
+        "y": 547,
+        "width": 640,
+        "height": 560
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 560
+      },
+      "sourceFiles": [
+        "commons-room/collective-games.mjs",
+        "commons-room/core.mjs",
+        "commons-room/engines.mjs",
+        "commons-room/games.json",
+        "commons-room/index.html",
+        "commons-room/living-ledgers.mjs",
+        "commons-room/market-games.mjs",
+        "commons-room/opposed-boards.mjs",
+        "commons-room/room.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "e41e7550095c8fff27f9516786d634f4d3194fbcecfb8e86a53ef5e872ae0aa7",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "e29ebc1cfaf475b74bc0a4f6f3ef3fc665d3486a6901b1b7b645435db460064f",
+      "capturedAt": "2026-10-02T19:55:34.332Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "package-yard",
+      "room": "commons-room",
+      "url": "commons-room/?game=package-yard&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board .table-wrap",
+      "clip": {
+        "x": 43,
+        "y": 571,
+        "width": 640,
+        "height": 660
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 660
+      },
+      "sourceFiles": [
+        "commons-room/collective-games.mjs",
+        "commons-room/core.mjs",
+        "commons-room/engines.mjs",
+        "commons-room/games.json",
+        "commons-room/index.html",
+        "commons-room/living-ledgers.mjs",
+        "commons-room/market-games.mjs",
+        "commons-room/opposed-boards.mjs",
+        "commons-room/room.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "e41e7550095c8fff27f9516786d634f4d3194fbcecfb8e86a53ef5e872ae0aa7",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "61057c78f3576252ad9f50f691064abc87282375ff258c26f798027c960b8d43",
+      "capturedAt": "2026-10-02T19:55:33.812Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "permit-and-progress",
+      "room": "commons-room",
+      "url": "commons-room/?game=permit-and-progress&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board .table-wrap",
+      "clip": {
+        "x": 43,
+        "y": 571,
+        "width": 640,
+        "height": 700
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 700
+      },
+      "sourceFiles": [
+        "commons-room/collective-games.mjs",
+        "commons-room/core.mjs",
+        "commons-room/engines.mjs",
+        "commons-room/games.json",
+        "commons-room/index.html",
+        "commons-room/living-ledgers.mjs",
+        "commons-room/market-games.mjs",
+        "commons-room/opposed-boards.mjs",
+        "commons-room/room.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "e41e7550095c8fff27f9516786d634f4d3194fbcecfb8e86a53ef5e872ae0aa7",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "101b04071e8d5eb9d4815f9d7de2099946f1ffa7a138bd603acfc167809b5532",
+      "capturedAt": "2026-10-02T19:55:36.189Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "price-of-plenty",
+      "room": "commons-room",
+      "url": "commons-room/?game=price-of-plenty&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board .table-wrap",
+      "clip": {
+        "x": 43,
+        "y": 662,
+        "width": 640,
+        "height": 420
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 420
+      },
+      "sourceFiles": [
+        "commons-room/collective-games.mjs",
+        "commons-room/core.mjs",
+        "commons-room/engines.mjs",
+        "commons-room/games.json",
+        "commons-room/index.html",
+        "commons-room/living-ledgers.mjs",
+        "commons-room/market-games.mjs",
+        "commons-room/opposed-boards.mjs",
+        "commons-room/room.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "e41e7550095c8fff27f9516786d634f4d3194fbcecfb8e86a53ef5e872ae0aa7",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "04cef7036a1aed2676cb730ba9f687c08c59487d3a7e38a57631b5f6e176c1a9",
+      "capturedAt": "2026-10-02T19:55:35.100Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "promised-tomorrow",
+      "room": "commons-room",
+      "url": "commons-room/?game=promised-tomorrow&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board .table-wrap",
+      "clip": {
+        "x": 43,
+        "y": 571,
+        "width": 640,
+        "height": 420
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 420
+      },
+      "sourceFiles": [
+        "commons-room/collective-games.mjs",
+        "commons-room/core.mjs",
+        "commons-room/engines.mjs",
+        "commons-room/games.json",
+        "commons-room/index.html",
+        "commons-room/living-ledgers.mjs",
+        "commons-room/market-games.mjs",
+        "commons-room/opposed-boards.mjs",
+        "commons-room/room.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "e41e7550095c8fff27f9516786d634f4d3194fbcecfb8e86a53ef5e872ae0aa7",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "59ba083e7b0b140a5f0e8c01811bcb3ef17c28226b05f3d02ccf2a71f76cdf6c",
+      "capturedAt": "2026-10-02T19:55:36.705Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "school-of-shoals",
+      "room": "commons-room",
+      "url": "commons-room/?game=school-of-shoals&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board",
+      "clip": {
+        "x": 43,
+        "y": 504,
+        "width": 640,
+        "height": 520
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 520
+      },
+      "sourceFiles": [
+        "commons-room/collective-games.mjs",
+        "commons-room/core.mjs",
+        "commons-room/engines.mjs",
+        "commons-room/games.json",
+        "commons-room/index.html",
+        "commons-room/living-ledgers.mjs",
+        "commons-room/market-games.mjs",
+        "commons-room/opposed-boards.mjs",
+        "commons-room/room.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "e41e7550095c8fff27f9516786d634f4d3194fbcecfb8e86a53ef5e872ae0aa7",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "e23d45105af3659f137c37686d2f8cdadd40c73de631a37fb4323cb7fb446e91",
+      "capturedAt": "2026-10-02T19:55:36.442Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "seasonal-ledger",
+      "room": "commons-room",
+      "url": "commons-room/?game=seasonal-ledger&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board .game-grid",
+      "clip": {
+        "x": 43,
+        "y": 662,
+        "width": 640,
+        "height": 480
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 480
+      },
+      "sourceFiles": [
+        "commons-room/collective-games.mjs",
+        "commons-room/core.mjs",
+        "commons-room/engines.mjs",
+        "commons-room/games.json",
+        "commons-room/index.html",
+        "commons-room/living-ledgers.mjs",
+        "commons-room/market-games.mjs",
+        "commons-room/opposed-boards.mjs",
+        "commons-room/room.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "e41e7550095c8fff27f9516786d634f4d3194fbcecfb8e86a53ef5e872ae0aa7",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "5562525f742c251c050358c63de098dbd9210e78bbf1944f912d1833a7725bc3",
+      "capturedAt": "2026-10-02T19:55:35.926Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "shared-comet",
+      "room": "commons-room",
+      "url": "commons-room/?game=shared-comet&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board .game-grid",
+      "clip": {
+        "x": 43,
+        "y": 547,
+        "width": 640,
+        "height": 480
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 480
+      },
+      "sourceFiles": [
+        "commons-room/collective-games.mjs",
+        "commons-room/core.mjs",
+        "commons-room/engines.mjs",
+        "commons-room/games.json",
+        "commons-room/index.html",
+        "commons-room/living-ledgers.mjs",
+        "commons-room/market-games.mjs",
+        "commons-room/opposed-boards.mjs",
+        "commons-room/room.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "e41e7550095c8fff27f9516786d634f4d3194fbcecfb8e86a53ef5e872ae0aa7",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "4942420aa0c9b8e3481dd20f56b44166cef2f68fee396099535b40276c8acff1",
+      "capturedAt": "2026-10-02T19:55:32.770Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "socket-skirmish",
+      "room": "commons-room",
+      "url": "commons-room/?game=socket-skirmish&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board .game-grid",
+      "clip": {
+        "x": 43,
+        "y": 571,
+        "width": 640,
+        "height": 480
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 480
+      },
+      "sourceFiles": [
+        "commons-room/collective-games.mjs",
+        "commons-room/core.mjs",
+        "commons-room/engines.mjs",
+        "commons-room/games.json",
+        "commons-room/index.html",
+        "commons-room/living-ledgers.mjs",
+        "commons-room/market-games.mjs",
+        "commons-room/opposed-boards.mjs",
+        "commons-room/room.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "e41e7550095c8fff27f9516786d634f4d3194fbcecfb8e86a53ef5e872ae0aa7",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "80ae2e5e49f8ebe2850bdee26e40a47df0d782edf317efda8222fa02904fb811",
+      "capturedAt": "2026-10-02T19:55:32.983Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "spore-council",
+      "room": "commons-room",
+      "url": "commons-room/?game=spore-council&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board .game-grid",
+      "clip": {
+        "x": 43,
+        "y": 571,
+        "width": 640,
+        "height": 480
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 480
+      },
+      "sourceFiles": [
+        "commons-room/collective-games.mjs",
+        "commons-room/core.mjs",
+        "commons-room/engines.mjs",
+        "commons-room/games.json",
+        "commons-room/index.html",
+        "commons-room/living-ledgers.mjs",
+        "commons-room/market-games.mjs",
+        "commons-room/opposed-boards.mjs",
+        "commons-room/room.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "e41e7550095c8fff27f9516786d634f4d3194fbcecfb8e86a53ef5e872ae0aa7",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "a79576d6b03bb9def23b688c2da9ff8aee11d5330d76f935117e6d648bac8ecd",
+      "capturedAt": "2026-10-02T19:55:32.582Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "three-fronts",
+      "room": "commons-room",
+      "url": "commons-room/?game=three-fronts&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board .table-wrap",
+      "clip": {
+        "x": 43,
+        "y": 596,
+        "width": 640,
+        "height": 420
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 420
+      },
+      "sourceFiles": [
+        "commons-room/collective-games.mjs",
+        "commons-room/core.mjs",
+        "commons-room/engines.mjs",
+        "commons-room/games.json",
+        "commons-room/index.html",
+        "commons-room/living-ledgers.mjs",
+        "commons-room/market-games.mjs",
+        "commons-room/opposed-boards.mjs",
+        "commons-room/room.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "e41e7550095c8fff27f9516786d634f4d3194fbcecfb8e86a53ef5e872ae0aa7",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "2dc970d670c45eee72191a1d97211b289c385d349a985e53cab11dcc9a709481",
+      "capturedAt": "2026-10-02T19:55:33.590Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "tide-and-retreat",
+      "room": "commons-room",
+      "url": "commons-room/?game=tide-and-retreat&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board .game-grid",
+      "clip": {
+        "x": 43,
+        "y": 571,
+        "width": 640,
+        "height": 480
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 480
+      },
+      "sourceFiles": [
+        "commons-room/collective-games.mjs",
+        "commons-room/core.mjs",
+        "commons-room/engines.mjs",
+        "commons-room/games.json",
+        "commons-room/index.html",
+        "commons-room/living-ledgers.mjs",
+        "commons-room/market-games.mjs",
+        "commons-room/opposed-boards.mjs",
+        "commons-room/room.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "e41e7550095c8fff27f9516786d634f4d3194fbcecfb8e86a53ef5e872ae0aa7",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "7df97aaf64afab3c4ad0d8197a80ac19429bfc99e68cd33ba3b49e673cc82138",
+      "capturedAt": "2026-10-02T19:55:32.372Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "compass-estate",
+      "room": "constraint-room",
+      "url": "constraint-room/?game=compass-estate&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board .game-grid",
+      "clip": {
+        "x": 43,
+        "y": 568,
+        "width": 640,
+        "height": 480
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 480
+      },
+      "sourceFiles": [
+        "constraint-room/composition.mjs",
+        "constraint-room/core.mjs",
+        "constraint-room/engines.mjs",
+        "constraint-room/games.json",
+        "constraint-room/index.html",
+        "constraint-room/paths.mjs",
+        "constraint-room/placement.mjs",
+        "constraint-room/room.css",
+        "constraint-room/room.mjs",
+        "constraint-room/shading.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "ae849471ead1541da99884e776eef7abe978a4895916a3a3e84348389ab8f3be",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "c7204aefbfc0b1d3c8177b2c2816889ed5d2df987dfbbef590e37193430e78b7",
+      "capturedAt": "2026-10-02T19:55:21.385Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "cyclic-courtyard",
+      "room": "constraint-room",
+      "url": "constraint-room/?game=cyclic-courtyard&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board .game-grid",
+      "clip": {
+        "x": 43,
+        "y": 497,
+        "width": 640,
+        "height": 481
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 481
+      },
+      "sourceFiles": [
+        "constraint-room/composition.mjs",
+        "constraint-room/core.mjs",
+        "constraint-room/engines.mjs",
+        "constraint-room/games.json",
+        "constraint-room/index.html",
+        "constraint-room/paths.mjs",
+        "constraint-room/placement.mjs",
+        "constraint-room/room.css",
+        "constraint-room/room.mjs",
+        "constraint-room/shading.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "ae849471ead1541da99884e776eef7abe978a4895916a3a3e84348389ab8f3be",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "c51769581ed1f5d99f28ba94ef08b000efc043d7c0e24f3bdb42a9d34250f9ed",
+      "capturedAt": "2026-10-02T19:55:23.186Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "diagonal-grove",
+      "room": "constraint-room",
+      "url": "constraint-room/?game=diagonal-grove&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board canvas",
+      "clip": {
+        "x": 43,
+        "y": 456,
+        "width": 640,
+        "height": 434
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 434
+      },
+      "sourceFiles": [
+        "constraint-room/composition.mjs",
+        "constraint-room/core.mjs",
+        "constraint-room/engines.mjs",
+        "constraint-room/games.json",
+        "constraint-room/index.html",
+        "constraint-room/paths.mjs",
+        "constraint-room/placement.mjs",
+        "constraint-room/room.css",
+        "constraint-room/room.mjs",
+        "constraint-room/shading.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "ae849471ead1541da99884e776eef7abe978a4895916a3a3e84348389ab8f3be",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "a717e5d41f80695d44ae3c04c9a87668409500f09008e64a5ccba07c0feb407c",
+      "capturedAt": "2026-10-02T19:55:20.866Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "domino-register",
+      "room": "constraint-room",
+      "url": "constraint-room/?game=domino-register&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board .game-grid",
+      "clip": {
+        "x": 43,
+        "y": 497,
+        "width": 640,
+        "height": 420
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 420
+      },
+      "sourceFiles": [
+        "constraint-room/composition.mjs",
+        "constraint-room/core.mjs",
+        "constraint-room/engines.mjs",
+        "constraint-room/games.json",
+        "constraint-room/index.html",
+        "constraint-room/paths.mjs",
+        "constraint-room/placement.mjs",
+        "constraint-room/room.css",
+        "constraint-room/room.mjs",
+        "constraint-room/shading.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "ae849471ead1541da99884e776eef7abe978a4895916a3a3e84348389ab8f3be",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "5ac1f9a3bacf53c7f7ea8eb3b89c342a6763e9cc7e5ca41c668d9d3a692422cd",
+      "capturedAt": "2026-10-02T19:55:22.554Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "exclusive-print",
+      "room": "constraint-room",
+      "url": "constraint-room/?game=exclusive-print&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board canvas",
+      "clip": {
+        "x": 43,
+        "y": 995,
+        "width": 640,
+        "height": 420
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 420
+      },
+      "sourceFiles": [
+        "constraint-room/composition.mjs",
+        "constraint-room/core.mjs",
+        "constraint-room/engines.mjs",
+        "constraint-room/games.json",
+        "constraint-room/index.html",
+        "constraint-room/paths.mjs",
+        "constraint-room/placement.mjs",
+        "constraint-room/room.css",
+        "constraint-room/room.mjs",
+        "constraint-room/shading.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "ae849471ead1541da99884e776eef7abe978a4895916a3a3e84348389ab8f3be",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "c1f5aa265f8960f5f9f76908690d84dec9e57be4c7386fcf14624463c28e3f28",
+      "capturedAt": "2026-10-02T19:55:23.606Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "fleet-blueprint",
+      "room": "constraint-room",
+      "url": "constraint-room/?game=fleet-blueprint&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board .game-grid",
+      "clip": {
+        "x": 43,
+        "y": 1000,
+        "width": 640,
+        "height": 481
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 481
+      },
+      "sourceFiles": [
+        "constraint-room/composition.mjs",
+        "constraint-room/core.mjs",
+        "constraint-room/engines.mjs",
+        "constraint-room/games.json",
+        "constraint-room/index.html",
+        "constraint-room/paths.mjs",
+        "constraint-room/placement.mjs",
+        "constraint-room/room.css",
+        "constraint-room/room.mjs",
+        "constraint-room/shading.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "ae849471ead1541da99884e776eef7abe978a4895916a3a3e84348389ab8f3be",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "826244e99444cf682daeb307b727fbdfe919f4e333589f73119248653afd50a9",
+      "capturedAt": "2026-10-02T19:55:21.635Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "four-forms",
+      "room": "constraint-room",
+      "url": "constraint-room/?game=four-forms&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board .game-grid",
+      "clip": {
+        "x": 43,
+        "y": 522,
+        "width": 640,
+        "height": 480
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 480
+      },
+      "sourceFiles": [
+        "constraint-room/composition.mjs",
+        "constraint-room/core.mjs",
+        "constraint-room/engines.mjs",
+        "constraint-room/games.json",
+        "constraint-room/index.html",
+        "constraint-room/paths.mjs",
+        "constraint-room/placement.mjs",
+        "constraint-room/room.css",
+        "constraint-room/room.mjs",
+        "constraint-room/shading.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "ae849471ead1541da99884e776eef7abe978a4895916a3a3e84348389ab8f3be",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "c5c27f87dfbfef1a481ddfd10a1c1814836458a6a112026b0b0750b529e42a44",
+      "capturedAt": "2026-10-02T19:55:22.333Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "lamp-ward",
+      "room": "constraint-room",
+      "url": "constraint-room/?game=lamp-ward&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board .game-grid",
+      "clip": {
+        "x": 43,
+        "y": 497,
+        "width": 640,
+        "height": 480
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 480
+      },
+      "sourceFiles": [
+        "constraint-room/composition.mjs",
+        "constraint-room/core.mjs",
+        "constraint-room/engines.mjs",
+        "constraint-room/games.json",
+        "constraint-room/index.html",
+        "constraint-room/paths.mjs",
+        "constraint-room/placement.mjs",
+        "constraint-room/room.css",
+        "constraint-room/room.mjs",
+        "constraint-room/shading.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "ae849471ead1541da99884e776eef7abe978a4895916a3a3e84348389ab8f3be",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "0dfce3f1e5c7e42bff8c904cad327a92269c988863a049973c18ea288b660c80",
+      "capturedAt": "2026-10-02T19:55:19.671Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "magnet-ledger",
+      "room": "constraint-room",
+      "url": "constraint-room/?game=magnet-ledger&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board .game-grid",
+      "clip": {
+        "x": 43,
+        "y": 811,
+        "width": 640,
+        "height": 480
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 480
+      },
+      "sourceFiles": [
+        "constraint-room/composition.mjs",
+        "constraint-room/core.mjs",
+        "constraint-room/engines.mjs",
+        "constraint-room/games.json",
+        "constraint-room/index.html",
+        "constraint-room/paths.mjs",
+        "constraint-room/placement.mjs",
+        "constraint-room/room.css",
+        "constraint-room/room.mjs",
+        "constraint-room/shading.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "ae849471ead1541da99884e776eef7abe978a4895916a3a3e84348389ab8f3be",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "a4d8f1b09f391609afd8e7d26f54a7fd87bc0b9384549d29cf24b7e9bb33a410",
+      "capturedAt": "2026-10-02T19:55:20.018Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "mosaic-ring",
+      "room": "constraint-room",
+      "url": "constraint-room/?game=mosaic-ring&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board .game-grid",
+      "clip": {
+        "x": 43,
+        "y": 522,
+        "width": 640,
+        "height": 480
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 480
+      },
+      "sourceFiles": [
+        "constraint-room/composition.mjs",
+        "constraint-room/core.mjs",
+        "constraint-room/engines.mjs",
+        "constraint-room/games.json",
+        "constraint-room/index.html",
+        "constraint-room/paths.mjs",
+        "constraint-room/placement.mjs",
+        "constraint-room/room.css",
+        "constraint-room/room.mjs",
+        "constraint-room/shading.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "ae849471ead1541da99884e776eef7abe978a4895916a3a3e84348389ab8f3be",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "eb131da29067c40c69ac6ca648cdf514e64b1f5dfcee6d6a2139c7fc4d3f948c",
+      "capturedAt": "2026-10-02T19:55:20.365Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "once-through",
+      "room": "constraint-room",
+      "url": "constraint-room/?game=once-through&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board canvas",
+      "clip": {
+        "x": 43,
+        "y": 497,
+        "width": 640,
+        "height": 434
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 434
+      },
+      "sourceFiles": [
+        "constraint-room/composition.mjs",
+        "constraint-room/core.mjs",
+        "constraint-room/engines.mjs",
+        "constraint-room/games.json",
+        "constraint-room/index.html",
+        "constraint-room/paths.mjs",
+        "constraint-room/placement.mjs",
+        "constraint-room/room.css",
+        "constraint-room/room.mjs",
+        "constraint-room/shading.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "ae849471ead1541da99884e776eef7abe978a4895916a3a3e84348389ab8f3be",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "b29b0a5a1010901c7b682c63a23af28e1ea0be1bd9f43983ea083e293f492fba",
+      "capturedAt": "2026-10-02T19:55:23.001Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "quiet-rooms",
+      "room": "constraint-room",
+      "url": "constraint-room/?game=quiet-rooms&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board .game-grid",
+      "clip": {
+        "x": 43,
+        "y": 802,
+        "width": 640,
+        "height": 480
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 480
+      },
+      "sourceFiles": [
+        "constraint-room/composition.mjs",
+        "constraint-room/core.mjs",
+        "constraint-room/engines.mjs",
+        "constraint-room/games.json",
+        "constraint-room/index.html",
+        "constraint-room/paths.mjs",
+        "constraint-room/placement.mjs",
+        "constraint-room/room.css",
+        "constraint-room/room.mjs",
+        "constraint-room/shading.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "ae849471ead1541da99884e776eef7abe978a4895916a3a3e84348389ab8f3be",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "683f902136a344b9442c0823a702f30ea62fb1f0aa99cd42bf52a7cc42dcd7e1",
+      "capturedAt": "2026-10-02T19:55:22.109Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "region-census",
+      "room": "constraint-room",
+      "url": "constraint-room/?game=region-census&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board .game-grid",
+      "clip": {
+        "x": 43,
+        "y": 516,
+        "width": 640,
+        "height": 480
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 480
+      },
+      "sourceFiles": [
+        "constraint-room/composition.mjs",
+        "constraint-room/core.mjs",
+        "constraint-room/engines.mjs",
+        "constraint-room/games.json",
+        "constraint-room/index.html",
+        "constraint-room/paths.mjs",
+        "constraint-room/placement.mjs",
+        "constraint-room/room.css",
+        "constraint-room/room.mjs",
+        "constraint-room/shading.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "ae849471ead1541da99884e776eef7abe978a4895916a3a3e84348389ab8f3be",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "0f09a200ff8e5ae01c40f3324cd21d6c28c8884886e99f7f185a831405922c01",
+      "capturedAt": "2026-10-02T19:55:20.204Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "seam-quilt",
+      "room": "constraint-room",
+      "url": "constraint-room/?game=seam-quilt&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board .table-wrap",
+      "clip": {
+        "x": 43,
+        "y": 456,
+        "width": 640,
+        "height": 760
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 760
+      },
+      "sourceFiles": [
+        "constraint-room/composition.mjs",
+        "constraint-room/core.mjs",
+        "constraint-room/engines.mjs",
+        "constraint-room/games.json",
+        "constraint-room/index.html",
+        "constraint-room/paths.mjs",
+        "constraint-room/placement.mjs",
+        "constraint-room/room.css",
+        "constraint-room/room.mjs",
+        "constraint-room/shading.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "ae849471ead1541da99884e776eef7abe978a4895916a3a3e84348389ab8f3be",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "f4893ff078590a353d0b22655e305e66136143c73961b938c0e7c7baab095d6f",
+      "capturedAt": "2026-10-02T19:55:23.389Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "shade-detour",
+      "room": "constraint-room",
+      "url": "constraint-room/?game=shade-detour&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board canvas",
+      "clip": {
+        "x": 43,
+        "y": 456,
+        "width": 640,
+        "height": 434
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 434
+      },
+      "sourceFiles": [
+        "constraint-room/composition.mjs",
+        "constraint-room/core.mjs",
+        "constraint-room/engines.mjs",
+        "constraint-room/games.json",
+        "constraint-room/index.html",
+        "constraint-room/paths.mjs",
+        "constraint-room/placement.mjs",
+        "constraint-room/room.css",
+        "constraint-room/room.mjs",
+        "constraint-room/shading.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "ae849471ead1541da99884e776eef7abe978a4895916a3a3e84348389ab8f3be",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "fbea5c3fe1d4ffb7809517a17078146b3bf032acc78b102c12bf06d24ea0a657",
+      "capturedAt": "2026-10-02T19:55:21.865Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "sight-garden",
+      "room": "constraint-room",
+      "url": "constraint-room/?game=sight-garden&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board .game-grid",
+      "clip": {
+        "x": 43,
+        "y": 522,
+        "width": 640,
+        "height": 480
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 480
+      },
+      "sourceFiles": [
+        "constraint-room/composition.mjs",
+        "constraint-room/core.mjs",
+        "constraint-room/engines.mjs",
+        "constraint-room/games.json",
+        "constraint-room/index.html",
+        "constraint-room/paths.mjs",
+        "constraint-room/placement.mjs",
+        "constraint-room/room.css",
+        "constraint-room/room.mjs",
+        "constraint-room/shading.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "ae849471ead1541da99884e776eef7abe978a4895916a3a3e84348389ab8f3be",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "c3cdac6a2d069b16b06f977f35dc4b27bd8e5042ee629bae95246cb3ea6540d0",
+      "capturedAt": "2026-10-02T19:55:20.524Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "star-charter",
+      "room": "constraint-room",
+      "url": "constraint-room/?game=star-charter&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board .game-grid",
+      "clip": {
+        "x": 43,
+        "y": 497,
+        "width": 640,
+        "height": 481
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 481
+      },
+      "sourceFiles": [
+        "constraint-room/composition.mjs",
+        "constraint-room/core.mjs",
+        "constraint-room/engines.mjs",
+        "constraint-room/games.json",
+        "constraint-room/index.html",
+        "constraint-room/paths.mjs",
+        "constraint-room/placement.mjs",
+        "constraint-room/room.css",
+        "constraint-room/room.mjs",
+        "constraint-room/shading.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "ae849471ead1541da99884e776eef7abe978a4895916a3a3e84348389ab8f3be",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "16dbc9857f9ff44767c83c13725148a1ab64252add5791c07bd7141a733479a1",
+      "capturedAt": "2026-10-02T19:55:19.840Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "thermometer-hall",
+      "room": "constraint-room",
+      "url": "constraint-room/?game=thermometer-hall&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board .game-grid",
+      "clip": {
+        "x": 43,
+        "y": 811,
+        "width": 640,
+        "height": 480
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 480
+      },
+      "sourceFiles": [
+        "constraint-room/composition.mjs",
+        "constraint-room/core.mjs",
+        "constraint-room/engines.mjs",
+        "constraint-room/games.json",
+        "constraint-room/index.html",
+        "constraint-room/paths.mjs",
+        "constraint-room/placement.mjs",
+        "constraint-room/room.css",
+        "constraint-room/room.mjs",
+        "constraint-room/shading.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "ae849471ead1541da99884e776eef7abe978a4895916a3a3e84348389ab8f3be",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "ea8f9474e737b5bd5f3c6571b7cc6c6b6fa10cd784e9e0c3bceba89a05bf3bbd",
+      "capturedAt": "2026-10-02T19:55:21.160Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "weighted-weft",
+      "room": "constraint-room",
+      "url": "constraint-room/?game=weighted-weft&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board .game-grid",
+      "clip": {
+        "x": 43,
+        "y": 878,
+        "width": 640,
+        "height": 480
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 480
+      },
+      "sourceFiles": [
+        "constraint-room/composition.mjs",
+        "constraint-room/core.mjs",
+        "constraint-room/engines.mjs",
+        "constraint-room/games.json",
+        "constraint-room/index.html",
+        "constraint-room/paths.mjs",
+        "constraint-room/placement.mjs",
+        "constraint-room/room.css",
+        "constraint-room/room.mjs",
+        "constraint-room/shading.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "ae849471ead1541da99884e776eef7abe978a4895916a3a3e84348389ab8f3be",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "a0ae2855e8377714fff74380403620b1f0da3974f78a8cf963218fa4f6807972",
+      "capturedAt": "2026-10-02T19:55:22.783Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "window-tally",
+      "room": "constraint-room",
+      "url": "constraint-room/?game=window-tally&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board .game-grid",
+      "clip": {
+        "x": 43,
+        "y": 497,
+        "width": 640,
+        "height": 480
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 480
+      },
+      "sourceFiles": [
+        "constraint-room/composition.mjs",
+        "constraint-room/core.mjs",
+        "constraint-room/engines.mjs",
+        "constraint-room/games.json",
+        "constraint-room/index.html",
+        "constraint-room/paths.mjs",
+        "constraint-room/placement.mjs",
+        "constraint-room/room.css",
+        "constraint-room/room.mjs",
+        "constraint-room/shading.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "ae849471ead1541da99884e776eef7abe978a4895916a3a3e84348389ab8f3be",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "91bd5b3fe774013a8eb098860529de33ebed104e653ba2560af78bed62beb50d",
+      "capturedAt": "2026-10-02T19:55:23.856Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "batters-window",
+      "room": "field-room",
+      "url": "field-room/?game=batters-window&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board canvas",
+      "clip": {
+        "x": 43,
+        "y": 547,
+        "width": 640,
+        "height": 434
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 434
+      },
+      "sourceFiles": [
+        "field-room/balance.mjs",
+        "field-room/core.mjs",
+        "field-room/engines.mjs",
+        "field-room/flow.mjs",
+        "field-room/games.json",
+        "field-room/index.html",
+        "field-room/room.mjs",
+        "field-room/sports.mjs",
+        "field-room/travel.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "c4739a025c9aa42d3e053dac01a0ecb9f2db8daee299a61aa34b432dc0cf43f3",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "4e6900927cea33dad91c12d5e03b5ac812c8ebb51898b2d2175ca838f169e0bd",
+      "capturedAt": "2026-10-02T19:55:24.401Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "belay-line",
+      "room": "field-room",
+      "url": "field-room/?game=belay-line&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board canvas",
+      "clip": {
+        "x": 43,
+        "y": 547,
+        "width": 640,
+        "height": 434
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 434
+      },
+      "sourceFiles": [
+        "field-room/balance.mjs",
+        "field-room/core.mjs",
+        "field-room/engines.mjs",
+        "field-room/flow.mjs",
+        "field-room/games.json",
+        "field-room/index.html",
+        "field-room/room.mjs",
+        "field-room/sports.mjs",
+        "field-room/travel.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "c4739a025c9aa42d3e053dac01a0ecb9f2db8daee299a61aa34b432dc0cf43f3",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "10baefe59bf73e59948914b908e4120a362871c3f951629ddd9212d9aee718e7",
+      "capturedAt": "2026-10-02T19:55:26.444Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "breathing-lane",
+      "room": "field-room",
+      "url": "field-room/?game=breathing-lane&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board canvas",
+      "clip": {
+        "x": 43,
+        "y": 571,
+        "width": 640,
+        "height": 434
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 434
+      },
+      "sourceFiles": [
+        "field-room/balance.mjs",
+        "field-room/core.mjs",
+        "field-room/engines.mjs",
+        "field-room/flow.mjs",
+        "field-room/games.json",
+        "field-room/index.html",
+        "field-room/room.mjs",
+        "field-room/sports.mjs",
+        "field-room/travel.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "c4739a025c9aa42d3e053dac01a0ecb9f2db8daee299a61aa34b432dc0cf43f3",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "3bbf6080fd8805a48756baede76c9a402c84035f727336586dbff6ac90661487",
+      "capturedAt": "2026-10-02T19:55:28.151Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "cable-carrier",
+      "room": "field-room",
+      "url": "field-room/?game=cable-carrier&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board canvas",
+      "clip": {
+        "x": 43,
+        "y": 547,
+        "width": 640,
+        "height": 434
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 434
+      },
+      "sourceFiles": [
+        "field-room/balance.mjs",
+        "field-room/core.mjs",
+        "field-room/engines.mjs",
+        "field-room/flow.mjs",
+        "field-room/games.json",
+        "field-room/index.html",
+        "field-room/room.mjs",
+        "field-room/sports.mjs",
+        "field-room/travel.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "c4739a025c9aa42d3e053dac01a0ecb9f2db8daee299a61aa34b432dc0cf43f3",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "ca567e6fbea917b2e63d95afc3c446694f66ebb890414e8e8ac61fef17468639",
+      "capturedAt": "2026-10-02T19:55:26.018Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "cascade-hands",
+      "room": "field-room",
+      "url": "field-room/?game=cascade-hands&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board canvas",
+      "clip": {
+        "x": 43,
+        "y": 522,
+        "width": 640,
+        "height": 434
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 434
+      },
+      "sourceFiles": [
+        "field-room/balance.mjs",
+        "field-room/core.mjs",
+        "field-room/engines.mjs",
+        "field-room/flow.mjs",
+        "field-room/games.json",
+        "field-room/index.html",
+        "field-room/room.mjs",
+        "field-room/sports.mjs",
+        "field-room/travel.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "c4739a025c9aa42d3e053dac01a0ecb9f2db8daee299a61aa34b432dc0cf43f3",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "836e19cf80fb046a34d6096b9ebbeef2e12415a7acc52cfc3d3f74e9ae7f61f5",
+      "capturedAt": "2026-10-02T19:55:27.725Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "clutch-circuit",
+      "room": "field-room",
+      "url": "field-room/?game=clutch-circuit&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board canvas",
+      "clip": {
+        "x": 43,
+        "y": 522,
+        "width": 640,
+        "height": 434
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 434
+      },
+      "sourceFiles": [
+        "field-room/balance.mjs",
+        "field-room/core.mjs",
+        "field-room/engines.mjs",
+        "field-room/flow.mjs",
+        "field-room/games.json",
+        "field-room/index.html",
+        "field-room/room.mjs",
+        "field-room/sports.mjs",
+        "field-room/travel.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "c4739a025c9aa42d3e053dac01a0ecb9f2db8daee299a61aa34b432dc0cf43f3",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "c8d3e3305dad6fe447f51f78bf02ca3c630c62545b1429fdb01d708a32cf607d",
+      "capturedAt": "2026-10-02T19:55:25.439Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "court-rotation",
+      "room": "field-room",
+      "url": "field-room/?game=court-rotation&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board canvas",
+      "clip": {
+        "x": 43,
+        "y": 547,
+        "width": 640,
+        "height": 434
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 434
+      },
+      "sourceFiles": [
+        "field-room/balance.mjs",
+        "field-room/core.mjs",
+        "field-room/engines.mjs",
+        "field-room/flow.mjs",
+        "field-room/games.json",
+        "field-room/index.html",
+        "field-room/room.mjs",
+        "field-room/sports.mjs",
+        "field-room/travel.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "c4739a025c9aa42d3e053dac01a0ecb9f2db8daee299a61aa34b432dc0cf43f3",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "e9c33984e37b5661b7cf0e99d7bb1d9a29e78fdf981864cfa755570f90a5657b",
+      "capturedAt": "2026-10-02T19:55:25.016Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "crease-keeper",
+      "room": "field-room",
+      "url": "field-room/?game=crease-keeper&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board canvas",
+      "clip": {
+        "x": 43,
+        "y": 522,
+        "width": 640,
+        "height": 434
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 434
+      },
+      "sourceFiles": [
+        "field-room/balance.mjs",
+        "field-room/core.mjs",
+        "field-room/engines.mjs",
+        "field-room/flow.mjs",
+        "field-room/games.json",
+        "field-room/index.html",
+        "field-room/room.mjs",
+        "field-room/sports.mjs",
+        "field-room/travel.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "c4739a025c9aa42d3e053dac01a0ecb9f2db8daee299a61aa34b432dc0cf43f3",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "103205db6c8697a8751b8d2d01685bd83d378208ced1151ef1a764654c1ed4c8",
+      "capturedAt": "2026-10-02T19:55:24.584Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "ice-rescue",
+      "room": "field-room",
+      "url": "field-room/?game=ice-rescue&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board canvas",
+      "clip": {
+        "x": 43,
+        "y": 547,
+        "width": 640,
+        "height": 434
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 434
+      },
+      "sourceFiles": [
+        "field-room/balance.mjs",
+        "field-room/core.mjs",
+        "field-room/engines.mjs",
+        "field-room/flow.mjs",
+        "field-room/games.json",
+        "field-room/index.html",
+        "field-room/room.mjs",
+        "field-room/sports.mjs",
+        "field-room/travel.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "c4739a025c9aa42d3e053dac01a0ecb9f2db8daee299a61aa34b432dc0cf43f3",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "e0f65379ff6d52b3ec016c1597f36a649b568941af0d872dd1d8f47be725f227",
+      "capturedAt": "2026-10-02T19:55:27.934Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "last-second-pass",
+      "room": "field-room",
+      "url": "field-room/?game=last-second-pass&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board canvas",
+      "clip": {
+        "x": 43,
+        "y": 571,
+        "width": 640,
+        "height": 434
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 434
+      },
+      "sourceFiles": [
+        "field-room/balance.mjs",
+        "field-room/core.mjs",
+        "field-room/engines.mjs",
+        "field-room/flow.mjs",
+        "field-room/games.json",
+        "field-room/index.html",
+        "field-room/room.mjs",
+        "field-room/sports.mjs",
+        "field-room/travel.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "c4739a025c9aa42d3e053dac01a0ecb9f2db8daee299a61aa34b432dc0cf43f3",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "ba6fccc21942f37660b6c974d2ae4bff2794e6f0fae15713c3cdf2ce31202f83",
+      "capturedAt": "2026-10-02T19:55:24.804Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "ninepin-line",
+      "room": "field-room",
+      "url": "field-room/?game=ninepin-line&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board canvas",
+      "clip": {
+        "x": 43,
+        "y": 522,
+        "width": 640,
+        "height": 434
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 434
+      },
+      "sourceFiles": [
+        "field-room/balance.mjs",
+        "field-room/core.mjs",
+        "field-room/engines.mjs",
+        "field-room/flow.mjs",
+        "field-room/games.json",
+        "field-room/index.html",
+        "field-room/room.mjs",
+        "field-room/sports.mjs",
+        "field-room/travel.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "c4739a025c9aa42d3e053dac01a0ecb9f2db8daee299a61aa34b432dc0cf43f3",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "c27b67d102f2739d62949cc571c8ab146940dc24b2f49c8c8279be1a9dd39896",
+      "capturedAt": "2026-10-02T19:55:24.168Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "ribbon-relay",
+      "room": "field-room",
+      "url": "field-room/?game=ribbon-relay&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board canvas",
+      "clip": {
+        "x": 43,
+        "y": 547,
+        "width": 640,
+        "height": 434
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 434
+      },
+      "sourceFiles": [
+        "field-room/balance.mjs",
+        "field-room/core.mjs",
+        "field-room/engines.mjs",
+        "field-room/flow.mjs",
+        "field-room/games.json",
+        "field-room/index.html",
+        "field-room/room.mjs",
+        "field-room/sports.mjs",
+        "field-room/travel.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "c4739a025c9aa42d3e053dac01a0ecb9f2db8daee299a61aa34b432dc0cf43f3",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "86dd5f15f02b81a59db4a0768a120256db4989c779e3e045a5a417dffa46aa91",
+      "capturedAt": "2026-10-02T19:55:25.601Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "ripple-skimmer",
+      "room": "field-room",
+      "url": "field-room/?game=ripple-skimmer&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board canvas",
+      "clip": {
+        "x": 43,
+        "y": 522,
+        "width": 640,
+        "height": 434
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 434
+      },
+      "sourceFiles": [
+        "field-room/balance.mjs",
+        "field-room/core.mjs",
+        "field-room/engines.mjs",
+        "field-room/flow.mjs",
+        "field-room/games.json",
+        "field-room/index.html",
+        "field-room/room.mjs",
+        "field-room/sports.mjs",
+        "field-room/travel.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "c4739a025c9aa42d3e053dac01a0ecb9f2db8daee299a61aa34b432dc0cf43f3",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "7d4d1d27426622bd8df4e45b74e7d1a838dd10e9aa9fbc1fa1cf2085e2d43238",
+      "capturedAt": "2026-10-02T19:55:27.303Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "spin-passage",
+      "room": "field-room",
+      "url": "field-room/?game=spin-passage&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board canvas",
+      "clip": {
+        "x": 43,
+        "y": 547,
+        "width": 640,
+        "height": 434
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 434
+      },
+      "sourceFiles": [
+        "field-room/balance.mjs",
+        "field-room/core.mjs",
+        "field-room/engines.mjs",
+        "field-room/flow.mjs",
+        "field-room/games.json",
+        "field-room/index.html",
+        "field-room/room.mjs",
+        "field-room/sports.mjs",
+        "field-room/travel.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "c4739a025c9aa42d3e053dac01a0ecb9f2db8daee299a61aa34b432dc0cf43f3",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "841a54de773d2cdadebee20cb625a086df1d2d14054a2d4693a56560a47b20fb",
+      "capturedAt": "2026-10-02T19:55:27.511Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "thermal-route",
+      "room": "field-room",
+      "url": "field-room/?game=thermal-route&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board canvas",
+      "clip": {
+        "x": 43,
+        "y": 547,
+        "width": 640,
+        "height": 434
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 434
+      },
+      "sourceFiles": [
+        "field-room/balance.mjs",
+        "field-room/core.mjs",
+        "field-room/engines.mjs",
+        "field-room/flow.mjs",
+        "field-room/games.json",
+        "field-room/index.html",
+        "field-room/room.mjs",
+        "field-room/sports.mjs",
+        "field-room/travel.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "c4739a025c9aa42d3e053dac01a0ecb9f2db8daee299a61aa34b432dc0cf43f3",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "11cee4c50939d9b61d8b05621a4b43fdff0aee69fc77cfbc4f06c193ea4ca74a",
+      "capturedAt": "2026-10-02T19:55:26.218Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "tucked-landing",
+      "room": "field-room",
+      "url": "field-room/?game=tucked-landing&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board canvas",
+      "clip": {
+        "x": 43,
+        "y": 547,
+        "width": 640,
+        "height": 434
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 434
+      },
+      "sourceFiles": [
+        "field-room/balance.mjs",
+        "field-room/core.mjs",
+        "field-room/engines.mjs",
+        "field-room/flow.mjs",
+        "field-room/games.json",
+        "field-room/index.html",
+        "field-room/room.mjs",
+        "field-room/sports.mjs",
+        "field-room/travel.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "c4739a025c9aa42d3e053dac01a0ecb9f2db8daee299a61aa34b432dc0cf43f3",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "93a2d873e68519b23f9ace01c79cb36ebba60912a92466c60a98836f4c28bc17",
+      "capturedAt": "2026-10-02T19:55:26.883Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "two-oars",
+      "room": "field-room",
+      "url": "field-room/?game=two-oars&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board canvas",
+      "clip": {
+        "x": 43,
+        "y": 547,
+        "width": 640,
+        "height": 434
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 434
+      },
+      "sourceFiles": [
+        "field-room/balance.mjs",
+        "field-room/core.mjs",
+        "field-room/engines.mjs",
+        "field-room/flow.mjs",
+        "field-room/games.json",
+        "field-room/index.html",
+        "field-room/room.mjs",
+        "field-room/sports.mjs",
+        "field-room/travel.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "c4739a025c9aa42d3e053dac01a0ecb9f2db8daee299a61aa34b432dc0cf43f3",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "07c033b2dd69b1ba257408fdd08681c900a67e510fe75c7e4d8793caec9b7475",
+      "capturedAt": "2026-10-02T19:55:25.790Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "vault-runway",
+      "room": "field-room",
+      "url": "field-room/?game=vault-runway&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board canvas",
+      "clip": {
+        "x": 43,
+        "y": 547,
+        "width": 640,
+        "height": 434
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 434
+      },
+      "sourceFiles": [
+        "field-room/balance.mjs",
+        "field-room/core.mjs",
+        "field-room/engines.mjs",
+        "field-room/flow.mjs",
+        "field-room/games.json",
+        "field-room/index.html",
+        "field-room/room.mjs",
+        "field-room/sports.mjs",
+        "field-room/travel.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "c4739a025c9aa42d3e053dac01a0ecb9f2db8daee299a61aa34b432dc0cf43f3",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "0aebcbd99b7d4678a55ce86d631a91ff641bb04646ac510c0315b739f41eee8d",
+      "capturedAt": "2026-10-02T19:55:26.642Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "velodrome-draft",
+      "room": "field-room",
+      "url": "field-room/?game=velodrome-draft&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board canvas",
+      "clip": {
+        "x": 43,
+        "y": 522,
+        "width": 640,
+        "height": 434
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 434
+      },
+      "sourceFiles": [
+        "field-room/balance.mjs",
+        "field-room/core.mjs",
+        "field-room/engines.mjs",
+        "field-room/flow.mjs",
+        "field-room/games.json",
+        "field-room/index.html",
+        "field-room/room.mjs",
+        "field-room/sports.mjs",
+        "field-room/travel.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "c4739a025c9aa42d3e053dac01a0ecb9f2db8daee299a61aa34b432dc0cf43f3",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "5011ec1e576673e8f2aaf9cfa1e6dc8be9530222fa4d77ff6edbceb3fbf7943b",
+      "capturedAt": "2026-10-02T19:55:25.240Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "wave-trim",
+      "room": "field-room",
+      "url": "field-room/?game=wave-trim&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board canvas",
+      "clip": {
+        "x": 43,
+        "y": 547,
+        "width": 640,
+        "height": 434
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 434
+      },
+      "sourceFiles": [
+        "field-room/balance.mjs",
+        "field-room/core.mjs",
+        "field-room/engines.mjs",
+        "field-room/flow.mjs",
+        "field-room/games.json",
+        "field-room/index.html",
+        "field-room/room.mjs",
+        "field-room/sports.mjs",
+        "field-room/travel.mjs",
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css"
+      ],
+      "sourceHash": "c4739a025c9aa42d3e053dac01a0ecb9f2db8daee299a61aa34b432dc0cf43f3",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "a9dda645094d832543a34807ae32502dd3aebcc4e70bf2d2afa91c2b9767bd2d",
+      "capturedAt": "2026-10-02T19:55:27.103Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "bound-names",
+      "room": "signal-lab",
+      "url": "signal-lab/?game=bound-names&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board > h3",
+      "clip": {
+        "x": 43,
+        "y": 549,
+        "width": 640,
+        "height": 420
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 420
+      },
+      "sourceFiles": [
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css",
+        "signal-lab/certificates.mjs",
+        "signal-lab/choices.mjs",
+        "signal-lab/common.mjs",
+        "signal-lab/engines.mjs",
+        "signal-lab/games.json",
+        "signal-lab/index.html",
+        "signal-lab/machines.mjs",
+        "signal-lab/measures.mjs",
+        "signal-lab/room.mjs",
+        "signal-lab/signals.mjs"
+      ],
+      "sourceHash": "0b6088f040bd8dd09fa442ed33533d00c50f9b02fca709db95f465a0ea430b83",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "4964c2ac5a11ed1d430655a00b7e51a6319521827cca61e37d7e0dd45c585774",
+      "capturedAt": "2026-10-02T19:55:30.599Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "branch-weather",
+      "room": "signal-lab",
+      "url": "signal-lab/?game=branch-weather&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board canvas",
+      "clip": {
+        "x": 43,
+        "y": 547,
+        "width": 640,
+        "height": 420
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 420
+      },
+      "sourceFiles": [
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css",
+        "signal-lab/certificates.mjs",
+        "signal-lab/choices.mjs",
+        "signal-lab/common.mjs",
+        "signal-lab/engines.mjs",
+        "signal-lab/games.json",
+        "signal-lab/index.html",
+        "signal-lab/machines.mjs",
+        "signal-lab/measures.mjs",
+        "signal-lab/room.mjs",
+        "signal-lab/signals.mjs"
+      ],
+      "sourceHash": "0b6088f040bd8dd09fa442ed33533d00c50f9b02fca709db95f465a0ea430b83",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "b003e03cb09f5af9f9e8483d4c491e179ba963e43d6c0ac94348e90fa6e1708d",
+      "capturedAt": "2026-10-02T19:55:29.418Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "clause-kiln",
+      "room": "signal-lab",
+      "url": "signal-lab/?game=clause-kiln&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board .game-grid",
+      "clip": {
+        "x": 43,
+        "y": 547,
+        "width": 640,
+        "height": 420
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 420
+      },
+      "sourceFiles": [
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css",
+        "signal-lab/certificates.mjs",
+        "signal-lab/choices.mjs",
+        "signal-lab/common.mjs",
+        "signal-lab/engines.mjs",
+        "signal-lab/games.json",
+        "signal-lab/index.html",
+        "signal-lab/machines.mjs",
+        "signal-lab/measures.mjs",
+        "signal-lab/room.mjs",
+        "signal-lab/signals.mjs"
+      ],
+      "sourceHash": "0b6088f040bd8dd09fa442ed33533d00c50f9b02fca709db95f465a0ea430b83",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "4b4b3aa36aca0b539cb8cbcecbd8e0cc814ce8dc51181c970c24455c9bc63bf8",
+      "capturedAt": "2026-10-02T19:55:28.986Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "credit-method",
+      "room": "signal-lab",
+      "url": "signal-lab/?game=credit-method&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board",
+      "clip": {
+        "x": 43,
+        "y": 479,
+        "width": 640,
+        "height": 420
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 420
+      },
+      "sourceFiles": [
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css",
+        "signal-lab/certificates.mjs",
+        "signal-lab/choices.mjs",
+        "signal-lab/common.mjs",
+        "signal-lab/engines.mjs",
+        "signal-lab/games.json",
+        "signal-lab/index.html",
+        "signal-lab/machines.mjs",
+        "signal-lab/measures.mjs",
+        "signal-lab/room.mjs",
+        "signal-lab/signals.mjs"
+      ],
+      "sourceHash": "0b6088f040bd8dd09fa442ed33533d00c50f9b02fca709db95f465a0ea430b83",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "0b4a0742d258072a3546ae9e17b8ec486296948a1a2b93cfab5c45fc532d5781",
+      "capturedAt": "2026-10-02T19:55:31.354Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "crossed-channel",
+      "room": "signal-lab",
+      "url": "signal-lab/?game=crossed-channel&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board canvas",
+      "clip": {
+        "x": 43,
+        "y": 596,
+        "width": 640,
+        "height": 420
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 420
+      },
+      "sourceFiles": [
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css",
+        "signal-lab/certificates.mjs",
+        "signal-lab/choices.mjs",
+        "signal-lab/common.mjs",
+        "signal-lab/engines.mjs",
+        "signal-lab/games.json",
+        "signal-lab/index.html",
+        "signal-lab/machines.mjs",
+        "signal-lab/measures.mjs",
+        "signal-lab/room.mjs",
+        "signal-lab/signals.mjs"
+      ],
+      "sourceHash": "0b6088f040bd8dd09fa442ed33533d00c50f9b02fca709db95f465a0ea430b83",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "c6c36a6f10592a64a0b050de3a3acb4d6bfab5e51773f1b6631fa50e1495dbc6",
+      "capturedAt": "2026-10-02T19:55:30.235Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "cutback-case",
+      "room": "signal-lab",
+      "url": "signal-lab/?game=cutback-case&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board .game-grid",
+      "clip": {
+        "x": 43,
+        "y": 547,
+        "width": 640,
+        "height": 420
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 420
+      },
+      "sourceFiles": [
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css",
+        "signal-lab/certificates.mjs",
+        "signal-lab/choices.mjs",
+        "signal-lab/common.mjs",
+        "signal-lab/engines.mjs",
+        "signal-lab/games.json",
+        "signal-lab/index.html",
+        "signal-lab/machines.mjs",
+        "signal-lab/measures.mjs",
+        "signal-lab/room.mjs",
+        "signal-lab/signals.mjs"
+      ],
+      "sourceHash": "0b6088f040bd8dd09fa442ed33533d00c50f9b02fca709db95f465a0ea430b83",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "7e9ac6bb08631ebcadc86c6f2dbb3945c90337ad507dac5b89a9d846c2690839",
+      "capturedAt": "2026-10-02T19:55:28.787Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "divisor-house",
+      "room": "signal-lab",
+      "url": "signal-lab/?game=divisor-house&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board .table-wrap",
+      "clip": {
+        "x": 43,
+        "y": 593,
+        "width": 640,
+        "height": 560
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 560
+      },
+      "sourceFiles": [
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css",
+        "signal-lab/certificates.mjs",
+        "signal-lab/choices.mjs",
+        "signal-lab/common.mjs",
+        "signal-lab/engines.mjs",
+        "signal-lab/games.json",
+        "signal-lab/index.html",
+        "signal-lab/machines.mjs",
+        "signal-lab/measures.mjs",
+        "signal-lab/room.mjs",
+        "signal-lab/signals.mjs"
+      ],
+      "sourceHash": "0b6088f040bd8dd09fa442ed33533d00c50f9b02fca709db95f465a0ea430b83",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "c1d2b2c9d2d7d3b179a44b8d83f73ba6331fba4a7f6dcfa45e548472ed1774de",
+      "capturedAt": "2026-10-02T19:55:32.153Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "empty-language",
+      "room": "signal-lab",
+      "url": "signal-lab/?game=empty-language&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board .game-grid",
+      "clip": {
+        "x": 43,
+        "y": 687,
+        "width": 640,
+        "height": 420
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 420
+      },
+      "sourceFiles": [
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css",
+        "signal-lab/certificates.mjs",
+        "signal-lab/choices.mjs",
+        "signal-lab/common.mjs",
+        "signal-lab/engines.mjs",
+        "signal-lab/games.json",
+        "signal-lab/index.html",
+        "signal-lab/machines.mjs",
+        "signal-lab/measures.mjs",
+        "signal-lab/room.mjs",
+        "signal-lab/signals.mjs"
+      ],
+      "sourceHash": "0b6088f040bd8dd09fa442ed33533d00c50f9b02fca709db95f465a0ea430b83",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "f696cbe1fc62ef0fb8b1636b48e9a25bdf8cae09841ed234b81329f62328abea",
+      "capturedAt": "2026-10-02T19:55:31.183Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "hall-window",
+      "room": "signal-lab",
+      "url": "signal-lab/?game=hall-window&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board canvas",
+      "clip": {
+        "x": 43,
+        "y": 571,
+        "width": 640,
+        "height": 420
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 420
+      },
+      "sourceFiles": [
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css",
+        "signal-lab/certificates.mjs",
+        "signal-lab/choices.mjs",
+        "signal-lab/common.mjs",
+        "signal-lab/engines.mjs",
+        "signal-lab/games.json",
+        "signal-lab/index.html",
+        "signal-lab/machines.mjs",
+        "signal-lab/measures.mjs",
+        "signal-lab/room.mjs",
+        "signal-lab/signals.mjs"
+      ],
+      "sourceHash": "0b6088f040bd8dd09fa442ed33533d00c50f9b02fca709db95f465a0ea430b83",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "714191655a5e76e8065674ea3b9b70a8ff8f7e75e4d032bc36d2c115d85e51c9",
+      "capturedAt": "2026-10-02T19:55:31.004Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "interval-post",
+      "room": "signal-lab",
+      "url": "signal-lab/?game=interval-post&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board canvas",
+      "clip": {
+        "x": 43,
+        "y": 783,
+        "width": 640,
+        "height": 420
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 420
+      },
+      "sourceFiles": [
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css",
+        "signal-lab/certificates.mjs",
+        "signal-lab/choices.mjs",
+        "signal-lab/common.mjs",
+        "signal-lab/engines.mjs",
+        "signal-lab/games.json",
+        "signal-lab/index.html",
+        "signal-lab/machines.mjs",
+        "signal-lab/measures.mjs",
+        "signal-lab/room.mjs",
+        "signal-lab/signals.mjs"
+      ],
+      "sourceHash": "0b6088f040bd8dd09fa442ed33533d00c50f9b02fca709db95f465a0ea430b83",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "ad165d61649faacd5a66263bdb69881e3dfaf7e0d99d0850632a3fb789f86159",
+      "capturedAt": "2026-10-02T19:55:31.573Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "phase-paper",
+      "room": "signal-lab",
+      "url": "signal-lab/?game=phase-paper&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board canvas",
+      "clip": {
+        "x": 43,
+        "y": 571,
+        "width": 640,
+        "height": 420
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 420
+      },
+      "sourceFiles": [
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css",
+        "signal-lab/certificates.mjs",
+        "signal-lab/choices.mjs",
+        "signal-lab/common.mjs",
+        "signal-lab/engines.mjs",
+        "signal-lab/games.json",
+        "signal-lab/index.html",
+        "signal-lab/machines.mjs",
+        "signal-lab/measures.mjs",
+        "signal-lab/room.mjs",
+        "signal-lab/signals.mjs"
+      ],
+      "sourceHash": "0b6088f040bd8dd09fa442ed33533d00c50f9b02fca709db95f465a0ea430b83",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "bfb7688d277408eff03f69ffc3ccf15d240fcfa3e000b2481f04f9c146baf83e",
+      "capturedAt": "2026-10-02T19:55:29.645Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "privacy-dials",
+      "room": "signal-lab",
+      "url": "signal-lab/?game=privacy-dials&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board .table-wrap",
+      "clip": {
+        "x": 43,
+        "y": 662,
+        "width": 640,
+        "height": 460
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 460
+      },
+      "sourceFiles": [
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css",
+        "signal-lab/certificates.mjs",
+        "signal-lab/choices.mjs",
+        "signal-lab/common.mjs",
+        "signal-lab/engines.mjs",
+        "signal-lab/games.json",
+        "signal-lab/index.html",
+        "signal-lab/machines.mjs",
+        "signal-lab/measures.mjs",
+        "signal-lab/room.mjs",
+        "signal-lab/signals.mjs"
+      ],
+      "sourceHash": "0b6088f040bd8dd09fa442ed33533d00c50f9b02fca709db95f465a0ea430b83",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "272d783c35684338087d1b5d5836722037e75afb6c738d8ff127ac4730b0f507",
+      "capturedAt": "2026-10-02T19:55:31.952Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "pruning-room",
+      "room": "signal-lab",
+      "url": "signal-lab/?game=pruning-room&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board canvas",
+      "clip": {
+        "x": 43,
+        "y": 571,
+        "width": 640,
+        "height": 520
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 520
+      },
+      "sourceFiles": [
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css",
+        "signal-lab/certificates.mjs",
+        "signal-lab/choices.mjs",
+        "signal-lab/common.mjs",
+        "signal-lab/engines.mjs",
+        "signal-lab/games.json",
+        "signal-lab/index.html",
+        "signal-lab/machines.mjs",
+        "signal-lab/measures.mjs",
+        "signal-lab/room.mjs",
+        "signal-lab/signals.mjs"
+      ],
+      "sourceHash": "0b6088f040bd8dd09fa442ed33533d00c50f9b02fca709db95f465a0ea430b83",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "188ec39d0299ff34984d124602c7206c431bd0fd24555a91ff555a59740440fb",
+      "capturedAt": "2026-10-02T19:55:31.767Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "quorum-garden",
+      "room": "signal-lab",
+      "url": "signal-lab/?game=quorum-garden&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board .buttons",
+      "clip": {
+        "x": 43,
+        "y": 660,
+        "width": 640,
+        "height": 480
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 480
+      },
+      "sourceFiles": [
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css",
+        "signal-lab/certificates.mjs",
+        "signal-lab/choices.mjs",
+        "signal-lab/common.mjs",
+        "signal-lab/engines.mjs",
+        "signal-lab/games.json",
+        "signal-lab/index.html",
+        "signal-lab/machines.mjs",
+        "signal-lab/measures.mjs",
+        "signal-lab/room.mjs",
+        "signal-lab/signals.mjs"
+      ],
+      "sourceHash": "0b6088f040bd8dd09fa442ed33533d00c50f9b02fca709db95f465a0ea430b83",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "4fd9a216a9ff2f802824b7187a98137e7ef370ee7abe6e3399677badcc3f4ba6",
+      "capturedAt": "2026-10-02T19:55:30.419Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "quotient-quay",
+      "room": "signal-lab",
+      "url": "signal-lab/?game=quotient-quay&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board canvas",
+      "clip": {
+        "x": 43,
+        "y": 547,
+        "width": 640,
+        "height": 420
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 420
+      },
+      "sourceFiles": [
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css",
+        "signal-lab/certificates.mjs",
+        "signal-lab/choices.mjs",
+        "signal-lab/common.mjs",
+        "signal-lab/engines.mjs",
+        "signal-lab/games.json",
+        "signal-lab/index.html",
+        "signal-lab/machines.mjs",
+        "signal-lab/measures.mjs",
+        "signal-lab/room.mjs",
+        "signal-lab/signals.mjs"
+      ],
+      "sourceHash": "0b6088f040bd8dd09fa442ed33533d00c50f9b02fca709db95f465a0ea430b83",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "3c4baae2cc6d1545d6ba2388904334de6536147fc2583dc153edaa1e809d8990",
+      "capturedAt": "2026-10-02T19:55:28.591Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "reset-post",
+      "room": "signal-lab",
+      "url": "signal-lab/?game=reset-post&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board canvas",
+      "clip": {
+        "x": 43,
+        "y": 547,
+        "width": 640,
+        "height": 420
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 420
+      },
+      "sourceFiles": [
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css",
+        "signal-lab/certificates.mjs",
+        "signal-lab/choices.mjs",
+        "signal-lab/common.mjs",
+        "signal-lab/engines.mjs",
+        "signal-lab/games.json",
+        "signal-lab/index.html",
+        "signal-lab/machines.mjs",
+        "signal-lab/measures.mjs",
+        "signal-lab/room.mjs",
+        "signal-lab/signals.mjs"
+      ],
+      "sourceHash": "0b6088f040bd8dd09fa442ed33533d00c50f9b02fca709db95f465a0ea430b83",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "71f7c74a0dc5ba5b3ef411999798ca09f1d1fcad9893bd57fcac93e396392677",
+      "capturedAt": "2026-10-02T19:55:28.372Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "rotation-index",
+      "room": "signal-lab",
+      "url": "signal-lab/?game=rotation-index&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board .game-grid",
+      "clip": {
+        "x": 43,
+        "y": 873,
+        "width": 640,
+        "height": 420
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 420
+      },
+      "sourceFiles": [
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css",
+        "signal-lab/certificates.mjs",
+        "signal-lab/choices.mjs",
+        "signal-lab/common.mjs",
+        "signal-lab/engines.mjs",
+        "signal-lab/games.json",
+        "signal-lab/index.html",
+        "signal-lab/machines.mjs",
+        "signal-lab/measures.mjs",
+        "signal-lab/room.mjs",
+        "signal-lab/signals.mjs"
+      ],
+      "sourceHash": "0b6088f040bd8dd09fa442ed33533d00c50f9b02fca709db95f465a0ea430b83",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "5bd7c6baedc9b0fa920bc3ccecbb6d640eb9c197eeb6a1def847ce259eef184d",
+      "capturedAt": "2026-10-02T19:55:29.843Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "separating-line",
+      "room": "signal-lab",
+      "url": "signal-lab/?game=separating-line&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board canvas",
+      "clip": {
+        "x": 43,
+        "y": 571,
+        "width": 640,
+        "height": 560
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 560
+      },
+      "sourceFiles": [
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css",
+        "signal-lab/certificates.mjs",
+        "signal-lab/choices.mjs",
+        "signal-lab/common.mjs",
+        "signal-lab/engines.mjs",
+        "signal-lab/games.json",
+        "signal-lab/index.html",
+        "signal-lab/machines.mjs",
+        "signal-lab/measures.mjs",
+        "signal-lab/room.mjs",
+        "signal-lab/signals.mjs"
+      ],
+      "sourceHash": "0b6088f040bd8dd09fa442ed33533d00c50f9b02fca709db95f465a0ea430b83",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "1117a59ef26a23f6389497781464bbd5e7079519773fab07967a98031e62cef5",
+      "capturedAt": "2026-10-02T19:55:30.819Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "shared-secret",
+      "room": "signal-lab",
+      "url": "signal-lab/?game=shared-secret&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board .game-grid",
+      "clip": {
+        "x": 43,
+        "y": 740,
+        "width": 640,
+        "height": 420
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 420
+      },
+      "sourceFiles": [
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css",
+        "signal-lab/certificates.mjs",
+        "signal-lab/choices.mjs",
+        "signal-lab/common.mjs",
+        "signal-lab/engines.mjs",
+        "signal-lab/games.json",
+        "signal-lab/index.html",
+        "signal-lab/machines.mjs",
+        "signal-lab/measures.mjs",
+        "signal-lab/room.mjs",
+        "signal-lab/signals.mjs"
+      ],
+      "sourceHash": "0b6088f040bd8dd09fa442ed33533d00c50f9b02fca709db95f465a0ea430b83",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "49c6f343b4176335d0638ae4827092a9712ce0fd66613e913cd4ff7f201d8c67",
+      "capturedAt": "2026-10-02T19:55:30.051Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    },
+    {
+      "id": "wraparound-witness",
+      "room": "signal-lab",
+      "url": "signal-lab/?game=wraparound-witness&seed=20261002",
+      "seed": 20261002,
+      "mode": "finite",
+      "stage": 0,
+      "opening": true,
+      "lifecycleActions": [
+        "begin"
+      ],
+      "gameplayActions": [],
+      "pausedForScreenshot": false,
+      "anchor": "#board .table-wrap",
+      "clip": {
+        "x": 43,
+        "y": 547,
+        "width": 640,
+        "height": 540
+      },
+      "dimensions": {
+        "width": 640,
+        "height": 540
+      },
+      "sourceFiles": [
+        "journey/journey.css",
+        "journey/journey.mjs",
+        "play.css",
+        "signal-lab/certificates.mjs",
+        "signal-lab/choices.mjs",
+        "signal-lab/common.mjs",
+        "signal-lab/engines.mjs",
+        "signal-lab/games.json",
+        "signal-lab/index.html",
+        "signal-lab/machines.mjs",
+        "signal-lab/measures.mjs",
+        "signal-lab/room.mjs",
+        "signal-lab/signals.mjs"
+      ],
+      "sourceHash": "0b6088f040bd8dd09fa442ed33533d00c50f9b02fca709db95f465a0ea430b83",
+      "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+      "pngSha256": "765693ff046121c4065412b11754ab6e53a498f0b8a1e993cfb77c91ac2ba6de",
+      "capturedAt": "2026-10-02T19:55:29.202Z",
+      "scope": "Real rendered opening board and nearby native controls; no gameplay-completion claim."
+    }
+  ],
+  "captureCount": 100,
+  "toolHash": "1a39713d1b4abe9f6d7d0855711bc2e16012775414e477f0867aa8fc6f6d122b",
+  "lastCapturedAt": "2026-10-02T19:55:42.022Z",
+  "baselinePreviewChecks": {
+    "passed": true,
+    "count": 290,
+    "scope": "All existing PNG files whose IDs belong to preserved300 were byte-hashed before and after this invocation."
+  }
+}

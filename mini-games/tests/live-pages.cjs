@@ -7,7 +7,7 @@ const base=(process.env.LIVE_BASE_URL||'https://yarith28.github.io/motion-design
 const out=process.env.SCREENSHOT_DIR||'live-verification';fs.mkdirSync(out,{recursive:true});
 const inventory=JSON.parse(fs.readFileSync('mini-games/inventory.json','utf8'));
 const total=inventory.games.length;
-const expansionRooms=new Set(['systems-room','tabletop-room','puzzle-lab','kinetic-room','discovery-room','construct-room','parlour-room','motion-room','workbench-room']);
+const expansionRooms=new Set(['systems-room','tabletop-room','puzzle-lab','kinetic-room','discovery-room','construct-room','parlour-room','motion-room','workbench-room','constraint-room','field-room','signal-lab','commons-room','atelier-room']);
 const categories=[...new Set(inventory.games.map(g=>g.category))];
 const categoryCount=c=>c==='all'?total:inventory.games.filter(g=>g.category===c).length;
 const games=['signal-run','double-take','pocket-orbit','good-order','afterglow','lantern-lines','tide-pool','word-weave','sky-stack','pebble-post'];
@@ -92,6 +92,7 @@ async function publishedFiles(){
     await page.screenshot({path:`${out}/afterglow-${mobile?'mobile':'desktop'}.png`,fullPage:true});
    }
    results.push({game:entry.id,viewport:mobile?'mobile':'desktop',url,status:response.status(),smoke:'passed'});
+   if(results.length%50===0)console.log(JSON.stringify({event:'route-progress',completed:results.length,total:total*2,time:new Date().toISOString()}));
    await page.getByRole('link',{name:'All games',exact:false}).first().click();await page.waitForURL(base+'/mini-games/');assert.equal(await page.locator('[data-category]:visible').count(),total);
   }
   await context.close();

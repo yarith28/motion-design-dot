@@ -3,9 +3,9 @@
   "suite": "motion-room",
   "passed": true,
   "status": "passed",
-  "startedAt": "2026-10-01T10:17:09.286Z",
+  "startedAt": "2026-10-02T20:05:36.563Z",
   "source": {
-    "sha256": "7577c07de7e627448691d8c2c8215779d6570d88dc695f69a0bea6b362aa0ec6",
+    "sha256": "1fbea5c075ec2ee2cd8a9cf59f8406de8444b8afcbeebfe9c4d44b8e7ec1bb01",
     "files": [
       "catalog.css",
       "catalog.js",
@@ -26,6 +26,7 @@
       "styles.css",
       "tests/fixtures/baseline100.json",
       "tests/fixtures/baseline200.json",
+      "tests/fixtures/baseline300.json",
       "tests/fixtures/parlour-b02-b05-paths.json",
       "tests/fixtures/parlour-b13-guided-paths.json",
       "tests/fixtures/parlour-paths.json",
@@ -37,7 +38,7 @@
       "tools/run-suite.cjs"
     ]
   },
-  "requestedBaseURL": "http://127.0.0.1:8781",
+  "requestedBaseURL": "http://127.0.0.1:8790",
   "browser": {
     "engine": "Chromium",
     "version": "Chromium 151.0.7922.173 built on Debian GNU/Linux 13 (trixie)",
@@ -83,24 +84,24 @@
     "Solver completions do not establish human difficulty or accessibility."
   ],
   "servedRuntimeBefore": {
-    "baseURL": "http://127.0.0.1:8781",
+    "baseURL": "http://127.0.0.1:8790",
     "passed": true,
-    "sha256": "e5c65e4da7ca8779ca0f31ec48f93309e9bf4ec623a929f68148a126f3d52904",
+    "sha256": "7b75be5ad99c2afcb1425112b2f7a3450268c96322b8669d7cb73211a95bf681",
     "fileCount": 17,
-    "verifiedAt": "2026-10-01T10:17:09.398Z"
+    "verifiedAt": "2026-10-02T20:05:36.779Z"
   },
   "exitCode": 0,
   "signal": null,
   "sourceUnchanged": true,
   "servedRuntime": {
-    "baseURL": "http://127.0.0.1:8781",
+    "baseURL": "http://127.0.0.1:8790",
     "passed": true,
-    "sha256": "e5c65e4da7ca8779ca0f31ec48f93309e9bf4ec623a929f68148a126f3d52904",
+    "sha256": "7b75be5ad99c2afcb1425112b2f7a3450268c96322b8669d7cb73211a95bf681",
     "fileCount": 17,
-    "verifiedAt": "2026-10-01T10:22:04.423Z"
+    "verifiedAt": "2026-10-02T20:12:23.940Z"
   },
   "completionEvidence": {
-    "sha256": "2bc208a45f7d7105760ecc5f101d7d8af860bdef86c595be841ab744bbaf2b5e",
+    "sha256": "c0cbcc1305c773d9f00609edec74393df196fafdb4b43055e95fcf17fe6d193e",
     "file": "coverage/motion-room.json",
     "cases": [
       {
@@ -1257,5 +1258,5 @@
       }
     ]
   },
-  "finishedAt": "2026-10-01T10:22:04.424Z"
+  "finishedAt": "2026-10-02T20:12:23.942Z"
 }

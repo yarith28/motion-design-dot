@@ -14,15 +14,27 @@ concurrency:
   group: verify-live-arcade
   cancel-in-progress: true
 jobs:
+  inventory-and-review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify400-game release and complete source-bound endless review
+        run: |
+          node mini-games/tests/expansion400-review-gate.cjs
+          node mini-games/tests/evidence-index.cjs
+          node mini-games/tests/evidence-fresh.cjs
+          node mini-games/tools/coverage-index.cjs
   live-browser-check:
     runs-on: ubuntu-latest
-    timeout-minutes: 55
+    timeout-minutes: 120
     steps:
       - uses: actions/checkout@v4
       - name: Preserve the original collection and showcase
         run: |
           node mini-games/tests/preservation.cjs
           node mini-games/tests/preservation200.cjs
+          node mini-games/tests/preservation300.cjs
           node mini-games/tests/expansion300-review-gate.cjs
       - name: Install test-only browser dependencies
         run: |
@@ -73,7 +85,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        room: [systems-room, tabletop-room, puzzle-lab, kinetic-room, discovery-room, construct-room, parlour-room, motion-room, workbench-room]
+        room: [systems-room, tabletop-room, puzzle-lab, kinetic-room, discovery-room, construct-room, parlour-room, motion-room, workbench-room, constraint-room, field-room, signal-lab, commons-room, atelier-room]
     steps:
       - uses: actions/checkout@v4
       - name: Install test-only browser dependencies
@@ -110,4 +122,33 @@ jobs:
             mini-games/coverage/suite-runs/${{ matrix.room }}.json
             mini-games/coverage/puzzle-generation-regression.json
             mini-games/coverage/discovery-design-properties.json
+          retention-days: 30
+  journey-lifecycle:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install test-only engines
+        run: |
+          npm install --prefix "$RUNNER_TEMP/journey" playwright@1.55.0
+          "$RUNNER_TEMP/journey/node_modules/.bin/playwright" install --with-deps chromium webkit
+      - name: Verify finite/endless lifecycle on Chromium and WebKit
+        env:
+          NODE_PATH: ${{ runner.temp }}/journey/node_modules
+          BASE_URL: http://127.0.0.1:8790
+        run: |
+          python3 -m http.server 8790 --bind 127.0.0.1 > "$RUNNER_TEMP/journey-server.log" 2>&1 &
+          export CHROMIUM_PATH="$(node -e "process.stdout.write(require('playwright').chromium.executablePath())")"
+          node mini-games/tests/journey.cjs
+          BROWSER_ENGINE=webkit node mini-games/tests/journey.cjs
+          node mini-games/tests/journey-opening-controls.cjs
+          BROWSER_ENGINE=webkit node mini-games/tests/journey-opening-controls.cjs
+      - name: Save lifecycle evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: journey-lifecycle
+          path: |
+            mini-games/coverage/journey-*.json
+            mini-games/coverage/opening-controls-*.json
           retention-days: 30

@@ -1,65 +1,110 @@
 {
-  "target": 200,
-  "phase": "200 existing games remediated after independent review; exact-commit publication workflow required",
+  "target": 500,
+  "phase": "400-game milestone passed local release gate; next100 isolated implementations and reviews in progress; exact-commit CI and Pages verification pending",
   "publicationRule": "Implemented playable entries are linked in the catalog; source-matched verification is tracked independently in coverage/index.json. Planned inventory is not playable.",
   "collections": [
     {
-      "id": "logic-room",
+      "id": "spatial-room",
       "target": 15,
-      "status": "implemented; consult current source-matched evidence"
+      "status": "catalog-linked; current source-bound evidence in coverage/index.json"
     },
     {
-      "id": "word-room",
+      "id": "logic-room",
       "target": 15,
-      "status": "implemented; consult current source-matched evidence"
+      "status": "catalog-linked; current source-bound evidence in coverage/index.json"
     },
     {
       "id": "number-room",
       "target": 15,
-      "status": "implemented; consult current source-matched evidence"
+      "status": "catalog-linked; current source-bound evidence in coverage/index.json"
+    },
+    {
+      "id": "word-room",
+      "target": 15,
+      "status": "catalog-linked; current source-bound evidence in coverage/index.json"
     },
     {
       "id": "strategy-room",
       "target": 15,
-      "status": "implemented; consult current source-matched evidence"
-    },
-    {
-      "id": "spatial-room",
-      "target": 15,
-      "status": "implemented; consult current source-matched evidence"
+      "status": "catalog-linked; current source-bound evidence in coverage/index.json"
     },
     {
       "id": "arcade-room",
       "target": 15,
-      "status": "implemented; consult current source-matched evidence"
+      "status": "catalog-linked; current source-bound evidence in coverage/index.json"
     },
     {
       "id": "systems-room",
       "target": 20,
-      "status": "implemented and reviewed; consult current source-matched evidence"
+      "status": "catalog-linked; current source-bound evidence in coverage/index.json"
     },
     {
       "id": "tabletop-room",
       "target": 20,
-      "status": "implemented and reviewed; consult current source-matched evidence"
+      "status": "catalog-linked; current source-bound evidence in coverage/index.json"
     },
     {
       "id": "puzzle-lab",
       "target": 20,
-      "status": "implemented and reviewed; consult current source-matched evidence"
+      "status": "catalog-linked; current source-bound evidence in coverage/index.json"
     },
     {
       "id": "kinetic-room",
       "target": 20,
-      "status": "implemented and reviewed; consult current source-matched evidence"
+      "status": "catalog-linked; current source-bound evidence in coverage/index.json"
     },
     {
       "id": "discovery-room",
       "target": 20,
-      "status": "implemented and reviewed; consult current source-matched evidence"
+      "status": "catalog-linked; current source-bound evidence in coverage/index.json"
+    },
+    {
+      "id": "construct-room",
+      "target": 14,
+      "status": "catalog-linked; current source-bound evidence in coverage/index.json"
+    },
+    {
+      "id": "parlour-room",
+      "target": 35,
+      "status": "catalog-linked; current source-bound evidence in coverage/index.json"
+    },
+    {
+      "id": "motion-room",
+      "target": 24,
+      "status": "catalog-linked; current source-bound evidence in coverage/index.json"
+    },
+    {
+      "id": "workbench-room",
+      "target": 27,
+      "status": "catalog-linked; current source-bound evidence in coverage/index.json"
+    },
+    {
+      "id": "constraint-room",
+      "target": 20,
+      "status": "catalog-linked; current source-bound evidence in coverage/index.json"
+    },
+    {
+      "id": "field-room",
+      "target": 20,
+      "status": "catalog-linked; current source-bound evidence in coverage/index.json"
+    },
+    {
+      "id": "signal-lab",
+      "target": 20,
+      "status": "catalog-linked; current source-bound evidence in coverage/index.json"
+    },
+    {
+      "id": "commons-room",
+      "target": 20,
+      "status": "catalog-linked; current source-bound evidence in coverage/index.json"
+    },
+    {
+      "id": "atelier-room",
+      "target": 20,
+      "status": "catalog-linked; current source-bound evidence in coverage/index.json"
     }
   ],
-  "catalogPlayable": 200,
+  "catalogPlayable": 400,
   "liveCommitMeaning": "The nested historicalRelease identifies the previously verified publication; it is not proof for current changed source.",
   "historicalRelease": {
     "verifiedLive": 100,
@@ -73,25 +118,29 @@
   "currentLocalEvidence": "coverage/index.json",
   "currentLiveVerification": {
     "workflow": "https://github.com/yarith28/motion-design-dot/actions/workflows/verify-pages.yml",
-    "policy": "A successful workflow run matching the published commit is required: source byte equivalence, 400 route/viewport cases, original reviewed-issue regressions, new-game Chromium/WebKit controls and full new-game Chromium completion jobs. A push is not deployment proof."
+    "policy": "A successful workflow run matching the published commit is required: served-source byte equivalence,800 route/viewport cases, original reviewed-issue regressions, new-game Chromium/WebKit openings, full new-game Chromium completion jobs and lifecycle checks. Local evidence or a push is not deployment proof."
   },
   "currentLocalVerification": {
     "evidence": "coverage/index.json",
-    "status": "Passed all 20 source-matched suites",
+    "status": "Passed all29 current source-matched suites and expansion400 release gate",
+    "originalGamesPreserved": 300,
     "newGames": 100,
+    "verifiedGames": 400,
+    "desktopCompletions": 400,
+    "mobileViewportCompletions": 400,
+    "touchGameplayCompletions": 347,
     "newDesktopCases": 100,
-    "newMobileCases": 100,
-    "newTouchOnlyGames": 97,
-    "localRouteResetCases": 400,
-    "localAssetsMatched": 313,
-    "controlsCases": 200,
-    "controlsEngine": "Chromium 151.0.7922.173",
-    "limits": "Completion uses solvers/probes/legal plans. Competitive terminal losses count; 3 discovery mobile paths use mixed native field entry. Ordinary review is sampled. No physical device or screen-reader session.",
-    "verifiedGames": 200,
-    "desktopCompletions": 200,
-    "mobileViewportCompletions": 200,
-    "touchGameplayCompletions": 149,
-    "layoutChecks": "Configured viewport width after font readiness; full 200-case new-game control suite rerun after Discovery table/header fixes. Historical local route report is superseded by exact-commit CI for current layout proof."
+    "newMobileTouchCases": 100,
+    "newFiniteStudyWins": 600,
+    "newOptionalChallengeWins": 328,
+    "newGeneratedChallengeStreams": 75,
+    "newMatchSeries": 7,
+    "newFiniteOnlyCampaigns": 18,
+    "nativeOpeningCases": 800,
+    "localRouteResetCases": 800,
+    "genericExpansionControlsCases": 600,
+    "browserEngine": "Chromium 151.0.7922.173",
+    "limits": "Native controls use source-informed legal plans. Original competitive terminal results and older mixed mobile input retain disclosed scope. Short ordinary samples cover100 new games; six selected campaigns were independently replayed. Local route asset checks include isolated unlinked500 prototypes and do not attest deployed source. No physical-device or screen-reader session."
   },
   "baselinePreserved": {
     "commit": "6f4469cc7491b2b6255e7479c20880adf99787df",
@@ -106,5 +155,47 @@
     "report": "REMEDIATION-200.md",
     "independentReview": "REMEDIATION-200-REVIEW.md",
     "publication": "Consult exact-commit Verify live arcade and Pages workflow results; prior deployment records do not certify this remediation."
+  },
+  "historical200LocalMilestone": {
+    "target": 200,
+    "phase": "200 existing games remediated after independent review; exact-commit publication workflow required",
+    "catalogPlayable": 200,
+    "currentLocalVerification": {
+      "evidence": "coverage/index.json",
+      "status": "Passed all 20 source-matched suites",
+      "newGames": 100,
+      "newDesktopCases": 100,
+      "newMobileCases": 100,
+      "newTouchOnlyGames": 97,
+      "localRouteResetCases": 400,
+      "localAssetsMatched": 313,
+      "controlsCases": 200,
+      "controlsEngine": "Chromium 151.0.7922.173",
+      "limits": "Completion uses solvers/probes/legal plans. Competitive terminal losses count; 3 discovery mobile paths use mixed native field entry. Ordinary review is sampled. No physical device or screen-reader session.",
+      "verifiedGames": 200,
+      "desktopCompletions": 200,
+      "mobileViewportCompletions": 200,
+      "touchGameplayCompletions": 149,
+      "layoutChecks": "Configured viewport width after font readiness; full 200-case new-game control suite rerun after Discovery table/header fixes. Historical local route report is superseded by exact-commit CI for current layout proof."
+    }
+  },
+  "baseline300Preserved": {
+    "commit": "c96ec5e39669d330ac761d98a335afe44c34a977",
+    "games": 300,
+    "runtimeAndUnrelatedFiles": 227,
+    "previews": 290,
+    "test": "tests/preservation300.cjs"
+  },
+  "next100": {
+    "plannedGames": 100,
+    "families": [
+      "relation-room",
+      "trajectory-room",
+      "protocol-room",
+      "civic-room",
+      "form-room"
+    ],
+    "catalogLinked": false,
+    "status": "isolated implementation and source review; full native execution, generation checks and integration gate required"
   }
 }

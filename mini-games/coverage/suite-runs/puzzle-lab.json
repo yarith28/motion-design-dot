@@ -3,9 +3,9 @@
   "suite": "puzzle-lab",
   "passed": true,
   "status": "passed",
-  "startedAt": "2026-10-01T09:55:57.877Z",
+  "startedAt": "2026-10-02T20:01:06.941Z",
   "source": {
-    "sha256": "bf32c04c8636df31db18a37b95068befcaf026540ace82382da237d45d5842ca",
+    "sha256": "3704f5d864981f1a2015a8f2b4d5661cb16f4a4284409768e28cb90a4b0c0948",
     "files": [
       "catalog.css",
       "catalog.js",
@@ -22,6 +22,7 @@
       "styles.css",
       "tests/fixtures/baseline100.json",
       "tests/fixtures/baseline200.json",
+      "tests/fixtures/baseline300.json",
       "tests/fixtures/parlour-b02-b05-paths.json",
       "tests/fixtures/parlour-b13-guided-paths.json",
       "tests/fixtures/parlour-paths.json",
@@ -33,7 +34,7 @@
       "tools/run-suite.cjs"
     ]
   },
-  "requestedBaseURL": "http://127.0.0.1:8781",
+  "requestedBaseURL": "http://127.0.0.1:8790",
   "browser": {
     "engine": "Chromium",
     "version": "Chromium 151.0.7922.173 built on Debian GNU/Linux 13 (trixie)",
@@ -75,21 +76,21 @@
     "Solver completions do not establish human difficulty or accessibility."
   ],
   "servedRuntimeBefore": {
-    "baseURL": "http://127.0.0.1:8781",
+    "baseURL": "http://127.0.0.1:8790",
     "passed": true,
-    "sha256": "a080818a67bff5f7bb690c5ab6e8e7cdb0ee46bf3b4b06e9e9abfe1d3ff6f625",
+    "sha256": "03fe875ccb9d035caba58d4bbe115c96b039efa7b9395cd85fd13c375c4a848a",
     "fileCount": 13,
-    "verifiedAt": "2026-10-01T09:55:58.150Z"
+    "verifiedAt": "2026-10-02T20:01:07.092Z"
   },
   "exitCode": 0,
   "signal": null,
   "sourceUnchanged": true,
   "servedRuntime": {
-    "baseURL": "http://127.0.0.1:8781",
+    "baseURL": "http://127.0.0.1:8790",
     "passed": true,
-    "sha256": "a080818a67bff5f7bb690c5ab6e8e7cdb0ee46bf3b4b06e9e9abfe1d3ff6f625",
+    "sha256": "03fe875ccb9d035caba58d4bbe115c96b039efa7b9395cd85fd13c375c4a848a",
     "fileCount": 13,
-    "verifiedAt": "2026-10-01T09:58:15.063Z"
+    "verifiedAt": "2026-10-02T20:03:20.427Z"
   },
   "completionEvidence": {
     "sha256": "b75f363f34f09f82a50df9a8623d5aced334fd0386e2d5823e97993fa69b32ac",
@@ -799,5 +800,5 @@
       }
     ]
   },
-  "finishedAt": "2026-10-01T09:58:15.065Z"
+  "finishedAt": "2026-10-02T20:03:20.428Z"
 }

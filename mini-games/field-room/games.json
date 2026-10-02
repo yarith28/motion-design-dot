@@ -1,0 +1,848 @@
+[
+  {
+    "id": "ninepin-line",
+    "name": "Ninepin Line",
+    "category": "puzzle",
+    "url": "field-room/?game=ninepin-line",
+    "mechanic": "Choose ball entry position and hook spin to trade direct pocket impact against useful pin-to-pin momentum; the second ball must convert the actual remaining rack.",
+    "description": "Choose ball entry position and hook spin to trade direct pocket impact against useful pin-to-pin momentum; the second ball must convert the actual remaining rack.",
+    "rules": [
+      "Each challenge has three nine-pin frames. Score the shown total pinfall target; each frame allows two deliveries and retains the actual standing pins for the second ball.",
+      "Choose offset, aim, launch speed and hook. A simulated moving ball and moving pins exchange impulses; hooks bend more near the far end of the lane. Fallen pins leave the next-ball rack.",
+      "Clear all three challenges for a finite campaign. A gutter/weak delivery uses its ball. Failing the three-frame quota ends the challenge. Reset challenge or Restart game restores the appropriate start."
+    ],
+    "controls": "Use Tab then Enter or Space on every named control; touch the same controls on mobile. Native sliders support arrows and touch dragging. All games are turn-paced: time advances only on the labeled simulation actions. Visual field interpretation is required.",
+    "accent": "#c9d8b6",
+    "symbol": "↗",
+    "stages": 3,
+    "nearestExisting": [
+      {
+        "id": "table-bowls",
+        "difference": "Pins fall when collision impulse or motion exceeds a threshold. Ball hook bends its lane trajectory, and a two-ball frame preserves the actual standing rack."
+      },
+      {
+        "id": "one-last-marble",
+        "difference": "Simulated variable-angle impacts and spin through a full rack replace deterministic legal contact chains."
+      }
+    ],
+    "sourceModules": [
+      "engines.mjs",
+      "core.mjs",
+      "sports.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"roll\"]"
+    },
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Seeded rack offsets, lane-hook factors and pinfall quotas vary each three-frame challenge; failed quota ends the cumulative tour.",
+      "difficultyCap": "Three bounded challenge families or bounded continuous geometry/physics ranges; sizes and physical limits remain fixed for unbounded stage indices."
+    }
+  },
+  {
+    "id": "batters-window",
+    "name": "Batter’s Window",
+    "category": "reflex",
+    "url": "field-room/?game=batters-window",
+    "mechanic": "Read the visible curved pitch, choose when it intersects bat reach, and set pull/center/push contact orientation to place the outgoing ball away from fielders.",
+    "description": "Read the visible curved pitch, choose when it intersects bat reach, and set pull/center/push contact orientation to place the outgoing ball away from fielders.",
+    "rules": [
+      "Make three safe hits within six pitches in each of three field alignments. The open outgoing-angle sector is marked on the field.",
+      "Advance a pitch one beat at a time. Swing once while its position is 1.8–4.2; contact quality must exceed 0.28. Bat orientation and early/late contact jointly determine where the hit flies.",
+      "A miss, late pitch or guarded outgoing hit uses a pitch. Six pitches without three safe hits loses. Use Reset challenge or Restart game to retry."
+    ],
+    "controls": "Use Tab then Enter or Space on every named control; touch the same controls on mobile. Native sliders support arrows and touch dragging. All games are turn-paced: time advances only on the labeled simulation actions. Visual field interpretation is required.",
+    "accent": "#d5c197",
+    "symbol": "◉",
+    "stages": 3,
+    "nearestExisting": [
+      {
+        "id": "pocket-orbit",
+        "difference": "Timing changes both contact quality and the resulting flight into a guarded field; orientation and pitcher trajectory are coupled decisions rather than one timing arc."
+      },
+      {
+        "id": "moon-basket",
+        "difference": "The incoming moving pitch supplies contact position/velocity; the player chooses contact rather than launching a stationary ball with angle and power."
+      }
+    ],
+    "sourceModules": [
+      "engines.mjs",
+      "core.mjs",
+      "sports.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"advance\"]"
+    },
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Seeded pitch speed/curvature sequences and continuously varied open field sectors; a failed six-pitch quota ends the run.",
+      "difficultyCap": "Three bounded challenge families or bounded continuous geometry/physics ranges; sizes and physical limits remain fixed for unbounded stage indices."
+    }
+  },
+  {
+    "id": "crease-keeper",
+    "name": "Crease Keeper",
+    "category": "reflex",
+    "url": "field-room/?game=crease-keeper",
+    "mechanic": "Choose a starting position and stance, then commit a high or low dive at the right beat to cover a visibly curving shot within finite reach.",
+    "description": "Choose a starting position and stance, then commit a high or low dive at the right beat to cover a visibly curving shot within finite reach.",
+    "rules": [
+      "Save at least four of six shots in each of three keeper sets. Final target, height and curvature are shown before every shot.",
+      "Choose a starting stance within −1.2 to +1.2, then begin the shot. A high or low dive commits direction/height and moves 0.62 per beat, capped at 2.3; it cannot be redirected.",
+      "The shot reaches the goal at beat eight. Save only within 0.6 horizontally with matching height. Too many conceded shots lose the set. Reset challenge or Restart game retries."
+    ],
+    "controls": "Use Tab then Enter or Space on every named control; touch the same controls on mobile. Native sliders support arrows and touch dragging. All games are turn-paced: time advances only on the labeled simulation actions. Visual field interpretation is required.",
+    "accent": "#b6d0c5",
+    "symbol": "⌁",
+    "stages": 3,
+    "nearestExisting": [
+      {
+        "id": "lantern-defense",
+        "difference": "One keeper combines initial position, committed finite dive reach and high/low coverage; there are no launched expanding blast zones."
+      },
+      {
+        "id": "rally-club",
+        "difference": "Each curving shot requires one committed interception with a fixed goal-line deadline, rather than continuous paddle repositioning."
+      }
+    ],
+    "sourceModules": [
+      "engines.mjs",
+      "core.mjs",
+      "sports.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"launch\"]"
+    },
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Seeded target offsets, curves and alternating high/low shots. Every generated set requires four of six saves; failure ends the run.",
+      "difficultyCap": "Three bounded challenge families or bounded continuous geometry/physics ranges; sizes and physical limits remain fixed for unbounded stage indices."
+    }
+  },
+  {
+    "id": "last-second-pass",
+    "name": "Last Second Pass",
+    "category": "strategy",
+    "url": "field-room/?game=last-second-pass",
+    "mechanic": "Move off-ball teammates before sending a physical pass so a receiver can arrive while a defender cannot intercept; possession, passing lanes and the offside line constrain the route to goal.",
+    "description": "Move off-ball teammates before sending a physical pass so a receiver can arrive while a defender cannot intercept; possession, passing lanes and the offside line constrain the route to goal.",
+    "rules": [
+      "Score once in each of three attacking formations before 35 attack beats. Select a teammate to move and a different player as receiver. The training combination needs at least two completed passes involving all three teammates before a shot.",
+      "Moving or waiting advances defenders one beat; passes and shots take three beats and check the full swept flight. Receivers beyond x8 at release are offside. A shot needs the goal within 4.2 units.",
+      "A tackle, intercepted pass or offside reception ends the attack. Defenders and all teammate coordinates are visible. Reset challenge or Restart game restores the formation."
+    ],
+    "controls": "Use Tab then Enter or Space on every named control; touch the same controls on mobile. Native sliders support arrows and touch dragging. All games are turn-paced: time advances only on the labeled simulation actions. Visual field interpretation is required.",
+    "accent": "#c8bdcf",
+    "symbol": "⇄",
+    "stages": 3,
+    "nearestExisting": [
+      {
+        "id": "two-couriers",
+        "difference": "Possession transfers by a swept ball that defenders can intercept; teammates support the next pass and a goal requires onside reception, not parcel pickup/delivery."
+      },
+      {
+        "id": "crossfire-courtyard",
+        "difference": "Nonviolent possession and offside/receiver movement replace AP shooting, cover, health and suppression."
+      }
+    ],
+    "sourceModules": [
+      "engines.mjs",
+      "core.mjs",
+      "sports.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"right\"]"
+    },
+    "endless": {
+      "supported": false,
+      "reason": "Do not ship an endless toggle initially: a repeating hand-authored possession is not adequate replay. A future generator needs validated reachable onside attacks and defender diversity.",
+      "design": "Finite authored campaign preserves deliberate route constraints."
+    }
+  },
+  {
+    "id": "court-rotation",
+    "name": "Court Rotation",
+    "category": "reflex",
+    "url": "field-room/?game=court-rotation",
+    "mechanic": "Allocate a three-contact airborne rally across player roles: receive to a setter, place a set, and choose a spike lane after observing blocker commitment.",
+    "description": "Allocate a three-contact airborne rally across player roles: receive to a setter, place a set, and choose a spike lane after observing blocker commitment.",
+    "rules": [
+      "Win three different airborne rallies: receive with Bump, direct the second contact with Set, then Spike as the third contact. Consecutive contacts by the same player are a fault.",
+      "Choose the player and advance the ball in 0.2-second beats. A contact needs horizontal reach 0.8 and height 0.35–3.1. Movement also advances the ball; player selection does not.",
+      "Set height and position change the attacker’s contact window. Read the blocker’s committed line/cross lane and clear net height 1.65. Ground contact, an illegal fourth touch or a block loses; reset or restart to retry."
+    ],
+    "controls": "Use Tab then Enter or Space on every named control; touch the same controls on mobile. Native sliders support arrows and touch dragging. All games are turn-paced: time advances only on the labeled simulation actions. Visual field interpretation is required.",
+    "accent": "#c9d8b6",
+    "symbol": "↗",
+    "stages": 3,
+    "nearestExisting": [
+      {
+        "id": "rally-club",
+        "difference": "Three different team contacts and illegal repeated-player contacts impose spatial setup before an offensive hit; no direct paddle return."
+      },
+      {
+        "id": "last-second-pass",
+        "difference": "The ball cannot be held, gravity/apex height governs contact and only three touches are available; possession routing and offside are absent."
+      }
+    ],
+    "sourceModules": [
+      "engines.mjs",
+      "core.mjs",
+      "sports.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"advance\"]"
+    },
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Seeded initial serve height and team offset alter contact timing and blocker commitment. Each generated rally must be won.",
+      "difficultyCap": "Three bounded challenge families or bounded continuous geometry/physics ranges; sizes and physical limits remain fixed for unbounded stage indices."
+    }
+  },
+  {
+    "id": "velodrome-draft",
+    "name": "Velodrome Draft",
+    "category": "strategy",
+    "url": "field-room/?game=velodrome-draft",
+    "mechanic": "Choose effort and lane while using an opponent’s slipstream to conserve energy, then spend that reserve to overtake; outer lanes reduce forward race progress.",
+    "description": "Choose effort and lane while using an opponent’s slipstream to conserve energy, then spend that reserve to overtake; outer lanes reduce forward race progress.",
+    "rules": [
+      "Win each of three races by crossing the distance line ahead of both rivals. Their next speeds and surge beats are public.",
+      "Choose coast, cruise or sprint, then Ride one second. Draft when a rival is 0–6m ahead in your lane. Draft reduces energy cost; outer lanes cover 6.5% extra distance per lane.",
+      "Changing lanes costs speed and contacting an overlapping rider loses. Exhausted energy at very low pace or a rival finishing first loses. Reset challenge or Restart game begins again."
+    ],
+    "controls": "Use Tab then Enter or Space on every named control; touch the same controls on mobile. Native sliders support arrows and touch dragging. All games are turn-paced: time advances only on the labeled simulation actions. Visual field interpretation is required.",
+    "accent": "#d5c197",
+    "symbol": "◉",
+    "stages": 3,
+    "nearestExisting": [
+      {
+        "id": "vector-rally",
+        "difference": "Draft position and lane-specific distance couple energy strategy to opponent traffic; no integer acceleration maze or swept wall path."
+      },
+      {
+        "id": "wind-sail",
+        "difference": "Moving slipstreams are created by rival riders and changes of lane trade distance against drag; wind heading/sail trim do not exist."
+      }
+    ],
+    "sourceModules": [
+      "engines.mjs",
+      "core.mjs",
+      "travel.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"ride\"]"
+    },
+    "endless": {
+      "supported": true,
+      "kind": "match-series",
+      "design": "Optional match series: seeded race length, rival pace and surge beats create fresh races, each starting with a restored race reserve. Scores accumulate between won races; a defeat, contact or exhausted reserve ends the series.",
+      "difficultyCap": "Three bounded challenge families or bounded continuous geometry/physics ranges; sizes and physical limits remain fixed for unbounded stage indices."
+    }
+  },
+  {
+    "id": "clutch-circuit",
+    "name": "Clutch Circuit",
+    "category": "reflex",
+    "url": "field-room/?game=clutch-circuit",
+    "mechanic": "Shift a manual gearbox to keep engine RPM in its useful band as gradients and corner caps change load; shifts interrupt drive while brakes trade speed for brake/engine heat.",
+    "description": "Shift a manual gearbox to keep engine RPM in its useful band as gradients and corner caps change load; shifts interrupt drive while brakes trade speed for brake/engine heat.",
+    "rules": [
+      "Finish three manual-drive road stages within each time gate. The complete road gradients, lengths and corner speed caps are listed.",
+      "Torque depends on RPM and gear ratio. Shifts consume one second, including 0.6s of interrupted drive. Choose full/low throttle, drive, or brake; every action simulates one second with boundary checks.",
+      "RPM above 8100, excessive heat or crossing a corner faster than its cap plus 1.1 loses. Brake before the corner and avoid high-gear lugging. Reset challenge or Restart game retries."
+    ],
+    "controls": "Use Tab then Enter or Space on every named control; touch the same controls on mobile. Native sliders support arrows and touch dragging. All games are turn-paced: time advances only on the labeled simulation actions. Visual field interpretation is required.",
+    "accent": "#b6d0c5",
+    "symbol": "⌁",
+    "stages": 3,
+    "nearestExisting": [
+      {
+        "id": "vector-rally",
+        "difference": "Engine torque curve, gear ratio, shift lag and heat replace direct integer acceleration choice; the road is longitudinal rather than an acceleration grid."
+      },
+      {
+        "id": "velodrome-draft",
+        "difference": "No opponent drafting/energy bank. Mechanical gear selection and thermal constraints determine achievable speed."
+      }
+    ],
+    "sourceModules": [
+      "engines.mjs",
+      "core.mjs",
+      "travel.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"drive\"]"
+    },
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Seeded grades, straight lengths and corner speed caps create new finite road sections. A mechanical failure or time-gate miss ends the run.",
+      "difficultyCap": "Three bounded challenge families or bounded continuous geometry/physics ranges; sizes and physical limits remain fixed for unbounded stage indices."
+    }
+  },
+  {
+    "id": "ribbon-relay",
+    "name": "Ribbon Relay",
+    "category": "reflex",
+    "url": "field-room/?game=ribbon-relay",
+    "mechanic": "Accelerate the outgoing runner while controlling the incoming runner so both occupy the exchange zone at similar speed before transferring the baton.",
+    "description": "Accelerate the outgoing runner while controlling the incoming runner so both occupy the exchange zone at similar speed before transferring the baton.",
+    "rules": [
+      "Complete three baton exchanges. Both runners must be inside the marked exchange zone, within 1.5m and within 2m/s at the moment of transfer.",
+      "Accelerate changes the named runner by +1.5 speed; Ease reduces it by 1. Both runners then move for one beat. Coast advances both without acceleration. The outgoing gradient may reduce speed.",
+      "A bad transfer drops the baton. Leaving the zone or exceeding 13 beats also loses. Speed up the outgoing runner at a useful cue, then match the incoming speed. Reset challenge or Restart game retries."
+    ],
+    "controls": "Use Tab then Enter or Space on every named control; touch the same controls on mobile. Native sliders support arrows and touch dragging. All games are turn-paced: time advances only on the labeled simulation actions. Visual field interpretation is required.",
+    "accent": "#c8bdcf",
+    "symbol": "⇄",
+    "stages": 3,
+    "nearestExisting": [
+      {
+        "id": "vector-rally",
+        "difference": "Two independent runner position and velocity states must meet inside an exchange zone with gap and speed-difference limits; the successful transfer ends that handoff challenge."
+      },
+      {
+        "id": "track-exchange",
+        "difference": "Continuous speed matching and moving handoff geometry replace graph-based cooperative cargo exchange and held signals."
+      }
+    ],
+    "sourceModules": [
+      "engines.mjs",
+      "core.mjs",
+      "travel.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"advance\"]"
+    },
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Seeded exchange positions, runner speeds and outgoing gradient vary the next handoff. A baton drop or zone exit ends the run.",
+      "difficultyCap": "Three bounded challenge families or bounded continuous geometry/physics ranges; sizes and physical limits remain fixed for unbounded stage indices."
+    }
+  },
+  {
+    "id": "two-oars",
+    "name": "Two Oars",
+    "category": "adventure",
+    "url": "field-room/?game=two-oars",
+    "mechanic": "Time each oar’s independent pull/recovery to create forward impulse or yaw while managing current drift and asymmetric fatigue.",
+    "description": "Time each oar’s independent pull/recovery to create forward impulse or yaw while managing current drift and asymmetric fatigue.",
+    "rules": [
+      "Navigate through all three ordered gates, then reach x15 on each of three river reaches. The entire hull must clear gates and banks.",
+      "Left/right pulls create yaw as well as forward impulse; both pulls balance yaw. Each oar needs three beats to recover. Premature pulls give weak impulse and high fatigue. Recover advances time while current still drifts the hull.",
+      "Each action is 0.5s. The hull extends 0.8 ahead/behind its center; angular velocity persists. Bank contact, missed gate, excessive fatigue or 100-beat exhaustion loses. Reset challenge or Restart game restores the river."
+    ],
+    "controls": "Use Tab then Enter or Space on every named control; touch the same controls on mobile. Native sliders support arrows and touch dragging. All games are turn-paced: time advances only on the labeled simulation actions. Visual field interpretation is required.",
+    "accent": "#c9d8b6",
+    "symbol": "↗",
+    "stages": 3,
+    "nearestExisting": [
+      {
+        "id": "wind-sail",
+        "difference": "Differential rowing impulses and separate recovery phases drive rotation; no sail polar, wind heading or tacking."
+      },
+      {
+        "id": "trailer-yard",
+        "difference": "One rigid hull on moving water has impulse steering and oar recovery, rather than reversed articulated vehicle geometry."
+      }
+    ],
+    "sourceModules": [
+      "engines.mjs",
+      "core.mjs",
+      "travel.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"both\"]"
+    },
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Seeded gate offsets and cross-current drift produce new river reaches. Each has a bounded width and three ordered gates; bank/missed gate/fatigue ends the run.",
+      "difficultyCap": "Three bounded challenge families or bounded continuous geometry/physics ranges; sizes and physical limits remain fixed for unbounded stage indices."
+    }
+  },
+  {
+    "id": "cable-carrier",
+    "name": "Cable Carrier",
+    "category": "puzzle",
+    "url": "field-room/?game=cable-carrier",
+    "mechanic": "Accelerate an overhead trolley and change cable length to cancel actual suspended-load oscillation before fitting the load into a receiver.",
+    "description": "Accelerate an overhead trolley and change cable length to cancel actual suspended-load oscillation before fitting the load into a receiver.",
+    "rules": [
+      "Settle three fragile suspended loads into their receivers. Trolley acceleration drives a real modeled pendulum; rope length changes also alter its angular velocity.",
+      "Every motion/hoist action simulates 0.4s. Cancel sway with the timing of acceleration and braking. Read the payload’s velocity and the full obstacle geometry; its swept motion is checked.",
+      "Detach only within receiver radius 0.55, payload speed below 0.55 and angular speed below 0.24. Contact, unsafe detach or 140 beats loses. Reset challenge or Restart game restores the load."
+    ],
+    "controls": "Use Tab then Enter or Space on every named control; touch the same controls on mobile. Native sliders support arrows and touch dragging. All games are turn-paced: time advances only on the labeled simulation actions. Visual field interpretation is required.",
+    "accent": "#d5c197",
+    "symbol": "◉",
+    "stages": 3,
+    "nearestExisting": [
+      {
+        "id": "scissor-lift",
+        "difference": "Continuous angle/angular velocity and moving support forces replace a scalar sway counter. Braking at the wrong oscillation phase increases the swing."
+      },
+      {
+        "id": "elbow-room",
+        "difference": "A flexible suspended pendulum responds dynamically to trolley acceleration rather than rigid joint configurations."
+      },
+      {
+        "id": "spring-courier",
+        "difference": "The attachment stays fixed to a moving trolley and must be settled for delivery; no jumping between anchors or pendulum release."
+      }
+    ],
+    "sourceModules": [
+      "engines.mjs",
+      "core.mjs",
+      "balance.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"right\"]"
+    },
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Seeded receiver positions across three obstacle families change the required sway cancellation and rope length. Unsafe detach/contact ends the run.",
+      "difficultyCap": "Three bounded challenge families or bounded continuous geometry/physics ranges; sizes and physical limits remain fixed for unbounded stage indices."
+    }
+  },
+  {
+    "id": "thermal-route",
+    "name": "Thermal Route",
+    "category": "adventure",
+    "url": "field-room/?game=thermal-route",
+    "mechanic": "Convert finite height into glide distance, then turn inside spatial thermal columns to recover height; airspeed and bank actions change sink and lift exposure.",
+    "description": "Convert finite height into glide distance, then turn inside spatial thermal columns to recover height; airspeed and bank actions change sink and lift exposure.",
+    "rules": [
+      "Reach the three ordered air gates in each of three unpowered routes. Gates have visible position/radius and minimum height. Height is the only flight reserve.",
+      "Bank changes heading by 0.22rad and advances one beat. Thermals supply lift only within their radius. Best-glide trim minimizes sink; slow trim stays in lift longer, while fast trim spends height for distance.",
+      "Zero height, leaving the 0–21 by 0–20 corridor or 90 beats loses. Plan the path through lift before aiming for a distant gate. Reset challenge or Restart game retries."
+    ],
+    "controls": "Use Tab then Enter or Space on every named control; touch the same controls on mobile. Native sliders support arrows and touch dragging. All games are turn-paced: time advances only on the labeled simulation actions. Visual field interpretation is required.",
+    "accent": "#b6d0c5",
+    "symbol": "⌁",
+    "stages": 3,
+    "nearestExisting": [
+      {
+        "id": "kite-flight",
+        "difference": "There is no hold-to-rise engine. Lift exists only inside spatial thermal columns; speed changes the glide ratio and banking increases sink."
+      },
+      {
+        "id": "soft-landing",
+        "difference": "Unpowered horizontal route/altitude energy planning replaces thrust/fuel landing control."
+      },
+      {
+        "id": "wind-sail",
+        "difference": "Three-dimensional altitude reserve and thermal dwell govern the route, not surface sail-heading propulsion."
+      }
+    ],
+    "sourceModules": [
+      "engines.mjs",
+      "core.mjs",
+      "travel.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"level\"]"
+    },
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Seeded air-gate and thermal-column offsets create new height-planning routes. Height depletion or corridor exit ends the run.",
+      "difficultyCap": "Three bounded challenge families or bounded continuous geometry/physics ranges; sizes and physical limits remain fixed for unbounded stage indices."
+    }
+  },
+  {
+    "id": "belay-line",
+    "name": "Belay Line",
+    "category": "puzzle",
+    "url": "field-room/?game=belay-line",
+    "mechanic": "Coordinate controlled descent with rope feed/take-up and friction braking, keeping enough slack for movement without creating a shock-loaded fall.",
+    "description": "Coordinate controlled descent with rope feed/take-up and friction braking, keeping enough slack for movement without creating a shock-loaded fall.",
+    "rules": [
+      "Reach three descending ledges on each of three rope routes. Each ledge requires vertical distance below 0.5, horizontal reach below 0.4 and speed below 0.9.",
+      "Feed/take changes rope length by 0.3, then simulates 0.25s. The rope applies elastic tension and selected friction only while taut. Slack allows acceleration before the rope catches.",
+      "Tension over 14, descending past the final ledge or 160 beats loses. Secure a ledge, then Feed to continue. Use the high brake before arrival; Reset challenge or Restart game retries."
+    ],
+    "controls": "Use Tab then Enter or Space on every named control; touch the same controls on mobile. Native sliders support arrows and touch dragging. All games are turn-paced: time advances only on the labeled simulation actions. Visual field interpretation is required.",
+    "accent": "#c8bdcf",
+    "symbol": "⇄",
+    "stages": 3,
+    "nearestExisting": [
+      {
+        "id": "threaded-return",
+        "difference": "Slack and elastic tension alter downward velocity and anchor force; there is no wrapping history or horizontal reach puzzle."
+      },
+      {
+        "id": "four-holds",
+        "difference": "A descending rope-bound body and belayer control replace individual limb placement/support."
+      }
+    ],
+    "sourceModules": [
+      "engines.mjs",
+      "core.mjs",
+      "balance.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"feed\"]"
+    },
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Seeded ledge horizontal offsets and descent heights change rope feed, braking and ledge alignment. Unsafe force or missed route ends the run.",
+      "difficultyCap": "Three bounded challenge families or bounded continuous geometry/physics ranges; sizes and physical limits remain fixed for unbounded stage indices."
+    }
+  },
+  {
+    "id": "vault-runway",
+    "name": "Vault Runway",
+    "category": "reflex",
+    "url": "field-room/?game=vault-runway",
+    "mechanic": "Build runway speed, choose the pole’s plant timing/grip, and release its stored bending energy at a useful rotation angle to clear a bar.",
+    "description": "Build runway speed, choose the pole’s plant timing/grip, and release its stored bending energy at a useful rotation angle to clear a bar.",
+    "rules": [
+      "Clear three different bars and land in the pit x11–15.5. Accelerate on the runway, then Plant within x7.4–8.6 at speed at least 3.",
+      "Approach energy becomes 60% elastic pole energy and 40% horizontal body energy. The pole pushes when compressed and pulls when extended. Grip changes its rest length; Advance pole/flight moves 0.2s.",
+      "Choose when to Release; flight then follows gravity. Missing the plant box, buckling, crossing the bar too low or landing outside the pit loses. Reset challenge or Restart game retries."
+    ],
+    "controls": "Use Tab then Enter or Space on every named control; touch the same controls on mobile. Native sliders support arrows and touch dragging. All games are turn-paced: time advances only on the labeled simulation actions. Visual field interpretation is required.",
+    "accent": "#c9d8b6",
+    "symbol": "↗",
+    "stages": 3,
+    "nearestExisting": [
+      {
+        "id": "step-and-spring",
+        "difference": "Takeoff follows an elastic rotating pole whose stored bend energy and plant point determine the trajectory; no freely repeated platform jump."
+      },
+      {
+        "id": "spring-courier",
+        "difference": "Runway translation is captured into deforming-pole spring energy before release; there is no fixed hanging pendulum or anchor chain."
+      }
+    ],
+    "sourceModules": [
+      "engines.mjs",
+      "core.mjs",
+      "balance.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"run\"]"
+    },
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Seeded bar heights between 2.1 and 2.9 require fresh grip/release choices. Failed plant, bar or landing ends the meet.",
+      "difficultyCap": "Three bounded challenge families or bounded continuous geometry/physics ranges; sizes and physical limits remain fixed for unbounded stage indices."
+    }
+  },
+  {
+    "id": "tucked-landing",
+    "name": "Tucked Landing",
+    "category": "reflex",
+    "url": "field-room/?game=tucked-landing",
+    "mechanic": "Tuck and extend during a dive to change rotational inertia while angular momentum is conserved, then align the body before water entry.",
+    "description": "Tuck and extend during a dive to change rotational inertia while angular momentum is conserved, then align the body before water entry.",
+    "rules": [
+      "Complete the specified half-, full- then double-turn dive with entry angle within 0.30rad and landing position within 0.55 of the marked water target.",
+      "Choose horizontal launch speed, Launch, then Tuck or Extend while airborne. Angular momentum is conserved: tuck inertia 0.5 rotates four times as fast as extended inertia 2. Shape changes do not advance time.",
+      "Advance flight is 0.1s; gravity changes the remaining flight time. Water entry checks both accumulated rotation and horizontal placement. A poor entry loses; Reset challenge or Restart game retries."
+    ],
+    "controls": "Use Tab then Enter or Space on every named control; touch the same controls on mobile. Native sliders support arrows and touch dragging. All games are turn-paced: time advances only on the labeled simulation actions. Visual field interpretation is required.",
+    "accent": "#d5c197",
+    "symbol": "◉",
+    "stages": 3,
+    "nearestExisting": [
+      {
+        "id": "soft-landing",
+        "difference": "No thruster or freely commanded rotation. Changing body inertia changes angular speed, and the score requires a specified number of turns before aligned entry."
+      },
+      {
+        "id": "vault-runway",
+        "difference": "Airborne conserved angular momentum and body-shape switching replace planted-pole elastic takeoff and release timing."
+      }
+    ],
+    "sourceModules": [
+      "engines.mjs",
+      "core.mjs",
+      "balance.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"launch\"]"
+    },
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Seeded half/full/double-turn dive requirements and water targets create new entry combinations. A poor entry ends the meet.",
+      "difficultyCap": "Three bounded challenge families or bounded continuous geometry/physics ranges; sizes and physical limits remain fixed for unbounded stage indices."
+    }
+  },
+  {
+    "id": "wave-trim",
+    "name": "Wave Trim",
+    "category": "adventure",
+    "url": "field-room/?game=wave-trim",
+    "mechanic": "Steer relative to a moving curved wave face: descending the face builds board speed, while climbing/carving spends it to reach gates before the crest passes.",
+    "description": "Steer relative to a moving curved wave face: descending the face builds board speed, while climbing/carving spends it to reach gates before the crest passes.",
+    "rules": [
+      "Carve through three ordered wave gates in each of three moving wave faces. Gate vertical tolerance is 0.8.",
+      "Carve changes heading by 0.18rad, then rides 0.4s. Straight holds the current heading. Deeper face position supplies more drive; trimming down the face increases depth, while carving costs speed.",
+      "Keep face depth 0.35–4.8 and stay ahead of the closing crest. Missing a gate, crest contact, flat-water stall or 32 beats loses. Reset challenge or Restart game retries."
+    ],
+    "controls": "Use Tab then Enter or Space on every named control; touch the same controls on mobile. Native sliders support arrows and touch dragging. All games are turn-paced: time advances only on the labeled simulation actions. Visual field interpretation is required.",
+    "accent": "#b6d0c5",
+    "symbol": "⌁",
+    "stages": 3,
+    "nearestExisting": [
+      {
+        "id": "balance-beam",
+        "difference": "A two-dimensional moving wave supplies position-dependent acceleration, and carving changes heading/drag; the goal is route gates rather than centering on a tilting beam."
+      },
+      {
+        "id": "wind-sail",
+        "difference": "Wave-face position supplies gravitational propulsion with crest-relative motion, not wind/sail trim."
+      }
+    ],
+    "sourceModules": [
+      "engines.mjs",
+      "core.mjs",
+      "balance.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"straight\"]"
+    },
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Seeded gate heights and wave phase create new carve paths. A wipeout or missed gate ends the tour.",
+      "difficultyCap": "Three bounded challenge families or bounded continuous geometry/physics ranges; sizes and physical limits remain fixed for unbounded stage indices."
+    }
+  },
+  {
+    "id": "ripple-skimmer",
+    "name": "Ripple Skimmer",
+    "category": "puzzle",
+    "url": "field-room/?game=ripple-skimmer",
+    "mechanic": "Choose a flat stone’s launch angle, plate tilt, speed and stabilizing spin so the specified final water skip lands inside a marked interval.",
+    "description": "Choose a flat stone’s launch angle, plate tilt, speed and stabilizing spin so the specified final water skip lands inside a marked interval.",
+    "rules": [
+      "Within six throws, make the specified consecutive skip count with the final required contact inside the marked interval. Complete three different water/skip contracts.",
+      "Launch angle, stone plate tilt, hand energy and stabilizing spin are coupled. Spin reduces wobble but spends forward launch energy. Every water contact checks grazing incidence and loses forward speed.",
+      "The final specified skip must hit the interval; earlier/later water contacts or airborne distance do not count. Steep incidence or insufficient speed sinks the stone. Six failed throws loses; Reset challenge or Restart game restores the contract."
+    ],
+    "controls": "Use Tab then Enter or Space on every named control; touch the same controls on mobile. Native sliders support arrows and touch dragging. All games are turn-paced: time advances only on the labeled simulation actions. Visual field interpretation is required.",
+    "accent": "#c8bdcf",
+    "symbol": "⇄",
+    "stages": 3,
+    "nearestExisting": [
+      {
+        "id": "moon-basket",
+        "difference": "Stone plate tilt/spin determine a succession of water-entry skips and energy losses; success is not a single ballistic crossing."
+      },
+      {
+        "id": "quiet-curl",
+        "difference": "Repeated airborne/water impact transitions replace continuous sliding friction and resting proximity."
+      }
+    ],
+    "sourceModules": [
+      "engines.mjs",
+      "core.mjs",
+      "flow.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"throw\"]"
+    },
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Seeded ripple phase, contact interval and skip quota create new water contracts. Six failed throws ends the pond tour.",
+      "difficultyCap": "Three bounded challenge families or bounded continuous geometry/physics ranges; sizes and physical limits remain fixed for unbounded stage indices."
+    }
+  },
+  {
+    "id": "spin-passage",
+    "name": "Spin Passage",
+    "category": "puzzle",
+    "url": "field-room/?game=spin-passage",
+    "mechanic": "Apply torque to a spinning top whose tilt direction precesses, anticipating where its contact point will drift before friction drains the spin reserve.",
+    "description": "Apply torque to a spinning top whose tilt direction precesses, anticipating where its contact point will drift before friction drains the spin reserve.",
+    "rules": [
+      "Guide a spinning top through all three ordered seals on each of three tables before its axis becomes unstable. Avoid the raised central obstruction.",
+      "Torque changes the tilt perpendicular to its direction; the tilt then precesses by 2.5/spin radians each beat. Contact drift follows tilt with damping. Low spin responds faster, so anticipate the next seal.",
+      "Toppling at tilt over 0.65, spin below 4, collision or leaving the table loses. Spin up only inside a marked pad; recharging preserves tilt and drift. Reset challenge or Restart game retries."
+    ],
+    "controls": "Use Tab then Enter or Space on every named control; touch the same controls on mobile. Native sliders support arrows and touch dragging. All games are turn-paced: time advances only on the labeled simulation actions. Visual field interpretation is required.",
+    "accent": "#c9d8b6",
+    "symbol": "↗",
+    "stages": 3,
+    "nearestExisting": [
+      {
+        "id": "balance-beam",
+        "difference": "Spin angular momentum and precession rotate the effect of lean over time; there is no controlled board tilt or restoring marble position."
+      },
+      {
+        "id": "star-tow",
+        "difference": "Torque changes top orientation through precession while surface contact drives drift; no propulsion/brake spacecraft controls."
+      }
+    ],
+    "sourceModules": [
+      "engines.mjs",
+      "core.mjs",
+      "flow.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"east\"]"
+    },
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Seeded seal offsets alter the torque route around a fixed obstacle with unchanged physical limits. Toppling or missed stability ends the run.",
+      "difficultyCap": "Three bounded challenge families or bounded continuous geometry/physics ranges; sizes and physical limits remain fixed for unbounded stage indices."
+    }
+  },
+  {
+    "id": "cascade-hands",
+    "name": "Cascade Hands",
+    "category": "reflex",
+    "url": "field-room/?game=cascade-hands",
+    "mechanic": "Choose throw height and catch/throw order across independently flying balls so each hand becomes free before the next descending ball arrives.",
+    "description": "Choose throw height and catch/throw order across independently flying balls so each hand becomes free before the next descending ball arrives.",
+    "rules": [
+      "Reach the catch quota in two-, three- then four-ball cascades. Each hand holds only one ball; every cross throw targets the opposite hand.",
+      "A successful throw/catch/pickup advances every airborne ball by 0.25s. Catch only descending balls destined for that hand at height −0.75 to 0.7 and horizontal hand reach 0.55. Short/high throws create different future arrival schedules.",
+      "Free a hand by throwing before its next arrival. Three drops or 200 beats loses. A dropped ball can be picked up with an empty hand. Reset challenge or Restart game restores the complete pattern."
+    ],
+    "controls": "Use Tab then Enter or Space on every named control; touch the same controls on mobile. Native sliders support arrows and touch dragging. All games are turn-paced: time advances only on the labeled simulation actions. Visual field interpretation is required.",
+    "accent": "#d5c197",
+    "symbol": "◉",
+    "stages": 3,
+    "nearestExisting": [
+      {
+        "id": "harbor-catch",
+        "difference": "Several conserved airborne balls compete for two one-ball hands; a catch changes the future schedule through chosen toss height and cross-hand destination."
+      },
+      {
+        "id": "beat-post",
+        "difference": "The player creates the future timing pattern by throwing, and ball trajectories/hand occupancy constrain later decisions; notes are not an externally supplied rhythm."
+      }
+    ],
+    "sourceModules": [
+      "engines.mjs",
+      "core.mjs",
+      "flow.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"throw:0:high\"]"
+    },
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Seeded ball count, initial airborne phases and catch quota create new timing schedules. Three drops ends the cascade.",
+      "difficultyCap": "Three bounded challenge families or bounded continuous geometry/physics ranges; sizes and physical limits remain fixed for unbounded stage indices."
+    }
+  },
+  {
+    "id": "ice-rescue",
+    "name": "Ice Rescue",
+    "category": "adventure",
+    "url": "field-room/?game=ice-rescue",
+    "mechanic": "Plan outbound and loaded return routes across ice whose support degrades with each pressure exposure; spreading weight reduces damage while costing actions in a moving current.",
+    "description": "Plan outbound and loaded return routes across ice whose support degrades with each pressure exposure; spreading weight reduces damage while costing actions in a moving current.",
+    "rules": [
+      "Reach the traveler, pick them up, return to home (0,3), then Set down. Complete three lakes with different weak bridges, water holes and current.",
+      "Every landing permanently reduces ice support: pressure 1 empty or 2.05 loaded. Spread weight uses 65% pressure but costs two beats. On the current lake, a spread step ending on a beat divisible by three also drifts down a square.",
+      "Open water, exhausted support or the action allowance loses. The heavier return can break an outbound route. The exact remaining support of every tile is visible. Reset challenge or Restart game restores the lake."
+    ],
+    "controls": "Use Tab then Enter or Space on every named control; touch the same controls on mobile. Native sliders support arrows and touch dragging. All games are turn-paced: time advances only on the labeled simulation actions. Visual field interpretation is required.",
+    "accent": "#b6d0c5",
+    "symbol": "⌁",
+    "stages": 3,
+    "nearestExisting": [
+      {
+        "id": "boulder-burrow",
+        "difference": "Every traversed surface loses load-bearing support according to carried weight; there is no excavated soil or falling rock."
+      },
+      {
+        "id": "border-bloom",
+        "difference": "The route damages the safe terrain instead of claiming permanent safe territory, and the loaded return changes which cells remain traversable."
+      }
+    ],
+    "sourceModules": [
+      "engines.mjs",
+      "core.mjs",
+      "flow.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"right\"]"
+    },
+    "endless": {
+      "supported": false,
+      "reason": "Do not ship an endless toggle initially: extending fixed lakes needs a generator that proves both outbound and heavier return routes survive cumulative pressure.",
+      "design": "Finite authored campaign preserves deliberate route constraints."
+    }
+  },
+  {
+    "id": "breathing-lane",
+    "name": "Breathing Lane",
+    "category": "adventure",
+    "url": "field-room/?game=breathing-lane",
+    "mechanic": "Coordinate stroke recovery, diving depth and surface breaths: submerged streamlining improves pace but expends oxygen, while breath posture adds drag and interrupts arm propulsion.",
+    "description": "Coordinate stroke recovery, diving depth and surface breaths: submerged streamlining improves pace but expends oxygen, while breath posture adds drag and interrupts arm propulsion.",
+    "rules": [
+      "Finish three swimming lengths through their ordered depth gates (tolerance 0.6). Plan surface breaths between submerged gates.",
+      "Each action advances 0.4s. Arms require three beats of recovery; premature strokes waste effort and build fatigue. Pitch changes vertical velocity, which persists. Underwater drag is lower than surface drag. Sculling adds drag so there is room to surface between gates.",
+      "A breath needs depth below 0.42, restores oxygen and reduces speed. Oxygen exhaustion, excessive fatigue, floor contact, missed gate or 90 beats loses. Reset challenge or Restart game retries."
+    ],
+    "controls": "Use Tab then Enter or Space on every named control; touch the same controls on mobile. Native sliders support arrows and touch dragging. All games are turn-paced: time advances only on the labeled simulation actions. Visual field interpretation is required.",
+    "accent": "#c8bdcf",
+    "symbol": "⇄",
+    "stages": 3,
+    "nearestExisting": [
+      {
+        "id": "kite-flight",
+        "difference": "Forward progress comes from alternating recoverable strokes with depth-dependent drag/oxygen; there is no single lift control through scrolling gates."
+      },
+      {
+        "id": "two-oars",
+        "difference": "Depth, mouth position and respiration constrain locomotion; left/right oar yaw and rigid surface hulls are absent."
+      }
+    ],
+    "sourceModules": [
+      "engines.mjs",
+      "core.mjs",
+      "flow.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"stroke\"]"
+    },
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Seeded gate depths and length families change stroke/oxygen routing. A failed depth gate or exhausted swimmer ends the run.",
+      "difficultyCap": "Three bounded challenge families or bounded continuous geometry/physics ranges; sizes and physical limits remain fixed for unbounded stage indices."
+    }
+  }
+]

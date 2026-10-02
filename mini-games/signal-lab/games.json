@@ -1,0 +1,687 @@
+[
+  {
+    "id": "reset-post",
+    "name": "Reset Post",
+    "category": "puzzle",
+    "url": "signal-lab/?game=reset-post",
+    "mechanic": "Choose one common input word that collapses every possible starting state into one state.",
+    "description": "Choose one common input word that collapses every possible starting state into one state.",
+    "rules": [
+      "The parcel may start at any station. One P or Q signal moves every possible location according to the table.",
+      "Collapse the possible-location set to one station before the signal allowance is spent. You cannot issue separate signals to individual stations.",
+      "Complete three finite machines. Undo/Reset reconsider a finite study; endless keeps the signal and loss constraints while generating new collapse patterns."
+    ],
+    "controls": "Tap/click labeled buttons; Tab and Enter/Space activate them. Sliders also support native touch and arrow keys. Undo/Reset are available in finite studies; Restart works in both modes.",
+    "accent": "#b5cfd2",
+    "symbol": "\u2194",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "New3\u20135station machines keep P as a cycle while Q folds seeded extra stations together. The two-letter alphabet remains fixed; collapse patterns and station identities vary.",
+      "difficultyCap": "At most5stations and16signals."
+    },
+    "nearestExisting": [
+      {
+        "id": "state-courier",
+        "difference": "Manipulates uncertainty sets in a fixed machine rather than constructing a transducer or navigating a known state."
+      }
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"P\"]"
+    },
+    "sourceModule": "signal-lab/machines.mjs"
+  },
+  {
+    "id": "quotient-quay",
+    "name": "Quotient Quay",
+    "category": "puzzle",
+    "url": "signal-lab/?game=quotient-quay",
+    "mechanic": "Merge exactly the states with identical future acceptance behavior.",
+    "description": "Merge exactly the states with identical future acceptance behavior.",
+    "rules": [
+      "Select two groups and merge them only if they accept exactly the same future input words. Acceptance now alone does not prove equivalence.",
+      "Each requested merge consumes one merge allowance. A wrong merge spends a review credit and shows a distinguishing word.",
+      "Certify the smallest equivalent machine within the merge allowance; complete three studies. Undo/Reset recover a finite study; Restart begins again."
+    ],
+    "controls": "Tap/click labeled buttons; Tab and Enter/Space activate them. Sliders also support native touch and arrow keys. Undo/Reset are available in finite studies; Restart works in both modes.",
+    "accent": "#b5cfd2",
+    "symbol": "\u2261",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "New machines vary equivalent-group sizes and transitions among their copied states;3\u20134distinct acceptance behaviors and at most7stations keep the challenge readable.",
+      "difficultyCap": "At most7stations with4distinct future behaviors."
+    },
+    "nearestExisting": [
+      {
+        "id": "state-courier",
+        "difference": "Builds a minimal quotient of an existing DFA using distinguishing future words; no output-circuit synthesis."
+      }
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"group-0\"]"
+    },
+    "sourceModule": "signal-lab/machines.mjs"
+  },
+  {
+    "id": "cutback-case",
+    "name": "Cutback Case",
+    "category": "puzzle",
+    "url": "signal-lab/?game=cutback-case",
+    "mechanic": "Spend oracle tests to isolate a minimal failure-inducing subset of an input.",
+    "description": "Spend oracle tests to isolate a minimal failure-inducing subset of an input.",
+    "rules": [
+      "Toggle events and run the selected input against the bug oracle. A blocker can make a failing input pass when added.",
+      "Find a tested failing input with exactly two events, the proven minimum. Your submitted selection must match the last tested input.",
+      "Oracle tests are limited; three invalid submissions also lose. Complete three cases. Undo/Reset recover finite cases; Restart clears the run."
+    ],
+    "controls": "Tap/click labeled buttons; Tab and Enter/Space activate them. Sliders also support native touch and arrow keys. Undo/Reset are available in finite studies; Restart works in both modes.",
+    "accent": "#b5cfd2",
+    "symbol": "\u2315",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "New7\u20139event cases hide different two-event triggers, a suppressing blocker and an overlapping three-event trigger. Oracle-test limits and minimum reproducer requirements persist.",
+      "difficultyCap": "At most9events with public minimum2-event reproducer."
+    },
+    "nearestExisting": [
+      {
+        "id": "causal-lab",
+        "difference": "Input shrinking with a nonmonotone failure predicate; experiments act on whole selected subsets rather than diagnosing a causal device."
+      }
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"event-0\"]"
+    },
+    "sourceModule": "signal-lab/certificates.mjs"
+  },
+  {
+    "id": "clause-kiln",
+    "name": "Clause Kiln",
+    "category": "puzzle",
+    "url": "signal-lab/?game=clause-kiln",
+    "mechanic": "Choose opposing literals and resolve clauses to construct an empty-clause certificate.",
+    "description": "Choose opposing literals and resolve clauses to construct an empty-clause certificate.",
+    "rules": [
+      "Select two clauses and a pivot appearing positively in one and negatively in the other. Resolution removes that opposing pair and keeps all other literals.",
+      "Derive the empty clause within the line budget. Tautological and duplicate results still spend a line without adding a useful clause.",
+      "Three invalid resolution requests spend the review credits. Complete three authored systems; Undo/Reset reconsider a finite study and Restart clears all."
+    ],
+    "controls": "Tap/click labeled buttons; Tab and Enter/Space activate them. Sliders also support native touch and arrow keys. Undo/Reset are available in finite studies; Restart works in both modes.",
+    "accent": "#b5cfd2",
+    "symbol": "\u25a1",
+    "stages": 3,
+    "endless": {
+      "supported": false,
+      "kind": "finite-campaign",
+      "design": "The three authored clause systems provide deliberate resolution structures. A future endless generator should validate proof depth and redundant-clause traps, rather than repeat renamed systems.",
+      "difficultyCap": "Three authored briefs",
+      "reason": "The three authored clause systems provide deliberate resolution structures. A future endless generator should validate proof depth and redundant-clause traps, rather than repeat renamed systems."
+    },
+    "nearestExisting": [
+      {
+        "id": "proof-lantern",
+        "difference": "Clause-set resolution without assumption boxes, conjunction packing or implication elimination."
+      }
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"clause-0\"]"
+    },
+    "sourceModule": "signal-lab/certificates.mjs"
+  },
+  {
+    "id": "wraparound-witness",
+    "name": "Wraparound Witness",
+    "category": "puzzle",
+    "url": "signal-lab/?game=wraparound-witness",
+    "mechanic": "Choose a small input that follows a required branch trace after fixed-width overflow.",
+    "description": "Choose a small input that follows a required branch trace after fixed-width overflow.",
+    "rules": [
+      "Set unsigned x and y inputs. Addition and left shift wrap to the displayed bit width; XOR acts on stored bits.",
+      "Execute an input whose three branch results match the requested trace. Signed negativity and unsigned comparison interpret the same bits differently.",
+      "Three wrong executions lose the case. Complete three programs. Undo/Reset recover finite studies; Restart starts a new run."
+    ],
+    "controls": "Tap/click labeled buttons; Tab and Enter/Space activate them. Sliders also support native touch and arrow keys. Undo/Reset are available in finite studies; Restart works in both modes.",
+    "accent": "#b5cfd2",
+    "symbol": "\u229e",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "New4/5-bit witness briefs vary comparison threshold and reachable branch trace; bit width remains capped at5 and all three wrapped operations persist.",
+      "difficultyCap": "At most5-bit inputs and3branch conditions."
+    },
+    "nearestExisting": [
+      {
+        "id": "stack-kitchen",
+        "difference": "Finds concrete counterexample inputs for an existing bitvector program; no program synthesis or positional encoding."
+      }
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"run\"]"
+    },
+    "sourceModule": "signal-lab/measures.mjs"
+  },
+  {
+    "id": "branch-weather",
+    "name": "Branch Weather",
+    "category": "puzzle",
+    "url": "signal-lab/?game=branch-weather",
+    "mechanic": "Evaluate nested all-path/existential temporal obligations by constructing state sets from inside out.",
+    "description": "Evaluate nested all-path/existential temporal obligations by constructing state sets from inside out.",
+    "rules": [
+      "Select exactly the stations satisfying the current forecast, then Apply. EX means some next branch; AX means every next branch.",
+      "EF means some finite route reaches the marked set. AF means every future eventually reaches it; an endless avoiding cycle fails. Zero steps count for EF/AF.",
+      "Your answer becomes the marked set for the next nested forecast. Three incorrect sets lose. Complete three graph studies; Undo/Reset recover finite studies."
+    ],
+    "controls": "Tap/click labeled buttons; Tab and Enter/Space activate them. Sliders also support native touch and arrow keys. Undo/Reset are available in finite studies; Restart works in both modes.",
+    "accent": "#b5cfd2",
+    "symbol": "\u25c7",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "New5\u20137station directed graphs are generated with nontrivial nested some/all-path forecasts, including avoiding cycles. Later graphs keep the node cap.",
+      "difficultyCap": "At most7stations and3nested forecasts."
+    },
+    "nearestExisting": [
+      {
+        "id": "arrow-audit",
+        "difference": "Reasons about every or some possible future, including cycles; neither route selection nor cycle removal."
+      }
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"state-0\"]"
+    },
+    "sourceModule": "signal-lab/machines.mjs"
+  },
+  {
+    "id": "phase-paper",
+    "name": "Phase Paper",
+    "category": "puzzle",
+    "url": "signal-lab/?game=phase-paper",
+    "mechanic": "Compose interference operations so amplitudes, including sign, meet a target two-state wave.",
+    "description": "Compose interference operations so amplitudes, including sign, meet a target two-state wave.",
+    "rules": [
+      "H splits/recombines amplitudes, X exchanges a bit, Z flips its1-amplitudes, and CX flips the other bit only when its control bit is1.",
+      "Build the full target coherent state within the gate budget. Relative signs matter; one global minus sign is physically equivalent and accepted.",
+      "Equal probabilities alone do not prove a match. Three incorrect certifications lose; remove a last gate to edit, or Undo/Reset finite studies. Complete three targets."
+    ],
+    "controls": "Tap/click labeled buttons; Tab and Enter/Space activate them. Sliders also support native touch and arrow keys. Undo/Reset are available in finite studies; Restart works in both modes.",
+    "accent": "#b5cfd2",
+    "symbol": "\u00b1",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "New coherent targets continue after the finite campaign. Late studies start in generated two-qubit Clifford states and derive reachable targets from fresh unitary sequences, with a9-gate cap.",
+      "difficultyCap": "At most2qubits,4real amplitudes and9gates."
+    },
+    "nearestExisting": [
+      {
+        "id": "gate-foundry",
+        "difference": "Unitary amplitude evolution with destructive interference, not Boolean truth tables or classical additive harmonics."
+      }
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"H-0\"]"
+    },
+    "sourceModule": "signal-lab/signals.mjs"
+  },
+  {
+    "id": "rotation-index",
+    "name": "Rotation Index",
+    "category": "puzzle",
+    "url": "signal-lab/?game=rotation-index",
+    "mechanic": "Rebuild a message by following stable occurrence ranks through a sorted cyclic transform.",
+    "description": "Rebuild a message by following stable occurrence ranks through a sorted cyclic transform.",
+    "rules": [
+      "Follow the current last-column occurrence to the SAME letter AND occurrence rank in the sorted first column.",
+      "The unique $ marker anchors decoding. Each correct connection recovers one earlier symbol; the message is reconstructed right to left.",
+      "An incorrect occurrence ends the study, even if its letter matches. Decode three messages; Undo/Reset recover finite studies and Restart begins again."
+    ],
+    "controls": "Tap/click labeled buttons; Tab and Enter/Space activate them. Sliders also support native touch and arrow keys. Undo/Reset are available in finite studies; Restart works in both modes.",
+    "accent": "#b5cfd2",
+    "symbol": "\u21bb",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "New messages vary repeated symbols and stable occurrence ranks; message length is capped at9letters plus the unique marker.",
+      "difficultyCap": "At most9message letters plus one end marker."
+    },
+    "nearestExisting": [
+      {
+        "id": "copy-ribbon",
+        "difference": "Inverse Burrows-Wheeler permutation with duplicate occurrence tracking, not source alignment or substring copying."
+      }
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"row-0\"]"
+    },
+    "sourceModule": "signal-lab/signals.mjs"
+  },
+  {
+    "id": "shared-secret",
+    "name": "Shared Secret",
+    "category": "puzzle",
+    "url": "signal-lab/?game=shared-secret",
+    "mechanic": "Choose interpolation weights whose weighted shares recover a hidden finite-field constant.",
+    "description": "Choose interpolation weights whose weighted shares recover a hidden finite-field constant.",
+    "rules": [
+      "Choose exactly the threshold number of shares and a coefficient for each. All sums and powers use the displayed prime modulus.",
+      "Weighted basis must be1 for the constant and0 for every higher power, so the combination recovers the secret for every possible hidden polynomial.",
+      "A correct-looking share value without the valid basis is insufficient. Three failed releases lose; complete three reconstructions. Undo/Reset recover finite studies."
+    ],
+    "controls": "Tap/click labeled buttons; Tab and Enter/Space activate them. Sliders also support native touch and arrow keys. Undo/Reset are available in finite studies; Restart works in both modes.",
+    "accent": "#b5cfd2",
+    "symbol": "\u2211",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "New degree1/2polynomials, distinct share coordinates and prime7/11fields produce fresh reconstructions; threshold and field sizes stay capped.",
+      "difficultyCap": "At most5shares, threshold3and prime modulus11."
+    },
+    "nearestExisting": [
+      {
+        "id": "row-orchestra",
+        "difference": "Threshold polynomial share reconstruction using modular basis weights; no augmented-row reduction or damaged-bit repair."
+      }
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"share-0\"]"
+    },
+    "sourceModule": "signal-lab/signals.mjs"
+  },
+  {
+    "id": "crossed-channel",
+    "name": "Crossed Channel",
+    "category": "puzzle",
+    "url": "signal-lab/?game=crossed-channel",
+    "mechanic": "Choose when a bottleneck should carry a linear combination so two receivers can undo it using side information.",
+    "description": "Choose when a bottleneck should carry a linear combination so two receivers can undo it using side information.",
+    "rules": [
+      "Select a wire and a packet its source can form from current knowledge. XOR combines known packets; it cannot invent an unknown independent letter.",
+      "Each transmission permanently spends a wire slot. Every reader must recover ALL source letters using received combinations and side information.",
+      "Duplicate information can strand a reader after its incoming slots are spent. Complete three finite networks; Undo/Reset reconsider a study and Restart clears progress."
+    ],
+    "controls": "Tap/click labeled buttons; Tab and Enter/Space activate them. Sliders also support native touch and arrow keys. Undo/Reset are available in finite studies; Restart works in both modes.",
+    "accent": "#b5cfd2",
+    "symbol": "\u2295",
+    "stages": 3,
+    "endless": {
+      "supported": false,
+      "kind": "finite-campaign",
+      "design": "The finite campaign develops side information, one-packet multicast and two-packet rank. A future endless graph generator should verify useful bottlenecks and transmission solvability.",
+      "difficultyCap": "Three authored briefs",
+      "reason": "The finite campaign develops side information, one-packet multicast and two-packet rank. A future endless graph generator should verify useful bottlenecks and transmission solvability."
+    },
+    "nearestExisting": [
+      {
+        "id": "river-capacity",
+        "difference": "Algebraic network coding under capacity, instead of scalar conserved flow or retransmission."
+      }
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"send\"]"
+    },
+    "sourceModule": "signal-lab/signals.mjs"
+  },
+  {
+    "id": "quorum-garden",
+    "name": "Quorum Garden",
+    "category": "puzzle",
+    "url": "signal-lab/?game=quorum-garden",
+    "mechanic": "Choose read/write quorum families that always intersect while surviving specified outages.",
+    "description": "Choose read/write quorum families that always intersect while surviving specified outages.",
+    "rules": [
+      "Build the displayed read and write teams, each with at least two nodes. Every read team must share a node with every write team.",
+      "For every listed outage, at least one complete read team and one complete write team must survive. Node cost counts again in each team using it.",
+      "Meet the total service-cost budget; three failed certifications lose. Complete three designs. Undo/Reset recover finite studies and Restart clears the run."
+    ],
+    "controls": "Tap/click labeled buttons; Tab and Enter/Space activate them. Sliders also support native touch and arrow keys. Undo/Reset are available in finite studies; Restart works in both modes.",
+    "accent": "#b5cfd2",
+    "symbol": "\u2318",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "New node costs and outage pairs require fresh intersecting team designs. Every generated brief has a certified feasible complement-family construction; at most6nodes.",
+      "difficultyCap": "At most6nodes,6teams and3public outages."
+    },
+    "nearestExisting": [
+      {
+        "id": "quiet-majority",
+        "difference": "Intersection of distributed read/write sets across failure domains, rather than weighted voter support or liquidity."
+      }
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"node-0\"]"
+    },
+    "sourceModule": "signal-lab/choices.mjs"
+  },
+  {
+    "id": "bound-names",
+    "name": "Bound Names",
+    "category": "puzzle",
+    "url": "signal-lab/?game=bound-names",
+    "mechanic": "Reduce an expression while renaming binders to prevent free-variable capture.",
+    "description": "Reduce an expression while renaming binders to prevent free-variable capture.",
+    "rules": [
+      "A lambda binder scopes only its own body. Rename a selected binder and its bound occurrences before a substitution would capture a free argument name.",
+      "Reduce function applications to the target shape. Harmless bound-name renaming is accepted; free and bound occurrences with the same spelling are different.",
+      "Capture or the change-budget limit loses; three wrong certifications also lose. Complete three authored scope studies. Undo/Reset recover and Restart clears progress."
+    ],
+    "controls": "Tap/click labeled buttons; Tab and Enter/Space activate them. Sliders also support native touch and arrow keys. Undo/Reset are available in finite studies; Restart works in both modes.",
+    "accent": "#b5cfd2",
+    "symbol": "\u03bb",
+    "stages": 3,
+    "endless": {
+      "supported": false,
+      "kind": "finite-campaign",
+      "design": "The campaign covers three authored scope/capture structures. Endless would require a bounded AST generator and independent normalization/capture validation.",
+      "difficultyCap": "Three authored briefs",
+      "reason": "The campaign covers three authored scope/capture structures. Endless would require a bounded AST generator and independent normalization/capture validation."
+    },
+    "nearestExisting": [
+      {
+        "id": "rewrite-press",
+        "difference": "Scope-sensitive lambda substitution; equal glyphs have binding identity and cannot be rewritten as substrings."
+      }
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"binder-l\"]"
+    },
+    "sourceModule": "signal-lab/certificates.mjs"
+  },
+  {
+    "id": "separating-line",
+    "name": "Separating Line",
+    "category": "puzzle",
+    "url": "signal-lab/?game=separating-line",
+    "mechanic": "Place a separating line with a required margin between two labeled point clouds.",
+    "description": "Place a separating line with a required margin between two labeled point clouds.",
+    "rules": [
+      "Set one integer slope and intercept for y = slope \u00d7 x + intercept. Circles belong above; squares belong below.",
+      "Every point needs at least two VERTICAL units of signed clearance. This is not perpendicular distance; a line edit affects all points.",
+      "Three failed certifications lose. Separate three generated clouds; Undo/Reset recover finite studies and Restart clears the run."
+    ],
+    "controls": "Tap/click labeled buttons; Tab and Enter/Space activate them. Sliders also support native touch and arrow keys. Undo/Reset are available in finite studies; Restart works in both modes.",
+    "accent": "#b5cfd2",
+    "symbol": "\u2571",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "New labeled point clouds vary their outliers and integer separating boundaries. Cloud size caps at10points; the shared vertical-clearance rule stays fixed.",
+      "difficultyCap": "At most10points, integer slopes\u22122\u20262and intercepts\u221210\u202610."
+    },
+    "nearestExisting": [
+      {
+        "id": "specimen-rule",
+        "difference": "Chooses one geometric decision boundary and margin, rather than multiple nearest prototypes."
+      }
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"certify\"]"
+    },
+    "sourceModule": "signal-lab/measures.mjs"
+  },
+  {
+    "id": "hall-window",
+    "name": "Hall Window",
+    "category": "puzzle",
+    "url": "signal-lab/?game=hall-window",
+    "mechanic": "Produce a subset of jobs with fewer eligible workers than jobs, proving full assignment impossible.",
+    "description": "Produce a subset of jobs with fewer eligible workers than jobs, proving full assignment impossible.",
+    "rules": [
+      "Select the required number of jobs. Count the UNION of their eligible workers, counting shared workers once.",
+      "A certificate needs strictly fewer combined workers than jobs, proving distinct assignments impossible. Equal counts are insufficient.",
+      "Three wrong certificates lose. Find three minimum-sized shortages; Undo/Reset recover finite studies and Restart clears progress."
+    ],
+    "controls": "Tap/click labeled buttons; Tab and Enter/Space activate them. Sliders also support native touch and arrow keys. Undo/Reset are available in finite studies; Restart works in both modes.",
+    "accent": "#b5cfd2",
+    "symbol": "\u2282",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "New bipartite eligibility graphs vary outsider neighborhoods and planted shortage incidence beyond relabeling; minimum shortage size2\u20134 and7jobs remain capped.",
+      "difficultyCap": "At most7jobs,7workers and a4-job minimum shortage."
+    },
+    "nearestExisting": [
+      {
+        "id": "mutual-match",
+        "difference": "Constructs an infeasibility certificate using Hall deficiency, rather than finding stable ranked matches."
+      }
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"job-0\"]"
+    },
+    "sourceModule": "signal-lab/certificates.mjs"
+  },
+  {
+    "id": "empty-language",
+    "name": "Empty Language",
+    "category": "puzzle",
+    "url": "signal-lab/?game=empty-language",
+    "mechanic": "Prove which grammar symbols can disappear by selecting justified nullable productions until fixedpoint.",
+    "description": "Prove which grammar symbols can disappear by selecting justified nullable productions until fixedpoint.",
+    "rules": [
+      "One production proves its left symbol empty only when every right-hand symbol is already proved empty; \u03b5 starts a grounded proof. Lowercase terminals never disappear.",
+      "Choose among grounded AND/OR routes under a tight proof-line budget. Reuse shared subproofs; individually valid but irrelevant branches still consume lines.",
+      "An ungrounded derivation or spent line budget loses. Prove three targets. Undo/Reset reconsider finite studies and Restart clears the campaign."
+    ],
+    "controls": "Tap/click labeled buttons; Tab and Enter/Space activate them. Sliders also support native touch and arrow keys. Undo/Reset are available in finite studies; Restart works in both modes.",
+    "accent": "#b5cfd2",
+    "symbol": "\u03b5",
+    "stages": 3,
+    "endless": {
+      "supported": false,
+      "kind": "finite-campaign",
+      "design": "The three finite dependency structures are authored scope lessons. An endless generator should vary productive alternatives and independently verify tight proof budgets.",
+      "difficultyCap": "Three authored briefs",
+      "reason": "The three finite dependency structures are authored scope lessons. An endless generator should vary productive alternatives and independently verify tight proof budgets."
+    },
+    "nearestExisting": [
+      {
+        "id": "bracket-workshop",
+        "difference": "Grammar least-fixedpoint reasoning about empty strings; no parsing or regular-expression construction."
+      }
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"derive-0\"]"
+    },
+    "sourceModule": "signal-lab/machines.mjs"
+  },
+  {
+    "id": "credit-method",
+    "name": "Credit Method",
+    "category": "puzzle",
+    "url": "signal-lab/?game=credit-method",
+    "mechanic": "Assign conserved potential credits so a sequence of costly data-structure operations fits a fixed amortized charge.",
+    "description": "Assign conserved potential credits so a sequence of costly data-structure operations fits a fixed amortized charge.",
+    "rules": [
+      "Choose a fixed charge and potential coefficient, then Commit. Rules freeze while replaying the public workload.",
+      "Each operation must satisfy actual cost + potential change \u2264 charge, and stored potential may never be negative. Total charges must stay within budget.",
+      "A costly burst or negative potential loses. Certify counter, resizing-array and multi-pop workloads; Undo/Reset recover finite studies and Restart begins again."
+    ],
+    "controls": "Tap/click labeled buttons; Tab and Enter/Space activate them. Sliders also support native touch and arrow keys. Undo/Reset are available in finite studies; Restart works in both modes.",
+    "accent": "#b5cfd2",
+    "symbol": "\u00a2",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "New counter starts, array lengths and push/multi-pop workloads vary costly bursts. Later randomized stack workloads retain the same nonnegative-potential constraints and charge cap.",
+      "difficultyCap": "At most11operations and a charge coefficient5."
+    },
+    "nearestExisting": [
+      {
+        "id": "pebble-engine",
+        "difference": "Accounts for aggregate cost with a potential function and prepayment, rather than storing objects or scheduling resources."
+      }
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"charge-2\"]"
+    },
+    "sourceModule": "signal-lab/measures.mjs"
+  },
+  {
+    "id": "interval-post",
+    "name": "Interval Post",
+    "category": "puzzle",
+    "url": "signal-lab/?game=interval-post",
+    "mechanic": "Narrow a rational coding interval, then choose the shortest binary fraction strictly inside it.",
+    "description": "Narrow a rational coding interval, then choose the shortest binary fraction strictly inside it.",
+    "rules": [
+      "Encode each dispatch letter by narrowing the current interval using its cumulative weight range. A wrong source letter cannot be repaired later.",
+      "After the full dispatch, append binary fraction bits. The transmitted fraction must lie strictly inside the exact final rational interval within the minimum-length allowance.",
+      "Both endpoints are excluded. Three invalid transmissions lose. Encode three dispatches; remove bits to edit, or Undo/Reset finite studies."
+    ],
+    "controls": "Tap/click labeled buttons; Tab and Enter/Space activate them. Sliders also support native touch and arrow keys. Undo/Reset are available in finite studies; Restart works in both modes.",
+    "accent": "#b5cfd2",
+    "symbol": "\u228f",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "New weighted alphabets and short dispatches create different exact rational intervals and shortest binary fractions; message size caps at5letters.",
+      "difficultyCap": "At most5source letters and bounded exact integer fractions."
+    },
+    "nearestExisting": [
+      {
+        "id": "prefix-press",
+        "difference": "Whole-message arithmetic interval coding, neither per-symbol tree codes, dictionary references nor lossy quantization."
+      }
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"letter-0\"]"
+    },
+    "sourceModule": "signal-lab/measures.mjs"
+  },
+  {
+    "id": "pruning-room",
+    "name": "Pruning Room",
+    "category": "puzzle",
+    "url": "signal-lab/?game=pruning-room",
+    "mechanic": "Expose selected leaves of a minimax tree and certify root value only when explored bounds justify pruning.",
+    "description": "Expose selected leaves of a minimax tree and certify root value only when explored bounds justify pruning.",
+    "rules": [
+      "Expose leaf values in the alternating MAX/MIN tree. Hidden leaves are bounded0\u20139; exposed bounds propagate through the chooser tree.",
+      "Prove one exact root value within the leaf-exposure allowance. Prune only a root branch whose bound cannot improve an established alternative.",
+      "A correct guess without bounds is insufficient. Overspending exposures or three invalid certificates loses. Complete three trees; Undo/Reset recover finite studies."
+    ],
+    "controls": "Tap/click labeled buttons; Tab and Enter/Space activate them. Sliders also support native touch and arrow keys. Undo/Reset are available in finite studies; Restart works in both modes.",
+    "accent": "#b5cfd2",
+    "symbol": "\u22ce",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "New adversarial leaf values create fresh exposure/pruning decisions in bounded alternating trees; at most12leaves and9exposures.",
+      "difficultyCap": "At most12leaves and9leaf exposures."
+    },
+    "nearestExisting": [
+      {
+        "id": "compare-parade",
+        "difference": "Player performs adversarial search and bound propagation, instead of choosing board moves against an AI."
+      }
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"leaf-0\"]"
+    },
+    "sourceModule": "signal-lab/choices.mjs"
+  },
+  {
+    "id": "privacy-dials",
+    "name": "Privacy Dials",
+    "category": "puzzle",
+    "url": "signal-lab/?game=privacy-dials",
+    "mechanic": "Allocate response probabilities so neighboring inputs have bounded likelihood ratios while accuracy stays high.",
+    "description": "Allocate response probabilities so neighboring inputs have bounded likelihood ratios while accuracy stays high.",
+    "rules": [
+      "Cycle integer response counts; every input row must total the displayed denominator. Neighbor report probabilities must be within a factor of2 in both directions.",
+      "Meet the accuracy floor; the ordered-input study also limits total reporting distance. A zero-probability leak violates the ratio rule despite high accuracy.",
+      "Three failed certifications lose. Complete three finite probability briefs; Undo/Reset recover a study and Restart begins again. This is a mathematical toy, not real-data certification."
+    ],
+    "controls": "Tap/click labeled buttons; Tab and Enter/Space activate them. Sliders also support native touch and arrow keys. Undo/Reset are available in finite studies; Restart works in both modes.",
+    "accent": "#b5cfd2",
+    "symbol": "\u2248",
+    "stages": 3,
+    "endless": {
+      "supported": false,
+      "kind": "finite-campaign",
+      "design": "These three explicit privacy/utility briefs are finite. Endless requires generated feasible integer probability matrices and varied, independently checked utility objectives.",
+      "difficultyCap": "Three authored briefs",
+      "reason": "These three explicit privacy/utility briefs are finite. Endless requires generated feasible integer probability matrices and varied, independently checked utility objectives."
+    },
+    "nearestExisting": [
+      {
+        "id": "private-census",
+        "difference": "Probabilistic indistinguishability over distributions, rather than cohort generalization or deterministic quantizer regions."
+      }
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"count-0-0\"]"
+    },
+    "sourceModule": "signal-lab/choices.mjs"
+  },
+  {
+    "id": "divisor-house",
+    "name": "Divisor House",
+    "category": "puzzle",
+    "url": "signal-lab/?game=divisor-house",
+    "mechanic": "Allocate a fixed house of seats so every district is consistent with one common divisor.",
+    "description": "Allocate a fixed house of seats so every district is consistent with one common divisor.",
+    "rules": [
+      "Allocate the exact fixed house of seats, with at least one seat per district. A single common divisor must make every population floor to its assigned seat count.",
+      "Each district permits population/(seats+1) < divisor \u2264 population/seats. Every permitted interval must overlap; the lower endpoint is excluded.",
+      "Moving a seat changes the shared rational window. Three failed certifications lose. Complete three elections; Undo/Reset recover finite studies and Restart clears progress."
+    ],
+    "controls": "Tap/click labeled buttons; Tab and Enter/Space activate them. Sliders also support native touch and arrow keys. Undo/Reset are available in finite studies; Restart works in both modes.",
+    "accent": "#b5cfd2",
+    "symbol": "\u00f7",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "New populations create fresh shared floor-division windows across4\u20136districts and9\u201316seats, with a guaranteed feasible allocation and exact rational comparisons.",
+      "difficultyCap": "At most6districts and16seats."
+    },
+    "nearestExisting": [
+      {
+        "id": "ratio-mixer",
+        "difference": "Integer representation creates shared floor-division intervals; each seat changes the common divisor window. No liquid composition or physical cutting."
+      }
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"up-0\"]"
+    },
+    "sourceModule": "signal-lab/measures.mjs"
+  }
+]

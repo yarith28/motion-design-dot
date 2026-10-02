@@ -1,0 +1,552 @@
+[
+  {
+    "id": "cam-workshop",
+    "name": "Cam Workshop",
+    "definingDecision": "Shape a cyclic radial cam profile whose neighboring samples must satisfy slope/contact limits while two phase-offset followers deliver different required motions.",
+    "nearestExisting": [
+      {
+        "id": "wave-desk",
+        "differentiator": "Cam geometry enforces cyclic contact and neighboring slope bounds; changing one sample affects two followers and the feasibility of adjacent transitions rather than adding an independent temporal basis wave."
+      }
+    ],
+    "controls": "Tap the labeled native controls, or use Tab with Enter/Space. All actions are turn-paced; dragging and timers are unnecessary. Reset study preserves prior clears; Restart returns to study one.",
+    "finite": "Three progressively coupled fabrication studies, with a scored completed campaign and explicit failed attempt/restart.",
+    "endless": {
+      "supported": true,
+      "design": "Seeded neighboring-safe radius mutations produce varied cyclic profiles and sampled dual-follower traces. Stock, fixed sectors and follower phase remain coupled.",
+      "difficultyCap": "Eight sectors, two followers, cyclic contact slope at most one.",
+      "kind": "challenge-stream"
+    },
+    "failureChallenge": "Removal/addition consumes stock; test rejects loss of contact or trace mismatch; exceeding fabrication allowance loses.",
+    "levelsGeneration": "Teaching single follower; two offset followers; locked stock sectors. Generated trace consistency checked before publication.",
+    "implementedMechanic": "Shape a cyclic radial cam profile whose neighboring samples must satisfy slope/contact limits while two phase-offset followers deliver different required motions.",
+    "source": "atelier-room/mechanical.mjs",
+    "finalRules": [
+      "Each of eight cam radii begins at3; cutting removes one unit permanently. Follower readings sum two neighboring radii.",
+      "Meet every sampled A/B trace with cyclic neighboring differences at most1. Fixed sectors cannot be cut; choose B’s phase.",
+      "The displayed cut allowance and three failed inspections end an attempt. Clear three studies; Reset study or Restart starts a fresh construction."
+    ]
+  },
+  {
+    "id": "common-cut",
+    "name": "Common Cut",
+    "definingDecision": "Nest two or three irregular parts in sheet stock, plan shared cutting edges, and retain a connected path to the fixed clamp until each part is safely released.",
+    "nearestExisting": [
+      {
+        "id": "fair-portions",
+        "differentiator": "Parts have fixed irregular silhouettes and kerf; cutting releases disconnected stock. Goal is exact extracted shapes, not guillotine equal mass portions."
+      }
+    ],
+    "controls": "Tap the labeled native controls, or use Tab with Enter/Space. All actions are turn-paced; dragging and timers are unnecessary. Reset study preserves prior clears; Restart returns to study one.",
+    "finite": "Three progressively coupled fabrication studies, with a scored completed campaign and explicit failed attempt/restart.",
+    "endless": {
+      "supported": false,
+      "design": "The current campaign uses three authored stock/part combinations. A verified nesting-and-cut-order generator is feasible but not shipped.",
+      "reason": "The current campaign uses three authored stock/part combinations. A verified nesting-and-cut-order generator is feasible but not shipped."
+    },
+    "failureChallenge": "A cut that strands an unfinished part from its clamp ruins it; kerf/cut allowance forces common-line planning.",
+    "levelsGeneration": "Two parts shared edge; three parts around clamp; protected stock void changes nesting.",
+    "implementedMechanic": "Nest two or three irregular parts in sheet stock, plan shared cutting edges, and retain a connected path to the fixed clamp until each part is safely released.",
+    "source": "atelier-room/construction.mjs",
+    "finalRules": [
+      "Place and rotate every silhouette without overlap or occupying CL clamp stock. The first cut freezes the nesting. Canvas cell numbers match the unit-cut labels; each part’s silhouette is shown beside the stock.",
+      "Cut unit adjacencies. A disconnected stock component must exactly equal one completed part; unfinished detached stock is scrapped.",
+      "Release every part within the cut allowance. Clear three stock studies; Reset study restores stock and Restart returns to study one."
+    ]
+  },
+  {
+    "id": "interlock-cabinet",
+    "name": "Interlock Cabinet",
+    "definingDecision": "Translate whole interlocked voxel pieces along their permitted axes, making clearance for others before withdrawing each through its matching aperture.",
+    "nearestExisting": [
+      {
+        "id": "bonding-room",
+        "differentiator": "Pieces are initially interpenetrating puzzle shapes and remain separate; permitted 3D slides and extraction order replace atoms binding on contact into a new molecule."
+      }
+    ],
+    "controls": "Tap the labeled native controls, or use Tab with Enter/Space. All actions are turn-paced; dragging and timers are unnecessary. Reset study preserves prior clears; Restart returns to study one.",
+    "finite": "Three progressively coupled fabrication studies, with a scored completed campaign and explicit failed attempt/restart.",
+    "endless": {
+      "supported": false,
+      "design": "Authored interlock dependencies are finite. Endless would require a checked inverse-assembly generator with genuinely different clearance orders.",
+      "reason": "Authored interlock dependencies are finite. Endless would require a checked inverse-assembly generator with genuinely different clearance orders."
+    },
+    "failureChallenge": "Moves consume an allowance; no illegal overlap; wrong extraction order can leave pieces trapped.",
+    "levelsGeneration": "Two axis-crossing bars; three-piece key lock; vertical aperture with a blocked intermediate layer.",
+    "implementedMechanic": "Translate whole interlocked voxel pieces along their permitted axes, making clearance for others before withdrawing each through its matching aperture.",
+    "source": "atelier-room/construction.mjs",
+    "finalRules": [
+      "Select a rigid solid and translate along one of its permitted axes. All occupied voxels must clear other solids and cabinet walls.",
+      "A withdraws through +X and B through +Y; when present, C uses the single +Z roof aperture. All occupied voxels must pass X ≥5, Y ≥5 or Z ≥3 respectively. A partly withdrawn piece remains a collision obstacle.",
+      "Extract every solid within the slide allowance. Three studies change blocking dependencies; Reset or Restart restores the cabinet."
+    ]
+  },
+  {
+    "id": "pressure-gallery",
+    "name": "Pressure Gallery",
+    "definingDecision": "Switch check valves and drive pistons: conserved liquid displacement and piston areas couple all connected strokes, while pressure thresholds make a valve open only under useful loading.",
+    "nearestExisting": [
+      {
+        "id": "measured-pour",
+        "differentiator": "Volumes are not arbitrary jug transfers: piston area, fluid pressure and one-way threshold valves govern displacement and output movement."
+      }
+    ],
+    "controls": "Tap the labeled native controls, or use Tab with Enter/Space. All actions are turn-paced; dragging and timers are unnecessary. Reset study preserves prior clears; Restart returns to study one.",
+    "finite": "Three progressively coupled fabrication studies, with a scored completed campaign and explicit failed attempt/restart.",
+    "endless": {
+      "supported": true,
+      "design": "Generated required fluid volumes for two unequal-area outputs with different pressure loads; lock timing, branch priority and energy remain active.",
+      "difficultyCap": "Two output pistons, five pump pressure settings, bounded stroke and energy.",
+      "kind": "challenge-stream"
+    },
+    "failureChallenge": "Overpressure ruptures a line, stroke limits block further movement, and excessive pump/waste loses.",
+    "levelsGeneration": "Simple area conversion; two unequal outputs; threshold branch with an accumulator.",
+    "implementedMechanic": "Route conserved pump units through two gated unequal-area pistons: fluid enters the easiest open branch, pump pressure must overcome its load, and locking permanently traps that output’s displacement.",
+    "source": "atelier-room/mechanical.mjs",
+    "finalRules": [
+      "A pump stroke supplies one fluid unit and spends energy equal to pump pressure. Fluid enters the easiest open, unlocked output.",
+      "Pump pressure must meet output resistance; stroke equals fluid volume divided by piston area. Locking an output permanently traps its volume.",
+      "Lock both outputs at their exact required strokes. Wrong locks, sealed pumping, travel-stop rupture or energy exhaustion lose; clear three hydraulic studies."
+    ]
+  },
+  {
+    "id": "shrink-fit",
+    "name": "Shrink Fit",
+    "definingDecision": "Heat rings and cool shafts to clear interference fits, then insert in the required geometric order before equilibration permanently locks their positions.",
+    "nearestExisting": [
+      {
+        "id": "kiln-house",
+        "differentiator": "Temperature controls contact geometry and assembly accessibility; permanent interference locking and insertion order are absent from kiln thermal-gradient control."
+      }
+    ],
+    "controls": "Tap the labeled native controls, or use Tab with Enter/Space. All actions are turn-paced; dragging and timers are unnecessary. Reset study preserves prior clears; Restart returns to study one.",
+    "finite": "Three progressively coupled fabrication studies, with a scored completed campaign and explicit failed attempt/restart.",
+    "endless": {
+      "supported": false,
+      "design": "This campaign is finite. Current parameter variations do not yet establish varied generated assembly orders and thermal-clearance decisions.",
+      "reason": "Feasible for an inverse-construction generator; current seed templates remain below the generated-content quality gate."
+    },
+    "failureChallenge": "Insertion without clearance is rejected; an early locked ring may block the remaining part; energy exhaustion or cracked thermal limits loses.",
+    "levelsGeneration": "Single heated ring; nested rings; shaft shoulder requires a nonobvious insertion order.",
+    "implementedMechanic": "Heat and cool rings to clear an entry shoulder and installed outer diameters, then assemble the required axial order before cooling permanently locks each interference seat.",
+    "source": "atelier-room/materials.mjs",
+    "finalRules": [
+      "Ring bore grows by0.1 per temperature unit. Heat adds10 for3 energy; other operations cool every ring by2. Selected cooling removes an extra6.",
+      "A ring must clear both the entry shoulder and installed outer diameters. When bore cools to its seat diameter it permanently locks.",
+      "Lock every ring on its shown axial seat within the operation/energy limits. Wrong locked seats or temperature above 40 fail; Reset or Restart restores parts."
+    ]
+  },
+  {
+    "id": "vented-cast",
+    "name": "Vented Cast",
+    "definingDecision": "Open gas vents and choose injection gates while liquid advances through a mold; filled cells block gas evacuation, making trapped pockets permanently unfillable.",
+    "nearestExisting": [
+      {
+        "id": "after-the-levee",
+        "differentiator": "Gas topology and irreversible closed cavities, rather than heightfield overflow or spoil conservation, determine success."
+      }
+    ],
+    "controls": "Tap the labeled native controls, or use Tab with Enter/Space. All actions are turn-paced; dragging and timers are unnecessary. Reset study preserves prior clears; Restart returns to study one.",
+    "finite": "Three progressively coupled fabrication studies, with a scored completed campaign and explicit failed attempt/restart.",
+    "endless": {
+      "supported": false,
+      "design": "The three molds are authored. A gas-safe cavity generator needs more topology validation before unlimited casting contracts.",
+      "reason": "The three molds are authored. A gas-safe cavity generator needs more topology validation before unlimited casting contracts."
+    },
+    "failureChallenge": "Trapped gas defects or overflow loses; resin budget and vent closing requirements penalize an always-open approach.",
+    "levelsGeneration": "Single cavity vent; two lobes sharing neck; resin outlet must be shut before final fill.",
+    "implementedMechanic": "Open gas vents and choose injection gates while liquid advances through a mold; filled cells block gas evacuation, making trapped pockets permanently unfillable.",
+    "source": "atelier-room/construction.mjs",
+    "finalRules": [
+      "Inject a cavity cell only from the active gate or a neighboring filled cell. Each injection spends one resin unit.",
+      "Every remaining connected gas pocket must reach an open vent. Filled open vents leak one additional resin unit on each later injection.",
+      "Fill the entire cavity, close all vents and cure. Trapped gas or depleted resin loses; three mold geometries and Reset/Restart are available."
+    ]
+  },
+  {
+    "id": "drawplate",
+    "name": "Drawplate",
+    "definingDecision": "Choose irreversible die reductions under volume conservation: every draw increases length and work hardening, so anneal timing must leave enough ductility and fuel for the final gauge.",
+    "nearestExisting": [
+      {
+        "id": "kiln-house",
+        "differentiator": "Plastic strain persists after cooling and couples diameter, length and remaining allowable reduction; kiln lacks irreversible deformation and choice of die sequence."
+      }
+    ],
+    "controls": "Tap the labeled native controls, or use Tab with Enter/Space. All actions are turn-paced; dragging and timers are unnecessary. Reset study preserves prior clears; Restart returns to study one.",
+    "finite": "Three progressively coupled fabrication studies, with a scored completed campaign and explicit failed attempt/restart.",
+    "endless": {
+      "supported": true,
+      "design": "Generated exact gauge ratios use eight feasible die-sequence families, varied volume and one anneal; different target ratios require different pass/anneal decisions.",
+      "difficultyCap": "Three dies, four draw passes, one anneal.",
+      "kind": "challenge-stream"
+    },
+    "failureChallenge": "Too large a reduction or excessive accumulated hardening snaps the wire; fuel limits prevent annealing every pass.",
+    "levelsGeneration": "Two-stage reduction; scarce anneal; mixed die sizes with an exact final diameter.",
+    "implementedMechanic": "Choose irreversible die reductions under volume conservation: every draw increases length and work hardening, so anneal timing must leave enough ductility and fuel for the final gauge.",
+    "source": "atelier-room/materials.mjs",
+    "finalRules": [
+      "A die multiplies area by its displayed ratio. Metal volume stays fixed, so length grows; hardening rises by percentage area removed.",
+      "Hardening above 65 snaps the wire. One3-fuel anneal removes hardening but heats to95; drawing above 45 tears the wire.",
+      "Reach exact final area in at most four draws and cool to 40 for measurement. Over-reduction is irreversible; three gauge contracts, Reset and Restart await."
+    ]
+  },
+  {
+    "id": "wet-paper",
+    "name": "Wet Paper",
+    "definingDecision": "Place water and pigment before they diffuse across connected wet fibers; drying locks color, while later water reactivates only unfixed pigment and bleeds across still-wet edges.",
+    "nearestExisting": [
+      {
+        "id": "pigment-lab",
+        "differentiator": "Pigment is transported by evolving wetness and locked by drying; no movable static translucent stencil can reproduce the deposition-order decisions."
+      }
+    ],
+    "controls": "Tap the labeled native controls, or use Tab with Enter/Space. All actions are turn-paced; dragging and timers are unnecessary. Reset study preserves prior clears; Restart returns to study one.",
+    "finite": "Three progressively coupled fabrication studies, with a scored completed campaign and explicit failed attempt/restart.",
+    "endless": {
+      "supported": false,
+      "design": "The authored washes teach materially different wet/dry orders. Endless needs verified inverse diffusion targets, not repetitions of those three washes.",
+      "reason": "The authored washes teach materially different wet/dry orders. Endless needs verified inverse diffusion targets, not repetitions of those three washes."
+    },
+    "failureChallenge": "Permanent pigment beyond target tolerance spoils the print; water and blot budgets make cleanup costly.",
+    "levelsGeneration": "Isolated dry edge; connected two-color bleed; wick strip that must be dried before adjacent pigment.",
+    "implementedMechanic": "Open connected wet-fiber diffusion paths with finite water, deposit two mobile pigments and time drying so permanent fixed color matches an exact spatial wash.",
+    "source": "atelier-room/materials.mjs",
+    "finalRules": [
+      "Water gives a fiber two wet ticks. Mobile pigment sends half to its wet connected neighbors at each drying tick, then fibers dry by one.",
+      "A dry fiber fixes pigment permanently. Water does not lift a fixed stain; blotting removes only mobile pigment and returns no stock.",
+      "Match both target pigments in every dry cell using finite water and pigment. Excess fixed pigment spoils the paper; clear three washes with Reset/Restart."
+    ]
+  },
+  {
+    "id": "sand-table",
+    "name": "Sand Table",
+    "definingDecision": "Drop conserved grains and place removable baffles so local angle-of-repose avalanches build required support elevations without burying marked fragile openings.",
+    "nearestExisting": [
+      {
+        "id": "after-the-levee",
+        "differentiator": "Grains form threshold-stable slopes and obstruct flow; unlike water they stop below a slope threshold, and removing a baffle can trigger an irreversible avalanche."
+      }
+    ],
+    "controls": "Tap the labeled native controls, or use Tab with Enter/Space. All actions are turn-paced; dragging and timers are unnecessary. Reset study preserves prior clears; Restart returns to study one.",
+    "finite": "Three progressively coupled fabrication studies, with a scored completed campaign and explicit failed attempt/restart.",
+    "endless": {
+      "supported": false,
+      "design": "This campaign is finite. Current parameter variations do not yet establish varied generated granular routing and baffle histories.",
+      "reason": "Feasible for an inverse-construction generator; current seed templates remain below the generated-content quality gate."
+    },
+    "failureChallenge": "Burying a fragile opening loses; missing support after grain/baffle budgets loses.",
+    "levelsGeneration": "Two supports; obstacle changes repose; baffle removal must reroute grains around a fragile pit.",
+    "implementedMechanic": "Drop conserved grains and place removable baffles so local angle-of-repose avalanches build required support elevations without burying marked fragile openings.",
+    "source": "atelier-room/construction.mjs",
+    "finalRules": [
+      "Each scoop adds three grains. Unblocked neighboring height differences above one avalanche until stable.",
+      "Only two baffles may be placed; lifting one immediately settles the connected pile. Marked fragile openings permit zero grains.",
+      "Reach both support-height quotas without burying any opening, using finite grain stock. Three bed layouts, Reset and Restart are available."
+    ]
+  },
+  {
+    "id": "crack-compass",
+    "name": "Crack Compass",
+    "definingDecision": "Notch a brittle plate and apply directional loading; a crack follows the most highly stressed accessible bond, while reinforcing a bond redirects the growing fracture toward a release seam.",
+    "nearestExisting": [
+      {
+        "id": "fossil-brush",
+        "differentiator": "The player steers autonomous fracture propagation and must preserve load paths; cells are not directly erased by a brush."
+      }
+    ],
+    "controls": "Tap the labeled native controls, or use Tab with Enter/Space. All actions are turn-paced; dragging and timers are unnecessary. Reset study preserves prior clears; Restart returns to study one.",
+    "finite": "Three progressively coupled fabrication studies, with a scored completed campaign and explicit failed attempt/restart.",
+    "endless": {
+      "supported": true,
+      "design": "Seeded bond stresses, protected inclusions and seam checkpoints with bounded directional-load and reinforcement choices.",
+      "difficultyCap": "4×4 node lattice, three reinforcing tabs, four load changes.",
+      "kind": "challenge-stream"
+    },
+    "failureChallenge": "Crack hits protected inclusions or detaches the clamp early; reinforcement/load-change budget forbids independent local protection.",
+    "levelsGeneration": "Single notch steering; forked stresses; two cracks interact by removing load-bearing bonds.",
+    "implementedMechanic": "Steer an automatically advancing highest-stress crack with directional loading and scarce reinforcing tabs; fractured neighboring bonds change later priority, and protected inclusions must be avoided.",
+    "source": "atelier-room/construction.mjs",
+    "finalRules": [
+      "The crack follows the strongest accessible unvisited bond. Current load direction adds4 stress; adjacent fractured bonds add0.75; reinforcement subtracts5.",
+      "Protected inclusions must remain untouched. Reach release node 16 after visiting the marked checkpoint; the crack cannot revisit a node.",
+      "Load direction changes, reinforcing tabs and ten fractures are limited. A struck inclusion, dead end or missed checkpoint loses; three plates can be reset/restarted."
+    ]
+  },
+  {
+    "id": "pulley-bay",
+    "name": "Pulley Bay",
+    "definingDecision": "Thread one continuous rope through fixed and movable pulleys, choose anchoring points, then operate it: rope-length constraints couple several load displacements and mechanical advantage.",
+    "nearestExisting": [
+      {
+        "id": "balance-mobile",
+        "differentiator": "Moving pulleys create coupled rope-length constraints and force multiplication; static torque balancing on independent hooks does not."
+      }
+    ],
+    "controls": "Tap the labeled native controls, or use Tab with Enter/Space. All actions are turn-paced; dragging and timers are unnecessary. Reset study preserves prior clears; Restart returns to study one.",
+    "finite": "Three progressively coupled fabrication studies, with a scored completed campaign and explicit failed attempt/restart.",
+    "endless": {
+      "supported": true,
+      "design": "Generated support-strand tuples set two different lift distances and load weights, with a certified feasible four-unit reflected hand force.",
+      "difficultyCap": "Two moving loads and three pulleys.",
+      "kind": "challenge-stream"
+    },
+    "failureChallenge": "Overloaded rope/anchor or unreachable lift demand fails; finite rope and pull stroke make simple extra pulleys costly.",
+    "levelsGeneration": "One moving pulley; unequal load travel; two linked moving pulleys with limited input stroke.",
+    "implementedMechanic": "Choose the supporting strand counts of two moving pulleys, then pull one input rope: each output moves by input distance divided by its count while the combined reflected load must fit the hand-force limit.",
+    "source": "atelier-room/mechanical.mjs",
+    "finalRules": [
+      "Choose1–4 support strands per moving pulley. Output travel equals input stroke divided by strand count.",
+      "Required hand force is the sum of weight divided by support strands. Rope strand stock and input travel are limited.",
+      "Anchor the rig, then pull both loads into their exact docks without overshoot. Overload or incompatible travel fails; three lifts have Reset/Restart."
+    ]
+  },
+  {
+    "id": "clutch-dock",
+    "name": "Clutch Dock",
+    "definingDecision": "Accelerate independent flywheels, then connect clutches that conserve angular momentum; synchronize a load without crossing clutch slip-energy or engine-stall limits.",
+    "nearestExisting": [
+      {
+        "id": "gear-train",
+        "differentiator": "Clutch engagement changes speeds by momentum sharing and consumes dissipated energy; static gear ratio permutation lacks transient load/synchronization decisions."
+      }
+    ],
+    "controls": "Tap the labeled native controls, or use Tab with Enter/Space. All actions are turn-paced; dragging and timers are unnecessary. Reset study preserves prior clears; Restart returns to study one.",
+    "finite": "Three progressively coupled fabrication studies, with a scored completed campaign and explicit failed attempt/restart.",
+    "endless": {
+      "supported": true,
+      "design": "Seeded inertia/load profiles and target speed windows under energy/slip limits.",
+      "difficultyCap": "Three shafts and two clutches.",
+      "kind": "challenge-stream"
+    },
+    "failureChallenge": "Excessive speed mismatch burns a clutch; engine stalls under incompatible load; fuel limits punish waiting indefinitely.",
+    "levelsGeneration": "Single flywheel synchronization; two inertias; loaded shaft requiring staged engagement.",
+    "implementedMechanic": "Accelerate independent flywheels, then connect clutches that conserve angular momentum; synchronize a load without crossing clutch slip-energy or engine-stall limits.",
+    "source": "atelier-room/mechanical.mjs",
+    "finalRules": [
+      "A motor pulse adds two momentum units to its connected inertia. A moving C load consumes one unit of each pulse as drag.",
+      "Engaging a clutch averages connected speeds by inertia, dissipates mismatch energy and pays C’s stationary start resistance. Two stationary coupled starts overheat the motor.",
+      "Couple all shafts at the exact target speed within fuel, speed and slip limits. Clear three loads; Reset and Restart restore shafts."
+    ]
+  },
+  {
+    "id": "lens-craft",
+    "name": "Lens Craft",
+    "definingDecision": "Place curved lenses at separations that transform both ray height and angle; focus two incident ray bundles while matching the image orientation and avoiding aperture clipping.",
+    "nearestExisting": [
+      {
+        "id": "lens-library",
+        "differentiator": "The lenses are constructed from signed power/separation with geometric ray transfer, rather than inferring an unknown blur kernel."
+      }
+    ],
+    "controls": "Tap the labeled native controls, or use Tab with Enter/Space. All actions are turn-paced; dragging and timers are unnecessary. Reset study preserves prior clears; Restart returns to study one.",
+    "finite": "Three progressively coupled fabrication studies, with a scored completed campaign and explicit failed attempt/restart.",
+    "endless": {
+      "supported": false,
+      "design": "The three benches have authored glass inventories. Endless needs varied feasible optical systems and aperture certification.",
+      "reason": "The three benches have authored glass inventories. Endless needs varied feasible optical systems and aperture certification."
+    },
+    "failureChallenge": "Glass budget and aperture limits exclude arbitrarily strong lenses; three failed certifications lose with explicit clipping/focus feedback.",
+    "levelsGeneration": "Single focus; diverging/converging pair; image flip and offset beam through a restricted aperture.",
+    "implementedMechanic": "Place finite-power glass cards in fixed bench sockets so thin-lens refraction and free propagation transform every ray’s height and angle while retaining image orientation and aperture clearance.",
+    "source": "atelier-room/optics.mjs",
+    "finalRules": [
+      "Between lenses, ray height changes by angle times distance. At a lens, angle changes by minus power times height.",
+      "Use every glass card once. Every ray must remain inside each occupied socket’s aperture and meet the target image height and outgoing angle.",
+      "Three failed optical certifications end an attempt. Clear three benches with changed glass and orientation; Reset or Restart rebuilds the bench."
+    ]
+  },
+  {
+    "id": "polarization-stage",
+    "name": "Polarization Stage",
+    "definingDecision": "Order polarizers and quarter-wave plates: plates transform linear light into elliptical states, so downstream intensity depends on component order rather than independent filter strength.",
+    "nearestExisting": [
+      {
+        "id": "invisible-ink",
+        "differentiator": "Manipulating polarization phase and ordered optical elements creates the beam states; existing spectral scanning only observes parcels."
+      }
+    ],
+    "controls": "Tap the labeled native controls, or use Tab with Enter/Space. All actions are turn-paced; dragging and timers are unnecessary. Reset study preserves prior clears; Restart returns to study one.",
+    "finite": "Three progressively coupled fabrication studies, with a scored completed campaign and explicit failed attempt/restart.",
+    "endless": {
+      "supported": true,
+      "design": "Seeded dual-beam polarization inputs and target intensity/state bands generated from feasible ordered stacks.",
+      "difficultyCap": "Three elements, four slots and 45° angles.",
+      "kind": "challenge-stream"
+    },
+    "failureChallenge": "Finite transmission requirements rule out blocking everything; layout/rotation allowance and incorrect certification loses.",
+    "levelsGeneration": "Crossed linear pair; quarter-wave restoration; two input beams require a shared ordered stack.",
+    "implementedMechanic": "Order polarizers and quarter-wave plates: plates transform linear light into elliptical states, so downstream intensity depends on component order rather than independent filter strength.",
+    "source": "atelier-room/optics.mjs",
+    "finalRules": [
+      "P polarizers discard the perpendicular field component; Q plates delay it by a quarter cycle. Rotating a component changes its axis by45°.",
+      "The same ordered stack must match both beams’ transmitted intensity and all three ellipse components. Blocking all light cannot satisfy a transmitting contract.",
+      "Neighbor swaps and rotations consume the adjustment allowance; three failed illuminations lose. Clear three stacks or play generated endless contracts; Reset/Restart are available."
+    ]
+  },
+  {
+    "id": "seal-shop",
+    "name": "Seal Shop",
+    "definingDecision": "Tighten bolts around an elastic gasket: each tightening changes neighboring compressions and total load; prevent leaks while avoiding local crush and bolt yield.",
+    "nearestExisting": [
+      {
+        "id": "span-workshop",
+        "differentiator": "Contact sealing requires a minimum distributed compressive preload and tightening redistributes that preload; this is not a truss member tension/compression design."
+      }
+    ],
+    "controls": "Tap the labeled native controls, or use Tab with Enter/Space. All actions are turn-paced; dragging and timers are unnecessary. Reset study preserves prior clears; Restart returns to study one.",
+    "finite": "Three progressively coupled fabrication studies, with a scored completed campaign and explicit failed attempt/restart.",
+    "endless": {
+      "supported": true,
+      "design": "Seeded gasket compliance matrices and leak sectors from bounded solvable preload targets.",
+      "difficultyCap": "Six bolts and bounded tightening budget.",
+      "kind": "challenge-stream"
+    },
+    "failureChallenge": "Crushed gasket or yielded bolt permanently fails; too low any sector leaks.",
+    "levelsGeneration": "Four-bolt ring; soft gasket sector; six-bolt ring with crossed influence requiring star-sequence control.",
+    "implementedMechanic": "Tighten bolts around an elastic gasket: each tightening changes neighboring compressions and total load; prevent leaks while avoiding local crush and bolt yield.",
+    "source": "atelier-room/mechanical.mjs",
+    "finalRules": [
+      "One bolt turn adds local compression times its compliance, half a turn to the following sector and minus a quarter turn to the preceding sector.",
+      "Every sector must lie inside its displayed compression band. Five turns yield a bolt; compression over6 crushes the gasket.",
+      "Meet all bands within the adjustment allowance and three pressure tests. Three gasket layouts, Reset and Restart are available."
+    ]
+  },
+  {
+    "id": "capstan-crossing",
+    "name": "Capstan Crossing",
+    "definingDecision": "Route a loaded rope around posts with different friction coefficients: each wrap can sustain a tension ratio but consumes rope length and increases required release effort.",
+    "nearestExisting": [
+      {
+        "id": "threaded-return",
+        "differentiator": "Wrap friction changes force capacity and controlled release, not avatar reachable space or winding topology."
+      }
+    ],
+    "controls": "Tap the labeled native controls, or use Tab with Enter/Space. All actions are turn-paced; dragging and timers are unnecessary. Reset study preserves prior clears; Restart returns to study one.",
+    "finite": "Three progressively coupled fabrication studies, with a scored completed campaign and explicit failed attempt/restart.",
+    "endless": {
+      "supported": true,
+      "design": "Generated post factors, rope stock, hand force and two-sided hold/release load bands are built from feasible wrap combinations.",
+      "difficultyCap": "Four posts and four wraps.",
+      "kind": "challenge-stream"
+    },
+    "failureChallenge": "Insufficient friction slips a load; excessive wrap jams commanded release; limited rope/hand force requires balancing both.",
+    "levelsGeneration": "One hold/release; changing load direction; two sequential loads share the same rope route.",
+    "implementedMechanic": "Route a loaded rope around posts with different friction coefficients: each wrap can sustain a tension ratio but consumes rope length and increases required release effort.",
+    "source": "atelier-room/mechanical.mjs",
+    "finalRules": [
+      "Each wrap multiplies capacity and release drag by its post factor. Holding capacity equals hand force times the combined factor.",
+      "Finite rope limits wrap count. Secure the load before lowering; changing wraps under load must keep enough holding capacity.",
+      "Hold the required load and lower below the release-drag ceiling. Slip or jam loses; three load contracts and Reset/Restart await."
+    ]
+  },
+  {
+    "id": "spring-form",
+    "name": "Spring Form",
+    "definingDecision": "Bend a strip around dies while elastic springback depends on material and prior yielding; tool reach and already-bent sections constrain which bends can be formed next.",
+    "nearestExisting": [
+      {
+        "id": "folded-cuttings",
+        "differentiator": "A permanent plastic angle differs from the temporarily applied angle; it is not reflected paper layers or symmetric hole replication."
+      }
+    ],
+    "controls": "Tap the labeled native controls, or use Tab with Enter/Space. All actions are turn-paced; dragging and timers are unnecessary. Reset study preserves prior clears; Restart returns to study one.",
+    "finite": "Three progressively coupled fabrication studies, with a scored completed campaign and explicit failed attempt/restart.",
+    "endless": {
+      "supported": false,
+      "design": "The three plastic profiles have real die-access geometry. Generated profiles require reachability validation under springback and collision limits.",
+      "reason": "The three plastic profiles have real die-access geometry. Generated profiles require reachability validation under springback and collision limits."
+    },
+    "failureChallenge": "Too tight a radius cracks the strip; formed geometry can block later die access; limited rebends make wrong order consequential.",
+    "levelsGeneration": "Single bend calibration; opposing bends; enclosed return bend requires planning access before closure.",
+    "implementedMechanic": "Choose die radius, applied angle and forming order while plastic springback and geometric tool clearance interact.",
+    "source": "atelier-room/materials.mjs",
+    "finalRules": [
+      "Released plastic angle equals applied press angle minus signed springback10,20 or30 degrees for the selected die.",
+      "A die clearance disk on the pressing side must avoid every nonincident strip segment. Tight dies crack above 70° applied; all dies crack above 100°.",
+      "Form every target angle; a formed station cannot be straightened. Three failed gauges or cracked material lose; three profiles have Reset/Restart."
+    ]
+  },
+  {
+    "id": "vacuum-patch",
+    "name": "Vacuum Patch",
+    "definingDecision": "Patch leaks in a flexible membrane while pump pressure increases peel forces along exposed patch edges; overlap can reinforce a seal but transfer stress to another edge.",
+    "nearestExisting": [
+      {
+        "id": "reservoir",
+        "differentiator": "Gas leak flow and pressure-dependent patch-edge failure create coupled coverage decisions; there is no water storage/release balance."
+      }
+    ],
+    "controls": "Tap the labeled native controls, or use Tab with Enter/Space. All actions are turn-paced; dragging and timers are unnecessary. Reset study preserves prior clears; Restart returns to study one.",
+    "finite": "Three progressively coupled fabrication studies, with a scored completed campaign and explicit failed attempt/restart.",
+    "endless": {
+      "supported": false,
+      "design": "The campaign has three authored leak/patch sets. A varied generator must validate both coverage and peel support.",
+      "reason": "The campaign has three authored leak/patch sets. A varied generator must validate both coverage and peel support."
+    },
+    "failureChallenge": "Patch peel exposes new leak area and consumes patch; rupture from excess differential loses; finite stock prevents blanket coverage.",
+    "levelsGeneration": "One reinforced leak; neighboring leaks share an edge; pressure target needs a double-supported seam.",
+    "implementedMechanic": "Patch leaks in a flexible membrane while pump pressure increases peel forces along exposed patch edges; overlap can reinforce a seal but transfer stress to another edge.",
+    "source": "atelier-room/materials.mjs",
+    "finalRules": [
+      "Bond complete patches irreversibly over leaks. A covered leak holds pressure; an exposed leak spends pump energy without gaining vacuum.",
+      "A patch cell supports pressure2, plus2 for its own overlap, plus2 for each adjacent overlap cell within that patch. The weakest cell controls peeling.",
+      "Reach target pressure without any peeled patch or exhausted energy. Three leak maps change required coverage and reinforcement; Reset/Restart restore stock."
+    ]
+  },
+  {
+    "id": "mill-fixture",
+    "name": "Mill Fixture",
+    "definingDecision": "Machine an exact cavity in a solid block while retaining clamped stock and choosing tool approach axes; removing one support may make later cuts inaccessible or the part unholdable.",
+    "nearestExisting": [
+      {
+        "id": "fossil-brush",
+        "differentiator": "Tool-axis accessibility, 3D collision and changing fixture support replace direct buried-cell brushing."
+      }
+    ],
+    "controls": "Tap the labeled native controls, or use Tab with Enter/Space. All actions are turn-paced; dragging and timers are unnecessary. Reset study preserves prior clears; Restart returns to study one.",
+    "finite": "Three progressively coupled fabrication studies, with a scored completed campaign and explicit failed attempt/restart.",
+    "endless": {
+      "supported": false,
+      "design": "The three cavities have authored access and fixture dependencies. Endless requires verified3D machining traces.",
+      "reason": "The three cavities have authored access and fixture dependencies. Endless requires verified3D machining traces."
+    },
+    "failureChallenge": "Fixture detachment scraps the part; forbidden tool cuts rejected; cut/re-clamp budget demands a feasible removal order.",
+    "levelsGeneration": "Top-down pocket; side undercut; cavity can only be completed by changing clamp face before severing support.",
+    "implementedMechanic": "Machine an exact cavity in a solid block while retaining clamped stock and choosing tool approach axes; removing one support may make later cuts inaccessible or the part unholdable.",
+    "source": "atelier-room/construction.mjs",
+    "finalRules": [
+      "Gold voxels are cavity stock; green voxels belong to the finished part. The selected approach ray must be clear of other solid voxels.",
+      "The active clamp face cannot be cut. Re-clamp only to permitted faces with enough remaining pad stock; every remaining component must connect to the fixture.",
+      "Remove exactly all cavity voxels within fixture-change limits. A protected cut or detached stock loses; three cavities have Reset/Restart."
+    ]
+  },
+  {
+    "id": "sound-splice",
+    "name": "Sound Splice",
+    "definingDecision": "Cut labeled phoneme ribbons and exchange suffixes between two words, simultaneously changing both; produce every target word with a limited number of coupled splices while intermediate ribbons remain pronounceable dictionary entries.",
+    "nearestExisting": [
+      {
+        "id": "one-letter-away",
+        "differentiator": "One operation exchanges arbitrarily long phoneme suffixes of two persistent words; both results must remain legal, unlike changing a single letter on one ladder."
+      }
+    ],
+    "controls": "Tap the labeled native controls, or use Tab with Enter/Space. All actions are turn-paced; dragging and timers are unnecessary. Reset study preserves prior clears; Restart returns to study one.",
+    "finite": "Three progressively coupled fabrication studies, with a scored completed campaign and explicit failed attempt/restart.",
+    "endless": {
+      "supported": true,
+      "design": "Legal coupled suffix exchanges construct varied three/four-word target sets over a visible curated phoneme vocabulary.",
+      "difficultyCap": "Four three-phoneme ribbons; five splices.",
+      "kind": "challenge-stream"
+    },
+    "failureChallenge": "Splice allowance forces preserving useful intermediate words; illegal two-word results rejected; spent allowance without target loses.",
+    "levelsGeneration": "Two-word onset exchange; three-word relay; four coupled ribbons with a tempting legal dead end.",
+    "implementedMechanic": "Cut labeled phoneme ribbons and exchange suffixes between two words, simultaneously changing both; produce every target word with a limited number of coupled splices while intermediate ribbons remain pronounceable dictionary entries.",
+    "source": "atelier-room/construction.mjs",
+    "finalRules": [
+      "Choose two different word positions and a cut after phoneme1 or2 in each. The exchanged suffixes change both persistent words.",
+      "Both results must belong to the complete visible notebook. Target word positions matter; pronunciation units use short A, O, I and E with labeled consonants.",
+      "Restore every target ribbon before the splice allowance ends. Invalid splices change nothing; three studies, generated endless contracts, Reset and Restart await."
+    ]
+  }
+]

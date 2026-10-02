@@ -1,0 +1,7465 @@
+{
+  "passed": true,
+  "verifiedAt": "2026-10-02T20:00:40.434Z",
+  "engine": "chromium",
+  "browserVersion": "151.0.7922.173",
+  "sourceSha": null,
+  "sourceFiles": [
+    {
+      "path": "mini-games/atelier-room/README.md",
+      "sha256": "fd5d305f37def6451a1d82be0b6cc751ce4cc433cca5f4ea52288e4da5e3b102"
+    },
+    {
+      "path": "mini-games/atelier-room/construction.mjs",
+      "sha256": "1bb74ab6726408edd47aee2dd8424e42363a6776de21eee91b81070887d8a854"
+    },
+    {
+      "path": "mini-games/atelier-room/core.mjs",
+      "sha256": "e740adf8959d2c26716dd2ae43a78147b7d7012a09a9398ea80e4327c03552ad"
+    },
+    {
+      "path": "mini-games/atelier-room/engines.mjs",
+      "sha256": "3d1bc05fcb6d011d59dc6a1b3c4707d416afc3084a93ad181f5b7f4e9eaaa018"
+    },
+    {
+      "path": "mini-games/atelier-room/games.json",
+      "sha256": "38871197bf03c4e6cd1b2abfd4812f9f274f813e23d701cbee383e31540bca2b"
+    },
+    {
+      "path": "mini-games/atelier-room/index.html",
+      "sha256": "1b9afc478035ca5b0a657cb8a449d489dfbff993cd4876385a9d7ef2e6a26d9e"
+    },
+    {
+      "path": "mini-games/atelier-room/materials.mjs",
+      "sha256": "a9b0d4761b2b27b6b662cf37bba0977ad8bab1a5268f4a572bc210a18f6cbf57"
+    },
+    {
+      "path": "mini-games/atelier-room/mechanical.mjs",
+      "sha256": "8ba9b2761189778553043c2c155e125543c49c58416d9ffcd8c3f87f32279de6"
+    },
+    {
+      "path": "mini-games/atelier-room/optics.mjs",
+      "sha256": "b43762adafd6c99db3ef49e005c3ccbfc9eadb0e8545564ac48a2d0bf5f5f039"
+    },
+    {
+      "path": "mini-games/atelier-room/room.mjs",
+      "sha256": "d9a3cba2043d7e5c6c406c2cbae764a1c96f17e8e5af05f9ef6b3465d2b29e8c"
+    },
+    {
+      "path": "mini-games/catalog.css",
+      "sha256": "3f7fed0b9eabdbb1ab1c308d225dcf4022d4946882a80968dccd0f8197d75840"
+    },
+    {
+      "path": "mini-games/catalog.js",
+      "sha256": "c041cb7696c9343e8ba3af69cca8230f61e49d9d64d964f613a9ba252ceb07d5"
+    },
+    {
+      "path": "mini-games/common.js",
+      "sha256": "c14967b43f3c485423b29ab47b8021776fe15933d1e8207467991491bc769cab"
+    },
+    {
+      "path": "mini-games/commons-room/collective-games.mjs",
+      "sha256": "9a1846df16c5aa672ae146aad6c356bddb43c62b809d1ea06fa53466b4f82d1a"
+    },
+    {
+      "path": "mini-games/commons-room/core.mjs",
+      "sha256": "82b48f343419f849567708a28f99b082b31cf11001d163ce24740fa102212e89"
+    },
+    {
+      "path": "mini-games/commons-room/engines.mjs",
+      "sha256": "4d89bec88b903d4c0927e2c3d13864f2f527d53f8b48adbbe143bb51249d90d4"
+    },
+    {
+      "path": "mini-games/commons-room/games.json",
+      "sha256": "8cc77ccfe86f28376ac0c9b4e04172e0486586867766d1081baa3364b88257d4"
+    },
+    {
+      "path": "mini-games/commons-room/index.html",
+      "sha256": "1b9afc478035ca5b0a657cb8a449d489dfbff993cd4876385a9d7ef2e6a26d9e"
+    },
+    {
+      "path": "mini-games/commons-room/living-ledgers.mjs",
+      "sha256": "b4f4cf71c2960c3d4a550377bf31242cd6a0924dd58ad5a4df6172865c454554"
+    },
+    {
+      "path": "mini-games/commons-room/market-games.mjs",
+      "sha256": "9e2effa3aa231ffcf6ab7802fc7e0532d5bf280c37134041ddfb2231d8118206"
+    },
+    {
+      "path": "mini-games/commons-room/opposed-boards.mjs",
+      "sha256": "4b2a53fc2fdac95ba5fb6cefd0b636bb40808c716bb8ad4b6cd2f56216571ace"
+    },
+    {
+      "path": "mini-games/commons-room/room.mjs",
+      "sha256": "908ac9439d545eeebef28d5942aa28a956a18f2f5665ee4366af74515f908674"
+    },
+    {
+      "path": "mini-games/constraint-room/REVIEW.md",
+      "sha256": "12ff1b76f70ce17b89c4463073cb6f52622536476e62f78137e7df73a81072d3"
+    },
+    {
+      "path": "mini-games/constraint-room/composition.mjs",
+      "sha256": "3c162dadd84b270ffdcc1b621c5cd206f9b25c86c9e4c6be16281369c3afcc88"
+    },
+    {
+      "path": "mini-games/constraint-room/core.mjs",
+      "sha256": "50ddbd0ce4b018d5d4f8d5226cb2c0498ad255cdb5ea72a622c776e96e376d4f"
+    },
+    {
+      "path": "mini-games/constraint-room/engines.mjs",
+      "sha256": "4082f9df2026481a94481b53b91efcbbaa2505f7db5af4e0faab81c128c3f159"
+    },
+    {
+      "path": "mini-games/constraint-room/games.json",
+      "sha256": "fd77df512fc0a68aa0909605ec89ecd0543b8da04c2abc1306010676be0b9b58"
+    },
+    {
+      "path": "mini-games/constraint-room/index.html",
+      "sha256": "8fff2e81e827c8baf40130306cd9a78f0a8817c2f462bbd47a193c9cc255693c"
+    },
+    {
+      "path": "mini-games/constraint-room/paths.mjs",
+      "sha256": "ababc5a8501f49ed7b2572cfb389b7a50d0aa2232e0292ccfb545222ce768a6e"
+    },
+    {
+      "path": "mini-games/constraint-room/placement.mjs",
+      "sha256": "f95a0b3a4656cdf1e466af281a526d665adb83b9861fad74f8e910bdd12ccfa5"
+    },
+    {
+      "path": "mini-games/constraint-room/room.css",
+      "sha256": "a8ba65d82bd35a02e6b1d2408509a0de523dbe67ebdbe6b9ede990eccb73798b"
+    },
+    {
+      "path": "mini-games/constraint-room/room.mjs",
+      "sha256": "13c14eac08066ae7a5cc786764034b852e4835e42729f86c81b6af584795f1e6"
+    },
+    {
+      "path": "mini-games/constraint-room/shading.mjs",
+      "sha256": "014b963cc4b1b0606afa3886eff21e06705cdebb0317a86d06f5876bee832ee5"
+    },
+    {
+      "path": "mini-games/field-room/ENDLESS-REVIEW.md",
+      "sha256": "7ee94ce763b4233f14ccccc4e67d96ad8e414aa99ca738f94d2d18ff9e81e1ed"
+    },
+    {
+      "path": "mini-games/field-room/README.md",
+      "sha256": "fd0d00faf59ca9c75d3d02fce4548d569d66d2c85821d11aa14be53425f2a8bb"
+    },
+    {
+      "path": "mini-games/field-room/balance.mjs",
+      "sha256": "9e9ea3e988f13b5b7ddc82c0f5d90d5f2ed05188ce29b317c3dcd7f1f2318af9"
+    },
+    {
+      "path": "mini-games/field-room/core.mjs",
+      "sha256": "426aecd3bac2e6499c8f60de2d435c4ffba9783677e2429f9f44f14244fda771"
+    },
+    {
+      "path": "mini-games/field-room/engines.mjs",
+      "sha256": "cf3f2c0a24339ebd54cf6e9ae802d6362b946fbda107bfb33d297c6f961041ba"
+    },
+    {
+      "path": "mini-games/field-room/flow.mjs",
+      "sha256": "380ad34cdca8a7d5c4ec9821323b9b74d1624aa5183c3fa00870ae5e7b892a2d"
+    },
+    {
+      "path": "mini-games/field-room/games.json",
+      "sha256": "f7721b6618a6e648747551ae22ec7f07c5323b9581d0eb3fefcd11437a421447"
+    },
+    {
+      "path": "mini-games/field-room/index.html",
+      "sha256": "1b9afc478035ca5b0a657cb8a449d489dfbff993cd4876385a9d7ef2e6a26d9e"
+    },
+    {
+      "path": "mini-games/field-room/room.mjs",
+      "sha256": "7df98438c0a2e0e0c36a3c3235c7cc96fb9d5b20c086c45a22b3c1c70101611f"
+    },
+    {
+      "path": "mini-games/field-room/sports.mjs",
+      "sha256": "5a3eb053f75082c0d6bfcf04bad9ea7491557dcf07d81a4638228034604a3cc1"
+    },
+    {
+      "path": "mini-games/field-room/travel.mjs",
+      "sha256": "ebd20dfa4db6da33a0f137cfe7df65648765889ce4e8936b8ccb68ce207320f0"
+    },
+    {
+      "path": "mini-games/index.html",
+      "sha256": "5e835db291b577a950cf0cfa8b93ed5ea20538bb765927d91c7b8aefd770c5e2"
+    },
+    {
+      "path": "mini-games/inventory.json",
+      "sha256": "11c0f03ce121f51d3fdf2c8025c23ea5cd33056a0ff55c0144706062c781f251"
+    },
+    {
+      "path": "mini-games/journey/journey.css",
+      "sha256": "e77e387075c86ad3addcf7220c9eeabfc06fec45987116205b75ed50cac83e67"
+    },
+    {
+      "path": "mini-games/journey/journey.mjs",
+      "sha256": "86a92fbd52ee7f5d34fd01225120feb74a336dd499a11e9e4780cf8f1f207872"
+    },
+    {
+      "path": "mini-games/play.css",
+      "sha256": "653182c898e835ca0f733f8e0c1f99a44073ea6fd2d0521b8aaff4d3f0313191"
+    },
+    {
+      "path": "mini-games/signal-lab/certificates.mjs",
+      "sha256": "691703ae117fe13d11457c6717f05703425025b51a38a54ee9b812856cf815ae"
+    },
+    {
+      "path": "mini-games/signal-lab/choices.mjs",
+      "sha256": "7cb9ba1f96e397224da9ccf51bc80eea64ba3eb2b00a5766e4412d6fedcc53f0"
+    },
+    {
+      "path": "mini-games/signal-lab/common.mjs",
+      "sha256": "715a4f3c691b2b0344164f628888217f44a26db66553d7f247f4675c25edb45b"
+    },
+    {
+      "path": "mini-games/signal-lab/engines.mjs",
+      "sha256": "22e8ab3bfb96f39636af4bf37c79e83de8bd3a2fd89f84fac441fc5fb64217d3"
+    },
+    {
+      "path": "mini-games/signal-lab/games.json",
+      "sha256": "22502b9164edd3850c8ba13247bd2e147c2d9a35bbca0963023bfc4fc607c746"
+    },
+    {
+      "path": "mini-games/signal-lab/index.html",
+      "sha256": "1b9afc478035ca5b0a657cb8a449d489dfbff993cd4876385a9d7ef2e6a26d9e"
+    },
+    {
+      "path": "mini-games/signal-lab/machines.mjs",
+      "sha256": "48752fe864e1a966c8eb74f9d10dd89e3d04e5f473c1383447bc49ddc7e47319"
+    },
+    {
+      "path": "mini-games/signal-lab/measures.mjs",
+      "sha256": "2ba22bdc128bd13dd9a5345658e2170a00031366d69eb4e542332f71f8581102"
+    },
+    {
+      "path": "mini-games/signal-lab/room.mjs",
+      "sha256": "94e42820a57c9120b6fc84ba5c061803c48d6e870f25501965eb127c7912d15b"
+    },
+    {
+      "path": "mini-games/signal-lab/signals.mjs",
+      "sha256": "1768ec132caaf705d9e317d1403fd069dc6df55ad2d607ad1a37fa118a8f2256"
+    },
+    {
+      "path": "mini-games/styles.css",
+      "sha256": "2f55c2ed941f3c912a09747355e89af92148812f825d97cf5f72f3075c3d0281"
+    },
+    {
+      "path": "mini-games/tests/journey-opening-controls.cjs",
+      "sha256": "5ce3be14fdfedbb612e8e284184cdacaf0dd4f6e9d3dbb95d4a2cb0a1cbda983"
+    }
+  ],
+  "sourceUnchanged": true,
+  "seeds": [
+    0,
+    1,
+    20261002,
+    4294967295
+  ],
+  "games": 100,
+  "cases": [
+    {
+      "id": "lamp-ward",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "lamp-ward",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "lamp-ward",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "lamp-ward",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "star-charter",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "star-charter",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "star-charter",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "star-charter",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "magnet-ledger",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"slot:0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "magnet-ledger",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"slot:0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "magnet-ledger",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"slot:0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "magnet-ledger",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"slot:0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "region-census",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "region-census",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "region-census",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "region-census",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "mosaic-ring",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "mosaic-ring",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "mosaic-ring",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "mosaic-ring",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "sight-garden",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "sight-garden",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "sight-garden",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "sight-garden",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "diagonal-grove",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "diagonal-grove",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "diagonal-grove",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "diagonal-grove",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "thermometer-hall",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"tube:0:1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "thermometer-hall",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"tube:0:1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "thermometer-hall",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"tube:0:1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "thermometer-hall",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"tube:0:1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "compass-estate",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"hub:1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "compass-estate",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"hub:1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "compass-estate",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"hub:1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "compass-estate",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"hub:1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "fleet-blueprint",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "fleet-blueprint",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "fleet-blueprint",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "fleet-blueprint",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "shade-detour",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "shade-detour",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "shade-detour",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "shade-detour",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "quiet-rooms",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "quiet-rooms",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "quiet-rooms",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "quiet-rooms",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "four-forms",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "four-forms",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "four-forms",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "four-forms",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "domino-register",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "domino-register",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "domino-register",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "domino-register",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "weighted-weft",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "weighted-weft",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "weighted-weft",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "weighted-weft",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "once-through",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "#board [data-action^=\"node:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "once-through",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "#board [data-action^=\"node:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "once-through",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "#board [data-action^=\"node:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "once-through",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "#board [data-action^=\"node:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "cyclic-courtyard",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"shift:row:0:1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "cyclic-courtyard",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"shift:row:0:1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "cyclic-courtyard",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"shift:row:0:1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "cyclic-courtyard",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"shift:row:0:1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "seam-quilt",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"tile:1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "seam-quilt",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"tile:1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "seam-quilt",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"tile:1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "seam-quilt",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"tile:1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "exclusive-print",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"plate:0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "exclusive-print",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"plate:0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "exclusive-print",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"plate:0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "exclusive-print",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"plate:0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "window-tally",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "window-tally",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "window-tally",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "window-tally",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "ninepin-line",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"roll\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "ninepin-line",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"roll\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "ninepin-line",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"roll\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "ninepin-line",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"roll\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "batters-window",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"advance\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "batters-window",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"advance\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "batters-window",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"advance\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "batters-window",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"advance\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "crease-keeper",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"launch\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "crease-keeper",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"launch\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "crease-keeper",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"launch\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "crease-keeper",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"launch\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "last-second-pass",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"right\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "last-second-pass",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"right\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "last-second-pass",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"right\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "last-second-pass",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"right\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "court-rotation",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"advance\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "court-rotation",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"advance\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "court-rotation",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"advance\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "court-rotation",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"advance\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "velodrome-draft",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"ride\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "velodrome-draft",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"ride\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "velodrome-draft",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"ride\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "velodrome-draft",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"ride\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "clutch-circuit",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"drive\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "clutch-circuit",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"drive\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "clutch-circuit",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"drive\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "clutch-circuit",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"drive\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "ribbon-relay",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"advance\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "ribbon-relay",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"advance\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "ribbon-relay",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"advance\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "ribbon-relay",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"advance\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "two-oars",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"both\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "two-oars",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"both\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "two-oars",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"both\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "two-oars",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"both\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "cable-carrier",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"right\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "cable-carrier",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"right\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "cable-carrier",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"right\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "cable-carrier",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"right\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "thermal-route",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"level\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "thermal-route",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"level\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "thermal-route",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"level\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "thermal-route",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"level\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "belay-line",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"feed\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "belay-line",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"feed\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "belay-line",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"feed\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "belay-line",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"feed\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "vault-runway",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"run\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "vault-runway",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"run\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "vault-runway",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"run\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "vault-runway",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"run\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "tucked-landing",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"launch\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "tucked-landing",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"launch\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "tucked-landing",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"launch\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "tucked-landing",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"launch\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "wave-trim",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"straight\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "wave-trim",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"straight\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "wave-trim",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"straight\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "wave-trim",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"straight\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "ripple-skimmer",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"throw\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "ripple-skimmer",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"throw\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "ripple-skimmer",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"throw\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "ripple-skimmer",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"throw\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "spin-passage",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"east\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "spin-passage",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"east\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "spin-passage",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"east\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "spin-passage",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"east\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "cascade-hands",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"throw:0:high\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "cascade-hands",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"throw:0:high\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "cascade-hands",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"throw:0:high\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "cascade-hands",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"throw:0:high\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "ice-rescue",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"right\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "ice-rescue",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"right\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "ice-rescue",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"right\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "ice-rescue",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"right\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "breathing-lane",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"stroke\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "breathing-lane",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"stroke\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "breathing-lane",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"stroke\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "breathing-lane",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"stroke\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "reset-post",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"P\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "reset-post",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"P\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "reset-post",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"P\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "reset-post",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"P\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "quotient-quay",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"group-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "quotient-quay",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"group-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "quotient-quay",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"group-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "quotient-quay",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"group-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "cutback-case",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"event-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "cutback-case",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"event-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "cutback-case",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"event-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "cutback-case",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"event-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "clause-kiln",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"clause-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "clause-kiln",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"clause-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "clause-kiln",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"clause-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "clause-kiln",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"clause-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "wraparound-witness",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"run\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "wraparound-witness",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"run\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "wraparound-witness",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"run\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "wraparound-witness",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"run\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "branch-weather",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"state-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "branch-weather",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"state-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "branch-weather",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"state-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "branch-weather",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"state-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "phase-paper",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"H-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "phase-paper",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"H-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "phase-paper",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"H-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "phase-paper",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"H-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "rotation-index",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"row-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "rotation-index",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"row-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "rotation-index",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"row-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "rotation-index",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"row-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "shared-secret",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"share-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "shared-secret",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"share-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "shared-secret",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"share-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "shared-secret",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"share-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "crossed-channel",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"send\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "crossed-channel",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"send\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "crossed-channel",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"send\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "crossed-channel",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"send\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "quorum-garden",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"node-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "quorum-garden",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"node-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "quorum-garden",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"node-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "quorum-garden",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"node-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "bound-names",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"binder-l\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "bound-names",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"binder-l\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "bound-names",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"binder-l\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "bound-names",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"binder-l\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "separating-line",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"certify\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "separating-line",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"certify\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "separating-line",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"certify\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "separating-line",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"certify\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "hall-window",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"job-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "hall-window",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"job-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "hall-window",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"job-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "hall-window",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"job-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "empty-language",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"derive-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "empty-language",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"derive-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "empty-language",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"derive-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "empty-language",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"derive-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "credit-method",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"charge-2\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "credit-method",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"charge-2\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "credit-method",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"charge-2\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "credit-method",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"charge-2\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "interval-post",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"letter-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "interval-post",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"letter-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "interval-post",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"letter-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "interval-post",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"letter-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "pruning-room",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"leaf-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "pruning-room",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"leaf-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "pruning-room",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"leaf-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "pruning-room",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"leaf-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "privacy-dials",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"count-0-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "privacy-dials",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"count-0-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "privacy-dials",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"count-0-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "privacy-dials",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"count-0-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "divisor-house",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"up-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "divisor-house",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"up-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "divisor-house",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"up-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "divisor-house",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"up-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "tide-and-retreat",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "tide-and-retreat",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "tide-and-retreat",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "tide-and-retreat",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "spore-council",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "spore-council",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "spore-council",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "spore-council",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "shared-comet",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "shared-comet",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "shared-comet",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "shared-comet",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "socket-skirmish",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "socket-skirmish",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "socket-skirmish",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "socket-skirmish",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "cannon-council",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "cannon-council",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "cannon-council",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "cannon-council",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "bloom-cauldron",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "bloom-cauldron",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "bloom-cauldron",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "bloom-cauldron",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "three-fronts",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "three-fronts",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "three-fronts",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "three-fronts",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "package-yard",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"more\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "package-yard",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"more\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "package-yard",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"more\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "package-yard",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"more\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "falling-hammer",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "falling-hammer",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "falling-hammer",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "falling-hammer",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "orderbook-wharf",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"post\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "orderbook-wharf",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"post\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "orderbook-wharf",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"post\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "orderbook-wharf",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"post\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "many-hands",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"give-1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "many-hands",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"give-1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "many-hands",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"give-1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "many-hands",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"give-1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "congestion-crossing",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "congestion-crossing",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "congestion-crossing",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "congestion-crossing",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "price-of-plenty",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"market\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "price-of-plenty",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"market\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "price-of-plenty",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"market\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "price-of-plenty",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"market\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "bargain-at-closing",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "bargain-at-closing",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "bargain-at-closing",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "bargain-at-closing",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "last-applicant",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "last-applicant",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "last-applicant",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "last-applicant",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "seasonal-ledger",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"crop-1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "seasonal-ledger",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"crop-1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "seasonal-ledger",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"crop-1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "seasonal-ledger",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"crop-1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "permit-and-progress",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"buy\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "permit-and-progress",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"buy\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "permit-and-progress",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"buy\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "permit-and-progress",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"buy\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "school-of-shoals",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"patrol\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "school-of-shoals",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"patrol\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "school-of-shoals",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"patrol\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "school-of-shoals",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"patrol\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "promised-tomorrow",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"cooperate\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "promised-tomorrow",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"cooperate\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "promised-tomorrow",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"cooperate\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "promised-tomorrow",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"cooperate\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "maturity-garden",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "maturity-garden",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "maturity-garden",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "maturity-garden",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "cam-workshop",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"cut\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "cam-workshop",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"cut\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "cam-workshop",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"cut\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "cam-workshop",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"cut\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "common-cut",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"rotate\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "common-cut",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"rotate\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "common-cut",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"rotate\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "common-cut",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"rotate\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "interlock-cabinet",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"piece:1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "interlock-cabinet",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"piece:1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "interlock-cabinet",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"piece:1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "interlock-cabinet",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"piece:1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "pressure-gallery",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"pump\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "pressure-gallery",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"pump\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "pressure-gallery",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"pump\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "pressure-gallery",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"pump\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "shrink-fit",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"heat\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "shrink-fit",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"heat\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "shrink-fit",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"heat\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "shrink-fit",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"heat\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "vented-cast",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"vent:0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "vented-cast",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"vent:0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "vented-cast",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"vent:0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "vented-cast",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"vent:0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "drawplate",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"draw:0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "drawplate",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"draw:0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "drawplate",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"draw:0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "drawplate",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"draw:0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "wet-paper",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"tool:red\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "wet-paper",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"tool:red\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "wet-paper",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"tool:red\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "wet-paper",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"tool:red\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "sand-table",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"column:2\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "sand-table",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"column:2\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "sand-table",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"column:2\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "sand-table",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"column:2\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "crack-compass",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"advance\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "crack-compass",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"advance\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "crack-compass",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"advance\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "crack-compass",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"advance\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "pulley-bay",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"strand:0:2\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "pulley-bay",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"strand:0:2\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "pulley-bay",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"strand:0:2\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "pulley-bay",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"strand:0:2\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "clutch-dock",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"clutch:0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "clutch-dock",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"clutch:0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "clutch-dock",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"clutch:0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "clutch-dock",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"clutch:0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "lens-craft",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"socket:0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "lens-craft",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"socket:0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "lens-craft",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"socket:0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "lens-craft",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"socket:0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "polarization-stage",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"rotate:0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "polarization-stage",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"rotate:0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "polarization-stage",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"rotate:0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "polarization-stage",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"rotate:0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "seal-shop",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"bolt:1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "seal-shop",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"bolt:1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "seal-shop",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"bolt:1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "seal-shop",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"bolt:1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "capstan-crossing",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"post:1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "capstan-crossing",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"post:1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "capstan-crossing",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"post:1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "capstan-crossing",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"post:1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "spring-form",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"die:0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "spring-form",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"die:0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "spring-form",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"die:0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "spring-form",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"die:0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "vacuum-patch",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"patch:1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "vacuum-patch",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"patch:1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "vacuum-patch",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"patch:1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "vacuum-patch",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"patch:1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "mill-fixture",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"voxel:18\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "mill-fixture",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"voxel:18\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "mill-fixture",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"voxel:18\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "mill-fixture",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"voxel:18\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "sound-splice",
+      "seed": 0,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"cut:0:2\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "sound-splice",
+      "seed": 1,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"cut:0:2\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "sound-splice",
+      "seed": 20261002,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"cut:0:2\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "sound-splice",
+      "seed": 4294967295,
+      "profile": "desktop-mouse",
+      "selector": "[data-action=\"cut:0:2\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "lamp-ward",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "lamp-ward",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "lamp-ward",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "lamp-ward",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "star-charter",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "star-charter",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "star-charter",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "star-charter",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "magnet-ledger",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"slot:0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "magnet-ledger",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"slot:0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "magnet-ledger",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"slot:0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "magnet-ledger",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"slot:0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "region-census",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "region-census",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "region-census",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "region-census",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "mosaic-ring",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "mosaic-ring",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "mosaic-ring",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "mosaic-ring",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "sight-garden",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "sight-garden",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "sight-garden",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "sight-garden",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "diagonal-grove",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "diagonal-grove",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "diagonal-grove",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "diagonal-grove",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "thermometer-hall",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"tube:0:1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "thermometer-hall",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"tube:0:1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "thermometer-hall",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"tube:0:1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "thermometer-hall",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"tube:0:1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "compass-estate",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"hub:1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "compass-estate",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"hub:1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "compass-estate",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"hub:1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "compass-estate",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"hub:1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "fleet-blueprint",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "fleet-blueprint",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "fleet-blueprint",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "fleet-blueprint",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "shade-detour",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "shade-detour",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "shade-detour",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "shade-detour",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "quiet-rooms",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "quiet-rooms",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "quiet-rooms",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "quiet-rooms",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "four-forms",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "four-forms",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "four-forms",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "four-forms",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "domino-register",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "domino-register",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "domino-register",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "domino-register",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "weighted-weft",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "weighted-weft",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "weighted-weft",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "weighted-weft",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "once-through",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "#board [data-action^=\"node:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "once-through",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "#board [data-action^=\"node:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "once-through",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "#board [data-action^=\"node:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "once-through",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "#board [data-action^=\"node:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "cyclic-courtyard",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"shift:row:0:1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "cyclic-courtyard",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"shift:row:0:1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "cyclic-courtyard",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"shift:row:0:1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "cyclic-courtyard",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"shift:row:0:1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "seam-quilt",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"tile:1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "seam-quilt",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"tile:1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "seam-quilt",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"tile:1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "seam-quilt",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"tile:1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "exclusive-print",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"plate:0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "exclusive-print",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"plate:0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "exclusive-print",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"plate:0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "exclusive-print",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"plate:0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "window-tally",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "window-tally",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "window-tally",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "window-tally",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "#board [data-action^=\"cell:\"]:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "ninepin-line",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"roll\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "ninepin-line",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"roll\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "ninepin-line",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"roll\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "ninepin-line",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"roll\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "batters-window",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"advance\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "batters-window",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"advance\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "batters-window",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"advance\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "batters-window",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"advance\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "crease-keeper",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"launch\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "crease-keeper",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"launch\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "crease-keeper",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"launch\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "crease-keeper",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"launch\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "last-second-pass",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"right\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "last-second-pass",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"right\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "last-second-pass",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"right\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "last-second-pass",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"right\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "court-rotation",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"advance\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "court-rotation",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"advance\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "court-rotation",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"advance\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "court-rotation",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"advance\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "velodrome-draft",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"ride\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "velodrome-draft",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"ride\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "velodrome-draft",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"ride\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "velodrome-draft",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"ride\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "clutch-circuit",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"drive\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "clutch-circuit",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"drive\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "clutch-circuit",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"drive\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "clutch-circuit",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"drive\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "ribbon-relay",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"advance\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "ribbon-relay",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"advance\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "ribbon-relay",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"advance\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "ribbon-relay",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"advance\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "two-oars",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"both\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "two-oars",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"both\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "two-oars",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"both\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "two-oars",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"both\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "cable-carrier",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"right\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "cable-carrier",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"right\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "cable-carrier",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"right\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "cable-carrier",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"right\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "thermal-route",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"level\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "thermal-route",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"level\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "thermal-route",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"level\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "thermal-route",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"level\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "belay-line",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"feed\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "belay-line",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"feed\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "belay-line",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"feed\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "belay-line",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"feed\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "vault-runway",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"run\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "vault-runway",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"run\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "vault-runway",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"run\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "vault-runway",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"run\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "tucked-landing",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"launch\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "tucked-landing",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"launch\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "tucked-landing",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"launch\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "tucked-landing",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"launch\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "wave-trim",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"straight\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "wave-trim",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"straight\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "wave-trim",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"straight\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "wave-trim",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"straight\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "ripple-skimmer",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"throw\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "ripple-skimmer",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"throw\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "ripple-skimmer",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"throw\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "ripple-skimmer",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"throw\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "spin-passage",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"east\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "spin-passage",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"east\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "spin-passage",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"east\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "spin-passage",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"east\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "cascade-hands",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"throw:0:high\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "cascade-hands",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"throw:0:high\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "cascade-hands",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"throw:0:high\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "cascade-hands",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"throw:0:high\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "ice-rescue",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"right\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "ice-rescue",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"right\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "ice-rescue",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"right\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "ice-rescue",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"right\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "breathing-lane",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"stroke\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "breathing-lane",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"stroke\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "breathing-lane",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"stroke\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "breathing-lane",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"stroke\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "reset-post",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"P\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "reset-post",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"P\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "reset-post",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"P\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "reset-post",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"P\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "quotient-quay",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"group-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "quotient-quay",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"group-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "quotient-quay",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"group-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "quotient-quay",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"group-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "cutback-case",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"event-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "cutback-case",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"event-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "cutback-case",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"event-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "cutback-case",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"event-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "clause-kiln",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"clause-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "clause-kiln",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"clause-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "clause-kiln",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"clause-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "clause-kiln",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"clause-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "wraparound-witness",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"run\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "wraparound-witness",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"run\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "wraparound-witness",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"run\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "wraparound-witness",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"run\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "branch-weather",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"state-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "branch-weather",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"state-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "branch-weather",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"state-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "branch-weather",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"state-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "phase-paper",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"H-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "phase-paper",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"H-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "phase-paper",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"H-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "phase-paper",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"H-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "rotation-index",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"row-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "rotation-index",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"row-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "rotation-index",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"row-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "rotation-index",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"row-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "shared-secret",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"share-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "shared-secret",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"share-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "shared-secret",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"share-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "shared-secret",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"share-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "crossed-channel",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"send\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "crossed-channel",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"send\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "crossed-channel",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"send\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "crossed-channel",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"send\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "quorum-garden",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"node-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "quorum-garden",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"node-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "quorum-garden",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"node-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "quorum-garden",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"node-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "bound-names",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"binder-l\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "bound-names",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"binder-l\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "bound-names",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"binder-l\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "bound-names",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"binder-l\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "separating-line",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"certify\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "separating-line",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"certify\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "separating-line",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"certify\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "separating-line",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"certify\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "hall-window",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"job-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "hall-window",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"job-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "hall-window",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"job-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "hall-window",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"job-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "empty-language",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"derive-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "empty-language",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"derive-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "empty-language",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"derive-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "empty-language",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"derive-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "credit-method",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"charge-2\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "credit-method",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"charge-2\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "credit-method",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"charge-2\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "credit-method",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"charge-2\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "interval-post",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"letter-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "interval-post",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"letter-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "interval-post",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"letter-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "interval-post",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"letter-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "pruning-room",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"leaf-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "pruning-room",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"leaf-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "pruning-room",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"leaf-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "pruning-room",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"leaf-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "privacy-dials",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"count-0-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "privacy-dials",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"count-0-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "privacy-dials",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"count-0-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "privacy-dials",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"count-0-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "divisor-house",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"up-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "divisor-house",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"up-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "divisor-house",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"up-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "divisor-house",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"up-0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "tide-and-retreat",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "tide-and-retreat",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "tide-and-retreat",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "tide-and-retreat",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "spore-council",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "spore-council",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "spore-council",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "spore-council",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "shared-comet",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "shared-comet",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "shared-comet",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "shared-comet",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "socket-skirmish",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "socket-skirmish",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "socket-skirmish",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "socket-skirmish",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "cannon-council",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "cannon-council",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "cannon-council",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "cannon-council",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "bloom-cauldron",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "bloom-cauldron",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "bloom-cauldron",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "bloom-cauldron",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "three-fronts",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "three-fronts",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "three-fronts",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "three-fronts",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "package-yard",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"more\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "package-yard",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"more\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "package-yard",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"more\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "package-yard",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"more\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "falling-hammer",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "falling-hammer",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "falling-hammer",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "falling-hammer",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "orderbook-wharf",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"post\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "orderbook-wharf",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"post\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "orderbook-wharf",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"post\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "orderbook-wharf",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"post\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "many-hands",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"give-1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "many-hands",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"give-1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "many-hands",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"give-1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "many-hands",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"give-1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "congestion-crossing",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "congestion-crossing",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "congestion-crossing",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "congestion-crossing",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "price-of-plenty",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"market\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "price-of-plenty",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"market\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "price-of-plenty",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"market\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "price-of-plenty",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"market\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "bargain-at-closing",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "bargain-at-closing",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "bargain-at-closing",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "bargain-at-closing",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "last-applicant",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "last-applicant",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "last-applicant",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "last-applicant",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "seasonal-ledger",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"crop-1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "seasonal-ledger",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"crop-1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "seasonal-ledger",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"crop-1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "seasonal-ledger",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"crop-1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "permit-and-progress",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"buy\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "permit-and-progress",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"buy\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "permit-and-progress",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"buy\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "permit-and-progress",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"buy\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "school-of-shoals",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"patrol\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "school-of-shoals",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"patrol\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "school-of-shoals",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"patrol\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "school-of-shoals",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"patrol\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "promised-tomorrow",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"cooperate\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "promised-tomorrow",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"cooperate\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "promised-tomorrow",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"cooperate\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "promised-tomorrow",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"cooperate\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "maturity-garden",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "maturity-garden",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "maturity-garden",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "maturity-garden",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "#board button:not(:disabled)",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "cam-workshop",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"cut\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "cam-workshop",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"cut\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "cam-workshop",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"cut\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "cam-workshop",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"cut\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "common-cut",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"rotate\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "common-cut",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"rotate\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "common-cut",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"rotate\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "common-cut",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"rotate\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "interlock-cabinet",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"piece:1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "interlock-cabinet",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"piece:1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "interlock-cabinet",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"piece:1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "interlock-cabinet",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"piece:1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "pressure-gallery",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"pump\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "pressure-gallery",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"pump\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "pressure-gallery",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"pump\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "pressure-gallery",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"pump\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "shrink-fit",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"heat\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "shrink-fit",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"heat\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "shrink-fit",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"heat\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "shrink-fit",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"heat\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "vented-cast",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"vent:0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "vented-cast",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"vent:0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "vented-cast",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"vent:0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "vented-cast",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"vent:0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "drawplate",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"draw:0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "drawplate",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"draw:0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "drawplate",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"draw:0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "drawplate",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"draw:0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "wet-paper",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"tool:red\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "wet-paper",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"tool:red\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "wet-paper",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"tool:red\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "wet-paper",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"tool:red\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "sand-table",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"column:2\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "sand-table",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"column:2\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "sand-table",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"column:2\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "sand-table",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"column:2\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "crack-compass",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"advance\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "crack-compass",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"advance\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "crack-compass",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"advance\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "crack-compass",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"advance\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "pulley-bay",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"strand:0:2\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "pulley-bay",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"strand:0:2\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "pulley-bay",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"strand:0:2\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "pulley-bay",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"strand:0:2\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "clutch-dock",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"clutch:0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "clutch-dock",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"clutch:0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "clutch-dock",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"clutch:0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "clutch-dock",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"clutch:0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "lens-craft",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"socket:0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "lens-craft",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"socket:0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "lens-craft",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"socket:0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "lens-craft",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"socket:0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "polarization-stage",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"rotate:0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "polarization-stage",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"rotate:0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "polarization-stage",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"rotate:0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "polarization-stage",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"rotate:0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "seal-shop",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"bolt:1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "seal-shop",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"bolt:1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "seal-shop",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"bolt:1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "seal-shop",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"bolt:1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "capstan-crossing",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"post:1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "capstan-crossing",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"post:1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "capstan-crossing",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"post:1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "capstan-crossing",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"post:1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "spring-form",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"die:0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "spring-form",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"die:0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "spring-form",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"die:0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "spring-form",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"die:0\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "vacuum-patch",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"patch:1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "vacuum-patch",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"patch:1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "vacuum-patch",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"patch:1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "vacuum-patch",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"patch:1\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "mill-fixture",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"voxel:18\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "mill-fixture",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"voxel:18\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "mill-fixture",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"voxel:18\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "mill-fixture",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"voxel:18\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "sound-splice",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"cut:0:2\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "sound-splice",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"cut:0:2\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "sound-splice",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"cut:0:2\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    },
+    {
+      "id": "sound-splice",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "selector": "[data-action=\"cut:0:2\"]",
+      "enabled": true,
+      "nativeAction": true,
+      "feedbackChanged": true
+    }
+  ],
+  "errors": [],
+  "scope": "Each manifest opening action is visible and enabled, receives an actual native mouse or touch input, and changes game content or feedback across four replay seeds. This is opening-control smoke, not completion, solvability or difficulty evidence."
+}

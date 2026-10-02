@@ -3,9 +3,9 @@
   "suite": "parlour-room",
   "passed": true,
   "status": "passed",
-  "startedAt": "2026-10-01T09:59:06.384Z",
+  "startedAt": "2026-10-02T20:30:25.645Z",
   "source": {
-    "sha256": "fca6952d13a7c333f005d7d6061ca5526186e5d5460875052a4f5cf02a85203c",
+    "sha256": "35ef44482113ece569a0335710e211a4fdd961b0536a78cc3a854171ec30fa05",
     "files": [
       "catalog.css",
       "catalog.js",
@@ -60,6 +60,7 @@
       "styles.css",
       "tests/fixtures/baseline100.json",
       "tests/fixtures/baseline200.json",
+      "tests/fixtures/baseline300.json",
       "tests/fixtures/parlour-b02-b05-paths.json",
       "tests/fixtures/parlour-b13-guided-paths.json",
       "tests/fixtures/parlour-paths.json",
@@ -73,7 +74,7 @@
       "tools/run-suite.cjs"
     ]
   },
-  "requestedBaseURL": "http://127.0.0.1:8781",
+  "requestedBaseURL": "http://127.0.0.1:8790",
   "browser": {
     "engine": "Chromium",
     "version": "Chromium 151.0.7922.173 built on Debian GNU/Linux 13 (trixie)",
@@ -130,24 +131,24 @@
     "Solver completions do not establish human difficulty or accessibility."
   ],
   "servedRuntimeBefore": {
-    "baseURL": "http://127.0.0.1:8781",
+    "baseURL": "http://127.0.0.1:8790",
     "passed": true,
-    "sha256": "ff01eab061c8f57241ba9e2ec73738ef6d562807f5b871d136addd13999ade03",
+    "sha256": "2e4b92f1de0c9eba9e3057831b1141fbda398880353317681518ace2d0dd92e1",
     "fileCount": 51,
-    "verifiedAt": "2026-10-01T09:59:06.610Z"
+    "verifiedAt": "2026-10-02T20:30:25.844Z"
   },
   "exitCode": 0,
   "signal": null,
   "sourceUnchanged": true,
   "servedRuntime": {
-    "baseURL": "http://127.0.0.1:8781",
+    "baseURL": "http://127.0.0.1:8790",
     "passed": true,
-    "sha256": "ff01eab061c8f57241ba9e2ec73738ef6d562807f5b871d136addd13999ade03",
+    "sha256": "2e4b92f1de0c9eba9e3057831b1141fbda398880353317681518ace2d0dd92e1",
     "fileCount": 51,
-    "verifiedAt": "2026-10-01T10:06:03.544Z"
+    "verifiedAt": "2026-10-02T20:40:14.239Z"
   },
   "completionEvidence": {
-    "sha256": "717b92b2df955789c029c0cba38c4cb50f0cd484891bc4bd85cdb5e77b2bdea0",
+    "sha256": "ff4b2056aedd1e4881b2138ac52bdd5c294a8b03fcdfa9c4e4b55471587d1ef0",
     "file": "coverage/parlour-room.json",
     "cases": [
       {
@@ -1649,5 +1650,5 @@
       }
     ]
   },
-  "finishedAt": "2026-10-01T10:06:03.546Z"
+  "finishedAt": "2026-10-02T20:40:14.242Z"
 }

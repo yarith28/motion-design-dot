@@ -1,0 +1,1677 @@
+{
+  "passed": true,
+  "browser": "chromium",
+  "generatedAt": "2026-10-02T20:12:25.087Z",
+  "sourceHash": "0f0e7db4ac48265cc157ebb7cc15488745349222b70a3f63c479b1b906f7ec9b",
+  "sourceHashes": {
+    "field-room/ENDLESS-REVIEW.md": "7ee94ce763b4233f14ccccc4e67d96ad8e414aa99ca738f94d2d18ff9e81e1ed",
+    "field-room/README.md": "fd0d00faf59ca9c75d3d02fce4548d569d66d2c85821d11aa14be53425f2a8bb",
+    "field-room/balance.mjs": "9e9ea3e988f13b5b7ddc82c0f5d90d5f2ed05188ce29b317c3dcd7f1f2318af9",
+    "field-room/core.mjs": "426aecd3bac2e6499c8f60de2d435c4ffba9783677e2429f9f44f14244fda771",
+    "field-room/engines.mjs": "cf3f2c0a24339ebd54cf6e9ae802d6362b946fbda107bfb33d297c6f961041ba",
+    "field-room/flow.mjs": "380ad34cdca8a7d5c4ec9821323b9b74d1624aa5183c3fa00870ae5e7b892a2d",
+    "field-room/games.json": "f7721b6618a6e648747551ae22ec7f07c5323b9581d0eb3fefcd11437a421447",
+    "field-room/index.html": "1b9afc478035ca5b0a657cb8a449d489dfbff993cd4876385a9d7ef2e6a26d9e",
+    "field-room/room.mjs": "7df98438c0a2e0e0c36a3c3235c7cc96fb9d5b20c086c45a22b3c1c70101611f",
+    "field-room/sports.mjs": "5a3eb053f75082c0d6bfcf04bad9ea7491557dcf07d81a4638228034604a3cc1",
+    "field-room/travel.mjs": "ebd20dfa4db6da33a0f137cfe7df65648765889ce4e8936b8ccb68ce207320f0",
+    "journey/journey.css": "e77e387075c86ad3addcf7220c9eeabfc06fec45987116205b75ed50cac83e67",
+    "journey/journey.mjs": "86a92fbd52ee7f5d34fd01225120feb74a336dd499a11e9e4780cf8f1f207872",
+    "tests/field-room.cjs": "c95ee56b267fea51a0c0dcb94aa82f2d6ee2c9a6eaa23c306229d283fc4f3d8b",
+    "tests/field-room-paths.json": "5d78ecf1783d55a8d3710192989ab2433b002a5e700590f3dee6d689852b3567",
+    "tests/field-room-plans.mjs": "450973b692023bd56f9d45b4f946700dc9025b49f8f418130f9e50691f7af724",
+    "tests/field-room-rules.mjs": "9c76400d33058f560c42a73810740c1ead55e9e6479530bc28f67ea8ad646594",
+    "tests/field-room-generate.mjs": "2a35f311be416fad070e0453626aa8adb343ddc10dad7a5ad6a70a7d22eab487"
+  },
+  "cases": [
+    {
+      "id": "ninepin-line",
+      "profile": "desktop",
+      "outcome": "win",
+      "passed": true,
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": false,
+      "inputMethod": "Native focused Enter/Space activation for all finite and optional gameplay buttons; native range Home/ArrowRight aiming. No writable probe.",
+      "edgeCases": [
+        "All three finite studies win through legal public controls",
+        "Natural terminal failure through public controls",
+        "Terminal controls disabled and all terminal renders complete",
+        "Restart and Play again restore exact initial board",
+        "Score banks each completed study once",
+        "Turn-paced physics does not advance on blur",
+        "320px containment and minimum 44px native controls",
+        "Personal finite score persists after reload",
+        "Specific defining-mechanic model regression: Standing-pin rack persists between deliveries; default-only launch loses later studies."
+      ],
+      "winActions": 45,
+      "lossActions": 9,
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "Pure-engine source-informed winning witnesses at stages 10,000 and 10,001; no late-stage browser claim."
+      }
+    },
+    {
+      "id": "batters-window",
+      "profile": "desktop",
+      "outcome": "win",
+      "passed": true,
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": false,
+      "inputMethod": "Native focused Enter/Space activation for all finite and optional gameplay buttons; native range Home/ArrowRight aiming. No writable probe.",
+      "edgeCases": [
+        "All three finite studies win through legal public controls",
+        "Natural terminal failure through public controls",
+        "Terminal controls disabled and all terminal renders complete",
+        "Restart and Play again restore exact initial board",
+        "Score banks each completed study once",
+        "Turn-paced physics does not advance on blur",
+        "320px containment and minimum 44px native controls",
+        "Personal finite score persists after reload",
+        "Specific defining-mechanic model regression: Equal pitch/contact timing with different bat orientation changes safe hit to guarded out."
+      ],
+      "winActions": 106,
+      "lossActions": 6,
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "Pure-engine source-informed winning witnesses at stages 10,000 and 10,001; no late-stage browser claim."
+      }
+    },
+    {
+      "id": "crease-keeper",
+      "profile": "desktop",
+      "outcome": "win",
+      "passed": true,
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": false,
+      "inputMethod": "Native focused Enter/Space activation for all finite and optional gameplay buttons; native range Home/ArrowRight aiming. No writable probe.",
+      "edgeCases": [
+        "All three finite studies win through legal public controls",
+        "Natural terminal failure through public controls",
+        "Terminal controls disabled and all terminal renders complete",
+        "Restart and Play again restore exact initial board",
+        "Score banks each completed study once",
+        "Turn-paced physics does not advance on blur",
+        "320px containment and minimum 44px native controls",
+        "Personal finite score persists after reload",
+        "Specific defining-mechanic model regression: Identical dive position/timing at the wrong height concedes the shot; six-shot win/loss terminal renders complete."
+      ],
+      "winActions": 198,
+      "lossActions": 54,
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "Pure-engine source-informed winning witnesses at stages 10,000 and 10,001; no late-stage browser claim."
+      }
+    },
+    {
+      "id": "last-second-pass",
+      "profile": "desktop",
+      "outcome": "win",
+      "passed": true,
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": false,
+      "inputMethod": "Native focused Enter/Space activation for all finite and optional gameplay buttons; native range Home/ArrowRight aiming. No writable probe.",
+      "edgeCases": [
+        "All three finite studies win through legal public controls",
+        "Natural terminal failure through public controls",
+        "Terminal controls disabled and all terminal renders complete",
+        "Restart and Play again restore exact initial board",
+        "Score banks each completed study once",
+        "Turn-paced physics does not advance on blur",
+        "320px containment and minimum 44px native controls",
+        "Personal finite score persists after reload",
+        "Specific defining-mechanic model regression: All teammates must participate; swept interception and offside reject routes; earlier upper route loses later formation."
+      ],
+      "winActions": 33,
+      "lossActions": 6,
+      "optionalMode": {
+        "supported": false,
+        "reason": "Do not ship an endless toggle initially: a repeating hand-authored possession is not adequate replay. A future generator needs validated reachable onside attacks and defender diversity."
+      }
+    },
+    {
+      "id": "court-rotation",
+      "profile": "desktop",
+      "outcome": "win",
+      "passed": true,
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": false,
+      "inputMethod": "Native focused Enter/Space activation for all finite and optional gameplay buttons; native range Home/ArrowRight aiming. No writable probe.",
+      "edgeCases": [
+        "All three finite studies win through legal public controls",
+        "Natural terminal failure through public controls",
+        "Terminal controls disabled and all terminal renders complete",
+        "Restart and Play again restore exact initial board",
+        "Score banks each completed study once",
+        "Turn-paced physics does not advance on blur",
+        "320px containment and minimum 44px native controls",
+        "Personal finite score persists after reload",
+        "Specific defining-mechanic model regression: Consecutive-player contact is a fault; spiking in the committed blocker lane loses at modeled net height."
+      ],
+      "winActions": 69,
+      "lossActions": 5,
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "Pure-engine source-informed winning witnesses at stages 10,000 and 10,001; no late-stage browser claim."
+      }
+    },
+    {
+      "id": "velodrome-draft",
+      "profile": "desktop",
+      "outcome": "win",
+      "passed": true,
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": false,
+      "inputMethod": "Native focused Enter/Space activation for all finite and optional gameplay buttons; native range Home/ArrowRight aiming. No writable probe.",
+      "edgeCases": [
+        "All three finite studies win through legal public controls",
+        "Natural terminal failure through public controls",
+        "Terminal controls disabled and all terminal renders complete",
+        "Restart and Play again restore exact initial board",
+        "Score banks each completed study once",
+        "Turn-paced physics does not advance on blur",
+        "320px containment and minimum 44px native controls",
+        "Personal finite score persists after reload",
+        "Specific defining-mechanic model regression: Same sprint effort costs less in a moving rival slipstream; outside lane covers less distance at equal speed."
+      ],
+      "winActions": 78,
+      "lossActions": 17,
+      "optionalMode": {
+        "supported": true,
+        "kind": "match-series",
+        "completedChallenges": 2,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "Pure-engine source-informed winning witnesses at stages 10,000 and 10,001; no late-stage browser claim."
+      }
+    },
+    {
+      "id": "clutch-circuit",
+      "profile": "desktop",
+      "outcome": "win",
+      "passed": true,
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": false,
+      "inputMethod": "Native focused Enter/Space activation for all finite and optional gameplay buttons; native range Home/ArrowRight aiming. No writable probe.",
+      "edgeCases": [
+        "All three finite studies win through legal public controls",
+        "Natural terminal failure through public controls",
+        "Terminal controls disabled and all terminal renders complete",
+        "Restart and Play again restore exact initial board",
+        "Score banks each completed study once",
+        "Turn-paced physics does not advance on blur",
+        "320px containment and minimum 44px native controls",
+        "Personal finite score persists after reload",
+        "Specific defining-mechanic model regression: Downshift overrev and actual swept corner-entry cap are enforced; gear changes interrupt propulsion."
+      ],
+      "winActions": 150,
+      "lossActions": 18,
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "Pure-engine source-informed winning witnesses at stages 10,000 and 10,001; no late-stage browser claim."
+      }
+    },
+    {
+      "id": "ribbon-relay",
+      "profile": "desktop",
+      "outcome": "win",
+      "passed": true,
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": false,
+      "inputMethod": "Native focused Enter/Space activation for all finite and optional gameplay buttons; native range Home/ArrowRight aiming. No writable probe.",
+      "edgeCases": [
+        "All three finite studies win through legal public controls",
+        "Natural terminal failure through public controls",
+        "Terminal controls disabled and all terminal renders complete",
+        "Restart and Play again restore exact initial board",
+        "Score banks each completed study once",
+        "Turn-paced physics does not advance on blur",
+        "320px containment and minimum 44px native controls",
+        "Personal finite score persists after reload",
+        "Specific defining-mechanic model regression: Position overlap alone cannot transfer a baton; relative running speed and exchange-zone bounds also apply."
+      ],
+      "winActions": 15,
+      "lossActions": 1,
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "Pure-engine source-informed winning witnesses at stages 10,000 and 10,001; no late-stage browser claim."
+      }
+    },
+    {
+      "id": "two-oars",
+      "profile": "desktop",
+      "outcome": "win",
+      "passed": true,
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": false,
+      "inputMethod": "Native focused Enter/Space activation for all finite and optional gameplay buttons; native range Home/ArrowRight aiming. No writable probe.",
+      "edgeCases": [
+        "All three finite studies win through legal public controls",
+        "Natural terminal failure through public controls",
+        "Terminal controls disabled and all terminal renders complete",
+        "Restart and Play again restore exact initial board",
+        "Score banks each completed study once",
+        "Turn-paced physics does not advance on blur",
+        "320px containment and minimum 44px native controls",
+        "Personal finite score persists after reload",
+        "Specific defining-mechanic model regression: Differential pulls create opposite yaw; premature oars fatigue; bow/stern clearance governs bank contact."
+      ],
+      "winActions": 58,
+      "lossActions": 8,
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "Pure-engine source-informed winning witnesses at stages 10,000 and 10,001; no late-stage browser claim."
+      }
+    },
+    {
+      "id": "cable-carrier",
+      "profile": "desktop",
+      "outcome": "win",
+      "passed": true,
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": false,
+      "inputMethod": "Native focused Enter/Space activation for all finite and optional gameplay buttons; native range Home/ArrowRight aiming. No writable probe.",
+      "edgeCases": [
+        "All three finite studies win through legal public controls",
+        "Natural terminal failure through public controls",
+        "Terminal controls disabled and all terminal renders complete",
+        "Restart and Play again restore exact initial board",
+        "Score banks each completed study once",
+        "Turn-paced physics does not advance on blur",
+        "320px containment and minimum 44px native controls",
+        "Personal finite score persists after reload",
+        "Specific defining-mechanic model regression: Hoist changes angular velocity through cable-length coupling; delivery needs payload velocity and settled sway."
+      ],
+      "winActions": 51,
+      "lossActions": 1,
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "Pure-engine source-informed winning witnesses at stages 10,000 and 10,001; no late-stage browser claim."
+      }
+    },
+    {
+      "id": "thermal-route",
+      "profile": "desktop",
+      "outcome": "win",
+      "passed": true,
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": false,
+      "inputMethod": "Native focused Enter/Space activation for all finite and optional gameplay buttons; native range Home/ArrowRight aiming. No writable probe.",
+      "edgeCases": [
+        "All three finite studies win through legal public controls",
+        "Natural terminal failure through public controls",
+        "Terminal controls disabled and all terminal renders complete",
+        "Restart and Play again restore exact initial board",
+        "Score banks each completed study once",
+        "Turn-paced physics does not advance on blur",
+        "320px containment and minimum 44px native controls",
+        "Personal finite score persists after reload",
+        "Specific defining-mechanic model regression: Lift depends on spatial thermal exposure; fast trim spends more height per beat outside thermals."
+      ],
+      "winActions": 138,
+      "lossActions": 15,
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "Pure-engine source-informed winning witnesses at stages 10,000 and 10,001; no late-stage browser claim."
+      }
+    },
+    {
+      "id": "belay-line",
+      "profile": "desktop",
+      "outcome": "win",
+      "passed": true,
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": false,
+      "inputMethod": "Native focused Enter/Space activation for all finite and optional gameplay buttons; native range Home/ArrowRight aiming. No writable probe.",
+      "edgeCases": [
+        "All three finite studies win through legal public controls",
+        "Natural terminal failure through public controls",
+        "Terminal controls disabled and all terminal renders complete",
+        "Restart and Play again restore exact initial board",
+        "Score banks each completed study once",
+        "Turn-paced physics does not advance on blur",
+        "320px containment and minimum 44px native controls",
+        "Personal finite score persists after reload",
+        "Specific defining-mechanic model regression: Brake acts through taut rope; slack delays tension and allows acceleration before a later shock catch."
+      ],
+      "winActions": 148,
+      "lossActions": 43,
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "Pure-engine source-informed winning witnesses at stages 10,000 and 10,001; no late-stage browser claim."
+      }
+    },
+    {
+      "id": "vault-runway",
+      "profile": "desktop",
+      "outcome": "win",
+      "passed": true,
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": false,
+      "inputMethod": "Native focused Enter/Space activation for all finite and optional gameplay buttons; native range Home/ArrowRight aiming. No writable probe.",
+      "edgeCases": [
+        "All three finite studies win through legal public controls",
+        "Natural terminal failure through public controls",
+        "Terminal controls disabled and all terminal renders complete",
+        "Restart and Play again restore exact initial board",
+        "Score banks each completed study once",
+        "Turn-paced physics does not advance on blur",
+        "320px containment and minimum 44px native controls",
+        "Personal finite score persists after reload",
+        "Specific defining-mechanic model regression: Plant splits approach energy without duplicating it; pole force persists until release and changes the trajectory."
+      ],
+      "winActions": 82,
+      "lossActions": 1,
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "Pure-engine source-informed winning witnesses at stages 10,000 and 10,001; no late-stage browser claim."
+      }
+    },
+    {
+      "id": "tucked-landing",
+      "profile": "desktop",
+      "outcome": "win",
+      "passed": true,
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": false,
+      "inputMethod": "Native focused Enter/Space activation for all finite and optional gameplay buttons; native range Home/ArrowRight aiming. No writable probe.",
+      "edgeCases": [
+        "All three finite studies win through legal public controls",
+        "Natural terminal failure through public controls",
+        "Terminal controls disabled and all terminal renders complete",
+        "Restart and Play again restore exact initial board",
+        "Score banks each completed study once",
+        "Turn-paced physics does not advance on blur",
+        "320px containment and minimum 44px native controls",
+        "Personal finite score persists after reload",
+        "Specific defining-mechanic model regression: Changing inertia changes angular speed fourfold while preserving angular momentum; entry also checks horizontal placement."
+      ],
+      "winActions": 83,
+      "lossActions": 21,
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "Pure-engine source-informed winning witnesses at stages 10,000 and 10,001; no late-stage browser claim."
+      }
+    },
+    {
+      "id": "wave-trim",
+      "profile": "desktop",
+      "outcome": "win",
+      "passed": true,
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": false,
+      "inputMethod": "Native focused Enter/Space activation for all finite and optional gameplay buttons; native range Home/ArrowRight aiming. No writable probe.",
+      "edgeCases": [
+        "All three finite studies win through legal public controls",
+        "Natural terminal failure through public controls",
+        "Terminal controls disabled and all terminal renders complete",
+        "Restart and Play again restore exact initial board",
+        "Score banks each completed study once",
+        "Turn-paced physics does not advance on blur",
+        "320px containment and minimum 44px native controls",
+        "Personal finite score persists after reload",
+        "Specific defining-mechanic model regression: Trim couples depth and drive; Straight preserves carved heading; gate and moving-crest limits apply."
+      ],
+      "winActions": 98,
+      "lossActions": 4,
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "Pure-engine source-informed winning witnesses at stages 10,000 and 10,001; no late-stage browser claim."
+      }
+    },
+    {
+      "id": "ripple-skimmer",
+      "profile": "desktop",
+      "outcome": "win",
+      "passed": true,
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": false,
+      "inputMethod": "Native focused Enter/Space activation for all finite and optional gameplay buttons; native range Home/ArrowRight aiming. No writable probe.",
+      "edgeCases": [
+        "All three finite studies win through legal public controls",
+        "Natural terminal failure through public controls",
+        "Terminal controls disabled and all terminal renders complete",
+        "Restart and Play again restore exact initial board",
+        "Score banks each completed study once",
+        "Turn-paced physics does not advance on blur",
+        "320px containment and minimum 44px native controls",
+        "Personal finite score persists after reload",
+        "Specific defining-mechanic model regression: Exactly the specified final skip must hit its interval; later/default contacts cannot substitute; spin spends forward launch energy."
+      ],
+      "winActions": 15,
+      "lossActions": 9,
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "Pure-engine source-informed winning witnesses at stages 10,000 and 10,001; no late-stage browser claim."
+      }
+    },
+    {
+      "id": "spin-passage",
+      "profile": "desktop",
+      "outcome": "win",
+      "passed": true,
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": false,
+      "inputMethod": "Native focused Enter/Space activation for all finite and optional gameplay buttons; native range Home/ArrowRight aiming. No writable probe.",
+      "edgeCases": [
+        "All three finite studies win through legal public controls",
+        "Natural terminal failure through public controls",
+        "Terminal controls disabled and all terminal renders complete",
+        "Restart and Play again restore exact initial board",
+        "Score banks each completed study once",
+        "Turn-paced physics does not advance on blur",
+        "320px containment and minimum 44px native controls",
+        "Personal finite score persists after reload",
+        "Specific defining-mechanic model regression: Spin reserve governs torque/precession sensitivity; recharge preserves axis/drift rather than resetting the steering puzzle."
+      ],
+      "winActions": 196,
+      "lossActions": 14,
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "Pure-engine source-informed winning witnesses at stages 10,000 and 10,001; no late-stage browser claim."
+      }
+    },
+    {
+      "id": "cascade-hands",
+      "profile": "desktop",
+      "outcome": "win",
+      "passed": true,
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": false,
+      "inputMethod": "Native focused Enter/Space activation for all finite and optional gameplay buttons; native range Home/ArrowRight aiming. No writable probe.",
+      "edgeCases": [
+        "All three finite studies win through legal public controls",
+        "Natural terminal failure through public controls",
+        "Terminal controls disabled and all terminal renders complete",
+        "Restart and Play again restore exact initial board",
+        "Score banks each completed study once",
+        "Turn-paced physics does not advance on blur",
+        "320px containment and minimum 44px native controls",
+        "Personal finite score persists after reload",
+        "Specific defining-mechanic model regression: Conserved ball identities and one-ball hand occupancy; catches require descending height AND actual horizontal hand reach."
+      ],
+      "winActions": 93,
+      "lossActions": 20,
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "Pure-engine source-informed winning witnesses at stages 10,000 and 10,001; no late-stage browser claim."
+      }
+    },
+    {
+      "id": "ice-rescue",
+      "profile": "desktop",
+      "outcome": "win",
+      "passed": true,
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": false,
+      "inputMethod": "Native focused Enter/Space activation for all finite and optional gameplay buttons; native range Home/ArrowRight aiming. No writable probe.",
+      "edgeCases": [
+        "All three finite studies win through legal public controls",
+        "Natural terminal failure through public controls",
+        "Terminal controls disabled and all terminal renders complete",
+        "Restart and Play again restore exact initial board",
+        "Score banks each completed study once",
+        "Turn-paced physics does not advance on blur",
+        "320px containment and minimum 44px native controls",
+        "Personal finite score persists after reload",
+        "Specific defining-mechanic model regression: Loaded pressure breaks previously safe ice; spread reduces pressure at a real action/time cost and current can add a second landing."
+      ],
+      "winActions": 58,
+      "lossActions": 3,
+      "optionalMode": {
+        "supported": false,
+        "reason": "Do not ship an endless toggle initially: extending fixed lakes needs a generator that proves both outbound and heavier return routes survive cumulative pressure."
+      }
+    },
+    {
+      "id": "breathing-lane",
+      "profile": "desktop",
+      "outcome": "win",
+      "passed": true,
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": false,
+      "inputMethod": "Native focused Enter/Space activation for all finite and optional gameplay buttons; native range Home/ArrowRight aiming. No writable probe.",
+      "edgeCases": [
+        "All three finite studies win through legal public controls",
+        "Natural terminal failure through public controls",
+        "Terminal controls disabled and all terminal renders complete",
+        "Restart and Play again restore exact initial board",
+        "Score banks each completed study once",
+        "Turn-paced physics does not advance on blur",
+        "320px containment and minimum 44px native controls",
+        "Personal finite score persists after reload",
+        "Specific defining-mechanic model regression: Breathing requires surface mouth position; sculling slows travel to permit surfacing; advanced finite length includes mid-length breathing."
+      ],
+      "winActions": 80,
+      "lossActions": 14,
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "Pure-engine source-informed winning witnesses at stages 10,000 and 10,001; no late-stage browser claim."
+      }
+    },
+    {
+      "id": "ninepin-line",
+      "profile": "mobile-touch",
+      "outcome": "win",
+      "passed": true,
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": true,
+      "inputMethod": "All finite and optional gameplay actions are touchscreen taps on native buttons and ranges. Mode setup uses native selectOption before gameplay; no keyboard input or writable probe.",
+      "edgeCases": [
+        "All three finite studies win through legal public controls",
+        "Natural terminal failure through public controls",
+        "Terminal controls disabled and all terminal renders complete",
+        "Restart and Play again restore exact initial board",
+        "Score banks each completed study once",
+        "Turn-paced physics does not advance on blur",
+        "320px containment and minimum 44px native controls",
+        "Blocked storage falls back to visit memory",
+        "Specific defining-mechanic model regression: Standing-pin rack persists between deliveries; default-only launch loses later studies."
+      ],
+      "winActions": 45,
+      "lossActions": 9,
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "Pure-engine source-informed winning witnesses at stages 10,000 and 10,001; no late-stage browser claim."
+      }
+    },
+    {
+      "id": "batters-window",
+      "profile": "mobile-touch",
+      "outcome": "win",
+      "passed": true,
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": true,
+      "inputMethod": "All finite and optional gameplay actions are touchscreen taps on native buttons and ranges. Mode setup uses native selectOption before gameplay; no keyboard input or writable probe.",
+      "edgeCases": [
+        "All three finite studies win through legal public controls",
+        "Natural terminal failure through public controls",
+        "Terminal controls disabled and all terminal renders complete",
+        "Restart and Play again restore exact initial board",
+        "Score banks each completed study once",
+        "Turn-paced physics does not advance on blur",
+        "320px containment and minimum 44px native controls",
+        "Blocked storage falls back to visit memory",
+        "Specific defining-mechanic model regression: Equal pitch/contact timing with different bat orientation changes safe hit to guarded out."
+      ],
+      "winActions": 106,
+      "lossActions": 6,
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "Pure-engine source-informed winning witnesses at stages 10,000 and 10,001; no late-stage browser claim."
+      }
+    },
+    {
+      "id": "crease-keeper",
+      "profile": "mobile-touch",
+      "outcome": "win",
+      "passed": true,
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": true,
+      "inputMethod": "All finite and optional gameplay actions are touchscreen taps on native buttons and ranges. Mode setup uses native selectOption before gameplay; no keyboard input or writable probe.",
+      "edgeCases": [
+        "All three finite studies win through legal public controls",
+        "Natural terminal failure through public controls",
+        "Terminal controls disabled and all terminal renders complete",
+        "Restart and Play again restore exact initial board",
+        "Score banks each completed study once",
+        "Turn-paced physics does not advance on blur",
+        "320px containment and minimum 44px native controls",
+        "Blocked storage falls back to visit memory",
+        "Specific defining-mechanic model regression: Identical dive position/timing at the wrong height concedes the shot; six-shot win/loss terminal renders complete."
+      ],
+      "winActions": 198,
+      "lossActions": 54,
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "Pure-engine source-informed winning witnesses at stages 10,000 and 10,001; no late-stage browser claim."
+      }
+    },
+    {
+      "id": "last-second-pass",
+      "profile": "mobile-touch",
+      "outcome": "win",
+      "passed": true,
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": true,
+      "inputMethod": "All finite and optional gameplay actions are touchscreen taps on native buttons and ranges. Mode setup uses native selectOption before gameplay; no keyboard input or writable probe.",
+      "edgeCases": [
+        "All three finite studies win through legal public controls",
+        "Natural terminal failure through public controls",
+        "Terminal controls disabled and all terminal renders complete",
+        "Restart and Play again restore exact initial board",
+        "Score banks each completed study once",
+        "Turn-paced physics does not advance on blur",
+        "320px containment and minimum 44px native controls",
+        "Blocked storage falls back to visit memory",
+        "Specific defining-mechanic model regression: All teammates must participate; swept interception and offside reject routes; earlier upper route loses later formation."
+      ],
+      "winActions": 33,
+      "lossActions": 6,
+      "optionalMode": {
+        "supported": false,
+        "reason": "Do not ship an endless toggle initially: a repeating hand-authored possession is not adequate replay. A future generator needs validated reachable onside attacks and defender diversity."
+      }
+    },
+    {
+      "id": "court-rotation",
+      "profile": "mobile-touch",
+      "outcome": "win",
+      "passed": true,
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": true,
+      "inputMethod": "All finite and optional gameplay actions are touchscreen taps on native buttons and ranges. Mode setup uses native selectOption before gameplay; no keyboard input or writable probe.",
+      "edgeCases": [
+        "All three finite studies win through legal public controls",
+        "Natural terminal failure through public controls",
+        "Terminal controls disabled and all terminal renders complete",
+        "Restart and Play again restore exact initial board",
+        "Score banks each completed study once",
+        "Turn-paced physics does not advance on blur",
+        "320px containment and minimum 44px native controls",
+        "Blocked storage falls back to visit memory",
+        "Specific defining-mechanic model regression: Consecutive-player contact is a fault; spiking in the committed blocker lane loses at modeled net height."
+      ],
+      "winActions": 69,
+      "lossActions": 5,
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "Pure-engine source-informed winning witnesses at stages 10,000 and 10,001; no late-stage browser claim."
+      }
+    },
+    {
+      "id": "velodrome-draft",
+      "profile": "mobile-touch",
+      "outcome": "win",
+      "passed": true,
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": true,
+      "inputMethod": "All finite and optional gameplay actions are touchscreen taps on native buttons and ranges. Mode setup uses native selectOption before gameplay; no keyboard input or writable probe.",
+      "edgeCases": [
+        "All three finite studies win through legal public controls",
+        "Natural terminal failure through public controls",
+        "Terminal controls disabled and all terminal renders complete",
+        "Restart and Play again restore exact initial board",
+        "Score banks each completed study once",
+        "Turn-paced physics does not advance on blur",
+        "320px containment and minimum 44px native controls",
+        "Blocked storage falls back to visit memory",
+        "Specific defining-mechanic model regression: Same sprint effort costs less in a moving rival slipstream; outside lane covers less distance at equal speed."
+      ],
+      "winActions": 78,
+      "lossActions": 17,
+      "optionalMode": {
+        "supported": true,
+        "kind": "match-series",
+        "completedChallenges": 2,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "Pure-engine source-informed winning witnesses at stages 10,000 and 10,001; no late-stage browser claim."
+      }
+    },
+    {
+      "id": "clutch-circuit",
+      "profile": "mobile-touch",
+      "outcome": "win",
+      "passed": true,
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": true,
+      "inputMethod": "All finite and optional gameplay actions are touchscreen taps on native buttons and ranges. Mode setup uses native selectOption before gameplay; no keyboard input or writable probe.",
+      "edgeCases": [
+        "All three finite studies win through legal public controls",
+        "Natural terminal failure through public controls",
+        "Terminal controls disabled and all terminal renders complete",
+        "Restart and Play again restore exact initial board",
+        "Score banks each completed study once",
+        "Turn-paced physics does not advance on blur",
+        "320px containment and minimum 44px native controls",
+        "Blocked storage falls back to visit memory",
+        "Specific defining-mechanic model regression: Downshift overrev and actual swept corner-entry cap are enforced; gear changes interrupt propulsion."
+      ],
+      "winActions": 150,
+      "lossActions": 18,
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "Pure-engine source-informed winning witnesses at stages 10,000 and 10,001; no late-stage browser claim."
+      }
+    },
+    {
+      "id": "ribbon-relay",
+      "profile": "mobile-touch",
+      "outcome": "win",
+      "passed": true,
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": true,
+      "inputMethod": "All finite and optional gameplay actions are touchscreen taps on native buttons and ranges. Mode setup uses native selectOption before gameplay; no keyboard input or writable probe.",
+      "edgeCases": [
+        "All three finite studies win through legal public controls",
+        "Natural terminal failure through public controls",
+        "Terminal controls disabled and all terminal renders complete",
+        "Restart and Play again restore exact initial board",
+        "Score banks each completed study once",
+        "Turn-paced physics does not advance on blur",
+        "320px containment and minimum 44px native controls",
+        "Blocked storage falls back to visit memory",
+        "Specific defining-mechanic model regression: Position overlap alone cannot transfer a baton; relative running speed and exchange-zone bounds also apply."
+      ],
+      "winActions": 15,
+      "lossActions": 1,
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "Pure-engine source-informed winning witnesses at stages 10,000 and 10,001; no late-stage browser claim."
+      }
+    },
+    {
+      "id": "two-oars",
+      "profile": "mobile-touch",
+      "outcome": "win",
+      "passed": true,
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": true,
+      "inputMethod": "All finite and optional gameplay actions are touchscreen taps on native buttons and ranges. Mode setup uses native selectOption before gameplay; no keyboard input or writable probe.",
+      "edgeCases": [
+        "All three finite studies win through legal public controls",
+        "Natural terminal failure through public controls",
+        "Terminal controls disabled and all terminal renders complete",
+        "Restart and Play again restore exact initial board",
+        "Score banks each completed study once",
+        "Turn-paced physics does not advance on blur",
+        "320px containment and minimum 44px native controls",
+        "Blocked storage falls back to visit memory",
+        "Specific defining-mechanic model regression: Differential pulls create opposite yaw; premature oars fatigue; bow/stern clearance governs bank contact."
+      ],
+      "winActions": 58,
+      "lossActions": 8,
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "Pure-engine source-informed winning witnesses at stages 10,000 and 10,001; no late-stage browser claim."
+      }
+    },
+    {
+      "id": "cable-carrier",
+      "profile": "mobile-touch",
+      "outcome": "win",
+      "passed": true,
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": true,
+      "inputMethod": "All finite and optional gameplay actions are touchscreen taps on native buttons and ranges. Mode setup uses native selectOption before gameplay; no keyboard input or writable probe.",
+      "edgeCases": [
+        "All three finite studies win through legal public controls",
+        "Natural terminal failure through public controls",
+        "Terminal controls disabled and all terminal renders complete",
+        "Restart and Play again restore exact initial board",
+        "Score banks each completed study once",
+        "Turn-paced physics does not advance on blur",
+        "320px containment and minimum 44px native controls",
+        "Blocked storage falls back to visit memory",
+        "Specific defining-mechanic model regression: Hoist changes angular velocity through cable-length coupling; delivery needs payload velocity and settled sway."
+      ],
+      "winActions": 51,
+      "lossActions": 1,
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "Pure-engine source-informed winning witnesses at stages 10,000 and 10,001; no late-stage browser claim."
+      }
+    },
+    {
+      "id": "thermal-route",
+      "profile": "mobile-touch",
+      "outcome": "win",
+      "passed": true,
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": true,
+      "inputMethod": "All finite and optional gameplay actions are touchscreen taps on native buttons and ranges. Mode setup uses native selectOption before gameplay; no keyboard input or writable probe.",
+      "edgeCases": [
+        "All three finite studies win through legal public controls",
+        "Natural terminal failure through public controls",
+        "Terminal controls disabled and all terminal renders complete",
+        "Restart and Play again restore exact initial board",
+        "Score banks each completed study once",
+        "Turn-paced physics does not advance on blur",
+        "320px containment and minimum 44px native controls",
+        "Blocked storage falls back to visit memory",
+        "Specific defining-mechanic model regression: Lift depends on spatial thermal exposure; fast trim spends more height per beat outside thermals."
+      ],
+      "winActions": 138,
+      "lossActions": 15,
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "Pure-engine source-informed winning witnesses at stages 10,000 and 10,001; no late-stage browser claim."
+      }
+    },
+    {
+      "id": "belay-line",
+      "profile": "mobile-touch",
+      "outcome": "win",
+      "passed": true,
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": true,
+      "inputMethod": "All finite and optional gameplay actions are touchscreen taps on native buttons and ranges. Mode setup uses native selectOption before gameplay; no keyboard input or writable probe.",
+      "edgeCases": [
+        "All three finite studies win through legal public controls",
+        "Natural terminal failure through public controls",
+        "Terminal controls disabled and all terminal renders complete",
+        "Restart and Play again restore exact initial board",
+        "Score banks each completed study once",
+        "Turn-paced physics does not advance on blur",
+        "320px containment and minimum 44px native controls",
+        "Blocked storage falls back to visit memory",
+        "Specific defining-mechanic model regression: Brake acts through taut rope; slack delays tension and allows acceleration before a later shock catch."
+      ],
+      "winActions": 148,
+      "lossActions": 43,
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "Pure-engine source-informed winning witnesses at stages 10,000 and 10,001; no late-stage browser claim."
+      }
+    },
+    {
+      "id": "vault-runway",
+      "profile": "mobile-touch",
+      "outcome": "win",
+      "passed": true,
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": true,
+      "inputMethod": "All finite and optional gameplay actions are touchscreen taps on native buttons and ranges. Mode setup uses native selectOption before gameplay; no keyboard input or writable probe.",
+      "edgeCases": [
+        "All three finite studies win through legal public controls",
+        "Natural terminal failure through public controls",
+        "Terminal controls disabled and all terminal renders complete",
+        "Restart and Play again restore exact initial board",
+        "Score banks each completed study once",
+        "Turn-paced physics does not advance on blur",
+        "320px containment and minimum 44px native controls",
+        "Blocked storage falls back to visit memory",
+        "Specific defining-mechanic model regression: Plant splits approach energy without duplicating it; pole force persists until release and changes the trajectory."
+      ],
+      "winActions": 82,
+      "lossActions": 1,
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "Pure-engine source-informed winning witnesses at stages 10,000 and 10,001; no late-stage browser claim."
+      }
+    },
+    {
+      "id": "tucked-landing",
+      "profile": "mobile-touch",
+      "outcome": "win",
+      "passed": true,
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": true,
+      "inputMethod": "All finite and optional gameplay actions are touchscreen taps on native buttons and ranges. Mode setup uses native selectOption before gameplay; no keyboard input or writable probe.",
+      "edgeCases": [
+        "All three finite studies win through legal public controls",
+        "Natural terminal failure through public controls",
+        "Terminal controls disabled and all terminal renders complete",
+        "Restart and Play again restore exact initial board",
+        "Score banks each completed study once",
+        "Turn-paced physics does not advance on blur",
+        "320px containment and minimum 44px native controls",
+        "Blocked storage falls back to visit memory",
+        "Specific defining-mechanic model regression: Changing inertia changes angular speed fourfold while preserving angular momentum; entry also checks horizontal placement."
+      ],
+      "winActions": 83,
+      "lossActions": 21,
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "Pure-engine source-informed winning witnesses at stages 10,000 and 10,001; no late-stage browser claim."
+      }
+    },
+    {
+      "id": "wave-trim",
+      "profile": "mobile-touch",
+      "outcome": "win",
+      "passed": true,
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": true,
+      "inputMethod": "All finite and optional gameplay actions are touchscreen taps on native buttons and ranges. Mode setup uses native selectOption before gameplay; no keyboard input or writable probe.",
+      "edgeCases": [
+        "All three finite studies win through legal public controls",
+        "Natural terminal failure through public controls",
+        "Terminal controls disabled and all terminal renders complete",
+        "Restart and Play again restore exact initial board",
+        "Score banks each completed study once",
+        "Turn-paced physics does not advance on blur",
+        "320px containment and minimum 44px native controls",
+        "Blocked storage falls back to visit memory",
+        "Specific defining-mechanic model regression: Trim couples depth and drive; Straight preserves carved heading; gate and moving-crest limits apply."
+      ],
+      "winActions": 98,
+      "lossActions": 4,
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "Pure-engine source-informed winning witnesses at stages 10,000 and 10,001; no late-stage browser claim."
+      }
+    },
+    {
+      "id": "ripple-skimmer",
+      "profile": "mobile-touch",
+      "outcome": "win",
+      "passed": true,
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": true,
+      "inputMethod": "All finite and optional gameplay actions are touchscreen taps on native buttons and ranges. Mode setup uses native selectOption before gameplay; no keyboard input or writable probe.",
+      "edgeCases": [
+        "All three finite studies win through legal public controls",
+        "Natural terminal failure through public controls",
+        "Terminal controls disabled and all terminal renders complete",
+        "Restart and Play again restore exact initial board",
+        "Score banks each completed study once",
+        "Turn-paced physics does not advance on blur",
+        "320px containment and minimum 44px native controls",
+        "Blocked storage falls back to visit memory",
+        "Specific defining-mechanic model regression: Exactly the specified final skip must hit its interval; later/default contacts cannot substitute; spin spends forward launch energy."
+      ],
+      "winActions": 15,
+      "lossActions": 9,
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "Pure-engine source-informed winning witnesses at stages 10,000 and 10,001; no late-stage browser claim."
+      }
+    },
+    {
+      "id": "spin-passage",
+      "profile": "mobile-touch",
+      "outcome": "win",
+      "passed": true,
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": true,
+      "inputMethod": "All finite and optional gameplay actions are touchscreen taps on native buttons and ranges. Mode setup uses native selectOption before gameplay; no keyboard input or writable probe.",
+      "edgeCases": [
+        "All three finite studies win through legal public controls",
+        "Natural terminal failure through public controls",
+        "Terminal controls disabled and all terminal renders complete",
+        "Restart and Play again restore exact initial board",
+        "Score banks each completed study once",
+        "Turn-paced physics does not advance on blur",
+        "320px containment and minimum 44px native controls",
+        "Blocked storage falls back to visit memory",
+        "Specific defining-mechanic model regression: Spin reserve governs torque/precession sensitivity; recharge preserves axis/drift rather than resetting the steering puzzle."
+      ],
+      "winActions": 196,
+      "lossActions": 14,
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "Pure-engine source-informed winning witnesses at stages 10,000 and 10,001; no late-stage browser claim."
+      }
+    },
+    {
+      "id": "cascade-hands",
+      "profile": "mobile-touch",
+      "outcome": "win",
+      "passed": true,
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": true,
+      "inputMethod": "All finite and optional gameplay actions are touchscreen taps on native buttons and ranges. Mode setup uses native selectOption before gameplay; no keyboard input or writable probe.",
+      "edgeCases": [
+        "All three finite studies win through legal public controls",
+        "Natural terminal failure through public controls",
+        "Terminal controls disabled and all terminal renders complete",
+        "Restart and Play again restore exact initial board",
+        "Score banks each completed study once",
+        "Turn-paced physics does not advance on blur",
+        "320px containment and minimum 44px native controls",
+        "Blocked storage falls back to visit memory",
+        "Specific defining-mechanic model regression: Conserved ball identities and one-ball hand occupancy; catches require descending height AND actual horizontal hand reach."
+      ],
+      "winActions": 93,
+      "lossActions": 20,
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "Pure-engine source-informed winning witnesses at stages 10,000 and 10,001; no late-stage browser claim."
+      }
+    },
+    {
+      "id": "ice-rescue",
+      "profile": "mobile-touch",
+      "outcome": "win",
+      "passed": true,
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": true,
+      "inputMethod": "All finite and optional gameplay actions are touchscreen taps on native buttons and ranges. Mode setup uses native selectOption before gameplay; no keyboard input or writable probe.",
+      "edgeCases": [
+        "All three finite studies win through legal public controls",
+        "Natural terminal failure through public controls",
+        "Terminal controls disabled and all terminal renders complete",
+        "Restart and Play again restore exact initial board",
+        "Score banks each completed study once",
+        "Turn-paced physics does not advance on blur",
+        "320px containment and minimum 44px native controls",
+        "Blocked storage falls back to visit memory",
+        "Specific defining-mechanic model regression: Loaded pressure breaks previously safe ice; spread reduces pressure at a real action/time cost and current can add a second landing."
+      ],
+      "winActions": 58,
+      "lossActions": 3,
+      "optionalMode": {
+        "supported": false,
+        "reason": "Do not ship an endless toggle initially: extending fixed lakes needs a generator that proves both outbound and heavier return routes survive cumulative pressure."
+      }
+    },
+    {
+      "id": "breathing-lane",
+      "profile": "mobile-touch",
+      "outcome": "win",
+      "passed": true,
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": true,
+      "inputMethod": "All finite and optional gameplay actions are touchscreen taps on native buttons and ranges. Mode setup uses native selectOption before gameplay; no keyboard input or writable probe.",
+      "edgeCases": [
+        "All three finite studies win through legal public controls",
+        "Natural terminal failure through public controls",
+        "Terminal controls disabled and all terminal renders complete",
+        "Restart and Play again restore exact initial board",
+        "Score banks each completed study once",
+        "Turn-paced physics does not advance on blur",
+        "320px containment and minimum 44px native controls",
+        "Blocked storage falls back to visit memory",
+        "Specific defining-mechanic model regression: Breathing requires surface mouth position; sculling slows travel to permit surfacing; advanced finite length includes mid-length breathing."
+      ],
+      "winActions": 80,
+      "lossActions": 14,
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "Pure-engine source-informed winning witnesses at stages 10,000 and 10,001; no late-stage browser claim."
+      }
+    }
+  ],
+  "errors": [],
+  "limits": [
+    "Author source-informed legal control plans are replayed through public UI; they establish reachable wins and regressions, not unaided discovery or human difficulty.",
+    "Desktop campaign game actions use native focused buttons with Enter/Space and native range keyboard input. Mobile campaign game actions use actual touchscreen taps, including native range aiming; no keyboard or writable game-state hooks. Native selectOption is used only to choose the optional mode before its touch gameplay.",
+    "Mobile is 390px touch emulation, with 320px responsive checks, not a physical phone or screen-reader certification.",
+    "All physics is turn-paced with fixed substeps and simplified documented game models; no engineering or sports prediction claim.",
+    "Optional-mode UI evidence includes exactly two fresh generated challenge wins, banked cumulative score, player end-run, and a separate generated-run natural loss/restart; unbounded-stage and differing-seed model properties are separate source assertions."
+  ],
+  "modelProperties": {
+    "passed": true,
+    "scope": "Pure-model state assertions and source-informed generation witnesses, separate from actual browser controls and ordinary play.",
+    "games": [
+      {
+        "id": "ninepin-line",
+        "passed": true,
+        "rule": "Standing-pin rack persists between deliveries; default-only launch loses later studies.",
+        "finiteFixtureWins": 3,
+        "terminalWinLossRenders": true,
+        "optional": {
+          "differentSeedStates": 24,
+          "lateStageWins": [
+            10000,
+            10001
+          ],
+          "difficultyBounded": true,
+          "scope": "Pure-engine source-informed controls; not browser late-stage interaction."
+        }
+      },
+      {
+        "id": "batters-window",
+        "passed": true,
+        "rule": "Equal pitch/contact timing with different bat orientation changes safe hit to guarded out.",
+        "finiteFixtureWins": 3,
+        "terminalWinLossRenders": true,
+        "optional": {
+          "differentSeedStates": 24,
+          "lateStageWins": [
+            10000,
+            10001
+          ],
+          "difficultyBounded": true,
+          "scope": "Pure-engine source-informed controls; not browser late-stage interaction."
+        }
+      },
+      {
+        "id": "crease-keeper",
+        "passed": true,
+        "rule": "Identical dive position/timing at the wrong height concedes the shot; six-shot win/loss terminal renders complete.",
+        "finiteFixtureWins": 3,
+        "terminalWinLossRenders": true,
+        "optional": {
+          "differentSeedStates": 24,
+          "lateStageWins": [
+            10000,
+            10001
+          ],
+          "difficultyBounded": true,
+          "scope": "Pure-engine source-informed controls; not browser late-stage interaction."
+        }
+      },
+      {
+        "id": "last-second-pass",
+        "passed": true,
+        "rule": "All teammates must participate; swept interception and offside reject routes; earlier upper route loses later formation.",
+        "finiteFixtureWins": 3,
+        "terminalWinLossRenders": true
+      },
+      {
+        "id": "court-rotation",
+        "passed": true,
+        "rule": "Consecutive-player contact is a fault; spiking in the committed blocker lane loses at modeled net height.",
+        "finiteFixtureWins": 3,
+        "terminalWinLossRenders": true,
+        "optional": {
+          "differentSeedStates": 24,
+          "lateStageWins": [
+            10000,
+            10001
+          ],
+          "difficultyBounded": true,
+          "scope": "Pure-engine source-informed controls; not browser late-stage interaction."
+        }
+      },
+      {
+        "id": "velodrome-draft",
+        "passed": true,
+        "rule": "Same sprint effort costs less in a moving rival slipstream; outside lane covers less distance at equal speed.",
+        "finiteFixtureWins": 3,
+        "terminalWinLossRenders": true,
+        "optional": {
+          "differentSeedStates": 24,
+          "lateStageWins": [
+            10000,
+            10001
+          ],
+          "difficultyBounded": true,
+          "scope": "Pure-engine source-informed controls; not browser late-stage interaction."
+        }
+      },
+      {
+        "id": "clutch-circuit",
+        "passed": true,
+        "rule": "Downshift overrev and actual swept corner-entry cap are enforced; gear changes interrupt propulsion.",
+        "finiteFixtureWins": 3,
+        "terminalWinLossRenders": true,
+        "optional": {
+          "differentSeedStates": 24,
+          "lateStageWins": [
+            10000,
+            10001
+          ],
+          "difficultyBounded": true,
+          "scope": "Pure-engine source-informed controls; not browser late-stage interaction."
+        }
+      },
+      {
+        "id": "ribbon-relay",
+        "passed": true,
+        "rule": "Position overlap alone cannot transfer a baton; relative running speed and exchange-zone bounds also apply.",
+        "finiteFixtureWins": 3,
+        "terminalWinLossRenders": true,
+        "optional": {
+          "differentSeedStates": 10,
+          "lateStageWins": [
+            10000,
+            10001
+          ],
+          "difficultyBounded": true,
+          "scope": "Pure-engine source-informed controls; not browser late-stage interaction."
+        }
+      },
+      {
+        "id": "two-oars",
+        "passed": true,
+        "rule": "Differential pulls create opposite yaw; premature oars fatigue; bow/stern clearance governs bank contact.",
+        "finiteFixtureWins": 3,
+        "terminalWinLossRenders": true,
+        "optional": {
+          "differentSeedStates": 24,
+          "lateStageWins": [
+            10000,
+            10001
+          ],
+          "difficultyBounded": true,
+          "scope": "Pure-engine source-informed controls; not browser late-stage interaction."
+        }
+      },
+      {
+        "id": "cable-carrier",
+        "passed": true,
+        "rule": "Hoist changes angular velocity through cable-length coupling; delivery needs payload velocity and settled sway.",
+        "finiteFixtureWins": 3,
+        "terminalWinLossRenders": true,
+        "optional": {
+          "differentSeedStates": 24,
+          "lateStageWins": [
+            10000,
+            10001
+          ],
+          "difficultyBounded": true,
+          "scope": "Pure-engine source-informed controls; not browser late-stage interaction."
+        }
+      },
+      {
+        "id": "thermal-route",
+        "passed": true,
+        "rule": "Lift depends on spatial thermal exposure; fast trim spends more height per beat outside thermals.",
+        "finiteFixtureWins": 3,
+        "terminalWinLossRenders": true,
+        "optional": {
+          "differentSeedStates": 24,
+          "lateStageWins": [
+            10000,
+            10001
+          ],
+          "difficultyBounded": true,
+          "scope": "Pure-engine source-informed controls; not browser late-stage interaction."
+        }
+      },
+      {
+        "id": "belay-line",
+        "passed": true,
+        "rule": "Brake acts through taut rope; slack delays tension and allows acceleration before a later shock catch.",
+        "finiteFixtureWins": 3,
+        "terminalWinLossRenders": true,
+        "optional": {
+          "differentSeedStates": 24,
+          "lateStageWins": [
+            10000,
+            10001
+          ],
+          "difficultyBounded": true,
+          "scope": "Pure-engine source-informed controls; not browser late-stage interaction."
+        }
+      },
+      {
+        "id": "vault-runway",
+        "passed": true,
+        "rule": "Plant splits approach energy without duplicating it; pole force persists until release and changes the trajectory.",
+        "finiteFixtureWins": 3,
+        "terminalWinLossRenders": true,
+        "optional": {
+          "differentSeedStates": 24,
+          "lateStageWins": [
+            10000,
+            10001
+          ],
+          "difficultyBounded": true,
+          "scope": "Pure-engine source-informed controls; not browser late-stage interaction."
+        }
+      },
+      {
+        "id": "tucked-landing",
+        "passed": true,
+        "rule": "Changing inertia changes angular speed fourfold while preserving angular momentum; entry also checks horizontal placement.",
+        "finiteFixtureWins": 3,
+        "terminalWinLossRenders": true,
+        "optional": {
+          "differentSeedStates": 24,
+          "lateStageWins": [
+            10000,
+            10001
+          ],
+          "difficultyBounded": true,
+          "scope": "Pure-engine source-informed controls; not browser late-stage interaction."
+        }
+      },
+      {
+        "id": "wave-trim",
+        "passed": true,
+        "rule": "Trim couples depth and drive; Straight preserves carved heading; gate and moving-crest limits apply.",
+        "finiteFixtureWins": 3,
+        "terminalWinLossRenders": true,
+        "optional": {
+          "differentSeedStates": 24,
+          "lateStageWins": [
+            10000,
+            10001
+          ],
+          "difficultyBounded": true,
+          "scope": "Pure-engine source-informed controls; not browser late-stage interaction."
+        }
+      },
+      {
+        "id": "ripple-skimmer",
+        "passed": true,
+        "rule": "Exactly the specified final skip must hit its interval; later/default contacts cannot substitute; spin spends forward launch energy.",
+        "finiteFixtureWins": 3,
+        "terminalWinLossRenders": true,
+        "optional": {
+          "differentSeedStates": 24,
+          "lateStageWins": [
+            10000,
+            10001
+          ],
+          "difficultyBounded": true,
+          "scope": "Pure-engine source-informed controls; not browser late-stage interaction."
+        }
+      },
+      {
+        "id": "spin-passage",
+        "passed": true,
+        "rule": "Spin reserve governs torque/precession sensitivity; recharge preserves axis/drift rather than resetting the steering puzzle.",
+        "finiteFixtureWins": 3,
+        "terminalWinLossRenders": true,
+        "optional": {
+          "differentSeedStates": 24,
+          "lateStageWins": [
+            10000,
+            10001
+          ],
+          "difficultyBounded": true,
+          "scope": "Pure-engine source-informed controls; not browser late-stage interaction."
+        }
+      },
+      {
+        "id": "cascade-hands",
+        "passed": true,
+        "rule": "Conserved ball identities and one-ball hand occupancy; catches require descending height AND actual horizontal hand reach.",
+        "finiteFixtureWins": 3,
+        "terminalWinLossRenders": true,
+        "optional": {
+          "differentSeedStates": 21,
+          "lateStageWins": [
+            10000,
+            10001
+          ],
+          "difficultyBounded": true,
+          "scope": "Pure-engine source-informed controls; not browser late-stage interaction."
+        }
+      },
+      {
+        "id": "ice-rescue",
+        "passed": true,
+        "rule": "Loaded pressure breaks previously safe ice; spread reduces pressure at a real action/time cost and current can add a second landing.",
+        "finiteFixtureWins": 3,
+        "terminalWinLossRenders": true
+      },
+      {
+        "id": "breathing-lane",
+        "passed": true,
+        "rule": "Breathing requires surface mouth position; sculling slows travel to permit surfacing; advanced finite length includes mid-length breathing.",
+        "finiteFixtureWins": 3,
+        "terminalWinLossRenders": true,
+        "optional": {
+          "differentSeedStates": 24,
+          "lateStageWins": [
+            10000,
+            10001
+          ],
+          "difficultyBounded": true,
+          "scope": "Pure-engine source-informed controls; not browser late-stage interaction."
+        }
+      }
+    ]
+  },
+  "completedAt": "2026-10-02T20:18:33.666Z"
+}

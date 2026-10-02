@@ -2,10 +2,11 @@
 const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
 const root=path.resolve(__dirname,'..');
 const original={browser:['signal-run'],'signal-mobile-complete':['signal-run'],collection:['double-take','good-order','pocket-orbit'],afterglow:['afterglow'],'lantern-lines':['lantern-lines'],'tide-pool':['tide-pool'],'word-weave':['word-weave'],'sky-stack':['sky-stack'],'pebble-post':['pebble-post']};
-const expansionRooms=['systems-room','tabletop-room','puzzle-lab','kinetic-room','discovery-room','construct-room','parlour-room','motion-room','workbench-room'];
+const journeyRooms=['constraint-room','field-room','signal-lab','commons-room','atelier-room'];
+const expansionRooms=['systems-room','tabletop-room','puzzle-lab','kinetic-room','discovery-room','construct-room','parlour-room','motion-room','workbench-room',...journeyRooms.filter(id=>fs.existsSync(path.join(root,id,'games.json')))];
 const rooms=['spatial-room','logic-room','number-room','word-room','strategy-room','arcade-room',...expansionRooms];
-const helpers={afterglow:['afterglow-engine'], 'spatial-room':['gear-depth','balance-depth'],'word-room':['word-room-edges']};
-const suites=Object.fromEntries([...Object.entries(original),...rooms.map(id=>[id,[id]])].map(([id,dirs])=>[id,{id,dirs,tests:[id,...(helpers[id]||[])]}]));
+const helpers={afterglow:['afterglow-engine'], 'spatial-room':['gear-depth','balance-depth'],'word-room':['word-room-edges'],...Object.fromEntries(journeyRooms.map(id=>[id,['journey']]))};
+const suites=Object.fromEntries([...Object.entries(original),...rooms.map(id=>[id,journeyRooms.includes(id)?[id,'journey']:[id]])].map(([id,dirs])=>[id,{id,dirs,tests:[id,...(helpers[id]||[])]}]));
 function filesIn(dir){return fs.readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.isDirectory()?filesIn(path.join(dir,e.name)):[path.join(dir,e.name)]);}
 function fingerprint(id){const suite=suites[id];if(!suite)throw Error('Unknown suite '+id);const files=[...suite.dirs.flatMap(d=>filesIn(path.join(root,d))),...fs.readdirSync(root).filter(n=>/\.(html|css|js|json)$/.test(n)&&!['progress.json','inventory-plan.json'].includes(n)&&!n.startsWith('design-')).map(n=>path.join(root,n)),...[...new Set([...suite.tests.map(n=>n+'.cjs'),...fs.readdirSync(path.join(root,'tests')).filter(n=>expansionRooms.includes(id)&&n.startsWith(id.split('-')[0]+'-'))])].map(n=>path.join(root,'tests',n)),...(expansionRooms.includes(id)?filesIn(path.join(root,'tests','fixtures')):[]),__filename,path.join(__dirname,'run-suite.cjs')].sort();const h=crypto.createHash('sha256');for(const file of files)h.update(path.relative(root,file)+'\0').update(fs.readFileSync(file)).update('\0');return {sha256:h.digest('hex'),files:files.map(f=>path.relative(root,f))};}
 function gameIds(id){return original[id]||JSON.parse(fs.readFileSync(path.join(root,id,'games.json'))).map(g=>g.id);}
@@ -42,4 +43,4 @@ validRun=(run,id)=>{
  if(!expansionRooms.includes(id))return true;
  try{return JSON.stringify(run.completionEvidence)===JSON.stringify(expansionEvidence(id));}catch{return false;}
 };
-module.exports={root,suites,fingerprint,runtimeFingerprint,gameIds,scope,validRun,partialOptions,expansionRooms,expansionEvidence,scopeForGame};
+module.exports={root,suites,fingerprint,runtimeFingerprint,gameIds,scope,validRun,partialOptions,expansionRooms,journeyRooms,expansionEvidence,scopeForGame};

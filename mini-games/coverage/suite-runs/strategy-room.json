@@ -3,9 +3,9 @@
   "suite": "strategy-room",
   "passed": true,
   "status": "passed",
-  "startedAt": "2026-10-01T09:54:58.658Z",
+  "startedAt": "2026-10-02T19:59:22.619Z",
   "source": {
-    "sha256": "77d6f73cb0e11d491f34cf388ee139d2c631ba035c87171a3b67ecde18021c9a",
+    "sha256": "8f58bf03aac301eb2e08afd5db0bca90cf7fb890335a2d9cb6b63a9ddd352b24",
     "files": [
       "catalog.css",
       "catalog.js",
@@ -24,7 +24,7 @@
       "tools/run-suite.cjs"
     ]
   },
-  "requestedBaseURL": "http://127.0.0.1:8781",
+  "requestedBaseURL": "http://127.0.0.1:8790",
   "browser": {
     "engine": "Chromium",
     "version": "Chromium 151.0.7922.173 built on Debian GNU/Linux 13 (trixie)",
@@ -61,22 +61,22 @@
     "Solver completions do not establish human difficulty or accessibility."
   ],
   "servedRuntimeBefore": {
-    "baseURL": "http://127.0.0.1:8781",
+    "baseURL": "http://127.0.0.1:8790",
     "passed": true,
-    "sha256": "90ca711e727de492339a10e015ee88618537f5296b1aef5ea3f60b8d04e46e46",
+    "sha256": "8d9b839214e218674884246ad9ecb77c5f3f492e26b6ebc679821f972a093037",
     "fileCount": 12,
-    "verifiedAt": "2026-10-01T09:54:59.118Z"
+    "verifiedAt": "2026-10-02T19:59:23.132Z"
   },
   "exitCode": 0,
   "signal": null,
   "sourceUnchanged": true,
   "servedRuntime": {
-    "baseURL": "http://127.0.0.1:8781",
+    "baseURL": "http://127.0.0.1:8790",
     "passed": true,
-    "sha256": "90ca711e727de492339a10e015ee88618537f5296b1aef5ea3f60b8d04e46e46",
+    "sha256": "8d9b839214e218674884246ad9ecb77c5f3f492e26b6ebc679821f972a093037",
     "fileCount": 12,
-    "verifiedAt": "2026-10-01T09:55:54.963Z"
+    "verifiedAt": "2026-10-02T20:00:13.742Z"
   },
   "completionEvidence": null,
-  "finishedAt": "2026-10-01T09:55:54.964Z"
+  "finishedAt": "2026-10-02T20:00:13.743Z"
 }

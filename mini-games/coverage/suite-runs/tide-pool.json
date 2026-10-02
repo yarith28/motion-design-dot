@@ -3,9 +3,9 @@
   "suite": "tide-pool",
   "passed": true,
   "status": "passed",
-  "startedAt": "2026-10-01T09:53:30.470Z",
+  "startedAt": "2026-10-02T19:56:49.401Z",
   "source": {
-    "sha256": "db542aff5c4c557e19c7186dfb1db753231aab3e410e98779ac3916b85a2cdc7",
+    "sha256": "4351e460a23221e0ca5ef467006a453abe1b4e008ccbbe36edf182e990754d88",
     "files": [
       "catalog.css",
       "catalog.js",
@@ -22,7 +22,7 @@
       "tools/run-suite.cjs"
     ]
   },
-  "requestedBaseURL": "http://127.0.0.1:8781",
+  "requestedBaseURL": "http://127.0.0.1:8790",
   "browser": {
     "engine": "Chromium",
     "version": "Chromium 151.0.7922.173 built on Debian GNU/Linux 13 (trixie)",
@@ -45,22 +45,22 @@
     "Solver completions do not establish human difficulty or accessibility."
   ],
   "servedRuntimeBefore": {
-    "baseURL": "http://127.0.0.1:8781",
+    "baseURL": "http://127.0.0.1:8790",
     "passed": true,
-    "sha256": "3fb286241e4cc95909d063c90f983eda4008419dadb0f2fce15c2e7e744dbbc5",
+    "sha256": "0546b80ce827634eeb1a7e4a350f6100991371c354acc45abc0d7d528fe0e637",
     "fileCount": 10,
-    "verifiedAt": "2026-10-01T09:53:30.620Z"
+    "verifiedAt": "2026-10-02T19:56:49.664Z"
   },
   "exitCode": 0,
   "signal": null,
   "sourceUnchanged": true,
   "servedRuntime": {
-    "baseURL": "http://127.0.0.1:8781",
+    "baseURL": "http://127.0.0.1:8790",
     "passed": true,
-    "sha256": "3fb286241e4cc95909d063c90f983eda4008419dadb0f2fce15c2e7e744dbbc5",
+    "sha256": "0546b80ce827634eeb1a7e4a350f6100991371c354acc45abc0d7d528fe0e637",
     "fileCount": 10,
-    "verifiedAt": "2026-10-01T09:53:51.184Z"
+    "verifiedAt": "2026-10-02T19:57:11.714Z"
   },
   "completionEvidence": null,
-  "finishedAt": "2026-10-01T09:53:51.184Z"
+  "finishedAt": "2026-10-02T19:57:11.715Z"
 }

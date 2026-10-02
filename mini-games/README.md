@@ -2,7 +2,26 @@
 
 Review remediation: [changes and verification scope](REMEDIATION-200.md) · [independent follow-up](REMEDIATION-200-REVIEW.md).
 
-A small, expandable browser arcade with 300 playable games. The catalog is `index.html`, with working All / Adventure / Reflex / Memory / Puzzle / Strategy filters. Every displayed game is playable.
+A small, expandable browser arcade with 400 playable games. The catalog is `index.html`, with working All / Adventure / Reflex / Memory / Puzzle / Strategy filters. Every displayed game is playable.
+
+## The 400-game expansion
+
+The latest100 games occupy five20-game rooms: Constraint, Field, Signal Lab, Commons and Atelier. Their decisions cover illumination/region/graph constraints, coupled sports and motion, computation/information proofs, competitive/economic choices, and physical fabrication. [The inventory and design plan](EXPANSION-400-DESIGNS.md) records their distinct mechanics and rejected overlapping concepts. [The release verification record](EXPANSION-400-VERIFICATION.md) describes the checks and their limits.
+
+Every new game has three finite studies, native keyboard and touch controls, visible rule/status feedback, personal scores, a terminal result and restart. Field Room advances its physical simulations through labeled player actions; its sports are paced by the player. Generated streams and match series are optional and keep the finite campaigns. Separate local records, exact-seed replay and visit-memory storage fallback apply throughout the new rooms.
+
+[The complete endless review](ENDLESS-REVIEW.md) covers all 400 games with real source/end-condition evidence, existing support, feasibility, a concrete optional design and reasons to preserve finite endings. It enables no new modes in the preserved300. The new rooms offer75 generated streams and7 match series;18 remain finite while their generator prerequisites are documented.
+
+`tests/preservation300.cjs` protects the 300 original inventory entries and227 original/unrelated runtime files, including Kitchen Cats, the motion showcase and Grid/List behavior. `tests/expansion400-review-gate.cjs` requires600 new finite-study wins across200 desktop/touch profiles, two optional challenges per supported profile, current evidence from all 29 registered suites, source-bound independent reviews, and exact400-game audit coverage. Short ordinary-input samples of100 games are recorded separately from the deeper source-informed playthroughs; they do not claim100 unaided campaign completions.
+
+```sh
+node mini-games/tests/preservation300.cjs
+node mini-games/tests/endless-review.cjs
+node mini-games/tests/expansion400-review-gate.cjs
+node mini-games/tools/coverage-index.cjs
+```
+
+The publication workflow verifies the exact commit's served bytes and800 desktop/mobile catalog route/reset cases, reruns14 expansion-room completion suites, and checks the shared finite/optional lifecycle on Chromium and WebKit. Mobile gameplay evidence uses emulated touch; no physical-device or screen-reader certification is claimed.
 
 ## The 300-game expansion
 
@@ -231,12 +250,12 @@ Fifteen action and sports games add snake, paddle rally, mini-golf, basketball, 
 
 ## Complete collection evidence
 
-`inventory.json` lists all100 actual routes and mechanics. `coverage/index.json` now maps entries to current source-content-matched suite results; missing, failed or stale evidence is marked unverified and makes the index command fail. Mobile-viewport completion and touch gameplay completion are separate fields. The original ten game implementations and `motion-showcase/` remain unchanged by the90-game expansion. New games use local browser assets and need no build or external service. The Pages workflow verifies source bytes, root redirect, all catalog routes on desktop/mobile, Grid/List preference, search/filter counts, image loading, reduced motion, blocked storage and responsive containment. Live checks launch and restart the new games; full rounds are the separate local suites. `progress.json` identifies the last verified deployment; pushing a commit alone is not deployment proof.
+`inventory.json` lists all 100 actual routes and mechanics. `coverage/index.json` now maps entries to current source-content-matched suite results; missing, failed or stale evidence is marked unverified and makes the index command fail. Mobile-viewport completion and touch gameplay completion are separate fields. The original ten game implementations and `motion-showcase/` remain unchanged by the 90-game expansion. New games use local browser assets and need no build or external service. The Pages workflow verifies source bytes, root redirect, all catalog routes on desktop/mobile, Grid/List preference, search/filter counts, image loading, reduced motion, blocked storage and responsive containment. Live checks launch and restart the new games; full rounds are the separate local suites. `progress.json` identifies the last verified deployment; pushing a commit alone is not deployment proof.
 
 
 ## Verified live100-game release
 
-The full collection is live at https://yarith28.github.io/motion-design-dot/mini-games/ . Release `0821d41f2f1cf88b3cc92727a2bcc67cecf53010` passed the [live browser workflow](https://github.com/yarith28/motion-design-dot/actions/runs/36751272054):200 game/viewport checks,159 matching runtime assets, no browser or asset failures. The root redirect, all100 entry links, catalog controls and desktop/mobile rendering were verified against the actual GitHub Pages site. The captured report is `coverage/live-release.json`. This is historical publication evidence for the named release. Later gameplay fixes require fresh local evidence and a new successful live workflow; this record does not certify changed source.
+The full collection is live at https://yarith28.github.io/motion-design-dot/mini-games/ . Release `0821d41f2f1cf88b3cc92727a2bcc67cecf53010` passed the [live browser workflow](https://github.com/yarith28/motion-design-dot/actions/runs/36751272054):200 game/viewport checks,159 matching runtime assets, no browser or asset failures. The root redirect, all 100 entry links, catalog controls and desktop/mobile rendering were verified against the actual GitHub Pages site. The captured report is `coverage/live-release.json`. This is historical publication evidence for the named release. Later gameplay fixes require fresh local evidence and a new successful live workflow; this record does not certify changed source.
 
 
 ## Current verification gate (October 2026)
