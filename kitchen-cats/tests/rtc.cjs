@@ -20,16 +20,22 @@ async function transferQr(from, to, complete) {
     }
     await from.waitForTimeout(120);
   }
-  const [sourceProgress, targetStatus, targetScanStatus, targetFrameProgress] = await Promise.all([
+  const [sourceProgress, sourceStep, targetStatus, targetStep, targetScanStatus, targetFrameProgress, targetAnswerLength, targetOfferLength] = await Promise.all([
     from.locator("#mp-qr-progress").textContent(),
+    from.locator("#mp-step").textContent(),
     to.locator("#mp-status").textContent(),
+    to.locator("#mp-step").textContent(),
     to.locator("#mp-scan-status").textContent(),
     to.locator("#mp-qr-progress").textContent(),
+    to.locator("#mp-answer").inputValue().then((value) => value.length),
+    to.locator("#mp-offer").inputValue().then((value) => value.length),
   ]);
   throw Error(
     `QR transfer timed out after ${seen.size} frames; ` +
-      `source=${JSON.stringify(sourceProgress)}, status=${JSON.stringify(targetStatus)}, ` +
-      `scan=${JSON.stringify(targetScanStatus)}, targetProgress=${JSON.stringify(targetFrameProgress)}`,
+      `sourceStep=${JSON.stringify(sourceStep)}, source=${JSON.stringify(sourceProgress)}, ` +
+      `targetStep=${JSON.stringify(targetStep)}, status=${JSON.stringify(targetStatus)}, ` +
+      `scan=${JSON.stringify(targetScanStatus)}, targetProgress=${JSON.stringify(targetFrameProgress)}, ` +
+      `targetOfferLength=${targetOfferLength}, targetAnswerLength=${targetAnswerLength}`,
   );
 }
 (async () => {
