@@ -50,6 +50,20 @@
               Just me? Start solo practice →
             </button>
           </div>
+          <section id="experimental-mp" class="panel card">
+                    <span class="eyebrow">EXPERIMENTAL LOCAL MULTIPLAYER</span>
+                    <p>Manual WebRTC pairing. Same Wi‑Fi recommended. No room discovery.</p>
+                    <button id="mp-host">Host game</button>
+                    <button id="mp-join">Join game</button>
+                    <textarea id="mp-offer" placeholder="Offer / answer text"></textarea>
+                    <textarea id="mp-answer" placeholder="Answer text"></textarea>
+                    <button id="mp-copy">Copy pairing text</button>
+                    <button id="mp-import">Import pairing</button>
+                    <button id="mp-cancel">Cancel</button>
+                    <div id="mp-status">Idle</div>
+                    <div id="mp-lobby"></div>
+                  </section>
+
           <div class="localnote">
             <strong>Offline ready</strong>
             <p>
@@ -64,7 +78,7 @@
           </div>
           <img
             id="hero-art"
-            src="/assets/title-illustration.png"
+            src="./assets/title-illustration.png"
             alt="Kitchen Cats title illustration with four cat chefs cooking together"
           />
           <figcaption class="poster-bottom">
@@ -72,24 +86,7 @@
             <span>CREAM · PEACH · MINT<br />LOCAL EDITION</span>
           </figcaption>
         </figure>
-      </section>
-
-
-        <section id="experimental-mp" class="panel card">
-          <span class="eyebrow">EXPERIMENTAL LOCAL MULTIPLAYER</span>
-          <p>Manual WebRTC pairing. Same Wi‑Fi recommended. No room discovery.</p>
-          <button id="mp-host">Host game</button>
-          <button id="mp-join">Join game</button>
-          <textarea id="mp-offer" placeholder="Offer / answer text"></textarea>
-          <textarea id="mp-answer" placeholder="Answer text"></textarea>
-          <button id="mp-copy">Copy pairing text</button>
-          <button id="mp-import">Import pairing</button>
-          <button id="mp-cancel">Cancel</button>
-          <div id="mp-status">Idle</div>
-          <div id="mp-lobby"></div>
-        </section>
-
-      <section id="game" hidden>
+      </section>      <section id="game" hidden>
         <div class="gamebar card slim">
           <div>
             <span class="eyebrow" id="mode">YOUR KITCHEN</span>
@@ -103,43 +100,6 @@
             <button id="leave">Leave</button>
           </div>
         </div>
-
-        <div id="lobby" class="panel card" hidden>
-          <div class="lobby-shell">
-            <div class="lobby-copy">
-              <span class="eyebrow">WELCOME TO THE KITCHEN</span>
-              <h2>Aprons on. Friends in.</h2>
-              <p>
-                Share the room code above. One computer runs the server; phones
-                join on the same local Wi-Fi. The host can start when everyone is ready.
-              </p>
-              <div class="roomchip">
-                <span>Room code</span>
-                <strong id="roomcode-large">------</strong>
-              </div>
-              <div id="crew" class="crew-grid"></div>
-              <div class="lobby-actions">
-                <button class="primary" id="start">Start the shift →</button>
-                <p id="hosthint"></p>
-              </div>
-            </div>
-            <aside class="lobby-aside card soft">
-              <img
-                src="/assets/title-illustration.png"
-                alt="Kitchen Cats lobby illustration"
-                class="lobby-hero"
-              />
-              <div class="aside-note">
-                <strong>Quick host reminder</strong>
-                <p>
-                  Computer host: <b>http://localhost:3000</b><br />
-                  Phone players: <b>http://HOST_LAN_IP:3000</b>
-                </p>
-              </div>
-            </aside>
-          </div>
-        </div>
-
         <div id="play" class="play-shell" hidden>
           <div id="orders" aria-live="polite"></div>
           <div class="game-stage">
@@ -176,10 +136,10 @@
           <div id="totals"></div>
           <p id="results-note"></p>
           <div class="results-art-row" aria-hidden="true">
-            <img src="/assets/cat-cream.png" alt="" />
-            <img src="/assets/cat-tabby.png" alt="" />
-            <img src="/assets/cat-gray.png" alt="" />
-            <img src="/assets/cat-tuxedo.png" alt="" />
+            <img src="./assets/cat-cream.png" alt="" />
+            <img src="./assets/cat-tabby.png" alt="" />
+            <img src="./assets/cat-gray.png" alt="" />
+            <img src="./assets/cat-tuxedo.png" alt="" />
           </div>
           <div class="results-actions">
             <button id="replay" class="primary">Another shift →</button>
