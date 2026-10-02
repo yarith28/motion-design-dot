@@ -53,7 +53,7 @@ const base = process.env.BASE_URL || "http://127.0.0.1:8000/kitchen-cats/";
         const decoded = [];
         let assembled;
         for (const frame of frames) {
-          qr.drawQr(canvas, frame, 320);
+          qr.drawQr(canvas, frame);
           const scanned = await qr.QrScanner.scanImage(canvas, {
             returnDetailedScanResult: true,
           });

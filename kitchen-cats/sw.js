@@ -1,4 +1,4 @@
-const VERSION = "kitchen-cats-20261002-r14-qr";
+const VERSION = "kitchen-cats-20261002-r15-qr-density";
 const PREFIX = "kitchen-cats-";
 const CACHE = VERSION + "-precache";
 const ASSETS = [

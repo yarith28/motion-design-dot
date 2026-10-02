@@ -1,8 +1,11 @@
 import QrScanner from "./vendor/qr-scanner.min.js";
 
 export const QR_PREFIX = "KCQR1";
-export const QR_MAX_FRAMES = 84;
-export const QR_FRAME_CHARS = 320;
+export const QR_MAX_FRAMES = 120;
+// Keep a generous quiet-zone/module-size margin on the phone-sized canvas.
+// The previous 320-character frames were technically valid but too dense for
+// some browser decoders at the rendered 280px size.
+export const QR_FRAME_CHARS = 240;
 export const QR_MAX_RAW_CHARS = 20000;
 
 const SAFE_TOKEN = /^[A-Za-z0-9._:~-]{1,80}$/;
@@ -202,7 +205,7 @@ export class QrFrameAssembler {
   }
 }
 
-export function drawQr(canvas, text, size = 280) {
+export function drawQr(canvas, text, size = 320) {
   if (!canvas || typeof globalThis.qrcode !== "function")
     throw Error("QR display is unavailable. Use Advanced text.");
   const qr = globalThis.qrcode(0, "M");
