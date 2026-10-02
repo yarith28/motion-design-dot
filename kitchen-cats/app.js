@@ -163,7 +163,7 @@ $("mp-host")?.addEventListener("click", async()=>{
  runtimeMode="host"; mpSession.isHost=true;
  const id=crypto.randomUUID(); mpSession.startHost(id);
  $("mp-offer").value=await mpTransport.createOffer(id);
- mpStatus.textContent="Host offer created";
+ mpStatus.textContent="Host offer ready with ICE candidates";
 });
 $("mp-join")?.addEventListener("click",()=>{
  runtimeMode="guest";

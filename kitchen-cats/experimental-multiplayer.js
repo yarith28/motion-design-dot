@@ -31,13 +31,14 @@ export class LanPeerSession {
   async acceptGuestAnswer(answer){
     await this.pc.setRemoteDescription(answer);
   }
-  gather(pc){
-    return new Promise(resolve=>{
-      if(pc.iceGatheringState==='complete') return resolve();
-      const done=()=>{if(pc.iceGatheringState==='complete'){pc.removeEventListener('icegatheringstatechange',done);resolve();}};
+  async gather(pc){
+    if(pc.iceGatheringState!=='complete') await new Promise((resolve,reject)=>{
+      const done=()=>{ if(pc.iceGatheringState==='complete'){cleanup();resolve();} };
+      const cleanup=()=>{pc.removeEventListener('icegatheringstatechange',done);clearTimeout(timer);};
+      const timer=setTimeout(()=>{cleanup();reject(new Error('ICE gathering timeout'));},10000);
       pc.addEventListener('icegatheringstatechange',done);
-      setTimeout(resolve,10000);
     });
+    if(!pc.localDescription?.sdp?.includes('a=candidate:')) throw new Error('No ICE candidates gathered');
   }
   bind(dc){
     dc.onopen=()=>this.onState('connected');
