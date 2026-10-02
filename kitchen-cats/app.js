@@ -458,6 +458,14 @@ async function createHostOffer() {
     if (mpSession.peers.size >= 3) throw Error("Kitchen full: four chefs maximum.");
     $("mp-offer").value = "";
     $("mp-answer").value = "";
+    // Keep a visible cancel path while ICE gathering is pending. A browser
+    // can fail before it produces an offer (for example with no usable local
+    // candidate), and hiding the flow would strand the player on that tap.
+    setPairingStep("Host · 1 of 2", "Preparing a local code…");
+    mpQrView.hidden = true;
+    mpCamera.hidden = true;
+    mpScanButton.hidden = true;
+    mpImagePick.hidden = true;
     mpStatus.textContent = "Preparing a local code…";
     const offer = await mpTransport.createOffer(makeId("peer"), mpSession.sessionId);
     if (generation !== pairingGeneration) return;
@@ -469,7 +477,13 @@ async function createHostOffer() {
     mpScanButton.textContent = "Scan guest reply";
     mpStatus.textContent = "Host code ready. Two scans are required.";
   } catch (e) {
-    if (generation === pairingGeneration) showPairingError("Host setup failed", e);
+    if (generation === pairingGeneration) {
+      showPairingError("Host setup failed", e);
+      // No offer exists yet, so return to the two primary actions for a clean
+      // retry. During the next attempt setPairingStep keeps Cancel visible.
+      mpActions.hidden = false;
+      mpFlow.hidden = true;
+    }
   } finally {
     if (generation === pairingGeneration) pairingBusy(false);
   }

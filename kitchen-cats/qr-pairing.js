@@ -22,7 +22,7 @@ function crc32(value) {
   let crc = 0xffffffff;
   for (let i = 0; i < value.length; i++)
     crc = CRC_TABLE[(crc ^ value.charCodeAt(i)) & 0xff] ^ (crc >>> 8);
-  return (crc ^ 0xffffffff).toString(16).padStart(8, "0");
+  return ((crc ^ 0xffffffff) >>> 0).toString(16).padStart(8, "0");
 }
 
 function base64UrlEncode(value) {
@@ -220,20 +220,21 @@ export function drawQr(canvas, text, size = 320) {
   canvas.style.width = `${size}px`;
   canvas.style.height = `${size}px`;
   const ctx = canvas.getContext("2d");
-  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  ctx.setTransform(1, 0, 0, 1, 0, 0);
   ctx.imageSmoothingEnabled = false;
   ctx.fillStyle = "#fff";
-  ctx.fillRect(0, 0, size, size);
-  // Use whole logical pixels for every module. Fractional module boundaries
-  // look crisp in a screenshot but can make the QR fail stricter decoders
-  // after a PNG round-trip. The spare canvas area becomes extra quiet zone.
-  const cell = Math.max(1, Math.floor(size / cells));
-  const offset = Math.floor((size - modules * cell) / 2);
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  // Render on the physical pixel grid. This avoids fractional transformed
+  // edges on devices whose DPR is not an integer, while leaving extra quiet
+  // zone when the QR does not divide evenly into the square canvas.
+  const cell = Math.max(1, Math.floor(Math.min(canvas.width, canvas.height) / cells));
+  const offsetX = Math.floor((canvas.width - modules * cell) / 2);
+  const offsetY = Math.floor((canvas.height - modules * cell) / 2);
   ctx.fillStyle = "#111";
   for (let row = 0; row < modules; row++) {
     for (let col = 0; col < modules; col++) {
       if (qr.isDark(row, col))
-        ctx.fillRect(offset + col * cell, offset + row * cell, cell, cell);
+        ctx.fillRect(offsetX + col * cell, offsetY + row * cell, cell, cell);
     }
   }
   canvas.setAttribute("aria-label", `Kitchen Cats pairing code, ${text.startsWith(`${QR_PREFIX}|o|`) ? "host offer" : "guest reply"}`);
@@ -247,7 +248,11 @@ export class QrCameraScanner {
     this.scanner = null;
   }
   async start() {
-    this.stop();
+    // A pre-attached stream is also useful for browser regression coverage:
+    // qr-scanner still decodes its video frames, while production starts with
+    // no stream and lets qr-scanner request the rear camera. If a scanner is
+    // already active, stop it before replacing the camera session.
+    if (this.scanner) this.stop();
     this.scanner = new QrScanner(
       this.video,
       (result) => this.onFrame(typeof result === "string" ? result : result.data),

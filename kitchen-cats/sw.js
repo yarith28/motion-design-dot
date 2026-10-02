@@ -1,4 +1,4 @@
-const VERSION = "kitchen-cats-20261002-r16-qr-import";
+const VERSION = "kitchen-cats-20261002-r17-qr-renderer";
 const PREFIX = "kitchen-cats-";
 const CACHE = VERSION + "-precache";
 const ASSETS = [

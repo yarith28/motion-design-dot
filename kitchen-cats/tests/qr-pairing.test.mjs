@@ -35,6 +35,7 @@ const first = parseQrFrame(frames[0]);
 assert.equal(first.role, "o");
 assert.equal(first.index, 1);
 assert.equal(first.total, frames.length);
+assert.match(frames[0], /^KCQR1\|o\|1\/\d+\|[0-9a-f]{8}\|/);
 
 const assembler = new QrFrameAssembler("o");
 let progress;
