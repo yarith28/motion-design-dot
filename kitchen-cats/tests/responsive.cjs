@@ -64,19 +64,11 @@ async function assertVisibleAndContained(page, label) {
       assert.match(await p.locator("#action").getAttribute("aria-label"), /Interact/);
       await assertVisibleAndContained(p, `${landscape.width}x${landscape.height}`);
 
-      await p.evaluate(() => {
-        const base = document.querySelector("#joystick");
-        const box = base.getBoundingClientRect();
-        base.dispatchEvent(
-          new PointerEvent("pointerdown", {
-            bubbles: true,
-            pointerId: 41,
-            pointerType: "touch",
-            clientX: box.right - 4,
-            clientY: box.top + box.height / 2,
-          }),
-        );
-      });
+      const stick = await p.locator("#joystick").boundingBox();
+      assert(stick);
+      await p.mouse.move(stick.x + stick.width / 2, stick.y + stick.height / 2);
+      await p.mouse.down();
+      await p.mouse.move(stick.x + stick.width - 4, stick.y + stick.height / 2);
       await p.evaluate(() => window.dispatchEvent(new Event("orientationchange")));
       assert.match(
         await p.locator("#stick-knob").evaluate((el) => el.style.transform),
@@ -91,6 +83,7 @@ async function assertVisibleAndContained(page, label) {
       await p.setViewportSize(landscape);
       await p.evaluate(() => window.dispatchEvent(new Event("orientationchange")));
       await p.waitForTimeout(50);
+      await p.mouse.up();
       await assertVisibleAndContained(p, `${landscape.width}x${landscape.height} return`);
       await p.locator("#leave").click();
       assert(await p.locator("#welcome").isVisible());
