@@ -3,7 +3,7 @@ if('serviceWorker' in navigator){
  navigator.serviceWorker.register('./sw.js',{scope:'./'}).then(reg=>{
   const check=()=>{CACHE_STATUS.controller=!!navigator.serviceWorker.controller; CACHE_STATUS.ready=CACHE_STATUS.controller; const el=document.getElementById('connection'); if(el) el.textContent=CACHE_STATUS.ready?'Offline ready':'Preparing offline';};
   check(); navigator.serviceWorker.addEventListener('controllerchange',check);
-  navigator.serviceWorker.addEventListener('message',e=>{if(e.data?.type==='CACHE_FAILED'){const el=document.getElementById('connection');if(el)el.textContent='Offline setup failed';}});
+  navigator.serviceWorker.addEventListener('message',e=>{if(e.data?.type==='CACHE_FAILED'){const el=document.getElementById('connection');if(el)el.textContent='Offline setup failed';} if(e.data?.type==='CACHE_UPDATED'){const el=document.getElementById('connection'); if(el) el.textContent='Update ready · close and reopen';}});
  }).catch(()=>{const el=document.getElementById('connection');if(el)el.textContent='Offline unavailable';});
 }
 import { KitchenGame } from "./game-core.js";
@@ -73,7 +73,9 @@ function send(v) {
   if (runtimeMode === "solo") {
     if (v.type === "move") offlineGame.move(v.x,v.y);
     if (v.type === "interact") offlineGame.interact(v.station);
-    if (v.type === "start") offlineGame.reset();
+    if (v.type === "start") offlineGame.start(v.name || "Chef", v.avatar || 0);
+    if (v.type === "stop") offlineGame.stop();
+    if (v.type === "replay") offlineGame.start(v.name || "Chef", v.avatar || 0);
     return;
   }
   if (!multiplayer) return;
@@ -200,6 +202,15 @@ $("motion") && ($("motion").onclick = () => {
 $("solo")?.addEventListener("click", () => { runtimeMode="solo"; send({ type: "start", solo: true, name: $("name")?.value, avatar: chosenAvatar() }); });
 $("start")?.addEventListener("click", () => send({ type: "start" }));
 $("replay")?.addEventListener("click", () => send({ type: "replay" }));
+
+$("leave")?.addEventListener("click", () => {
+  stop();
+  runtimeMode="solo";
+  multiplayer?.leave?.();
+  send({ type: "stop" });
+  state = offlineGame.snapshot();
+  renderUI();
+});
 
 
 function nearest() {
@@ -365,13 +376,14 @@ function renderOrders() {
 
 function renderUI() {
   document.body.classList.toggle("game-active", state?.phase === "playing");
-  $("welcome").hidden = true;
-  $("game").hidden = false;
+  const idle = !state || state.phase === "idle";
+  $("welcome").hidden = !idle;
+  $("game").hidden = idle;
   $("room") && ($("room").textContent = "SOLO");
   $("roomcode-large") && ($("roomcode-large").textContent = "SOLO");
-  $("mode").textContent = "SOLO PRACTICE · 1 CHEF";
+  $("mode").textContent = runtimeMode === "solo" ? "SOLO PRACTICE · 1 CHEF" : runtimeMode.toUpperCase();
 
-  $("lobby") && ($("lobby").hidden = true);
+  $("lobby") && ($("lobby").hidden = runtimeMode === "solo" || idle);
   $("play").hidden = state.phase !== "playing";
   $("results").hidden = state.phase !== "results";
 
@@ -388,7 +400,7 @@ function renderUI() {
   $("start") && ($("start").disabled = false);
   $("hosthint") && ($("hosthint").textContent = "Solo kitchen ready.");
 
-  $("replay") && ($("replay").disabled = false);
+  $("replay") && ($("replay").disabled = state.phase !== "results");
   $("totals").textContent = `${state.score} points · ${state.served} served · ${state.missed} missed`;
 
   const resultText = resultsCopy(state.score, state.served);
