@@ -43,34 +43,22 @@ const { launchBrowser } = require('./browser-launch.cjs');
           const timer = setInterval(paint, 60);
           const streams = [];
           const stream = () => {
-            // Each getUserMedia call represents a fresh camera source. WebKit
-            // may reject recapturing a canvas whose previous track was stopped.
+            // Each acquisition owns a fresh source and tracks, like a new camera stream.
             const canvas = document.createElement('canvas');
             canvas.width = feed.width; canvas.height = feed.height;
             canvas.getContext('2d').drawImage(feed, 0, 0);
             cameraFeeds.push(canvas);
             const s = canvas.captureStream(15); streams.push(s); return s;
           };
-          if (name === 'rapid-restart') {
-            const control = document.createElement('canvas');
-            const first = control.captureStream(15);
-            first.getTracks().forEach(t => t.stop());
-            try {
-              const second = control.captureStream(15);
-              second.getTracks().forEach(t => t.stop());
-              console.log('Fixture control: recapturing a stopped canvas succeeded');
-            } catch (error) {
-              console.log(`Fixture control: recapturing a stopped canvas failed: ${error.name}: ${error.message}`);
-            }
-          }
           let release;
           let requested = false;
           let constraints;
-          Object.defineProperty(navigator.mediaDevices, 'getUserMedia', { configurable: true, value: async c => {
+          const acquire = async c => {
             constraints = c; requested = true;
             if (name === 'late-permission') await new Promise(r => release = r);
             return stream();
-          }});
+          };
+          Object.defineProperty(navigator.mediaDevices, 'getUserMedia', { configurable: true, value: acquire });
           if (name === 'frame-callback-stall') {
             const original = video.requestVideoFrameCallback?.bind(video);
             let calls = 0;
@@ -104,8 +92,12 @@ const { launchBrowser } = require('./browser-launch.cjs');
           await until(() => seen.includes(texts[0]));
           const first = seen.includes(texts[0]);
           if (name === 'rapid-restart') {
+            console.log(`Fixture control: acquisition override retained after decode = ${navigator.mediaDevices.getUserMedia === acquire}`);
+            // Keep the injected boundary on Navigator itself: a recreated
+            // MediaDevices JS wrapper must not route a retry to real hardware.
+            Object.defineProperty(navigator, 'mediaDevices', { configurable: true, value: { getUserMedia: acquire } });
             scanner.stop();
-            await scanner.start();
+            await scanner.start().catch(error => { throw Error(`restart failed: ${error.name}: ${error.message}; acquired streams=${streams.length}`); });
             await sleep(450);
           }
           if (name === 'decoder-rejection' || name === 'decoder-timeout') {
@@ -123,12 +115,13 @@ const { launchBrowser } = require('./browser-launch.cjs');
           const count = seen.length;
           await sleep(300);
           clearInterval(timer);
-          return { first, second, active, preview, quiet: count === seen.length, constraints,
+          return { acquisitions: streams.length, first, second, active, preview, quiet: count === seen.length, constraints,
             ended: streams.every(s => s.getTracks().every(t => t.readyState === 'ended')) };
         }, name);
         if (name === 'late-permission') assert.deepEqual(result, { ended: true, detached: true, hidden: true });
         else {
           assert(result.first && result.second && result.active && result.preview && result.quiet && result.ended, JSON.stringify(result));
+          assert.equal(result.acquisitions, name === 'rapid-restart' ? 2 : 1);
           assert.equal(result.constraints.audio, false);
           assert(result.constraints.video.facingMode);
         }
@@ -154,13 +147,13 @@ const { launchBrowser } = require('./browser-launch.cjs');
           };
           paint(1);
           const streams = [];
-          Object.defineProperty(navigator.mediaDevices, 'getUserMedia', { value: async () => {
+          Object.defineProperty(navigator, 'mediaDevices', { configurable: true, value: { getUserMedia: async () => {
             const feed = document.createElement('canvas');
             feed.width = canvas.width; feed.height = canvas.height;
             feed.getContext('2d').drawImage(canvas, 0, 0);
             cameraFeeds.push(feed);
             const stream = feed.captureStream(15); streams.push(stream); return stream;
-          }});
+          }}});
           let frame = 1;
           const timer = setInterval(() => paint(frame), 100);
           window.cameraProgressTest = { streams, timer, next() { frame = 2; paint(frame); } };
@@ -175,7 +168,7 @@ const { launchBrowser } = require('./browser-launch.cjs');
         await page.locator('#mp-cancel').click();
         assert(await page.evaluate(() => {
           clearInterval(cameraProgressTest.timer);
-          return cameraProgressTest.streams.every(s => s.getTracks().every(t => t.readyState === 'ended'));
+          return cameraProgressTest.streams.length === 2 && cameraProgressTest.streams.every(s => s.getTracks().every(t => t.readyState === 'ended'));
         }));
         console.log('PASS camera progress-retry: duplicate frames show guidance; restart keeps collected frames; cancel ends tracks');
       } catch (error) { failures++; console.error(`FAIL camera progress-retry: ${error.message}`); }
