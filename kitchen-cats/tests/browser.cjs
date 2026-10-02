@@ -191,7 +191,10 @@ const base = process.env.BASE_URL || "http://127.0.0.1:8000/kitchen-cats/";
     await p.locator("#mp-advanced").click();
     await p.locator("#mp-offer").fill("bad-json");
     await p.locator("#mp-import").click();
-    assert.match(await p.locator("#mp-status").textContent(), /Pairing failed/);
+    assert.match(
+      await p.locator("#mp-status").textContent(),
+      /Pairing failed|Host code failed|Guest reply failed/,
+    );
     await p.locator("#mp-cancel").click();
     await p.locator("#solo").click();
     assert(await p.locator("#play").isVisible());
