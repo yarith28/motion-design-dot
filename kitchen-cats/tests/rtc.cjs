@@ -20,7 +20,17 @@ async function transferQr(from, to, complete) {
     }
     await from.waitForTimeout(120);
   }
-  throw Error(`QR transfer timed out after ${seen.size} frames`);
+  const [sourceProgress, targetStatus, targetScanStatus, targetFrameProgress] = await Promise.all([
+    from.locator("#mp-qr-progress").textContent(),
+    to.locator("#mp-status").textContent(),
+    to.locator("#mp-scan-status").textContent(),
+    to.locator("#mp-qr-progress").textContent(),
+  ]);
+  throw Error(
+    `QR transfer timed out after ${seen.size} frames; ` +
+      `source=${JSON.stringify(sourceProgress)}, status=${JSON.stringify(targetStatus)}, ` +
+      `scan=${JSON.stringify(targetScanStatus)}, targetProgress=${JSON.stringify(targetFrameProgress)}`,
+  );
 }
 (async () => {
   const b = await launchBrowser();

@@ -221,6 +221,53 @@ const base = process.env.BASE_URL || "http://127.0.0.1:8000/kitchen-cats/";
     assert.deepEqual(evidence.cleanup, { stopped: 1, destroyed: 1, tracks: 1 });
     assert.deepEqual(errors, []);
 
+    const screenshotFrame = await p.evaluate(async () => {
+      const qr = await import("./qr-pairing.js");
+      const frame = qr.createQrFrames(
+        JSON.stringify({
+          version: 1,
+          peerId: "peer-screenshot-1234",
+          sessionId: "session-screenshot-5678",
+          description: {
+            type: "answer",
+            sdp: [
+              "v=0",
+              "o=- 3 4 IN IP4 127.0.0.1",
+              "s=-",
+              "t=0 0",
+              "m=application 9 UDP/DTLS/SCTP webrtc-datachannel",
+              ...Array.from(
+                { length: 16 },
+                (_, i) =>
+                  `a=candidate:${i + 1} 1 udp 2122260223 192.168.1.${40 + i} ${6000 + i} typ host generation 0 ufrag xyz${i} network-cost 999`,
+              ),
+              "a=ice-ufrag:xyz",
+              "a=ice-pwd:zyxwvutsrqponmlkjihgfedcba54321",
+            ].join("\\r\\n"),
+          },
+        }),
+        "a",
+      )[0];
+      const canvas = document.createElement("canvas");
+      canvas.id = "qr-screenshot-canvas";
+      document.body.append(canvas);
+      qr.drawQr(canvas, frame);
+      return frame;
+    });
+    const screenshot = await p.locator("#qr-screenshot-canvas").screenshot();
+    const screenshotEvidence = await p.evaluate(
+      async ({ frame, bytes }) => {
+        const qr = await import("./qr-pairing.js");
+        const scanner = new qr.QrCameraScanner(document.createElement("video"), () => {});
+        const text = await scanner.scanImage(
+          new File([new Uint8Array(bytes)], "rendered-qr-screenshot.png", { type: "image/png" }),
+        );
+        return { match: text === frame, decodedLength: text.length, expectedLength: frame.length };
+      },
+      { frame: screenshotFrame, bytes: [...screenshot] },
+    );
+    assert(screenshotEvidence.match, `rendered canvas screenshot did not roundtrip: ${JSON.stringify(screenshotEvidence)}`);
+
     await p.locator("#mp-join").click();
     assert(await p.locator("#mp-flow").isVisible());
     assert.match(await p.locator("#mp-step").innerText(), /Guest · 1 of 2/);
