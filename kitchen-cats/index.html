@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,viewport-fit=cover"
+    />
+    <title>Kitchen Cats · A little chaos. A lot of soup.</title>
+    <link rel="stylesheet" href="./style.css" />
+  <link rel="manifest" href="./manifest.json"></head>
+  <body>
+    <header>
+      <a class="brand" href="/">Kitchen<span>Cats</span><i>✦</i></a>
+      <div class="tag">LOCAL SOUP CLUB <b>01</b></div>
+      <span id="connection">Connecting…</span>
+    </header>
+    <main>
+      <section id="welcome">
+        <div class="intro card">
+          <span class="eyebrow">OFFLINE SOLO KITCHEN FOR PHONES</span>
+          <h1>Good soup.<br />Better <em>company.</em></h1>
+          <p>
+            Pick a cat chef and run a complete offline cooking shift directly on your phone.
+          </p>
+          <div class="badges">
+            <span>Offline after setup</span>
+            <span>2–4 cat chefs</span>
+            <span>Solo practice too</span>
+          </div>
+          <div class="entry">
+            <label for="name">YOUR CHEF NAME</label>
+            <input
+              id="name"
+              maxlength="16"
+              value="Miso"
+              autocomplete="nickname"
+            />
+
+            <div class="pickerblock">
+              <div class="pickerlabel-row">
+                <label>CHOOSE YOUR CAT CHEF</label>
+                <span id="chosen-chef-name">Cream whisker</span>
+              </div>
+              <div id="avatar-picker" class="avatar-picker" role="radiogroup"></div>
+            </div>
+
+            
+            <button id="solo" class="textbutton">
+              Just me? Start solo practice →
+            </button>
+          </div>
+          <div class="localnote">
+            <strong>Offline ready</strong>
+            <p>
+              Everything runs locally in your browser after assets are available.
+            </p>
+          </div>
+        </div>
+
+        <figure class="poster card">
+          <div class="poster-top">
+            TODAY'S SPECIAL <span>♡ made together</span>
+          </div>
+          <img
+            id="hero-art"
+            src="/assets/title-illustration.png"
+            alt="Kitchen Cats title illustration with four cat chefs cooking together"
+          />
+          <figcaption class="poster-bottom">
+            <strong>Too many cooks?<br />Never too many cats.</strong>
+            <span>CREAM · PEACH · MINT<br />LOCAL EDITION</span>
+          </figcaption>
+        </figure>
+      </section>
+
+
+        <section id="experimental-mp" class="panel card" hidden>
+          <span class="eyebrow">EXPERIMENTAL LOCAL MULTIPLAYER</span>
+          <p>Manual WebRTC pairing. Same Wi‑Fi recommended. No room discovery.</p>
+          <button id="mp-host">Host game</button>
+          <button id="mp-join">Join game</button>
+          <textarea id="mp-offer" placeholder="Offer / answer text"></textarea>
+          <textarea id="mp-answer" placeholder="Answer text"></textarea>
+          <button id="mp-copy">Copy pairing text</button>
+          <button id="mp-import">Import pairing</button>
+          <button id="mp-cancel">Cancel</button>
+          <div id="mp-status">Idle</div>
+          <div id="mp-lobby"></div>
+        </section>
+
+      <section id="game" hidden>
+        <div class="gamebar card slim">
+          <div>
+            <span class="eyebrow" id="mode">YOUR KITCHEN</span>
+            <h2 id="room"></h2>
+          </div>
+          <div class="stats">
+            <span>SHIFT <b id="clock">2:00</b></span>
+            <span>SCORE <b id="score">0</b></span>
+            <button id="mute" aria-label="Toggle sound">🔊 Sound</button>
+            <button id="motion" aria-label="Toggle motion">✨ Motion</button>
+            <button id="leave">Leave</button>
+          </div>
+        </div>
+
+        <div id="lobby" class="panel card" hidden>
+          <div class="lobby-shell">
+            <div class="lobby-copy">
+              <span class="eyebrow">WELCOME TO THE KITCHEN</span>
+              <h2>Aprons on. Friends in.</h2>
+              <p>
+                Share the room code above. One computer runs the server; phones
+                join on the same local Wi-Fi. The host can start when everyone is ready.
+              </p>
+              <div class="roomchip">
+                <span>Room code</span>
+                <strong id="roomcode-large">------</strong>
+              </div>
+              <div id="crew" class="crew-grid"></div>
+              <div class="lobby-actions">
+                <button class="primary" id="start">Start the shift →</button>
+                <p id="hosthint"></p>
+              </div>
+            </div>
+            <aside class="lobby-aside card soft">
+              <img
+                src="/assets/title-illustration.png"
+                alt="Kitchen Cats lobby illustration"
+                class="lobby-hero"
+              />
+              <div class="aside-note">
+                <strong>Quick host reminder</strong>
+                <p>
+                  Computer host: <b>http://localhost:3000</b><br />
+                  Phone players: <b>http://HOST_LAN_IP:3000</b>
+                </p>
+              </div>
+            </aside>
+          </div>
+        </div>
+
+        <div id="play" class="play-shell" hidden>
+          <div id="orders" aria-live="polite"></div>
+          <div class="game-stage">
+            <div class="control-rail movement-rail">
+              <strong class="rail-title">MOVE</strong>
+              <div id="joystick" class="joystick" aria-label="Analog movement stick"><div id="stick-knob"></div></div>
+            </div>
+            <div class="kitchen-wrap card slim">
+              <canvas
+                id="kitchen"
+                width="800"
+                height="620"
+                aria-label="Shared kitchen. Move with arrows or WASD. Press E to interact."
+                tabindex="0"
+              ></canvas>
+              <div id="notice" role="status"></div>
+            </div>
+            <div class="control-rail action-rail">
+              <strong class="rail-title">ACT</strong>
+              <button id="action" class="primary" aria-label="Interact">E · Interact</button>
+              <button id="action-secondary" aria-label="Secondary action">Action</button>
+              <span id="holding">PAWS · Empty paws</span>
+            </div>
+          </div>
+          <div class="actionbar card slim">
+            <span id="holding-legacy" hidden></span>
+            <span class="keyhint">WASD / arrows to move · tap or press E to act</span>
+          </div>
+        </div>
+
+        <div id="results" class="panel card" hidden>
+          <span class="eyebrow">SHIFT COMPLETE</span>
+          <h2 id="results-title">Pawsitively delicious.</h2>
+          <div id="totals"></div>
+          <p id="results-note"></p>
+          <div class="results-art-row" aria-hidden="true">
+            <img src="/assets/cat-cream.png" alt="" />
+            <img src="/assets/cat-tabby.png" alt="" />
+            <img src="/assets/cat-gray.png" alt="" />
+            <img src="/assets/cat-tuxedo.png" alt="" />
+          </div>
+          <div class="results-actions">
+            <button id="replay" class="primary">Another shift →</button>
+            <button id="back" hidden>Return to lobby</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="how card slim">
+        <div>
+          <span>01 / PICK</span>
+          <p>Grab tomatoes or carrots from the top counter.</p>
+        </div>
+        <div>
+          <span>02 / PREP</span>
+          <p>Chop at the board. Anyone can collect the finished prep.</p>
+        </div>
+        <div>
+          <span>03 / SIMMER</span>
+          <p>Drop chopped veg in the soup pot and wait for it to finish.</p>
+        </div>
+        <div>
+          <span>04 / SERVE</span>
+          <p>Bring matching soup to the service window before the order expires.</p>
+        </div>
+      </section>
+      <p class="teamtip">
+        CHEF’S TIP · Use the team counter to hand ingredients to a friend.
+        The board and pot are shared, so teamwork is always faster.
+      </p>
+    </main>
+    <div id="toast" role="alert"></div>
+    <footer>
+      <span>Kitchen Cats</span>
+      <span>A little chaos. A lot of soup.</span>
+      <span>LOCAL EDITION / 01</span>
+    </footer>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
