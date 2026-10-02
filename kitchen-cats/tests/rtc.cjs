@@ -7,6 +7,10 @@ async function transferQr(from, to, complete) {
   const seen = new Set();
   const lastAttempt = new Map();
   const deadline = Date.now() + 90000;
+  await from.locator("#mp-qr-view").waitFor({
+    state: "visible",
+    timeout: Math.max(1000, deadline - Date.now()),
+  });
   while (Date.now() < deadline) {
     const image = await from.locator("#mp-qr").screenshot();
     const key = crypto.createHash("sha256").update(image).digest("hex");

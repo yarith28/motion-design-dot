@@ -1,4 +1,4 @@
-const VERSION = "kitchen-cats-20261002-r20-rtc-transfer";
+const VERSION = "kitchen-cats-20261002-r21-rtc-visible-source";
 const PREFIX = "kitchen-cats-";
 const CACHE = VERSION + "-precache";
 const ASSETS = [
