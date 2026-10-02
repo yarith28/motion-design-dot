@@ -50,6 +50,12 @@ const { launchBrowser } = require("./browser-launch.cjs");
   const base = `http://127.0.0.1:${server.address().port}/kitchen-cats/`;
   const b = await launchBrowser();
   try {
+    const coldOpen = async (context, page) => {
+      await page.close();
+      const next = await context.newPage();
+      await next.goto(base);
+      return next;
+    };
     // Interrupt a brand-new install while one precache response is in flight.
     // Closing the page is the closest portable browser-level approximation to
     // an interrupted first download; the follow-up install must still be
@@ -77,8 +83,8 @@ const { launchBrowser } = require("./browser-launch.cjs");
       () => document.querySelector("#connection").textContent === "Offline ready",
     );
     await recovered.setOffline(true);
-    await recoveredPage.reload();
-    assert(await recoveredPage.locator("#solo").isVisible());
+    const recoveredOfflinePage = await coldOpen(recovered, recoveredPage);
+    assert(await recoveredOfflinePage.locator("#solo").isVisible());
     await recovered.close();
 
     const c = await b.newContext();
@@ -108,12 +114,10 @@ const { launchBrowser } = require("./browser-launch.cjs");
       false,
     );
     await c.setOffline(true);
-    await p.reload();
+    p = await coldOpen(c, p);
     await p.locator("#solo").click();
     assert(await p.locator("#play").isVisible());
-    await p.close();
-    p = await c.newPage();
-    await p.goto(base);
+    p = await coldOpen(c, p);
     assert(await p.locator("#solo").isVisible(), "offline cold reopen lost the app shell");
     await c.setOffline(false);
     await p.locator("#solo").click();
@@ -150,7 +154,7 @@ const { launchBrowser } = require("./browser-launch.cjs");
       "kitchen-cats-test-update-precache",
     ]);
     await c.setOffline(true);
-    await p.reload();
+    p = await coldOpen(c, p);
     assert(await p.locator("#solo").isVisible());
     await c.setOffline(false);
     fs.unlinkSync(path.join(root, "kitchen-cats/assets/icon-512.png"));
@@ -171,7 +175,7 @@ const { launchBrowser } = require("./browser-launch.cjs");
       keys.sort(),
     );
     await c.setOffline(true);
-    await p.reload();
+    p = await coldOpen(c, p);
     assert(await p.locator("#solo").isVisible());
     await c.close();
     const bad = await b.newContext();
