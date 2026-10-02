@@ -1,4 +1,4 @@
-const VERSION = "kitchen-cats-20261002-r15-qr-density";
+const VERSION = "kitchen-cats-20261002-r16-qr-import";
 const PREFIX = "kitchen-cats-";
 const CACHE = VERSION + "-precache";
 const ASSETS = [
@@ -12,6 +12,7 @@ const ASSETS = [
   "./webrtc-transport.js",
   "./qr-pairing.js",
   "./vendor/qrcode-generator.js",
+  "./vendor/jsqr.js",
   "./vendor/qr-scanner.min.js",
   "./vendor/qr-scanner-worker.min.js",
   "./vendor/THIRD-PARTY-LICENSES.txt",

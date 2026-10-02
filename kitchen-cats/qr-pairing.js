@@ -278,6 +278,44 @@ export class QrCameraScanner {
   }
   async scanImage(file) {
     if (!file) throw Error("Choose a QR image first.");
+    // jsQR is used for imported images because it consumes the decoded pixel
+    // buffer directly and behaves consistently in Chromium, WebKit, and
+    // Safari-like image paths. The live camera keeps qr-scanner's tested
+    // worker/permission lifecycle below.
+    if (typeof globalThis.jsQR === "function") {
+      const url = URL.createObjectURL(file);
+      try {
+        const image = new Image();
+        await new Promise((resolve, reject) => {
+          image.onload = resolve;
+          image.onerror = () => reject(Error("The QR image could not be read."));
+          image.src = url;
+        });
+        if (!image.naturalWidth || !image.naturalHeight)
+          throw Error("The QR image could not be read.");
+        const pixels = image.naturalWidth * image.naturalHeight;
+        if (pixels > 16_000_000)
+          throw Error("That QR image is too large.");
+        const maxSide = 1200;
+        const scale = Math.min(1, maxSide / Math.max(image.naturalWidth, image.naturalHeight));
+        const canvas = document.createElement("canvas");
+        canvas.width = Math.max(1, Math.round(image.naturalWidth * scale));
+        canvas.height = Math.max(1, Math.round(image.naturalHeight * scale));
+        const context = canvas.getContext("2d", { willReadFrequently: true });
+        context.imageSmoothingEnabled = false;
+        context.drawImage(image, 0, 0, canvas.width, canvas.height);
+        const result = globalThis.jsQR(
+          context.getImageData(0, 0, canvas.width, canvas.height).data,
+          canvas.width,
+          canvas.height,
+          { inversionAttempts: "attemptBoth" },
+        );
+        if (!result?.data) throw Error("No QR code found.");
+        return result.data;
+      } finally {
+        URL.revokeObjectURL(url);
+      }
+    }
     const result = await QrScanner.scanImage(file, {
       returnDetailedScanResult: true,
       alsoTryWithoutScanRegion: true,
