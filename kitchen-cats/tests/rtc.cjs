@@ -115,7 +115,7 @@ async function transferQr(from, to, complete) {
       const answerFrames = await transferQr(
         g,
         h,
-        async () => (await h.locator("#mp-status").innerText()).includes("Connecting"),
+        async () => /Connecting|Connected/.test(await h.locator("#mp-status").innerText()),
       );
       assert(offerFrames >= 1);
       assert(answerFrames >= 1);
