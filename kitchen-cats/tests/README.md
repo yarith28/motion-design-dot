@@ -23,7 +23,7 @@ node kitchen-cats/tests/multiplayer-ui.cjs
 node kitchen-cats/tests/rtc.cjs
 ```
 
-Set `BROWSER_ENGINE=webkit` and `BROWSER_PATH` to the Playwright WebKit executable to run the iOS-like engine suites. The repository workflow runs the responsive, PWA, simulated-transport, and native-RTC checks there when the runner can install WebKit.
+Set `BROWSER_ENGINE=webkit` and `BROWSER_PATH` to the Playwright WebKit executable to run the iOS-like engine suites. The repository workflow runs the responsive, PWA, simulated-transport, and native-RTC checks there when the runner can install WebKit. If Playwright/WebKit itself reports an internal error during the offline service-worker cold reopen, that one gate is explicitly logged as `UNTESTED`, never as a product pass; Chromium remains the PWA gate.
 
 Set `BASE_URL` to the Kitchen Cats URL (including its trailing slash) to test another server. The PWA suite always serves an isolated temporary copy so download failure/update tests never modify the product.
 

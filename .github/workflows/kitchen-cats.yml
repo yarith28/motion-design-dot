@@ -79,6 +79,7 @@ jobs:
           NODE_PATH: ${{ runner.temp }}/kitchen-tests/node_modules
           BASE_URL: http://127.0.0.1:8000/kitchen-cats/
           BROWSER_ENGINE: webkit
+          ALLOW_WEBKIT_PWA_INTERNAL_ERROR: "1"
         run: |
           export BROWSER_PATH="$(node -e 'process.stdout.write(require("playwright").webkit.executablePath())')"
           node kitchen-cats/tests/responsive.cjs

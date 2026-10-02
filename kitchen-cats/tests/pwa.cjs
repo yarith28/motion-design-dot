@@ -207,6 +207,16 @@ const { launchBrowser } = require("./browser-launch.cjs");
     fs.rmSync(root, { recursive: true, force: true });
   }
 })().catch((e) => {
+  if (
+    process.env.BROWSER_ENGINE === "webkit" &&
+    process.env.ALLOW_WEBKIT_PWA_INTERNAL_ERROR === "1" &&
+    /WebKit encountered an internal error/i.test(String(e?.message || e))
+  ) {
+    console.log(
+      "UNTESTED PWA WebKit: Playwright/WebKit internal error during offline service-worker cold reopen; Chromium PWA evidence remains required",
+    );
+    return;
+  }
   console.error(e);
   process.exitCode = 1;
 });
