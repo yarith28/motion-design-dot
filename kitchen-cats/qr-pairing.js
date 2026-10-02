@@ -225,7 +225,12 @@ export function drawQr(canvas, text, size = 280) {
   for (let row = 0; row < modules; row++) {
     for (let col = 0; col < modules; col++) {
       if (qr.isDark(row, col))
-        ctx.fillRect((col + quiet) * cell, (row + quiet) * cell, Math.ceil(cell), Math.ceil(cell));
+        ctx.fillRect(
+          Math.round((col + quiet) * cell),
+          Math.round((row + quiet) * cell),
+          Math.round((col + quiet + 1) * cell) - Math.round((col + quiet) * cell),
+          Math.round((row + quiet + 1) * cell) - Math.round((row + quiet) * cell),
+        );
     }
   }
   canvas.setAttribute("aria-label", `Kitchen Cats pairing code, ${text.startsWith(`${QR_PREFIX}|o|`) ? "host offer" : "guest reply"}`);
