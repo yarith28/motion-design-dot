@@ -12,7 +12,11 @@ python3 -m http.server 8000 --bind 127.0.0.1
 In another terminal, from the repository root:
 
 ```sh
+cd kitchen-cats
+npm test
+cd ..
 node kitchen-cats/tests/core.mjs
+node kitchen-cats/tests/session-security.mjs
 node kitchen-cats/tests/browser.cjs
 node kitchen-cats/tests/pwa.cjs
 node kitchen-cats/tests/multiplayer-ui.cjs
@@ -22,6 +26,7 @@ node kitchen-cats/tests/rtc.cjs
 Set `BASE_URL` to the Kitchen Cats URL (including its trailing slash) to test another server. The PWA suite always serves an isolated temporary copy so download failure/update tests never modify the product.
 
 - `core.mjs`: cooking, timers, scoring, movement, reset, and session contracts. Its paired in-memory transport is not WebRTC evidence.
+- `session-security.mjs`: identity binding, malformed input/snapshot rejection, disconnect, and fresh-peer rejoin.
 - `browser.cjs`: real UI actions through a complete solo recipe, results/replay, repeated leave/restart, landscape bounds, and simultaneous touch contacts. Time is accelerated with Playwright's clock; snapshots are observed without changing gameplay state.
 - `pwa.cjs`: initial caching, offline reopening, update activation, failed update recovery, failed first download, and cache/scope isolation.
 - `multiplayer-ui.cjs`: two pages using a simulated transport, including guest cooking, score, replay, leave, and re-pairing. This is integration coverage, not proof of native transport.
@@ -29,3 +34,5 @@ Set `BASE_URL` to the Kitchen Cats URL (including its trailing slash) to test an
 
 Physical iOS/Android installation, offline cold launch, and two phones on a Wi-Fi network without internet remain required device validation. Keep the host foregrounded: backgrounding a playing host closes the session, and guests can return to solo or pair again.
 - `cream-animation.test.mjs`: Cream atlas idle/walk/work/celebrate/reduced-motion routing, 200ms movement hold, and presentation reset.
+
+The repository workflow `.github/workflows/kitchen-cats.yml` installs Chromium on a clean runner and runs the executable browser suites. A local run without a browser binary is an environment failure, not a passing browser result.

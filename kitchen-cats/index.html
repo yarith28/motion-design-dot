@@ -13,8 +13,8 @@
   <body>
     <header>
       <a class="brand" href="./">Kitchen<span>Cats</span><i>✦</i></a>
-      <div class="tag">LOCAL SOUP CLUB <b>02</b><small>r12</small></div>
-      <span id="connection">Connecting…</span>
+      <div class="tag">LOCAL SOUP CLUB <b>02</b><small>r13</small></div>
+      <span id="connection" role="status" aria-live="polite">Connecting…</span>
     </header>
     <main>
       <section id="welcome">
@@ -48,6 +48,7 @@
                 id="avatar-picker"
                 class="avatar-picker"
                 role="radiogroup"
+                aria-label="Choose your cat chef"
               ></div>
             </div>
 
@@ -58,7 +59,7 @@
 
           <div class="localnote">
             <strong>Download for offline play</strong
-            ><span id="build-version">Build kitchen-cats-20261002-r12</span>
+            ><span id="build-version">Build kitchen-cats-20261002-r13</span>
             <p>
               Wait for “Offline ready” above before disconnecting. On your
               phone, add this page to your Home Screen for easy reopening.
@@ -99,7 +100,7 @@
         <button id="mp-copy">Copy pairing text</button>
         <button id="mp-import">Import pairing</button>
         <button id="mp-cancel">Cancel</button>
-        <div id="mp-status">Idle</div>
+        <div id="mp-status" role="status" aria-live="polite">Idle</div>
         <div id="mp-lobby"></div>
       </section>
       <section id="game" hidden>
@@ -129,6 +130,7 @@
               <div
                 id="joystick"
                 class="joystick"
+                role="group"
                 aria-label="Analog movement stick"
               >
                 <div id="stick-knob"></div>
@@ -150,7 +152,7 @@
                 E · Interact
               </button>
 
-              <span id="holding">PAWS · Empty paws</span>
+              <span id="holding" role="status" aria-live="polite">PAWS · Empty paws</span>
             </div>
           </div>
           <div class="actionbar card slim">

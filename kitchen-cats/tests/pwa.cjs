@@ -60,6 +60,10 @@ const { chromium } = require("playwright");
       expectedPrecacheCount,
     );
     await p.evaluate(() => caches.open("arcade-sentinel"));
+    const registrationScope = await p.evaluate(
+      async () => (await navigator.serviceWorker.getRegistration()).scope,
+    );
+    assert.equal(registrationScope, base);
     assert.equal(
       await p.evaluate(
         async () =>

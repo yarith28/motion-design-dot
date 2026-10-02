@@ -6,10 +6,28 @@ export class WebRTCTransport {
     this.onStatus = () => {};
   }
   createPeer(peerId, sessionId, initiator = false) {
+    if (typeof RTCPeerConnection !== "function")
+      throw Error("WebRTC is unavailable in this browser.");
+    if (
+      typeof peerId !== "string" ||
+      peerId.length === 0 ||
+      peerId.length > 80 ||
+      typeof sessionId !== "string" ||
+      sessionId.length === 0 ||
+      sessionId.length > 80
+    )
+      throw Error("Invalid pairing identity. Create a fresh offer.");
     if (this.peers.has(peerId))
       throw Error("This pairing is already in use. Create a new offer.");
     const pc = new RTCPeerConnection({ iceServers: [] });
-    const peer = { peerId, sessionId, pc, dc: null, cancelIce: null };
+    const peer = {
+      peerId,
+      sessionId,
+      pc,
+      dc: null,
+      cancelIce: null,
+      disconnectTimer: null,
+    };
     this.peers.set(peerId, peer);
     pc.ondatachannel = (e) => {
       if (peer.dc) {
@@ -19,8 +37,17 @@ export class WebRTCTransport {
       this.bind(peer, e.channel);
     };
     pc.onconnectionstatechange = () => {
-      if (["failed", "disconnected", "closed"].includes(pc.connectionState))
+      if (["failed", "closed"].includes(pc.connectionState)) {
         this.closePeer(peerId);
+      } else if (pc.connectionState === "disconnected") {
+        clearTimeout(peer.disconnectTimer);
+        peer.disconnectTimer = setTimeout(() => {
+          if (pc.connectionState === "disconnected") this.closePeer(peerId);
+        }, 5000);
+      } else {
+        clearTimeout(peer.disconnectTimer);
+        peer.disconnectTimer = null;
+      }
     };
     peer.timer = setTimeout(() => {
       if (peer.dc?.readyState !== "open") this.closePeer(peerId);
@@ -29,6 +56,10 @@ export class WebRTCTransport {
     return peer;
   }
   bind(peer, dc) {
+    if (peer.dc || !dc) {
+      dc?.close();
+      return;
+    }
     peer.dc = dc;
     dc.onmessage = (e) => {
       if (typeof e.data !== "string" || e.data.length > 65536) return;
@@ -51,7 +82,9 @@ export class WebRTCTransport {
       return false;
     }
     try {
-      dc.send(JSON.stringify(msg));
+      const payload = JSON.stringify(msg);
+      if (payload.length > 65536) return false;
+      dc.send(payload);
       return true;
     } catch {
       this.closePeer(peerId);
@@ -63,6 +96,7 @@ export class WebRTCTransport {
     if (!p) return;
     this.peers.delete(peerId);
     clearTimeout(p.timer);
+    clearTimeout(p.disconnectTimer);
     p.cancelIce?.();
     if (p.dc) {
       p.dc.onclose = null;
@@ -124,10 +158,14 @@ export class WebRTCTransport {
       d?.version !== 1 ||
       typeof d.peerId !== "string" ||
       typeof d.sessionId !== "string" ||
+      d.peerId.length === 0 ||
+      d.sessionId.length === 0 ||
       d.peerId.length > 80 ||
       d.sessionId.length > 80 ||
       d.description?.type !== type ||
-      typeof d.description.sdp !== "string"
+      typeof d.description.sdp !== "string" ||
+      d.description.sdp.length > 65536 ||
+      !d.description.sdp.includes("a=candidate:")
     )
       throw Error("Paste a current " + type + " from Kitchen Cats");
     return d;

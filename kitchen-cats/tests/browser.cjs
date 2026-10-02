@@ -7,6 +7,29 @@ const base = process.env.BASE_URL || "http://127.0.0.1:8000/kitchen-cats/";
     args: ["--no-sandbox"],
   });
   try {
+    const storageContext = await b.newContext({
+      viewport: { width: 844, height: 390 },
+      isMobile: true,
+      hasTouch: true,
+    });
+    await storageContext.addInitScript(() => {
+      Object.defineProperty(window, "localStorage", {
+        configurable: true,
+        get() {
+          throw Error("storage blocked by test");
+        },
+      });
+    });
+    const storagePage = await storageContext.newPage();
+    const storageErrors = [];
+    storagePage.on("pageerror", (e) => storageErrors.push(e.message));
+    await storagePage.goto(base);
+    await storagePage.locator("#solo").click();
+    await storagePage.locator("#motion").click();
+    assert.match(await storagePage.locator("#toast").textContent(), /could not be saved/);
+    assert.deepEqual(storageErrors, []);
+    await storageContext.close();
+
     const c = await b.newContext({
       viewport: { width: 844, height: 390 },
       isMobile: true,
@@ -57,6 +80,15 @@ const base = process.env.BASE_URL || "http://127.0.0.1:8000/kitchen-cats/";
     await step(100);
     assert.equal((await state()).phase, "playing");
     assert.equal(await p.locator(".order").count(), 2);
+    await p.keyboard.down("ArrowRight");
+    await step(100);
+    await p.evaluate(() => window.dispatchEvent(new Event("blur")));
+    await step(100);
+    assert.deepEqual((await state()).players[0].input, { x: 0, y: 0 });
+    await p.keyboard.up("ArrowRight");
+    await p.evaluate(() => window.dispatchEvent(new Event("orientationchange")));
+    await step(100);
+    assert.deepEqual((await state()).players[0].input, { x: 0, y: 0 });
     await axis("y", 175);
     await axis("x", 280);
     await action();

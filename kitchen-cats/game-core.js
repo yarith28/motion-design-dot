@@ -9,11 +9,18 @@ export const stations = [
   { id: "bin", label: "Bin", x: 110, y: 540, kind: "bin" },
 ];
 export const SHIFT_MS = 90000;
+export const MAX_PLAYERS = 4;
+export const MAX_NAME_LENGTH = 16;
+const MAX_PLAYER_ID_LENGTH = 80;
 const input = (x, y) => {
   if (!Number.isFinite(x) || !Number.isFinite(y)) return { x: 0, y: 0 };
   const n = Math.max(1, Math.hypot(x, y));
   return { x: x / n, y: y / n };
 };
+const cleanName = (name) =>
+  String(name ?? "Chef").trim().slice(0, MAX_NAME_LENGTH) || "Chef";
+const cleanAvatar = (avatar) =>
+  Number.isInteger(avatar) && avatar >= 0 && avatar < 4 ? avatar : 0;
 const spawn = (i) => ({
   x: 250 + i * 55,
   y: 250,
@@ -57,11 +64,18 @@ export class KitchenGame {
     this.listeners.forEach((f) => f(s));
   }
   addPlayer(id, name = "Chef", avatar = 0) {
-    if (this.players.size >= 4 || this.players.has(id)) return false;
+    if (
+      typeof id !== "string" ||
+      id.length === 0 ||
+      id.length > MAX_PLAYER_ID_LENGTH ||
+      this.players.size >= MAX_PLAYERS ||
+      this.players.has(id)
+    )
+      return false;
     this.players.set(id, {
       id,
-      name: String(name).slice(0, 16) || "Chef",
-      avatar: Number(avatar) || 0,
+      name: cleanName(name),
+      avatar: cleanAvatar(avatar),
       ...spawn(this.players.size),
       connected: true,
     });
@@ -86,8 +100,8 @@ export class KitchenGame {
   start(name, avatar) {
     const p = this.players.get("solo");
     if (p) {
-      if (name !== undefined) p.name = String(name).slice(0, 16) || "Chef";
-      if (avatar !== undefined) p.avatar = avatar;
+      if (name !== undefined) p.name = cleanName(name);
+      if (avatar !== undefined) p.avatar = cleanAvatar(avatar);
     }
     this.resetPlayers();
     this.state = {
@@ -129,13 +143,13 @@ export class KitchenGame {
     });
   }
   move(id, x, y) {
-    if (y === undefined) {
+    if (arguments.length < 3) {
       y = x;
       x = id;
       id = "solo";
     }
     const p = this.getPlayer(id);
-    if (!p) return false;
+    if (!p || !Number.isFinite(x) || !Number.isFinite(y)) return false;
     p.input = input(x, y);
     p.lastInput = this.clock();
     return true;
@@ -149,19 +163,20 @@ export class KitchenGame {
       this.emit();
       return;
     }
+    const elapsed = Number.isFinite(dt) && dt >= 0 ? Math.min(dt, 0.25) : 0.05;
     for (const p of this.players.values()) {
       if (now - (p.lastInput ?? now) > 500) p.input = { x: 0, y: 0 };
       // Small substeps prevent tunnelling during irregular host frames.
-      const steps = Math.max(1, Math.ceil(dt / 0.025));
+      const steps = Math.max(1, Math.ceil(elapsed / 0.025));
       for (let i = 0; i < steps; i++) {
         const x = Math.max(
           40,
-          Math.min(760, p.x + (p.input.x * 190 * dt) / steps),
+          Math.min(760, p.x + (p.input.x * 190 * elapsed) / steps),
         );
         if (!blocked(x, p.y)) p.x = x;
         const y = Math.max(
           175,
-          Math.min(465, p.y + (p.input.y * 190 * dt) / steps),
+          Math.min(465, p.y + (p.input.y * 190 * elapsed) / steps),
         );
         if (!blocked(p.x, y)) p.y = y;
       }

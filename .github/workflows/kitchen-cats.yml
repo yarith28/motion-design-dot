@@ -1,0 +1,57 @@
+name: Verify Kitchen Cats
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "kitchen-cats/**"
+      - ".github/workflows/kitchen-cats.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: kitchen-cats-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  deterministic:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run deterministic core and asset contracts
+        working-directory: kitchen-cats
+        run: |
+          npm test
+          test "$(git hash-object assets/cream-chef-pose-atlas.png)" = "07548268193e3e9abd682ebab6f29a50c6d38aeb"
+
+  browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install test-only browser dependencies
+        run: |
+          npm install --prefix "$RUNNER_TEMP/kitchen-tests" playwright@1.55.0
+          "$RUNNER_TEMP/kitchen-tests/node_modules/.bin/playwright" install chromium
+      - name: Serve Kitchen Cats
+        run: |
+          python3 -m http.server 8000 --bind 127.0.0.1 > "$RUNNER_TEMP/kitchen-server.log" 2>&1 &
+          for attempt in 1 2 3 4 5; do
+            if curl --fail --silent http://127.0.0.1:8000/kitchen-cats/ > /dev/null; then exit 0; fi
+            sleep 1
+          done
+          exit 1
+      - name: Run real browser UI, PWA, simulated integration, and native RTC gates
+        env:
+          NODE_PATH: ${{ runner.temp }}/kitchen-tests/node_modules
+          CHROMIUM_PATH: ${{ runner.temp }}/kitchen-tests/node_modules/playwright-core/.local-browsers/chromium-*/chrome-linux/chrome
+          BASE_URL: http://127.0.0.1:8000/kitchen-cats/
+        run: |
+          export CHROMIUM_PATH="$(node -e 'process.stdout.write(require("playwright").chromium.executablePath())')"
+          node kitchen-cats/tests/browser.cjs
+          node kitchen-cats/tests/pwa.cjs
+          node kitchen-cats/tests/multiplayer-ui.cjs
+          node kitchen-cats/tests/rtc.cjs

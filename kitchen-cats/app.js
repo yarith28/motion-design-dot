@@ -59,24 +59,52 @@ let state,
 const keys = new Set();
 let touchPointers = new Map();
 let joystickPointer = null;
-let muted = localStorage.getItem("kitchen-muted") === "1";
-let reducedMotion = localStorage.getItem("kitchen-reduced-motion") === "1";
-let selectedAvatar = Math.max(
-  0,
-  Math.min(
-    CHEFS.length - 1,
-    Number(localStorage.getItem("kitchen-avatar")) || 0,
-  ),
-);
+let storageUnavailable = false;
+let storageNoticeShown = false;
+const readPreference = (key, fallback = "") => {
+  try {
+    return window.localStorage.getItem(key) ?? fallback;
+  } catch {
+    storageUnavailable = true;
+    return fallback;
+  }
+};
+const writePreference = (key, value) => {
+  try {
+    window.localStorage.setItem(key, value);
+    return true;
+  } catch {
+    storageUnavailable = true;
+    return false;
+  }
+};
+const storedAvatar = Number(readPreference("kitchen-avatar", "0"));
+let muted = readPreference("kitchen-muted") === "1";
+let reducedMotion = readPreference("kitchen-reduced-motion") === "1";
+let selectedAvatar = Number.isInteger(storedAvatar)
+  ? Math.max(0, Math.min(CHEFS.length - 1, storedAvatar))
+  : 0;
 let lastPhase;
 let lastServed = 0;
 
 let lastActionTouch = 0;
+let soloTickLoop = null;
+let inputLoop = null;
+let animationFrame = 0;
+let renderActive = false;
+let clearAnalogStick = () => {};
 // Presentation-only animation clock. Gameplay/session clocks remain untouched.
 const presentation = createPresentationState();
 let audioContext;
 
-function clearPresentationMotion(){ resetPresentation(presentation, state); lastServed = state?.served || 0; }
+const makeId = (prefix) => {
+  if (typeof globalThis.crypto?.randomUUID === "function")
+    return globalThis.crypto.randomUUID();
+  const random = Math.random().toString(36).slice(2);
+  return `${prefix}-${Date.now().toString(36)}-${random}`;
+};
+
+function clearPresentationMotion(){ resetPresentation(presentation, state || {}); lastServed = state?.served || 0; }
 
 function send(v) {
   if (runtimeMode === "solo") {
@@ -101,6 +129,42 @@ function send(v) {
   }
 }
 
+function updateSoloTickLoop() {
+  const shouldTick = runtimeMode === "solo" && state?.phase === "playing";
+  if (shouldTick && !soloTickLoop) {
+    soloTickLoop = setInterval(() => offlineGame.tick(), 50);
+  } else if (!shouldTick && soloTickLoop) {
+    clearInterval(soloTickLoop);
+    soloTickLoop = null;
+  }
+}
+
+function sendCurrentInput() {
+  if (state?.phase !== "playing") return;
+  const d = currentTouchDirection();
+  send({
+    type: "move",
+    x:
+      d.x +
+      Number(keys.has("d") || keys.has("arrowright")) -
+      Number(keys.has("a") || keys.has("arrowleft")),
+    y:
+      d.y +
+      Number(keys.has("s") || keys.has("arrowdown")) -
+      Number(keys.has("w") || keys.has("arrowup")),
+  });
+}
+
+function updateInputLoop() {
+  const shouldSend = state?.phase === "playing";
+  if (shouldSend && !inputLoop) {
+    inputLoop = setInterval(sendCurrentInput, 60);
+  } else if (!shouldSend && inputLoop) {
+    clearInterval(inputLoop);
+    inputLoop = null;
+  }
+}
+
 function toast(message) {
   $("toast").textContent = message;
   $("toast").style.display = "block";
@@ -108,10 +172,25 @@ function toast(message) {
   toast.timer = setTimeout(() => ($("toast").style.display = "none"), 3500);
 }
 
+creamAtlas.addEventListener("error", () => {
+  if (state?.phase === "playing")
+    toast("Cream's pose atlas failed to load; showing a fallback chef.");
+});
+for (const image of chefImages)
+  image.addEventListener("error", () => {
+    if (state?.phase === "playing") toast("A chef portrait failed to load.");
+  });
+
 function persistPrefs() {
-  localStorage.setItem("kitchen-avatar", String(selectedAvatar));
-  localStorage.setItem("kitchen-muted", muted ? "1" : "0");
-  localStorage.setItem("kitchen-reduced-motion", reducedMotion ? "1" : "0");
+  const saved = [
+    writePreference("kitchen-avatar", String(selectedAvatar)),
+    writePreference("kitchen-muted", muted ? "1" : "0"),
+    writePreference("kitchen-reduced-motion", reducedMotion ? "1" : "0"),
+  ].every(Boolean);
+  if (!saved && !storageNoticeShown) {
+    storageNoticeShown = true;
+    toast("Preferences could not be saved; this shift still works normally.");
+  }
 }
 
 function updateToggles() {
@@ -163,11 +242,10 @@ function connect() {
       renderUI();
     }
   });
-  offlineGame.tickLoop = setInterval(() => {
-    if (runtimeMode === "solo") offlineGame.tick();
-  }, 50);
   $("connection").textContent = "● Offline";
   state = offlineGame.snapshot();
+  updateSoloTickLoop();
+  updateInputLoop();
   // solo runtime: no lobby/network controls
 }
 
@@ -223,7 +301,7 @@ $("mp-host").addEventListener("click", async () => {
     if (runtimeMode !== "host") {
       runtimeMode = "host";
       const p = profile();
-      mpSession.startHost(crypto.randomUUID(), p.name, p.avatar);
+      mpSession.startHost(makeId("session"), p.name, p.avatar);
     }
     // Replace an unanswered offer, preserving connected chefs.
     for (const [id, p] of mpTransport.peers)
@@ -234,7 +312,7 @@ $("mp-host").addEventListener("click", async () => {
     $("mp-answer").value = "";
     mpStatus.textContent = "Gathering local ICE candidates…";
     const offer = await mpTransport.createOffer(
-      crypto.randomUUID(),
+      makeId("peer"),
       mpSession.sessionId,
     );
     if (generation !== pairingGeneration) return;
@@ -351,9 +429,9 @@ $("replay")?.addEventListener("click", () => send({ type: "replay" }));
 $("leave").addEventListener("click", () => { clearPresentationMotion(); returnToSolo("Kitchen closed."); });
 
 function nearest() {
-  const player = state?.players.find((entry) => entry.id === me);
+  const player = state?.players?.find((entry) => entry.id === me);
   if (!player) return null;
-  return state.stations
+  return (state.stations || [])
     .map((station) => ({
       ...station,
       d: Math.hypot(station.x - player.x, station.y - player.y),
@@ -425,10 +503,16 @@ function setupAnalogStick() {
     knob = $("stick-knob");
   if (!base) return;
   const clear = () => {
+    if (joystickPointer !== null) {
+      try {
+        base.releasePointerCapture(joystickPointer);
+      } catch {}
+    }
     joystickPointer = null;
     knob.style.transform = "translate(0,0)";
     touchPointers.delete("stick");
   };
+  clearAnalogStick = clear;
   const update = (e) => {
     const r = base.getBoundingClientRect();
     let x = e.clientX - (r.left + r.width / 2),
@@ -471,8 +555,7 @@ setupAnalogStick();
 function stop() {
   keys.clear();
   touchPointers.clear();
-  joystickPointer = null;
-  $("stick-knob").style.transform = "translate(0,0)";
+  clearAnalogStick();
   send({ type: "move", x: 0, y: 0 });
 }
 window.addEventListener("blur", stop);
@@ -481,25 +564,18 @@ document.addEventListener("visibilitychange", () => {
     stop();
     if (runtimeMode === "host" && state?.phase === "playing")
       returnToSolo("Host went into the background. Pair again to play.");
+  } else {
+    syncRenderLoop();
   }
 });
-
-setInterval(() => {
-  if (state?.phase === "playing") {
-    const d = currentTouchDirection();
-    send({
-      type: "move",
-      x:
-        d.x +
-        Number(keys.has("d") || keys.has("arrowright")) -
-        Number(keys.has("a") || keys.has("arrowleft")),
-      y:
-        d.y +
-        Number(keys.has("s") || keys.has("arrowdown")) -
-        Number(keys.has("w") || keys.has("arrowup")),
-    });
-  }
-}, 60);
+window.addEventListener("orientationchange", () => {
+  stop();
+  toast("Controls paused while the screen rotates.");
+});
+window.addEventListener("pagehide", () => {
+  stop();
+  mpSession?.stop();
+});
 
 const pretty = (held) => (held ? held.replaceAll("-", " ") : "Empty paws");
 
@@ -528,7 +604,7 @@ function resultsCopy(score, served) {
 
 function renderCrew() {
   $("crew").replaceChildren(
-    ...state.players.map((player) => {
+    ...(Array.isArray(state?.players) ? state.players : []).map((player) => {
       const card = document.createElement("div");
       card.className = "crewcat";
       if (player.id === me) card.classList.add("self");
@@ -558,7 +634,7 @@ function renderCrew() {
 
 function renderOrders() {
   $("orders").replaceChildren(
-    ...state.orders.map((order) => {
+    ...(Array.isArray(state?.orders) ? state.orders : []).map((order) => {
       const item = document.createElement("div");
       item.className = "order";
 
@@ -589,6 +665,7 @@ function renderOrders() {
 }
 
 function renderUI() {
+  if (!state) return;
   document.body.classList.toggle("game-active", state?.phase === "playing");
   const idle = !state || state.phase === "idle";
   $("welcome").hidden = !idle;
@@ -641,6 +718,10 @@ function renderUI() {
   const near = nearest();
   $("action").textContent =
     near?.d <= 110 ? `E · ${near.label}` : "E · Interact";
+  $("action").setAttribute(
+    "aria-label",
+    near?.d <= 110 ? `Interact with ${near.label}` : "Interact with nearest station",
+  );
   $("notice").textContent = state.notice || "";
 
   if (lastPhase !== state.phase) { updatePhasePresentation(presentation, state); }
@@ -657,6 +738,9 @@ function renderUI() {
   if (state.served > lastServed && !muted) beep();
   lastServed = state.served;
   lastPhase = state.phase;
+  updateSoloTickLoop();
+  updateInputLoop();
+  syncRenderLoop();
 }
 
 function unlockAudio() {
@@ -794,7 +878,9 @@ function vegetable(ctx, item, x, y, scale = 1) {
   ctx.restore();
 }
 
-const ctx = $("kitchen").getContext("2d");
+const canvas = $("kitchen");
+const ctx = canvas?.getContext("2d");
+if (!ctx) $("connection").textContent = "Canvas unavailable in this browser";
 
 function drawChefSprite(player) {
   const now = performance.now();
@@ -844,7 +930,16 @@ function drawChefSprite(player) {
     if(image?.complete && image.naturalWidth){
       const height=102, width=image.naturalWidth*(height/image.naturalHeight);
       ctx.drawImage(image,anchorX-width/2,anchorY-height+34,width,height);
-    } else fallbackCat(ctx,anchorX,anchorY,colors[player.color%colors.length],.9);
+    } else {
+      const colorIndex = Number.isInteger(player.color) ? player.color : player.avatar;
+      fallbackCat(
+        ctx,
+        anchorX,
+        anchorY,
+        colors[((colorIndex || 0) % colors.length + colors.length) % colors.length],
+        .9,
+      );
+    }
   }
   ctx.globalAlpha=1;
   text(ctx,player.name+(player.id===me?" · you":""),anchorX,anchorY+54,12);
@@ -852,9 +947,12 @@ function drawChefSprite(player) {
   ctx.restore();
 }
 
-function drawKitchen() {
-  requestAnimationFrame(drawKitchen);
-  if (!state || state.phase !== "playing") return;
+function drawKitchenFrame() {
+  if (!renderActive || !ctx || !state || state.phase !== "playing" || document.hidden) {
+    renderActive = false;
+    animationFrame = 0;
+    return;
+  }
 
   ctx.clearRect(0, 0, 800, 620);
 
@@ -974,9 +1072,23 @@ function drawKitchen() {
 
   for (const player of [...state.players].sort((a, b) => a.y - b.y))
     drawChefSprite(player);
+
+  animationFrame = requestAnimationFrame(drawKitchenFrame);
 }
 
-drawKitchen();
+function syncRenderLoop() {
+  const shouldRender = Boolean(ctx && state?.phase === "playing" && !document.hidden);
+  if (shouldRender && !renderActive) {
+    renderActive = true;
+    animationFrame = requestAnimationFrame(drawKitchenFrame);
+  } else if (!shouldRender && renderActive) {
+    renderActive = false;
+    cancelAnimationFrame(animationFrame);
+    animationFrame = 0;
+  }
+}
+
+syncRenderLoop();
 
 renderUI();
 // Cache setup is successful only after a completely installed worker controls us.

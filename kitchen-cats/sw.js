@@ -1,4 +1,4 @@
-const VERSION = "kitchen-cats-20261002-r12";
+const VERSION = "kitchen-cats-20261002-r13";
 const PREFIX = "kitchen-cats-";
 const CACHE = VERSION + "-precache";
 const ASSETS = [
@@ -64,7 +64,7 @@ self.addEventListener("fetch", (event) => {
   event.respondWith(
     (async () => {
       const cache = await caches.open(CACHE);
-      const cached = await cache.match(event.request);
+      const cached = await cache.match(event.request, { ignoreSearch: true });
       if (cached) return cached;
       try {
         return await fetch(event.request);
