@@ -1,11 +1,3 @@
-const CACHE_STATUS={ready:false,controller:false};
-if('serviceWorker' in navigator){
- navigator.serviceWorker.register('./sw.js',{scope:'./'}).then(reg=>{
-  const check=()=>{CACHE_STATUS.controller=!!navigator.serviceWorker.controller; CACHE_STATUS.ready=CACHE_STATUS.controller; const el=document.getElementById('connection'); if(el) el.textContent=CACHE_STATUS.ready?'Offline ready':'Preparing offline';};
-  check(); navigator.serviceWorker.addEventListener('controllerchange',check);
-  navigator.serviceWorker.addEventListener('message',e=>{if(e.data?.type==='CACHE_FAILED'){const el=document.getElementById('connection');if(el)el.textContent='Offline setup failed';} if(e.data?.type==='CACHE_UPDATED'){const el=document.getElementById('connection'); if(el) el.textContent='Update ready · close and reopen';}});
- }).catch(()=>{const el=document.getElementById('connection');if(el)el.textContent='Offline unavailable';});
-}
 import { KitchenGame } from "./game-core.js";
 import { MultiplayerSession } from "./multiplayer-session.js";
 import { WebRTCTransport } from "./webrtc-transport.js";
@@ -54,7 +46,8 @@ const chefImages = CHEFS.map((chef) => {
   return image;
 });
 
-let state, me=0;
+let state,
+  me = "solo";
 const keys = new Set();
 let touchPointers = new Map();
 let joystickPointer = null;
@@ -62,7 +55,10 @@ let muted = localStorage.getItem("kitchen-muted") === "1";
 let reducedMotion = localStorage.getItem("kitchen-reduced-motion") === "1";
 let selectedAvatar = Math.max(
   0,
-  Math.min(CHEFS.length - 1, Number(localStorage.getItem("kitchen-avatar")) || 0),
+  Math.min(
+    CHEFS.length - 1,
+    Number(localStorage.getItem("kitchen-avatar")) || 0,
+  ),
 );
 let lastPhase;
 let lastServed = 0;
@@ -71,20 +67,22 @@ let audioContext;
 
 function send(v) {
   if (runtimeMode === "solo") {
-    if (v.type === "move") offlineGame.move(v.x,v.y);
+    if (v.type === "move") offlineGame.move(v.x, v.y);
     if (v.type === "interact") offlineGame.interact(v.station);
     if (v.type === "start") offlineGame.start(v.name || "Chef", v.avatar || 0);
     if (v.type === "stop") offlineGame.stop();
-    if (v.type === "replay") offlineGame.start(v.name || "Chef", v.avatar || 0);
+    if (v.type === "replay") offlineGame.replay();
     return;
   }
   if (!multiplayer) return;
   if (runtimeMode === "guest") {
-    if (v.type === "move") multiplayer.sendInput(v.x,v.y);
+    if (v.type === "move") multiplayer.sendInput(v.x, v.y);
     if (v.type === "interact") multiplayer.sendInteract(v.station);
     return;
   }
   if (runtimeMode === "host") {
+    if (v.type === "move") multiplayer.sendInput(v.x, v.y);
+    if (v.type === "interact") multiplayer.sendInteract(v.station);
     if (v.type === "start") multiplayer.start();
     if (v.type === "replay") multiplayer.replay();
   }
@@ -109,7 +107,9 @@ function updateToggles() {
 }
 
 function getChef(index) {
-  return CHEFS[((Number(index) || 0) % CHEFS.length + CHEFS.length) % CHEFS.length];
+  return CHEFS[
+    (((Number(index) || 0) % CHEFS.length) + CHEFS.length) % CHEFS.length
+  ];
 }
 
 function renderAvatarPicker() {
@@ -120,7 +120,8 @@ function renderAvatarPicker() {
     ...CHEFS.map((chef, index) => {
       const button = document.createElement("button");
       button.type = "button";
-      button.className = "avatar-option" + (index === selectedAvatar ? " selected" : "");
+      button.className =
+        "avatar-option" + (index === selectedAvatar ? " selected" : "");
       button.setAttribute("role", "radio");
       button.setAttribute("aria-checked", String(index === selectedAvatar));
       button.dataset.avatar = String(index);
@@ -142,75 +143,156 @@ function renderAvatarPicker() {
 }
 
 function connect() {
-  offlineGame.on((s)=>{ if(runtimeMode === "solo"){ state=s; me=0; renderUI(); }});
-  offlineGame.tickLoop=setInterval(()=>{ if(runtimeMode === "solo") offlineGame.tick(); },50);
-  $("connection").textContent="● Offline";
-  state=offlineGame.snapshot();
-// solo runtime: no lobby/network controls
-
+  offlineGame.on((s) => {
+    if (runtimeMode === "solo") {
+      state = s;
+      me = "solo";
+      renderUI();
+    }
+  });
+  offlineGame.tickLoop = setInterval(() => {
+    if (runtimeMode === "solo") offlineGame.tick();
+  }, 50);
+  $("connection").textContent = "● Offline";
+  state = offlineGame.snapshot();
+  // solo runtime: no lobby/network controls
 }
-
 
 connect();
 updateToggles();
 const mpTransport = new WebRTCTransport();
-const mpSession = new MultiplayerSession({transport: mpTransport, host:false});
+const mpSession = new MultiplayerSession({ transport: mpTransport });
 multiplayer = mpSession;
-mpSession.onSnapshot((s)=>{ if(runtimeMode !== "solo"){ state=s; me=mpSession.playerId || 0; renderUI(); }});
-mpSession.onStatus((s)=>{ if(mpStatus) mpStatus.textContent=s; });
-const mpStatus=$("mp-status");
-let mpPending=false;
-const showMpError=(prefix,e)=>{
- mpPending=false;
- runtimeMode="solo";
- mpSession.isHost=false;
- mpStatus.textContent=prefix+": "+(e?.message||String(e));
-};
-$("mp-host")?.addEventListener("click", async()=>{
- if(mpPending) return;
- mpPending=true;
- try {
-  runtimeMode="host"; mpSession.isHost=true;
-  const id=crypto.randomUUID(); mpSession.startHost(id);
-  mpStatus.textContent="Gathering ICE candidates…";
-  const offer=await mpTransport.createOffer(id);
-  $("mp-offer").value=offer;
-  mpPending=false;
-  mpStatus.textContent="Host offer ready with ICE candidates";
- } catch(e){ showMpError("Host offer failed",e); }
+const mpStatus = $("mp-status");
+let mpPending = false,
+  pairingGeneration = 0;
+const profile = () => ({
+  name: $("name").value || "Chef",
+  avatar: chosenAvatar(),
 });
-$("mp-join")?.addEventListener("click",()=>{
- runtimeMode="guest";
- mpSession.isHost=false;
- mpStatus.textContent="Guest mode: paste host offer, then Import pairing";
-});
-$("mp-import")?.addEventListener("click",async()=>{
- if(mpPending) return;
- mpPending=true;
- try {
-  mpStatus.textContent="Processing pairing…";
-  if(runtimeMode==="guest") {
-    $("mp-answer").value=await mpTransport.acceptOffer($("mp-offer").value);
-    mpStatus.textContent="Answer generated. Send answer back to host.";
-  } else {
-    await mpTransport.acceptAnswer($("mp-answer").value);
-    mpStatus.textContent="Host pairing accepted.";
+function pairingBusy(busy) {
+  mpPending = busy;
+  for (const id of ["mp-host", "mp-join", "mp-import", "start"])
+    $(id).disabled = busy;
+}
+function returnToSolo(message = "Cancelled") {
+  pairingGeneration++;
+  pairingBusy(false);
+  stop();
+  runtimeMode = "solo";
+  mpSession.stop();
+  offlineGame.stop();
+  me = "solo";
+  state = offlineGame.snapshot();
+  $("mp-offer").value = "";
+  $("mp-answer").value = "";
+  mpStatus.textContent = message;
+  renderUI();
+}
+mpSession.onSnapshot((s) => {
+  if (runtimeMode !== "solo") {
+    state = s;
+    me = mpSession.playerId;
+    renderUI();
   }
-  mpPending=false;
- } catch(e){
-  showMpError("Pairing failed",e);
- }
 });
-$("mp-cancel")?.addEventListener("click",()=>{
- mpPending=false;
- mpTransport.close();
- mpSession.stop("cancelled");
- runtimeMode="solo";
- state=offlineGame.snapshot();
- renderUI();
- mpStatus.textContent="Cancelled";
+mpSession.onStatus((s) => {
+  if (s === "disconnected") {
+    returnToSolo("Host disconnected. Start solo or pair again.");
+    toast("Host disconnected.");
+  } else mpStatus.textContent = s;
 });
-$("mp-copy")?.addEventListener("click",()=>navigator.clipboard?.writeText($("mp-offer").value||$("mp-answer").value));
+$("mp-host").addEventListener("click", async () => {
+  if (mpPending) return;
+  const generation = ++pairingGeneration;
+  pairingBusy(true);
+  try {
+    if (runtimeMode !== "host") {
+      runtimeMode = "host";
+      const p = profile();
+      mpSession.startHost(crypto.randomUUID(), p.name, p.avatar);
+    }
+    // Replace an unanswered offer, preserving connected chefs.
+    for (const [id, p] of mpTransport.peers)
+      if (p.dc?.readyState !== "open") mpTransport.closePeer(id);
+    if (mpSession.peers.size >= 3)
+      throw Error("Kitchen full: four chefs maximum.");
+    $("mp-offer").value = "";
+    $("mp-answer").value = "";
+    mpStatus.textContent = "Gathering local ICE candidates…";
+    const offer = await mpTransport.createOffer(
+      crypto.randomUUID(),
+      mpSession.sessionId,
+    );
+    if (generation !== pairingGeneration) return;
+    $("mp-offer").value = offer;
+    mpStatus.textContent =
+      "Copy this offer to one friend. Import their answer here.";
+  } catch (e) {
+    if (generation === pairingGeneration)
+      mpStatus.textContent = "Host offer failed: " + e.message;
+  } finally {
+    if (generation === pairingGeneration) pairingBusy(false);
+  }
+});
+$("mp-join").addEventListener("click", () => {
+  returnToSolo();
+  runtimeMode = "guest";
+  const p = profile();
+  mpSession.join(p.name, p.avatar);
+  mpStatus.textContent = "Paste a host offer, then Import pairing.";
+});
+$("mp-import").addEventListener("click", async () => {
+  if (mpPending) return;
+  if (runtimeMode === "solo") {
+    mpStatus.textContent = "Choose Host game or Join game first.";
+    return;
+  }
+  const generation = ++pairingGeneration;
+  pairingBusy(true);
+  try {
+    if (runtimeMode === "guest") {
+      if (mpSession.serverPeer)
+        throw Error(
+          "Already connected. Cancel before joining another kitchen.",
+        );
+      mpTransport.close();
+      $("mp-answer").value = "";
+      mpStatus.textContent = "Gathering local answer…";
+      const answer = await mpTransport.acceptOffer($("mp-offer").value);
+      if (generation !== pairingGeneration) return;
+      $("mp-answer").value = answer;
+      mpStatus.textContent =
+        "Copy this answer back to the host. Waiting for connection…";
+    } else {
+      await mpTransport.acceptAnswer($("mp-answer").value);
+      if (generation === pairingGeneration)
+        mpStatus.textContent =
+          "Answer accepted. Waiting for the chef to connect…";
+    }
+  } catch (e) {
+    if (generation === pairingGeneration)
+      mpStatus.textContent = "Pairing failed: " + e.message;
+  } finally {
+    if (generation === pairingGeneration) pairingBusy(false);
+  }
+});
+$("mp-cancel").addEventListener("click", () => returnToSolo());
+$("mp-copy").addEventListener("click", async () => {
+  const el = $(runtimeMode === "guest" ? "mp-answer" : "mp-offer");
+  if (!el.value) {
+    mpStatus.textContent = "Generate pairing text first.";
+    return;
+  }
+  try {
+    await navigator.clipboard.writeText(el.value);
+    mpStatus.textContent = "Pairing text copied.";
+  } catch {
+    el.focus();
+    el.select();
+    mpStatus.textContent = "Select and copy the pairing text manually.";
+  }
+});
 
 renderAvatarPicker();
 
@@ -226,32 +308,34 @@ $("avatar-picker")?.addEventListener("click", (event) => {
   renderAvatarPicker();
 });
 
-$("mute") && ($("mute").onclick = () => {
-  muted = !muted;
-  persistPrefs();
-  updateToggles();
+$("mute") &&
+  ($("mute").onclick = () => {
+    muted = !muted;
+    persistPrefs();
+    updateToggles();
+  });
+
+$("motion") &&
+  ($("motion").onclick = () => {
+    reducedMotion = !reducedMotion;
+    persistPrefs();
+    updateToggles();
+  });
+
+$("solo")?.addEventListener("click", () => {
+  returnToSolo();
+  runtimeMode = "solo";
+  send({
+    type: "start",
+    solo: true,
+    name: $("name")?.value,
+    avatar: chosenAvatar(),
+  });
 });
-
-$("motion") && ($("motion").onclick = () => {
-  reducedMotion = !reducedMotion;
-  persistPrefs();
-  updateToggles();
-});
-
-
-$("solo")?.addEventListener("click", () => { runtimeMode="solo"; send({ type: "start", solo: true, name: $("name")?.value, avatar: chosenAvatar() }); });
 $("start")?.addEventListener("click", () => send({ type: "start" }));
 $("replay")?.addEventListener("click", () => send({ type: "replay" }));
 
-$("leave")?.addEventListener("click", () => {
-  stop();
-  runtimeMode="solo";
-  multiplayer?.leave?.();
-  send({ type: "stop" });
-  state = offlineGame.snapshot();
-  renderUI();
-});
-
+$("leave").addEventListener("click", () => returnToSolo("Kitchen closed."));
 
 function nearest() {
   const player = state?.players.find((entry) => entry.id === me);
@@ -266,7 +350,8 @@ function nearest() {
 
 function interact() {
   const station = nearest();
-  if (station && station.d <= 110) send({ type: "interact", station: station.id });
+  if (station && station.d <= 110)
+    send({ type: "interact", station: station.id });
   else toast("Walk closer to a station, then interact.");
 }
 
@@ -287,47 +372,121 @@ $("action").addEventListener("click", () => {
 window.addEventListener("keydown", (event) => {
   unlockAudio();
   if (["INPUT", "TEXTAREA"].includes(document.activeElement.tagName)) return;
-  if ([
-    "ArrowUp",
-    "ArrowDown",
-    "ArrowLeft",
-    "ArrowRight",
-    " ",
-    "w",
-    "a",
-    "s",
-    "d",
-    "e",
-    "E",
-  ].includes(event.key)) {
+  if (
+    [
+      "ArrowUp",
+      "ArrowDown",
+      "ArrowLeft",
+      "ArrowRight",
+      " ",
+      "w",
+      "a",
+      "s",
+      "d",
+      "e",
+      "E",
+    ].includes(event.key)
+  ) {
     if (state?.phase === "playing") event.preventDefault();
     keys.add(event.key.toLowerCase());
     if (["e", "E", " "].includes(event.key) && !event.repeat) interact();
   }
 });
 
-window.addEventListener("keyup", (event) => keys.delete(event.key.toLowerCase()));
+window.addEventListener("keyup", (event) =>
+  keys.delete(event.key.toLowerCase()),
+);
 
 function currentTouchDirection() {
-  let x = 0, y = 0;
-  for (const direction of touchPointers.values()) { x += direction.x; y += direction.y; }
-  return {x,y};
+  let x = 0,
+    y = 0;
+  for (const direction of touchPointers.values()) {
+    x += direction.x;
+    y += direction.y;
+  }
+  return { x, y };
 }
 
-function setupAnalogStick(){
- const base=$('joystick'), knob=$('stick-knob'); if(!base)return;
- const clear=()=>{joystickPointer=null;knob.style.transform='translate(0,0)';touchPointers.delete('stick');};
- const update=(e)=>{const r=base.getBoundingClientRect();let x=e.clientX-(r.left+r.width/2),y=e.clientY-(r.top+r.height/2);const max=r.width*.38;const len=Math.hypot(x,y);if(len>max){x=x/len*max;y=y/len*max;} const dead=8;if(Math.hypot(x,y)<dead){x=0;y=0;}else{x/=max;y/=max;}touchPointers.set('stick',{x,y});knob.style.transform=`translate(${x*max}px,${y*max}px)`;};
- base.onpointerdown=e=>{e.preventDefault();joystickPointer=e.pointerId;base.setPointerCapture(e.pointerId);update(e);};
- base.onpointermove=e=>{if(e.pointerId===joystickPointer)update(e);};
- ['pointerup','pointercancel','lostpointercapture'].forEach(n=>base.addEventListener(n,e=>{if(e.pointerId===joystickPointer)clear();}));
+function setupAnalogStick() {
+  const base = $("joystick"),
+    knob = $("stick-knob");
+  if (!base) return;
+  const clear = () => {
+    joystickPointer = null;
+    knob.style.transform = "translate(0,0)";
+    touchPointers.delete("stick");
+  };
+  const update = (e) => {
+    const r = base.getBoundingClientRect();
+    let x = e.clientX - (r.left + r.width / 2),
+      y = e.clientY - (r.top + r.height / 2);
+    const max = r.width * 0.38;
+    const len = Math.hypot(x, y);
+    if (len > max) {
+      x = (x / len) * max;
+      y = (y / len) * max;
+    }
+    const dead = 8;
+    if (Math.hypot(x, y) < dead) {
+      x = 0;
+      y = 0;
+    } else {
+      x /= max;
+      y /= max;
+    }
+    touchPointers.set("stick", { x, y });
+    knob.style.transform = `translate(${x * max}px,${y * max}px)`;
+  };
+  base.onpointerdown = (e) => {
+    e.preventDefault();
+    if (joystickPointer !== null) return;
+    joystickPointer = e.pointerId;
+    base.setPointerCapture(e.pointerId);
+    update(e);
+  };
+  base.onpointermove = (e) => {
+    if (e.pointerId === joystickPointer) update(e);
+  };
+  ["pointerup", "pointercancel", "lostpointercapture"].forEach((n) =>
+    base.addEventListener(n, (e) => {
+      if (e.pointerId === joystickPointer) clear();
+    }),
+  );
 }
 setupAnalogStick();
 
-function stop(){keys.clear();touchPointers.clear();send({type:'move',x:0,y:0});}
-window.addEventListener('blur',stop);document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();});
+function stop() {
+  keys.clear();
+  touchPointers.clear();
+  joystickPointer = null;
+  $("stick-knob").style.transform = "translate(0,0)";
+  send({ type: "move", x: 0, y: 0 });
+}
+window.addEventListener("blur", stop);
+document.addEventListener("visibilitychange", () => {
+  if (document.hidden) {
+    stop();
+    if (runtimeMode === "host" && state?.phase === "playing")
+      returnToSolo("Host went into the background. Pair again to play.");
+  }
+});
 
-setInterval(()=>{if(state?.phase==='playing'){const d=currentTouchDirection();send({type:'move',x:d.x+Number(keys.has('d')||keys.has('arrowright'))-Number(keys.has('a')||keys.has('arrowleft')),y:d.y+Number(keys.has('s')||keys.has('arrowdown'))-Number(keys.has('w')||keys.has('arrowup'))});}},60);
+setInterval(() => {
+  if (state?.phase === "playing") {
+    const d = currentTouchDirection();
+    send({
+      type: "move",
+      x:
+        d.x +
+        Number(keys.has("d") || keys.has("arrowright")) -
+        Number(keys.has("a") || keys.has("arrowleft")),
+      y:
+        d.y +
+        Number(keys.has("s") || keys.has("arrowdown")) -
+        Number(keys.has("w") || keys.has("arrowup")),
+    });
+  }
+}, 60);
 
 const pretty = (held) => (held ? held.replaceAll("-", " ") : "Empty paws");
 
@@ -398,7 +557,8 @@ function renderOrders() {
 
       const recipe = document.createElement("div");
       recipe.className = "order-recipe";
-      recipe.textContent = order.recipe === "tomato" ? "Tomato base" : "Carrot base";
+      recipe.textContent =
+        order.recipe === "tomato" ? "Tomato base" : "Carrot base";
 
       const steps = document.createElement("small");
       steps.textContent = "Pick vegetable → chop → pot → serve";
@@ -406,7 +566,8 @@ function renderOrders() {
       info.append(name, recipe, steps);
 
       const timer = document.createElement("b");
-      timer.textContent = Math.max(0, Math.ceil((order.expires - state.now) / 1000)) + "s";
+      timer.textContent =
+        Math.max(0, Math.ceil((order.expires - state.now) / 1000)) + "s";
 
       item.append(info, timer);
       return item;
@@ -419,29 +580,43 @@ function renderUI() {
   const idle = !state || state.phase === "idle";
   $("welcome").hidden = !idle;
   $("game").hidden = idle;
-  $("room") && ($("room").textContent = "SOLO");
+  $("room").textContent = runtimeMode === "solo" ? "SOLO" : "LOCAL KITCHEN";
   $("roomcode-large") && ($("roomcode-large").textContent = "SOLO");
-  $("mode").textContent = runtimeMode === "solo" ? "SOLO PRACTICE · 1 CHEF" : runtimeMode.toUpperCase();
+  $("mode").textContent =
+    runtimeMode === "solo"
+      ? "SOLO PRACTICE · 1 CHEF"
+      : runtimeMode.toUpperCase();
 
-  $("lobby") && ($("lobby").hidden = runtimeMode === "solo" || idle);
+  $("lobby").hidden = state.phase !== "lobby";
+  $("experimental-mp").hidden = !idle && state.phase !== "lobby";
+  $("mp-join").hidden = runtimeMode === "host";
+  $("mp-host").textContent =
+    runtimeMode === "host" ? "Offer for another chef" : "Host game";
   $("play").hidden = state.phase !== "playing";
   $("results").hidden = state.phase !== "results";
 
   const remain = Math.max(0, Math.ceil((state.ends - state.now) / 1000));
   $("clock").textContent =
     state.phase === "lobby"
-      ? "2:00"
+      ? "1:30"
       : `${Math.floor(remain / 60)}:${String(remain % 60).padStart(2, "0")}`;
   $("score").textContent = state.score;
 
   renderCrew();
   renderOrders();
 
-  $("start") && ($("start").disabled = false);
-  $("hosthint") && ($("hosthint").textContent = "Solo kitchen ready.");
+  $("start").hidden = runtimeMode !== "host";
+  $("start").disabled = mpPending;
+  $("hosthint").textContent =
+    runtimeMode === "guest"
+      ? "Waiting for the host to start."
+      : "Pair friends, then start a 90-second shift.";
 
-  $("replay") && ($("replay").disabled = state.phase !== "results");
-  $("totals").textContent = `${state.score} points · ${state.served} served · ${state.missed} missed`;
+  $("replay").disabled = state.phase !== "results" || runtimeMode === "guest";
+  $("replay").textContent =
+    runtimeMode === "guest" ? "Waiting for host to replay…" : "Another shift →";
+  $("totals").textContent =
+    `${state.score} points · ${state.served} served · ${state.missed} missed`;
 
   const resultText = resultsCopy(state.score, state.served);
   $("results-title").textContent = resultText.title;
@@ -451,13 +626,15 @@ function renderUI() {
   $("holding").textContent = `PAWS · ${pretty(myState?.held)}`;
 
   const near = nearest();
-  $("action").textContent = near?.d <= 110 ? `E · ${near.label}` : "E · Interact";
+  $("action").textContent =
+    near?.d <= 110 ? `E · ${near.label}` : "E · Interact";
   $("notice").textContent = state.notice || "";
 
   if (lastPhase !== state.phase && state.phase === "playing") {
+    window.scrollTo(0, 0);
     $("kitchen").focus({ preventScroll: true });
     $("game").scrollIntoView({
-      behavior: reducedMotion ? "auto" : "smooth",
+      behavior: "instant",
       block: "start",
     });
   }
@@ -500,7 +677,15 @@ function rounded(ctx, x, y, width, height, radius, fill) {
   ctx.fill();
 }
 
-function text(ctx, value, x, y, size = 14, color = "#304b3d", align = "center") {
+function text(
+  ctx,
+  value,
+  x,
+  y,
+  size = 14,
+  color = "#304b3d",
+  align = "center",
+) {
   ctx.fillStyle = color;
   ctx.font = `700 ${size}px Arial`;
   ctx.textAlign = align;
@@ -597,7 +782,11 @@ function vegetable(ctx, item, x, y, scale = 1) {
 const ctx = $("kitchen").getContext("2d");
 
 function drawChefSprite(player) {
-  const image = chefImages[((player.avatar ?? player.color ?? 0) % CHEFS.length + CHEFS.length) % CHEFS.length];
+  const image =
+    chefImages[
+      (((player.avatar ?? player.color ?? 0) % CHEFS.length) + CHEFS.length) %
+        CHEFS.length
+    ];
   const anchorX = player.x;
   const anchorY = player.y;
 
@@ -619,13 +808,31 @@ function drawChefSprite(player) {
   if (image?.complete && image.naturalWidth) {
     const height = 102;
     const width = image.naturalWidth * (height / image.naturalHeight);
-    ctx.drawImage(image, anchorX - width / 2, anchorY - height + 34, width, height);
+    ctx.drawImage(
+      image,
+      anchorX - width / 2,
+      anchorY - height + 34,
+      width,
+      height,
+    );
   } else {
-    fallbackCat(ctx, anchorX, anchorY, colors[player.color % colors.length], 0.9);
+    fallbackCat(
+      ctx,
+      anchorX,
+      anchorY,
+      colors[player.color % colors.length],
+      0.9,
+    );
   }
 
   ctx.globalAlpha = 1;
-  text(ctx, player.name + (player.id === me ? " · you" : ""), anchorX, anchorY + 54, 12);
+  text(
+    ctx,
+    player.name + (player.id === me ? " · you" : ""),
+    anchorX,
+    anchorY + 54,
+    12,
+  );
   if (player.held) vegetable(ctx, player.held, anchorX + 28, anchorY + 8, 0.8);
   ctx.restore();
 }
@@ -658,7 +865,15 @@ function drawKitchen() {
   const near = nearest();
   for (const station of state.stations) {
     const active = near?.id === station.id && near.d <= 110;
-    rounded(ctx, station.x - 62, station.y - 44, 124, 75, 16, active ? "#ffe3a4" : "#fff9ef");
+    rounded(
+      ctx,
+      station.x - 62,
+      station.y - 44,
+      124,
+      75,
+      16,
+      active ? "#ffe3a4" : "#fff9ef",
+    );
     if (active) {
       ctx.strokeStyle = "#e69957";
       ctx.lineWidth = 3;
@@ -666,18 +881,21 @@ function drawKitchen() {
     }
     text(ctx, station.label, station.x, station.y + 51, 16, "#3f5a4a");
 
-    if (station.kind === "source") vegetable(ctx, station.id, station.x, station.y - 5, 1.4);
+    if (station.kind === "source")
+      vegetable(ctx, station.id, station.x, station.y - 5, 1.4);
 
     if (station.kind === "prep") {
       rounded(ctx, station.x - 34, station.y - 25, 68, 40, 8, "#cca97a");
       text(ctx, "╱", station.x + 20, station.y, 24, "#5c473a");
-      if (state.prep) vegetable(ctx, state.prep.item, station.x - 12, station.y, 1);
+      if (state.prep)
+        vegetable(ctx, state.prep.item, station.x - 12, station.y, 1);
     }
 
     if (station.kind === "pot") {
       rounded(ctx, station.x - 34, station.y - 24, 68, 46, 12, "#5d7f6c");
       text(ctx, "≈", station.x, station.y - 2, 32, "#f0bd6c");
-      if (state.pot) vegetable(ctx, state.pot.item, station.x, station.y - 4, 0.8);
+      if (state.pot)
+        vegetable(ctx, state.pot.item, station.x, station.y - 4, 0.8);
     }
 
     if (station.kind === "pass") {
@@ -691,18 +909,82 @@ function drawKitchen() {
       text(ctx, "✦", station.x, station.y + 17, 22, "#edb66a");
     }
 
-    if (station.kind === "bin") text(ctx, "↻", station.x, station.y + 8, 32, "#829175");
+    if (station.kind === "bin")
+      text(ctx, "↻", station.x, station.y + 8, 32, "#829175");
 
-    const job = station.kind === "prep" ? state.prep : station.kind === "pot" ? state.pot : null;
+    const job =
+      station.kind === "prep"
+        ? state.prep
+        : station.kind === "pot"
+          ? state.pot
+          : null;
     if (job) {
-      const progress = Math.min(1, (state.now - job.started) / (job.ready - job.started));
+      const progress = Math.min(
+        1,
+        (state.now - job.started) / (job.ready - job.started),
+      );
       rounded(ctx, station.x - 43, station.y + 19, 86, 7, 4, "#d5d8c4");
-      rounded(ctx, station.x - 43, station.y + 19, 86 * progress, 7, 4, "#67956c");
-      text(ctx, progress >= 1 ? "READY" : "working…", station.x, station.y - 51, 11, "#54695c");
+      rounded(
+        ctx,
+        station.x - 43,
+        station.y + 19,
+        86 * progress,
+        7,
+        4,
+        "#67956c",
+      );
+      text(
+        ctx,
+        progress >= 1 ? "READY" : "working…",
+        station.x,
+        station.y - 51,
+        11,
+        "#54695c",
+      );
     }
   }
 
-  for (const player of [...state.players].sort((a, b) => a.y - b.y)) drawChefSprite(player);
+  for (const player of [...state.players].sort((a, b) => a.y - b.y))
+    drawChefSprite(player);
 }
 
 drawKitchen();
+
+renderUI();
+// Cache setup is successful only after a completely installed worker controls us.
+const offlineStatus = $("connection");
+if ("serviceWorker" in navigator) {
+  offlineStatus.textContent = "Preparing offline…";
+  navigator.serviceWorker
+    .register("./sw.js", { scope: "./" })
+    .then((reg) => {
+      const update = () => {
+        offlineStatus.textContent = reg.waiting
+          ? "Update downloaded · close all Kitchen Cats tabs to apply"
+          : navigator.serviceWorker.controller
+            ? "Offline ready"
+            : "Preparing offline…";
+      };
+      const watch = (worker) => {
+        if (!worker) return;
+        worker.addEventListener("statechange", () => {
+          if (worker.state === "redundant" && !reg.waiting)
+            offlineStatus.textContent = navigator.serviceWorker.controller
+              ? "Offline ready · update failed; retry online"
+              : "Offline setup failed · reload online to retry";
+          else update();
+        });
+      };
+      watch(reg.installing);
+      reg.addEventListener("updatefound", () => watch(reg.installing));
+      navigator.serviceWorker.addEventListener("controllerchange", update);
+      update();
+    })
+    .catch(
+      () =>
+        (offlineStatus.textContent =
+          "Offline unavailable · reload online to retry"),
+    );
+} else
+  offlineStatus.textContent =
+    "Offline installation unavailable in this browser";

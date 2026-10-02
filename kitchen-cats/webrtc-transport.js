@@ -1,52 +1,176 @@
+// Manual signaling, host ICE candidates only: no servers or media permissions.
 export class WebRTCTransport {
-  constructor(){this.peers=new Map();this.onMessage=()=>{};this.onStatus=()=>{};}
-  createPeer(peerId, sessionId){
-    if(this.peers.has(peerId)) throw Error("peer exists");
-    const pc=new RTCPeerConnection({iceServers:[]});
-    const dc=pc.createDataChannel('kitchen');
-    const peer={peerId,sessionId,pc,dc,closed:false};
-    this.peers.set(peerId,peer); this.bind(peer); return peer;
+  constructor() {
+    this.peers = new Map();
+    this.onMessage = () => {};
+    this.onStatus = () => {};
   }
-  bind(peer){peer.dc.onmessage=e=>this.onMessage(peer.peerId,JSON.parse(e.data)); peer.dc.onopen=()=>this.onStatus(peer.peerId,'connected'); peer.dc.onclose=()=>this.closePeer(peer.peerId);}
-  send(peerId,msg){const p=this.peers.get(peerId); if(p?.dc?.readyState==='open') p.dc.send(JSON.stringify(msg));}
-  closePeer(peerId){const p=this.peers.get(peerId); if(!p)return; p.dc.close?.();p.pc.close?.();this.peers.delete(peerId);this.onStatus(peerId,'closed');}
-  async waitForIce(peer, timeoutMs=10000){
-    const pc=peer.pc;
-    if(pc.iceGatheringState==='complete') return;
-    await new Promise((resolve,reject)=>{
-      let done=false;
-      const finish=(err)=>{ if(done)return; done=true; pc.removeEventListener('icegatheringstatechange',check); clearTimeout(timer); err?reject(err):resolve(); };
-      const check=()=>{ if(pc.iceGatheringState==='complete') finish(); };
-      const timer=setTimeout(()=>finish(new Error('ICE gathering timeout')), timeoutMs);
-      pc.addEventListener('icegatheringstatechange',check);
+  createPeer(peerId, sessionId, initiator = false) {
+    if (this.peers.has(peerId))
+      throw Error("This pairing is already in use. Create a new offer.");
+    const pc = new RTCPeerConnection({ iceServers: [] });
+    const peer = { peerId, sessionId, pc, dc: null, cancelIce: null };
+    this.peers.set(peerId, peer);
+    pc.ondatachannel = (e) => {
+      if (peer.dc) {
+        e.channel.close();
+        return;
+      }
+      this.bind(peer, e.channel);
+    };
+    pc.onconnectionstatechange = () => {
+      if (["failed", "disconnected", "closed"].includes(pc.connectionState))
+        this.closePeer(peerId);
+    };
+    peer.timer = setTimeout(() => {
+      if (peer.dc?.readyState !== "open") this.closePeer(peerId);
+    }, 120000);
+    if (initiator) this.bind(peer, pc.createDataChannel("kitchen"));
+    return peer;
+  }
+  bind(peer, dc) {
+    peer.dc = dc;
+    dc.onmessage = (e) => {
+      if (typeof e.data !== "string" || e.data.length > 65536) return;
+      try {
+        this.onMessage(peer.peerId, JSON.parse(e.data));
+      } catch {}
+    };
+    dc.onopen = () => {
+      clearTimeout(peer.timer);
+      this.onStatus(peer.peerId, "connected");
+    };
+    dc.onclose = () => this.closePeer(peer.peerId);
+    dc.onerror = () => this.closePeer(peer.peerId);
+  }
+  send(peerId, msg) {
+    const dc = this.peers.get(peerId)?.dc;
+    if (dc?.readyState !== "open") return false;
+    if (dc.bufferedAmount > 262144) {
+      this.closePeer(peerId);
+      return false;
+    }
+    try {
+      dc.send(JSON.stringify(msg));
+      return true;
+    } catch {
+      this.closePeer(peerId);
+      return false;
+    }
+  }
+  closePeer(peerId) {
+    const p = this.peers.get(peerId);
+    if (!p) return;
+    this.peers.delete(peerId);
+    clearTimeout(p.timer);
+    p.cancelIce?.();
+    if (p.dc) {
+      p.dc.onclose = null;
+      p.dc.onerror = null;
+      p.dc.close();
+    }
+    p.pc.onconnectionstatechange = null;
+    p.pc.close();
+    this.onStatus(peerId, "closed");
+  }
+  close() {
+    for (const id of [...this.peers.keys()]) this.closePeer(id);
+  }
+  async waitForIce(peer) {
+    const pc = peer.pc;
+    if (pc.iceGatheringState === "complete") return;
+    await new Promise((resolve, reject) => {
+      let timer;
+      const finish = (err) => {
+        pc.removeEventListener("icegatheringstatechange", check);
+        clearTimeout(timer);
+        peer.cancelIce = null;
+        err ? reject(err) : resolve();
+      };
+      const check = () => {
+        if (pc.iceGatheringState === "complete") finish();
+      };
+      peer.cancelIce = () => finish(Error("Pairing cancelled"));
+      timer = setTimeout(
+        () =>
+          finish(
+            Error("ICE gathering timed out. Try again on the same Wi-Fi."),
+          ),
+        10000,
+      );
+      pc.addEventListener("icegatheringstatechange", check);
+      check();
     });
   }
-  assertGathered(peer){
-    const s=peer.pc.localDescription;
-    if(!s || !s.sdp || !s.sdp.includes('a=candidate:')) throw new Error('No ICE candidates gathered. Check network or browser WebRTC support.');
-    return s;
+  description(peer) {
+    if (!this.peers.has(peer.peerId)) throw Error("Pairing cancelled");
+    const d = peer.pc.localDescription;
+    if (!d?.sdp?.includes("a=candidate:"))
+      throw Error(
+        "No ICE candidates gathered. This browser/network cannot pair locally.",
+      );
+    return { type: d.type, sdp: d.sdp };
   }
-  async createOffer(peerId, sessionId){
-    const peer=this.createPeer(peerId, sessionId);
-    const offer=await peer.pc.createOffer();
-    await peer.pc.setLocalDescription(offer);
-    await this.waitForIce(peer);
-    return JSON.stringify({sessionId,peerId,description:this.assertGathered(peer)});
+  parse(text, type) {
+    if (typeof text !== "string" || text.length > 65536)
+      throw Error("Invalid pairing text");
+    let d;
+    try {
+      d = JSON.parse(text);
+    } catch {
+      throw Error("Invalid pairing JSON");
+    }
+    if (
+      d?.version !== 1 ||
+      typeof d.peerId !== "string" ||
+      typeof d.sessionId !== "string" ||
+      d.peerId.length > 80 ||
+      d.sessionId.length > 80 ||
+      d.description?.type !== type ||
+      typeof d.description.sdp !== "string"
+    )
+      throw Error("Paste a current " + type + " from Kitchen Cats");
+    return d;
   }
-  async acceptOffer(text){
-    const data=JSON.parse(text);
-    const peer=this.createPeer(data.peerId, data.sessionId);
-    await peer.pc.setRemoteDescription(data.description);
-    const answer=await peer.pc.createAnswer();
-    await peer.pc.setLocalDescription(answer);
-    await this.waitForIce(peer);
-    return JSON.stringify({sessionId:data.sessionId,peerId:data.peerId,description:this.assertGathered(peer)});
+  async createOffer(peerId, sessionId) {
+    const peer = this.createPeer(peerId, sessionId, true);
+    try {
+      await peer.pc.setLocalDescription(await peer.pc.createOffer());
+      await this.waitForIce(peer);
+      return JSON.stringify({
+        version: 1,
+        peerId,
+        sessionId,
+        description: this.description(peer),
+      });
+    } catch (e) {
+      this.closePeer(peerId);
+      throw e;
+    }
   }
-  async acceptAnswer(text){
-    const data=JSON.parse(text);
-    const peer=this.peers.get(data.peerId);
-    if(!peer || peer.sessionId!==data.sessionId) throw Error('stale answer');
-    await peer.pc.setRemoteDescription(data.description);
+  async acceptOffer(text) {
+    const data = this.parse(text, "offer"),
+      peer = this.createPeer(data.peerId, data.sessionId);
+    try {
+      await peer.pc.setRemoteDescription(data.description);
+      await peer.pc.setLocalDescription(await peer.pc.createAnswer());
+      await this.waitForIce(peer);
+      return JSON.stringify({ ...data, description: this.description(peer) });
+    } catch (e) {
+      this.closePeer(peer.peerId);
+      throw e;
+    }
   }
-  close(){for(const id of [...this.peers.keys()])this.closePeer(id);}
+  async acceptAnswer(text) {
+    const data = this.parse(text, "answer"),
+      peer = this.peers.get(data.peerId);
+    if (!peer || peer.sessionId !== data.sessionId)
+      throw Error("Stale answer. Create a new offer.");
+    try {
+      await peer.pc.setRemoteDescription(data.description);
+    } catch (e) {
+      this.closePeer(peer.peerId);
+      throw e;
+    }
+  }
 }

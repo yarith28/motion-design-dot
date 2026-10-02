@@ -1050,3 +1050,25 @@ body.game-active header, body.game-active .how, body.game-active .teamtip { disp
 #experimental-mp { margin-top: 1rem; }
 #experimental-mp textarea { min-height: 90px; width: 100%; }
 #mp-status { margin-top: .75rem; }
+
+/* Keep the complete playing surface inside the visible phone viewport. */
+body.game-active { height:100svh; overflow:hidden; }
+body.game-active main { height:100svh; padding:4px max(8px, env(safe-area-inset-right)) max(4px, env(safe-area-inset-bottom)) max(8px, env(safe-area-inset-left)); box-sizing:border-box; }
+body.game-active #game { height:100%; display:flex; flex-direction:column; gap:4px; }
+body.game-active .gamebar { flex:0 0 42px; height:42px; margin:0; flex-direction:row; align-items:center; }
+body.game-active .gamebar .eyebrow { display:none; }
+body.game-active .stats { width:auto; }
+body.game-active #play { flex:1; min-height:0; height:auto; gap:4px; }
+body.game-active #orders { flex:0 0 38px; min-height:0; height:38px; margin:0; }
+body.game-active .game-stage { flex:1; height:auto; min-height:0; grid-template-columns:88px minmax(0,1fr) 80px; gap:4px; }
+body.game-active .control-rail { width:100%; }
+body.game-active .kitchen-wrap { height:100%; min-height:0; max-height:100%; overflow:hidden; }
+body.game-active #kitchen { width:auto; height:100%; max-height:100%; max-width:100%; object-fit:contain; }
+body.game-active .action-rail #action { width:76px; min-height:60px; }
+body.game-active .order strong { font-size:12px; }
+@media (max-width:600px) and (orientation:portrait) {
+ body.game-active .gamebar h2 { display:none; }
+ body.game-active .stats { width:100%; justify-content:space-between; }
+ body.game-active .stats button { padding:4px; }
+ body.game-active .game-stage { grid-template-columns:88px minmax(0,1fr) 80px; }
+}

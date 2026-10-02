@@ -8,10 +8,11 @@
     />
     <title>Kitchen Cats · A little chaos. A lot of soup.</title>
     <link rel="stylesheet" href="./style.css" />
-  <link rel="manifest" href="./manifest.json"></head>
+    <link rel="manifest" href="./manifest.json" />
+  </head>
   <body>
     <header>
-      <a class="brand" href="/">Kitchen<span>Cats</span><i>✦</i></a>
+      <a class="brand" href="./">Kitchen<span>Cats</span><i>✦</i></a>
       <div class="tag">LOCAL SOUP CLUB <b>01</b></div>
       <span id="connection">Connecting…</span>
     </header>
@@ -21,7 +22,8 @@
           <span class="eyebrow">OFFLINE SOLO KITCHEN FOR PHONES</span>
           <h1>Good soup.<br />Better <em>company.</em></h1>
           <p>
-            Pick a cat chef and run a complete offline cooking shift directly on your phone.
+            Pick a cat chef and run a complete offline cooking shift directly on
+            your phone.
           </p>
           <div class="badges">
             <span>Offline after setup</span>
@@ -42,32 +44,24 @@
                 <label>CHOOSE YOUR CAT CHEF</label>
                 <span id="chosen-chef-name">Cream whisker</span>
               </div>
-              <div id="avatar-picker" class="avatar-picker" role="radiogroup"></div>
+              <div
+                id="avatar-picker"
+                class="avatar-picker"
+                role="radiogroup"
+              ></div>
             </div>
 
-            
             <button id="solo" class="textbutton">
               Just me? Start solo practice →
             </button>
           </div>
-          <section id="experimental-mp" class="panel card">
-                    <span class="eyebrow">EXPERIMENTAL LOCAL MULTIPLAYER</span>
-                    <p>Manual WebRTC pairing. Same Wi‑Fi recommended. No room discovery.</p>
-                    <button id="mp-host">Host game</button>
-                    <button id="mp-join">Join game</button>
-                    <textarea id="mp-offer" placeholder="Offer / answer text"></textarea>
-                    <textarea id="mp-answer" placeholder="Answer text"></textarea>
-                    <button id="mp-copy">Copy pairing text</button>
-                    <button id="mp-import">Import pairing</button>
-                    <button id="mp-cancel">Cancel</button>
-                    <div id="mp-status">Idle</div>
-                    <div id="mp-lobby"></div>
-                  </section>
 
           <div class="localnote">
-            <strong>Offline ready</strong><span id="build-version">Build kitchen-cats-20261002-0512</span>
+            <strong>Download for offline play</strong
+            ><span id="build-version">Build kitchen-cats-20261002-r2</span>
             <p>
-              Everything runs locally in your browser after assets are available.
+              Wait for “Offline ready” above before disconnecting. On your
+              phone, add this page to your Home Screen for easy reopening.
             </p>
           </div>
         </div>
@@ -86,26 +80,59 @@
             <span>CREAM · PEACH · MINT<br />LOCAL EDITION</span>
           </figcaption>
         </figure>
-      </section>      <section id="game" hidden>
+      </section>
+      <section id="experimental-mp" class="panel card">
+        <span class="eyebrow">EXPERIMENTAL LOCAL MULTIPLAYER</span>
+        <p>
+          Manual WebRTC pairing. Both phones must download this game online
+          first. Then use the same Wi-Fi (no internet required). Copy the offer
+          to your friend, and their answer back here using a local sharing
+          method. No room discovery. Local pairing depends on browser and router
+          support. Keep the host screen open during play.
+        </p>
+        <button id="mp-host">Host game</button>
+        <button id="mp-join">Join game</button>
+        <label for="mp-offer">Host offer</label
+        ><textarea id="mp-offer" placeholder="Offer / answer text"></textarea>
+        <label for="mp-answer">Guest answer</label
+        ><textarea id="mp-answer" placeholder="Answer text"></textarea>
+        <button id="mp-copy">Copy pairing text</button>
+        <button id="mp-import">Import pairing</button>
+        <button id="mp-cancel">Cancel</button>
+        <div id="mp-status">Idle</div>
+        <div id="mp-lobby"></div>
+      </section>
+      <section id="game" hidden>
         <div class="gamebar card slim">
           <div>
             <span class="eyebrow" id="mode">YOUR KITCHEN</span>
             <h2 id="room"></h2>
           </div>
           <div class="stats">
-            <span>SHIFT <b id="clock">2:00</b></span>
+            <span>SHIFT <b id="clock">1:30</b></span>
             <span>SCORE <b id="score">0</b></span>
             <button id="mute" aria-label="Toggle sound">🔊 Sound</button>
             <button id="motion" aria-label="Toggle motion">✨ Motion</button>
             <button id="leave">Leave</button>
           </div>
         </div>
+        <div id="lobby" class="panel card" hidden>
+          <p id="hosthint"></p>
+          <div id="crew"></div>
+          <button id="start" class="primary">Start shift</button>
+        </div>
         <div id="play" class="play-shell" hidden>
           <div id="orders" aria-live="polite"></div>
           <div class="game-stage">
             <div class="control-rail movement-rail">
               <strong class="rail-title">MOVE</strong>
-              <div id="joystick" class="joystick" aria-label="Analog movement stick"><div id="stick-knob"></div></div>
+              <div
+                id="joystick"
+                class="joystick"
+                aria-label="Analog movement stick"
+              >
+                <div id="stick-knob"></div>
+              </div>
             </div>
             <div class="kitchen-wrap card slim">
               <canvas
@@ -119,14 +146,18 @@
             </div>
             <div class="control-rail action-rail">
               <strong class="rail-title">ACT</strong>
-              <button id="action" class="primary" aria-label="Interact">E · Interact</button>
-              <button id="action-secondary" aria-label="Secondary action">Action</button>
+              <button id="action" class="primary" aria-label="Interact">
+                E · Interact
+              </button>
+
               <span id="holding">PAWS · Empty paws</span>
             </div>
           </div>
           <div class="actionbar card slim">
             <span id="holding-legacy" hidden></span>
-            <span class="keyhint">WASD / arrows to move · tap or press E to act</span>
+            <span class="keyhint"
+              >WASD / arrows to move · tap or press E to act</span
+            >
           </div>
         </div>
 
@@ -163,12 +194,14 @@
         </div>
         <div>
           <span>04 / SERVE</span>
-          <p>Bring matching soup to the service window before the order expires.</p>
+          <p>
+            Bring matching soup to the service window before the order expires.
+          </p>
         </div>
       </section>
       <p class="teamtip">
-        CHEF’S TIP · Use the team counter to hand ingredients to a friend.
-        The board and pot are shared, so teamwork is always faster.
+        CHEF’S TIP · Use the team counter to hand ingredients to a friend. The
+        board and pot are shared, so teamwork is always faster.
       </p>
     </main>
     <div id="toast" role="alert"></div>
