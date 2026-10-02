@@ -159,11 +159,25 @@ multiplayer = mpSession;
 mpSession.onSnapshot((s)=>{ if(runtimeMode !== "solo"){ state=s; me=mpSession.playerId || 0; renderUI(); }});
 mpSession.onStatus((s)=>{ if(mpStatus) mpStatus.textContent=s; });
 const mpStatus=$("mp-status");
+let mpPending=false;
+const showMpError=(prefix,e)=>{
+ mpPending=false;
+ runtimeMode="solo";
+ mpSession.isHost=false;
+ mpStatus.textContent=prefix+": "+(e?.message||String(e));
+};
 $("mp-host")?.addEventListener("click", async()=>{
- runtimeMode="host"; mpSession.isHost=true;
- const id=crypto.randomUUID(); mpSession.startHost(id);
- $("mp-offer").value=await mpTransport.createOffer(id);
- mpStatus.textContent="Host offer ready with ICE candidates";
+ if(mpPending) return;
+ mpPending=true;
+ try {
+  runtimeMode="host"; mpSession.isHost=true;
+  const id=crypto.randomUUID(); mpSession.startHost(id);
+  mpStatus.textContent="Gathering ICE candidates…";
+  const offer=await mpTransport.createOffer(id);
+  $("mp-offer").value=offer;
+  mpPending=false;
+  mpStatus.textContent="Host offer ready with ICE candidates";
+ } catch(e){ showMpError("Host offer failed",e); }
 });
 $("mp-join")?.addEventListener("click",()=>{
  runtimeMode="guest";
@@ -171,7 +185,10 @@ $("mp-join")?.addEventListener("click",()=>{
  mpStatus.textContent="Guest mode: paste host offer, then Import pairing";
 });
 $("mp-import")?.addEventListener("click",async()=>{
+ if(mpPending) return;
+ mpPending=true;
  try {
+  mpStatus.textContent="Processing pairing…";
   if(runtimeMode==="guest") {
     $("mp-answer").value=await mpTransport.acceptOffer($("mp-offer").value);
     mpStatus.textContent="Answer generated. Send answer back to host.";
@@ -179,11 +196,13 @@ $("mp-import")?.addEventListener("click",async()=>{
     await mpTransport.acceptAnswer($("mp-answer").value);
     mpStatus.textContent="Host pairing accepted.";
   }
+  mpPending=false;
  } catch(e){
-  mpStatus.textContent="Pairing failed: "+(e?.message||String(e));
+  showMpError("Pairing failed",e);
  }
 });
 $("mp-cancel")?.addEventListener("click",()=>{
+ mpPending=false;
  mpTransport.close();
  mpSession.stop("cancelled");
  runtimeMode="solo";

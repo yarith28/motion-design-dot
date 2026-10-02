@@ -1,4 +1,4 @@
-const APP_VERSION="kitchen-cats-20261002-0525";
+const APP_VERSION="kitchen-cats-20261002-0540";
 const APP_CACHE_PREFIX="kitchen-cats-";
 const CACHE=`${APP_VERSION}-precache`;
 const ASSETS=[
