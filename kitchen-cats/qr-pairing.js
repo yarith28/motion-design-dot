@@ -221,19 +221,19 @@ export function drawQr(canvas, text, size = 320) {
   canvas.style.height = `${size}px`;
   const ctx = canvas.getContext("2d");
   ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  ctx.imageSmoothingEnabled = false;
   ctx.fillStyle = "#fff";
   ctx.fillRect(0, 0, size, size);
-  const cell = size / cells;
+  // Use whole logical pixels for every module. Fractional module boundaries
+  // look crisp in a screenshot but can make the QR fail stricter decoders
+  // after a PNG round-trip. The spare canvas area becomes extra quiet zone.
+  const cell = Math.max(1, Math.floor(size / cells));
+  const offset = Math.floor((size - modules * cell) / 2);
   ctx.fillStyle = "#111";
   for (let row = 0; row < modules; row++) {
     for (let col = 0; col < modules; col++) {
       if (qr.isDark(row, col))
-        ctx.fillRect(
-          Math.round((col + quiet) * cell),
-          Math.round((row + quiet) * cell),
-          Math.round((col + quiet + 1) * cell) - Math.round((col + quiet) * cell),
-          Math.round((row + quiet + 1) * cell) - Math.round((row + quiet) * cell),
-        );
+        ctx.fillRect(offset + col * cell, offset + row * cell, cell, cell);
     }
   }
   canvas.setAttribute("aria-label", `Kitchen Cats pairing code, ${text.startsWith(`${QR_PREFIX}|o|`) ? "host offer" : "guest reply"}`);
