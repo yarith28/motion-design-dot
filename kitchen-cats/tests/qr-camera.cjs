@@ -11,6 +11,7 @@ const { launchBrowser } = require('./browser-launch.cjs');
       const page = await browser.newPage();
       const errors = [];
       page.on('pageerror', e => errors.push(e.message));
+      page.on('console', message => { if (message.text().startsWith('Fixture control:')) console.log(message.text()); });
       try {
         await page.goto(process.env.BASE_URL || 'http://127.0.0.1:8000/kitchen-cats/');
         const result = await page.evaluate(async name => {
@@ -30,16 +31,38 @@ const { launchBrowser } = require('./browser-launch.cjs');
           const code = document.createElement('canvas');
           const texts = ['Kitchen Cats camera regression frame one', 'Kitchen Cats camera regression frame two'];
           let index = 0;
+          const cameraFeeds = [];
           const paint = () => {
             qr.drawQr(code, texts[index], 360);
             ctx.fillStyle = '#fff'; ctx.fillRect(0, 0, feed.width, feed.height);
             // At x=30 the whole QR is visible but outside the old central crop.
             ctx.drawImage(code, name === 'off-center' ? 30 : 460, 180, 360, 360);
+            for (const canvas of cameraFeeds) canvas.getContext('2d').drawImage(feed, 0, 0);
           };
           paint();
           const timer = setInterval(paint, 60);
           const streams = [];
-          const stream = () => { const s = feed.captureStream(15); streams.push(s); return s; };
+          const stream = () => {
+            // Each getUserMedia call represents a fresh camera source. WebKit
+            // may reject recapturing a canvas whose previous track was stopped.
+            const canvas = document.createElement('canvas');
+            canvas.width = feed.width; canvas.height = feed.height;
+            canvas.getContext('2d').drawImage(feed, 0, 0);
+            cameraFeeds.push(canvas);
+            const s = canvas.captureStream(15); streams.push(s); return s;
+          };
+          if (name === 'rapid-restart') {
+            const control = document.createElement('canvas');
+            const first = control.captureStream(15);
+            first.getTracks().forEach(t => t.stop());
+            try {
+              const second = control.captureStream(15);
+              second.getTracks().forEach(t => t.stop());
+              console.log('Fixture control: recapturing a stopped canvas succeeded');
+            } catch (error) {
+              console.log(`Fixture control: recapturing a stopped canvas failed: ${error.name}: ${error.message}`);
+            }
+          }
           let release;
           let requested = false;
           let constraints;
@@ -124,11 +147,19 @@ const { launchBrowser } = require('./browser-launch.cjs');
           const canvas = document.createElement('canvas');
           // Only incomplete protocol fragments: test saved progress without
           // supplying fabricated signaling or claiming a transport connection.
-          const paint = n => qr.drawQr(canvas, `KCQR1|o|${n}/3|12345678|${'YWJj'.repeat(60)}`, 600);
+          const cameraFeeds = [];
+          const paint = n => {
+            qr.drawQr(canvas, `KCQR1|o|${n}/3|12345678|${'YWJj'.repeat(60)}`, 600);
+            for (const feed of cameraFeeds) feed.getContext('2d').drawImage(canvas, 0, 0);
+          };
           paint(1);
           const streams = [];
           Object.defineProperty(navigator.mediaDevices, 'getUserMedia', { value: async () => {
-            const stream = canvas.captureStream(15); streams.push(stream); return stream;
+            const feed = document.createElement('canvas');
+            feed.width = canvas.width; feed.height = canvas.height;
+            feed.getContext('2d').drawImage(canvas, 0, 0);
+            cameraFeeds.push(feed);
+            const stream = feed.captureStream(15); streams.push(stream); return stream;
           }});
           let frame = 1;
           const timer = setInterval(() => paint(frame), 100);

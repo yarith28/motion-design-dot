@@ -90,3 +90,23 @@ jobs:
           node kitchen-cats/tests/pwa.cjs
           node kitchen-cats/tests/multiplayer-ui.cjs
           node kitchen-cats/tests/rtc.cjs
+
+  deployed:
+    needs: [deterministic, browser, webkit]
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify exact Pages build and every precached asset
+        run: node kitchen-cats/tests/live-version.mjs
+      - name: Install test-only browser dependencies
+        run: |
+          npm install --prefix "$RUNNER_TEMP/kitchen-live" playwright@1.55.0
+          "$RUNNER_TEMP/kitchen-live/node_modules/.bin/playwright" install chromium
+      - name: Verify deployed QR camera regressions
+        env:
+          NODE_PATH: ${{ runner.temp }}/kitchen-live/node_modules
+          BASE_URL: https://yarith28.github.io/motion-design-dot/kitchen-cats/
+        run: |
+          export CHROMIUM_PATH="$(node -e 'process.stdout.write(require("playwright").chromium.executablePath())')"
+          node kitchen-cats/tests/qr-camera.cjs
