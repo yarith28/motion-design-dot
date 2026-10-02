@@ -1025,7 +1025,7 @@ footer {
   width: min(100%, 480px);
   max-height: 52svh;
   aspect-ratio: 4 / 3;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 14px;
   background: #101713;
 }

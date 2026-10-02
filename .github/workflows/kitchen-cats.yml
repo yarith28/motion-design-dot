@@ -54,6 +54,7 @@ jobs:
           node kitchen-cats/tests/browser.cjs
           node kitchen-cats/tests/responsive.cjs
           node kitchen-cats/tests/qr-pairing.cjs
+          node kitchen-cats/tests/qr-camera.cjs
           node kitchen-cats/tests/pwa.cjs
           node kitchen-cats/tests/multiplayer-ui.cjs
           node kitchen-cats/tests/rtc.cjs
@@ -85,6 +86,7 @@ jobs:
           export BROWSER_PATH="$(node -e 'process.stdout.write(require("playwright").webkit.executablePath())')"
           node kitchen-cats/tests/responsive.cjs
           node kitchen-cats/tests/qr-pairing.cjs
+          node kitchen-cats/tests/qr-camera.cjs
           node kitchen-cats/tests/pwa.cjs
           node kitchen-cats/tests/multiplayer-ui.cjs
           node kitchen-cats/tests/rtc.cjs

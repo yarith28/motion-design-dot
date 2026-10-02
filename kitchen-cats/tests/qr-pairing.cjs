@@ -396,7 +396,7 @@ const base = process.env.BASE_URL || "http://127.0.0.1:8000/kitchen-cats/";
       console.log(
       `PASS QR browser: real encoded-PNG decode roundtrips for offer/answer, long candidate framing, unrelated-code rejection, ` +
         `camera decoder=${evidence.camera.supported ? "rendered stream" : "UNTESTED captureStream unavailable"}, ` +
-        "continuous animated-frame UI collection, scanner cleanup, cancel/retry UI, zero page errors",
+        `${continuousFeed.skipped ? "UNTESTED continuous animated-frame UI collection (no native ICE)" : "continuous animated-frame UI collection"}, scanner cleanup, cancel/retry UI, zero page errors`,
     );
     await c.close();
   } finally {

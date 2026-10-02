@@ -242,41 +242,144 @@ export function drawQr(canvas, text, size = 320) {
 }
 
 export class QrCameraScanner {
-  constructor(video, onFrame) {
+  constructor(video, onFrame, onState = () => {}) {
     this.video = video;
     this.onFrame = onFrame;
+    this.onState = onState;
     this.scanner = null;
   }
   async start() {
-    // A pre-attached stream is also useful for browser regression coverage:
-    // qr-scanner still decodes its video frames, while production starts with
-    // no stream and lets qr-scanner request the rear camera. If a scanner is
-    // already active, stop it before replacing the camera session.
     if (this.scanner) this.stop();
-    this.scanner = new QrScanner(
-      this.video,
-      (result) => this.onFrame(typeof result === "string" ? result : result.data),
-      {
-        preferredCamera: "environment",
-        maxScansPerSecond: 12,
-        returnDetailedScanResult: true,
-      },
-    );
+    const video = this.video;
+    const session = { stream: null, engine: null, timer: null, fallback: false, scans: 0 };
+    this.scanner = session;
+    const current = () => this.scanner === session;
+    const releaseEngine = () => {
+      session.engine?.terminate?.();
+      session.engine = null;
+    };
+    session.stop = () => {
+      clearTimeout(session.timer);
+      session.stream?.getTracks().forEach((track) => track.stop());
+    };
+    session.destroy = releaseEngine;
+    const report = (state) => {
+      if (!current() || session.state === state) return;
+      session.state = state;
+      this.onState(state);
+    };
+    // Bound both engine startup and decoding. A worker/native decoder failure
+    // must not hold the only scan loop forever. Late results are never delivered.
+    const bounded = async (promise, ms) => {
+      let timer;
+      try {
+        return await Promise.race([
+          promise,
+          new Promise((_, reject) => { timer = setTimeout(() => reject(Error('QR decoder timeout')), ms); }),
+        ]);
+      } finally { clearTimeout(timer); }
+    };
     try {
-      await this.scanner.start();
-      this.video.hidden = false;
+      video.muted = true;
+      video.playsInline = true;
+      // Keep a real, visible preview. Constructing the old live scanner while
+      // hidden caused it to permanently set opacity/width/height to zero.
+      video.hidden = false;
+      // Ideal constraints preserve the rear-camera preference without failing
+      // cameras that cannot satisfy an exact resolution or facing mode.
+      const stream = video.srcObject || await navigator.mediaDevices.getUserMedia({
+        audio: false,
+        video: { facingMode: { ideal: 'environment' }, width: { ideal: 1280 }, height: { ideal: 720 } },
+      });
+      session.stream = stream;
+      if (!current()) { session.stop(); return; }
+      video.srcObject = stream;
+      await bounded(video.play(), 8000);
+      if (!current()) return;
+      const enginePromise = QrScanner.createQrEngine().then((engine) => {
+        if (!current() || session.fallback) { engine?.terminate?.(); return null; }
+        session.engine = engine;
+        return engine;
+      });
+      try { await bounded(enginePromise, 1500); }
+      catch { session.fallback = true; releaseEngine(); }
+      if (!current()) return;
+      const canvas = document.createElement('canvas');
+      const context = canvas.getContext('2d', { willReadFrequently: true });
+      const scan = async () => {
+        try {
+          if (!current()) return;
+          if (!session.stream.getVideoTracks().some((track) => track.readyState === 'live')) {
+            report('ended');
+            this.stop();
+            return;
+          }
+          if (video.paused || video.readyState < 2 || !video.videoWidth || !video.videoHeight) {
+            report('waiting');
+            return;
+          }
+          report(session.fallback ? 'recovering' : 'scanning');
+          // Alternate the entire camera view with a detailed center crop. The
+          // previous invisible central 2/3 crop missed codes visible in preview.
+          const centered = session.scans++ % 2 === 1;
+          const side = Math.min(video.videoWidth, video.videoHeight);
+          const width = centered ? side : video.videoWidth;
+          const height = centered ? side : video.videoHeight;
+          const scale = Math.min(1, 960 / Math.max(width, height));
+          canvas.width = Math.round(width * scale);
+          canvas.height = Math.round(height * scale);
+          context.imageSmoothingEnabled = false;
+          context.drawImage(video, (video.videoWidth - width) / 2, (video.videoHeight - height) / 2,
+            width, height, 0, 0, canvas.width, canvas.height);
+          let result;
+          if (!session.fallback) {
+            try {
+              result = await bounded(QrScanner.scanImage(canvas, {
+                qrEngine: session.engine, returnDetailedScanResult: true,
+              }), 1500);
+            } catch (error) {
+              if (!current()) return;
+              if (String(error?.message || error).includes(QrScanner.NO_QR_CODE_FOUND)) return;
+              session.fallback = true;
+              releaseEngine();
+              report('recovering');
+            }
+          }
+          if (!current()) return;
+          if (session.fallback) {
+            const pixels = context.getImageData(0, 0, canvas.width, canvas.height);
+            result = globalThis.jsQR(pixels.data, canvas.width, canvas.height, { inversionAttempts: 'attemptBoth' });
+          }
+          if (result?.data && current()) {
+            // Consumer failures must not break scheduling or become unhandled
+            // promise rejections. Do not wait for signaling to finish to schedule.
+            Promise.resolve().then(() => current() && this.onFrame(result.data)).catch(() => {});
+          }
+        } catch {
+          report('recovering');
+        } finally {
+          // Timer scheduling survives missing requestVideoFrameCallback events,
+          // temporarily unready video, decode errors, and rejected callbacks.
+          if (current()) session.timer = setTimeout(scan, 100);
+        }
+      };
+      scan();
     } catch (error) {
+      // An old permission/play promise must never stop a newer camera session.
+      if (!current()) { session.stop(); return; }
       this.stop();
       throw error;
     }
   }
   stop() {
-    this.scanner?.stop();
-    this.scanner?.destroy();
+    const session = this.scanner;
     this.scanner = null;
+    session?.stop();
+    session?.destroy();
     const stream = this.video?.srcObject;
     stream?.getTracks?.().forEach((track) => track.stop());
     if (this.video) {
+      this.video.pause();
       this.video.srcObject = null;
       this.video.hidden = true;
     }
@@ -285,8 +388,7 @@ export class QrCameraScanner {
     if (!file) throw Error("Choose a QR image first.");
     // jsQR is used for imported images because it consumes the decoded pixel
     // buffer directly and behaves consistently in Chromium, WebKit, and
-    // Safari-like image paths. The live camera keeps qr-scanner's tested
-    // worker/permission lifecycle below.
+    // Safari-like image paths. It also provides live-camera decoder recovery.
     if (typeof globalThis.jsQR === "function") {
       const url = URL.createObjectURL(file);
       try {

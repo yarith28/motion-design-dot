@@ -1,4 +1,4 @@
-const VERSION = "kitchen-cats-20261002-r24-qr-live-frames";
+const VERSION = "kitchen-cats-20261002-r25-qr-camera-recovery";
 const PREFIX = "kitchen-cats-";
 const CACHE = VERSION + "-precache";
 const ASSETS = [

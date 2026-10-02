@@ -282,8 +282,19 @@ let mpPending = false,
   qrScanRole = null,
   qrScanBusy = false,
   qrPendingDecode = false,
-  qrLastError = "";
-const qrCamera = new QrCameraScanner(mpVideo, (text) => handleQrText(text));
+  qrLastError = "",
+  qrProgressTimer = null,
+  qrLastProgress = 0,
+  qrCameraAttempt = 0;
+const qrCamera = new QrCameraScanner(mpVideo, (text) => handleQrText(text), (state) => {
+  if (!qrScanBusy) return;
+  if (state === "ended") {
+    stopQrCamera();
+    mpScanStatus.textContent = "Camera stopped. Tap Scan to resume; saved frames are kept.";
+  } else if (state === "waiting") {
+    mpScanStatus.textContent = "Waiting for camera… Tap Restart camera if needed.";
+  }
+});
 const profile = () => ({
   name: $("name").value || "Chef",
   avatar: chosenAvatar(),
@@ -299,6 +310,9 @@ function stopQrAnimation() {
   qrFrames = [];
 }
 function stopQrCamera() {
+  qrCameraAttempt++;
+  clearInterval(qrProgressTimer);
+  qrProgressTimer = null;
   qrScanBusy = false;
   qrCamera.stop();
   mpCamera.hidden = true;
@@ -381,22 +395,34 @@ function cameraErrorMessage(error) {
 async function startQrCamera() {
   if (!qrAssembler || !qrScanRole || qrScanBusy) return;
   stopQrAnimation();
+  const attempt = ++qrCameraAttempt;
   qrScanBusy = true;
+  qrLastProgress = Date.now();
   mpCamera.hidden = false;
   mpScanButton.disabled = true;
   mpScanButton.textContent = "Camera scanning…";
   mpScanStatus.textContent = "Point the rear camera at the QR code.";
   try {
     await qrCamera.start();
-    if (!qrScanBusy) return;
+    if (!qrScanBusy || attempt !== qrCameraAttempt) return;
+    mpScanButton.disabled = false;
+    mpScanButton.textContent = "Restart camera";
+    qrProgressTimer = setInterval(() => {
+      if (Date.now() - qrLastProgress < 6000) return;
+      const count = qrAssembler?.frames.size || 0;
+      const progress = count ? `${count} of ${qrAssembler.total} saved. ` : "";
+      mpScanStatus.textContent = `${progress}Keep the whole code visible. Move closer or tap Restart camera.`;
+    }, 1000);
   } catch (e) {
+    if (attempt !== qrCameraAttempt) return;
     stopQrCamera();
     mpStatus.textContent = `${cameraErrorMessage(e)} Choose a QR image or open Advanced.`;
     mpScanStatus.textContent = "Camera unavailable. No permission bypass was attempted.";
   }
 }
 function updateQrProgress(result) {
-  if (!result) return;
+  if (!result || result.duplicate) return;
+  qrLastProgress = Date.now();
   mpScanStatus.textContent = result.complete
     ? "Code complete. Finishing pairing…"
     : `Reading code · ${result.received} of ${result.total} frames`;
@@ -581,7 +607,7 @@ $("mp-import").addEventListener("click", async () => {
 $("mp-cancel").addEventListener("click", () => returnToSolo());
 mpScanButton.addEventListener("click", () => {
   if (qrScanBusy) stopQrCamera();
-  else startQrCamera();
+  startQrCamera();
 });
 $("mp-stop-scan").addEventListener("click", () => stopQrCamera());
 mpImagePick.addEventListener("click", () => mpImage.click());
