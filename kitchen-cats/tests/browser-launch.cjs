@@ -12,7 +12,7 @@ const executablePath =
 async function launchBrowser() {
   return browserType.launch({
     executablePath,
-    args: ["--no-sandbox"],
+    args: browserType === chromium ? ["--no-sandbox"] : [],
   });
 }
 
