@@ -1046,3 +1046,7 @@ body.game-active header, body.game-active .how, body.game-active .teamtip { disp
 #stick-knob { width:34px; height:34px; position:absolute; left:24px; top:24px; border-radius:50%; background:#e77d56; }
 .action-rail button { width:100%; min-height:52px; touch-action:none; }
 @media (max-width:900px) and (orientation:landscape) { header {display:none;} main {width:100%; padding:4px;} #game {height:100svh;} .gamebar {padding:6px;} .stats span {font-size:12px;} }
+
+#experimental-mp { margin-top: 1rem; }
+#experimental-mp textarea { min-height: 90px; width: 100%; }
+#mp-status { margin-top: .75rem; }

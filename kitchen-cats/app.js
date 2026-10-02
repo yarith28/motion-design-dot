@@ -165,11 +165,32 @@ $("mp-host")?.addEventListener("click", async()=>{
  $("mp-offer").value=await mpTransport.createOffer(id);
  mpStatus.textContent="Host offer created";
 });
-$("mp-join")?.addEventListener("click",()=>mpStatus.textContent="Paste host offer then import");
-$("mp-import")?.addEventListener("click",async()=>{
- try { if(mpSession.isHost===false) $("mp-answer").value=await mpTransport.acceptOffer($("mp-offer").value); else await mpTransport.acceptAnswer($("mp-answer").value); mpStatus.textContent="Pairing accepted"; } catch(e){mpStatus.textContent="Pairing failed: "+e.message;}
+$("mp-join")?.addEventListener("click",()=>{
+ runtimeMode="guest";
+ mpSession.isHost=false;
+ mpStatus.textContent="Guest mode: paste host offer, then Import pairing";
 });
-$("mp-cancel")?.addEventListener("click",()=>{mpTransport.close();mpStatus.textContent="Cancelled"});
+$("mp-import")?.addEventListener("click",async()=>{
+ try {
+  if(runtimeMode==="guest") {
+    $("mp-answer").value=await mpTransport.acceptOffer($("mp-offer").value);
+    mpStatus.textContent="Answer generated. Send answer back to host.";
+  } else {
+    await mpTransport.acceptAnswer($("mp-answer").value);
+    mpStatus.textContent="Host pairing accepted.";
+  }
+ } catch(e){
+  mpStatus.textContent="Pairing failed: "+(e?.message||String(e));
+ }
+});
+$("mp-cancel")?.addEventListener("click",()=>{
+ mpTransport.close();
+ mpSession.stop("cancelled");
+ runtimeMode="solo";
+ state=offlineGame.snapshot();
+ renderUI();
+ mpStatus.textContent="Cancelled";
+});
 $("mp-copy")?.addEventListener("click",()=>navigator.clipboard?.writeText($("mp-offer").value||$("mp-answer").value));
 
 renderAvatarPicker();

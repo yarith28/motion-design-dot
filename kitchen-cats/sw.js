@@ -1,4 +1,4 @@
-const APP_VERSION="kitchen-cats-static-v4";
+const APP_VERSION="kitchen-cats-static-v5";
 const CACHE=`${APP_VERSION}-precache`;
 const ASSETS=[
  "./","./index.html","./style.css","./app.js","./game-core.js","./multiplayer-session.js","./experimental-multiplayer.js","./webrtc-transport.js","./manifest.json",
