@@ -52,6 +52,36 @@ jobs:
         run: |
           export CHROMIUM_PATH="$(node -e 'process.stdout.write(require("playwright").chromium.executablePath())')"
           node kitchen-cats/tests/browser.cjs
+          node kitchen-cats/tests/responsive.cjs
+          node kitchen-cats/tests/pwa.cjs
+          node kitchen-cats/tests/multiplayer-ui.cjs
+          node kitchen-cats/tests/rtc.cjs
+
+  webkit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install test-only WebKit dependencies
+        run: |
+          npm install --prefix "$RUNNER_TEMP/kitchen-tests" playwright@1.55.0
+          "$RUNNER_TEMP/kitchen-tests/node_modules/.bin/playwright" install --with-deps webkit
+      - name: Serve Kitchen Cats
+        run: |
+          python3 -m http.server 8000 --bind 127.0.0.1 > "$RUNNER_TEMP/kitchen-server-webkit.log" 2>&1 &
+          for attempt in 1 2 3 4 5; do
+            if curl --fail --silent http://127.0.0.1:8000/kitchen-cats/ > /dev/null; then exit 0; fi
+            sleep 1
+          done
+          exit 1
+      - name: Run WebKit layout, PWA, simulated integration, and native RTC gates
+        env:
+          NODE_PATH: ${{ runner.temp }}/kitchen-tests/node_modules
+          BASE_URL: http://127.0.0.1:8000/kitchen-cats/
+          BROWSER_ENGINE: webkit
+        run: |
+          export BROWSER_PATH="$(node -e 'process.stdout.write(require("playwright").webkit.executablePath())')"
+          node kitchen-cats/tests/responsive.cjs
           node kitchen-cats/tests/pwa.cjs
           node kitchen-cats/tests/multiplayer-ui.cjs
           node kitchen-cats/tests/rtc.cjs

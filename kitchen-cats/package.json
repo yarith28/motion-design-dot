@@ -5,7 +5,8 @@
   "scripts": {
     "test:syntax": "find . -type f \\( -name '*.js' -o -name '*.mjs' -o -name '*.cjs' \\) -print0 | xargs -0 -n1 node --check",
     "test:core": "node tests/core.mjs && node tests/cream-animation.test.mjs && node tests/visual-r6.test.mjs && node tests/session-security.mjs && node tests/rtc-contract.mjs",
-    "test:browser": "node tests/browser.cjs",
+    "test:browser": "node tests/browser.cjs && node tests/responsive.cjs",
+    "test:responsive": "node tests/responsive.cjs",
     "test:pwa": "node tests/pwa.cjs",
     "test:multiplayer": "node tests/multiplayer-ui.cjs",
     "test:rtc": "node tests/rtc.cjs",

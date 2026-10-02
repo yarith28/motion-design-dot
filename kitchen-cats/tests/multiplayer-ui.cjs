@@ -1,6 +1,6 @@
 // Browser integration with a simulated transport. This does NOT prove WebRTC connectivity.
 const assert = require("node:assert/strict");
-const { chromium } = require("playwright");
+const { launchBrowser } = require("./browser-launch.cjs");
 const base = process.env.BASE_URL || "http://127.0.0.1:8000/kitchen-cats/";
 async function bridge(page) {
   await page.evaluate(async () => {
@@ -68,10 +68,7 @@ async function bridge(page) {
   });
 }
 (async () => {
-  const b = await chromium.launch({
-    executablePath: process.env.CHROMIUM_PATH || "/usr/bin/chromium",
-    args: ["--no-sandbox"],
-  });
+  const b = await launchBrowser();
   try {
     const c = await b.newContext();
     const h = await c.newPage(),

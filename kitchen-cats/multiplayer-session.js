@@ -127,6 +127,10 @@ export class MultiplayerSession {
     this.timer = null;
     this.stopping = false;
     this.helloSent = false;
+    this.snapshotSeq = 0;
+    this.lastSnapshotSeq = 0;
+    this.clientSeq = 0;
+    this.lastClientSeq = new Map();
     transport.onMessage = (id, m) => this.receive(id, m);
     transport.onStatus = (id, s) => this.connection(id, s);
   }
@@ -157,11 +161,13 @@ export class MultiplayerSession {
     this.profile = profileValue(name, avatar);
   }
   publish(s) {
+    const seq = ++this.snapshotSeq;
     this.snapshotCb(s);
     for (const id of this.peers) {
       this.safeSend(id, {
         type: "snapshot",
         sessionId: this.sessionId,
+        seq,
         snapshot: s,
       });
     }
@@ -201,6 +207,7 @@ export class MultiplayerSession {
       if (this.isHost) {
         this.peers.delete(id);
         this.rate.delete(id);
+        this.lastClientSeq.delete(id);
         if (this.game?.removePlayer(id)) this.publish(this.game.snapshot());
         this.status("Pairing closed / chef left");
       } else if (this.serverPeer === id) {
@@ -224,8 +231,15 @@ export class MultiplayerSession {
         return;
       }
       if (m.sessionId !== this.sessionId) return;
-      if (m.type === "snapshot" && validSnapshot(m.snapshot))
+      if (
+        m.type === "snapshot" &&
+        Number.isSafeInteger(m.seq) &&
+        m.seq > this.lastSnapshotSeq &&
+        validSnapshot(m.snapshot)
+      ) {
+        this.lastSnapshotSeq = m.seq;
         this.snapshotCb(copySnapshot(m.snapshot));
+      }
       if (m.type === "ended") this.status("disconnected");
       return;
     }
@@ -252,13 +266,20 @@ export class MultiplayerSession {
     }
     if (!this.game || m.sessionId !== this.sessionId || m.playerId !== id)
       return;
+    const isInput = m.type === "input";
+    const isInteract = m.type === "interact";
+    if (!isInput && !isInteract) return;
+    if (!Number.isSafeInteger(m.seq) || m.seq < 1) return;
+    const previousSeq = this.lastClientSeq.get(id) || 0;
+    if (m.seq <= previousSeq) return;
+    this.lastClientSeq.set(id, m.seq);
     const now = this.now();
     let r = this.rate.get(id);
     if (!r || now - r.t >= 1000) r = { t: now, n: 0 };
     this.rate.set(id, r);
     if (++r.n > 40) return;
     if (
-      m.type === "input" &&
+      isInput &&
       Number.isFinite(m.x) &&
       Number.isFinite(m.y) &&
       Math.abs(m.x) <= 1 &&
@@ -266,7 +287,7 @@ export class MultiplayerSession {
     )
       this.game.move(id, m.x, m.y);
     if (
-      m.type === "interact" &&
+      isInteract &&
       typeof m.station === "string" &&
       stationIds.has(m.station)
     )
@@ -301,10 +322,11 @@ export class MultiplayerSession {
     y /= magnitude;
     if (this.isHost) return !!this.game?.move("host", x, y);
     if (this.serverPeer && this.sessionId && this.playerId)
-      return this.transport.send(this.serverPeer, {
+      return this.safeSend(this.serverPeer, {
         type: "input",
         sessionId: this.sessionId,
         playerId: this.playerId,
+        seq: ++this.clientSeq,
         x,
         y,
       });
@@ -314,10 +336,11 @@ export class MultiplayerSession {
     if (!stationIds.has(station)) return false;
     if (this.isHost) return !!this.game?.interact("host", station);
     if (this.serverPeer && this.sessionId && this.playerId)
-      return this.transport.send(this.serverPeer, {
+      return this.safeSend(this.serverPeer, {
         type: "interact",
         sessionId: this.sessionId,
         playerId: this.playerId,
+        seq: ++this.clientSeq,
         station,
       });
     return false;
@@ -361,6 +384,10 @@ export class MultiplayerSession {
     this.playerId = null;
     this.profile = null;
     this.helloSent = false;
+    this.snapshotSeq = 0;
+    this.lastSnapshotSeq = 0;
+    this.clientSeq = 0;
+    this.lastClientSeq.clear();
     this.rate.clear();
     this.stopping = false;
   }

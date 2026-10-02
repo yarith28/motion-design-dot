@@ -989,8 +989,8 @@ body.game-active #game {
 }
 
 body.game-active .gamebar {
-  flex: 0 0 42px;
-  height: 42px;
+  flex: 0 0 48px;
+  height: 48px;
   margin: 0;
   padding: 4px 8px;
   overflow: hidden;
@@ -1019,7 +1019,7 @@ body.game-active .stats b {
 
 body.game-active .stats button {
   padding: 6px 8px;
-  min-height: 32px;
+  min-height: 44px;
   border-radius: 10px;
   font-size: 11px;
 }

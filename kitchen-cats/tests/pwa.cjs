@@ -3,7 +3,7 @@ const assert = require("node:assert/strict"),
   path = require("node:path"),
   os = require("node:os"),
   http = require("node:http");
-const { chromium } = require("playwright");
+const { launchBrowser } = require("./browser-launch.cjs");
 (async () => {
   const root = fs.mkdtempSync(path.join(os.tmpdir(), "kitchen-pwa-"));
   fs.cpSync(path.resolve(__dirname, ".."), path.join(root, "kitchen-cats"), {
@@ -14,7 +14,11 @@ const { chromium } = require("playwright");
   const expectedPrecacheCount = (
     swSource.match(/^\s+"\.\/[^"]*",?\s*$/gm) || []
   ).length;
-  const server = http.createServer((req, res) => {
+  let pauseAsset = null;
+  let resolvePaused;
+  let releasePaused;
+  const paused = new Promise((resolve) => (resolvePaused = resolve));
+  const server = http.createServer(async (req, res) => {
     const file = path.join(
       root,
       decodeURIComponent(new URL(req.url, "http://local").pathname),
@@ -36,15 +40,47 @@ const { chromium } = require("playwright");
         ".png": "image/png",
       }[path.extname(p)] || "text/plain",
     );
+    if (pauseAsset && p.endsWith(pauseAsset)) {
+      resolvePaused();
+      await new Promise((resolve) => (releasePaused = resolve));
+    }
     res.end(fs.readFileSync(p));
   });
   await new Promise((r) => server.listen(0, "127.0.0.1", r));
   const base = `http://127.0.0.1:${server.address().port}/kitchen-cats/`;
-  const b = await chromium.launch({
-    executablePath: process.env.CHROMIUM_PATH || "/usr/bin/chromium",
-    args: ["--no-sandbox"],
-  });
+  const b = await launchBrowser();
   try {
+    // Interrupt a brand-new install while one precache response is in flight.
+    // Closing the page is the closest portable browser-level approximation to
+    // an interrupted first download; the follow-up install must still be
+    // complete and usable offline.
+    pauseAsset = "assets/icon-512.png";
+    const interrupted = await b.newContext();
+    const interruptedPage = await interrupted.newPage();
+    const interruptedNavigation = interruptedPage.goto(base).catch(() => {});
+    assert(
+      await Promise.race([
+        paused.then(() => true),
+        new Promise((resolve) => setTimeout(() => resolve(false), 5000)),
+      ]),
+      "first install did not reach the interrupted asset",
+    );
+    await interrupted.close();
+    pauseAsset = null;
+    releasePaused?.();
+    await interruptedNavigation;
+
+    const recovered = await b.newContext();
+    const recoveredPage = await recovered.newPage();
+    await recoveredPage.goto(base);
+    await recoveredPage.waitForFunction(
+      () => document.querySelector("#connection").textContent === "Offline ready",
+    );
+    await recovered.setOffline(true);
+    await recoveredPage.reload();
+    assert(await recoveredPage.locator("#solo").isVisible());
+    await recovered.close();
+
     const c = await b.newContext();
     let p = await c.newPage();
     await p.goto(base);
@@ -75,8 +111,13 @@ const { chromium } = require("playwright");
     await p.reload();
     await p.locator("#solo").click();
     assert(await p.locator("#play").isVisible());
+    await p.close();
+    p = await c.newPage();
+    await p.goto(base);
+    assert(await p.locator("#solo").isVisible(), "offline cold reopen lost the app shell");
     await c.setOffline(false);
-    await p.locator("#leave").click();
+    await p.locator("#solo").click();
+    assert(await p.locator("#play").isVisible(), "offline cold reopen could not start a shift");
     fs.writeFileSync(
       sw,
       swSource.replace(
@@ -95,6 +136,7 @@ const { chromium } = require("playwright");
         .querySelector("#connection")
         .textContent.includes("Update downloaded"),
     );
+    assert(await p.locator("#play").isVisible(), "update during active shift tore down play");
     await p.goto("about:blank");
     await p.waitForTimeout(300);
     await p.goto(base);
@@ -153,7 +195,7 @@ const { chromium } = require("playwright");
     );
     await bad.close();
     console.log(
-      "PASS PWA: complete precache, offline launch, waiting update/status, activation/reopen offline, scope/cache isolation, failed update preserves old offline version, failed download reporting/no partial cache",
+      "PASS PWA: interrupted first-install recovery, complete precache, warm/cold offline launch, active-shift update, scope/cache isolation, failed update preserves old version, failed download reporting/no partial cache",
     );
   } finally {
     await b.close();

@@ -1,11 +1,8 @@
 const assert = require("node:assert/strict");
-const { chromium } = require("playwright");
+const { launchBrowser } = require("./browser-launch.cjs");
 const base = process.env.BASE_URL || "http://127.0.0.1:8000/kitchen-cats/";
 (async () => {
-  const b = await chromium.launch({
-    executablePath: process.env.CHROMIUM_PATH || "/usr/bin/chromium",
-    args: ["--no-sandbox"],
-  });
+  const b = await launchBrowser();
   try {
     const c = await b.newContext();
     const h = await c.newPage();
@@ -29,7 +26,7 @@ const base = process.env.BASE_URL || "http://127.0.0.1:8000/kitchen-cats/";
     if (!(await h.locator("#mp-offer").inputValue())) {
       assert.match(
         await h.locator("#mp-status").textContent(),
-        /No ICE candidates|timed out/,
+        /No ICE candidates|timed out|unavailable/,
       );
       assert.equal(await h.evaluate(() => testTransport.peers.size), 0);
       for (let i = 0; i < 2; i++) {

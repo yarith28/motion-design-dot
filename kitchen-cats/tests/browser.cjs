@@ -1,11 +1,8 @@
 const assert = require("node:assert/strict");
-const { chromium } = require("playwright");
+const { launchBrowser } = require("./browser-launch.cjs");
 const base = process.env.BASE_URL || "http://127.0.0.1:8000/kitchen-cats/";
 (async () => {
-  const b = await chromium.launch({
-    executablePath: process.env.CHROMIUM_PATH || "/usr/bin/chromium",
-    args: ["--no-sandbox"],
-  });
+  const b = await launchBrowser();
   try {
     const storageContext = await b.newContext({
       viewport: { width: 844, height: 390 },
@@ -50,6 +47,12 @@ const base = process.env.BASE_URL || "http://127.0.0.1:8000/kitchen-cats/";
         window.testSnapshot = s;
         return s;
       };
+      const tick = KitchenGame.prototype.tick;
+      KitchenGame.prototype.tick = function (...args) {
+        window.testTickCount = (window.testTickCount || 0) + 1;
+        return tick.apply(this, args);
+      };
+      window.testTickCount = 0;
     });
     const state = () => p.evaluate(() => window.testSnapshot);
     const step = (ms) => p.clock.runFor(ms);
@@ -138,6 +141,26 @@ const base = process.env.BASE_URL || "http://127.0.0.1:8000/kitchen-cats/";
       await step(100);
       assert.equal((await state()).score, 0);
     }
+    for (let i = 0; i < 8; i++) {
+      const beforeTicks = await p.evaluate(() => window.testTickCount);
+      await p.locator("#leave").click();
+      assert(await p.locator("#welcome").isVisible());
+      await p.locator("#solo").click();
+      await step(250);
+      const runningTicks =
+        (await p.evaluate(() => window.testTickCount)) - beforeTicks;
+      assert(runningTicks >= 2 && runningTicks <= 8, `unexpected tick count: ${runningTicks}`);
+      await p.locator("#leave").click();
+      const stoppedTicks = await p.evaluate(() => window.testTickCount);
+      await step(1000);
+      assert.equal(await p.evaluate(() => window.testTickCount), stoppedTicks);
+      if (i < 7) {
+        await p.locator("#solo").click();
+        await step(50);
+      }
+    }
+    await p.locator("#solo").click();
+    await step(100);
     await axis("y", 175);
     const cd = await c.newCDPSession(p),
       r = await p.locator("#joystick").boundingBox(),
@@ -173,7 +196,7 @@ const base = process.env.BASE_URL || "http://127.0.0.1:8000/kitchen-cats/";
     assert(await p.locator("#play").isVisible());
     assert.deepEqual(errors, []);
     console.log(
-      "PASS UI: actual pickup/chop/cook/serve, score, results/replay, three Leave/restarts, 844x390 bounds, simultaneous thumbstick/action, analog/release, malformed pairing/cancel/solo; zero page errors",
+      "PASS UI: actual pickup/chop/cook/serve, score, results/replay, eleven Leave/restarts, tick cleanup, 844x390 bounds, simultaneous thumbstick/action, analog/release, malformed pairing/cancel/solo; zero page errors",
     );
     await c.close();
   } finally {
