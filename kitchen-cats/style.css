@@ -949,13 +949,139 @@ footer {
   margin-top: 1rem;
 }
 
+#mp-intro {
+  max-width: 720px;
+}
+
+#mp-flow {
+  display: grid;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.pair-actions,
+.pair-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.pair-step {
+  padding: 14px 16px;
+  border: 1px solid #d8dfd0;
+  border-radius: 16px;
+  background: #f5f9f0;
+}
+
+.pair-step strong {
+  display: block;
+  color: var(--peach-strong);
+  letter-spacing: 0.8px;
+}
+
+.pair-step p {
+  margin: 6px 0 0;
+  color: var(--ink-soft);
+}
+
+.qr-view {
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+  padding: 14px;
+  border-radius: 20px;
+  background: #eef4e9;
+  border: 1px solid #d5dfd0;
+}
+
+#mp-qr {
+  display: block;
+  width: min(280px, 76vw);
+  height: auto;
+  aspect-ratio: 1;
+  image-rendering: pixelated;
+  border-radius: 8px;
+}
+
+#mp-qr-progress,
+#mp-scan-status {
+  color: var(--ink-soft);
+  font-size: 12px;
+  text-align: center;
+}
+
+.qr-camera {
+  display: grid;
+  gap: 10px;
+  justify-items: center;
+  padding: 12px;
+  border-radius: 18px;
+  background: #1f3028;
+}
+
+#mp-video {
+  display: block;
+  width: min(100%, 480px);
+  max-height: 52svh;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 14px;
+  background: #101713;
+}
+
+.qr-camera p {
+  margin: 0;
+  color: #f7fbf2;
+}
+
+#mp-advanced {
+  border-top: 1px solid #d8dfd0;
+  padding-top: 10px;
+}
+
+#mp-advanced summary {
+  cursor: pointer;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  color: var(--ink-soft);
+  font-weight: 700;
+}
+
 #experimental-mp textarea {
   min-height: 90px;
   width: 100%;
 }
 
+#mp-advanced label {
+  display: block;
+  margin-top: 10px;
+}
+
+#mp-advanced .pair-tools {
+  margin-top: 10px;
+}
+
+.pair-cancel {
+  justify-self: start;
+}
+
 #mp-status {
   margin-top: .75rem;
+}
+
+@media (max-width: 520px) {
+  .pair-actions,
+  .pair-tools {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .pair-actions button,
+  .pair-tools button {
+    width: 100%;
+  }
 }
 
 body.game-active {

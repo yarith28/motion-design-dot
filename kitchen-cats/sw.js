@@ -1,4 +1,4 @@
-const VERSION = "kitchen-cats-20261002-r13";
+const VERSION = "kitchen-cats-20261002-r14-qr";
 const PREFIX = "kitchen-cats-";
 const CACHE = VERSION + "-precache";
 const ASSETS = [
@@ -10,6 +10,11 @@ const ASSETS = [
   "./game-core.js",
   "./multiplayer-session.js",
   "./webrtc-transport.js",
+  "./qr-pairing.js",
+  "./vendor/qrcode-generator.js",
+  "./vendor/qr-scanner.min.js",
+  "./vendor/qr-scanner-worker.min.js",
+  "./vendor/THIRD-PARTY-LICENSES.txt",
   "./manifest.json",
   "./assets/cat-tabby.png",
   "./assets/title-illustration.png",

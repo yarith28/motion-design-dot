@@ -31,20 +31,28 @@ async function bridge(page) {
     T.prototype.createOffer = async function (id, sessionId) {
       this.role = "host";
       init(this);
-      return JSON.stringify({ id, sessionId });
+      return JSON.stringify({
+        version: 1,
+        peerId: id,
+        sessionId,
+        description: { type: "offer", sdp: "v=0\\r\\na=candidate:test" },
+      });
     };
     T.prototype.acceptOffer = async function (s) {
       this.role = "guest";
       init(this);
       const data = JSON.parse(s);
-      this.id = data.id;
-      return JSON.stringify(data);
+      this.id = data.peerId;
+      return JSON.stringify({
+        ...data,
+        description: { type: "answer", sdp: "v=0\\r\\na=candidate:test-answer" },
+      });
     };
     T.prototype.acceptAnswer = async function (s) {
-      const { id } = JSON.parse(s);
-      this.bus.postMessage({ to: "guest", kind: "connected", id });
-      this.peers.set(id, { dc: { readyState: "open" } });
-      this.onStatus(id, "connected");
+      const { peerId } = JSON.parse(s);
+      this.bus.postMessage({ to: "guest", kind: "connected", id: peerId });
+      this.peers.set(peerId, { dc: { readyState: "open" } });
+      this.onStatus(peerId, "connected");
     };
     T.prototype.send = function (id, msg) {
       this.bus.postMessage({
@@ -84,6 +92,8 @@ async function bridge(page) {
     async function pair() {
       await h.locator("#mp-host").click();
       await g.locator("#mp-join").click();
+      if (!(await g.locator("#mp-advanced").getAttribute("open")))
+        await g.locator("#mp-advanced").click();
       await g
         .locator("#mp-offer")
         .fill(await h.locator("#mp-offer").inputValue());
@@ -103,6 +113,8 @@ async function bridge(page) {
         await g.evaluate(() => window.copied),
         await g.locator("#mp-answer").inputValue(),
       );
+      if (!(await h.locator("#mp-advanced").getAttribute("open")))
+        await h.locator("#mp-advanced").click();
       await h
         .locator("#mp-answer")
         .fill(await g.locator("#mp-answer").inputValue());

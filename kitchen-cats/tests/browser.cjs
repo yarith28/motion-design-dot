@@ -188,6 +188,7 @@ const base = process.env.BASE_URL || "http://127.0.0.1:8000/kitchen-cats/";
     assert.deepEqual(after.input, { x: 0, y: 0 });
     await p.locator("#leave").click();
     await p.locator("#mp-join").click();
+    await p.locator("#mp-advanced").click();
     await p.locator("#mp-offer").fill("bad-json");
     await p.locator("#mp-import").click();
     assert.match(await p.locator("#mp-status").textContent(), /Pairing failed/);

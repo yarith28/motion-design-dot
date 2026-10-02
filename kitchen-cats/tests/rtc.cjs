@@ -1,6 +1,27 @@
 const assert = require("node:assert/strict");
+const crypto = require("node:crypto");
 const { launchBrowser } = require("./browser-launch.cjs");
 const base = process.env.BASE_URL || "http://127.0.0.1:8000/kitchen-cats/";
+
+async function transferQr(from, to, complete) {
+  const seen = new Set();
+  const deadline = Date.now() + 90000;
+  while (Date.now() < deadline) {
+    const image = await from.locator("#mp-qr").screenshot();
+    const key = crypto.createHash("sha256").update(image).digest("hex");
+    if (!seen.has(key)) {
+      seen.add(key);
+      await to.locator("#mp-image").setInputFiles({
+        name: "kitchen-cats-pairing.png",
+        mimeType: "image/png",
+        buffer: image,
+      });
+      if (await complete()) return seen.size;
+    }
+    await from.waitForTimeout(120);
+  }
+  throw Error(`QR transfer timed out after ${seen.size} frames`);
+}
 (async () => {
   const b = await launchBrowser();
   try {
@@ -52,23 +73,22 @@ const base = process.env.BASE_URL || "http://127.0.0.1:8000/kitchen-cats/";
         g = await gc.newPage();
       await g.goto(base);
       await g.locator("#mp-join").click();
-      await g
-        .locator("#mp-offer")
-        .fill(await h.locator("#mp-offer").inputValue());
-      await g.locator("#mp-import").click();
-      await g.waitForFunction(
-        () =>
-          document.querySelector("#mp-answer").value ||
-          document.querySelector("#mp-status").textContent.includes("failed"),
+      const offerFrames = await transferQr(
+        h,
+        g,
+        async () => await g.locator("#mp-answer").inputValue(),
       );
       assert(
         await g.locator("#mp-answer").inputValue(),
         "Guest could not gather candidates",
       );
-      await h
-        .locator("#mp-answer")
-        .fill(await g.locator("#mp-answer").inputValue());
-      await h.locator("#mp-import").click();
+      const answerFrames = await transferQr(
+        g,
+        h,
+        async () => (await h.locator("#mp-status").innerText()).includes("Connecting"),
+      );
+      assert(offerFrames >= 1);
+      assert(answerFrames >= 1);
       await g.locator("#lobby").waitFor({ state: "visible" });
       await h.locator("#start").click();
       await g.locator("#play").waitFor({ state: "visible" });
@@ -78,7 +98,7 @@ const base = process.env.BASE_URL || "http://127.0.0.1:8000/kitchen-cats/";
       await h.locator("#leave").click();
       await g.locator("#welcome").waitFor({ state: "visible" });
       console.log(
-        "PASS real local WebRTC: two browser contexts paired, started, guest input, host leave. Physical phones remain untested.",
+        "PASS real local WebRTC + QR image pairing: two browser contexts paired, guest reply scanned from animated QR, started, guest input, host leave. Physical phones remain untested.",
       );
       await gc.close();
     }

@@ -1,6 +1,12 @@
 import { KitchenGame } from "./game-core.js";
 import { MultiplayerSession } from "./multiplayer-session.js";
 import { WebRTCTransport } from "./webrtc-transport.js";
+import {
+  createQrFrames,
+  QrFrameAssembler,
+  drawQr,
+  QrCameraScanner,
+} from "./qr-pairing.js";
 import { createPresentationState, resetPresentation, updatePhasePresentation, updatePlayerVisual, updateServeEffect, prepPose, potEffect, burstOffset } from "./presentation-animation.js";
 const offlineGame = new KitchenGame();
 let runtimeMode = "solo"; // solo | host | guest
@@ -255,8 +261,29 @@ const mpTransport = new WebRTCTransport();
 const mpSession = new MultiplayerSession({ transport: mpTransport });
 multiplayer = mpSession;
 const mpStatus = $("mp-status");
+const mpFlow = $("mp-flow");
+const mpActions = $("mp-actions");
+const mpStep = $("mp-step");
+const mpInstruction = $("mp-instruction");
+const mpQrView = $("mp-qr-view");
+const mpQr = $("mp-qr");
+const mpQrProgress = $("mp-qr-progress");
+const mpCamera = $("mp-camera");
+const mpVideo = $("mp-video");
+const mpScanStatus = $("mp-scan-status");
+const mpScanButton = $("mp-scan");
+const mpImagePick = $("mp-image-pick");
+const mpImage = $("mp-image");
 let mpPending = false,
-  pairingGeneration = 0;
+  pairingGeneration = 0,
+  qrFrames = [],
+  qrFrameTimer = null,
+  qrAssembler = null,
+  qrScanRole = null,
+  qrScanBusy = false,
+  qrPendingDecode = false,
+  qrLastError = "";
+const qrCamera = new QrCameraScanner(mpVideo, (text) => handleQrText(text));
 const profile = () => ({
   name: $("name").value || "Chef",
   avatar: chosenAvatar(),
@@ -266,8 +293,231 @@ function pairingBusy(busy) {
   for (const id of ["mp-host", "mp-join", "mp-import", "start"])
     $(id).disabled = busy;
 }
+function stopQrAnimation() {
+  clearInterval(qrFrameTimer);
+  qrFrameTimer = null;
+  qrFrames = [];
+}
+function stopQrCamera() {
+  qrScanBusy = false;
+  qrCamera.stop();
+  mpCamera.hidden = true;
+  mpScanButton.disabled = false;
+  mpScanButton.textContent = "Scan with camera";
+}
+function stopPairingMedia() {
+  stopQrAnimation();
+  stopQrCamera();
+  qrAssembler = null;
+  qrScanRole = null;
+}
+function resetPairingUi(message = "Idle") {
+  stopPairingMedia();
+  mpActions.hidden = false;
+  mpFlow.hidden = true;
+  mpQrView.hidden = true;
+  mpScanButton.hidden = false;
+  mpImagePick.hidden = false;
+  mpQrProgress.textContent = "";
+  mpInstruction.textContent = "";
+  mpStatus.textContent = message;
+}
+function setPairingStep(step, instruction) {
+  mpActions.hidden = true;
+  mpFlow.hidden = false;
+  mpStep.textContent = step;
+  mpInstruction.textContent = instruction;
+}
+function showQrFrames(frames, instruction) {
+  stopQrCamera();
+  qrFrames = frames;
+  mpQrView.hidden = false;
+  mpInstruction.textContent = instruction;
+  let index = 0;
+  const render = () => {
+    try {
+      drawQr(mpQr, qrFrames[index]);
+      mpQrProgress.textContent =
+        qrFrames.length === 1
+          ? "One code · keep it visible"
+          : `Animated code · frame ${index + 1} of ${qrFrames.length}`;
+    } catch (e) {
+      mpStatus.textContent = e.message;
+      stopQrAnimation();
+      return;
+    }
+    index = (index + 1) % qrFrames.length;
+  };
+  render();
+  if (qrFrames.length > 1) qrFrameTimer = setInterval(render, 850);
+}
+function prepareQrScan(role, instruction) {
+  stopQrCamera();
+  qrScanRole = role;
+  qrAssembler = new QrFrameAssembler(role);
+  qrLastError = "";
+  mpQrView.hidden = true;
+  mpCamera.hidden = true;
+  mpScanButton.hidden = false;
+  mpImagePick.hidden = false;
+  mpScanStatus.textContent = "Point the rear camera at the QR code.";
+  mpScanButton.textContent = "Scan with camera";
+  mpInstruction.textContent = instruction;
+}
+function showPairingError(prefix, error) {
+  stopQrCamera();
+  qrAssembler?.reset();
+  const message = error?.message || String(error);
+  mpStatus.textContent = `${prefix}: ${message} Try again or open Advanced.`;
+  mpScanStatus.textContent = "Camera stopped. You can retry, choose an image, or use Advanced.";
+}
+function cameraErrorMessage(error) {
+  if (error?.name === "NotAllowedError" || /permission|denied/i.test(String(error?.message || error)))
+    return "Camera permission was denied.";
+  if (error?.name === "NotFoundError" || /camera.*(found|available)|not found/i.test(String(error?.message || error)))
+    return "No camera is available.";
+  return "Camera could not start.";
+}
+async function startQrCamera() {
+  if (!qrAssembler || !qrScanRole || qrScanBusy) return;
+  stopQrAnimation();
+  qrScanBusy = true;
+  mpCamera.hidden = false;
+  mpScanButton.disabled = true;
+  mpScanButton.textContent = "Camera scanning…";
+  mpScanStatus.textContent = "Point the rear camera at the QR code.";
+  try {
+    await qrCamera.start();
+    if (!qrScanBusy) return;
+  } catch (e) {
+    stopQrCamera();
+    mpStatus.textContent = `${cameraErrorMessage(e)} Choose a QR image or open Advanced.`;
+    mpScanStatus.textContent = "Camera unavailable. No permission bypass was attempted.";
+  }
+}
+function updateQrProgress(result) {
+  if (!result) return;
+  mpScanStatus.textContent = result.complete
+    ? "Code complete. Finishing pairing…"
+    : `Reading code · ${result.received} of ${result.total} frames`;
+}
+async function handleQrText(text) {
+  if (!qrAssembler || !qrScanRole || !qrScanBusy || qrPendingDecode) return;
+  qrPendingDecode = true;
+  try {
+    const result = qrAssembler.add(text);
+    updateQrProgress(result);
+    if (result.raw) {
+      stopQrCamera();
+      if (qrScanRole === "o") await acceptOfferText(result.raw);
+      else await acceptAnswerText(result.raw);
+    }
+  } catch (e) {
+    const message = e?.message || String(e);
+    if (message !== qrLastError) {
+      qrLastError = message;
+      mpScanStatus.textContent = `${message} Keep scanning or try again.`;
+    }
+  } finally {
+    qrPendingDecode = false;
+  }
+}
+async function scanImageFile(file) {
+  if (!qrAssembler || !qrScanRole || !file) return;
+  const wasCameraScanning = qrScanBusy;
+  try {
+    const text = await qrCamera.scanImage(file);
+    qrScanBusy = true;
+    await handleQrText(text);
+  } catch (e) {
+    mpStatus.textContent = `${e?.message || "No QR code found."} Choose another image or use Advanced.`;
+  } finally {
+    if (!wasCameraScanning && !qrAssembler?.complete) qrScanBusy = false;
+    mpImage.value = "";
+  }
+}
+function showConnectedPairing() {
+  stopPairingMedia();
+  mpActions.hidden = true;
+  mpFlow.hidden = true;
+  mpStatus.textContent = "Connected. The host can start the shift.";
+}
+async function createHostOffer() {
+  if (mpPending) return;
+  if (runtimeMode !== "host") {
+    returnToSolo();
+    runtimeMode = "host";
+    const p = profile();
+    mpSession.startHost(makeId("session"), p.name, p.avatar);
+  }
+  const generation = ++pairingGeneration;
+  pairingBusy(true);
+  try {
+    for (const [id, p] of mpTransport.peers)
+      if (p.dc?.readyState !== "open") mpTransport.closePeer(id);
+    if (mpSession.peers.size >= 3) throw Error("Kitchen full: four chefs maximum.");
+    $("mp-offer").value = "";
+    $("mp-answer").value = "";
+    mpStatus.textContent = "Preparing a local code…";
+    const offer = await mpTransport.createOffer(makeId("peer"), mpSession.sessionId);
+    if (generation !== pairingGeneration) return;
+    $("mp-offer").value = offer;
+    const frames = createQrFrames(offer, "o");
+    setPairingStep("Host · 1 of 2", "Show this code to the guest. Then scan the guest reply.");
+    prepareQrScan("a", "When the guest shows the reply, tap Scan guest reply.");
+    showQrFrames(frames, "Show this code to the guest. Then tap Scan guest reply.");
+    mpScanButton.textContent = "Scan guest reply";
+    mpStatus.textContent = "Host code ready. Two scans are required.";
+  } catch (e) {
+    if (generation === pairingGeneration) showPairingError("Host setup failed", e);
+  } finally {
+    if (generation === pairingGeneration) pairingBusy(false);
+  }
+}
+async function acceptOfferText(offer) {
+  if (mpPending || runtimeMode !== "guest") return;
+  const generation = ++pairingGeneration;
+  pairingBusy(true);
+  try {
+    mpStatus.textContent = "Reading host code…";
+    mpTransport.close();
+    $("mp-offer").value = offer;
+    const answer = await mpTransport.acceptOffer(offer);
+    if (generation !== pairingGeneration) return;
+    $("mp-answer").value = answer;
+    const frames = createQrFrames(answer, "a");
+    setPairingStep("Guest · 2 of 2", "Show this reply code to the host. Keep this screen open while they scan it.");
+    showQrFrames(frames, "Show this reply code to the host. Keep this screen open while they scan it.");
+    mpScanButton.hidden = true;
+    mpImagePick.hidden = true;
+    mpStatus.textContent = "Reply ready. The host must scan this code.";
+  } catch (e) {
+    if (generation === pairingGeneration) showPairingError("Host code failed", e);
+  } finally {
+    if (generation === pairingGeneration) pairingBusy(false);
+  }
+}
+async function acceptAnswerText(answer) {
+  if (mpPending || runtimeMode !== "host") return;
+  const generation = ++pairingGeneration;
+  pairingBusy(true);
+  try {
+    $("mp-answer").value = answer;
+    mpStatus.textContent = "Reading guest reply…";
+    await mpTransport.acceptAnswer(answer);
+    if (generation === pairingGeneration) {
+      stopPairingMedia();
+      mpStatus.textContent = "Reply accepted. Connecting…";
+    }
+  } catch (e) {
+    if (generation === pairingGeneration) showPairingError("Guest reply failed", e);
+  } finally {
+    if (generation === pairingGeneration) pairingBusy(false);
+  }
+}
 function returnToSolo(message = "Cancelled") {
   pairingGeneration++;
+  stopPairingMedia();
   pairingBusy(false);
   stop();
   runtimeMode = "solo";
@@ -277,7 +527,7 @@ function returnToSolo(message = "Cancelled") {
   state = offlineGame.snapshot();
   $("mp-offer").value = "";
   $("mp-answer").value = "";
-  mpStatus.textContent = message;
+  resetPairingUi(message);
   renderUI();
 }
 mpSession.onSnapshot((s) => {
@@ -291,47 +541,19 @@ mpSession.onStatus((s) => {
   if (s === "disconnected") {
     returnToSolo("Host disconnected. Start solo or pair again.");
     toast("Host disconnected.");
+  } else if (s === "Chef connected" || s === "connected") {
+    showConnectedPairing();
   } else mpStatus.textContent = s;
 });
-$("mp-host").addEventListener("click", async () => {
-  if (mpPending) return;
-  const generation = ++pairingGeneration;
-  pairingBusy(true);
-  try {
-    if (runtimeMode !== "host") {
-      runtimeMode = "host";
-      const p = profile();
-      mpSession.startHost(makeId("session"), p.name, p.avatar);
-    }
-    // Replace an unanswered offer, preserving connected chefs.
-    for (const [id, p] of mpTransport.peers)
-      if (p.dc?.readyState !== "open") mpTransport.closePeer(id);
-    if (mpSession.peers.size >= 3)
-      throw Error("Kitchen full: four chefs maximum.");
-    $("mp-offer").value = "";
-    $("mp-answer").value = "";
-    mpStatus.textContent = "Gathering local ICE candidates…";
-    const offer = await mpTransport.createOffer(
-      makeId("peer"),
-      mpSession.sessionId,
-    );
-    if (generation !== pairingGeneration) return;
-    $("mp-offer").value = offer;
-    mpStatus.textContent =
-      "Copy this offer to one friend. Import their answer here.";
-  } catch (e) {
-    if (generation === pairingGeneration)
-      mpStatus.textContent = "Host offer failed: " + e.message;
-  } finally {
-    if (generation === pairingGeneration) pairingBusy(false);
-  }
-});
+$("mp-host").addEventListener("click", createHostOffer);
 $("mp-join").addEventListener("click", () => {
   returnToSolo();
   runtimeMode = "guest";
   const p = profile();
   mpSession.join(p.name, p.avatar);
-  mpStatus.textContent = "Paste a host offer, then Import pairing.";
+  setPairingStep("Guest · 1 of 2", "Tap Scan with camera, then point it at the host code.");
+  prepareQrScan("o", "Tap Scan with camera, then point it at the host code.");
+  mpStatus.textContent = "Ready to scan the host code.";
 });
 $("mp-import").addEventListener("click", async () => {
   if (mpPending) return;
@@ -339,36 +561,17 @@ $("mp-import").addEventListener("click", async () => {
     mpStatus.textContent = "Choose Host game or Join game first.";
     return;
   }
-  const generation = ++pairingGeneration;
-  pairingBusy(true);
-  try {
-    if (runtimeMode === "guest") {
-      if (mpSession.serverPeer)
-        throw Error(
-          "Already connected. Cancel before joining another kitchen.",
-        );
-      mpTransport.close();
-      $("mp-answer").value = "";
-      mpStatus.textContent = "Gathering local answer…";
-      const answer = await mpTransport.acceptOffer($("mp-offer").value);
-      if (generation !== pairingGeneration) return;
-      $("mp-answer").value = answer;
-      mpStatus.textContent =
-        "Copy this answer back to the host. Waiting for connection…";
-    } else {
-      await mpTransport.acceptAnswer($("mp-answer").value);
-      if (generation === pairingGeneration)
-        mpStatus.textContent =
-          "Answer accepted. Waiting for the chef to connect…";
-    }
-  } catch (e) {
-    if (generation === pairingGeneration)
-      mpStatus.textContent = "Pairing failed: " + e.message;
-  } finally {
-    if (generation === pairingGeneration) pairingBusy(false);
-  }
+  if (runtimeMode === "guest") await acceptOfferText($("mp-offer").value);
+  else await acceptAnswerText($("mp-answer").value);
 });
 $("mp-cancel").addEventListener("click", () => returnToSolo());
+mpScanButton.addEventListener("click", () => {
+  if (qrScanBusy) stopQrCamera();
+  else startQrCamera();
+});
+$("mp-stop-scan").addEventListener("click", () => stopQrCamera());
+mpImagePick.addEventListener("click", () => mpImage.click());
+mpImage.addEventListener("change", () => scanImageFile(mpImage.files?.[0]));
 $("mp-copy").addEventListener("click", async () => {
   const el = $(runtimeMode === "guest" ? "mp-answer" : "mp-offer");
   if (!el.value) {
@@ -377,11 +580,11 @@ $("mp-copy").addEventListener("click", async () => {
   }
   try {
     await navigator.clipboard.writeText(el.value);
-    mpStatus.textContent = "Pairing text copied.";
+    mpStatus.textContent = "Pairing text copied. The other phone still needs to use it.";
   } catch {
     el.focus();
     el.select();
-    mpStatus.textContent = "Select and copy the pairing text manually.";
+    mpStatus.textContent = "Select and copy the pairing text manually, then use it under Advanced.";
   }
 });
 
@@ -561,6 +764,7 @@ function stop() {
 window.addEventListener("blur", stop);
 document.addEventListener("visibilitychange", () => {
   if (document.hidden) {
+    stopQrCamera();
     stop();
     if (runtimeMode === "host" && state?.phase === "playing")
       returnToSolo("Host went into the background. Pair again to play.");
@@ -569,10 +773,12 @@ document.addEventListener("visibilitychange", () => {
   }
 });
 window.addEventListener("orientationchange", () => {
+  stopQrCamera();
   stop();
   toast("Controls paused while the screen rotates.");
 });
 window.addEventListener("pagehide", () => {
+  stopPairingMedia();
   stop();
   mpSession?.stop();
 });
@@ -678,7 +884,10 @@ function renderUI() {
       : runtimeMode.toUpperCase();
 
   $("lobby").hidden = state.phase !== "lobby";
-  $("experimental-mp").hidden = !idle && state.phase !== "lobby";
+  const paired =
+    (runtimeMode === "host" && mpSession.peers.size > 0) ||
+    (runtimeMode === "guest" && !!mpSession.serverPeer);
+  $("experimental-mp").hidden = !idle && (state.phase !== "lobby" || paired);
   $("mp-join").hidden = runtimeMode === "host";
   $("mp-host").textContent =
     runtimeMode === "host" ? "Offer for another chef" : "Host game";

@@ -13,7 +13,7 @@
   <body>
     <header>
       <a class="brand" href="./">Kitchen<span>Cats</span><i>✦</i></a>
-      <div class="tag">LOCAL SOUP CLUB <b>02</b><small>r13</small></div>
+      <div class="tag">LOCAL SOUP CLUB <b>02</b><small>r14</small></div>
       <span id="connection" role="status" aria-live="polite">Connecting…</span>
     </header>
     <main>
@@ -59,7 +59,7 @@
 
           <div class="localnote">
             <strong>Download for offline play</strong
-            ><span id="build-version">Build kitchen-cats-20261002-r13</span>
+            ><span id="build-version">Build kitchen-cats-20261002-r14</span>
             <p>
               Wait for “Offline ready” above before disconnecting. On your
               phone, add this page to your Home Screen for easy reopening.
@@ -84,22 +84,50 @@
       </section>
       <section id="experimental-mp" class="panel card">
         <span class="eyebrow">EXPERIMENTAL LOCAL MULTIPLAYER</span>
-        <p>
-          Manual WebRTC pairing. Both phones must download this game online
-          first. Then use the same Wi-Fi (no internet required). Copy the offer
-          to your friend, and their answer back here using a local sharing
-          method. No room discovery. Local pairing depends on browser and router
-          support. Keep the host screen open during play.
+        <p id="mp-intro">
+          Connect two phones without a server. Both phones download the game
+          first, then use the same Wi-Fi. Two scans are needed: the host shows
+          a code, then the guest shows a reply code. Browser and router support
+          still decide whether the local connection works.
         </p>
-        <button id="mp-host">Host game</button>
-        <button id="mp-join">Join game</button>
-        <label for="mp-offer">Host offer</label
-        ><textarea id="mp-offer" placeholder="Offer / answer text"></textarea>
-        <label for="mp-answer">Guest answer</label
-        ><textarea id="mp-answer" placeholder="Answer text"></textarea>
-        <button id="mp-copy">Copy pairing text</button>
-        <button id="mp-import">Import pairing</button>
-        <button id="mp-cancel">Cancel</button>
+        <div id="mp-actions" class="pair-actions">
+          <button id="mp-host">Host: show a code</button>
+          <button id="mp-join">Join: scan a code</button>
+        </div>
+        <div id="mp-flow" hidden>
+          <div class="pair-step">
+            <strong id="mp-step">Step 1 of 2</strong>
+            <p id="mp-instruction"></p>
+          </div>
+          <div id="mp-qr-view" class="qr-view" hidden>
+            <canvas id="mp-qr" width="280" height="280"></canvas>
+            <span id="mp-qr-progress" role="status" aria-live="polite"></span>
+          </div>
+          <div id="mp-camera" class="qr-camera" hidden>
+            <video id="mp-video" playsinline muted></video>
+            <p id="mp-scan-status" role="status" aria-live="polite">
+              Point the rear camera at the QR code.
+            </p>
+            <button id="mp-stop-scan">Stop camera</button>
+          </div>
+          <div class="pair-tools">
+            <button id="mp-scan">Scan with camera</button>
+            <button id="mp-image-pick">Choose a QR image</button>
+            <input id="mp-image" type="file" accept="image/*" hidden />
+          </div>
+          <details id="mp-advanced">
+            <summary>Advanced: use pairing text</summary>
+            <label for="mp-offer">Host code text</label>
+            <textarea id="mp-offer" placeholder="Paste host code here"></textarea>
+            <label for="mp-answer">Guest reply text</label>
+            <textarea id="mp-answer" placeholder="Paste guest reply here"></textarea>
+            <div class="pair-tools">
+              <button id="mp-copy">Copy current text</button>
+              <button id="mp-import">Use pasted text</button>
+            </div>
+          </details>
+          <button id="mp-cancel" class="pair-cancel">Cancel pairing</button>
+        </div>
         <div id="mp-status" role="status" aria-live="polite">Idle</div>
         <div id="mp-lobby"></div>
       </section>
@@ -212,6 +240,7 @@
       <span>A little chaos. A lot of soup.</span>
       <span>LOCAL EDITION / 01</span>
     </footer>
+    <script src="./vendor/qrcode-generator.js"></script>
     <script type="module" src="./app.js"></script>
   </body>
 </html>

@@ -202,6 +202,7 @@ export class MultiplayerSession {
       } else {
         this.serverPeer = id;
         if (this.sessionId) this.sendHello();
+        this.status("connected");
       }
     } else if (status === "closed") {
       if (this.isHost) {
