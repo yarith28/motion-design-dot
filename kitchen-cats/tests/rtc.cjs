@@ -5,18 +5,28 @@ const base = process.env.BASE_URL || "http://127.0.0.1:8000/kitchen-cats/";
 
 async function transferQr(from, to, complete) {
   const seen = new Set();
+  const lastAttempt = new Map();
   const deadline = Date.now() + 90000;
   while (Date.now() < deadline) {
     const image = await from.locator("#mp-qr").screenshot();
     const key = crypto.createHash("sha256").update(image).digest("hex");
-    if (!seen.has(key)) {
+    const now = Date.now();
+    if (!lastAttempt.has(key) || now - lastAttempt.get(key) >= 1000) {
+      lastAttempt.set(key, now);
       seen.add(key);
       await to.locator("#mp-image").setInputFiles({
         name: "kitchen-cats-pairing.png",
         mimeType: "image/png",
         buffer: image,
       });
+    }
+    // setInputFiles returns before the async change handler finishes QR
+    // assembly, candidate gathering, and answer generation. Poll the actual
+    // user-visible completion state, while allowing a lost frame to be
+    // submitted again after one second.
+    for (let poll = 0; poll < 20; poll++) {
       if (await complete()) return seen.size;
+      await to.waitForTimeout(50);
     }
     await from.waitForTimeout(120);
   }
