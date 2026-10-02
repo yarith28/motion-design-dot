@@ -28,3 +28,4 @@ Set `BASE_URL` to the Kitchen Cats URL (including its trailing slash) to test an
 - `rtc.cjs`: native WebRTC pairing attempt with no ICE servers or media permissions. If the browser produces no candidates, it explicitly reports peer gameplay NOT RUN and checks cleanup/cancellation instead. It never disables network security or requests media access.
 
 Physical iOS/Android installation, offline cold launch, and two phones on a Wi-Fi network without internet remain required device validation. Keep the host foregrounded: backgrounding a playing host closes the session, and guests can return to solo or pair again.
+- `cream-animation.test.mjs`: Cream atlas idle/walk/work/celebrate/reduced-motion routing, 200ms movement hold, and presentation reset.

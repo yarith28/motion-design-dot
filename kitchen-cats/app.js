@@ -40,6 +40,13 @@ const CHEFS = [
 ];
 
 const colors = ["#e8aa69", "#a1b9a5", "#c8afd7", "#e7ca69"];
+const creamAtlas = new Image();
+creamAtlas.decoding = "async";
+creamAtlas.src = "./assets/cream-chef-pose-atlas.png";
+// Atlas cell metrics are intentionally fixed after inspection. The sprite uses
+// one common scale/baseline across frames, never per-frame rescaling.
+const CREAM_ATLAS_CELLS = { cols: 4, rows: 4, visibleW: 313, visibleH: 313, height: 102 };
+
 const chefImages = CHEFS.map((chef) => {
   const image = new Image();
   image.decoding = "async";
@@ -791,28 +798,31 @@ const ctx = $("kitchen").getContext("2d");
 
 function drawChefSprite(player) {
   const now = performance.now();
-  const visual = updatePlayerVisual(presentation, player, now, reducedMotion);
-  const bob = visual.bob;
-  const tilt = visual.tilt;
-
-  const image =
-    chefImages[
-      (((player.avatar ?? player.color ?? 0) % CHEFS.length) + CHEFS.length) %
-        CHEFS.length
-    ];
-  const anchorX = player.x;
-  const anchorY = player.y;
+  const near = (kind) => (state?.stations || []).some(s =>
+    s.kind === kind && Math.hypot(player.x - s.x, player.y - s.y) <= 110);
+  const visual = updatePlayerVisual(presentation, player, {
+    now,
+    reducedMotion,
+    nearPrep: near("prep"),
+    nearPot: near("pot"),
+    prepActive: !!state?.prep && state.now < state.prep.ready,
+    potActive: !!state?.pot && state.now < state.pot.ready,
+    celebrate: now < (presentation.serveBurstUntil || 0)
+  });
+  const bob = visual.bob || 0;
+  const tilt = visual.tilt || 0;
+  const anchorX = player.x, anchorY = player.y;
+  const isCream = player.avatar === 0 || (player.avatar == null && player.color === 0);
 
   ctx.save();
   ctx.translate(anchorX, anchorY + bob);
   ctx.rotate(tilt);
   ctx.translate(-anchorX, -anchorY);
-  ctx.globalAlpha = player.connected ? 1 : 0.45;
-  ctx.fillStyle = "rgba(39, 61, 52, 0.12)";
-  ctx.beginPath();
-  ctx.ellipse(anchorX, anchorY + 32, 28, 9, 0, 0, Math.PI * 2);
-  ctx.fill();
+  ctx.globalAlpha = player.connected ? 1 : .45;
+  ctx.fillStyle = "rgba(39,61,52,.12)";
+  ctx.beginPath(); ctx.ellipse(anchorX, anchorY+32, 28, 9, 0, 0, Math.PI*2); ctx.fill();
 
+  // Preserve the local-player selection ring from r6.
   if (player.id === me) {
     ctx.strokeStyle = "#e9a05d";
     ctx.lineWidth = 3;
@@ -821,35 +831,24 @@ function drawChefSprite(player) {
     ctx.stroke();
   }
 
-  if (image?.complete && image.naturalWidth) {
-    const height = 102;
-    const width = image.naturalWidth * (height / image.naturalHeight);
-    ctx.drawImage(
-      image,
-      anchorX - width / 2,
-      anchorY - height + 34,
-      width,
-      height,
-    );
+  if (isCream && creamAtlas.complete && creamAtlas.naturalWidth) {
+    const { cols, rows, visibleW, visibleH, height } = CREAM_ATLAS_CELLS;
+    const cw = creamAtlas.naturalWidth / cols;
+    const ch = creamAtlas.naturalHeight / rows;
+    const dh = height;
+    const dw = visibleW * (height / visibleH);
+    ctx.drawImage(creamAtlas, visual.frame*cw, visual.row*ch, cw, ch,
+      anchorX-dw/2, anchorY-dh+34, dw, dh);
   } else {
-    fallbackCat(
-      ctx,
-      anchorX,
-      anchorY,
-      colors[player.color % colors.length],
-      0.9,
-    );
+    const image=chefImages[(((player.avatar ?? player.color ?? 0)%CHEFS.length)+CHEFS.length)%CHEFS.length];
+    if(image?.complete && image.naturalWidth){
+      const height=102, width=image.naturalWidth*(height/image.naturalHeight);
+      ctx.drawImage(image,anchorX-width/2,anchorY-height+34,width,height);
+    } else fallbackCat(ctx,anchorX,anchorY,colors[player.color%colors.length],.9);
   }
-
-  ctx.globalAlpha = 1;
-  text(
-    ctx,
-    player.name + (player.id === me ? " · you" : ""),
-    anchorX,
-    anchorY + 54,
-    12,
-  );
-  if (player.held) vegetable(ctx, player.held, anchorX + 28, anchorY + 8, 0.8);
+  ctx.globalAlpha=1;
+  text(ctx,player.name+(player.id===me?" · you":""),anchorX,anchorY+54,12);
+  if(player.held) vegetable(ctx,player.held,anchorX+28,anchorY+8,.8);
   ctx.restore();
 }
 

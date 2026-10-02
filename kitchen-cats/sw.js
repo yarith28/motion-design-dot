@@ -1,4 +1,4 @@
-const VERSION = "kitchen-cats-20261002-r6";
+const VERSION = "kitchen-cats-20261002-r12";
 const PREFIX = "kitchen-cats-";
 const CACHE = VERSION + "-precache";
 const ASSETS = [
@@ -18,6 +18,7 @@ const ASSETS = [
   "./assets/cat-cream.png",
   "./assets/icon-192.png",
   "./assets/icon-512.png",
+  "./assets/cream-chef-pose-atlas.png",
 ];
 self.addEventListener("install", (event) =>
   event.waitUntil(

@@ -9,6 +9,11 @@ const { chromium } = require("playwright");
   fs.cpSync(path.resolve(__dirname, ".."), path.join(root, "kitchen-cats"), {
     recursive: true,
   });
+  const sw = path.join(root, "kitchen-cats/sw.js");
+  const swSource = fs.readFileSync(sw, "utf8");
+  const expectedPrecacheCount = (
+    swSource.match(/^\s+"\.\/[^"]*",?\s*$/gm) || []
+  ).length;
   const server = http.createServer((req, res) => {
     const file = path.join(
       root,
@@ -52,7 +57,7 @@ const { chromium } = require("playwright");
         async () =>
           (await (await caches.open((await caches.keys())[0])).keys()).length,
       ),
-      15,
+      expectedPrecacheCount,
     );
     await p.evaluate(() => caches.open("arcade-sentinel"));
     assert.equal(
@@ -68,10 +73,12 @@ const { chromium } = require("playwright");
     assert(await p.locator("#play").isVisible());
     await c.setOffline(false);
     await p.locator("#leave").click();
-    const sw = path.join(root, "kitchen-cats/sw.js");
     fs.writeFileSync(
       sw,
-      fs.readFileSync(sw, "utf8").replace("20261002-r2", "test-update"),
+      swSource.replace(
+        /const VERSION = "[^"]+";/,
+        'const VERSION = "kitchen-cats-test-update";',
+      ),
     );
     await p.evaluate(async () => {
       await (await navigator.serviceWorker.getRegistration()).update();
