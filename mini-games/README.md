@@ -2,15 +2,32 @@
 
 Review remediation: [changes and verification scope](REMEDIATION-200.md) · [independent follow-up](REMEDIATION-200-REVIEW.md).
 
-A small, expandable browser arcade with 400 playable games. The catalog is `index.html`, with working All / Adventure / Reflex / Memory / Puzzle / Strategy filters. Every displayed game is playable.
+A small, expandable browser arcade with 500 playable games. The catalog is `index.html`, with Grid/List views, search and filters for every inventoried category. Every displayed game is playable.
+
+## The 500-game continuation
+
+The checked continuation adds200 games to the preserved300 baseline across Constraint, Field, Signal Lab, Commons, Atelier, Relation, Trajectory, Protocol, Civic and Form. [The latest design plan](EXPANSION-500-DESIGNS.md) records the next100 defining mechanics; [the verification record](EXPANSION-500-VERIFICATION.md) separates current tested scope from pending integration/publication checks.
+
+All additions retain three finite studies. The continuation offers142 generated challenge streams and23 match series, with35 finite-only campaigns. Native controls, visible rule/feedback, scores, progression, failure/recovery, restart and exact-seed replay apply throughout. Existing400 inventory entries and390 previews are preserved exactly. Of276 protected runtime/unrelated files,275 are byte-identical; [the documented Arrow Audit repair](ARROW-AUDIT-REPAIR.md) changes only its initialization region in one shared engine. Original baseline hashes and the archived module remain intact. Kitchen Cats and the motion showcase are unchanged.
+
+The500 release gate requires200 distinct proposal/manifest/engine IDs,1200 finite-study wins,660 optional challenge/match wins, complete current reports from34 suites,1600 native opening checks, the source-bound500-row endless review and independently replayed campaign samples. The published workflow additionally checks1000 route/reset cases and Chromium/WebKit behavior on the exact pushed commit.
+
+```sh
+node mini-games/tests/preservation400.cjs
+node mini-games/tests/endless-review.cjs
+node mini-games/tests/expansion500-review-gate.cjs
+node mini-games/tools/coverage-index.cjs
+```
+
+All34 current suites, the500 release gate,1600native openings,800keyboard/touch controls and1000local route/reset cases pass. Publication is attested separately by the exact pushed commit’s GitHub Actions and Pages records. Historical gates and command examples below apply to their milestone checkout.
 
 ## The 400-game expansion
 
-The latest100 games occupy five20-game rooms: Constraint, Field, Signal Lab, Commons and Atelier. Their decisions cover illumination/region/graph constraints, coupled sports and motion, computation/information proofs, competitive/economic choices, and physical fabrication. [The inventory and design plan](EXPANSION-400-DESIGNS.md) records their distinct mechanics and rejected overlapping concepts. [The release verification record](EXPANSION-400-VERIFICATION.md) describes the checks and their limits.
+The first100 additions occupy five20-game rooms: Constraint, Field, Signal Lab, Commons and Atelier. Their decisions cover illumination/region/graph constraints, coupled sports and motion, computation/information proofs, competitive/economic choices, and physical fabrication. [The inventory and design plan](EXPANSION-400-DESIGNS.md) records their distinct mechanics and rejected overlapping concepts. [The release verification record](EXPANSION-400-VERIFICATION.md) describes the checks and their limits.
 
 Every new game has three finite studies, native keyboard and touch controls, visible rule/status feedback, personal scores, a terminal result and restart. Field Room advances its physical simulations through labeled player actions; its sports are paced by the player. Generated streams and match series are optional and keep the finite campaigns. Separate local records, exact-seed replay and visit-memory storage fallback apply throughout the new rooms.
 
-[The complete endless review](ENDLESS-REVIEW.md) covers all 400 games with real source/end-condition evidence, existing support, feasibility, a concrete optional design and reasons to preserve finite endings. It enables no new modes in the preserved300. The new rooms offer75 generated streams and7 match series;18 remain finite while their generator prerequisites are documented.
+[The historical400-game endless review](review400/ENDLESS-REVIEW.md) records source/end-condition evidence, existing support, feasibility, a concrete optional design and reasons to preserve finite endings. It enables no new modes in the preserved300. The first five rooms offer75 generated streams and7 match series;18 remain finite while their generator prerequisites are documented. [The current review](ENDLESS-REVIEW.md) covers all500 games.
 
 `tests/preservation300.cjs` protects the 300 original inventory entries and227 original/unrelated runtime files, including Kitchen Cats, the motion showcase and Grid/List behavior. `tests/expansion400-review-gate.cjs` requires600 new finite-study wins across200 desktop/touch profiles, two optional challenges per supported profile, current evidence from all 29 registered suites, source-bound independent reviews, and exact400-game audit coverage. Short ordinary-input samples of100 games are recorded separately from the deeper source-informed playthroughs; they do not claim100 unaided campaign completions.
 

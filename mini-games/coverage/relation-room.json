@@ -1,0 +1,5286 @@
+{
+  "passed": true,
+  "startedAt": "2026-10-02T22:57:34.916Z",
+  "sourceHash": "75451b353c0ae4c7bd8a9e910f0f1ec42084e1a7f01cceace3cb7e10215c1d2a",
+  "sourceFiles": [
+    "journey/journey.css",
+    "journey/journey.mjs",
+    "relation-room/README.md",
+    "relation-room/REVIEW.md",
+    "relation-room/constructions.mjs",
+    "relation-room/core.mjs",
+    "relation-room/council.mjs",
+    "relation-room/engines.mjs",
+    "relation-room/evidence.mjs",
+    "relation-room/games.json",
+    "relation-room/graphs.mjs",
+    "relation-room/index.html",
+    "relation-room/room.mjs",
+    "relation-room/semantics.mjs",
+    "tests/relation-room-construction-check.mjs",
+    "tests/relation-room-construction-plans.mjs",
+    "tests/relation-room-evidence-check.mjs",
+    "tests/relation-room-evidence-plans.mjs",
+    "tests/relation-room-generate.mjs",
+    "tests/relation-room-graph-check.mjs",
+    "tests/relation-room-graph-plans.mjs",
+    "tests/relation-room-paths.json",
+    "tests/relation-room-plans.mjs",
+    "tests/relation-room-semantic-check.mjs",
+    "tests/relation-room-semantic-plans.mjs",
+    "tests/relation-room.cjs"
+  ],
+  "scope": "Author source-derived legal plans drive native UI. No writable browser state hooks. Sealed Posterior outcomes used by test-only planning; Recall UI collects rendered pulses before hiding. Tactical Council wins are full placement-plus-rotation from balanced tactical openings.",
+  "method": "Source-derived independent legal plans drive rendered native buttons. Recall captures public cues before hiding; sealed Posterior observations are used by test-only author planning. No writable browser state hooks or hidden browser-state access.",
+  "limits": [
+    "Author legal-witness plans drive native controls; this does not establish unaided player difficulty or ordinary source-blind completion.",
+    "Browser completion covers all three finite studies and the first two optional studies; stages7/100/100000 at six dispersed replay seeds use independent pure-model legal witnesses, not late-stage browser completion.",
+    "Chromium desktop and320px emulated touchscreen profiles; no physical-device, cross-browser or screen-reader claim.",
+    "Posterior test planning reads sealed source outcomes; Echo pure models use source sequences while browser play collects only rendered pulses before hiding. No hidden browser-state inspection or writable browser hooks."
+  ],
+  "cases": [
+    {
+      "id": "minor-museum",
+      "profile": "desktop",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "touchOnly": false,
+      "inputMethod": "Native mouse clicks plus actual keyboard Space activation of opening control; native mode selectOption navigation",
+      "edgeCases": [
+        "Protected adjacent target anchors cannot contract into one bag",
+        "All three finite studies completed through native controls",
+        "Explained natural failure, Reset recovery and correct replay completed",
+        "Terminal engine controls are disabled",
+        "Two fresh optional studies completed and accumulated score banked",
+        "Optional Reset/Undo disabled; Bank/restart cannot mint score"
+      ],
+      "winActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "node:0",
+            "node:3",
+            "contract",
+            "node:1",
+            "node:4",
+            "contract",
+            "check"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 1,
+          "actions": [
+            "node:0",
+            "node:5",
+            "contract",
+            "node:1",
+            "node:4",
+            "contract",
+            "node:2",
+            "node:6",
+            "contract",
+            "check"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 2,
+          "actions": [
+            "delete:3,6",
+            "delete:6,7",
+            "node:0",
+            "node:5",
+            "contract",
+            "node:0",
+            "node:6",
+            "contract",
+            "node:0",
+            "node:8",
+            "contract",
+            "node:3",
+            "node:7",
+            "contract",
+            "check"
+          ]
+        },
+        {
+          "mode": "endless",
+          "stage": 0,
+          "actions": [
+            "node:0",
+            "node:4",
+            "contract",
+            "node:1",
+            "node:3",
+            "contract",
+            "check"
+          ]
+        },
+        {
+          "mode": "endless",
+          "stage": 1,
+          "actions": [
+            "delete:0,2",
+            "delete:3,5",
+            "node:0",
+            "node:5",
+            "contract",
+            "node:0",
+            "node:6",
+            "contract",
+            "node:2",
+            "node:4",
+            "contract",
+            "check"
+          ]
+        }
+      ],
+      "lossActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "delete:0,3",
+            "delete:1,2",
+            "delete:1,3",
+            "delete:1,4",
+            "delete:2,4"
+          ]
+        }
+      ],
+      "finiteStudiesCompleted": 3,
+      "endlessStudiesCompleted": 2,
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "sourceSeed": 20261002,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "Pure model independent legal-witness completion at stages7/100/100000 across six dispersed public run seeds; actual browser finite0–2 and optional0–1, plus separately disclosed failure scope."
+      },
+      "errors": []
+    },
+    {
+      "id": "twin-graph",
+      "profile": "desktop",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "touchOnly": false,
+      "inputMethod": "Native mouse clicks plus actual keyboard Space activation of opening control; native mode selectOption navigation",
+      "edgeCases": [
+        "Occupied isomorphism destinations swap assignments without duplicate ownership",
+        "All three finite studies completed through native controls",
+        "Explained natural failure, Reset recovery and correct replay completed",
+        "Terminal engine controls are disabled",
+        "Two fresh optional studies completed and accumulated score banked",
+        "Optional Reset/Undo disabled; Bank/restart cannot mint score"
+      ],
+      "winActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "left:0",
+            "right:3",
+            "left:1",
+            "right:1",
+            "left:2",
+            "right:0",
+            "left:3",
+            "right:4",
+            "left:4",
+            "right:2",
+            "check"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 1,
+          "actions": [
+            "left:0",
+            "right:0",
+            "left:1",
+            "right:5",
+            "left:2",
+            "right:2",
+            "left:3",
+            "right:1",
+            "left:4",
+            "right:4",
+            "left:5",
+            "right:3",
+            "check"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 2,
+          "actions": [
+            "left:0",
+            "right:3",
+            "left:1",
+            "right:1",
+            "left:2",
+            "right:5",
+            "left:3",
+            "right:4",
+            "left:4",
+            "right:2",
+            "left:5",
+            "right:6",
+            "left:6",
+            "right:0",
+            "check"
+          ]
+        },
+        {
+          "mode": "endless",
+          "stage": 0,
+          "actions": [
+            "left:0",
+            "right:5",
+            "left:1",
+            "right:4",
+            "left:2",
+            "right:1",
+            "left:3",
+            "right:0",
+            "left:4",
+            "right:3",
+            "left:5",
+            "right:2",
+            "check"
+          ]
+        },
+        {
+          "mode": "endless",
+          "stage": 1,
+          "actions": [
+            "left:0",
+            "right:1",
+            "left:1",
+            "right:0",
+            "left:2",
+            "right:6",
+            "left:3",
+            "right:4",
+            "left:4",
+            "right:2",
+            "left:5",
+            "right:5",
+            "left:6",
+            "right:3",
+            "check"
+          ]
+        }
+      ],
+      "lossActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "check",
+            "check",
+            "check"
+          ]
+        }
+      ],
+      "finiteStudiesCompleted": 3,
+      "endlessStudiesCompleted": 2,
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "sourceSeed": 20261002,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "Pure model independent legal-witness completion at stages7/100/100000 across six dispersed public run seeds; actual browser finite0–2 and optional0–1, plus separately disclosed failure scope."
+      },
+      "errors": []
+    },
+    {
+      "id": "interval-museum",
+      "profile": "desktop",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "touchOnly": false,
+      "inputMethod": "Native mouse clicks plus actual keyboard Space activation of opening control; native mode selectOption navigation",
+      "edgeCases": [
+        "Native endpoint bounds and reversed-endpoint audit are enforced",
+        "All three finite studies completed through native controls",
+        "Explained natural failure, Reset recovery and correct replay completed",
+        "Terminal engine controls are disabled",
+        "Two fresh optional studies completed and accumulated score banked",
+        "Optional Reset/Undo disabled; Bank/restart cannot mint score"
+      ],
+      "winActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "select:0",
+            "select:1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:1:-1",
+            "select:2",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "select:3",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "check"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 1,
+          "actions": [
+            "select:0",
+            "endpoint:1:1",
+            "select:1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:1:-1",
+            "select:2",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "select:3",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "select:4",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "check"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 2,
+          "actions": [
+            "select:0",
+            "select:1",
+            "select:2",
+            "select:3",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "select:4",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "select:5",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "check"
+          ]
+        },
+        {
+          "mode": "endless",
+          "stage": 0,
+          "actions": [
+            "select:0",
+            "endpoint:0:1",
+            "endpoint:0:1",
+            "endpoint:1:1",
+            "endpoint:1:1",
+            "select:1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:1:-1",
+            "select:2",
+            "endpoint:0:-1",
+            "endpoint:1:-1",
+            "select:3",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "select:4",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "check"
+          ]
+        },
+        {
+          "mode": "endless",
+          "stage": 1,
+          "actions": [
+            "select:0",
+            "endpoint:1:1",
+            "select:1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "select:2",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "select:3",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "select:4",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "select:5",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "check"
+          ]
+        }
+      ],
+      "lossActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "check",
+            "check",
+            "check"
+          ]
+        }
+      ],
+      "finiteStudiesCompleted": 3,
+      "endlessStudiesCompleted": 2,
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "sourceSeed": 20261002,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "Pure model independent legal-witness completion at stages7/100/100000 across six dispersed public run seeds; actual browser finite0–2 and optional0–1, plus separately disclosed failure scope."
+      },
+      "errors": []
+    },
+    {
+      "id": "knowledge-circle",
+      "profile": "desktop",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "touchOnly": false,
+      "inputMethod": "Native mouse clicks plus actual keyboard Space activation of opening control; native mode selectOption navigation",
+      "edgeCases": [
+        "Each successful announcement removes public worlds and rebuilds current groups",
+        "All three finite studies completed through native controls",
+        "Explained natural failure, Reset recovery and correct replay completed",
+        "Terminal engine controls are disabled",
+        "Two fresh optional studies completed and accumulated score banked",
+        "Optional Reset/Undo disabled; Bank/restart cannot mint score"
+      ],
+      "winActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "world:0",
+            "world:1",
+            "world:3",
+            "world:6",
+            "world:7",
+            "apply"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 1,
+          "actions": [
+            "world:0",
+            "world:1",
+            "world:2",
+            "world:3",
+            "world:4",
+            "world:5",
+            "world:6",
+            "world:7",
+            "world:8",
+            "apply",
+            "world:2",
+            "apply"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 2,
+          "actions": [
+            "world:0",
+            "world:1",
+            "world:2",
+            "world:3",
+            "world:5",
+            "world:6",
+            "world:7",
+            "world:8",
+            "world:9",
+            "world:10",
+            "apply",
+            "world:0",
+            "world:1",
+            "world:2",
+            "world:3",
+            "world:5",
+            "world:6",
+            "world:7",
+            "world:8",
+            "world:9",
+            "apply",
+            "world:9",
+            "apply"
+          ]
+        },
+        {
+          "mode": "endless",
+          "stage": 0,
+          "actions": [
+            "world:0",
+            "world:1",
+            "world:3",
+            "world:6",
+            "world:7",
+            "apply"
+          ]
+        },
+        {
+          "mode": "endless",
+          "stage": 1,
+          "actions": [
+            "world:0",
+            "world:1",
+            "world:2",
+            "world:3",
+            "world:4",
+            "world:5",
+            "world:6",
+            "world:7",
+            "world:8",
+            "apply",
+            "world:2",
+            "apply"
+          ]
+        }
+      ],
+      "lossActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "apply",
+            "apply",
+            "apply"
+          ]
+        }
+      ],
+      "finiteStudiesCompleted": 3,
+      "endlessStudiesCompleted": 2,
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "sourceSeed": 20261002,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "Pure model independent legal-witness completion at stages7/100/100000 across six dispersed public run seeds; actual browser finite0–2 and optional0–1, plus separately disclosed failure scope."
+      },
+      "errors": []
+    },
+    {
+      "id": "modal-witness",
+      "profile": "desktop",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "touchOnly": false,
+      "inputMethod": "Native mouse clicks plus actual keyboard Space activation of opening control; native mode selectOption navigation",
+      "edgeCases": [
+        "Reverse accessibility arrow cannot witness a root Diamond premise",
+        "All three finite studies completed through native controls",
+        "Explained natural failure, Reset recovery and correct replay completed",
+        "Terminal engine controls are disabled",
+        "Unsupported procedural mode disabled with accurate finite-only explanation"
+      ],
+      "winActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "from:0",
+            "to:1",
+            "arrow",
+            "from:0",
+            "to:2",
+            "arrow",
+            "value:1:P",
+            "check"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 1,
+          "actions": [
+            "from:0",
+            "to:1",
+            "arrow",
+            "from:0",
+            "to:2",
+            "arrow",
+            "value:1:P",
+            "value:2:Q",
+            "check"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 2,
+          "actions": [
+            "from:0",
+            "to:1",
+            "arrow",
+            "from:0",
+            "to:2",
+            "arrow",
+            "from:1",
+            "to:2",
+            "arrow",
+            "from:1",
+            "to:0",
+            "arrow",
+            "from:2",
+            "to:1",
+            "arrow",
+            "from:2",
+            "to:0",
+            "arrow",
+            "value:1:P",
+            "value:1:Q",
+            "value:2:P",
+            "check"
+          ]
+        }
+      ],
+      "lossActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "check",
+            "check",
+            "check"
+          ]
+        }
+      ],
+      "finiteStudiesCompleted": 3,
+      "endlessStudiesCompleted": 0,
+      "optionalMode": {
+        "supported": false
+      },
+      "errors": []
+    },
+    {
+      "id": "polygon-passport",
+      "profile": "desktop",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "touchOnly": false,
+      "inputMethod": "Native mouse clicks plus actual keyboard Space activation of opening control; native mode selectOption navigation",
+      "edgeCases": [
+        "Side gluing merges endpoint classes and removing the gluing restores them",
+        "All three finite studies completed through native controls",
+        "Explained natural failure, Reset recovery and correct replay completed",
+        "Terminal engine controls are disabled",
+        "Unsupported procedural mode disabled with accurate finite-only explanation"
+      ],
+      "winActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "side:0",
+            "side:2",
+            "pair",
+            "side:1",
+            "side:3",
+            "pair",
+            "check"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 1,
+          "actions": [
+            "side:0",
+            "side:1",
+            "orientation",
+            "pair",
+            "side:2",
+            "side:3",
+            "pair",
+            "check"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 2,
+          "actions": [
+            "side:0",
+            "side:2",
+            "pair",
+            "side:1",
+            "side:3",
+            "pair",
+            "side:4",
+            "side:6",
+            "pair",
+            "side:5",
+            "side:7",
+            "pair",
+            "check"
+          ]
+        }
+      ],
+      "lossActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "check",
+            "check",
+            "check"
+          ]
+        }
+      ],
+      "finiteStudiesCompleted": 3,
+      "endlessStudiesCompleted": 0,
+      "optionalMode": {
+        "supported": false
+      },
+      "errors": []
+    },
+    {
+      "id": "hairpin-studio",
+      "profile": "desktop",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "touchOnly": false,
+      "inputMethod": "Native mouse clicks plus actual keyboard Space activation of opening control; native mode selectOption navigation",
+      "edgeCases": [
+        "Adjacent positions fail the actual minimum-loop-gap rule",
+        "All three finite studies completed through native controls",
+        "Explained natural failure, Reset recovery and correct replay completed",
+        "Terminal engine controls are disabled",
+        "Two fresh optional studies completed and accumulated score banked",
+        "Optional Reset/Undo disabled; Bank/restart cannot mint score"
+      ],
+      "winActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "site:0",
+            "site:5",
+            "bond",
+            "site:2",
+            "site:4",
+            "bond",
+            "check"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 1,
+          "actions": [
+            "site:0",
+            "site:9",
+            "bond",
+            "site:1",
+            "site:8",
+            "bond",
+            "site:2",
+            "site:7",
+            "bond",
+            "check"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 2,
+          "actions": [
+            "site:0",
+            "site:11",
+            "bond",
+            "site:1",
+            "site:10",
+            "bond",
+            "site:2",
+            "site:9",
+            "bond",
+            "site:3",
+            "site:8",
+            "bond",
+            "check"
+          ]
+        },
+        {
+          "mode": "endless",
+          "stage": 0,
+          "actions": [
+            "site:0",
+            "site:11",
+            "bond",
+            "site:1",
+            "site:10",
+            "bond",
+            "site:2",
+            "site:9",
+            "bond",
+            "site:3",
+            "site:8",
+            "bond",
+            "site:4",
+            "site:7",
+            "bond",
+            "check"
+          ]
+        },
+        {
+          "mode": "endless",
+          "stage": 1,
+          "actions": [
+            "site:0",
+            "site:13",
+            "bond",
+            "site:1",
+            "site:12",
+            "bond",
+            "site:2",
+            "site:11",
+            "bond",
+            "site:3",
+            "site:10",
+            "bond",
+            "site:4",
+            "site:8",
+            "bond",
+            "check"
+          ]
+        }
+      ],
+      "lossActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "check",
+            "check",
+            "check"
+          ]
+        }
+      ],
+      "finiteStudiesCompleted": 3,
+      "endlessStudiesCompleted": 2,
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "sourceSeed": 20261002,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "Pure model independent legal-witness completion at stages7/100/100000 across six dispersed public run seeds; actual browser finite0–2 and optional0–1, plus separately disclosed failure scope."
+      },
+      "errors": []
+    },
+    {
+      "id": "letter-carries",
+      "profile": "desktop",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "touchOnly": false,
+      "inputMethod": "Native mouse clicks plus actual keyboard Space activation of opening control; native mode selectOption navigation",
+      "edgeCases": [
+        "A complete digit assignment with a leading zero fails certification",
+        "All three finite studies completed through native controls",
+        "Explained natural failure, Reset recovery and correct replay completed",
+        "Terminal engine controls are disabled",
+        "Two fresh optional studies completed and accumulated score banked",
+        "Optional Reset/Undo disabled; Bank/restart cannot mint score"
+      ],
+      "winActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "letter:A",
+            "digit:2",
+            "letter:D",
+            "digit:1",
+            "letter:F",
+            "digit:4",
+            "letter:G",
+            "digit:3",
+            "letter:I",
+            "digit:7",
+            "check"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 1,
+          "actions": [
+            "letter:B",
+            "digit:0",
+            "letter:C",
+            "digit:7",
+            "letter:H",
+            "digit:1",
+            "letter:I",
+            "digit:3",
+            "letter:J",
+            "digit:2",
+            "check"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 2,
+          "actions": [
+            "letter:A",
+            "digit:2",
+            "letter:B",
+            "digit:9",
+            "letter:C",
+            "digit:6",
+            "letter:D",
+            "digit:1",
+            "letter:F",
+            "digit:3",
+            "letter:G",
+            "digit:0",
+            "letter:J",
+            "digit:5",
+            "check"
+          ]
+        },
+        {
+          "mode": "endless",
+          "stage": 0,
+          "actions": [
+            "letter:A",
+            "digit:2",
+            "letter:D",
+            "digit:1",
+            "letter:F",
+            "digit:4",
+            "letter:G",
+            "digit:3",
+            "letter:I",
+            "digit:7",
+            "check"
+          ]
+        },
+        {
+          "mode": "endless",
+          "stage": 1,
+          "actions": [
+            "letter:B",
+            "digit:0",
+            "letter:C",
+            "digit:7",
+            "letter:H",
+            "digit:1",
+            "letter:I",
+            "digit:3",
+            "letter:J",
+            "digit:2",
+            "check"
+          ]
+        }
+      ],
+      "lossActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "letter:A",
+            "digit:2",
+            "letter:D",
+            "digit:1",
+            "letter:F",
+            "digit:4",
+            "letter:G",
+            "digit:3",
+            "letter:I",
+            "digit:7",
+            "letter:G",
+            "digit:0",
+            "check",
+            "check",
+            "check"
+          ]
+        }
+      ],
+      "finiteStudiesCompleted": 3,
+      "endlessStudiesCompleted": 2,
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "sourceSeed": 20261002,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "Pure model independent legal-witness completion at stages7/100/100000 across six dispersed public run seeds; actual browser finite0–2 and optional0–1, plus separately disclosed failure scope."
+      },
+      "errors": []
+    },
+    {
+      "id": "fill-in-station",
+      "profile": "desktop",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "touchOnly": false,
+      "inputMethod": "Native mouse clicks plus actual keyboard Space activation of opening control; native mode selectOption navigation",
+      "edgeCases": [
+        "A destructive high-degree elimination loses under the induced-width cap",
+        "All three finite studies completed through native controls",
+        "Explained natural failure, Reset recovery and correct replay completed",
+        "Terminal engine controls are disabled",
+        "Two fresh optional studies completed and accumulated score banked",
+        "Optional Reset/Undo disabled; Bank/restart cannot mint score"
+      ],
+      "winActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "select:2",
+            "eliminate",
+            "select:3",
+            "eliminate",
+            "select:1",
+            "eliminate",
+            "select:0",
+            "eliminate",
+            "select:4",
+            "eliminate"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 1,
+          "actions": [
+            "select:0",
+            "eliminate",
+            "select:1",
+            "eliminate",
+            "select:2",
+            "eliminate",
+            "select:3",
+            "eliminate",
+            "select:4",
+            "eliminate",
+            "select:5",
+            "eliminate"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 2,
+          "actions": [
+            "select:0",
+            "eliminate",
+            "select:3",
+            "eliminate",
+            "select:2",
+            "eliminate",
+            "select:4",
+            "eliminate",
+            "select:1",
+            "eliminate",
+            "select:5",
+            "eliminate",
+            "select:6",
+            "eliminate"
+          ]
+        },
+        {
+          "mode": "endless",
+          "stage": 0,
+          "actions": [
+            "select:2",
+            "eliminate",
+            "select:3",
+            "eliminate",
+            "select:1",
+            "eliminate",
+            "select:0",
+            "eliminate",
+            "select:4",
+            "eliminate"
+          ]
+        },
+        {
+          "mode": "endless",
+          "stage": 1,
+          "actions": [
+            "select:0",
+            "eliminate",
+            "select:1",
+            "eliminate",
+            "select:2",
+            "eliminate",
+            "select:3",
+            "eliminate",
+            "select:4",
+            "eliminate",
+            "select:5",
+            "eliminate"
+          ]
+        }
+      ],
+      "lossActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "select:0",
+            "eliminate"
+          ]
+        }
+      ],
+      "finiteStudiesCompleted": 3,
+      "endlessStudiesCompleted": 2,
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "sourceSeed": 20261002,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "Pure model independent legal-witness completion at stages7/100/100000 across six dispersed public run seeds; actual browser finite0–2 and optional0–1, plus separately disclosed failure scope."
+      },
+      "errors": []
+    },
+    {
+      "id": "alternating-couriers",
+      "profile": "desktop",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "touchOnly": false,
+      "inputMethod": "Native mouse clicks plus actual keyboard Space activation of opening control; native mode selectOption navigation",
+      "edgeCases": [
+        "A matched right endpoint forces its partner as the next alternating step",
+        "All three finite studies completed through native controls",
+        "Explained natural failure, Reset recovery and correct replay completed",
+        "Terminal engine controls are disabled",
+        "Two fresh optional studies completed and accumulated score banked",
+        "Optional Reset/Undo disabled; Bank/restart cannot mint score"
+      ],
+      "winActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "walk:1",
+            "walk:5",
+            "walk:0",
+            "walk:7",
+            "flip"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 1,
+          "actions": [
+            "walk:2",
+            "walk:5",
+            "walk:1",
+            "walk:6",
+            "walk:4",
+            "walk:7",
+            "flip"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 2,
+          "actions": [
+            "walk:0",
+            "walk:9",
+            "flip",
+            "walk:3",
+            "walk:7",
+            "walk:2",
+            "walk:6",
+            "walk:1",
+            "walk:8",
+            "flip"
+          ]
+        },
+        {
+          "mode": "endless",
+          "stage": 0,
+          "actions": [
+            "walk:1",
+            "walk:5",
+            "walk:0",
+            "walk:7",
+            "flip"
+          ]
+        },
+        {
+          "mode": "endless",
+          "stage": 1,
+          "actions": [
+            "walk:2",
+            "walk:6",
+            "walk:4",
+            "walk:7",
+            "flip"
+          ]
+        }
+      ],
+      "lossActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "walk:1",
+            "cancel",
+            "walk:1",
+            "cancel",
+            "walk:1",
+            "cancel",
+            "walk:1",
+            "cancel",
+            "walk:1",
+            "cancel",
+            "walk:1",
+            "cancel",
+            "walk:1",
+            "cancel",
+            "walk:1",
+            "cancel",
+            "walk:1",
+            "cancel",
+            "walk:1",
+            "cancel",
+            "walk:1",
+            "cancel",
+            "walk:1",
+            "cancel",
+            "walk:1",
+            "cancel",
+            "walk:1",
+            "cancel",
+            "walk:1",
+            "cancel",
+            "walk:1",
+            "cancel",
+            "walk:1",
+            "cancel",
+            "walk:1"
+          ]
+        }
+      ],
+      "finiteStudiesCompleted": 3,
+      "endlessStudiesCompleted": 2,
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "sourceSeed": 20261002,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "Pure model independent legal-witness completion at stages7/100/100000 across six dispersed public run seeds; actual browser finite0–2 and optional0–1, plus separately disclosed failure scope."
+      },
+      "errors": []
+    },
+    {
+      "id": "recursive-rings",
+      "profile": "desktop",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "touchOnly": false,
+      "inputMethod": "Native mouse clicks plus actual keyboard Space activation of opening control; native mode selectOption navigation",
+      "edgeCases": [
+        "Detaching ring1 unlocks ring3 only while its preceding ring2 remains attached",
+        "All three finite studies completed through native controls",
+        "Explained natural failure, Reset recovery and correct replay completed",
+        "Terminal engine controls are disabled",
+        "Unsupported procedural mode disabled with accurate finite-only explanation"
+      ],
+      "winActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "ring:0",
+            "ring:2",
+            "ring:0",
+            "ring:1",
+            "ring:0"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 1,
+          "actions": [
+            "ring:1",
+            "ring:0",
+            "ring:3",
+            "ring:0",
+            "ring:1",
+            "ring:0",
+            "ring:2",
+            "ring:0",
+            "ring:1",
+            "ring:0"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 2,
+          "actions": [
+            "ring:0",
+            "ring:2",
+            "ring:0",
+            "ring:1",
+            "ring:0",
+            "ring:4",
+            "ring:0",
+            "ring:1",
+            "ring:0",
+            "ring:2",
+            "ring:0",
+            "ring:1",
+            "ring:0",
+            "ring:3",
+            "ring:0",
+            "ring:1",
+            "ring:0",
+            "ring:2",
+            "ring:0",
+            "ring:1",
+            "ring:0"
+          ]
+        }
+      ],
+      "lossActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "ring:0",
+            "ring:0",
+            "ring:0",
+            "ring:0",
+            "ring:0",
+            "ring:0",
+            "ring:0",
+            "ring:0"
+          ]
+        }
+      ],
+      "finiteStudiesCompleted": 3,
+      "endlessStudiesCompleted": 0,
+      "optionalMode": {
+        "supported": false
+      },
+      "errors": []
+    },
+    {
+      "id": "ordered-echo",
+      "profile": "desktop",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "touchOnly": false,
+      "inputMethod": "Native mouse clicks plus actual keyboard Space activation of opening control; native mode selectOption navigation",
+      "edgeCases": [
+        "Recall collects visible pulses before hiding; a wrong next symbol ends the attempt",
+        "All three finite studies completed through native controls",
+        "Explained natural failure, Reset recovery and correct replay completed",
+        "Terminal engine controls are disabled",
+        "Two fresh optional studies completed and accumulated score banked",
+        "Optional Reset/Undo disabled; Bank/restart cannot mint score"
+      ],
+      "winActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "observedPulses": [
+            1,
+            2,
+            1,
+            2
+          ],
+          "inputScope": "Visible pulse read before each hide; recalled only after all cues covered"
+        },
+        {
+          "mode": "finite",
+          "stage": 1,
+          "observedPulses": [
+            2,
+            4,
+            2,
+            3,
+            3,
+            0
+          ],
+          "inputScope": "Visible pulse read before each hide; recalled only after all cues covered"
+        },
+        {
+          "mode": "finite",
+          "stage": 2,
+          "observedPulses": [
+            0,
+            3,
+            0,
+            4,
+            5,
+            3,
+            2,
+            5
+          ],
+          "inputScope": "Visible pulse read before each hide; recalled only after all cues covered"
+        },
+        {
+          "mode": "endless",
+          "stage": 0,
+          "observedPulses": [
+            1,
+            2,
+            1,
+            2
+          ]
+        },
+        {
+          "mode": "endless",
+          "stage": 1,
+          "observedPulses": [
+            2,
+            4,
+            2,
+            3,
+            3,
+            0
+          ]
+        }
+      ],
+      "lossActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": "visible cues then deliberately wrong first recall"
+        }
+      ],
+      "finiteStudiesCompleted": 3,
+      "endlessStudiesCompleted": 2,
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "sourceSeed": 20261002,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "Pure model independent legal-witness completion at stages7/100/100000 across six dispersed public run seeds; actual browser finite0–2 and optional0–1, plus separately disclosed failure scope."
+      },
+      "errors": []
+    },
+    {
+      "id": "heritage-house",
+      "profile": "desktop",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "touchOnly": false,
+      "inputMethod": "Native mouse clicks plus actual keyboard Space activation of opening control; native mode selectOption navigation",
+      "edgeCases": [
+        "A complete family assignment with a wrong visible trait fails certification",
+        "All three finite studies completed through native controls",
+        "Explained natural failure, Reset recovery and correct replay completed",
+        "Terminal engine controls are disabled",
+        "Two fresh optional studies completed and accumulated score banked",
+        "Optional Reset/Undo disabled; Bank/restart cannot mint score"
+      ],
+      "winActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "person:0",
+            "person:0",
+            "person:1",
+            "person:1",
+            "person:2",
+            "check"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 1,
+          "actions": [
+            "person:0",
+            "person:0",
+            "person:1",
+            "person:2",
+            "person:2",
+            "person:4",
+            "person:4",
+            "check"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 2,
+          "actions": [
+            "person:0",
+            "person:0",
+            "person:1",
+            "person:1",
+            "person:2",
+            "person:2",
+            "person:5",
+            "person:5",
+            "person:6",
+            "person:6",
+            "person:7",
+            "check"
+          ]
+        },
+        {
+          "mode": "endless",
+          "stage": 0,
+          "actions": [
+            "person:0",
+            "person:0",
+            "person:1",
+            "person:1",
+            "person:2",
+            "check"
+          ]
+        },
+        {
+          "mode": "endless",
+          "stage": 1,
+          "actions": [
+            "person:0",
+            "person:0",
+            "person:1",
+            "person:1",
+            "person:4",
+            "person:4",
+            "person:5",
+            "check"
+          ]
+        }
+      ],
+      "lossActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "person:0",
+            "person:0",
+            "person:1",
+            "person:1",
+            "person:2",
+            "person:0",
+            "person:0",
+            "person:0",
+            "check",
+            "check",
+            "check"
+          ]
+        }
+      ],
+      "finiteStudiesCompleted": 3,
+      "endlessStudiesCompleted": 2,
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "sourceSeed": 20261002,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "Pure model independent legal-witness completion at stages7/100/100000 across six dispersed public run seeds; actual browser finite0–2 and optional0–1, plus separately disclosed failure scope."
+      },
+      "errors": []
+    },
+    {
+      "id": "posterior-post",
+      "profile": "desktop",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "touchOnly": false,
+      "inputMethod": "Native mouse clicks plus actual keyboard Space activation of opening control; native mode selectOption navigation",
+      "edgeCases": [
+        "Purchased probe is charged once and remains disabled; positive likelihood classes remain represented",
+        "All three finite studies completed through native controls",
+        "Explained natural failure, Reset recovery and correct replay completed",
+        "Terminal engine controls are disabled",
+        "Two fresh optional studies completed and accumulated score banked",
+        "Optional Reset/Undo disabled; Bank/restart cannot mint score"
+      ],
+      "winActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "probe:2",
+            "probe:1",
+            "respond:1"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 1,
+          "actions": [
+            "probe:2",
+            "respond:0"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 2,
+          "actions": [
+            "probe:1",
+            "probe:0",
+            "respond:0"
+          ]
+        },
+        {
+          "mode": "endless",
+          "stage": 0,
+          "actions": [
+            "probe:2",
+            "respond:0"
+          ]
+        },
+        {
+          "mode": "endless",
+          "stage": 1,
+          "actions": [
+            "probe:2",
+            "probe:1",
+            "respond:0"
+          ]
+        }
+      ],
+      "lossActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "respond:0"
+          ]
+        }
+      ],
+      "finiteStudiesCompleted": 3,
+      "endlessStudiesCompleted": 2,
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "sourceSeed": 20261002,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "Pure model independent legal-witness completion at stages7/100/100000 across six dispersed public run seeds; actual browser finite0–2 and optional0–1, plus separately disclosed failure scope."
+      },
+      "errors": []
+    },
+    {
+      "id": "heap-foundry",
+      "profile": "desktop",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "touchOnly": false,
+      "inputMethod": "Native mouse clicks plus actual keyboard Space activation of opening control; native mode selectOption navigation",
+      "edgeCases": [
+        "Selecting a leaf does not exchange values; only explicit parent-child swaps mutate the heap",
+        "All three finite studies completed through native controls",
+        "Explained natural failure, Reset recovery and correct replay completed",
+        "Terminal engine controls are disabled",
+        "Two fresh optional studies completed and accumulated score banked",
+        "Optional Reset/Undo disabled; Bank/restart cannot mint score"
+      ],
+      "winActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "slot:1",
+            "swap:4",
+            "slot:0",
+            "swap:2",
+            "extract",
+            "slot:0",
+            "swap:1",
+            "extract",
+            "slot:0",
+            "swap:1",
+            "extract",
+            "extract",
+            "extract"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 1,
+          "actions": [
+            "slot:2",
+            "swap:6",
+            "extract",
+            "slot:0",
+            "swap:1",
+            "extract",
+            "slot:0",
+            "swap:2",
+            "extract",
+            "slot:0",
+            "swap:1",
+            "extract",
+            "slot:0",
+            "swap:1",
+            "extract",
+            "extract",
+            "extract"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 2,
+          "actions": [
+            "slot:3",
+            "swap:7",
+            "slot:1",
+            "swap:4",
+            "slot:0",
+            "swap:1",
+            "slot:1",
+            "swap:4",
+            "extract",
+            "slot:0",
+            "swap:2",
+            "slot:2",
+            "swap:5",
+            "extract",
+            "slot:0",
+            "swap:1",
+            "slot:1",
+            "swap:4",
+            "extract",
+            "slot:0",
+            "swap:1",
+            "slot:1",
+            "swap:3",
+            "extract",
+            "slot:0",
+            "swap:1",
+            "extract",
+            "slot:0",
+            "swap:2",
+            "extract",
+            "slot:0",
+            "swap:1",
+            "extract",
+            "extract",
+            "extract"
+          ]
+        },
+        {
+          "mode": "endless",
+          "stage": 0,
+          "actions": [
+            "slot:2",
+            "swap:6",
+            "slot:1",
+            "swap:3",
+            "slot:0",
+            "swap:2",
+            "slot:2",
+            "swap:6",
+            "extract",
+            "slot:0",
+            "swap:1",
+            "slot:1",
+            "swap:3",
+            "extract",
+            "slot:0",
+            "swap:1",
+            "slot:1",
+            "swap:4",
+            "extract",
+            "slot:0",
+            "swap:1",
+            "slot:1",
+            "swap:3",
+            "extract",
+            "slot:0",
+            "swap:2",
+            "extract",
+            "slot:0",
+            "swap:1",
+            "extract",
+            "extract"
+          ]
+        },
+        {
+          "mode": "endless",
+          "stage": 1,
+          "actions": [
+            "slot:1",
+            "swap:3",
+            "slot:3",
+            "swap:7",
+            "slot:0",
+            "swap:2",
+            "extract",
+            "slot:0",
+            "swap:2",
+            "slot:2",
+            "swap:5",
+            "extract",
+            "slot:0",
+            "swap:1",
+            "slot:1",
+            "swap:4",
+            "extract",
+            "slot:0",
+            "swap:2",
+            "extract",
+            "slot:0",
+            "swap:1",
+            "extract",
+            "slot:0",
+            "swap:1",
+            "extract",
+            "slot:0",
+            "swap:1",
+            "extract",
+            "extract"
+          ]
+        }
+      ],
+      "lossActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "extract"
+          ]
+        }
+      ],
+      "finiteStudiesCompleted": 3,
+      "endlessStudiesCompleted": 2,
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "sourceSeed": 20261002,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "Pure model independent legal-witness completion at stages7/100/100000 across six dispersed public run seeds; actual browser finite0–2 and optional0–1, plus separately disclosed failure scope."
+      },
+      "errors": []
+    },
+    {
+      "id": "diagram-order",
+      "profile": "desktop",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "touchOnly": false,
+      "inputMethod": "Native mouse clicks plus actual keyboard Space activation of opening control; native mode selectOption navigation",
+      "edgeCases": [
+        "An independently chosen over-budget reduced variable order fails its full-node audit",
+        "All three finite studies completed through native controls",
+        "Explained natural failure, Reset recovery and correct replay completed",
+        "Terminal engine controls are disabled",
+        "Two fresh optional studies completed and accumulated score banked",
+        "Optional Reset/Undo disabled; Bank/restart cannot mint score"
+      ],
+      "winActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "up:0",
+            "up:0",
+            "up:1",
+            "check"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 1,
+          "actions": [
+            "up:1",
+            "up:2",
+            "check"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 2,
+          "actions": [
+            "up:4",
+            "up:4",
+            "up:4",
+            "up:4",
+            "up:0",
+            "up:0",
+            "up:0",
+            "check"
+          ]
+        },
+        {
+          "mode": "endless",
+          "stage": 0,
+          "actions": [
+            "up:3",
+            "up:3",
+            "up:1",
+            "check"
+          ]
+        },
+        {
+          "mode": "endless",
+          "stage": 1,
+          "actions": [
+            "up:0",
+            "up:0",
+            "up:0",
+            "up:1",
+            "up:1",
+            "up:2",
+            "up:3",
+            "check"
+          ]
+        }
+      ],
+      "lossActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "check",
+            "check",
+            "check"
+          ]
+        }
+      ],
+      "finiteStudiesCompleted": 3,
+      "endlessStudiesCompleted": 2,
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "sourceSeed": 20261002,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "Pure model independent legal-witness completion at stages7/100/100000 across six dispersed public run seeds; actual browser finite0–2 and optional0–1, plus separately disclosed failure scope."
+      },
+      "errors": []
+    },
+    {
+      "id": "turning-council",
+      "profile": "desktop",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "touchOnly": false,
+      "inputMethod": "Native mouse clicks plus actual keyboard Space activation of opening control; native mode selectOption navigation",
+      "edgeCases": [
+        "Placement waits for rotation; a nonwinning full turn elicits one legal complete house reply",
+        "All three finite studies completed through native controls",
+        "Explained natural failure, Reset recovery and correct replay completed",
+        "Terminal engine controls are disabled",
+        "Optional terminal recovery observed through Bank; natural tactical loss executed in finite study3 only",
+        "Two fresh optional studies completed and accumulated score banked",
+        "Optional Reset/Undo disabled; Bank/restart cannot mint score"
+      ],
+      "winActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "place:4",
+            "rotate:0:-1"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 1,
+          "actions": [
+            "place:1",
+            "rotate:1:1"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 2,
+          "actions": [
+            "place:2",
+            "rotate:2:-1"
+          ]
+        },
+        {
+          "mode": "endless",
+          "stage": 0,
+          "actions": [
+            "place:24",
+            "rotate:0:1"
+          ]
+        },
+        {
+          "mode": "endless",
+          "stage": 1,
+          "actions": [
+            "place:22",
+            "rotate:2:1"
+          ]
+        }
+      ],
+      "lossActions": [
+        {
+          "mode": "finite",
+          "stage": 2,
+          "actions": [
+            "place:0",
+            "rotate:0:1"
+          ]
+        }
+      ],
+      "finiteStudiesCompleted": 3,
+      "endlessStudiesCompleted": 2,
+      "optionalMode": {
+        "supported": true,
+        "kind": "match-series",
+        "completedChallenges": 2,
+        "sourceSeed": 20261002,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "Pure model independent legal-witness completion at stages7/100/100000 across six dispersed public run seeds; actual browser finite0–2 and optional0–1, plus separately disclosed failure scope."
+      },
+      "errors": []
+    },
+    {
+      "id": "witness-table",
+      "profile": "desktop",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "touchOnly": false,
+      "inputMethod": "Native mouse clicks plus actual keyboard Space activation of opening control; native mode selectOption navigation",
+      "edgeCases": [
+        "All printed universal branches are checked with the permitted earlier/later witness contexts",
+        "All three finite studies completed through native controls",
+        "Explained natural failure, Reset recovery and correct replay completed",
+        "Terminal engine controls are disabled",
+        "Two fresh optional studies completed and accumulated score banked",
+        "Optional Reset/Undo disabled; Bank/restart cannot mint score"
+      ],
+      "winActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "branch:0",
+            "choose:2",
+            "branch:1",
+            "choose:1",
+            "branch:2",
+            "choose:1",
+            "check"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 1,
+          "actions": [
+            "branch:0",
+            "choose:0",
+            "check"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 2,
+          "actions": [
+            "branch:0",
+            "choose:0",
+            "later-branch:0",
+            "later:1",
+            "later-branch:1",
+            "later:0",
+            "later-branch:2",
+            "later:0",
+            "branch:1",
+            "choose:0",
+            "later-branch:3",
+            "later:1",
+            "later-branch:4",
+            "later:0",
+            "later-branch:5",
+            "later:0",
+            "branch:2",
+            "choose:0",
+            "later-branch:6",
+            "later:1",
+            "later-branch:7",
+            "later:0",
+            "later-branch:8",
+            "later:0",
+            "check"
+          ]
+        },
+        {
+          "mode": "endless",
+          "stage": 0,
+          "actions": [
+            "branch:0",
+            "choose:2",
+            "branch:1",
+            "choose:0",
+            "branch:2",
+            "choose:0",
+            "branch:3",
+            "choose:2",
+            "check"
+          ]
+        },
+        {
+          "mode": "endless",
+          "stage": 1,
+          "actions": [
+            "branch:0",
+            "choose:0",
+            "check"
+          ]
+        }
+      ],
+      "lossActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "check",
+            "check",
+            "check"
+          ]
+        }
+      ],
+      "finiteStudiesCompleted": 3,
+      "endlessStudiesCompleted": 2,
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "sourceSeed": 20261002,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "Pure model independent legal-witness completion at stages7/100/100000 across six dispersed public run seeds; actual browser finite0–2 and optional0–1, plus separately disclosed failure scope."
+      },
+      "errors": []
+    },
+    {
+      "id": "one-lie-archive",
+      "profile": "desktop",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "touchOnly": false,
+      "inputMethod": "Native mouse clicks plus actual keyboard Space activation of opening control; native mode selectOption navigation",
+      "edgeCases": [
+        "The same property can be asked repeatedly; transcript disagreements update globally",
+        "All three finite studies completed through native controls",
+        "Explained natural failure, Reset recovery and correct replay completed",
+        "Terminal engine controls are disabled",
+        "Two fresh optional studies completed and accumulated score banked",
+        "Optional Reset/Undo disabled; Bank/restart cannot mint score"
+      ],
+      "winActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "ask:0",
+            "ask:0",
+            "ask:0",
+            "ask:1",
+            "identify:1"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 1,
+          "actions": [
+            "ask:0",
+            "ask:0",
+            "ask:0",
+            "ask:1",
+            "ask:1",
+            "ask:1",
+            "ask:2",
+            "identify:1"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 2,
+          "actions": [
+            "ask:0",
+            "ask:0",
+            "ask:0",
+            "ask:1",
+            "ask:1",
+            "ask:1",
+            "ask:2",
+            "ask:2",
+            "ask:2",
+            "ask:3",
+            "identify:4"
+          ]
+        },
+        {
+          "mode": "endless",
+          "stage": 0,
+          "actions": [
+            "ask:0",
+            "ask:0",
+            "ask:0",
+            "ask:1",
+            "ask:1",
+            "ask:1",
+            "ask:2",
+            "ask:2",
+            "ask:2",
+            "ask:3",
+            "identify:0"
+          ]
+        },
+        {
+          "mode": "endless",
+          "stage": 1,
+          "actions": [
+            "ask:0",
+            "ask:0",
+            "ask:0",
+            "ask:1",
+            "ask:1",
+            "ask:1",
+            "ask:2",
+            "ask:2",
+            "ask:2",
+            "ask:3",
+            "ask:3",
+            "ask:3",
+            "ask:4",
+            "identify:6"
+          ]
+        }
+      ],
+      "lossActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "identify:0"
+          ]
+        }
+      ],
+      "finiteStudiesCompleted": 3,
+      "endlessStudiesCompleted": 2,
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "sourceSeed": 20261002,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "Pure model independent legal-witness completion at stages7/100/100000 across six dispersed public run seeds; actual browser finite0–2 and optional0–1, plus separately disclosed failure scope."
+      },
+      "errors": []
+    },
+    {
+      "id": "invariant-gallery",
+      "profile": "desktop",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "touchOnly": false,
+      "inputMethod": "Native mouse clicks plus actual keyboard Space activation of opening control; native mode selectOption navigation",
+      "edgeCases": [
+        "A region containing initials and excluding forbidden states still fails on an admitted unreachable transition",
+        "All three finite studies completed through native controls",
+        "Explained natural failure, Reset recovery and correct replay completed",
+        "Terminal engine controls are disabled",
+        "Two fresh optional studies completed and accumulated score banked",
+        "Optional Reset/Undo disabled; Bank/restart cannot mint score"
+      ],
+      "winActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "inequality:0",
+            "coefficient:0:-1",
+            "coefficient:1:1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "inequality:1",
+            "coefficient:0:1",
+            "coefficient:1:-1",
+            "coefficient:1:-1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "check"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 1,
+          "actions": [
+            "inequality:0",
+            "coefficient:0:-1",
+            "coefficient:1:1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "inequality:1",
+            "coefficient:0:1",
+            "coefficient:1:-1",
+            "coefficient:1:-1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "check"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 2,
+          "actions": [
+            "inequality:0",
+            "coefficient:0:-1",
+            "coefficient:1:1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "inequality:1",
+            "coefficient:0:1",
+            "coefficient:1:-1",
+            "coefficient:1:-1",
+            "coefficient:1:-1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "check"
+          ]
+        },
+        {
+          "mode": "endless",
+          "stage": 0,
+          "actions": [
+            "inequality:0",
+            "coefficient:0:-1",
+            "coefficient:1:-1",
+            "coefficient:1:-1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "inequality:1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "check"
+          ]
+        },
+        {
+          "mode": "endless",
+          "stage": 1,
+          "actions": [
+            "inequality:0",
+            "coefficient:0:-1",
+            "coefficient:1:1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "inequality:1",
+            "coefficient:0:1",
+            "coefficient:1:-1",
+            "coefficient:1:-1",
+            "coefficient:1:-1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "check"
+          ]
+        }
+      ],
+      "lossActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "inequality:0",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "inequality:1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "check",
+            "check",
+            "check"
+          ]
+        }
+      ],
+      "finiteStudiesCompleted": 3,
+      "endlessStudiesCompleted": 2,
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "sourceSeed": 20261002,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "Pure model independent legal-witness completion at stages7/100/100000 across six dispersed public run seeds; actual browser finite0–2 and optional0–1, plus separately disclosed failure scope."
+      },
+      "errors": []
+    },
+    {
+      "id": "minor-museum",
+      "profile": "mobile-touch",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "touchOnly": true,
+      "inputMethod": "Actual touchscreen taps for every engine and shell gameplay action; native mode selectOption used only for mode navigation",
+      "edgeCases": [
+        "Protected adjacent target anchors cannot contract into one bag",
+        "All three finite studies completed through native controls",
+        "Explained natural failure, Reset recovery and correct replay completed",
+        "Terminal engine controls are disabled",
+        "Two fresh optional studies completed and accumulated score banked",
+        "Optional Reset/Undo disabled; Bank/restart cannot mint score"
+      ],
+      "winActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "node:0",
+            "node:3",
+            "contract",
+            "node:1",
+            "node:4",
+            "contract",
+            "check"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 1,
+          "actions": [
+            "node:0",
+            "node:5",
+            "contract",
+            "node:1",
+            "node:4",
+            "contract",
+            "node:2",
+            "node:6",
+            "contract",
+            "check"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 2,
+          "actions": [
+            "delete:3,6",
+            "delete:6,7",
+            "node:0",
+            "node:5",
+            "contract",
+            "node:0",
+            "node:6",
+            "contract",
+            "node:0",
+            "node:8",
+            "contract",
+            "node:3",
+            "node:7",
+            "contract",
+            "check"
+          ]
+        },
+        {
+          "mode": "endless",
+          "stage": 0,
+          "actions": [
+            "node:0",
+            "node:4",
+            "contract",
+            "node:1",
+            "node:3",
+            "contract",
+            "check"
+          ]
+        },
+        {
+          "mode": "endless",
+          "stage": 1,
+          "actions": [
+            "delete:0,2",
+            "delete:3,5",
+            "node:0",
+            "node:5",
+            "contract",
+            "node:0",
+            "node:6",
+            "contract",
+            "node:2",
+            "node:4",
+            "contract",
+            "check"
+          ]
+        }
+      ],
+      "lossActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "delete:0,3",
+            "delete:1,2",
+            "delete:1,3",
+            "delete:1,4",
+            "delete:2,4"
+          ]
+        }
+      ],
+      "finiteStudiesCompleted": 3,
+      "endlessStudiesCompleted": 2,
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "sourceSeed": 20261002,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "Pure model independent legal-witness completion at stages7/100/100000 across six dispersed public run seeds; actual browser finite0–2 and optional0–1, plus separately disclosed failure scope."
+      },
+      "errors": []
+    },
+    {
+      "id": "twin-graph",
+      "profile": "mobile-touch",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "touchOnly": true,
+      "inputMethod": "Actual touchscreen taps for every engine and shell gameplay action; native mode selectOption used only for mode navigation",
+      "edgeCases": [
+        "Occupied isomorphism destinations swap assignments without duplicate ownership",
+        "All three finite studies completed through native controls",
+        "Explained natural failure, Reset recovery and correct replay completed",
+        "Terminal engine controls are disabled",
+        "Two fresh optional studies completed and accumulated score banked",
+        "Optional Reset/Undo disabled; Bank/restart cannot mint score"
+      ],
+      "winActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "left:0",
+            "right:3",
+            "left:1",
+            "right:1",
+            "left:2",
+            "right:0",
+            "left:3",
+            "right:4",
+            "left:4",
+            "right:2",
+            "check"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 1,
+          "actions": [
+            "left:0",
+            "right:0",
+            "left:1",
+            "right:5",
+            "left:2",
+            "right:2",
+            "left:3",
+            "right:1",
+            "left:4",
+            "right:4",
+            "left:5",
+            "right:3",
+            "check"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 2,
+          "actions": [
+            "left:0",
+            "right:3",
+            "left:1",
+            "right:1",
+            "left:2",
+            "right:5",
+            "left:3",
+            "right:4",
+            "left:4",
+            "right:2",
+            "left:5",
+            "right:6",
+            "left:6",
+            "right:0",
+            "check"
+          ]
+        },
+        {
+          "mode": "endless",
+          "stage": 0,
+          "actions": [
+            "left:0",
+            "right:5",
+            "left:1",
+            "right:4",
+            "left:2",
+            "right:1",
+            "left:3",
+            "right:0",
+            "left:4",
+            "right:3",
+            "left:5",
+            "right:2",
+            "check"
+          ]
+        },
+        {
+          "mode": "endless",
+          "stage": 1,
+          "actions": [
+            "left:0",
+            "right:1",
+            "left:1",
+            "right:0",
+            "left:2",
+            "right:6",
+            "left:3",
+            "right:4",
+            "left:4",
+            "right:2",
+            "left:5",
+            "right:5",
+            "left:6",
+            "right:3",
+            "check"
+          ]
+        }
+      ],
+      "lossActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "check",
+            "check",
+            "check"
+          ]
+        }
+      ],
+      "finiteStudiesCompleted": 3,
+      "endlessStudiesCompleted": 2,
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "sourceSeed": 20261002,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "Pure model independent legal-witness completion at stages7/100/100000 across six dispersed public run seeds; actual browser finite0–2 and optional0–1, plus separately disclosed failure scope."
+      },
+      "errors": []
+    },
+    {
+      "id": "interval-museum",
+      "profile": "mobile-touch",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "touchOnly": true,
+      "inputMethod": "Actual touchscreen taps for every engine and shell gameplay action; native mode selectOption used only for mode navigation",
+      "edgeCases": [
+        "Native endpoint bounds and reversed-endpoint audit are enforced",
+        "All three finite studies completed through native controls",
+        "Explained natural failure, Reset recovery and correct replay completed",
+        "Terminal engine controls are disabled",
+        "Two fresh optional studies completed and accumulated score banked",
+        "Optional Reset/Undo disabled; Bank/restart cannot mint score"
+      ],
+      "winActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "select:0",
+            "select:1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:1:-1",
+            "select:2",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "select:3",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "check"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 1,
+          "actions": [
+            "select:0",
+            "endpoint:1:1",
+            "select:1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:1:-1",
+            "select:2",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "select:3",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "select:4",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "check"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 2,
+          "actions": [
+            "select:0",
+            "select:1",
+            "select:2",
+            "select:3",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "select:4",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "select:5",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "check"
+          ]
+        },
+        {
+          "mode": "endless",
+          "stage": 0,
+          "actions": [
+            "select:0",
+            "endpoint:0:1",
+            "endpoint:0:1",
+            "endpoint:1:1",
+            "endpoint:1:1",
+            "select:1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:1:-1",
+            "select:2",
+            "endpoint:0:-1",
+            "endpoint:1:-1",
+            "select:3",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "select:4",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "check"
+          ]
+        },
+        {
+          "mode": "endless",
+          "stage": 1,
+          "actions": [
+            "select:0",
+            "endpoint:1:1",
+            "select:1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "select:2",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "select:3",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "select:4",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "select:5",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:0:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "endpoint:1:-1",
+            "check"
+          ]
+        }
+      ],
+      "lossActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "check",
+            "check",
+            "check"
+          ]
+        }
+      ],
+      "finiteStudiesCompleted": 3,
+      "endlessStudiesCompleted": 2,
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "sourceSeed": 20261002,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "Pure model independent legal-witness completion at stages7/100/100000 across six dispersed public run seeds; actual browser finite0–2 and optional0–1, plus separately disclosed failure scope."
+      },
+      "errors": []
+    },
+    {
+      "id": "knowledge-circle",
+      "profile": "mobile-touch",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "touchOnly": true,
+      "inputMethod": "Actual touchscreen taps for every engine and shell gameplay action; native mode selectOption used only for mode navigation",
+      "edgeCases": [
+        "Each successful announcement removes public worlds and rebuilds current groups",
+        "All three finite studies completed through native controls",
+        "Explained natural failure, Reset recovery and correct replay completed",
+        "Terminal engine controls are disabled",
+        "Two fresh optional studies completed and accumulated score banked",
+        "Optional Reset/Undo disabled; Bank/restart cannot mint score"
+      ],
+      "winActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "world:0",
+            "world:1",
+            "world:3",
+            "world:6",
+            "world:7",
+            "apply"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 1,
+          "actions": [
+            "world:0",
+            "world:1",
+            "world:2",
+            "world:3",
+            "world:4",
+            "world:5",
+            "world:6",
+            "world:7",
+            "world:8",
+            "apply",
+            "world:2",
+            "apply"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 2,
+          "actions": [
+            "world:0",
+            "world:1",
+            "world:2",
+            "world:3",
+            "world:5",
+            "world:6",
+            "world:7",
+            "world:8",
+            "world:9",
+            "world:10",
+            "apply",
+            "world:0",
+            "world:1",
+            "world:2",
+            "world:3",
+            "world:5",
+            "world:6",
+            "world:7",
+            "world:8",
+            "world:9",
+            "apply",
+            "world:9",
+            "apply"
+          ]
+        },
+        {
+          "mode": "endless",
+          "stage": 0,
+          "actions": [
+            "world:0",
+            "world:1",
+            "world:3",
+            "world:6",
+            "world:7",
+            "apply"
+          ]
+        },
+        {
+          "mode": "endless",
+          "stage": 1,
+          "actions": [
+            "world:0",
+            "world:1",
+            "world:2",
+            "world:3",
+            "world:4",
+            "world:5",
+            "world:6",
+            "world:7",
+            "world:8",
+            "apply",
+            "world:2",
+            "apply"
+          ]
+        }
+      ],
+      "lossActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "apply",
+            "apply",
+            "apply"
+          ]
+        }
+      ],
+      "finiteStudiesCompleted": 3,
+      "endlessStudiesCompleted": 2,
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "sourceSeed": 20261002,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "Pure model independent legal-witness completion at stages7/100/100000 across six dispersed public run seeds; actual browser finite0–2 and optional0–1, plus separately disclosed failure scope."
+      },
+      "errors": []
+    },
+    {
+      "id": "modal-witness",
+      "profile": "mobile-touch",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "touchOnly": true,
+      "inputMethod": "Actual touchscreen taps for every engine and shell gameplay action; native mode selectOption used only for mode navigation",
+      "edgeCases": [
+        "Reverse accessibility arrow cannot witness a root Diamond premise",
+        "All three finite studies completed through native controls",
+        "Explained natural failure, Reset recovery and correct replay completed",
+        "Terminal engine controls are disabled",
+        "Unsupported procedural mode disabled with accurate finite-only explanation"
+      ],
+      "winActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "from:0",
+            "to:1",
+            "arrow",
+            "from:0",
+            "to:2",
+            "arrow",
+            "value:1:P",
+            "check"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 1,
+          "actions": [
+            "from:0",
+            "to:1",
+            "arrow",
+            "from:0",
+            "to:2",
+            "arrow",
+            "value:1:P",
+            "value:2:Q",
+            "check"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 2,
+          "actions": [
+            "from:0",
+            "to:1",
+            "arrow",
+            "from:0",
+            "to:2",
+            "arrow",
+            "from:1",
+            "to:2",
+            "arrow",
+            "from:1",
+            "to:0",
+            "arrow",
+            "from:2",
+            "to:1",
+            "arrow",
+            "from:2",
+            "to:0",
+            "arrow",
+            "value:1:P",
+            "value:1:Q",
+            "value:2:P",
+            "check"
+          ]
+        }
+      ],
+      "lossActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "check",
+            "check",
+            "check"
+          ]
+        }
+      ],
+      "finiteStudiesCompleted": 3,
+      "endlessStudiesCompleted": 0,
+      "optionalMode": {
+        "supported": false
+      },
+      "errors": []
+    },
+    {
+      "id": "polygon-passport",
+      "profile": "mobile-touch",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "touchOnly": true,
+      "inputMethod": "Actual touchscreen taps for every engine and shell gameplay action; native mode selectOption used only for mode navigation",
+      "edgeCases": [
+        "Side gluing merges endpoint classes and removing the gluing restores them",
+        "All three finite studies completed through native controls",
+        "Explained natural failure, Reset recovery and correct replay completed",
+        "Terminal engine controls are disabled",
+        "Unsupported procedural mode disabled with accurate finite-only explanation"
+      ],
+      "winActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "side:0",
+            "side:2",
+            "pair",
+            "side:1",
+            "side:3",
+            "pair",
+            "check"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 1,
+          "actions": [
+            "side:0",
+            "side:1",
+            "orientation",
+            "pair",
+            "side:2",
+            "side:3",
+            "pair",
+            "check"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 2,
+          "actions": [
+            "side:0",
+            "side:2",
+            "pair",
+            "side:1",
+            "side:3",
+            "pair",
+            "side:4",
+            "side:6",
+            "pair",
+            "side:5",
+            "side:7",
+            "pair",
+            "check"
+          ]
+        }
+      ],
+      "lossActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "check",
+            "check",
+            "check"
+          ]
+        }
+      ],
+      "finiteStudiesCompleted": 3,
+      "endlessStudiesCompleted": 0,
+      "optionalMode": {
+        "supported": false
+      },
+      "errors": []
+    },
+    {
+      "id": "hairpin-studio",
+      "profile": "mobile-touch",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "touchOnly": true,
+      "inputMethod": "Actual touchscreen taps for every engine and shell gameplay action; native mode selectOption used only for mode navigation",
+      "edgeCases": [
+        "Adjacent positions fail the actual minimum-loop-gap rule",
+        "All three finite studies completed through native controls",
+        "Explained natural failure, Reset recovery and correct replay completed",
+        "Terminal engine controls are disabled",
+        "Two fresh optional studies completed and accumulated score banked",
+        "Optional Reset/Undo disabled; Bank/restart cannot mint score"
+      ],
+      "winActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "site:0",
+            "site:5",
+            "bond",
+            "site:2",
+            "site:4",
+            "bond",
+            "check"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 1,
+          "actions": [
+            "site:0",
+            "site:9",
+            "bond",
+            "site:1",
+            "site:8",
+            "bond",
+            "site:2",
+            "site:7",
+            "bond",
+            "check"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 2,
+          "actions": [
+            "site:0",
+            "site:11",
+            "bond",
+            "site:1",
+            "site:10",
+            "bond",
+            "site:2",
+            "site:9",
+            "bond",
+            "site:3",
+            "site:8",
+            "bond",
+            "check"
+          ]
+        },
+        {
+          "mode": "endless",
+          "stage": 0,
+          "actions": [
+            "site:0",
+            "site:11",
+            "bond",
+            "site:1",
+            "site:10",
+            "bond",
+            "site:2",
+            "site:9",
+            "bond",
+            "site:3",
+            "site:8",
+            "bond",
+            "site:4",
+            "site:7",
+            "bond",
+            "check"
+          ]
+        },
+        {
+          "mode": "endless",
+          "stage": 1,
+          "actions": [
+            "site:0",
+            "site:13",
+            "bond",
+            "site:1",
+            "site:12",
+            "bond",
+            "site:2",
+            "site:11",
+            "bond",
+            "site:3",
+            "site:10",
+            "bond",
+            "site:4",
+            "site:8",
+            "bond",
+            "check"
+          ]
+        }
+      ],
+      "lossActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "check",
+            "check",
+            "check"
+          ]
+        }
+      ],
+      "finiteStudiesCompleted": 3,
+      "endlessStudiesCompleted": 2,
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "sourceSeed": 20261002,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "Pure model independent legal-witness completion at stages7/100/100000 across six dispersed public run seeds; actual browser finite0–2 and optional0–1, plus separately disclosed failure scope."
+      },
+      "errors": []
+    },
+    {
+      "id": "letter-carries",
+      "profile": "mobile-touch",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "touchOnly": true,
+      "inputMethod": "Actual touchscreen taps for every engine and shell gameplay action; native mode selectOption used only for mode navigation",
+      "edgeCases": [
+        "A complete digit assignment with a leading zero fails certification",
+        "All three finite studies completed through native controls",
+        "Explained natural failure, Reset recovery and correct replay completed",
+        "Terminal engine controls are disabled",
+        "Two fresh optional studies completed and accumulated score banked",
+        "Optional Reset/Undo disabled; Bank/restart cannot mint score"
+      ],
+      "winActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "letter:A",
+            "digit:2",
+            "letter:D",
+            "digit:1",
+            "letter:F",
+            "digit:4",
+            "letter:G",
+            "digit:3",
+            "letter:I",
+            "digit:7",
+            "check"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 1,
+          "actions": [
+            "letter:B",
+            "digit:0",
+            "letter:C",
+            "digit:7",
+            "letter:H",
+            "digit:1",
+            "letter:I",
+            "digit:3",
+            "letter:J",
+            "digit:2",
+            "check"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 2,
+          "actions": [
+            "letter:A",
+            "digit:2",
+            "letter:B",
+            "digit:9",
+            "letter:C",
+            "digit:6",
+            "letter:D",
+            "digit:1",
+            "letter:F",
+            "digit:3",
+            "letter:G",
+            "digit:0",
+            "letter:J",
+            "digit:5",
+            "check"
+          ]
+        },
+        {
+          "mode": "endless",
+          "stage": 0,
+          "actions": [
+            "letter:A",
+            "digit:2",
+            "letter:D",
+            "digit:1",
+            "letter:F",
+            "digit:4",
+            "letter:G",
+            "digit:3",
+            "letter:I",
+            "digit:7",
+            "check"
+          ]
+        },
+        {
+          "mode": "endless",
+          "stage": 1,
+          "actions": [
+            "letter:B",
+            "digit:0",
+            "letter:C",
+            "digit:7",
+            "letter:H",
+            "digit:1",
+            "letter:I",
+            "digit:3",
+            "letter:J",
+            "digit:2",
+            "check"
+          ]
+        }
+      ],
+      "lossActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "letter:A",
+            "digit:2",
+            "letter:D",
+            "digit:1",
+            "letter:F",
+            "digit:4",
+            "letter:G",
+            "digit:3",
+            "letter:I",
+            "digit:7",
+            "letter:G",
+            "digit:0",
+            "check",
+            "check",
+            "check"
+          ]
+        }
+      ],
+      "finiteStudiesCompleted": 3,
+      "endlessStudiesCompleted": 2,
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "sourceSeed": 20261002,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "Pure model independent legal-witness completion at stages7/100/100000 across six dispersed public run seeds; actual browser finite0–2 and optional0–1, plus separately disclosed failure scope."
+      },
+      "errors": []
+    },
+    {
+      "id": "fill-in-station",
+      "profile": "mobile-touch",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "touchOnly": true,
+      "inputMethod": "Actual touchscreen taps for every engine and shell gameplay action; native mode selectOption used only for mode navigation",
+      "edgeCases": [
+        "A destructive high-degree elimination loses under the induced-width cap",
+        "All three finite studies completed through native controls",
+        "Explained natural failure, Reset recovery and correct replay completed",
+        "Terminal engine controls are disabled",
+        "Two fresh optional studies completed and accumulated score banked",
+        "Optional Reset/Undo disabled; Bank/restart cannot mint score"
+      ],
+      "winActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "select:2",
+            "eliminate",
+            "select:3",
+            "eliminate",
+            "select:1",
+            "eliminate",
+            "select:0",
+            "eliminate",
+            "select:4",
+            "eliminate"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 1,
+          "actions": [
+            "select:0",
+            "eliminate",
+            "select:1",
+            "eliminate",
+            "select:2",
+            "eliminate",
+            "select:3",
+            "eliminate",
+            "select:4",
+            "eliminate",
+            "select:5",
+            "eliminate"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 2,
+          "actions": [
+            "select:0",
+            "eliminate",
+            "select:3",
+            "eliminate",
+            "select:2",
+            "eliminate",
+            "select:4",
+            "eliminate",
+            "select:1",
+            "eliminate",
+            "select:5",
+            "eliminate",
+            "select:6",
+            "eliminate"
+          ]
+        },
+        {
+          "mode": "endless",
+          "stage": 0,
+          "actions": [
+            "select:2",
+            "eliminate",
+            "select:3",
+            "eliminate",
+            "select:1",
+            "eliminate",
+            "select:0",
+            "eliminate",
+            "select:4",
+            "eliminate"
+          ]
+        },
+        {
+          "mode": "endless",
+          "stage": 1,
+          "actions": [
+            "select:0",
+            "eliminate",
+            "select:1",
+            "eliminate",
+            "select:2",
+            "eliminate",
+            "select:3",
+            "eliminate",
+            "select:4",
+            "eliminate",
+            "select:5",
+            "eliminate"
+          ]
+        }
+      ],
+      "lossActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "select:0",
+            "eliminate"
+          ]
+        }
+      ],
+      "finiteStudiesCompleted": 3,
+      "endlessStudiesCompleted": 2,
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "sourceSeed": 20261002,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "Pure model independent legal-witness completion at stages7/100/100000 across six dispersed public run seeds; actual browser finite0–2 and optional0–1, plus separately disclosed failure scope."
+      },
+      "errors": []
+    },
+    {
+      "id": "alternating-couriers",
+      "profile": "mobile-touch",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "touchOnly": true,
+      "inputMethod": "Actual touchscreen taps for every engine and shell gameplay action; native mode selectOption used only for mode navigation",
+      "edgeCases": [
+        "A matched right endpoint forces its partner as the next alternating step",
+        "All three finite studies completed through native controls",
+        "Explained natural failure, Reset recovery and correct replay completed",
+        "Terminal engine controls are disabled",
+        "Two fresh optional studies completed and accumulated score banked",
+        "Optional Reset/Undo disabled; Bank/restart cannot mint score"
+      ],
+      "winActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "walk:1",
+            "walk:5",
+            "walk:0",
+            "walk:7",
+            "flip"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 1,
+          "actions": [
+            "walk:2",
+            "walk:5",
+            "walk:1",
+            "walk:6",
+            "walk:4",
+            "walk:7",
+            "flip"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 2,
+          "actions": [
+            "walk:0",
+            "walk:9",
+            "flip",
+            "walk:3",
+            "walk:7",
+            "walk:2",
+            "walk:6",
+            "walk:1",
+            "walk:8",
+            "flip"
+          ]
+        },
+        {
+          "mode": "endless",
+          "stage": 0,
+          "actions": [
+            "walk:1",
+            "walk:5",
+            "walk:0",
+            "walk:7",
+            "flip"
+          ]
+        },
+        {
+          "mode": "endless",
+          "stage": 1,
+          "actions": [
+            "walk:2",
+            "walk:6",
+            "walk:4",
+            "walk:7",
+            "flip"
+          ]
+        }
+      ],
+      "lossActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "walk:1",
+            "cancel",
+            "walk:1",
+            "cancel",
+            "walk:1",
+            "cancel",
+            "walk:1",
+            "cancel",
+            "walk:1",
+            "cancel",
+            "walk:1",
+            "cancel",
+            "walk:1",
+            "cancel",
+            "walk:1",
+            "cancel",
+            "walk:1",
+            "cancel",
+            "walk:1",
+            "cancel",
+            "walk:1",
+            "cancel",
+            "walk:1",
+            "cancel",
+            "walk:1",
+            "cancel",
+            "walk:1",
+            "cancel",
+            "walk:1",
+            "cancel",
+            "walk:1",
+            "cancel",
+            "walk:1",
+            "cancel",
+            "walk:1"
+          ]
+        }
+      ],
+      "finiteStudiesCompleted": 3,
+      "endlessStudiesCompleted": 2,
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "sourceSeed": 20261002,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "Pure model independent legal-witness completion at stages7/100/100000 across six dispersed public run seeds; actual browser finite0–2 and optional0–1, plus separately disclosed failure scope."
+      },
+      "errors": []
+    },
+    {
+      "id": "recursive-rings",
+      "profile": "mobile-touch",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "touchOnly": true,
+      "inputMethod": "Actual touchscreen taps for every engine and shell gameplay action; native mode selectOption used only for mode navigation",
+      "edgeCases": [
+        "Detaching ring1 unlocks ring3 only while its preceding ring2 remains attached",
+        "All three finite studies completed through native controls",
+        "Explained natural failure, Reset recovery and correct replay completed",
+        "Terminal engine controls are disabled",
+        "Unsupported procedural mode disabled with accurate finite-only explanation"
+      ],
+      "winActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "ring:0",
+            "ring:2",
+            "ring:0",
+            "ring:1",
+            "ring:0"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 1,
+          "actions": [
+            "ring:1",
+            "ring:0",
+            "ring:3",
+            "ring:0",
+            "ring:1",
+            "ring:0",
+            "ring:2",
+            "ring:0",
+            "ring:1",
+            "ring:0"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 2,
+          "actions": [
+            "ring:0",
+            "ring:2",
+            "ring:0",
+            "ring:1",
+            "ring:0",
+            "ring:4",
+            "ring:0",
+            "ring:1",
+            "ring:0",
+            "ring:2",
+            "ring:0",
+            "ring:1",
+            "ring:0",
+            "ring:3",
+            "ring:0",
+            "ring:1",
+            "ring:0",
+            "ring:2",
+            "ring:0",
+            "ring:1",
+            "ring:0"
+          ]
+        }
+      ],
+      "lossActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "ring:0",
+            "ring:0",
+            "ring:0",
+            "ring:0",
+            "ring:0",
+            "ring:0",
+            "ring:0",
+            "ring:0"
+          ]
+        }
+      ],
+      "finiteStudiesCompleted": 3,
+      "endlessStudiesCompleted": 0,
+      "optionalMode": {
+        "supported": false
+      },
+      "errors": []
+    },
+    {
+      "id": "ordered-echo",
+      "profile": "mobile-touch",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "touchOnly": true,
+      "inputMethod": "Actual touchscreen taps for every engine and shell gameplay action; native mode selectOption used only for mode navigation",
+      "edgeCases": [
+        "Recall collects visible pulses before hiding; a wrong next symbol ends the attempt",
+        "All three finite studies completed through native controls",
+        "Explained natural failure, Reset recovery and correct replay completed",
+        "Terminal engine controls are disabled",
+        "Two fresh optional studies completed and accumulated score banked",
+        "Optional Reset/Undo disabled; Bank/restart cannot mint score"
+      ],
+      "winActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "observedPulses": [
+            1,
+            2,
+            1,
+            2
+          ],
+          "inputScope": "Visible pulse read before each hide; recalled only after all cues covered"
+        },
+        {
+          "mode": "finite",
+          "stage": 1,
+          "observedPulses": [
+            2,
+            4,
+            2,
+            3,
+            3,
+            0
+          ],
+          "inputScope": "Visible pulse read before each hide; recalled only after all cues covered"
+        },
+        {
+          "mode": "finite",
+          "stage": 2,
+          "observedPulses": [
+            0,
+            3,
+            0,
+            4,
+            5,
+            3,
+            2,
+            5
+          ],
+          "inputScope": "Visible pulse read before each hide; recalled only after all cues covered"
+        },
+        {
+          "mode": "endless",
+          "stage": 0,
+          "observedPulses": [
+            1,
+            2,
+            1,
+            2
+          ]
+        },
+        {
+          "mode": "endless",
+          "stage": 1,
+          "observedPulses": [
+            2,
+            4,
+            2,
+            3,
+            3,
+            0
+          ]
+        }
+      ],
+      "lossActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": "visible cues then deliberately wrong first recall"
+        }
+      ],
+      "finiteStudiesCompleted": 3,
+      "endlessStudiesCompleted": 2,
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "sourceSeed": 20261002,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "Pure model independent legal-witness completion at stages7/100/100000 across six dispersed public run seeds; actual browser finite0–2 and optional0–1, plus separately disclosed failure scope."
+      },
+      "errors": []
+    },
+    {
+      "id": "heritage-house",
+      "profile": "mobile-touch",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "touchOnly": true,
+      "inputMethod": "Actual touchscreen taps for every engine and shell gameplay action; native mode selectOption used only for mode navigation",
+      "edgeCases": [
+        "A complete family assignment with a wrong visible trait fails certification",
+        "All three finite studies completed through native controls",
+        "Explained natural failure, Reset recovery and correct replay completed",
+        "Terminal engine controls are disabled",
+        "Two fresh optional studies completed and accumulated score banked",
+        "Optional Reset/Undo disabled; Bank/restart cannot mint score"
+      ],
+      "winActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "person:0",
+            "person:0",
+            "person:1",
+            "person:1",
+            "person:2",
+            "check"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 1,
+          "actions": [
+            "person:0",
+            "person:0",
+            "person:1",
+            "person:2",
+            "person:2",
+            "person:4",
+            "person:4",
+            "check"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 2,
+          "actions": [
+            "person:0",
+            "person:0",
+            "person:1",
+            "person:1",
+            "person:2",
+            "person:2",
+            "person:5",
+            "person:5",
+            "person:6",
+            "person:6",
+            "person:7",
+            "check"
+          ]
+        },
+        {
+          "mode": "endless",
+          "stage": 0,
+          "actions": [
+            "person:0",
+            "person:0",
+            "person:1",
+            "person:1",
+            "person:2",
+            "check"
+          ]
+        },
+        {
+          "mode": "endless",
+          "stage": 1,
+          "actions": [
+            "person:0",
+            "person:0",
+            "person:1",
+            "person:1",
+            "person:4",
+            "person:4",
+            "person:5",
+            "check"
+          ]
+        }
+      ],
+      "lossActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "person:0",
+            "person:0",
+            "person:1",
+            "person:1",
+            "person:2",
+            "person:0",
+            "person:0",
+            "person:0",
+            "check",
+            "check",
+            "check"
+          ]
+        }
+      ],
+      "finiteStudiesCompleted": 3,
+      "endlessStudiesCompleted": 2,
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "sourceSeed": 20261002,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "Pure model independent legal-witness completion at stages7/100/100000 across six dispersed public run seeds; actual browser finite0–2 and optional0–1, plus separately disclosed failure scope."
+      },
+      "errors": []
+    },
+    {
+      "id": "posterior-post",
+      "profile": "mobile-touch",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "touchOnly": true,
+      "inputMethod": "Actual touchscreen taps for every engine and shell gameplay action; native mode selectOption used only for mode navigation",
+      "edgeCases": [
+        "Purchased probe is charged once and remains disabled; positive likelihood classes remain represented",
+        "All three finite studies completed through native controls",
+        "Explained natural failure, Reset recovery and correct replay completed",
+        "Terminal engine controls are disabled",
+        "Two fresh optional studies completed and accumulated score banked",
+        "Optional Reset/Undo disabled; Bank/restart cannot mint score"
+      ],
+      "winActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "probe:2",
+            "probe:1",
+            "respond:1"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 1,
+          "actions": [
+            "probe:2",
+            "respond:0"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 2,
+          "actions": [
+            "probe:1",
+            "probe:0",
+            "respond:0"
+          ]
+        },
+        {
+          "mode": "endless",
+          "stage": 0,
+          "actions": [
+            "probe:2",
+            "respond:0"
+          ]
+        },
+        {
+          "mode": "endless",
+          "stage": 1,
+          "actions": [
+            "probe:2",
+            "probe:1",
+            "respond:0"
+          ]
+        }
+      ],
+      "lossActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "respond:0"
+          ]
+        }
+      ],
+      "finiteStudiesCompleted": 3,
+      "endlessStudiesCompleted": 2,
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "sourceSeed": 20261002,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "Pure model independent legal-witness completion at stages7/100/100000 across six dispersed public run seeds; actual browser finite0–2 and optional0–1, plus separately disclosed failure scope."
+      },
+      "errors": []
+    },
+    {
+      "id": "heap-foundry",
+      "profile": "mobile-touch",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "touchOnly": true,
+      "inputMethod": "Actual touchscreen taps for every engine and shell gameplay action; native mode selectOption used only for mode navigation",
+      "edgeCases": [
+        "Selecting a leaf does not exchange values; only explicit parent-child swaps mutate the heap",
+        "All three finite studies completed through native controls",
+        "Explained natural failure, Reset recovery and correct replay completed",
+        "Terminal engine controls are disabled",
+        "Two fresh optional studies completed and accumulated score banked",
+        "Optional Reset/Undo disabled; Bank/restart cannot mint score"
+      ],
+      "winActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "slot:1",
+            "swap:4",
+            "slot:0",
+            "swap:2",
+            "extract",
+            "slot:0",
+            "swap:1",
+            "extract",
+            "slot:0",
+            "swap:1",
+            "extract",
+            "extract",
+            "extract"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 1,
+          "actions": [
+            "slot:2",
+            "swap:6",
+            "extract",
+            "slot:0",
+            "swap:1",
+            "extract",
+            "slot:0",
+            "swap:2",
+            "extract",
+            "slot:0",
+            "swap:1",
+            "extract",
+            "slot:0",
+            "swap:1",
+            "extract",
+            "extract",
+            "extract"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 2,
+          "actions": [
+            "slot:3",
+            "swap:7",
+            "slot:1",
+            "swap:4",
+            "slot:0",
+            "swap:1",
+            "slot:1",
+            "swap:4",
+            "extract",
+            "slot:0",
+            "swap:2",
+            "slot:2",
+            "swap:5",
+            "extract",
+            "slot:0",
+            "swap:1",
+            "slot:1",
+            "swap:4",
+            "extract",
+            "slot:0",
+            "swap:1",
+            "slot:1",
+            "swap:3",
+            "extract",
+            "slot:0",
+            "swap:1",
+            "extract",
+            "slot:0",
+            "swap:2",
+            "extract",
+            "slot:0",
+            "swap:1",
+            "extract",
+            "extract",
+            "extract"
+          ]
+        },
+        {
+          "mode": "endless",
+          "stage": 0,
+          "actions": [
+            "slot:2",
+            "swap:6",
+            "slot:1",
+            "swap:3",
+            "slot:0",
+            "swap:2",
+            "slot:2",
+            "swap:6",
+            "extract",
+            "slot:0",
+            "swap:1",
+            "slot:1",
+            "swap:3",
+            "extract",
+            "slot:0",
+            "swap:1",
+            "slot:1",
+            "swap:4",
+            "extract",
+            "slot:0",
+            "swap:1",
+            "slot:1",
+            "swap:3",
+            "extract",
+            "slot:0",
+            "swap:2",
+            "extract",
+            "slot:0",
+            "swap:1",
+            "extract",
+            "extract"
+          ]
+        },
+        {
+          "mode": "endless",
+          "stage": 1,
+          "actions": [
+            "slot:1",
+            "swap:3",
+            "slot:3",
+            "swap:7",
+            "slot:0",
+            "swap:2",
+            "extract",
+            "slot:0",
+            "swap:2",
+            "slot:2",
+            "swap:5",
+            "extract",
+            "slot:0",
+            "swap:1",
+            "slot:1",
+            "swap:4",
+            "extract",
+            "slot:0",
+            "swap:2",
+            "extract",
+            "slot:0",
+            "swap:1",
+            "extract",
+            "slot:0",
+            "swap:1",
+            "extract",
+            "slot:0",
+            "swap:1",
+            "extract",
+            "extract"
+          ]
+        }
+      ],
+      "lossActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "extract"
+          ]
+        }
+      ],
+      "finiteStudiesCompleted": 3,
+      "endlessStudiesCompleted": 2,
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "sourceSeed": 20261002,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "Pure model independent legal-witness completion at stages7/100/100000 across six dispersed public run seeds; actual browser finite0–2 and optional0–1, plus separately disclosed failure scope."
+      },
+      "errors": []
+    },
+    {
+      "id": "diagram-order",
+      "profile": "mobile-touch",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "touchOnly": true,
+      "inputMethod": "Actual touchscreen taps for every engine and shell gameplay action; native mode selectOption used only for mode navigation",
+      "edgeCases": [
+        "An independently chosen over-budget reduced variable order fails its full-node audit",
+        "All three finite studies completed through native controls",
+        "Explained natural failure, Reset recovery and correct replay completed",
+        "Terminal engine controls are disabled",
+        "Two fresh optional studies completed and accumulated score banked",
+        "Optional Reset/Undo disabled; Bank/restart cannot mint score"
+      ],
+      "winActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "up:0",
+            "up:0",
+            "up:1",
+            "check"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 1,
+          "actions": [
+            "up:1",
+            "up:2",
+            "check"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 2,
+          "actions": [
+            "up:4",
+            "up:4",
+            "up:4",
+            "up:4",
+            "up:0",
+            "up:0",
+            "up:0",
+            "check"
+          ]
+        },
+        {
+          "mode": "endless",
+          "stage": 0,
+          "actions": [
+            "up:3",
+            "up:3",
+            "up:1",
+            "check"
+          ]
+        },
+        {
+          "mode": "endless",
+          "stage": 1,
+          "actions": [
+            "up:0",
+            "up:0",
+            "up:0",
+            "up:1",
+            "up:1",
+            "up:2",
+            "up:3",
+            "check"
+          ]
+        }
+      ],
+      "lossActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "check",
+            "check",
+            "check"
+          ]
+        }
+      ],
+      "finiteStudiesCompleted": 3,
+      "endlessStudiesCompleted": 2,
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "sourceSeed": 20261002,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "Pure model independent legal-witness completion at stages7/100/100000 across six dispersed public run seeds; actual browser finite0–2 and optional0–1, plus separately disclosed failure scope."
+      },
+      "errors": []
+    },
+    {
+      "id": "turning-council",
+      "profile": "mobile-touch",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "touchOnly": true,
+      "inputMethod": "Actual touchscreen taps for every engine and shell gameplay action; native mode selectOption used only for mode navigation",
+      "edgeCases": [
+        "Placement waits for rotation; a nonwinning full turn elicits one legal complete house reply",
+        "All three finite studies completed through native controls",
+        "Explained natural failure, Reset recovery and correct replay completed",
+        "Terminal engine controls are disabled",
+        "Optional terminal recovery observed through Bank; natural tactical loss executed in finite study3 only",
+        "Two fresh optional studies completed and accumulated score banked",
+        "Optional Reset/Undo disabled; Bank/restart cannot mint score"
+      ],
+      "winActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "place:4",
+            "rotate:0:-1"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 1,
+          "actions": [
+            "place:1",
+            "rotate:1:1"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 2,
+          "actions": [
+            "place:2",
+            "rotate:2:-1"
+          ]
+        },
+        {
+          "mode": "endless",
+          "stage": 0,
+          "actions": [
+            "place:24",
+            "rotate:0:1"
+          ]
+        },
+        {
+          "mode": "endless",
+          "stage": 1,
+          "actions": [
+            "place:22",
+            "rotate:2:1"
+          ]
+        }
+      ],
+      "lossActions": [
+        {
+          "mode": "finite",
+          "stage": 2,
+          "actions": [
+            "place:0",
+            "rotate:0:1"
+          ]
+        }
+      ],
+      "finiteStudiesCompleted": 3,
+      "endlessStudiesCompleted": 2,
+      "optionalMode": {
+        "supported": true,
+        "kind": "match-series",
+        "completedChallenges": 2,
+        "sourceSeed": 20261002,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "Pure model independent legal-witness completion at stages7/100/100000 across six dispersed public run seeds; actual browser finite0–2 and optional0–1, plus separately disclosed failure scope."
+      },
+      "errors": []
+    },
+    {
+      "id": "witness-table",
+      "profile": "mobile-touch",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "touchOnly": true,
+      "inputMethod": "Actual touchscreen taps for every engine and shell gameplay action; native mode selectOption used only for mode navigation",
+      "edgeCases": [
+        "All printed universal branches are checked with the permitted earlier/later witness contexts",
+        "All three finite studies completed through native controls",
+        "Explained natural failure, Reset recovery and correct replay completed",
+        "Terminal engine controls are disabled",
+        "Two fresh optional studies completed and accumulated score banked",
+        "Optional Reset/Undo disabled; Bank/restart cannot mint score"
+      ],
+      "winActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "branch:0",
+            "choose:2",
+            "branch:1",
+            "choose:1",
+            "branch:2",
+            "choose:1",
+            "check"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 1,
+          "actions": [
+            "branch:0",
+            "choose:0",
+            "check"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 2,
+          "actions": [
+            "branch:0",
+            "choose:0",
+            "later-branch:0",
+            "later:1",
+            "later-branch:1",
+            "later:0",
+            "later-branch:2",
+            "later:0",
+            "branch:1",
+            "choose:0",
+            "later-branch:3",
+            "later:1",
+            "later-branch:4",
+            "later:0",
+            "later-branch:5",
+            "later:0",
+            "branch:2",
+            "choose:0",
+            "later-branch:6",
+            "later:1",
+            "later-branch:7",
+            "later:0",
+            "later-branch:8",
+            "later:0",
+            "check"
+          ]
+        },
+        {
+          "mode": "endless",
+          "stage": 0,
+          "actions": [
+            "branch:0",
+            "choose:2",
+            "branch:1",
+            "choose:0",
+            "branch:2",
+            "choose:0",
+            "branch:3",
+            "choose:2",
+            "check"
+          ]
+        },
+        {
+          "mode": "endless",
+          "stage": 1,
+          "actions": [
+            "branch:0",
+            "choose:0",
+            "check"
+          ]
+        }
+      ],
+      "lossActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "check",
+            "check",
+            "check"
+          ]
+        }
+      ],
+      "finiteStudiesCompleted": 3,
+      "endlessStudiesCompleted": 2,
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "sourceSeed": 20261002,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "Pure model independent legal-witness completion at stages7/100/100000 across six dispersed public run seeds; actual browser finite0–2 and optional0–1, plus separately disclosed failure scope."
+      },
+      "errors": []
+    },
+    {
+      "id": "one-lie-archive",
+      "profile": "mobile-touch",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "touchOnly": true,
+      "inputMethod": "Actual touchscreen taps for every engine and shell gameplay action; native mode selectOption used only for mode navigation",
+      "edgeCases": [
+        "The same property can be asked repeatedly; transcript disagreements update globally",
+        "All three finite studies completed through native controls",
+        "Explained natural failure, Reset recovery and correct replay completed",
+        "Terminal engine controls are disabled",
+        "Two fresh optional studies completed and accumulated score banked",
+        "Optional Reset/Undo disabled; Bank/restart cannot mint score"
+      ],
+      "winActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "ask:0",
+            "ask:0",
+            "ask:0",
+            "ask:1",
+            "identify:1"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 1,
+          "actions": [
+            "ask:0",
+            "ask:0",
+            "ask:0",
+            "ask:1",
+            "ask:1",
+            "ask:1",
+            "ask:2",
+            "identify:1"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 2,
+          "actions": [
+            "ask:0",
+            "ask:0",
+            "ask:0",
+            "ask:1",
+            "ask:1",
+            "ask:1",
+            "ask:2",
+            "ask:2",
+            "ask:2",
+            "ask:3",
+            "identify:4"
+          ]
+        },
+        {
+          "mode": "endless",
+          "stage": 0,
+          "actions": [
+            "ask:0",
+            "ask:0",
+            "ask:0",
+            "ask:1",
+            "ask:1",
+            "ask:1",
+            "ask:2",
+            "ask:2",
+            "ask:2",
+            "ask:3",
+            "identify:0"
+          ]
+        },
+        {
+          "mode": "endless",
+          "stage": 1,
+          "actions": [
+            "ask:0",
+            "ask:0",
+            "ask:0",
+            "ask:1",
+            "ask:1",
+            "ask:1",
+            "ask:2",
+            "ask:2",
+            "ask:2",
+            "ask:3",
+            "ask:3",
+            "ask:3",
+            "ask:4",
+            "identify:6"
+          ]
+        }
+      ],
+      "lossActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "identify:0"
+          ]
+        }
+      ],
+      "finiteStudiesCompleted": 3,
+      "endlessStudiesCompleted": 2,
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "sourceSeed": 20261002,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "Pure model independent legal-witness completion at stages7/100/100000 across six dispersed public run seeds; actual browser finite0–2 and optional0–1, plus separately disclosed failure scope."
+      },
+      "errors": []
+    },
+    {
+      "id": "invariant-gallery",
+      "profile": "mobile-touch",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "touchOnly": true,
+      "inputMethod": "Actual touchscreen taps for every engine and shell gameplay action; native mode selectOption used only for mode navigation",
+      "edgeCases": [
+        "A region containing initials and excluding forbidden states still fails on an admitted unreachable transition",
+        "All three finite studies completed through native controls",
+        "Explained natural failure, Reset recovery and correct replay completed",
+        "Terminal engine controls are disabled",
+        "Two fresh optional studies completed and accumulated score banked",
+        "Optional Reset/Undo disabled; Bank/restart cannot mint score"
+      ],
+      "winActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "inequality:0",
+            "coefficient:0:-1",
+            "coefficient:1:1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "inequality:1",
+            "coefficient:0:1",
+            "coefficient:1:-1",
+            "coefficient:1:-1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "check"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 1,
+          "actions": [
+            "inequality:0",
+            "coefficient:0:-1",
+            "coefficient:1:1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "inequality:1",
+            "coefficient:0:1",
+            "coefficient:1:-1",
+            "coefficient:1:-1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "check"
+          ]
+        },
+        {
+          "mode": "finite",
+          "stage": 2,
+          "actions": [
+            "inequality:0",
+            "coefficient:0:-1",
+            "coefficient:1:1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "inequality:1",
+            "coefficient:0:1",
+            "coefficient:1:-1",
+            "coefficient:1:-1",
+            "coefficient:1:-1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "check"
+          ]
+        },
+        {
+          "mode": "endless",
+          "stage": 0,
+          "actions": [
+            "inequality:0",
+            "coefficient:0:-1",
+            "coefficient:1:-1",
+            "coefficient:1:-1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "inequality:1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "check"
+          ]
+        },
+        {
+          "mode": "endless",
+          "stage": 1,
+          "actions": [
+            "inequality:0",
+            "coefficient:0:-1",
+            "coefficient:1:1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "inequality:1",
+            "coefficient:0:1",
+            "coefficient:1:-1",
+            "coefficient:1:-1",
+            "coefficient:1:-1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "check"
+          ]
+        }
+      ],
+      "lossActions": [
+        {
+          "mode": "finite",
+          "stage": 0,
+          "actions": [
+            "inequality:0",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "inequality:1",
+            "coefficient:2:-1",
+            "coefficient:2:-1",
+            "check",
+            "check",
+            "check"
+          ]
+        }
+      ],
+      "finiteStudiesCompleted": 3,
+      "endlessStudiesCompleted": 2,
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "sourceSeed": 20261002,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "Pure model independent legal-witness completion at stages7/100/100000 across six dispersed public run seeds; actual browser finite0–2 and optional0–1, plus separately disclosed failure scope."
+      },
+      "errors": []
+    }
+  ],
+  "sourceUnchanged": true,
+  "sourceHashAfter": "75451b353c0ae4c7bd8a9e910f0f1ec42084e1a7f01cceace3cb7e10215c1d2a",
+  "finishedAt": "2026-10-02T23:00:19.385Z"
+}

@@ -1,0 +1,96 @@
+{
+  "checkedAt": "2026-10-02T20:48:12.225501+00:00",
+  "passed": true,
+  "sourceBinding": {
+    "sha256": "62e50df2991b3e8192314cdc10171cfddde27b3e0527009916ff7b21ff57b178",
+    "files": [
+      "journey/journey.css",
+      "journey/journey.mjs",
+      "relation-room/README.md",
+      "relation-room/REVIEW.md",
+      "relation-room/constructions.mjs",
+      "relation-room/core.mjs",
+      "relation-room/council.mjs",
+      "relation-room/engines.mjs",
+      "relation-room/evidence.mjs",
+      "relation-room/games.json",
+      "relation-room/graphs.mjs",
+      "relation-room/index.html",
+      "relation-room/room.mjs",
+      "relation-room/semantics.mjs",
+      "tests/relation-room-construction-check.mjs",
+      "tests/relation-room-construction-plans.mjs",
+      "tests/relation-room-evidence-check.mjs",
+      "tests/relation-room-evidence-plans.mjs",
+      "tests/relation-room-generate.mjs",
+      "tests/relation-room-graph-check.mjs",
+      "tests/relation-room-graph-plans.mjs",
+      "tests/relation-room-paths.json",
+      "tests/relation-room-plans.mjs",
+      "tests/relation-room-semantic-check.mjs",
+      "tests/relation-room-semantic-plans.mjs",
+      "tests/relation-room.cjs"
+    ],
+    "unchangedAtCompletedNativeSuite": true
+  },
+  "runs": [
+    {
+      "command": "node mini-games/tests/relation-room-graph-check.mjs",
+      "cases": 180,
+      "regressions": 6,
+      "passed": true
+    },
+    {
+      "command": "node mini-games/tests/relation-room-semantic-check.mjs",
+      "cases": 126,
+      "regressions": 7,
+      "passed": true
+    },
+    {
+      "command": "node mini-games/tests/relation-room-construction-check.mjs",
+      "cases": 180,
+      "regressions": 8,
+      "passed": true
+    },
+    {
+      "command": "node mini-games/tests/relation-room-evidence-check.mjs",
+      "cases": 180,
+      "regressions": 8,
+      "passed": true
+    }
+  ],
+  "totalCases": 666,
+  "totalRegressions": 29,
+  "fixtureGenerator": {
+    "command": "node mini-games/tests/relation-room-generate.mjs",
+    "finiteStudies": 60,
+    "naturalLosses": 20,
+    "optionalStudies": 34,
+    "lateModels": 306,
+    "passed": true
+  },
+  "scope": "Independent model solvers validate legal witnesses and mechanism-specific regressions; these are not browser or ordinary-play claims. Browser study completions are separate in relation-room.json. Model and fixture counts overlap and must not be added as unique games/studies.",
+  "lateStageScope": {
+    "publicRunSeeds": [
+      0,
+      1,
+      20261002,
+      4294967295,
+      937182,
+      728391
+    ],
+    "stageIndices": [
+      7,
+      100,
+      100000
+    ],
+    "supportedGames": 17,
+    "independentLegalWitnesses": 306,
+    "invariantDistinctInitialBadTransitionSystems": 18
+  },
+  "limits": [
+    "Posterior author planning reads sealed source outcomes; no hidden browser state is accessed.",
+    "Echo pure models use source sequence; actual browser suite collects only rendered pulses before hiding.",
+    "Six dispersed replay seeds and three late stages are bounded evidence, not proof every possible procedural instance is solvable."
+  ]
+}

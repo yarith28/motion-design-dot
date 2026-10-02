@@ -46,27 +46,6 @@
       "classification": "Replay of independently recorded ordinary UI path; this reproduction is guided"
     },
     {
-      "id": "returned-banner",
-      "designId": "B02",
-      "profile": "mobile-touch",
-      "variant": "main",
-      "passed": true,
-      "outcome": "win",
-      "restart": true,
-      "sourceSha256": "57d514a8258ec782c9f24cdb41460ca3afaf2f389edcdcf28779a6590d10c1db",
-      "seed": 731,
-      "actions": 12,
-      "inputMethod": "touchscreen.tap",
-      "touchOnly": true,
-      "edgeCases": [
-        "full terminal outcome",
-        "terminal controls removed",
-        "same-deal restart restores initial score",
-        "no page errors",
-        "320px no horizontal overflow"
-      ]
-    },
-    {
       "id": "four-step-menagerie",
       "designId": "B03",
       "profile": "desktop",
@@ -86,6 +65,27 @@
         "no page errors"
       ],
       "classification": "Guided reproduction of independent reviewer ordinary public-button win; author imported only after independent acceptance. Public trace cross-B03-public-win.json."
+    },
+    {
+      "id": "returned-banner",
+      "designId": "B02",
+      "profile": "mobile-touch",
+      "variant": "main",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "sourceSha256": "57d514a8258ec782c9f24cdb41460ca3afaf2f389edcdcf28779a6590d10c1db",
+      "seed": 731,
+      "actions": 12,
+      "inputMethod": "touchscreen.tap",
+      "touchOnly": true,
+      "edgeCases": [
+        "full terminal outcome",
+        "terminal controls removed",
+        "same-deal restart restores initial score",
+        "no page errors",
+        "320px no horizontal overflow"
+      ]
     },
     {
       "id": "returned-banner",
@@ -192,27 +192,6 @@
       "classification": "Replay of independently recorded ordinary UI path; this reproduction is guided"
     },
     {
-      "id": "breathing-room",
-      "designId": "B01",
-      "profile": "desktop",
-      "variant": "failure",
-      "passed": true,
-      "outcome": "loss",
-      "restart": true,
-      "sourceSha256": "98e8d1b41e008c9411f8e474683fc3478999f9c0cc9f2c2fe11cac54aef3263e",
-      "seed": 731,
-      "actions": 1,
-      "inputMethod": "native focused button Enter/Space",
-      "touchOnly": false,
-      "edgeCases": [
-        "full terminal outcome",
-        "terminal controls removed",
-        "same-deal restart restores initial score",
-        "no page errors"
-      ],
-      "classification": "source-planned guided reachability; may use offline hidden-state information, never unassisted evidence"
-    },
-    {
       "id": "four-step-menagerie",
       "designId": "B03",
       "profile": "mobile-touch",
@@ -233,6 +212,27 @@
         "320px no horizontal overflow"
       ],
       "classification": "Guided reproduction of independent reviewer ordinary public-button win; author imported only after independent acceptance. Public trace cross-B03-public-win.json."
+    },
+    {
+      "id": "breathing-room",
+      "designId": "B01",
+      "profile": "desktop",
+      "variant": "failure",
+      "passed": true,
+      "outcome": "loss",
+      "restart": true,
+      "sourceSha256": "98e8d1b41e008c9411f8e474683fc3478999f9c0cc9f2c2fe11cac54aef3263e",
+      "seed": 731,
+      "actions": 1,
+      "inputMethod": "native focused button Enter/Space",
+      "touchOnly": false,
+      "edgeCases": [
+        "full terminal outcome",
+        "terminal controls removed",
+        "same-deal restart restores initial score",
+        "no page errors"
+      ],
+      "classification": "source-planned guided reachability; may use offline hidden-state information, never unassisted evidence"
     },
     {
       "id": "breathing-room",
@@ -486,6 +486,27 @@
       ]
     },
     {
+      "id": "veiled-standard",
+      "designId": "B06",
+      "profile": "desktop",
+      "variant": "failure",
+      "passed": true,
+      "outcome": "loss",
+      "restart": true,
+      "sourceSha256": "082da1bbc6055ac193b3db67f6cacd7bbfe60df7001a2f52214f8235bdc68b1b",
+      "seed": 731,
+      "actions": 45,
+      "inputMethod": "native focused button Enter/Space",
+      "touchOnly": false,
+      "edgeCases": [
+        "full terminal outcome",
+        "terminal controls removed",
+        "same-deal restart restores initial score",
+        "no page errors"
+      ],
+      "classification": "source-planned guided reachability; may use offline hidden-state information, never unassisted evidence"
+    },
+    {
       "id": "homeward-pips",
       "designId": "B05",
       "profile": "mobile-touch",
@@ -507,27 +528,6 @@
       ]
     },
     {
-      "id": "veiled-standard",
-      "designId": "B06",
-      "profile": "desktop",
-      "variant": "failure",
-      "passed": true,
-      "outcome": "loss",
-      "restart": true,
-      "sourceSha256": "082da1bbc6055ac193b3db67f6cacd7bbfe60df7001a2f52214f8235bdc68b1b",
-      "seed": 731,
-      "actions": 45,
-      "inputMethod": "native focused button Enter/Space",
-      "touchOnly": false,
-      "edgeCases": [
-        "full terminal outcome",
-        "terminal controls removed",
-        "same-deal restart restores initial score",
-        "no page errors"
-      ],
-      "classification": "source-planned guided reachability; may use offline hidden-state information, never unassisted evidence"
-    },
-    {
       "id": "four-step-menagerie",
       "designId": "B03",
       "profile": "desktop",
@@ -612,6 +612,28 @@
       "classification": "source-planned guided reachability; may use offline hidden-state information, never unassisted evidence"
     },
     {
+      "id": "four-step-menagerie",
+      "designId": "B03",
+      "profile": "mobile-touch",
+      "variant": "secondary",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "sourceSha256": "64916339953aded818fb2864fcd76cf6147110aa82e41363e25d946caf57ac3a",
+      "seed": 16569,
+      "actions": 56,
+      "inputMethod": "touchscreen.tap",
+      "touchOnly": true,
+      "edgeCases": [
+        "full terminal outcome",
+        "terminal controls removed",
+        "same-deal restart restores initial score",
+        "no page errors",
+        "320px no horizontal overflow"
+      ],
+      "classification": "Source-planned guided reachability via exported board model and legal ordinary action codes; actual opponent policy inspected offline. Not unassisted evidence."
+    },
+    {
       "id": "homeward-pips",
       "designId": "B05",
       "profile": "mobile-touch",
@@ -651,28 +673,6 @@
         "same-deal restart restores initial score",
         "no page errors"
       ]
-    },
-    {
-      "id": "four-step-menagerie",
-      "designId": "B03",
-      "profile": "mobile-touch",
-      "variant": "secondary",
-      "passed": true,
-      "outcome": "win",
-      "restart": true,
-      "sourceSha256": "64916339953aded818fb2864fcd76cf6147110aa82e41363e25d946caf57ac3a",
-      "seed": 16569,
-      "actions": 56,
-      "inputMethod": "touchscreen.tap",
-      "touchOnly": true,
-      "edgeCases": [
-        "full terminal outcome",
-        "terminal controls removed",
-        "same-deal restart restores initial score",
-        "no page errors",
-        "320px no horizontal overflow"
-      ],
-      "classification": "Source-planned guided reachability via exported board model and legal ordinary action codes; actual opponent policy inspected offline. Not unassisted evidence."
     },
     {
       "id": "veiled-standard",
@@ -781,6 +781,28 @@
       "classification": "source-planned guided reachability; may use offline hidden-state information, never unassisted evidence"
     },
     {
+      "id": "second-shuffle",
+      "designId": "B07",
+      "profile": "mobile-touch",
+      "variant": "failure",
+      "passed": true,
+      "outcome": "loss",
+      "restart": true,
+      "sourceSha256": "a60cd7815324ccd8023bfbe703e6a086de703875a5668bdda710fbdb92be1ad7",
+      "seed": 731,
+      "actions": 104,
+      "inputMethod": "touchscreen.tap",
+      "touchOnly": true,
+      "edgeCases": [
+        "full terminal outcome",
+        "terminal controls removed",
+        "same-deal restart restores initial score",
+        "no page errors",
+        "320px no horizontal overflow"
+      ],
+      "classification": "source-planned guided reachability; may use offline hidden-state information, never unassisted evidence"
+    },
+    {
       "id": "corner-garden",
       "designId": "B08",
       "profile": "mobile-touch",
@@ -805,22 +827,21 @@
     {
       "id": "second-shuffle",
       "designId": "B07",
-      "profile": "mobile-touch",
-      "variant": "failure",
+      "profile": "desktop",
+      "variant": "main",
       "passed": true,
-      "outcome": "loss",
+      "outcome": "win",
       "restart": true,
       "sourceSha256": "a60cd7815324ccd8023bfbe703e6a086de703875a5668bdda710fbdb92be1ad7",
-      "seed": 731,
-      "actions": 104,
-      "inputMethod": "touchscreen.tap",
-      "touchOnly": true,
+      "seed": 8650,
+      "actions": 60,
+      "inputMethod": "native focused button Enter/Space",
+      "touchOnly": false,
       "edgeCases": [
         "full terminal outcome",
         "terminal controls removed",
         "same-deal restart restores initial score",
-        "no page errors",
-        "320px no horizontal overflow"
+        "no page errors"
       ],
       "classification": "source-planned guided reachability; may use offline hidden-state information, never unassisted evidence"
     },
@@ -868,27 +889,6 @@
       "classification": "source-planned guided reachability; may use offline hidden-state information, never unassisted evidence"
     },
     {
-      "id": "second-shuffle",
-      "designId": "B07",
-      "profile": "desktop",
-      "variant": "main",
-      "passed": true,
-      "outcome": "win",
-      "restart": true,
-      "sourceSha256": "a60cd7815324ccd8023bfbe703e6a086de703875a5668bdda710fbdb92be1ad7",
-      "seed": 8650,
-      "actions": 60,
-      "inputMethod": "native focused button Enter/Space",
-      "touchOnly": false,
-      "edgeCases": [
-        "full terminal outcome",
-        "terminal controls removed",
-        "same-deal restart restores initial score",
-        "no page errors"
-      ],
-      "classification": "source-planned guided reachability; may use offline hidden-state information, never unassisted evidence"
-    },
-    {
       "id": "gifted-traits",
       "designId": "B09",
       "profile": "desktop",
@@ -899,49 +899,6 @@
       "sourceSha256": "480b304a198778ba67ee946d9c5e48f5691af02691b546bceb787d748007c503",
       "seed": 731,
       "actions": 16,
-      "inputMethod": "native focused button Enter/Space",
-      "touchOnly": false,
-      "edgeCases": [
-        "full terminal outcome",
-        "terminal controls removed",
-        "same-deal restart restores initial score",
-        "no page errors"
-      ],
-      "classification": "source-planned guided reachability; may use offline hidden-state information, never unassisted evidence"
-    },
-    {
-      "id": "gifted-traits",
-      "designId": "B09",
-      "profile": "mobile-touch",
-      "variant": "main",
-      "passed": true,
-      "outcome": "win",
-      "restart": true,
-      "sourceSha256": "480b304a198778ba67ee946d9c5e48f5691af02691b546bceb787d748007c503",
-      "seed": 731,
-      "actions": 16,
-      "inputMethod": "touchscreen.tap",
-      "touchOnly": true,
-      "edgeCases": [
-        "full terminal outcome",
-        "terminal controls removed",
-        "same-deal restart restores initial score",
-        "no page errors",
-        "320px no horizontal overflow"
-      ],
-      "classification": "source-planned guided reachability; may use offline hidden-state information, never unassisted evidence"
-    },
-    {
-      "id": "gifted-traits",
-      "designId": "B09",
-      "profile": "desktop",
-      "variant": "failure",
-      "passed": true,
-      "outcome": "loss",
-      "restart": true,
-      "sourceSha256": "480b304a198778ba67ee946d9c5e48f5691af02691b546bceb787d748007c503",
-      "seed": 731,
-      "actions": 13,
       "inputMethod": "native focused button Enter/Space",
       "touchOnly": false,
       "edgeCases": [
@@ -975,25 +932,26 @@
       "classification": "source-planned guided reachability; may use offline hidden-state information, never unassisted evidence"
     },
     {
-      "id": "corner-garden",
-      "designId": "B08",
-      "profile": "desktop",
-      "variant": "secondary",
+      "id": "gifted-traits",
+      "designId": "B09",
+      "profile": "mobile-touch",
+      "variant": "main",
       "passed": true,
       "outcome": "win",
       "restart": true,
-      "sourceSha256": "1dd8c6fbe67368585f2cf28554314e2e9b17a840261644128010e60e7ef95260",
-      "seed": 8650,
-      "actions": 41,
-      "inputMethod": "native focused button Enter/Space",
-      "touchOnly": false,
+      "sourceSha256": "480b304a198778ba67ee946d9c5e48f5691af02691b546bceb787d748007c503",
+      "seed": 731,
+      "actions": 16,
+      "inputMethod": "touchscreen.tap",
+      "touchOnly": true,
       "edgeCases": [
         "full terminal outcome",
         "terminal controls removed",
         "same-deal restart restores initial score",
-        "no page errors"
+        "no page errors",
+        "320px no horizontal overflow"
       ],
-      "classification": "Source-planned secondary-deal guided reachability; offline information used, not ordinary play"
+      "classification": "source-planned guided reachability; may use offline hidden-state information, never unassisted evidence"
     },
     {
       "id": "second-shuffle",
@@ -1016,6 +974,48 @@
         "320px no horizontal overflow"
       ],
       "classification": "source-planned guided reachability; may use offline hidden-state information, never unassisted evidence"
+    },
+    {
+      "id": "gifted-traits",
+      "designId": "B09",
+      "profile": "desktop",
+      "variant": "failure",
+      "passed": true,
+      "outcome": "loss",
+      "restart": true,
+      "sourceSha256": "480b304a198778ba67ee946d9c5e48f5691af02691b546bceb787d748007c503",
+      "seed": 731,
+      "actions": 13,
+      "inputMethod": "native focused button Enter/Space",
+      "touchOnly": false,
+      "edgeCases": [
+        "full terminal outcome",
+        "terminal controls removed",
+        "same-deal restart restores initial score",
+        "no page errors"
+      ],
+      "classification": "source-planned guided reachability; may use offline hidden-state information, never unassisted evidence"
+    },
+    {
+      "id": "corner-garden",
+      "designId": "B08",
+      "profile": "desktop",
+      "variant": "secondary",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "sourceSha256": "1dd8c6fbe67368585f2cf28554314e2e9b17a840261644128010e60e7ef95260",
+      "seed": 8650,
+      "actions": 41,
+      "inputMethod": "native focused button Enter/Space",
+      "touchOnly": false,
+      "edgeCases": [
+        "full terminal outcome",
+        "terminal controls removed",
+        "same-deal restart restores initial score",
+        "no page errors"
+      ],
+      "classification": "Source-planned secondary-deal guided reachability; offline information used, not ordinary play"
     },
     {
       "id": "gifted-traits",
@@ -1057,28 +1057,6 @@
         "terminal controls removed",
         "same-deal restart restores initial score",
         "no page errors"
-      ],
-      "classification": "Source-planned secondary-deal guided reachability; offline information used, not ordinary play"
-    },
-    {
-      "id": "gifted-traits",
-      "designId": "B09",
-      "profile": "mobile-touch",
-      "variant": "secondary",
-      "passed": true,
-      "outcome": "win",
-      "restart": true,
-      "sourceSha256": "480b304a198778ba67ee946d9c5e48f5691af02691b546bceb787d748007c503",
-      "seed": 8650,
-      "actions": 16,
-      "inputMethod": "touchscreen.tap",
-      "touchOnly": true,
-      "edgeCases": [
-        "full terminal outcome",
-        "terminal controls removed",
-        "same-deal restart restores initial score",
-        "no page errors",
-        "320px no horizontal overflow"
       ],
       "classification": "Source-planned secondary-deal guided reachability; offline information used, not ordinary play"
     },
@@ -1104,25 +1082,26 @@
       "classification": "Source-planned secondary-deal guided reachability; offline information used, not ordinary play"
     },
     {
-      "id": "orders-at-dusk",
-      "designId": "B10",
-      "profile": "desktop",
-      "variant": "failure",
+      "id": "gifted-traits",
+      "designId": "B09",
+      "profile": "mobile-touch",
+      "variant": "secondary",
       "passed": true,
-      "outcome": "loss",
+      "outcome": "win",
       "restart": true,
-      "sourceSha256": "82b96554bf44c10e2fe81b7b8b3c622b9e7cf7a8ce3b37ea3f2afc3eb0005745",
-      "seed": 731,
-      "actions": 39,
-      "inputMethod": "native focused button Enter/Space",
-      "touchOnly": false,
+      "sourceSha256": "480b304a198778ba67ee946d9c5e48f5691af02691b546bceb787d748007c503",
+      "seed": 8650,
+      "actions": 16,
+      "inputMethod": "touchscreen.tap",
+      "touchOnly": true,
       "edgeCases": [
         "full terminal outcome",
         "terminal controls removed",
         "same-deal restart restores initial score",
-        "no page errors"
+        "no page errors",
+        "320px no horizontal overflow"
       ],
-      "classification": "source-planned guided reachability; may use offline hidden-state information, never unassisted evidence"
+      "classification": "Source-planned secondary-deal guided reachability; offline information used, not ordinary play"
     },
     {
       "id": "corner-garden",
@@ -1145,6 +1124,27 @@
         "320px no horizontal overflow"
       ],
       "classification": "Source-planned secondary-deal guided reachability; offline information used, not ordinary play"
+    },
+    {
+      "id": "orders-at-dusk",
+      "designId": "B10",
+      "profile": "desktop",
+      "variant": "failure",
+      "passed": true,
+      "outcome": "loss",
+      "restart": true,
+      "sourceSha256": "82b96554bf44c10e2fe81b7b8b3c622b9e7cf7a8ce3b37ea3f2afc3eb0005745",
+      "seed": 731,
+      "actions": 39,
+      "inputMethod": "native focused button Enter/Space",
+      "touchOnly": false,
+      "edgeCases": [
+        "full terminal outcome",
+        "terminal controls removed",
+        "same-deal restart restores initial score",
+        "no page errors"
+      ],
+      "classification": "source-planned guided reachability; may use offline hidden-state information, never unassisted evidence"
     },
     {
       "id": "almost-a-word",
@@ -1276,27 +1276,6 @@
       "classification": "Source-planned secondary-deal guided reachability; offline information used, not ordinary play"
     },
     {
-      "id": "orders-at-dusk",
-      "designId": "B10",
-      "profile": "desktop",
-      "variant": "main",
-      "passed": true,
-      "outcome": "win",
-      "restart": true,
-      "sourceSha256": "82b96554bf44c10e2fe81b7b8b3c622b9e7cf7a8ce3b37ea3f2afc3eb0005745",
-      "seed": 731,
-      "actions": 82,
-      "inputMethod": "native focused button Enter/Space",
-      "touchOnly": false,
-      "edgeCases": [
-        "full terminal outcome",
-        "terminal controls removed",
-        "same-deal restart restores initial score",
-        "no page errors"
-      ],
-      "classification": "source-planned guided reachability; may use offline hidden-state information, never unassisted evidence"
-    },
-    {
       "id": "almost-a-word",
       "designId": "B11",
       "profile": "mobile-touch",
@@ -1319,6 +1298,27 @@
       "classification": "Source-planned secondary-deal guided reachability; offline information used, not ordinary play"
     },
     {
+      "id": "orders-at-dusk",
+      "designId": "B10",
+      "profile": "desktop",
+      "variant": "main",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "sourceSha256": "82b96554bf44c10e2fe81b7b8b3c622b9e7cf7a8ce3b37ea3f2afc3eb0005745",
+      "seed": 731,
+      "actions": 82,
+      "inputMethod": "native focused button Enter/Space",
+      "touchOnly": false,
+      "edgeCases": [
+        "full terminal outcome",
+        "terminal controls removed",
+        "same-deal restart restores initial score",
+        "no page errors"
+      ],
+      "classification": "source-planned guided reachability; may use offline hidden-state information, never unassisted evidence"
+    },
+    {
       "id": "crossgrain",
       "designId": "B12",
       "profile": "desktop",
@@ -1336,28 +1336,6 @@
         "terminal controls removed",
         "same-deal restart restores initial score",
         "no page errors"
-      ],
-      "classification": "source-planned guided reachability; may use offline hidden-state information, never unassisted evidence"
-    },
-    {
-      "id": "orders-at-dusk",
-      "designId": "B10",
-      "profile": "mobile-touch",
-      "variant": "main",
-      "passed": true,
-      "outcome": "win",
-      "restart": true,
-      "sourceSha256": "82b96554bf44c10e2fe81b7b8b3c622b9e7cf7a8ce3b37ea3f2afc3eb0005745",
-      "seed": 731,
-      "actions": 82,
-      "inputMethod": "touchscreen.tap",
-      "touchOnly": true,
-      "edgeCases": [
-        "full terminal outcome",
-        "terminal controls removed",
-        "same-deal restart restores initial score",
-        "no page errors",
-        "320px no horizontal overflow"
       ],
       "classification": "source-planned guided reachability; may use offline hidden-state information, never unassisted evidence"
     },
@@ -1386,21 +1364,22 @@
     {
       "id": "orders-at-dusk",
       "designId": "B10",
-      "profile": "desktop",
-      "variant": "secondary",
+      "profile": "mobile-touch",
+      "variant": "main",
       "passed": true,
       "outcome": "win",
       "restart": true,
       "sourceSha256": "82b96554bf44c10e2fe81b7b8b3c622b9e7cf7a8ce3b37ea3f2afc3eb0005745",
-      "seed": 8650,
-      "actions": 30,
-      "inputMethod": "native focused button Enter/Space",
-      "touchOnly": false,
+      "seed": 731,
+      "actions": 82,
+      "inputMethod": "touchscreen.tap",
+      "touchOnly": true,
       "edgeCases": [
         "full terminal outcome",
         "terminal controls removed",
         "same-deal restart restores initial score",
-        "no page errors"
+        "no page errors",
+        "320px no horizontal overflow"
       ],
       "classification": "source-planned guided reachability; may use offline hidden-state information, never unassisted evidence"
     },
@@ -1423,6 +1402,27 @@
         "same-deal restart restores initial score",
         "no page errors"
       ]
+    },
+    {
+      "id": "orders-at-dusk",
+      "designId": "B10",
+      "profile": "desktop",
+      "variant": "secondary",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "sourceSha256": "82b96554bf44c10e2fe81b7b8b3c622b9e7cf7a8ce3b37ea3f2afc3eb0005745",
+      "seed": 8650,
+      "actions": 30,
+      "inputMethod": "native focused button Enter/Space",
+      "touchOnly": false,
+      "edgeCases": [
+        "full terminal outcome",
+        "terminal controls removed",
+        "same-deal restart restores initial score",
+        "no page errors"
+      ],
+      "classification": "source-planned guided reachability; may use offline hidden-state information, never unassisted evidence"
     },
     {
       "id": "orders-at-dusk",
@@ -1511,6 +1511,27 @@
       "classification": "source-planned guided reachability; may use offline hidden-state information, never unassisted evidence"
     },
     {
+      "id": "patient-columns",
+      "designId": "B13",
+      "profile": "mobile-touch",
+      "variant": "main",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "sourceSha256": "56db37f2c423a9c3d3b1c2ea9efa03644f2f9e7918419fc70636a7138a8de906",
+      "seed": 731,
+      "actions": 105,
+      "inputMethod": "touchscreen.tap",
+      "touchOnly": true,
+      "edgeCases": [
+        "full terminal outcome",
+        "terminal controls removed",
+        "same-deal restart restores initial score",
+        "no page errors",
+        "320px no horizontal overflow"
+      ]
+    },
+    {
       "id": "twin-roofs",
       "designId": "B14",
       "profile": "mobile-touch",
@@ -1533,27 +1554,6 @@
       "classification": "source-planned guided reachability; may use offline hidden-state information, never unassisted evidence"
     },
     {
-      "id": "patient-columns",
-      "designId": "B13",
-      "profile": "mobile-touch",
-      "variant": "main",
-      "passed": true,
-      "outcome": "win",
-      "restart": true,
-      "sourceSha256": "56db37f2c423a9c3d3b1c2ea9efa03644f2f9e7918419fc70636a7138a8de906",
-      "seed": 731,
-      "actions": 105,
-      "inputMethod": "touchscreen.tap",
-      "touchOnly": true,
-      "edgeCases": [
-        "full terminal outcome",
-        "terminal controls removed",
-        "same-deal restart restores initial score",
-        "no page errors",
-        "320px no horizontal overflow"
-      ]
-    },
-    {
       "id": "crossgrain",
       "designId": "B12",
       "profile": "mobile-touch",
@@ -1572,27 +1572,6 @@
         "same-deal restart restores initial score",
         "no page errors",
         "320px no horizontal overflow"
-      ],
-      "classification": "source-planned guided reachability; may use offline hidden-state information, never unassisted evidence"
-    },
-    {
-      "id": "crossgrain",
-      "designId": "B12",
-      "profile": "desktop",
-      "variant": "secondary",
-      "passed": true,
-      "outcome": "win",
-      "restart": true,
-      "sourceSha256": "b6cec91f5e6b83ee2c91099475bda02bea37a2f865ba2243bdafcb631ad9645c",
-      "seed": 8650,
-      "actions": 53,
-      "inputMethod": "native focused button Enter/Space",
-      "touchOnly": false,
-      "edgeCases": [
-        "full terminal outcome",
-        "terminal controls removed",
-        "same-deal restart restores initial score",
-        "no page errors"
       ],
       "classification": "source-planned guided reachability; may use offline hidden-state information, never unassisted evidence"
     },
@@ -1607,6 +1586,27 @@
       "sourceSha256": "56db37f2c423a9c3d3b1c2ea9efa03644f2f9e7918419fc70636a7138a8de906",
       "seed": 16569,
       "actions": 95,
+      "inputMethod": "native focused button Enter/Space",
+      "touchOnly": false,
+      "edgeCases": [
+        "full terminal outcome",
+        "terminal controls removed",
+        "same-deal restart restores initial score",
+        "no page errors"
+      ],
+      "classification": "source-planned guided reachability; may use offline hidden-state information, never unassisted evidence"
+    },
+    {
+      "id": "crossgrain",
+      "designId": "B12",
+      "profile": "desktop",
+      "variant": "secondary",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "sourceSha256": "b6cec91f5e6b83ee2c91099475bda02bea37a2f865ba2243bdafcb631ad9645c",
+      "seed": 8650,
+      "actions": 53,
       "inputMethod": "native focused button Enter/Space",
       "touchOnly": false,
       "edgeCases": [
@@ -1789,25 +1789,25 @@
       "classification": "Source-planned secondary-deal guided reachability; offline information used, not ordinary play"
     },
     {
-      "id": "letters-we-cannot-see",
-      "designId": "B16",
-      "profile": "desktop",
-      "variant": "failure",
+      "id": "patient-columns",
+      "designId": "B13",
+      "profile": "mobile-touch",
+      "variant": "secondary",
       "passed": true,
-      "outcome": "loss",
+      "outcome": "win",
       "restart": true,
-      "sourceSha256": "423dee4a701b3d86c1fffa06d37f5bdcefcbd4d1b21c117481fb47f583290890",
-      "seed": 731,
-      "actions": 21,
-      "inputMethod": "native focused button Enter/Space",
-      "touchOnly": false,
+      "sourceSha256": "56db37f2c423a9c3d3b1c2ea9efa03644f2f9e7918419fc70636a7138a8de906",
+      "seed": 8650,
+      "actions": 149,
+      "inputMethod": "touchscreen.tap",
+      "touchOnly": true,
       "edgeCases": [
         "full terminal outcome",
         "terminal controls removed",
         "same-deal restart restores initial score",
-        "no page errors"
-      ],
-      "classification": "source-planned guided reachability; may use offline hidden-state information, never unassisted evidence"
+        "no page errors",
+        "320px no horizontal overflow"
+      ]
     },
     {
       "id": "ascending-expeditions",
@@ -1832,25 +1832,46 @@
       "classification": "source-planned guided reachability; may use offline hidden-state information, never unassisted evidence"
     },
     {
-      "id": "patient-columns",
-      "designId": "B13",
-      "profile": "mobile-touch",
-      "variant": "secondary",
+      "id": "letters-we-cannot-see",
+      "designId": "B16",
+      "profile": "desktop",
+      "variant": "failure",
       "passed": true,
-      "outcome": "win",
+      "outcome": "loss",
       "restart": true,
-      "sourceSha256": "56db37f2c423a9c3d3b1c2ea9efa03644f2f9e7918419fc70636a7138a8de906",
-      "seed": 8650,
-      "actions": 149,
-      "inputMethod": "touchscreen.tap",
-      "touchOnly": true,
+      "sourceSha256": "423dee4a701b3d86c1fffa06d37f5bdcefcbd4d1b21c117481fb47f583290890",
+      "seed": 731,
+      "actions": 21,
+      "inputMethod": "native focused button Enter/Space",
+      "touchOnly": false,
       "edgeCases": [
         "full terminal outcome",
         "terminal controls removed",
         "same-deal restart restores initial score",
-        "no page errors",
-        "320px no horizontal overflow"
-      ]
+        "no page errors"
+      ],
+      "classification": "source-planned guided reachability; may use offline hidden-state information, never unassisted evidence"
+    },
+    {
+      "id": "ordered-harvest",
+      "designId": "B17",
+      "profile": "desktop",
+      "variant": "main",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "sourceSha256": "35b7843e9234263df4356f740d53c4910bfd0a2fb64bc6a1fda47ab2a8d3c058",
+      "seed": 731,
+      "actions": 60,
+      "inputMethod": "native focused button Enter/Space",
+      "touchOnly": false,
+      "edgeCases": [
+        "full terminal outcome",
+        "terminal controls removed",
+        "same-deal restart restores initial score",
+        "no page errors"
+      ],
+      "classification": "source-planned guided reachability; may use offline hidden-state information, never unassisted evidence"
     },
     {
       "id": "letters-we-cannot-see",
@@ -1896,16 +1917,16 @@
       "classification": "source-planned beam route uses offline true cards; not ordinary/unassisted play. UI replay required."
     },
     {
-      "id": "ordered-harvest",
-      "designId": "B17",
+      "id": "ascending-expeditions",
+      "designId": "B15",
       "profile": "desktop",
-      "variant": "main",
+      "variant": "failure",
       "passed": true,
-      "outcome": "win",
+      "outcome": "loss",
       "restart": true,
-      "sourceSha256": "35b7843e9234263df4356f740d53c4910bfd0a2fb64bc6a1fda47ab2a8d3c058",
+      "sourceSha256": "b81f09c4baab5ac19e61292f8d3863dacf9801286bd1b5531723a058f1e72ec8",
       "seed": 731,
-      "actions": 60,
+      "actions": 149,
       "inputMethod": "native focused button Enter/Space",
       "touchOnly": false,
       "edgeCases": [
@@ -1939,27 +1960,6 @@
       "classification": "source-planned beam route uses offline true cards; not ordinary/unassisted play. UI replay required."
     },
     {
-      "id": "ascending-expeditions",
-      "designId": "B15",
-      "profile": "desktop",
-      "variant": "failure",
-      "passed": true,
-      "outcome": "loss",
-      "restart": true,
-      "sourceSha256": "b81f09c4baab5ac19e61292f8d3863dacf9801286bd1b5531723a058f1e72ec8",
-      "seed": 731,
-      "actions": 149,
-      "inputMethod": "native focused button Enter/Space",
-      "touchOnly": false,
-      "edgeCases": [
-        "full terminal outcome",
-        "terminal controls removed",
-        "same-deal restart restores initial score",
-        "no page errors"
-      ],
-      "classification": "source-planned guided reachability; may use offline hidden-state information, never unassisted evidence"
-    },
-    {
       "id": "letters-we-cannot-see",
       "designId": "B16",
       "profile": "desktop",
@@ -1979,49 +1979,6 @@
         "no page errors"
       ],
       "classification": "source-planned beam route uses offline true cards; not ordinary/unassisted play. UI replay required."
-    },
-    {
-      "id": "letters-we-cannot-see",
-      "designId": "B16",
-      "profile": "mobile-touch",
-      "variant": "secondary",
-      "passed": true,
-      "outcome": "win",
-      "restart": true,
-      "sourceSha256": "423dee4a701b3d86c1fffa06d37f5bdcefcbd4d1b21c117481fb47f583290890",
-      "seed": 8650,
-      "actions": 17,
-      "inputMethod": "touchscreen.tap",
-      "touchOnly": true,
-      "edgeCases": [
-        "full terminal outcome",
-        "terminal controls removed",
-        "same-deal restart restores initial score",
-        "no page errors",
-        "320px no horizontal overflow"
-      ],
-      "classification": "source-planned beam route uses offline true cards; not ordinary/unassisted play. UI replay required."
-    },
-    {
-      "id": "shared-seasons",
-      "designId": "B18",
-      "profile": "desktop",
-      "variant": "main",
-      "passed": true,
-      "outcome": "win",
-      "restart": true,
-      "sourceSha256": "69f599c749c2034c71a9af3ab44f9528f697f9029aa71e1e67c10463c24682dc",
-      "seed": 731,
-      "actions": 45,
-      "inputMethod": "native focused button Enter/Space",
-      "touchOnly": false,
-      "edgeCases": [
-        "full terminal outcome",
-        "terminal controls removed",
-        "same-deal restart restores initial score",
-        "no page errors"
-      ],
-      "classification": "source-planned guided reachability; may use offline hidden-state information, never unassisted evidence"
     },
     {
       "id": "ordered-harvest",
@@ -2046,6 +2003,28 @@
       "classification": "source-planned guided reachability; may use offline hidden-state information, never unassisted evidence"
     },
     {
+      "id": "letters-we-cannot-see",
+      "designId": "B16",
+      "profile": "mobile-touch",
+      "variant": "secondary",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "sourceSha256": "423dee4a701b3d86c1fffa06d37f5bdcefcbd4d1b21c117481fb47f583290890",
+      "seed": 8650,
+      "actions": 17,
+      "inputMethod": "touchscreen.tap",
+      "touchOnly": true,
+      "edgeCases": [
+        "full terminal outcome",
+        "terminal controls removed",
+        "same-deal restart restores initial score",
+        "no page errors",
+        "320px no horizontal overflow"
+      ],
+      "classification": "source-planned beam route uses offline true cards; not ordinary/unassisted play. UI replay required."
+    },
+    {
       "id": "ordered-harvest",
       "designId": "B17",
       "profile": "desktop",
@@ -2056,6 +2035,27 @@
       "sourceSha256": "35b7843e9234263df4356f740d53c4910bfd0a2fb64bc6a1fda47ab2a8d3c058",
       "seed": 731,
       "actions": 73,
+      "inputMethod": "native focused button Enter/Space",
+      "touchOnly": false,
+      "edgeCases": [
+        "full terminal outcome",
+        "terminal controls removed",
+        "same-deal restart restores initial score",
+        "no page errors"
+      ],
+      "classification": "source-planned guided reachability; may use offline hidden-state information, never unassisted evidence"
+    },
+    {
+      "id": "shared-seasons",
+      "designId": "B18",
+      "profile": "desktop",
+      "variant": "main",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "sourceSha256": "69f599c749c2034c71a9af3ab44f9528f697f9029aa71e1e67c10463c24682dc",
+      "seed": 731,
+      "actions": 45,
       "inputMethod": "native focused button Enter/Space",
       "touchOnly": false,
       "edgeCases": [
@@ -2110,28 +2110,6 @@
       "classification": "source-planned guided reachability; may use offline hidden-state information, never unassisted evidence"
     },
     {
-      "id": "shared-seasons",
-      "designId": "B18",
-      "profile": "mobile-touch",
-      "variant": "failure",
-      "passed": true,
-      "outcome": "loss",
-      "restart": true,
-      "sourceSha256": "69f599c749c2034c71a9af3ab44f9528f697f9029aa71e1e67c10463c24682dc",
-      "seed": 731,
-      "actions": 39,
-      "inputMethod": "touchscreen.tap",
-      "touchOnly": true,
-      "edgeCases": [
-        "full terminal outcome",
-        "terminal controls removed",
-        "same-deal restart restores initial score",
-        "no page errors",
-        "320px no horizontal overflow"
-      ],
-      "classification": "source-planned guided reachability; may use offline hidden-state information, never unassisted evidence"
-    },
-    {
       "id": "ordered-harvest",
       "designId": "B17",
       "profile": "mobile-touch",
@@ -2176,16 +2154,16 @@
       "classification": "source-planned guided reachability; may use offline hidden-state information, never unassisted evidence"
     },
     {
-      "id": "shared-seasons",
-      "designId": "B18",
+      "id": "ordered-harvest",
+      "designId": "B17",
       "profile": "desktop",
       "variant": "secondary",
       "passed": true,
       "outcome": "win",
       "restart": true,
-      "sourceSha256": "69f599c749c2034c71a9af3ab44f9528f697f9029aa71e1e67c10463c24682dc",
+      "sourceSha256": "35b7843e9234263df4356f740d53c4910bfd0a2fb64bc6a1fda47ab2a8d3c058",
       "seed": 8650,
-      "actions": 45,
+      "actions": 59,
       "inputMethod": "native focused button Enter/Space",
       "touchOnly": false,
       "edgeCases": [
@@ -2197,16 +2175,38 @@
       "classification": "Source-planned secondary-deal guided reachability; offline information used, not ordinary play"
     },
     {
-      "id": "ordered-harvest",
-      "designId": "B17",
+      "id": "shared-seasons",
+      "designId": "B18",
+      "profile": "mobile-touch",
+      "variant": "failure",
+      "passed": true,
+      "outcome": "loss",
+      "restart": true,
+      "sourceSha256": "69f599c749c2034c71a9af3ab44f9528f697f9029aa71e1e67c10463c24682dc",
+      "seed": 731,
+      "actions": 39,
+      "inputMethod": "touchscreen.tap",
+      "touchOnly": true,
+      "edgeCases": [
+        "full terminal outcome",
+        "terminal controls removed",
+        "same-deal restart restores initial score",
+        "no page errors",
+        "320px no horizontal overflow"
+      ],
+      "classification": "source-planned guided reachability; may use offline hidden-state information, never unassisted evidence"
+    },
+    {
+      "id": "shared-seasons",
+      "designId": "B18",
       "profile": "desktop",
       "variant": "secondary",
       "passed": true,
       "outcome": "win",
       "restart": true,
-      "sourceSha256": "35b7843e9234263df4356f740d53c4910bfd0a2fb64bc6a1fda47ab2a8d3c058",
+      "sourceSha256": "69f599c749c2034c71a9af3ab44f9528f697f9029aa71e1e67c10463c24682dc",
       "seed": 8650,
-      "actions": 59,
+      "actions": 45,
       "inputMethod": "native focused button Enter/Space",
       "touchOnly": false,
       "edgeCases": [
@@ -2239,16 +2239,16 @@
       "classification": "source-planned guided reachability; may use offline hidden-state information, never unassisted evidence"
     },
     {
-      "id": "shared-seasons",
-      "designId": "B18",
+      "id": "ordered-harvest",
+      "designId": "B17",
       "profile": "mobile-touch",
       "variant": "secondary",
       "passed": true,
       "outcome": "win",
       "restart": true,
-      "sourceSha256": "69f599c749c2034c71a9af3ab44f9528f697f9029aa71e1e67c10463c24682dc",
+      "sourceSha256": "35b7843e9234263df4356f740d53c4910bfd0a2fb64bc6a1fda47ab2a8d3c058",
       "seed": 8650,
-      "actions": 45,
+      "actions": 59,
       "inputMethod": "touchscreen.tap",
       "touchOnly": true,
       "edgeCases": [
@@ -2282,16 +2282,16 @@
       "classification": "source-planned guided reachability; may use offline hidden-state information, never unassisted evidence"
     },
     {
-      "id": "ordered-harvest",
-      "designId": "B17",
+      "id": "shared-seasons",
+      "designId": "B18",
       "profile": "mobile-touch",
       "variant": "secondary",
       "passed": true,
       "outcome": "win",
       "restart": true,
-      "sourceSha256": "35b7843e9234263df4356f740d53c4910bfd0a2fb64bc6a1fda47ab2a8d3c058",
+      "sourceSha256": "69f599c749c2034c71a9af3ab44f9528f697f9029aa71e1e67c10463c24682dc",
       "seed": 8650,
-      "actions": 59,
+      "actions": 45,
       "inputMethod": "touchscreen.tap",
       "touchOnly": true,
       "edgeCases": [
@@ -2368,28 +2368,6 @@
       "classification": "source-planned guided reachability; may use offline hidden-state information, never unassisted evidence"
     },
     {
-      "id": "pass-the-burden",
-      "designId": "B19",
-      "profile": "mobile-touch",
-      "variant": "failure",
-      "passed": true,
-      "outcome": "loss",
-      "restart": true,
-      "sourceSha256": "04aff60e261a26e4e0e8f0c898ae59792402c053ba3147b6f0cefa7cd2c6c828",
-      "seed": 731,
-      "actions": 20,
-      "inputMethod": "touchscreen.tap",
-      "touchOnly": true,
-      "edgeCases": [
-        "full terminal outcome",
-        "terminal controls removed",
-        "same-deal restart restores initial score",
-        "no page errors",
-        "320px no horizontal overflow"
-      ],
-      "classification": "source-planned guided reachability; may use offline hidden-state information, never unassisted evidence"
-    },
-    {
       "id": "market-of-five",
       "designId": "B20",
       "profile": "mobile-touch",
@@ -2410,6 +2388,28 @@
         "320px no horizontal overflow"
       ],
       "classification": "Replay of independently recorded ordinary UI path; this reproduction is guided"
+    },
+    {
+      "id": "pass-the-burden",
+      "designId": "B19",
+      "profile": "mobile-touch",
+      "variant": "failure",
+      "passed": true,
+      "outcome": "loss",
+      "restart": true,
+      "sourceSha256": "04aff60e261a26e4e0e8f0c898ae59792402c053ba3147b6f0cefa7cd2c6c828",
+      "seed": 731,
+      "actions": 20,
+      "inputMethod": "touchscreen.tap",
+      "touchOnly": true,
+      "edgeCases": [
+        "full terminal outcome",
+        "terminal controls removed",
+        "same-deal restart restores initial score",
+        "no page errors",
+        "320px no horizontal overflow"
+      ],
+      "classification": "source-planned guided reachability; may use offline hidden-state information, never unassisted evidence"
     },
     {
       "id": "pass-the-burden",
@@ -2627,27 +2627,6 @@
       "classification": "source-planned guided reachability; may use offline hidden-state information, never unassisted evidence"
     },
     {
-      "id": "anchor-stacks",
-      "designId": "B23",
-      "profile": "desktop",
-      "variant": "main",
-      "passed": true,
-      "outcome": "win",
-      "restart": true,
-      "sourceSha256": "0edae1123af664d763cae5f20d0274c6aee56347c6c357099a5b2d3ab539be7f",
-      "seed": 731,
-      "actions": 14,
-      "inputMethod": "native focused button Enter/Space",
-      "touchOnly": false,
-      "edgeCases": [
-        "full terminal outcome",
-        "terminal controls removed",
-        "same-deal restart restores initial score",
-        "no page errors"
-      ],
-      "classification": "source-planned guided reachability; may use offline hidden-state information, never unassisted evidence"
-    },
-    {
       "id": "factory-mosaic",
       "designId": "B22",
       "profile": "mobile-touch",
@@ -2670,6 +2649,48 @@
       "classification": "source-planned guided reachability; may use offline hidden-state information, never unassisted evidence"
     },
     {
+      "id": "anchor-stacks",
+      "designId": "B23",
+      "profile": "desktop",
+      "variant": "main",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "sourceSha256": "0edae1123af664d763cae5f20d0274c6aee56347c6c357099a5b2d3ab539be7f",
+      "seed": 731,
+      "actions": 14,
+      "inputMethod": "native focused button Enter/Space",
+      "touchOnly": false,
+      "edgeCases": [
+        "full terminal outcome",
+        "terminal controls removed",
+        "same-deal restart restores initial score",
+        "no page errors"
+      ],
+      "classification": "source-planned guided reachability; may use offline hidden-state information, never unassisted evidence"
+    },
+    {
+      "id": "factory-mosaic",
+      "designId": "B22",
+      "profile": "desktop",
+      "variant": "main",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "sourceSha256": "eca21903b531bc2117aa50dd68378b51417c6946e3b8b731a3de4f1378dd7052",
+      "seed": 731,
+      "actions": 56,
+      "inputMethod": "native focused button Enter/Space",
+      "touchOnly": false,
+      "edgeCases": [
+        "full terminal outcome",
+        "terminal controls removed",
+        "same-deal restart restores initial score",
+        "no page errors"
+      ],
+      "classification": "source-planned guided reachability; may use offline hidden-state information, never unassisted evidence"
+    },
+    {
       "id": "roads-we-share",
       "designId": "B21",
       "profile": "desktop",
@@ -2713,27 +2734,6 @@
       "classification": "source-planned guided reachability; may use offline hidden-state information, never unassisted evidence"
     },
     {
-      "id": "factory-mosaic",
-      "designId": "B22",
-      "profile": "desktop",
-      "variant": "main",
-      "passed": true,
-      "outcome": "win",
-      "restart": true,
-      "sourceSha256": "eca21903b531bc2117aa50dd68378b51417c6946e3b8b731a3de4f1378dd7052",
-      "seed": 731,
-      "actions": 56,
-      "inputMethod": "native focused button Enter/Space",
-      "touchOnly": false,
-      "edgeCases": [
-        "full terminal outcome",
-        "terminal controls removed",
-        "same-deal restart restores initial score",
-        "no page errors"
-      ],
-      "classification": "source-planned guided reachability; may use offline hidden-state information, never unassisted evidence"
-    },
-    {
       "id": "anchor-stacks",
       "designId": "B23",
       "profile": "desktop",
@@ -2798,28 +2798,6 @@
       "classification": "Source-planned secondary-deal guided reachability; offline information used, not ordinary play"
     },
     {
-      "id": "anchor-stacks",
-      "designId": "B23",
-      "profile": "mobile-touch",
-      "variant": "secondary",
-      "passed": true,
-      "outcome": "win",
-      "restart": true,
-      "sourceSha256": "0edae1123af664d763cae5f20d0274c6aee56347c6c357099a5b2d3ab539be7f",
-      "seed": 8650,
-      "actions": 12,
-      "inputMethod": "touchscreen.tap",
-      "touchOnly": true,
-      "edgeCases": [
-        "full terminal outcome",
-        "terminal controls removed",
-        "same-deal restart restores initial score",
-        "no page errors",
-        "320px no horizontal overflow"
-      ],
-      "classification": "Source-planned secondary-deal guided reachability; offline information used, not ordinary play"
-    },
-    {
       "id": "factory-mosaic",
       "designId": "B22",
       "profile": "mobile-touch",
@@ -2842,25 +2820,26 @@
       "classification": "source-planned guided reachability; may use offline hidden-state information, never unassisted evidence"
     },
     {
-      "id": "the-other-half",
-      "designId": "B24",
-      "profile": "desktop",
-      "variant": "main",
+      "id": "anchor-stacks",
+      "designId": "B23",
+      "profile": "mobile-touch",
+      "variant": "secondary",
       "passed": true,
       "outcome": "win",
       "restart": true,
-      "sourceSha256": "560950764888803019bbf98ac4c8fb33e8699a5ae6152dc86d5944a3b91b390b",
-      "seed": 731,
-      "actions": 24,
-      "inputMethod": "native focused button Enter/Space",
-      "touchOnly": false,
+      "sourceSha256": "0edae1123af664d763cae5f20d0274c6aee56347c6c357099a5b2d3ab539be7f",
+      "seed": 8650,
+      "actions": 12,
+      "inputMethod": "touchscreen.tap",
+      "touchOnly": true,
       "edgeCases": [
         "full terminal outcome",
         "terminal controls removed",
         "same-deal restart restores initial score",
-        "no page errors"
+        "no page errors",
+        "320px no horizontal overflow"
       ],
-      "classification": "Source-planned guided reachability, not ordinary"
+      "classification": "Source-planned secondary-deal guided reachability; offline information used, not ordinary play"
     },
     {
       "id": "roads-we-share",
@@ -2885,6 +2864,27 @@
       "classification": "source-planned guided reachability; may use offline hidden-state information, never unassisted evidence"
     },
     {
+      "id": "the-other-half",
+      "designId": "B24",
+      "profile": "desktop",
+      "variant": "main",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "sourceSha256": "560950764888803019bbf98ac4c8fb33e8699a5ae6152dc86d5944a3b91b390b",
+      "seed": 731,
+      "actions": 24,
+      "inputMethod": "native focused button Enter/Space",
+      "touchOnly": false,
+      "edgeCases": [
+        "full terminal outcome",
+        "terminal controls removed",
+        "same-deal restart restores initial score",
+        "no page errors"
+      ],
+      "classification": "Source-planned guided reachability, not ordinary"
+    },
+    {
       "id": "factory-mosaic",
       "designId": "B22",
       "profile": "desktop",
@@ -3034,27 +3034,6 @@
         "320px no horizontal overflow"
       ],
       "classification": "Source-planned secondary-deal guided reachability; offline information used, not ordinary play"
-    },
-    {
-      "id": "the-other-half",
-      "designId": "B24",
-      "profile": "desktop",
-      "variant": "secondary",
-      "passed": true,
-      "outcome": "win",
-      "restart": true,
-      "sourceSha256": "560950764888803019bbf98ac4c8fb33e8699a5ae6152dc86d5944a3b91b390b",
-      "seed": 8650,
-      "actions": 28,
-      "inputMethod": "native focused button Enter/Space",
-      "touchOnly": false,
-      "edgeCases": [
-        "full terminal outcome",
-        "terminal controls removed",
-        "same-deal restart restores initial score",
-        "no page errors"
-      ],
-      "classification": "Source-planned guided reachability, not ordinary"
     },
     {
       "id": "carried-road",
@@ -3076,6 +3055,27 @@
         "no page errors"
       ],
       "classification": "source-planned guided reachability; may use offline hidden-state information, never unassisted evidence"
+    },
+    {
+      "id": "the-other-half",
+      "designId": "B24",
+      "profile": "desktop",
+      "variant": "secondary",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "sourceSha256": "560950764888803019bbf98ac4c8fb33e8699a5ae6152dc86d5944a3b91b390b",
+      "seed": 8650,
+      "actions": 28,
+      "inputMethod": "native focused button Enter/Space",
+      "touchOnly": false,
+      "edgeCases": [
+        "full terminal outcome",
+        "terminal controls removed",
+        "same-deal restart restores initial score",
+        "no page errors"
+      ],
+      "classification": "Source-planned guided reachability, not ordinary"
     },
     {
       "id": "carried-road",
@@ -3229,27 +3229,6 @@
       "classification": "source-planned guided reachability; may use offline hidden-state information, never unassisted evidence"
     },
     {
-      "id": "carried-road",
-      "designId": "B26",
-      "profile": "desktop",
-      "variant": "secondary",
-      "passed": true,
-      "outcome": "win",
-      "restart": true,
-      "sourceSha256": "a07e5b3350bb8de06091ca4c31e44d809f77ddfefb68ce23e04a3df0b7448965",
-      "seed": 8650,
-      "actions": 16,
-      "inputMethod": "native focused button Enter/Space",
-      "touchOnly": false,
-      "edgeCases": [
-        "full terminal outcome",
-        "terminal controls removed",
-        "same-deal restart restores initial score",
-        "no page errors"
-      ],
-      "classification": "Source-planned secondary-deal guided reachability; offline information used, not ordinary play"
-    },
-    {
       "id": "masks-and-coins",
       "designId": "B27",
       "profile": "desktop",
@@ -3269,6 +3248,27 @@
         "no page errors"
       ],
       "classification": "source-planned guided reachability; may use offline hidden-state information, never unassisted evidence"
+    },
+    {
+      "id": "carried-road",
+      "designId": "B26",
+      "profile": "desktop",
+      "variant": "secondary",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "sourceSha256": "a07e5b3350bb8de06091ca4c31e44d809f77ddfefb68ce23e04a3df0b7448965",
+      "seed": 8650,
+      "actions": 16,
+      "inputMethod": "native focused button Enter/Space",
+      "touchOnly": false,
+      "edgeCases": [
+        "full terminal outcome",
+        "terminal controls removed",
+        "same-deal restart restores initial score",
+        "no page errors"
+      ],
+      "classification": "Source-planned secondary-deal guided reachability; offline information used, not ordinary play"
     },
     {
       "id": "masks-and-coins",
@@ -3788,16 +3788,16 @@
       "classification": "source-planned guided reachability; may use offline hidden-state information, never unassisted evidence"
     },
     {
-      "id": "one-last-card",
-      "designId": "B31",
+      "id": "crossed-programs",
+      "designId": "B30",
       "profile": "desktop",
-      "variant": "secondary",
+      "variant": "failure",
       "passed": true,
-      "outcome": "win",
+      "outcome": "loss",
       "restart": true,
-      "sourceSha256": "ea547fed5486c8ad7cac53d45820809005da5990796c6b249baab68d6bd63861",
-      "seed": 8650,
-      "actions": 25,
+      "sourceSha256": "f1182d6b8f4f55826004c8eb4c0df83837588ce8827b1b9952cee1d831c200eb",
+      "seed": 731,
+      "actions": 97,
       "inputMethod": "native focused button Enter/Space",
       "touchOnly": false,
       "edgeCases": [
@@ -3809,16 +3809,16 @@
       "classification": "source-planned guided reachability; may use offline hidden-state information, never unassisted evidence"
     },
     {
-      "id": "crossed-programs",
-      "designId": "B30",
+      "id": "one-last-card",
+      "designId": "B31",
       "profile": "desktop",
-      "variant": "failure",
+      "variant": "secondary",
       "passed": true,
-      "outcome": "loss",
+      "outcome": "win",
       "restart": true,
-      "sourceSha256": "f1182d6b8f4f55826004c8eb4c0df83837588ce8827b1b9952cee1d831c200eb",
-      "seed": 731,
-      "actions": 97,
+      "sourceSha256": "ea547fed5486c8ad7cac53d45820809005da5990796c6b249baab68d6bd63861",
+      "seed": 8650,
+      "actions": 25,
       "inputMethod": "native focused button Enter/Space",
       "touchOnly": false,
       "edgeCases": [
@@ -4196,6 +4196,28 @@
       "classification": "source-planned guided reachability; may use offline hidden-state information, never unassisted evidence"
     },
     {
+      "id": "river-stakes",
+      "designId": "B34",
+      "profile": "mobile-touch",
+      "variant": "main",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "sourceSha256": "8d838e9a3113aa87747f0955162e77f980ffd87b1825b65ad1c7805feae85204",
+      "seed": 731,
+      "actions": 31,
+      "inputMethod": "touchscreen.tap",
+      "touchOnly": true,
+      "edgeCases": [
+        "full terminal outcome",
+        "terminal controls removed",
+        "same-deal restart restores initial score",
+        "no page errors",
+        "320px no horizontal overflow"
+      ],
+      "classification": "source-planned guided reachability; may use offline hidden-state information, never unassisted evidence"
+    },
+    {
       "id": "a-stitch-in-time",
       "designId": "B33",
       "profile": "desktop",
@@ -4219,28 +4241,6 @@
     {
       "id": "river-stakes",
       "designId": "B34",
-      "profile": "mobile-touch",
-      "variant": "main",
-      "passed": true,
-      "outcome": "win",
-      "restart": true,
-      "sourceSha256": "8d838e9a3113aa87747f0955162e77f980ffd87b1825b65ad1c7805feae85204",
-      "seed": 731,
-      "actions": 31,
-      "inputMethod": "touchscreen.tap",
-      "touchOnly": true,
-      "edgeCases": [
-        "full terminal outcome",
-        "terminal controls removed",
-        "same-deal restart restores initial score",
-        "no page errors",
-        "320px no horizontal overflow"
-      ],
-      "classification": "source-planned guided reachability; may use offline hidden-state information, never unassisted evidence"
-    },
-    {
-      "id": "river-stakes",
-      "designId": "B34",
       "profile": "desktop",
       "variant": "failure",
       "passed": true,
@@ -4270,28 +4270,6 @@
       "sourceSha256": "8d838e9a3113aa87747f0955162e77f980ffd87b1825b65ad1c7805feae85204",
       "seed": 731,
       "actions": 19,
-      "inputMethod": "touchscreen.tap",
-      "touchOnly": true,
-      "edgeCases": [
-        "full terminal outcome",
-        "terminal controls removed",
-        "same-deal restart restores initial score",
-        "no page errors",
-        "320px no horizontal overflow"
-      ],
-      "classification": "source-planned guided reachability; may use offline hidden-state information, never unassisted evidence"
-    },
-    {
-      "id": "four-houses",
-      "designId": "B25",
-      "profile": "mobile-touch",
-      "variant": "secondary",
-      "passed": true,
-      "outcome": "win",
-      "restart": true,
-      "sourceSha256": "d41a9aab425ca217fc3d3e708458c5c1594283836aa31ae391fb867456286866",
-      "seed": 8650,
-      "actions": 186,
       "inputMethod": "touchscreen.tap",
       "touchOnly": true,
       "edgeCases": [
@@ -4323,6 +4301,28 @@
         "no page errors"
       ],
       "classification": "Source-planned secondary-deal guided reachability; offline information used, not ordinary play"
+    },
+    {
+      "id": "four-houses",
+      "designId": "B25",
+      "profile": "mobile-touch",
+      "variant": "secondary",
+      "passed": true,
+      "outcome": "win",
+      "restart": true,
+      "sourceSha256": "d41a9aab425ca217fc3d3e708458c5c1594283836aa31ae391fb867456286866",
+      "seed": 8650,
+      "actions": 186,
+      "inputMethod": "touchscreen.tap",
+      "touchOnly": true,
+      "edgeCases": [
+        "full terminal outcome",
+        "terminal controls removed",
+        "same-deal restart restores initial score",
+        "no page errors",
+        "320px no horizontal overflow"
+      ],
+      "classification": "source-planned guided reachability; may use offline hidden-state information, never unassisted evidence"
     },
     {
       "id": "a-stitch-in-time",

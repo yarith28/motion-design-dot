@@ -1,0 +1,35 @@
+{
+  "scope": "Deliberately failing diagnostic native touch on unmodified public route with reproducible LCG RNG; this is not passing evidence.",
+  "seed": 20,
+  "engine": "Chromium",
+  "sourceFiles": [
+    {
+      "path": "mini-games/puzzle-lab/engines.js",
+      "sha256": "d6de5a4d7a8efe01682a384259c780a3fa88ecd75f32ffa5d9eaa46167d0ebcd"
+    },
+    {
+      "path": "mini-games/puzzle-lab/room.js",
+      "sha256": "dc06145590e8e587abba9b8648f0a54514a175cc9c15a1ef7b3ea291d5ff53ee"
+    }
+  ],
+  "events": [
+    {
+      "event": "console",
+      "message": "ARROW_DIAG native click reached Start before engine.init"
+    }
+  ],
+  "url": "http://127.0.0.1:8790/mini-games/puzzle-lab/?game=arrow-audit",
+  "before": {
+    "game": "arrow-audit",
+    "outcome": "ready",
+    "status": "Three studies. All the time you need.",
+    "startVisible": true
+  },
+  "tap": {
+    "completed": false,
+    "durationMs": 3004.573974,
+    "name": "TimeoutError",
+    "message": "locator.tap: Timeout 3000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#start')\u001b[22m\n\u001b[2m    - locator resolved to <button id=\"start\" class=\"primary\">Open the first study</button>\u001b[22m\n\u001b[2m  - attempting tap action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - performing tap action\u001b[22m\n"
+  },
+  "sourceUnchanged": true
+}

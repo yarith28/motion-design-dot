@@ -1,0 +1,3835 @@
+{
+  "sourceFiles": [
+    {
+      "path": "mini-games/journey/journey.mjs",
+      "sha256": "86a92fbd52ee7f5d34fd01225120feb74a336dd499a11e9e4780cf8f1f207872"
+    },
+    {
+      "path": "mini-games/journey/journey.css",
+      "sha256": "e77e387075c86ad3addcf7220c9eeabfc06fec45987116205b75ed50cac83e67"
+    },
+    {
+      "path": "mini-games/relation-room/constructions.mjs",
+      "sha256": "9d7cc5bba030a24ac449496d29893043187f699f2e149f6f2a4e026f771f9333"
+    },
+    {
+      "path": "mini-games/relation-room/core.mjs",
+      "sha256": "ac1460bc4def36a8493c440347d5eb43e32c485bf8d4149676aea54a322f7bbe"
+    },
+    {
+      "path": "mini-games/relation-room/council.mjs",
+      "sha256": "1f709382c07a99cb6bcf690cdd3e78a94635a61c87e7862200599d7aefe8f626"
+    },
+    {
+      "path": "mini-games/relation-room/engines.mjs",
+      "sha256": "92655688854b4f779045822d2c0e462b1f5e8a3c80fc509bdbf3d2e3eea6c594"
+    },
+    {
+      "path": "mini-games/relation-room/evidence.mjs",
+      "sha256": "0f1eef82ac2b7fe1fce30acdcac9112b408d2abefef18f32a55cd373a86771fc"
+    },
+    {
+      "path": "mini-games/relation-room/games.json",
+      "sha256": "9d5cd9cfc147487769b64782aedabfbd2954e570137a8c9b4839300bdc23d2b2"
+    },
+    {
+      "path": "mini-games/relation-room/graphs.mjs",
+      "sha256": "164c2208e51ad856d4321de30dc6f2e7c1fb13e2350956c94729cb7fc855c516"
+    },
+    {
+      "path": "mini-games/relation-room/index.html",
+      "sha256": "f6947c2e4f4f75dbd0bead31dcbae133053599b78fa1685dd5587d04ecf98ce0"
+    },
+    {
+      "path": "mini-games/relation-room/room.mjs",
+      "sha256": "9ce2949867a5a87d69f3de64a892e24753948f185bb0565cdaffe99149d45284"
+    },
+    {
+      "path": "mini-games/relation-room/semantics.mjs",
+      "sha256": "2ad3074e705bff2d20cdce97feca91418501000b5ddc7f0c813612c5299a11e4"
+    },
+    {
+      "path": "mini-games/trajectory-room/contact.mjs",
+      "sha256": "d97fa6a35bc96251c20f2ee4c18c1e137991c8eeca84cab2ed8a760d932f5fe9"
+    },
+    {
+      "path": "mini-games/trajectory-room/core.mjs",
+      "sha256": "426aecd3bac2e6499c8f60de2d435c4ffba9783677e2429f9f44f14244fda771"
+    },
+    {
+      "path": "mini-games/trajectory-room/engines.mjs",
+      "sha256": "1a7f5fd92bb6a8a527747033091e0adcd2f13a9b420d90046d5baad8c999270f"
+    },
+    {
+      "path": "mini-games/trajectory-room/fluids.mjs",
+      "sha256": "df9af92919191ee9073bd360c2c3142e4a5b67fea9aa45b4af611ca76cc89db0"
+    },
+    {
+      "path": "mini-games/trajectory-room/games.json",
+      "sha256": "e943d273f307a3359cb242c6918d7f85067beb2763ddc8816a96255a9bef1e06"
+    },
+    {
+      "path": "mini-games/trajectory-room/handles.mjs",
+      "sha256": "e79ac184001304099181241ec2d2425e375f80d0533c1eac00d6a2918faebb60"
+    },
+    {
+      "path": "mini-games/trajectory-room/index.html",
+      "sha256": "f6947c2e4f4f75dbd0bead31dcbae133053599b78fa1685dd5587d04ecf98ce0"
+    },
+    {
+      "path": "mini-games/trajectory-room/orbits.mjs",
+      "sha256": "b176d30e3cb60fde41012d293cf04f2528f582bd398af3a1bfd3b0321ebb84b7"
+    },
+    {
+      "path": "mini-games/trajectory-room/room.mjs",
+      "sha256": "faf0bd8143c3875126c73975a8c5bee9782f716d1048f0d3367d57681a243054"
+    },
+    {
+      "path": "mini-games/trajectory-room/transport.mjs",
+      "sha256": "eef2484a8e7e1343b2475f937d3c23ac735e85975fe1da47da72dfe3020ef302"
+    },
+    {
+      "path": "mini-games/protocol-room/collaboration.mjs",
+      "sha256": "8a89cf281909bd99ac31ba1e210d1eb90b3dc9484f6dfa5cc15e8c8a81f44946"
+    },
+    {
+      "path": "mini-games/protocol-room/core.mjs",
+      "sha256": "e4f622851dee8e4119f156e36b57a73d9b7c50bf6a1e9c2bc21f582df3db6383"
+    },
+    {
+      "path": "mini-games/protocol-room/engines.mjs",
+      "sha256": "018727b143999c9f0a13be2a25abd33f8092a34bababf2361e1a5ddb50e995d4"
+    },
+    {
+      "path": "mini-games/protocol-room/execution.mjs",
+      "sha256": "8d9bed3470f636239dbc654ff277e3481dfd1b932fafaf1fb5553989925d720b"
+    },
+    {
+      "path": "mini-games/protocol-room/games.json",
+      "sha256": "e400d63575f9329a2715b8c7592494463d5c4be99b82f443ae30b088ba10146c"
+    },
+    {
+      "path": "mini-games/protocol-room/index.html",
+      "sha256": "f6947c2e4f4f75dbd0bead31dcbae133053599b78fa1685dd5587d04ecf98ce0"
+    },
+    {
+      "path": "mini-games/protocol-room/network.mjs",
+      "sha256": "bb2d6111359576cfcc7e72fca634e7de48e7940831f7a96678aeee09a62c294a"
+    },
+    {
+      "path": "mini-games/protocol-room/numerics.mjs",
+      "sha256": "05ea14aa8ec085d5a47d692bb61c02531e3fc7b48538c72c1a2e2855ee2d3969"
+    },
+    {
+      "path": "mini-games/protocol-room/room.mjs",
+      "sha256": "d45f21ee0e40e338333898d1b888dc41cf09d69950439e09789ec292820eaa23"
+    },
+    {
+      "path": "mini-games/protocol-room/storage.mjs",
+      "sha256": "d69671a04ee9a5bb3705781987558347525525ff625c742d5a79c0781cc48e4a"
+    },
+    {
+      "path": "mini-games/protocol-room/streams.mjs",
+      "sha256": "ecf20fa21dfe8c5aae3c63299a76b9b69f239f325cff33ff6558cd75e61b6f28"
+    },
+    {
+      "path": "mini-games/protocol-room/systems.mjs",
+      "sha256": "a91243c7ebf5bbb159e4a4579bf10ec1975be27f89de2541ee8ebf919fb9d904"
+    },
+    {
+      "path": "mini-games/civic-room/card-tables.mjs",
+      "sha256": "291406665bb7d62c30d695cd28ac26805221e288fcd390aea3ca9e2521fd0f77"
+    },
+    {
+      "path": "mini-games/civic-room/contact-and-stacks.mjs",
+      "sha256": "67e58a8c471bd8d315035e02714a3f44208a84585a19b59f3471482237d01446"
+    },
+    {
+      "path": "mini-games/civic-room/core.mjs",
+      "sha256": "987c45897b11e0621323dd4f08eff356b9ceab38eb281935494fcece92078ec0"
+    },
+    {
+      "path": "mini-games/civic-room/engines.mjs",
+      "sha256": "f69109ea165b60ef4df5c6f1ff77770d238be37e4f7de1df5702e0eaee1c7992"
+    },
+    {
+      "path": "mini-games/civic-room/forced-races.mjs",
+      "sha256": "068a01f48bc50e5dd01a69a514d0422b6c42cc0c1bdd508ee23e4794a12f3da7"
+    },
+    {
+      "path": "mini-games/civic-room/games.json",
+      "sha256": "92fb4f98b34def83de999a417e72abadc15a6758bedd649568226b8915792ea7"
+    },
+    {
+      "path": "mini-games/civic-room/incentive-economies.mjs",
+      "sha256": "9114c6bbfbc930705758a298d0163856a9df5fc7af25b01871779c8f051e0d39"
+    },
+    {
+      "path": "mini-games/civic-room/index.html",
+      "sha256": "d0d3e070bff816618465dc66b2fdc0096c07c8702c3cfc72c10d4ff009e96000"
+    },
+    {
+      "path": "mini-games/civic-room/licensed-boards.mjs",
+      "sha256": "c79537adca29c6883e16af651acd2b9435109ae55599f70bf986acf9d741e9f1"
+    },
+    {
+      "path": "mini-games/civic-room/lines-and-loops.mjs",
+      "sha256": "5925963193285e5445798307d619313fd24b923e9dfde740819caa54d59eb094"
+    },
+    {
+      "path": "mini-games/civic-room/linked-marks.mjs",
+      "sha256": "dc19790c82a3974f89c0b325d25945095de26ba3bc594e75b53077b1a813d574"
+    },
+    {
+      "path": "mini-games/civic-room/mill-graph.mjs",
+      "sha256": "aa0f31eb4a44d52ca885a96b5b6fd307cd8327ed28a8574ad79b83c70b3ba5c5"
+    },
+    {
+      "path": "mini-games/civic-room/room.css",
+      "sha256": "6dbf6909ced1837646b470efa118daea61a05615847d0d359de4b7bb33209aad"
+    },
+    {
+      "path": "mini-games/civic-room/room.mjs",
+      "sha256": "7f81834901b9b2fccc9a93876f14633b8090a0f46e1afe990c45039fae6a5645"
+    },
+    {
+      "path": "mini-games/civic-room/row-reserves.mjs",
+      "sha256": "3f598ffee53b572be0f3881379af79ef2845f344aa0b508da15c76b2771f615d"
+    },
+    {
+      "path": "mini-games/civic-room/supply-front.mjs",
+      "sha256": "209d7de1de50f6de1f31fd421010380b098e6d92939817f9f3858db87c2c2519"
+    },
+    {
+      "path": "mini-games/civic-room/supported-vault.mjs",
+      "sha256": "036ab0c5c86a4a2909e543919dbef8f64dbfb161bd6f5f51b5f330b8d95ac55b"
+    },
+    {
+      "path": "mini-games/form-room/acoustics.mjs",
+      "sha256": "b9f13835ee48e9da222c4ca698d283e76e930badf326cf366d8b23641422f9d1"
+    },
+    {
+      "path": "mini-games/form-room/contact.mjs",
+      "sha256": "9945bc2f6751f8284a85d12203b2e676d6e889fca2ed0d4435f73a6cfd66d4db"
+    },
+    {
+      "path": "mini-games/form-room/core.mjs",
+      "sha256": "7d7f2b691586869340e9e0e09c7c2b3dfe548c4d034c09755d87eaa201f7cf7f"
+    },
+    {
+      "path": "mini-games/form-room/engines.mjs",
+      "sha256": "27f6be8f5bc550809b2b1ef8eac26935e031f6bbe2f1eddd73abe3907f1c48c3"
+    },
+    {
+      "path": "mini-games/form-room/equilibrium.mjs",
+      "sha256": "650a1436d3d48a2700acec3c0bb84717a68ee3ce091dcc3e8fba9c45b68c134b"
+    },
+    {
+      "path": "mini-games/form-room/games.json",
+      "sha256": "5e7bd22bb042d24c03ea15cbe4f4bc09bfe35117dafb5f039bf421b05b6aa953"
+    },
+    {
+      "path": "mini-games/form-room/index.html",
+      "sha256": "f6947c2e4f4f75dbd0bead31dcbae133053599b78fa1685dd5587d04ecf98ce0"
+    },
+    {
+      "path": "mini-games/form-room/material.mjs",
+      "sha256": "710f5a66db6f987b88376bd8eb1784d25c7b8af9b2dd226187f89f02bc69f51b"
+    },
+    {
+      "path": "mini-games/form-room/matter.mjs",
+      "sha256": "41572e351971b08b9efdfd4a04d88ce46b6b540f9c69534e94ce25cb0a78c3ea"
+    },
+    {
+      "path": "mini-games/form-room/process.mjs",
+      "sha256": "422eb28a1b95227055454d2a00ffb14465c1fd6af803669394f243ef69dd4fbc"
+    },
+    {
+      "path": "mini-games/form-room/room.mjs",
+      "sha256": "746afd1428d5b454c22f51fd6d916442c3bcddb7f4b159eb472c4e85abcacb03"
+    },
+    {
+      "path": "mini-games/form-room/shaping.mjs",
+      "sha256": "88ce31d8670412225b88afa55c6fcdb47cba0d2d59c58c252f528d369bebbb93"
+    },
+    {
+      "path": "mini-games/form-room/structure.mjs",
+      "sha256": "e6453202d58e8146b71745673f6ffe5e577bed3005c7bca55b2b79da3c66e056"
+    },
+    {
+      "path": "mini-games/form-room/textile.mjs",
+      "sha256": "1773d7b46bc2fa45c83b6775b18df141e818743e3b19954aadaac80bfd18c958"
+    }
+  ],
+  "sourceUnchanged": true,
+  "verifiedAt": "2026-10-02T21:48:57.210Z",
+  "scope": "Independent ordinary input samples and exact-seed restart for currently implemented second-expansion games using native touch controls. Three actions per game are not a full campaign or endless playthrough. Native action feedback, honest optional availability and 390px document layout are checked; these short samples are not full campaigns, optional wins or content-uniqueness certification.",
+  "browserVersion": "151.0.7922.173",
+  "cases": [
+    {
+      "id": "minor-museum",
+      "family": "relation-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "node:1",
+          "label": "B {2}",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "node:0",
+          "label": "A {1}",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "node:2",
+          "label": "C {3}",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Select two bags to contract their connecting edge.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "twin-graph",
+      "family": "relation-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "left:1",
+          "label": "B → ?",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "left:0",
+          "label": "A → ?",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "left:1",
+          "label": "B → ?",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Match marks, edges AND absent edges. Choosing an occupied destination swaps assignments, keeping a bijection.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "interval-museum",
+      "family": "relation-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "select:1",
+          "label": "B [2,3]",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "select:0",
+          "label": "A [0,1]",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "select:1",
+          "label": "B [2,3]",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Place two ordered endpoints per interval. Realize EVERY requested overlap and disjoint pair; closed intervals touching at one endpoint overlap.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "knowledge-circle",
+      "family": "relation-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "world:0",
+          "label": "World 1 remove",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "world:1",
+          "label": "World 2 remove",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "world:2",
+          "label": "World 3 remove",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "An announcement is evaluated in EVERY currently active world at once. Retain exactly the worlds where it is true, then update all observers’ groups.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "modal-witness",
+      "family": "relation-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "value:0:P",
+          "label": "World 1 P: false",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "from:1",
+          "label": "From world2",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "from:0",
+          "label": "From world1",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Construct a counterexample at root 1. All premises must be true and the conclusion false. Arrows are directed; □ with no successor is true, ◇ with no successor is false.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "polygon-passport",
+      "family": "relation-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "side:0",
+          "label": "Side1",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "side:1",
+          "label": "Side2",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "side:2",
+          "label": "Side3",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Pair every boundary side. All arrows follow the polygon boundary. Reversed gluing identifies the first endpoint with the partner’s last endpoint; same-arrow gluing identifies first with first.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "hairpin-studio",
+      "family": "relation-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "site:0",
+          "label": "1:A",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "site:1",
+          "label": "2:A",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "site:2",
+          "label": "3:B",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Choose two complementary unused positions. Long bonds can nest but cannot interlace; inner loops and stacking affect which bonds can coexist.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "letter-carries",
+      "family": "relation-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "digit:1",
+          "label": "1",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "letter:B",
+          "label": "B=?",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "letter:A",
+          "label": "A=1",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "A repeated letter has one global decimal digit; different letters need different digits. No leading letter may be0. Every column must carry correctly.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "fill-in-station",
+      "family": "relation-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "select:1",
+          "label": "B",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "select:0",
+          "label": "A",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "select:1",
+          "label": "B",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Eliminating a vertex connects every pair of its current neighbors, then removes it. Preview the new clique before committing.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "alternating-couriers",
+      "family": "relation-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "walk:1",
+          "label": "L2",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "walk:6",
+          "label": "R3",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "walk:2",
+          "label": "L3",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Path: L2 → R3 → L3.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "recursive-rings",
+      "family": "relation-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "ring:0",
+          "label": "Ring 1: attached",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "ring:0",
+          "label": "Ring 1: detached",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "ring:0",
+          "label": "Ring 1: attached",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Ring 1 detached. Temporary reattachment may be necessary.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "ordered-echo",
+      "family": "relation-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "next-pulse",
+          "label": "Hide this pulse; show next",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "next-pulse",
+          "label": "Hide this pulse; show next",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "next-pulse",
+          "label": "Hide this pulse; show next",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Pulse4 is now visible; earlier pulses are hidden.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "heritage-house",
+      "family": "relation-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "person:0",
+          "label": "Person 1: ?",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "person:0",
+          "label": "Person 1: aa",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "person:0",
+          "label": "Person 1: Aa",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "The recessive child has aa. Each dominant-trait parent must transmit one a allele; infer their two-copy genotypes.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "posterior-post",
+      "family": "relation-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "probe:0",
+          "label": "Buy Probe1",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "probe:1",
+          "label": "Buy Probe2",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "probe:2",
+          "label": "Buy Probe3",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Weights multiplied by the displayed result likelihood and renormalized. Every class still has positive probability.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "heap-foundry",
+      "family": "relation-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "slot:1",
+          "label": "Slot 2: 1",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "slot:0",
+          "label": "Slot 1: 4",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "slot:1",
+          "label": "Slot 2: 1",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Slot 2 selected; use an explicit parent/child swap control.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "diagram-order",
+      "family": "relation-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "down:1",
+          "label": "B later",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "down:2",
+          "label": "C later",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "down:1",
+          "label": "B later",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "One global variable order applies to every branch. Equal low/high children remove a test; identical (variable,low,high) triples share ONE node. Meet the nonterminal-node budget.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "turning-council",
+      "family": "relation-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "place:0",
+          "label": "·",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "rotate:0:-1",
+          "label": "Quadrant 1 ↺",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "place:3",
+          "label": "·",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Placement made. Rotate one quadrant; alignment is evaluated only after the required rotation.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "witness-table",
+      "family": "relation-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "choose:0",
+          "label": "y1",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "branch:1",
+          "label": "x2: y?",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "branch:0",
+          "label": "x1: y1",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Earlier witness fixed for all following universal branches.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "one-lie-archive",
+      "family": "relation-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "ask:0",
+          "label": "Ask property1",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "ask:0",
+          "label": "Ask property1",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "ask:0",
+          "label": "Ask property1",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Property 1: no. All remaining objects disagree with at most one answer;3 questions remain.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "invariant-gallery",
+      "family": "relation-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "coefficient:2:-1",
+          "label": "−",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "inequality:1",
+          "label": "2: 0x + 1y ≤ 4",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "inequality:0",
+          "label": "1: 1x + 0y ≤ 3",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Synthesize TWO half-plane inequalities. They must include every initial state, exclude every forbidden state, and preserve every enabled transition from EVERY admitted integer state, including unreachable ones.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "rendezvous-window",
+      "family": "trajectory-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "coast",
+          "label": "Coast under gravity · 0.1",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "coast",
+          "label": "Coast under gravity · 0.1",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "coast",
+          "label": "Coast under gravity · 0.1",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Coast advanced 0.1 time unit. Relative distance 2.72, relative speed 2.18. Match both before docking.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "ballast-bay",
+      "family": "trajectory-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "flood",
+          "label": "Flood selected tank / vent 0.025",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "advance",
+          "label": "Advance dive · 0.2 s",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "advance",
+          "label": "Advance dive · 0.2 s",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Dive advanced 0.2 s. External pressure 1.30; fore/aft air volumes 0.44/0.46.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "induction-coast",
+      "family": "trajectory-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "advance",
+          "label": "Advance rail · 0.25 s",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "advance",
+          "label": "Advance rail · 0.25 s",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "advance",
+          "label": "Advance rail · 0.25 s",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Rail advanced 0.25 s. Induced EMF 7.08, current 0.00, opposing force 0.00. Stored receiver energy 0.00.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "resonant-switch",
+      "family": "trajectory-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "source",
+          "label": "Source ↔ inductor",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "advance",
+          "label": "Advance circuit · 0.08 s",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "advance",
+          "label": "Advance circuit · 0.08 s",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Circuit advanced 0.08 s. Source V 3.95, signed current 0.64. Switching now retains this inductor current.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "suspension-course",
+      "family": "trajectory-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "damping:1.6",
+          "label": "Damping 1.6",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "advance",
+          "label": "Advance suspension · 0.1 s",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "advance",
+          "label": "Advance suspension · 0.1 s",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Road advanced 0.1 s. Cabin acceleration exposure 0.00/1; tire normal 5.00.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "pawl-and-tooth",
+      "family": "trajectory-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "drive-down",
+          "label": "Lower drive pawl",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "drive-up",
+          "label": "Raise drive pawl",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "drive-down",
+          "label": "Lower drive pawl",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Drive pawl engaged its forward tooth face.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "footfall-foundry",
+      "family": "trajectory-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "hip:3",
+          "label": "Hip force right",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "advance",
+          "label": "Advance support · 0.1 s",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "advance",
+          "label": "Advance support · 0.1 s",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Support advanced 0.1 s. COM 0.06, velocity 0.56; planted support center 0.00.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "belt-corner",
+      "family": "trajectory-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "upper:east",
+          "label": "upper belt east",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "advance",
+          "label": "Advance belts · 0.1 s",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "advance",
+          "label": "Advance belts · 0.1 s",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Belts advanced 0.1 s. Package velocity (0.22,0.00), angular speed 0.17; local slip forces determine its motion.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "stance-circle",
+      "family": "trajectory-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "brace",
+          "label": "Plant and brace",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "advance",
+          "label": "Advance match · 0.2 s",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "advance",
+          "label": "Advance match · 0.2 s",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Match advanced 0.2 s. Opponent recover; next policy phase at 0.80. Friction and push recoil act on both bodies.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "compliant-socket",
+      "family": "trajectory-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "stiffness:12",
+          "label": "Firm mount",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "advance",
+          "label": "Advance compliance · 0.1 s",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "advance",
+          "label": "Advance compliance · 0.1 s",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Compliance advanced 0.1 s. Actual center (-0.15,-1.15), yaw 0.11, contact force 0.00. Command pose is not actual pose.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "stick-slip-studio",
+      "family": "trajectory-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "base-right",
+          "label": "Drive base right 0.10",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "advance",
+          "label": "Advance slip · 0.1 s",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "advance",
+          "label": "Advance slip · 0.1 s",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Slip advanced 0.1 s. Sticking below the static threshold; spring force 0.40, stylus speed 0.00.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "backlash-observatory",
+      "family": "trajectory-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "drive:0.6",
+          "label": "Right torque 0.6",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "advance",
+          "label": "Advance tracking · 0.1 s",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "advance",
+          "label": "Advance tracking · 0.1 s",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Tracked 0.1 s. Gear flank free; angular error 0.21, relative rate 0.07.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "surge-passage",
+      "family": "trajectory-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "pump:0.6",
+          "label": "Pump pressure 0.6",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "advance",
+          "label": "Advance traveling fronts · one cell",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "advance",
+          "label": "Advance traveling fronts · one cell",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Pressure fronts advanced one cell. Delivered 0.18/2.80; outlet flow 0.45.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "osmotic-port",
+      "family": "trajectory-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "membrane:0",
+          "label": "Membrane A–B",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "advance",
+          "label": "Advance solvent · 0.5 s",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "advance",
+          "label": "Advance solvent · 0.5 s",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Solvent advanced 0.5 s. Salt remains local; concentrations 0.00/0.84/5.00. Water total 6.00.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "rocking-parcel",
+      "family": "trajectory-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "force:1.5",
+          "label": "Push right 1.5",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "advance",
+          "label": "Advance rocking · 0.1 s",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "advance",
+          "label": "Advance rocking · 0.1 s",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Rocking advanced 0.1 s. Current pivot right, angle 0.02, angular speed 0.20.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "loop-runner",
+      "family": "trajectory-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "coast",
+          "label": "Coast gravity track · 0.1 s",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "coast",
+          "label": "Coast gravity track · 0.1 s",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "coast",
+          "label": "Coast gravity track · 0.1 s",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Track advanced 0.1 s; normal force 2.34/25. Brake force 0 trades energy and contact margin.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "refractory-route",
+      "family": "trajectory-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "stimulate",
+          "label": "Stimulate resting injector",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "advance",
+          "label": "Advance excitation · one cell beat",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "advance",
+          "label": "Advance excitation · one cell beat",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Excitation advanced one cell beat. Receiver arrivals:none; collisions annihilated:0.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "air-sieve",
+      "family": "trajectory-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "heavy",
+          "label": "Collector heavy",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "advance",
+          "label": "Advance particle air · 0.2 s",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "advance",
+          "label": "Advance particle air · 0.2 s",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Air advanced 0.2 s. Particle velocity follows relative-slip drag; counts 0/0/0.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "meniscus-maze",
+      "family": "trajectory-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "gate",
+          "label": "Toggle selected source gate",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "advance",
+          "label": "Advance menisci · 0.5 s",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "advance",
+          "label": "Advance menisci · 0.5 s",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Menisci advanced 0.5 s. Primed history changes entry resistance; advancing/receding capillary pressures differ. Source 5.77.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "soft-sluice",
+      "family": "trajectory-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "sleeve:0.8",
+          "label": "Squeeze transverse / elongate x 0.8",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "advance",
+          "label": "Advance flow + relaxation · 0.2 s",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "advance",
+          "label": "Advance flow + relaxation · 0.2 s",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Material advanced 0.2 s. Axes 0.81×0.47; constant a×b=0.385. Stress 0.41, relaxed memory 0.02.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "page-orchard",
+      "family": "protocol-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "request",
+          "label": "Apply next request",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "request",
+          "label": "Apply next request",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "loss",
+      "status": "The next request cannot start: Page 1 has more than three keys.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "paired-harbor",
+      "family": "protocol-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "arrival",
+          "label": "Begin next arrival",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "berth:2",
+          "label": "Berth 3 · empty",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "arrival",
+          "label": "Begin next arrival",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Key A arrived; choose one of its two berths.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "ring-transfer",
+      "family": "protocol-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "server:A",
+          "label": "Select server A",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "server:B",
+          "label": "Select server B",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "server:A",
+          "label": "Select server A",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Compare the visible constraints before acting. Restart starts the campaign again; finite studies also allow Undo and Reset.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "durable-ink",
+      "family": "protocol-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "append:0:0",
+          "label": "T1: A → 40",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "append:0:1",
+          "label": "T1: C → 51",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "flush",
+          "label": "Flush queued journal",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "All queued journal records are durable.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "safe-advance",
+      "family": "protocol-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "select:0",
+          "label": "Bundle client 1",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "grant:0",
+          "label": "Grant client 1 1",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "loss",
+      "status": "The affordable grant removed every safe completion order. Future maximum claims can now deadlock.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "version-valley",
+      "family": "protocol-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "read:0",
+          "label": "Read snapshot for T1",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "protect:0:field",
+          "label": "Protect T1 written field",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "refresh:0",
+          "label": "Refresh T1 · one retry",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "T1 refreshed its snapshot; prior guard is discarded.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "term-tower",
+      "family": "protocol-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "fresh",
+          "label": "Append current-term entry",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "replica:2",
+          "label": "Choose follower 3",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "replica:1",
+          "label": "Choose follower 2",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Appended one current-term entry at index 4.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "pipeline-parade",
+      "family": "protocol-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "issue:0",
+          "label": "Issue #0",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "issue:3",
+          "label": "Issue #3",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "issue:6",
+          "label": "Issue #6",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Instruction #6 issued; its captured operands will not change.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "delta-garden",
+      "family": "protocol-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "join",
+          "label": "Run selected incremental join",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "left:old",
+          "label": "Before this epoch",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "left:delta",
+          "label": "Signed change only",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Signed join output queued: 0, 3, 6",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "shared-cursors",
+      "family": "protocol-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "batch:2",
+          "label": "Two consecutive edits",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "receiver:1",
+          "label": "Writer Q: A · B · q1 · C · D · E · q2",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "receiver:0",
+          "label": "Writer P: A · B · C · D · E · p2 · p1",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Receiver selected; positions count from0 in its current strip.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "quiet-network",
+      "family": "protocol-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "execute:0",
+          "label": "Execute ready job 0",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "deliver:1",
+          "label": "work 1: W1→W3 · J1/2",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "execute:1",
+          "label": "Execute ready job 1",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Job 1 executed and issued 2 child credits.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "lantern-ring",
+      "family": "protocol-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "repair:1",
+          "label": "Process 2 · copy P1",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "repair:2",
+          "label": "Process 3 · copy P2",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "repair:3",
+          "label": "Process 4 · copy P3",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Process 4 copied its predecessor. Now 1 processes are privileged.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "lease-lighthouse",
+      "family": "protocol-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "fence",
+          "label": "Enable resource epoch fence",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "write",
+          "label": "Send required B update",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "loss",
+      "status": "B sent work without a locally live grant. Request and deliver authority, allowing for clock drift.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "echo-seals",
+      "family": "protocol-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "route:1",
+          "label": "#1: INITIAL red, author0 → node1",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "node:2",
+          "label": "Node 2",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "node:1",
+          "label": "Node 1",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Receiver selected; inspect its distinct-author certificates.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "timestamp-current",
+      "family": "protocol-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "next:0",
+          "label": "Deliver Source 1",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "next:0",
+          "label": "Deliver Source 1",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "next:0",
+          "label": "Deliver Source 1",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Out-of-order event buffered for window 2.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "changing-roads",
+      "family": "protocol-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "withdraw",
+          "label": "Withdraw failed direct link",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "router:1",
+          "label": "Select router 2",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "router:0",
+          "label": "Select router 1",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Router1 withdrew the failed direct destination link.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "branch-archive",
+      "family": "protocol-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "begin",
+          "label": "Begin requested draft",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "path:L",
+          "label": "L · node 2",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "path:",
+          "label": "root · node 1",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Draft shares the source root. Copy protected nodes before changing them.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "cancellation-desk",
+      "family": "protocol-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "term:0",
+          "label": "1000000 = 1000000",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "term:1",
+          "label": "1 = 1",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "term:2",
+          "label": "-1000000 = -1000000",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Signed terms selected for the next rounded operation.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "bracket-ferry",
+      "family": "protocol-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "probe",
+          "label": "Compute selected probe",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "method:secant",
+          "label": "Secant through endpoints",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "method:midpoint",
+          "label": "Bisect interval",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Probe computed at 2 with exact sign -1.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "pivot-gallery",
+      "family": "protocol-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "release:1",
+          "label": "Release #1",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "release:0",
+          "label": "Release #0",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "release:1",
+          "label": "Release #1",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Compare the visible constraints before acting. Restart starts the campaign again; finite studies also allow Undo and Reset.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "last-contact",
+      "family": "civic-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "square-0",
+          "label": "A1●",
+          "pressed": "false",
+          "own": true,
+          "opponent": false
+        },
+        {
+          "action": "square-1",
+          "label": "B1○",
+          "pressed": "false",
+          "own": false,
+          "opponent": true
+        },
+        {
+          "action": "square-1",
+          "label": "B1●",
+          "pressed": "false",
+          "own": true,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "B1 selected: choose an adjacent highlighted enemy to capture.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "triad-and-tower",
+      "family": "civic-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "square-4",
+          "label": "(0, -1)●M1",
+          "pressed": "false",
+          "own": true,
+          "opponent": false
+        },
+        {
+          "action": "move-4-14-capture",
+          "label": "capture (0, 1) · height 1",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "square-0",
+          "label": "(0, -2)●S1",
+          "pressed": "false",
+          "own": true,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "You capture at (0, 1). Choose an optional second action or finish your turn.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "crossing-court",
+      "family": "civic-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "square-13",
+          "label": "B4●1",
+          "pressed": "false",
+          "own": true,
+          "opponent": false
+        },
+        {
+          "action": "square-8",
+          "label": "A3○3",
+          "pressed": "false",
+          "own": false,
+          "opponent": true
+        },
+        {
+          "action": "square-14",
+          "label": "C4●1",
+          "pressed": "false",
+          "own": true,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "C4 rank 1 selected: choose a highlighted court destination.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "chromatic-command",
+      "family": "civic-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "square-20",
+          "label": "A5M ●S",
+          "pressed": "false",
+          "own": true,
+          "opponent": false
+        },
+        {
+          "action": "square-5",
+          "label": "A2W",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "pass",
+          "label": "Forced pawn blocked: pass",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "House moves D3 → C4, forcing your Sun pawn. Your forced pawn is blocked: pass using its square color.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "outward-and-home",
+      "family": "civic-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "run-0",
+          "label": "Runner 1 → 1 · resets none",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "run-0",
+          "label": "Runner 1 → 2 · resets none",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "run-0",
+          "label": "Runner 1 → 3 · resets none",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "House runner 3 reaches 2; resets yours 1.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "pair-breaker",
+      "family": "civic-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "place-0",
+          "label": "A1·",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "place-1",
+          "label": "B1·",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "loss",
+      "status": "Pairs captured you 0/5, house 0/5. House completed its line or fifth pair.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "looping-guard",
+      "family": "civic-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "square-1",
+          "label": "B1●",
+          "pressed": "false",
+          "own": true,
+          "opponent": false
+        },
+        {
+          "action": "move-1-0-step--1",
+          "label": "step A1",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "square-0",
+          "label": "A1●",
+          "pressed": "false",
+          "own": true,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "A1 selected. Choose an adjacent step or a legal loop route below.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "mill-and-flight",
+      "family": "civic-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "place-1",
+          "label": "D1·",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "place-8",
+          "label": "B2·",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "place-16",
+          "label": "C3·",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "House moves at D6.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "mirrored-offensive",
+      "family": "civic-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "select-0-8",
+          "label": "A3●",
+          "pressed": "false",
+          "own": true,
+          "opponent": false
+        },
+        {
+          "action": "pass-0-8-2",
+          "label": "C1·",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "select-1-8",
+          "label": "A3●",
+          "pressed": "false",
+          "own": true,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Board 2 A3 selected for attack move.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "marble-vault",
+      "family": "civic-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "select-0",
+          "label": "A1●",
+          "pressed": "false",
+          "own": true,
+          "opponent": false
+        },
+        {
+          "action": "select-2",
+          "label": "C1●",
+          "pressed": "false",
+          "own": true,
+          "opponent": false
+        },
+        {
+          "action": "select-0",
+          "label": "A1●",
+          "pressed": "false",
+          "own": true,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Layer 1 A1 selected for promotion.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "brimline-reserves",
+      "family": "civic-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "insert-0",
+          "label": "Enter (0, -2) → (1, -2)",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "row-1",
+          "label": "Recycle (0, -2) → (0, -1) → (0, 0)",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "insert-0",
+          "label": "Enter (0, -2) → (1, -2)",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "House inserts at (0, -2).",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "last-defense",
+      "family": "civic-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "card-0",
+          "label": "Sun 1 · trump",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "card-1",
+          "label": "Sun 2 · trump",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "card-2",
+          "label": "Sun 3 · trump",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "House takes the entire table.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "covered-columns",
+      "family": "civic-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "draw",
+          "label": "Draw deck",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "replace-0",
+          "label": "8 · 1",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "draw",
+          "label": "Draw deck",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Drawn 2. Replace a grid cell, or discard it and reveal a hidden cell.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "double-written",
+      "family": "civic-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "square-0",
+          "label": "A1●1",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "square-1",
+          "label": "B1●1",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "square-2",
+          "label": "C1·",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "C1 is the first endpoint; choose a different uncollapsed cell.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "capital-lines",
+      "family": "civic-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "square-16",
+          "label": "B4●",
+          "pressed": "false",
+          "own": true,
+          "opponent": false
+        },
+        {
+          "action": "square-11",
+          "label": "B3·",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "square-18",
+          "label": "D4●",
+          "pressed": "false",
+          "own": true,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "D4 selected. Choose an adjacent advance or attack.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "bracket-and-effort",
+      "family": "civic-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "rate-0-1",
+          "label": "25%",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "rate-0-0",
+          "label": "0%",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "rate-0-1",
+          "label": "25%",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Band 1 rate is 25%. Worker best responses updated.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "club-tariff",
+      "family": "civic-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "fee-1",
+          "label": "Entry fee 1",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "fee-0",
+          "label": "Entry fee 0",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "fee-1",
+          "label": "Entry fee 1",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Selected fee 1. Review the response before committing.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "pooling-desk",
+      "family": "civic-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "premium-1",
+          "label": "Premium 1",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "premium-0",
+          "label": "Premium 0",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "premium-1",
+          "label": "Premium 1",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Selected premium 1. Review the response before committing.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "network-tipping",
+      "family": "civic-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "invest-1",
+          "label": "Quality investment 1",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "launch",
+          "label": "Launch period and observe simultaneous choices",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "launch",
+          "label": "Launch period and observe simultaneous choices",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "2 choose your platform; 0 new adopters receive subsidy. Quality decays by one; the rival responds to your scale.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "bonus-and-burden",
+      "family": "civic-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "base-1",
+          "label": "Base wage 1",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "base-0",
+          "label": "Base wage 0",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "base-1",
+          "label": "Base wage 1",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Selected base 1. Review the response before committing.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "warp-shed",
+      "family": "form-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "lift:0",
+          "label": "Warp 1 tan lowered",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "lift:1",
+          "label": "Warp 2 green lowered",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "lift:2",
+          "label": "Warp 3 tan lowered",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Choose the shed before each shuttle pass. A raised warp is on the face; a lowered warp lets the selected weft show. Same-color crossings can hide different float histories.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "live-loops",
+      "family": "form-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "K",
+          "label": "Knit · consume one",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "K",
+          "label": "Knit · consume one",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "K",
+          "label": "Knit · consume one",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "New loop secured from 1 held parent. 1 held loops remain.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "corbel-tower",
+      "family": "form-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "offset:0.75",
+          "label": "Offset +0.75",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "block:1",
+          "label": "Block 2 L2.5 m2",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "block:0",
+          "label": "Block 1 L3 m3",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Adding a block changes every lower joint’s cumulative load resultant. Contacts support compression only inside their actual overlap; the crown will change these resultants again.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "pivot-network",
+      "family": "form-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "rocker:2.5",
+          "label": "rocker 2.5",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "crank:1.5",
+          "label": "crank 1.5",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "crank:1",
+          "label": "crank 1",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Three moving bars must close between two fixed pivots. The output is one of two circle intersections; a fixed assembly cannot jump branches except at a true zero-height toggle.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "fiber-panel",
+      "family": "form-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "card:1",
+          "label": "Ply 2 0° stiffness 2",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "card:0",
+          "label": "Ply 1 0° stiffness 2",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "card:1",
+          "label": "Ply 2 0° stiffness 2",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "A ply’s direction sets its stiffness tensor. Moving the same plies through thickness keeps their extensional sum but changes bending coupling, so membrane and curvature contracts must both pass.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "remanence-bench",
+      "family": "form-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "coil:1",
+          "label": "Coil 2 domains 1,2,3",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "coil:0",
+          "label": "Coil 1 domains 1,2,3,4,5,6",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "coil:1",
+          "label": "Coil 2 domains 1,2,3",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Domains retain their history after fields are removed. A domain reverses only past its coercive threshold; a flipped neighbor can trigger a cascade during the same pulse.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "sieve-cascade",
+      "family": "form-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "screen:2.3",
+          "label": "Slit 2.3",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "deck:1",
+          "label": "Deck 2",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "deck:0",
+          "label": "Deck 1",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Screens test the actual cross-slit projection of each particle. Two retained grains bridge a deck and strand later small grains. A reverse shake reopens pores, turns rods by90° and puts currently fitting grains first.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "solvent-ladder",
+      "family": "form-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "evaporate",
+          "label": "Evaporate 0.25 solvent",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "packet:1",
+          "label": "Packet B",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "packet:0",
+          "label": "Packet A",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "A solvent portion evaporated; each species re-equilibrated against its own saturation boundary.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "resonator-rack",
+      "family": "form-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "cavity:1,1",
+          "label": "C2 = 1",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "cavity:1,0.5",
+          "label": "C2 = 0.5",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "cavity:1,1",
+          "label": "C2 = 1",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Choose actual cavity compliances and neck connections. The whole complex acoustic admittance matrix is solved at each frequency, so a branch can create a notch and alter the neighboring pass band.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "mesh-form",
+      "family": "form-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "grip:6",
+          "label": "Grip vertex 7",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "fixture:1",
+          "label": "Clamp vertices 1, 7",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "fixture:0",
+          "label": "Clamp vertices 1, 3",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Choose a clamp fixture and one grip. Prescribing that grip solves every free vertex through the coupled triangular material stiffness; individual free vertices cannot be edited.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "catenary-yard",
+      "family": "form-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "length:6.8",
+          "label": "Cable 6.8",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "length:6.4",
+          "label": "Cable 6.4",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "length:6.8",
+          "label": "Cable 6.8",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Construction changed; every required load case must be tested again.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "gel-window",
+      "family": "form-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "first:1",
+          "label": "M2",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "first:0",
+          "label": "M1",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "first:1",
+          "label": "M2",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "A bond consumes one functional site on each monomer. A component gels only when it contains both a cycle and a branch; gel interior nodes with two or more bonds then lose access to their remaining sites.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "emulsion-bench",
+      "family": "form-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "coat:2",
+          "label": "Coat up to 2",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "coat:0.5",
+          "label": "Coat up to 0.5",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "coat:0.5",
+          "label": "Coat up to 0.5",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Coating adsorbed onto the selected interface.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "curved-compass",
+      "family": "form-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "arc:30",
+          "label": "Lay 30° arc",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "turn:-90",
+          "label": "Turn -90°",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "turn:-90",
+          "label": "Turn -90°",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "The heading turned inside the local tangent plane; the sphere point did not move.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "three-flats",
+      "family": "form-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "rotation:1",
+          "label": "90°",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "first:1",
+          "label": "Plate 2",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "first:0",
+          "label": "Plate 1",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Only the actual highest combined facing cells contact. A lap removes one stock unit from both plates at every such contact. A complementary pair can show full mating contact while each plate remains nonflat; use the third plate and relative rotation.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "delaunay-bench",
+      "family": "form-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "flip",
+          "label": "Flip selected quadrilateral diagonal",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "flip",
+          "label": "Flip selected quadrilateral diagonal",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "flip",
+          "label": "Flip selected quadrilateral diagonal",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Diagonal flipped. Its neighbors now have different adjacent triangles; inspect their actual circumcircle tests.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "thread-portrait",
+      "family": "form-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "peg:2",
+          "label": "Lay chord to peg 3",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "peg:0",
+          "label": "Lay chord to peg 1",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "loss",
+      "status": "A crossed cell exceeds its target density; the laid thread cannot be erased.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "rubber-boundary",
+      "family": "form-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "left:1",
+          "label": "Support 2",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "left:0",
+          "label": "Support 1",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "left:1",
+          "label": "Support 2",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "An arriving external site needs two tangency supports. Rehang atomically through it, replacing the obsolete counterclockwise support chain while enclosing every observed site.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "powder-press",
+      "family": "form-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "face:1",
+          "label": "Bottom face",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "face:0",
+          "label": "Top face",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "face:1",
+          "label": "Bottom face",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Solid volume stays fixed as void fraction falls. A face load attenuates through the current layer thickness, so prior densification changes later stress reaching the core. Unloading restores elastic void volume and checks cracking gradients.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "id": "clay-spindle",
+      "family": "form-room",
+      "profile": "390px mobile touch emulation",
+      "runSeed": 4242,
+      "actions": [
+        {
+          "action": "shape:0.1",
+          "label": "Form outward 0.1",
+          "pressed": null,
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "band:1",
+          "label": "Band 2",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        },
+        {
+          "action": "band:0",
+          "label": "Band 1 bottom",
+          "pressed": "false",
+          "own": false,
+          "opponent": false
+        }
+      ],
+      "visibleGameplayChanged": true,
+      "observedOutcome": "playing",
+      "status": "Radial shaping preserved this band’s clay volume, changing bore radius and wall thickness together; finish this changed inner surface again if required.",
+      "restartVerified": true,
+      "optionalGateVerified": true,
+      "overflow": false,
+      "errors": []
+    }
+  ]
+}

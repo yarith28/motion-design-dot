@@ -1,0 +1,13 @@
+import{contactAndStacks}from'./contact-and-stacks.mjs';
+import{forcedRaces}from'./forced-races.mjs';
+import{linesAndLoops}from'./lines-and-loops.mjs';
+import{millGraphs}from'./mill-graph.mjs';
+import{licensedBoards}from'./licensed-boards.mjs';
+import{supportedVault}from'./supported-vault.mjs';
+import{rowReserves}from'./row-reserves.mjs';
+import{linkedMarks}from'./linked-marks.mjs';
+import{cardTables}from'./card-tables.mjs';
+import{supplyFront}from'./supply-front.mjs';
+import{incentiveEconomies}from'./incentive-economies.mjs';
+import{actions}from'./core.mjs';
+export const engines=Object.fromEntries(Object.entries({...contactAndStacks,...forcedRaces,...linesAndLoops,...millGraphs,...licensedBoards,...supportedVault,...rowReserves,...linkedMarks,...cardTables,...supplyFront,...incentiveEconomies}).map(([id,e])=>[id,{...e,act(s,k){if(s.outcome==='playing'&&actions(e,s).includes(k))e.act(s,k)}}]));

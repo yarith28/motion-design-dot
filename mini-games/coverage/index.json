@@ -1,11 +1,11 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-02T20:41:01.213Z",
-  "total": 400,
-  "verified": 400,
-  "desktopCompletions": 400,
-  "mobileViewportCompletions": 400,
-  "touchGameplayCompletions": 347,
+  "generatedAt": "2026-10-02T23:01:21.533Z",
+  "total": 500,
+  "verified": 500,
+  "desktopCompletions": 500,
+  "mobileViewportCompletions": 500,
+  "touchGameplayCompletions": 447,
   "limits": "Current successful suite runs only; source hashes exclude generated coverage and root documentation, while room files include their documentation. Mobile viewport completion is not touch-only completion or iPhone/Safari certification. Solvers may inspect hidden answers and use virtual time. Original strategy-room terminal results can be losses; later expansion batches require winning primary paths in both profiles. Failure variants and ordinary-play samples are separately labeled. Live route/reset checks and ordinary-play samples are separate.",
   "games": [
     {
@@ -10008,6 +10008,2506 @@
       "methods": [
         {
           "suite": "atelier-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Chromium emulated touchscreen taps for all gameplay, loss, recovery, progression, restart and bank inputs; native selectOption for mode only"
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "minor-museum",
+      "name": "Minor Museum",
+      "url": "relation-room/?game=minor-museum",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/relation-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "relation-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Actual touchscreen taps for every engine and shell gameplay action; native mode selectOption used only for mode navigation"
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "twin-graph",
+      "name": "Twin Graph",
+      "url": "relation-room/?game=twin-graph",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/relation-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "relation-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Actual touchscreen taps for every engine and shell gameplay action; native mode selectOption used only for mode navigation"
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "interval-museum",
+      "name": "Interval Museum",
+      "url": "relation-room/?game=interval-museum",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/relation-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "relation-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Actual touchscreen taps for every engine and shell gameplay action; native mode selectOption used only for mode navigation"
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "knowledge-circle",
+      "name": "Knowledge Circle",
+      "url": "relation-room/?game=knowledge-circle",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/relation-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "relation-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Actual touchscreen taps for every engine and shell gameplay action; native mode selectOption used only for mode navigation"
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "modal-witness",
+      "name": "Modal Witness",
+      "url": "relation-room/?game=modal-witness",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/relation-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "relation-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Actual touchscreen taps for every engine and shell gameplay action; native mode selectOption used only for mode navigation"
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "polygon-passport",
+      "name": "Polygon Passport",
+      "url": "relation-room/?game=polygon-passport",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/relation-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "relation-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Actual touchscreen taps for every engine and shell gameplay action; native mode selectOption used only for mode navigation"
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "hairpin-studio",
+      "name": "Hairpin Studio",
+      "url": "relation-room/?game=hairpin-studio",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/relation-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "relation-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Actual touchscreen taps for every engine and shell gameplay action; native mode selectOption used only for mode navigation"
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "letter-carries",
+      "name": "Letter Carries",
+      "url": "relation-room/?game=letter-carries",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/relation-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "relation-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Actual touchscreen taps for every engine and shell gameplay action; native mode selectOption used only for mode navigation"
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "fill-in-station",
+      "name": "Fill-In Station",
+      "url": "relation-room/?game=fill-in-station",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/relation-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "relation-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Actual touchscreen taps for every engine and shell gameplay action; native mode selectOption used only for mode navigation"
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "alternating-couriers",
+      "name": "Alternating Couriers",
+      "url": "relation-room/?game=alternating-couriers",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/relation-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "relation-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Actual touchscreen taps for every engine and shell gameplay action; native mode selectOption used only for mode navigation"
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "recursive-rings",
+      "name": "Recursive Rings",
+      "url": "relation-room/?game=recursive-rings",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/relation-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "relation-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Actual touchscreen taps for every engine and shell gameplay action; native mode selectOption used only for mode navigation"
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "ordered-echo",
+      "name": "Ordered Echo",
+      "url": "relation-room/?game=ordered-echo",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/relation-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "relation-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Actual touchscreen taps for every engine and shell gameplay action; native mode selectOption used only for mode navigation"
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "heritage-house",
+      "name": "Heritage House",
+      "url": "relation-room/?game=heritage-house",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/relation-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "relation-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Actual touchscreen taps for every engine and shell gameplay action; native mode selectOption used only for mode navigation"
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "posterior-post",
+      "name": "Posterior Post",
+      "url": "relation-room/?game=posterior-post",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/relation-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "relation-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Actual touchscreen taps for every engine and shell gameplay action; native mode selectOption used only for mode navigation"
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "heap-foundry",
+      "name": "Heap Foundry",
+      "url": "relation-room/?game=heap-foundry",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/relation-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "relation-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Actual touchscreen taps for every engine and shell gameplay action; native mode selectOption used only for mode navigation"
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "diagram-order",
+      "name": "Diagram Order",
+      "url": "relation-room/?game=diagram-order",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/relation-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "relation-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Actual touchscreen taps for every engine and shell gameplay action; native mode selectOption used only for mode navigation"
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "turning-council",
+      "name": "Turning Council",
+      "url": "relation-room/?game=turning-council",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/relation-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "relation-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Actual touchscreen taps for every engine and shell gameplay action; native mode selectOption used only for mode navigation"
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "witness-table",
+      "name": "Witness Table",
+      "url": "relation-room/?game=witness-table",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/relation-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "relation-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Actual touchscreen taps for every engine and shell gameplay action; native mode selectOption used only for mode navigation"
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "one-lie-archive",
+      "name": "One-Lie Archive",
+      "url": "relation-room/?game=one-lie-archive",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/relation-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "relation-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Actual touchscreen taps for every engine and shell gameplay action; native mode selectOption used only for mode navigation"
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "invariant-gallery",
+      "name": "Invariant Gallery",
+      "url": "relation-room/?game=invariant-gallery",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/relation-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "relation-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Actual touchscreen taps for every engine and shell gameplay action; native mode selectOption used only for mode navigation"
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "rendezvous-window",
+      "name": "Rendezvous Window",
+      "url": "trajectory-room/?game=rendezvous-window",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/trajectory-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "trajectory-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "All finite and optional gameplay actions are touchscreen taps on native buttons and ranges. Mode setup uses native selectOption before gameplay; no keyboard input or writable probe."
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "ballast-bay",
+      "name": "Ballast Bay",
+      "url": "trajectory-room/?game=ballast-bay",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/trajectory-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "trajectory-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "All finite and optional gameplay actions are touchscreen taps on native buttons and ranges. Mode setup uses native selectOption before gameplay; no keyboard input or writable probe."
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "induction-coast",
+      "name": "Induction Coast",
+      "url": "trajectory-room/?game=induction-coast",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/trajectory-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "trajectory-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "All finite and optional gameplay actions are touchscreen taps on native buttons and ranges. Mode setup uses native selectOption before gameplay; no keyboard input or writable probe."
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "resonant-switch",
+      "name": "Resonant Switch",
+      "url": "trajectory-room/?game=resonant-switch",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/trajectory-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "trajectory-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "All finite and optional gameplay actions are touchscreen taps on native buttons and ranges. Mode setup uses native selectOption before gameplay; no keyboard input or writable probe."
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "suspension-course",
+      "name": "Suspension Course",
+      "url": "trajectory-room/?game=suspension-course",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/trajectory-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "trajectory-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "All finite and optional gameplay actions are touchscreen taps on native buttons and ranges. Mode setup uses native selectOption before gameplay; no keyboard input or writable probe."
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "pawl-and-tooth",
+      "name": "Pawl and Tooth",
+      "url": "trajectory-room/?game=pawl-and-tooth",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/trajectory-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "trajectory-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "All finite and optional gameplay actions are touchscreen taps on native buttons and ranges. Mode setup uses native selectOption before gameplay; no keyboard input or writable probe."
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "footfall-foundry",
+      "name": "Footfall Foundry",
+      "url": "trajectory-room/?game=footfall-foundry",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/trajectory-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "trajectory-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "All finite and optional gameplay actions are touchscreen taps on native buttons and ranges. Mode setup uses native selectOption before gameplay; no keyboard input or writable probe."
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "belt-corner",
+      "name": "Belt Corner",
+      "url": "trajectory-room/?game=belt-corner",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/trajectory-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "trajectory-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "All finite and optional gameplay actions are touchscreen taps on native buttons and ranges. Mode setup uses native selectOption before gameplay; no keyboard input or writable probe."
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "stance-circle",
+      "name": "Stance Circle",
+      "url": "trajectory-room/?game=stance-circle",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/trajectory-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "trajectory-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "All finite and optional gameplay actions are touchscreen taps on native buttons and ranges. Mode setup uses native selectOption before gameplay; no keyboard input or writable probe."
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "compliant-socket",
+      "name": "Compliant Socket",
+      "url": "trajectory-room/?game=compliant-socket",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/trajectory-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "trajectory-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "All finite and optional gameplay actions are touchscreen taps on native buttons and ranges. Mode setup uses native selectOption before gameplay; no keyboard input or writable probe."
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "stick-slip-studio",
+      "name": "Stick Slip Studio",
+      "url": "trajectory-room/?game=stick-slip-studio",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/trajectory-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "trajectory-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "All finite and optional gameplay actions are touchscreen taps on native buttons and ranges. Mode setup uses native selectOption before gameplay; no keyboard input or writable probe."
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "backlash-observatory",
+      "name": "Backlash Observatory",
+      "url": "trajectory-room/?game=backlash-observatory",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/trajectory-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "trajectory-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "All finite and optional gameplay actions are touchscreen taps on native buttons and ranges. Mode setup uses native selectOption before gameplay; no keyboard input or writable probe."
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "surge-passage",
+      "name": "Surge Passage",
+      "url": "trajectory-room/?game=surge-passage",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/trajectory-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "trajectory-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "All finite and optional gameplay actions are touchscreen taps on native buttons and ranges. Mode setup uses native selectOption before gameplay; no keyboard input or writable probe."
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "osmotic-port",
+      "name": "Osmotic Port",
+      "url": "trajectory-room/?game=osmotic-port",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/trajectory-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "trajectory-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "All finite and optional gameplay actions are touchscreen taps on native buttons and ranges. Mode setup uses native selectOption before gameplay; no keyboard input or writable probe."
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "rocking-parcel",
+      "name": "Rocking Parcel",
+      "url": "trajectory-room/?game=rocking-parcel",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/trajectory-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "trajectory-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "All finite and optional gameplay actions are touchscreen taps on native buttons and ranges. Mode setup uses native selectOption before gameplay; no keyboard input or writable probe."
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "loop-runner",
+      "name": "Loop Runner",
+      "url": "trajectory-room/?game=loop-runner",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/trajectory-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "trajectory-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "All finite and optional gameplay actions are touchscreen taps on native buttons and ranges. Mode setup uses native selectOption before gameplay; no keyboard input or writable probe."
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "refractory-route",
+      "name": "Refractory Route",
+      "url": "trajectory-room/?game=refractory-route",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/trajectory-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "trajectory-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "All finite and optional gameplay actions are touchscreen taps on native buttons and ranges. Mode setup uses native selectOption before gameplay; no keyboard input or writable probe."
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "air-sieve",
+      "name": "Air Sieve",
+      "url": "trajectory-room/?game=air-sieve",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/trajectory-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "trajectory-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "All finite and optional gameplay actions are touchscreen taps on native buttons and ranges. Mode setup uses native selectOption before gameplay; no keyboard input or writable probe."
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "meniscus-maze",
+      "name": "Meniscus Maze",
+      "url": "trajectory-room/?game=meniscus-maze",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/trajectory-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "trajectory-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "All finite and optional gameplay actions are touchscreen taps on native buttons and ranges. Mode setup uses native selectOption before gameplay; no keyboard input or writable probe."
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "soft-sluice",
+      "name": "Soft Sluice",
+      "url": "trajectory-room/?game=soft-sluice",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/trajectory-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "trajectory-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "All finite and optional gameplay actions are touchscreen taps on native buttons and ranges. Mode setup uses native selectOption before gameplay; no keyboard input or writable probe."
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "page-orchard",
+      "name": "Page Orchard",
+      "url": "protocol-room/?game=page-orchard",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/protocol-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "protocol-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Touchscreen taps on native buttons and actual slider tracks; source-informed routes through every study. Native selectOption configures optional mode."
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "paired-harbor",
+      "name": "Paired Harbor",
+      "url": "protocol-room/?game=paired-harbor",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/protocol-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "protocol-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Touchscreen taps on native buttons and actual slider tracks; source-informed routes through every study. Native selectOption configures optional mode."
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "ring-transfer",
+      "name": "Ring Transfer",
+      "url": "protocol-room/?game=ring-transfer",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/protocol-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "protocol-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Touchscreen taps on native buttons and actual slider tracks; source-informed routes through every study. Native selectOption configures optional mode."
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "durable-ink",
+      "name": "Durable Ink",
+      "url": "protocol-room/?game=durable-ink",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/protocol-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "protocol-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Touchscreen taps on native buttons and actual slider tracks; source-informed routes through every study. Native selectOption configures optional mode."
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "safe-advance",
+      "name": "Safe Advance",
+      "url": "protocol-room/?game=safe-advance",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/protocol-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "protocol-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Touchscreen taps on native buttons and actual slider tracks; source-informed routes through every study. Native selectOption configures optional mode."
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "version-valley",
+      "name": "Version Valley",
+      "url": "protocol-room/?game=version-valley",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/protocol-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "protocol-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Touchscreen taps on native buttons and actual slider tracks; source-informed routes through every study. Native selectOption configures optional mode."
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "term-tower",
+      "name": "Term Tower",
+      "url": "protocol-room/?game=term-tower",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/protocol-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "protocol-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Touchscreen taps on native buttons and actual slider tracks; source-informed routes through every study. Native selectOption configures optional mode."
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "pipeline-parade",
+      "name": "Pipeline Parade",
+      "url": "protocol-room/?game=pipeline-parade",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/protocol-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "protocol-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Touchscreen taps on native buttons and actual slider tracks; source-informed routes through every study. Native selectOption configures optional mode."
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "delta-garden",
+      "name": "Delta Garden",
+      "url": "protocol-room/?game=delta-garden",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/protocol-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "protocol-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Touchscreen taps on native buttons and actual slider tracks; source-informed routes through every study. Native selectOption configures optional mode."
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "shared-cursors",
+      "name": "Shared Cursors",
+      "url": "protocol-room/?game=shared-cursors",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/protocol-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "protocol-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Touchscreen taps on native buttons and actual slider tracks; source-informed routes through every study. Native selectOption configures optional mode."
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "quiet-network",
+      "name": "Quiet Network",
+      "url": "protocol-room/?game=quiet-network",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/protocol-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "protocol-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Touchscreen taps on native buttons and actual slider tracks; source-informed routes through every study. Native selectOption configures optional mode."
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "lantern-ring",
+      "name": "Lantern Ring",
+      "url": "protocol-room/?game=lantern-ring",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/protocol-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "protocol-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Touchscreen taps on native buttons and actual slider tracks; source-informed routes through every study. Native selectOption configures optional mode."
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "lease-lighthouse",
+      "name": "Lease Lighthouse",
+      "url": "protocol-room/?game=lease-lighthouse",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/protocol-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "protocol-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Touchscreen taps on native buttons and actual slider tracks; source-informed routes through every study. Native selectOption configures optional mode."
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "echo-seals",
+      "name": "Echo Seals",
+      "url": "protocol-room/?game=echo-seals",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/protocol-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "protocol-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Touchscreen taps on native buttons and actual slider tracks; source-informed routes through every study. Native selectOption configures optional mode."
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "timestamp-current",
+      "name": "Timestamp Current",
+      "url": "protocol-room/?game=timestamp-current",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/protocol-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "protocol-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Touchscreen taps on native buttons and actual slider tracks; source-informed routes through every study. Native selectOption configures optional mode."
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "changing-roads",
+      "name": "Changing Roads",
+      "url": "protocol-room/?game=changing-roads",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/protocol-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "protocol-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Touchscreen taps on native buttons and actual slider tracks; source-informed routes through every study. Native selectOption configures optional mode."
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "branch-archive",
+      "name": "Branch Archive",
+      "url": "protocol-room/?game=branch-archive",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/protocol-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "protocol-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Touchscreen taps on native buttons and actual slider tracks; source-informed routes through every study. Native selectOption configures optional mode."
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "cancellation-desk",
+      "name": "Cancellation Desk",
+      "url": "protocol-room/?game=cancellation-desk",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/protocol-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "protocol-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Touchscreen taps on native buttons and actual slider tracks; source-informed routes through every study. Native selectOption configures optional mode."
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "bracket-ferry",
+      "name": "Bracket Ferry",
+      "url": "protocol-room/?game=bracket-ferry",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/protocol-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "protocol-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Touchscreen taps on native buttons and actual slider tracks; source-informed routes through every study. Native selectOption configures optional mode."
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "pivot-gallery",
+      "name": "Pivot Gallery",
+      "url": "protocol-room/?game=pivot-gallery",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/protocol-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "protocol-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Touchscreen taps on native buttons and actual slider tracks; source-informed routes through every study. Native selectOption configures optional mode."
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "last-contact",
+      "name": "Last Contact",
+      "url": "civic-room/?game=last-contact",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/civic-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "civic-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Touchscreen taps for all finite/optional gameplay; native mode-selector setup before Begin"
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "triad-and-tower",
+      "name": "Triad and Tower",
+      "url": "civic-room/?game=triad-and-tower",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/civic-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "civic-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Touchscreen taps for all finite/optional gameplay; native mode-selector setup before Begin"
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "crossing-court",
+      "name": "Crossing Court",
+      "url": "civic-room/?game=crossing-court",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/civic-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "civic-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Touchscreen taps for all finite/optional gameplay; native mode-selector setup before Begin"
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "chromatic-command",
+      "name": "Chromatic Command",
+      "url": "civic-room/?game=chromatic-command",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/civic-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "civic-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Touchscreen taps for all finite/optional gameplay; native mode-selector setup before Begin"
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "outward-and-home",
+      "name": "Outward and Home",
+      "url": "civic-room/?game=outward-and-home",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/civic-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "civic-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Touchscreen taps for all finite/optional gameplay; native mode-selector setup before Begin"
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "pair-breaker",
+      "name": "Pair Breaker",
+      "url": "civic-room/?game=pair-breaker",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/civic-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "civic-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Touchscreen taps for all finite/optional gameplay; native mode-selector setup before Begin"
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "looping-guard",
+      "name": "Looping Guard",
+      "url": "civic-room/?game=looping-guard",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/civic-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "civic-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Touchscreen taps for all finite/optional gameplay; native mode-selector setup before Begin"
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "mill-and-flight",
+      "name": "Mill and Flight",
+      "url": "civic-room/?game=mill-and-flight",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/civic-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "civic-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Touchscreen taps for all finite/optional gameplay; native mode-selector setup before Begin"
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "mirrored-offensive",
+      "name": "Mirrored Offensive",
+      "url": "civic-room/?game=mirrored-offensive",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/civic-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "civic-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Touchscreen taps for all finite/optional gameplay; native mode-selector setup before Begin"
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "marble-vault",
+      "name": "Marble Vault",
+      "url": "civic-room/?game=marble-vault",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/civic-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "civic-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Touchscreen taps for all finite/optional gameplay; native mode-selector setup before Begin"
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "brimline-reserves",
+      "name": "Brimline Reserves",
+      "url": "civic-room/?game=brimline-reserves",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/civic-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "civic-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Touchscreen taps for all finite/optional gameplay; native mode-selector setup before Begin"
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "last-defense",
+      "name": "Last Defense",
+      "url": "civic-room/?game=last-defense",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/civic-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "civic-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Touchscreen taps for all finite/optional gameplay; native mode-selector setup before Begin"
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "covered-columns",
+      "name": "Covered Columns",
+      "url": "civic-room/?game=covered-columns",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/civic-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "civic-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Touchscreen taps for all finite/optional gameplay; native mode-selector setup before Begin"
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "double-written",
+      "name": "Double Written",
+      "url": "civic-room/?game=double-written",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/civic-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "civic-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Touchscreen taps for all finite/optional gameplay; native mode-selector setup before Begin"
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "capital-lines",
+      "name": "Capital Lines",
+      "url": "civic-room/?game=capital-lines",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/civic-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "civic-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Touchscreen taps for all finite/optional gameplay; native mode-selector setup before Begin"
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "bracket-and-effort",
+      "name": "Bracket and Effort",
+      "url": "civic-room/?game=bracket-and-effort",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/civic-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "civic-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Touchscreen taps for all finite/optional gameplay; native mode-selector setup before Begin"
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "club-tariff",
+      "name": "Club Tariff",
+      "url": "civic-room/?game=club-tariff",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/civic-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "civic-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Touchscreen taps for all finite/optional gameplay; native mode-selector setup before Begin"
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "pooling-desk",
+      "name": "Pooling Desk",
+      "url": "civic-room/?game=pooling-desk",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/civic-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "civic-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Touchscreen taps for all finite/optional gameplay; native mode-selector setup before Begin"
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "network-tipping",
+      "name": "Network Tipping",
+      "url": "civic-room/?game=network-tipping",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/civic-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "civic-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Touchscreen taps for all finite/optional gameplay; native mode-selector setup before Begin"
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "bonus-and-burden",
+      "name": "Bonus and Burden",
+      "url": "civic-room/?game=bonus-and-burden",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/civic-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "civic-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Touchscreen taps for all finite/optional gameplay; native mode-selector setup before Begin"
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "warp-shed",
+      "name": "Warp Shed",
+      "url": "form-room/?game=warp-shed",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/form-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "form-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Chromium emulated touchscreen taps for all gameplay, loss, recovery, progression, restart and bank inputs; native selectOption for mode only"
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "live-loops",
+      "name": "Live Loops",
+      "url": "form-room/?game=live-loops",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/form-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "form-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Chromium emulated touchscreen taps for all gameplay, loss, recovery, progression, restart and bank inputs; native selectOption for mode only"
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "corbel-tower",
+      "name": "Corbel Tower",
+      "url": "form-room/?game=corbel-tower",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/form-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "form-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Chromium emulated touchscreen taps for all gameplay, loss, recovery, progression, restart and bank inputs; native selectOption for mode only"
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "pivot-network",
+      "name": "Pivot Network",
+      "url": "form-room/?game=pivot-network",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/form-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "form-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Chromium emulated touchscreen taps for all gameplay, loss, recovery, progression, restart and bank inputs; native selectOption for mode only"
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "fiber-panel",
+      "name": "Fiber Panel",
+      "url": "form-room/?game=fiber-panel",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/form-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "form-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Chromium emulated touchscreen taps for all gameplay, loss, recovery, progression, restart and bank inputs; native selectOption for mode only"
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "remanence-bench",
+      "name": "Remanence Bench",
+      "url": "form-room/?game=remanence-bench",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/form-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "form-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Chromium emulated touchscreen taps for all gameplay, loss, recovery, progression, restart and bank inputs; native selectOption for mode only"
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "sieve-cascade",
+      "name": "Sieve Cascade",
+      "url": "form-room/?game=sieve-cascade",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/form-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "form-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Chromium emulated touchscreen taps for all gameplay, loss, recovery, progression, restart and bank inputs; native selectOption for mode only"
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "solvent-ladder",
+      "name": "Solvent Ladder",
+      "url": "form-room/?game=solvent-ladder",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/form-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "form-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Chromium emulated touchscreen taps for all gameplay, loss, recovery, progression, restart and bank inputs; native selectOption for mode only"
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "resonator-rack",
+      "name": "Resonator Rack",
+      "url": "form-room/?game=resonator-rack",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/form-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "form-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Chromium emulated touchscreen taps for all gameplay, loss, recovery, progression, restart and bank inputs; native selectOption for mode only"
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "mesh-form",
+      "name": "Mesh Form",
+      "url": "form-room/?game=mesh-form",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/form-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "form-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Chromium emulated touchscreen taps for all gameplay, loss, recovery, progression, restart and bank inputs; native selectOption for mode only"
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "catenary-yard",
+      "name": "Catenary Yard",
+      "url": "form-room/?game=catenary-yard",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/form-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "form-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Chromium emulated touchscreen taps for all gameplay, loss, recovery, progression, restart and bank inputs; native selectOption for mode only"
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "gel-window",
+      "name": "Gel Window",
+      "url": "form-room/?game=gel-window",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/form-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "form-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Chromium emulated touchscreen taps for all gameplay, loss, recovery, progression, restart and bank inputs; native selectOption for mode only"
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "emulsion-bench",
+      "name": "Emulsion Bench",
+      "url": "form-room/?game=emulsion-bench",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/form-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "form-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Chromium emulated touchscreen taps for all gameplay, loss, recovery, progression, restart and bank inputs; native selectOption for mode only"
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "curved-compass",
+      "name": "Curved Compass",
+      "url": "form-room/?game=curved-compass",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/form-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "form-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Chromium emulated touchscreen taps for all gameplay, loss, recovery, progression, restart and bank inputs; native selectOption for mode only"
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "three-flats",
+      "name": "Three Flats",
+      "url": "form-room/?game=three-flats",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/form-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "form-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Chromium emulated touchscreen taps for all gameplay, loss, recovery, progression, restart and bank inputs; native selectOption for mode only"
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "delaunay-bench",
+      "name": "Delaunay Bench",
+      "url": "form-room/?game=delaunay-bench",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/form-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "form-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Chromium emulated touchscreen taps for all gameplay, loss, recovery, progression, restart and bank inputs; native selectOption for mode only"
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "thread-portrait",
+      "name": "Thread Portrait",
+      "url": "form-room/?game=thread-portrait",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/form-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "form-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Chromium emulated touchscreen taps for all gameplay, loss, recovery, progression, restart and bank inputs; native selectOption for mode only"
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "rubber-boundary",
+      "name": "Rubber Boundary",
+      "url": "form-room/?game=rubber-boundary",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/form-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "form-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Chromium emulated touchscreen taps for all gameplay, loss, recovery, progression, restart and bank inputs; native selectOption for mode only"
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "powder-press",
+      "name": "Powder Press",
+      "url": "form-room/?game=powder-press",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/form-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "form-room",
+          "desktopCompletion": true,
+          "mobileViewportCompletion": true,
+          "touchGameplayCompletion": true,
+          "touchControlSmoke": true,
+          "completionMeans": "desktop: win; mobile-touch: win",
+          "method": "Per-game UI completion, restart and edge assertions; consult case inputMethod",
+          "mobileMethod": "Chromium emulated touchscreen taps for all gameplay, loss, recovery, progression, restart and bank inputs; native selectOption for mode only"
+        }
+      ],
+      "unverifiedSuites": []
+    },
+    {
+      "id": "clay-spindle",
+      "name": "Clay Spindle",
+      "url": "form-room/?game=clay-spindle",
+      "status": "verified",
+      "fullCompletionDesktop": true,
+      "fullCompletionMobileViewport": true,
+      "touchGameplayCompletion": true,
+      "evidence": [
+        "coverage/suite-runs/form-room.json"
+      ],
+      "methods": [
+        {
+          "suite": "form-room",
           "desktopCompletion": true,
           "mobileViewportCompletion": true,
           "touchGameplayCompletion": true,

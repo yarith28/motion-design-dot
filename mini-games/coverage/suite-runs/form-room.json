@@ -1,0 +1,5720 @@
+{
+  "schemaVersion": 2,
+  "suite": "form-room",
+  "passed": true,
+  "status": "passed",
+  "startedAt": "2026-10-02T22:15:33.499Z",
+  "source": {
+    "sha256": "a6e20a0240a7f750b94c96f2a23edcbdaf2eb6f1008ab51daa47b05ea5883dbb",
+    "files": [
+      "catalog.css",
+      "catalog.js",
+      "common.js",
+      "form-room/README.md",
+      "form-room/acoustics.mjs",
+      "form-room/contact.mjs",
+      "form-room/core.mjs",
+      "form-room/engines.mjs",
+      "form-room/equilibrium.mjs",
+      "form-room/games.json",
+      "form-room/index.html",
+      "form-room/material.mjs",
+      "form-room/matter.mjs",
+      "form-room/process.mjs",
+      "form-room/room.mjs",
+      "form-room/shaping.mjs",
+      "form-room/structure.mjs",
+      "form-room/textile.mjs",
+      "index.html",
+      "inventory.json",
+      "journey/journey.css",
+      "journey/journey.mjs",
+      "play.css",
+      "styles.css",
+      "tests/fixtures/baseline100.json",
+      "tests/fixtures/baseline200.json",
+      "tests/fixtures/baseline300.json",
+      "tests/fixtures/baseline400.json",
+      "tests/fixtures/parlour-b02-b05-paths.json",
+      "tests/fixtures/parlour-b13-guided-paths.json",
+      "tests/fixtures/parlour-paths.json",
+      "tests/fixtures/tabletop-paths.json",
+      "tests/form-room-opening.cjs",
+      "tests/form-room-plans.mjs",
+      "tests/form-room-regressions.mjs",
+      "tests/form-room.cjs",
+      "tests/journey.cjs",
+      "tools/evidence.cjs",
+      "tools/run-suite.cjs"
+    ]
+  },
+  "requestedBaseURL": "http://127.0.0.1:8790",
+  "browser": {
+    "engine": "Chromium",
+    "version": "Chromium 151.0.7922.173 built on Debian GNU/Linux 13 (trixie)",
+    "executable": "/usr/bin/chromium"
+  },
+  "scope": {
+    "desktopCompletion": true,
+    "mobileViewportCompletion": true,
+    "touchGameplayCompletion": false,
+    "touchControlSmoke": true,
+    "completionMeans": "winning full progression",
+    "method": "scripted UI; curated answers or board solvers",
+    "mobileMethod": "touch gameplay with scripted navigation/solvers"
+  },
+  "games": [
+    "warp-shed",
+    "live-loops",
+    "corbel-tower",
+    "pivot-network",
+    "fiber-panel",
+    "remanence-bench",
+    "sieve-cascade",
+    "solvent-ladder",
+    "resonator-rack",
+    "mesh-form",
+    "catenary-yard",
+    "gel-window",
+    "emulsion-bench",
+    "curved-compass",
+    "three-flats",
+    "delaunay-bench",
+    "thread-portrait",
+    "rubber-boundary",
+    "powder-press",
+    "clay-spindle"
+  ],
+  "limits": [
+    "Mobile is Chromium viewport/touch emulation, not Safari or a physical device.",
+    "Solver completions do not establish human difficulty or accessibility."
+  ],
+  "servedRuntimeBefore": {
+    "baseURL": "http://127.0.0.1:8790",
+    "passed": true,
+    "sha256": "313f40d4ee9c041821a74db6986f1a483d138d32ae5d010183426b39a916d52f",
+    "fileCount": 24,
+    "verifiedAt": "2026-10-02T22:15:33.855Z"
+  },
+  "exitCode": 0,
+  "signal": null,
+  "sourceUnchanged": true,
+  "servedRuntime": {
+    "baseURL": "http://127.0.0.1:8790",
+    "passed": true,
+    "sha256": "313f40d4ee9c041821a74db6986f1a483d138d32ae5d010183426b39a916d52f",
+    "fileCount": 24,
+    "verifiedAt": "2026-10-02T22:21:47.253Z"
+  },
+  "completionEvidence": {
+    "sha256": "2f7635db69d681c727afb8d2f53bd0d7a259bc60add05a4a8e463ad0818636c0",
+    "file": "coverage/form-room.json",
+    "cases": [
+      {
+        "id": "warp-shed",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": false,
+        "inputMethod": "Native keyboard Enter and Space for every game action, loss, recovery, progression and restart; programmatic focus identifies the intended native control",
+        "edgeCases": [
+          "Natural material/routing/budget failure ends play with an explanation; Undo recovers it and Reset clears that study",
+          "Restart works during an active construction",
+          "All three finite studies complete through real native controls; earned score banks once and terminal controls lock",
+          "Restart after campaign completion returns to study one with score zero",
+          "Two generated endless challenges complete with accumulated score; later loss preserves earned score, Restart clears it, and Bank ends a new run",
+          "Equal face colors still obey separate horizontal/vertical float history; shed freezes after a crossing (separate pure-model regression)"
+        ],
+        "winActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "weft:1",
+              "lift:1",
+              "pass",
+              "pass",
+              "pass",
+              "pass",
+              "weft:0",
+              "lift:0",
+              "lift:1",
+              "lift:2",
+              "pass",
+              "pass",
+              "pass",
+              "pass",
+              "weft:1",
+              "lift:0",
+              "lift:1",
+              "lift:2",
+              "lift:3",
+              "pass",
+              "pass",
+              "pass",
+              "pass",
+              "weft:0",
+              "lift:1",
+              "lift:2",
+              "lift:3",
+              "pass",
+              "pass",
+              "pass",
+              "pass"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 1,
+            "actions": [
+              "weft:1",
+              "lift:0",
+              "lift:1",
+              "lift:4",
+              "pass",
+              "pass",
+              "pass",
+              "pass",
+              "pass",
+              "weft:0",
+              "lift:0",
+              "lift:2",
+              "lift:4",
+              "pass",
+              "pass",
+              "pass",
+              "pass",
+              "pass",
+              "weft:1",
+              "lift:1",
+              "lift:3",
+              "pass",
+              "pass",
+              "pass",
+              "pass",
+              "pass",
+              "weft:0",
+              "lift:0",
+              "lift:2",
+              "lift:4",
+              "pass",
+              "pass",
+              "pass",
+              "pass",
+              "pass"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 2,
+            "actions": [
+              "weft:1",
+              "lift:0",
+              "lift:1",
+              "lift:4",
+              "pass",
+              "pass",
+              "pass",
+              "pass",
+              "pass",
+              "weft:0",
+              "lift:0",
+              "lift:1",
+              "lift:2",
+              "lift:4",
+              "pass",
+              "pass",
+              "pass",
+              "pass",
+              "pass",
+              "weft:1",
+              "lift:3",
+              "pass",
+              "pass",
+              "pass",
+              "pass",
+              "pass",
+              "weft:0",
+              "lift:0",
+              "lift:1",
+              "lift:2",
+              "lift:4",
+              "pass",
+              "pass",
+              "pass",
+              "pass",
+              "pass",
+              "weft:1",
+              "lift:3",
+              "pass",
+              "pass",
+              "pass",
+              "pass",
+              "pass"
+            ]
+          },
+          {
+            "mode": "endless",
+            "stage": 0,
+            "actions": [
+              "weft:0",
+              "lift:1",
+              "pass",
+              "pass",
+              "pass",
+              "pass",
+              "weft:1",
+              "pass",
+              "pass",
+              "pass",
+              "pass",
+              "weft:1",
+              "lift:0",
+              "lift:1",
+              "lift:2",
+              "lift:3",
+              "pass",
+              "pass",
+              "pass",
+              "pass",
+              "weft:0",
+              "lift:0",
+              "lift:1",
+              "lift:2",
+              "lift:3",
+              "pass",
+              "pass",
+              "pass",
+              "pass"
+            ]
+          },
+          {
+            "mode": "endless",
+            "stage": 1,
+            "actions": [
+              "weft:0",
+              "lift:2",
+              "pass",
+              "pass",
+              "pass",
+              "pass",
+              "pass",
+              "weft:1",
+              "lift:1",
+              "pass",
+              "pass",
+              "pass",
+              "pass",
+              "pass",
+              "weft:1",
+              "lift:0",
+              "lift:1",
+              "lift:2",
+              "lift:3",
+              "lift:4",
+              "pass",
+              "pass",
+              "pass",
+              "pass",
+              "pass",
+              "weft:0",
+              "lift:0",
+              "lift:2",
+              "lift:3",
+              "lift:4",
+              "pass",
+              "pass",
+              "pass",
+              "pass",
+              "pass"
+            ]
+          }
+        ],
+        "lossActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "weft:0",
+              "pass"
+            ]
+          },
+          {
+            "mode": "endless",
+            "stage": 2,
+            "actions": [
+              "weft:0",
+              "pass",
+              "pass"
+            ]
+          }
+        ],
+        "feedbackChecks": [],
+        "finiteStudiesCompleted": 3,
+        "optionalMode": {
+          "supported": true,
+          "kind": "challenge-stream",
+          "completedChallenges": 2,
+          "freshChallenges": true,
+          "scoreAccumulated": true,
+          "terminalRecovery": true,
+          "playerEndRun": true,
+          "lateStageProperties": true,
+          "lateStageScope": "100 pure-model seeded legal completions including stages17/128; browser tests cover stages0–2",
+          "lateStagePropertyMethod": "Pure-model100-seed replay completions including stages17/128, separately from browser stages0–2."
+        },
+        "errors": []
+      },
+      {
+        "id": "warp-shed",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": true,
+        "inputMethod": "Chromium emulated touchscreen taps for all gameplay, loss, recovery, progression, restart and bank inputs; native selectOption for mode only",
+        "edgeCases": [
+          "Natural material/routing/budget failure ends play with an explanation; Undo recovers it and Reset clears that study",
+          "Restart works during an active construction",
+          "All three finite studies complete through real native controls; earned score banks once and terminal controls lock",
+          "Restart after campaign completion returns to study one with score zero",
+          "Two generated endless challenges complete with accumulated score; later loss preserves earned score, Restart clears it, and Bank ends a new run",
+          "Equal face colors still obey separate horizontal/vertical float history; shed freezes after a crossing (separate pure-model regression)"
+        ],
+        "winActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "weft:1",
+              "lift:1",
+              "pass",
+              "pass",
+              "pass",
+              "pass",
+              "weft:0",
+              "lift:0",
+              "lift:1",
+              "lift:2",
+              "pass",
+              "pass",
+              "pass",
+              "pass",
+              "weft:1",
+              "lift:0",
+              "lift:1",
+              "lift:2",
+              "lift:3",
+              "pass",
+              "pass",
+              "pass",
+              "pass",
+              "weft:0",
+              "lift:1",
+              "lift:2",
+              "lift:3",
+              "pass",
+              "pass",
+              "pass",
+              "pass"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 1,
+            "actions": [
+              "weft:1",
+              "lift:0",
+              "lift:1",
+              "lift:4",
+              "pass",
+              "pass",
+              "pass",
+              "pass",
+              "pass",
+              "weft:0",
+              "lift:0",
+              "lift:2",
+              "lift:4",
+              "pass",
+              "pass",
+              "pass",
+              "pass",
+              "pass",
+              "weft:1",
+              "lift:1",
+              "lift:3",
+              "pass",
+              "pass",
+              "pass",
+              "pass",
+              "pass",
+              "weft:0",
+              "lift:0",
+              "lift:2",
+              "lift:4",
+              "pass",
+              "pass",
+              "pass",
+              "pass",
+              "pass"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 2,
+            "actions": [
+              "weft:1",
+              "lift:0",
+              "lift:1",
+              "lift:4",
+              "pass",
+              "pass",
+              "pass",
+              "pass",
+              "pass",
+              "weft:0",
+              "lift:0",
+              "lift:1",
+              "lift:2",
+              "lift:4",
+              "pass",
+              "pass",
+              "pass",
+              "pass",
+              "pass",
+              "weft:1",
+              "lift:3",
+              "pass",
+              "pass",
+              "pass",
+              "pass",
+              "pass",
+              "weft:0",
+              "lift:0",
+              "lift:1",
+              "lift:2",
+              "lift:4",
+              "pass",
+              "pass",
+              "pass",
+              "pass",
+              "pass",
+              "weft:1",
+              "lift:3",
+              "pass",
+              "pass",
+              "pass",
+              "pass",
+              "pass"
+            ]
+          },
+          {
+            "mode": "endless",
+            "stage": 0,
+            "actions": [
+              "weft:0",
+              "lift:1",
+              "pass",
+              "pass",
+              "pass",
+              "pass",
+              "weft:1",
+              "pass",
+              "pass",
+              "pass",
+              "pass",
+              "weft:1",
+              "lift:0",
+              "lift:1",
+              "lift:2",
+              "lift:3",
+              "pass",
+              "pass",
+              "pass",
+              "pass",
+              "weft:0",
+              "lift:0",
+              "lift:1",
+              "lift:2",
+              "lift:3",
+              "pass",
+              "pass",
+              "pass",
+              "pass"
+            ]
+          },
+          {
+            "mode": "endless",
+            "stage": 1,
+            "actions": [
+              "weft:0",
+              "lift:2",
+              "pass",
+              "pass",
+              "pass",
+              "pass",
+              "pass",
+              "weft:1",
+              "lift:1",
+              "pass",
+              "pass",
+              "pass",
+              "pass",
+              "pass",
+              "weft:1",
+              "lift:0",
+              "lift:1",
+              "lift:2",
+              "lift:3",
+              "lift:4",
+              "pass",
+              "pass",
+              "pass",
+              "pass",
+              "pass",
+              "weft:0",
+              "lift:0",
+              "lift:2",
+              "lift:3",
+              "lift:4",
+              "pass",
+              "pass",
+              "pass",
+              "pass",
+              "pass"
+            ]
+          }
+        ],
+        "lossActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "weft:0",
+              "pass"
+            ]
+          },
+          {
+            "mode": "endless",
+            "stage": 2,
+            "actions": [
+              "weft:0",
+              "pass",
+              "pass"
+            ]
+          }
+        ],
+        "feedbackChecks": [],
+        "finiteStudiesCompleted": 3,
+        "optionalMode": {
+          "supported": true,
+          "kind": "challenge-stream",
+          "completedChallenges": 2,
+          "freshChallenges": true,
+          "scoreAccumulated": true,
+          "terminalRecovery": true,
+          "playerEndRun": true,
+          "lateStageProperties": true,
+          "lateStageScope": "100 pure-model seeded legal completions including stages17/128; browser tests cover stages0–2",
+          "lateStagePropertyMethod": "Pure-model100-seed replay completions including stages17/128, separately from browser stages0–2."
+        },
+        "errors": []
+      },
+      {
+        "id": "live-loops",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": false,
+        "inputMethod": "Native keyboard Enter and Space for every game action, loss, recovery, progression and restart; programmatic focus identifies the intended native control",
+        "edgeCases": [
+          "Natural material/routing/budget failure ends play with an explanation; Undo recovers it and Reset clears that study",
+          "Restart works during an active construction",
+          "All three finite studies complete through real native controls; earned score banks once and terminal controls lock",
+          "Restart after campaign completion returns to study one with score zero",
+          "Unaudited template variations stay unavailable; finite mode remains playable",
+          "Decrease merges actual parent ancestry; turning unsecured loops drops the fabric (separate pure-model regression)"
+        ],
+        "winActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "K",
+              "P",
+              "K",
+              "P",
+              "turn",
+              "P",
+              "K",
+              "P",
+              "K",
+              "turn",
+              "castoff"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 1,
+            "actions": [
+              "K",
+              "D",
+              "P",
+              "K",
+              "turn",
+              "D",
+              "K",
+              "P",
+              "turn",
+              "castoff"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 2,
+            "actions": [
+              "K",
+              "Y",
+              "D",
+              "P",
+              "turn",
+              "P",
+              "D",
+              "Y",
+              "K",
+              "turn",
+              "K",
+              "P",
+              "K",
+              "P",
+              "turn",
+              "castoff"
+            ]
+          }
+        ],
+        "lossActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "castoff"
+            ]
+          }
+        ],
+        "feedbackChecks": [],
+        "finiteStudiesCompleted": 3,
+        "optionalMode": {
+          "supported": false,
+          "kind": "finite-campaign",
+          "reason": "The initial three stitch topologies are authored. A future generator must certify parent-child graph reachability and every live-loop width, rather than repeat a knit/purl picture."
+        },
+        "errors": []
+      },
+      {
+        "id": "live-loops",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": true,
+        "inputMethod": "Chromium emulated touchscreen taps for all gameplay, loss, recovery, progression, restart and bank inputs; native selectOption for mode only",
+        "edgeCases": [
+          "Natural material/routing/budget failure ends play with an explanation; Undo recovers it and Reset clears that study",
+          "Restart works during an active construction",
+          "All three finite studies complete through real native controls; earned score banks once and terminal controls lock",
+          "Restart after campaign completion returns to study one with score zero",
+          "Unaudited template variations stay unavailable; finite mode remains playable",
+          "Decrease merges actual parent ancestry; turning unsecured loops drops the fabric (separate pure-model regression)"
+        ],
+        "winActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "K",
+              "P",
+              "K",
+              "P",
+              "turn",
+              "P",
+              "K",
+              "P",
+              "K",
+              "turn",
+              "castoff"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 1,
+            "actions": [
+              "K",
+              "D",
+              "P",
+              "K",
+              "turn",
+              "D",
+              "K",
+              "P",
+              "turn",
+              "castoff"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 2,
+            "actions": [
+              "K",
+              "Y",
+              "D",
+              "P",
+              "turn",
+              "P",
+              "D",
+              "Y",
+              "K",
+              "turn",
+              "K",
+              "P",
+              "K",
+              "P",
+              "turn",
+              "castoff"
+            ]
+          }
+        ],
+        "lossActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "castoff"
+            ]
+          }
+        ],
+        "feedbackChecks": [],
+        "finiteStudiesCompleted": 3,
+        "optionalMode": {
+          "supported": false,
+          "kind": "finite-campaign",
+          "reason": "The initial three stitch topologies are authored. A future generator must certify parent-child graph reachability and every live-loop width, rather than repeat a knit/purl picture."
+        },
+        "errors": []
+      },
+      {
+        "id": "corbel-tower",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": false,
+        "inputMethod": "Native keyboard Enter and Space for every game action, loss, recovery, progression and restart; programmatic focus identifies the intended native control",
+        "edgeCases": [
+          "Natural material/routing/budget failure ends play with an explanation; Undo recovers it and Reset clears that study",
+          "Restart works during an active construction",
+          "All three finite studies complete through real native controls; earned score banks once and terminal controls lock",
+          "Restart after campaign completion returns to study one with score zero",
+          "Two generated endless challenges complete with accumulated score; later loss preserves earned score, Restart clears it, and Bank ends a new run",
+          "A new upper mass and crown alter the resultants of earlier unchanged contact joints (separate pure-model regression)"
+        ],
+        "winActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "block:0",
+              "offset:0.5",
+              "place",
+              "block:1",
+              "offset:0.5",
+              "place",
+              "block:2",
+              "offset:0.5",
+              "place",
+              "crown"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 1,
+            "actions": [
+              "block:0",
+              "offset:0.5",
+              "place",
+              "block:1",
+              "offset:0.5",
+              "place",
+              "block:2",
+              "offset:0.5",
+              "place",
+              "block:3",
+              "offset:0.5",
+              "place",
+              "crown"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 2,
+            "actions": [
+              "block:0",
+              "offset:0.5",
+              "place",
+              "block:1",
+              "offset:0.5",
+              "place",
+              "block:2",
+              "offset:0.5",
+              "place",
+              "block:3",
+              "offset:0.5",
+              "place",
+              "block:4",
+              "offset:0.25",
+              "place",
+              "crown"
+            ]
+          },
+          {
+            "mode": "endless",
+            "stage": 0,
+            "actions": [
+              "block:0",
+              "offset:0.5",
+              "place",
+              "block:1",
+              "offset:0.5",
+              "place",
+              "block:2",
+              "offset:0.75",
+              "place",
+              "crown"
+            ]
+          },
+          {
+            "mode": "endless",
+            "stage": 1,
+            "actions": [
+              "block:0",
+              "offset:0.5",
+              "place",
+              "block:1",
+              "offset:0.5",
+              "place",
+              "block:2",
+              "offset:0.5",
+              "place",
+              "block:3",
+              "offset:0.5",
+              "place",
+              "crown"
+            ]
+          }
+        ],
+        "lossActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "block:0",
+              "offset:1",
+              "place",
+              "block:1",
+              "offset:1",
+              "place",
+              "block:2",
+              "offset:1",
+              "place",
+              "crown"
+            ]
+          },
+          {
+            "mode": "endless",
+            "stage": 2,
+            "actions": [
+              "block:0",
+              "offset:1",
+              "place",
+              "block:1",
+              "offset:1",
+              "place",
+              "block:2",
+              "offset:1",
+              "place",
+              "block:3",
+              "offset:1",
+              "place"
+            ]
+          }
+        ],
+        "feedbackChecks": [],
+        "finiteStudiesCompleted": 3,
+        "optionalMode": {
+          "supported": true,
+          "kind": "challenge-stream",
+          "completedChallenges": 2,
+          "freshChallenges": true,
+          "scoreAccumulated": true,
+          "terminalRecovery": true,
+          "playerEndRun": true,
+          "lateStageProperties": true,
+          "lateStageScope": "100 pure-model seeded legal completions including stages17/128; browser tests cover stages0–2",
+          "lateStagePropertyMethod": "Pure-model100-seed replay completions including stages17/128, separately from browser stages0–2."
+        },
+        "errors": []
+      },
+      {
+        "id": "corbel-tower",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": true,
+        "inputMethod": "Chromium emulated touchscreen taps for all gameplay, loss, recovery, progression, restart and bank inputs; native selectOption for mode only",
+        "edgeCases": [
+          "Natural material/routing/budget failure ends play with an explanation; Undo recovers it and Reset clears that study",
+          "Restart works during an active construction",
+          "All three finite studies complete through real native controls; earned score banks once and terminal controls lock",
+          "Restart after campaign completion returns to study one with score zero",
+          "Two generated endless challenges complete with accumulated score; later loss preserves earned score, Restart clears it, and Bank ends a new run",
+          "A new upper mass and crown alter the resultants of earlier unchanged contact joints (separate pure-model regression)"
+        ],
+        "winActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "block:0",
+              "offset:0.5",
+              "place",
+              "block:1",
+              "offset:0.5",
+              "place",
+              "block:2",
+              "offset:0.5",
+              "place",
+              "crown"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 1,
+            "actions": [
+              "block:0",
+              "offset:0.5",
+              "place",
+              "block:1",
+              "offset:0.5",
+              "place",
+              "block:2",
+              "offset:0.5",
+              "place",
+              "block:3",
+              "offset:0.5",
+              "place",
+              "crown"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 2,
+            "actions": [
+              "block:0",
+              "offset:0.5",
+              "place",
+              "block:1",
+              "offset:0.5",
+              "place",
+              "block:2",
+              "offset:0.5",
+              "place",
+              "block:3",
+              "offset:0.5",
+              "place",
+              "block:4",
+              "offset:0.25",
+              "place",
+              "crown"
+            ]
+          },
+          {
+            "mode": "endless",
+            "stage": 0,
+            "actions": [
+              "block:0",
+              "offset:0.5",
+              "place",
+              "block:1",
+              "offset:0.5",
+              "place",
+              "block:2",
+              "offset:0.75",
+              "place",
+              "crown"
+            ]
+          },
+          {
+            "mode": "endless",
+            "stage": 1,
+            "actions": [
+              "block:0",
+              "offset:0.5",
+              "place",
+              "block:1",
+              "offset:0.5",
+              "place",
+              "block:2",
+              "offset:0.5",
+              "place",
+              "block:3",
+              "offset:0.5",
+              "place",
+              "crown"
+            ]
+          }
+        ],
+        "lossActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "block:0",
+              "offset:1",
+              "place",
+              "block:1",
+              "offset:1",
+              "place",
+              "block:2",
+              "offset:1",
+              "place",
+              "crown"
+            ]
+          },
+          {
+            "mode": "endless",
+            "stage": 2,
+            "actions": [
+              "block:0",
+              "offset:1",
+              "place",
+              "block:1",
+              "offset:1",
+              "place",
+              "block:2",
+              "offset:1",
+              "place",
+              "block:3",
+              "offset:1",
+              "place"
+            ]
+          }
+        ],
+        "feedbackChecks": [],
+        "finiteStudiesCompleted": 3,
+        "optionalMode": {
+          "supported": true,
+          "kind": "challenge-stream",
+          "completedChallenges": 2,
+          "freshChallenges": true,
+          "scoreAccumulated": true,
+          "terminalRecovery": true,
+          "playerEndRun": true,
+          "lateStageProperties": true,
+          "lateStageScope": "100 pure-model seeded legal completions including stages17/128; browser tests cover stages0–2",
+          "lateStagePropertyMethod": "Pure-model100-seed replay completions including stages17/128, separately from browser stages0–2."
+        },
+        "errors": []
+      },
+      {
+        "id": "pivot-network",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": false,
+        "inputMethod": "Native keyboard Enter and Space for every game action, loss, recovery, progression and restart; programmatic focus identifies the intended native control",
+        "edgeCases": [
+          "Natural material/routing/budget failure ends play with an explanation; Undo recovers it and Reset clears that study",
+          "Restart works during an active construction",
+          "All three finite studies complete through real native controls; earned score banks once and terminal controls lock",
+          "Restart after campaign completion returns to study one with score zero",
+          "Unaudited template variations stay unavailable; finite mode remains playable",
+          "True branch toggles spend the same allowance as drive/lock/stamps and cannot bypass the terminal budget (separate pure-model regression)"
+        ],
+        "winActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "crank:1",
+              "rocker:2.5",
+              "coupler:2.5",
+              "ground:3",
+              "alpha:0.5",
+              "branch:1",
+              "lock",
+              "stamp",
+              "drive:15",
+              "drive:15",
+              "drive:15",
+              "stamp",
+              "drive:15",
+              "drive:15",
+              "drive:15",
+              "stamp"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 1,
+            "actions": [
+              "crank:1.5",
+              "rocker:2",
+              "coupler:3",
+              "ground:4",
+              "alpha:0.75",
+              "branch:-1",
+              "lock",
+              "stamp",
+              "drive:15",
+              "drive:15",
+              "drive:15",
+              "stamp",
+              "drive:15",
+              "drive:15",
+              "drive:15",
+              "stamp"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 2,
+            "actions": [
+              "crank:1.5",
+              "rocker:2",
+              "coupler:3.5",
+              "ground:4",
+              "alpha:0.5",
+              "branch:1",
+              "lock",
+              "stamp",
+              "drive:15",
+              "drive:15",
+              "drive:15",
+              "drive:15",
+              "drive:15",
+              "drive:15",
+              "stamp",
+              "drive:15",
+              "drive:15",
+              "drive:15",
+              "drive:15",
+              "drive:15",
+              "drive:15",
+              "stamp",
+              "toggle",
+              "drive:-15",
+              "drive:-15",
+              "drive:-15",
+              "drive:-15",
+              "drive:-15",
+              "drive:-15",
+              "stamp"
+            ]
+          }
+        ],
+        "lossActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "crank:1",
+              "rocker:2",
+              "coupler:2",
+              "ground:4",
+              "branch:-1",
+              "lock",
+              "drive:15",
+              "drive:15",
+              "drive:15",
+              "drive:15",
+              "drive:15",
+              "drive:15"
+            ]
+          }
+        ],
+        "feedbackChecks": [],
+        "finiteStudiesCompleted": 3,
+        "optionalMode": {
+          "supported": false,
+          "kind": "finite-campaign",
+          "reason": "Three authored linkage benches first. A generator needs certified continuous branch tracking through a full permitted sweep, with varied receivers and nontrivial keep-out geometry."
+        },
+        "errors": []
+      },
+      {
+        "id": "pivot-network",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": true,
+        "inputMethod": "Chromium emulated touchscreen taps for all gameplay, loss, recovery, progression, restart and bank inputs; native selectOption for mode only",
+        "edgeCases": [
+          "Natural material/routing/budget failure ends play with an explanation; Undo recovers it and Reset clears that study",
+          "Restart works during an active construction",
+          "All three finite studies complete through real native controls; earned score banks once and terminal controls lock",
+          "Restart after campaign completion returns to study one with score zero",
+          "Unaudited template variations stay unavailable; finite mode remains playable",
+          "True branch toggles spend the same allowance as drive/lock/stamps and cannot bypass the terminal budget (separate pure-model regression)"
+        ],
+        "winActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "crank:1",
+              "rocker:2.5",
+              "coupler:2.5",
+              "ground:3",
+              "alpha:0.5",
+              "branch:1",
+              "lock",
+              "stamp",
+              "drive:15",
+              "drive:15",
+              "drive:15",
+              "stamp",
+              "drive:15",
+              "drive:15",
+              "drive:15",
+              "stamp"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 1,
+            "actions": [
+              "crank:1.5",
+              "rocker:2",
+              "coupler:3",
+              "ground:4",
+              "alpha:0.75",
+              "branch:-1",
+              "lock",
+              "stamp",
+              "drive:15",
+              "drive:15",
+              "drive:15",
+              "stamp",
+              "drive:15",
+              "drive:15",
+              "drive:15",
+              "stamp"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 2,
+            "actions": [
+              "crank:1.5",
+              "rocker:2",
+              "coupler:3.5",
+              "ground:4",
+              "alpha:0.5",
+              "branch:1",
+              "lock",
+              "stamp",
+              "drive:15",
+              "drive:15",
+              "drive:15",
+              "drive:15",
+              "drive:15",
+              "drive:15",
+              "stamp",
+              "drive:15",
+              "drive:15",
+              "drive:15",
+              "drive:15",
+              "drive:15",
+              "drive:15",
+              "stamp",
+              "toggle",
+              "drive:-15",
+              "drive:-15",
+              "drive:-15",
+              "drive:-15",
+              "drive:-15",
+              "drive:-15",
+              "stamp"
+            ]
+          }
+        ],
+        "lossActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "crank:1",
+              "rocker:2",
+              "coupler:2",
+              "ground:4",
+              "branch:-1",
+              "lock",
+              "drive:15",
+              "drive:15",
+              "drive:15",
+              "drive:15",
+              "drive:15",
+              "drive:15"
+            ]
+          }
+        ],
+        "feedbackChecks": [],
+        "finiteStudiesCompleted": 3,
+        "optionalMode": {
+          "supported": false,
+          "kind": "finite-campaign",
+          "reason": "Three authored linkage benches first. A generator needs certified continuous branch tracking through a full permitted sweep, with varied receivers and nontrivial keep-out geometry."
+        },
+        "errors": []
+      },
+      {
+        "id": "fiber-panel",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": false,
+        "inputMethod": "Native keyboard Enter and Space for every game action, loss, recovery, progression and restart; programmatic focus identifies the intended native control",
+        "edgeCases": [
+          "Natural material/routing/budget failure ends play with an explanation; Undo recovers it and Reset clears that study",
+          "Restart works during an active construction",
+          "All three finite studies complete through real native controls; earned score banks once and terminal controls lock",
+          "Restart after campaign completion returns to study one with score zero",
+          "Two generated endless challenges complete with accumulated score; later loss preserves earned score, Restart clears it, and Bank ends a new run",
+          "Permuting the same plies retains extensional stiffness but changes bending coupling and solved response (separate pure-model regression)"
+        ],
+        "winActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "card:0",
+              "slot:0",
+              "flip:0",
+              "place",
+              "card:2",
+              "slot:1",
+              "flip:0",
+              "place",
+              "card:3",
+              "slot:2",
+              "flip:0",
+              "place",
+              "card:1",
+              "slot:3",
+              "flip:0",
+              "place",
+              "bond",
+              "case:0",
+              "test",
+              "case:1",
+              "test"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 1,
+            "actions": [
+              "card:0",
+              "slot:0",
+              "flip:0",
+              "place",
+              "card:1",
+              "slot:1",
+              "flip:0",
+              "place",
+              "card:2",
+              "slot:2",
+              "flip:0",
+              "place",
+              "card:3",
+              "slot:3",
+              "flip:0",
+              "place",
+              "card:4",
+              "slot:4",
+              "flip:0",
+              "place",
+              "card:5",
+              "slot:5",
+              "flip:0",
+              "place",
+              "bond",
+              "case:0",
+              "test",
+              "case:1",
+              "test"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 2,
+            "actions": [
+              "card:0",
+              "slot:0",
+              "flip:0",
+              "place",
+              "card:2",
+              "slot:1",
+              "flip:0",
+              "place",
+              "card:1",
+              "slot:2",
+              "flip:0",
+              "place",
+              "card:3",
+              "slot:3",
+              "flip:0",
+              "place",
+              "bond",
+              "case:0",
+              "test",
+              "case:1",
+              "test"
+            ]
+          },
+          {
+            "mode": "endless",
+            "stage": 0,
+            "actions": [
+              "card:2",
+              "slot:0",
+              "flip:0",
+              "place",
+              "card:3",
+              "slot:1",
+              "flip:1",
+              "place",
+              "card:0",
+              "slot:2",
+              "flip:0",
+              "place",
+              "card:1",
+              "slot:3",
+              "flip:1",
+              "place",
+              "bond",
+              "case:0",
+              "test",
+              "case:1",
+              "test"
+            ]
+          },
+          {
+            "mode": "endless",
+            "stage": 1,
+            "actions": [
+              "card:1",
+              "slot:0",
+              "flip:0",
+              "place",
+              "card:5",
+              "slot:1",
+              "flip:1",
+              "place",
+              "card:4",
+              "slot:2",
+              "flip:0",
+              "place",
+              "card:0",
+              "slot:3",
+              "flip:0",
+              "place",
+              "card:3",
+              "slot:4",
+              "flip:1",
+              "place",
+              "card:2",
+              "slot:5",
+              "flip:0",
+              "place",
+              "bond",
+              "case:0",
+              "test",
+              "case:1",
+              "test"
+            ]
+          }
+        ],
+        "lossActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "card:0",
+              "slot:0",
+              "flip:0",
+              "place",
+              "card:1",
+              "slot:1",
+              "flip:0",
+              "place",
+              "card:2",
+              "slot:2",
+              "flip:0",
+              "place",
+              "card:3",
+              "slot:3",
+              "flip:0",
+              "place",
+              "bond",
+              "case:0",
+              "test"
+            ]
+          },
+          {
+            "mode": "endless",
+            "stage": 2,
+            "actions": [
+              "card:0",
+              "slot:0",
+              "flip:0",
+              "place",
+              "card:1",
+              "slot:1",
+              "flip:0",
+              "place",
+              "card:2",
+              "slot:2",
+              "flip:0",
+              "place",
+              "card:3",
+              "slot:3",
+              "flip:0",
+              "place",
+              "bond",
+              "case:0",
+              "test"
+            ]
+          }
+        ],
+        "feedbackChecks": [],
+        "finiteStudiesCompleted": 3,
+        "optionalMode": {
+          "supported": true,
+          "kind": "challenge-stream",
+          "completedChallenges": 2,
+          "freshChallenges": true,
+          "scoreAccumulated": true,
+          "terminalRecovery": true,
+          "playerEndRun": true,
+          "lateStageProperties": true,
+          "lateStageScope": "100 pure-model seeded legal completions including stages17/128; browser tests cover stages0–2",
+          "lateStagePropertyMethod": "Pure-model100-seed replay completions including stages17/128, separately from browser stages0–2."
+        },
+        "errors": []
+      },
+      {
+        "id": "fiber-panel",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": true,
+        "inputMethod": "Chromium emulated touchscreen taps for all gameplay, loss, recovery, progression, restart and bank inputs; native selectOption for mode only",
+        "edgeCases": [
+          "Natural material/routing/budget failure ends play with an explanation; Undo recovers it and Reset clears that study",
+          "Restart works during an active construction",
+          "All three finite studies complete through real native controls; earned score banks once and terminal controls lock",
+          "Restart after campaign completion returns to study one with score zero",
+          "Two generated endless challenges complete with accumulated score; later loss preserves earned score, Restart clears it, and Bank ends a new run",
+          "Permuting the same plies retains extensional stiffness but changes bending coupling and solved response (separate pure-model regression)"
+        ],
+        "winActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "card:0",
+              "slot:0",
+              "flip:0",
+              "place",
+              "card:2",
+              "slot:1",
+              "flip:0",
+              "place",
+              "card:3",
+              "slot:2",
+              "flip:0",
+              "place",
+              "card:1",
+              "slot:3",
+              "flip:0",
+              "place",
+              "bond",
+              "case:0",
+              "test",
+              "case:1",
+              "test"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 1,
+            "actions": [
+              "card:0",
+              "slot:0",
+              "flip:0",
+              "place",
+              "card:1",
+              "slot:1",
+              "flip:0",
+              "place",
+              "card:2",
+              "slot:2",
+              "flip:0",
+              "place",
+              "card:3",
+              "slot:3",
+              "flip:0",
+              "place",
+              "card:4",
+              "slot:4",
+              "flip:0",
+              "place",
+              "card:5",
+              "slot:5",
+              "flip:0",
+              "place",
+              "bond",
+              "case:0",
+              "test",
+              "case:1",
+              "test"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 2,
+            "actions": [
+              "card:0",
+              "slot:0",
+              "flip:0",
+              "place",
+              "card:2",
+              "slot:1",
+              "flip:0",
+              "place",
+              "card:1",
+              "slot:2",
+              "flip:0",
+              "place",
+              "card:3",
+              "slot:3",
+              "flip:0",
+              "place",
+              "bond",
+              "case:0",
+              "test",
+              "case:1",
+              "test"
+            ]
+          },
+          {
+            "mode": "endless",
+            "stage": 0,
+            "actions": [
+              "card:2",
+              "slot:0",
+              "flip:0",
+              "place",
+              "card:3",
+              "slot:1",
+              "flip:1",
+              "place",
+              "card:0",
+              "slot:2",
+              "flip:0",
+              "place",
+              "card:1",
+              "slot:3",
+              "flip:1",
+              "place",
+              "bond",
+              "case:0",
+              "test",
+              "case:1",
+              "test"
+            ]
+          },
+          {
+            "mode": "endless",
+            "stage": 1,
+            "actions": [
+              "card:1",
+              "slot:0",
+              "flip:0",
+              "place",
+              "card:5",
+              "slot:1",
+              "flip:1",
+              "place",
+              "card:4",
+              "slot:2",
+              "flip:0",
+              "place",
+              "card:0",
+              "slot:3",
+              "flip:0",
+              "place",
+              "card:3",
+              "slot:4",
+              "flip:1",
+              "place",
+              "card:2",
+              "slot:5",
+              "flip:0",
+              "place",
+              "bond",
+              "case:0",
+              "test",
+              "case:1",
+              "test"
+            ]
+          }
+        ],
+        "lossActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "card:0",
+              "slot:0",
+              "flip:0",
+              "place",
+              "card:1",
+              "slot:1",
+              "flip:0",
+              "place",
+              "card:2",
+              "slot:2",
+              "flip:0",
+              "place",
+              "card:3",
+              "slot:3",
+              "flip:0",
+              "place",
+              "bond",
+              "case:0",
+              "test"
+            ]
+          },
+          {
+            "mode": "endless",
+            "stage": 2,
+            "actions": [
+              "card:0",
+              "slot:0",
+              "flip:0",
+              "place",
+              "card:1",
+              "slot:1",
+              "flip:0",
+              "place",
+              "card:2",
+              "slot:2",
+              "flip:0",
+              "place",
+              "card:3",
+              "slot:3",
+              "flip:0",
+              "place",
+              "bond",
+              "case:0",
+              "test"
+            ]
+          }
+        ],
+        "feedbackChecks": [],
+        "finiteStudiesCompleted": 3,
+        "optionalMode": {
+          "supported": true,
+          "kind": "challenge-stream",
+          "completedChallenges": 2,
+          "freshChallenges": true,
+          "scoreAccumulated": true,
+          "terminalRecovery": true,
+          "playerEndRun": true,
+          "lateStageProperties": true,
+          "lateStageScope": "100 pure-model seeded legal completions including stages17/128; browser tests cover stages0–2",
+          "lateStagePropertyMethod": "Pure-model100-seed replay completions including stages17/128, separately from browser stages0–2."
+        },
+        "errors": []
+      },
+      {
+        "id": "remanence-bench",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": false,
+        "inputMethod": "Native keyboard Enter and Space for every game action, loss, recovery, progression and restart; programmatic focus identifies the intended native control",
+        "edgeCases": [
+          "Natural material/routing/budget failure ends play with an explanation; Undo recovers it and Reset clears that study",
+          "Restart works during an active construction",
+          "All three finite studies complete through real native controls; earned score banks once and terminal controls lock",
+          "Restart after campaign completion returns to study one with score zero",
+          "Two generated endless challenges complete with accumulated score; later loss preserves earned score, Restart clears it, and Bank ends a new run",
+          "A negative minor loop selectively reverses weaker domains and preserves mixed zero-field memory (separate pure-model regression)"
+        ],
+        "winActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "coil:0",
+              "pulse:1.5",
+              "coil:1",
+              "pulse:2.5",
+              "coil:0",
+              "pulse:0",
+              "measure"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 1,
+            "actions": [
+              "coil:0",
+              "pulse:3",
+              "coil:1",
+              "pulse:-2",
+              "coil:0",
+              "pulse:0",
+              "measure"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 2,
+            "actions": [
+              "coil:0",
+              "pulse:3",
+              "coil:0",
+              "pulse:-2.5",
+              "coil:0",
+              "pulse:0",
+              "measure"
+            ]
+          },
+          {
+            "mode": "endless",
+            "stage": 0,
+            "actions": [
+              "coil:0",
+              "pulse:3",
+              "coil:1",
+              "pulse:-3",
+              "coil:0",
+              "pulse:0",
+              "measure"
+            ]
+          },
+          {
+            "mode": "endless",
+            "stage": 1,
+            "actions": [
+              "coil:1",
+              "pulse:2",
+              "coil:0",
+              "pulse:0",
+              "measure"
+            ]
+          }
+        ],
+        "lossActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "coil:0",
+              "pulse:4"
+            ]
+          },
+          {
+            "mode": "endless",
+            "stage": 2,
+            "actions": [
+              "coil:0",
+              "pulse:4",
+              "pulse:4",
+              "pulse:4"
+            ]
+          }
+        ],
+        "feedbackChecks": [],
+        "finiteStudiesCompleted": 3,
+        "optionalMode": {
+          "supported": true,
+          "kind": "challenge-stream",
+          "completedChallenges": 2,
+          "freshChallenges": true,
+          "scoreAccumulated": true,
+          "terminalRecovery": true,
+          "playerEndRun": true,
+          "lateStageProperties": true,
+          "lateStageScope": "100 pure-model seeded legal completions including stages17/128; browser tests cover stages0–2",
+          "lateStagePropertyMethod": "Pure-model100-seed replay completions including stages17/128, separately from browser stages0–2."
+        },
+        "errors": []
+      },
+      {
+        "id": "remanence-bench",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": true,
+        "inputMethod": "Chromium emulated touchscreen taps for all gameplay, loss, recovery, progression, restart and bank inputs; native selectOption for mode only",
+        "edgeCases": [
+          "Natural material/routing/budget failure ends play with an explanation; Undo recovers it and Reset clears that study",
+          "Restart works during an active construction",
+          "All three finite studies complete through real native controls; earned score banks once and terminal controls lock",
+          "Restart after campaign completion returns to study one with score zero",
+          "Two generated endless challenges complete with accumulated score; later loss preserves earned score, Restart clears it, and Bank ends a new run",
+          "A negative minor loop selectively reverses weaker domains and preserves mixed zero-field memory (separate pure-model regression)"
+        ],
+        "winActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "coil:0",
+              "pulse:1.5",
+              "coil:1",
+              "pulse:2.5",
+              "coil:0",
+              "pulse:0",
+              "measure"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 1,
+            "actions": [
+              "coil:0",
+              "pulse:3",
+              "coil:1",
+              "pulse:-2",
+              "coil:0",
+              "pulse:0",
+              "measure"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 2,
+            "actions": [
+              "coil:0",
+              "pulse:3",
+              "coil:0",
+              "pulse:-2.5",
+              "coil:0",
+              "pulse:0",
+              "measure"
+            ]
+          },
+          {
+            "mode": "endless",
+            "stage": 0,
+            "actions": [
+              "coil:0",
+              "pulse:3",
+              "coil:1",
+              "pulse:-3",
+              "coil:0",
+              "pulse:0",
+              "measure"
+            ]
+          },
+          {
+            "mode": "endless",
+            "stage": 1,
+            "actions": [
+              "coil:1",
+              "pulse:2",
+              "coil:0",
+              "pulse:0",
+              "measure"
+            ]
+          }
+        ],
+        "lossActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "coil:0",
+              "pulse:4"
+            ]
+          },
+          {
+            "mode": "endless",
+            "stage": 2,
+            "actions": [
+              "coil:0",
+              "pulse:4",
+              "pulse:4",
+              "pulse:4"
+            ]
+          }
+        ],
+        "feedbackChecks": [],
+        "finiteStudiesCompleted": 3,
+        "optionalMode": {
+          "supported": true,
+          "kind": "challenge-stream",
+          "completedChallenges": 2,
+          "freshChallenges": true,
+          "scoreAccumulated": true,
+          "terminalRecovery": true,
+          "playerEndRun": true,
+          "lateStageProperties": true,
+          "lateStageScope": "100 pure-model seeded legal completions including stages17/128; browser tests cover stages0–2",
+          "lateStagePropertyMethod": "Pure-model100-seed replay completions including stages17/128, separately from browser stages0–2."
+        },
+        "errors": []
+      },
+      {
+        "id": "sieve-cascade",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": false,
+        "inputMethod": "Native keyboard Enter and Space for every game action, loss, recovery, progression and restart; programmatic focus identifies the intended native control",
+        "edgeCases": [
+          "Natural material/routing/budget failure ends play with an explanation; Undo recovers it and Reset clears that study",
+          "Restart works during an active construction",
+          "All three finite studies complete through real native controls; earned score banks once and terminal controls lock",
+          "Restart after campaign completion returns to study one with score zero",
+          "Two generated endless challenges complete with accumulated score; later loss preserves earned score, Restart clears it, and Bank ends a new run",
+          "A fitting grain stays above a bridged aperture until reverse-shaking changes physical orientation and opens it (separate pure-model regression)"
+        ],
+        "winActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "deck:0",
+              "screen:2.3",
+              "deck:1",
+              "screen:1.3",
+              "deck:2",
+              "screen:0.5",
+              "lock",
+              "deck:0",
+              "reverse",
+              "deck:0",
+              "forward",
+              "deck:0",
+              "bin:0",
+              "discharge",
+              "deck:1",
+              "reverse",
+              "deck:1",
+              "forward",
+              "deck:1",
+              "bin:1",
+              "discharge",
+              "deck:2",
+              "bin:2",
+              "discharge",
+              "certify"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 1,
+            "actions": [
+              "deck:0",
+              "screen:2.3",
+              "deck:1",
+              "screen:1.3",
+              "deck:2",
+              "screen:0.5",
+              "lock",
+              "deck:0",
+              "reverse",
+              "deck:0",
+              "forward",
+              "deck:0",
+              "bin:0",
+              "discharge",
+              "deck:1",
+              "reverse",
+              "deck:1",
+              "reverse",
+              "deck:1",
+              "forward",
+              "deck:1",
+              "bin:1",
+              "discharge",
+              "deck:2",
+              "bin:2",
+              "discharge",
+              "certify"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 2,
+            "actions": [
+              "deck:0",
+              "screen:2.3",
+              "deck:1",
+              "screen:1.3",
+              "deck:2",
+              "screen:0.5",
+              "lock",
+              "deck:0",
+              "reverse",
+              "deck:0",
+              "forward",
+              "deck:0",
+              "bin:0",
+              "discharge",
+              "deck:1",
+              "reverse",
+              "deck:1",
+              "reverse",
+              "deck:1",
+              "forward",
+              "deck:1",
+              "bin:1",
+              "discharge",
+              "deck:2",
+              "bin:2",
+              "discharge",
+              "certify"
+            ]
+          },
+          {
+            "mode": "endless",
+            "stage": 0,
+            "actions": [
+              "deck:0",
+              "screen:2.3000000000000003",
+              "deck:1",
+              "screen:1.2",
+              "deck:2",
+              "screen:0.4",
+              "lock",
+              "deck:0",
+              "reverse",
+              "deck:0",
+              "forward",
+              "deck:0",
+              "reverse",
+              "deck:0",
+              "forward",
+              "deck:0",
+              "bin:0",
+              "discharge",
+              "deck:1",
+              "reverse",
+              "deck:1",
+              "reverse",
+              "deck:1",
+              "forward",
+              "deck:1",
+              "bin:1",
+              "discharge",
+              "deck:2",
+              "bin:2",
+              "discharge",
+              "certify"
+            ]
+          },
+          {
+            "mode": "endless",
+            "stage": 1,
+            "actions": [
+              "deck:0",
+              "screen:2.2",
+              "deck:1",
+              "screen:1.2",
+              "deck:2",
+              "screen:0.4",
+              "lock",
+              "deck:0",
+              "reverse",
+              "deck:0",
+              "reverse",
+              "deck:0",
+              "forward",
+              "deck:0",
+              "bin:0",
+              "discharge",
+              "deck:1",
+              "bin:1",
+              "discharge",
+              "certify"
+            ]
+          }
+        ],
+        "lossActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "lock",
+              "bin:2",
+              "discharge"
+            ]
+          },
+          {
+            "mode": "endless",
+            "stage": 2,
+            "actions": [
+              "lock",
+              "bin:2",
+              "discharge"
+            ]
+          }
+        ],
+        "feedbackChecks": [],
+        "finiteStudiesCompleted": 3,
+        "optionalMode": {
+          "supported": true,
+          "kind": "challenge-stream",
+          "completedChallenges": 2,
+          "freshChallenges": true,
+          "scoreAccumulated": true,
+          "terminalRecovery": true,
+          "playerEndRun": true,
+          "lateStageProperties": true,
+          "lateStageScope": "100 pure-model seeded legal completions including stages17/128; browser tests cover stages0–2",
+          "lateStagePropertyMethod": "Pure-model100-seed replay completions including stages17/128, separately from browser stages0–2."
+        },
+        "errors": []
+      },
+      {
+        "id": "sieve-cascade",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": true,
+        "inputMethod": "Chromium emulated touchscreen taps for all gameplay, loss, recovery, progression, restart and bank inputs; native selectOption for mode only",
+        "edgeCases": [
+          "Natural material/routing/budget failure ends play with an explanation; Undo recovers it and Reset clears that study",
+          "Restart works during an active construction",
+          "All three finite studies complete through real native controls; earned score banks once and terminal controls lock",
+          "Restart after campaign completion returns to study one with score zero",
+          "Two generated endless challenges complete with accumulated score; later loss preserves earned score, Restart clears it, and Bank ends a new run",
+          "A fitting grain stays above a bridged aperture until reverse-shaking changes physical orientation and opens it (separate pure-model regression)"
+        ],
+        "winActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "deck:0",
+              "screen:2.3",
+              "deck:1",
+              "screen:1.3",
+              "deck:2",
+              "screen:0.5",
+              "lock",
+              "deck:0",
+              "reverse",
+              "deck:0",
+              "forward",
+              "deck:0",
+              "bin:0",
+              "discharge",
+              "deck:1",
+              "reverse",
+              "deck:1",
+              "forward",
+              "deck:1",
+              "bin:1",
+              "discharge",
+              "deck:2",
+              "bin:2",
+              "discharge",
+              "certify"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 1,
+            "actions": [
+              "deck:0",
+              "screen:2.3",
+              "deck:1",
+              "screen:1.3",
+              "deck:2",
+              "screen:0.5",
+              "lock",
+              "deck:0",
+              "reverse",
+              "deck:0",
+              "forward",
+              "deck:0",
+              "bin:0",
+              "discharge",
+              "deck:1",
+              "reverse",
+              "deck:1",
+              "reverse",
+              "deck:1",
+              "forward",
+              "deck:1",
+              "bin:1",
+              "discharge",
+              "deck:2",
+              "bin:2",
+              "discharge",
+              "certify"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 2,
+            "actions": [
+              "deck:0",
+              "screen:2.3",
+              "deck:1",
+              "screen:1.3",
+              "deck:2",
+              "screen:0.5",
+              "lock",
+              "deck:0",
+              "reverse",
+              "deck:0",
+              "forward",
+              "deck:0",
+              "bin:0",
+              "discharge",
+              "deck:1",
+              "reverse",
+              "deck:1",
+              "reverse",
+              "deck:1",
+              "forward",
+              "deck:1",
+              "bin:1",
+              "discharge",
+              "deck:2",
+              "bin:2",
+              "discharge",
+              "certify"
+            ]
+          },
+          {
+            "mode": "endless",
+            "stage": 0,
+            "actions": [
+              "deck:0",
+              "screen:2.3000000000000003",
+              "deck:1",
+              "screen:1.2",
+              "deck:2",
+              "screen:0.4",
+              "lock",
+              "deck:0",
+              "reverse",
+              "deck:0",
+              "forward",
+              "deck:0",
+              "reverse",
+              "deck:0",
+              "forward",
+              "deck:0",
+              "bin:0",
+              "discharge",
+              "deck:1",
+              "reverse",
+              "deck:1",
+              "reverse",
+              "deck:1",
+              "forward",
+              "deck:1",
+              "bin:1",
+              "discharge",
+              "deck:2",
+              "bin:2",
+              "discharge",
+              "certify"
+            ]
+          },
+          {
+            "mode": "endless",
+            "stage": 1,
+            "actions": [
+              "deck:0",
+              "screen:2.2",
+              "deck:1",
+              "screen:1.2",
+              "deck:2",
+              "screen:0.4",
+              "lock",
+              "deck:0",
+              "reverse",
+              "deck:0",
+              "reverse",
+              "deck:0",
+              "forward",
+              "deck:0",
+              "bin:0",
+              "discharge",
+              "deck:1",
+              "bin:1",
+              "discharge",
+              "certify"
+            ]
+          }
+        ],
+        "lossActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "lock",
+              "bin:2",
+              "discharge"
+            ]
+          },
+          {
+            "mode": "endless",
+            "stage": 2,
+            "actions": [
+              "lock",
+              "bin:2",
+              "discharge"
+            ]
+          }
+        ],
+        "feedbackChecks": [],
+        "finiteStudiesCompleted": 3,
+        "optionalMode": {
+          "supported": true,
+          "kind": "challenge-stream",
+          "completedChallenges": 2,
+          "freshChallenges": true,
+          "scoreAccumulated": true,
+          "terminalRecovery": true,
+          "playerEndRun": true,
+          "lateStageProperties": true,
+          "lateStageScope": "100 pure-model seeded legal completions including stages17/128; browser tests cover stages0–2",
+          "lateStagePropertyMethod": "Pure-model100-seed replay completions including stages17/128, separately from browser stages0–2."
+        },
+        "errors": []
+      },
+      {
+        "id": "solvent-ladder",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": false,
+        "inputMethod": "Native keyboard Enter and Space for every game action, loss, recovery, progression and restart; programmatic focus identifies the intended native control",
+        "edgeCases": [
+          "Natural material/routing/budget failure ends play with an explanation; Undo recovers it and Reset clears that study",
+          "Restart works during an active construction",
+          "All three finite studies complete through real native controls; earned score banks once and terminal controls lock",
+          "Restart after campaign completion returns to study one with score zero",
+          "Two generated endless challenges complete with accumulated score; later loss preserves earned score, Restart clears it, and Bank ends a new run",
+          "Filtration and selective washing conserve each solute while impurity/recovery tradeoffs change (separate pure-model regression)"
+        ],
+        "winActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "packet:0",
+              "evaporate",
+              "evaporate",
+              "evaporate",
+              "evaporate",
+              "filter",
+              "packet:1",
+              "evaporate",
+              "evaporate",
+              "evaporate",
+              "filter",
+              "finish"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 1,
+            "actions": [
+              "packet:0",
+              "evaporate",
+              "evaporate",
+              "evaporate",
+              "evaporate",
+              "filter",
+              "wash",
+              "packet:1",
+              "evaporate",
+              "evaporate",
+              "evaporate",
+              "filter",
+              "finish"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 2,
+            "actions": [
+              "packet:0",
+              "evaporate",
+              "evaporate",
+              "evaporate",
+              "evaporate",
+              "filter",
+              "wash",
+              "packet:1",
+              "evaporate",
+              "evaporate",
+              "evaporate",
+              "filter",
+              "wash",
+              "finish"
+            ]
+          },
+          {
+            "mode": "endless",
+            "stage": 0,
+            "actions": [
+              "packet:0",
+              "evaporate",
+              "evaporate",
+              "evaporate",
+              "filter",
+              "packet:1",
+              "evaporate",
+              "evaporate",
+              "evaporate",
+              "filter",
+              "finish"
+            ]
+          },
+          {
+            "mode": "endless",
+            "stage": 1,
+            "actions": [
+              "packet:1",
+              "evaporate",
+              "evaporate",
+              "evaporate",
+              "filter",
+              "wash",
+              "packet:0",
+              "evaporate",
+              "evaporate",
+              "evaporate",
+              "evaporate",
+              "evaporate",
+              "filter",
+              "finish"
+            ]
+          }
+        ],
+        "lossActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "packet:1",
+              "filter",
+              "finish",
+              "finish",
+              "finish"
+            ]
+          },
+          {
+            "mode": "endless",
+            "stage": 2,
+            "actions": [
+              "packet:1",
+              "filter",
+              "finish",
+              "finish",
+              "finish"
+            ]
+          }
+        ],
+        "feedbackChecks": [],
+        "finiteStudiesCompleted": 3,
+        "optionalMode": {
+          "supported": true,
+          "kind": "challenge-stream",
+          "completedChallenges": 2,
+          "freshChallenges": true,
+          "scoreAccumulated": true,
+          "terminalRecovery": true,
+          "playerEndRun": true,
+          "lateStageProperties": true,
+          "lateStageScope": "100 pure-model seeded legal completions including stages17/128; browser tests cover stages0–2",
+          "lateStagePropertyMethod": "Pure-model100-seed replay completions including stages17/128, separately from browser stages0–2."
+        },
+        "errors": []
+      },
+      {
+        "id": "solvent-ladder",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": true,
+        "inputMethod": "Chromium emulated touchscreen taps for all gameplay, loss, recovery, progression, restart and bank inputs; native selectOption for mode only",
+        "edgeCases": [
+          "Natural material/routing/budget failure ends play with an explanation; Undo recovers it and Reset clears that study",
+          "Restart works during an active construction",
+          "All three finite studies complete through real native controls; earned score banks once and terminal controls lock",
+          "Restart after campaign completion returns to study one with score zero",
+          "Two generated endless challenges complete with accumulated score; later loss preserves earned score, Restart clears it, and Bank ends a new run",
+          "Filtration and selective washing conserve each solute while impurity/recovery tradeoffs change (separate pure-model regression)"
+        ],
+        "winActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "packet:0",
+              "evaporate",
+              "evaporate",
+              "evaporate",
+              "evaporate",
+              "filter",
+              "packet:1",
+              "evaporate",
+              "evaporate",
+              "evaporate",
+              "filter",
+              "finish"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 1,
+            "actions": [
+              "packet:0",
+              "evaporate",
+              "evaporate",
+              "evaporate",
+              "evaporate",
+              "filter",
+              "wash",
+              "packet:1",
+              "evaporate",
+              "evaporate",
+              "evaporate",
+              "filter",
+              "finish"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 2,
+            "actions": [
+              "packet:0",
+              "evaporate",
+              "evaporate",
+              "evaporate",
+              "evaporate",
+              "filter",
+              "wash",
+              "packet:1",
+              "evaporate",
+              "evaporate",
+              "evaporate",
+              "filter",
+              "wash",
+              "finish"
+            ]
+          },
+          {
+            "mode": "endless",
+            "stage": 0,
+            "actions": [
+              "packet:0",
+              "evaporate",
+              "evaporate",
+              "evaporate",
+              "filter",
+              "packet:1",
+              "evaporate",
+              "evaporate",
+              "evaporate",
+              "filter",
+              "finish"
+            ]
+          },
+          {
+            "mode": "endless",
+            "stage": 1,
+            "actions": [
+              "packet:1",
+              "evaporate",
+              "evaporate",
+              "evaporate",
+              "filter",
+              "wash",
+              "packet:0",
+              "evaporate",
+              "evaporate",
+              "evaporate",
+              "evaporate",
+              "evaporate",
+              "filter",
+              "finish"
+            ]
+          }
+        ],
+        "lossActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "packet:1",
+              "filter",
+              "finish",
+              "finish",
+              "finish"
+            ]
+          },
+          {
+            "mode": "endless",
+            "stage": 2,
+            "actions": [
+              "packet:1",
+              "filter",
+              "finish",
+              "finish",
+              "finish"
+            ]
+          }
+        ],
+        "feedbackChecks": [],
+        "finiteStudiesCompleted": 3,
+        "optionalMode": {
+          "supported": true,
+          "kind": "challenge-stream",
+          "completedChallenges": 2,
+          "freshChallenges": true,
+          "scoreAccumulated": true,
+          "terminalRecovery": true,
+          "playerEndRun": true,
+          "lateStageProperties": true,
+          "lateStageScope": "100 pure-model seeded legal completions including stages17/128; browser tests cover stages0–2",
+          "lateStagePropertyMethod": "Pure-model100-seed replay completions including stages17/128, separately from browser stages0–2."
+        },
+        "errors": []
+      },
+      {
+        "id": "resonator-rack",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": false,
+        "inputMethod": "Native keyboard Enter and Space for every game action, loss, recovery, progression and restart; programmatic focus identifies the intended native control",
+        "edgeCases": [
+          "Natural material/routing/budget failure ends play with an explanation; Undo recovers it and Reset clears that study",
+          "Restart works during an active construction",
+          "All three finite studies complete through real native controls; earned score banks once and terminal controls lock",
+          "Restart after campaign completion returns to study one with score zero",
+          "Unaudited template variations stay unavailable; finite mode remains playable",
+          "A side branch creates a genuine notch; neck permutation changes the whole complex response (separate pure-model regression)"
+        ],
+        "winActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "cavity:1,1",
+              "parent:0,1",
+              "neck:0,1",
+              "lock",
+              "sample:0",
+              "measure",
+              "sample:1",
+              "measure",
+              "sample:2",
+              "measure"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 1,
+            "actions": [
+              "cavity:1,0.5",
+              "cavity:2,1",
+              "parent:0,1",
+              "parent:1,1",
+              "neck:0,0",
+              "neck:1,1",
+              "lock",
+              "sample:0",
+              "measure",
+              "sample:1",
+              "measure",
+              "sample:2",
+              "measure",
+              "sample:3",
+              "measure"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 2,
+            "actions": [
+              "cavity:1,1",
+              "cavity:2,2",
+              "parent:0,1",
+              "parent:1,2",
+              "neck:0,2",
+              "neck:1,1",
+              "neck:2,0",
+              "output:2",
+              "lock",
+              "sample:0",
+              "measure",
+              "sample:1",
+              "measure",
+              "sample:2",
+              "measure",
+              "sample:3",
+              "measure"
+            ]
+          }
+        ],
+        "lossActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "parent:0,-1",
+              "lock"
+            ]
+          }
+        ],
+        "feedbackChecks": [],
+        "finiteStudiesCompleted": 3,
+        "optionalMode": {
+          "supported": false,
+          "kind": "finite-campaign",
+          "reason": "Authored acoustic networks first. A generated mode needs varied topology with certified complex responses and broad pass/stop feasibility, not rescaled copies of one resonance."
+        },
+        "errors": []
+      },
+      {
+        "id": "resonator-rack",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": true,
+        "inputMethod": "Chromium emulated touchscreen taps for all gameplay, loss, recovery, progression, restart and bank inputs; native selectOption for mode only",
+        "edgeCases": [
+          "Natural material/routing/budget failure ends play with an explanation; Undo recovers it and Reset clears that study",
+          "Restart works during an active construction",
+          "All three finite studies complete through real native controls; earned score banks once and terminal controls lock",
+          "Restart after campaign completion returns to study one with score zero",
+          "Unaudited template variations stay unavailable; finite mode remains playable",
+          "A side branch creates a genuine notch; neck permutation changes the whole complex response (separate pure-model regression)"
+        ],
+        "winActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "cavity:1,1",
+              "parent:0,1",
+              "neck:0,1",
+              "lock",
+              "sample:0",
+              "measure",
+              "sample:1",
+              "measure",
+              "sample:2",
+              "measure"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 1,
+            "actions": [
+              "cavity:1,0.5",
+              "cavity:2,1",
+              "parent:0,1",
+              "parent:1,1",
+              "neck:0,0",
+              "neck:1,1",
+              "lock",
+              "sample:0",
+              "measure",
+              "sample:1",
+              "measure",
+              "sample:2",
+              "measure",
+              "sample:3",
+              "measure"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 2,
+            "actions": [
+              "cavity:1,1",
+              "cavity:2,2",
+              "parent:0,1",
+              "parent:1,2",
+              "neck:0,2",
+              "neck:1,1",
+              "neck:2,0",
+              "output:2",
+              "lock",
+              "sample:0",
+              "measure",
+              "sample:1",
+              "measure",
+              "sample:2",
+              "measure",
+              "sample:3",
+              "measure"
+            ]
+          }
+        ],
+        "lossActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "parent:0,-1",
+              "lock"
+            ]
+          }
+        ],
+        "feedbackChecks": [],
+        "finiteStudiesCompleted": 3,
+        "optionalMode": {
+          "supported": false,
+          "kind": "finite-campaign",
+          "reason": "Authored acoustic networks first. A generated mode needs varied topology with certified complex responses and broad pass/stop feasibility, not rescaled copies of one resonance."
+        },
+        "errors": []
+      },
+      {
+        "id": "mesh-form",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": false,
+        "inputMethod": "Native keyboard Enter and Space for every game action, loss, recovery, progression and restart; programmatic focus identifies the intended native control",
+        "edgeCases": [
+          "Natural material/routing/budget failure ends play with an explanation; Undo recovers it and Reset clears that study",
+          "Restart works during an active construction",
+          "All three finite studies complete through real native controls; earned score banks once and terminal controls lock",
+          "Restart after campaign completion returns to study one with score zero",
+          "Unaudited template variations stay unavailable; finite mode remains playable",
+          "Only the grip is prescribed; unclamped vertices materially solve together and fixture choice changes their response (separate pure-model regression)"
+        ],
+        "winActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "fixture:0",
+              "grip:6",
+              "lock",
+              "move:dx,0.1",
+              "move:dx,0.1",
+              "move:dy,0.1",
+              "certify"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 1,
+            "actions": [
+              "fixture:0",
+              "grip:7",
+              "lock",
+              "move:dx,0.1",
+              "move:dx,0.1",
+              "move:dy,-0.1",
+              "certify"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 2,
+            "actions": [
+              "fixture:0",
+              "grip:8",
+              "lock",
+              "move:dx,-0.1",
+              "move:dx,-0.1",
+              "move:dy,0.1",
+              "move:dy,0.1",
+              "certify"
+            ]
+          }
+        ],
+        "lossActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "fixture:3",
+              "lock"
+            ]
+          }
+        ],
+        "feedbackChecks": [],
+        "finiteStudiesCompleted": 3,
+        "optionalMode": {
+          "supported": false,
+          "kind": "finite-campaign",
+          "reason": "Three authored material meshes. A future generator must certify a complete strain-safe deformation path, not merely a noncrossing final drawing."
+        },
+        "errors": []
+      },
+      {
+        "id": "mesh-form",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": true,
+        "inputMethod": "Chromium emulated touchscreen taps for all gameplay, loss, recovery, progression, restart and bank inputs; native selectOption for mode only",
+        "edgeCases": [
+          "Natural material/routing/budget failure ends play with an explanation; Undo recovers it and Reset clears that study",
+          "Restart works during an active construction",
+          "All three finite studies complete through real native controls; earned score banks once and terminal controls lock",
+          "Restart after campaign completion returns to study one with score zero",
+          "Unaudited template variations stay unavailable; finite mode remains playable",
+          "Only the grip is prescribed; unclamped vertices materially solve together and fixture choice changes their response (separate pure-model regression)"
+        ],
+        "winActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "fixture:0",
+              "grip:6",
+              "lock",
+              "move:dx,0.1",
+              "move:dx,0.1",
+              "move:dy,0.1",
+              "certify"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 1,
+            "actions": [
+              "fixture:0",
+              "grip:7",
+              "lock",
+              "move:dx,0.1",
+              "move:dx,0.1",
+              "move:dy,-0.1",
+              "certify"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 2,
+            "actions": [
+              "fixture:0",
+              "grip:8",
+              "lock",
+              "move:dx,-0.1",
+              "move:dx,-0.1",
+              "move:dy,0.1",
+              "move:dy,0.1",
+              "certify"
+            ]
+          }
+        ],
+        "lossActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "fixture:3",
+              "lock"
+            ]
+          }
+        ],
+        "feedbackChecks": [],
+        "finiteStudiesCompleted": 3,
+        "optionalMode": {
+          "supported": false,
+          "kind": "finite-campaign",
+          "reason": "Three authored material meshes. A future generator must certify a complete strain-safe deformation path, not merely a noncrossing final drawing."
+        },
+        "errors": []
+      },
+      {
+        "id": "catenary-yard",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": false,
+        "inputMethod": "Native keyboard Enter and Space for every game action, loss, recovery, progression and restart; programmatic focus identifies the intended native control",
+        "edgeCases": [
+          "Natural material/routing/budget failure ends play with an explanation; Undo recovers it and Reset clears that study",
+          "Restart works during an active construction",
+          "All three finite studies complete through real native controls; earned score banks once and terminal controls lock",
+          "Restart after campaign completion returns to study one with score zero",
+          "Unaudited template variations stay unavailable; finite mode remains playable",
+          "Exact finite arclength couples sag, hook loads and nonlinear anchor reactions (separate pure-model regression)"
+        ],
+        "winActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "length:6.8",
+              "left:3",
+              "right:3",
+              "case:0",
+              "test"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 1,
+            "actions": [
+              "length:7.2",
+              "left:3.5",
+              "right:3",
+              "hook:3",
+              "case:0",
+              "test"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 2,
+            "actions": [
+              "length:7.6",
+              "left:3.5",
+              "right:3.5",
+              "hook:2",
+              "case:0",
+              "test",
+              "case:1",
+              "test"
+            ]
+          }
+        ],
+        "lossActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "length:6.4",
+              "left:2.5",
+              "right:2.5",
+              "test"
+            ]
+          }
+        ],
+        "feedbackChecks": [],
+        "finiteStudiesCompleted": 3,
+        "optionalMode": {
+          "supported": false,
+          "kind": "finite-campaign",
+          "reason": "Three authored cable yards. Generated contracts require certified arclength equilibrium and clearance under varied independent point-load cases, rather than uniform-load scaling."
+        },
+        "errors": []
+      },
+      {
+        "id": "catenary-yard",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": true,
+        "inputMethod": "Chromium emulated touchscreen taps for all gameplay, loss, recovery, progression, restart and bank inputs; native selectOption for mode only",
+        "edgeCases": [
+          "Natural material/routing/budget failure ends play with an explanation; Undo recovers it and Reset clears that study",
+          "Restart works during an active construction",
+          "All three finite studies complete through real native controls; earned score banks once and terminal controls lock",
+          "Restart after campaign completion returns to study one with score zero",
+          "Unaudited template variations stay unavailable; finite mode remains playable",
+          "Exact finite arclength couples sag, hook loads and nonlinear anchor reactions (separate pure-model regression)"
+        ],
+        "winActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "length:6.8",
+              "left:3",
+              "right:3",
+              "case:0",
+              "test"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 1,
+            "actions": [
+              "length:7.2",
+              "left:3.5",
+              "right:3",
+              "hook:3",
+              "case:0",
+              "test"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 2,
+            "actions": [
+              "length:7.6",
+              "left:3.5",
+              "right:3.5",
+              "hook:2",
+              "case:0",
+              "test",
+              "case:1",
+              "test"
+            ]
+          }
+        ],
+        "lossActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "length:6.4",
+              "left:2.5",
+              "right:2.5",
+              "test"
+            ]
+          }
+        ],
+        "feedbackChecks": [],
+        "finiteStudiesCompleted": 3,
+        "optionalMode": {
+          "supported": false,
+          "kind": "finite-campaign",
+          "reason": "Three authored cable yards. Generated contracts require certified arclength equilibrium and clearance under varied independent point-load cases, rather than uniform-load scaling."
+        },
+        "errors": []
+      },
+      {
+        "id": "gel-window",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": false,
+        "inputMethod": "Native keyboard Enter and Space for every game action, loss, recovery, progression and restart; programmatic focus identifies the intended native control",
+        "edgeCases": [
+          "Natural material/routing/budget failure ends play with an explanation; Undo recovers it and Reset clears that study",
+          "Restart works during an active construction",
+          "All three finite studies complete through real native controls; earned score banks once and terminal controls lock",
+          "Restart after campaign completion returns to study one with score zero",
+          "Unaudited template variations stay unavailable; finite mode remains playable",
+          "Premature branch-cycle formation traps an unconsumed interior site needed by a later monomer (separate pure-model regression)"
+        ],
+        "winActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "first:0",
+              "second:1",
+              "join",
+              "first:1",
+              "second:2",
+              "join",
+              "first:3",
+              "second:4",
+              "join",
+              "first:4",
+              "second:5",
+              "join",
+              "first:0",
+              "terminate",
+              "first:2",
+              "terminate",
+              "first:3",
+              "terminate",
+              "first:5",
+              "terminate",
+              "certify"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 1,
+            "actions": [
+              "first:0",
+              "second:1",
+              "join",
+              "first:0",
+              "second:2",
+              "join",
+              "first:0",
+              "second:3",
+              "join",
+              "first:3",
+              "second:4",
+              "join",
+              "first:4",
+              "second:5",
+              "join",
+              "first:1",
+              "second:2",
+              "join",
+              "certify"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 2,
+            "actions": [
+              "first:0",
+              "second:1",
+              "join",
+              "first:0",
+              "second:2",
+              "join",
+              "first:0",
+              "second:3",
+              "join",
+              "first:0",
+              "second:4",
+              "join",
+              "first:2",
+              "second:5",
+              "join",
+              "first:5",
+              "second:6",
+              "join",
+              "first:1",
+              "second:2",
+              "join",
+              "first:3",
+              "second:4",
+              "join",
+              "certify"
+            ]
+          }
+        ],
+        "lossActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "first:0",
+              "terminate",
+              "terminate",
+              "terminate"
+            ]
+          }
+        ],
+        "feedbackChecks": [],
+        "finiteStudiesCompleted": 3,
+        "optionalMode": {
+          "supported": false,
+          "kind": "finite-campaign",
+          "reason": "Authored molecular networks first. An unlimited mode requires reachability certification with varied branching, cycles and accessibility; random graph labels are inadequate."
+        },
+        "errors": []
+      },
+      {
+        "id": "gel-window",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": true,
+        "inputMethod": "Chromium emulated touchscreen taps for all gameplay, loss, recovery, progression, restart and bank inputs; native selectOption for mode only",
+        "edgeCases": [
+          "Natural material/routing/budget failure ends play with an explanation; Undo recovers it and Reset clears that study",
+          "Restart works during an active construction",
+          "All three finite studies complete through real native controls; earned score banks once and terminal controls lock",
+          "Restart after campaign completion returns to study one with score zero",
+          "Unaudited template variations stay unavailable; finite mode remains playable",
+          "Premature branch-cycle formation traps an unconsumed interior site needed by a later monomer (separate pure-model regression)"
+        ],
+        "winActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "first:0",
+              "second:1",
+              "join",
+              "first:1",
+              "second:2",
+              "join",
+              "first:3",
+              "second:4",
+              "join",
+              "first:4",
+              "second:5",
+              "join",
+              "first:0",
+              "terminate",
+              "first:2",
+              "terminate",
+              "first:3",
+              "terminate",
+              "first:5",
+              "terminate",
+              "certify"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 1,
+            "actions": [
+              "first:0",
+              "second:1",
+              "join",
+              "first:0",
+              "second:2",
+              "join",
+              "first:0",
+              "second:3",
+              "join",
+              "first:3",
+              "second:4",
+              "join",
+              "first:4",
+              "second:5",
+              "join",
+              "first:1",
+              "second:2",
+              "join",
+              "certify"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 2,
+            "actions": [
+              "first:0",
+              "second:1",
+              "join",
+              "first:0",
+              "second:2",
+              "join",
+              "first:0",
+              "second:3",
+              "join",
+              "first:0",
+              "second:4",
+              "join",
+              "first:2",
+              "second:5",
+              "join",
+              "first:5",
+              "second:6",
+              "join",
+              "first:1",
+              "second:2",
+              "join",
+              "first:3",
+              "second:4",
+              "join",
+              "certify"
+            ]
+          }
+        ],
+        "lossActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "first:0",
+              "terminate",
+              "terminate",
+              "terminate"
+            ]
+          }
+        ],
+        "feedbackChecks": [],
+        "finiteStudiesCompleted": 3,
+        "optionalMode": {
+          "supported": false,
+          "kind": "finite-campaign",
+          "reason": "Authored molecular networks first. An unlimited mode requires reachability certification with varied branching, cycles and accessibility; random graph labels are inadequate."
+        },
+        "errors": []
+      },
+      {
+        "id": "emulsion-bench",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": false,
+        "inputMethod": "Native keyboard Enter and Space for every game action, loss, recovery, progression and restart; programmatic focus identifies the intended native control",
+        "edgeCases": [
+          "Natural material/routing/budget failure ends play with an explanation; Undo recovers it and Reset clears that study",
+          "Restart works during an active construction",
+          "All three finite studies complete through real native controls; earned score banks once and terminal controls lock",
+          "Restart after campaign completion returns to study one with score zero",
+          "Two generated endless challenges complete with accumulated score; later loss preserves earned score, Restart clears it, and Bank ends a new run",
+          "Split feedback promises the same remaining grace as both public child counters; the visible coalescence rule states both expired and either incomplete.",
+          "Splitting grows interface while conserving oil/coating; expired uncovered children coalesce without losing oil (separate pure-model regression)"
+        ],
+        "winActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "drop:0",
+              "coat:2",
+              "coat:2",
+              "split:0.3333333333333333",
+              "drop:0",
+              "coat:2",
+              "drop:1",
+              "coat:2",
+              "split:0.5",
+              "drop:1",
+              "coat:2",
+              "drop:2",
+              "coat:2",
+              "rest",
+              "rest",
+              "inspect"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 1,
+            "actions": [
+              "dilute",
+              "drop:0",
+              "coat:2",
+              "coat:2",
+              "split:0.3333333333333333",
+              "drop:0",
+              "coat:2",
+              "drop:1",
+              "coat:2",
+              "split:0.5",
+              "drop:1",
+              "coat:2",
+              "drop:2",
+              "coat:2",
+              "drop:3",
+              "coat:2",
+              "split:0.5",
+              "drop:3",
+              "coat:2",
+              "drop:4",
+              "coat:2",
+              "rest",
+              "rest",
+              "inspect"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 2,
+            "actions": [
+              "dilute",
+              "dilute",
+              "drop:0",
+              "coat:2",
+              "coat:2",
+              "split:0.3333333333333333",
+              "drop:0",
+              "coat:2",
+              "split:0.5",
+              "drop:0",
+              "coat:2",
+              "drop:1",
+              "coat:2",
+              "drop:2",
+              "coat:2",
+              "split:0.3333333333333333",
+              "drop:2",
+              "coat:2",
+              "split:0.5",
+              "drop:2",
+              "coat:2",
+              "drop:3",
+              "coat:2",
+              "drop:4",
+              "coat:2",
+              "split:0.3333333333333333",
+              "drop:4",
+              "coat:2",
+              "drop:5",
+              "coat:2",
+              "split:0.5",
+              "drop:5",
+              "coat:2",
+              "drop:6",
+              "coat:2",
+              "rest",
+              "rest",
+              "inspect"
+            ]
+          },
+          {
+            "mode": "endless",
+            "stage": 0,
+            "actions": [
+              "drop:0",
+              "coat:2",
+              "split:0.5",
+              "drop:0",
+              "coat:2",
+              "drop:1",
+              "coat:2",
+              "drop:2",
+              "coat:2",
+              "coat:2",
+              "split:0.3333333333333333",
+              "drop:2",
+              "coat:2",
+              "drop:3",
+              "coat:2",
+              "split:0.5",
+              "drop:3",
+              "coat:2",
+              "drop:4",
+              "coat:2",
+              "rest",
+              "rest",
+              "inspect"
+            ]
+          },
+          {
+            "mode": "endless",
+            "stage": 1,
+            "actions": [
+              "dilute",
+              "dilute",
+              "drop:0",
+              "coat:2",
+              "split:0.5",
+              "drop:0",
+              "coat:2",
+              "drop:1",
+              "coat:2",
+              "drop:2",
+              "coat:2",
+              "split:0.3333333333333333",
+              "drop:2",
+              "coat:2",
+              "drop:3",
+              "coat:2",
+              "split:0.5",
+              "drop:3",
+              "coat:2",
+              "drop:4",
+              "coat:2",
+              "rest",
+              "rest",
+              "inspect"
+            ]
+          }
+        ],
+        "lossActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "inspect",
+              "inspect",
+              "inspect"
+            ]
+          },
+          {
+            "mode": "endless",
+            "stage": 2,
+            "actions": [
+              "inspect",
+              "inspect",
+              "inspect"
+            ]
+          }
+        ],
+        "feedbackChecks": [
+          {
+            "action": "split:0.3333333333333333",
+            "promisedRemaining": 4,
+            "visibleChildrenRemaining": [
+              4,
+              4
+            ],
+            "matched": true
+          },
+          {
+            "action": "split:0.5",
+            "promisedRemaining": 4,
+            "visibleChildrenRemaining": [
+              4,
+              4
+            ],
+            "matched": true
+          },
+          {
+            "action": "split:0.3333333333333333",
+            "promisedRemaining": 4,
+            "visibleChildrenRemaining": [
+              4,
+              4
+            ],
+            "matched": true
+          },
+          {
+            "action": "split:0.5",
+            "promisedRemaining": 4,
+            "visibleChildrenRemaining": [
+              4,
+              4
+            ],
+            "matched": true
+          },
+          {
+            "action": "split:0.5",
+            "promisedRemaining": 4,
+            "visibleChildrenRemaining": [
+              4,
+              4
+            ],
+            "matched": true
+          },
+          {
+            "action": "split:0.3333333333333333",
+            "promisedRemaining": 4,
+            "visibleChildrenRemaining": [
+              4,
+              4
+            ],
+            "matched": true
+          },
+          {
+            "action": "split:0.5",
+            "promisedRemaining": 4,
+            "visibleChildrenRemaining": [
+              4,
+              4
+            ],
+            "matched": true
+          },
+          {
+            "action": "split:0.3333333333333333",
+            "promisedRemaining": 4,
+            "visibleChildrenRemaining": [
+              4,
+              4
+            ],
+            "matched": true
+          },
+          {
+            "action": "split:0.5",
+            "promisedRemaining": 4,
+            "visibleChildrenRemaining": [
+              4,
+              4
+            ],
+            "matched": true
+          },
+          {
+            "action": "split:0.3333333333333333",
+            "promisedRemaining": 4,
+            "visibleChildrenRemaining": [
+              4,
+              4
+            ],
+            "matched": true
+          },
+          {
+            "action": "split:0.5",
+            "promisedRemaining": 4,
+            "visibleChildrenRemaining": [
+              4,
+              4
+            ],
+            "matched": true
+          },
+          {
+            "action": "split:0.5",
+            "promisedRemaining": 4,
+            "visibleChildrenRemaining": [
+              4,
+              4
+            ],
+            "matched": true
+          },
+          {
+            "action": "split:0.3333333333333333",
+            "promisedRemaining": 4,
+            "visibleChildrenRemaining": [
+              4,
+              4
+            ],
+            "matched": true
+          },
+          {
+            "action": "split:0.5",
+            "promisedRemaining": 4,
+            "visibleChildrenRemaining": [
+              4,
+              4
+            ],
+            "matched": true
+          },
+          {
+            "action": "split:0.5",
+            "promisedRemaining": 4,
+            "visibleChildrenRemaining": [
+              4,
+              4
+            ],
+            "matched": true
+          },
+          {
+            "action": "split:0.3333333333333333",
+            "promisedRemaining": 4,
+            "visibleChildrenRemaining": [
+              4,
+              4
+            ],
+            "matched": true
+          },
+          {
+            "action": "split:0.5",
+            "promisedRemaining": 4,
+            "visibleChildrenRemaining": [
+              4,
+              4
+            ],
+            "matched": true
+          }
+        ],
+        "finiteStudiesCompleted": 3,
+        "optionalMode": {
+          "supported": true,
+          "kind": "challenge-stream",
+          "completedChallenges": 2,
+          "freshChallenges": true,
+          "scoreAccumulated": true,
+          "terminalRecovery": true,
+          "playerEndRun": true,
+          "lateStageProperties": true,
+          "lateStageScope": "100 pure-model seeded legal completions including stages17/128; browser tests cover stages0–2",
+          "lateStagePropertyMethod": "Pure-model100-seed replay completions including stages17/128, separately from browser stages0–2."
+        },
+        "errors": []
+      },
+      {
+        "id": "emulsion-bench",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": true,
+        "inputMethod": "Chromium emulated touchscreen taps for all gameplay, loss, recovery, progression, restart and bank inputs; native selectOption for mode only",
+        "edgeCases": [
+          "Natural material/routing/budget failure ends play with an explanation; Undo recovers it and Reset clears that study",
+          "Restart works during an active construction",
+          "All three finite studies complete through real native controls; earned score banks once and terminal controls lock",
+          "Restart after campaign completion returns to study one with score zero",
+          "Two generated endless challenges complete with accumulated score; later loss preserves earned score, Restart clears it, and Bank ends a new run",
+          "Split feedback promises the same remaining grace as both public child counters; the visible coalescence rule states both expired and either incomplete.",
+          "Splitting grows interface while conserving oil/coating; expired uncovered children coalesce without losing oil (separate pure-model regression)"
+        ],
+        "winActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "drop:0",
+              "coat:2",
+              "coat:2",
+              "split:0.3333333333333333",
+              "drop:0",
+              "coat:2",
+              "drop:1",
+              "coat:2",
+              "split:0.5",
+              "drop:1",
+              "coat:2",
+              "drop:2",
+              "coat:2",
+              "rest",
+              "rest",
+              "inspect"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 1,
+            "actions": [
+              "dilute",
+              "drop:0",
+              "coat:2",
+              "coat:2",
+              "split:0.3333333333333333",
+              "drop:0",
+              "coat:2",
+              "drop:1",
+              "coat:2",
+              "split:0.5",
+              "drop:1",
+              "coat:2",
+              "drop:2",
+              "coat:2",
+              "drop:3",
+              "coat:2",
+              "split:0.5",
+              "drop:3",
+              "coat:2",
+              "drop:4",
+              "coat:2",
+              "rest",
+              "rest",
+              "inspect"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 2,
+            "actions": [
+              "dilute",
+              "dilute",
+              "drop:0",
+              "coat:2",
+              "coat:2",
+              "split:0.3333333333333333",
+              "drop:0",
+              "coat:2",
+              "split:0.5",
+              "drop:0",
+              "coat:2",
+              "drop:1",
+              "coat:2",
+              "drop:2",
+              "coat:2",
+              "split:0.3333333333333333",
+              "drop:2",
+              "coat:2",
+              "split:0.5",
+              "drop:2",
+              "coat:2",
+              "drop:3",
+              "coat:2",
+              "drop:4",
+              "coat:2",
+              "split:0.3333333333333333",
+              "drop:4",
+              "coat:2",
+              "drop:5",
+              "coat:2",
+              "split:0.5",
+              "drop:5",
+              "coat:2",
+              "drop:6",
+              "coat:2",
+              "rest",
+              "rest",
+              "inspect"
+            ]
+          },
+          {
+            "mode": "endless",
+            "stage": 0,
+            "actions": [
+              "drop:0",
+              "coat:2",
+              "split:0.5",
+              "drop:0",
+              "coat:2",
+              "drop:1",
+              "coat:2",
+              "drop:2",
+              "coat:2",
+              "coat:2",
+              "split:0.3333333333333333",
+              "drop:2",
+              "coat:2",
+              "drop:3",
+              "coat:2",
+              "split:0.5",
+              "drop:3",
+              "coat:2",
+              "drop:4",
+              "coat:2",
+              "rest",
+              "rest",
+              "inspect"
+            ]
+          },
+          {
+            "mode": "endless",
+            "stage": 1,
+            "actions": [
+              "dilute",
+              "dilute",
+              "drop:0",
+              "coat:2",
+              "split:0.5",
+              "drop:0",
+              "coat:2",
+              "drop:1",
+              "coat:2",
+              "drop:2",
+              "coat:2",
+              "split:0.3333333333333333",
+              "drop:2",
+              "coat:2",
+              "drop:3",
+              "coat:2",
+              "split:0.5",
+              "drop:3",
+              "coat:2",
+              "drop:4",
+              "coat:2",
+              "rest",
+              "rest",
+              "inspect"
+            ]
+          }
+        ],
+        "lossActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "inspect",
+              "inspect",
+              "inspect"
+            ]
+          },
+          {
+            "mode": "endless",
+            "stage": 2,
+            "actions": [
+              "inspect",
+              "inspect",
+              "inspect"
+            ]
+          }
+        ],
+        "feedbackChecks": [
+          {
+            "action": "split:0.3333333333333333",
+            "promisedRemaining": 4,
+            "visibleChildrenRemaining": [
+              4,
+              4
+            ],
+            "matched": true
+          },
+          {
+            "action": "split:0.5",
+            "promisedRemaining": 4,
+            "visibleChildrenRemaining": [
+              4,
+              4
+            ],
+            "matched": true
+          },
+          {
+            "action": "split:0.3333333333333333",
+            "promisedRemaining": 4,
+            "visibleChildrenRemaining": [
+              4,
+              4
+            ],
+            "matched": true
+          },
+          {
+            "action": "split:0.5",
+            "promisedRemaining": 4,
+            "visibleChildrenRemaining": [
+              4,
+              4
+            ],
+            "matched": true
+          },
+          {
+            "action": "split:0.5",
+            "promisedRemaining": 4,
+            "visibleChildrenRemaining": [
+              4,
+              4
+            ],
+            "matched": true
+          },
+          {
+            "action": "split:0.3333333333333333",
+            "promisedRemaining": 4,
+            "visibleChildrenRemaining": [
+              4,
+              4
+            ],
+            "matched": true
+          },
+          {
+            "action": "split:0.5",
+            "promisedRemaining": 4,
+            "visibleChildrenRemaining": [
+              4,
+              4
+            ],
+            "matched": true
+          },
+          {
+            "action": "split:0.3333333333333333",
+            "promisedRemaining": 4,
+            "visibleChildrenRemaining": [
+              4,
+              4
+            ],
+            "matched": true
+          },
+          {
+            "action": "split:0.5",
+            "promisedRemaining": 4,
+            "visibleChildrenRemaining": [
+              4,
+              4
+            ],
+            "matched": true
+          },
+          {
+            "action": "split:0.3333333333333333",
+            "promisedRemaining": 4,
+            "visibleChildrenRemaining": [
+              4,
+              4
+            ],
+            "matched": true
+          },
+          {
+            "action": "split:0.5",
+            "promisedRemaining": 4,
+            "visibleChildrenRemaining": [
+              4,
+              4
+            ],
+            "matched": true
+          },
+          {
+            "action": "split:0.5",
+            "promisedRemaining": 4,
+            "visibleChildrenRemaining": [
+              4,
+              4
+            ],
+            "matched": true
+          },
+          {
+            "action": "split:0.3333333333333333",
+            "promisedRemaining": 4,
+            "visibleChildrenRemaining": [
+              4,
+              4
+            ],
+            "matched": true
+          },
+          {
+            "action": "split:0.5",
+            "promisedRemaining": 4,
+            "visibleChildrenRemaining": [
+              4,
+              4
+            ],
+            "matched": true
+          },
+          {
+            "action": "split:0.5",
+            "promisedRemaining": 4,
+            "visibleChildrenRemaining": [
+              4,
+              4
+            ],
+            "matched": true
+          },
+          {
+            "action": "split:0.3333333333333333",
+            "promisedRemaining": 4,
+            "visibleChildrenRemaining": [
+              4,
+              4
+            ],
+            "matched": true
+          },
+          {
+            "action": "split:0.5",
+            "promisedRemaining": 4,
+            "visibleChildrenRemaining": [
+              4,
+              4
+            ],
+            "matched": true
+          }
+        ],
+        "finiteStudiesCompleted": 3,
+        "optionalMode": {
+          "supported": true,
+          "kind": "challenge-stream",
+          "completedChallenges": 2,
+          "freshChallenges": true,
+          "scoreAccumulated": true,
+          "terminalRecovery": true,
+          "playerEndRun": true,
+          "lateStageProperties": true,
+          "lateStageScope": "100 pure-model seeded legal completions including stages17/128; browser tests cover stages0–2",
+          "lateStagePropertyMethod": "Pure-model100-seed replay completions including stages17/128, separately from browser stages0–2."
+        },
+        "errors": []
+      },
+      {
+        "id": "curved-compass",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": false,
+        "inputMethod": "Native keyboard Enter and Space for every game action, loss, recovery, progression and restart; programmatic focus identifies the intended native control",
+        "edgeCases": [
+          "Natural material/routing/budget failure ends play with an explanation; Undo recovers it and Reset clears that study",
+          "Restart works during an active construction",
+          "All three finite studies complete through real native controls; earned score banks once and terminal controls lock",
+          "Restart after campaign completion returns to study one with score zero",
+          "Unaudited template variations stay unavailable; finite mode remains playable",
+          "A closed spherical path returns to its point with a different transported tangent direction (separate pure-model regression)"
+        ],
+        "winActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "arc:90",
+              "turn:90",
+              "arc:90",
+              "join"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 1,
+            "actions": [
+              "arc:90",
+              "turn:90",
+              "arc:90",
+              "turn:90",
+              "arc:90",
+              "join"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 2,
+            "actions": [
+              "arc:60",
+              "turn:90",
+              "arc:60",
+              "turn:-45",
+              "arc:90",
+              "join"
+            ]
+          }
+        ],
+        "lossActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "arc:90",
+              "arc:90",
+              "arc:90"
+            ]
+          }
+        ],
+        "feedbackChecks": [],
+        "finiteStudiesCompleted": 3,
+        "optionalMode": {
+          "supported": false,
+          "kind": "finite-campaign",
+          "reason": "Three authored spherical seam routes. A generator needs meaningful varied cap geometry and certified orientation-aware legal paths, not rotations of one triangle."
+        },
+        "errors": []
+      },
+      {
+        "id": "curved-compass",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": true,
+        "inputMethod": "Chromium emulated touchscreen taps for all gameplay, loss, recovery, progression, restart and bank inputs; native selectOption for mode only",
+        "edgeCases": [
+          "Natural material/routing/budget failure ends play with an explanation; Undo recovers it and Reset clears that study",
+          "Restart works during an active construction",
+          "All three finite studies complete through real native controls; earned score banks once and terminal controls lock",
+          "Restart after campaign completion returns to study one with score zero",
+          "Unaudited template variations stay unavailable; finite mode remains playable",
+          "A closed spherical path returns to its point with a different transported tangent direction (separate pure-model regression)"
+        ],
+        "winActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "arc:90",
+              "turn:90",
+              "arc:90",
+              "join"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 1,
+            "actions": [
+              "arc:90",
+              "turn:90",
+              "arc:90",
+              "turn:90",
+              "arc:90",
+              "join"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 2,
+            "actions": [
+              "arc:60",
+              "turn:90",
+              "arc:60",
+              "turn:-45",
+              "arc:90",
+              "join"
+            ]
+          }
+        ],
+        "lossActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "arc:90",
+              "arc:90",
+              "arc:90"
+            ]
+          }
+        ],
+        "feedbackChecks": [],
+        "finiteStudiesCompleted": 3,
+        "optionalMode": {
+          "supported": false,
+          "kind": "finite-campaign",
+          "reason": "Three authored spherical seam routes. A generator needs meaningful varied cap geometry and certified orientation-aware legal paths, not rotations of one triangle."
+        },
+        "errors": []
+      },
+      {
+        "id": "three-flats",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": false,
+        "inputMethod": "Native keyboard Enter and Space for every game action, loss, recovery, progression and restart; programmatic focus identifies the intended native control",
+        "edgeCases": [
+          "Natural material/routing/budget failure ends play with an explanation; Undo recovers it and Reset clears that study",
+          "Restart works during an active construction",
+          "All three finite studies complete through real native controls; earned score banks once and terminal controls lock",
+          "Restart after campaign completion returns to study one with score zero",
+          "Unaudited template variations stay unavailable; finite mode remains playable",
+          "Complementary full contact conceals individual relief; a third/rotated pairing reveals actual high contacts (separate pure-model regression)"
+        ],
+        "winActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "first:0",
+              "second:1",
+              "rotation:0",
+              "lap",
+              "gauge"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 1,
+            "actions": [
+              "first:0",
+              "second:1",
+              "rotation:1",
+              "lap",
+              "first:0",
+              "second:2",
+              "rotation:0",
+              "lap",
+              "first:0",
+              "second:1",
+              "rotation:1",
+              "lap",
+              "first:1",
+              "second:2",
+              "rotation:0",
+              "lap",
+              "gauge"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 2,
+            "actions": [
+              "first:0",
+              "second:1",
+              "rotation:1",
+              "lap",
+              "first:0",
+              "second:1",
+              "rotation:2",
+              "lap",
+              "first:0",
+              "second:2",
+              "rotation:0",
+              "lap",
+              "first:0",
+              "second:2",
+              "rotation:3",
+              "lap",
+              "gauge"
+            ]
+          }
+        ],
+        "lossActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "lap",
+              "lap",
+              "lap",
+              "lap"
+            ]
+          }
+        ],
+        "feedbackChecks": [],
+        "finiteStudiesCompleted": 3,
+        "optionalMode": {
+          "supported": false,
+          "kind": "finite-campaign",
+          "reason": "Authored contact/wear examples first. A generator needs witnessed convergence and stock safety over varied complementary maps, not arbitrary initial relief."
+        },
+        "errors": []
+      },
+      {
+        "id": "three-flats",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": true,
+        "inputMethod": "Chromium emulated touchscreen taps for all gameplay, loss, recovery, progression, restart and bank inputs; native selectOption for mode only",
+        "edgeCases": [
+          "Natural material/routing/budget failure ends play with an explanation; Undo recovers it and Reset clears that study",
+          "Restart works during an active construction",
+          "All three finite studies complete through real native controls; earned score banks once and terminal controls lock",
+          "Restart after campaign completion returns to study one with score zero",
+          "Unaudited template variations stay unavailable; finite mode remains playable",
+          "Complementary full contact conceals individual relief; a third/rotated pairing reveals actual high contacts (separate pure-model regression)"
+        ],
+        "winActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "first:0",
+              "second:1",
+              "rotation:0",
+              "lap",
+              "gauge"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 1,
+            "actions": [
+              "first:0",
+              "second:1",
+              "rotation:1",
+              "lap",
+              "first:0",
+              "second:2",
+              "rotation:0",
+              "lap",
+              "first:0",
+              "second:1",
+              "rotation:1",
+              "lap",
+              "first:1",
+              "second:2",
+              "rotation:0",
+              "lap",
+              "gauge"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 2,
+            "actions": [
+              "first:0",
+              "second:1",
+              "rotation:1",
+              "lap",
+              "first:0",
+              "second:1",
+              "rotation:2",
+              "lap",
+              "first:0",
+              "second:2",
+              "rotation:0",
+              "lap",
+              "first:0",
+              "second:2",
+              "rotation:3",
+              "lap",
+              "gauge"
+            ]
+          }
+        ],
+        "lossActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "lap",
+              "lap",
+              "lap",
+              "lap"
+            ]
+          }
+        ],
+        "feedbackChecks": [],
+        "finiteStudiesCompleted": 3,
+        "optionalMode": {
+          "supported": false,
+          "kind": "finite-campaign",
+          "reason": "Authored contact/wear examples first. A generator needs witnessed convergence and stock safety over varied complementary maps, not arbitrary initial relief."
+        },
+        "errors": []
+      },
+      {
+        "id": "delaunay-bench",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": false,
+        "inputMethod": "Native keyboard Enter and Space for every game action, loss, recovery, progression and restart; programmatic focus identifies the intended native control",
+        "edgeCases": [
+          "Natural material/routing/budget failure ends play with an explanation; Undo recovers it and Reset clears that study",
+          "Restart works during an active construction",
+          "All three finite studies complete through real native controls; earned score banks once and terminal controls lock",
+          "Restart after campaign completion returns to study one with score zero",
+          "Two generated endless challenges complete with accumulated score; later loss preserves earned score, Restart clears it, and Bank ends a new run",
+          "A diagonal flip repairs its two actual triangles; fixed seams and constrained coverage survive (separate pure-model regression)"
+        ],
+        "winActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "edge:1:3",
+              "flip",
+              "certify"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 1,
+            "actions": [
+              "edge:1:4",
+              "flip",
+              "certify"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 2,
+            "actions": [
+              "edge:0:4",
+              "flip",
+              "certify"
+            ]
+          },
+          {
+            "mode": "endless",
+            "stage": 0,
+            "actions": [
+              "edge:1:3",
+              "flip",
+              "certify"
+            ]
+          },
+          {
+            "mode": "endless",
+            "stage": 1,
+            "actions": [
+              "edge:1:4",
+              "flip",
+              "edge:1:3",
+              "flip",
+              "certify"
+            ]
+          }
+        ],
+        "lossActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "flip",
+              "flip",
+              "flip",
+              "flip",
+              "flip"
+            ]
+          },
+          {
+            "mode": "endless",
+            "stage": 2,
+            "actions": [
+              "flip",
+              "flip",
+              "flip",
+              "flip",
+              "flip",
+              "flip",
+              "flip",
+              "flip",
+              "flip",
+              "flip",
+              "flip",
+              "flip",
+              "flip",
+              "flip",
+              "flip",
+              "flip",
+              "flip",
+              "flip",
+              "flip",
+              "flip",
+              "flip",
+              "flip",
+              "flip",
+              "flip",
+              "flip"
+            ]
+          }
+        ],
+        "feedbackChecks": [],
+        "finiteStudiesCompleted": 3,
+        "optionalMode": {
+          "supported": true,
+          "kind": "challenge-stream",
+          "completedChallenges": 2,
+          "freshChallenges": true,
+          "scoreAccumulated": true,
+          "terminalRecovery": true,
+          "playerEndRun": true,
+          "lateStageProperties": true,
+          "lateStageScope": "100 pure-model seeded legal completions including stages17/128; browser tests cover stages0–2",
+          "lateStagePropertyMethod": "Pure-model100-seed replay completions including stages17/128, separately from browser stages0–2."
+        },
+        "errors": []
+      },
+      {
+        "id": "delaunay-bench",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": true,
+        "inputMethod": "Chromium emulated touchscreen taps for all gameplay, loss, recovery, progression, restart and bank inputs; native selectOption for mode only",
+        "edgeCases": [
+          "Natural material/routing/budget failure ends play with an explanation; Undo recovers it and Reset clears that study",
+          "Restart works during an active construction",
+          "All three finite studies complete through real native controls; earned score banks once and terminal controls lock",
+          "Restart after campaign completion returns to study one with score zero",
+          "Two generated endless challenges complete with accumulated score; later loss preserves earned score, Restart clears it, and Bank ends a new run",
+          "A diagonal flip repairs its two actual triangles; fixed seams and constrained coverage survive (separate pure-model regression)"
+        ],
+        "winActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "edge:1:3",
+              "flip",
+              "certify"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 1,
+            "actions": [
+              "edge:1:4",
+              "flip",
+              "certify"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 2,
+            "actions": [
+              "edge:0:4",
+              "flip",
+              "certify"
+            ]
+          },
+          {
+            "mode": "endless",
+            "stage": 0,
+            "actions": [
+              "edge:1:3",
+              "flip",
+              "certify"
+            ]
+          },
+          {
+            "mode": "endless",
+            "stage": 1,
+            "actions": [
+              "edge:1:4",
+              "flip",
+              "edge:1:3",
+              "flip",
+              "certify"
+            ]
+          }
+        ],
+        "lossActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "flip",
+              "flip",
+              "flip",
+              "flip",
+              "flip"
+            ]
+          },
+          {
+            "mode": "endless",
+            "stage": 2,
+            "actions": [
+              "flip",
+              "flip",
+              "flip",
+              "flip",
+              "flip",
+              "flip",
+              "flip",
+              "flip",
+              "flip",
+              "flip",
+              "flip",
+              "flip",
+              "flip",
+              "flip",
+              "flip",
+              "flip",
+              "flip",
+              "flip",
+              "flip",
+              "flip",
+              "flip",
+              "flip",
+              "flip",
+              "flip",
+              "flip"
+            ]
+          }
+        ],
+        "feedbackChecks": [],
+        "finiteStudiesCompleted": 3,
+        "optionalMode": {
+          "supported": true,
+          "kind": "challenge-stream",
+          "completedChallenges": 2,
+          "freshChallenges": true,
+          "scoreAccumulated": true,
+          "terminalRecovery": true,
+          "playerEndRun": true,
+          "lateStageProperties": true,
+          "lateStageScope": "100 pure-model seeded legal completions including stages17/128; browser tests cover stages0–2",
+          "lateStagePropertyMethod": "Pure-model100-seed replay completions including stages17/128, separately from browser stages0–2."
+        },
+        "errors": []
+      },
+      {
+        "id": "thread-portrait",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": false,
+        "inputMethod": "Native keyboard Enter and Space for every game action, loss, recovery, progression and restart; programmatic focus identifies the intended native control",
+        "edgeCases": [
+          "Natural material/routing/budget failure ends play with an explanation; Undo recovers it and Reset clears that study",
+          "Restart works during an active construction",
+          "All three finite studies complete through real native controls; earned score banks once and terminal controls lock",
+          "Restart after campaign completion returns to study one with score zero",
+          "Two generated endless challenges complete with accumulated score; later loss preserves earned score, Restart clears it, and Bank ends a new run",
+          "A continuous chord changes every geometric crossing cell together and cannot erase excess density (separate pure-model regression)"
+        ],
+        "winActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "peg:2",
+              "peg:1",
+              "peg:3",
+              "certify"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 1,
+            "actions": [
+              "peg:3",
+              "peg:1",
+              "peg:4",
+              "peg:2",
+              "peg:5",
+              "certify"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 2,
+            "actions": [
+              "peg:4",
+              "peg:1",
+              "peg:5",
+              "peg:2",
+              "peg:6",
+              "peg:3",
+              "certify"
+            ]
+          },
+          {
+            "mode": "endless",
+            "stage": 0,
+            "actions": [
+              "peg:2",
+              "peg:1",
+              "peg:3",
+              "certify"
+            ]
+          },
+          {
+            "mode": "endless",
+            "stage": 1,
+            "actions": [
+              "peg:4",
+              "peg:1",
+              "peg:3",
+              "peg:2",
+              "peg:5",
+              "certify"
+            ]
+          }
+        ],
+        "lossActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "certify",
+              "certify",
+              "certify"
+            ]
+          },
+          {
+            "mode": "endless",
+            "stage": 2,
+            "actions": [
+              "peg:4"
+            ]
+          }
+        ],
+        "feedbackChecks": [],
+        "finiteStudiesCompleted": 3,
+        "optionalMode": {
+          "supported": true,
+          "kind": "challenge-stream",
+          "completedChallenges": 2,
+          "freshChallenges": true,
+          "scoreAccumulated": true,
+          "terminalRecovery": true,
+          "playerEndRun": true,
+          "lateStageProperties": true,
+          "lateStageScope": "100 pure-model seeded legal completions including stages17/128; browser tests cover stages0–2",
+          "lateStagePropertyMethod": "Pure-model100-seed replay completions including stages17/128, separately from browser stages0–2."
+        },
+        "errors": []
+      },
+      {
+        "id": "thread-portrait",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": true,
+        "inputMethod": "Chromium emulated touchscreen taps for all gameplay, loss, recovery, progression, restart and bank inputs; native selectOption for mode only",
+        "edgeCases": [
+          "Natural material/routing/budget failure ends play with an explanation; Undo recovers it and Reset clears that study",
+          "Restart works during an active construction",
+          "All three finite studies complete through real native controls; earned score banks once and terminal controls lock",
+          "Restart after campaign completion returns to study one with score zero",
+          "Two generated endless challenges complete with accumulated score; later loss preserves earned score, Restart clears it, and Bank ends a new run",
+          "A continuous chord changes every geometric crossing cell together and cannot erase excess density (separate pure-model regression)"
+        ],
+        "winActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "peg:2",
+              "peg:1",
+              "peg:3",
+              "certify"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 1,
+            "actions": [
+              "peg:3",
+              "peg:1",
+              "peg:4",
+              "peg:2",
+              "peg:5",
+              "certify"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 2,
+            "actions": [
+              "peg:4",
+              "peg:1",
+              "peg:5",
+              "peg:2",
+              "peg:6",
+              "peg:3",
+              "certify"
+            ]
+          },
+          {
+            "mode": "endless",
+            "stage": 0,
+            "actions": [
+              "peg:2",
+              "peg:1",
+              "peg:3",
+              "certify"
+            ]
+          },
+          {
+            "mode": "endless",
+            "stage": 1,
+            "actions": [
+              "peg:4",
+              "peg:1",
+              "peg:3",
+              "peg:2",
+              "peg:5",
+              "certify"
+            ]
+          }
+        ],
+        "lossActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "certify",
+              "certify",
+              "certify"
+            ]
+          },
+          {
+            "mode": "endless",
+            "stage": 2,
+            "actions": [
+              "peg:4"
+            ]
+          }
+        ],
+        "feedbackChecks": [],
+        "finiteStudiesCompleted": 3,
+        "optionalMode": {
+          "supported": true,
+          "kind": "challenge-stream",
+          "completedChallenges": 2,
+          "freshChallenges": true,
+          "scoreAccumulated": true,
+          "terminalRecovery": true,
+          "playerEndRun": true,
+          "lateStageProperties": true,
+          "lateStageScope": "100 pure-model seeded legal completions including stages17/128; browser tests cover stages0–2",
+          "lateStagePropertyMethod": "Pure-model100-seed replay completions including stages17/128, separately from browser stages0–2."
+        },
+        "errors": []
+      },
+      {
+        "id": "rubber-boundary",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": false,
+        "inputMethod": "Native keyboard Enter and Space for every game action, loss, recovery, progression and restart; programmatic focus identifies the intended native control",
+        "edgeCases": [
+          "Visible first/second tangent captions identify the replaced counterclockwise chain independently of click order.",
+          "Natural material/routing/budget failure ends play with an explanation; Undo recovers it and Reset clears that study",
+          "Restart works during an active construction",
+          "All three finite studies complete through real native controls; earned score banks once and terminal controls lock",
+          "Restart after campaign completion returns to study one with score zero",
+          "Two generated endless challenges complete with accumulated score; later loss preserves earned score, Restart clears it, and Bank ends a new run",
+          "Retired support points remain enclosed; incorrect tangent-chain replacement cuts a required site or reverses a corner (separate pure-model regression)"
+        ],
+        "winActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "left:1",
+              "right:2",
+              "rehang",
+              "left:4",
+              "right:3",
+              "rehang",
+              "left:3",
+              "right:0",
+              "rehang"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 1,
+            "actions": [
+              "left:0",
+              "right:2",
+              "rehang",
+              "left:4",
+              "right:3",
+              "rehang",
+              "left:5",
+              "right:0",
+              "rehang"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 2,
+            "actions": [
+              "left:1",
+              "right:3",
+              "rehang",
+              "left:1",
+              "right:3",
+              "rehang",
+              "left:5",
+              "right:0",
+              "rehang"
+            ]
+          },
+          {
+            "mode": "endless",
+            "stage": 0,
+            "actions": [
+              "left:3",
+              "right:1",
+              "rehang",
+              "left:4",
+              "right:2",
+              "rehang",
+              "left:3",
+              "right:4",
+              "rehang"
+            ]
+          },
+          {
+            "mode": "endless",
+            "stage": 1,
+            "actions": [
+              "left:1",
+              "right:2",
+              "rehang",
+              "left:4",
+              "right:3",
+              "rehang",
+              "left:5",
+              "right:0",
+              "rehang"
+            ]
+          }
+        ],
+        "lossActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "left:0",
+              "right:1",
+              "rehang"
+            ]
+          },
+          {
+            "mode": "endless",
+            "stage": 2,
+            "actions": [
+              "left:2",
+              "right:3",
+              "rehang"
+            ]
+          }
+        ],
+        "feedbackChecks": [],
+        "finiteStudiesCompleted": 3,
+        "optionalMode": {
+          "supported": true,
+          "kind": "challenge-stream",
+          "completedChallenges": 2,
+          "freshChallenges": true,
+          "scoreAccumulated": true,
+          "terminalRecovery": true,
+          "playerEndRun": true,
+          "lateStageProperties": true,
+          "lateStageScope": "100 pure-model seeded legal completions including stages17/128; browser tests cover stages0–2",
+          "lateStagePropertyMethod": "Pure-model100-seed replay completions including stages17/128, separately from browser stages0–2."
+        },
+        "errors": []
+      },
+      {
+        "id": "rubber-boundary",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": true,
+        "inputMethod": "Chromium emulated touchscreen taps for all gameplay, loss, recovery, progression, restart and bank inputs; native selectOption for mode only",
+        "edgeCases": [
+          "Visible first/second tangent captions identify the replaced counterclockwise chain independently of click order.",
+          "Natural material/routing/budget failure ends play with an explanation; Undo recovers it and Reset clears that study",
+          "Restart works during an active construction",
+          "All three finite studies complete through real native controls; earned score banks once and terminal controls lock",
+          "Restart after campaign completion returns to study one with score zero",
+          "Two generated endless challenges complete with accumulated score; later loss preserves earned score, Restart clears it, and Bank ends a new run",
+          "Retired support points remain enclosed; incorrect tangent-chain replacement cuts a required site or reverses a corner (separate pure-model regression)"
+        ],
+        "winActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "left:1",
+              "right:2",
+              "rehang",
+              "left:4",
+              "right:3",
+              "rehang",
+              "left:3",
+              "right:0",
+              "rehang"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 1,
+            "actions": [
+              "left:0",
+              "right:2",
+              "rehang",
+              "left:4",
+              "right:3",
+              "rehang",
+              "left:5",
+              "right:0",
+              "rehang"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 2,
+            "actions": [
+              "left:1",
+              "right:3",
+              "rehang",
+              "left:1",
+              "right:3",
+              "rehang",
+              "left:5",
+              "right:0",
+              "rehang"
+            ]
+          },
+          {
+            "mode": "endless",
+            "stage": 0,
+            "actions": [
+              "left:3",
+              "right:1",
+              "rehang",
+              "left:4",
+              "right:2",
+              "rehang",
+              "left:3",
+              "right:4",
+              "rehang"
+            ]
+          },
+          {
+            "mode": "endless",
+            "stage": 1,
+            "actions": [
+              "left:1",
+              "right:2",
+              "rehang",
+              "left:4",
+              "right:3",
+              "rehang",
+              "left:5",
+              "right:0",
+              "rehang"
+            ]
+          }
+        ],
+        "lossActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "left:0",
+              "right:1",
+              "rehang"
+            ]
+          },
+          {
+            "mode": "endless",
+            "stage": 2,
+            "actions": [
+              "left:2",
+              "right:3",
+              "rehang"
+            ]
+          }
+        ],
+        "feedbackChecks": [],
+        "finiteStudiesCompleted": 3,
+        "optionalMode": {
+          "supported": true,
+          "kind": "challenge-stream",
+          "completedChallenges": 2,
+          "freshChallenges": true,
+          "scoreAccumulated": true,
+          "terminalRecovery": true,
+          "playerEndRun": true,
+          "lateStageProperties": true,
+          "lateStageScope": "100 pure-model seeded legal completions including stages17/128; browser tests cover stages0–2",
+          "lateStagePropertyMethod": "Pure-model100-seed replay completions including stages17/128, separately from browser stages0–2."
+        },
+        "errors": []
+      },
+      {
+        "id": "powder-press",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": false,
+        "inputMethod": "Native keyboard Enter and Space for every game action, loss, recovery, progression and restart; programmatic focus identifies the intended native control",
+        "edgeCases": [
+          "Natural material/routing/budget failure ends play with an explanation; Undo recovers it and Reset clears that study",
+          "Restart works during an active construction",
+          "All three finite studies complete through real native controls; earned score banks once and terminal controls lock",
+          "Restart after campaign completion returns to study one with score zero",
+          "Unaudited template variations stay unavailable; finite mode remains playable",
+          "Press-face history changes porosity; earlier compaction changes stress transmitted through current thickness (separate pure-model regression)"
+        ],
+        "winActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "face:0",
+              "press:6",
+              "unload",
+              "eject"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 1,
+            "actions": [
+              "face:0",
+              "press:4",
+              "face:1",
+              "press:6",
+              "face:0",
+              "press:8",
+              "unload",
+              "eject"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 2,
+            "actions": [
+              "face:0",
+              "press:6",
+              "face:0",
+              "press:10",
+              "face:1",
+              "press:6",
+              "face:1",
+              "press:10",
+              "unload",
+              "eject"
+            ]
+          }
+        ],
+        "lossActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "press:10"
+            ]
+          }
+        ],
+        "feedbackChecks": [],
+        "finiteStudiesCompleted": 3,
+        "optionalMode": {
+          "supported": false,
+          "kind": "finite-campaign",
+          "reason": "Authored compaction histories first. A future generator must certify path-dependent densification and unload gradients, not scale the same pressure schedule."
+        },
+        "errors": []
+      },
+      {
+        "id": "powder-press",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": true,
+        "inputMethod": "Chromium emulated touchscreen taps for all gameplay, loss, recovery, progression, restart and bank inputs; native selectOption for mode only",
+        "edgeCases": [
+          "Natural material/routing/budget failure ends play with an explanation; Undo recovers it and Reset clears that study",
+          "Restart works during an active construction",
+          "All three finite studies complete through real native controls; earned score banks once and terminal controls lock",
+          "Restart after campaign completion returns to study one with score zero",
+          "Unaudited template variations stay unavailable; finite mode remains playable",
+          "Press-face history changes porosity; earlier compaction changes stress transmitted through current thickness (separate pure-model regression)"
+        ],
+        "winActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "face:0",
+              "press:6",
+              "unload",
+              "eject"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 1,
+            "actions": [
+              "face:0",
+              "press:4",
+              "face:1",
+              "press:6",
+              "face:0",
+              "press:8",
+              "unload",
+              "eject"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 2,
+            "actions": [
+              "face:0",
+              "press:6",
+              "face:0",
+              "press:10",
+              "face:1",
+              "press:6",
+              "face:1",
+              "press:10",
+              "unload",
+              "eject"
+            ]
+          }
+        ],
+        "lossActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "press:10"
+            ]
+          }
+        ],
+        "feedbackChecks": [],
+        "finiteStudiesCompleted": 3,
+        "optionalMode": {
+          "supported": false,
+          "kind": "finite-campaign",
+          "reason": "Authored compaction histories first. A future generator must certify path-dependent densification and unload gradients, not scale the same pressure schedule."
+        },
+        "errors": []
+      },
+      {
+        "id": "clay-spindle",
+        "profile": "desktop",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": false,
+        "inputMethod": "Native keyboard Enter and Space for every game action, loss, recovery, progression and restart; programmatic focus identifies the intended native control",
+        "edgeCases": [
+          "Natural material/routing/budget failure ends play with an explanation; Undo recovers it and Reset clears that study",
+          "Restart works during an active construction",
+          "All three finite studies complete through real native controls; earned score banks once and terminal controls lock",
+          "Restart after campaign completion returns to study one with score zero",
+          "Unaudited template variations stay unavailable; finite mode remains playable",
+          "Widening thins a conserved wall; neighbor transfer changes both bores and an early neck blocks inner finishing (separate pure-model regression)"
+        ],
+        "winActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "band:0",
+              "shape:0.1",
+              "shape:0.1",
+              "band:1",
+              "shape:0.1",
+              "shape:0.1",
+              "band:2",
+              "shape:0.1",
+              "shape:0.1",
+              "band:0",
+              "inner",
+              "gauge"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 1,
+            "actions": [
+              "band:0",
+              "pull:1",
+              "band:0",
+              "band:1",
+              "shape:0.1",
+              "shape:0.1",
+              "band:2",
+              "band:0",
+              "inner",
+              "gauge"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 2,
+            "actions": [
+              "band:2",
+              "pull:-1",
+              "band:0",
+              "shape:0.1",
+              "shape:0.1",
+              "band:1",
+              "shape:0.1",
+              "shape:0.1",
+              "band:0",
+              "inner",
+              "band:1",
+              "inner",
+              "band:2",
+              "shape:-0.1",
+              "shape:-0.1",
+              "shape:-0.1",
+              "shape:-0.1",
+              "shape:-0.1",
+              "gauge"
+            ]
+          }
+        ],
+        "lossActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "shape:0.1",
+              "shape:0.1",
+              "shape:0.1",
+              "shape:0.1",
+              "shape:0.1",
+              "shape:0.1",
+              "shape:0.1",
+              "shape:0.1"
+            ]
+          }
+        ],
+        "feedbackChecks": [],
+        "finiteStudiesCompleted": 3,
+        "optionalMode": {
+          "supported": false,
+          "kind": "finite-campaign",
+          "reason": "Three authored vessel profiles first. A generated mode needs a certified material-transfer and inner-tool-access path with varied geometry; target radius relabeling alone is unacceptable."
+        },
+        "errors": []
+      },
+      {
+        "id": "clay-spindle",
+        "profile": "mobile-touch",
+        "passed": true,
+        "outcome": "win",
+        "restart": true,
+        "touchOnly": true,
+        "inputMethod": "Chromium emulated touchscreen taps for all gameplay, loss, recovery, progression, restart and bank inputs; native selectOption for mode only",
+        "edgeCases": [
+          "Natural material/routing/budget failure ends play with an explanation; Undo recovers it and Reset clears that study",
+          "Restart works during an active construction",
+          "All three finite studies complete through real native controls; earned score banks once and terminal controls lock",
+          "Restart after campaign completion returns to study one with score zero",
+          "Unaudited template variations stay unavailable; finite mode remains playable",
+          "Widening thins a conserved wall; neighbor transfer changes both bores and an early neck blocks inner finishing (separate pure-model regression)"
+        ],
+        "winActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "band:0",
+              "shape:0.1",
+              "shape:0.1",
+              "band:1",
+              "shape:0.1",
+              "shape:0.1",
+              "band:2",
+              "shape:0.1",
+              "shape:0.1",
+              "band:0",
+              "inner",
+              "gauge"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 1,
+            "actions": [
+              "band:0",
+              "pull:1",
+              "band:0",
+              "band:1",
+              "shape:0.1",
+              "shape:0.1",
+              "band:2",
+              "band:0",
+              "inner",
+              "gauge"
+            ]
+          },
+          {
+            "mode": "finite",
+            "stage": 2,
+            "actions": [
+              "band:2",
+              "pull:-1",
+              "band:0",
+              "shape:0.1",
+              "shape:0.1",
+              "band:1",
+              "shape:0.1",
+              "shape:0.1",
+              "band:0",
+              "inner",
+              "band:1",
+              "inner",
+              "band:2",
+              "shape:-0.1",
+              "shape:-0.1",
+              "shape:-0.1",
+              "shape:-0.1",
+              "shape:-0.1",
+              "gauge"
+            ]
+          }
+        ],
+        "lossActions": [
+          {
+            "mode": "finite",
+            "stage": 0,
+            "actions": [
+              "shape:0.1",
+              "shape:0.1",
+              "shape:0.1",
+              "shape:0.1",
+              "shape:0.1",
+              "shape:0.1",
+              "shape:0.1",
+              "shape:0.1"
+            ]
+          }
+        ],
+        "feedbackChecks": [],
+        "finiteStudiesCompleted": 3,
+        "optionalMode": {
+          "supported": false,
+          "kind": "finite-campaign",
+          "reason": "Three authored vessel profiles first. A generated mode needs a certified material-transfer and inner-tool-access path with varied geometry; target radius relabeling alone is unacceptable."
+        },
+        "errors": []
+      }
+    ]
+  },
+  "finishedAt": "2026-10-02T22:21:47.255Z"
+}

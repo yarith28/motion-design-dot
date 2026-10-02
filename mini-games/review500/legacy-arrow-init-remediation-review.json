@@ -1,0 +1,1250 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-02T22:55:56.583Z",
+  "scope": "Independent current-source reinspection and isolated legal-model checks of the sole preserved Arrow Audit initialization remediation; native owner regression is separate evidence.",
+  "sourceUnchanged": true,
+  "sourceFiles": [
+    {
+      "path": "mini-games/puzzle-lab/engines.js",
+      "sha256": "8594a9e2f463b49188c8e4050c95fd9510360548d74a5654223b6d43902cae57"
+    },
+    {
+      "path": "mini-games/puzzle-lab/room.js",
+      "sha256": "dc06145590e8e587abba9b8648f0a54514a175cc9c15a1ef7b3ea291d5ff53ee"
+    },
+    {
+      "path": "mini-games/puzzle-lab/index.html",
+      "sha256": "973bc398d8ccb4af75e65ab6bdcf6edf88b6822f194eed8a860967e8cdbbec3a"
+    },
+    {
+      "path": "mini-games/puzzle-lab/games.json",
+      "sha256": "3065067271aa47a2c6148bba90c3a69deb954d6e4fc63f53c98a72d2de07103f"
+    }
+  ],
+  "historicalOriginal": {
+    "path": "mini-games/puzzle-lab/engines.js",
+    "sha256": "d6de5a4d7a8efe01682a384259c780a3fa88ecd75f32ffa5d9eaa46167d0ebcd",
+    "archivePath": "mini-games/preservation/historical/puzzle-lab-engines.js"
+  },
+  "delta": {
+    "parser": "Acorn engine init body boundaries",
+    "beforeBody": {
+      "start": 38356,
+      "end": 38883
+    },
+    "afterBody": {
+      "start": 38356,
+      "end": 39323
+    },
+    "allBytesOutsideInitIdentical": true,
+    "other19EnginesAndArrowRenderCheckUnchanged": true
+  },
+  "sourceEvidence": [
+    {
+      "file": "mini-games/puzzle-lab/engines.js",
+      "line": 176,
+      "function": "Arrow Audit init mandatory triangle",
+      "excerpt": "for(let a=0;a<n;a++)for(let b=a+1;b<n;b++)if(b===a+1||(a===0&&b===2)||Math.random()<.45)edges.push([order[a],order[b]]);"
+    },
+    {
+      "file": "mini-games/puzzle-lab/engines.js",
+      "line": 179,
+      "function": "candidate exhaustive minimum reversal budget",
+      "excerpt": "while(budget<4&&cycle(n,initial)&&!subsets(initial.length,budget).some(set=>!cycle(n,initial.map((e,i)=>set.includes(i)?[e[1],e[0]]:e))))budget++;"
+    },
+    {
+      "file": "mini-games/puzzle-lab/engines.js",
+      "line": 182,
+      "function": "bounded candidate loop",
+      "excerpt": "for(let attempt=0;attempt<128;attempt++){"
+    },
+    {
+      "file": "mini-games/puzzle-lab/engines.js",
+      "line": 187,
+      "function": "constructive cyclic fallback",
+      "excerpt": "return candidate([[order[0],order[1]],[order[1],order[2]]].map(([a,b])=>edges.findIndex(([x,y])=>x===a&&y===b)));"
+    },
+    {
+      "file": "mini-games/puzzle-lab/engines.js",
+      "line": 188,
+      "function": "unchanged rendering/check contract",
+      "excerpt": "},render(c){const m=c.m;c.clue(`Reversals ${m.flipped.length}/${m.budget}. Every task must admit an order with all arrows pointing forward. No task labels imply a correct order.`);c.cards();m.edges.forEach(([a,b],i)=>{const rev=m.flipped.includes(i);c.button(`${letter(rev?b:a)} → ${letter(rev?a:b)}${rev?' · reversed':''}`,'edge-'+i,()=>c.act(()=>m.flipped=rev?m.flipped.filter(x=>x!==i):[...m.flipped,i]),rev?'on':'');});},check(m){if(m.flipped.length>m.budget)return`Over the reversal budget by ${m.flipped.length-m.budget}.`;const loop=cycle(m.n,m.edges.map((e,i)=>m.flipped.includes(i)?[e[1],e[0"
+    }
+  ],
+  "oldFailure": {
+    "stage": 0,
+    "diagnosticMathRandom": "constant0.99",
+    "isolatedVmTimeoutMs": 100,
+    "timeoutObserved": true,
+    "reason": "With no optional chords, the original undirected graph is a path; every orientation is acyclic, so retrying orientations of that same graph cannot produce the required cycle."
+  },
+  "review": {
+    "boundedGeneration": "The path plus mandatory0–2chord guarantees an undirected triangle. At most128 orientation candidates are examined; every candidate’s reversal minimum is exhaustively certified within1–3. The fallback reverses the first two path edges to close that triangle; reversing them back restores the original forward-order DAG, guaranteeing a feasible finite task.",
+    "finiteBehavior": "Rendering, reversal controls, DAG/budget checks and three-study room completion are byte-identical. Failed checks remain feedback with unlimited retries; no new loss cap or optional mode was introduced.",
+    "endlessFeasibility": "Conditional. The repair makes bounded finite initialization reliable; a future stream still requires structural variety beyond relabelling, capped difficulty, separate cumulative scoring and an explicit wrong-check failure allowance. Preserve the current finite three-study journey and its unlimited feedback."
+  },
+  "modelEvidence": {
+    "cases": 54,
+    "diagnosticConstantCases": 6,
+    "independentXorshiftCases": 48,
+    "oracle": "Exhaustive vertex-order permutations minimize backward edges, independently of the engine cycle and reversal-subset helpers.",
+    "allStartsCyclic": true,
+    "allBudgetsExactAndAtMostThree": true,
+    "allWitnessesAccepted": true,
+    "allRandomCallsBounded": true,
+    "fallbackCases": 3,
+    "results": [
+      {
+        "random": "constant0",
+        "stage": 0,
+        "n": 5,
+        "edgeCount": 10,
+        "randomCalls": 18,
+        "randomCallBound": 1161,
+        "minimumReversals": 1,
+        "witness": [
+          0
+        ],
+        "vertexOrder": [
+          2,
+          3,
+          4,
+          1,
+          0
+        ],
+        "constructiveFallbackExercised": false
+      },
+      {
+        "random": "constant0",
+        "stage": 1,
+        "n": 6,
+        "edgeCount": 15,
+        "randomCalls": 28,
+        "randomCallBound": 1806,
+        "minimumReversals": 1,
+        "witness": [
+          0
+        ],
+        "vertexOrder": [
+          2,
+          3,
+          4,
+          5,
+          1,
+          0
+        ],
+        "constructiveFallbackExercised": false
+      },
+      {
+        "random": "constant0",
+        "stage": 2,
+        "n": 7,
+        "edgeCount": 21,
+        "randomCalls": 40,
+        "randomCallBound": 2580,
+        "minimumReversals": 1,
+        "witness": [
+          0
+        ],
+        "vertexOrder": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          1,
+          0
+        ],
+        "constructiveFallbackExercised": false
+      },
+      {
+        "random": "constant0.99",
+        "stage": 0,
+        "n": 5,
+        "edgeCount": 5,
+        "randomCalls": 521,
+        "randomCallBound": 521,
+        "minimumReversals": 1,
+        "witness": [
+          0
+        ],
+        "vertexOrder": [
+          0,
+          2,
+          1,
+          3,
+          4
+        ],
+        "constructiveFallbackExercised": true
+      },
+      {
+        "random": "constant0.99",
+        "stage": 1,
+        "n": 6,
+        "edgeCount": 6,
+        "randomCalls": 654,
+        "randomCallBound": 654,
+        "minimumReversals": 1,
+        "witness": [
+          0
+        ],
+        "vertexOrder": [
+          0,
+          2,
+          1,
+          3,
+          4,
+          5
+        ],
+        "constructiveFallbackExercised": true
+      },
+      {
+        "random": "constant0.99",
+        "stage": 2,
+        "n": 7,
+        "edgeCount": 7,
+        "randomCalls": 788,
+        "randomCallBound": 788,
+        "minimumReversals": 1,
+        "witness": [
+          0
+        ],
+        "vertexOrder": [
+          0,
+          2,
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "constructiveFallbackExercised": true
+      },
+      {
+        "random": "xorshift:1",
+        "stage": 0,
+        "n": 5,
+        "edgeCount": 8,
+        "randomCalls": 16,
+        "randomCallBound": 905,
+        "minimumReversals": 1,
+        "witness": [
+          3
+        ],
+        "vertexOrder": [
+          1,
+          2,
+          3,
+          0,
+          4
+        ],
+        "constructiveFallbackExercised": false
+      },
+      {
+        "random": "xorshift:1",
+        "stage": 1,
+        "n": 6,
+        "edgeCount": 11,
+        "randomCalls": 24,
+        "randomCallBound": 1294,
+        "minimumReversals": 1,
+        "witness": [
+          10
+        ],
+        "vertexOrder": [
+          0,
+          3,
+          1,
+          4,
+          5,
+          2
+        ],
+        "constructiveFallbackExercised": false
+      },
+      {
+        "random": "xorshift:1",
+        "stage": 2,
+        "n": 7,
+        "edgeCount": 14,
+        "randomCalls": 33,
+        "randomCallBound": 1684,
+        "minimumReversals": 2,
+        "witness": [
+          1,
+          4
+        ],
+        "vertexOrder": [
+          1,
+          5,
+          0,
+          2,
+          3,
+          4,
+          6
+        ],
+        "constructiveFallbackExercised": false
+      },
+      {
+        "random": "xorshift:257",
+        "stage": 0,
+        "n": 5,
+        "edgeCount": 8,
+        "randomCalls": 16,
+        "randomCallBound": 905,
+        "minimumReversals": 1,
+        "witness": [
+          6
+        ],
+        "vertexOrder": [
+          1,
+          2,
+          0,
+          4,
+          3
+        ],
+        "constructiveFallbackExercised": false
+      },
+      {
+        "random": "xorshift:257",
+        "stage": 1,
+        "n": 6,
+        "edgeCount": 10,
+        "randomCalls": 23,
+        "randomCallBound": 1166,
+        "minimumReversals": 1,
+        "witness": [
+          3
+        ],
+        "vertexOrder": [
+          3,
+          0,
+          2,
+          4,
+          1,
+          5
+        ],
+        "constructiveFallbackExercised": false
+      },
+      {
+        "random": "xorshift:257",
+        "stage": 2,
+        "n": 7,
+        "edgeCount": 12,
+        "randomCalls": 31,
+        "randomCallBound": 1428,
+        "minimumReversals": 1,
+        "witness": [
+          0
+        ],
+        "vertexOrder": [
+          2,
+          1,
+          5,
+          4,
+          6,
+          0,
+          3
+        ],
+        "constructiveFallbackExercised": false
+      },
+      {
+        "random": "xorshift:1291",
+        "stage": 0,
+        "n": 5,
+        "edgeCount": 5,
+        "randomCalls": 33,
+        "randomCallBound": 521,
+        "minimumReversals": 1,
+        "witness": [
+          2
+        ],
+        "vertexOrder": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "constructiveFallbackExercised": false
+      },
+      {
+        "random": "xorshift:1291",
+        "stage": 1,
+        "n": 6,
+        "edgeCount": 9,
+        "randomCalls": 22,
+        "randomCallBound": 1038,
+        "minimumReversals": 1,
+        "witness": [
+          6
+        ],
+        "vertexOrder": [
+          2,
+          3,
+          4,
+          1,
+          5,
+          0
+        ],
+        "constructiveFallbackExercised": false
+      },
+      {
+        "random": "xorshift:1291",
+        "stage": 2,
+        "n": 7,
+        "edgeCount": 14,
+        "randomCalls": 33,
+        "randomCallBound": 1684,
+        "minimumReversals": 1,
+        "witness": [
+          8
+        ],
+        "vertexOrder": [
+          5,
+          4,
+          3,
+          6,
+          1,
+          0,
+          2
+        ],
+        "constructiveFallbackExercised": false
+      },
+      {
+        "random": "xorshift:65537",
+        "stage": 0,
+        "n": 5,
+        "edgeCount": 8,
+        "randomCalls": 23,
+        "randomCallBound": 905,
+        "minimumReversals": 1,
+        "witness": [
+          0
+        ],
+        "vertexOrder": [
+          1,
+          2,
+          3,
+          0,
+          4
+        ],
+        "constructiveFallbackExercised": false
+      },
+      {
+        "random": "xorshift:65537",
+        "stage": 1,
+        "n": 6,
+        "edgeCount": 11,
+        "randomCalls": 24,
+        "randomCallBound": 1294,
+        "minimumReversals": 1,
+        "witness": [
+          0
+        ],
+        "vertexOrder": [
+          4,
+          2,
+          3,
+          1,
+          5,
+          0
+        ],
+        "constructiveFallbackExercised": false
+      },
+      {
+        "random": "xorshift:65537",
+        "stage": 2,
+        "n": 7,
+        "edgeCount": 13,
+        "randomCalls": 32,
+        "randomCallBound": 1556,
+        "minimumReversals": 1,
+        "witness": [
+          6
+        ],
+        "vertexOrder": [
+          1,
+          4,
+          0,
+          3,
+          2,
+          5,
+          6
+        ],
+        "constructiveFallbackExercised": false
+      },
+      {
+        "random": "xorshift:20261002",
+        "stage": 0,
+        "n": 5,
+        "edgeCount": 5,
+        "randomCalls": 25,
+        "randomCallBound": 521,
+        "minimumReversals": 1,
+        "witness": [
+          0
+        ],
+        "vertexOrder": [
+          1,
+          2,
+          3,
+          0,
+          4
+        ],
+        "constructiveFallbackExercised": false
+      },
+      {
+        "random": "xorshift:20261002",
+        "stage": 1,
+        "n": 6,
+        "edgeCount": 9,
+        "randomCalls": 22,
+        "randomCallBound": 1038,
+        "minimumReversals": 1,
+        "witness": [
+          4
+        ],
+        "vertexOrder": [
+          0,
+          3,
+          5,
+          1,
+          2,
+          4
+        ],
+        "constructiveFallbackExercised": false
+      },
+      {
+        "random": "xorshift:20261002",
+        "stage": 2,
+        "n": 7,
+        "edgeCount": 12,
+        "randomCalls": 42,
+        "randomCallBound": 1428,
+        "minimumReversals": 1,
+        "witness": [
+          3
+        ],
+        "vertexOrder": [
+          4,
+          2,
+          5,
+          0,
+          6,
+          1,
+          3
+        ],
+        "constructiveFallbackExercised": false
+      },
+      {
+        "random": "xorshift:305419896",
+        "stage": 0,
+        "n": 5,
+        "edgeCount": 7,
+        "randomCalls": 21,
+        "randomCallBound": 777,
+        "minimumReversals": 1,
+        "witness": [
+          0
+        ],
+        "vertexOrder": [
+          1,
+          3,
+          0,
+          4,
+          2
+        ],
+        "constructiveFallbackExercised": false
+      },
+      {
+        "random": "xorshift:305419896",
+        "stage": 1,
+        "n": 6,
+        "edgeCount": 11,
+        "randomCalls": 24,
+        "randomCallBound": 1294,
+        "minimumReversals": 2,
+        "witness": [
+          6,
+          7
+        ],
+        "vertexOrder": [
+          1,
+          0,
+          2,
+          3,
+          4,
+          5
+        ],
+        "constructiveFallbackExercised": false
+      },
+      {
+        "random": "xorshift:305419896",
+        "stage": 2,
+        "n": 7,
+        "edgeCount": 12,
+        "randomCalls": 31,
+        "randomCallBound": 1428,
+        "minimumReversals": 2,
+        "witness": [
+          8,
+          11
+        ],
+        "vertexOrder": [
+          0,
+          1,
+          5,
+          6,
+          3,
+          4,
+          2
+        ],
+        "constructiveFallbackExercised": false
+      },
+      {
+        "random": "xorshift:2147483647",
+        "stage": 0,
+        "n": 5,
+        "edgeCount": 6,
+        "randomCalls": 19,
+        "randomCallBound": 649,
+        "minimumReversals": 1,
+        "witness": [
+          3
+        ],
+        "vertexOrder": [
+          0,
+          3,
+          4,
+          1,
+          2
+        ],
+        "constructiveFallbackExercised": false
+      },
+      {
+        "random": "xorshift:2147483647",
+        "stage": 1,
+        "n": 6,
+        "edgeCount": 8,
+        "randomCalls": 28,
+        "randomCallBound": 910,
+        "minimumReversals": 1,
+        "witness": [
+          6
+        ],
+        "vertexOrder": [
+          1,
+          3,
+          2,
+          4,
+          0,
+          5
+        ],
+        "constructiveFallbackExercised": false
+      },
+      {
+        "random": "xorshift:2147483647",
+        "stage": 2,
+        "n": 7,
+        "edgeCount": 9,
+        "randomCalls": 28,
+        "randomCallBound": 1044,
+        "minimumReversals": 1,
+        "witness": [
+          3
+        ],
+        "vertexOrder": [
+          3,
+          2,
+          5,
+          1,
+          4,
+          6,
+          0
+        ],
+        "constructiveFallbackExercised": false
+      },
+      {
+        "random": "xorshift:4294967295",
+        "stage": 0,
+        "n": 5,
+        "edgeCount": 7,
+        "randomCalls": 15,
+        "randomCallBound": 777,
+        "minimumReversals": 1,
+        "witness": [
+          3
+        ],
+        "vertexOrder": [
+          2,
+          4,
+          1,
+          3,
+          0
+        ],
+        "constructiveFallbackExercised": false
+      },
+      {
+        "random": "xorshift:4294967295",
+        "stage": 1,
+        "n": 6,
+        "edgeCount": 10,
+        "randomCalls": 23,
+        "randomCallBound": 1166,
+        "minimumReversals": 1,
+        "witness": [
+          1
+        ],
+        "vertexOrder": [
+          5,
+          2,
+          1,
+          4,
+          0,
+          3
+        ],
+        "constructiveFallbackExercised": false
+      },
+      {
+        "random": "xorshift:4294967295",
+        "stage": 2,
+        "n": 7,
+        "edgeCount": 13,
+        "randomCalls": 32,
+        "randomCallBound": 1556,
+        "minimumReversals": 1,
+        "witness": [
+          1
+        ],
+        "vertexOrder": [
+          6,
+          3,
+          4,
+          5,
+          1,
+          2,
+          0
+        ],
+        "constructiveFallbackExercised": false
+      },
+      {
+        "random": "xorshift:37",
+        "stage": 0,
+        "n": 5,
+        "edgeCount": 10,
+        "randomCalls": 36,
+        "randomCallBound": 1161,
+        "minimumReversals": 1,
+        "witness": [
+          2
+        ],
+        "vertexOrder": [
+          4,
+          3,
+          1,
+          0,
+          2
+        ],
+        "constructiveFallbackExercised": false
+      },
+      {
+        "random": "xorshift:37",
+        "stage": 1,
+        "n": 6,
+        "edgeCount": 14,
+        "randomCalls": 27,
+        "randomCallBound": 1678,
+        "minimumReversals": 1,
+        "witness": [
+          8
+        ],
+        "vertexOrder": [
+          3,
+          5,
+          2,
+          1,
+          4,
+          0
+        ],
+        "constructiveFallbackExercised": false
+      },
+      {
+        "random": "xorshift:37",
+        "stage": 2,
+        "n": 7,
+        "edgeCount": 18,
+        "randomCalls": 54,
+        "randomCallBound": 2196,
+        "minimumReversals": 1,
+        "witness": [
+          9
+        ],
+        "vertexOrder": [
+          1,
+          4,
+          2,
+          5,
+          6,
+          3,
+          0
+        ],
+        "constructiveFallbackExercised": false
+      },
+      {
+        "random": "xorshift:113",
+        "stage": 0,
+        "n": 5,
+        "edgeCount": 7,
+        "randomCalls": 15,
+        "randomCallBound": 777,
+        "minimumReversals": 1,
+        "witness": [
+          1
+        ],
+        "vertexOrder": [
+          1,
+          3,
+          4,
+          0,
+          2
+        ],
+        "constructiveFallbackExercised": false
+      },
+      {
+        "random": "xorshift:113",
+        "stage": 1,
+        "n": 6,
+        "edgeCount": 10,
+        "randomCalls": 23,
+        "randomCallBound": 1166,
+        "minimumReversals": 1,
+        "witness": [
+          3
+        ],
+        "vertexOrder": [
+          2,
+          4,
+          5,
+          1,
+          3,
+          0
+        ],
+        "constructiveFallbackExercised": false
+      },
+      {
+        "random": "xorshift:113",
+        "stage": 2,
+        "n": 7,
+        "edgeCount": 14,
+        "randomCalls": 33,
+        "randomCallBound": 1684,
+        "minimumReversals": 1,
+        "witness": [
+          12
+        ],
+        "vertexOrder": [
+          0,
+          2,
+          1,
+          3,
+          6,
+          5,
+          4
+        ],
+        "constructiveFallbackExercised": false
+      },
+      {
+        "random": "xorshift:509",
+        "stage": 0,
+        "n": 5,
+        "edgeCount": 8,
+        "randomCalls": 23,
+        "randomCallBound": 905,
+        "minimumReversals": 1,
+        "witness": [
+          0
+        ],
+        "vertexOrder": [
+          4,
+          2,
+          3,
+          0,
+          1
+        ],
+        "constructiveFallbackExercised": false
+      },
+      {
+        "random": "xorshift:509",
+        "stage": 1,
+        "n": 6,
+        "edgeCount": 11,
+        "randomCalls": 24,
+        "randomCallBound": 1294,
+        "minimumReversals": 1,
+        "witness": [
+          2
+        ],
+        "vertexOrder": [
+          3,
+          5,
+          1,
+          2,
+          0,
+          4
+        ],
+        "constructiveFallbackExercised": false
+      },
+      {
+        "random": "xorshift:509",
+        "stage": 2,
+        "n": 7,
+        "edgeCount": 14,
+        "randomCalls": 33,
+        "randomCallBound": 1684,
+        "minimumReversals": 1,
+        "witness": [
+          3
+        ],
+        "vertexOrder": [
+          1,
+          4,
+          6,
+          2,
+          5,
+          0,
+          3
+        ],
+        "constructiveFallbackExercised": false
+      },
+      {
+        "random": "xorshift:1031",
+        "stage": 0,
+        "n": 5,
+        "edgeCount": 8,
+        "randomCalls": 23,
+        "randomCallBound": 905,
+        "minimumReversals": 1,
+        "witness": [
+          4
+        ],
+        "vertexOrder": [
+          3,
+          1,
+          2,
+          4,
+          0
+        ],
+        "constructiveFallbackExercised": false
+      },
+      {
+        "random": "xorshift:1031",
+        "stage": 1,
+        "n": 6,
+        "edgeCount": 13,
+        "randomCalls": 26,
+        "randomCallBound": 1550,
+        "minimumReversals": 1,
+        "witness": [
+          7
+        ],
+        "vertexOrder": [
+          2,
+          4,
+          3,
+          5,
+          1,
+          0
+        ],
+        "constructiveFallbackExercised": false
+      },
+      {
+        "random": "xorshift:1031",
+        "stage": 2,
+        "n": 7,
+        "edgeCount": 14,
+        "randomCalls": 33,
+        "randomCallBound": 1684,
+        "minimumReversals": 1,
+        "witness": [
+          12
+        ],
+        "vertexOrder": [
+          4,
+          3,
+          6,
+          2,
+          5,
+          0,
+          1
+        ],
+        "constructiveFallbackExercised": false
+      },
+      {
+        "random": "xorshift:4093",
+        "stage": 0,
+        "n": 5,
+        "edgeCount": 7,
+        "randomCalls": 21,
+        "randomCallBound": 777,
+        "minimumReversals": 2,
+        "witness": [
+          1,
+          6
+        ],
+        "vertexOrder": [
+          0,
+          1,
+          4,
+          3,
+          2
+        ],
+        "constructiveFallbackExercised": false
+      },
+      {
+        "random": "xorshift:4093",
+        "stage": 1,
+        "n": 6,
+        "edgeCount": 11,
+        "randomCalls": 24,
+        "randomCallBound": 1294,
+        "minimumReversals": 2,
+        "witness": [
+          2,
+          9
+        ],
+        "vertexOrder": [
+          0,
+          1,
+          5,
+          4,
+          3,
+          2
+        ],
+        "constructiveFallbackExercised": false
+      },
+      {
+        "random": "xorshift:4093",
+        "stage": 2,
+        "n": 7,
+        "edgeCount": 13,
+        "randomCalls": 32,
+        "randomCallBound": 1556,
+        "minimumReversals": 1,
+        "witness": [
+          12
+        ],
+        "vertexOrder": [
+          0,
+          1,
+          2,
+          4,
+          5,
+          3,
+          6
+        ],
+        "constructiveFallbackExercised": false
+      },
+      {
+        "random": "xorshift:8191",
+        "stage": 0,
+        "n": 5,
+        "edgeCount": 7,
+        "randomCalls": 15,
+        "randomCallBound": 777,
+        "minimumReversals": 1,
+        "witness": [
+          0
+        ],
+        "vertexOrder": [
+          4,
+          1,
+          0,
+          2,
+          3
+        ],
+        "constructiveFallbackExercised": false
+      },
+      {
+        "random": "xorshift:8191",
+        "stage": 1,
+        "n": 6,
+        "edgeCount": 9,
+        "randomCalls": 62,
+        "randomCallBound": 1038,
+        "minimumReversals": 1,
+        "witness": [
+          8
+        ],
+        "vertexOrder": [
+          4,
+          1,
+          2,
+          3,
+          5,
+          0
+        ],
+        "constructiveFallbackExercised": false
+      },
+      {
+        "random": "xorshift:8191",
+        "stage": 2,
+        "n": 7,
+        "edgeCount": 14,
+        "randomCalls": 33,
+        "randomCallBound": 1684,
+        "minimumReversals": 1,
+        "witness": [
+          13
+        ],
+        "vertexOrder": [
+          3,
+          6,
+          5,
+          4,
+          2,
+          1,
+          0
+        ],
+        "constructiveFallbackExercised": false
+      },
+      {
+        "random": "xorshift:131071",
+        "stage": 0,
+        "n": 5,
+        "edgeCount": 6,
+        "randomCalls": 14,
+        "randomCallBound": 649,
+        "minimumReversals": 1,
+        "witness": [
+          4
+        ],
+        "vertexOrder": [
+          0,
+          2,
+          3,
+          4,
+          1
+        ],
+        "constructiveFallbackExercised": false
+      },
+      {
+        "random": "xorshift:131071",
+        "stage": 1,
+        "n": 6,
+        "edgeCount": 10,
+        "randomCalls": 23,
+        "randomCallBound": 1166,
+        "minimumReversals": 2,
+        "witness": [
+          0,
+          7
+        ],
+        "vertexOrder": [
+          1,
+          2,
+          3,
+          5,
+          0,
+          4
+        ],
+        "constructiveFallbackExercised": false
+      },
+      {
+        "random": "xorshift:131071",
+        "stage": 2,
+        "n": 7,
+        "edgeCount": 11,
+        "randomCalls": 30,
+        "randomCallBound": 1300,
+        "minimumReversals": 1,
+        "witness": [
+          3
+        ],
+        "vertexOrder": [
+          4,
+          3,
+          6,
+          2,
+          5,
+          0,
+          1
+        ],
+        "constructiveFallbackExercised": false
+      },
+      {
+        "random": "xorshift:1048573",
+        "stage": 0,
+        "n": 5,
+        "edgeCount": 6,
+        "randomCalls": 14,
+        "randomCallBound": 649,
+        "minimumReversals": 2,
+        "witness": [
+          1,
+          5
+        ],
+        "vertexOrder": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "constructiveFallbackExercised": false
+      },
+      {
+        "random": "xorshift:1048573",
+        "stage": 1,
+        "n": 6,
+        "edgeCount": 8,
+        "randomCalls": 42,
+        "randomCallBound": 910,
+        "minimumReversals": 1,
+        "witness": [
+          7
+        ],
+        "vertexOrder": [
+          0,
+          4,
+          2,
+          5,
+          1,
+          3
+        ],
+        "constructiveFallbackExercised": false
+      },
+      {
+        "random": "xorshift:1048573",
+        "stage": 2,
+        "n": 7,
+        "edgeCount": 13,
+        "randomCalls": 32,
+        "randomCallBound": 1556,
+        "minimumReversals": 2,
+        "witness": [
+          6,
+          9
+        ],
+        "vertexOrder": [
+          1,
+          3,
+          4,
+          5,
+          6,
+          2,
+          0
+        ],
+        "constructiveFallbackExercised": false
+      }
+    ]
+  },
+  "additionalEvidence": {
+    "artifact": "mini-games/coverage/puzzle-arrow-audit-regression.json",
+    "scope": "Separate owner-authored source-bound774 model starts and4 keyboard/touch diagnostic profiles, completing3 finite studies each. Not added to the independent200 ordinary sample totals."
+  },
+  "limits": [
+    "Direct model initialization and check are source-informed legal proofs, not unaided browser play.",
+    "Diagnostic random functions are isolated test inputs; legacy PuzzleLab has no public replay-seed control.",
+    "Sampled graphs and witnesses do not establish an implemented optional endless mode."
+  ]
+}

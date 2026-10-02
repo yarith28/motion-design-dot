@@ -1,0 +1,888 @@
+[
+  {
+    "id": "page-orchard",
+    "name": "Page Orchard",
+    "category": "puzzle",
+    "url": "protocol-room/?game=page-orchard",
+    "mechanic": "Repair an ordered multi-key page tree after insertions and deletions: choose a separator to promote, a sibling to borrow from, or a merge while retaining equal leaf depth and minimum occupancy.",
+    "description": "Repair an ordered multi-key page tree after insertions and deletions: choose a separator to promote, a sibling to borrow from, or a merge while retaining equal leaf depth and minimum occupancy.",
+    "rules": [
+      "Apply each ordered insert/delete request. Pages hold1\u20133 ordered keys; each child owns the interval between parent separators, and all leaves must have equal depth.",
+      "Split an overflowing page at either middle key. Borrow or merge an empty nonroot page; an internal deletion first chooses the predecessor or successor. Every edited page costs writes. Advancing with an unrepaired tree loses.",
+      "Complete three finite studies. Reset challenge retries this study; Restart game begins the campaign again. Optional generated challenges bank finished-study scores until a loss or you end the run."
+    ],
+    "controls": "Advance the next request; select a page; split at a middle key, borrow from a sibling, merge pages or choose an internal deletion replacement; audit the final tree. Use touch taps, or Tab with Enter/Space; arrow keys adjust any labeled native range.",
+    "accent": "#cbbf98",
+    "symbol": "\u2318",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Generate varied bounded insertion/deletion sequences over shuffled key gaps and independently derive legal repair witnesses; cap keys/pages while varying true request histories.",
+      "difficultyCap": "At most eight initial keys plus four insertions; seeded insertion/deletion request order and key gaps vary. Multi-key pages retain a maximum of three keys after repairs."
+    },
+    "nearestExisting": [
+      {
+        "id": "branch-librarian",
+        "source": "workbench-room/structures.mjs",
+        "difference": "That model rotates one binary child to change frequency-weighted depths. This model has multi-key fixed-capacity pages, separators, occupancy invariants and split/borrow/merge propagation; rotations cannot repair its overflow."
+      },
+      {
+        "id": "heap-garden",
+        "source": "workbench-room/storage.mjs",
+        "difference": "No contiguous byte placement or pinned physical blocks: tree search order and page occupancy determine legality."
+      }
+    ],
+    "source": [
+      "protocol-room/storage.mjs",
+      "protocol-room/core.mjs",
+      "protocol-room/engines.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"request\"]"
+    }
+  },
+  {
+    "id": "paired-harbor",
+    "name": "Paired Harbor",
+    "category": "puzzle",
+    "url": "protocol-room/?game=paired-harbor",
+    "mechanic": "Store each key in one of its two hashed berths; inserting into an occupied berth displaces its previous key, which must move to its alternate berth or consume a scarce stash slot.",
+    "description": "Store each key in one of its two hashed berths; inserting into an occupied berth displaces its previous key, which must move to its alternate berth or consume a scarce stash slot.",
+    "rules": [
+      "Begin arrivals in the shown order. Each key may occupy only its two hashed berths; placing it carries any displaced key. Finish that carried key before another arrival.",
+      "One key may use the searchable stash. Placements cost1. A rescue rehash costs3, changes every pair and restarts all arrivals; using it cannot restore spent work. Finish every lookup before auditing.",
+      "Complete three finite studies. Reset challenge retries this study; Restart game begins the campaign again. Optional generated challenges bank finished-study scores until a loss or you end the run."
+    ],
+    "controls": "Begin an arrival, place the carried key in a legal berth, stash or withdraw one key, use the single rescue rehash, and audit all lookups. Use touch taps, or Tab with Enter/Space; arrow keys adjust any labeled native range.",
+    "accent": "#cbbf98",
+    "symbol": "\u2318",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Seed genuinely different paired-incidence graphs and insertion orders with constructive bounded legal matchings, including optional cycles; vary graph edges rather than relabel one template.",
+      "difficultyCap": "Bounded pages, clients, keys or workers; seeded structures and histories vary after the three finite studies."
+    },
+    "nearestExisting": [
+      {
+        "id": "hall-window",
+        "source": "signal-lab/certificates.mjs",
+        "difference": "Hall Window selects a deficient job subset to certify that matching is impossible. This is a live constructive insertion/displacement system with carried keys, alternate hash locations, cycles and a stash; the player must keep actual lookup locations valid."
+      },
+      {
+        "id": "heap-garden",
+        "source": "workbench-room/storage.mjs",
+        "difference": "Keys have two discrete legal homes rather than contiguous size spans, compaction or pinned allocations."
+      }
+    ],
+    "source": [
+      "protocol-room/storage.mjs",
+      "protocol-room/core.mjs",
+      "protocol-room/engines.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"arrival\"]"
+    }
+  },
+  {
+    "id": "ring-transfer",
+    "name": "Ring Transfer",
+    "category": "puzzle",
+    "url": "protocol-room/?game=ring-transfer",
+    "mechanic": "Place new server markers on a circular hash address space and migrate the keys whose clockwise owner changes, balancing final server load against the cost of changing ownership.",
+    "description": "Place new server markers on a circular hash address space and migrate the keys whose clockwise owner changes, balancing final server load against the cost of changing ownership.",
+    "rules": [
+      "Place every new server marker. Each key belongs to the first marker clockwise, including an exact marker address. The forecast load of every final server must fit the public cap.",
+      "Lock the ownership layout, copy affected keys at their displayed weight cost, then switch authority. Switching to a missing copy or exceeding bandwidth loses. Close only when every key serves from its final owner.",
+      "Complete three finite studies. Reset challenge retries this study; Restart game begins the campaign again. Optional generated challenges bank finished-study scores until a loss or you end the run."
+    ],
+    "controls": "Select a final server marker, set its circular address on the native range and press Place to confirm. Lock the ownership plan, copy affected keys, switch authority and audit. Native buttons/range support keyboard and touch.",
+    "accent": "#cbbf98",
+    "symbol": "\u2318",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Generate distinct key coordinates and weights on the bounded circular address space. Each difficulty tier has a fixed membership change; its seeded key layout determines the actual load cap and migration bandwidth, derived from a legal marker witness.",
+      "difficultyCap": "Bounded pages, clients, keys or workers; seeded structures and histories vary after the three finite studies."
+    },
+    "nearestExisting": [
+      {
+        "id": "divisor-house",
+        "source": "signal-lab/measures.mjs",
+        "difference": "Seat allocation searches a common divisor across independent quotas. Here key positions are fixed, contiguous circular ownership intervals couple assignments, and ownership changes require costed safe migration."
+      },
+      {
+        "id": "cyclic-courtyard",
+        "source": "constraint-room/paths.mjs",
+        "difference": "No row/column tile permutation: circular interval successor ownership and data movement determine the state."
+      }
+    ],
+    "source": [
+      "protocol-room/storage.mjs",
+      "protocol-room/core.mjs",
+      "protocol-room/engines.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"server:A\"]"
+    }
+  },
+  {
+    "id": "durable-ink",
+    "name": "Durable Ink",
+    "category": "puzzle",
+    "url": "protocol-room/?game=durable-ink",
+    "mechanic": "Batch durable journal records, preserve committed edits and undo provisional overlapping writes after a controlled crash; checkpoint safely before provisional edits.",
+    "description": "Batch durable journal records, preserve committed edits and undo provisional overlapping writes after a controlled crash; checkpoint safely before provisional edits.",
+    "rules": [
+      "Append every ONE update and its commit, then flush to make the commit durable. TWO starts only afterward and remains uncommitted. Data writes require their individual update record to be durable.",
+      "Before crashing, log every TWO update and write at least one provisional TWO value to disk. The third finite study requires a checkpoint before TWO: it writes committed ONE data and compacts the tight journal. Journal space and work are limited.",
+      "After the crash, redo surviving updates in increasing journal order, then undo TWO in reverse order. The recovered store must contain exactly ONE\u2019s values and none of TWO\u2019s edits.",
+      "Complete three finite studies. Reset challenge retries this study; Restart game begins the campaign again. Optional generated challenges bank finished-study scores until a loss or you end the run."
+    ],
+    "controls": "Append a requested update, append the commit, flush, write a logged record to disk, checkpoint, trigger the controlled crash, redo/undo records and open the recovered store. Native keyboard buttons or touch taps.",
+    "accent": "#cbbf98",
+    "symbol": "\u2318",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "design": "Seed bounded sets of ONE updates and overlapping TWO updates, with varied field selection, before/after values, an optional additional provisional field and either ordinary or checkpoint-requiring journal capacity. The two-transaction recovery protocol and legal witness work remain bounded.",
+      "kind": "challenge-stream",
+      "difficultyCap": "Bounded program, event, key, edit or geometric state; seed-driven transition data continues to vary after study three."
+    },
+    "nearestExisting": [
+      {
+        "id": "cache-hotel",
+        "source": "workbench-room/storage.mjs",
+        "difference": "Dirty eviction there pays writeback while minimizing cache misses. Here ordering of durable undo/redo records and commit markers controls crash atomicity; checkpoint reclamation can permanently remove recovery evidence."
+      },
+      {
+        "id": "ledger-race",
+        "source": "workbench-room/computation.mjs",
+        "difference": "No thread-interleaving anomaly witness: the player protects durability across explicit storage crashes and recovery."
+      }
+    ],
+    "source": [
+      "protocol-room/execution.mjs",
+      "protocol-room/core.mjs",
+      "protocol-room/engines.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"append:0:0\"]"
+    }
+  },
+  {
+    "id": "safe-advance",
+    "name": "Safe Advance",
+    "category": "puzzle",
+    "url": "protocol-room/?game=safe-advance",
+    "mechanic": "Grant or defer resource requests while retaining a completion sequence that can satisfy every declared maximum claim; a locally affordable request can strand all processes later.",
+    "description": "Grant or defer resource requests while retaining a completion sequence that can satisfy every declared maximum claim; a locally affordable request can strand all processes later.",
+    "rules": [
+      "A client retains granted resources until all its declared maximum has arrived and it finishes. A single or selected concurrent request bundle must fit the free vector.",
+      "Every grant must retain some full completion sequence under remaining maximum claims. An affordable unsafe grant loses. Defer at most three times; complete all clients and return their resources.",
+      "Complete three finite studies. Reset challenge retries this study; Restart game begins the campaign again. Optional generated challenges bank finished-study scores until a loss or you end the run."
+    ],
+    "controls": "Grant one displayed request, select clients for an atomic bundle, defer a request or finish a fully supplied client to return its resources. Use touch taps, or Tab with Enter/Space; arrow keys adjust any labeled native range.",
+    "accent": "#cbbf98",
+    "symbol": "\u2318",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Construct different maximum-claim matrices and safe initial allocations from seeded completion sequences; interleave requests with bounded patience and verify a legal grant/defer route.",
+      "difficultyCap": "Three to five clients and two or three resources, with varied held allocations, remaining claims, request orders and request quanta."
+    },
+    "nearestExisting": [
+      {
+        "id": "workshop-shift",
+        "source": "systems-room/workshop-shift.mjs",
+        "difference": "Exclusive stations there make recipes during shifts. Here maximum future claims and retained partial allocations determine whether a safe completion order exists; deferring an affordable request protects future progress."
+      },
+      {
+        "id": "token-crucible",
+        "source": "workbench-room/networks.mjs",
+        "difference": "No freely fired consume/produce recipe net or exact marking target: clients retain resources across requests and release them only at completion under announced maxima."
+      }
+    ],
+    "source": [
+      "protocol-room/systems.mjs",
+      "protocol-room/core.mjs",
+      "protocol-room/engines.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"select:0\"]"
+    }
+  },
+  {
+    "id": "version-valley",
+    "name": "Version Valley",
+    "category": "puzzle",
+    "url": "protocol-room/?game=version-valley",
+    "mechanic": "Choose when snapshot transactions refresh, lock a predicate or commit so concurrent stale reads cannot publish incompatible updates while a bounded number of aborts still lets required work finish.",
+    "description": "Choose when snapshot transactions refresh, lock a predicate or commit so concurrent stale reads cannot publish incompatible updates while a bounded number of aborts still lets required work finish.",
+    "rules": [
+      "Read a private snapshot and stage a reservation only when every capacity group allows it. Commits publish writes together. A changed direct write aborts and requires rereading.",
+      "A field guard protects only the written row; a range guard also checks every version read by capacity predicates. Stale unguarded separate-row writes can break a shared cap. Complete every client and meet the accepted-reservation quota within bounded retries.",
+      "Complete three finite studies. Reset challenge retries this study; Restart game begins the campaign again. Optional generated challenges bank finished-study scores until a loss or you end the run."
+    ],
+    "controls": "Read a transaction snapshot, protect its field or whole capacity scan, refresh a staged snapshot, and commit its reservation or decline. Use touch taps, or Tab with Enter/Space; arrow keys adjust any labeled native range.",
+    "accent": "#cbbf98",
+    "symbol": "\u2318",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Generate varied read/write dependency histories and bounded invariants, with a constructive serial completion witness and meaningful conflicting alternatives.",
+      "difficultyCap": "Bounded pages, clients, keys or workers; seeded structures and histories vary after the three finite studies."
+    },
+    "nearestExisting": [
+      {
+        "id": "ledger-race",
+        "source": "workbench-room/computation.mjs",
+        "difference": "The existing game exposes an anomaly by interleaving primitive instructions. This game keeps private snapshots, version histories, commit validation and bounded retry/locking decisions, and must produce a safe completed transaction history."
+      },
+      {
+        "id": "causal-camera",
+        "source": "workbench-room/collective.mjs",
+        "difference": "No process-prefix cut reconstruction or in-transit inventory: database read versions and commit conflicts control visibility."
+      }
+    ],
+    "source": [
+      "protocol-room/systems.mjs",
+      "protocol-room/core.mjs",
+      "protocol-room/engines.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"read:0\"]"
+    }
+  },
+  {
+    "id": "term-tower",
+    "name": "Term Tower",
+    "category": "puzzle",
+    "url": "protocol-room/?game=term-tower",
+    "mechanic": "Repair conflicting replicated log suffixes and decide when an entry is safe to commit under the current leader term; a majority of an old-term entry alone cannot justify the same commitment step.",
+    "description": "Repair conflicting replicated log suffixes and decide when an entry is safe to commit under the current leader term; a majority of an old-term entry alone cannot justify the same commitment step.",
+    "rules": [
+      "Logs contain index, election term and client value. Appending at a chosen next index requires a matching previous term; a successful message replaces the conflicting suffix and costs1 plus transmitted entries.",
+      "Commit only with active current-term authority and a current-term last entry matched by a majority. A higher term revokes the old leader; a new candidate needs an up-to-date majority and the required client prefix.",
+      "Complete three finite studies. Reset retries this study; Restart begins the campaign. Optional generated challenges, when offered, bank scores until a loss or you end the run."
+    ],
+    "controls": "Select a follower and proposed next-entry index, append the leader suffix, append a current-term authority entry, elect a new leader after interruption, and commit a matching majority. Use touch taps, or Tab with Enter/Space; arrow keys adjust any labeled native range.",
+    "accent": "#cbbf98",
+    "symbol": "\u2318",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Vary bounded log length, replica prefix cut lengths and the conflicting suffix of one replica. The third difficulty tier has a single published higher-term interruption; current-term append, log matching and majority commitment determine legal completion.",
+      "difficultyCap": "Three or five replicas and at most seven original entries, varied prefix cuts and one old conflicting suffix; at most one higher-term interruption."
+    },
+    "nearestExisting": [
+      {
+        "id": "quorum-garden",
+        "source": "signal-lab/choices.mjs",
+        "difference": "That game designs static intersecting quorum families. This uses evolving term/index logs, suffix replacement, stale-leader rejection and actual commitment progression; sets alone do not establish log-prefix safety."
+      },
+      {
+        "id": "receipt-route",
+        "source": "workbench-room/computation.mjs",
+        "difference": "Receipts deliver a fixed contiguous data sequence. Here replicas begin with conflicting histories and only elected-term authority can overwrite or commit particular prefixes."
+      }
+    ],
+    "source": [
+      "protocol-room/network.mjs",
+      "protocol-room/core.mjs",
+      "protocol-room/engines.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"fresh\"]"
+    }
+  },
+  {
+    "id": "pipeline-parade",
+    "name": "Pipeline Parade",
+    "category": "puzzle",
+    "url": "protocol-room/?game=pipeline-parade",
+    "mechanic": "Issue and retire a dependency program while deciding when to broadcast results, forward same-address stores and squash a taken branch before side effects escape.",
+    "description": "Issue and retire a dependency program while deciding when to broadcast results, forward same-address stores and squash a taken branch before side effects escape.",
+    "rules": [
+      "Issue instructions only when their captured register operands are ready. A completed register result feeds dependent work after retirement or a limited early broadcast. Execution latency advances on clock steps.",
+      "Loads may observe memory before an older same-address store retires. Forward a completed store or wait. Retire in program order, and resolve the branch before exposing younger side effects.",
+      "Retire all required instructions within the clock deadline. Taken branches squash the two fall-through instructions. Final register and memory values must match the sequential program.",
+      "Complete three finite studies. Reset challenge retries this study; Restart game begins the campaign again. Optional generated challenges bank finished-study scores until a loss or you end the run."
+    ],
+    "controls": "Issue a ready instruction, broadcast a completed register result, forward a completed store, advance the clock, resolve the branch, retire the oldest instruction and check the final state. Use touch taps, or Tab with Enter/Space; arrow keys adjust any labeled native range.",
+    "accent": "#cbbf98",
+    "symbol": "\u2318",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "design": "Generate bounded arithmetic dependency programs with differing source choices, operation types, operand values, execution latencies and taken/fall-through branches. The fixed instruction skeleton includes same-address store/load hazards and a published branch target.",
+      "kind": "challenge-stream",
+      "difficultyCap": "Bounded program, event, key, edit or geometric state; seed-driven transition data continues to vary after study three."
+    },
+    "nearestExisting": [
+      {
+        "id": "signal-cabinet",
+        "source": "systems-room/signal-cabinet.mjs",
+        "difference": "Job dispatch there changes tool class and meets release/deadlines. Here data dependencies, renaming, forwarding, in-order retirement, memory aliases and branch squashes change which executions are semantically safe."
+      },
+      {
+        "id": "pebble-engine",
+        "source": "workbench-room/storage.mjs",
+        "difference": "No reusable DAG pebble placement/recomputation target: instruction values and speculative architectural effects must match a sequential execution."
+      }
+    ],
+    "source": [
+      "protocol-room/execution.mjs",
+      "protocol-room/core.mjs",
+      "protocol-room/engines.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"issue:0\"]"
+    }
+  },
+  {
+    "id": "delta-garden",
+    "name": "Delta Garden",
+    "category": "puzzle",
+    "url": "protocol-room/?game=delta-garden",
+    "mechanic": "Maintain a multiset join under insertions and deletions by choosing batches and signed delta products; applying two simultaneous changes separately or together requires different cross terms.",
+    "description": "Maintain a multiset join under insertions and deletions by choosing batches and signed delta products; applying two simultaneous changes separately or together requires different cross terms.",
+    "rules": [
+      "A matching key contributes left multiplicity times right multiplicity. Each epoch provides signed insert/delete deltas; retain the exact materialized join after every epoch.",
+      "Choose old, delta or new inputs for each incremental join. At least one input must be a delta. Simultaneous left/right changes require the cross product exactly once; queued terms add to the old result.",
+      "Join passes are limited. Discarding queued terms restores no work. Commit only an exact epoch result; complete all epochs to finish the study.",
+      "Complete three finite studies. Reset challenge retries this study; Restart game begins the campaign again. Optional generated challenges bank finished-study scores until a loss or you end the run."
+    ],
+    "controls": "Choose old, signed-delta or new inputs on both sides, run the incremental join, discard queued terms or commit the epoch. Use touch taps, or Tab with Enter/Space; arrow keys adjust any labeled native range.",
+    "accent": "#cbbf98",
+    "symbol": "\u2318",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "design": "Generate two or three epochs of signed multiplicity changes across three or four join keys. Insertions, legal deletions, affected key subsets and simultaneous cross terms vary against the actual previous epoch.",
+      "kind": "challenge-stream",
+      "difficultyCap": "Bounded program, event, key, edit or geometric state; seed-driven transition data continues to vary after study three."
+    },
+    "nearestExisting": [
+      {
+        "id": "table-confluence",
+        "source": "workbench-room/structures.mjs",
+        "difference": "That builds a one-time relational operator pipeline with bag semantics. This incrementally maintains an existing output, subtracts deleted multiplicities and handles simultaneous update cross terms with batching cost."
+      },
+      {
+        "id": "pebble-engine",
+        "source": "workbench-room/storage.mjs",
+        "difference": "No DAG register/recomputation puzzle: signed bag changes can cancel and double counting is an observable semantic error."
+      }
+    ],
+    "source": [
+      "protocol-room/streams.mjs",
+      "protocol-room/core.mjs",
+      "protocol-room/engines.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"join\"]"
+    }
+  },
+  {
+    "id": "shared-cursors",
+    "name": "Shared Cursors",
+    "category": "puzzle",
+    "url": "protocol-room/?game=shared-cursors",
+    "mechanic": "Transform concurrent insert/delete operations against already applied remote edits so their original text intentions survive delivery order without duplicating or deleting the wrong character.",
+    "description": "Transform concurrent insert/delete operations against already applied remote edits so their original text intentions survive delivery order without duplicating or deleting the wrong character.",
+    "rules": [
+      "Both writers have applied their own local edit sequence to the same initial strip. Deliver the other writer\u2019s consecutive edits in packets of at most two, using positions transformed across concurrent operations.",
+      "An insert shifts later positions; equal-position inserts place P before Q. A delete shifts later positions back; two deletes of the same character reduce the second deletion to a no-op. Packet edit two applies after edit one.",
+      "Packet allowance requires batching. Every remote edit must be delivered, with its transformed position or justified no-op, and both document strips must converge.",
+      "Complete three finite studies. Reset challenge retries this study; Restart game begins the campaign again. Optional generated challenges bank finished-study scores until a loss or you end the run."
+    ],
+    "controls": "Choose receiver and packet size, set each transformed position on its native range, mark duplicate deletion no-ops, deliver and check convergence. Touch taps or Tab, Enter/Space and range arrows.",
+    "accent": "#cbbf98",
+    "symbol": "\u2318",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "design": "Generate two or three concurrent insert/delete edits per writer over bounded initial strips, varying positions, edit types and delete collisions. Real position-transform dependencies vary; final packets must preserve each edit\u2019s intention.",
+      "kind": "challenge-stream",
+      "difficultyCap": "Bounded program, event, key, edit or geometric state; seed-driven transition data continues to vary after study three."
+    },
+    "nearestExisting": [
+      {
+        "id": "archive-edit",
+        "source": "discovery-room/room.js",
+        "difference": "Dependency-constrained patch selection resolves authored patch conflicts. This transforms positional concurrent operations through live peer histories and must converge despite delivery order."
+      },
+      {
+        "id": "parallel-manuscripts",
+        "source": "workbench-room/information.mjs",
+        "difference": "No static affine-gap alignment of two strings: edits act on changing coordinates and can overlap while original intention is tracked."
+      }
+    ],
+    "source": [
+      "protocol-room/collaboration.mjs",
+      "protocol-room/core.mjs",
+      "protocol-room/engines.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"batch:2\"]"
+    }
+  },
+  {
+    "id": "quiet-network",
+    "name": "Quiet Network",
+    "category": "puzzle",
+    "url": "protocol-room/?game=quiet-network",
+    "mechanic": "Return completion credits through a dynamically grown parent tree only after descendants and in-flight tasks have settled; an apparently idle set of workers can still have work in transit.",
+    "description": "Return completion credits through a dynamically grown parent tree only after descendants and in-flight tasks have settled; an apparently idle set of workers can still have work in transit.",
+    "rules": [
+      "Executing a delivered job sends child work and retains a credit obligation for each child. An idle job cannot acknowledge its parent until every child credit returns.",
+      "Group all currently ready acknowledgments from one worker to one parent worker into an envelope. Executions and envelope deliveries cost1; early small batches can exhaust the allowance. Declare completion only when all jobs and channels settle.",
+      "Complete three finite studies. Reset challenge retries this study; Restart game begins the campaign again. Optional generated challenges bank finished-study scores until a loss or you end the run."
+    ],
+    "controls": "Execute a delivered job, route a work or acknowledgment envelope, batch completed credits between workers, and declare global completion. Use touch taps, or Tab with Enter/Space; arrow keys adjust any labeled native range.",
+    "accent": "#cbbf98",
+    "symbol": "\u2318",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Generate bounded rooted work trees with varied child counts, worker ownership and optional third depth. Parent credit obligations and acknowledgment batching vary with the actual tree; envelopes wait for player-directed delivery.",
+      "difficultyCap": "At most five workers and fifteen jobs in a rooted tree, with at most three child depths. Ownership and batching obligations vary."
+    },
+    "nearestExisting": [
+      {
+        "id": "causal-camera",
+        "source": "workbench-room/collective.mjs",
+        "difference": "Snapshot reconstruction selects static event cuts and records channel tokens. This is an operating termination protocol with dynamically spawned child obligations and delayed acknowledgment routing; credits establish that future work cannot arrive."
+      },
+      {
+        "id": "credit-method",
+        "source": "signal-lab/measures.mjs",
+        "difference": "No amortized-cost potential coefficients: actual transferable work credits are protocol ownership records, not a charge inequality."
+      }
+    ],
+    "source": [
+      "protocol-room/systems.mjs",
+      "protocol-room/core.mjs",
+      "protocol-room/engines.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"execute:0\"]"
+    }
+  },
+  {
+    "id": "lantern-ring",
+    "name": "Lantern Ring",
+    "category": "puzzle",
+    "url": "protocol-room/?game=lantern-ring",
+    "mechanic": "Choose eligible local repairs around a cyclic process ring until exactly one process owns the token; copying the predecessor and the distinguished process's increment have different eligibility rules.",
+    "description": "Choose eligible local repairs around a cyclic process ring until exactly one process owns the token; copying the predecessor and the distinguished process's increment have different eligibility rules.",
+    "rules": [
+      "Ordinary processes copy their predecessor only when colors differ. Process1 instead increments modulo the alphabet only when matching the final process.",
+      "Only eligible local repairs are enabled. Certify exactly one eligible process before the finite action allowance is spent. This is a bounded reachable repair puzzle, not a claim about every asynchronous schedule.",
+      "Complete three finite studies. Reset challenge retries this study; Restart game begins the campaign again. Optional generated challenges bank finished-study scores until a loss or you end the run."
+    ],
+    "controls": "Choose an eligible local copy or increment, then certify that exactly one process owns the token. Use touch taps, or Tab with Enter/Space; arrow keys adjust any labeled native range.",
+    "accent": "#cbbf98",
+    "symbol": "\u2318",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Generate seed-varied full colour vectors with at least two initially eligible processes on bounded rings of four to six nodes. An ascending ordinary-process repair gives a constructive legal witness within n\u22121 moves; no general daemon stabilization claim is made.",
+      "difficultyCap": "Bounded pages, clients, keys or workers; seeded structures and histories vary after the three finite studies."
+    },
+    "nearestExisting": [
+      {
+        "id": "cyclic-courtyard",
+        "source": "constraint-room/paths.mjs",
+        "difference": "Cyclic Courtyard permutes distinct tiles by whole-row/column shifts. This changes equal-color local process states under asymmetric eligibility and repairs token uniqueness; it does not preserve a tile permutation."
+      },
+      {
+        "id": "clockwork",
+        "source": "number-room/room.js",
+        "difference": "No single modular traveler or chosen numerical jump: many local states share a predecessor-dependent privilege invariant."
+      }
+    ],
+    "source": [
+      "protocol-room/systems.mjs",
+      "protocol-room/core.mjs",
+      "protocol-room/engines.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action^=\"repair:\"]:not(:disabled)"
+    }
+  },
+  {
+    "id": "lease-lighthouse",
+    "name": "Lease Lighthouse",
+    "category": "puzzle",
+    "url": "protocol-room/?game=lease-lighthouse",
+    "mechanic": "Transfer timed ownership between clients with clock drift and delayed messages, issuing monotone fencing tokens so a stale holder cannot overwrite a newer owner's work.",
+    "description": "Transfer timed ownership between clients with clock drift and delayed messages, issuing monotone fencing tokens so a stale holder cannot overwrite a newer owner's work.",
+    "rules": [
+      "Server lease expiry and client local clocks advance at different displayed rates. B must receive a grant, send value20 and deliver it before the server deadline; a short duration can already expire locally during grant delay.",
+      "A already wrote10, but its old status11 is delayed. The resource epoch fence rejects older writes only after a newer epoch has arrived. Drain every old/new envelope and preserve20; waiting for the old packet first can miss B\u2019s deadline.",
+      "Complete three finite studies. Reset retries this study; Restart begins the campaign. Optional generated challenges, when offered, bank scores until a loss or you end the run."
+    ],
+    "controls": "Set lease duration on its range, advance server ticks, request or renew B authority, enable fencing, send B work, deliver eligible delayed envelopes and audit the resource. Use touch taps, or Tab with Enter/Space; arrow keys adjust any labeled native range.",
+    "accent": "#cbbf98",
+    "symbol": "\u2318",
+    "stages": 3,
+    "endless": {
+      "supported": false,
+      "reason": "The current three contracts share one authored handover and delayed-old-write shape; varying clock rates alone would provide too little endless variety.",
+      "design": "A future stream should generate multi-owner work queues, resource overlaps, renewal races and independently witnessed drift/delay schedules."
+    },
+    "nearestExisting": [
+      {
+        "id": "ledger-race",
+        "source": "workbench-room/computation.mjs",
+        "difference": "Primitive shared-memory read/write interleavings expose a race there. This coordinates separate drifting clocks, expiring authority, delayed writes and epoch-based resource fencing."
+      },
+      {
+        "id": "quorum-garden",
+        "source": "signal-lab/choices.mjs",
+        "difference": "No static read/write family intersection: authority changes over time and stale epoch rejection is essential even after the grant expired."
+      }
+    ],
+    "source": [
+      "protocol-room/network.mjs",
+      "protocol-room/core.mjs",
+      "protocol-room/engines.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"fence\"]"
+    }
+  },
+  {
+    "id": "echo-seals",
+    "name": "Echo Seals",
+    "category": "puzzle",
+    "url": "protocol-room/?game=echo-seals",
+    "mechanic": "Route echo/ready evidence among honest receivers despite one sender equivocating, and deliver a value only when the protocol's collected evidence establishes agreement.",
+    "description": "Route echo/ready evidence among honest receivers despite one sender equivocating, and deliver a value only when the protocol's collected evidence establishes agreement.",
+    "rules": [
+      "Nodes1\u20133 are honest; sender0 can equivocate. Route visible signed envelopes to receivers. Count distinct authors separately for each phase and colour; duplicate signatures add no author.",
+      "An honest receiver emits one ECHO for a sender colour it received. READY requires three distinct ECHOs or two distinct READYs; delivery requires three distinct READYs at that receiver.",
+      "All honest receivers must deliver the same certified colour within the delivery budget. Irrelevant envelopes may be discarded. These finite schedules guarantee an attainable common delivery.",
+      "Complete three finite studies. Reset challenge retries this study; Restart game begins the campaign again."
+    ],
+    "controls": "Select an honest receiver, route or discard a signed envelope, emit ECHO or READY, deliver a colour with its certificate, and certify common honest delivery. Use touch taps, or Tab with Enter/Space; arrow keys adjust any labeled native range.",
+    "accent": "#cbbf98",
+    "symbol": "\u2318",
+    "stages": 3,
+    "endless": {
+      "supported": false,
+      "design": "Three authored authenticated schedules: a consistent sender, an equivocating sender, and repeated faulty signatures. Each schedule permits a common certified delivery; arbitrary faulty-sender liveness is not claimed.",
+      "reason": "The current implementation offers three authored studies rather than a verified indefinitely varied generator."
+    },
+    "nearestExisting": [
+      {
+        "id": "quorum-garden",
+        "source": "signal-lab/choices.mjs",
+        "difference": "Static quorum-set design does not operate echo/ready phases, author-deduplicated evidence or a Byzantine sender emitting inconsistent values. Here local evidence evolves and delivery decisions must agree."
+      },
+      {
+        "id": "masks-and-coins",
+        "source": "parlour-room/masks-and-coins.mjs",
+        "difference": "No hidden role bluff or challenge: fault bound and public evidence rules govern distributed delivery, with one declared adversarial participant."
+      }
+    ],
+    "source": [
+      "protocol-room/collaboration.mjs",
+      "protocol-room/core.mjs",
+      "protocol-room/engines.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"route:1\"]"
+    }
+  },
+  {
+    "id": "timestamp-current",
+    "name": "Timestamp Current",
+    "category": "puzzle",
+    "url": "protocol-room/?game=timestamp-current",
+    "mechanic": "Advance an event-time watermark to close aggregation windows while retaining enough memory for late events permitted by each source's progress guarantee.",
+    "description": "Advance an event-time watermark to close aggregation windows while retaining enough memory for late events permitted by each source's progress guarantee.",
+    "rules": [
+      "Choose which source\u2019s next event or progress envelope arrives. Events may be out of timestamp order. Progress envelopes certify a lower bound for that source\u2019s remaining events.",
+      "Publish a monotone global watermark no higher than every source\u2019s certified bound. Close a window only when its end is at or behind that watermark; premature finality loses.",
+      "Finalizing a window releases its buffer space and sums every buffered or archived event exactly once. Limited archive spills can relieve pressure. Finish every source and window with exact totals.",
+      "Complete three finite studies. Reset challenge retries this study; Restart game begins the campaign again. Optional generated challenges bank finished-study scores until a loss or you end the run."
+    ],
+    "controls": "Deliver a source\u2019s next event or progress envelope, set and publish the global watermark, close a window, archive one buffered event if needed, and seal the stream. Use touch taps, or Tab with Enter/Space; arrow keys adjust any labeled native range.",
+    "accent": "#cbbf98",
+    "symbol": "\u2318",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "design": "Generate three or four event-time windows across two or three sources, with varied event timestamps/values, look-ahead placement and additional bounded event counts. Progress envelopes certify lower bounds; arrival order and buffer pressure vary.",
+      "kind": "challenge-stream",
+      "difficultyCap": "Bounded program, event, key, edit or geometric state; seed-driven transition data continues to vary after study three."
+    },
+    "nearestExisting": [
+      {
+        "id": "receipt-route",
+        "source": "workbench-room/computation.mjs",
+        "difference": "Reliable delivery buffers a missing sequence prefix. This closes time intervals under source event-time guarantees and sums unordered rows; there is no cumulative data ACK or required packet sequence."
+      },
+      {
+        "id": "cold-chain",
+        "source": "systems-room/cold-chain.mjs",
+        "difference": "No physical perishability/recipe aging: timestamps, safe finality and irrevocable aggregate emission govern memory."
+      }
+    ],
+    "source": [
+      "protocol-room/streams.mjs",
+      "protocol-room/core.mjs",
+      "protocol-room/engines.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"next:0\"]"
+    }
+  },
+  {
+    "id": "changing-roads",
+    "name": "Changing Roads",
+    "category": "puzzle",
+    "url": "protocol-room/?game=changing-roads",
+    "mechanic": "Repair distance-vector routing after a link failure by choosing advertisements and poisoned reverse withdrawals, preventing neighbors from sustaining a bogus route through each other.",
+    "description": "Repair distance-vector routing after a link failure by choosing advertisements and poisoned reverse withdrawals, preventing neighbors from sustaining a bogus route through each other.",
+    "rules": [
+      "The R1 direct link to destination failed before play. Withdraw it, then exchange displayed neighbor costs. Each receiver picks the cheapest link-plus-advertised-neighbor route.",
+      "Poisoned reverse reports infinity specifically toward the sender\u2019s current next hop. Settle all stale and new reports, then certify true shortest costs and loop-free forwarding. Sending and delivering each envelope costs1.",
+      "Complete three finite studies. Reset retries this study; Restart begins the campaign. Optional generated challenges, when offered, bank scores until a loss or you end the run."
+    ],
+    "controls": "Withdraw the failed direct link, select a router, send an ordinary or poisoned-reverse advertisement, deliver queued reports and trace the final forwarding table. Use touch taps, or Tab with Enter/Space; arrow keys adjust any labeled native range.",
+    "accent": "#cbbf98",
+    "symbol": "\u2318",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Generate varied weighted connected graphs and one bounded failure/cost change, with independently computed shortest paths and safe withdrawal/adoption schedules.",
+      "difficultyCap": "At most5 replicas with7 log entries, or6 routers with positive costs and a bounded message allowance."
+    },
+    "nearestExisting": [
+      {
+        "id": "orbit-transfer",
+        "source": "spatial-room/room.js",
+        "difference": "That selects a traveler path through a fixed directed map. Here autonomous next-hop tables change through exchanged advertisements, stale information and link failure; a locally low cost can be a forwarding loop."
+      },
+      {
+        "id": "copper-tree",
+        "source": "puzzle-lab/engines.js",
+        "difference": "No spanning-tree edge-set optimization: destination-specific costs and advertisements converge to usable forwarding tables."
+      }
+    ],
+    "source": [
+      "protocol-room/network.mjs",
+      "protocol-room/core.mjs",
+      "protocol-room/engines.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"withdraw\"]"
+    }
+  },
+  {
+    "id": "branch-archive",
+    "name": "Branch Archive",
+    "category": "puzzle",
+    "url": "protocol-room/?game=branch-archive",
+    "mechanic": "Update multiple immutable tree versions by copying only shared nodes on the changed path; retain reusable subtrees without allowing an update to corrupt an older published version.",
+    "description": "Update multiple immutable tree versions by copying only shared nodes on the changed path; retain reusable subtrees without allowing an update to corrupt an older published version.",
+    "rules": [
+      "A draft begins from its requested published version. Every node reachable from a retained root is protected; copy its ancestor before attaching a private child and copy the target leaf before changing it.",
+      "Only requested leaf values may change. Publish all changes together, retain required versions, and release optional versions only after they supplied any needed draft. Reuse private paths to meet the copy budget.",
+      "Complete three finite studies. Reset challenge retries this study; Restart game begins the campaign again. Optional generated challenges bank finished-study scores until a loss or you end the run."
+    ],
+    "controls": "Begin a requested version, select a tree path, copy a protected node, store a requested leaf value, release an optional version, publish the draft and audit retained roots. Use touch taps, or Tab with Enter/Space; arrow keys adjust any labeled native range.",
+    "accent": "#cbbf98",
+    "symbol": "\u2318",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Seed bounded version branch histories and leaf updates, with distinct shared-path geometry and constructive minimal path-copy witness budgets.",
+      "difficultyCap": "Bounded pages, clients, keys or workers; seeded structures and histories vary after the three finite studies."
+    },
+    "nearestExisting": [
+      {
+        "id": "branch-librarian",
+        "source": "workbench-room/structures.mjs",
+        "difference": "Binary rotations preserve one mutable search tree and minimize access depths. This maintains several independent immutable roots, path-copies updates and shares subtrees under an allocation budget; search shape does not change."
+      },
+      {
+        "id": "night-collector",
+        "source": "workbench-room/living-systems.mjs",
+        "difference": "Tracing collection preserves current live objects during mutation. Here prior published values themselves must remain immutable, and copying rather than marking is the central action."
+      }
+    ],
+    "source": [
+      "protocol-room/storage.mjs",
+      "protocol-room/core.mjs",
+      "protocol-room/engines.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"begin\"]"
+    }
+  },
+  {
+    "id": "cancellation-desk",
+    "name": "Cancellation Desk",
+    "category": "puzzle",
+    "url": "protocol-room/?game=cancellation-desk",
+    "mechanic": "Choose summation order and when to retain a compensation residual under finite decimal precision so small contributions survive large cancellation without overspending arithmetic work.",
+    "description": "Choose summation order and when to retain a compensation residual under finite decimal precision so small contributions survive large cancellation without overspending arithmetic work.",
+    "rules": [
+      "All arithmetic rounds to three significant decimal digits. Select one signed term to add or two to form a rounded subtotal. Every original term must contribute exactly once.",
+      "Ordinary addition costs one work unit; compensated addition costs two and keeps a separately rounded lost-part correction. Pairing costs one and creates a new rounded term. Choose grouping and order before information disappears.",
+      "Report only after consuming every term. The final rounded accumulator plus correction must equal the exact signed total. The work allowance prevents repairing arbitrary poor choices.",
+      "Complete three finite studies. Reset challenge retries this study; Restart game begins the campaign again."
+    ],
+    "controls": "Select one term for an ordinary or compensated add, or two terms for a rounded pair; report the final sum after consuming every term. Use touch taps, or Tab with Enter/Space; arrow keys adjust any labeled native range.",
+    "accent": "#cbbf98",
+    "symbol": "\u2318",
+    "stages": 3,
+    "endless": {
+      "supported": false,
+      "design": "Three authored three-significant-digit cancellation sets; magnitude scales, residuals and available grouping/compensation choices differ. No relabelled-template endless mode.",
+      "reason": "The current implementation offers three authored studies rather than a verified indefinitely varied generator."
+    },
+    "nearestExisting": [
+      {
+        "id": "wraparound-witness",
+        "source": "signal-lab/measures.mjs",
+        "difference": "Overflow witnesses exploit exact fixed-width integer modular wrap to follow branch tests. This uses decimal rounding and cancellation, preserves an error residual and optimizes final numerical accuracy rather than selecting a branch trace."
+      },
+      {
+        "id": "make-24",
+        "source": "number-room/room.js",
+        "difference": "No arbitrary expression target from four numbers: a fixed multiset must be summed, all terms count once and limited precision changes the evaluated answer."
+      }
+    ],
+    "source": [
+      "protocol-room/numerics.mjs",
+      "protocol-room/core.mjs",
+      "protocol-room/engines.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"term:0\"]"
+    }
+  },
+  {
+    "id": "bracket-ferry",
+    "name": "Bracket Ferry",
+    "category": "puzzle",
+    "url": "protocol-room/?game=bracket-ferry",
+    "mechanic": "Choose midpoint, secant or Newton root probes while preserving an exact sign-changing interval; fast tangents may leave the bracket, while bisection spends more probes.",
+    "description": "Choose midpoint, secant or Newton root probes while preserving an exact sign-changing interval; fast tangents may leave the bracket, while bisection spends more probes.",
+    "rules": [
+      "Initially the cubic has opposite signs at the two endpoints. Choose midpoint, endpoint secant or a Newton tangent from either endpoint; a valid probe must remain strictly inside the bracket.",
+      "Retain the half whose endpoints still have opposite signs. Sign and width comparisons use exact fractions, even when the displayed decimal approximation is short.",
+      "Accept only a completed bracket no wider than the target, within the probe allowance. A wrong half, out-of-bracket tangent or premature acceptance loses; an exact root wins immediately.",
+      "Complete three finite studies. Reset challenge retries this study; Restart game begins the campaign again. Optional generated challenges bank finished-study scores until a loss or you end the run."
+    ],
+    "controls": "Choose midpoint, secant or Newton; choose a Newton endpoint, compute the probe, retain the sign-preserving half and accept the finished bracket. Use touch taps, or Tab with Enter/Space; arrow keys adjust any labeled native range.",
+    "accent": "#cbbf98",
+    "symbol": "\u2318",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "design": "Generate positive cubic-plus-linear functions with varied linear coefficients and root locations. Exact rational endpoint, secant and Newton transitions preserve bounded sign-certified intervals through all stages.",
+      "kind": "challenge-stream",
+      "difficultyCap": "Bounded program, event, key, edit or geometric state; seed-driven transition data continues to vary after study three."
+    },
+    "nearestExisting": [
+      {
+        "id": "false-weight",
+        "source": "discovery-room/room.js",
+        "difference": "Balance experiments identify a discrete anomalous object. Here continuous sign brackets and derivative-informed numerical steps certify a root interval, with exact bracket preservation and evaluation costs."
+      },
+      {
+        "id": "clockwork",
+        "source": "number-room/room.js",
+        "difference": "No exact modular arrival route: uncertainty interval shrinks after actual function probes, and root error is bounded by the surviving interval."
+      }
+    ],
+    "source": [
+      "protocol-room/numerics.mjs",
+      "protocol-room/core.mjs",
+      "protocol-room/engines.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"probe\"]"
+    }
+  },
+  {
+    "id": "pivot-gallery",
+    "name": "Pivot Gallery",
+    "category": "puzzle",
+    "url": "protocol-room/?game=pivot-gallery",
+    "mechanic": "Pivot among feasible corners of a small linear optimization problem, choosing an improving entering direction and its minimum-ratio limiting constraint while avoiding degenerate wasted pivots.",
+    "description": "Pivot among feasible corners of a small linear optimization problem, choosing an improving entering direction and its minimum-ratio limiting constraint while avoiding degenerate wasted pivots.",
+    "rules": [
+      "Keep every resource inequality feasible. Release one active corner boundary and choose a direction along the other. Each forward blocking ratio is shown; pivot only as far as the earliest limiting resource.",
+      "Each pivot spends one unit. A farther blocking choice crosses a nearer boundary and loses. Zero-length tied pivots can change the active basis but still cost work.",
+      "At the final corner, set nonnegative integer weights for its two active normals. Their weighted sum must equal the objective vector, certifying optimality within the pivot allowance.",
+      "Complete three finite studies. Reset challenge retries this study; Restart game begins the campaign again. Optional generated challenges bank finished-study scores until a loss or you end the run."
+    ],
+    "controls": "Choose the active boundary to release and an edge direction, select the limiting resource to pivot to, set both certificate weights on native ranges and certify the corner. Use touch taps, or Tab with Enter/Space; arrow keys adjust any labeled native range.",
+    "accent": "#cbbf98",
+    "symbol": "\u2318",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "design": "Generate bounded resource polygons with different normal vectors, limits, corner geometry and an optional third resource. Objectives are constructive positive combinations of two active normals, allowing an exact dual certificate.",
+      "kind": "challenge-stream",
+      "difficultyCap": "Bounded program, event, key, edit or geometric state; seed-driven transition data continues to vary after study three."
+    },
+    "nearestExisting": [
+      {
+        "id": "row-orchestra",
+        "source": "workbench-room/structures.mjs",
+        "difference": "Row Orchestra uses bounded elementary row transformations to reach a matrix target. This maintains inequality feasibility, an active corner basis, objective improvement and ratio-limited edge moves; matrix equivalence alone cannot certify a valid pivot."
+      },
+      {
+        "id": "orbit-transfer",
+        "source": "spatial-room/room.js",
+        "difference": "No authored graph destinations: feasible edge endpoints are derived from actual linear constraints and the player's entering/leaving basis choice."
+      }
+    ],
+    "source": [
+      "protocol-room/numerics.mjs",
+      "protocol-room/core.mjs",
+      "protocol-room/engines.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"release:1\"]"
+    }
+  }
+]

@@ -19,9 +19,11 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
-      - name: Verify400-game release and complete source-bound endless review
+      - name: Verify500-game release and complete source-bound endless review
         run: |
-          node mini-games/tests/expansion400-review-gate.cjs
+          node mini-games/tests/expansion500-review-gate.cjs
+          node mini-games/tests/verification-scopes-test.cjs
+          node mini-games/preservation/remediations-test.cjs
           node mini-games/tests/evidence-index.cjs
           node mini-games/tests/evidence-fresh.cjs
           node mini-games/tools/coverage-index.cjs
@@ -35,6 +37,7 @@ jobs:
           node mini-games/tests/preservation.cjs
           node mini-games/tests/preservation200.cjs
           node mini-games/tests/preservation300.cjs
+          node mini-games/tests/preservation400.cjs
           node mini-games/tests/expansion300-review-gate.cjs
       - name: Install test-only browser dependencies
         run: |
@@ -53,7 +56,7 @@ jobs:
         run: |
           set -o pipefail
           export CHROMIUM_PATH="$(node -e "process.stdout.write(require('playwright').chromium.executablePath())")"
-          for suite in resume-focus number-room-review-regressions spatial-accessibility review-arcade-strategy expansion-controls systems-remediation tabletop-remediation puzzle-remediation kinetic-remediation discovery-remediation; do
+          for suite in resume-focus number-room-review-regressions spatial-accessibility review-arcade-strategy expansion-controls systems-remediation tabletop-remediation puzzle-remediation puzzle-arrow-audit-regression kinetic-remediation discovery-remediation; do
             node "mini-games/tests/$suite.cjs" | tee "live-verification/fix-$suite-chromium.log"
           done
       - name: Install WebKit for browser-engine regression checks
@@ -67,7 +70,7 @@ jobs:
           BROWSER_ENGINE: webkit
         run: |
           set -o pipefail
-          for suite in resume-focus number-room-review-regressions spatial-accessibility review-arcade-strategy expansion-controls systems-remediation tabletop-remediation puzzle-remediation kinetic-remediation discovery-remediation; do
+          for suite in resume-focus number-room-review-regressions spatial-accessibility review-arcade-strategy expansion-controls systems-remediation tabletop-remediation puzzle-remediation puzzle-arrow-audit-regression kinetic-remediation discovery-remediation; do
             node "mini-games/tests/$suite.cjs" | tee "live-verification/fix-$suite-webkit.log"
           done
       - name: Save live verification evidence
@@ -78,6 +81,8 @@ jobs:
           path: |
             live-verification/
             mini-games/coverage/*-remediation-*.json
+            mini-games/coverage/puzzle-arrow-audit-regression.json
+            mini-games/coverage/puzzle-arrow-audit-regression-*.json
           retention-days: 30
   new-game-completion:
     runs-on: ubuntu-latest
@@ -85,7 +90,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        room: [systems-room, tabletop-room, puzzle-lab, kinetic-room, discovery-room, construct-room, parlour-room, motion-room, workbench-room, constraint-room, field-room, signal-lab, commons-room, atelier-room]
+        room: [systems-room, tabletop-room, puzzle-lab, kinetic-room, discovery-room, construct-room, parlour-room, motion-room, workbench-room, constraint-room, field-room, signal-lab, commons-room, atelier-room, relation-room, trajectory-room, protocol-room, civic-room, form-room]
     steps:
       - uses: actions/checkout@v4
       - name: Install test-only browser dependencies
@@ -121,11 +126,12 @@ jobs:
             mini-games/coverage/${{ matrix.room }}.json
             mini-games/coverage/suite-runs/${{ matrix.room }}.json
             mini-games/coverage/puzzle-generation-regression.json
+            mini-games/coverage/puzzle-arrow-audit-regression.json
             mini-games/coverage/discovery-design-properties.json
           retention-days: 30
   journey-lifecycle:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
       - name: Install test-only engines

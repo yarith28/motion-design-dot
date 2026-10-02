@@ -1,0 +1,909 @@
+[
+  {
+    "id": "rendezvous-window",
+    "name": "Rendezvous Window",
+    "category": "puzzle",
+    "url": "trajectory-room/?game=rendezvous-window",
+    "mechanic": "Time prograde/radial burns in a central-gravity orbit to meet an independently orbiting target with low relative position AND velocity; an orbit crossing alone cannot dock.",
+    "description": "Time prograde/radial burns in a central-gravity orbit to meet an independently orbiting target with low relative position AND velocity; an orbit crossing alone cannot dock.",
+    "rules": [
+      "Dock with distance<0.30 and relative speed<0.20 after a central-gravity coast/burn route. Propellant impulse allowance 2.5; impact, escape and 28-time-unit expiry lose.",
+      "Every physics interval advances only through its named native control; inspect the actual state and public targets between intervals. These are simplified game models, not engineering predictions.",
+      "Complete all three authored studies for a finite campaign. Unsafe committed actions or exhausted physical/time allowances lose; Reset challenge restores this study and Restart game restores the campaign."
+    ],
+    "controls": "Signed native burn slider; prograde/radial direction, Apply impulse, Coast 0.1, Dock. Use Tab+Enter/Space or mobile touch on native controls; sliders support keyboard arrows and touch.",
+    "accent": "#b9ceb5",
+    "symbol": "↗",
+    "stages": 3,
+    "nearestExisting": [
+      {
+        "id": "orbit-transfer",
+        "difference": "Existing source traverses directed station arrows and spends integer fuel; this proposal integrates inverse-square acceleration and continuous orbital phase."
+      },
+      {
+        "id": "soft-landing",
+        "difference": "Existing source lands against constant downward gravity and a stationary pad; this mission has a moving circular/elliptic target and matching orbital velocity."
+      },
+      {
+        "id": "star-tow",
+        "difference": "Existing source has damped inertial motion with cargo pickup; central gravity, coast-phase timing and relative-velocity docking define this game."
+      }
+    ],
+    "sourceModules": [
+      "engines.mjs",
+      "core.mjs",
+      "orbits.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"coast\"]"
+    },
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Generate bounded outward/inward central-gravity transfers with varied source/target radii and orbital phase. Each rendezvous retains both position and relative-velocity docking constraints, finite impulse 2. 5 and 28-time-unit coast allowance.",
+      "difficultyCap": "Physical sizes and 3 bounded route/target families stay capped for unbounded stage indices. 24 dispersed generated initializations and 8 legal late-stage witnesses per game are model evidence; native two-challenge coverage is recorded separately."
+    }
+  },
+  {
+    "id": "ballast-bay",
+    "name": "Ballast Bay",
+    "category": "puzzle",
+    "url": "trajectory-room/?game=ballast-bay",
+    "mechanic": "Control fore/aft flood and compressed-air blow while pressure shrinks ballast air with depth; neutral buoyancy and pitch depend on both water mass and compressible volume.",
+    "description": "Control fore/aft flood and compressed-air blow while pressure shrinks ballast air with depth; neutral buoyancy and pitch depend on both water mass and compressible volume.",
+    "rules": [
+      "Dock the full hull within 0.25 of the receiver with speed<0.18, pitch<0.08 and angular speed<0.1. Hydrostatic pressure compresses air, admits water and changes buoyancy; fore/aft imbalance torques trim.",
+      "Every physics interval advances only through its named native control; inspect the actual state and public targets between intervals. These are simplified game models, not engineering predictions.",
+      "Complete all three authored studies for a finite campaign. Unsafe committed actions or exhausted physical/time allowances lose; Reset challenge restores this study and Restart game restores the campaign."
+    ],
+    "controls": "Select fore/aft, Flood/Blow measured air amount, ahead/off/astern propeller, Advance 0.2 s, Dock. Use Tab+Enter/Space or mobile touch on native controls; sliders support keyboard arrows and touch.",
+    "accent": "#b9ceb5",
+    "symbol": "↗",
+    "stages": 3,
+    "nearestExisting": [
+      {
+        "id": "breathing-lane",
+        "difference": "Existing swimming advances through depth gates using stroke recovery and oxygen. Here two ballast tanks change mass, volume, trim and depth-dependent buoyancy; there is no stroke or respiration model."
+      },
+      {
+        "id": "pressure-gallery",
+        "difference": "Existing incompressible pump units choose loaded piston branches. This vehicle has compressible tank air, hydrostatic pressure, pitched motion and full hull clearance."
+      }
+    ],
+    "sourceModules": [
+      "engines.mjs",
+      "core.mjs",
+      "fluids.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"flood\"]"
+    },
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Generate bounded receiver horizontal/depth positions across open bay, submerged sill and two-wall gap routes. Pressure-compressed air volume and fore/aft water mass determine buoyancy/trim, with finite compressed-air reserve and full swept hull checks.",
+      "difficultyCap": "Physical sizes and 3 bounded route/target families stay capped for unbounded stage indices. 24 dispersed generated initializations and 8 legal late-stage witnesses per game are model evidence; native two-challenge coverage is recorded separately."
+    }
+  },
+  {
+    "id": "induction-coast",
+    "name": "Induction Coast",
+    "category": "puzzle",
+    "url": "trajectory-room/?game=induction-coast",
+    "mechanic": "Switch electrical loads on a moving conducting rail so induced current both brakes the runner and transfers mechanical energy to a receiver; stronger load changes later available voltage.",
+    "description": "Switch electrical loads on a moving conducting rail so induced current both brakes the runner and transfers mechanical energy to a receiver; stronger load changes later available voltage.",
+    "rules": [
+      "Clamp at x11.2–12.1, speed<1.2 and recovered energy within 1.0 of the public target. Moving through alternating field signs changes EMF; resistor/receiver heat and voltage are bounded.",
+      "Every physics interval advances only through its named native control; inspect the actual state and public targets between intervals. These are simplified game models, not engineering predictions.",
+      "Complete all three authored studies for a finite campaign. Unsafe committed actions or exhausted physical/time allowances lose; Reset challenge restores this study and Restart game restores the campaign."
+    ],
+    "controls": "Open/receiver/resistor circuit, resistance 0.5/1/2, receiver polarity, Advance 0.25 s, Clamp. Use Tab+Enter/Space or mobile touch on native controls; sliders support keyboard arrows and touch.",
+    "accent": "#b9ceb5",
+    "symbol": "↗",
+    "stages": 3,
+    "nearestExisting": [
+      {
+        "id": "magnetic-quartet",
+        "difference": "Existing source moves charged pucks in static inverse-square fields. Induction uses velocity-generated EMF and current-dependent opposing mechanical force, with no movable magnetic source."
+      },
+      {
+        "id": "clutch-circuit",
+        "difference": "Existing engine/gear RPM creates propulsion and heat. Here the conductor receives gravity/initial kinetic energy, and circuit load simultaneously changes its speed and stored electrical energy."
+      },
+      {
+        "id": "power-desk",
+        "difference": "Existing source allocates hourly turbine/battery stocks. This energy comes from coupled continuous motion and back-EMF rather than chosen production units."
+      }
+    ],
+    "sourceModules": [
+      "engines.mjs",
+      "core.mjs",
+      "orbits.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"advance\"]"
+    },
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Generate bounded field strengths, receiver capacitances 0. 8–1. 2 and target energies 6–7. 5. The same actual back-EMF/current force couples charging, resistive heat and terminal braking in each fresh track.",
+      "difficultyCap": "Physical sizes and 3 bounded route/target families stay capped for unbounded stage indices. 24 dispersed generated initializations and 8 legal late-stage witnesses per game are model evidence; native two-challenge coverage is recorded separately."
+    }
+  },
+  {
+    "id": "resonant-switch",
+    "name": "Resonant Switch",
+    "category": "puzzle",
+    "url": "trajectory-room/?game=resonant-switch",
+    "mechanic": "Observe capacitor charge and inductor current, then switch at the useful oscillation phase to move energy through a one-way receiver without reversing or overcharging it.",
+    "description": "Observe capacitor charge and inductor current, then switch at the useful oscillation phase to move energy through a one-way receiver without reversing or overcharging it.",
+    "rules": [
+      "Charge every unequal receiver within its displayed voltage band and finish at current<0.1. Wrong phase, receiver overvoltage or opening a live coil loses.",
+      "Every physics interval advances only through its named native control; inspect the actual state and public targets between intervals. These are simplified game models, not engineering predictions.",
+      "Complete all three authored studies for a finite campaign. Unsafe committed actions or exhausted physical/time allowances lose; Reset challenge restores this study and Restart game restores the campaign."
+    ],
+    "controls": "Source/receiver/dump/isolate circuits, Advance 0.08 s, Seal receivers. Use Tab+Enter/Space or mobile touch on native controls; sliders support keyboard arrows and touch.",
+    "accent": "#b9ceb5",
+    "symbol": "↗",
+    "stages": 3,
+    "nearestExisting": [
+      {
+        "id": "phase-paper",
+        "difference": "Existing source composes instantaneous amplitude gates and compares coherent vectors. This circuit evolves charge/current in time and switches physical paths with dissipative/diode limits."
+      },
+      {
+        "id": "power-desk",
+        "difference": "Existing battery balances lumped hourly stock. Resonant transfer depends on current polarity and stored magnetic/electric energy at the switching instant."
+      },
+      {
+        "id": "induction-coast",
+        "difference": "New neighbor derives voltage from moving conductors and brakes motion. This circuit has no rail or mechanical source; its central choice is switching the phase of a lumped LC oscillation."
+      }
+    ],
+    "sourceModules": [
+      "engines.mjs",
+      "core.mjs",
+      "orbits.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"source\"]"
+    },
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Generate inductor values 0. 9–1. 1, unequal receiver capacitances and energy-feasible receiver voltage bands. Signed phase/current and diode zero-current transfer remain actual state; each challenge begins with a fresh finite source charge.",
+      "difficultyCap": "Physical sizes and 3 bounded route/target families stay capped for unbounded stage indices. 24 dispersed generated initializations and 8 legal late-stage witnesses per game are model evidence; native two-challenge coverage is recorded separately."
+    }
+  },
+  {
+    "id": "suspension-course",
+    "name": "Suspension Course",
+    "category": "puzzle",
+    "url": "trajectory-room/?game=suspension-course",
+    "mechanic": "Apply force between sprung cabin and unsprung wheel while road excitation changes their relative displacement; improve comfort without unloading the tire or bottoming the suspension.",
+    "description": "Apply force between sprung cabin and unsprung wheel while road excitation changes their relative displacement; improve comfort without unloading the tire or bottoming the suspension.",
+    "rules": [
+      "Finish the 8s bump route with cabin displacement<0.08 and speed<0.2, tire lift≤0.15s, travel≤0.55, and the public shock/work allowances. Separate cabin/wheel dynamics react to damping and actuator forces.",
+      "Every physics interval advances only through its named native control; inspect the actual state and public targets between intervals. These are simplified game models, not engineering predictions.",
+      "Complete all three authored studies for a finite campaign. Unsafe committed actions or exhausted physical/time allowances lose; Reset challenge restores this study and Restart game restores the campaign."
+    ],
+    "controls": "Three actuator forces, three damping settings, Advance 0.1 s. Use Tab+Enter/Space or mobile touch on native controls; sliders support keyboard arrows and touch.",
+    "accent": "#b9ceb5",
+    "symbol": "↗",
+    "stages": 3,
+    "nearestExisting": [
+      {
+        "id": "balance-beam",
+        "difference": "Existing source leans a beam to move a single marble against a breeze. This is two vertically coupled masses, a tire-ground contact force and internal actuator work."
+      },
+      {
+        "id": "cable-carrier",
+        "difference": "Existing pendulum couples angular sway to an overhead trolley/rope length. This uses independent cabin/wheel vertical velocities and suspension travel/contact constraints; no hanging load."
+      },
+      {
+        "id": "clutch-circuit",
+        "difference": "Existing car chooses gear/throttle/brakes for longitudinal travel. Travel here is prescribed, and the player controls vertical force and damping through road bumps."
+      }
+    ],
+    "sourceModules": [
+      "engines.mjs",
+      "core.mjs",
+      "contact.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"damping:1.6\"]"
+    },
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Generate bounded bump heights and center-time offsets across isolated, paired and alternating bump/dip road profiles. Cabin/wheel masses, tire contact and finite comfort/work limits remain fixed; some generated rides require active force/damping choices.",
+      "difficultyCap": "Physical sizes and 3 bounded route/target families stay capped for unbounded stage indices. 24 dispersed generated initializations and 8 legal late-stage witnesses per game are model evidence; native two-challenge coverage is recorded separately."
+    }
+  },
+  {
+    "id": "pawl-and-tooth",
+    "name": "Pawl and Tooth",
+    "category": "puzzle",
+    "url": "trajectory-room/?game=pawl-and-tooth",
+    "mechanic": "Engage a drive pawl only at a tooth’s useful face, then transfer the load to the holding pawl before returning the drive; tooth phase and reverse torque determine safe advancement.",
+    "description": "Engage a drive pawl only at a tooth’s useful face, then transfer the load to the holding pawl before returning the drive; tooth phase and reverse torque determine safe advancement.",
+    "rules": [
+      "Raise the loaded wheel to the target whole tooth, transfer to the holding pawl, raise the drive and return its arm before securing. Tooth phase, unilateral holding contact and loaded angular inertia determine safe cycles. The final finite study shares a bridge: raise the holder during the carried drive stroke, then raise drive before lowering holder without an unsupported Advance.",
+      "Every physics interval advances only through its named native control; inspect the actual state and public targets between intervals. These are simplified game models, not engineering predictions.",
+      "Complete all three authored studies for a finite campaign. Unsafe committed actions or exhausted physical/time allowances lose; Reset challenge restores this study and Restart game restores the campaign."
+    ],
+    "controls": "Raise/lower each pawl; Push/Wait/Return 0.1 s; Secure. Use Tab+Enter/Space or mobile touch on native controls; sliders support keyboard arrows and touch.",
+    "accent": "#b9ceb5",
+    "symbol": "↗",
+    "stages": 3,
+    "nearestExisting": [
+      {
+        "id": "gear-train",
+        "difference": "Existing source swaps adjacent gears to meet static ratios. Here pawls collide with oriented tooth faces and an applied load attempts to backdrive the wheel."
+      },
+      {
+        "id": "clutch-dock",
+        "difference": "Existing source couples flywheel speeds by momentum-conserving clutches. Pawls impose unilateral angular stops and ratchet phase, with no speed averaging."
+      },
+      {
+        "id": "cam-workshop",
+        "difference": "Existing source edits follower profiles and validates slope. Here a fixed tooth profile determines real engagement and anti-reversal timing."
+      }
+    ],
+    "sourceModules": [
+      "engines.mjs",
+      "core.mjs",
+      "handles.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"drive-down\"]"
+    },
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Generate physical tooth pitch 0. 9–1. 15, loaded torque 0. 5–0. 75 and 2–4 required teeth. The shared bridge appears in one bounded family; stroke lengths, phase contacts and loaded holding transfers respond to the actual generated geometry.",
+      "difficultyCap": "Physical sizes and 3 bounded route/target families stay capped for unbounded stage indices. 24 dispersed generated initializations and 8 legal late-stage witnesses per game are model evidence; native two-challenge coverage is recorded separately."
+    }
+  },
+  {
+    "id": "footfall-foundry",
+    "name": "Footfall Foundry",
+    "category": "puzzle",
+    "url": "trajectory-room/?game=footfall-foundry",
+    "mechanic": "Place a swinging foot only after moving weight onto the supporting foot, then control hip impulse so the moving center of mass enters the next support region without falling.",
+    "description": "Place a swinging foot only after moving weight onto the supporting foot, then control hip impulse so the moving center of mass enters the next support region without falling.",
+    "rules": [
+      "Transport the dynamic center of mass onto the final stone with both feet planted, COM error<0.25 and speed<0.25. Lift only a≤25%-loaded foot, swing two beats and land within 1.1 reach on a real stone.",
+      "Every physics interval advances only through its named native control; inspect the actual state and public targets between intervals. These are simplified game models, not engineering predictions.",
+      "Complete all three authored studies for a finite campaign. Unsafe committed actions or exhausted physical/time allowances lose; Reset challenge restores this study and Restart game restores the campaign."
+    ],
+    "controls": "Foot selection, load/landing native sliders, Lift/Place, three hip forces, Advance 0.1 s, Settle. Use Tab+Enter/Space or mobile touch on native controls; sliders support keyboard arrows and touch.",
+    "accent": "#b9ceb5",
+    "symbol": "↗",
+    "stages": 3,
+    "nearestExisting": [
+      {
+        "id": "four-holds",
+        "difference": "Existing source repositions climbing limbs under static reach/order and fatigue checks. This walker has horizontal center-of-mass velocity, one/double-support phases, time-consuming swings and landing impulses."
+      },
+      {
+        "id": "step-and-spring",
+        "difference": "Existing platformer directly jumps/air-steers a body and resets on landing. This game cannot command free body translation; feet and hip torque create the support transitions."
+      }
+    ],
+    "sourceModules": [
+      "engines.mjs",
+      "core.mjs",
+      "contact.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"hip:3\"]"
+    },
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Generate 5–7 real support stones with spacing 0. 7–0. 85 and widths 0. 28–0. 38. Native landing ticks stay finer than support widths; single/double support, moving COM and landing impulses govern the complete walk.",
+      "difficultyCap": "Physical sizes and 3 bounded route/target families stay capped for unbounded stage indices. 24 dispersed generated initializations and 8 legal late-stage witnesses per game are model evidence; native two-challenge coverage is recorded separately."
+    }
+  },
+  {
+    "id": "belt-corner",
+    "name": "Belt Corner",
+    "category": "puzzle",
+    "url": "trajectory-room/?game=belt-corner",
+    "mechanic": "Use differential conveyor surface velocities to rotate and translate a rigid package through distributed friction contacts; one contact patch can spin the package while another carries it.",
+    "description": "Use differential conveyor surface velocities to rotate and translate a rigid package through distributed friction contacts; one contact patch can spin the package while another carries it.",
+    "rules": [
+      "Use four distributed slip contacts to settle the rigid package at receiver position<0.35 and angle<0.12, with translation<0.18 and spin<0.16. Full oriented-body obstacle/wall checks run during motion.",
+      "Every physics interval advances only through its named native control; inspect the actual state and public targets between intervals. These are simplified game models, not engineering predictions.",
+      "Complete all three authored studies for a finite campaign. Unsafe committed actions or exhausted physical/time allowances lose; Reset challenge restores this study and Restart game restores the campaign."
+    ],
+    "controls": "Upper/lower belt direction or stop, belt speed 0.3/1.2, Advance 0.1 s, Dock. Use Tab+Enter/Space or mobile touch on native controls; sliders support keyboard arrows and touch.",
+    "accent": "#b9ceb5",
+    "symbol": "↗",
+    "stages": 3,
+    "nearestExisting": [
+      {
+        "id": "assembly-belt",
+        "difference": "Existing source advances badges between discrete processing stations with die/oven scheduling. Here the body has continuous position, rotation and velocity under several contact forces."
+      },
+      {
+        "id": "corner-carry",
+        "difference": "Existing source directly previews/commits rigid translation and rotation. Here the player never sets the package pose; belt forces and friction generate it."
+      },
+      {
+        "id": "two-oars",
+        "difference": "Existing separate oar impulses create yaw with recovery/fatigue. Conveyor contact forces depend on each package point’s actual slip against its local moving surface, including frictional torque."
+      }
+    ],
+    "sourceModules": [
+      "engines.mjs",
+      "core.mjs",
+      "contact.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"upper:east\"]"
+    },
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Generate varied receiver centers across translation, quarter-turn and obstacle-detour warehouse families. Package pose comes only from distributed belt slip; full oriented-body sweeps and settled receiver pose remain required.",
+      "difficultyCap": "Physical sizes and 3 bounded route/target families stay capped for unbounded stage indices. 24 dispersed generated initializations and 8 legal late-stage witnesses per game are model evidence; native two-challenge coverage is recorded separately."
+    }
+  },
+  {
+    "id": "stance-circle",
+    "name": "Stance Circle",
+    "category": "puzzle",
+    "url": "trajectory-room/?game=stance-circle",
+    "mechanic": "Choose foot span and weight shift before pushing an opponent: stance changes both traction and tipping support, while the same push creates a recoil impulse on the player.",
+    "description": "Choose foot span and weight shift before pushing an opponent: stance changes both traction and tipping support, while the same push creates a recoil impulse on the player.",
+    "rules": [
+      "Win three independently settled ring matches by slipping or tipping the opponent outside their support/ring. Read the public 0.8s opponent policy; your push also recoils against your own friction and support span.",
+      "Every physics interval advances only through its named native control; inspect the actual state and public targets between intervals. These are simplified game models, not engineering predictions.",
+      "Complete all three authored studies for a finite campaign. Unsafe committed actions or exhausted physical/time allowances lose; Reset challenge restores this study and Restart game restores the campaign."
+    ],
+    "controls": "Foot span, brace/release, step/rest, high/low push, Advance 0.2 s. Use Tab+Enter/Space or mobile touch on native controls; sliders support keyboard arrows and touch.",
+    "accent": "#b9ceb5",
+    "symbol": "↗",
+    "stages": 3,
+    "nearestExisting": [
+      {
+        "id": "quiet-foil",
+        "difference": "Existing fencing uses range, telegraphed intents, stamina and health touches. This contest resolves actual center-of-mass/recoil/foot support and ends by falling or ring-out, with no health bar."
+      },
+      {
+        "id": "marble-council",
+        "difference": "Existing source ejects discrete hex groups through numerical superiority. Here support geometry and friction determine whether an opposed force moves a body or tips it."
+      },
+      {
+        "id": "footfall-foundry",
+        "difference": "New neighbor solves solo dynamic stepping between supports. This game adds opposed contact force, reaction impulse and an adversary; stepping is not the scoring route."
+      }
+    ],
+    "sourceModules": [
+      "engines.mjs",
+      "core.mjs",
+      "contact.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"brace\"]"
+    },
+    "endless": {
+      "supported": false,
+      "design": "Authored finite campaign currently available.",
+      "reason": "The three authored opponent policies do not yet supply fresh procedurally varied matches; preserve each finite match settlement."
+    }
+  },
+  {
+    "id": "compliant-socket",
+    "name": "Compliant Socket",
+    "category": "puzzle",
+    "url": "trajectory-room/?game=compliant-socket",
+    "mechanic": "Move the base of a compliant peg instead of directly moving its tip; contact deflection, yaw and Coulomb friction determine whether downward feed self-centers or jams against both walls.",
+    "description": "Move the base of a compliant peg instead of directly moving its tip; contact deflection, yaw and Coulomb friction determine whether downward feed self-centers or jams against both walls.",
+    "rules": [
+      "Seat the actual spring-mounted peg at depth 2.25–2.65 and the displayed lateral/yaw pose, with low velocity. Distributed side contacts create centering torque/friction; force, wedge duration and work are bounded.",
+      "Every physics interval advances only through its named native control; inspect the actual state and public targets between intervals. These are simplified game models, not engineering predictions.",
+      "Complete all three authored studies for a finite campaign. Unsafe committed actions or exhausted physical/time allowances lose; Reset challenge restores this study and Restart game restores the campaign."
+    ],
+    "controls": "Native command center/depth/yaw sliders, soft/firm mount, Advance 0.1 s, Seat. Use Tab+Enter/Space or mobile touch on native controls; sliders support keyboard arrows and touch.",
+    "accent": "#b9ceb5",
+    "symbol": "↗",
+    "stages": 3,
+    "nearestExisting": [
+      {
+        "id": "shrink-fit",
+        "difference": "Existing source heats rigid rings until clearance admits insertion and then cooling locks them. This socket has contact-dependent forces, elastic tip displacement and two-point wedging at fixed dimensions."
+      },
+      {
+        "id": "elbow-room",
+        "difference": "Existing source changes articulated arm joint configurations with swept link clearance. This has no arm-link planning; force/compliance transforms commanded base pose into loaded peg pose."
+      },
+      {
+        "id": "seal-shop",
+        "difference": "Existing bolt turns redistribute static gasket compression. Here insertion advances through geometric chamfer contacts and frictional jamming."
+      }
+    ],
+    "sourceModules": [
+      "engines.mjs",
+      "core.mjs",
+      "contact.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"stiffness:12\"]"
+    },
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Generate straight/lightly curved and signed bend 0. 28–0. 33 sockets. Full sampled side geometry, spring command/actual-pose deflection, contact yaw and insertion friction remain active; each peg has finite force/work limits.",
+      "difficultyCap": "Physical sizes and 3 bounded route/target families stay capped for unbounded stage indices. 24 dispersed generated initializations and 8 legal late-stage witnesses per game are model evidence; native two-challenge coverage is recorded separately."
+    }
+  },
+  {
+    "id": "stick-slip-studio",
+    "name": "Stick Slip Studio",
+    "category": "puzzle",
+    "url": "trajectory-room/?game=stick-slip-studio",
+    "mechanic": "Advance a spring-driven stylus just enough to break static friction, then reduce drive before kinetic slip carries it past the next registration mark; stored spring force remains after the base stops.",
+    "description": "Advance a spring-driven stylus just enough to break static friction, then reduce drive before kinetic slip carries it past the next registration mark; stored spring force remains after the base stops.",
+    "rules": [
+      "Stamp every ordered registration mark within 0.08 while speed<0.05 and sticking. Drive-base motion stores spring force below static friction; the same preload releases into kinetic slip after the threshold.",
+      "Every physics interval advances only through its named native control; inspect the actual state and public targets between intervals. These are simplified game models, not engineering predictions.",
+      "Complete all three authored studies for a finite campaign. Unsafe committed actions or exhausted physical/time allowances lose; Reset challenge restores this study and Restart game restores the campaign."
+    ],
+    "controls": "Coarse/fine drive-base steps, stiffness 4/6, Advance 0.1 s, Stamp. Use Tab+Enter/Space or mobile touch on native controls; sliders support keyboard arrows and touch.",
+    "accent": "#b9ceb5",
+    "symbol": "↗",
+    "stages": 3,
+    "nearestExisting": [
+      {
+        "id": "quiet-curl",
+        "difference": "Existing source launches freely sliding stones under decelerating kinetic friction. This stylus sticks under a static threshold and receives ongoing force from a moving compliant drive."
+      },
+      {
+        "id": "paper-links",
+        "difference": "Existing source aims/powers one friction-driven ball. Here the player controls the drive-base motion over time, and elastic preload/history determines each slip."
+      },
+      {
+        "id": "cable-carrier",
+        "difference": "Existing pendulum oscillation uses trolley/rope geometry. This is tangential static/kinetic surface friction with a spring preload, not a suspended angle problem."
+      }
+    ],
+    "sourceModules": [
+      "engines.mjs",
+      "core.mjs",
+      "handles.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"base-right\"]"
+    },
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Generate small independent ordered mark offsets across uniform, rough-patch and reversing registration families. Actual spring preload, static/kinetic transition and prior stamped-state history remain coupled.",
+      "difficultyCap": "Physical sizes and 3 bounded route/target families stay capped for unbounded stage indices. 24 dispersed generated initializations and 8 legal late-stage witnesses per game are model evidence; native two-challenge coverage is recorded separately."
+    }
+  },
+  {
+    "id": "backlash-observatory",
+    "name": "Backlash Observatory",
+    "category": "puzzle",
+    "url": "trajectory-room/?game=backlash-observatory",
+    "mechanic": "Track a moving star by driving through a gearbox with reversal slack and telescope inertia; a reversed motor can take up backlash without moving the view at all.",
+    "description": "Track a moving star by driving through a gearbox with reversal slack and telescope inertia; a reversed motor can take up backlash without moving the view at all.",
+    "rules": [
+      "Complete four consecutive exposure beats inside the public observation window, with angle error≤0.08 and relative rate≤0.075. Take up backlash without exceeding contact/travel limits.",
+      "Every physics interval advances only through its named native control; inspect the actual state and public targets between intervals. These are simplified game models, not engineering predictions.",
+      "Complete all three authored studies for a finite campaign. Unsafe committed actions or exhausted physical/time allowances lose; Reset challenge restores this study and Restart game restores the campaign."
+    ],
+    "controls": "Five signed motor torques, Advance 0.1 s, Commit four-beat exposure. Use Tab+Enter/Space or mobile touch on native controls; sliders support keyboard arrows and touch.",
+    "accent": "#b9ceb5",
+    "symbol": "↗",
+    "stages": 3,
+    "nearestExisting": [
+      {
+        "id": "lens-library",
+        "difference": "Existing source calibrates a hidden blur kernel and reconstructs pixels. This is public mechanical drive/angle state and time-varying target tracking, not hidden optical inference."
+      },
+      {
+        "id": "crease-keeper",
+        "difference": "Existing source prepositions once and commits a bounded dive to one shot. Telescope control reverses repeatedly, with path-dependent dead travel and low relative angular-speed exposure."
+      }
+    ],
+    "sourceModules": [
+      "engines.mjs",
+      "core.mjs",
+      "orbits.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"drive:0.6\"]"
+    },
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Generate gear slack 0. 08–0. 16, star offsets and oscillation phases in bounded drift/reversal families. A fresh scheduled four-beat exposure must still satisfy actual angular/rate errors through drive hysteresis and both inertial rotors.",
+      "difficultyCap": "Physical sizes and 3 bounded route/target families stay capped for unbounded stage indices. 24 dispersed generated initializations and 8 legal late-stage witnesses per game are model evidence; native two-challenge coverage is recorded separately."
+    }
+  },
+  {
+    "id": "surge-passage",
+    "name": "Surge Passage",
+    "category": "puzzle",
+    "url": "trajectory-room/?game=surge-passage",
+    "mechanic": "Close and open a downstream valve while pressure waves propagate along a pipe and reflect; controlling mean delivery alone cannot prevent a delayed upstream burst.",
+    "description": "Close and open a downstream valve while pressure waves propagate along a pipe and reflect; controlling mean delivery alone cannot prevent a delayed upstream burst.",
+    "rules": [
+      "Deliver target water±0.12, close the outlet and survive two full wave traversals before isolation completes. Every pipe cell must stay pressure 0.18–1.18; traveling/reflected characteristics can burst or cavitate later.",
+      "Every physics interval advances only through its named native control; inspect the actual state and public targets between intervals. These are simplified game models, not engineering predictions.",
+      "Complete all three authored studies for a finite campaign. Unsafe committed actions or exhausted physical/time allowances lose; Reset challenge restores this study and Restart game restores the campaign."
+    ],
+    "controls": "Pump pressure, valve opening, Advance one-cell propagation, Isolate/verify. Use Tab+Enter/Space or mobile touch on native controls; sliders support keyboard arrows and touch.",
+    "accent": "#b9ceb5",
+    "symbol": "↗",
+    "stages": 3,
+    "nearestExisting": [
+      {
+        "id": "pressure-gallery",
+        "difference": "Existing source selects incompressible piston branches and spends pump units. Here distributed pressure/flow characteristics travel through segments and reflect at boundary impedance."
+      },
+      {
+        "id": "reservoir",
+        "difference": "Existing source chooses daily releases from a storage forecast. This has signed traveling wave state, finite propagation delay and local instantaneous pressure limits."
+      },
+      {
+        "id": "resonant-switch",
+        "difference": "New neighbor switches a lumped LC energy phase. Surge Passage controls a spatial pipe with delay/reflection and net delivered water, rather than charging capacitors."
+      }
+    ],
+    "sourceModules": [
+      "engines.mjs",
+      "core.mjs",
+      "fluids.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"pump:0.6\"]"
+    },
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Generate bounded 5/7/9-cell lines and delivered-volume targets 2. 7–3. 7; the longest line contains a real impedance junction. Every local pressure remains constrained, and isolated lines verify two complete delayed reflection traversals.",
+      "difficultyCap": "Physical sizes and 3 bounded route/target families stay capped for unbounded stage indices. 24 dispersed generated initializations and 8 legal late-stage witnesses per game are model evidence; native two-challenge coverage is recorded separately."
+    }
+  },
+  {
+    "id": "osmotic-port",
+    "name": "Osmotic Port",
+    "category": "puzzle",
+    "url": "trajectory-room/?game=osmotic-port",
+    "mechanic": "Route water through semipermeable membranes while salt remains in its own chamber; every transfer changes concentration, osmotic driving pressure and hydrostatic head for later transfers.",
+    "description": "Route water through semipermeable membranes while salt remains in its own chamber; every transfer changes concentration, osmotic driving pressure and hydrostatic head for later transfers.",
+    "rules": [
+      "Seal all three chamber water targets±0.09 with membranes closed. Only solvent crosses; local salt mass stays fixed, concentration/head update the flow direction, pressure difference≤6 and pump work≤12.",
+      "Every physics interval advances only through its named native control; inspect the actual state and public targets between intervals. These are simplified game models, not engineering predictions.",
+      "Complete all three authored studies for a finite campaign. Unsafe committed actions or exhausted physical/time allowances lose; Reset challenge restores this study and Restart game restores the campaign."
+    ],
+    "controls": "Three counterpressure sliders, individual membrane toggles, Advance 0.5 s, Seal. Use Tab+Enter/Space or mobile touch on native controls; sliders support keyboard arrows and touch.",
+    "accent": "#b9ceb5",
+    "symbol": "↗",
+    "stages": 3,
+    "nearestExisting": [
+      {
+        "id": "measured-pour",
+        "difference": "Existing source transfers jug contents until capacity/empty stops. These connected chambers transfer only solvent, and concentration-dependent flow approaches a changing equilibrium."
+      },
+      {
+        "id": "ratio-mixer",
+        "difference": "Existing source plans integer ratios/capacity. Here salt is conserved locally across selective membranes while water movement changes pressure nonlinearly."
+      },
+      {
+        "id": "pressure-gallery",
+        "difference": "Existing pistons move fixed incompressible units under chosen pressure. Osmotic flow direction can reverse as concentrations/head change, with no piston or forced per-unit stroke."
+      }
+    ],
+    "sourceModules": [
+      "engines.mjs",
+      "core.mjs",
+      "fluids.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"membrane:0\"]"
+    },
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Generate total-water-conserving target perturbations across forward-transfer, salty-chamber reverse-transfer and unequal chamber targets. Local salt is fixed; solvent concentration/head change pressure and later membrane direction.",
+      "difficultyCap": "Physical sizes and 3 bounded route/target families stay capped for unbounded stage indices. 24 dispersed generated initializations and 8 legal late-stage witnesses per game are model evidence; native two-challenge coverage is recorded separately."
+    }
+  },
+  {
+    "id": "rocking-parcel",
+    "name": "Rocking Parcel",
+    "category": "puzzle",
+    "url": "trajectory-room/?game=rocking-parcel",
+    "mechanic": "Apply a push at a selected contact height to tip an asymmetric crate over a supporting corner, then catch its landing without excessive angular impact; its center of mass determines the tipping threshold.",
+    "description": "Apply a push at a selected contact height to tip an asymmetric crate over a supporting corner, then catch its landing without excessive angular impact; its center of mass determines the tipping threshold.",
+    "rules": [
+      "Settle the marked crate face at its receiver after one/two quarter-turns. Choose push height/force, overcome the actual COM torque barrier and counterpush to keep corner impact speed≤0.8. Each landing transforms dimensions, COM and pivot.",
+      "Every physics interval advances only through its named native control; inspect the actual state and public targets between intervals. These are simplified game models, not engineering predictions.",
+      "Complete all three authored studies for a finite campaign. Unsafe committed actions or exhausted physical/time allowances lose; Reset challenge restores this study and Restart game restores the campaign."
+    ],
+    "controls": "Low/high contact, nine signed push forces, Advance 0.1 s, Settle. Use Tab+Enter/Space or mobile touch on native controls; sliders support keyboard arrows and touch.",
+    "accent": "#b9ceb5",
+    "symbol": "↗",
+    "stages": 3,
+    "nearestExisting": [
+      {
+        "id": "corner-carry",
+        "difference": "Existing rigid load directly translates/rotates around chosen handles with preview. This body rotates under gravity and torque about its current floor-contact corner, switching pivot on landing."
+      },
+      {
+        "id": "balance-mobile",
+        "difference": "Existing source places weights to satisfy static torque. Here an offset fixed mass affects dynamic tipping, angular velocity and successive contacts."
+      },
+      {
+        "id": "domino-relay",
+        "difference": "Existing source arranges many hinged rods to transmit knockdown. This player controls one repeatedly rocking body and must arrest, place and orient it safely."
+      }
+    ],
+    "sourceModules": [
+      "engines.mjs",
+      "core.mjs",
+      "handles.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"force:1.5\"]"
+    },
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Generate COM offsets 0. 25–0. 65 across one/two-quarter-turn floor placements. Each landing transforms dimensions and COM, with actual gravity torque, push height and finite fragile angular impact/work constraints.",
+      "difficultyCap": "Physical sizes and 3 bounded route/target families stay capped for unbounded stage indices. 24 dispersed generated initializations and 8 legal late-stage witnesses per game are model evidence; native two-challenge coverage is recorded separately."
+    }
+  },
+  {
+    "id": "loop-runner",
+    "name": "Loop Runner",
+    "category": "puzzle",
+    "url": "trajectory-room/?game=loop-runner",
+    "mechanic": "Carry a cart around a vertical track while normal force depends on speed AND curvature; braking avoids excessive loads but can remove the contact needed at the top of a loop.",
+    "description": "Carry a cart around a vertical track while normal force depends on speed AND curvature; braking avoids excessive loads but can remove the contact needed at the top of a loop.",
+    "rules": [
+      "Keep normal contact force 0–25 through actual vertical loops and valleys, then stop in the last coordinate unit below speed 0.6. Finite work pulses and study-specific brake heat constrain the route.",
+      "Every physics interval advances only through its named native control; inspect the actual state and public targets between intervals. These are simplified game models, not engineering predictions.",
+      "Complete all three authored studies for a finite campaign. Unsafe committed actions or exhausted physical/time allowances lose; Reset challenge restores this study and Restart game restores the campaign."
+    ],
+    "controls": "Native release-speed slider; Coast/weak/strong brake 0.1 s, finite work pulse, Clamp. Use Tab+Enter/Space or mobile touch on native controls; sliders support keyboard arrows and touch.",
+    "accent": "#b9ceb5",
+    "symbol": "↗",
+    "stages": 3,
+    "nearestExisting": [
+      {
+        "id": "vector-rally",
+        "difference": "Existing source traces accumulated grid velocity around a course. This cart is constrained to a vertical curve and may detach when track normal force becomes negative."
+      },
+      {
+        "id": "clutch-circuit",
+        "difference": "Existing longitudinal engine/gear controls obey scalar road caps. This game has no gearbox; gravitational energy, loop contact and load limits define a lower as well as upper speed envelope."
+      },
+      {
+        "id": "vault-runway",
+        "difference": "Existing athlete releases an elastic pole into ballistic flight. This cart must retain track contact through loop curvature and complete a controlled terminal stop."
+      }
+    ],
+    "sourceModules": [
+      "engines.mjs",
+      "core.mjs",
+      "orbits.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"coast\"]"
+    },
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Generate release heights 4. 65–4. 95, bounded first-loop radii, valley depths and second-loop radii 2. 1–2. 25. All sections retain actual gravity/contact/load constraints and finite work pulses, with 20/30 brake-heat capacity by route family.",
+      "difficultyCap": "Physical sizes and 3 bounded route/target families stay capped for unbounded stage indices. 24 dispersed generated initializations and 8 legal late-stage witnesses per game are model evidence; native two-challenge coverage is recorded separately."
+    }
+  },
+  {
+    "id": "refractory-route",
+    "name": "Refractory Route",
+    "category": "puzzle",
+    "url": "trajectory-room/?game=refractory-route",
+    "mechanic": "Inject and block excitation pulses in a spatial excitable corridor: a recently fired cell cannot fire again, and colliding fronts annihilate rather than add amplitudes.",
+    "description": "Inject and block excitation pulses in a spatial excitable corridor: a recently fired cell cannot fire again, and colliding fronts annihilate rather than add amplitudes.",
+    "rules": [
+      "Deliver the ordered receiver windows±1 while keeping the protected receiver silent, then certify no active fronts. Recently fired cells recover for three beats; simultaneous opposing fronts annihilate and shortcut loops alter arrival histories.",
+      "Every physics interval advances only through its named native control; inspect the actual state and public targets between intervals. These are simplified game models, not engineering predictions.",
+      "Complete all three authored studies for a finite campaign. Unsafe committed actions or exhausted physical/time allowances lose; Reset challenge restores this study and Restart game restores the campaign."
+    ],
+    "controls": "Select injector/gate, Stimulate resting cell, gate toggle, Advance one cell beat, Certify. Use Tab+Enter/Space or mobile touch on native controls; sliders support keyboard arrows and touch.",
+    "accent": "#b9ceb5",
+    "symbol": "↗",
+    "stages": 3,
+    "nearestExisting": [
+      {
+        "id": "seed-tomorrow",
+        "difference": "Existing source intervenes in binary cellular growth to reach a final pattern. This signal has resting/excited/refractory phases and timed arrival obligations across a branched excitable path."
+      },
+      {
+        "id": "wave-desk",
+        "difference": "Existing source sets static harmonic coefficients to match samples. These nonlinear pulse fronts propagate, block through refractory history and collide without linear superposition."
+      },
+      {
+        "id": "reset-post",
+        "difference": "Existing source applies a common word to collapse a finite state set. Here spatial fronts and refractory timing determine which receivers fire and when."
+      }
+    ],
+    "sourceModules": [
+      "engines.mjs",
+      "core.mjs",
+      "transport.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"stimulate\"]"
+    },
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Generate ordered arrival-window delays 0–4, second-pulse spacing 12–16 and shortcut endpoints among bounded 14-cell networks. Rest/excited/refractory history, collision annihilation and protected receiver constraints remain actual spatial signal rules.",
+      "difficultyCap": "Physical sizes and 3 bounded route/target families stay capped for unbounded stage indices. 24 dispersed generated initializations and 8 legal late-stage witnesses per game are model evidence; native two-challenge coverage is recorded separately."
+    }
+  },
+  {
+    "id": "air-sieve",
+    "name": "Air Sieve",
+    "category": "puzzle",
+    "url": "trajectory-room/?game=air-sieve",
+    "mechanic": "Choose counterflow air speed and collection timing so particles with different mass/drag settle into separate hoppers; accelerating the air changes their velocities gradually rather than teleporting classifications.",
+    "description": "Choose counterflow air speed and collection timing so particles with different mass/drag settle into separate hoppers; accelerating the air changes their velocities gradually rather than teleporting classifications.",
+    "rules": [
+      "Collect every particle from every feed burst in its matching hopper without contamination. Actual mass/relative-slip drag/gravity govern inertial settling; changing air cannot teleport a class. Avoid top/bottom escapes and finite airflow energy.",
+      "Every physics interval advances only through its named native control; inspect the actual state and public targets between intervals. These are simplified game models, not engineering predictions.",
+      "Complete all three authored studies for a finite campaign. Unsafe committed actions or exhausted physical/time allowances lose; Reset challenge restores this study and Restart game restores the campaign."
+    ],
+    "controls": "Native upward-air slider, matching hopper/closed, Advance 0.2 s, Finish. Use Tab+Enter/Space or mobile touch on native controls; sliders support keyboard arrows and touch.",
+    "accent": "#b9ceb5",
+    "symbol": "↗",
+    "stages": 3,
+    "nearestExisting": [
+      {
+        "id": "common-meadow",
+        "difference": "Existing source herds cohesive animals using separation and repulsion. These independent particles follow drag/gravity with different terminal velocities and cannot be individually commanded."
+      },
+      {
+        "id": "sand-table",
+        "difference": "Existing source drops grains that avalanche to support heights. Here suspended particles evolve continuously through counterflow and are collected by velocity-dependent sorting."
+      },
+      {
+        "id": "assembly-belt",
+        "difference": "Existing badges travel deterministic station queues. Particle residence time and drag inertia determine whether a hopper gate receives the right class."
+      }
+    ],
+    "sourceModules": [
+      "engines.mjs",
+      "core.mjs",
+      "transport.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"heavy\"]"
+    },
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Generate independent feed heights and second-burst phases across wide/closer drag-class batches. Particle mass, air slip, gravity and velocity history govern real arrival ordering; no per-particle direct placement or class teleportation.",
+      "difficultyCap": "Physical sizes and 3 bounded route/target families stay capped for unbounded stage indices. 24 dispersed generated initializations and 8 legal late-stage witnesses per game are model evidence; native two-challenge coverage is recorded separately."
+    }
+  },
+  {
+    "id": "meniscus-maze",
+    "name": "Meniscus Maze",
+    "category": "puzzle",
+    "url": "trajectory-room/?game=meniscus-maze",
+    "mechanic": "Prime wetting channels so capillary pressure overcomes height and entry barriers, then isolate them before a receding meniscus drains an already supplied branch; contact-angle history changes later flow.",
+    "description": "Prime wetting channels so capillary pressure overcomes height and entry barriers, then isolate them before a receding meniscus drains an already supplied branch; contact-angle history changes later flow.",
+    "rules": [
+      "Fill and isolate every cup within 0.08 with full channel fronts and the competing siphon closed. Radius determines capillary rise and conductance; dry entry barriers and advancing/receding thresholds depend on wetting history.",
+      "Every physics interval advances only through its named native control; inspect the actual state and public targets between intervals. These are simplified game models, not engineering predictions.",
+      "Complete all three authored studies for a finite campaign. Unsafe committed actions or exhausted physical/time allowances lose; Reset challenge restores this study and Restart game restores the campaign."
+    ],
+    "controls": "Select channel, gate, base pressure, finite Prime pulse, competing siphon, Advance 0.5 s, Seal. Use Tab+Enter/Space or mobile touch on native controls; sliders support keyboard arrows and touch.",
+    "accent": "#b9ceb5",
+    "symbol": "↗",
+    "stages": 3,
+    "nearestExisting": [
+      {
+        "id": "wet-paper",
+        "difference": "Existing wet fibers diffuse pigment and dry/fix color. This has explicit advancing liquid fronts, capillary rise thresholds and different advancing/receding entry pressures."
+      },
+      {
+        "id": "pressure-gallery",
+        "difference": "Existing source distributes pump strokes through valves to pistons. Meniscus pressure depends on pore width, height and wetting history, and channels can stall unfilled despite connection."
+      },
+      {
+        "id": "osmotic-port",
+        "difference": "New neighbor flows water through salt-selective concentration gradients. This has no salt/semipermeability: interface curvature and priming barriers determine connectivity and hysteresis."
+      }
+    ],
+    "sourceModules": [
+      "engines.mjs",
+      "core.mjs",
+      "fluids.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"gate\"]"
+    },
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Generate bounded pore radii and cup bands 0. 55–0. 73 across parallel lift/entry-barrier/siphon networks. Advancing/receding capillary pressures, priming history, finite source and isolation determine retained delivery.",
+      "difficultyCap": "Physical sizes and 3 bounded route/target families stay capped for unbounded stage indices. 24 dispersed generated initializations and 8 legal late-stage witnesses per game are model evidence; native two-challenge coverage is recorded separately."
+    }
+  },
+  {
+    "id": "soft-sluice",
+    "name": "Soft Sluice",
+    "category": "puzzle",
+    "url": "trajectory-room/?game=soft-sluice",
+    "mechanic": "Control flow and squeezing of one viscoelastic capsule: reducing one axis lengthens the other at constant section area, stress relaxes over time, and releasing before a throat clears can trap the expanding body.",
+    "description": "Control flow and squeezing of one viscoelastic capsule: reducing one axis lengthens the other at constant section area, stress relaxes over time, and releasing before a throat clears can trap the expanding body.",
+    "rules": [
+      "Transport one unsplit capsule through alternating clearances and seal relaxed at the receiver. Reducing one axis lengthens the other under constant volume; stress memory changes later deformation, and the full ellipse is checked against every wall at each substep.",
+      "Every physics interval advances only through its named native control; inspect the actual state and public targets between intervals. These are simplified game models, not engineering predictions.",
+      "Complete all three authored studies for a finite campaign. Unsafe committed actions or exhausted physical/time allowances lose; Reset challenge restores this study and Restart game restores the campaign."
+    ],
+    "controls": "Seven signed sleeve forces; flow force 0.3/0.8, four flow directions/stop, Advance 0.2 s, Seal relaxed capsule. Native buttons use keyboard Enter/Space or touchscreen taps.",
+    "accent": "#b9ceb5",
+    "symbol": "↗",
+    "stages": 3,
+    "nearestExisting": [
+      {
+        "id": "corner-carry",
+        "difference": "Existing body is rigid and freely previewed/rotated. This capsule changes aspect ratio through compliant stress and pressure-driven motion; its full time-varying envelope is checked."
+      },
+      {
+        "id": "many-as-one",
+        "difference": "Existing source splits discrete conserved mass cells to pass capacity gates. This body never splits/merges; volume-preserving continuous deformation and stress history govern clearance."
+      },
+      {
+        "id": "spring-form",
+        "difference": "Existing irreversible strip bends subtract a static springback allowance. This body relaxes dynamically under load, and the history of squeeze/release affects later passage."
+      }
+    ],
+    "sourceModules": [
+      "engines.mjs",
+      "core.mjs",
+      "transport.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"sleeve:0.8\"]"
+    },
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Generate throat half-clearances 0. 39–0. 425 and relaxation times 1. 3–1. 6 across straight/L/return routes. An unsplit unit-thickness ellipse preserves area, evolves stress memory, clears every wall during the full transport route and relaxes inside its receiver.",
+      "difficultyCap": "Physical sizes and 3 bounded route/target families stay capped for unbounded stage indices. 24 dispersed generated initializations and 8 legal late-stage witnesses per game are model evidence; native two-challenge coverage is recorded separately."
+    }
+  }
+]

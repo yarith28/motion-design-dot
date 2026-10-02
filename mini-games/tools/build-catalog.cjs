@@ -9,10 +9,10 @@ const old=[['signal-run','Signal Run','reflex'],['double-take','Double Take','me
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const games=rooms.flatMap(room=>{
  const data=JSON.parse(fs.readFileSync(path.join(root,room,'games.json')));
- const expected={'systems-room':20,'tabletop-room':20,'puzzle-lab':20,'kinetic-room':20,'discovery-room':20,'construct-room':14,'parlour-room':35,'motion-room':24,'workbench-room':27,'constraint-room':20,'field-room':20,'signal-lab':20,'commons-room':20,'atelier-room':20}[room]||15;
+ const expected={'systems-room':20,'tabletop-room':20,'puzzle-lab':20,'kinetic-room':20,'discovery-room':20,'construct-room':14,'parlour-room':35,'motion-room':24,'workbench-room':27,'constraint-room':20,'field-room':20,'signal-lab':20,'commons-room':20,'atelier-room':20,'relation-room':20,'trajectory-room':20,'protocol-room':20,'civic-room':20,'form-room':20}[room]||15;
  if(data.length!==expected)throw Error(room+' must have '+expected+' distinct games');
  if(!preparing&&!fs.existsSync(path.join(root,'coverage',room+'.json')))throw Error('Missing browser evidence for '+room);
- if(!preparing&&['construct-room','parlour-room','motion-room','workbench-room','constraint-room','field-room','signal-lab','commons-room','atelier-room'].includes(room))require('./evidence.cjs').expansionEvidence(room);
+ if(!preparing&&['construct-room','parlour-room','motion-room','workbench-room','constraint-room','field-room','signal-lab','commons-room','atelier-room','relation-room','trajectory-room','protocol-room','civic-room','form-room'].includes(room))require('./evidence.cjs').expansionEvidence(room);
  return data.map(g=>({...g,family:room,status:'playable'}));
 });
 const all=[...old,...games];if(new Set(all.map(g=>g.id)).size!==all.length)throw Error('Duplicate game ids');
@@ -26,7 +26,8 @@ const cards=games.map((g,i)=>{
 }).join('\n');
 let html=fs.readFileSync(path.join(root,'index.html'),'utf8').replace(/\n<!-- ROOM CARDS START -->[\s\S]*?<!-- ROOM CARDS END -->/,'');
 html=html.replace('\n</div>\n<div id="empty-results"',`\n<!-- ROOM CARDS START -->\n${cards}\n<!-- ROOM CARDS END -->\n</div>\n<div id="empty-results"`);
-const order=['all','adventure','reflex','arcade','sports','memory','puzzle','strategy','word','number','creative'];
+const establishedOrder=['all','adventure','reflex','arcade','sports','memory','puzzle','strategy','word','number','creative'];
+const order=[...establishedOrder,...[...new Set(all.map(g=>g.category))].filter(category=>!establishedOrder.includes(category)).sort()];
 const names={all:'All games',word:'Wordplay',number:'Numbers',creative:'Creative'};
 const filters=order.filter(c=>c==='all'||all.some(g=>g.category===c)).map(c=>`<button data-filter="${c}" aria-pressed="${c==='all'}">${names[c]||c[0].toUpperCase()+c.slice(1)} <span>${String(c==='all'?all.length:all.filter(g=>g.category===c).length).padStart(2,'0')}</span></button>`).join('');
 html=html.replace(/(<div class="filters"[^>]*>)[\s\S]*?(<\/div><div class="view-switch")/,'$1'+filters+'$2');

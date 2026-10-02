@@ -1,0 +1,775 @@
+{
+  "schemaVersion": 1,
+  "reviewType": "independent-source-blind-ordinary-play",
+  "reviewer": "GPT-6.1 Sol Ultra",
+  "seed": 20261002,
+  "createdAt": "2026-10-02T22:08:31.320Z",
+  "environment": {
+    "browser": "Chromium /usr/bin/chromium",
+    "viewport": {
+      "width": 1180,
+      "height": 1000
+    },
+    "touchTested": false
+  },
+  "methodology": {
+    "observed": "Rendered public instructions, body text, state tables, control labels, diagrams, and screenshots only.",
+    "gameplay": "Public native buttons focused using Playwright locators, followed by actual browser keyboard Enter events. Every physics interval is a named native input.",
+    "excluded": "No engine/source contents, planner, tests, fixture routes, imported owner solutions, storage mutation, evaluation hooks, writable state, or direct state API.",
+    "independence": "Initial paths were inferred from this reviewer’s own visible state. The final-byte replay repeats only those independently discovered native paths."
+  },
+  "completedStudyCount": 9,
+  "sampledGameCount": 3,
+  "games": [
+    {
+      "id": "induction-coast",
+      "title": "Induction Coast",
+      "url": "http://127.0.0.1:8790/mini-games/trajectory-room/?game=induction-coast&seed=20261002",
+      "inputMethod": "native-keyboard",
+      "completedStudyCount": 3,
+      "campaignComplete": true,
+      "studies": [
+        {
+          "study": 1,
+          "at": "2026-10-02T22:07:35.748Z",
+          "outcome": "study-won",
+          "publicState": "Rail x 11.24/12.5 · speed 0.17 · load resistor · resistance 0.5 · polarity + · 14/140 beats.\n\nMeasured state\tValue\nReceiver energy / target\t5.20 / 6.00 ±1.00\nCapacitance / voltage\t0.80 / 3.60\nCurrent / brake force\t0.42 / -0.50\nDissipated heat\t31.84 /35"
+        },
+        {
+          "study": 2,
+          "at": "2026-10-02T22:07:37.902Z",
+          "outcome": "study-won",
+          "publicState": "Rail x 11.29/12.5 · speed 0.72 · load resistor · resistance 0.5 · polarity − · 10/140 beats.\n\nMeasured state\tValue\nReceiver energy / target\t7.01 / 7.00 ±1.00\nCapacitance / voltage\t1.00 / 3.74\nCurrent / brake force\t1.75 / -2.10\nDissipated heat\t29.81 /35"
+        },
+        {
+          "study": 3,
+          "at": "2026-10-02T22:07:40.377Z",
+          "outcome": "campaign-won",
+          "publicState": "Rail x 11.23/12.5 · speed 0.22 · load resistor · resistance 0.5 · polarity − · 13/140 beats.\n\nMeasured state\tValue\nReceiver energy / target\t6.64 / 7.50 ±1.00\nCapacitance / voltage\t1.20 / 3.33\nCurrent / brake force\t0.53 / -0.63\nDissipated heat\t30.38 /35"
+        }
+      ],
+      "paths": [
+        [
+          {
+            "button": "Connect diode receiver",
+            "key": "Enter",
+            "count": 1
+          },
+          {
+            "button": "Advance rail · 0.25 s",
+            "key": "Enter",
+            "count": 3
+          },
+          {
+            "button": "Open circuit",
+            "key": "Enter",
+            "count": 1
+          },
+          {
+            "button": "Advance rail · 0.25 s",
+            "key": "Enter",
+            "count": 3
+          },
+          {
+            "button": "Resistance 0.5",
+            "key": "Enter",
+            "count": 1
+          },
+          {
+            "button": "Connect dissipative resistor",
+            "key": "Enter",
+            "count": 1
+          },
+          {
+            "button": "Advance rail · 0.25 s",
+            "key": "Enter",
+            "count": 8
+          },
+          {
+            "button": "Clamp at receiver now",
+            "key": "Enter",
+            "count": 1
+          }
+        ],
+        [
+          {
+            "button": "Connect diode receiver",
+            "key": "Enter",
+            "count": 1
+          },
+          {
+            "button": "Advance rail · 0.25 s",
+            "key": "Enter",
+            "count": 3
+          },
+          {
+            "button": "Reverse receiver polarity",
+            "key": "Enter",
+            "count": 1
+          },
+          {
+            "button": "Advance rail · 0.25 s",
+            "key": "Enter",
+            "count": 2
+          },
+          {
+            "button": "Open circuit",
+            "key": "Enter",
+            "count": 1
+          },
+          {
+            "button": "Advance rail · 0.25 s",
+            "key": "Enter",
+            "count": 2
+          },
+          {
+            "button": "Resistance 0.5",
+            "key": "Enter",
+            "count": 1
+          },
+          {
+            "button": "Connect dissipative resistor",
+            "key": "Enter",
+            "count": 1
+          },
+          {
+            "button": "Advance rail · 0.25 s",
+            "key": "Enter",
+            "count": 3
+          },
+          {
+            "button": "Clamp at receiver now",
+            "key": "Enter",
+            "count": 1
+          }
+        ],
+        [
+          {
+            "button": "Connect diode receiver",
+            "key": "Enter",
+            "count": 1
+          },
+          {
+            "button": "Advance rail · 0.25 s",
+            "key": "Enter",
+            "count": 3
+          },
+          {
+            "button": "Reverse receiver polarity",
+            "key": "Enter",
+            "count": 1
+          },
+          {
+            "button": "Advance rail · 0.25 s",
+            "key": "Enter",
+            "count": 2
+          },
+          {
+            "button": "Open circuit",
+            "key": "Enter",
+            "count": 1
+          },
+          {
+            "button": "Advance rail · 0.25 s",
+            "key": "Enter",
+            "count": 2
+          },
+          {
+            "button": "Resistance 0.5",
+            "key": "Enter",
+            "count": 1
+          },
+          {
+            "button": "Connect dissipative resistor",
+            "key": "Enter",
+            "count": 1
+          },
+          {
+            "button": "Advance rail · 0.25 s",
+            "key": "Enter",
+            "count": 6
+          },
+          {
+            "button": "Clamp at receiver now",
+            "key": "Enter",
+            "count": 1
+          }
+        ]
+      ],
+      "naturalFailure": {
+        "button": "Clamp at receiver now",
+        "startingState": true,
+        "screenshot": "ordinary500-trajectory-review/final-byte-final-freeze-induction-coast-natural-failure.png"
+      },
+      "resetChallengeVerified": true,
+      "playAgainVerified": true,
+      "restartGameVerified": true,
+      "screenshot": "ordinary500-trajectory-review/final-byte-final-freeze-induction-coast-campaign-win.png"
+    },
+    {
+      "id": "refractory-route",
+      "title": "Refractory Route",
+      "url": "http://127.0.0.1:8790/mini-games/trajectory-room/?game=refractory-route&seed=20261002",
+      "inputMethod": "native-keyboard",
+      "completedStudyCount": 3,
+      "campaignComplete": true,
+      "studies": [
+        {
+          "study": 1,
+          "at": "2026-10-02T22:07:43.572Z",
+          "outcome": "study-won",
+          "publicState": "Excitation beat 13 · required arrivals 12 ±1 · actual 12 · stimuli 3/4 · collision annihilations 0.\n\nCell\tPhase\n0\tResting\n1\tResting\n2\tResting\n3\tResting\n4\tResting\n5\tResting\n6\tResting\n7\tResting\n8\tResting\n9\tResting\n10\tRefractory 1\n11\tRefractory 2\n12\tRefractory 3\n13\tResting"
+        },
+        {
+          "study": 2,
+          "at": "2026-10-02T22:07:46.296Z",
+          "outcome": "study-won",
+          "publicState": "Excitation beat 15 · required arrivals 14 ±1 · actual 14 · stimuli 3/4 · collision annihilations 0.\n\nCell\tPhase\n0\tResting\n1\tResting\n2\tResting\n3\tResting\n4\tResting\n5\tResting\n6\tResting\n7\tResting\n8\tResting\n9\tResting\n10\tRefractory 1\n11\tRefractory 2\n12\tRefractory 3\n13\tResting"
+        },
+        {
+          "study": 3,
+          "at": "2026-10-02T22:07:50.277Z",
+          "outcome": "campaign-won",
+          "publicState": "Excitation beat 25 · required arrivals 12 → 24 ±1 · actual 12 → 24 · stimuli 2/4 · collision annihilations 0.\n\nCell\tPhase\n0\tResting\n1\tResting\n2\tResting\n3\tResting\n4\tResting\n5\tResting\n6\tResting\n7\tResting\n8\tResting\n9\tResting\n10\tRefractory 1\n11\tRefractory 2\n12\tRefractory 3\n13\tResting"
+        }
+      ],
+      "paths": [
+        [
+          {
+            "button": "Stimulate resting injector",
+            "key": "Enter",
+            "count": 1
+          },
+          {
+            "button": "Advance excitation · one cell beat",
+            "key": "Enter",
+            "count": 13
+          },
+          {
+            "button": "Certify arrivals and extinction",
+            "key": "Enter",
+            "count": 1
+          }
+        ],
+        [
+          {
+            "button": "Select gate 6–13",
+            "key": "Enter",
+            "count": 1
+          },
+          {
+            "button": "Toggle selected conduction gate",
+            "key": "Enter",
+            "count": 1
+          },
+          {
+            "button": "Advance excitation · one cell beat",
+            "key": "Enter",
+            "count": 2
+          },
+          {
+            "button": "Stimulate resting injector",
+            "key": "Enter",
+            "count": 1
+          },
+          {
+            "button": "Advance excitation · one cell beat",
+            "key": "Enter",
+            "count": 13
+          },
+          {
+            "button": "Certify arrivals and extinction",
+            "key": "Enter",
+            "count": 1
+          }
+        ],
+        [
+          {
+            "button": "Select gate 6–13",
+            "key": "Enter",
+            "count": 1
+          },
+          {
+            "button": "Toggle selected conduction gate",
+            "key": "Enter",
+            "count": 1
+          },
+          {
+            "button": "Select gate 3–8",
+            "key": "Enter",
+            "count": 1
+          },
+          {
+            "button": "Toggle selected conduction gate",
+            "key": "Enter",
+            "count": 1
+          },
+          {
+            "button": "Stimulate resting injector",
+            "key": "Enter",
+            "count": 1
+          },
+          {
+            "button": "Advance excitation · one cell beat",
+            "key": "Enter",
+            "count": 12
+          },
+          {
+            "button": "Stimulate resting injector",
+            "key": "Enter",
+            "count": 1
+          },
+          {
+            "button": "Advance excitation · one cell beat",
+            "key": "Enter",
+            "count": 13
+          },
+          {
+            "button": "Certify arrivals and extinction",
+            "key": "Enter",
+            "count": 1
+          }
+        ]
+      ],
+      "naturalFailure": {
+        "button": "Certify arrivals and extinction",
+        "startingState": true,
+        "screenshot": "ordinary500-trajectory-review/final-byte-final-freeze-refractory-route-natural-failure.png"
+      },
+      "resetChallengeVerified": true,
+      "playAgainVerified": true,
+      "restartGameVerified": true,
+      "screenshot": "ordinary500-trajectory-review/final-byte-final-freeze-refractory-route-campaign-win.png"
+    },
+    {
+      "id": "meniscus-maze",
+      "title": "Meniscus Maze",
+      "url": "http://127.0.0.1:8790/mini-games/trajectory-room/?game=meniscus-maze&seed=20261002",
+      "inputMethod": "native-keyboard",
+      "completedStudyCount": 3,
+      "campaignComplete": true,
+      "studies": [
+        {
+          "study": 1,
+          "at": "2026-10-02T22:07:54.501Z",
+          "outcome": "study-won",
+          "publicState": "Selected channel 1 gate closed · source 2.71/6 · base pressure 3 · priming pulses 3/4 · competing siphon closed · 16/180 beats.\n\nChannel\tRadius\tRise / entry barrier\tFront\tCup / target\tFlow\n1\t0.60\t1.2 / 0.5\t1.00\t0.59/0.60\t0.12\n2\t0.80\t2.2 / 0.5\t1.00\t0.70/0.70\t0.10"
+        },
+        {
+          "study": 2,
+          "at": "2026-10-02T22:08:03.237Z",
+          "outcome": "study-won",
+          "publicState": "Selected channel 3 gate closed · source 1.15/6 · base pressure 3 · priming pulses 0/4 · competing siphon closed · 58/180 beats.\n\nChannel\tRadius\tRise / entry barrier\tFront\tCup / target\tFlow\n1\t0.60\t1.8 / 0.5\t1.00\t0.60/0.60\t0.10\n2\t0.80\t2.8 / 4.5\t1.00\t0.67/0.70\t0.06\n3\t0.50\t3.8 / 1.5\t1.00\t0.58/0.60\t0.02"
+        },
+        {
+          "study": 3,
+          "at": "2026-10-02T22:08:11.873Z",
+          "outcome": "campaign-won",
+          "publicState": "Selected channel 3 gate closed · source 1.15/6 · base pressure 3 · priming pulses 0/4 · competing siphon closed · 58/180 beats.\n\nChannel\tRadius\tRise / entry barrier\tFront\tCup / target\tFlow\n1\t0.60\t1.8 / 0.5\t1.00\t0.60/0.60\t0.10\n2\t0.80\t2.8 / 4.5\t1.00\t0.67/0.70\t0.06\n3\t0.50\t3.8 / 1.5\t1.00\t0.58/0.60\t0.02"
+        }
+      ],
+      "paths": [
+        [
+          {
+            "button": "Base pressure 3",
+            "key": "Enter",
+            "count": 1
+          },
+          {
+            "button": "Toggle selected source gate",
+            "key": "Enter",
+            "count": 1
+          },
+          {
+            "button": "Select channel 2",
+            "key": "Enter",
+            "count": 1
+          },
+          {
+            "button": "Toggle selected source gate",
+            "key": "Enter",
+            "count": 1
+          },
+          {
+            "button": "Prime selected entry +2 next beat",
+            "key": "Enter",
+            "count": 1
+          },
+          {
+            "button": "Advance menisci · 0.5 s",
+            "key": "Enter",
+            "count": 16
+          },
+          {
+            "button": "Toggle selected source gate",
+            "key": "Enter",
+            "count": 1
+          },
+          {
+            "button": "Select channel 1",
+            "key": "Enter",
+            "count": 1
+          },
+          {
+            "button": "Toggle selected source gate",
+            "key": "Enter",
+            "count": 1
+          },
+          {
+            "button": "Seal isolated target cups",
+            "key": "Enter",
+            "count": 1
+          }
+        ],
+        [
+          {
+            "button": "Base pressure 3",
+            "key": "Enter",
+            "count": 1
+          },
+          {
+            "button": "Toggle selected source gate",
+            "key": "Enter",
+            "count": 1
+          },
+          {
+            "button": "Select channel 2",
+            "key": "Enter",
+            "count": 1
+          },
+          {
+            "button": "Toggle selected source gate",
+            "key": "Enter",
+            "count": 1
+          },
+          {
+            "button": "Prime selected entry +2 next beat",
+            "key": "Enter",
+            "count": 1
+          },
+          {
+            "button": "Advance menisci · 0.5 s",
+            "key": "Enter",
+            "count": 1
+          },
+          {
+            "button": "Select channel 3",
+            "key": "Enter",
+            "count": 1
+          },
+          {
+            "button": "Toggle selected source gate",
+            "key": "Enter",
+            "count": 1
+          },
+          {
+            "button": "Advance menisci · 0.5 s",
+            "key": "Enter",
+            "count": 16
+          },
+          {
+            "button": "Prime selected entry +2 next beat",
+            "key": "Enter",
+            "count": 1
+          },
+          {
+            "button": "Advance menisci · 0.5 s",
+            "key": "Enter",
+            "count": 2
+          },
+          {
+            "button": "Select channel 1",
+            "key": "Enter",
+            "count": 1
+          },
+          {
+            "button": "Toggle selected source gate",
+            "key": "Enter",
+            "count": 1
+          },
+          {
+            "button": "Select channel 2",
+            "key": "Enter",
+            "count": 1
+          },
+          {
+            "button": "Advance menisci · 0.5 s",
+            "key": "Enter",
+            "count": 4
+          },
+          {
+            "button": "Toggle selected source gate",
+            "key": "Enter",
+            "count": 1
+          },
+          {
+            "button": "Select channel 3",
+            "key": "Enter",
+            "count": 1
+          },
+          {
+            "button": "Prime selected entry +2 next beat",
+            "key": "Enter",
+            "count": 1
+          },
+          {
+            "button": "Advance menisci · 0.5 s",
+            "key": "Enter",
+            "count": 1
+          },
+          {
+            "button": "Prime selected entry +2 next beat",
+            "key": "Enter",
+            "count": 1
+          },
+          {
+            "button": "Advance menisci · 0.5 s",
+            "key": "Enter",
+            "count": 34
+          },
+          {
+            "button": "Toggle selected source gate",
+            "key": "Enter",
+            "count": 1
+          },
+          {
+            "button": "Seal isolated target cups",
+            "key": "Enter",
+            "count": 1
+          }
+        ],
+        [
+          {
+            "button": "Toggle competing siphon",
+            "key": "Enter",
+            "count": 1
+          },
+          {
+            "button": "Base pressure 3",
+            "key": "Enter",
+            "count": 1
+          },
+          {
+            "button": "Toggle selected source gate",
+            "key": "Enter",
+            "count": 1
+          },
+          {
+            "button": "Select channel 2",
+            "key": "Enter",
+            "count": 1
+          },
+          {
+            "button": "Toggle selected source gate",
+            "key": "Enter",
+            "count": 1
+          },
+          {
+            "button": "Prime selected entry +2 next beat",
+            "key": "Enter",
+            "count": 1
+          },
+          {
+            "button": "Advance menisci · 0.5 s",
+            "key": "Enter",
+            "count": 1
+          },
+          {
+            "button": "Select channel 3",
+            "key": "Enter",
+            "count": 1
+          },
+          {
+            "button": "Toggle selected source gate",
+            "key": "Enter",
+            "count": 1
+          },
+          {
+            "button": "Advance menisci · 0.5 s",
+            "key": "Enter",
+            "count": 16
+          },
+          {
+            "button": "Prime selected entry +2 next beat",
+            "key": "Enter",
+            "count": 1
+          },
+          {
+            "button": "Advance menisci · 0.5 s",
+            "key": "Enter",
+            "count": 2
+          },
+          {
+            "button": "Select channel 1",
+            "key": "Enter",
+            "count": 1
+          },
+          {
+            "button": "Toggle selected source gate",
+            "key": "Enter",
+            "count": 1
+          },
+          {
+            "button": "Select channel 2",
+            "key": "Enter",
+            "count": 1
+          },
+          {
+            "button": "Advance menisci · 0.5 s",
+            "key": "Enter",
+            "count": 4
+          },
+          {
+            "button": "Toggle selected source gate",
+            "key": "Enter",
+            "count": 1
+          },
+          {
+            "button": "Select channel 3",
+            "key": "Enter",
+            "count": 1
+          },
+          {
+            "button": "Prime selected entry +2 next beat",
+            "key": "Enter",
+            "count": 1
+          },
+          {
+            "button": "Advance menisci · 0.5 s",
+            "key": "Enter",
+            "count": 1
+          },
+          {
+            "button": "Prime selected entry +2 next beat",
+            "key": "Enter",
+            "count": 1
+          },
+          {
+            "button": "Advance menisci · 0.5 s",
+            "key": "Enter",
+            "count": 34
+          },
+          {
+            "button": "Toggle selected source gate",
+            "key": "Enter",
+            "count": 1
+          },
+          {
+            "button": "Seal isolated target cups",
+            "key": "Enter",
+            "count": 1
+          }
+        ]
+      ],
+      "naturalFailure": {
+        "button": "Seal isolated target cups",
+        "startingState": true,
+        "screenshot": "ordinary500-trajectory-review/final-byte-final-freeze-meniscus-maze-natural-failure.png"
+      },
+      "resetChallengeVerified": true,
+      "playAgainVerified": true,
+      "restartGameVerified": true,
+      "screenshot": "ordinary500-trajectory-review/final-byte-final-freeze-meniscus-maze-campaign-win.png"
+    }
+  ],
+  "provenance": {
+    "hashMethod": "SHA-256 over opaque file buffers; source contents were never printed or read for gameplay.",
+    "scope": [
+      "all files recursively under mini-games/trajectory-room",
+      "all files recursively under mini-games/journey"
+    ],
+    "originalBefore": "ordinary500-trajectory-review/before-hashes.json",
+    "finalBefore": "ordinary500-trajectory-review/final-byte-final-freeze-before-hashes.json",
+    "finalAfter": "ordinary500-trajectory-review/final-byte-final-freeze-after-hashes.json",
+    "finalBeforeAt": "2026-10-02T22:07:31.380Z",
+    "finalAfterAt": "2026-10-02T22:08:12.249Z",
+    "changedDuringFinalReplay": [],
+    "changedSinceOriginalObservation": [
+      "mini-games/trajectory-room/contact.mjs",
+      "mini-games/trajectory-room/fluids.mjs",
+      "mini-games/trajectory-room/handles.mjs",
+      "mini-games/trajectory-room/transport.mjs"
+    ],
+    "finalSourceHashes": {
+      "mini-games/trajectory-room/ENDLESS-REVIEW.md": "6f2a26354640c53144b4c1ac2d45ae1f319e0ec2858ec1b545fb6d3cd7cf9216",
+      "mini-games/trajectory-room/README.md": "5d23ba8fca2340ba61a403f0180c544a2301ff50105be094259d7b168914714d",
+      "mini-games/trajectory-room/contact.mjs": "2ca3400b152bf9952cf5e5b0fd52fcd5c588c04549b08f6f21f828cfbf5b6830",
+      "mini-games/trajectory-room/core.mjs": "426aecd3bac2e6499c8f60de2d435c4ffba9783677e2429f9f44f14244fda771",
+      "mini-games/trajectory-room/engines.mjs": "1a7f5fd92bb6a8a527747033091e0adcd2f13a9b420d90046d5baad8c999270f",
+      "mini-games/trajectory-room/fluids.mjs": "df9af92919191ee9073bd360c2c3142e4a5b67fea9aa45b4af611ca76cc89db0",
+      "mini-games/trajectory-room/games.json": "e943d273f307a3359cb242c6918d7f85067beb2763ddc8816a96255a9bef1e06",
+      "mini-games/trajectory-room/handles.mjs": "e79ac184001304099181241ec2d2425e375f80d0533c1eac00d6a2918faebb60",
+      "mini-games/trajectory-room/index.html": "f6947c2e4f4f75dbd0bead31dcbae133053599b78fa1685dd5587d04ecf98ce0",
+      "mini-games/trajectory-room/orbits.mjs": "b176d30e3cb60fde41012d293cf04f2528f582bd398af3a1bfd3b0321ebb84b7",
+      "mini-games/trajectory-room/room.mjs": "faf0bd8143c3875126c73975a8c5bee9782f716d1048f0d3367d57681a243054",
+      "mini-games/trajectory-room/transport.mjs": "eef2484a8e7e1343b2475f937d3c23ac735e85975fe1da47da72dfe3020ef302",
+      "mini-games/journey/journey.css": "e77e387075c86ad3addcf7220c9eeabfc06fec45987116205b75ed50cac83e67",
+      "mini-games/journey/journey.mjs": "86a92fbd52ee7f5d34fd01225120feb74a336dd499a11e9e4780cf8f1f207872"
+    },
+    "previousReplay": {
+      "historical": true,
+      "report": "ordinary500-trajectory-review.post-footfall.json",
+      "markdownReport": "ordinary500-trajectory-review.post-footfall.md",
+      "before": "ordinary500-trajectory-review/final-byte-post-footfall-before-hashes.json",
+      "after": "ordinary500-trajectory-review/final-byte-post-footfall-after-hashes.json",
+      "beforeAt": "2026-10-02T21:42:16.860Z",
+      "afterAt": "2026-10-02T21:43:06.555Z",
+      "changedSincePreviousReplay": [
+        "mini-games/trajectory-room/contact.mjs"
+      ]
+    },
+    "historicalSnapshots": [
+      {
+        "historical": true,
+        "report": "ordinary500-trajectory-review.previous-final-byte.json",
+        "markdownReport": "ordinary500-trajectory-review.previous-final-byte.md",
+        "run": "final-byte",
+        "before": "ordinary500-trajectory-review/final-byte-before-hashes.json",
+        "after": "ordinary500-trajectory-review/final-byte-after-hashes.json",
+        "beforeAt": "2026-10-02T21:24:48.104Z",
+        "afterAt": "2026-10-02T21:25:36.721Z",
+        "completedStudyCount": 9
+      },
+      {
+        "historical": true,
+        "report": "ordinary500-trajectory-review.post-footfall.json",
+        "markdownReport": "ordinary500-trajectory-review.post-footfall.md",
+        "run": "final-byte-post-footfall",
+        "before": "ordinary500-trajectory-review/final-byte-post-footfall-before-hashes.json",
+        "after": "ordinary500-trajectory-review/final-byte-post-footfall-after-hashes.json",
+        "beforeAt": "2026-10-02T21:42:16.860Z",
+        "afterAt": "2026-10-02T21:43:06.555Z",
+        "completedStudyCount": 9
+      }
+    ]
+  },
+  "evidence": {
+    "originalPublicLog": "ordinary500-trajectory-review/public-actions.jsonl",
+    "meniscusCompletionLog": "ordinary500-trajectory-review/meniscus-completion-public-actions.jsonl",
+    "finalBytePublicLog": "ordinary500-trajectory-review/final-byte-final-freeze-public-actions.jsonl",
+    "exactFinalCommands": "ordinary500-trajectory-review/final-byte-final-freeze-commands.jsonl",
+    "replayScript": "ordinary500-trajectory-review/final-byte-replay.cjs",
+    "browserHelper": "ordinary500-trajectory-review/browser.cjs",
+    "finalReplayCommandCount": 342,
+    "currentReplayLabel": "final-byte-final-freeze"
+  },
+  "observations": [
+    {
+      "severity": "usability",
+      "game": "meniscus-maze",
+      "description": "Play again after the failed third study returns to Challenge 1 and resets campaign score; Reset challenge preserves the current study. The visible guide explicitly distinguishes Reset and Restart but does not explain Play again. Recorded as a wording distinction, not a rules failure."
+    },
+    {
+      "severity": "reviewer-process",
+      "description": "The original Meniscus third-study Play again check restarted the campaign. A queued sequence had assumed study 3, causing unavailable Select channel 3 locator timeouts and unintended ordinary inputs on study 1. Those attempts remain in the original logs and are excluded from success evidence. A separate fresh completion session won all 3 studies, and the final-byte session independently replayed all 9 wins."
+    }
+  ],
+  "pageErrors": [],
+  "helperErrors": [],
+  "limits": [
+    "Only these 3 of 20 Trajectory games were reviewed independently; the other 17 Trajectory games are outside this sample.",
+    "Finite campaign at seed 20261002 and desktop native keyboard were tested. Endless play, mobile touch, arbitrary seeds, and collision/withdrawal edge-case coverage are outside this sample.",
+    "A source-informed owner regression suite is distinct from this source-blind evidence."
+  ],
+  "blockers": []
+}

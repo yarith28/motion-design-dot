@@ -1,0 +1,9 @@
+#board .civic-cell{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:.2rem;gap:.15rem}
+#board .civic-cell .cell-coordinate{font-size:.6rem;font-weight:500;line-height:1.1}
+#board .civic-cell .cell-piece{font-size:1rem;font-weight:700;line-height:1.2}
+#board .civic-cell:disabled{opacity:1;color:#67746b;background:#f5f4ec;cursor:default}
+#board .civic-cell.own{color:#224c3f;background:#e0e8d7}
+#board .civic-cell.opponent{color:#4a516f;background:#e6e8ef}
+#board .off-field:disabled{visibility:hidden}
+#board .race-marker:disabled{opacity:1;font-size:.8rem;color:#274c44;background:#f4f4ed}
+@media(max-width:350px){#board .civic-cell .cell-piece{font-size:.9rem}#board .civic-cell .cell-coordinate{font-size:.55rem}}

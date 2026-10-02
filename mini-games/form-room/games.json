@@ -1,0 +1,788 @@
+[
+  {
+    "id": "warp-shed",
+    "name": "Warp Shed",
+    "category": "puzzle",
+    "url": "form-room/?game=warp-shed",
+    "mechanic": "Choose an entire shed and weft spool before advancing one continuous shuttle; ambiguous same-color crossings must still obey warp and weft float limits.",
+    "description": "Weave a colored face through real warp lifts, finite weft stock and capped float lengths.",
+    "rules": [
+      "Before starting a row, choose its weft color and lifted warp ends. A shuttle pass permanently commits one crossing, alternating row direction.",
+      "Match every face cell while no horizontal or vertical same-shed float exceeds two crossings. Each row consumes one finite weft spool.",
+      "Wrong committed color, excessive float or exhausted stock loses. Clear three studies; Reset and Restart restore the loom."
+    ],
+    "controls": "Tap labeled native controls, or focus a control and use Enter/Space. Every process is turn-paced. Reset study restores the current construction; Restart returns to study one.",
+    "accent": "#b5ba90",
+    "symbol": "\u25c7",
+    "family": "form-room",
+    "status": "playable",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Seeded warp/weft colors and constraint-safe binary shed mutations produce varied color clues, finite stock and horizontal/vertical float constraints on four-to-five-crossing rows.",
+      "difficultyCap": "Finite state sizes remain capped at the third study; later seeds create fresh bounded challenges."
+    },
+    "nearestExisting": [
+      {
+        "id": "seam-quilt",
+        "difference": "No edge-labeled tile placement: one continuous shuttle forms crossings over fixed warp, with persistent vertical/horizontal float histories and spool consumption."
+      },
+      {
+        "id": "exclusive-print",
+        "difference": "Face colors can hide ambiguous crossings; legality depends on physical over/under continuity, not independent selected plate incidence."
+      }
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"lift:0\"]"
+    },
+    "source": "form-room/textile.mjs"
+  },
+  {
+    "id": "live-loops",
+    "name": "Live Loops",
+    "category": "puzzle",
+    "url": "form-room/?game=live-loops",
+    "mechanic": "Consume held loops in needle order while deciding whether to knit, purl, merge two loops or create a yarn-over opening.",
+    "description": "Consume, merge and create actual knitted loops to reproduce a parent-linked stitch graph.",
+    "rules": [
+      "Knit or purl consumes one front loop; decrease consumes two; yarn-over creates an opening without consuming a parent. Every new loop keeps its actual ancestry.",
+      "Turn only after every held loop is secured. The new row must match the displayed parent graph, faces, loop count and hole allowance.",
+      "Dropped loops, incorrect row structure or exhausted yarn loses. Cast off after the complete three-study pattern; Reset or Restart restores held loops."
+    ],
+    "controls": "Tap labeled native controls, or focus a control and use Enter/Space. Every process is turn-paced. Reset study restores the current construction; Restart returns to study one.",
+    "accent": "#b5ba90",
+    "symbol": "\u25c7",
+    "family": "form-room",
+    "status": "playable",
+    "stages": 3,
+    "endless": {
+      "supported": false,
+      "design": "The initial three stitch topologies are authored. A future generator must certify parent-child graph reachability and every live-loop width, rather than repeat a knit/purl picture.",
+      "reason": "The initial three stitch topologies are authored. A future generator must certify parent-child graph reachability and every live-loop width, rather than repeat a knit/purl picture."
+    },
+    "nearestExisting": [
+      {
+        "id": "a-stitch-in-time",
+        "difference": "Patchwork buys existing spatial patches with time/income; this constructs loop topology by consuming and creating held loops."
+      },
+      {
+        "id": "gentle-unknot",
+        "difference": "Closed braid simplification preserves one knot; knitting grows a new fabric graph with live-loop consumption, branching and dropped-loop failure."
+      }
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"K\"]"
+    },
+    "source": "form-room/textile.mjs"
+  },
+  {
+    "id": "corbel-tower",
+    "name": "Corbel Tower",
+    "category": "puzzle",
+    "url": "form-room/?game=corbel-tower",
+    "mechanic": "Place unequal blocks and a crown load so every cumulative load resultant remains inside every earlier contact interval.",
+    "description": "Stack different stock blocks while every lower contact carries the cumulative upper load.",
+    "rules": [
+      "Choose a remaining block and its quarter-unit offset, then commit its placement. Overlap contacts support compression only inside their safe margins.",
+      "Each added block changes every earlier joint\u2019s weighted resultant. Apply the displayed crown only after all blocks are placed and reach the required upper-right extent.",
+      "Any current or crown-loaded resultant outside its overlap overturns the stack. Clear three studies; Reset or Restart restores the stock."
+    ],
+    "controls": "Tap labeled native controls, or focus a control and use Enter/Space. Every process is turn-paced. Reset study restores the current construction; Restart returns to study one.",
+    "accent": "#b5ba90",
+    "symbol": "\u25c7",
+    "family": "form-room",
+    "status": "playable",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Seeded block lengths/masses, crown loading and certified compression-safe stacks determine varied reach contracts and cumulative support decisions.",
+      "difficultyCap": "Finite state sizes remain capped at the third study; later seeds create fresh bounded challenges."
+    },
+    "nearestExisting": [
+      {
+        "id": "balance-mobile",
+        "difference": "Balance Mobile assigns fixed values to independent moment arms and requires torque equality. Sequential block placement changes every earlier support interval and cumulative resultant; contacts cannot pull."
+      },
+      {
+        "id": "span-workshop",
+        "difference": "No chosen axial members or stiffness solve: rigid block overlap and cumulative compression contact determine overturning."
+      }
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"offset:0.75\"]"
+    },
+    "source": "form-room/structure.mjs"
+  },
+  {
+    "id": "pivot-network",
+    "name": "Pivot Network",
+    "category": "puzzle",
+    "url": "form-room/?game=pivot-network",
+    "mechanic": "Configure a closed four-bar linkage, choose its assembly branch, and drive one input while the other joints must satisfy loop closure.",
+    "description": "Construct a closed four-bar linkage and drive its real assembly branch through ordered receivers.",
+    "rules": [
+      "Select bar lengths, fixed-pivot span, assembly branch and coupler tool fraction before locking construction. Circle intersections determine the constrained joints.",
+      "Drive the crank in15\u00b0 steps. The full swept bars must clear keepouts, and changing branch is legal only when the two closure intersections coincide.",
+      "Stamp ordered receivers at their listed input angles. Lost loop closure, collision, travel stop or spent construction/drive allowance loses; clear three studies."
+    ],
+    "controls": "Tap labeled native controls, or focus a control and use Enter/Space. Every process is turn-paced. Reset study restores the current construction; Restart returns to study one.",
+    "accent": "#b5ba90",
+    "symbol": "\u25c7",
+    "family": "form-room",
+    "status": "playable",
+    "stages": 3,
+    "endless": {
+      "supported": false,
+      "design": "Three authored linkage benches first. A generator needs certified continuous branch tracking through a full permitted sweep, with varied receivers and nontrivial keep-out geometry.",
+      "reason": "Three authored linkage benches first. A generator needs certified continuous branch tracking through a full permitted sweep, with varied receivers and nontrivial keep-out geometry."
+    },
+    "nearestExisting": [
+      {
+        "id": "elbow-room",
+        "difference": "The robotic arm has independently controlled serial joints. A closed four-bar has one input degree of freedom and a coupled output constrained by circle intersections and assembly branch."
+      },
+      {
+        "id": "gear-train",
+        "difference": "Static tooth-count ratios do not determine a spatial closed-loop coupler path or toggle reachability."
+      }
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"rocker:2.5\"]"
+    },
+    "source": "form-room/structure.mjs"
+  },
+  {
+    "id": "fiber-panel",
+    "name": "Fiber Panel",
+    "category": "puzzle",
+    "url": "form-room/?game=fiber-panel",
+    "mechanic": "Choose ply directions and stack order so the same laminated panel resists several loads without unwanted extension-to-bend coupling.",
+    "description": "Order anisotropic plies through thickness to meet coupled membrane and bending responses.",
+    "rules": [
+      "Place each stock ply once, choose its original or mirrored fiber slant, and fill every thickness layer before bonding.",
+      "Each load solves the complete six-component A/B/D system. The same ply sum can retain membrane stiffness while its layer order changes bending coupling.",
+      "Every response component must fit its displayed band in both load cases. A bonded miss loses; clear three studies or use Reset/Restart to rebuild."
+    ],
+    "controls": "Tap labeled native controls, or focus a control and use Enter/Space. Every process is turn-paced. Reset study restores the current construction; Restart returns to study one.",
+    "accent": "#b5ba90",
+    "symbol": "\u25c7",
+    "family": "form-room",
+    "status": "playable",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Independently varied anisotropic ply angles/stiffnesses, real layer order and load cases produce certified coupled six-component response contracts.",
+      "difficultyCap": "Finite state sizes remain capped at the third study; later seeds create fresh bounded challenges."
+    },
+    "nearestExisting": [
+      {
+        "id": "seal-shop",
+        "difference": "Seal Shop modifies neighboring contact compression through bolt turns. A panel combines directional stiffness tensors and signed layer moments; order alters multi-load bend coupling without changing total stiffness."
+      },
+      {
+        "id": "wave-desk",
+        "difference": "Independent scalar harmonic weights cannot represent coupled vector load response and a stack-order coupling matrix."
+      }
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"card:1\"]"
+    },
+    "source": "form-room/equilibrium.mjs"
+  },
+  {
+    "id": "remanence-bench",
+    "name": "Remanence Bench",
+    "category": "puzzle",
+    "url": "form-room/?game=remanence-bench",
+    "mechanic": "Choose field direction and pulse strength to move coercive magnetic domains while anticipating neighbor-triggered avalanches and remanence after the field returns to zero.",
+    "description": "Use coercive field histories and neighbor avalanches to retain a required zero-field domain pattern.",
+    "rules": [
+      "Choose a spatial coil and signed pulse. A domain flips only when its local applied-plus-neighbor field crosses its own coercive threshold.",
+      "Neighbor flips repeatedly relax until stable. Pulse heating costs strength squared, doubled for the full coil; domain memory persists after field removal.",
+      "Measure the exact target with every applied field zero. Spent heat or three failed inspections loses; clear three material studies, Reset or Restart to demagnetize."
+    ],
+    "controls": "Tap labeled native controls, or focus a control and use Enter/Space. Every process is turn-paced. Reset study restores the current construction; Restart returns to study one.",
+    "accent": "#b5ba90",
+    "symbol": "\u25c7",
+    "family": "form-room",
+    "status": "playable",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Independent coercive thresholds, neighbor coupling, spatial coil masks and witnessed mixed remanence patterns create varied pulse histories under certified heat budgets.",
+      "difficultyCap": "Finite state sizes remain capped at the third study; later seeds create fresh bounded challenges."
+    },
+    "nearestExisting": [
+      {
+        "id": "magnetic-quartet",
+        "difference": "Movable field sources steer charged pucks continuously. Domain hysteresis changes the persistent material state via coercive flips and avalanches after fields are removed."
+      },
+      {
+        "id": "seed-tomorrow",
+        "difference": "Cellular intervention alone is insufficient: thresholds, signed field reversal, cascade relaxation and zero-field memory must all affect decisions."
+      }
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"coil:1\"]"
+    },
+    "source": "form-room/material.mjs"
+  },
+  {
+    "id": "sieve-cascade",
+    "name": "Sieve Cascade",
+    "category": "puzzle",
+    "url": "form-room/?game=sieve-cascade",
+    "mechanic": "Arrange shape-sensitive screens and choose when to reverse-shake a clogged deck before useful grains are stranded above it.",
+    "description": "Separate shaped grains through aperture fit, rod orientation and physical pore bridges.",
+    "rules": [
+      "Install one aperture and projection axis on each of three decks. A forward stroke passes fitting grains until two retained grains bridge that deck.",
+      "Reverse-shaking only the selected deck opens its bridge, turns rods90\u00b0 and brings currently fitting grains first. All original grains remain physically accounted for.",
+      "Discharge a whole deck into its required grade receiver. Contamination, bottom escape or exhausted stroke stock loses; certify all three grades in three studies."
+    ],
+    "controls": "Tap labeled native controls, or focus a control and use Enter/Space. Every process is turn-paced. Reset study restores the current construction; Restart returns to study one.",
+    "accent": "#b5ba90",
+    "symbol": "\u25c7",
+    "family": "form-room",
+    "status": "playable",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Seeded particle diameters, aspect ratios, orientations, grade composition and aperture stocks vary projected fit, pore bridges and legal backshake/discharge sequences.",
+      "difficultyCap": "Finite state sizes remain capped at the third study; later seeds create fresh bounded challenges."
+    },
+    "nearestExisting": [
+      {
+        "id": "sand-table",
+        "difference": "Avalanche baffles regulate column height and slope. Screens create size/shape passability, blocked pores and bridge-release history rather than granular height support."
+      },
+      {
+        "id": "air-sieve",
+        "difference": "Air Sieve sorts by aerodynamic drag/slip and delayed gates. This uses aperture fit, particle orientation and pore bridges; no airflow or terminal-velocity control."
+      }
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"screen:2.3\"]"
+    },
+    "source": "form-room/matter.mjs"
+  },
+  {
+    "id": "solvent-ladder",
+    "name": "Solvent Ladder",
+    "category": "puzzle",
+    "url": "form-room/?game=solvent-ladder",
+    "mechanic": "Change solvent volume to cross different saturation boundaries, filter at useful compositions, and redissolve mixed solids before purity becomes permanently lost.",
+    "description": "Recover separate products through coupled saturation, entrained filtration and selective cake washing.",
+    "rules": [
+      "Each species dissolves only up to its solubility times current solvent volume. Quarter-unit evaporation and dilution move all species across their own saturation boundaries.",
+      "Filtering collects every solid together; later studies also dry entrained solution into the cake. A quarter-solvent wash selectively returns dissolved cake species to the bath.",
+      "Both packets must satisfy their independent recovery and purity thresholds. Solvent exhaustion, spent operations or three failed inspections loses; clear three studies."
+    ],
+    "controls": "Tap labeled native controls, or focus a control and use Enter/Space. Every process is turn-paced. Reset study restores the current construction; Restart returns to study one.",
+    "accent": "#b5ba90",
+    "symbol": "\u25c7",
+    "family": "form-room",
+    "status": "playable",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Varied independent masses and solubility coefficients reverse which required product precipitates first; actual witnessed filtering/washing histories set separate recovery and purity bands. Saturation points, packet order, contamination and wash losses change together.",
+      "difficultyCap": "Finite state sizes remain capped at the third study; later seeds create fresh bounded challenges."
+    },
+    "nearestExisting": [
+      {
+        "id": "measured-pour",
+        "difference": "Jug transfer changes container volumes only. Saturation moves individual species between dissolved and solid phases, and filtration irreversibly separates a mixture."
+      },
+      {
+        "id": "cold-chain",
+        "difference": "No age/cooling recipe scheduling: each decision changes equilibrium composition and the purity of collected solids."
+      }
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"evaporate\"]"
+    },
+    "source": "form-room/material.mjs"
+  },
+  {
+    "id": "resonator-rack",
+    "name": "Resonator Rack",
+    "category": "puzzle",
+    "url": "form-room/?game=resonator-rack",
+    "mechanic": "Build cavity-and-neck topology to suppress chosen noise frequencies while transmitting useful bands; a branch changes the entire coupled frequency response.",
+    "description": "Build coupled acoustic cavities and neck topology to pass useful bands and suppress unwanted tones.",
+    "rules": [
+      "Choose stock necks, cavity compliances and real attachments before assembling. The last study has one each of three necks and a second output port.",
+      "Each frequency solves the entire complex nodal admittance system. A side branch changes every connected pressure and can create an interacting transmission notch.",
+      "Measure every required amplitude band at every output. A disconnected cavity or assembled band miss loses; clear three networks, Reset or Restart to rebuild."
+    ],
+    "controls": "Tap labeled native controls, or focus a control and use Enter/Space. Every process is turn-paced. Reset study restores the current construction; Restart returns to study one.",
+    "accent": "#b5ba90",
+    "symbol": "\u25c7",
+    "family": "form-room",
+    "status": "playable",
+    "stages": 3,
+    "endless": {
+      "supported": false,
+      "design": "Authored acoustic networks first. A generated mode needs varied topology with certified complex responses and broad pass/stop feasibility, not rescaled copies of one resonance.",
+      "reason": "Authored acoustic networks first. A generated mode needs varied topology with certified complex responses and broad pass/stop feasibility, not rescaled copies of one resonance."
+    },
+    "nearestExisting": [
+      {
+        "id": "wave-desk",
+        "difference": "Wave Desk sums independent harmonic basis coefficients. Topology here changes a coupled nodal admittance inverse, creating interacting resonances/antiresonances and tradeoffs across bands."
+      },
+      {
+        "id": "resonant-switch",
+        "difference": "No timed switching, signed capacitor charge, diode path or stored-energy delivery: decisions build a static acoustic network and test its steady frequency response."
+      }
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"cavity:1,1\"]"
+    },
+    "source": "form-room/acoustics.mjs"
+  },
+  {
+    "id": "mesh-form",
+    "name": "Mesh Form",
+    "category": "puzzle",
+    "url": "form-room/?game=mesh-form",
+    "mechanic": "Choose boundary clamps and one grip, then impose that grip\u2019s displacement while all free sheet vertices respond through elastic equilibrium. Embedded marks must fit without tearing any material element.",
+    "description": "Move one grip while actual coupled material equilibrium determines every free vertex.",
+    "rules": [
+      "Choose a boundary clamp fixture and one grip, then lock them. Free vertices cannot be directly moved: their coordinates solve the assembled triangular stiffness equations.",
+      "Grip steps must retain positive signed element area, safe element strain and clamp reactions. Different material regions change the global response.",
+      "Reach every visible embedded landmark receiver. Singular fixtures, tears, folds, overload or exhausted actions loses; clear three sheets, Reset or Restart to rebuild."
+    ],
+    "controls": "Tap labeled native controls, or focus a control and use Enter/Space. Every process is turn-paced. Reset study restores the current construction; Restart returns to study one.",
+    "accent": "#b5ba90",
+    "symbol": "\u25c7",
+    "family": "form-room",
+    "status": "playable",
+    "stages": 3,
+    "endless": {
+      "supported": false,
+      "design": "Three authored material meshes. A future generator must certify a complete strain-safe deformation path, not merely a noncrossing final drawing.",
+      "reason": "Three authored material meshes. A future generator must certify a complete strain-safe deformation path, not merely a noncrossing final drawing."
+    },
+    "nearestExisting": [
+      {
+        "id": "loose-ends",
+        "difference": "Loose Ends directly swaps graph-node positions until crossings disappear. Here only a chosen boundary grip is prescribed; material equilibrium moves every free vertex, and clamp choices change load/strain distribution. Players cannot edit the free layout."
+      },
+      {
+        "id": "span-workshop",
+        "difference": "Span Workshop adds axial members and tests moving loads. A persistent triangular material sheet is stretched by boundary displacement constraints; full plane-stress elements couple area, shear and extension, with tearing and grip/clamp reaction limits."
+      }
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"grip:6\"]"
+    },
+    "source": "form-room/equilibrium.mjs"
+  },
+  {
+    "id": "catenary-yard",
+    "name": "Catenary Yard",
+    "category": "puzzle",
+    "url": "form-room/?game=catenary-yard",
+    "mechanic": "Choose hanging cable length, anchors and point-load attachment positions so the nonlinear equilibrium clears obstacles in both required load cases without exceeding anchor tension.",
+    "description": "Choose finite cable length and load hooks to trade nonlinear sag against clearance and anchor force.",
+    "rules": [
+      "Choose stock cable length, both anchor heights and the pendant hook. Cumulative point loads and the exact arclength determine all segment slopes and horizontal tension.",
+      "Every station must stay inside its clearance envelope and both anchor forces must remain within capacity. Changing construction invalidates previous load certifications.",
+      "Release and test every required load case. A too-short cable, collision or force overload loses; clear three constructions, Reset or Restart to rebuild."
+    ],
+    "controls": "Tap labeled native controls, or focus a control and use Enter/Space. Every process is turn-paced. Reset study restores the current construction; Restart returns to study one.",
+    "accent": "#b5ba90",
+    "symbol": "\u25c7",
+    "family": "form-room",
+    "status": "playable",
+    "stages": 3,
+    "endless": {
+      "supported": false,
+      "design": "Three authored cable yards. Generated contracts require certified arclength equilibrium and clearance under varied independent point-load cases, rather than uniform-load scaling.",
+      "reason": "Three authored cable yards. Generated contracts require certified arclength equilibrium and clearance under varied independent point-load cases, rather than uniform-load scaling."
+    },
+    "nearestExisting": [
+      {
+        "id": "span-workshop",
+        "difference": "A hanging cable has nonlinear finite-length geometry and one tension field; it is not a straight axial-member truss stiffness network."
+      },
+      {
+        "id": "threaded-return",
+        "difference": "A moving avatar stores rope wrapping history. This is static construction equilibrium under distributed/point loads with no avatar route or winding."
+      }
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"length:6.8\"]"
+    },
+    "source": "form-room/structure.mjs"
+  },
+  {
+    "id": "gel-window",
+    "name": "Gel Window",
+    "category": "puzzle",
+    "url": "form-room/?game=gel-window",
+    "mechanic": "Grow and branch polymer chains through functional end sites, then join them into the required gel before local gel formation blocks remaining reaction access.",
+    "description": "Grow molecular chains by consuming functional sites before cyclic branching traps gel interiors.",
+    "rules": [
+      "A join consumes one functional site on each selected monomer. Site functionality limits bonds; termination permanently removes one available end.",
+      "Each component tracks actual connectivity and independent cycles. A component with both branching and a cycle gels, making degree-two-or-higher interior sites inaccessible.",
+      "Meet component sizes, cycle count, gel state and termination requirements. A consumed/trapped site or spent bond stock loses; clear three molecular studies."
+    ],
+    "controls": "Tap labeled native controls, or focus a control and use Enter/Space. Every process is turn-paced. Reset study restores the current construction; Restart returns to study one.",
+    "accent": "#b5ba90",
+    "symbol": "\u25c7",
+    "family": "form-room",
+    "status": "playable",
+    "stages": 3,
+    "endless": {
+      "supported": false,
+      "design": "Authored molecular networks first. An unlimited mode requires reachability certification with varied branching, cycles and accessibility; random graph labels are inadequate.",
+      "reason": "Authored molecular networks first. An unlimited mode requires reachability certification with varied branching, cycles and accessibility; random graph labels are inadequate."
+    },
+    "nearestExisting": [
+      {
+        "id": "bonding-room",
+        "difference": "Bonding Room joins rigid atoms by spatial contact and navigates their changing footprint to a dock. This grows chemical connectivity by consuming functional sites, with chain distribution/cyclization and gel accessibility."
+      },
+      {
+        "id": "soft-sluice",
+        "difference": "No viscoelastic moving capsule, squeeze/release axes or throat clearance; the state is molecular graph growth and functional-site consumption."
+      }
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"first:1\"]"
+    },
+    "source": "form-room/matter.mjs"
+  },
+  {
+    "id": "emulsion-bench",
+    "name": "Emulsion Bench",
+    "category": "puzzle",
+    "url": "form-room/?game=emulsion-bench",
+    "mechanic": "Split droplets and dose surfactant while reserving enough interfacial coverage for the additional area; uncovered droplets coalesce and can reverse the continuous phase.",
+    "description": "Split conserved oil droplets and protect their expanding interfaces before coalescence or phase inversion.",
+    "rules": [
+      "Precoat a parent, split by the selected ratio, then finish both child interfaces. Splits preserve oil and coating but increase total interface area.",
+      "Every process action, including a split, advances protection grace. Adjacent droplets coalesce when both have zero grace and either interface is incompletely coated; dilution lowers the hydrated dispersed fraction and costs finite water stock.",
+      "Meet individual size, count and full coating requirements through two final rests. Phase inversion, stock exhaustion or failed inspections loses; clear three dispersions."
+    ],
+    "controls": "Tap labeled native controls, or focus a control and use Enter/Space. Every process is turn-paced. Reset study restores the current construction; Restart returns to study one.",
+    "accent": "#b5ba90",
+    "symbol": "\u25c7",
+    "family": "form-room",
+    "status": "playable",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Independent initial droplet volumes, size limits and continuous-phase dilution vary safe split/coating/dilution histories; conservation, grace, interface protection and phase limits remain active.",
+      "difficultyCap": "Finite state sizes remain capped at the third study; later seeds create fresh bounded challenges."
+    },
+    "nearestExisting": [
+      {
+        "id": "ratio-mixer",
+        "difference": "A static integer recipe does not track droplet interfaces, nonlinear area growth, persistent adsorbed coverage or coalescence history."
+      },
+      {
+        "id": "vacuum-patch",
+        "difference": "Patch overlaps reinforce a solid membrane. Droplet splitting changes total interfacial area under volume conservation and missing coverage reverses that breakup through coalescence."
+      }
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"coat:2\"]"
+    },
+    "source": "form-room/process.mjs"
+  },
+  {
+    "id": "curved-compass",
+    "name": "Curved Compass",
+    "category": "puzzle",
+    "url": "form-room/?game=curved-compass",
+    "mechanic": "Walk a construction seam along sphere geodesics and turn in its transported tangent frame; the same endpoint can retain different seam orientations.",
+    "description": "Lay spherical great-circle seams while parallel-transporting the exact endpoint direction.",
+    "rules": [
+      "Choose a local heading turn or a30\u00b0,60\u00b0 or90\u00b0 great-circle arc. Arc motion transports the tangent frame along the actual sphere.",
+      "Both receiver position and transported tangent direction must match. A closed spatial route can still miss the required direction because of curved-surface holonomy.",
+      "Stay within arc length, turn stock and forbidden spherical caps. Three failed joins or exhausted stock loses; clear three seams, Reset or Restart to rebuild."
+    ],
+    "controls": "Tap labeled native controls, or focus a control and use Enter/Space. Every process is turn-paced. Reset study restores the current construction; Restart returns to study one.",
+    "accent": "#b5ba90",
+    "symbol": "\u25c7",
+    "family": "form-room",
+    "status": "playable",
+    "stages": 3,
+    "endless": {
+      "supported": false,
+      "design": "Three authored spherical seam routes. A generator needs meaningful varied cap geometry and certified orientation-aware legal paths, not rotations of one triangle.",
+      "reason": "Three authored spherical seam routes. A generator needs meaningful varied cap geometry and certified orientation-aware legal paths, not rotations of one triangle."
+    },
+    "nearestExisting": [
+      {
+        "id": "cube-seal",
+        "difference": "Discrete cube rolling tracks face orientation on a flat grid; sphere geodesics parallel-transport a continuous tangent frame and expose closed-route holonomy."
+      },
+      {
+        "id": "compass-house",
+        "difference": "Euclidean points/lines/circles are construction dependencies; they do not transport orientation over a curved intrinsic surface."
+      }
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"arc:30\"]"
+    },
+    "source": "form-room/structure.mjs"
+  },
+  {
+    "id": "three-flats",
+    "name": "Three Flats",
+    "category": "puzzle",
+    "url": "form-room/?game=three-flats",
+    "mechanic": "Choose which two plates to lap and their relative orientation so complementary mating errors cannot hide persistent nonflatness.",
+    "description": "Lap the actual high contacts of two plates to eliminate individual errors hidden by complementary mates.",
+    "rules": [
+      "Select two physical plates and a relative quarter turn. Only cells at maximal combined facing height contact; one lap removes one unit on both surfaces at every such cell.",
+      "Full mating contact can hide complementary individual relief. Use the third plate and rotation while respecting each plate\u2019s separate minimum stock.",
+      "Gauge all three individual surfaces to zero height range. A worn stock reserve, spent abrasive stock or three failed gauges loses; clear three studies."
+    ],
+    "controls": "Tap labeled native controls, or focus a control and use Enter/Space. Every process is turn-paced. Reset study restores the current construction; Restart returns to study one.",
+    "accent": "#b5ba90",
+    "symbol": "\u25c7",
+    "family": "form-room",
+    "status": "playable",
+    "stages": 3,
+    "endless": {
+      "supported": false,
+      "design": "Authored contact/wear examples first. A generator needs witnessed convergence and stock safety over varied complementary maps, not arbitrary initial relief.",
+      "reason": "Authored contact/wear examples first. A generator needs witnessed convergence and stock safety over varied complementary maps, not arbitrary initial relief."
+    },
+    "nearestExisting": [
+      {
+        "id": "mill-fixture",
+        "difference": "Milling directly removes a selected accessible target voxel. Lapping automatically removes the coupled maxima of two mating surfaces; the choice is pair/orientation and wear distribution."
+      },
+      {
+        "id": "cam-workshop",
+        "difference": "Cam cuts one chosen radial sample against follower traces. Contact wear changes both whole mating height maps and can conceal individual surface error."
+      }
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"rotation:1\"]"
+    },
+    "source": "form-room/contact.mjs"
+  },
+  {
+    "id": "delaunay-bench",
+    "name": "Delaunay Bench",
+    "category": "puzzle",
+    "url": "form-room/?game=delaunay-bench",
+    "mechanic": "Flip a legal convex quadrilateral diagonal to remove geometric circumcircle violations while keeping constrained edges and a bounded repair budget.",
+    "description": "Flip actual convex quadrilateral diagonals to remove local incircle violations while retaining fixed seams.",
+    "rules": [
+      "Each movable diagonal must have a convex two-triangle union. The opposite point must lie outside or on the first triangle\u2019s circumcircle; a positive incircle determinant marks a violation.",
+      "A flip replaces both adjacent triangles with the other diagonal. Fixed seams, point geometry and planar triangle coverage remain intact.",
+      "Certify every free edge within the flip allowance. Spent flips or three failed certifications loses; clear three geometries, Reset or Restart to rebuild."
+    ],
+    "controls": "Tap labeled native controls, or focus a control and use Enter/Space. Every process is turn-paced. Reset study restores the current construction; Restart returns to study one.",
+    "accent": "#b5ba90",
+    "symbol": "\u25c7",
+    "family": "form-room",
+    "status": "playable",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "General-position seed geometry, convex local flip scrambles and fixed seams generate varied incircle violations with a legal bounded repair witness.",
+      "difficultyCap": "Finite state sizes remain capped at the third study; later seeds create fresh bounded challenges."
+    },
+    "nearestExisting": [
+      {
+        "id": "loose-ends",
+        "difference": "Node positions are fixed; the operation changes triangle incidence through a legal local edge exchange rather than swapping positions to eliminate crossings."
+      }
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"flip\"]"
+    },
+    "source": "form-room/structure.mjs"
+  },
+  {
+    "id": "thread-portrait",
+    "name": "Thread Portrait",
+    "category": "puzzle",
+    "url": "form-room/?game=thread-portrait",
+    "mechanic": "Route one continuous thread between pegs so overlapping chords accumulate the desired tonal image without exhausting pin wraps or over-darkening a cell.",
+    "description": "Lay one continuous strand to reproduce exact cell densities under finite peg wraps and chord stock.",
+    "rules": [
+      "Each next endpoint must continue from the current strand head. Every crossed image cell gains one irreversible density unit, including overlaps.",
+      "Crossings use actual point-to-segment distance; every peg has finite endpoint wrap capacity and the whole strand has finite chord stock.",
+      "Match all target cells exactly. Overpainting, exhausted thread or peg wraps loses; clear three portraits, Reset or Restart to erase the strand."
+    ],
+    "controls": "Tap labeled native controls, or focus a control and use Enter/Space. Every process is turn-paced. Reset study restores the current construction; Restart returns to study one.",
+    "accent": "#b5ba90",
+    "symbol": "\u25c7",
+    "family": "form-room",
+    "status": "playable",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Varied actual peg coordinates and continuous legal chord walks generate density overlaps and wrap inventories; the route is hidden and exact density is public.",
+      "difficultyCap": "Finite state sizes remain capped at the third study; later seeds create fresh bounded challenges."
+    },
+    "nearestExisting": [
+      {
+        "id": "cable-loom",
+        "difference": "Hamiltonian peg traversal visits every grid node once. This allows useful revisits and arbitrary chords, with the persistent end and per-peg wraps constrained by an additive tonal image."
+      },
+      {
+        "id": "stamp-studio",
+        "difference": "Selected stamps form a set union independent of application order. Continuous chord routing accumulates density and changes the next available start; overlapping cells can need multiple thread passes."
+      }
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"peg:2\"]"
+    },
+    "source": "form-room/process.mjs"
+  },
+  {
+    "id": "rubber-boundary",
+    "name": "Rubber Boundary",
+    "category": "puzzle",
+    "url": "form-room/?game=rubber-boundary",
+    "mechanic": "Choose both visible tangency contacts when a new required site arrives, replacing the obsolete support chain while retaining the tight convex enclosure.",
+    "description": "Replace obsolete support chains through actual tangencies as new external sites arrive.",
+    "rules": [
+      "Choose two current supports, then replace the forward counterclockwise support chain between them with two segments through the new external site.",
+      "The elastic boundary must be strictly convex, enclose every observed site and use no more than the available support pins. Retired sites remain required interior points.",
+      "A reversed corner, cut-off site or excessive active support stock loses. Enclose three arrivals in each of three studies; Reset or Restart restores the supports."
+    ],
+    "controls": "Tap labeled native controls, or focus a control and use Enter/Space. Every process is turn-paced. Reset study restores the current construction; Restart returns to study one.",
+    "accent": "#b5ba90",
+    "symbol": "\u25c7",
+    "family": "form-room",
+    "status": "playable",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Independent radial support coordinates and successive external arrival angles change convex-hull tangencies and support-chain retirements.",
+      "difficultyCap": "Finite state sizes remain capped at the third study; later seeds create fresh bounded challenges."
+    },
+    "nearestExisting": [
+      {
+        "id": "copper-tree",
+        "difference": "Minimum spanning tree edge selection seeks a connected network. The state is a persistent enclosing convex loop and each new site replaces a contiguous visible support chain."
+      },
+      {
+        "id": "loose-ends",
+        "difference": "No point swapping or general untangling: arriving sites are fixed, and geometric support/tangency determines which old boundary vertices become obsolete."
+      }
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"left:1\"]"
+    },
+    "source": "form-room/structure.mjs"
+  },
+  {
+    "id": "powder-press",
+    "name": "Powder Press",
+    "category": "puzzle",
+    "url": "form-room/?game=powder-press",
+    "mechanic": "Choose a two-sided compaction history so wall-friction attenuation does not leave a porous core or an unload density gradient that cracks the finished compact.",
+    "description": "Compact conserved solid layers through history-dependent thickness attenuation and unload cracking limits.",
+    "rules": [
+      "Choose the pressed face and load pulse. Each layer\u2019s local pressure attenuates through current overlying thickness; peak stress creates irreversible densification.",
+      "Layer solid volume stays fixed while height and void fraction change. Unloading restores only elastic compression and tests the neighboring porosity gradient.",
+      "Eject unloaded with every layer in its target porosity band and total height in range. Energy exhaustion, over-densification or cracking loses; clear three charges."
+    ],
+    "controls": "Tap labeled native controls, or focus a control and use Enter/Space. Every process is turn-paced. Reset study restores the current construction; Restart returns to study one.",
+    "accent": "#b5ba90",
+    "symbol": "\u25c7",
+    "family": "form-room",
+    "status": "playable",
+    "stages": 3,
+    "endless": {
+      "supported": false,
+      "design": "Authored compaction histories first. A future generator must certify path-dependent densification and unload gradients, not scale the same pressure schedule.",
+      "reason": "Authored compaction histories first. A future generator must certify path-dependent densification and unload gradients, not scale the same pressure schedule."
+    },
+    "nearestExisting": [
+      {
+        "id": "pressure-gallery",
+        "difference": "Hydraulic pumping distributes conserved liquid units by branch resistance. Solid powder loses void volume irreversibly, changes transmission geometry through densification and rebounds/cracks on unloading."
+      },
+      {
+        "id": "sand-table",
+        "difference": "No column avalanches or baffle topology: bulk porosity and stress attenuation, rather than granular height differences, govern the state."
+      }
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"face:1\"]"
+    },
+    "source": "form-room/shaping.mjs"
+  },
+  {
+    "id": "clay-spindle",
+    "name": "Clay Spindle",
+    "category": "puzzle",
+    "url": "form-room/?game=clay-spindle",
+    "mechanic": "Redistribute a conserved hollow wall between axial bands while retaining bore access and enough wall thickness for the final neck.",
+    "description": "Form a hollow conserved wall while redistributing clay and keeping the inner finishing path open.",
+    "rules": [
+      "Radial forming changes both outer and inner radius at fixed band volume. Pulling transfers a quarter-unit of clay to an adjacent band; total wall volume is conserved.",
+      "Every wall must retain minimum thickness and support upper outward steps. The inner finishing tool must pass every higher bore; changed walls need renewed finishing.",
+      "Gauge exact outer profile, wall distribution and required bore finishing. Collapse, sealed bore, blocked tool or spent shaping allowance loses; clear three vessels."
+    ],
+    "controls": "Tap labeled native controls, or focus a control and use Enter/Space. Every process is turn-paced. Reset study restores the current construction; Restart returns to study one.",
+    "accent": "#b5ba90",
+    "symbol": "\u25c7",
+    "family": "form-room",
+    "status": "playable",
+    "stages": 3,
+    "endless": {
+      "supported": false,
+      "design": "Three authored vessel profiles first. A generated mode needs a certified material-transfer and inner-tool-access path with varied geometry; target radius relabeling alone is unacceptable.",
+      "reason": "Three authored vessel profiles first. A generated mode needs a certified material-transfer and inner-tool-access path with varied geometry; target radius relabeling alone is unacceptable."
+    },
+    "nearestExisting": [
+      {
+        "id": "cam-workshop",
+        "difference": "Cam removes one radial stock unit irreversibly to meet neighboring follower sums. Hollow clay preserves total wall volume, transfers material between bands and changes both bore/outer geometry; access and thickness govern order."
+      },
+      {
+        "id": "spring-form",
+        "difference": "Plastic strip bends preserve a fixed cross-section and die disk access. The vessel changes wall cross-section through conserved material flow and can close its own internal tool path."
+      }
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"shape:0.1\"]"
+    },
+    "source": "form-room/shaping.mjs"
+  }
+]

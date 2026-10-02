@@ -1,0 +1,1326 @@
+{
+  "passed": true,
+  "scope": "Opening native keyboard/touch selectability and meaningful board/status action only;160 cases across20games and four public replay seeds. Separate relation-room full campaign suite.",
+  "before": {
+    "sha256": "5636cc6859694256660cc8e4a9ae128450dac3bff1afba5623920c3aba7e410f",
+    "files": [
+      "journey/journey.css",
+      "journey/journey.mjs",
+      "relation-room/README.md",
+      "relation-room/REVIEW.md",
+      "relation-room/constructions.mjs",
+      "relation-room/core.mjs",
+      "relation-room/council.mjs",
+      "relation-room/engines.mjs",
+      "relation-room/evidence.mjs",
+      "relation-room/games.json",
+      "relation-room/graphs.mjs",
+      "relation-room/index.html",
+      "relation-room/room.mjs",
+      "relation-room/semantics.mjs"
+    ]
+  },
+  "after": {
+    "sha256": "5636cc6859694256660cc8e4a9ae128450dac3bff1afba5623920c3aba7e410f",
+    "files": [
+      "journey/journey.css",
+      "journey/journey.mjs",
+      "relation-room/README.md",
+      "relation-room/REVIEW.md",
+      "relation-room/constructions.mjs",
+      "relation-room/core.mjs",
+      "relation-room/council.mjs",
+      "relation-room/engines.mjs",
+      "relation-room/evidence.mjs",
+      "relation-room/games.json",
+      "relation-room/graphs.mjs",
+      "relation-room/index.html",
+      "relation-room/room.mjs",
+      "relation-room/semantics.mjs"
+    ]
+  },
+  "sourceUnchanged": true,
+  "cases": [
+    {
+      "id": "minor-museum",
+      "profile": "desktop-native-Enter",
+      "seed": 0,
+      "selector": "[data-action=\"node:1\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "twin-graph",
+      "profile": "desktop-native-Enter",
+      "seed": 0,
+      "selector": "[data-action=\"left:1\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "interval-museum",
+      "profile": "desktop-native-Enter",
+      "seed": 0,
+      "selector": "[data-action=\"select:1\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "knowledge-circle",
+      "profile": "desktop-native-Enter",
+      "seed": 0,
+      "selector": "[data-action=\"world:0\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "modal-witness",
+      "profile": "desktop-native-Enter",
+      "seed": 0,
+      "selector": "[data-action=\"value:0:P\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "polygon-passport",
+      "profile": "desktop-native-Enter",
+      "seed": 0,
+      "selector": "[data-action=\"side:0\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "hairpin-studio",
+      "profile": "desktop-native-Enter",
+      "seed": 0,
+      "selector": "[data-action=\"site:0\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "letter-carries",
+      "profile": "desktop-native-Enter",
+      "seed": 0,
+      "selector": "[data-action=\"digit:1\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "fill-in-station",
+      "profile": "desktop-native-Enter",
+      "seed": 0,
+      "selector": "[data-action=\"select:1\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "alternating-couriers",
+      "profile": "desktop-native-Enter",
+      "seed": 0,
+      "selector": "#board [data-action^=\"walk:\"]:not(:disabled)",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "recursive-rings",
+      "profile": "desktop-native-Enter",
+      "seed": 0,
+      "selector": "[data-action=\"ring:0\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "ordered-echo",
+      "profile": "desktop-native-Enter",
+      "seed": 0,
+      "selector": "[data-action=\"next-pulse\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "heritage-house",
+      "profile": "desktop-native-Enter",
+      "seed": 0,
+      "selector": "#board [data-action^=\"person:\"]:not(:disabled)",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "posterior-post",
+      "profile": "desktop-native-Enter",
+      "seed": 0,
+      "selector": "[data-action=\"probe:0\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "heap-foundry",
+      "profile": "desktop-native-Enter",
+      "seed": 0,
+      "selector": "[data-action=\"slot:1\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "diagram-order",
+      "profile": "desktop-native-Enter",
+      "seed": 0,
+      "selector": "#board [data-action^=\"up:\"]:not(:disabled)",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "turning-council",
+      "profile": "desktop-native-Enter",
+      "seed": 0,
+      "selector": "#board [data-action^=\"place:\"]:not(:disabled)",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "witness-table",
+      "profile": "desktop-native-Enter",
+      "seed": 0,
+      "selector": "[data-action=\"choose:0\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "one-lie-archive",
+      "profile": "desktop-native-Enter",
+      "seed": 0,
+      "selector": "[data-action=\"ask:0\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "invariant-gallery",
+      "profile": "desktop-native-Enter",
+      "seed": 0,
+      "selector": "[data-action=\"coefficient:2:-1\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "minor-museum",
+      "profile": "desktop-native-Enter",
+      "seed": 1,
+      "selector": "[data-action=\"node:1\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "twin-graph",
+      "profile": "desktop-native-Enter",
+      "seed": 1,
+      "selector": "[data-action=\"left:1\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "interval-museum",
+      "profile": "desktop-native-Enter",
+      "seed": 1,
+      "selector": "[data-action=\"select:1\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "knowledge-circle",
+      "profile": "desktop-native-Enter",
+      "seed": 1,
+      "selector": "[data-action=\"world:0\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "modal-witness",
+      "profile": "desktop-native-Enter",
+      "seed": 1,
+      "selector": "[data-action=\"value:0:P\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "polygon-passport",
+      "profile": "desktop-native-Enter",
+      "seed": 1,
+      "selector": "[data-action=\"side:0\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "hairpin-studio",
+      "profile": "desktop-native-Enter",
+      "seed": 1,
+      "selector": "[data-action=\"site:0\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "letter-carries",
+      "profile": "desktop-native-Enter",
+      "seed": 1,
+      "selector": "[data-action=\"digit:1\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "fill-in-station",
+      "profile": "desktop-native-Enter",
+      "seed": 1,
+      "selector": "[data-action=\"select:1\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "alternating-couriers",
+      "profile": "desktop-native-Enter",
+      "seed": 1,
+      "selector": "#board [data-action^=\"walk:\"]:not(:disabled)",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "recursive-rings",
+      "profile": "desktop-native-Enter",
+      "seed": 1,
+      "selector": "[data-action=\"ring:0\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "ordered-echo",
+      "profile": "desktop-native-Enter",
+      "seed": 1,
+      "selector": "[data-action=\"next-pulse\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "heritage-house",
+      "profile": "desktop-native-Enter",
+      "seed": 1,
+      "selector": "#board [data-action^=\"person:\"]:not(:disabled)",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "posterior-post",
+      "profile": "desktop-native-Enter",
+      "seed": 1,
+      "selector": "[data-action=\"probe:0\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "heap-foundry",
+      "profile": "desktop-native-Enter",
+      "seed": 1,
+      "selector": "[data-action=\"slot:1\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "diagram-order",
+      "profile": "desktop-native-Enter",
+      "seed": 1,
+      "selector": "#board [data-action^=\"up:\"]:not(:disabled)",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "turning-council",
+      "profile": "desktop-native-Enter",
+      "seed": 1,
+      "selector": "#board [data-action^=\"place:\"]:not(:disabled)",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "witness-table",
+      "profile": "desktop-native-Enter",
+      "seed": 1,
+      "selector": "[data-action=\"choose:0\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "one-lie-archive",
+      "profile": "desktop-native-Enter",
+      "seed": 1,
+      "selector": "[data-action=\"ask:0\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "invariant-gallery",
+      "profile": "desktop-native-Enter",
+      "seed": 1,
+      "selector": "[data-action=\"coefficient:2:-1\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "minor-museum",
+      "profile": "desktop-native-Enter",
+      "seed": 20261002,
+      "selector": "[data-action=\"node:1\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "twin-graph",
+      "profile": "desktop-native-Enter",
+      "seed": 20261002,
+      "selector": "[data-action=\"left:1\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "interval-museum",
+      "profile": "desktop-native-Enter",
+      "seed": 20261002,
+      "selector": "[data-action=\"select:1\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "knowledge-circle",
+      "profile": "desktop-native-Enter",
+      "seed": 20261002,
+      "selector": "[data-action=\"world:0\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "modal-witness",
+      "profile": "desktop-native-Enter",
+      "seed": 20261002,
+      "selector": "[data-action=\"value:0:P\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "polygon-passport",
+      "profile": "desktop-native-Enter",
+      "seed": 20261002,
+      "selector": "[data-action=\"side:0\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "hairpin-studio",
+      "profile": "desktop-native-Enter",
+      "seed": 20261002,
+      "selector": "[data-action=\"site:0\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "letter-carries",
+      "profile": "desktop-native-Enter",
+      "seed": 20261002,
+      "selector": "[data-action=\"digit:1\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "fill-in-station",
+      "profile": "desktop-native-Enter",
+      "seed": 20261002,
+      "selector": "[data-action=\"select:1\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "alternating-couriers",
+      "profile": "desktop-native-Enter",
+      "seed": 20261002,
+      "selector": "#board [data-action^=\"walk:\"]:not(:disabled)",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "recursive-rings",
+      "profile": "desktop-native-Enter",
+      "seed": 20261002,
+      "selector": "[data-action=\"ring:0\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "ordered-echo",
+      "profile": "desktop-native-Enter",
+      "seed": 20261002,
+      "selector": "[data-action=\"next-pulse\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "heritage-house",
+      "profile": "desktop-native-Enter",
+      "seed": 20261002,
+      "selector": "#board [data-action^=\"person:\"]:not(:disabled)",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "posterior-post",
+      "profile": "desktop-native-Enter",
+      "seed": 20261002,
+      "selector": "[data-action=\"probe:0\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "heap-foundry",
+      "profile": "desktop-native-Enter",
+      "seed": 20261002,
+      "selector": "[data-action=\"slot:1\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "diagram-order",
+      "profile": "desktop-native-Enter",
+      "seed": 20261002,
+      "selector": "#board [data-action^=\"up:\"]:not(:disabled)",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "turning-council",
+      "profile": "desktop-native-Enter",
+      "seed": 20261002,
+      "selector": "#board [data-action^=\"place:\"]:not(:disabled)",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "witness-table",
+      "profile": "desktop-native-Enter",
+      "seed": 20261002,
+      "selector": "[data-action=\"choose:0\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "one-lie-archive",
+      "profile": "desktop-native-Enter",
+      "seed": 20261002,
+      "selector": "[data-action=\"ask:0\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "invariant-gallery",
+      "profile": "desktop-native-Enter",
+      "seed": 20261002,
+      "selector": "[data-action=\"coefficient:2:-1\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "minor-museum",
+      "profile": "desktop-native-Enter",
+      "seed": 4294967295,
+      "selector": "[data-action=\"node:1\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "twin-graph",
+      "profile": "desktop-native-Enter",
+      "seed": 4294967295,
+      "selector": "[data-action=\"left:1\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "interval-museum",
+      "profile": "desktop-native-Enter",
+      "seed": 4294967295,
+      "selector": "[data-action=\"select:1\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "knowledge-circle",
+      "profile": "desktop-native-Enter",
+      "seed": 4294967295,
+      "selector": "[data-action=\"world:0\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "modal-witness",
+      "profile": "desktop-native-Enter",
+      "seed": 4294967295,
+      "selector": "[data-action=\"value:0:P\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "polygon-passport",
+      "profile": "desktop-native-Enter",
+      "seed": 4294967295,
+      "selector": "[data-action=\"side:0\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "hairpin-studio",
+      "profile": "desktop-native-Enter",
+      "seed": 4294967295,
+      "selector": "[data-action=\"site:0\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "letter-carries",
+      "profile": "desktop-native-Enter",
+      "seed": 4294967295,
+      "selector": "[data-action=\"digit:1\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "fill-in-station",
+      "profile": "desktop-native-Enter",
+      "seed": 4294967295,
+      "selector": "[data-action=\"select:1\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "alternating-couriers",
+      "profile": "desktop-native-Enter",
+      "seed": 4294967295,
+      "selector": "#board [data-action^=\"walk:\"]:not(:disabled)",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "recursive-rings",
+      "profile": "desktop-native-Enter",
+      "seed": 4294967295,
+      "selector": "[data-action=\"ring:0\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "ordered-echo",
+      "profile": "desktop-native-Enter",
+      "seed": 4294967295,
+      "selector": "[data-action=\"next-pulse\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "heritage-house",
+      "profile": "desktop-native-Enter",
+      "seed": 4294967295,
+      "selector": "#board [data-action^=\"person:\"]:not(:disabled)",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "posterior-post",
+      "profile": "desktop-native-Enter",
+      "seed": 4294967295,
+      "selector": "[data-action=\"probe:0\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "heap-foundry",
+      "profile": "desktop-native-Enter",
+      "seed": 4294967295,
+      "selector": "[data-action=\"slot:1\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "diagram-order",
+      "profile": "desktop-native-Enter",
+      "seed": 4294967295,
+      "selector": "#board [data-action^=\"up:\"]:not(:disabled)",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "turning-council",
+      "profile": "desktop-native-Enter",
+      "seed": 4294967295,
+      "selector": "#board [data-action^=\"place:\"]:not(:disabled)",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "witness-table",
+      "profile": "desktop-native-Enter",
+      "seed": 4294967295,
+      "selector": "[data-action=\"choose:0\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "one-lie-archive",
+      "profile": "desktop-native-Enter",
+      "seed": 4294967295,
+      "selector": "[data-action=\"ask:0\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "invariant-gallery",
+      "profile": "desktop-native-Enter",
+      "seed": 4294967295,
+      "selector": "[data-action=\"coefficient:2:-1\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "minor-museum",
+      "profile": "320px-native-touch",
+      "seed": 0,
+      "selector": "[data-action=\"node:1\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "twin-graph",
+      "profile": "320px-native-touch",
+      "seed": 0,
+      "selector": "[data-action=\"left:1\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "interval-museum",
+      "profile": "320px-native-touch",
+      "seed": 0,
+      "selector": "[data-action=\"select:1\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "knowledge-circle",
+      "profile": "320px-native-touch",
+      "seed": 0,
+      "selector": "[data-action=\"world:0\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "modal-witness",
+      "profile": "320px-native-touch",
+      "seed": 0,
+      "selector": "[data-action=\"value:0:P\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "polygon-passport",
+      "profile": "320px-native-touch",
+      "seed": 0,
+      "selector": "[data-action=\"side:0\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "hairpin-studio",
+      "profile": "320px-native-touch",
+      "seed": 0,
+      "selector": "[data-action=\"site:0\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "letter-carries",
+      "profile": "320px-native-touch",
+      "seed": 0,
+      "selector": "[data-action=\"digit:1\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "fill-in-station",
+      "profile": "320px-native-touch",
+      "seed": 0,
+      "selector": "[data-action=\"select:1\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "alternating-couriers",
+      "profile": "320px-native-touch",
+      "seed": 0,
+      "selector": "#board [data-action^=\"walk:\"]:not(:disabled)",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "recursive-rings",
+      "profile": "320px-native-touch",
+      "seed": 0,
+      "selector": "[data-action=\"ring:0\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "ordered-echo",
+      "profile": "320px-native-touch",
+      "seed": 0,
+      "selector": "[data-action=\"next-pulse\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "heritage-house",
+      "profile": "320px-native-touch",
+      "seed": 0,
+      "selector": "#board [data-action^=\"person:\"]:not(:disabled)",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "posterior-post",
+      "profile": "320px-native-touch",
+      "seed": 0,
+      "selector": "[data-action=\"probe:0\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "heap-foundry",
+      "profile": "320px-native-touch",
+      "seed": 0,
+      "selector": "[data-action=\"slot:1\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "diagram-order",
+      "profile": "320px-native-touch",
+      "seed": 0,
+      "selector": "#board [data-action^=\"up:\"]:not(:disabled)",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "turning-council",
+      "profile": "320px-native-touch",
+      "seed": 0,
+      "selector": "#board [data-action^=\"place:\"]:not(:disabled)",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "witness-table",
+      "profile": "320px-native-touch",
+      "seed": 0,
+      "selector": "[data-action=\"choose:0\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "one-lie-archive",
+      "profile": "320px-native-touch",
+      "seed": 0,
+      "selector": "[data-action=\"ask:0\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "invariant-gallery",
+      "profile": "320px-native-touch",
+      "seed": 0,
+      "selector": "[data-action=\"coefficient:2:-1\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "minor-museum",
+      "profile": "320px-native-touch",
+      "seed": 1,
+      "selector": "[data-action=\"node:1\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "twin-graph",
+      "profile": "320px-native-touch",
+      "seed": 1,
+      "selector": "[data-action=\"left:1\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "interval-museum",
+      "profile": "320px-native-touch",
+      "seed": 1,
+      "selector": "[data-action=\"select:1\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "knowledge-circle",
+      "profile": "320px-native-touch",
+      "seed": 1,
+      "selector": "[data-action=\"world:0\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "modal-witness",
+      "profile": "320px-native-touch",
+      "seed": 1,
+      "selector": "[data-action=\"value:0:P\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "polygon-passport",
+      "profile": "320px-native-touch",
+      "seed": 1,
+      "selector": "[data-action=\"side:0\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "hairpin-studio",
+      "profile": "320px-native-touch",
+      "seed": 1,
+      "selector": "[data-action=\"site:0\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "letter-carries",
+      "profile": "320px-native-touch",
+      "seed": 1,
+      "selector": "[data-action=\"digit:1\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "fill-in-station",
+      "profile": "320px-native-touch",
+      "seed": 1,
+      "selector": "[data-action=\"select:1\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "alternating-couriers",
+      "profile": "320px-native-touch",
+      "seed": 1,
+      "selector": "#board [data-action^=\"walk:\"]:not(:disabled)",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "recursive-rings",
+      "profile": "320px-native-touch",
+      "seed": 1,
+      "selector": "[data-action=\"ring:0\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "ordered-echo",
+      "profile": "320px-native-touch",
+      "seed": 1,
+      "selector": "[data-action=\"next-pulse\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "heritage-house",
+      "profile": "320px-native-touch",
+      "seed": 1,
+      "selector": "#board [data-action^=\"person:\"]:not(:disabled)",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "posterior-post",
+      "profile": "320px-native-touch",
+      "seed": 1,
+      "selector": "[data-action=\"probe:0\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "heap-foundry",
+      "profile": "320px-native-touch",
+      "seed": 1,
+      "selector": "[data-action=\"slot:1\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "diagram-order",
+      "profile": "320px-native-touch",
+      "seed": 1,
+      "selector": "#board [data-action^=\"up:\"]:not(:disabled)",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "turning-council",
+      "profile": "320px-native-touch",
+      "seed": 1,
+      "selector": "#board [data-action^=\"place:\"]:not(:disabled)",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "witness-table",
+      "profile": "320px-native-touch",
+      "seed": 1,
+      "selector": "[data-action=\"choose:0\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "one-lie-archive",
+      "profile": "320px-native-touch",
+      "seed": 1,
+      "selector": "[data-action=\"ask:0\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "invariant-gallery",
+      "profile": "320px-native-touch",
+      "seed": 1,
+      "selector": "[data-action=\"coefficient:2:-1\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "minor-museum",
+      "profile": "320px-native-touch",
+      "seed": 20261002,
+      "selector": "[data-action=\"node:1\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "twin-graph",
+      "profile": "320px-native-touch",
+      "seed": 20261002,
+      "selector": "[data-action=\"left:1\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "interval-museum",
+      "profile": "320px-native-touch",
+      "seed": 20261002,
+      "selector": "[data-action=\"select:1\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "knowledge-circle",
+      "profile": "320px-native-touch",
+      "seed": 20261002,
+      "selector": "[data-action=\"world:0\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "modal-witness",
+      "profile": "320px-native-touch",
+      "seed": 20261002,
+      "selector": "[data-action=\"value:0:P\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "polygon-passport",
+      "profile": "320px-native-touch",
+      "seed": 20261002,
+      "selector": "[data-action=\"side:0\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "hairpin-studio",
+      "profile": "320px-native-touch",
+      "seed": 20261002,
+      "selector": "[data-action=\"site:0\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "letter-carries",
+      "profile": "320px-native-touch",
+      "seed": 20261002,
+      "selector": "[data-action=\"digit:1\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "fill-in-station",
+      "profile": "320px-native-touch",
+      "seed": 20261002,
+      "selector": "[data-action=\"select:1\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "alternating-couriers",
+      "profile": "320px-native-touch",
+      "seed": 20261002,
+      "selector": "#board [data-action^=\"walk:\"]:not(:disabled)",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "recursive-rings",
+      "profile": "320px-native-touch",
+      "seed": 20261002,
+      "selector": "[data-action=\"ring:0\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "ordered-echo",
+      "profile": "320px-native-touch",
+      "seed": 20261002,
+      "selector": "[data-action=\"next-pulse\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "heritage-house",
+      "profile": "320px-native-touch",
+      "seed": 20261002,
+      "selector": "#board [data-action^=\"person:\"]:not(:disabled)",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "posterior-post",
+      "profile": "320px-native-touch",
+      "seed": 20261002,
+      "selector": "[data-action=\"probe:0\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "heap-foundry",
+      "profile": "320px-native-touch",
+      "seed": 20261002,
+      "selector": "[data-action=\"slot:1\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "diagram-order",
+      "profile": "320px-native-touch",
+      "seed": 20261002,
+      "selector": "#board [data-action^=\"up:\"]:not(:disabled)",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "turning-council",
+      "profile": "320px-native-touch",
+      "seed": 20261002,
+      "selector": "#board [data-action^=\"place:\"]:not(:disabled)",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "witness-table",
+      "profile": "320px-native-touch",
+      "seed": 20261002,
+      "selector": "[data-action=\"choose:0\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "one-lie-archive",
+      "profile": "320px-native-touch",
+      "seed": 20261002,
+      "selector": "[data-action=\"ask:0\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "invariant-gallery",
+      "profile": "320px-native-touch",
+      "seed": 20261002,
+      "selector": "[data-action=\"coefficient:2:-1\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "minor-museum",
+      "profile": "320px-native-touch",
+      "seed": 4294967295,
+      "selector": "[data-action=\"node:1\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "twin-graph",
+      "profile": "320px-native-touch",
+      "seed": 4294967295,
+      "selector": "[data-action=\"left:1\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "interval-museum",
+      "profile": "320px-native-touch",
+      "seed": 4294967295,
+      "selector": "[data-action=\"select:1\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "knowledge-circle",
+      "profile": "320px-native-touch",
+      "seed": 4294967295,
+      "selector": "[data-action=\"world:0\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "modal-witness",
+      "profile": "320px-native-touch",
+      "seed": 4294967295,
+      "selector": "[data-action=\"value:0:P\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "polygon-passport",
+      "profile": "320px-native-touch",
+      "seed": 4294967295,
+      "selector": "[data-action=\"side:0\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "hairpin-studio",
+      "profile": "320px-native-touch",
+      "seed": 4294967295,
+      "selector": "[data-action=\"site:0\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "letter-carries",
+      "profile": "320px-native-touch",
+      "seed": 4294967295,
+      "selector": "[data-action=\"digit:1\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "fill-in-station",
+      "profile": "320px-native-touch",
+      "seed": 4294967295,
+      "selector": "[data-action=\"select:1\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "alternating-couriers",
+      "profile": "320px-native-touch",
+      "seed": 4294967295,
+      "selector": "#board [data-action^=\"walk:\"]:not(:disabled)",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "recursive-rings",
+      "profile": "320px-native-touch",
+      "seed": 4294967295,
+      "selector": "[data-action=\"ring:0\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "ordered-echo",
+      "profile": "320px-native-touch",
+      "seed": 4294967295,
+      "selector": "[data-action=\"next-pulse\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "heritage-house",
+      "profile": "320px-native-touch",
+      "seed": 4294967295,
+      "selector": "#board [data-action^=\"person:\"]:not(:disabled)",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "posterior-post",
+      "profile": "320px-native-touch",
+      "seed": 4294967295,
+      "selector": "[data-action=\"probe:0\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "heap-foundry",
+      "profile": "320px-native-touch",
+      "seed": 4294967295,
+      "selector": "[data-action=\"slot:1\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "diagram-order",
+      "profile": "320px-native-touch",
+      "seed": 4294967295,
+      "selector": "#board [data-action^=\"up:\"]:not(:disabled)",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "turning-council",
+      "profile": "320px-native-touch",
+      "seed": 4294967295,
+      "selector": "#board [data-action^=\"place:\"]:not(:disabled)",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "witness-table",
+      "profile": "320px-native-touch",
+      "seed": 4294967295,
+      "selector": "[data-action=\"choose:0\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "one-lie-archive",
+      "profile": "320px-native-touch",
+      "seed": 4294967295,
+      "selector": "[data-action=\"ask:0\"]",
+      "enabled": true,
+      "changed": true
+    },
+    {
+      "id": "invariant-gallery",
+      "profile": "320px-native-touch",
+      "seed": 4294967295,
+      "selector": "[data-action=\"coefficient:2:-1\"]",
+      "enabled": true,
+      "changed": true
+    }
+  ],
+  "errors": []
+}

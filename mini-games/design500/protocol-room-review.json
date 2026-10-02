@@ -1,0 +1,2480 @@
+{
+  "room": "protocol-room",
+  "count": 20,
+  "status": "complete",
+  "finishedAt": "2026-10-02T20:46:35.026Z",
+  "summary": {
+    "newGames": 20,
+    "finiteStudiesPerGame": 3,
+    "supportedChallengeStreams": 17,
+    "finiteOnly": 3,
+    "primaryNativeProfiles": 40,
+    "nativeFiniteStudyWins": 120,
+    "optionalNativeProfiles": 34,
+    "optionalNativeChallengeWins": 68,
+    "openingProfiles": 160,
+    "mechanicRegressionCases": 53,
+    "generatorLegalWitnessSamples": 408,
+    "noUnresolvedOwnerFindings": true
+  },
+  "evidence": {
+    "primary": "coverage/protocol-room.json",
+    "primarySourceHash": "1378d4f0e8d1913ff2fbdbb53b468153f9c1d684106141c72508a6b045000543",
+    "openings": "coverage/protocol-room-openings.json",
+    "openingSourceHash": "fb1c3a75e6b40f53d48a560c298b1b600d9cf52fe848f797c27138619c562999",
+    "canonicalEntry": "tests/protocol-room.cjs",
+    "sourceFiles": [
+      "protocol-room/collaboration.mjs",
+      "protocol-room/core.mjs",
+      "protocol-room/engines.mjs",
+      "protocol-room/execution.mjs",
+      "protocol-room/games.json",
+      "protocol-room/index.html",
+      "protocol-room/network.mjs",
+      "protocol-room/numerics.mjs",
+      "protocol-room/room.mjs",
+      "protocol-room/storage.mjs",
+      "protocol-room/streams.mjs",
+      "protocol-room/systems.mjs",
+      "journey/journey.css",
+      "journey/journey.mjs",
+      "play.css",
+      "tests/protocol-room-collaboration-plans.mjs",
+      "tests/protocol-room-execution-plans.mjs",
+      "tests/protocol-room-network-plans.mjs",
+      "tests/protocol-room-numeric-plans.mjs",
+      "tests/protocol-room-openings.cjs",
+      "tests/protocol-room-paths.json",
+      "tests/protocol-room-plans.mjs",
+      "tests/protocol-room-play.cjs",
+      "tests/protocol-room-regressions.mjs",
+      "tests/protocol-room-storage-plans.mjs",
+      "tests/protocol-room-stream-plans.mjs",
+      "tests/protocol-room-systems-plans.mjs",
+      "tests/protocol-room.cjs"
+    ],
+    "limits": [
+      "Source-informed legal routes and negative cases prove reachability and rule regression, not unaided solving.",
+      "Chromium keyboard and emulated touchscreen inputs; no physical-device or screen-reader certification.",
+      "Mode setup uses native selectOption; every mobile gameplay action uses touchscreen taps, including native range tracks.",
+      "Generated late-stage samples use pure models; browser optional-mode coverage completes its first two challenges then a third challenge failure and recovery."
+    ],
+    "visualReview": "All20 mobile opening layouts inspected; current packet/certificate reading-order refinements and an actual begun persistent draft also inspected. These visual checks do not replace gameplay evidence."
+  },
+  "sourceHashes": {
+    "protocol-room/collaboration.mjs": "8a89cf281909bd99ac31ba1e210d1eb90b3dc9484f6dfa5cc15e8c8a81f44946",
+    "protocol-room/core.mjs": "e4f622851dee8e4119f156e36b57a73d9b7c50bf6a1e9c2bc21f582df3db6383",
+    "protocol-room/engines.mjs": "018727b143999c9f0a13be2a25abd33f8092a34bababf2361e1a5ddb50e995d4",
+    "protocol-room/execution.mjs": "8d9bed3470f636239dbc654ff277e3481dfd1b932fafaf1fb5553989925d720b",
+    "protocol-room/games.json": "e400d63575f9329a2715b8c7592494463d5c4be99b82f443ae30b088ba10146c",
+    "protocol-room/index.html": "f6947c2e4f4f75dbd0bead31dcbae133053599b78fa1685dd5587d04ecf98ce0",
+    "protocol-room/network.mjs": "bb2d6111359576cfcc7e72fca634e7de48e7940831f7a96678aeee09a62c294a",
+    "protocol-room/numerics.mjs": "05ea14aa8ec085d5a47d692bb61c02531e3fc7b48538c72c1a2e2855ee2d3969",
+    "protocol-room/room.mjs": "d45f21ee0e40e338333898d1b888dc41cf09d69950439e09789ec292820eaa23",
+    "protocol-room/storage.mjs": "d69671a04ee9a5bb3705781987558347525525ff625c742d5a79c0781cc48e4a",
+    "protocol-room/streams.mjs": "ecf20fa21dfe8c5aae3c63299a76b9b69f239f325cff33ff6558cd75e61b6f28",
+    "protocol-room/systems.mjs": "a91243c7ebf5bbb159e4a4579bf10ec1975be27f89de2541ee8ebf919fb9d904"
+  },
+  "games": [
+    {
+      "id": "page-orchard",
+      "name": "Page Orchard",
+      "implementedMechanic": "Repair an ordered multi-key page tree after insertions and deletions: choose a separator to promote, a sibling to borrow from, or a merge while retaining equal leaf depth and minimum occupancy.",
+      "sourceFiles": [
+        {
+          "path": "protocol-room/storage.mjs",
+          "sha256": "d69671a04ee9a5bb3705781987558347525525ff625c742d5a79c0781cc48e4a"
+        },
+        {
+          "path": "protocol-room/core.mjs",
+          "sha256": "e4f622851dee8e4119f156e36b57a73d9b7c50bf6a1e9c2bc21f582df3db6383"
+        },
+        {
+          "path": "protocol-room/engines.mjs",
+          "sha256": "018727b143999c9f0a13be2a25abd33f8092a34bababf2361e1a5ddb50e995d4"
+        }
+      ],
+      "nearestActualExisting": [
+        {
+          "id": "branch-librarian",
+          "source": "workbench-room/structures.mjs",
+          "difference": "That model rotates one binary child to change frequency-weighted depths. This model has multi-key fixed-capacity pages, separators, occupancy invariants and split/borrow/merge propagation; rotations cannot repair its overflow."
+        },
+        {
+          "id": "heap-garden",
+          "source": "workbench-room/storage.mjs",
+          "difference": "No contiguous byte placement or pinned physical blocks: tree search order and page occupancy determine legality."
+        }
+      ],
+      "finite": {
+        "retained": true,
+        "studies": 3,
+        "realization": [
+          "Root split and propagation",
+          "Leaf deletion repair",
+          "Repeated deletion and root contraction"
+        ],
+        "nativeProfiles": [
+          {
+            "profile": "desktop",
+            "finiteStudiesCompleted": 3,
+            "winActions": 32,
+            "lossActions": 2,
+            "restart": true
+          },
+          {
+            "profile": "mobile-touch",
+            "finiteStudiesCompleted": 3,
+            "winActions": 32,
+            "lossActions": 2,
+            "restart": true
+          }
+        ]
+      },
+      "controls": "Advance the next request; select a page; split at a middle key, borrow from a sibling, merge pages or choose an internal deletion replacement; audit the final tree. Use touch taps, or Tab with Enter/Space; arrow keys adjust any labeled native range.",
+      "optionalEndless": {
+        "implemented": true,
+        "kind": "challenge-stream",
+        "actualGeneration": "Generate varied bounded insertion/deletion sequences over shuffled key gaps and independently derive legal repair witnesses; cap keys/pages while varying true request histories.",
+        "difficultyCap": "At most eight initial keys plus four insertions; seeded insertion/deletion request order and key gaps vary. Multi-key pages retain a maximum of three keys after repairs.",
+        "reason": null,
+        "feasibility": "Implemented bounded seeded challenge stream; finite campaign is retained.",
+        "nativeEvidence": [
+          {
+            "supported": true,
+            "kind": "challenge-stream",
+            "completedChallenges": 2,
+            "freshChallenges": true,
+            "scoreAccumulated": true,
+            "terminalRecovery": true,
+            "playerEndRun": true,
+            "lateStageProperties": true,
+            "lateStageScope": "24 enabled-control pure-model witnesses including stages17and250; native browser coverage completes the first two generated challenges, fails the third and recovers."
+          },
+          {
+            "supported": true,
+            "kind": "challenge-stream",
+            "completedChallenges": 2,
+            "freshChallenges": true,
+            "scoreAccumulated": true,
+            "terminalRecovery": true,
+            "playerEndRun": true,
+            "lateStageProperties": true,
+            "lateStageScope": "24 enabled-control pure-model witnesses including stages17and250; native browser coverage completes the first two generated challenges, fails the third and recovers."
+          }
+        ],
+        "modelGenerationEvidence": {
+          "id": "page-orchard",
+          "passed": true,
+          "samples": 24,
+          "stages": [
+            0,
+            1,
+            2,
+            3,
+            17,
+            250
+          ],
+          "seeds": [
+            0,
+            1,
+            20261002,
+            4294967295
+          ],
+          "scope": "Pure-model enabled-control legal witnesses, bounded serializable state and positive terminal score; does not substitute for the separate native browser cases."
+        }
+      },
+      "regressions": [
+        {
+          "id": "page-orchard",
+          "label": "All three finite studies have enabled-control legal completions and real terminal failures",
+          "passed": true
+        },
+        {
+          "id": "page-orchard",
+          "label": "Overflow cannot be ignored before the next request",
+          "passed": true
+        },
+        {
+          "id": "page-orchard",
+          "label": "Deletion campaign legally contracts the root with exact keys and equal leaf depth",
+          "passed": true
+        }
+      ],
+      "openFindings": []
+    },
+    {
+      "id": "paired-harbor",
+      "name": "Paired Harbor",
+      "implementedMechanic": "Store each key in one of its two hashed berths; inserting into an occupied berth displaces its previous key, which must move to its alternate berth or consume a scarce stash slot.",
+      "sourceFiles": [
+        {
+          "path": "protocol-room/storage.mjs",
+          "sha256": "d69671a04ee9a5bb3705781987558347525525ff625c742d5a79c0781cc48e4a"
+        },
+        {
+          "path": "protocol-room/core.mjs",
+          "sha256": "e4f622851dee8e4119f156e36b57a73d9b7c50bf6a1e9c2bc21f582df3db6383"
+        },
+        {
+          "path": "protocol-room/engines.mjs",
+          "sha256": "018727b143999c9f0a13be2a25abd33f8092a34bababf2361e1a5ddb50e995d4"
+        }
+      ],
+      "nearestActualExisting": [
+        {
+          "id": "hall-window",
+          "source": "signal-lab/certificates.mjs",
+          "difference": "Hall Window selects a deficient job subset to certify that matching is impossible. This is a live constructive insertion/displacement system with carried keys, alternate hash locations, cycles and a stash; the player must keep actual lookup locations valid."
+        },
+        {
+          "id": "heap-garden",
+          "source": "workbench-room/storage.mjs",
+          "difference": "Keys have two discrete legal homes rather than contiguous size spans, compaction or pinned allocations."
+        }
+      ],
+      "finite": {
+        "retained": true,
+        "studies": 3,
+        "realization": [
+          "Five-key paired incidence graph",
+          "Six-key paired incidence graph",
+          "Seven-key graph with stash/rehash decisions"
+        ],
+        "nativeProfiles": [
+          {
+            "profile": "desktop",
+            "finiteStudiesCompleted": 3,
+            "winActions": 39,
+            "lossActions": 2,
+            "restart": true
+          },
+          {
+            "profile": "mobile-touch",
+            "finiteStudiesCompleted": 3,
+            "winActions": 39,
+            "lossActions": 2,
+            "restart": true
+          }
+        ]
+      },
+      "controls": "Begin an arrival, place the carried key in a legal berth, stash or withdraw one key, use the single rescue rehash, and audit all lookups. Use touch taps, or Tab with Enter/Space; arrow keys adjust any labeled native range.",
+      "optionalEndless": {
+        "implemented": true,
+        "kind": "challenge-stream",
+        "actualGeneration": "Seed genuinely different paired-incidence graphs and insertion orders with constructive bounded legal matchings, including optional cycles; vary graph edges rather than relabel one template.",
+        "difficultyCap": "Bounded pages, clients, keys or workers; seeded structures and histories vary after the three finite studies.",
+        "reason": null,
+        "feasibility": "Implemented bounded seeded challenge stream; finite campaign is retained.",
+        "nativeEvidence": [
+          {
+            "supported": true,
+            "kind": "challenge-stream",
+            "completedChallenges": 2,
+            "freshChallenges": true,
+            "scoreAccumulated": true,
+            "terminalRecovery": true,
+            "playerEndRun": true,
+            "lateStageProperties": true,
+            "lateStageScope": "24 enabled-control pure-model witnesses including stages17and250; native browser coverage completes the first two generated challenges, fails the third and recovers."
+          },
+          {
+            "supported": true,
+            "kind": "challenge-stream",
+            "completedChallenges": 2,
+            "freshChallenges": true,
+            "scoreAccumulated": true,
+            "terminalRecovery": true,
+            "playerEndRun": true,
+            "lateStageProperties": true,
+            "lateStageScope": "24 enabled-control pure-model witnesses including stages17and250; native browser coverage completes the first two generated challenges, fails the third and recovers."
+          }
+        ],
+        "modelGenerationEvidence": {
+          "id": "paired-harbor",
+          "passed": true,
+          "samples": 24,
+          "stages": [
+            0,
+            1,
+            2,
+            3,
+            17,
+            250
+          ],
+          "seeds": [
+            0,
+            1,
+            20261002,
+            4294967295
+          ],
+          "scope": "Pure-model enabled-control legal witnesses, bounded serializable state and positive terminal score; does not substitute for the separate native browser cases."
+        }
+      },
+      "regressions": [
+        {
+          "id": "paired-harbor",
+          "label": "All three finite studies have enabled-control legal completions and real terminal failures",
+          "passed": true
+        },
+        {
+          "id": "paired-harbor",
+          "label": "A displaced cycle can preserve all keys using the real one-slot stash",
+          "passed": true
+        },
+        {
+          "id": "paired-harbor",
+          "label": "Rehash consumes rescue and changes the full incidence graph without refunding work",
+          "passed": true
+        }
+      ],
+      "openFindings": []
+    },
+    {
+      "id": "ring-transfer",
+      "name": "Ring Transfer",
+      "implementedMechanic": "Place new server markers on a circular hash address space and migrate the keys whose clockwise owner changes, balancing final server load against the cost of changing ownership.",
+      "sourceFiles": [
+        {
+          "path": "protocol-room/storage.mjs",
+          "sha256": "d69671a04ee9a5bb3705781987558347525525ff625c742d5a79c0781cc48e4a"
+        },
+        {
+          "path": "protocol-room/core.mjs",
+          "sha256": "e4f622851dee8e4119f156e36b57a73d9b7c50bf6a1e9c2bc21f582df3db6383"
+        },
+        {
+          "path": "protocol-room/engines.mjs",
+          "sha256": "018727b143999c9f0a13be2a25abd33f8092a34bababf2361e1a5ddb50e995d4"
+        }
+      ],
+      "nearestActualExisting": [
+        {
+          "id": "divisor-house",
+          "source": "signal-lab/measures.mjs",
+          "difference": "Seat allocation searches a common divisor across independent quotas. Here key positions are fixed, contiguous circular ownership intervals couple assignments, and ownership changes require costed safe migration."
+        },
+        {
+          "id": "cyclic-courtyard",
+          "source": "constraint-room/paths.mjs",
+          "difference": "No row/column tile permutation: circular interval successor ownership and data movement determine the state."
+        }
+      ],
+      "finite": {
+        "retained": true,
+        "studies": 3,
+        "realization": [
+          "Add one marker",
+          "Retire B and install C",
+          "Retire A and install C/D"
+        ],
+        "nativeProfiles": [
+          {
+            "profile": "desktop",
+            "finiteStudiesCompleted": 3,
+            "winActions": 38,
+            "lossActions": 1,
+            "restart": true
+          },
+          {
+            "profile": "mobile-touch",
+            "finiteStudiesCompleted": 3,
+            "winActions": 38,
+            "lossActions": 1,
+            "restart": true
+          }
+        ]
+      },
+      "controls": "Select a final server marker, set its circular address on the native range and press Place to confirm. Lock the ownership plan, copy affected keys, switch authority and audit. Native buttons/range support keyboard and touch.",
+      "optionalEndless": {
+        "implemented": true,
+        "kind": "challenge-stream",
+        "actualGeneration": "Generate distinct key coordinates and weights on the bounded circular address space. Each difficulty tier has a fixed membership change; its seeded key layout determines the actual load cap and migration bandwidth, derived from a legal marker witness.",
+        "difficultyCap": "Bounded pages, clients, keys or workers; seeded structures and histories vary after the three finite studies.",
+        "reason": null,
+        "feasibility": "Implemented bounded seeded challenge stream; finite campaign is retained.",
+        "nativeEvidence": [
+          {
+            "supported": true,
+            "kind": "challenge-stream",
+            "completedChallenges": 2,
+            "freshChallenges": true,
+            "scoreAccumulated": true,
+            "terminalRecovery": true,
+            "playerEndRun": true,
+            "lateStageProperties": true,
+            "lateStageScope": "24 enabled-control pure-model witnesses including stages17and250; native browser coverage completes the first two generated challenges, fails the third and recovers."
+          },
+          {
+            "supported": true,
+            "kind": "challenge-stream",
+            "completedChallenges": 2,
+            "freshChallenges": true,
+            "scoreAccumulated": true,
+            "terminalRecovery": true,
+            "playerEndRun": true,
+            "lateStageProperties": true,
+            "lateStageScope": "24 enabled-control pure-model witnesses including stages17and250; native browser coverage completes the first two generated challenges, fails the third and recovers."
+          }
+        ],
+        "modelGenerationEvidence": {
+          "id": "ring-transfer",
+          "passed": true,
+          "samples": 24,
+          "stages": [
+            0,
+            1,
+            2,
+            3,
+            17,
+            250
+          ],
+          "seeds": [
+            0,
+            1,
+            20261002,
+            4294967295
+          ],
+          "scope": "Pure-model enabled-control legal witnesses, bounded serializable state and positive terminal score; does not substitute for the separate native browser cases."
+        }
+      },
+      "regressions": [
+        {
+          "id": "ring-transfer",
+          "label": "All three finite studies have enabled-control legal completions and real terminal failures",
+          "passed": true
+        },
+        {
+          "id": "ring-transfer",
+          "label": "Clockwise wraparound and exact-marker ownership",
+          "passed": true
+        },
+        {
+          "id": "ring-transfer",
+          "label": "Missing destination copy cannot become authoritative",
+          "passed": true
+        }
+      ],
+      "openFindings": []
+    },
+    {
+      "id": "durable-ink",
+      "name": "Durable Ink",
+      "implementedMechanic": "Batch durable journal records, preserve committed edits and undo provisional overlapping writes after a controlled crash; checkpoint safely before provisional edits.",
+      "sourceFiles": [
+        {
+          "path": "protocol-room/execution.mjs",
+          "sha256": "8d9bed3470f636239dbc654ff277e3481dfd1b932fafaf1fb5553989925d720b"
+        },
+        {
+          "path": "protocol-room/core.mjs",
+          "sha256": "e4f622851dee8e4119f156e36b57a73d9b7c50bf6a1e9c2bc21f582df3db6383"
+        },
+        {
+          "path": "protocol-room/engines.mjs",
+          "sha256": "018727b143999c9f0a13be2a25abd33f8092a34bababf2361e1a5ddb50e995d4"
+        }
+      ],
+      "nearestActualExisting": [
+        {
+          "id": "cache-hotel",
+          "source": "workbench-room/storage.mjs",
+          "difference": "Dirty eviction there pays writeback while minimizing cache misses. Here ordering of durable undo/redo records and commit markers controls crash atomicity; checkpoint reclamation can permanently remove recovery evidence."
+        },
+        {
+          "id": "ledger-race",
+          "source": "workbench-room/computation.mjs",
+          "difference": "No thread-interleaving anomaly witness: the player protects durability across explicit storage crashes and recovery."
+        }
+      ],
+      "finite": {
+        "retained": true,
+        "studies": 3,
+        "realization": [
+          "Two committed updates and one provisional overlap",
+          "Three committed updates and two provisional overlaps",
+          "Four committed updates, two provisional overlaps and a required checkpoint"
+        ],
+        "nativeProfiles": [
+          {
+            "profile": "desktop",
+            "finiteStudiesCompleted": 3,
+            "winActions": 48,
+            "lossActions": 2,
+            "restart": true
+          },
+          {
+            "profile": "mobile-touch",
+            "finiteStudiesCompleted": 3,
+            "winActions": 48,
+            "lossActions": 2,
+            "restart": true
+          }
+        ]
+      },
+      "controls": "Append a requested update, append the commit, flush, write a logged record to disk, checkpoint, trigger the controlled crash, redo/undo records and open the recovered store. Native keyboard buttons or touch taps.",
+      "optionalEndless": {
+        "implemented": true,
+        "kind": "challenge-stream",
+        "actualGeneration": "Seed bounded sets of ONE updates and overlapping TWO updates, with varied field selection, before/after values, an optional additional provisional field and either ordinary or checkpoint-requiring journal capacity. The two-transaction recovery protocol and legal witness work remain bounded.",
+        "difficultyCap": "Bounded program, event, key, edit or geometric state; seed-driven transition data continues to vary after study three.",
+        "reason": null,
+        "feasibility": "Implemented bounded seeded challenge stream; finite campaign is retained.",
+        "nativeEvidence": [
+          {
+            "supported": true,
+            "kind": "challenge-stream",
+            "completedChallenges": 2,
+            "freshChallenges": true,
+            "scoreAccumulated": true,
+            "terminalRecovery": true,
+            "playerEndRun": true,
+            "lateStageProperties": true,
+            "lateStageScope": "24 enabled-control pure-model witnesses including stages17and250; native browser coverage completes the first two generated challenges, fails the third and recovers."
+          },
+          {
+            "supported": true,
+            "kind": "challenge-stream",
+            "completedChallenges": 2,
+            "freshChallenges": true,
+            "scoreAccumulated": true,
+            "terminalRecovery": true,
+            "playerEndRun": true,
+            "lateStageProperties": true,
+            "lateStageScope": "24 enabled-control pure-model witnesses including stages17and250; native browser coverage completes the first two generated challenges, fails the third and recovers."
+          }
+        ],
+        "modelGenerationEvidence": {
+          "id": "durable-ink",
+          "passed": true,
+          "samples": 24,
+          "stages": [
+            0,
+            1,
+            2,
+            3,
+            17,
+            250
+          ],
+          "seeds": [
+            0,
+            1,
+            20261002,
+            4294967295
+          ],
+          "scope": "Pure-model enabled-control legal witnesses, bounded serializable state and positive terminal score; does not substitute for the separate native browser cases."
+        }
+      },
+      "regressions": [
+        {
+          "id": "durable-ink",
+          "label": "All three finite studies have enabled-control legal completions and real terminal failures",
+          "passed": true
+        },
+        {
+          "id": "durable-ink",
+          "label": "Write-ahead gate rejects an undurable data write",
+          "passed": true
+        },
+        {
+          "id": "durable-ink",
+          "label": "Checkpoint preserves committed data and reclaims journal before TWO",
+          "passed": true
+        }
+      ],
+      "openFindings": []
+    },
+    {
+      "id": "safe-advance",
+      "name": "Safe Advance",
+      "implementedMechanic": "Grant or defer resource requests while retaining a completion sequence that can satisfy every declared maximum claim; a locally affordable request can strand all processes later.",
+      "sourceFiles": [
+        {
+          "path": "protocol-room/systems.mjs",
+          "sha256": "a91243c7ebf5bbb159e4a4579bf10ec1975be27f89de2541ee8ebf919fb9d904"
+        },
+        {
+          "path": "protocol-room/core.mjs",
+          "sha256": "e4f622851dee8e4119f156e36b57a73d9b7c50bf6a1e9c2bc21f582df3db6383"
+        },
+        {
+          "path": "protocol-room/engines.mjs",
+          "sha256": "018727b143999c9f0a13be2a25abd33f8092a34bababf2361e1a5ddb50e995d4"
+        }
+      ],
+      "nearestActualExisting": [
+        {
+          "id": "workshop-shift",
+          "source": "systems-room/workshop-shift.mjs",
+          "difference": "Exclusive stations there make recipes during shifts. Here maximum future claims and retained partial allocations determine whether a safe completion order exists; deferring an affordable request protects future progress."
+        },
+        {
+          "id": "token-crucible",
+          "source": "workbench-room/networks.mjs",
+          "difference": "No freely fired consume/produce recipe net or exact marking target: clients retain resources across requests and release them only at completion under announced maxima."
+        }
+      ],
+      "finite": {
+        "retained": true,
+        "studies": 3,
+        "realization": [
+          "One resource and three maximum-claim clients",
+          "Two resource dimensions and three clients",
+          "Three resource dimensions, five clients and varied request quanta"
+        ],
+        "nativeProfiles": [
+          {
+            "profile": "desktop",
+            "finiteStudiesCompleted": 3,
+            "winActions": 52,
+            "lossActions": 4,
+            "restart": true
+          },
+          {
+            "profile": "mobile-touch",
+            "finiteStudiesCompleted": 3,
+            "winActions": 52,
+            "lossActions": 4,
+            "restart": true
+          }
+        ]
+      },
+      "controls": "Grant one displayed request, select clients for an atomic bundle, defer a request or finish a fully supplied client to return its resources. Use touch taps, or Tab with Enter/Space; arrow keys adjust any labeled native range.",
+      "optionalEndless": {
+        "implemented": true,
+        "kind": "challenge-stream",
+        "actualGeneration": "Construct different maximum-claim matrices and safe initial allocations from seeded completion sequences; interleave requests with bounded patience and verify a legal grant/defer route.",
+        "difficultyCap": "Three to five clients and two or three resources, with varied held allocations, remaining claims, request orders and request quanta.",
+        "reason": null,
+        "feasibility": "Implemented bounded seeded challenge stream; finite campaign is retained.",
+        "nativeEvidence": [
+          {
+            "supported": true,
+            "kind": "challenge-stream",
+            "completedChallenges": 2,
+            "freshChallenges": true,
+            "scoreAccumulated": true,
+            "terminalRecovery": true,
+            "playerEndRun": true,
+            "lateStageProperties": true,
+            "lateStageScope": "24 enabled-control pure-model witnesses including stages17and250; native browser coverage completes the first two generated challenges, fails the third and recovers."
+          },
+          {
+            "supported": true,
+            "kind": "challenge-stream",
+            "completedChallenges": 2,
+            "freshChallenges": true,
+            "scoreAccumulated": true,
+            "terminalRecovery": true,
+            "playerEndRun": true,
+            "lateStageProperties": true,
+            "lateStageScope": "24 enabled-control pure-model witnesses including stages17and250; native browser coverage completes the first two generated challenges, fails the third and recovers."
+          }
+        ],
+        "modelGenerationEvidence": {
+          "id": "safe-advance",
+          "passed": true,
+          "samples": 24,
+          "stages": [
+            0,
+            1,
+            2,
+            3,
+            17,
+            250
+          ],
+          "seeds": [
+            0,
+            1,
+            20261002,
+            4294967295
+          ],
+          "scope": "Pure-model enabled-control legal witnesses, bounded serializable state and positive terminal score; does not substitute for the separate native browser cases."
+        }
+      },
+      "regressions": [
+        {
+          "id": "safe-advance",
+          "label": "All three finite studies have enabled-control legal completions and real terminal failures",
+          "passed": true
+        },
+        {
+          "id": "safe-advance",
+          "label": "Affordable is different from safe for maximum remaining claims",
+          "passed": true
+        },
+        {
+          "id": "safe-advance",
+          "label": "Completing clients returns all originally held resources",
+          "passed": true
+        }
+      ],
+      "openFindings": []
+    },
+    {
+      "id": "version-valley",
+      "name": "Version Valley",
+      "implementedMechanic": "Choose when snapshot transactions refresh, lock a predicate or commit so concurrent stale reads cannot publish incompatible updates while a bounded number of aborts still lets required work finish.",
+      "sourceFiles": [
+        {
+          "path": "protocol-room/systems.mjs",
+          "sha256": "a91243c7ebf5bbb159e4a4579bf10ec1975be27f89de2541ee8ebf919fb9d904"
+        },
+        {
+          "path": "protocol-room/core.mjs",
+          "sha256": "e4f622851dee8e4119f156e36b57a73d9b7c50bf6a1e9c2bc21f582df3db6383"
+        },
+        {
+          "path": "protocol-room/engines.mjs",
+          "sha256": "018727b143999c9f0a13be2a25abd33f8092a34bababf2361e1a5ddb50e995d4"
+        }
+      ],
+      "nearestActualExisting": [
+        {
+          "id": "ledger-race",
+          "source": "workbench-room/computation.mjs",
+          "difference": "The existing game exposes an anomaly by interleaving primitive instructions. This game keeps private snapshots, version histories, commit validation and bounded retry/locking decisions, and must produce a safe completed transaction history."
+        },
+        {
+          "id": "causal-camera",
+          "source": "workbench-room/collective.mjs",
+          "difference": "No process-prefix cut reconstruction or in-transit inventory: database read versions and commit conflicts control visibility."
+        }
+      ],
+      "finite": {
+        "retained": true,
+        "studies": 3,
+        "realization": [
+          "Same-row version conflict",
+          "Separate writes sharing a stale predicate",
+          "Overlapping capacity groups with a two-reservation quota"
+        ],
+        "nativeProfiles": [
+          {
+            "profile": "desktop",
+            "finiteStudiesCompleted": 3,
+            "winActions": 14,
+            "lossActions": 4,
+            "restart": true
+          },
+          {
+            "profile": "mobile-touch",
+            "finiteStudiesCompleted": 3,
+            "winActions": 14,
+            "lossActions": 4,
+            "restart": true
+          }
+        ]
+      },
+      "controls": "Read a transaction snapshot, protect its field or whole capacity scan, refresh a staged snapshot, and commit its reservation or decline. Use touch taps, or Tab with Enter/Space; arrow keys adjust any labeled native range.",
+      "optionalEndless": {
+        "implemented": true,
+        "kind": "challenge-stream",
+        "actualGeneration": "Generate varied read/write dependency histories and bounded invariants, with a constructive serial completion witness and meaningful conflicting alternatives.",
+        "difficultyCap": "Bounded pages, clients, keys or workers; seeded structures and histories vary after the three finite studies.",
+        "reason": null,
+        "feasibility": "Implemented bounded seeded challenge stream; finite campaign is retained.",
+        "nativeEvidence": [
+          {
+            "supported": true,
+            "kind": "challenge-stream",
+            "completedChallenges": 2,
+            "freshChallenges": true,
+            "scoreAccumulated": true,
+            "terminalRecovery": true,
+            "playerEndRun": true,
+            "lateStageProperties": true,
+            "lateStageScope": "24 enabled-control pure-model witnesses including stages17and250; native browser coverage completes the first two generated challenges, fails the third and recovers."
+          },
+          {
+            "supported": true,
+            "kind": "challenge-stream",
+            "completedChallenges": 2,
+            "freshChallenges": true,
+            "scoreAccumulated": true,
+            "terminalRecovery": true,
+            "playerEndRun": true,
+            "lateStageProperties": true,
+            "lateStageScope": "24 enabled-control pure-model witnesses including stages17and250; native browser coverage completes the first two generated challenges, fails the third and recovers."
+          }
+        ],
+        "modelGenerationEvidence": {
+          "id": "version-valley",
+          "passed": true,
+          "samples": 24,
+          "stages": [
+            0,
+            1,
+            2,
+            3,
+            17,
+            250
+          ],
+          "seeds": [
+            0,
+            1,
+            20261002,
+            4294967295
+          ],
+          "scope": "Pure-model enabled-control legal witnesses, bounded serializable state and positive terminal score; does not substitute for the separate native browser cases."
+        }
+      },
+      "regressions": [
+        {
+          "id": "version-valley",
+          "label": "All three finite studies have enabled-control legal completions and real terminal failures",
+          "passed": true
+        },
+        {
+          "id": "version-valley",
+          "label": "Separate rows can violate the same stale capacity predicate",
+          "passed": true
+        },
+        {
+          "id": "version-valley",
+          "label": "Range guard aborts the write skew without overbooking",
+          "passed": true
+        }
+      ],
+      "openFindings": []
+    },
+    {
+      "id": "term-tower",
+      "name": "Term Tower",
+      "implementedMechanic": "Repair conflicting replicated log suffixes and decide when an entry is safe to commit under the current leader term; a majority of an old-term entry alone cannot justify the same commitment step.",
+      "sourceFiles": [
+        {
+          "path": "protocol-room/network.mjs",
+          "sha256": "bb2d6111359576cfcc7e72fca634e7de48e7940831f7a96678aeee09a62c294a"
+        },
+        {
+          "path": "protocol-room/core.mjs",
+          "sha256": "e4f622851dee8e4119f156e36b57a73d9b7c50bf6a1e9c2bc21f582df3db6383"
+        },
+        {
+          "path": "protocol-room/engines.mjs",
+          "sha256": "018727b143999c9f0a13be2a25abd33f8092a34bababf2361e1a5ddb50e995d4"
+        }
+      ],
+      "nearestActualExisting": [
+        {
+          "id": "quorum-garden",
+          "source": "signal-lab/choices.mjs",
+          "difference": "That game designs static intersecting quorum families. This uses evolving term/index logs, suffix replacement, stale-leader rejection and actual commitment progression; sets alone do not establish log-prefix safety."
+        },
+        {
+          "id": "receipt-route",
+          "source": "workbench-room/computation.mjs",
+          "difference": "Receipts deliver a fixed contiguous data sequence. Here replicas begin with conflicting histories and only elected-term authority can overwrite or commit particular prefixes."
+        }
+      ],
+      "finite": {
+        "retained": true,
+        "studies": 3,
+        "realization": [
+          "Partial replica prefixes",
+          "Conflicting old-term suffix",
+          "Five replicas and one higher-term interruption"
+        ],
+        "nativeProfiles": [
+          {
+            "profile": "desktop",
+            "finiteStudiesCompleted": 3,
+            "winActions": 23,
+            "lossActions": 1,
+            "restart": true
+          },
+          {
+            "profile": "mobile-touch",
+            "finiteStudiesCompleted": 3,
+            "winActions": 23,
+            "lossActions": 1,
+            "restart": true
+          }
+        ]
+      },
+      "controls": "Select a follower and proposed next-entry index, append the leader suffix, append a current-term authority entry, elect a new leader after interruption, and commit a matching majority. Use touch taps, or Tab with Enter/Space; arrow keys adjust any labeled native range.",
+      "optionalEndless": {
+        "implemented": true,
+        "kind": "challenge-stream",
+        "actualGeneration": "Vary bounded log length, replica prefix cut lengths and the conflicting suffix of one replica. The third difficulty tier has a single published higher-term interruption; current-term append, log matching and majority commitment determine legal completion.",
+        "difficultyCap": "Three or five replicas and at most seven original entries, varied prefix cuts and one old conflicting suffix; at most one higher-term interruption.",
+        "reason": null,
+        "feasibility": "Implemented bounded seeded challenge stream; finite campaign is retained.",
+        "nativeEvidence": [
+          {
+            "supported": true,
+            "kind": "challenge-stream",
+            "completedChallenges": 2,
+            "freshChallenges": true,
+            "scoreAccumulated": true,
+            "terminalRecovery": true,
+            "playerEndRun": true,
+            "lateStageProperties": true,
+            "lateStageScope": "24 enabled-control pure-model witnesses including stages17and250; native browser coverage completes the first two generated challenges, fails the third and recovers."
+          },
+          {
+            "supported": true,
+            "kind": "challenge-stream",
+            "completedChallenges": 2,
+            "freshChallenges": true,
+            "scoreAccumulated": true,
+            "terminalRecovery": true,
+            "playerEndRun": true,
+            "lateStageProperties": true,
+            "lateStageScope": "24 enabled-control pure-model witnesses including stages17and250; native browser coverage completes the first two generated challenges, fails the third and recovers."
+          }
+        ],
+        "modelGenerationEvidence": {
+          "id": "term-tower",
+          "passed": true,
+          "samples": 24,
+          "stages": [
+            0,
+            1,
+            2,
+            3,
+            17,
+            250
+          ],
+          "seeds": [
+            0,
+            1,
+            20261002,
+            4294967295
+          ],
+          "scope": "Pure-model enabled-control legal witnesses, bounded serializable state and positive terminal score; does not substitute for the separate native browser cases."
+        }
+      },
+      "regressions": [
+        {
+          "id": "term-tower",
+          "label": "All three finite studies have enabled-control legal completions and real terminal failures",
+          "passed": true
+        },
+        {
+          "id": "term-tower",
+          "label": "Old-term entries cannot commit without a current-term authority entry",
+          "passed": true
+        },
+        {
+          "id": "term-tower",
+          "label": "Higher-term interruption is recovered through election and suffix matching",
+          "passed": true
+        }
+      ],
+      "openFindings": []
+    },
+    {
+      "id": "pipeline-parade",
+      "name": "Pipeline Parade",
+      "implementedMechanic": "Issue and retire a dependency program while deciding when to broadcast results, forward same-address stores and squash a taken branch before side effects escape.",
+      "sourceFiles": [
+        {
+          "path": "protocol-room/execution.mjs",
+          "sha256": "8d9bed3470f636239dbc654ff277e3481dfd1b932fafaf1fb5553989925d720b"
+        },
+        {
+          "path": "protocol-room/core.mjs",
+          "sha256": "e4f622851dee8e4119f156e36b57a73d9b7c50bf6a1e9c2bc21f582df3db6383"
+        },
+        {
+          "path": "protocol-room/engines.mjs",
+          "sha256": "018727b143999c9f0a13be2a25abd33f8092a34bababf2361e1a5ddb50e995d4"
+        }
+      ],
+      "nearestActualExisting": [
+        {
+          "id": "signal-cabinet",
+          "source": "systems-room/signal-cabinet.mjs",
+          "difference": "Job dispatch there changes tool class and meets release/deadlines. Here data dependencies, renaming, forwarding, in-order retirement, memory aliases and branch squashes change which executions are semantically safe."
+        },
+        {
+          "id": "pebble-engine",
+          "source": "workbench-room/storage.mjs",
+          "difference": "No reusable DAG pebble placement/recomputation target: instruction values and speculative architectural effects must match a sequential execution."
+        }
+      ],
+      "finite": {
+        "retained": true,
+        "studies": 3,
+        "realization": [
+          "Fall-through branch with store/load alias",
+          "Taken branch and wrong-path squashing",
+          "Seed-varied branch with the same dependency and retirement invariants"
+        ],
+        "nativeProfiles": [
+          {
+            "profile": "desktop",
+            "finiteStudiesCompleted": 3,
+            "winActions": 89,
+            "lossActions": 27,
+            "restart": true
+          },
+          {
+            "profile": "mobile-touch",
+            "finiteStudiesCompleted": 3,
+            "winActions": 89,
+            "lossActions": 27,
+            "restart": true
+          }
+        ]
+      },
+      "controls": "Issue a ready instruction, broadcast a completed register result, forward a completed store, advance the clock, resolve the branch, retire the oldest instruction and check the final state. Use touch taps, or Tab with Enter/Space; arrow keys adjust any labeled native range.",
+      "optionalEndless": {
+        "implemented": true,
+        "kind": "challenge-stream",
+        "actualGeneration": "Generate bounded arithmetic dependency programs with differing source choices, operation types, operand values, execution latencies and taken/fall-through branches. The fixed instruction skeleton includes same-address store/load hazards and a published branch target.",
+        "difficultyCap": "Bounded program, event, key, edit or geometric state; seed-driven transition data continues to vary after study three.",
+        "reason": null,
+        "feasibility": "Implemented bounded seeded challenge stream; finite campaign is retained.",
+        "nativeEvidence": [
+          {
+            "supported": true,
+            "kind": "challenge-stream",
+            "completedChallenges": 2,
+            "freshChallenges": true,
+            "scoreAccumulated": true,
+            "terminalRecovery": true,
+            "playerEndRun": true,
+            "lateStageProperties": true,
+            "lateStageScope": "24 enabled-control pure-model witnesses including stages17and250; native browser coverage completes the first two generated challenges, fails the third and recovers."
+          },
+          {
+            "supported": true,
+            "kind": "challenge-stream",
+            "completedChallenges": 2,
+            "freshChallenges": true,
+            "scoreAccumulated": true,
+            "terminalRecovery": true,
+            "playerEndRun": true,
+            "lateStageProperties": true,
+            "lateStageScope": "24 enabled-control pure-model witnesses including stages17and250; native browser coverage completes the first two generated challenges, fails the third and recovers."
+          }
+        ],
+        "modelGenerationEvidence": {
+          "id": "pipeline-parade",
+          "passed": true,
+          "samples": 24,
+          "stages": [
+            0,
+            1,
+            2,
+            3,
+            17,
+            250
+          ],
+          "seeds": [
+            0,
+            1,
+            20261002,
+            4294967295
+          ],
+          "scope": "Pure-model enabled-control legal witnesses, bounded serializable state and positive terminal score; does not substitute for the separate native browser cases."
+        }
+      },
+      "regressions": [
+        {
+          "id": "pipeline-parade",
+          "label": "All three finite studies have enabled-control legal completions and real terminal failures",
+          "passed": true
+        },
+        {
+          "id": "pipeline-parade",
+          "label": "Store forwarding captures an older completed matching-address value",
+          "passed": true
+        },
+        {
+          "id": "pipeline-parade",
+          "label": "A premature same-address load fails final architectural validation",
+          "passed": true
+        }
+      ],
+      "openFindings": []
+    },
+    {
+      "id": "delta-garden",
+      "name": "Delta Garden",
+      "implementedMechanic": "Maintain a multiset join under insertions and deletions by choosing batches and signed delta products; applying two simultaneous changes separately or together requires different cross terms.",
+      "sourceFiles": [
+        {
+          "path": "protocol-room/streams.mjs",
+          "sha256": "ecf20fa21dfe8c5aae3c63299a76b9b69f239f325cff33ff6558cd75e61b6f28"
+        },
+        {
+          "path": "protocol-room/core.mjs",
+          "sha256": "e4f622851dee8e4119f156e36b57a73d9b7c50bf6a1e9c2bc21f582df3db6383"
+        },
+        {
+          "path": "protocol-room/engines.mjs",
+          "sha256": "018727b143999c9f0a13be2a25abd33f8092a34bababf2361e1a5ddb50e995d4"
+        }
+      ],
+      "nearestActualExisting": [
+        {
+          "id": "table-confluence",
+          "source": "workbench-room/structures.mjs",
+          "difference": "That builds a one-time relational operator pipeline with bag semantics. This incrementally maintains an existing output, subtracts deleted multiplicities and handles simultaneous update cross terms with batching cost."
+        },
+        {
+          "id": "pebble-engine",
+          "source": "workbench-room/storage.mjs",
+          "difference": "No DAG register/recomputation puzzle: signed bag changes can cancel and double counting is an observable semantic error."
+        }
+      ],
+      "finite": {
+        "retained": true,
+        "studies": 3,
+        "realization": [
+          "Two one-sided signed epochs",
+          "Two simultaneous signed epochs",
+          "Three signed epochs over four keys"
+        ],
+        "nativeProfiles": [
+          {
+            "profile": "desktop",
+            "finiteStudiesCompleted": 3,
+            "winActions": 43,
+            "lossActions": 3,
+            "restart": true
+          },
+          {
+            "profile": "mobile-touch",
+            "finiteStudiesCompleted": 3,
+            "winActions": 43,
+            "lossActions": 3,
+            "restart": true
+          }
+        ]
+      },
+      "controls": "Choose old, signed-delta or new inputs on both sides, run the incremental join, discard queued terms or commit the epoch. Use touch taps, or Tab with Enter/Space; arrow keys adjust any labeled native range.",
+      "optionalEndless": {
+        "implemented": true,
+        "kind": "challenge-stream",
+        "actualGeneration": "Generate two or three epochs of signed multiplicity changes across three or four join keys. Insertions, legal deletions, affected key subsets and simultaneous cross terms vary against the actual previous epoch.",
+        "difficultyCap": "Bounded program, event, key, edit or geometric state; seed-driven transition data continues to vary after study three.",
+        "reason": null,
+        "feasibility": "Implemented bounded seeded challenge stream; finite campaign is retained.",
+        "nativeEvidence": [
+          {
+            "supported": true,
+            "kind": "challenge-stream",
+            "completedChallenges": 2,
+            "freshChallenges": true,
+            "scoreAccumulated": true,
+            "terminalRecovery": true,
+            "playerEndRun": true,
+            "lateStageProperties": true,
+            "lateStageScope": "24 enabled-control pure-model witnesses including stages17and250; native browser coverage completes the first two generated challenges, fails the third and recovers."
+          },
+          {
+            "supported": true,
+            "kind": "challenge-stream",
+            "completedChallenges": 2,
+            "freshChallenges": true,
+            "scoreAccumulated": true,
+            "terminalRecovery": true,
+            "playerEndRun": true,
+            "lateStageProperties": true,
+            "lateStageScope": "24 enabled-control pure-model witnesses including stages17and250; native browser coverage completes the first two generated challenges, fails the third and recovers."
+          }
+        ],
+        "modelGenerationEvidence": {
+          "id": "delta-garden",
+          "passed": true,
+          "samples": 24,
+          "stages": [
+            0,
+            1,
+            2,
+            3,
+            17,
+            250
+          ],
+          "seeds": [
+            0,
+            1,
+            20261002,
+            4294967295
+          ],
+          "scope": "Pure-model enabled-control legal witnesses, bounded serializable state and positive terminal score; does not substitute for the separate native browser cases."
+        }
+      },
+      "regressions": [
+        {
+          "id": "delta-garden",
+          "label": "All three finite studies have enabled-control legal completions and real terminal failures",
+          "passed": true
+        },
+        {
+          "id": "delta-garden",
+          "label": "Deletion deltas are legal, and new multiplicities never become negative",
+          "passed": true
+        },
+        {
+          "id": "delta-garden",
+          "label": "The simultaneous cross product cannot be omitted or counted twice",
+          "passed": true
+        }
+      ],
+      "openFindings": []
+    },
+    {
+      "id": "shared-cursors",
+      "name": "Shared Cursors",
+      "implementedMechanic": "Transform concurrent insert/delete operations against already applied remote edits so their original text intentions survive delivery order without duplicating or deleting the wrong character.",
+      "sourceFiles": [
+        {
+          "path": "protocol-room/collaboration.mjs",
+          "sha256": "8a89cf281909bd99ac31ba1e210d1eb90b3dc9484f6dfa5cc15e8c8a81f44946"
+        },
+        {
+          "path": "protocol-room/core.mjs",
+          "sha256": "e4f622851dee8e4119f156e36b57a73d9b7c50bf6a1e9c2bc21f582df3db6383"
+        },
+        {
+          "path": "protocol-room/engines.mjs",
+          "sha256": "018727b143999c9f0a13be2a25abd33f8092a34bababf2361e1a5ddb50e995d4"
+        }
+      ],
+      "nearestActualExisting": [
+        {
+          "id": "archive-edit",
+          "source": "discovery-room/room.js",
+          "difference": "Dependency-constrained patch selection resolves authored patch conflicts. This transforms positional concurrent operations through live peer histories and must converge despite delivery order."
+        },
+        {
+          "id": "parallel-manuscripts",
+          "source": "workbench-room/information.mjs",
+          "difference": "No static affine-gap alignment of two strings: edits act on changing coordinates and can overlap while original intention is tracked."
+        }
+      ],
+      "finite": {
+        "retained": true,
+        "studies": 3,
+        "realization": [
+          "Two-edit histories beginning with inserts",
+          "Two-edit mixed histories on a six-character strip",
+          "Two-edit histories beginning with deletions on a seven-character strip"
+        ],
+        "nativeProfiles": [
+          {
+            "profile": "desktop",
+            "finiteStudiesCompleted": 3,
+            "winActions": 33,
+            "lossActions": 5,
+            "restart": true
+          },
+          {
+            "profile": "mobile-touch",
+            "finiteStudiesCompleted": 3,
+            "winActions": 33,
+            "lossActions": 5,
+            "restart": true
+          }
+        ]
+      },
+      "controls": "Choose receiver and packet size, set each transformed position on its native range, mark duplicate deletion no-ops, deliver and check convergence. Touch taps or Tab, Enter/Space and range arrows.",
+      "optionalEndless": {
+        "implemented": true,
+        "kind": "challenge-stream",
+        "actualGeneration": "Generate two or three concurrent insert/delete edits per writer over bounded initial strips, varying positions, edit types and delete collisions. Real position-transform dependencies vary; final packets must preserve each edit’s intention.",
+        "difficultyCap": "Bounded program, event, key, edit or geometric state; seed-driven transition data continues to vary after study three.",
+        "reason": null,
+        "feasibility": "Implemented bounded seeded challenge stream; finite campaign is retained.",
+        "nativeEvidence": [
+          {
+            "supported": true,
+            "kind": "challenge-stream",
+            "completedChallenges": 2,
+            "freshChallenges": true,
+            "scoreAccumulated": true,
+            "terminalRecovery": true,
+            "playerEndRun": true,
+            "lateStageProperties": true,
+            "lateStageScope": "24 enabled-control pure-model witnesses including stages17and250; native browser coverage completes the first two generated challenges, fails the third and recovers."
+          },
+          {
+            "supported": true,
+            "kind": "challenge-stream",
+            "completedChallenges": 2,
+            "freshChallenges": true,
+            "scoreAccumulated": true,
+            "terminalRecovery": true,
+            "playerEndRun": true,
+            "lateStageProperties": true,
+            "lateStageScope": "24 enabled-control pure-model witnesses including stages17and250; native browser coverage completes the first two generated challenges, fails the third and recovers."
+          }
+        ],
+        "modelGenerationEvidence": {
+          "id": "shared-cursors",
+          "passed": true,
+          "samples": 24,
+          "stages": [
+            0,
+            1,
+            2,
+            3,
+            17,
+            250
+          ],
+          "seeds": [
+            0,
+            1,
+            20261002,
+            4294967295
+          ],
+          "scope": "Pure-model enabled-control legal witnesses, bounded serializable state and positive terminal score; does not substitute for the separate native browser cases."
+        }
+      },
+      "regressions": [
+        {
+          "id": "shared-cursors",
+          "label": "All three finite studies have enabled-control legal completions and real terminal failures",
+          "passed": true
+        },
+        {
+          "id": "shared-cursors",
+          "label": "Delete/delete collision collapses, while equal-position inserts retain author order",
+          "passed": true
+        },
+        {
+          "id": "shared-cursors",
+          "label": "Both packet receivers converge across three-edit generated histories",
+          "passed": true
+        }
+      ],
+      "openFindings": []
+    },
+    {
+      "id": "quiet-network",
+      "name": "Quiet Network",
+      "implementedMechanic": "Return completion credits through a dynamically grown parent tree only after descendants and in-flight tasks have settled; an apparently idle set of workers can still have work in transit.",
+      "sourceFiles": [
+        {
+          "path": "protocol-room/systems.mjs",
+          "sha256": "a91243c7ebf5bbb159e4a4579bf10ec1975be27f89de2541ee8ebf919fb9d904"
+        },
+        {
+          "path": "protocol-room/core.mjs",
+          "sha256": "e4f622851dee8e4119f156e36b57a73d9b7c50bf6a1e9c2bc21f582df3db6383"
+        },
+        {
+          "path": "protocol-room/engines.mjs",
+          "sha256": "018727b143999c9f0a13be2a25abd33f8092a34bababf2361e1a5ddb50e995d4"
+        }
+      ],
+      "nearestActualExisting": [
+        {
+          "id": "causal-camera",
+          "source": "workbench-room/collective.mjs",
+          "difference": "Snapshot reconstruction selects static event cuts and records channel tokens. This is an operating termination protocol with dynamically spawned child obligations and delayed acknowledgment routing; credits establish that future work cannot arrive."
+        },
+        {
+          "id": "credit-method",
+          "source": "signal-lab/measures.mjs",
+          "difference": "No amortized-cost potential coefficients: actual transferable work credits are protocol ownership records, not a charge inequality."
+        }
+      ],
+      "finite": {
+        "retained": true,
+        "studies": 3,
+        "realization": [
+          "Three workers and two root children",
+          "Four workers and three root children",
+          "Five workers, four root children and two third-depth jobs"
+        ],
+        "nativeProfiles": [
+          {
+            "profile": "desktop",
+            "finiteStudiesCompleted": 3,
+            "winActions": 87,
+            "lossActions": 2,
+            "restart": true
+          },
+          {
+            "profile": "mobile-touch",
+            "finiteStudiesCompleted": 3,
+            "winActions": 87,
+            "lossActions": 2,
+            "restart": true
+          }
+        ]
+      },
+      "controls": "Execute a delivered job, route a work or acknowledgment envelope, batch completed credits between workers, and declare global completion. Use touch taps, or Tab with Enter/Space; arrow keys adjust any labeled native range.",
+      "optionalEndless": {
+        "implemented": true,
+        "kind": "challenge-stream",
+        "actualGeneration": "Generate bounded rooted work trees with varied child counts, worker ownership and optional third depth. Parent credit obligations and acknowledgment batching vary with the actual tree; envelopes wait for player-directed delivery.",
+        "difficultyCap": "At most five workers and fifteen jobs in a rooted tree, with at most three child depths. Ownership and batching obligations vary.",
+        "reason": null,
+        "feasibility": "Implemented bounded seeded challenge stream; finite campaign is retained.",
+        "nativeEvidence": [
+          {
+            "supported": true,
+            "kind": "challenge-stream",
+            "completedChallenges": 2,
+            "freshChallenges": true,
+            "scoreAccumulated": true,
+            "terminalRecovery": true,
+            "playerEndRun": true,
+            "lateStageProperties": true,
+            "lateStageScope": "24 enabled-control pure-model witnesses including stages17and250; native browser coverage completes the first two generated challenges, fails the third and recovers."
+          },
+          {
+            "supported": true,
+            "kind": "challenge-stream",
+            "completedChallenges": 2,
+            "freshChallenges": true,
+            "scoreAccumulated": true,
+            "terminalRecovery": true,
+            "playerEndRun": true,
+            "lateStageProperties": true,
+            "lateStageScope": "24 enabled-control pure-model witnesses including stages17and250; native browser coverage completes the first two generated challenges, fails the third and recovers."
+          }
+        ],
+        "modelGenerationEvidence": {
+          "id": "quiet-network",
+          "passed": true,
+          "samples": 24,
+          "stages": [
+            0,
+            1,
+            2,
+            3,
+            17,
+            250
+          ],
+          "seeds": [
+            0,
+            1,
+            20261002,
+            4294967295
+          ],
+          "scope": "Pure-model enabled-control legal witnesses, bounded serializable state and positive terminal score; does not substitute for the separate native browser cases."
+        }
+      },
+      "regressions": [
+        {
+          "id": "quiet-network",
+          "label": "All three finite studies have enabled-control legal completions and real terminal failures",
+          "passed": true
+        },
+        {
+          "id": "quiet-network",
+          "label": "An executed idle root still owes spawned child credits",
+          "passed": true
+        },
+        {
+          "id": "quiet-network",
+          "label": "Completed batches discharge every exact obligation and empty every channel",
+          "passed": true
+        }
+      ],
+      "openFindings": []
+    },
+    {
+      "id": "lantern-ring",
+      "name": "Lantern Ring",
+      "implementedMechanic": "Choose eligible local repairs around a cyclic process ring until exactly one process owns the token; copying the predecessor and the distinguished process's increment have different eligibility rules.",
+      "sourceFiles": [
+        {
+          "path": "protocol-room/systems.mjs",
+          "sha256": "a91243c7ebf5bbb159e4a4579bf10ec1975be27f89de2541ee8ebf919fb9d904"
+        },
+        {
+          "path": "protocol-room/core.mjs",
+          "sha256": "e4f622851dee8e4119f156e36b57a73d9b7c50bf6a1e9c2bc21f582df3db6383"
+        },
+        {
+          "path": "protocol-room/engines.mjs",
+          "sha256": "018727b143999c9f0a13be2a25abd33f8092a34bababf2361e1a5ddb50e995d4"
+        }
+      ],
+      "nearestActualExisting": [
+        {
+          "id": "cyclic-courtyard",
+          "source": "constraint-room/paths.mjs",
+          "difference": "Cyclic Courtyard permutes distinct tiles by whole-row/column shifts. This changes equal-color local process states under asymmetric eligibility and repairs token uniqueness; it does not preserve a tile permutation."
+        },
+        {
+          "id": "clockwork",
+          "source": "number-room/room.js",
+          "difference": "No single modular traveler or chosen numerical jump: many local states share a predecessor-dependent privilege invariant."
+        }
+      ],
+      "finite": {
+        "retained": true,
+        "studies": 3,
+        "realization": [
+          "Four processes modulo five",
+          "Five processes modulo six",
+          "Six processes modulo seven"
+        ],
+        "nativeProfiles": [
+          {
+            "profile": "desktop",
+            "finiteStudiesCompleted": 3,
+            "winActions": 12,
+            "lossActions": 4,
+            "restart": true
+          },
+          {
+            "profile": "mobile-touch",
+            "finiteStudiesCompleted": 3,
+            "winActions": 12,
+            "lossActions": 4,
+            "restart": true
+          }
+        ]
+      },
+      "controls": "Choose an eligible local copy or increment, then certify that exactly one process owns the token. Use touch taps, or Tab with Enter/Space; arrow keys adjust any labeled native range.",
+      "optionalEndless": {
+        "implemented": true,
+        "kind": "challenge-stream",
+        "actualGeneration": "Generate seed-varied full colour vectors with at least two initially eligible processes on bounded rings of four to six nodes. An ascending ordinary-process repair gives a constructive legal witness within n−1 moves; no general daemon stabilization claim is made.",
+        "difficultyCap": "Bounded pages, clients, keys or workers; seeded structures and histories vary after the three finite studies.",
+        "reason": null,
+        "feasibility": "Implemented bounded seeded challenge stream; finite campaign is retained.",
+        "nativeEvidence": [
+          {
+            "supported": true,
+            "kind": "challenge-stream",
+            "completedChallenges": 2,
+            "freshChallenges": true,
+            "scoreAccumulated": true,
+            "terminalRecovery": true,
+            "playerEndRun": true,
+            "lateStageProperties": true,
+            "lateStageScope": "24 enabled-control pure-model witnesses including stages17and250; native browser coverage completes the first two generated challenges, fails the third and recovers."
+          },
+          {
+            "supported": true,
+            "kind": "challenge-stream",
+            "completedChallenges": 2,
+            "freshChallenges": true,
+            "scoreAccumulated": true,
+            "terminalRecovery": true,
+            "playerEndRun": true,
+            "lateStageProperties": true,
+            "lateStageScope": "24 enabled-control pure-model witnesses including stages17and250; native browser coverage completes the first two generated challenges, fails the third and recovers."
+          }
+        ],
+        "modelGenerationEvidence": {
+          "id": "lantern-ring",
+          "passed": true,
+          "samples": 24,
+          "stages": [
+            0,
+            1,
+            2,
+            3,
+            17,
+            250
+          ],
+          "seeds": [
+            0,
+            1,
+            20261002,
+            4294967295
+          ],
+          "scope": "Pure-model enabled-control legal witnesses, bounded serializable state and positive terminal score; does not substitute for the separate native browser cases."
+        }
+      },
+      "regressions": [
+        {
+          "id": "lantern-ring",
+          "label": "All three finite studies have enabled-control legal completions and real terminal failures",
+          "passed": true
+        },
+        {
+          "id": "lantern-ring",
+          "label": "A legal root increment moves the unique token to its successor",
+          "passed": true
+        }
+      ],
+      "openFindings": []
+    },
+    {
+      "id": "lease-lighthouse",
+      "name": "Lease Lighthouse",
+      "implementedMechanic": "Transfer timed ownership between clients with clock drift and delayed messages, issuing monotone fencing tokens so a stale holder cannot overwrite a newer owner's work.",
+      "sourceFiles": [
+        {
+          "path": "protocol-room/network.mjs",
+          "sha256": "bb2d6111359576cfcc7e72fca634e7de48e7940831f7a96678aeee09a62c294a"
+        },
+        {
+          "path": "protocol-room/core.mjs",
+          "sha256": "e4f622851dee8e4119f156e36b57a73d9b7c50bf6a1e9c2bc21f582df3db6383"
+        },
+        {
+          "path": "protocol-room/engines.mjs",
+          "sha256": "018727b143999c9f0a13be2a25abd33f8092a34bababf2361e1a5ddb50e995d4"
+        }
+      ],
+      "nearestActualExisting": [
+        {
+          "id": "ledger-race",
+          "source": "workbench-room/computation.mjs",
+          "difference": "Primitive shared-memory read/write interleavings expose a race there. This coordinates separate drifting clocks, expiring authority, delayed writes and epoch-based resource fencing."
+        },
+        {
+          "id": "quorum-garden",
+          "source": "signal-lab/choices.mjs",
+          "difference": "No static read/write family intersection: authority changes over time and stale epoch rejection is essential even after the grant expired."
+        }
+      ],
+      "finite": {
+        "retained": true,
+        "studies": 3,
+        "realization": [
+          "Immediate grant/write handover",
+          "Delayed grant with clock drift",
+          "Delayed grant and write under a deadline"
+        ],
+        "nativeProfiles": [
+          {
+            "profile": "desktop",
+            "finiteStudiesCompleted": 3,
+            "winActions": 45,
+            "lossActions": 12,
+            "restart": true
+          },
+          {
+            "profile": "mobile-touch",
+            "finiteStudiesCompleted": 3,
+            "winActions": 45,
+            "lossActions": 12,
+            "restart": true
+          }
+        ]
+      },
+      "controls": "Set lease duration on its range, advance server ticks, request or renew B authority, enable fencing, send B work, deliver eligible delayed envelopes and audit the resource. Use touch taps, or Tab with Enter/Space; arrow keys adjust any labeled native range.",
+      "optionalEndless": {
+        "implemented": false,
+        "kind": null,
+        "actualGeneration": "A future stream should generate multi-owner work queues, resource overlaps, renewal races and independently witnessed drift/delay schedules.",
+        "difficultyCap": null,
+        "reason": "The current three contracts share one authored handover and delayed-old-write shape; varying clock rates alone would provide too little endless variety.",
+        "feasibility": "Conditionally feasible: generate broader multi-owner handovers, renewal races, delayed grants and overlapping resource writes, with witnessed local/server deadline feasibility and monotone fencing. Current three authored contracts stay finite.",
+        "nativeEvidence": [
+          {
+            "supported": false
+          },
+          {
+            "supported": false
+          }
+        ],
+        "modelGenerationEvidence": null
+      },
+      "regressions": [
+        {
+          "id": "lease-lighthouse",
+          "label": "All three finite studies have enabled-control legal completions and real terminal failures",
+          "passed": true
+        },
+        {
+          "id": "lease-lighthouse",
+          "label": "Fencing rejects a delayed old epoch after new work while missing fencing loses",
+          "passed": true
+        }
+      ],
+      "openFindings": []
+    },
+    {
+      "id": "echo-seals",
+      "name": "Echo Seals",
+      "implementedMechanic": "Route echo/ready evidence among honest receivers despite one sender equivocating, and deliver a value only when the protocol's collected evidence establishes agreement.",
+      "sourceFiles": [
+        {
+          "path": "protocol-room/collaboration.mjs",
+          "sha256": "8a89cf281909bd99ac31ba1e210d1eb90b3dc9484f6dfa5cc15e8c8a81f44946"
+        },
+        {
+          "path": "protocol-room/core.mjs",
+          "sha256": "e4f622851dee8e4119f156e36b57a73d9b7c50bf6a1e9c2bc21f582df3db6383"
+        },
+        {
+          "path": "protocol-room/engines.mjs",
+          "sha256": "018727b143999c9f0a13be2a25abd33f8092a34bababf2361e1a5ddb50e995d4"
+        }
+      ],
+      "nearestActualExisting": [
+        {
+          "id": "quorum-garden",
+          "source": "signal-lab/choices.mjs",
+          "difference": "Static quorum-set design does not operate echo/ready phases, author-deduplicated evidence or a Byzantine sender emitting inconsistent values. Here local evidence evolves and delivery decisions must agree."
+        },
+        {
+          "id": "masks-and-coins",
+          "source": "parlour-room/masks-and-coins.mjs",
+          "difference": "No hidden role bluff or challenge: fault bound and public evidence rules govern distributed delivery, with one declared adversarial participant."
+        }
+      ],
+      "finite": {
+        "retained": true,
+        "studies": 3,
+        "realization": [
+          "Consistent signed sender",
+          "Equivocating sender with attainable blue certificates",
+          "Duplicate faulty signatures and irrelevant red READY evidence"
+        ],
+        "nativeProfiles": [
+          {
+            "profile": "desktop",
+            "finiteStudiesCompleted": 3,
+            "winActions": 123,
+            "lossActions": 1,
+            "restart": true
+          },
+          {
+            "profile": "mobile-touch",
+            "finiteStudiesCompleted": 3,
+            "winActions": 123,
+            "lossActions": 1,
+            "restart": true
+          }
+        ]
+      },
+      "controls": "Select an honest receiver, route or discard a signed envelope, emit ECHO or READY, deliver a colour with its certificate, and certify common honest delivery. Use touch taps, or Tab with Enter/Space; arrow keys adjust any labeled native range.",
+      "optionalEndless": {
+        "implemented": false,
+        "kind": null,
+        "actualGeneration": "Three authored authenticated schedules: a consistent sender, an equivocating sender, and repeated faulty signatures. Each schedule permits a common certified delivery; arbitrary faulty-sender liveness is not claimed.",
+        "difficultyCap": null,
+        "reason": "The current implementation offers three authored studies rather than a verified indefinitely varied generator.",
+        "feasibility": "Conditionally feasible: generate structurally distinct signed evidence and adversarial delivery schedules with a planted attainable honest-agreement certificate. Arbitrary faulty-sender liveness must remain unclaimed. Current three schedules stay finite.",
+        "nativeEvidence": [
+          {
+            "supported": false
+          },
+          {
+            "supported": false
+          }
+        ],
+        "modelGenerationEvidence": null
+      },
+      "regressions": [
+        {
+          "id": "echo-seals",
+          "label": "All three finite studies have enabled-control legal completions and real terminal failures",
+          "passed": true
+        },
+        {
+          "id": "echo-seals",
+          "label": "Duplicate faulty READY signatures cannot form a threshold",
+          "passed": true
+        },
+        {
+          "id": "echo-seals",
+          "label": "Equivocating sender schedule still admits certified agreement among all honest receivers",
+          "passed": true
+        }
+      ],
+      "openFindings": []
+    },
+    {
+      "id": "timestamp-current",
+      "name": "Timestamp Current",
+      "implementedMechanic": "Advance an event-time watermark to close aggregation windows while retaining enough memory for late events permitted by each source's progress guarantee.",
+      "sourceFiles": [
+        {
+          "path": "protocol-room/streams.mjs",
+          "sha256": "ecf20fa21dfe8c5aae3c63299a76b9b69f239f325cff33ff6558cd75e61b6f28"
+        },
+        {
+          "path": "protocol-room/core.mjs",
+          "sha256": "e4f622851dee8e4119f156e36b57a73d9b7c50bf6a1e9c2bc21f582df3db6383"
+        },
+        {
+          "path": "protocol-room/engines.mjs",
+          "sha256": "018727b143999c9f0a13be2a25abd33f8092a34bababf2361e1a5ddb50e995d4"
+        }
+      ],
+      "nearestActualExisting": [
+        {
+          "id": "receipt-route",
+          "source": "workbench-room/computation.mjs",
+          "difference": "Reliable delivery buffers a missing sequence prefix. This closes time intervals under source event-time guarantees and sums unordered rows; there is no cumulative data ACK or required packet sequence."
+        },
+        {
+          "id": "cold-chain",
+          "source": "systems-room/cold-chain.mjs",
+          "difference": "No physical perishability/recipe aging: timestamps, safe finality and irrevocable aggregate emission govern memory."
+        }
+      ],
+      "finite": {
+        "retained": true,
+        "studies": 3,
+        "realization": [
+          "Two sources and three event-time windows",
+          "Three sources and three windows",
+          "Three sources and four windows"
+        ],
+        "nativeProfiles": [
+          {
+            "profile": "desktop",
+            "finiteStudiesCompleted": 3,
+            "winActions": 94,
+            "lossActions": 2,
+            "restart": true
+          },
+          {
+            "profile": "mobile-touch",
+            "finiteStudiesCompleted": 3,
+            "winActions": 94,
+            "lossActions": 2,
+            "restart": true
+          }
+        ]
+      },
+      "controls": "Deliver a source’s next event or progress envelope, set and publish the global watermark, close a window, archive one buffered event if needed, and seal the stream. Use touch taps, or Tab with Enter/Space; arrow keys adjust any labeled native range.",
+      "optionalEndless": {
+        "implemented": true,
+        "kind": "challenge-stream",
+        "actualGeneration": "Generate three or four event-time windows across two or three sources, with varied event timestamps/values, look-ahead placement and additional bounded event counts. Progress envelopes certify lower bounds; arrival order and buffer pressure vary.",
+        "difficultyCap": "Bounded program, event, key, edit or geometric state; seed-driven transition data continues to vary after study three.",
+        "reason": null,
+        "feasibility": "Implemented bounded seeded challenge stream; finite campaign is retained.",
+        "nativeEvidence": [
+          {
+            "supported": true,
+            "kind": "challenge-stream",
+            "completedChallenges": 2,
+            "freshChallenges": true,
+            "scoreAccumulated": true,
+            "terminalRecovery": true,
+            "playerEndRun": true,
+            "lateStageProperties": true,
+            "lateStageScope": "24 enabled-control pure-model witnesses including stages17and250; native browser coverage completes the first two generated challenges, fails the third and recovers."
+          },
+          {
+            "supported": true,
+            "kind": "challenge-stream",
+            "completedChallenges": 2,
+            "freshChallenges": true,
+            "scoreAccumulated": true,
+            "terminalRecovery": true,
+            "playerEndRun": true,
+            "lateStageProperties": true,
+            "lateStageScope": "24 enabled-control pure-model witnesses including stages17and250; native browser coverage completes the first two generated challenges, fails the third and recovers."
+          }
+        ],
+        "modelGenerationEvidence": {
+          "id": "timestamp-current",
+          "passed": true,
+          "samples": 24,
+          "stages": [
+            0,
+            1,
+            2,
+            3,
+            17,
+            250
+          ],
+          "seeds": [
+            0,
+            1,
+            20261002,
+            4294967295
+          ],
+          "scope": "Pure-model enabled-control legal witnesses, bounded serializable state and positive terminal score; does not substitute for the separate native browser cases."
+        }
+      },
+      "regressions": [
+        {
+          "id": "timestamp-current",
+          "label": "All three finite studies have enabled-control legal completions and real terminal failures",
+          "passed": true
+        },
+        {
+          "id": "timestamp-current",
+          "label": "Frontier cannot advance beyond the slowest certified source",
+          "passed": true
+        },
+        {
+          "id": "timestamp-current",
+          "label": "Look-ahead events remain counted after earlier window buffers are released",
+          "passed": true
+        }
+      ],
+      "openFindings": []
+    },
+    {
+      "id": "changing-roads",
+      "name": "Changing Roads",
+      "implementedMechanic": "Repair distance-vector routing after a link failure by choosing advertisements and poisoned reverse withdrawals, preventing neighbors from sustaining a bogus route through each other.",
+      "sourceFiles": [
+        {
+          "path": "protocol-room/network.mjs",
+          "sha256": "bb2d6111359576cfcc7e72fca634e7de48e7940831f7a96678aeee09a62c294a"
+        },
+        {
+          "path": "protocol-room/core.mjs",
+          "sha256": "e4f622851dee8e4119f156e36b57a73d9b7c50bf6a1e9c2bc21f582df3db6383"
+        },
+        {
+          "path": "protocol-room/engines.mjs",
+          "sha256": "018727b143999c9f0a13be2a25abd33f8092a34bababf2361e1a5ddb50e995d4"
+        }
+      ],
+      "nearestActualExisting": [
+        {
+          "id": "orbit-transfer",
+          "source": "spatial-room/room.js",
+          "difference": "That selects a traveler path through a fixed directed map. Here autonomous next-hop tables change through exchanged advertisements, stale information and link failure; a locally low cost can be a forwarding loop."
+        },
+        {
+          "id": "copper-tree",
+          "source": "puzzle-lab/engines.js",
+          "difference": "No spanning-tree edge-set optimization: destination-specific costs and advertisements converge to usable forwarding tables."
+        }
+      ],
+      "finite": {
+        "retained": true,
+        "studies": 3,
+        "realization": [
+          "Four-router failed-link repair",
+          "Five-router failed-link repair",
+          "Six-router repair with more weighted alternate links"
+        ],
+        "nativeProfiles": [
+          {
+            "profile": "desktop",
+            "finiteStudiesCompleted": 3,
+            "winActions": 161,
+            "lossActions": 2,
+            "restart": true
+          },
+          {
+            "profile": "mobile-touch",
+            "finiteStudiesCompleted": 3,
+            "winActions": 161,
+            "lossActions": 2,
+            "restart": true
+          }
+        ]
+      },
+      "controls": "Withdraw the failed direct link, select a router, send an ordinary or poisoned-reverse advertisement, deliver queued reports and trace the final forwarding table. Use touch taps, or Tab with Enter/Space; arrow keys adjust any labeled native range.",
+      "optionalEndless": {
+        "implemented": true,
+        "kind": "challenge-stream",
+        "actualGeneration": "Generate varied weighted connected graphs and one bounded failure/cost change, with independently computed shortest paths and safe withdrawal/adoption schedules.",
+        "difficultyCap": "At most5 replicas with7 log entries, or6 routers with positive costs and a bounded message allowance.",
+        "reason": null,
+        "feasibility": "Implemented bounded seeded challenge stream; finite campaign is retained.",
+        "nativeEvidence": [
+          {
+            "supported": true,
+            "kind": "challenge-stream",
+            "completedChallenges": 2,
+            "freshChallenges": true,
+            "scoreAccumulated": true,
+            "terminalRecovery": true,
+            "playerEndRun": true,
+            "lateStageProperties": true,
+            "lateStageScope": "24 enabled-control pure-model witnesses including stages17and250; native browser coverage completes the first two generated challenges, fails the third and recovers."
+          },
+          {
+            "supported": true,
+            "kind": "challenge-stream",
+            "completedChallenges": 2,
+            "freshChallenges": true,
+            "scoreAccumulated": true,
+            "terminalRecovery": true,
+            "playerEndRun": true,
+            "lateStageProperties": true,
+            "lateStageScope": "24 enabled-control pure-model witnesses including stages17and250; native browser coverage completes the first two generated challenges, fails the third and recovers."
+          }
+        ],
+        "modelGenerationEvidence": {
+          "id": "changing-roads",
+          "passed": true,
+          "samples": 24,
+          "stages": [
+            0,
+            1,
+            2,
+            3,
+            17,
+            250
+          ],
+          "seeds": [
+            0,
+            1,
+            20261002,
+            4294967295
+          ],
+          "scope": "Pure-model enabled-control legal witnesses, bounded serializable state and positive terminal score; does not substitute for the separate native browser cases."
+        }
+      },
+      "regressions": [
+        {
+          "id": "changing-roads",
+          "label": "All three finite studies have enabled-control legal completions and real terminal failures",
+          "passed": true
+        },
+        {
+          "id": "changing-roads",
+          "label": "Poisoned reverse advertises infinity specifically to the current next hop",
+          "passed": true
+        }
+      ],
+      "openFindings": []
+    },
+    {
+      "id": "branch-archive",
+      "name": "Branch Archive",
+      "implementedMechanic": "Update multiple immutable tree versions by copying only shared nodes on the changed path; retain reusable subtrees without allowing an update to corrupt an older published version.",
+      "sourceFiles": [
+        {
+          "path": "protocol-room/storage.mjs",
+          "sha256": "d69671a04ee9a5bb3705781987558347525525ff625c742d5a79c0781cc48e4a"
+        },
+        {
+          "path": "protocol-room/core.mjs",
+          "sha256": "e4f622851dee8e4119f156e36b57a73d9b7c50bf6a1e9c2bc21f582df3db6383"
+        },
+        {
+          "path": "protocol-room/engines.mjs",
+          "sha256": "018727b143999c9f0a13be2a25abd33f8092a34bababf2361e1a5ddb50e995d4"
+        }
+      ],
+      "nearestActualExisting": [
+        {
+          "id": "branch-librarian",
+          "source": "workbench-room/structures.mjs",
+          "difference": "Binary rotations preserve one mutable search tree and minimize access depths. This maintains several independent immutable roots, path-copies updates and shares subtrees under an allocation budget; search shape does not change."
+        },
+        {
+          "id": "night-collector",
+          "source": "workbench-room/living-systems.mjs",
+          "difference": "Tracing collection preserves current live objects during mutation. Here prior published values themselves must remain immutable, and copying rather than marking is the central action."
+        }
+      ],
+      "finite": {
+        "retained": true,
+        "studies": 3,
+        "realization": [
+          "One draft updating a shared sibling path",
+          "Two retained drafts on opposite branches",
+          "Three drafts requiring optional-root release and path reuse"
+        ],
+        "nativeProfiles": [
+          {
+            "profile": "desktop",
+            "finiteStudiesCompleted": 3,
+            "winActions": 65,
+            "lossActions": 3,
+            "restart": true
+          },
+          {
+            "profile": "mobile-touch",
+            "finiteStudiesCompleted": 3,
+            "winActions": 65,
+            "lossActions": 3,
+            "restart": true
+          }
+        ]
+      },
+      "controls": "Begin a requested version, select a tree path, copy a protected node, store a requested leaf value, release an optional version, publish the draft and audit retained roots. Use touch taps, or Tab with Enter/Space; arrow keys adjust any labeled native range.",
+      "optionalEndless": {
+        "implemented": true,
+        "kind": "challenge-stream",
+        "actualGeneration": "Seed bounded version branch histories and leaf updates, with distinct shared-path geometry and constructive minimal path-copy witness budgets.",
+        "difficultyCap": "Bounded pages, clients, keys or workers; seeded structures and histories vary after the three finite studies.",
+        "reason": null,
+        "feasibility": "Implemented bounded seeded challenge stream; finite campaign is retained.",
+        "nativeEvidence": [
+          {
+            "supported": true,
+            "kind": "challenge-stream",
+            "completedChallenges": 2,
+            "freshChallenges": true,
+            "scoreAccumulated": true,
+            "terminalRecovery": true,
+            "playerEndRun": true,
+            "lateStageProperties": true,
+            "lateStageScope": "24 enabled-control pure-model witnesses including stages17and250; native browser coverage completes the first two generated challenges, fails the third and recovers."
+          },
+          {
+            "supported": true,
+            "kind": "challenge-stream",
+            "completedChallenges": 2,
+            "freshChallenges": true,
+            "scoreAccumulated": true,
+            "terminalRecovery": true,
+            "playerEndRun": true,
+            "lateStageProperties": true,
+            "lateStageScope": "24 enabled-control pure-model witnesses including stages17and250; native browser coverage completes the first two generated challenges, fails the third and recovers."
+          }
+        ],
+        "modelGenerationEvidence": {
+          "id": "branch-archive",
+          "passed": true,
+          "samples": 24,
+          "stages": [
+            0,
+            1,
+            2,
+            3,
+            17,
+            250
+          ],
+          "seeds": [
+            0,
+            1,
+            20261002,
+            4294967295
+          ],
+          "scope": "Pure-model enabled-control legal witnesses, bounded serializable state and positive terminal score; does not substitute for the separate native browser cases."
+        }
+      },
+      "regressions": [
+        {
+          "id": "branch-archive",
+          "label": "All three finite studies have enabled-control legal completions and real terminal failures",
+          "passed": true
+        },
+        {
+          "id": "branch-archive",
+          "label": "Published roots remain immutable after shared-path update and optional version release",
+          "passed": true
+        }
+      ],
+      "openFindings": []
+    },
+    {
+      "id": "cancellation-desk",
+      "name": "Cancellation Desk",
+      "implementedMechanic": "Choose summation order and when to retain a compensation residual under finite decimal precision so small contributions survive large cancellation without overspending arithmetic work.",
+      "sourceFiles": [
+        {
+          "path": "protocol-room/numerics.mjs",
+          "sha256": "05ea14aa8ec085d5a47d692bb61c02531e3fc7b48538c72c1a2e2855ee2d3969"
+        },
+        {
+          "path": "protocol-room/core.mjs",
+          "sha256": "e4f622851dee8e4119f156e36b57a73d9b7c50bf6a1e9c2bc21f582df3db6383"
+        },
+        {
+          "path": "protocol-room/engines.mjs",
+          "sha256": "018727b143999c9f0a13be2a25abd33f8092a34bababf2361e1a5ddb50e995d4"
+        }
+      ],
+      "nearestActualExisting": [
+        {
+          "id": "wraparound-witness",
+          "source": "signal-lab/measures.mjs",
+          "difference": "Overflow witnesses exploit exact fixed-width integer modular wrap to follow branch tests. This uses decimal rounding and cancellation, preserves an error residual and optimizes final numerical accuracy rather than selecting a branch trace."
+        },
+        {
+          "id": "make-24",
+          "source": "number-room/room.js",
+          "difference": "No arbitrary expression target from four numbers: a fixed multiset must be summed, all terms count once and limited precision changes the evaluated answer."
+        }
+      ],
+      "finite": {
+        "retained": true,
+        "studies": 3,
+        "realization": [
+          "Million-scale cancellation and unit residual",
+          "Ten-thousand-scale cancellation with decimal residual",
+          "Two cancellation scales with micro residuals"
+        ],
+        "nativeProfiles": [
+          {
+            "profile": "desktop",
+            "finiteStudiesCompleted": 3,
+            "winActions": 38,
+            "lossActions": 7,
+            "restart": true
+          },
+          {
+            "profile": "mobile-touch",
+            "finiteStudiesCompleted": 3,
+            "winActions": 38,
+            "lossActions": 7,
+            "restart": true
+          }
+        ]
+      },
+      "controls": "Select one term for an ordinary or compensated add, or two terms for a rounded pair; report the final sum after consuming every term. Use touch taps, or Tab with Enter/Space; arrow keys adjust any labeled native range.",
+      "optionalEndless": {
+        "implemented": false,
+        "kind": null,
+        "actualGeneration": "Three authored three-significant-digit cancellation sets; magnitude scales, residuals and available grouping/compensation choices differ. No relabelled-template endless mode.",
+        "difficultyCap": null,
+        "reason": "The current implementation offers three authored studies rather than a verified indefinitely varied generator.",
+        "feasibility": "Conditionally feasible: generate varied multiscale exact decimal cancellation trees and validate an attainable grouping/compensation budget. Current three authored pathology sets stay finite.",
+        "nativeEvidence": [
+          {
+            "supported": false
+          },
+          {
+            "supported": false
+          }
+        ],
+        "modelGenerationEvidence": null
+      },
+      "regressions": [
+        {
+          "id": "cancellation-desk",
+          "label": "All three finite studies have enabled-control legal completions and real terminal failures",
+          "passed": true
+        },
+        {
+          "id": "cancellation-desk",
+          "label": "Large cancellation ordering changes the rounded result; grouping retains the exact residual",
+          "passed": true
+        }
+      ],
+      "openFindings": []
+    },
+    {
+      "id": "bracket-ferry",
+      "name": "Bracket Ferry",
+      "implementedMechanic": "Choose midpoint, secant or Newton root probes while preserving an exact sign-changing interval; fast tangents may leave the bracket, while bisection spends more probes.",
+      "sourceFiles": [
+        {
+          "path": "protocol-room/numerics.mjs",
+          "sha256": "05ea14aa8ec085d5a47d692bb61c02531e3fc7b48538c72c1a2e2855ee2d3969"
+        },
+        {
+          "path": "protocol-room/core.mjs",
+          "sha256": "e4f622851dee8e4119f156e36b57a73d9b7c50bf6a1e9c2bc21f582df3db6383"
+        },
+        {
+          "path": "protocol-room/engines.mjs",
+          "sha256": "018727b143999c9f0a13be2a25abd33f8092a34bababf2361e1a5ddb50e995d4"
+        }
+      ],
+      "nearestActualExisting": [
+        {
+          "id": "false-weight",
+          "source": "discovery-room/room.js",
+          "difference": "Balance experiments identify a discrete anomalous object. Here continuous sign brackets and derivative-informed numerical steps certify a root interval, with exact bracket preservation and evaluation costs."
+        },
+        {
+          "id": "clockwork",
+          "source": "number-room/room.js",
+          "difference": "No exact modular arrival route: uncertainty interval shrinks after actual function probes, and root error is bounded by the surviving interval."
+        }
+      ],
+      "finite": {
+        "retained": true,
+        "studies": 3,
+        "realization": [
+          "Exact width at most1/32",
+          "Exact width at most1/64",
+          "Exact width at most1/96"
+        ],
+        "nativeProfiles": [
+          {
+            "profile": "desktop",
+            "finiteStudiesCompleted": 3,
+            "winActions": 83,
+            "lossActions": 4,
+            "restart": true
+          },
+          {
+            "profile": "mobile-touch",
+            "finiteStudiesCompleted": 3,
+            "winActions": 83,
+            "lossActions": 4,
+            "restart": true
+          }
+        ]
+      },
+      "controls": "Choose midpoint, secant or Newton; choose a Newton endpoint, compute the probe, retain the sign-preserving half and accept the finished bracket. Use touch taps, or Tab with Enter/Space; arrow keys adjust any labeled native range.",
+      "optionalEndless": {
+        "implemented": true,
+        "kind": "challenge-stream",
+        "actualGeneration": "Generate positive cubic-plus-linear functions with varied linear coefficients and root locations. Exact rational endpoint, secant and Newton transitions preserve bounded sign-certified intervals through all stages.",
+        "difficultyCap": "Bounded program, event, key, edit or geometric state; seed-driven transition data continues to vary after study three.",
+        "reason": null,
+        "feasibility": "Implemented bounded seeded challenge stream; finite campaign is retained.",
+        "nativeEvidence": [
+          {
+            "supported": true,
+            "kind": "challenge-stream",
+            "completedChallenges": 2,
+            "freshChallenges": true,
+            "scoreAccumulated": true,
+            "terminalRecovery": true,
+            "playerEndRun": true,
+            "lateStageProperties": true,
+            "lateStageScope": "24 enabled-control pure-model witnesses including stages17and250; native browser coverage completes the first two generated challenges, fails the third and recovers."
+          },
+          {
+            "supported": true,
+            "kind": "challenge-stream",
+            "completedChallenges": 2,
+            "freshChallenges": true,
+            "scoreAccumulated": true,
+            "terminalRecovery": true,
+            "playerEndRun": true,
+            "lateStageProperties": true,
+            "lateStageScope": "24 enabled-control pure-model witnesses including stages17and250; native browser coverage completes the first two generated challenges, fails the third and recovers."
+          }
+        ],
+        "modelGenerationEvidence": {
+          "id": "bracket-ferry",
+          "passed": true,
+          "samples": 24,
+          "stages": [
+            0,
+            1,
+            2,
+            3,
+            17,
+            250
+          ],
+          "seeds": [
+            0,
+            1,
+            20261002,
+            4294967295
+          ],
+          "scope": "Pure-model enabled-control legal witnesses, bounded serializable state and positive terminal score; does not substitute for the separate native browser cases."
+        }
+      },
+      "regressions": [
+        {
+          "id": "bracket-ferry",
+          "label": "All three finite studies have enabled-control legal completions and real terminal failures",
+          "passed": true
+        },
+        {
+          "id": "bracket-ferry",
+          "label": "Fractional boundary comparisons are exact and wrong-side retention destroys the certificate",
+          "passed": true
+        }
+      ],
+      "openFindings": []
+    },
+    {
+      "id": "pivot-gallery",
+      "name": "Pivot Gallery",
+      "implementedMechanic": "Pivot among feasible corners of a small linear optimization problem, choosing an improving entering direction and its minimum-ratio limiting constraint while avoiding degenerate wasted pivots.",
+      "sourceFiles": [
+        {
+          "path": "protocol-room/numerics.mjs",
+          "sha256": "05ea14aa8ec085d5a47d692bb61c02531e3fc7b48538c72c1a2e2855ee2d3969"
+        },
+        {
+          "path": "protocol-room/core.mjs",
+          "sha256": "e4f622851dee8e4119f156e36b57a73d9b7c50bf6a1e9c2bc21f582df3db6383"
+        },
+        {
+          "path": "protocol-room/engines.mjs",
+          "sha256": "018727b143999c9f0a13be2a25abd33f8092a34bababf2361e1a5ddb50e995d4"
+        }
+      ],
+      "nearestActualExisting": [
+        {
+          "id": "row-orchestra",
+          "source": "workbench-room/structures.mjs",
+          "difference": "Row Orchestra uses bounded elementary row transformations to reach a matrix target. This maintains inequality feasibility, an active corner basis, objective improvement and ratio-limited edge moves; matrix equivalence alone cannot certify a valid pivot."
+        },
+        {
+          "id": "orbit-transfer",
+          "source": "spatial-room/room.js",
+          "difference": "No authored graph destinations: feasible edge endpoints are derived from actual linear constraints and the player's entering/leaving basis choice."
+        }
+      ],
+      "finite": {
+        "retained": true,
+        "studies": 3,
+        "realization": [
+          "Two resource normals and coordinate limits",
+          "Varied resource polygon under a four-pivot cap",
+          "Third resource through the optimum and possible tied pivots"
+        ],
+        "nativeProfiles": [
+          {
+            "profile": "desktop",
+            "finiteStudiesCompleted": 3,
+            "winActions": 27,
+            "lossActions": 3,
+            "restart": true
+          },
+          {
+            "profile": "mobile-touch",
+            "finiteStudiesCompleted": 3,
+            "winActions": 27,
+            "lossActions": 3,
+            "restart": true
+          }
+        ]
+      },
+      "controls": "Choose the active boundary to release and an edge direction, select the limiting resource to pivot to, set both certificate weights on native ranges and certify the corner. Use touch taps, or Tab with Enter/Space; arrow keys adjust any labeled native range.",
+      "optionalEndless": {
+        "implemented": true,
+        "kind": "challenge-stream",
+        "actualGeneration": "Generate bounded resource polygons with different normal vectors, limits, corner geometry and an optional third resource. Objectives are constructive positive combinations of two active normals, allowing an exact dual certificate.",
+        "difficultyCap": "Bounded program, event, key, edit or geometric state; seed-driven transition data continues to vary after study three.",
+        "reason": null,
+        "feasibility": "Implemented bounded seeded challenge stream; finite campaign is retained.",
+        "nativeEvidence": [
+          {
+            "supported": true,
+            "kind": "challenge-stream",
+            "completedChallenges": 2,
+            "freshChallenges": true,
+            "scoreAccumulated": true,
+            "terminalRecovery": true,
+            "playerEndRun": true,
+            "lateStageProperties": true,
+            "lateStageScope": "24 enabled-control pure-model witnesses including stages17and250; native browser coverage completes the first two generated challenges, fails the third and recovers."
+          },
+          {
+            "supported": true,
+            "kind": "challenge-stream",
+            "completedChallenges": 2,
+            "freshChallenges": true,
+            "scoreAccumulated": true,
+            "terminalRecovery": true,
+            "playerEndRun": true,
+            "lateStageProperties": true,
+            "lateStageScope": "24 enabled-control pure-model witnesses including stages17and250; native browser coverage completes the first two generated challenges, fails the third and recovers."
+          }
+        ],
+        "modelGenerationEvidence": {
+          "id": "pivot-gallery",
+          "passed": true,
+          "samples": 24,
+          "stages": [
+            0,
+            1,
+            2,
+            3,
+            17,
+            250
+          ],
+          "seeds": [
+            0,
+            1,
+            20261002,
+            4294967295
+          ],
+          "scope": "Pure-model enabled-control legal witnesses, bounded serializable state and positive terminal score; does not substitute for the separate native browser cases."
+        }
+      },
+      "regressions": [
+        {
+          "id": "pivot-gallery",
+          "label": "All three finite studies have enabled-control legal completions and real terminal failures",
+          "passed": true
+        },
+        {
+          "id": "pivot-gallery",
+          "label": "Nonnegative dual weights certify objective, and a farther blocking row violates feasibility",
+          "passed": true
+        }
+      ],
+      "openFindings": []
+    }
+  ]
+}

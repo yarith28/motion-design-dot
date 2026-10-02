@@ -1,0 +1,689 @@
+{
+  "room": "relation-room",
+  "target": 20,
+  "status": "Accepted by root and source auditor; isolated implementation in progress. Actual engine/manifest checkpoint pending.",
+  "scope": "Twenty additional mechanics after the preserved first400. All400 inventory records and390 room manifests inspected; closest original/new mechanics inspected in source. Existing rooms and catalog remain untouched.",
+  "discardedBeforeImplementation": [
+    {
+      "candidate": "Sokoban pushes",
+      "reason": "Original pebble-post already has authored irreversible crate pushing and deadlocks."
+    },
+    {
+      "candidate": "two-cell tipping block",
+      "reason": "Too close to cube-seal/corner-carry; changing support footprint alone is insufficient."
+    },
+    {
+      "candidate": "ordinary chip firing",
+      "reason": "token-crucible already supports exact consume/produce graph firing and deadlocks."
+    },
+    {
+      "candidate": "triangulation flips",
+      "reason": "Form owner reserves the stronger actual Delaunay/incircle constrained-flip mechanic."
+    },
+    {
+      "candidate": "grounded argument defense",
+      "reason": "Actual empty-language source already constructs reusable grounded AND/OR certificates."
+    }
+  ],
+  "games": [
+    {
+      "id": "minor-museum",
+      "name": "Minor Museum",
+      "definingDecision": "Choose adjacent vertex contractions and edge deletions to turn a larger undirected network into the shown labeled minor, without merging two protected anchors.",
+      "transitionSignature": "Contracting an edge replaces its endpoints with one bag, redirects every incident edge and removes loops/parallel duplicates; deletion changes only one edge. Bags retain their actual original vertices.",
+      "nearestExisting": [
+        {
+          "id": "quotient-quay",
+          "difference": "Quotient merges automaton states justified by all future input acceptance; these contractions require actual adjacency and change graph topology, with edge deletion and protected anchor bags."
+        },
+        {
+          "id": "copper-tree",
+          "difference": "MST selects cheap existing edges while preserving the vertex set; this game destroys vertices through contractions and targets a smaller graph."
+        }
+      ],
+      "finiteStudies": [
+        "Subdivided path with a removable chord.",
+        "Branched target with surplus attached vertices and protected anchors.",
+        "Cycle-containing target requiring contraction/deletion order."
+      ],
+      "controls": "Choose two visible vertex bags, Contract connecting edge, or select an edge and Delete. Native compact cards, edge controls and paired current/target graph drawings support keyboard and touch.",
+      "failureChallenge": "An anchor collision is refused; spending the irreversible edit allowance outside the target loses. Certify verifies all target adjacencies, missing edges and bag anchors, accepting every valid minor witness.",
+      "levelStrategy": "Construct varied source graphs by subdividing/expanding a generated small target, then adding deletable chords and pendant branches. Discard construction witness; tests recover independent legal contraction/deletion witnesses.",
+      "endless": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "design": "New target/source topologies, expansions and budget tradeoffs from each stage seed; cap target5 and source9 vertices."
+      },
+      "testPlan": "Independent bag-graph replay solver; verify redirected edges, duplicate cleanup, anchor protection, alternate valid witnesses and destructive wrong contractions; UI all3 finite studies,2 generated studies, late-stage witness."
+    },
+    {
+      "id": "twin-graph",
+      "name": "Twin Graph",
+      "definingDecision": "Construct a bijection between two differently drawn networks that preserves vertex marks AND every adjacency/nonadjacency.",
+      "transitionSignature": "Assigning a left vertex to an occupied right vertex swaps mappings; edges remain fixed. Correctness is graph isomorphism, including absent edges, rather than diagram appearance or one stored permutation.",
+      "nearestExisting": [
+        {
+          "id": "loose-ends",
+          "difference": "Loose Ends swaps drawing positions to remove crossings in one fixed graph; Twin Graph maps between two graphs and checks structural adjacency, with crossings irrelevant."
+        },
+        {
+          "id": "map-inks",
+          "difference": "Vertex coloring assigns one of a few reusable inks under neighbor inequality; this is a unique bijection preserving the whole relation."
+        }
+      ],
+      "finiteStudies": [
+        "Distinct degrees help identify a small asymmetric graph.",
+        "Equal-degree vertices require neighborhood comparison.",
+        "Repeated vertex marks and graph symmetries admit multiple valid bijections."
+      ],
+      "controls": "Select left node, then right node; Clear selected assignment and Certify. Drawings and correspondence table, native buttons/touch.",
+      "failureChallenge": "Three structural audits fail an attempt, with an exact adjacency/nonadjacency mismatch. Complete all mappings; every genuine isomorphism is accepted.",
+      "levelStrategy": "Generate connected nontrivial marked graphs, independently permute/draw the right copy, discard permutation. Require useful repeated marks and nontrivial competing degree candidates in later studies.",
+      "endless": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "design": "Seeded graph edges, marks and permutations;6\u20138 vertices with bounded symmetry and degree ambiguity."
+      },
+      "testPlan": "Backtracking solver uses public adjacency/marks only; adversarial nonedge mismatch, duplicate destination, alternate automorphisms; full native UI campaigns and bounded late-stage models."
+    },
+    {
+      "id": "interval-museum",
+      "name": "Interval Museum",
+      "definingDecision": "Place each named interval's two endpoints on a shared line so interval overlap realizes exactly the requested neighbor graph.",
+      "transitionSignature": "Moving an endpoint changes that interval's overlap relation with many others; an endpoint can never pass its partner. Closed intervals touching at one endpoint count as overlapping.",
+      "nearestExisting": [
+        {
+          "id": "seat-at-table",
+          "difference": "Seat ordering permutes one position per guest under written inequalities; this chooses two endpoints per object and realizes overlap/nonoverlap relations including cliques and nested intervals."
+        },
+        {
+          "id": "map-inks",
+          "difference": "Graph coloring never changes a geometric representation; interval layout must realize the exact edges and absent edges through shared endpoint geometry."
+        }
+      ],
+      "finiteStudies": [
+        "Overlapping chain with required disjoint endpoints.",
+        "Clique and leaf neighborhoods requiring different interval extents.",
+        "Nested and separated groups with equal-degree ambiguity."
+      ],
+      "controls": "Select interval; labeled left/right integer sliders plus endpoint\u2212/+ buttons; live interval drawing, requested graph and overlap matrix; Certify. Touch dragging and native buttons.",
+      "failureChallenge": "Three wrong exact-relation audits lose; feedback names the pair with an unwanted/missing overlap. Any valid endpoint representation is accepted.",
+      "levelStrategy": "Generate graph from independently sampled interval endpoints, reject complete/empty and overly simple graphs, discard endpoints. Independent endpoint-order search proves current and late layouts representable.",
+      "endless": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "design": "Fresh overlap graphs on5\u20136 intervals, line coordinates0\u201314; difficulty caps without repeating three graphs."
+      },
+      "testPlan": "Touching endpoints, nesting, nonedge enforcement, invalid reversed endpoints, alternate representations, independent source-free solver and real slider/button UI wins."
+    },
+    {
+      "id": "knowledge-circle",
+      "name": "Knowledge Circle",
+      "definingDecision": "Apply a sequence of truthful public knowledge announcements by retaining exactly the worlds compatible with what each observer knows, then recomputing their information groups after each announcement.",
+      "transitionSignature": "An observer knows a claim only if it holds in every still-possible world with the same private observation. Public announcements remove worlds, which changes later knowledge/equivalence groups; nested knowing refers to those groups, not actual-world omniscience.",
+      "nearestExisting": [
+        {
+          "id": "invisible-ink",
+          "difference": "Ink reveals physical evidence bits and intersects observations; these announcements depend on another observer's uncertainty and update the observers' information relations."
+        },
+        {
+          "id": "branch-weather",
+          "difference": "Temporal forecasts evaluate successor/reachability operators on a fixed transition graph. Public announcement removes worlds and rebuilds observation equivalence relations before later epistemic claims."
+        },
+        {
+          "id": "honest-company",
+          "difference": "Self-referential truth assignment is one simultaneous Boolean solution; this is a transcript of changing knowledge states."
+        }
+      ],
+      "finiteStudies": [
+        "One observer does not yet know the marked fact.",
+        "An announcement about another observer's knowledge changes groups.",
+        "Multiple announcements establish new knowledge that was false initially."
+      ],
+      "controls": "Toggle retained world cards for the current announcement, Apply announcement, inspect public observation/world tables and information-group drawing. Native buttons/touch.",
+      "failureChallenge": "Three incorrect retained sets lose. Audit explains one incorrectly retained/removed world using its current observation group; no secret winning world is exposed.",
+      "levelStrategy": "Construct varied small observation partitions and fact labels, with nonempty nontrivial announced survivor sets. Do not store answers; evaluate the stated semantics from current worlds. Tests independently recompute epistemic predicates.",
+      "endless": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "design": "Fresh private-observation partitions, P/Q facts and one-to-three actual public announcements, with8\u201312 worlds and knowledge depth2."
+      },
+      "testPlan": "Knowledge versus mere truth, vacuous/missing groups, nested statements, public-update change, simultaneous filtering, and three actual UI transcripts plus late-stage independent evaluations."
+    },
+    {
+      "id": "modal-witness",
+      "name": "Modal Witness",
+      "definingDecision": "Build a small world/reachability model in which every premise is true at the root and the proposed modal conclusion is false.",
+      "transitionSignature": "Toggle directed accessibility arrows and per-world proposition valuations. Diamond needs a witnessing successor; Box checks all successors, including its specified vacuous semantics. Nested modalities inspect the player's constructed model.",
+      "nearestExisting": [
+        {
+          "id": "proof-lantern",
+          "difference": "Natural deduction derives a conclusion from fixed formulas using scoped assumptions; this disproves an inference by constructing semantic worlds, arrows and valuations."
+        },
+        {
+          "id": "branch-weather",
+          "difference": "Weather computes correct state sets in a given graph; this changes the graph itself to witness premise/conclusion separation."
+        },
+        {
+          "id": "clause-kiln",
+          "difference": "Clause resolution builds a syntactic inconsistency certificate, not a modal frame counterexample."
+        }
+      ],
+      "finiteStudies": [
+        "Diamond P does not imply Box P.",
+        "Box(P or Q) need not imply Box P or Box Q.",
+        "A nested-modal claim needs a model with witnesses at different depths."
+      ],
+      "controls": "Select source/destination world, toggle arrow; toggle labeled proposition at a world; Certify counterexample. World graph, formula tree and per-world truth table; all native touch/keyboard.",
+      "failureChallenge": "Three failed counterexamples lose; feedback states which premise fails or why conclusion remains true. Multiple valid models accepted; all required worlds/edge budget respected.",
+      "levelStrategy": "Three authored invalid inference studies with increasing semantic depth and independently constructed witnesses. No stored answer graph.",
+      "endless": {
+        "supported": false,
+        "reason": "Three authored invalid formula studies are finite. Swapping proposition names or cycling those formulas is insufficient; a future stream needs varied invalid formula generation with checked finite countermodels."
+      },
+      "testPlan": "Box vacuity, Diamond existence, nested depth, independent formula evaluator, alternate countermodels, directed versus reverse edge regression and all3 actual UI model constructions."
+    },
+    {
+      "id": "polygon-passport",
+      "name": "Polygon Passport",
+      "definingDecision": "Pair directed polygon sides and choose gluing orientation to create a closed surface with the requested vertex identifications, Euler characteristic and orientability.",
+      "transitionSignature": "Gluing identifies endpoint vertices according to side orientation; vertex equivalence classes and orientation consistency update globally. Topological correctness is independent of a flat tile arrangement.",
+      "nearestExisting": [
+        {
+          "id": "seam-quilt",
+          "difference": "Quilt places separate rigid tiles under local numerical seam/boundary matches; this identifies sides of one polygon and computes quotient vertices, closed-surface Euler characteristic and orientability."
+        },
+        {
+          "id": "gentle-unknot",
+          "difference": "Braid moves preserve over/under knot topology while removing crossings; side gluing creates a2D surface and changes its vertex quotient and orientation constraints."
+        }
+      ],
+      "finiteStudies": [
+        "Four-side orientable gluing with one vertex class.",
+        "Orientation-reversing identification with a distinct requested surface invariant.",
+        "Eight-side gluing satisfying specific vertex classes and higher-genus invariant."
+      ],
+      "controls": "Select two unpaired sides, choose same/reversed arrow gluing, Pair; Undo gluing and Certify. Directed polygon drawing, identified-vertex classes and gluing table; labeled native controls/touch.",
+      "failureChallenge": "Three failed classifications lose; incomplete/unpaired boundaries cannot certify. A wrong gluing changes actual equivalence classes and may need reconstruction, not a cosmetic label fix.",
+      "levelStrategy": "Authored quotient-surface studies with independent disjoint-set/orientation checks. Construct explicit legal witnesses and validate endpoint conventions on known simple surfaces.",
+      "endless": {
+        "supported": false,
+        "reason": "The authored surface-classification curriculum is finite. A procedural stream needs varied polygonal cell complexes and nontrivial quotient/vertex constraints, not relabeling three side words."
+      },
+      "testPlan": "Endpoint direction reversal, transitive vertex merging, all-side pairing, orientable versus nonorientable conventions, alternative equivalent gluing witnesses and complete UI campaigns."
+    },
+    {
+      "id": "hairpin-studio",
+      "name": "Hairpin Studio",
+      "definingDecision": "Pair complementary sites on one strand into a nested folding diagram, trading strong bonds and stacking bonuses against minimum loop gaps and forbidden crossings.",
+      "transitionSignature": "Add/remove a bond between two unused complementary positions. Bonds may nest or remain disjoint but never interlace; a neighboring inner bond changes stacking score. Geometry and available endpoints constrain later choices.",
+      "nearestExisting": [
+        {
+          "id": "parallel-manuscripts",
+          "difference": "Affine-gap alignment advances two text cursors monotonically and spends alignment/gap cost; this pairs two locations within one strand into a noncrossing nested structure."
+        },
+        {
+          "id": "sound-splice",
+          "difference": "Splice exchanges suffixes and changes both word ribbons. Folding keeps the strand fixed and chooses a nested bond structure."
+        },
+        {
+          "id": "domino-register",
+          "difference": "Dominosa pairs adjacent grid cells using unique number pairs; these long-range complementary bonds interact through nesting, loop gaps and stacking."
+        }
+      ],
+      "finiteStudies": [
+        "Choose compatible noncrossing bonds.",
+        "Strong versus weak complement weights and minimum gap compete.",
+        "A stacking bonus makes a nested pair preferable to individually attractive crossing bonds."
+      ],
+      "controls": "Tap first/second strand sites to bond, select bond to remove, Certify fold. Arc diagram and compact site controls with bond/loop feedback; touch/keyboard.",
+      "failureChallenge": "Invalid bonds are refused with a specific reason; three folds below the score/loop requirements lose. The objective accepts all sufficiently good legal folds.",
+      "levelStrategy": "Generate bounded complementary-label strands with nontrivial nested choices; independent interval DP evaluates attainable scores. Runtime evaluates the player's fold, not a stored solution.",
+      "endless": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "design": "Fresh strand complements, strong/weak bond choices and nested stack conflicts;12 or14 sites, minimum interior gap2 and bounded pair search."
+      },
+      "testPlan": "Crossing versus nesting, reused site, complement mismatch, minimum gap, stacking counted once, alternate optimal folds; public-strand independent solver and all UI chapters/optional challenges."
+    },
+    {
+      "id": "letter-carries",
+      "name": "Letter Carries",
+      "definingDecision": "Assign distinct decimal digits to repeated letter symbols and account for actual column carries so a written addition is valid.",
+      "transitionSignature": "Changing one letter changes every occurrence across all addends/result. Carries couple successive columns; leading symbols forbid zero and different letters cannot share a digit.",
+      "nearestExisting": [
+        {
+          "id": "digit-forge",
+          "difference": "Digit Forge orders a finite digit deck under whole-number divisibility clues; this solves shared symbol substitutions coupled by column carries."
+        },
+        {
+          "id": "cross-sums",
+          "difference": "Kakuro uses local row/column sums with digit uniqueness in each run; alphametic digits are globally unique per letter and repeated occurrences participate in carry arithmetic."
+        },
+        {
+          "id": "secret-post",
+          "difference": "Cryptogram substitution is letter-to-letter dictionary decoding; this is injective digit arithmetic."
+        }
+      ],
+      "finiteStudies": [
+        "Two-digit addition with a repeated symbol.",
+        "Carry into a new leading symbol.",
+        "Three addends with carries shared across several columns."
+      ],
+      "controls": "Select letter, choose digit0\u20139; optional carry annotations, live written equation and column table, Certify. Native buttons/touch.",
+      "failureChallenge": "Three arithmetic audits lose; errors identify a duplicate digit, leading zero or failing column/carry. Every complete valid assignment accepted.",
+      "levelStrategy": "Construct addition from seeded digit words and relabel distinct digits, require repeated symbols/nontrivial carry, discard mapping. Test-side column-search solver finds assignments independently.",
+      "endless": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "design": "Fresh symbol patterns, addend structures and carries; cap7 distinct letters and3-column sums."
+      },
+      "testPlan": "Repeated symbol propagation, global injectivity, leading zero, carries1/2 and overflow column, alternate valid assignments; genuine desktop/touch campaigns and late seed witnesses."
+    },
+    {
+      "id": "fill-in-station",
+      "name": "Fill-In Station",
+      "definingDecision": "Choose a vertex elimination order that completes each eliminated neighborhood into a clique while keeping induced degree and newly created fill edges within limits.",
+      "transitionSignature": "Eliminate selected vertex, connect every pair of its remaining neighbors, then delete the vertex. The new edges persist and alter later elimination costs.",
+      "nearestExisting": [
+        {
+          "id": "copper-tree",
+          "difference": "MST adds selected existing edges by weight to connect fixed vertices; elimination removes vertices and creates all missing neighbor edges, with future fill/width coupling."
+        },
+        {
+          "id": "pebble-engine",
+          "difference": "Pebbling computes/erases values in a fixed DAG under memory limits; this changes an undirected graph's adjacency on every elimination."
+        },
+        {
+          "id": "circuit-break",
+          "difference": "Vertex cut deletes nodes to disconnect targets; elimination instead connects their neighborhoods."
+        }
+      ],
+      "finiteStudies": [
+        "Sparse path where a bad interior elimination wastes fill.",
+        "A cycle necessarily introduces some fill; choose its location.",
+        "Intersecting neighborhoods require planning to avoid a later width violation."
+      ],
+      "controls": "Select a vertex; preview its neighbor clique, added edges and degree; Eliminate, with live graph/history. Native controls/touch.",
+      "failureChallenge": "Committing above degree/fill allowance loses; a stranded residual graph with no affordable elimination loses. Finish every vertex; reset/undo recover finite attempts.",
+      "levelStrategy": "Generate partial bounded-treewidth graphs from checked clique attachments/removals, discard ordering. Independent search verifies attainable width/fill budget and diverse bad orders.",
+      "endless": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "design": "Fresh7-vertex full2-tree topologies built by attaching each new vertex to an existing edge. Highest tier has width limit2 and fill allowance0; earlier optional teaching tiers use the path/cycle challenges. Independent elimination witnesses."
+      },
+      "testPlan": "Fill clique completeness, no edges to eliminated nodes, degree counts, persistent fill, alternate legal orders and bad-order traps; full native UI and late-stage exhaustive legal witnesses."
+    },
+    {
+      "id": "alternating-couriers",
+      "name": "Alternating Couriers",
+      "definingDecision": "Walk an alternating path from an unmatched left vertex to an unmatched right vertex, then flip every path edge to enlarge a matching without losing previous assignments.",
+      "transitionSignature": "Unmatched/matched edges must alternate. Reaching a matched right vertex forces traversal of its matched edge; augmenting flips the entire completed path and increases matching size by exactly one.",
+      "nearestExisting": [
+        {
+          "id": "mutual-match",
+          "difference": "Stable matching assigns/swaps partners directly using ranked preferences; this has a fixed eligibility graph, no rankings, and changes assignment through complete alternating-path flips."
+        },
+        {
+          "id": "hall-window",
+          "difference": "Hall Window certifies that assignment is impossible using a deficient union; these graphs are assignable and the player constructs a matching through augmenting paths."
+        },
+        {
+          "id": "once-through",
+          "difference": "Euler traversal consumes each graph edge exactly once; augmentation revisits a changing matched/unmatched edge state to repair assignments."
+        }
+      ],
+      "finiteStudies": [
+        "One displaced partner needs a short alternating repair.",
+        "An augmenting chain must reroute several current partners.",
+        "Competing paths and more than one free start change later repairs."
+      ],
+      "controls": "Choose free start; tap a displayed neighbor along the required edge kind; Augment at a free destination, abandon path at a cost. Bipartite graph and pairing table; native touch/keyboard.",
+      "failureChallenge": "Wrong edge kinds refused; repeated/trapped path or traversal allowance exhaustion loses. Full perfect matching wins, regardless of which legal augmentation sequence produced it.",
+      "levelStrategy": "Generate graphs with a known perfect matching and seeded displaced partial matchings plus competing eligibility edges; discard witness. Independent alternating-path search recovers plans.",
+      "endless": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "design": "Fresh bipartite topology, displaced partial matching and competing augmenting paths;4\u20136 pairs with a bounded traversal allowance and independent complete-matching witnesses."
+      },
+      "testPlan": "Edge alternation, forced matched step, no vertex repetition, whole-path flip, matching-size increment, competing valid perfect matchings; all UI studies/streams plus late models."
+    },
+    {
+      "id": "recursive-rings",
+      "name": "Recursive Rings",
+      "definingDecision": "Release a nested ring chain by manipulating lower rings to unlock each higher ring, while fitting a tight move allowance.",
+      "transitionSignature": "Ring0 toggles freely; ring i>0 can toggle only while ring i\u22121 is attached and every ring below i\u22121 is detached. Only the selected ring changes, so legality depends on the current recursive prefix configuration.",
+      "nearestExisting": [
+        {
+          "id": "bit-lanterns",
+          "difference": "Binary encoding toggles independent bits to match a sum; these bits have recursively dependent legal transitions and a shortest-path release goal."
+        },
+        {
+          "id": "lantern-lines",
+          "difference": "Lights Out toggles a fixed cross of neighbors on every move; this toggles one ring only when a state-dependent prefix condition permits it."
+        },
+        {
+          "id": "thermometer-hall",
+          "difference": "Thermometers assign prefix lengths under row/column sums; recursive rings must navigate legal intermediate configurations within a move budget."
+        }
+      ],
+      "finiteStudies": [
+        "Three-ring release teaches the unlock condition.",
+        "Four-ring release requires restoring a lower ring temporarily.",
+        "Five-ring release makes recursive subplans necessary."
+      ],
+      "controls": "Native ring buttons show attached/detached and why each is enabled; chain drawing and remaining move allowance. Touch/keyboard; Undo/Reset.",
+      "failureChallenge": "Illegal toggles disabled; spending the legal-move allowance before release loses. Repeated free-ring toggles genuinely consume moves.",
+      "levelStrategy": "Finite standard chains; optional seed chooses bounded nontrivial initial masks. Test-side BFS/recursive plans establish shortest legal release lengths; runtime stores no plan.",
+      "endless": {
+        "supported": false,
+        "reason": "Three authored recursive chains are finite. Merely varying starting masks within a small fixed toggle graph would be a narrow replay bank; no substantive unbounded challenge stream is claimed."
+      },
+      "testPlan": "Every prefix unlock boundary, reattachment necessity, illegal actions inert, finite move limits; real native releases and dispersed/late start-mask witnesses."
+    },
+    {
+      "id": "ordered-echo",
+      "name": "Ordered Echo",
+      "definingDecision": "Observe a sequence of symbols one pulse at a time, then reproduce the hidden temporal order without a persistent spatial pair layout.",
+      "transitionSignature": "Reveal-next advances the study sequence; after covering it, each chosen symbol is compared to the next unrevealed expected position. Repeated symbols and neighboring swaps create real order errors.",
+      "nearestExisting": [
+        {
+          "id": "double-take",
+          "difference": "Pair memory discovers matching symbols at persistent card locations; this remembers one temporal stream, with repeated symbols and no spatial pairs."
+        },
+        {
+          "id": "beat-post",
+          "difference": "Rhythm reacts to live visible cues crossing a line; echo hides the full stream before recall and is deliberately turn-paced."
+        },
+        {
+          "id": "echo-steps",
+          "difference": "Recorded spatial replay cooperates physically with a second actor; this is recall of hidden symbol ordering."
+        }
+      ],
+      "finiteStudies": [
+        "Four pulses including a repeated symbol.",
+        "Six pulses with similar adjacent subpatterns.",
+        "Eight pulses require retaining temporal order across repeated motifs."
+      ],
+      "controls": "Next pulse/cover buttons and a native symbol palette for recall; keyboard and touch, no forced timer or keyboard-only path.",
+      "failureChallenge": "A wrong recalled position ends the study with expected/selected feedback; reset/restart gives a fresh observation phase. Correct complete sequence wins.",
+      "levelStrategy": "Seeded symbol streams sampled with repetition and motif variation; discard no necessary memory data, but never render full answer during recall or expose browser hooks.",
+      "endless": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "design": "Fresh temporal streams, length4\u201310 with an honest memory difficulty cap."
+      },
+      "testPlan": "Collect every cue through rendered UI before it hides, then input native recall; swapped/repeated cue regression, no answer visible in recall DOM, full campaigns and optional streams on desktop/touch."
+    },
+    {
+      "id": "heritage-house",
+      "name": "Heritage House",
+      "definingDecision": "Infer unknown two-copy genotypes on a fixed family diagram from visible inherited traits, known carriers and parent/child allele transmission constraints.",
+      "transitionSignature": "Assign an unknown member AA/Aa/aa; that assignment simultaneously constrains their own trait and every existing family edge. Each child must be explainable by one allele from each fixed parent.",
+      "nearestExisting": [
+        {
+          "id": "linked-orchard",
+          "difference": "Linked Orchard selects mating parents/crossover gametes and creates/discards plants to breed a target; Heritage never creates offspring or chooses crosses and instead infers hidden genotypes from a fixed observed pedigree."
+        },
+        {
+          "id": "honest-company",
+          "difference": "Truth/lie assignments must match self-referential Boolean claims; pedigree values are inherited paired symbols constrained by parental transmission and phenotype evidence."
+        }
+      ],
+      "finiteStudies": [
+        "A recessive child proves both dominant-trait parents are carriers.",
+        "Siblings and a known carrier constrain another branch.",
+        "Two generations couple ancestors and descendants."
+      ],
+      "controls": "Select family member; genotype buttons; fixed clues disabled; family graph and transmission/trait table, Certify. Native touch/keyboard.",
+      "failureChallenge": "Three inconsistent pedigree audits lose; feedback identifies trait or exact parent-child incompatibility. All globally consistent genotypes accepted.",
+      "levelStrategy": "Generate small acyclic families by explicit valid allele transmission, reveal phenotype/selected genotypes, discard hidden assignment. Independent small-domain solver accepts ambiguity honestly.",
+      "endless": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "design": "Fresh fixed family topologies, inherited genotypes and clue patterns; at most8 members, each child after both parents. Authored families span up to three transmissions; randomized earlier-parent links may be deeper. Players infer genotypes rather than select breeding crosses."
+      },
+      "testPlan": "Carrier versus homozygous trait, recessive transmission, both-parent necessity, fixed clues, alternate pedigrees; independently solved UI and late-model samples."
+    },
+    {
+      "id": "posterior-post",
+      "name": "Posterior Post",
+      "definingDecision": "Choose which costly noisy observation to obtain, update actual nonzero likelihood-weighted beliefs, then stop with the response minimizing asymmetric expected loss plus investigation cost.",
+      "transitionSignature": "An observation multiplies each class weight by its printed conditional likelihood and normalizes; no class is eliminated by a merely unlikely result. Stopping commits an action whose loss is averaged over the current posterior, with test costs already spent.",
+      "nearestExisting": [
+        {
+          "id": "false-weight",
+          "difference": "Balance experiments eliminate deterministic heavy/light hypotheses; noisy Bayes retains every positive-likelihood class and measures posterior-weighted risk."
+        },
+        {
+          "id": "invisible-ink",
+          "difference": "Ink intersects exact observed bits to certify genuine parcels; this compares costly likelihood ratios and can rationally protect a rare but expensive class."
+        },
+        {
+          "id": "privacy-dials",
+          "difference": "Privacy designs response distributions under ratio/accuracy constraints; it does not update beliefs from obtained observations or choose a risk-sensitive stopping action."
+        }
+      ],
+      "finiteStudies": [
+        "One reliable observation versus several cheap weak ones.",
+        "Conflicting noisy results require posterior updating rather than majority vote.",
+        "Asymmetric losses make most-probable-class guessing insufficient."
+      ],
+      "controls": "Choose an unspent observation card, inspect its revealed result/posterior table; choose response and Stop. Actual likelihood/expense/loss matrix displayed; native buttons/touch.",
+      "failureChallenge": "Stopping above the total expected-cost ceiling or exhausting the investigation allowance without an affordable response loses. A result cannot be replayed for free; all expected costs computed from actual updated weights.",
+      "levelStrategy": "Generate bounded solvable observation contracts with strictly positive likelihoods and asymmetric loss matrices; retain sealed outcomes, not a winning policy. Independent decision search verifies affordable witnesses and counterexamples to naive strategies.",
+      "endless": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "design": "Fresh positive priors, strictly positive likelihoods, sealed outcomes, prices and asymmetric losses;3 classes and3/4 probes. Floating arithmetic is checked with explicit tolerances; legal stop contracts are constructed and independently recovered."
+      },
+      "testPlan": "Bayes normalization and product ratios, no deterministic false elimination, cost paid once, asymmetric optimum different from MAP, early-stop/exhaustion loss; actual UI evidence acquisition and legal late-stage policies."
+    },
+    {
+      "id": "heap-foundry",
+      "name": "Heap Foundry",
+      "definingDecision": "Repair a binary min-heap through actual parent/child exchanges, extract the root, and reheapify the shrinking shape before the next extraction within a swap allowance.",
+      "transitionSignature": "A swap exchanges visible values only along a parent-child edge. Root extraction moves the last value into the root and deletes the last leaf; this changes later repair paths and shape.",
+      "nearestExisting": [
+        {
+          "id": "compare-parade",
+          "difference": "Comparison-network design places fixed bridges that sort every input simultaneously; this operates on a current heap, consumes swaps and repeatedly removes a root/changes shape."
+        },
+        {
+          "id": "branch-librarian",
+          "difference": "BST rotations change links/depths while preserving key order; heap repairs preserve the complete-tree shape, exchange values and remove the minimum."
+        },
+        {
+          "id": "heap-garden",
+          "difference": "Despite its name Heap Garden is contiguous storage allocation/compaction, not a priority heap."
+        }
+      ],
+      "finiteStudies": [
+        "Repair then extract from a small nearly valid heap.",
+        "Choose the smaller child after root replacement.",
+        "Several extractions couple repair order and shrinking-tree budget."
+      ],
+      "controls": "Select parent/child nodes, Exchange; Extract minimum only after inspecting current ordering; tree and array views, output list. Native touch/keyboard.",
+      "failureChallenge": "Invalid nonedge swap refused; extracting before heap order or spending the swap allowance unfinished loses. Finish the sorted extraction ledger.",
+      "levelStrategy": "Generate varied small value arrays/partly repaired heaps; independent heapification/extraction witness establishes budget. Runtime executes actual player exchanges, not automatic hidden repair.",
+      "endless": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "design": "Fresh priorities and disordered heap states; cap9 nodes and a measured legal-repair allowance."
+      },
+      "testPlan": "Parent/child relation, correct root replacement/shrink, equal values, wrong-child excess cost, invalid extract; native full extraction UI and late-stage replay witnesses."
+    },
+    {
+      "id": "diagram-order",
+      "name": "Diagram Order",
+      "definingDecision": "Choose one global variable order for a reduced binary decision diagram so repeated cofactors share nodes and irrelevant tests vanish, meeting a node budget for the whole truth function.",
+      "transitionSignature": "Appending a variable cofactors every current residual function in that order. Identical residuals are shared and nodes with identical low/high children disappear; ordering changes graph size without changing the represented truth function.",
+      "nearestExisting": [
+        {
+          "id": "gate-foundry",
+          "difference": "Fixed-wire circuit synthesis chooses gate operators to match outputs; this fixes the complete truth function and changes a global decision order to control canonical DAG sharing."
+        },
+        {
+          "id": "twenty-questions",
+          "difference": "Specimen decision trees allow different questions per branch and unique item leaves; this uses one global variable order, Boolean terminal reuse, skipped tests and shared subgraphs across branches."
+        },
+        {
+          "id": "prefix-press",
+          "difference": "Prefix coding merges weighted trees to minimize transmission cost; BDD order minimizes shared decision nodes of one Boolean function."
+        }
+      ],
+      "finiteStudies": [
+        "A selector should precede its alternatives.",
+        "Shared cofactors appear only with a suitable order.",
+        "Two selector/data interactions create competing node costs."
+      ],
+      "controls": "Choose next unused variable, remove last order choice, Build/Certify; actual reduced DAG drawing, truth table and shared-node count. Native touch/keyboard.",
+      "failureChallenge": "Completed order above node allowance loses; three failed premature certifications lose. Multiple orders meeting the true reduced-node budget accepted.",
+      "levelStrategy": "Construct varied small nonconstant truth functions from selector/shared-subfunction structures; discard good order. Test-side exhaustive variable permutations independently verify node counts and good/bad orders.",
+      "endless": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "design": "Fresh selector/cofactor dependencies and truth functions; cap5 variables/32 truth rows with genuinely differing order costs."
+      },
+      "testPlan": "Canonical cofactor merging, equal-child reduction, terminal sharing, function preservation, independent node-count evaluator, alternative good orders; all real UI order constructions plus late samples."
+    },
+    {
+      "id": "turning-council",
+      "name": "Turning Council",
+      "definingDecision": "Place a stone on a6\u00d76 board, then rotate one3\u00d73 quadrant by90\u00b0 before the opponent's complete turn; plan both placement and the rearranged existing lines.",
+      "transitionSignature": "Every turn has two mandatory phases: placement into an empty cell, then a chosen quadrant rotation that moves BOTH colors' existing stones. Five contiguous stones after the completed turn wins; simultaneous lines are adjudicated explicitly.",
+      "nearestExisting": [
+        {
+          "id": "four",
+          "difference": "Gravity alignment fixes every played stone and chooses a column; quadrant rotation moves groups of both sides' existing stones after each free placement and changes threat geometry."
+        },
+        {
+          "id": "corner-cabinet",
+          "difference": "The2\u00d72 cube is a single-player orientation/permutation restoration puzzle; this is adversarial evolving line construction with new stones and mandatory subboard rotation."
+        },
+        {
+          "id": "cyclic-courtyard",
+          "difference": "Wrapping row/column shifts restore a fixed permutation; this changes an adversarial board and its lines after each placement."
+        }
+      ],
+      "finiteStudies": [
+        "Restore an interrupted horizontal line with a required top-left quadrant rotation.",
+        "A top-right rotation changes a different cross-quadrant horizontal threat.",
+        "A lower-left rotation restores a vertical cross-quadrant threat; the same actual opponent policy applies."
+      ],
+      "controls": "Tap empty cell; choose quadrant and clockwise/counterclockwise rotation; opponent responds after rotation. Actual board grid, rotation preview and phase labels; native touch/keyboard.",
+      "failureChallenge": "Opponent five-line or a filled board without player victory loses the study; completed-turn simultaneous-line rule explicitly documented. Restart/reset restores the duel.",
+      "levelStrategy": "Playable tactical/full duels with legal nonterminal opener states. Generated optional opening histories and bounded opponent policies are checked for legal player-winning witnesses; no already-lost spawn.",
+      "endless": {
+        "supported": true,
+        "kind": "match-series",
+        "design": "Fresh balanced tactical openings vary five-line geometry, required rearrangement, missing placement and opposing stone positions. A recoverable complete placement-plus-rotation win is constructed then discarded; tests independently find legal witnesses. This is a tactical match series, not empty-board full-match completion."
+      },
+      "testPlan": "Rotation coordinate permutation and both-color movement, mandatory phase, five-line directions, simultaneous wins, illegal occupied placement, opponent legality; actual full player wins on desktop/touch with disclosed legal planning."
+    },
+    {
+      "id": "witness-table",
+      "name": "Witness Table",
+      "definingDecision": "Build an existential witness strategy whose choices may depend only on preceding universal choices, and verify every universal branch rather than one convenient tuple.",
+      "transitionSignature": "The game enumerates universal values; the player commits existential witnesses at their permitted dependency scope. A witness before a universal quantifier must remain fixed across all of that quantifier's branches; later witnesses may vary.",
+      "nearestExisting": [
+        {
+          "id": "proof-lantern",
+          "difference": "Natural deduction manipulates symbolic implication/conjunction facts and scoped assumptions; this chooses semantic witnesses on finite relations and checks quantifier-dependency strategies."
+        },
+        {
+          "id": "twenty-questions",
+          "difference": "Decision trees identify specimens through questions; quantified strategies must satisfy a given relation for all universal assignments and respect when a witness can depend on them."
+        },
+        {
+          "id": "type-loom",
+          "difference": "Type sockets unify shared unknown structures; this is finite first-order quantifier game semantics with committed versus contingent choices."
+        }
+      ],
+      "finiteStudies": [
+        "For every x choose a possibly different neighbor y.",
+        "One y must work for every x: changing quantifier order changes the task.",
+        "For every x choose y, then for every z choose w with y fixed through z branches."
+      ],
+      "controls": "Choose labeled witness from native palette at the current scope; relation diagrams/tables show all constraints, branch ledger and committed witnesses. Keyboard/touch.",
+      "failureChallenge": "An invalid tuple or a committed witness with an unsatisfiable later branch loses. All universal branches must complete; a lucky single tuple cannot win. Finite undo/reset revises scope choices.",
+      "levelStrategy": "Construct finite relation tables from varied valid contingent strategies, add distractor witnesses that fail later branches, discard strategy. Independent quantifier recursion checks all branches and witness dependency.",
+      "endless": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "design": "Fresh relation tables, contingency structures and distractors; cap3\u20134 domain values/quantifier depth4 and bounded branch count."
+      },
+      "testPlan": "\u2200\u2203 versus \u2203\u2200, earlier witness persistence, later witness variation, universal completeness, wrong future branch; actual complete UI strategies and independently checked late studies."
+    },
+    {
+      "id": "one-lie-archive",
+      "name": "One-Lie Archive",
+      "definingDecision": "Identify an object under adversarial binary answers that may contain one lie, selecting repeatable property questions so every surviving at-most-one-lie explanation ends at the same object.",
+      "transitionSignature": "Each answer updates every object's minimum discrepancy count; objects disappear only after more than one mismatch. The adversary chooses a still-consistent answer that preserves uncertainty, so repeating/cross-checking questions changes two uncertainty layers.",
+      "nearestExisting": [
+        {
+          "id": "twenty-questions",
+          "difference": "A truthful full-catalog decision tree routes each specimen deterministically once; this is online robust questioning with lie-used/lie-unused hypotheses and adversarial consistent responses."
+        },
+        {
+          "id": "code-cabinet",
+          "difference": "Mastermind feedback is truthful about a fixed code; a single inconsistent observation here cannot safely eliminate a candidate."
+        },
+        {
+          "id": "false-weight",
+          "difference": "Balance feedback deterministically filters heavy/light worlds; robust questioning retains histories with one permitted discrepancy and proves worst-case identification."
+        }
+      ],
+      "finiteStudies": [
+        "Repeated answers need corroboration.",
+        "Different property questions separate lie-used candidates.",
+        "Sparse attribute codes require planning across a larger ambiguous catalog."
+      ],
+      "controls": "Select a public binary property question and Ask; transcript and discrepancy table are visible; identify only when all consistent worlds name one object. Native buttons/touch.",
+      "failureChallenge": "Question allowance exhausted while multiple objects remain, or premature unsupported identification, loses. Adversarial answers always preserve at least one explanation with\u22641 lie.",
+      "levelStrategy": "Generate distinct binary attribute codes with a verified bounded robust strategy. Runtime response policy preserves maximum uncertainty but never invents an impossible transcript. Independent belief-state minimax plans certify worst-case feasibility.",
+      "endless": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "design": "Fresh unique attribute-code matrices,8 objects and4/5 repeatable binary properties; every study starts with an empty transcript. Globally consistent adversarial answers evolve discrepancy layers and leave a robust bounded-question witness."
+      },
+      "testPlan": "Two discrepancy layers, one lie versus two mismatches, no empty adversary state, repeat questions, worst-case strategy bounds, full native interrogation wins and late-stage minimax witnesses."
+    },
+    {
+      "id": "invariant-gallery",
+      "name": "Invariant Gallery",
+      "definingDecision": "Construct a conjunction of linear inequalities that contains every initial state, excludes every forbidden state and is preserved by every enabled program transition, including currently unreachable states inside the chosen region.",
+      "transitionSignature": "Editing a coefficient/bound changes a region of integer states. Certification checks initial inclusion, safety exclusion and one-step inductive closure under actual guarded transitions; a fitted boundary can fail because it admits a state whose successor escapes.",
+      "nearestExisting": [
+        {
+          "id": "separating-line",
+          "difference": "Separation classifies fixed labeled points by one line/margin; invariance must also quantify over every admitted state and preserve the region through all enabled updates, requiring multiple inequalities."
+        },
+        {
+          "id": "branch-weather",
+          "difference": "Temporal forecasts calculate given-graph satisfaction sets; this synthesizes a compact arithmetic invariant and must reject admitted unreachable states that violate induction."
+        },
+        {
+          "id": "wraparound-witness",
+          "difference": "Overflow witnesses find one input trace; an inductive invariant proves exclusion for all allowed traces."
+        }
+      ],
+      "finiteStudies": [
+        "A preserved x\u2212y bound beats a boundary fitted only to examples.",
+        "Two inequalities exclude a corner while retaining all initial states.",
+        "Unequal increments require the correct slope and a guarded upper bound."
+      ],
+      "controls": "Select inequality, integer coefficient/bound controls, add/remove a limited conjunct, Certify. Integer state-plane drawing, transition arrows/guards and counterexample trace; native sliders/buttons/touch.",
+      "failureChallenge": "Three failed invariants lose; feedback identifies missing initial state, admitted forbidden state, or exact allowed transition leaving the region. Any valid bounded-form invariant accepted.",
+      "levelStrategy": "Construct guarded affine systems with varied known invariant families, add plausible noninductive decoys and forbidden states, discard witness. Independent exhaustive finite-state closure validates every candidate and late generated instance.",
+      "endless": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "design": "Fresh affine update subsets (dy1/2, positive/zero/negative dx), explicit guards, initial subsets and forbidden states. Bounded slopes1/2, cap2\u20134, offset0\u20132 and two small-coefficient inequalities; declared domains up to0\u202612 by0\u20266. Independently recovered legal closure witnesses, including checks of outside-domain successors."
+      },
+      "testPlan": "Initial inclusion versus safety versus induction isolated separately; unreachable admitted-state counterexample, every enabled transition, guard boundaries and alternate invariants; full UI synthesis and late-stage legal witnesses."
+    }
+  ],
+  "sharedVerification": "Exactly20 IDs, all3 finite studies played via native desktop and actual mobile-touch controls, meaningful rule failure/recovery/restart,320/390px bounds and zero page errors. Supported modes require2 fresh completed challenges, cumulative score, terminal recovery, explicit Bank and independently legal late-stage witnesses with pure-model scope disclosed. No catalog/global edits or commits by this owner.",
+  "sourceComparisonNotes": "Sources inspected include original lantern-lines/game.js, good-order/game.js, double-take/game.js; puzzle-lab/engines.js (ice, cube, graph coloring, stability, logic/circuit); logic-room/room.js; number-room/room.js; spatial-room/room.js; discovery-room/room.js (observations/trees/prefixes); workbench-room/structures.mjs,reasoning.mjs,living-systems.mjs,networks.mjs,operating.mjs; signal-lab/machines.mjs,choices.mjs,measures.mjs,certificates.mjs; new constraint-room modules. Protocol/form/civic reservations coordinated separately. No existing engine reused under a new name."
+}

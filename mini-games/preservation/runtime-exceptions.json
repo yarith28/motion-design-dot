@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "exceptions": [
+    {
+      "id": "arrow-audit-generator-termination",
+      "path": "mini-games/puzzle-lab/engines.js",
+      "beforeSha256": "d6de5a4d7a8efe01682a384259c780a3fa88ecd75f32ffa5d9eaa46167d0ebcd",
+      "afterSha256": "8594a9e2f463b49188c8e4050c95fd9510360548d74a5654223b6d43902cae57",
+      "archivePath": "mini-games/preservation/historical/puzzle-lab-engines.js",
+      "archiveSha256": "d6de5a4d7a8efe01682a384259c780a3fa88ecd75f32ffa5d9eaa46167d0ebcd",
+      "startMarker": "E['arrow-audit']={init(stage){",
+      "endMarker": "},render(c)",
+      "reason": "Bound Arrow Audit's cyclic-orientation generation with a guaranteed triangle, 128 candidates and a valid fallback; preserve all bytes outside its initialization block."
+    }
+  ]
+}

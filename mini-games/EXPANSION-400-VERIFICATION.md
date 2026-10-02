@@ -32,6 +32,10 @@ Review corrections include rejecting a Flood-It duplicate and an overlapping dec
 
 The final local aggregate verifies400 desktop/mobile completions and347 touch-gameplay completions. One Parlour suite attempt stopped at204/210 cases without a failure and was terminated after it stalled. Its partial report was rejected; a separate complete210-case retry passed against identical source. All29 current provenance reports now pass. The gate checks the shell's effective finite-stage count, including engines that take their three stages from the manifest.
 
+## Completed400-game milestone
+
+Commit `3239a0be3fce85b851d969327df507a873bd55f0` passed all17 jobs in [exact-commit verification run37062536968](https://github.com/yarith28/motion-design-dot/actions/runs/37062536968) and [Pages deployment37062535553](https://github.com/yarith28/motion-design-dot/actions/runs/37062535553). The live job matched654/654 committed assets, passed800/800 route/reset cases with zero errors or failures, and completed all ten reviewed-fix suites on Chromium140.0.7339.16 and WebKit26.0. Route smoke, full room completion and browser-engine regressions retain their separate scopes. This completed milestone is historical while the500 continuation is assembled.
+
 ## Publication and practical limits
 
 The public catalog is [Small Hours](https://yarith28.github.io/motion-design-dot/mini-games/). [Verify live arcade](https://github.com/yarith28/motion-design-dot/actions/workflows/verify-pages.yml) requires the exact pushed commit: current review/evidence gates,14 independent room-completion jobs, source byte equivalence,800 desktop/mobile route-reset cases, original Chromium/WebKit fix regressions and shared lifecycle checks on both engines. The live artifact records `sourceSha`, browser version, matched assets,800 routes and screenshots; a push alone is not deployment evidence.

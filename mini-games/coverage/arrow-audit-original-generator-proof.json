@@ -1,0 +1,98 @@
+{
+  "sourceSha256": "d6de5a4d7a8efe01682a384259c780a3fa88ecd75f32ffa5d9eaa46167d0ebcd",
+  "scope": "Read-only original engine in an isolated VM with timeout; seeded/constant RNG is a diagnostic input, not a passing gameplay claim.",
+  "records": [
+    {
+      "label": "constant0.99 produces path without chords",
+      "terminated": false,
+      "errorCode": "ERR_SCRIPT_EXECUTION_TIMEOUT",
+      "durationMs": 150.635731,
+      "calls": 186712,
+      "firstRandomValues": [
+        0.99,
+        0.99,
+        0.99,
+        0.99,
+        0.99,
+        0.99,
+        0.99,
+        0.99,
+        0.99,
+        0.99,
+        0.99,
+        0.99,
+        0.99,
+        0.99,
+        0.99,
+        0.99,
+        0.99,
+        0.99,
+        0.99,
+        0.99,
+        0.99,
+        0.99,
+        0.99,
+        0.99
+      ]
+    },
+    {
+      "label": "LCG seed 20",
+      "terminated": false,
+      "errorCode": "ERR_SCRIPT_EXECUTION_TIMEOUT",
+      "durationMs": 150.41552000000001,
+      "calls": 195280,
+      "firstRandomValues": [
+        0.24381902138702571,
+        0.09264221182093024,
+        0.5136992067564279,
+        0.40819421596825123,
+        0.7134025262203068,
+        0.5760248289443552,
+        0.9644665757659823,
+        0.9630948444828391,
+        0.6820807706099004,
+        0.7307674172334373,
+        0.871238460065797,
+        0.43380899354815483,
+        0.15105371526442468,
+        0.9214684893377125,
+        0.5732828287873417,
+        0.8366552228108048,
+        0.7708171277772635,
+        0.6156814224086702,
+        0.35570276458747685,
+        0.3802929427474737,
+        0.3465947115328163,
+        0.7982821338810027,
+        0.8049662488047034,
+        0.6813596216961741
+      ],
+      "seed": 20
+    }
+  ],
+  "tree": {
+    "nodes": 5,
+    "baseEdges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "orientations": 16,
+    "allAcyclic": true,
+    "missingOptionalChordProbability": 0.027680640625000013
+  },
+  "cause": "A tree is fixed outside the rejection loop; every orientation is acyclic, so the loop condition !cycle remains true forever."
+}

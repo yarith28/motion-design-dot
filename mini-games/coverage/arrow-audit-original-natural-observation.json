@@ -1,0 +1,1888 @@
+{
+  "scope": "Read-only failing diagnostic: Math.random observation returns the original random values unchanged; native Start/Restart only; no passing promotion.",
+  "sourceFiles": [
+    {
+      "path": "mini-games/puzzle-lab/engines.js",
+      "sha256": "d6de5a4d7a8efe01682a384259c780a3fa88ecd75f32ffa5d9eaa46167d0ebcd"
+    },
+    {
+      "path": "mini-games/puzzle-lab/room.js",
+      "sha256": "dc06145590e8e587abba9b8648f0a54514a175cc9c15a1ef7b3ea291d5ff53ee"
+    }
+  ],
+  "records": [
+    {
+      "loop": 0,
+      "startCompleted": true,
+      "durationMs": 92.47473200000013
+    },
+    {
+      "loop": 1,
+      "startCompleted": true,
+      "durationMs": 54.39409999999998
+    },
+    {
+      "loop": 2,
+      "startCompleted": true,
+      "durationMs": 51.95109200000002
+    },
+    {
+      "loop": 3,
+      "startCompleted": true,
+      "durationMs": 68.93436299999985
+    },
+    {
+      "loop": 4,
+      "startCompleted": true,
+      "durationMs": 51.570290000000114
+    },
+    {
+      "loop": 5,
+      "startCompleted": true,
+      "durationMs": 51.80349000000001
+    },
+    {
+      "loop": 6,
+      "startCompleted": true,
+      "durationMs": 54.36038499999995
+    },
+    {
+      "loop": 7,
+      "startCompleted": true,
+      "durationMs": 52.31203499999992
+    },
+    {
+      "loop": 8,
+      "startCompleted": true,
+      "durationMs": 54.703411999999844
+    },
+    {
+      "loop": 9,
+      "startCompleted": true,
+      "durationMs": 51.3663039999999
+    },
+    {
+      "loop": 10,
+      "startCompleted": true,
+      "durationMs": 51.67043200000012
+    },
+    {
+      "loop": 11,
+      "startCompleted": true,
+      "durationMs": 51.57741000000033
+    },
+    {
+      "loop": 12,
+      "startCompleted": true,
+      "durationMs": 52.47728499999994
+    },
+    {
+      "loop": 13,
+      "startCompleted": true,
+      "durationMs": 51.31824199999983
+    },
+    {
+      "loop": 14,
+      "startCompleted": true,
+      "durationMs": 53.652751999999964
+    },
+    {
+      "loop": 15,
+      "startCompleted": true,
+      "durationMs": 57.32318000000032
+    },
+    {
+      "loop": 16,
+      "startCompleted": true,
+      "durationMs": 50.74269699999968
+    },
+    {
+      "loop": 17,
+      "startCompleted": true,
+      "durationMs": 48.9619889999999
+    },
+    {
+      "loop": 18,
+      "startCompleted": true,
+      "durationMs": 51.78258000000005
+    },
+    {
+      "loop": 19,
+      "startCompleted": true,
+      "durationMs": 51.712105000000065
+    },
+    {
+      "loop": 20,
+      "startCompleted": true,
+      "durationMs": 52.403102999999646
+    },
+    {
+      "loop": 21,
+      "startCompleted": true,
+      "durationMs": 51.52261300000009
+    },
+    {
+      "loop": 22,
+      "startCompleted": true,
+      "durationMs": 52.511325999999826
+    },
+    {
+      "loop": 23,
+      "startCompleted": true,
+      "durationMs": 51.8698330000002
+    },
+    {
+      "loop": 24,
+      "startCompleted": true,
+      "durationMs": 52.87199899999996
+    },
+    {
+      "loop": 25,
+      "startCompleted": true,
+      "durationMs": 51.97280600000022
+    },
+    {
+      "loop": 26,
+      "startCompleted": true,
+      "durationMs": 52.25526200000013
+    },
+    {
+      "loop": 27,
+      "startCompleted": true,
+      "durationMs": 51.36201699999992
+    },
+    {
+      "loop": 28,
+      "startCompleted": true,
+      "durationMs": 53.6498389999997
+    },
+    {
+      "loop": 29,
+      "startCompleted": true,
+      "durationMs": 50.648415000000114
+    },
+    {
+      "loop": 30,
+      "startCompleted": false,
+      "durationMs": 3003.7899460000003,
+      "name": "TimeoutError",
+      "message": "locator.tap: Timeout 3000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#start')\u001b[22m\n\u001b[2m    - locator resolved to <button id=\"start\" class=\"primary\">Open the first study</button>\u001b[22m\n\u001b[2m  - attempting tap action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - performing tap action\u001b[22m\n"
+    }
+  ],
+  "randomObservations": [
+    {
+      "loop": 0,
+      "event": "nativeStart"
+    },
+    {
+      "loop": 0,
+      "draw": 1,
+      "value": 0.8391903691530529
+    },
+    {
+      "loop": 0,
+      "draw": 2,
+      "value": 0.2577152746413873
+    },
+    {
+      "loop": 0,
+      "draw": 3,
+      "value": 0.3743453913676351
+    },
+    {
+      "loop": 0,
+      "draw": 4,
+      "value": 0.4529088650278582
+    },
+    {
+      "loop": 0,
+      "draw": 5,
+      "value": 0.3333008595601924
+    },
+    {
+      "loop": 0,
+      "draw": 6,
+      "value": 0.9338542882998669
+    },
+    {
+      "loop": 0,
+      "draw": 7,
+      "value": 0.34363684124614424
+    },
+    {
+      "loop": 0,
+      "draw": 8,
+      "value": 0.9810931946743986
+    },
+    {
+      "loop": 0,
+      "draw": 9,
+      "value": 0.4242968982512938
+    },
+    {
+      "loop": 0,
+      "draw": 10,
+      "value": 0.7899345844787992
+    },
+    {
+      "loop": 1,
+      "event": "nativeStart"
+    },
+    {
+      "loop": 1,
+      "draw": 1,
+      "value": 0.9189833191458138
+    },
+    {
+      "loop": 1,
+      "draw": 2,
+      "value": 0.15496804962339794
+    },
+    {
+      "loop": 1,
+      "draw": 3,
+      "value": 0.7211184426258607
+    },
+    {
+      "loop": 1,
+      "draw": 4,
+      "value": 0.33458743333740015
+    },
+    {
+      "loop": 1,
+      "draw": 5,
+      "value": 0.8026669804678053
+    },
+    {
+      "loop": 1,
+      "draw": 6,
+      "value": 0.2879852584426926
+    },
+    {
+      "loop": 1,
+      "draw": 7,
+      "value": 0.8909545100282451
+    },
+    {
+      "loop": 1,
+      "draw": 8,
+      "value": 0.5663607809752591
+    },
+    {
+      "loop": 1,
+      "draw": 9,
+      "value": 0.5450686539957244
+    },
+    {
+      "loop": 1,
+      "draw": 10,
+      "value": 0.4005102420688855
+    },
+    {
+      "loop": 2,
+      "event": "nativeStart"
+    },
+    {
+      "loop": 2,
+      "draw": 1,
+      "value": 0.5753596531881993
+    },
+    {
+      "loop": 2,
+      "draw": 2,
+      "value": 0.5391500911270278
+    },
+    {
+      "loop": 2,
+      "draw": 3,
+      "value": 0.24886828623937085
+    },
+    {
+      "loop": 2,
+      "draw": 4,
+      "value": 0.4437959305887964
+    },
+    {
+      "loop": 2,
+      "draw": 5,
+      "value": 0.6820200427345792
+    },
+    {
+      "loop": 2,
+      "draw": 6,
+      "value": 0.5195514315424239
+    },
+    {
+      "loop": 2,
+      "draw": 7,
+      "value": 0.1212139099448527
+    },
+    {
+      "loop": 2,
+      "draw": 8,
+      "value": 0.29855185125334693
+    },
+    {
+      "loop": 2,
+      "draw": 9,
+      "value": 0.15236939198921584
+    },
+    {
+      "loop": 2,
+      "draw": 10,
+      "value": 0.4683720490336344
+    },
+    {
+      "loop": 3,
+      "event": "nativeStart"
+    },
+    {
+      "loop": 3,
+      "draw": 1,
+      "value": 0.9616406019189591
+    },
+    {
+      "loop": 3,
+      "draw": 2,
+      "value": 0.014169707816106047
+    },
+    {
+      "loop": 3,
+      "draw": 3,
+      "value": 0.0989054025097652
+    },
+    {
+      "loop": 3,
+      "draw": 4,
+      "value": 0.709841855331673
+    },
+    {
+      "loop": 3,
+      "draw": 5,
+      "value": 0.31785903810871385
+    },
+    {
+      "loop": 3,
+      "draw": 6,
+      "value": 0.6666995736162653
+    },
+    {
+      "loop": 3,
+      "draw": 7,
+      "value": 0.9824233176312933
+    },
+    {
+      "loop": 3,
+      "draw": 8,
+      "value": 0.9349744798321109
+    },
+    {
+      "loop": 3,
+      "draw": 9,
+      "value": 0.976125299284305
+    },
+    {
+      "loop": 3,
+      "draw": 10,
+      "value": 0.6868526789334378
+    },
+    {
+      "loop": 4,
+      "event": "nativeStart"
+    },
+    {
+      "loop": 4,
+      "draw": 1,
+      "value": 0.7388793140005059
+    },
+    {
+      "loop": 4,
+      "draw": 2,
+      "value": 0.5485010222006749
+    },
+    {
+      "loop": 4,
+      "draw": 3,
+      "value": 0.7262746367248566
+    },
+    {
+      "loop": 4,
+      "draw": 4,
+      "value": 0.6156287766455111
+    },
+    {
+      "loop": 4,
+      "draw": 5,
+      "value": 0.6466339235943871
+    },
+    {
+      "loop": 4,
+      "draw": 6,
+      "value": 0.4728779320660832
+    },
+    {
+      "loop": 4,
+      "draw": 7,
+      "value": 0.3288166954405892
+    },
+    {
+      "loop": 4,
+      "draw": 8,
+      "value": 0.31245671060074864
+    },
+    {
+      "loop": 4,
+      "draw": 9,
+      "value": 0.7469180329834026
+    },
+    {
+      "loop": 4,
+      "draw": 10,
+      "value": 0.07958561236768746
+    },
+    {
+      "loop": 5,
+      "event": "nativeStart"
+    },
+    {
+      "loop": 5,
+      "draw": 1,
+      "value": 0.6417165133921963
+    },
+    {
+      "loop": 5,
+      "draw": 2,
+      "value": 0.781413856167975
+    },
+    {
+      "loop": 5,
+      "draw": 3,
+      "value": 0.4257239688299227
+    },
+    {
+      "loop": 5,
+      "draw": 4,
+      "value": 0.15042724610333102
+    },
+    {
+      "loop": 5,
+      "draw": 5,
+      "value": 0.2457018390554504
+    },
+    {
+      "loop": 5,
+      "draw": 6,
+      "value": 0.38737874614515166
+    },
+    {
+      "loop": 5,
+      "draw": 7,
+      "value": 0.6789483787744188
+    },
+    {
+      "loop": 5,
+      "draw": 8,
+      "value": 0.842138554385872
+    },
+    {
+      "loop": 5,
+      "draw": 9,
+      "value": 0.9884095625545201
+    },
+    {
+      "loop": 5,
+      "draw": 10,
+      "value": 0.36155826542573166
+    },
+    {
+      "loop": 6,
+      "event": "nativeStart"
+    },
+    {
+      "loop": 6,
+      "draw": 1,
+      "value": 0.2441025791913295
+    },
+    {
+      "loop": 6,
+      "draw": 2,
+      "value": 0.1334333909414639
+    },
+    {
+      "loop": 6,
+      "draw": 3,
+      "value": 0.7418505364949155
+    },
+    {
+      "loop": 6,
+      "draw": 4,
+      "value": 0.18127664822197098
+    },
+    {
+      "loop": 6,
+      "draw": 5,
+      "value": 0.7223474073577638
+    },
+    {
+      "loop": 6,
+      "draw": 6,
+      "value": 0.3070307023980655
+    },
+    {
+      "loop": 6,
+      "draw": 7,
+      "value": 0.3210498542131984
+    },
+    {
+      "loop": 6,
+      "draw": 8,
+      "value": 0.6889665821059212
+    },
+    {
+      "loop": 6,
+      "draw": 9,
+      "value": 0.4914788535466431
+    },
+    {
+      "loop": 6,
+      "draw": 10,
+      "value": 0.23472543544466207
+    },
+    {
+      "loop": 7,
+      "event": "nativeStart"
+    },
+    {
+      "loop": 7,
+      "draw": 1,
+      "value": 0.028483071940578197
+    },
+    {
+      "loop": 7,
+      "draw": 2,
+      "value": 0.847114682993349
+    },
+    {
+      "loop": 7,
+      "draw": 3,
+      "value": 0.4953364767773185
+    },
+    {
+      "loop": 7,
+      "draw": 4,
+      "value": 0.6625576987169136
+    },
+    {
+      "loop": 7,
+      "draw": 5,
+      "value": 0.32388401551420687
+    },
+    {
+      "loop": 7,
+      "draw": 6,
+      "value": 0.7271586427990615
+    },
+    {
+      "loop": 7,
+      "draw": 7,
+      "value": 0.45482017099077054
+    },
+    {
+      "loop": 7,
+      "draw": 8,
+      "value": 0.043465933917987476
+    },
+    {
+      "loop": 7,
+      "draw": 9,
+      "value": 0.4637580189885354
+    },
+    {
+      "loop": 7,
+      "draw": 10,
+      "value": 0.09894905254512731
+    },
+    {
+      "loop": 8,
+      "event": "nativeStart"
+    },
+    {
+      "loop": 8,
+      "draw": 1,
+      "value": 0.9328748631460188
+    },
+    {
+      "loop": 8,
+      "draw": 2,
+      "value": 0.3765373572310673
+    },
+    {
+      "loop": 8,
+      "draw": 3,
+      "value": 0.9074406920084516
+    },
+    {
+      "loop": 8,
+      "draw": 4,
+      "value": 0.3028227220467905
+    },
+    {
+      "loop": 8,
+      "draw": 5,
+      "value": 0.14291575920982402
+    },
+    {
+      "loop": 8,
+      "draw": 6,
+      "value": 0.9497957256748508
+    },
+    {
+      "loop": 8,
+      "draw": 7,
+      "value": 0.5885492598322482
+    },
+    {
+      "loop": 8,
+      "draw": 8,
+      "value": 0.6307381443007897
+    },
+    {
+      "loop": 8,
+      "draw": 9,
+      "value": 0.7591126088152469
+    },
+    {
+      "loop": 8,
+      "draw": 10,
+      "value": 0.585621137534472
+    },
+    {
+      "loop": 9,
+      "event": "nativeStart"
+    },
+    {
+      "loop": 9,
+      "draw": 1,
+      "value": 0.9789206954261324
+    },
+    {
+      "loop": 9,
+      "draw": 2,
+      "value": 0.8122609853118227
+    },
+    {
+      "loop": 9,
+      "draw": 3,
+      "value": 0.2322977392350144
+    },
+    {
+      "loop": 9,
+      "draw": 4,
+      "value": 0.42349302785242915
+    },
+    {
+      "loop": 9,
+      "draw": 5,
+      "value": 0.8613959160871482
+    },
+    {
+      "loop": 9,
+      "draw": 6,
+      "value": 0.43294149184691044
+    },
+    {
+      "loop": 9,
+      "draw": 7,
+      "value": 0.0256486591579973
+    },
+    {
+      "loop": 9,
+      "draw": 8,
+      "value": 0.06865445853821295
+    },
+    {
+      "loop": 9,
+      "draw": 9,
+      "value": 0.33943257638046975
+    },
+    {
+      "loop": 9,
+      "draw": 10,
+      "value": 0.23640558754206353
+    },
+    {
+      "loop": 10,
+      "event": "nativeStart"
+    },
+    {
+      "loop": 10,
+      "draw": 1,
+      "value": 0.6755062549339047
+    },
+    {
+      "loop": 10,
+      "draw": 2,
+      "value": 0.007628878751056334
+    },
+    {
+      "loop": 10,
+      "draw": 3,
+      "value": 0.15769199116260868
+    },
+    {
+      "loop": 10,
+      "draw": 4,
+      "value": 0.7921579762226207
+    },
+    {
+      "loop": 10,
+      "draw": 5,
+      "value": 0.8666541252025727
+    },
+    {
+      "loop": 10,
+      "draw": 6,
+      "value": 0.8388107418895516
+    },
+    {
+      "loop": 10,
+      "draw": 7,
+      "value": 0.808698408278463
+    },
+    {
+      "loop": 10,
+      "draw": 8,
+      "value": 0.4697088559716476
+    },
+    {
+      "loop": 10,
+      "draw": 9,
+      "value": 0.09871131730110694
+    },
+    {
+      "loop": 10,
+      "draw": 10,
+      "value": 0.3457540509282264
+    },
+    {
+      "loop": 11,
+      "event": "nativeStart"
+    },
+    {
+      "loop": 11,
+      "draw": 1,
+      "value": 0.7902018146642632
+    },
+    {
+      "loop": 11,
+      "draw": 2,
+      "value": 0.3783450141738388
+    },
+    {
+      "loop": 11,
+      "draw": 3,
+      "value": 0.8522697911921007
+    },
+    {
+      "loop": 11,
+      "draw": 4,
+      "value": 0.4789103047288963
+    },
+    {
+      "loop": 11,
+      "draw": 5,
+      "value": 0.31525362811686
+    },
+    {
+      "loop": 11,
+      "draw": 6,
+      "value": 0.14966399722735502
+    },
+    {
+      "loop": 11,
+      "draw": 7,
+      "value": 0.6826593925283724
+    },
+    {
+      "loop": 11,
+      "draw": 8,
+      "value": 0.8094101312837928
+    },
+    {
+      "loop": 11,
+      "draw": 9,
+      "value": 0.08590996300418896
+    },
+    {
+      "loop": 11,
+      "draw": 10,
+      "value": 0.5678047470530313
+    },
+    {
+      "loop": 12,
+      "event": "nativeStart"
+    },
+    {
+      "loop": 12,
+      "draw": 1,
+      "value": 0.4314810234234042
+    },
+    {
+      "loop": 12,
+      "draw": 2,
+      "value": 0.6591053957875604
+    },
+    {
+      "loop": 12,
+      "draw": 3,
+      "value": 0.6268314598570891
+    },
+    {
+      "loop": 12,
+      "draw": 4,
+      "value": 0.1776445293218214
+    },
+    {
+      "loop": 12,
+      "draw": 5,
+      "value": 0.3395018136738641
+    },
+    {
+      "loop": 12,
+      "draw": 6,
+      "value": 0.4826648231997719
+    },
+    {
+      "loop": 12,
+      "draw": 7,
+      "value": 0.546655353267227
+    },
+    {
+      "loop": 12,
+      "draw": 8,
+      "value": 0.06627063435286973
+    },
+    {
+      "loop": 12,
+      "draw": 9,
+      "value": 0.1749484813307981
+    },
+    {
+      "loop": 12,
+      "draw": 10,
+      "value": 0.49683477122089903
+    },
+    {
+      "loop": 13,
+      "event": "nativeStart"
+    },
+    {
+      "loop": 13,
+      "draw": 1,
+      "value": 0.28859949776248894
+    },
+    {
+      "loop": 13,
+      "draw": 2,
+      "value": 0.19881656180344343
+    },
+    {
+      "loop": 13,
+      "draw": 3,
+      "value": 0.845455182621414
+    },
+    {
+      "loop": 13,
+      "draw": 4,
+      "value": 0.6913672489149928
+    },
+    {
+      "loop": 13,
+      "draw": 5,
+      "value": 0.8622048140560523
+    },
+    {
+      "loop": 13,
+      "draw": 6,
+      "value": 0.38444521790967856
+    },
+    {
+      "loop": 13,
+      "draw": 7,
+      "value": 0.08813264397875975
+    },
+    {
+      "loop": 13,
+      "draw": 8,
+      "value": 0.8637990684755382
+    },
+    {
+      "loop": 13,
+      "draw": 9,
+      "value": 0.35359866820858166
+    },
+    {
+      "loop": 13,
+      "draw": 10,
+      "value": 0.6551914732214131
+    },
+    {
+      "loop": 14,
+      "event": "nativeStart"
+    },
+    {
+      "loop": 14,
+      "draw": 1,
+      "value": 0.379968074690324
+    },
+    {
+      "loop": 14,
+      "draw": 2,
+      "value": 0.6165192802680111
+    },
+    {
+      "loop": 14,
+      "draw": 3,
+      "value": 0.9600465696183557
+    },
+    {
+      "loop": 14,
+      "draw": 4,
+      "value": 0.9020510110619464
+    },
+    {
+      "loop": 14,
+      "draw": 5,
+      "value": 0.30313621356423304
+    },
+    {
+      "loop": 14,
+      "draw": 6,
+      "value": 0.7190946028996896
+    },
+    {
+      "loop": 14,
+      "draw": 7,
+      "value": 0.2371982063167576
+    },
+    {
+      "loop": 14,
+      "draw": 8,
+      "value": 0.3202324407144468
+    },
+    {
+      "loop": 14,
+      "draw": 9,
+      "value": 0.8277815060341334
+    },
+    {
+      "loop": 14,
+      "draw": 10,
+      "value": 0.8590917921566588
+    },
+    {
+      "loop": 15,
+      "event": "nativeStart"
+    },
+    {
+      "loop": 15,
+      "draw": 1,
+      "value": 0.7130474464031816
+    },
+    {
+      "loop": 15,
+      "draw": 2,
+      "value": 0.851718190424334
+    },
+    {
+      "loop": 15,
+      "draw": 3,
+      "value": 0.6722133308736288
+    },
+    {
+      "loop": 15,
+      "draw": 4,
+      "value": 0.8580256822155016
+    },
+    {
+      "loop": 15,
+      "draw": 5,
+      "value": 0.8107393150146053
+    },
+    {
+      "loop": 15,
+      "draw": 6,
+      "value": 0.5957595920897187
+    },
+    {
+      "loop": 15,
+      "draw": 7,
+      "value": 0.02780252344514056
+    },
+    {
+      "loop": 15,
+      "draw": 8,
+      "value": 0.6902940700796745
+    },
+    {
+      "loop": 15,
+      "draw": 9,
+      "value": 0.18826310748763242
+    },
+    {
+      "loop": 15,
+      "draw": 10,
+      "value": 0.1378170107557638
+    },
+    {
+      "loop": 16,
+      "event": "nativeStart"
+    },
+    {
+      "loop": 16,
+      "draw": 1,
+      "value": 0.7350271914659503
+    },
+    {
+      "loop": 16,
+      "draw": 2,
+      "value": 0.8124187680300513
+    },
+    {
+      "loop": 16,
+      "draw": 3,
+      "value": 0.09891130067295628
+    },
+    {
+      "loop": 16,
+      "draw": 4,
+      "value": 0.8333045332122865
+    },
+    {
+      "loop": 16,
+      "draw": 5,
+      "value": 0.8627750723306941
+    },
+    {
+      "loop": 16,
+      "draw": 6,
+      "value": 0.1647164325200544
+    },
+    {
+      "loop": 16,
+      "draw": 7,
+      "value": 0.6763587908627815
+    },
+    {
+      "loop": 16,
+      "draw": 8,
+      "value": 0.06395845074169915
+    },
+    {
+      "loop": 16,
+      "draw": 9,
+      "value": 0.6197664012361075
+    },
+    {
+      "loop": 16,
+      "draw": 10,
+      "value": 0.9264088575725917
+    },
+    {
+      "loop": 17,
+      "event": "nativeStart"
+    },
+    {
+      "loop": 17,
+      "draw": 1,
+      "value": 0.25477187956216474
+    },
+    {
+      "loop": 17,
+      "draw": 2,
+      "value": 0.4591923215752658
+    },
+    {
+      "loop": 17,
+      "draw": 3,
+      "value": 0.8824718653921358
+    },
+    {
+      "loop": 17,
+      "draw": 4,
+      "value": 0.8056547232768363
+    },
+    {
+      "loop": 17,
+      "draw": 5,
+      "value": 0.8440804975304704
+    },
+    {
+      "loop": 17,
+      "draw": 6,
+      "value": 0.9456193817632388
+    },
+    {
+      "loop": 17,
+      "draw": 7,
+      "value": 0.516053013627327
+    },
+    {
+      "loop": 17,
+      "draw": 8,
+      "value": 0.2288565723649938
+    },
+    {
+      "loop": 17,
+      "draw": 9,
+      "value": 0.27647691731409174
+    },
+    {
+      "loop": 17,
+      "draw": 10,
+      "value": 0.8392940931908778
+    },
+    {
+      "loop": 18,
+      "event": "nativeStart"
+    },
+    {
+      "loop": 18,
+      "draw": 1,
+      "value": 0.393294123157624
+    },
+    {
+      "loop": 18,
+      "draw": 2,
+      "value": 0.06481496142261434
+    },
+    {
+      "loop": 18,
+      "draw": 3,
+      "value": 0.945781199925087
+    },
+    {
+      "loop": 18,
+      "draw": 4,
+      "value": 0.43832790869687954
+    },
+    {
+      "loop": 18,
+      "draw": 5,
+      "value": 0.7549931375862166
+    },
+    {
+      "loop": 18,
+      "draw": 6,
+      "value": 0.3171037589946172
+    },
+    {
+      "loop": 18,
+      "draw": 7,
+      "value": 0.9734519991336281
+    },
+    {
+      "loop": 18,
+      "draw": 8,
+      "value": 0.5348758665899481
+    },
+    {
+      "loop": 18,
+      "draw": 9,
+      "value": 0.3339309651873603
+    },
+    {
+      "loop": 18,
+      "draw": 10,
+      "value": 0.7823081018358061
+    },
+    {
+      "loop": 19,
+      "event": "nativeStart"
+    },
+    {
+      "loop": 19,
+      "draw": 1,
+      "value": 0.2351616831275778
+    },
+    {
+      "loop": 19,
+      "draw": 2,
+      "value": 0.9785011984289388
+    },
+    {
+      "loop": 19,
+      "draw": 3,
+      "value": 0.5591234593918363
+    },
+    {
+      "loop": 19,
+      "draw": 4,
+      "value": 0.591586465710154
+    },
+    {
+      "loop": 19,
+      "draw": 5,
+      "value": 0.5100432182318949
+    },
+    {
+      "loop": 19,
+      "draw": 6,
+      "value": 0.9946037346050433
+    },
+    {
+      "loop": 19,
+      "draw": 7,
+      "value": 0.8480737104542212
+    },
+    {
+      "loop": 19,
+      "draw": 8,
+      "value": 0.5777944705715318
+    },
+    {
+      "loop": 19,
+      "draw": 9,
+      "value": 0.06763365666928245
+    },
+    {
+      "loop": 19,
+      "draw": 10,
+      "value": 0.2912779611197617
+    },
+    {
+      "loop": 20,
+      "event": "nativeStart"
+    },
+    {
+      "loop": 20,
+      "draw": 1,
+      "value": 0.7811502596414206
+    },
+    {
+      "loop": 20,
+      "draw": 2,
+      "value": 0.2914720460338541
+    },
+    {
+      "loop": 20,
+      "draw": 3,
+      "value": 0.6717871546415782
+    },
+    {
+      "loop": 20,
+      "draw": 4,
+      "value": 0.17400190834632623
+    },
+    {
+      "loop": 20,
+      "draw": 5,
+      "value": 0.9144363124187335
+    },
+    {
+      "loop": 20,
+      "draw": 6,
+      "value": 0.4080789570262551
+    },
+    {
+      "loop": 20,
+      "draw": 7,
+      "value": 0.2898071324335054
+    },
+    {
+      "loop": 20,
+      "draw": 8,
+      "value": 0.5440710368322537
+    },
+    {
+      "loop": 20,
+      "draw": 9,
+      "value": 0.9025369837320667
+    },
+    {
+      "loop": 20,
+      "draw": 10,
+      "value": 0.010618211143396228
+    },
+    {
+      "loop": 21,
+      "event": "nativeStart"
+    },
+    {
+      "loop": 21,
+      "draw": 1,
+      "value": 0.029053012753395224
+    },
+    {
+      "loop": 21,
+      "draw": 2,
+      "value": 0.14705310834298724
+    },
+    {
+      "loop": 21,
+      "draw": 3,
+      "value": 0.48494766125667754
+    },
+    {
+      "loop": 21,
+      "draw": 4,
+      "value": 0.45382224820520034
+    },
+    {
+      "loop": 21,
+      "draw": 5,
+      "value": 0.29188572224199083
+    },
+    {
+      "loop": 21,
+      "draw": 6,
+      "value": 0.9042519572139646
+    },
+    {
+      "loop": 21,
+      "draw": 7,
+      "value": 0.5241132542851392
+    },
+    {
+      "loop": 21,
+      "draw": 8,
+      "value": 0.44722197604477
+    },
+    {
+      "loop": 21,
+      "draw": 9,
+      "value": 0.5314018438190361
+    },
+    {
+      "loop": 21,
+      "draw": 10,
+      "value": 0.4257117637355706
+    },
+    {
+      "loop": 22,
+      "event": "nativeStart"
+    },
+    {
+      "loop": 22,
+      "draw": 1,
+      "value": 0.47996093015997265
+    },
+    {
+      "loop": 22,
+      "draw": 2,
+      "value": 0.9687948206169045
+    },
+    {
+      "loop": 22,
+      "draw": 3,
+      "value": 0.3904966827683556
+    },
+    {
+      "loop": 22,
+      "draw": 4,
+      "value": 0.4081854940821237
+    },
+    {
+      "loop": 22,
+      "draw": 5,
+      "value": 0.6003307854594341
+    },
+    {
+      "loop": 22,
+      "draw": 6,
+      "value": 0.3566391460824201
+    },
+    {
+      "loop": 22,
+      "draw": 7,
+      "value": 0.3856072151486374
+    },
+    {
+      "loop": 22,
+      "draw": 8,
+      "value": 0.01569852409492134
+    },
+    {
+      "loop": 22,
+      "draw": 9,
+      "value": 0.8288920204996999
+    },
+    {
+      "loop": 22,
+      "draw": 10,
+      "value": 0.07781448663970647
+    },
+    {
+      "loop": 23,
+      "event": "nativeStart"
+    },
+    {
+      "loop": 23,
+      "draw": 1,
+      "value": 0.8619271616450738
+    },
+    {
+      "loop": 23,
+      "draw": 2,
+      "value": 0.11571594454880219
+    },
+    {
+      "loop": 23,
+      "draw": 3,
+      "value": 0.40358861816554525
+    },
+    {
+      "loop": 23,
+      "draw": 4,
+      "value": 0.015782272959075305
+    },
+    {
+      "loop": 23,
+      "draw": 5,
+      "value": 0.8698151192483327
+    },
+    {
+      "loop": 23,
+      "draw": 6,
+      "value": 0.5611293680859976
+    },
+    {
+      "loop": 23,
+      "draw": 7,
+      "value": 0.7492587411585061
+    },
+    {
+      "loop": 23,
+      "draw": 8,
+      "value": 0.38199058035182787
+    },
+    {
+      "loop": 23,
+      "draw": 9,
+      "value": 0.5122782775047651
+    },
+    {
+      "loop": 23,
+      "draw": 10,
+      "value": 0.8685761164726071
+    },
+    {
+      "loop": 24,
+      "event": "nativeStart"
+    },
+    {
+      "loop": 24,
+      "draw": 1,
+      "value": 0.8842189796499274
+    },
+    {
+      "loop": 24,
+      "draw": 2,
+      "value": 0.4519517105063957
+    },
+    {
+      "loop": 24,
+      "draw": 3,
+      "value": 0.9741811466022778
+    },
+    {
+      "loop": 24,
+      "draw": 4,
+      "value": 0.7566119102141129
+    },
+    {
+      "loop": 24,
+      "draw": 5,
+      "value": 0.5344536469856638
+    },
+    {
+      "loop": 24,
+      "draw": 6,
+      "value": 0.938224153338928
+    },
+    {
+      "loop": 24,
+      "draw": 7,
+      "value": 0.26503869412733594
+    },
+    {
+      "loop": 24,
+      "draw": 8,
+      "value": 0.18857862474861475
+    },
+    {
+      "loop": 24,
+      "draw": 9,
+      "value": 0.13365051744121892
+    },
+    {
+      "loop": 24,
+      "draw": 10,
+      "value": 0.7849729367615013
+    },
+    {
+      "loop": 25,
+      "event": "nativeStart"
+    },
+    {
+      "loop": 25,
+      "draw": 1,
+      "value": 0.630605987273626
+    },
+    {
+      "loop": 25,
+      "draw": 2,
+      "value": 0.047188213566267456
+    },
+    {
+      "loop": 25,
+      "draw": 3,
+      "value": 0.08064885755458284
+    },
+    {
+      "loop": 25,
+      "draw": 4,
+      "value": 0.6936602003510611
+    },
+    {
+      "loop": 25,
+      "draw": 5,
+      "value": 0.7724931341574182
+    },
+    {
+      "loop": 25,
+      "draw": 6,
+      "value": 0.5545663369980842
+    },
+    {
+      "loop": 25,
+      "draw": 7,
+      "value": 0.9310613628367547
+    },
+    {
+      "loop": 25,
+      "draw": 8,
+      "value": 0.7457031401167693
+    },
+    {
+      "loop": 25,
+      "draw": 9,
+      "value": 0.5176698074483973
+    },
+    {
+      "loop": 25,
+      "draw": 10,
+      "value": 0.3321896053666761
+    },
+    {
+      "loop": 26,
+      "event": "nativeStart"
+    },
+    {
+      "loop": 26,
+      "draw": 1,
+      "value": 0.22273741460182017
+    },
+    {
+      "loop": 26,
+      "draw": 2,
+      "value": 0.8561619781061726
+    },
+    {
+      "loop": 26,
+      "draw": 3,
+      "value": 0.9875778819636784
+    },
+    {
+      "loop": 26,
+      "draw": 4,
+      "value": 0.8501462670362346
+    },
+    {
+      "loop": 26,
+      "draw": 5,
+      "value": 0.577829030076439
+    },
+    {
+      "loop": 26,
+      "draw": 6,
+      "value": 0.8883569789865372
+    },
+    {
+      "loop": 26,
+      "draw": 7,
+      "value": 0.050539399190472234
+    },
+    {
+      "loop": 26,
+      "draw": 8,
+      "value": 0.5602143479285753
+    },
+    {
+      "loop": 26,
+      "draw": 9,
+      "value": 0.6796988415639993
+    },
+    {
+      "loop": 26,
+      "draw": 10,
+      "value": 0.43218152861930925
+    },
+    {
+      "loop": 27,
+      "event": "nativeStart"
+    },
+    {
+      "loop": 27,
+      "draw": 1,
+      "value": 0.111351848105811
+    },
+    {
+      "loop": 27,
+      "draw": 2,
+      "value": 0.7801971483664024
+    },
+    {
+      "loop": 27,
+      "draw": 3,
+      "value": 0.7273885530294513
+    },
+    {
+      "loop": 27,
+      "draw": 4,
+      "value": 0.015161666533644147
+    },
+    {
+      "loop": 27,
+      "draw": 5,
+      "value": 0.8517376813696604
+    },
+    {
+      "loop": 27,
+      "draw": 6,
+      "value": 0.12938528611629396
+    },
+    {
+      "loop": 27,
+      "draw": 7,
+      "value": 0.7429872045547068
+    },
+    {
+      "loop": 27,
+      "draw": 8,
+      "value": 0.18449852740926598
+    },
+    {
+      "loop": 27,
+      "draw": 9,
+      "value": 0.9047302233631883
+    },
+    {
+      "loop": 27,
+      "draw": 10,
+      "value": 0.643313867181399
+    },
+    {
+      "loop": 28,
+      "event": "nativeStart"
+    },
+    {
+      "loop": 28,
+      "draw": 1,
+      "value": 0.3657444759067062
+    },
+    {
+      "loop": 28,
+      "draw": 2,
+      "value": 0.022868033427246193
+    },
+    {
+      "loop": 28,
+      "draw": 3,
+      "value": 0.6234789451642583
+    },
+    {
+      "loop": 28,
+      "draw": 4,
+      "value": 0.6371226264418044
+    },
+    {
+      "loop": 28,
+      "draw": 5,
+      "value": 0.49259266269264
+    },
+    {
+      "loop": 28,
+      "draw": 6,
+      "value": 0.8786284636729584
+    },
+    {
+      "loop": 28,
+      "draw": 7,
+      "value": 0.13497212608134612
+    },
+    {
+      "loop": 28,
+      "draw": 8,
+      "value": 0.5154893556641156
+    },
+    {
+      "loop": 28,
+      "draw": 9,
+      "value": 0.1238930914632781
+    },
+    {
+      "loop": 28,
+      "draw": 10,
+      "value": 0.7255595867577781
+    },
+    {
+      "loop": 29,
+      "event": "nativeStart"
+    },
+    {
+      "loop": 29,
+      "draw": 1,
+      "value": 0.741520911257755
+    },
+    {
+      "loop": 29,
+      "draw": 2,
+      "value": 0.9308921349780557
+    },
+    {
+      "loop": 29,
+      "draw": 3,
+      "value": 0.9370903765033356
+    },
+    {
+      "loop": 29,
+      "draw": 4,
+      "value": 0.7954049338368546
+    },
+    {
+      "loop": 29,
+      "draw": 5,
+      "value": 0.9374586272897752
+    },
+    {
+      "loop": 29,
+      "draw": 6,
+      "value": 0.32595673168932504
+    },
+    {
+      "loop": 29,
+      "draw": 7,
+      "value": 0.44794509734531907
+    },
+    {
+      "loop": 29,
+      "draw": 8,
+      "value": 0.8691488535859703
+    },
+    {
+      "loop": 29,
+      "draw": 9,
+      "value": 0.5940530987344294
+    },
+    {
+      "loop": 29,
+      "draw": 10,
+      "value": 0.7610229178902934
+    },
+    {
+      "loop": 30,
+      "event": "nativeStart"
+    },
+    {
+      "loop": 30,
+      "draw": 1,
+      "value": 0.31078366637215926
+    },
+    {
+      "loop": 30,
+      "draw": 2,
+      "value": 0.37149974180870493
+    },
+    {
+      "loop": 30,
+      "draw": 3,
+      "value": 0.6609612053828952
+    },
+    {
+      "loop": 30,
+      "draw": 4,
+      "value": 0.6517852618135407
+    },
+    {
+      "loop": 30,
+      "draw": 5,
+      "value": 0.6048729735695025
+    },
+    {
+      "loop": 30,
+      "draw": 6,
+      "value": 0.7665577030167688
+    },
+    {
+      "loop": 30,
+      "draw": 7,
+      "value": 0.4258780669172878
+    },
+    {
+      "loop": 30,
+      "draw": 8,
+      "value": 0.7431522175695484
+    },
+    {
+      "loop": 30,
+      "draw": 9,
+      "value": 0.5936578888903659
+    },
+    {
+      "loop": 30,
+      "draw": 10,
+      "value": 0.9001182945626487
+    }
+  ],
+  "sourceUnchanged": true,
+  "failureGraph": {
+    "observedNativeLoopZeroBased": 30,
+    "attempt": 31,
+    "originalMathRandomUnchanged": true,
+    "order": [
+      0,
+      2,
+      3,
+      4,
+      1
+    ],
+    "edges": [
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        1
+      ]
+    ],
+    "edgeCount": 5,
+    "exactReversalsRequired": 2,
+    "choices": 10,
+    "allAllowedOrientationsAcyclic": true,
+    "reason": "The graph is one five-edge undirected cycle. Its two possible directed cycle orientations require reversing exactly one or four edges of the original DAG; the fixed two-edge reversal sampler cannot reach either."
+  }
+}

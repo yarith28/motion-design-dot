@@ -1,0 +1,1467 @@
+{
+  "passed": true,
+  "sourceHash": "338e9be02221b6272b681da68b34b23453d02c3954a7e021da285fdbd17e54b4",
+  "sourceHashes": {
+    "trajectory-room/ENDLESS-REVIEW.md": "6f2a26354640c53144b4c1ac2d45ae1f319e0ec2858ec1b545fb6d3cd7cf9216",
+    "trajectory-room/README.md": "5d23ba8fca2340ba61a403f0180c544a2301ff50105be094259d7b168914714d",
+    "trajectory-room/contact.mjs": "2ca3400b152bf9952cf5e5b0fd52fcd5c588c04549b08f6f21f828cfbf5b6830",
+    "trajectory-room/core.mjs": "426aecd3bac2e6499c8f60de2d435c4ffba9783677e2429f9f44f14244fda771",
+    "trajectory-room/engines.mjs": "1a7f5fd92bb6a8a527747033091e0adcd2f13a9b420d90046d5baad8c999270f",
+    "trajectory-room/fluids.mjs": "df9af92919191ee9073bd360c2c3142e4a5b67fea9aa45b4af611ca76cc89db0",
+    "trajectory-room/games.json": "e943d273f307a3359cb242c6918d7f85067beb2763ddc8816a96255a9bef1e06",
+    "trajectory-room/handles.mjs": "e79ac184001304099181241ec2d2425e375f80d0533c1eac00d6a2918faebb60",
+    "trajectory-room/index.html": "f6947c2e4f4f75dbd0bead31dcbae133053599b78fa1685dd5587d04ecf98ce0",
+    "trajectory-room/orbits.mjs": "b176d30e3cb60fde41012d293cf04f2528f582bd398af3a1bfd3b0321ebb84b7",
+    "trajectory-room/room.mjs": "faf0bd8143c3875126c73975a8c5bee9782f716d1048f0d3367d57681a243054",
+    "trajectory-room/transport.mjs": "eef2484a8e7e1343b2475f937d3c23ac735e85975fe1da47da72dfe3020ef302",
+    "journey/journey.css": "e77e387075c86ad3addcf7220c9eeabfc06fec45987116205b75ed50cac83e67",
+    "journey/journey.mjs": "86a92fbd52ee7f5d34fd01225120feb74a336dd499a11e9e4780cf8f1f207872",
+    "tests/trajectory-room-opening.cjs": "5362eabf05a6ee130fe46715b4ad0d1bf8d0ab38cc7710f30e394f9180e1493b"
+  },
+  "generatedAt": "2026-10-02T22:06:14.143Z",
+  "cases": [
+    {
+      "id": "rendezvous-window",
+      "seed": 0,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "ballast-bay",
+      "seed": 0,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "induction-coast",
+      "seed": 0,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "resonant-switch",
+      "seed": 0,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "suspension-course",
+      "seed": 0,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "pawl-and-tooth",
+      "seed": 0,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "footfall-foundry",
+      "seed": 0,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "belt-corner",
+      "seed": 0,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "stance-circle",
+      "seed": 0,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "compliant-socket",
+      "seed": 0,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "stick-slip-studio",
+      "seed": 0,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "backlash-observatory",
+      "seed": 0,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "surge-passage",
+      "seed": 0,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "osmotic-port",
+      "seed": 0,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "rocking-parcel",
+      "seed": 0,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "loop-runner",
+      "seed": 0,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "refractory-route",
+      "seed": 0,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "air-sieve",
+      "seed": 0,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "meniscus-maze",
+      "seed": 0,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "soft-sluice",
+      "seed": 0,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "rendezvous-window",
+      "seed": 1,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "ballast-bay",
+      "seed": 1,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "induction-coast",
+      "seed": 1,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "resonant-switch",
+      "seed": 1,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "suspension-course",
+      "seed": 1,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "pawl-and-tooth",
+      "seed": 1,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "footfall-foundry",
+      "seed": 1,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "belt-corner",
+      "seed": 1,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "stance-circle",
+      "seed": 1,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "compliant-socket",
+      "seed": 1,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "stick-slip-studio",
+      "seed": 1,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "backlash-observatory",
+      "seed": 1,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "surge-passage",
+      "seed": 1,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "osmotic-port",
+      "seed": 1,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "rocking-parcel",
+      "seed": 1,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "loop-runner",
+      "seed": 1,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "refractory-route",
+      "seed": 1,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "air-sieve",
+      "seed": 1,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "meniscus-maze",
+      "seed": 1,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "soft-sluice",
+      "seed": 1,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "rendezvous-window",
+      "seed": 20261002,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "ballast-bay",
+      "seed": 20261002,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "induction-coast",
+      "seed": 20261002,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "resonant-switch",
+      "seed": 20261002,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "suspension-course",
+      "seed": 20261002,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "pawl-and-tooth",
+      "seed": 20261002,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "footfall-foundry",
+      "seed": 20261002,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "belt-corner",
+      "seed": 20261002,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "stance-circle",
+      "seed": 20261002,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "compliant-socket",
+      "seed": 20261002,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "stick-slip-studio",
+      "seed": 20261002,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "backlash-observatory",
+      "seed": 20261002,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "surge-passage",
+      "seed": 20261002,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "osmotic-port",
+      "seed": 20261002,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "rocking-parcel",
+      "seed": 20261002,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "loop-runner",
+      "seed": 20261002,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "refractory-route",
+      "seed": 20261002,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "air-sieve",
+      "seed": 20261002,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "meniscus-maze",
+      "seed": 20261002,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "soft-sluice",
+      "seed": 20261002,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "rendezvous-window",
+      "seed": 4294967295,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "ballast-bay",
+      "seed": 4294967295,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "induction-coast",
+      "seed": 4294967295,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "resonant-switch",
+      "seed": 4294967295,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "suspension-course",
+      "seed": 4294967295,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "pawl-and-tooth",
+      "seed": 4294967295,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "footfall-foundry",
+      "seed": 4294967295,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "belt-corner",
+      "seed": 4294967295,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "stance-circle",
+      "seed": 4294967295,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "compliant-socket",
+      "seed": 4294967295,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "stick-slip-studio",
+      "seed": 4294967295,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "backlash-observatory",
+      "seed": 4294967295,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "surge-passage",
+      "seed": 4294967295,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "osmotic-port",
+      "seed": 4294967295,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "rocking-parcel",
+      "seed": 4294967295,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "loop-runner",
+      "seed": 4294967295,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "refractory-route",
+      "seed": 4294967295,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "air-sieve",
+      "seed": 4294967295,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "meniscus-maze",
+      "seed": 4294967295,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "soft-sluice",
+      "seed": 4294967295,
+      "profile": "desktop",
+      "inputMethod": "Native focused Enter",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "rendezvous-window",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "ballast-bay",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "induction-coast",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "resonant-switch",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "suspension-course",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "pawl-and-tooth",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "footfall-foundry",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "belt-corner",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "stance-circle",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "compliant-socket",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "stick-slip-studio",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "backlash-observatory",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "surge-passage",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "osmotic-port",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "rocking-parcel",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "loop-runner",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "refractory-route",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "air-sieve",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "meniscus-maze",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "soft-sluice",
+      "seed": 0,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "rendezvous-window",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "ballast-bay",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "induction-coast",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "resonant-switch",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "suspension-course",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "pawl-and-tooth",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "footfall-foundry",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "belt-corner",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "stance-circle",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "compliant-socket",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "stick-slip-studio",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "backlash-observatory",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "surge-passage",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "osmotic-port",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "rocking-parcel",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "loop-runner",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "refractory-route",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "air-sieve",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "meniscus-maze",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "soft-sluice",
+      "seed": 1,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "rendezvous-window",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "ballast-bay",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "induction-coast",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "resonant-switch",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "suspension-course",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "pawl-and-tooth",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "footfall-foundry",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "belt-corner",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "stance-circle",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "compliant-socket",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "stick-slip-studio",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "backlash-observatory",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "surge-passage",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "osmotic-port",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "rocking-parcel",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "loop-runner",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "refractory-route",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "air-sieve",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "meniscus-maze",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "soft-sluice",
+      "seed": 20261002,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "rendezvous-window",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "ballast-bay",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "induction-coast",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "resonant-switch",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "suspension-course",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "pawl-and-tooth",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "footfall-foundry",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "belt-corner",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "stance-circle",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "compliant-socket",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "stick-slip-studio",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "backlash-observatory",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "surge-passage",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "osmotic-port",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "rocking-parcel",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "loop-runner",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "refractory-route",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "air-sieve",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "meniscus-maze",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    },
+    {
+      "id": "soft-sluice",
+      "seed": 4294967295,
+      "profile": "mobile-touch",
+      "inputMethod": "Native touchscreen tap",
+      "enabled": true,
+      "changed": true,
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "scope": "Opening-state regression only: every manifest smoke action must be enabled and change rendered board text, status, score or outcome at four public replay seeds on desktop and actual touchscreen. Full campaigns are separately tested.",
+  "completedAt": "2026-10-02T22:06:45.047Z"
+}

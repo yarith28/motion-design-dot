@@ -1,0 +1,554 @@
+{
+  "room": "protocol-room",
+  "count": 20,
+  "status": "Proposals for source and cross-room distinctness review before implementation",
+  "inspectedCatalogs": [
+    "tests/fixtures/baseline300.json",
+    "constraint-room/games.json",
+    "field-room/games.json",
+    "signal-lab/games.json",
+    "commons-room/games.json",
+    "atelier-room/games.json"
+  ],
+  "inspectedNearestSources": [
+    "workbench-room/storage.mjs",
+    "workbench-room/computation.mjs",
+    "workbench-room/structures.mjs",
+    "workbench-room/networks.mjs",
+    "workbench-room/collective.mjs",
+    "workbench-room/living-systems.mjs",
+    "systems-room/signal-cabinet.mjs",
+    "signal-lab/machines.mjs",
+    "signal-lab/certificates.mjs",
+    "signal-lab/measures.mjs",
+    "signal-lab/choices.mjs",
+    "discovery-room/room.js",
+    "spatial-room/room.js",
+    "number-room/room.js",
+    "puzzle-lab/engines.js"
+  ],
+  "sharedControls": "Every essential choice uses a labeled native button or range: touch tap, or Tab with Enter/Space and arrows for ranges. Graphs, page diagrams and tables show actual state; no ASCII-only board or shipped solution helper.",
+  "sharedVerification": "Test-only legal witnesses generate ordinary native-control action plans. Browser desktop and touch profiles complete all three finite studies, meaningful initial failure/recovery, scores, restart, Undo/Reset, 320px bounds and no page errors. Any supported stream additionally plays two fresh studies, fails/restarts late, and has dispersed-seed/high-stage model witnesses with source hashes.",
+  "games": [
+    {
+      "id": "page-orchard",
+      "name": "Page Orchard",
+      "definingDecision": "Repair an ordered multi-key page tree after insertions and deletions: choose a separator to promote, a sibling to borrow from, or a merge while retaining equal leaf depth and minimum occupancy.",
+      "transitions": "Inserting or deleting the next requested key can overflow or underfill a page. Split changes a parent separator and creates a page; borrowing rotates a separator through the parent; merging consumes a separator and can propagate underfill upward. Root contraction changes tree height.",
+      "nearestExisting": [
+        {
+          "id": "branch-librarian",
+          "source": "workbench-room/structures.mjs",
+          "difference": "That model rotates one binary child to change frequency-weighted depths. This model has multi-key fixed-capacity pages, separators, occupancy invariants and split/borrow/merge propagation; rotations cannot repair its overflow."
+        },
+        {
+          "id": "heap-garden",
+          "source": "workbench-room/storage.mjs",
+          "difference": "No contiguous byte placement or pinned physical blocks: tree search order and page occupancy determine legality."
+        }
+      ],
+      "controls": "Select a page, split at a displayed key, borrow from a displayed sibling, merge pages, advance request and audit.",
+      "finite": "Three substantial request sequences: propagated split, deletion borrowing, then root-height contraction with several repair choices.",
+      "failureChallenge": "A request leaving an invalid ordering/occupancy loses when advanced; excessive page writes exhaust a real repair budget. Show the exact violated page invariant.",
+      "endless": {
+        "candidate": true,
+        "design": "Generate varied bounded insertion/deletion sequences over shuffled key gaps and independently derive legal repair witnesses; cap keys/pages while varying true request histories."
+      },
+      "legalWitnessTests": "Check every separator interval, minimum occupancy, equal leaf depth and exact stored key set after each legal repair; independently replay split, sibling borrow and cascading merge routes."
+    },
+    {
+      "id": "paired-harbor",
+      "name": "Paired Harbor",
+      "definingDecision": "Store each key in one of its two hashed berths; inserting into an occupied berth displaces its previous key, which must move to its alternate berth or consume a scarce stash slot.",
+      "transitions": "A carried key can replace either of its two berth occupants. The evicted key becomes carried, so a poor choice can close a displacement cycle. Rehashing changes both berth choices for all keys but spends the one rescue token.",
+      "nearestExisting": [
+        {
+          "id": "hall-window",
+          "source": "signal-lab/certificates.mjs",
+          "difference": "Hall Window selects a deficient job subset to certify that matching is impossible. This is a live constructive insertion/displacement system with carried keys, alternate hash locations, cycles and a stash; the player must keep actual lookup locations valid."
+        },
+        {
+          "id": "heap-garden",
+          "source": "workbench-room/storage.mjs",
+          "difference": "Keys have two discrete legal homes rather than contiguous size spans, compaction or pinned allocations."
+        }
+      ],
+      "controls": "Choose a berth for the carried key, use stash, rehash, begin next arrival and verify all lookups.",
+      "finite": "Three batches introducing displacement chains, a cycle requiring stash discipline, then a rehash choice with future arrivals.",
+      "failureChallenge": "Displacement allowance, stash capacity and rescue count constrain real insertions; lost keys or unfinished carried keys fail lookup certification.",
+      "endless": {
+        "candidate": true,
+        "design": "Seed genuinely different paired-incidence graphs and insertion orders with constructive bounded legal matchings, including optional cycles; vary graph edges rather than relabel one template."
+      },
+      "legalWitnessTests": "Every stored key occupies a declared hash berth or legal stash; no duplicates/lost keys; explicit cyclic and acyclic fixtures; seeded graph diversity and complete legal insertion plans."
+    },
+    {
+      "id": "ring-transfer",
+      "name": "Ring Transfer",
+      "definingDecision": "Place new server markers on a circular hash address space and migrate the keys whose clockwise owner changes, balancing final server load against the cost of changing ownership.",
+      "transitions": "A marker owns its preceding circular interval. Adding or moving a marker changes only particular interval owners; migrations spend bandwidth and cannot skip the currently authoritative copy. Removing an old server requires all its keys to move safely.",
+      "nearestExisting": [
+        {
+          "id": "divisor-house",
+          "source": "signal-lab/measures.mjs",
+          "difference": "Seat allocation searches a common divisor across independent quotas. Here key positions are fixed, contiguous circular ownership intervals couple assignments, and ownership changes require costed safe migration."
+        },
+        {
+          "id": "cyclic-courtyard",
+          "source": "constraint-room/paths.mjs",
+          "difference": "No row/column tile permutation: circular interval successor ownership and data movement determine the state."
+        }
+      ],
+      "controls": "Select server marker, move clockwise/counterclockwise, copy a displayed affected key, switch authority, retire old server and audit.",
+      "finite": "Three migrations: add capacity, retire a loaded server, then add two markers while preserving a hot-key load limit.",
+      "failureChallenge": "Exceeding transfer bandwidth, switching to a missing copy or retiring the only copy loses; load limits must hold after the completed migration.",
+      "endless": {
+        "candidate": true,
+        "design": "Generate different key coordinates, weights, marker starts and membership changes under bounded ring size; derive a feasible migration bandwidth from a constructive witness."
+      },
+      "legalWitnessTests": "Exact wraparound owner calculation, one authoritative copy, bandwidth charged once per actual transfer, final per-server load, and high-stage generated migration witnesses."
+    },
+    {
+      "id": "durable-ink",
+      "name": "Durable Ink",
+      "definingDecision": "Order journal, data-page and commit writes so a scheduled crash can recover each transaction atomically; choose checkpoints to free journal space without forgetting required undo/redo evidence.",
+      "transitions": "Buffered journal records become durable only when flushed. Writing a dirty page before its preceding log is durable violates write-ahead safety. Crash drops buffers; recovery undoes uncommitted durable changes and redoes committed changes before serving reads.",
+      "nearestExisting": [
+        {
+          "id": "cache-hotel",
+          "source": "workbench-room/storage.mjs",
+          "difference": "Dirty eviction there pays writeback while minimizing cache misses. Here ordering of durable undo/redo records and commit markers controls crash atomicity; checkpoint reclamation can permanently remove recovery evidence."
+        },
+        {
+          "id": "ledger-race",
+          "source": "workbench-room/computation.mjs",
+          "difference": "No thread-interleaving anomaly witness: the player protects durability across explicit storage crashes and recovery."
+        }
+      ],
+      "controls": "Append next log record, flush journal, write selected page, commit, checkpoint, advance scheduled crash and run recovery.",
+      "finite": "Three schedules: committed redo, uncommitted undo, then mixed transactions with a tight journal and checkpoint.",
+      "failureChallenge": "Unsafe page write, incomplete recovery, atomicity violation or log exhaustion loses with the offending record/page identified.",
+      "endless": {
+        "candidate": true,
+        "design": "Seed bounded transaction operations, crash points and page sharing; choose sufficient journal/write budgets using independent durable-state simulation."
+      },
+      "legalWitnessTests": "Crash erases only nondurable bytes; recovery restores precisely committed effects, including overlapping page updates; checkpoint safety and write-ahead ordering have targeted regressions."
+    },
+    {
+      "id": "safe-advance",
+      "name": "Safe Advance",
+      "definingDecision": "Grant or defer resource requests while retaining a completion sequence that can satisfy every declared maximum claim; a locally affordable request can strand all processes later.",
+      "transitions": "A grant reduces free resources and the requesting process's remaining claim. A process may finish only when its remaining claim is satisfiable; completion returns all held resources. Deferral advances to another request and spends patience.",
+      "nearestExisting": [
+        {
+          "id": "workshop-shift",
+          "source": "systems-room/workshop-shift.mjs",
+          "difference": "Exclusive stations there make recipes during shifts. Here maximum future claims and retained partial allocations determine whether a safe completion order exists; deferring an affordable request protects future progress."
+        },
+        {
+          "id": "token-crucible",
+          "source": "workbench-room/networks.mjs",
+          "difference": "No freely fired consume/produce recipe net or exact marking target: clients retain resources across requests and release them only at completion under announced maxima."
+        }
+      ],
+      "controls": "Grant or defer the selected request, select the next requesting process, complete an eligible process and submit the final ledger.",
+      "finite": "Three systems: one scarce resource, two-resource unsafe allocation, then three-resource requests requiring different completion orders.",
+      "failureChallenge": "Granting into a state with no safe completion sequence loses, as does spending all deferral patience with work unfinished.",
+      "endless": {
+        "candidate": true,
+        "design": "Construct different maximum-claim matrices and safe initial allocations from seeded completion sequences; interleave requests with bounded patience and verify a legal grant/defer route."
+      },
+      "legalWitnessTests": "Conserve each resource, respect maximum claims, independently enumerate safety orders, and show an affordable but unsafe grant as a real negative fixture."
+    },
+    {
+      "id": "version-valley",
+      "name": "Version Valley",
+      "definingDecision": "Choose when snapshot transactions refresh, lock a predicate or commit so concurrent stale reads cannot publish incompatible updates while a bounded number of aborts still lets required work finish.",
+      "transitions": "A read saves its visible committed version; writes stay private. Commit checks direct write conflicts and any chosen read/predicate protection. Refresh restarts a transaction on new versions; one transaction can otherwise make another's saved decision invalid.",
+      "nearestExisting": [
+        {
+          "id": "ledger-race",
+          "source": "workbench-room/computation.mjs",
+          "difference": "The existing game exposes an anomaly by interleaving primitive instructions. This game keeps private snapshots, version histories, commit validation and bounded retry/locking decisions, and must produce a safe completed transaction history."
+        },
+        {
+          "id": "causal-camera",
+          "source": "workbench-room/collective.mjs",
+          "difference": "No process-prefix cut reconstruction or in-transit inventory: database read versions and commit conflicts control visibility."
+        }
+      ],
+      "controls": "Start/read transaction, refresh snapshot, protect displayed predicate, commit staged update, abort/retry and close ledger.",
+      "finite": "Three histories: stale update, write skew across separate rows, then range/predicate phantom protection.",
+      "failureChallenge": "Publishing an invariant-breaking committed state, exhausting retry credit or retaining unfinished required transactions loses.",
+      "endless": {
+        "candidate": true,
+        "design": "Generate varied read/write dependency histories and bounded invariants, with a constructive serial completion witness and meaningful conflicting alternatives."
+      },
+      "legalWitnessTests": "Visibility uses version time, uncommitted writes remain private, direct conflicts and protected read ranges are distinct, and all final constraints hold under independently replayed commits."
+    },
+    {
+      "id": "term-tower",
+      "name": "Term Tower",
+      "definingDecision": "Repair conflicting replicated log suffixes and decide when an entry is safe to commit under the current leader term; a majority of an old-term entry alone cannot justify the same commitment step.",
+      "transitions": "Append messages require a matching previous index/term; mismatch backs the next index up. Successful append replaces conflicting suffixes. Higher-term messages end a leader's authority. Current-term quorum commitment carries its preceding log prefix with it.",
+      "nearestExisting": [
+        {
+          "id": "quorum-garden",
+          "source": "signal-lab/choices.mjs",
+          "difference": "That game designs static intersecting quorum families. This uses evolving term/index logs, suffix replacement, stale-leader rejection and actual commitment progression; sets alone do not establish log-prefix safety."
+        },
+        {
+          "id": "receipt-route",
+          "source": "workbench-room/computation.mjs",
+          "difference": "Receipts deliver a fixed contiguous data sequence. Here replicas begin with conflicting histories and only elected-term authority can overwrite or commit particular prefixes."
+        }
+      ],
+      "controls": "Select follower, send an append with displayed previous index, step back its probe, install higher-term leader and commit selected entry.",
+      "finite": "Three recovery elections: short follower, divergent suffixes, then old-term majority plus a higher-term interruption.",
+      "failureChallenge": "Unsafe commitment or accepting a stale leader loses; message budget makes unnecessary full-prefix retransmission costly.",
+      "endless": {
+        "candidate": true,
+        "design": "Generate genuinely different replica prefix conflicts, term histories and bounded delivery interruptions around a legal current-leader witness."
+      },
+      "legalWitnessTests": "Matching-prefix append, exact conflicting-suffix removal, monotonically increasing terms, committed-prefix agreement, and explicit old-term-majority regression."
+    },
+    {
+      "id": "pipeline-parade",
+      "name": "Pipeline Parade",
+      "definingDecision": "Issue ready instructions onto limited execution units while forwarding completed values, respecting memory aliases and retiring in program order; speculative work can be squashed by a resolved branch.",
+      "transitions": "Issuing captures renamed source dependencies rather than the latest architectural register. Units finish at different latencies. Retirement updates architectural state only in order; a mispredicted branch discards younger effects without undoing older retired work.",
+      "nearestExisting": [
+        {
+          "id": "signal-cabinet",
+          "source": "systems-room/signal-cabinet.mjs",
+          "difference": "Job dispatch there changes tool class and meets release/deadlines. Here data dependencies, renaming, forwarding, in-order retirement, memory aliases and branch squashes change which executions are semantically safe."
+        },
+        {
+          "id": "pebble-engine",
+          "source": "workbench-room/storage.mjs",
+          "difference": "No reusable DAG pebble placement/recomputation target: instruction values and speculative architectural effects must match a sequential execution."
+        }
+      ],
+      "controls": "Issue displayed instruction, choose available unit, forward result, retire head instruction and advance one cycle.",
+      "finite": "Three programs: latency overlap, register reuse/forwarding, then memory alias plus branch rollback.",
+      "failureChallenge": "Incorrect source, unsafe store retirement or excess cycle budget loses; required final registers/memory are explicit.",
+      "endless": {
+        "candidate": true,
+        "design": "Generate bounded instruction DAGs, register aliases, unit latencies and branch paths; reference sequential interpretation plus legal dependency-aware schedules bound the cycle target."
+      },
+      "legalWitnessTests": "Independent sequential interpreter, renaming hazards, store/load alias dependency, in-order retirement and misprediction squash all receive focused tests."
+    },
+    {
+      "id": "delta-garden",
+      "name": "Delta Garden",
+      "definingDecision": "Maintain a multiset join under insertions and deletions by choosing batches and signed delta products; applying two simultaneous changes separately or together requires different cross terms.",
+      "transitions": "Input edits create signed pending rows. Propagating a batch multiplies its weights with the opposite retained table; simultaneous two-sided batches also require the delta-by-delta product exactly once. Flushing commits the new retained tables and output counts.",
+      "nearestExisting": [
+        {
+          "id": "table-confluence",
+          "source": "workbench-room/structures.mjs",
+          "difference": "That builds a one-time relational operator pipeline with bag semantics. This incrementally maintains an existing output, subtracts deleted multiplicities and handles simultaneous update cross terms with batching cost."
+        },
+        {
+          "id": "pebble-engine",
+          "source": "workbench-room/storage.mjs",
+          "difference": "No DAG register/recomputation puzzle: signed bag changes can cancel and double counting is an observable semantic error."
+        }
+      ],
+      "controls": "Choose one-sided or combined batch, select displayed signed product, propagate, consolidate equal rows and commit pulse.",
+      "finite": "Three streams: one-sided duplicates, deletions, then simultaneous left/right changes where cross terms matter.",
+      "failureChallenge": "A wrong signed output or omitted/doubled cross term loses at commit; propagation budget rewards legitimate batching rather than full recomputation.",
+      "endless": {
+        "candidate": true,
+        "design": "Seed actual multisets and insertion/deletion histories, maintaining nonnegative input counts, with an independently recomputed full-join witness at each pulse."
+      },
+      "legalWitnessTests": "Signed weights multiply, consolidated output equals a full recomputation after every committed pulse, and deletion plus simultaneous cross-term fixtures distinguish incorrect formulas."
+    },
+    {
+      "id": "shared-cursors",
+      "name": "Shared Cursors",
+      "definingDecision": "Transform concurrent insert/delete operations against already applied remote edits so their original text intentions survive delivery order without duplicating or deleting the wrong character.",
+      "transitions": "Each peer records operation position against its own document version. Remote insertions shift positions; deletions can absorb or shift another deletion. Equal-position insertion tie order is fixed by author identity. Acknowledgment removes only the corresponding pending operation.",
+      "nearestExisting": [
+        {
+          "id": "archive-edit",
+          "source": "discovery-room/room.js",
+          "difference": "Dependency-constrained patch selection resolves authored patch conflicts. This transforms positional concurrent operations through live peer histories and must converge despite delivery order."
+        },
+        {
+          "id": "parallel-manuscripts",
+          "source": "workbench-room/information.mjs",
+          "difference": "No static affine-gap alignment of two strings: edits act on changing coordinates and can overlap while original intention is tracked."
+        }
+      ],
+      "controls": "Select queued edit, choose transformed position/overlap treatment, deliver to peer, acknowledge and audit converged documents.",
+      "finite": "Three histories: concurrent insertion, overlapping deletion, then insert/delete with several outstanding local edits.",
+      "failureChallenge": "Deleting an unintended token, duplicating an edit or closing with divergent peers loses; transformation/queue budget prevents repeated unproductive delivery.",
+      "endless": {
+        "candidate": true,
+        "design": "Generate bounded distinct edit histories on labeled tokens and peer queues, with a test-only reference transform and constructive convergence plan."
+      },
+      "legalWitnessTests": "All operations apply once, original labeled-token intentions survive, equal-position ties are deterministic, and different legal message orders converge."
+    },
+    {
+      "id": "quiet-network",
+      "name": "Quiet Network",
+      "definingDecision": "Return completion credits through a dynamically grown parent tree only after descendants and in-flight tasks have settled; an apparently idle set of workers can still have work in transit.",
+      "transitions": "Sending work transfers a credit and creates a pending obligation. Idle workers can acknowledge only completed child obligations; a worker with outstanding descendants cannot return its parent credit. The root may announce completion only after all credit returns and all channels empty.",
+      "nearestExisting": [
+        {
+          "id": "causal-camera",
+          "source": "workbench-room/collective.mjs",
+          "difference": "Snapshot reconstruction selects static event cuts and records channel tokens. This is an operating termination protocol with dynamically spawned child obligations and delayed acknowledgment routing; credits establish that future work cannot arrive."
+        },
+        {
+          "id": "credit-method",
+          "source": "signal-lab/measures.mjs",
+          "difference": "No amortized-cost potential coefficients: actual transferable work credits are protocol ownership records, not a charge inequality."
+        }
+      ],
+      "controls": "Deliver queued task, execute one task, send completion acknowledgment, relay a returned obligation and announce global completion.",
+      "finite": "Three branching workloads: delayed task, reused busy worker, then nested spawned work with acknowledgments crossing.",
+      "failureChallenge": "Premature completion, returning a still-obligated credit or exhausting communication budget loses; exact outstanding obligations are explained.",
+      "endless": {
+        "candidate": true,
+        "design": "Generate bounded but structurally varied work-spawn DAGs and channel delays with explicit parent obligation histories, rather than permuting one tree."
+      },
+      "legalWitnessTests": "Credit ownership conserved, every delivered task executes once, acknowledgments discharge the correct obligation, and idle-with-inflight-work is a negative regression."
+    },
+    {
+      "id": "lantern-ring",
+      "name": "Lantern Ring",
+      "definingDecision": "Choose eligible local repairs around a cyclic process ring until exactly one process owns the token; copying the predecessor and the distinguished process's increment have different eligibility rules.",
+      "transitions": "Ordinary process i may copy its predecessor only when their colors differ. Process0 may increment modulo the color alphabet only when it matches the last process. Each local action changes the neighboring eligibility pattern; the target is one privileged process.",
+      "nearestExisting": [
+        {
+          "id": "cyclic-courtyard",
+          "source": "constraint-room/paths.mjs",
+          "difference": "Cyclic Courtyard permutes distinct tiles by whole-row/column shifts. This changes equal-color local process states under asymmetric eligibility and repairs token uniqueness; it does not preserve a tile permutation."
+        },
+        {
+          "id": "clockwork",
+          "source": "number-room/room.js",
+          "difference": "No single modular traveler or chosen numerical jump: many local states share a predecessor-dependent privilege invariant."
+        }
+      ],
+      "controls": "Native process buttons perform only their currently eligible copy/increment; audit unique token ownership.",
+      "finite": "Three scrambled rings with different lengths, multiple simultaneous privileges and tight but reachable repair allowances.",
+      "failureChallenge": "Exhausting the local-action budget before one privilege loses; disabled processes cannot make illegal repairs.",
+      "endless": {
+        "candidate": true,
+        "design": "Generate different entire color-state vectors under bounded ring sizes and use independent BFS legal witnesses to select nontrivial solvable action targets."
+      },
+      "legalWitnessTests": "Exact distinguished/ordinary eligibility, modular wrap, privilege count, reachable unique-token witnesses, and dispersed generated vectors rather than label-only variation."
+    },
+    {
+      "id": "lease-lighthouse",
+      "name": "Lease Lighthouse",
+      "definingDecision": "Transfer timed ownership between clients with clock drift and delayed messages, issuing monotone fencing tokens so a stale holder cannot overwrite a newer owner's work.",
+      "transitions": "Grant records server expiry and an epoch. Clients observe drifted local times and delayed grants; expiry alone does not erase a queued stale write. The protected resource rejects lower epochs after accepting a newer one. Renewal and handover consume real time.",
+      "nearestExisting": [
+        {
+          "id": "ledger-race",
+          "source": "workbench-room/computation.mjs",
+          "difference": "Primitive shared-memory read/write interleavings expose a race there. This coordinates separate drifting clocks, expiring authority, delayed writes and epoch-based resource fencing."
+        },
+        {
+          "id": "quorum-garden",
+          "source": "signal-lab/choices.mjs",
+          "difference": "No static read/write family intersection: authority changes over time and stale epoch rejection is essential even after the grant expired."
+        }
+      ],
+      "controls": "Set lease duration, request/renew lease, deliver delayed grant/write, hand over authority, select resource fencing policy and advance tick.",
+      "finite": "Three contracts: drift-safe timing, delayed old-owner write, then renewal racing with a new grant.",
+      "failureChallenge": "Accepting a stale write, allowing simultaneous effective ownership or missing mandatory writes before deadline loses.",
+      "endless": {
+        "candidate": true,
+        "design": "Seed bounded drift directions/rates, network delay histories and workload deadlines with constructive safe fenced schedules."
+      },
+      "legalWitnessTests": "Server and client times differ as displayed, epochs never decrease, delayed old writes are rejected after newer fencing, and deadlines use their declared clock."
+    },
+    {
+      "id": "echo-seals",
+      "name": "Echo Seals",
+      "definingDecision": "Route echo/ready evidence among honest receivers despite one sender equivocating, and deliver a value only when the protocol's collected evidence establishes agreement.",
+      "transitions": "A receiver echoes its first sender value once. Distinct-author echo evidence can trigger ready; enough ready authors can relay ready and eventually deliver. The faulty participant can advertise conflicting values, but repeated copies of one author's seal never count twice.",
+      "nearestExisting": [
+        {
+          "id": "quorum-garden",
+          "source": "signal-lab/choices.mjs",
+          "difference": "Static quorum-set design does not operate echo/ready phases, author-deduplicated evidence or a Byzantine sender emitting inconsistent values. Here local evidence evolves and delivery decisions must agree."
+        },
+        {
+          "id": "masks-and-coins",
+          "source": "parlour-room/masks-and-coins.mjs",
+          "difference": "No hidden role bluff or challenge: fault bound and public evidence rules govern distributed delivery, with one declared adversarial participant."
+        }
+      ],
+      "controls": "Choose queued envelope to deliver, echo first value, emit/relay ready, and certify a receiver's deliver decision with its displayed seal set.",
+      "finite": "Three authored evidence studies: honest sender, equivocating sender, then duplicated and delayed ready messages.",
+      "failureChallenge": "Delivering without sufficient distinct evidence, honest disagreement or exhausting the envelope allowance loses.",
+      "endless": {
+        "candidate": false,
+        "design": "Preserve these three finite adversarial studies initially. A future stream needs structurally varied fault/delivery schedules with an independent liveness witness, not name/color permutations."
+      },
+      "legalWitnessTests": "Deduplicate authors, distinguish echo and ready thresholds, never echo two values at one honest receiver, preserve agreement and demonstrate faulty duplicated evidence does not satisfy a threshold."
+    },
+    {
+      "id": "timestamp-current",
+      "name": "Timestamp Current",
+      "definingDecision": "Advance an event-time watermark to close aggregation windows while retaining enough memory for late events permitted by each source's progress guarantee.",
+      "transitions": "Arriving rows carry event time different from arrival tick. A source progress notice bounds future timestamp lateness. Advancing the watermark emits and forgets closed windows; later events below an unjustified watermark cannot repair lost output. Buffered open windows consume memory.",
+      "nearestExisting": [
+        {
+          "id": "receipt-route",
+          "source": "workbench-room/computation.mjs",
+          "difference": "Reliable delivery buffers a missing sequence prefix. This closes time intervals under source event-time guarantees and sums unordered rows; there is no cumulative data ACK or required packet sequence."
+        },
+        {
+          "id": "cold-chain",
+          "source": "systems-room/cold-chain.mjs",
+          "difference": "No physical perishability/recipe aging: timestamps, safe finality and irrevocable aggregate emission govern memory."
+        }
+      ],
+      "controls": "Deliver source row/progress message, set candidate watermark, close eligible window, flush completed result and advance arrival tick.",
+      "finite": "Three logs: one late source, independent source frontiers, then overlapping windows under a small buffer.",
+      "failureChallenge": "Premature finality yields incorrect permanent output; failing to close safely before memory overflow also loses.",
+      "endless": {
+        "candidate": true,
+        "design": "Generate varied timestamp/arrival permutations and independent monotone source frontiers under bounded lateness and buffer size; reference full-window aggregation supplies a legal plan."
+      },
+      "legalWitnessTests": "Watermark is no greater than every source's proven frontier, closed sums equal complete-log sums, lateness never silently changes finalized results, and buffer accounting is exact."
+    },
+    {
+      "id": "changing-roads",
+      "name": "Changing Roads",
+      "definingDecision": "Repair distance-vector routing after a link failure by choosing advertisements and poisoned reverse withdrawals, preventing neighbors from sustaining a bogus route through each other.",
+      "transitions": "A router accepts a neighbor's advertised cost plus local link cost and records that neighbor as next hop. A failed link invalidates direct ownership. Sending a route back toward its own next hop advertises infinity when poisoned reverse is used; stale messages can otherwise recreate loops.",
+      "nearestExisting": [
+        {
+          "id": "orbit-transfer",
+          "source": "spatial-room/room.js",
+          "difference": "That selects a traveler path through a fixed directed map. Here autonomous next-hop tables change through exchanged advertisements, stale information and link failure; a locally low cost can be a forwarding loop."
+        },
+        {
+          "id": "copper-tree",
+          "source": "puzzle-lab/engines.js",
+          "difference": "No spanning-tree edge-set optimization: destination-specific costs and advertisements converge to usable forwarding tables."
+        }
+      ],
+      "controls": "Select router/neighbor advertisement, choose normal or poisoned report, deliver queued update, withdraw failed route and test forwarding.",
+      "finite": "Three networks: cost update, failed direct exit with count-to-infinity risk, then simultaneous stale advertisements across a fork.",
+      "failureChallenge": "Forwarding loop, wrong final distance or exhausting message/time budget before convergence loses.",
+      "endless": {
+        "candidate": true,
+        "design": "Generate varied weighted connected graphs and one bounded failure/cost change, with independently computed shortest paths and safe withdrawal/adoption schedules."
+      },
+      "legalWitnessTests": "Bellman costs match next hops, poison applies specifically toward the selected next hop, stale message effects are real, and final forwarding reaches destination without cycles."
+    },
+    {
+      "id": "branch-archive",
+      "name": "Branch Archive",
+      "definingDecision": "Update multiple immutable tree versions by copying only shared nodes on the changed path; retain reusable subtrees without allowing an update to corrupt an older published version.",
+      "transitions": "Publishing a version adds a root reference. Shared nodes cannot be changed in place. Copying a node creates a private editable record pointing to its existing children; a path update installs copied ancestors and can reuse untouched siblings. Releasing obsolete versions changes which records remain shared.",
+      "nearestExisting": [
+        {
+          "id": "branch-librarian",
+          "source": "workbench-room/structures.mjs",
+          "difference": "Binary rotations preserve one mutable search tree and minimize access depths. This maintains several independent immutable roots, path-copies updates and shares subtrees under an allocation budget; search shape does not change."
+        },
+        {
+          "id": "night-collector",
+          "source": "workbench-room/living-systems.mjs",
+          "difference": "Tracing collection preserves current live objects during mutation. Here prior published values themselves must remain immutable, and copying rather than marking is the central action."
+        }
+      ],
+      "controls": "Select version and path node, copy node, attach copied child, change private leaf, publish new root, release permitted version and audit.",
+      "finite": "Three histories: single persistent update, sibling branches sharing a prefix, then release/reuse under a tight allocation cap.",
+      "failureChallenge": "Changing a shared published node corrupts an old contract and loses; excessive copies exhaust allocation; every retained version must still answer its original queries.",
+      "endless": {
+        "candidate": true,
+        "design": "Seed bounded version branch histories and leaf updates, with distinct shared-path geometry and constructive minimal path-copy witness budgets."
+      },
+      "legalWitnessTests": "Independent materialized version values, accurate reachability/reference sharing, immutable retained roots, and exact path-copy allocation cost across branched updates."
+    },
+    {
+      "id": "cancellation-desk",
+      "name": "Cancellation Desk",
+      "definingDecision": "Choose summation order and when to retain a compensation residual under finite decimal precision so small contributions survive large cancellation without overspending arithmetic work.",
+      "transitions": "Each arithmetic operation rounds to the displayed significant-digit precision. Plain accumulation can absorb a small term permanently; compensated addition retains the rounding residual in a second register but consumes more operations. Pairwise reduction changes the magnitudes that meet before rounding.",
+      "nearestExisting": [
+        {
+          "id": "wraparound-witness",
+          "source": "signal-lab/measures.mjs",
+          "difference": "Overflow witnesses exploit exact fixed-width integer modular wrap to follow branch tests. This uses decimal rounding and cancellation, preserves an error residual and optimizes final numerical accuracy rather than selecting a branch trace."
+        },
+        {
+          "id": "make-24",
+          "source": "number-room/room.js",
+          "difference": "No arbitrary expression target from four numbers: a fixed multiset must be summed, all terms count once and limited precision changes the evaluated answer."
+        }
+      ],
+      "controls": "Choose next term, plain or compensated addition, pair two partial sums, inspect rounded/residual registers and submit final sum.",
+      "finite": "Three authored accuracy contracts: swallowed small terms, opposite large values, then mixed signs with a work budget requiring selective compensation.",
+      "failureChallenge": "Terms omitted/reused, excessive operation cost or final exact rational error beyond tolerance loses.",
+      "endless": {
+        "candidate": false,
+        "design": "Keep the three designed numerical pathologies finite until a generator demonstrates varied scale/cancellation structures with independently certified accuracy routes; mere coefficient perturbation is insufficient."
+      },
+      "legalWitnessTests": "Implement decimal rounding from exact scaled integers/rationals; compare final error to exact sum, verify compensation residual identities, and show plain-order negative witnesses for each study."
+    },
+    {
+      "id": "bracket-ferry",
+      "name": "Bracket Ferry",
+      "definingDecision": "Choose midpoint, secant or tangent-root probes while maintaining a proven sign-changing interval; fast steps can leave the bracket or stall near a flat derivative, whereas bisection spends certainty slowly.",
+      "transitions": "Each evaluation returns a function value at a chosen probe and replaces the same-sign interval endpoint. A tangent step uses a known derivative but may lie outside the certified interval. Certification requires the remaining interval width and opposite endpoint signs, not proximity to a hidden answer.",
+      "nearestExisting": [
+        {
+          "id": "false-weight",
+          "source": "discovery-room/room.js",
+          "difference": "Balance experiments identify a discrete anomalous object. Here continuous sign brackets and derivative-informed numerical steps certify a root interval, with exact bracket preservation and evaluation costs."
+        },
+        {
+          "id": "clockwork",
+          "source": "number-room/room.js",
+          "difference": "No exact modular arrival route: uncertainty interval shrinks after actual function probes, and root error is bounded by the surviving interval."
+        }
+      ],
+      "controls": "Choose midpoint/secant/tangent probe, choose tangent anchor, evaluate, optionally enter a rational custom probe through native ranges, and certify bracket.",
+      "finite": "Three functions: smooth monotone root, flat derivative trap, then a sharply curved function where guarded fast steps outperform a tight bisection budget.",
+      "failureChallenge": "An out-of-bracket irreversible probe or spent evaluation budget before certified width loses with numerical evidence.",
+      "endless": {
+        "candidate": true,
+        "design": "Generate different bounded rational polynomial/monotone piecewise-linear functions with an exact sign-changing bracket and witness schedule; preserve distinct curvature and derivative shapes, not just translated roots."
+      },
+      "legalWitnessTests": "Exact rational signs, strict bracket containment, endpoint replacement, stopping width, secant/tangent formulas and late-stage generated legal evaluation routes."
+    },
+    {
+      "id": "pivot-gallery",
+      "name": "Pivot Gallery",
+      "definingDecision": "Pivot among feasible corners of a small linear optimization problem, choosing an improving entering direction and its minimum-ratio limiting constraint while avoiding degenerate wasted pivots.",
+      "transitions": "An entering variable defines a feasible edge direction. The first binding inequality decides the leaving constraint and next corner. A wrong ratio choice leaves the feasible polygon; zero-length pivots change the active basis without improving the objective and spend effort.",
+      "nearestExisting": [
+        {
+          "id": "row-orchestra",
+          "source": "workbench-room/structures.mjs",
+          "difference": "Row Orchestra uses bounded elementary row transformations to reach a matrix target. This maintains inequality feasibility, an active corner basis, objective improvement and ratio-limited edge moves; matrix equivalence alone cannot certify a valid pivot."
+        },
+        {
+          "id": "orbit-transfer",
+          "source": "spatial-room/room.js",
+          "difference": "No authored graph destinations: feasible edge endpoints are derived from actual linear constraints and the player's entering/leaving basis choice."
+        }
+      ],
+      "controls": "Choose entering variable/direction, select displayed limiting inequality, pivot, inspect slack/objective and certify optimum.",
+      "finite": "Three polygons: basic improving pivots, competing ratio limits, then a degenerate corner where the efficient basis matters.",
+      "failureChallenge": "Violating any inequality, pivoting beyond the allowed effort or certifying a corner with a remaining improving feasible direction loses.",
+      "endless": {
+        "candidate": true,
+        "design": "Seed varied bounded rational constraints and objectives with independently enumerated feasible corners and legal pivot paths; cap polygon size but vary adjacency and degeneracy."
+      },
+      "legalWitnessTests": "Exact rational feasibility/objectives, minimum-ratio endpoints, basis validity, no false optimum, and independently enumerated graph routes for generated cases."
+    }
+  ]
+}

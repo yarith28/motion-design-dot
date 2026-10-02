@@ -3,9 +3,9 @@
   "suite": "construct-room",
   "passed": true,
   "status": "passed",
-  "startedAt": "2026-10-02T20:04:05.979Z",
+  "startedAt": "2026-10-02T22:16:45.870Z",
   "source": {
-    "sha256": "2ef89f2dcc7719b30d6f6ab065a1a5aa4e71f43890a0bf1119cc72957c8d0cdd",
+    "sha256": "7e5fe1739de1c184f587304b6bf57fe599cea70115bb0b055d219bed08332520",
     "files": [
       "catalog.css",
       "catalog.js",
@@ -24,6 +24,7 @@
       "tests/fixtures/baseline100.json",
       "tests/fixtures/baseline200.json",
       "tests/fixtures/baseline300.json",
+      "tests/fixtures/baseline400.json",
       "tests/fixtures/parlour-b02-b05-paths.json",
       "tests/fixtures/parlour-b13-guided-paths.json",
       "tests/fixtures/parlour-paths.json",
@@ -70,9 +71,9 @@
   "servedRuntimeBefore": {
     "baseURL": "http://127.0.0.1:8790",
     "passed": true,
-    "sha256": "c714e4ece51753a615633c3638abc874e62bdd13540d02d929c453234514a0f3",
+    "sha256": "445c58a7ef6569318871a4d7bd0cae6402709c3f0f343ff312f8aaf3f71c7e1e",
     "fileCount": 12,
-    "verifiedAt": "2026-10-02T20:04:06.237Z"
+    "verifiedAt": "2026-10-02T22:16:46.174Z"
   },
   "exitCode": 0,
   "signal": null,
@@ -80,9 +81,9 @@
   "servedRuntime": {
     "baseURL": "http://127.0.0.1:8790",
     "passed": true,
-    "sha256": "c714e4ece51753a615633c3638abc874e62bdd13540d02d929c453234514a0f3",
+    "sha256": "445c58a7ef6569318871a4d7bd0cae6402709c3f0f343ff312f8aaf3f71c7e1e",
     "fileCount": 12,
-    "verifiedAt": "2026-10-02T20:06:34.129Z"
+    "verifiedAt": "2026-10-02T22:20:16.476Z"
   },
   "completionEvidence": {
     "sha256": "bbcf48db6aa3d075685203e8f42cff78cd44c7854d7c4c44a6fff08010379491",
@@ -580,5 +581,5 @@
       }
     ]
   },
-  "finishedAt": "2026-10-02T20:06:34.135Z"
+  "finishedAt": "2026-10-02T22:20:16.477Z"
 }

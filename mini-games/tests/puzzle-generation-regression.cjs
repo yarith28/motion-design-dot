@@ -30,6 +30,7 @@ function check(id,m,stage){
  }
 }
 try{
+ report.arrowAudit=require('./puzzle-arrow-audit-regression.cjs').runModelChecks();
  const engines=load(),samples=Number(process.env.GENERATOR_SAMPLES||20);
  for(const id of ids){const start=Date.now(),signatures=new Set();for(let stage=0;stage<3;stage++)for(let i=0;i<samples;i++){const m=engines[id].init(stage);check(id,m,stage);signatures.add(JSON.stringify(m.edges||m.conflicts||[m.initial,m.target]));report.randomCases++;}assert.ok(signatures.size>3,id+' has actual generated variety');report.timings[id]=Date.now()-start;}
  // Constant zero drives cut/flow/ferry random attempts into rejection, exercising their bounded fallbacks.

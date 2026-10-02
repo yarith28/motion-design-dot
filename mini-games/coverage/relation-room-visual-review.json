@@ -1,0 +1,66 @@
+{
+  "checkedAt": "2026-10-02T20:46:38.000572+00:00",
+  "method": "Rendered full-page screenshots visually inspected; no image manipulation. Supplementary graphs plus native tables/buttons verified readable in selected screenshots. Full40 automated author cases separately check viewport overflow and controls.",
+  "scope": "Eight selected rendered views;40 initial desktop/touch screenshots captured. No claim all40 images manually inspected or physical-device testing.",
+  "sourceBinding": {
+    "sha256": "5636cc6859694256660cc8e4a9ae128450dac3bff1afba5623920c3aba7e410f",
+    "files": [
+      "journey/journey.css",
+      "journey/journey.mjs",
+      "relation-room/README.md",
+      "relation-room/REVIEW.md",
+      "relation-room/constructions.mjs",
+      "relation-room/core.mjs",
+      "relation-room/council.mjs",
+      "relation-room/engines.mjs",
+      "relation-room/evidence.mjs",
+      "relation-room/games.json",
+      "relation-room/graphs.mjs",
+      "relation-room/index.html",
+      "relation-room/room.mjs",
+      "relation-room/semantics.mjs"
+    ]
+  },
+  "sourceUnchangedDuringOpeningCapture": true,
+  "screenshots": [
+    {
+      "path": "coverage/relation-room-visual/minor-museum-320-touch.png",
+      "sha256": "a272032a31016a74ef988144d95730e6799c2a76ef6fb6d98b53e5dfe8922d71"
+    },
+    {
+      "path": "coverage/relation-room-visual/diagram-order-320-touch.png",
+      "sha256": "75ea24353468e69e50b19cfc3437ba91b8d1da284c663244baf978308d9ecca9"
+    },
+    {
+      "path": "coverage/relation-room-visual/polygon-passport-320-touch.png",
+      "sha256": "dcbb7a653af0b03ae886e1c56bee9a6e7d35e1bf4b32b3452510203548fea8dd"
+    },
+    {
+      "path": "coverage/relation-room-visual/posterior-post-320-touch.png",
+      "sha256": "c3d042cb1901025a4ce9fdf666bd8c6575be94de4b07bed5324d626476f47a4c"
+    },
+    {
+      "path": "coverage/relation-room-visual/invariant-gallery-320-touch.png",
+      "sha256": "663ff8114433aede6241a14f6192a9a58b85844d5928edec74934f4f03f3992a"
+    },
+    {
+      "path": "coverage/relation-room-visual/heritage-house-320-touch.png",
+      "sha256": "5879ce151e40577d22be8308e1f6f97baa6de51cde2c1317fe734781c16e214e"
+    },
+    {
+      "path": "coverage/relation-room-visual/turning-council-desktop.png",
+      "sha256": "5667961032469088b3aac9b00aabeb2149ecfa06f271d08265aeed3a4890a25b"
+    },
+    {
+      "path": "coverage/relation-room-visual/knowledge-circle-320-touch.png",
+      "sha256": "000e7d4ee910836108995d96ad114b4e5da6e425c8a6004c5a5ffdafcbb1c8bc"
+    }
+  ],
+  "findings": [
+    "All selected native controls and study instructions remain within the viewport.",
+    "Dense truth/probability/genotype/transition tables use local horizontal scrolling at320px; some columns require swiping the table. The page itself does not overflow.",
+    "Scaled graph/canvas labels are supplemental at320px; essential graph edges, observations, transitions and family relations also appear in native public tables or text.",
+    "Posterior paid observations and Echo covered cues have disabled Undo; visible instructions explain Reset starts another attempt.",
+    "Tactical Council visibly describes balanced tactical openings, mandatory quadrant rotation, complete opponent turns and match-series optional scope."
+  ]
+}

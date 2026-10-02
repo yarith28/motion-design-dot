@@ -1,0 +1,7660 @@
+{
+  "passed": true,
+  "sourceFiles": [
+    {
+      "path": "mini-games/puzzle-lab/engines.js",
+      "sha256": "8594a9e2f463b49188c8e4050c95fd9510360548d74a5654223b6d43902cae57"
+    },
+    {
+      "path": "mini-games/puzzle-lab/room.js",
+      "sha256": "dc06145590e8e587abba9b8648f0a54514a175cc9c15a1ef7b3ea291d5ff53ee"
+    },
+    {
+      "path": "mini-games/puzzle-lab/games.json",
+      "sha256": "3065067271aa47a2c6148bba90c3a69deb954d6e4fc63f53c98a72d2de07103f"
+    },
+    {
+      "path": "mini-games/tests/puzzle-arrow-audit-regression.cjs",
+      "sha256": "c1c31f97e697211b0813c2aecc3373b2425484f3494c5429ccc68284562bcdaa"
+    },
+    {
+      "path": "mini-games/tests/puzzle-lab.cjs",
+      "sha256": "406e5f692cda814f4bc6c4fb235cd1a3d1fb3ac4770cbaf1f30d17b87135cc8e"
+    },
+    {
+      "path": "mini-games/tests/puzzle-generation-regression.cjs",
+      "sha256": "a09ca3e6793fb16e91b788ff6b05ab5d5cd9cff2f7b063009f900fafdcdfe6e5"
+    }
+  ],
+  "sourceUnchanged": true,
+  "sourceSha": null,
+  "browserEngine": "chromium",
+  "model": {
+    "passed": true,
+    "cases": 774,
+    "constantCases": 6,
+    "seededCases": 768,
+    "formerlyBlockingLCGSeed": 20,
+    "distinctGraphs": 768,
+    "minimumBudgets": [
+      1,
+      2,
+      3
+    ],
+    "records": [
+      {
+        "kind": "constant-random",
+        "value": 0,
+        "stage": 0,
+        "randomCalls": 18,
+        "structuralBound": 1161,
+        "minimumBudget": 1,
+        "initialCycle": true,
+        "fallbackExercised": false
+      },
+      {
+        "kind": "constant-random",
+        "value": 0,
+        "stage": 1,
+        "randomCalls": 28,
+        "structuralBound": 1806,
+        "minimumBudget": 1,
+        "initialCycle": true,
+        "fallbackExercised": false
+      },
+      {
+        "kind": "constant-random",
+        "value": 0,
+        "stage": 2,
+        "randomCalls": 40,
+        "structuralBound": 2580,
+        "minimumBudget": 1,
+        "initialCycle": true,
+        "fallbackExercised": false
+      },
+      {
+        "kind": "constant-random",
+        "value": 0.99,
+        "stage": 0,
+        "randomCalls": 521,
+        "structuralBound": 521,
+        "minimumBudget": 1,
+        "initialCycle": true,
+        "fallbackExercised": true
+      },
+      {
+        "kind": "constant-random",
+        "value": 0.99,
+        "stage": 1,
+        "randomCalls": 654,
+        "structuralBound": 654,
+        "minimumBudget": 1,
+        "initialCycle": true,
+        "fallbackExercised": true
+      },
+      {
+        "kind": "constant-random",
+        "value": 0.99,
+        "stage": 2,
+        "randomCalls": 788,
+        "structuralBound": 788,
+        "minimumBudget": 1,
+        "initialCycle": true,
+        "fallbackExercised": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 0,
+        "stage": 0,
+        "randomCalls": 21,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 0,
+        "stage": 1,
+        "randomCalls": 26,
+        "structuralBound": 782,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 0,
+        "stage": 2,
+        "randomCalls": 30,
+        "structuralBound": 1300,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 1,
+        "stage": 0,
+        "randomCalls": 16,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 1,
+        "stage": 1,
+        "randomCalls": 23,
+        "structuralBound": 1166,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 1,
+        "stage": 2,
+        "randomCalls": 31,
+        "structuralBound": 1428,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 2,
+        "stage": 0,
+        "randomCalls": 15,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 2,
+        "stage": 1,
+        "randomCalls": 30,
+        "structuralBound": 1038,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 2,
+        "stage": 2,
+        "randomCalls": 32,
+        "structuralBound": 1556,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 3,
+        "stage": 0,
+        "randomCalls": 37,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 3,
+        "stage": 1,
+        "randomCalls": 22,
+        "structuralBound": 1038,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 3,
+        "stage": 2,
+        "randomCalls": 33,
+        "structuralBound": 1684,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 4,
+        "stage": 0,
+        "randomCalls": 23,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 4,
+        "stage": 1,
+        "randomCalls": 21,
+        "structuralBound": 910,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 4,
+        "stage": 2,
+        "randomCalls": 32,
+        "structuralBound": 1556,
+        "minimumBudget": 3,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 5,
+        "stage": 0,
+        "randomCalls": 23,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 5,
+        "stage": 1,
+        "randomCalls": 34,
+        "structuralBound": 1294,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 5,
+        "stage": 2,
+        "randomCalls": 33,
+        "structuralBound": 1684,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 6,
+        "stage": 0,
+        "randomCalls": 37,
+        "structuralBound": 905,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 6,
+        "stage": 1,
+        "randomCalls": 21,
+        "structuralBound": 910,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 6,
+        "stage": 2,
+        "randomCalls": 31,
+        "structuralBound": 1428,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 7,
+        "stage": 0,
+        "randomCalls": 25,
+        "structuralBound": 1033,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 7,
+        "stage": 1,
+        "randomCalls": 30,
+        "structuralBound": 1038,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 7,
+        "stage": 2,
+        "randomCalls": 30,
+        "structuralBound": 1300,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 8,
+        "stage": 0,
+        "randomCalls": 17,
+        "structuralBound": 521,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 8,
+        "stage": 1,
+        "randomCalls": 23,
+        "structuralBound": 1166,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 8,
+        "stage": 2,
+        "randomCalls": 32,
+        "structuralBound": 1556,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 9,
+        "stage": 0,
+        "randomCalls": 17,
+        "structuralBound": 1033,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 9,
+        "stage": 1,
+        "randomCalls": 24,
+        "structuralBound": 1294,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 9,
+        "stage": 2,
+        "randomCalls": 34,
+        "structuralBound": 1812,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 10,
+        "stage": 0,
+        "randomCalls": 15,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 10,
+        "stage": 1,
+        "randomCalls": 24,
+        "structuralBound": 1294,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 10,
+        "stage": 2,
+        "randomCalls": 34,
+        "structuralBound": 1812,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 11,
+        "stage": 0,
+        "randomCalls": 15,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 11,
+        "stage": 1,
+        "randomCalls": 25,
+        "structuralBound": 1422,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 11,
+        "stage": 2,
+        "randomCalls": 48,
+        "structuralBound": 1812,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 12,
+        "stage": 0,
+        "randomCalls": 14,
+        "structuralBound": 649,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 12,
+        "stage": 1,
+        "randomCalls": 32,
+        "structuralBound": 1166,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 12,
+        "stage": 2,
+        "randomCalls": 32,
+        "structuralBound": 1556,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 13,
+        "stage": 0,
+        "randomCalls": 30,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 13,
+        "stage": 1,
+        "randomCalls": 24,
+        "structuralBound": 1294,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 13,
+        "stage": 2,
+        "randomCalls": 32,
+        "structuralBound": 1556,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 14,
+        "stage": 0,
+        "randomCalls": 27,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 14,
+        "stage": 1,
+        "randomCalls": 26,
+        "structuralBound": 1550,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 14,
+        "stage": 2,
+        "randomCalls": 35,
+        "structuralBound": 1940,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 15,
+        "stage": 0,
+        "randomCalls": 16,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 15,
+        "stage": 1,
+        "randomCalls": 25,
+        "structuralBound": 1422,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 15,
+        "stage": 2,
+        "randomCalls": 34,
+        "structuralBound": 1812,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 16,
+        "stage": 0,
+        "randomCalls": 16,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 16,
+        "stage": 1,
+        "randomCalls": 24,
+        "structuralBound": 1294,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 16,
+        "stage": 2,
+        "randomCalls": 33,
+        "structuralBound": 1684,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 17,
+        "stage": 0,
+        "randomCalls": 23,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 17,
+        "stage": 1,
+        "randomCalls": 25,
+        "structuralBound": 1422,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 17,
+        "stage": 2,
+        "randomCalls": 33,
+        "structuralBound": 1684,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 18,
+        "stage": 0,
+        "randomCalls": 17,
+        "structuralBound": 1033,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 18,
+        "stage": 1,
+        "randomCalls": 25,
+        "structuralBound": 1422,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 18,
+        "stage": 2,
+        "randomCalls": 32,
+        "structuralBound": 1556,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 19,
+        "stage": 0,
+        "randomCalls": 30,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 19,
+        "stage": 1,
+        "randomCalls": 23,
+        "structuralBound": 1166,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 19,
+        "stage": 2,
+        "randomCalls": 33,
+        "structuralBound": 1684,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 20,
+        "stage": 0,
+        "randomCalls": 13,
+        "structuralBound": 521,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 20,
+        "stage": 1,
+        "randomCalls": 21,
+        "structuralBound": 910,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 20,
+        "stage": 2,
+        "randomCalls": 30,
+        "structuralBound": 1300,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 21,
+        "stage": 0,
+        "randomCalls": 17,
+        "structuralBound": 1033,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 21,
+        "stage": 1,
+        "randomCalls": 25,
+        "structuralBound": 1422,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 21,
+        "stage": 2,
+        "randomCalls": 33,
+        "structuralBound": 1684,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 22,
+        "stage": 0,
+        "randomCalls": 15,
+        "structuralBound": 777,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 22,
+        "stage": 1,
+        "randomCalls": 21,
+        "structuralBound": 910,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 22,
+        "stage": 2,
+        "randomCalls": 40,
+        "structuralBound": 1300,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 23,
+        "stage": 0,
+        "randomCalls": 15,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 23,
+        "stage": 1,
+        "randomCalls": 23,
+        "structuralBound": 1166,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 23,
+        "stage": 2,
+        "randomCalls": 35,
+        "structuralBound": 1940,
+        "minimumBudget": 3,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 24,
+        "stage": 0,
+        "randomCalls": 14,
+        "structuralBound": 649,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 24,
+        "stage": 1,
+        "randomCalls": 35,
+        "structuralBound": 910,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 24,
+        "stage": 2,
+        "randomCalls": 47,
+        "structuralBound": 1172,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 25,
+        "stage": 0,
+        "randomCalls": 17,
+        "structuralBound": 1033,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 25,
+        "stage": 1,
+        "randomCalls": 25,
+        "structuralBound": 1422,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 25,
+        "stage": 2,
+        "randomCalls": 32,
+        "structuralBound": 1556,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 26,
+        "stage": 0,
+        "randomCalls": 39,
+        "structuralBound": 649,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 26,
+        "stage": 1,
+        "randomCalls": 30,
+        "structuralBound": 1038,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 26,
+        "stage": 2,
+        "randomCalls": 56,
+        "structuralBound": 1172,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 27,
+        "stage": 0,
+        "randomCalls": 30,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 27,
+        "stage": 1,
+        "randomCalls": 24,
+        "structuralBound": 1294,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 27,
+        "stage": 2,
+        "randomCalls": 34,
+        "structuralBound": 1812,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 28,
+        "stage": 0,
+        "randomCalls": 23,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 28,
+        "stage": 1,
+        "randomCalls": 22,
+        "structuralBound": 1038,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 28,
+        "stage": 2,
+        "randomCalls": 30,
+        "structuralBound": 1300,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 29,
+        "stage": 0,
+        "randomCalls": 16,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 29,
+        "stage": 1,
+        "randomCalls": 32,
+        "structuralBound": 1166,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 29,
+        "stage": 2,
+        "randomCalls": 33,
+        "structuralBound": 1684,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 30,
+        "stage": 0,
+        "randomCalls": 17,
+        "structuralBound": 1033,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 30,
+        "stage": 1,
+        "randomCalls": 26,
+        "structuralBound": 1550,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 30,
+        "stage": 2,
+        "randomCalls": 35,
+        "structuralBound": 1940,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 31,
+        "stage": 0,
+        "randomCalls": 23,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 31,
+        "stage": 1,
+        "randomCalls": 23,
+        "structuralBound": 1166,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 31,
+        "stage": 2,
+        "randomCalls": 32,
+        "structuralBound": 1556,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 32,
+        "stage": 0,
+        "randomCalls": 24,
+        "structuralBound": 649,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 32,
+        "stage": 1,
+        "randomCalls": 23,
+        "structuralBound": 1166,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 32,
+        "stage": 2,
+        "randomCalls": 33,
+        "structuralBound": 1684,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 33,
+        "stage": 0,
+        "randomCalls": 16,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 33,
+        "stage": 1,
+        "randomCalls": 23,
+        "structuralBound": 1166,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 33,
+        "stage": 2,
+        "randomCalls": 40,
+        "structuralBound": 1300,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 34,
+        "stage": 0,
+        "randomCalls": 33,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 34,
+        "stage": 1,
+        "randomCalls": 23,
+        "structuralBound": 1166,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 34,
+        "stage": 2,
+        "randomCalls": 40,
+        "structuralBound": 1300,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 35,
+        "stage": 0,
+        "randomCalls": 21,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 35,
+        "stage": 1,
+        "randomCalls": 22,
+        "structuralBound": 1038,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 35,
+        "stage": 2,
+        "randomCalls": 30,
+        "structuralBound": 1300,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 36,
+        "stage": 0,
+        "randomCalls": 39,
+        "structuralBound": 649,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 36,
+        "stage": 1,
+        "randomCalls": 22,
+        "structuralBound": 1038,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 36,
+        "stage": 2,
+        "randomCalls": 33,
+        "structuralBound": 1684,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 37,
+        "stage": 0,
+        "randomCalls": 17,
+        "structuralBound": 1033,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 37,
+        "stage": 1,
+        "randomCalls": 44,
+        "structuralBound": 1294,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 37,
+        "stage": 2,
+        "randomCalls": 32,
+        "structuralBound": 1556,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 38,
+        "stage": 0,
+        "randomCalls": 14,
+        "structuralBound": 649,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 38,
+        "stage": 1,
+        "randomCalls": 22,
+        "structuralBound": 1038,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 38,
+        "stage": 2,
+        "randomCalls": 30,
+        "structuralBound": 1300,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 39,
+        "stage": 0,
+        "randomCalls": 17,
+        "structuralBound": 1033,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 39,
+        "stage": 1,
+        "randomCalls": 24,
+        "structuralBound": 1294,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 39,
+        "stage": 2,
+        "randomCalls": 33,
+        "structuralBound": 1684,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 40,
+        "stage": 0,
+        "randomCalls": 15,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 40,
+        "stage": 1,
+        "randomCalls": 21,
+        "structuralBound": 910,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 40,
+        "stage": 2,
+        "randomCalls": 68,
+        "structuralBound": 1556,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 41,
+        "stage": 0,
+        "randomCalls": 17,
+        "structuralBound": 1033,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 41,
+        "stage": 1,
+        "randomCalls": 24,
+        "structuralBound": 1294,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 41,
+        "stage": 2,
+        "randomCalls": 32,
+        "structuralBound": 1556,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 42,
+        "stage": 0,
+        "randomCalls": 17,
+        "structuralBound": 1033,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 42,
+        "stage": 1,
+        "randomCalls": 22,
+        "structuralBound": 1038,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 42,
+        "stage": 2,
+        "randomCalls": 30,
+        "structuralBound": 1300,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 43,
+        "stage": 0,
+        "randomCalls": 16,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 43,
+        "stage": 1,
+        "randomCalls": 24,
+        "structuralBound": 1294,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 43,
+        "stage": 2,
+        "randomCalls": 33,
+        "structuralBound": 1684,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 44,
+        "stage": 0,
+        "randomCalls": 29,
+        "structuralBound": 649,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 44,
+        "stage": 1,
+        "randomCalls": 56,
+        "structuralBound": 910,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 44,
+        "stage": 2,
+        "randomCalls": 42,
+        "structuralBound": 1428,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 45,
+        "stage": 0,
+        "randomCalls": 30,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 45,
+        "stage": 1,
+        "randomCalls": 41,
+        "structuralBound": 1166,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 45,
+        "stage": 2,
+        "randomCalls": 30,
+        "structuralBound": 1300,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 46,
+        "stage": 0,
+        "randomCalls": 16,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 46,
+        "stage": 1,
+        "randomCalls": 23,
+        "structuralBound": 1166,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 46,
+        "stage": 2,
+        "randomCalls": 32,
+        "structuralBound": 1556,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 47,
+        "stage": 0,
+        "randomCalls": 14,
+        "structuralBound": 649,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 47,
+        "stage": 1,
+        "randomCalls": 30,
+        "structuralBound": 1038,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 47,
+        "stage": 2,
+        "randomCalls": 46,
+        "structuralBound": 1684,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 48,
+        "stage": 0,
+        "randomCalls": 15,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 48,
+        "stage": 1,
+        "randomCalls": 42,
+        "structuralBound": 910,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 48,
+        "stage": 2,
+        "randomCalls": 42,
+        "structuralBound": 1428,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 49,
+        "stage": 0,
+        "randomCalls": 16,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 49,
+        "stage": 1,
+        "randomCalls": 24,
+        "structuralBound": 1294,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 49,
+        "stage": 2,
+        "randomCalls": 36,
+        "structuralBound": 2068,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 50,
+        "stage": 0,
+        "randomCalls": 27,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 50,
+        "stage": 1,
+        "randomCalls": 28,
+        "structuralBound": 910,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 50,
+        "stage": 2,
+        "randomCalls": 31,
+        "structuralBound": 1428,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 51,
+        "stage": 0,
+        "randomCalls": 23,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 51,
+        "stage": 1,
+        "randomCalls": 23,
+        "structuralBound": 1166,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 51,
+        "stage": 2,
+        "randomCalls": 32,
+        "structuralBound": 1556,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 52,
+        "stage": 0,
+        "randomCalls": 21,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 52,
+        "stage": 1,
+        "randomCalls": 24,
+        "structuralBound": 1294,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 52,
+        "stage": 2,
+        "randomCalls": 32,
+        "structuralBound": 1556,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 53,
+        "stage": 0,
+        "randomCalls": 16,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 53,
+        "stage": 1,
+        "randomCalls": 25,
+        "structuralBound": 1422,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 53,
+        "stage": 2,
+        "randomCalls": 35,
+        "structuralBound": 1940,
+        "minimumBudget": 3,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 54,
+        "stage": 0,
+        "randomCalls": 15,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 54,
+        "stage": 1,
+        "randomCalls": 23,
+        "structuralBound": 1166,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 54,
+        "stage": 2,
+        "randomCalls": 32,
+        "structuralBound": 1556,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 55,
+        "stage": 0,
+        "randomCalls": 16,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 55,
+        "stage": 1,
+        "randomCalls": 24,
+        "structuralBound": 1294,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 55,
+        "stage": 2,
+        "randomCalls": 35,
+        "structuralBound": 1940,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 56,
+        "stage": 0,
+        "randomCalls": 33,
+        "structuralBound": 521,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 56,
+        "stage": 1,
+        "randomCalls": 23,
+        "structuralBound": 1166,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 56,
+        "stage": 2,
+        "randomCalls": 48,
+        "structuralBound": 1812,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 57,
+        "stage": 0,
+        "randomCalls": 15,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 57,
+        "stage": 1,
+        "randomCalls": 30,
+        "structuralBound": 1038,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 57,
+        "stage": 2,
+        "randomCalls": 34,
+        "structuralBound": 1812,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 58,
+        "stage": 0,
+        "randomCalls": 23,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 58,
+        "stage": 1,
+        "randomCalls": 44,
+        "structuralBound": 1294,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 58,
+        "stage": 2,
+        "randomCalls": 34,
+        "structuralBound": 1812,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 59,
+        "stage": 0,
+        "randomCalls": 13,
+        "structuralBound": 521,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 59,
+        "stage": 1,
+        "randomCalls": 22,
+        "structuralBound": 1038,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 59,
+        "stage": 2,
+        "randomCalls": 32,
+        "structuralBound": 1556,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 60,
+        "stage": 0,
+        "randomCalls": 23,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 60,
+        "stage": 1,
+        "randomCalls": 24,
+        "structuralBound": 1294,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 60,
+        "stage": 2,
+        "randomCalls": 33,
+        "structuralBound": 1684,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 61,
+        "stage": 0,
+        "randomCalls": 15,
+        "structuralBound": 777,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 61,
+        "stage": 1,
+        "randomCalls": 22,
+        "structuralBound": 1038,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 61,
+        "stage": 2,
+        "randomCalls": 30,
+        "structuralBound": 1300,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 62,
+        "stage": 0,
+        "randomCalls": 16,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 62,
+        "stage": 1,
+        "randomCalls": 25,
+        "structuralBound": 1422,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 62,
+        "stage": 2,
+        "randomCalls": 36,
+        "structuralBound": 2068,
+        "minimumBudget": 3,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 63,
+        "stage": 0,
+        "randomCalls": 27,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 63,
+        "stage": 1,
+        "randomCalls": 23,
+        "structuralBound": 1166,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 63,
+        "stage": 2,
+        "randomCalls": 34,
+        "structuralBound": 1812,
+        "minimumBudget": 3,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 64,
+        "stage": 0,
+        "randomCalls": 16,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 64,
+        "stage": 1,
+        "randomCalls": 23,
+        "structuralBound": 1166,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 64,
+        "stage": 2,
+        "randomCalls": 33,
+        "structuralBound": 1684,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 65,
+        "stage": 0,
+        "randomCalls": 16,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 65,
+        "stage": 1,
+        "randomCalls": 26,
+        "structuralBound": 1550,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 65,
+        "stage": 2,
+        "randomCalls": 34,
+        "structuralBound": 1812,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 66,
+        "stage": 0,
+        "randomCalls": 37,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 66,
+        "stage": 1,
+        "randomCalls": 23,
+        "structuralBound": 1166,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 66,
+        "stage": 2,
+        "randomCalls": 35,
+        "structuralBound": 1940,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 67,
+        "stage": 0,
+        "randomCalls": 16,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 67,
+        "stage": 1,
+        "randomCalls": 24,
+        "structuralBound": 1294,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 67,
+        "stage": 2,
+        "randomCalls": 35,
+        "structuralBound": 1940,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 68,
+        "stage": 0,
+        "randomCalls": 29,
+        "structuralBound": 649,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 68,
+        "stage": 1,
+        "randomCalls": 38,
+        "structuralBound": 1038,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 68,
+        "stage": 2,
+        "randomCalls": 32,
+        "structuralBound": 1556,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 69,
+        "stage": 0,
+        "randomCalls": 16,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 69,
+        "stage": 1,
+        "randomCalls": 23,
+        "structuralBound": 1166,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 69,
+        "stage": 2,
+        "randomCalls": 31,
+        "structuralBound": 1428,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 70,
+        "stage": 0,
+        "randomCalls": 15,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 70,
+        "stage": 1,
+        "randomCalls": 26,
+        "structuralBound": 782,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 70,
+        "stage": 2,
+        "randomCalls": 31,
+        "structuralBound": 1428,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 71,
+        "stage": 0,
+        "randomCalls": 29,
+        "structuralBound": 521,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 71,
+        "stage": 1,
+        "randomCalls": 49,
+        "structuralBound": 910,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 71,
+        "stage": 2,
+        "randomCalls": 30,
+        "structuralBound": 1300,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 72,
+        "stage": 0,
+        "randomCalls": 16,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 72,
+        "stage": 1,
+        "randomCalls": 32,
+        "structuralBound": 1166,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 72,
+        "stage": 2,
+        "randomCalls": 33,
+        "structuralBound": 1684,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 73,
+        "stage": 0,
+        "randomCalls": 15,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 73,
+        "stage": 1,
+        "randomCalls": 21,
+        "structuralBound": 910,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 73,
+        "stage": 2,
+        "randomCalls": 40,
+        "structuralBound": 1300,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 74,
+        "stage": 0,
+        "randomCalls": 16,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 74,
+        "stage": 1,
+        "randomCalls": 25,
+        "structuralBound": 1422,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 74,
+        "stage": 2,
+        "randomCalls": 36,
+        "structuralBound": 2068,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 75,
+        "stage": 0,
+        "randomCalls": 15,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 75,
+        "stage": 1,
+        "randomCalls": 46,
+        "structuralBound": 1038,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 75,
+        "stage": 2,
+        "randomCalls": 32,
+        "structuralBound": 1556,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 76,
+        "stage": 0,
+        "randomCalls": 18,
+        "structuralBound": 1161,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 76,
+        "stage": 1,
+        "randomCalls": 25,
+        "structuralBound": 1422,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 76,
+        "stage": 2,
+        "randomCalls": 35,
+        "structuralBound": 1940,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 77,
+        "stage": 0,
+        "randomCalls": 15,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 77,
+        "stage": 1,
+        "randomCalls": 23,
+        "structuralBound": 1166,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 77,
+        "stage": 2,
+        "randomCalls": 31,
+        "structuralBound": 1428,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 78,
+        "stage": 0,
+        "randomCalls": 16,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 78,
+        "stage": 1,
+        "randomCalls": 36,
+        "structuralBound": 1422,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 78,
+        "stage": 2,
+        "randomCalls": 32,
+        "structuralBound": 1556,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 79,
+        "stage": 0,
+        "randomCalls": 16,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 79,
+        "stage": 1,
+        "randomCalls": 23,
+        "structuralBound": 1166,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 79,
+        "stage": 2,
+        "randomCalls": 32,
+        "structuralBound": 1556,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 80,
+        "stage": 0,
+        "randomCalls": 15,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 80,
+        "stage": 1,
+        "randomCalls": 24,
+        "structuralBound": 1294,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 80,
+        "stage": 2,
+        "randomCalls": 32,
+        "structuralBound": 1556,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 81,
+        "stage": 0,
+        "randomCalls": 16,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 81,
+        "stage": 1,
+        "randomCalls": 23,
+        "structuralBound": 1166,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 81,
+        "stage": 2,
+        "randomCalls": 31,
+        "structuralBound": 1428,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 82,
+        "stage": 0,
+        "randomCalls": 15,
+        "structuralBound": 777,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 82,
+        "stage": 1,
+        "randomCalls": 22,
+        "structuralBound": 1038,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 82,
+        "stage": 2,
+        "randomCalls": 31,
+        "structuralBound": 1428,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 83,
+        "stage": 0,
+        "randomCalls": 19,
+        "structuralBound": 649,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 83,
+        "stage": 1,
+        "randomCalls": 42,
+        "structuralBound": 910,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 83,
+        "stage": 2,
+        "randomCalls": 32,
+        "structuralBound": 1556,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 84,
+        "stage": 0,
+        "randomCalls": 23,
+        "structuralBound": 905,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 84,
+        "stage": 1,
+        "randomCalls": 32,
+        "structuralBound": 1166,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 84,
+        "stage": 2,
+        "randomCalls": 31,
+        "structuralBound": 1428,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 85,
+        "stage": 0,
+        "randomCalls": 21,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 85,
+        "stage": 1,
+        "randomCalls": 21,
+        "structuralBound": 910,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 85,
+        "stage": 2,
+        "randomCalls": 40,
+        "structuralBound": 1300,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 86,
+        "stage": 0,
+        "randomCalls": 23,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 86,
+        "stage": 1,
+        "randomCalls": 22,
+        "structuralBound": 1038,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 86,
+        "stage": 2,
+        "randomCalls": 30,
+        "structuralBound": 1300,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 87,
+        "stage": 0,
+        "randomCalls": 27,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 87,
+        "stage": 1,
+        "randomCalls": 22,
+        "structuralBound": 1038,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 87,
+        "stage": 2,
+        "randomCalls": 44,
+        "structuralBound": 1556,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 88,
+        "stage": 0,
+        "randomCalls": 18,
+        "structuralBound": 1161,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 88,
+        "stage": 1,
+        "randomCalls": 24,
+        "structuralBound": 1294,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 88,
+        "stage": 2,
+        "randomCalls": 32,
+        "structuralBound": 1556,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 89,
+        "stage": 0,
+        "randomCalls": 27,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 89,
+        "stage": 1,
+        "randomCalls": 22,
+        "structuralBound": 1038,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 89,
+        "stage": 2,
+        "randomCalls": 30,
+        "structuralBound": 1300,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 90,
+        "stage": 0,
+        "randomCalls": 17,
+        "structuralBound": 1033,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 90,
+        "stage": 1,
+        "randomCalls": 23,
+        "structuralBound": 1166,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 90,
+        "stage": 2,
+        "randomCalls": 31,
+        "structuralBound": 1428,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 91,
+        "stage": 0,
+        "randomCalls": 21,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 91,
+        "stage": 1,
+        "randomCalls": 22,
+        "structuralBound": 1038,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 91,
+        "stage": 2,
+        "randomCalls": 60,
+        "structuralBound": 1300,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 92,
+        "stage": 0,
+        "randomCalls": 15,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 92,
+        "stage": 1,
+        "randomCalls": 21,
+        "structuralBound": 910,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 92,
+        "stage": 2,
+        "randomCalls": 30,
+        "structuralBound": 1300,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 93,
+        "stage": 0,
+        "randomCalls": 16,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 93,
+        "stage": 1,
+        "randomCalls": 41,
+        "structuralBound": 1166,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 93,
+        "stage": 2,
+        "randomCalls": 32,
+        "structuralBound": 1556,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 94,
+        "stage": 0,
+        "randomCalls": 21,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 94,
+        "stage": 1,
+        "randomCalls": 24,
+        "structuralBound": 1294,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 94,
+        "stage": 2,
+        "randomCalls": 34,
+        "structuralBound": 1812,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 95,
+        "stage": 0,
+        "randomCalls": 34,
+        "structuralBound": 649,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 95,
+        "stage": 1,
+        "randomCalls": 23,
+        "structuralBound": 1166,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 95,
+        "stage": 2,
+        "randomCalls": 31,
+        "structuralBound": 1428,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 96,
+        "stage": 0,
+        "randomCalls": 16,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 96,
+        "stage": 1,
+        "randomCalls": 25,
+        "structuralBound": 1422,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 96,
+        "stage": 2,
+        "randomCalls": 34,
+        "structuralBound": 1812,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 97,
+        "stage": 0,
+        "randomCalls": 16,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 97,
+        "stage": 1,
+        "randomCalls": 25,
+        "structuralBound": 1422,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 97,
+        "stage": 2,
+        "randomCalls": 46,
+        "structuralBound": 1684,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 98,
+        "stage": 0,
+        "randomCalls": 21,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 98,
+        "stage": 1,
+        "randomCalls": 36,
+        "structuralBound": 1422,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 98,
+        "stage": 2,
+        "randomCalls": 34,
+        "structuralBound": 1812,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 99,
+        "stage": 0,
+        "randomCalls": 23,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 99,
+        "stage": 1,
+        "randomCalls": 24,
+        "structuralBound": 1294,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 99,
+        "stage": 2,
+        "randomCalls": 32,
+        "structuralBound": 1556,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 100,
+        "stage": 0,
+        "randomCalls": 18,
+        "structuralBound": 1161,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 100,
+        "stage": 1,
+        "randomCalls": 28,
+        "structuralBound": 1806,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 100,
+        "stage": 2,
+        "randomCalls": 38,
+        "structuralBound": 2324,
+        "minimumBudget": 3,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 101,
+        "stage": 0,
+        "randomCalls": 27,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 101,
+        "stage": 1,
+        "randomCalls": 24,
+        "structuralBound": 1294,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 101,
+        "stage": 2,
+        "randomCalls": 33,
+        "structuralBound": 1684,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 102,
+        "stage": 0,
+        "randomCalls": 17,
+        "structuralBound": 1033,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 102,
+        "stage": 1,
+        "randomCalls": 25,
+        "structuralBound": 1422,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 102,
+        "stage": 2,
+        "randomCalls": 36,
+        "structuralBound": 2068,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 103,
+        "stage": 0,
+        "randomCalls": 21,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 103,
+        "stage": 1,
+        "randomCalls": 22,
+        "structuralBound": 1038,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 103,
+        "stage": 2,
+        "randomCalls": 30,
+        "structuralBound": 1300,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 104,
+        "stage": 0,
+        "randomCalls": 30,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 104,
+        "stage": 1,
+        "randomCalls": 23,
+        "structuralBound": 1166,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 104,
+        "stage": 2,
+        "randomCalls": 30,
+        "structuralBound": 1300,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 105,
+        "stage": 0,
+        "randomCalls": 15,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 105,
+        "stage": 1,
+        "randomCalls": 30,
+        "structuralBound": 1038,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 105,
+        "stage": 2,
+        "randomCalls": 44,
+        "structuralBound": 1044,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 106,
+        "stage": 0,
+        "randomCalls": 16,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 106,
+        "stage": 1,
+        "randomCalls": 23,
+        "structuralBound": 1166,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 106,
+        "stage": 2,
+        "randomCalls": 32,
+        "structuralBound": 1556,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 107,
+        "stage": 0,
+        "randomCalls": 17,
+        "structuralBound": 521,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 107,
+        "stage": 1,
+        "randomCalls": 22,
+        "structuralBound": 1038,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 107,
+        "stage": 2,
+        "randomCalls": 46,
+        "structuralBound": 1684,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 108,
+        "stage": 0,
+        "randomCalls": 16,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 108,
+        "stage": 1,
+        "randomCalls": 22,
+        "structuralBound": 1038,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 108,
+        "stage": 2,
+        "randomCalls": 30,
+        "structuralBound": 1300,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 109,
+        "stage": 0,
+        "randomCalls": 23,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 109,
+        "stage": 1,
+        "randomCalls": 24,
+        "structuralBound": 1294,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 109,
+        "stage": 2,
+        "randomCalls": 33,
+        "structuralBound": 1684,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 110,
+        "stage": 0,
+        "randomCalls": 19,
+        "structuralBound": 649,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 110,
+        "stage": 1,
+        "randomCalls": 22,
+        "structuralBound": 1038,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 110,
+        "stage": 2,
+        "randomCalls": 32,
+        "structuralBound": 1556,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 111,
+        "stage": 0,
+        "randomCalls": 16,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 111,
+        "stage": 1,
+        "randomCalls": 23,
+        "structuralBound": 1166,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 111,
+        "stage": 2,
+        "randomCalls": 33,
+        "structuralBound": 1684,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 112,
+        "stage": 0,
+        "randomCalls": 23,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 112,
+        "stage": 1,
+        "randomCalls": 24,
+        "structuralBound": 1294,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 112,
+        "stage": 2,
+        "randomCalls": 31,
+        "structuralBound": 1428,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 113,
+        "stage": 0,
+        "randomCalls": 16,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 113,
+        "stage": 1,
+        "randomCalls": 26,
+        "structuralBound": 1550,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 113,
+        "stage": 2,
+        "randomCalls": 36,
+        "structuralBound": 2068,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 114,
+        "stage": 0,
+        "randomCalls": 15,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 114,
+        "stage": 1,
+        "randomCalls": 38,
+        "structuralBound": 1038,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 114,
+        "stage": 2,
+        "randomCalls": 33,
+        "structuralBound": 1684,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 115,
+        "stage": 0,
+        "randomCalls": 33,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 115,
+        "stage": 1,
+        "randomCalls": 22,
+        "structuralBound": 1038,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 115,
+        "stage": 2,
+        "randomCalls": 46,
+        "structuralBound": 1684,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 116,
+        "stage": 0,
+        "randomCalls": 21,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 116,
+        "stage": 1,
+        "randomCalls": 25,
+        "structuralBound": 1422,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 116,
+        "stage": 2,
+        "randomCalls": 33,
+        "structuralBound": 1684,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 117,
+        "stage": 0,
+        "randomCalls": 16,
+        "structuralBound": 905,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 117,
+        "stage": 1,
+        "randomCalls": 23,
+        "structuralBound": 1166,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 117,
+        "stage": 2,
+        "randomCalls": 33,
+        "structuralBound": 1684,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 118,
+        "stage": 0,
+        "randomCalls": 15,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 118,
+        "stage": 1,
+        "randomCalls": 23,
+        "structuralBound": 1166,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 118,
+        "stage": 2,
+        "randomCalls": 32,
+        "structuralBound": 1556,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 119,
+        "stage": 0,
+        "randomCalls": 14,
+        "structuralBound": 649,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 119,
+        "stage": 1,
+        "randomCalls": 23,
+        "structuralBound": 1166,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 119,
+        "stage": 2,
+        "randomCalls": 33,
+        "structuralBound": 1684,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 120,
+        "stage": 0,
+        "randomCalls": 16,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 120,
+        "stage": 1,
+        "randomCalls": 23,
+        "structuralBound": 1166,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 120,
+        "stage": 2,
+        "randomCalls": 50,
+        "structuralBound": 1940,
+        "minimumBudget": 3,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 121,
+        "stage": 0,
+        "randomCalls": 37,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 121,
+        "stage": 1,
+        "randomCalls": 22,
+        "structuralBound": 1038,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 121,
+        "stage": 2,
+        "randomCalls": 30,
+        "structuralBound": 1300,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 122,
+        "stage": 0,
+        "randomCalls": 29,
+        "structuralBound": 649,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 122,
+        "stage": 1,
+        "randomCalls": 23,
+        "structuralBound": 1166,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 122,
+        "stage": 2,
+        "randomCalls": 33,
+        "structuralBound": 1684,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 123,
+        "stage": 0,
+        "randomCalls": 25,
+        "structuralBound": 1033,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 123,
+        "stage": 1,
+        "randomCalls": 30,
+        "structuralBound": 1038,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 123,
+        "stage": 2,
+        "randomCalls": 32,
+        "structuralBound": 1556,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 124,
+        "stage": 0,
+        "randomCalls": 16,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 124,
+        "stage": 1,
+        "randomCalls": 22,
+        "structuralBound": 1038,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 124,
+        "stage": 2,
+        "randomCalls": 32,
+        "structuralBound": 1556,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 125,
+        "stage": 0,
+        "randomCalls": 25,
+        "structuralBound": 1033,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 125,
+        "stage": 1,
+        "randomCalls": 24,
+        "structuralBound": 1294,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 125,
+        "stage": 2,
+        "randomCalls": 31,
+        "structuralBound": 1428,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 126,
+        "stage": 0,
+        "randomCalls": 15,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 126,
+        "stage": 1,
+        "randomCalls": 21,
+        "structuralBound": 910,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 126,
+        "stage": 2,
+        "randomCalls": 33,
+        "structuralBound": 1684,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 127,
+        "stage": 0,
+        "randomCalls": 16,
+        "structuralBound": 905,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 127,
+        "stage": 1,
+        "randomCalls": 22,
+        "structuralBound": 1038,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 127,
+        "stage": 2,
+        "randomCalls": 34,
+        "structuralBound": 1812,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 128,
+        "stage": 0,
+        "randomCalls": 14,
+        "structuralBound": 649,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 128,
+        "stage": 1,
+        "randomCalls": 21,
+        "structuralBound": 910,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 128,
+        "stage": 2,
+        "randomCalls": 32,
+        "structuralBound": 1556,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 129,
+        "stage": 0,
+        "randomCalls": 30,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 129,
+        "stage": 1,
+        "randomCalls": 32,
+        "structuralBound": 1166,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 129,
+        "stage": 2,
+        "randomCalls": 31,
+        "structuralBound": 1428,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 130,
+        "stage": 0,
+        "randomCalls": 33,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 130,
+        "stage": 1,
+        "randomCalls": 21,
+        "structuralBound": 910,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 130,
+        "stage": 2,
+        "randomCalls": 31,
+        "structuralBound": 1428,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 131,
+        "stage": 0,
+        "randomCalls": 19,
+        "structuralBound": 649,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 131,
+        "stage": 1,
+        "randomCalls": 23,
+        "structuralBound": 1166,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 131,
+        "stage": 2,
+        "randomCalls": 31,
+        "structuralBound": 1428,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 132,
+        "stage": 0,
+        "randomCalls": 30,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 132,
+        "stage": 1,
+        "randomCalls": 23,
+        "structuralBound": 1166,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 132,
+        "stage": 2,
+        "randomCalls": 32,
+        "structuralBound": 1556,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 133,
+        "stage": 0,
+        "randomCalls": 30,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 133,
+        "stage": 1,
+        "randomCalls": 23,
+        "structuralBound": 1166,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 133,
+        "stage": 2,
+        "randomCalls": 33,
+        "structuralBound": 1684,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 134,
+        "stage": 0,
+        "randomCalls": 21,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 134,
+        "stage": 1,
+        "randomCalls": 23,
+        "structuralBound": 1166,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 134,
+        "stage": 2,
+        "randomCalls": 33,
+        "structuralBound": 1684,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 135,
+        "stage": 0,
+        "randomCalls": 16,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 135,
+        "stage": 1,
+        "randomCalls": 36,
+        "structuralBound": 1422,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 135,
+        "stage": 2,
+        "randomCalls": 36,
+        "structuralBound": 2068,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 136,
+        "stage": 0,
+        "randomCalls": 23,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 136,
+        "stage": 1,
+        "randomCalls": 23,
+        "structuralBound": 1166,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 136,
+        "stage": 2,
+        "randomCalls": 32,
+        "structuralBound": 1556,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 137,
+        "stage": 0,
+        "randomCalls": 17,
+        "structuralBound": 1033,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 137,
+        "stage": 1,
+        "randomCalls": 25,
+        "structuralBound": 1422,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 137,
+        "stage": 2,
+        "randomCalls": 36,
+        "structuralBound": 2068,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 138,
+        "stage": 0,
+        "randomCalls": 27,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 138,
+        "stage": 1,
+        "randomCalls": 24,
+        "structuralBound": 1294,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 138,
+        "stage": 2,
+        "randomCalls": 33,
+        "structuralBound": 1684,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 139,
+        "stage": 0,
+        "randomCalls": 44,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 139,
+        "stage": 1,
+        "randomCalls": 32,
+        "structuralBound": 1166,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 139,
+        "stage": 2,
+        "randomCalls": 32,
+        "structuralBound": 1556,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 140,
+        "stage": 0,
+        "randomCalls": 24,
+        "structuralBound": 649,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 140,
+        "stage": 1,
+        "randomCalls": 23,
+        "structuralBound": 1166,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 140,
+        "stage": 2,
+        "randomCalls": 32,
+        "structuralBound": 1556,
+        "minimumBudget": 3,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 141,
+        "stage": 0,
+        "randomCalls": 17,
+        "structuralBound": 1033,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 141,
+        "stage": 1,
+        "randomCalls": 25,
+        "structuralBound": 1422,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 141,
+        "stage": 2,
+        "randomCalls": 34,
+        "structuralBound": 1812,
+        "minimumBudget": 3,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 142,
+        "stage": 0,
+        "randomCalls": 14,
+        "structuralBound": 649,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 142,
+        "stage": 1,
+        "randomCalls": 30,
+        "structuralBound": 1038,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 142,
+        "stage": 2,
+        "randomCalls": 30,
+        "structuralBound": 1300,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 143,
+        "stage": 0,
+        "randomCalls": 14,
+        "structuralBound": 649,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 143,
+        "stage": 1,
+        "randomCalls": 21,
+        "structuralBound": 910,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 143,
+        "stage": 2,
+        "randomCalls": 30,
+        "structuralBound": 1300,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 144,
+        "stage": 0,
+        "randomCalls": 23,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 144,
+        "stage": 1,
+        "randomCalls": 24,
+        "structuralBound": 1294,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 144,
+        "stage": 2,
+        "randomCalls": 32,
+        "structuralBound": 1556,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 145,
+        "stage": 0,
+        "randomCalls": 16,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 145,
+        "stage": 1,
+        "randomCalls": 41,
+        "structuralBound": 1166,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 145,
+        "stage": 2,
+        "randomCalls": 32,
+        "structuralBound": 1556,
+        "minimumBudget": 3,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 146,
+        "stage": 0,
+        "randomCalls": 15,
+        "structuralBound": 777,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 146,
+        "stage": 1,
+        "randomCalls": 32,
+        "structuralBound": 1166,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 146,
+        "stage": 2,
+        "randomCalls": 33,
+        "structuralBound": 1684,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 147,
+        "stage": 0,
+        "randomCalls": 16,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 147,
+        "stage": 1,
+        "randomCalls": 24,
+        "structuralBound": 1294,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 147,
+        "stage": 2,
+        "randomCalls": 35,
+        "structuralBound": 1940,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 148,
+        "stage": 0,
+        "randomCalls": 17,
+        "structuralBound": 1033,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 148,
+        "stage": 1,
+        "randomCalls": 36,
+        "structuralBound": 1422,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 148,
+        "stage": 2,
+        "randomCalls": 32,
+        "structuralBound": 1556,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 149,
+        "stage": 0,
+        "randomCalls": 23,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 149,
+        "stage": 1,
+        "randomCalls": 25,
+        "structuralBound": 1422,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 149,
+        "stage": 2,
+        "randomCalls": 32,
+        "structuralBound": 1556,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 150,
+        "stage": 0,
+        "randomCalls": 33,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 150,
+        "stage": 1,
+        "randomCalls": 22,
+        "structuralBound": 1038,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 150,
+        "stage": 2,
+        "randomCalls": 32,
+        "structuralBound": 1556,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 151,
+        "stage": 0,
+        "randomCalls": 37,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 151,
+        "stage": 1,
+        "randomCalls": 25,
+        "structuralBound": 1422,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 151,
+        "stage": 2,
+        "randomCalls": 32,
+        "structuralBound": 1556,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 152,
+        "stage": 0,
+        "randomCalls": 19,
+        "structuralBound": 649,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 152,
+        "stage": 1,
+        "randomCalls": 30,
+        "structuralBound": 1038,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 152,
+        "stage": 2,
+        "randomCalls": 40,
+        "structuralBound": 1300,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 153,
+        "stage": 0,
+        "randomCalls": 17,
+        "structuralBound": 1033,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 153,
+        "stage": 1,
+        "randomCalls": 25,
+        "structuralBound": 1422,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 153,
+        "stage": 2,
+        "randomCalls": 34,
+        "structuralBound": 1812,
+        "minimumBudget": 3,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 154,
+        "stage": 0,
+        "randomCalls": 14,
+        "structuralBound": 649,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 154,
+        "stage": 1,
+        "randomCalls": 30,
+        "structuralBound": 1038,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 154,
+        "stage": 2,
+        "randomCalls": 34,
+        "structuralBound": 1812,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 155,
+        "stage": 0,
+        "randomCalls": 21,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 155,
+        "stage": 1,
+        "randomCalls": 24,
+        "structuralBound": 1294,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 155,
+        "stage": 2,
+        "randomCalls": 34,
+        "structuralBound": 1812,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 156,
+        "stage": 0,
+        "randomCalls": 27,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 156,
+        "stage": 1,
+        "randomCalls": 22,
+        "structuralBound": 1038,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 156,
+        "stage": 2,
+        "randomCalls": 29,
+        "structuralBound": 1172,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 157,
+        "stage": 0,
+        "randomCalls": 17,
+        "structuralBound": 1033,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 157,
+        "stage": 1,
+        "randomCalls": 25,
+        "structuralBound": 1422,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 157,
+        "stage": 2,
+        "randomCalls": 32,
+        "structuralBound": 1556,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 158,
+        "stage": 0,
+        "randomCalls": 15,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 158,
+        "stage": 1,
+        "randomCalls": 30,
+        "structuralBound": 1038,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 158,
+        "stage": 2,
+        "randomCalls": 31,
+        "structuralBound": 1428,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 159,
+        "stage": 0,
+        "randomCalls": 16,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 159,
+        "stage": 1,
+        "randomCalls": 54,
+        "structuralBound": 1038,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 159,
+        "stage": 2,
+        "randomCalls": 31,
+        "structuralBound": 1428,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 160,
+        "stage": 0,
+        "randomCalls": 17,
+        "structuralBound": 1033,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 160,
+        "stage": 1,
+        "randomCalls": 36,
+        "structuralBound": 1422,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 160,
+        "stage": 2,
+        "randomCalls": 34,
+        "structuralBound": 1812,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 161,
+        "stage": 0,
+        "randomCalls": 23,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 161,
+        "stage": 1,
+        "randomCalls": 32,
+        "structuralBound": 1166,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 161,
+        "stage": 2,
+        "randomCalls": 42,
+        "structuralBound": 1428,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 162,
+        "stage": 0,
+        "randomCalls": 23,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 162,
+        "stage": 1,
+        "randomCalls": 23,
+        "structuralBound": 1166,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 162,
+        "stage": 2,
+        "randomCalls": 32,
+        "structuralBound": 1556,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 163,
+        "stage": 0,
+        "randomCalls": 15,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 163,
+        "stage": 1,
+        "randomCalls": 22,
+        "structuralBound": 1038,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 163,
+        "stage": 2,
+        "randomCalls": 32,
+        "structuralBound": 1556,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 164,
+        "stage": 0,
+        "randomCalls": 21,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 164,
+        "stage": 1,
+        "randomCalls": 24,
+        "structuralBound": 1294,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 164,
+        "stage": 2,
+        "randomCalls": 32,
+        "structuralBound": 1556,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 165,
+        "stage": 0,
+        "randomCalls": 15,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 165,
+        "stage": 1,
+        "randomCalls": 21,
+        "structuralBound": 910,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 165,
+        "stage": 2,
+        "randomCalls": 38,
+        "structuralBound": 1172,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 166,
+        "stage": 0,
+        "randomCalls": 24,
+        "structuralBound": 649,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 166,
+        "stage": 1,
+        "randomCalls": 22,
+        "structuralBound": 1038,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 166,
+        "stage": 2,
+        "randomCalls": 30,
+        "structuralBound": 1300,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 167,
+        "stage": 0,
+        "randomCalls": 14,
+        "structuralBound": 649,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 167,
+        "stage": 1,
+        "randomCalls": 22,
+        "structuralBound": 1038,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 167,
+        "stage": 2,
+        "randomCalls": 46,
+        "structuralBound": 1684,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 168,
+        "stage": 0,
+        "randomCalls": 21,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 168,
+        "stage": 1,
+        "randomCalls": 30,
+        "structuralBound": 1038,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 168,
+        "stage": 2,
+        "randomCalls": 30,
+        "structuralBound": 1300,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 169,
+        "stage": 0,
+        "randomCalls": 21,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 169,
+        "stage": 1,
+        "randomCalls": 42,
+        "structuralBound": 910,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 169,
+        "stage": 2,
+        "randomCalls": 29,
+        "structuralBound": 1172,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 170,
+        "stage": 0,
+        "randomCalls": 14,
+        "structuralBound": 649,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 170,
+        "stage": 1,
+        "randomCalls": 22,
+        "structuralBound": 1038,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 170,
+        "stage": 2,
+        "randomCalls": 31,
+        "structuralBound": 1428,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 171,
+        "stage": 0,
+        "randomCalls": 16,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 171,
+        "stage": 1,
+        "randomCalls": 23,
+        "structuralBound": 1166,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 171,
+        "stage": 2,
+        "randomCalls": 34,
+        "structuralBound": 1812,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 172,
+        "stage": 0,
+        "randomCalls": 17,
+        "structuralBound": 1033,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 172,
+        "stage": 1,
+        "randomCalls": 30,
+        "structuralBound": 1038,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 172,
+        "stage": 2,
+        "randomCalls": 42,
+        "structuralBound": 1428,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 173,
+        "stage": 0,
+        "randomCalls": 19,
+        "structuralBound": 649,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 173,
+        "stage": 1,
+        "randomCalls": 22,
+        "structuralBound": 1038,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 173,
+        "stage": 2,
+        "randomCalls": 33,
+        "structuralBound": 1684,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 174,
+        "stage": 0,
+        "randomCalls": 17,
+        "structuralBound": 1033,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 174,
+        "stage": 1,
+        "randomCalls": 30,
+        "structuralBound": 1038,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 174,
+        "stage": 2,
+        "randomCalls": 31,
+        "structuralBound": 1428,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 175,
+        "stage": 0,
+        "randomCalls": 19,
+        "structuralBound": 649,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 175,
+        "stage": 1,
+        "randomCalls": 20,
+        "structuralBound": 782,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 175,
+        "stage": 2,
+        "randomCalls": 28,
+        "structuralBound": 1044,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 176,
+        "stage": 0,
+        "randomCalls": 16,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 176,
+        "stage": 1,
+        "randomCalls": 24,
+        "structuralBound": 1294,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 176,
+        "stage": 2,
+        "randomCalls": 31,
+        "structuralBound": 1428,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 177,
+        "stage": 0,
+        "randomCalls": 14,
+        "structuralBound": 649,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 177,
+        "stage": 1,
+        "randomCalls": 28,
+        "structuralBound": 910,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 177,
+        "stage": 2,
+        "randomCalls": 32,
+        "structuralBound": 1556,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 178,
+        "stage": 0,
+        "randomCalls": 16,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 178,
+        "stage": 1,
+        "randomCalls": 22,
+        "structuralBound": 1038,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 178,
+        "stage": 2,
+        "randomCalls": 40,
+        "structuralBound": 1300,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 179,
+        "stage": 0,
+        "randomCalls": 37,
+        "structuralBound": 521,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 179,
+        "stage": 1,
+        "randomCalls": 22,
+        "structuralBound": 1038,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 179,
+        "stage": 2,
+        "randomCalls": 32,
+        "structuralBound": 1556,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 180,
+        "stage": 0,
+        "randomCalls": 30,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 180,
+        "stage": 1,
+        "randomCalls": 34,
+        "structuralBound": 1294,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 180,
+        "stage": 2,
+        "randomCalls": 36,
+        "structuralBound": 2068,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 181,
+        "stage": 0,
+        "randomCalls": 15,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 181,
+        "stage": 1,
+        "randomCalls": 22,
+        "structuralBound": 1038,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 181,
+        "stage": 2,
+        "randomCalls": 34,
+        "structuralBound": 1812,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 182,
+        "stage": 0,
+        "randomCalls": 15,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 182,
+        "stage": 1,
+        "randomCalls": 26,
+        "structuralBound": 1550,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 182,
+        "stage": 2,
+        "randomCalls": 36,
+        "structuralBound": 2068,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 183,
+        "stage": 0,
+        "randomCalls": 23,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 183,
+        "stage": 1,
+        "randomCalls": 25,
+        "structuralBound": 1422,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 183,
+        "stage": 2,
+        "randomCalls": 34,
+        "structuralBound": 1812,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 184,
+        "stage": 0,
+        "randomCalls": 17,
+        "structuralBound": 1033,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 184,
+        "stage": 1,
+        "randomCalls": 26,
+        "structuralBound": 1550,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 184,
+        "stage": 2,
+        "randomCalls": 36,
+        "structuralBound": 2068,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 185,
+        "stage": 0,
+        "randomCalls": 15,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 185,
+        "stage": 1,
+        "randomCalls": 24,
+        "structuralBound": 1294,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 185,
+        "stage": 2,
+        "randomCalls": 34,
+        "structuralBound": 1812,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 186,
+        "stage": 0,
+        "randomCalls": 16,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 186,
+        "stage": 1,
+        "randomCalls": 25,
+        "structuralBound": 1422,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 186,
+        "stage": 2,
+        "randomCalls": 35,
+        "structuralBound": 1940,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 187,
+        "stage": 0,
+        "randomCalls": 15,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 187,
+        "stage": 1,
+        "randomCalls": 46,
+        "structuralBound": 1038,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 187,
+        "stage": 2,
+        "randomCalls": 42,
+        "structuralBound": 1428,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 188,
+        "stage": 0,
+        "randomCalls": 16,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 188,
+        "stage": 1,
+        "randomCalls": 25,
+        "structuralBound": 1422,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 188,
+        "stage": 2,
+        "randomCalls": 34,
+        "structuralBound": 1812,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 189,
+        "stage": 0,
+        "randomCalls": 14,
+        "structuralBound": 649,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 189,
+        "stage": 1,
+        "randomCalls": 22,
+        "structuralBound": 1038,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 189,
+        "stage": 2,
+        "randomCalls": 32,
+        "structuralBound": 1556,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 190,
+        "stage": 0,
+        "randomCalls": 23,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 190,
+        "stage": 1,
+        "randomCalls": 23,
+        "structuralBound": 1166,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 190,
+        "stage": 2,
+        "randomCalls": 35,
+        "structuralBound": 1940,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 191,
+        "stage": 0,
+        "randomCalls": 14,
+        "structuralBound": 649,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 191,
+        "stage": 1,
+        "randomCalls": 21,
+        "structuralBound": 910,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 191,
+        "stage": 2,
+        "randomCalls": 30,
+        "structuralBound": 1300,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 192,
+        "stage": 0,
+        "randomCalls": 17,
+        "structuralBound": 1033,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 192,
+        "stage": 1,
+        "randomCalls": 24,
+        "structuralBound": 1294,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 192,
+        "stage": 2,
+        "randomCalls": 46,
+        "structuralBound": 1684,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 193,
+        "stage": 0,
+        "randomCalls": 14,
+        "structuralBound": 649,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 193,
+        "stage": 1,
+        "randomCalls": 28,
+        "structuralBound": 910,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 193,
+        "stage": 2,
+        "randomCalls": 32,
+        "structuralBound": 1556,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 194,
+        "stage": 0,
+        "randomCalls": 15,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 194,
+        "stage": 1,
+        "randomCalls": 22,
+        "structuralBound": 1038,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 194,
+        "stage": 2,
+        "randomCalls": 33,
+        "structuralBound": 1684,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 195,
+        "stage": 0,
+        "randomCalls": 17,
+        "structuralBound": 1033,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 195,
+        "stage": 1,
+        "randomCalls": 25,
+        "structuralBound": 1422,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 195,
+        "stage": 2,
+        "randomCalls": 33,
+        "structuralBound": 1684,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 196,
+        "stage": 0,
+        "randomCalls": 17,
+        "structuralBound": 1033,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 196,
+        "stage": 1,
+        "randomCalls": 24,
+        "structuralBound": 1294,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 196,
+        "stage": 2,
+        "randomCalls": 31,
+        "structuralBound": 1428,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 197,
+        "stage": 0,
+        "randomCalls": 15,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 197,
+        "stage": 1,
+        "randomCalls": 24,
+        "structuralBound": 1294,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 197,
+        "stage": 2,
+        "randomCalls": 35,
+        "structuralBound": 1940,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 198,
+        "stage": 0,
+        "randomCalls": 16,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 198,
+        "stage": 1,
+        "randomCalls": 24,
+        "structuralBound": 1294,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 198,
+        "stage": 2,
+        "randomCalls": 35,
+        "structuralBound": 1940,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 199,
+        "stage": 0,
+        "randomCalls": 16,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 199,
+        "stage": 1,
+        "randomCalls": 26,
+        "structuralBound": 1550,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 199,
+        "stage": 2,
+        "randomCalls": 37,
+        "structuralBound": 2196,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 200,
+        "stage": 0,
+        "randomCalls": 15,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 200,
+        "stage": 1,
+        "randomCalls": 32,
+        "structuralBound": 1166,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 200,
+        "stage": 2,
+        "randomCalls": 33,
+        "structuralBound": 1684,
+        "minimumBudget": 3,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 201,
+        "stage": 0,
+        "randomCalls": 44,
+        "structuralBound": 649,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 201,
+        "stage": 1,
+        "randomCalls": 38,
+        "structuralBound": 1038,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 201,
+        "stage": 2,
+        "randomCalls": 32,
+        "structuralBound": 1556,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 202,
+        "stage": 0,
+        "randomCalls": 16,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 202,
+        "stage": 1,
+        "randomCalls": 25,
+        "structuralBound": 1422,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 202,
+        "stage": 2,
+        "randomCalls": 34,
+        "structuralBound": 1812,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 203,
+        "stage": 0,
+        "randomCalls": 24,
+        "structuralBound": 649,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 203,
+        "stage": 1,
+        "randomCalls": 30,
+        "structuralBound": 1038,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 203,
+        "stage": 2,
+        "randomCalls": 42,
+        "structuralBound": 1428,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 204,
+        "stage": 0,
+        "randomCalls": 17,
+        "structuralBound": 1033,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 204,
+        "stage": 1,
+        "randomCalls": 26,
+        "structuralBound": 1550,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 204,
+        "stage": 2,
+        "randomCalls": 48,
+        "structuralBound": 1812,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 205,
+        "stage": 0,
+        "randomCalls": 19,
+        "structuralBound": 649,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 205,
+        "stage": 1,
+        "randomCalls": 22,
+        "structuralBound": 1038,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 205,
+        "stage": 2,
+        "randomCalls": 33,
+        "structuralBound": 1684,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 206,
+        "stage": 0,
+        "randomCalls": 16,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 206,
+        "stage": 1,
+        "randomCalls": 44,
+        "structuralBound": 1294,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 206,
+        "stage": 2,
+        "randomCalls": 35,
+        "structuralBound": 1940,
+        "minimumBudget": 3,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 207,
+        "stage": 0,
+        "randomCalls": 16,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 207,
+        "stage": 1,
+        "randomCalls": 21,
+        "structuralBound": 910,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 207,
+        "stage": 2,
+        "randomCalls": 31,
+        "structuralBound": 1428,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 208,
+        "stage": 0,
+        "randomCalls": 17,
+        "structuralBound": 1033,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 208,
+        "stage": 1,
+        "randomCalls": 34,
+        "structuralBound": 1294,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 208,
+        "stage": 2,
+        "randomCalls": 31,
+        "structuralBound": 1428,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 209,
+        "stage": 0,
+        "randomCalls": 27,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 209,
+        "stage": 1,
+        "randomCalls": 42,
+        "structuralBound": 910,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 209,
+        "stage": 2,
+        "randomCalls": 28,
+        "structuralBound": 1044,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 210,
+        "stage": 0,
+        "randomCalls": 16,
+        "structuralBound": 905,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 210,
+        "stage": 1,
+        "randomCalls": 22,
+        "structuralBound": 1038,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 210,
+        "stage": 2,
+        "randomCalls": 31,
+        "structuralBound": 1428,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 211,
+        "stage": 0,
+        "randomCalls": 51,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 211,
+        "stage": 1,
+        "randomCalls": 22,
+        "structuralBound": 1038,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 211,
+        "stage": 2,
+        "randomCalls": 31,
+        "structuralBound": 1428,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 212,
+        "stage": 0,
+        "randomCalls": 21,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 212,
+        "stage": 1,
+        "randomCalls": 28,
+        "structuralBound": 910,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 212,
+        "stage": 2,
+        "randomCalls": 30,
+        "structuralBound": 1300,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 213,
+        "stage": 0,
+        "randomCalls": 15,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 213,
+        "stage": 1,
+        "randomCalls": 21,
+        "structuralBound": 910,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 213,
+        "stage": 2,
+        "randomCalls": 38,
+        "structuralBound": 1172,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 214,
+        "stage": 0,
+        "randomCalls": 15,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 214,
+        "stage": 1,
+        "randomCalls": 28,
+        "structuralBound": 910,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 214,
+        "stage": 2,
+        "randomCalls": 31,
+        "structuralBound": 1428,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 215,
+        "stage": 0,
+        "randomCalls": 15,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 215,
+        "stage": 1,
+        "randomCalls": 38,
+        "structuralBound": 1038,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 215,
+        "stage": 2,
+        "randomCalls": 30,
+        "structuralBound": 1300,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 216,
+        "stage": 0,
+        "randomCalls": 17,
+        "structuralBound": 1033,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 216,
+        "stage": 1,
+        "randomCalls": 38,
+        "structuralBound": 1038,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 216,
+        "stage": 2,
+        "randomCalls": 31,
+        "structuralBound": 1428,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 217,
+        "stage": 0,
+        "randomCalls": 21,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 217,
+        "stage": 1,
+        "randomCalls": 24,
+        "structuralBound": 1294,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 217,
+        "stage": 2,
+        "randomCalls": 33,
+        "structuralBound": 1684,
+        "minimumBudget": 3,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 218,
+        "stage": 0,
+        "randomCalls": 23,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 218,
+        "stage": 1,
+        "randomCalls": 25,
+        "structuralBound": 1422,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 218,
+        "stage": 2,
+        "randomCalls": 34,
+        "structuralBound": 1812,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 219,
+        "stage": 0,
+        "randomCalls": 16,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 219,
+        "stage": 1,
+        "randomCalls": 24,
+        "structuralBound": 1294,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 219,
+        "stage": 2,
+        "randomCalls": 56,
+        "structuralBound": 1556,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 220,
+        "stage": 0,
+        "randomCalls": 18,
+        "structuralBound": 1161,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 220,
+        "stage": 1,
+        "randomCalls": 26,
+        "structuralBound": 1550,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 220,
+        "stage": 2,
+        "randomCalls": 36,
+        "structuralBound": 2068,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 221,
+        "stage": 0,
+        "randomCalls": 24,
+        "structuralBound": 649,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 221,
+        "stage": 1,
+        "randomCalls": 24,
+        "structuralBound": 1294,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 221,
+        "stage": 2,
+        "randomCalls": 32,
+        "structuralBound": 1556,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 222,
+        "stage": 0,
+        "randomCalls": 17,
+        "structuralBound": 1033,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 222,
+        "stage": 1,
+        "randomCalls": 24,
+        "structuralBound": 1294,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 222,
+        "stage": 2,
+        "randomCalls": 31,
+        "structuralBound": 1428,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 223,
+        "stage": 0,
+        "randomCalls": 15,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 223,
+        "stage": 1,
+        "randomCalls": 22,
+        "structuralBound": 1038,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 223,
+        "stage": 2,
+        "randomCalls": 29,
+        "structuralBound": 1172,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 224,
+        "stage": 0,
+        "randomCalls": 24,
+        "structuralBound": 649,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 224,
+        "stage": 1,
+        "randomCalls": 34,
+        "structuralBound": 1294,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 224,
+        "stage": 2,
+        "randomCalls": 34,
+        "structuralBound": 1812,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 225,
+        "stage": 0,
+        "randomCalls": 15,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 225,
+        "stage": 1,
+        "randomCalls": 38,
+        "structuralBound": 1038,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 225,
+        "stage": 2,
+        "randomCalls": 33,
+        "structuralBound": 1684,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 226,
+        "stage": 0,
+        "randomCalls": 24,
+        "structuralBound": 649,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 226,
+        "stage": 1,
+        "randomCalls": 21,
+        "structuralBound": 910,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 226,
+        "stage": 2,
+        "randomCalls": 30,
+        "structuralBound": 1300,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 227,
+        "stage": 0,
+        "randomCalls": 15,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 227,
+        "stage": 1,
+        "randomCalls": 23,
+        "structuralBound": 1166,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 227,
+        "stage": 2,
+        "randomCalls": 31,
+        "structuralBound": 1428,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 228,
+        "stage": 0,
+        "randomCalls": 15,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 228,
+        "stage": 1,
+        "randomCalls": 22,
+        "structuralBound": 1038,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 228,
+        "stage": 2,
+        "randomCalls": 38,
+        "structuralBound": 1172,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 229,
+        "stage": 0,
+        "randomCalls": 17,
+        "structuralBound": 1033,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 229,
+        "stage": 1,
+        "randomCalls": 32,
+        "structuralBound": 1166,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 229,
+        "stage": 2,
+        "randomCalls": 44,
+        "structuralBound": 1556,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 230,
+        "stage": 0,
+        "randomCalls": 34,
+        "structuralBound": 649,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 230,
+        "stage": 1,
+        "randomCalls": 23,
+        "structuralBound": 1166,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 230,
+        "stage": 2,
+        "randomCalls": 31,
+        "structuralBound": 1428,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 231,
+        "stage": 0,
+        "randomCalls": 17,
+        "structuralBound": 1033,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 231,
+        "stage": 1,
+        "randomCalls": 23,
+        "structuralBound": 1166,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 231,
+        "stage": 2,
+        "randomCalls": 32,
+        "structuralBound": 1556,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 232,
+        "stage": 0,
+        "randomCalls": 17,
+        "structuralBound": 1033,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 232,
+        "stage": 1,
+        "randomCalls": 24,
+        "structuralBound": 1294,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 232,
+        "stage": 2,
+        "randomCalls": 68,
+        "structuralBound": 1556,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 233,
+        "stage": 0,
+        "randomCalls": 15,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 233,
+        "stage": 1,
+        "randomCalls": 23,
+        "structuralBound": 1166,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 233,
+        "stage": 2,
+        "randomCalls": 34,
+        "structuralBound": 1812,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 234,
+        "stage": 0,
+        "randomCalls": 23,
+        "structuralBound": 905,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 234,
+        "stage": 1,
+        "randomCalls": 23,
+        "structuralBound": 1166,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 234,
+        "stage": 2,
+        "randomCalls": 33,
+        "structuralBound": 1684,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 235,
+        "stage": 0,
+        "randomCalls": 16,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 235,
+        "stage": 1,
+        "randomCalls": 24,
+        "structuralBound": 1294,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 235,
+        "stage": 2,
+        "randomCalls": 32,
+        "structuralBound": 1556,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 236,
+        "stage": 0,
+        "randomCalls": 15,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 236,
+        "stage": 1,
+        "randomCalls": 24,
+        "structuralBound": 1294,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 236,
+        "stage": 2,
+        "randomCalls": 30,
+        "structuralBound": 1300,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 237,
+        "stage": 0,
+        "randomCalls": 15,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 237,
+        "stage": 1,
+        "randomCalls": 24,
+        "structuralBound": 1294,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 237,
+        "stage": 2,
+        "randomCalls": 34,
+        "structuralBound": 1812,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 238,
+        "stage": 0,
+        "randomCalls": 64,
+        "structuralBound": 649,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 238,
+        "stage": 1,
+        "randomCalls": 30,
+        "structuralBound": 1038,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 238,
+        "stage": 2,
+        "randomCalls": 33,
+        "structuralBound": 1684,
+        "minimumBudget": 3,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 239,
+        "stage": 0,
+        "randomCalls": 30,
+        "structuralBound": 905,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 239,
+        "stage": 1,
+        "randomCalls": 27,
+        "structuralBound": 1678,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 239,
+        "stage": 2,
+        "randomCalls": 34,
+        "structuralBound": 1812,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 240,
+        "stage": 0,
+        "randomCalls": 15,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 240,
+        "stage": 1,
+        "randomCalls": 24,
+        "structuralBound": 1294,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 240,
+        "stage": 2,
+        "randomCalls": 32,
+        "structuralBound": 1556,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 241,
+        "stage": 0,
+        "randomCalls": 17,
+        "structuralBound": 1033,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 241,
+        "stage": 1,
+        "randomCalls": 26,
+        "structuralBound": 1550,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 241,
+        "stage": 2,
+        "randomCalls": 36,
+        "structuralBound": 2068,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 242,
+        "stage": 0,
+        "randomCalls": 29,
+        "structuralBound": 649,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 242,
+        "stage": 1,
+        "randomCalls": 22,
+        "structuralBound": 1038,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 242,
+        "stage": 2,
+        "randomCalls": 32,
+        "structuralBound": 1556,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 243,
+        "stage": 0,
+        "randomCalls": 27,
+        "structuralBound": 1161,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 243,
+        "stage": 1,
+        "randomCalls": 26,
+        "structuralBound": 1550,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 243,
+        "stage": 2,
+        "randomCalls": 34,
+        "structuralBound": 1812,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 244,
+        "stage": 0,
+        "randomCalls": 16,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 244,
+        "stage": 1,
+        "randomCalls": 22,
+        "structuralBound": 1038,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 244,
+        "stage": 2,
+        "randomCalls": 33,
+        "structuralBound": 1684,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 245,
+        "stage": 0,
+        "randomCalls": 15,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 245,
+        "stage": 1,
+        "randomCalls": 22,
+        "structuralBound": 1038,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 245,
+        "stage": 2,
+        "randomCalls": 31,
+        "structuralBound": 1428,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 246,
+        "stage": 0,
+        "randomCalls": 23,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 246,
+        "stage": 1,
+        "randomCalls": 24,
+        "structuralBound": 1294,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 246,
+        "stage": 2,
+        "randomCalls": 35,
+        "structuralBound": 1940,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 247,
+        "stage": 0,
+        "randomCalls": 16,
+        "structuralBound": 905,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 247,
+        "stage": 1,
+        "randomCalls": 21,
+        "structuralBound": 910,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 247,
+        "stage": 2,
+        "randomCalls": 40,
+        "structuralBound": 1300,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 248,
+        "stage": 0,
+        "randomCalls": 21,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 248,
+        "stage": 1,
+        "randomCalls": 22,
+        "structuralBound": 1038,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 248,
+        "stage": 2,
+        "randomCalls": 31,
+        "structuralBound": 1428,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 249,
+        "stage": 0,
+        "randomCalls": 15,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 249,
+        "stage": 1,
+        "randomCalls": 21,
+        "structuralBound": 910,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 249,
+        "stage": 2,
+        "randomCalls": 38,
+        "structuralBound": 1172,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 250,
+        "stage": 0,
+        "randomCalls": 21,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 250,
+        "stage": 1,
+        "randomCalls": 28,
+        "structuralBound": 910,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 250,
+        "stage": 2,
+        "randomCalls": 33,
+        "structuralBound": 1684,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 251,
+        "stage": 0,
+        "randomCalls": 15,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 251,
+        "stage": 1,
+        "randomCalls": 30,
+        "structuralBound": 1038,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 251,
+        "stage": 2,
+        "randomCalls": 33,
+        "structuralBound": 1684,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 252,
+        "stage": 0,
+        "randomCalls": 21,
+        "structuralBound": 777,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 252,
+        "stage": 1,
+        "randomCalls": 23,
+        "structuralBound": 1166,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 252,
+        "stage": 2,
+        "randomCalls": 32,
+        "structuralBound": 1556,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 253,
+        "stage": 0,
+        "randomCalls": 17,
+        "structuralBound": 1033,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 253,
+        "stage": 1,
+        "randomCalls": 23,
+        "structuralBound": 1166,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 253,
+        "stage": 2,
+        "randomCalls": 33,
+        "structuralBound": 1684,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 254,
+        "stage": 0,
+        "randomCalls": 19,
+        "structuralBound": 649,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 254,
+        "stage": 1,
+        "randomCalls": 22,
+        "structuralBound": 1038,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 254,
+        "stage": 2,
+        "randomCalls": 32,
+        "structuralBound": 1556,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 255,
+        "stage": 0,
+        "randomCalls": 18,
+        "structuralBound": 1161,
+        "minimumBudget": 1,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 255,
+        "stage": 1,
+        "randomCalls": 25,
+        "structuralBound": 1422,
+        "minimumBudget": 2,
+        "initialCycle": true
+      },
+      {
+        "kind": "LCG",
+        "seed": 255,
+        "stage": 2,
+        "randomCalls": 34,
+        "structuralBound": 1812,
+        "minimumBudget": 2,
+        "initialCycle": true
+      }
+    ],
+    "scope": "Original engine initialization in timeout-bounded isolated VMs; independent topological ordering and exhaustive minimum-reversal witnesses. Seeded model checks are separate from native UI evidence."
+  },
+  "nativeCases": [
+    {
+      "random": "constant0.99",
+      "profile": "desktop-keyboard",
+      "passed": true,
+      "finiteStudiesCompleted": 3,
+      "initialCycleRejected": true,
+      "resetSameStudy": true,
+      "editCheckCountersVerified": true,
+      "terminalRestart": true,
+      "startMs": 68.96318999999994,
+      "actions": [
+        "#start",
+        "#check",
+        "[data-key=\"edge-0\"]",
+        "#undo",
+        "[data-key=\"edge-0\"]",
+        "#reset",
+        "[data-key=\"edge-0\"]",
+        "#check",
+        "#next",
+        "[data-key=\"edge-0\"]",
+        "#check",
+        "#next",
+        "[data-key=\"edge-0\"]",
+        "#check",
+        "#restart",
+        "#start"
+      ],
+      "witnesses": [
+        {
+          "stage": 0,
+          "edges": [
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              4
+            ]
+          ],
+          "minimumBudget": 1,
+          "reversed": [
+            0
+          ]
+        },
+        {
+          "stage": 1,
+          "edges": [
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "minimumBudget": 1,
+          "reversed": [
+            0
+          ]
+        },
+        {
+          "stage": 2,
+          "edges": [
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "minimumBudget": 1,
+          "reversed": [
+            0
+          ]
+        }
+      ],
+      "errors": []
+    },
+    {
+      "random": "LCG20",
+      "profile": "desktop-keyboard",
+      "passed": true,
+      "finiteStudiesCompleted": 3,
+      "initialCycleRejected": true,
+      "resetSameStudy": true,
+      "editCheckCountersVerified": true,
+      "terminalRestart": true,
+      "startMs": 44.77038500000026,
+      "actions": [
+        "#start",
+        "#check",
+        "[data-key=\"edge-0\"]",
+        "#undo",
+        "[data-key=\"edge-0\"]",
+        "#reset",
+        "[data-key=\"edge-0\"]",
+        "#check",
+        "#next",
+        "[data-key=\"edge-0\"]",
+        "[data-key=\"edge-8\"]",
+        "#check",
+        "#next",
+        "[data-key=\"edge-3\"]",
+        "[data-key=\"edge-5\"]",
+        "#check",
+        "#restart",
+        "#start"
+      ],
+      "witnesses": [
+        {
+          "stage": 0,
+          "edges": [
+            [
+              3,
+              2
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "minimumBudget": 1,
+          "reversed": [
+            0
+          ]
+        },
+        {
+          "stage": 1,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              5
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              5,
+              4
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              5
+            ]
+          ],
+          "minimumBudget": 2,
+          "reversed": [
+            0,
+            8
+          ]
+        },
+        {
+          "stage": 2,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              6
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              5,
+              0
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              6,
+              1
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              6,
+              4
+            ],
+            [
+              3,
+              2
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              5,
+              4
+            ]
+          ],
+          "minimumBudget": 2,
+          "reversed": [
+            3,
+            5
+          ]
+        }
+      ],
+      "errors": []
+    },
+    {
+      "random": "constant0.99",
+      "profile": "mobile-touch",
+      "passed": true,
+      "finiteStudiesCompleted": 3,
+      "initialCycleRejected": true,
+      "resetSameStudy": true,
+      "editCheckCountersVerified": true,
+      "terminalRestart": true,
+      "startMs": 62.81163000000015,
+      "actions": [
+        "#start",
+        "#check",
+        "[data-key=\"edge-0\"]",
+        "#undo",
+        "[data-key=\"edge-0\"]",
+        "#reset",
+        "[data-key=\"edge-0\"]",
+        "#check",
+        "#next",
+        "[data-key=\"edge-0\"]",
+        "#check",
+        "#next",
+        "[data-key=\"edge-0\"]",
+        "#check",
+        "#restart",
+        "#start"
+      ],
+      "witnesses": [
+        {
+          "stage": 0,
+          "edges": [
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              4
+            ]
+          ],
+          "minimumBudget": 1,
+          "reversed": [
+            0
+          ]
+        },
+        {
+          "stage": 1,
+          "edges": [
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "minimumBudget": 1,
+          "reversed": [
+            0
+          ]
+        },
+        {
+          "stage": 2,
+          "edges": [
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "minimumBudget": 1,
+          "reversed": [
+            0
+          ]
+        }
+      ],
+      "errors": []
+    },
+    {
+      "random": "LCG20",
+      "profile": "mobile-touch",
+      "passed": true,
+      "finiteStudiesCompleted": 3,
+      "initialCycleRejected": true,
+      "resetSameStudy": true,
+      "editCheckCountersVerified": true,
+      "terminalRestart": true,
+      "startMs": 72.4105239999999,
+      "actions": [
+        "#start",
+        "#check",
+        "[data-key=\"edge-0\"]",
+        "#undo",
+        "[data-key=\"edge-0\"]",
+        "#reset",
+        "[data-key=\"edge-0\"]",
+        "#check",
+        "#next",
+        "[data-key=\"edge-0\"]",
+        "[data-key=\"edge-8\"]",
+        "#check",
+        "#next",
+        "[data-key=\"edge-3\"]",
+        "[data-key=\"edge-5\"]",
+        "#check",
+        "#restart",
+        "#start"
+      ],
+      "witnesses": [
+        {
+          "stage": 0,
+          "edges": [
+            [
+              3,
+              2
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "minimumBudget": 1,
+          "reversed": [
+            0
+          ]
+        },
+        {
+          "stage": 1,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              5
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              5,
+              4
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              5
+            ]
+          ],
+          "minimumBudget": 2,
+          "reversed": [
+            0,
+            8
+          ]
+        },
+        {
+          "stage": 2,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              6
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              5,
+              0
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              6,
+              1
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              6,
+              4
+            ],
+            [
+              3,
+              2
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              5,
+              4
+            ]
+          ],
+          "minimumBudget": 2,
+          "reversed": [
+            3,
+            5
+          ]
+        }
+      ],
+      "errors": []
+    }
+  ],
+  "limits": [
+    "The two deliberately selected diagnostic random streams reproduce earlier initialization failures; they are test inputs, not a public replay-seed feature.",
+    "Native finite paths use public displayed arrows and exhaustive legal reversal planning; no writable game-state hook or model probe.",
+    "Touch uses browser emulation on the recorded engine, not a physical device; this legacy game exposes edit/check counters rather than a point score."
+  ],
+  "browser": {
+    "engine": "Chromium",
+    "version": "151.0.7922.173"
+  },
+  "verifiedAt": "2026-10-02T22:56:58.336Z"
+}

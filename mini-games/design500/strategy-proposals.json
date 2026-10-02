@@ -1,0 +1,669 @@
+{
+  "owner": "strategy_additions",
+  "room": "civic-room",
+  "status": "All20 implemented and final source-bound owner40 suite passed; runtime/metadata/test inputs held for independent source review and global500 release gate.",
+  "baseline": {
+    "preservedCount": 300,
+    "comparisonCount": 400,
+    "inventory": "mini-games/inventory.json",
+    "inspectedManifests": [
+      "strategy-room",
+      "systems-room",
+      "tabletop-room",
+      "parlour-room",
+      "workbench-room",
+      "construct-room",
+      "puzzle-lab",
+      "logic-room",
+      "number-room",
+      "discovery-room",
+      "word-room",
+      "spatial-room",
+      "constraint-room",
+      "field-room",
+      "signal-lab",
+      "commons-room",
+      "atelier-room"
+    ],
+    "sourceComparisons": [
+      "strategy-room/engines.mjs",
+      "tabletop-room/boards.mjs",
+      "tabletop-room/cards.mjs",
+      "parlour-room/returned-banner.mjs",
+      "parlour-room/orders-at-dusk.mjs",
+      "parlour-room/anchor-stacks.mjs",
+      "parlour-room/factory-mosaic.mjs",
+      "parlour-room/four-houses.mjs",
+      "systems-room/two-couriers.mjs",
+      "systems-room/safe-return.mjs",
+      "systems-room/growing-block.mjs",
+      "commons-room/opposed-boards.mjs",
+      "commons-room/market-games.mjs",
+      "commons-room/collective-games.mjs",
+      "commons-room/living-ledgers.mjs"
+    ]
+  },
+  "scope": "Fifteen uncovered opposed board/card transition systems and five incentive-response economies. No auctions, Blotto, bilateral bargaining, public-goods funding, congestion flow, permits, repeated trust or resource-portfolio games.",
+  "games": [
+    {
+      "id": "looping-guard",
+      "name": "Looping Guard",
+      "definingDecision": "Reposition by adjacent steps, but capture only by following an unobstructed orthogonal route that has traversed at least one corner loop. Empty loops can turn a remote blocker into a capture shield or expose a distant piece.",
+      "nearestExisting": [
+        {
+          "id": "draught-garden",
+          "differentiator": "No jump-over landing or compulsory capture: capture traverses an empty directed route through corner loops and ends on the first enemy."
+        },
+        {
+          "id": "cannon-council",
+          "differentiator": "No three-piece formation or empty muzzle; the capture route changes direction around fixed off-board loops."
+        }
+      ],
+      "controls": "Select a piece, then an adjacent step or explicitly labeled legal loop-capture route; every route is shown with its traversed loop count.",
+      "finite": "Three complete opposed studies: one-loop screening, two-loop interference, then competing mobile screens.",
+      "failure": "Elimination or no legal turn; a disclosed repetition/turn cap settles by surviving material.",
+      "levelsGeneration": "Six-by-six graph with two nested corner-loop families; authored legal positions and seeded sparse positions with both sides' mobility validated.",
+      "endless": {
+        "kind": "match-series",
+        "design": "Seeded legal piece locations and opponent tie order produce a fresh bounded capture match; preserve the result before advancing.",
+        "difficultyCap": "Fixed 6x6 graph, bounded material and opponent lookahead.",
+        "candidate": true,
+        "supportStatus": "Provisional design only; runtime support requires source-bound generated witnesses and full UI optional-mode evidence."
+      },
+      "objective": "Capture the last house piece or leave the house without a legal turn; if the disclosed turn cap is reached, finish with strictly more surviving pieces.",
+      "naturalLoss": "Move a screen aside and let the house loop-capture the final pawn.",
+      "failureChallenge": "Elimination or no legal turn; a disclosed repetition/turn cap settles by surviving material.",
+      "input": "Native touch and keyboard controls; Select a piece, then an adjacent step or explicitly labeled legal loop-capture route; every route is shown with its traversed loop count."
+    },
+    {
+      "id": "chromatic-command",
+      "name": "Chromatic Command",
+      "definingDecision": "A pawn slides forward along clear rays; the color of its landing square forces the opponent to use their pawn of that color. A blocked forced pawn passes control using the color under it, so movement chooses the opponent's next move family.",
+      "nearestExisting": [
+        {
+          "id": "pawns",
+          "differentiator": "No diagonal capture or unrestricted choice of pawn: landing colors couple successive players' legal movers."
+        },
+        {
+          "id": "borrowed-steps",
+          "differentiator": "No movement-card exchange; persistent square colors force a specific opposing pawn and can force a pass."
+        }
+      ],
+      "controls": "Select the currently eligible colored pawn and a clear forward-ray endpoint; a native Pass control appears only when the forced pawn is blocked.",
+      "finite": "Three home-edge races: simple forcing, forced-pass chains, then an interleaved color map requiring defensive landing choices.",
+      "failure": "Opponent reaches your home edge; complete-position repetition or a finite turn cap holds the defense.",
+      "levelsGeneration": "Five colors and a 5x5 board; bounded varied Latin-style color maps and legal starting pawn rows, checked to exclude immediate edge wins.",
+      "endless": {
+        "kind": "match-series",
+        "design": "Fresh color maps and legal prefixes create new forcing games with finite results.",
+        "difficultyCap": "Five pawns per side, fixed board and capped lookahead.",
+        "candidate": true,
+        "supportStatus": "Provisional design only; runtime support requires source-bound generated witnesses and full UI optional-mode evidence."
+      },
+      "objective": "Reach the far home row with any pawn before the house reaches yours.",
+      "naturalLoss": "Land on a color that licenses an opposing home-row arrival.",
+      "failureChallenge": "Opponent reaches your home edge; complete-position repetition or a finite turn cap holds the defense.",
+      "input": "Native touch and keyboard controls; Select the currently eligible colored pawn and a clear forward-ray endpoint; a native Pass control appears only when the forced pawn is blocked."
+    },
+    {
+      "id": "mirrored-offensive",
+      "name": "Mirrored Offensive",
+      "definingDecision": "First make a non-pushing passive move on one of your home boards; then reuse its exact displacement on a board of the other color for an aggressive move that can push one enemy off an edge. Choose a passive move that licenses the needed attack.",
+      "nearestExisting": [
+        {
+          "id": "marble-council",
+          "differentiator": "No inline numerical superiority: one aggressive stone can push, but its displacement must first be paid for by a separate clear passive move on a different board."
+        },
+        {
+          "id": "twin-steps",
+          "differentiator": "Adversarial four-board material play with a chosen passive origin and a separately chosen aggressive origin; not mirrored maze navigation."
+        }
+      ],
+      "controls": "Select passive board, stone and displacement, then an eligible aggressive stone and endpoint; show the committed vector throughout the second phase.",
+      "finite": "Three four-board contests: single-step edge pressure, two-step screened pushes, then constrained passive space.",
+      "failure": "Lose every stone on any one board, or have no complete legal two-part turn.",
+      "levelsGeneration": "Four 4x4 boards with bounded legal stone populations and seeded reachable prefixes; validate at least one complete turn for both sides.",
+      "endless": {
+        "kind": "match-series",
+        "design": "Fresh legal four-board configurations preserve each game's local elimination result.",
+        "difficultyCap": "Fixed four boards, at most four stones per side per board.",
+        "candidate": true,
+        "supportStatus": "Provisional design only; runtime support requires source-bound generated witnesses and full UI optional-mode evidence."
+      },
+      "objective": "Remove every house stone on at least one of the four boards, or leave it without a complete passive/aggressive turn.",
+      "naturalLoss": "Spend passive space on a vector that lets the house eject the last stone from a vulnerable board.",
+      "failureChallenge": "Lose every stone on any one board, or have no complete legal two-part turn.",
+      "input": "Native touch and keyboard controls; Select passive board, stone and displacement, then an eligible aggressive stone and endpoint; show the committed vector throughout the second phase."
+    },
+    {
+      "id": "pair-breaker",
+      "name": "Pair Breaker",
+      "definingDecision": "Place a stone to create a five-stone line or bracket exactly two enemies between the new stone and an older one. Captured pairs reopen cells and can dismantle a threatened line; either alignment or enough captured pairs wins.",
+      "nearestExisting": [
+        {
+          "id": "four",
+          "differentiator": "Free placement, pair removal and an independent capture victory change occupancy and defensive priorities; gravity alignment cannot express these transitions."
+        },
+        {
+          "id": "reversi",
+          "differentiator": "Exactly two bracketed enemies are removed rather than arbitrary rays changing allegiance; capture totals can win before any line."
+        }
+      ],
+      "controls": "Tap an empty square to place; feedback highlights the removed pairs, line threats and both capture totals.",
+      "finite": "Three opposed positions: pair defense, capture-race fork, then competing alignment and capture threats.",
+      "failure": "House makes five or reaches the capture threshold; full-board or repetition cap settles visibly.",
+      "levelsGeneration": "A 7x7 board; varied legal placement prefixes generated by alternating actual moves, with no already-terminal starts.",
+      "endless": {
+        "kind": "match-series",
+        "design": "Seeded legal opening histories create changing capture and alignment structures, not rotated copies of three boards.",
+        "difficultyCap": "Fixed 7x7 board and finite tactical opponent depth.",
+        "candidate": true,
+        "supportStatus": "Provisional design only; runtime support requires source-bound generated witnesses and full UI optional-mode evidence."
+      },
+      "objective": "Complete five consecutive stones or capture the disclosed number of enemy pairs before the house does.",
+      "naturalLoss": "Ignore a line or capture-race threat and allow the house to finish it.",
+      "failureChallenge": "House makes five or reaches the capture threshold; full-board or repetition cap settles visibly.",
+      "input": "Native touch and keyboard controls; Tap an empty square to place; feedback highlights the removed pairs, line threats and both capture totals."
+    },
+    {
+      "id": "mill-and-flight",
+      "name": "Mill and Flight",
+      "definingDecision": "Deploy reserves to a connected mill graph, then move along its edges; completing a three-point mill earns a selective removal. At three surviving pieces the movement rule changes to flying, so depletion can create a last tactical resource.",
+      "nearestExisting": [
+        {
+          "id": "four",
+          "differentiator": "Alignment is an intermittent capture action, not the win condition; reserves, graph movement, protected mills and flying determine survival."
+        },
+        {
+          "id": "joining-lines",
+          "differentiator": "Movement uses fixed graph edges (or late flying) and wins by reducing mobility/material; occupancy-dependent distance and army connectivity are absent."
+        }
+      ],
+      "controls": "Place a reserve, or select piece and graph neighbor; after a mill choose an eligible opposing piece to remove. Flying destinations are explicitly highlighted.",
+      "finite": "Three legal studies cover deployment, connected movement and the three-piece flying endgame.",
+      "failure": "Fewer than three pieces after reserves empty, no legal movement, or a disclosed repetition draw favoring defense.",
+      "levelsGeneration": "The full 24-point three-ring mill graph; seed-driven legal deployment prefixes preserve reserves, mill ownership and player-to-move history.",
+      "endless": {
+        "kind": "match-series",
+        "design": "New legal deployment/movement histories create finite fresh matches; record each result before reset.",
+        "difficultyCap": "Nine pieces per side and capped opponent search.",
+        "candidate": true,
+        "supportStatus": "Provisional design only; runtime support requires source-bound generated witnesses and full UI optional-mode evidence."
+      },
+      "objective": "After deployment, reduce the house to fewer than three pieces or leave it unable to move.",
+      "naturalLoss": "Permit a mill capture to reduce an army below three after reserves are empty.",
+      "failureChallenge": "Fewer than three pieces after reserves empty, no legal movement, or a disclosed repetition draw favoring defense.",
+      "input": "Native touch and keyboard controls; Place a reserve, or select piece and graph neighbor; after a mill choose an eligible opposing piece to remove. Flying destinations are explicitly highlighted."
+    },
+    {
+      "id": "last-contact",
+      "name": "Last Contact",
+      "definingDecision": "The only move replaces an orthogonally adjacent enemy with the moving piece, leaving its source empty. Every action destroys a future contact, so preserving your final capture while cutting the opponent's matters more than material advantage.",
+      "nearestExisting": [
+        {
+          "id": "draught-garden",
+          "differentiator": "A move lands directly on an adjacent victim; empty cells are unusable and there is no jump, promotion, or non-capturing step."
+        },
+        {
+          "id": "nim",
+          "differentiator": "Legal removal depends on changing spatial adjacency and allegiance, not independent heap sizes."
+        }
+      ],
+      "controls": "Select your piece and an adjacent occupied enemy; empty destinations stay disabled.",
+      "finite": "Three small opposed contact graphs: connected checkerboard, split corridors, then a branching contact trap.",
+      "failure": "The player to move has no adjacent enemy capture; pieces remaining alone do not confer a win.",
+      "levelsGeneration": "Bounded 4x4 spatial contact boards; seeded mixed occupancy with both sides initially mobile and every turn reducing total material.",
+      "endless": {
+        "kind": "match-series",
+        "design": "Fresh occupied contact graphs create new finite normal-play games, with results retained between matches.",
+        "difficultyCap": "At most sixteen pieces and a finite exact/limited opponent search.",
+        "candidate": true,
+        "supportStatus": "Provisional design only; runtime support requires source-bound generated witnesses and full UI optional-mode evidence."
+      },
+      "objective": "Take the final available capture: the house must begin its turn with no adjacent enemy to replace.",
+      "naturalLoss": "Capture into a dead branch so the house makes the final remaining contact.",
+      "failureChallenge": "The player to move has no adjacent enemy capture; pieces remaining alone do not confer a win.",
+      "input": "Native touch and keyboard controls; Select your piece and an adjacent occupied enemy; empty destinations stay disabled."
+    },
+    {
+      "id": "brimline-reserves",
+      "name": "Brimline Reserves",
+      "definingDecision": "Insert a reserve at the edge of a hex field and push a whole occupied row toward its first gap. A completed own line can be removed with all connected row stones: recover your own reserves, permanently capture enemies, and keep enough reserve to take another turn.",
+      "nearestExisting": [
+        {
+          "id": "marble-council",
+          "differentiator": "The mover enters from outside; mixed rows shift without a superior group, and line removal/recycling governs reserve exhaustion instead of edge ejection."
+        },
+        {
+          "id": "anchor-stacks",
+          "differentiator": "No height-controlled stacks or disconnected-island collapse; linear insertion changes all intervening cells and captured rows replenish only their owner."
+        }
+      ],
+      "controls": "Choose a labeled edge entrance and push direction, then choose any eligible completed row to reclaim; show returned and captured counts.",
+      "finite": "Three reserve contests: simple recycling, intersecting rows, then a low-reserve capture race.",
+      "failure": "No reserve for the next insertion or no insertion lane; reclamation is a real material decision.",
+      "levelsGeneration": "A radius-two 19-cell hex field; legal insertion prefixes create occupied patterns while tracking every reserve and capture.",
+      "endless": {
+        "kind": "match-series",
+        "design": "Seeded legal insertion histories and reserve states produce new bounded matches.",
+        "difficultyCap": "Fixed field and finite piece pools, with repetition settlement.",
+        "candidate": true,
+        "supportStatus": "Provisional design only; runtime support requires source-bound generated witnesses and full UI optional-mode evidence."
+      },
+      "objective": "Capture/reclaim rows until the house has no reserve for its next insertion or no legal insertion lane.",
+      "naturalLoss": "Use the final reserve without reclaiming a line, leaving no piece for the next insertion.",
+      "failureChallenge": "No reserve for the next insertion or no insertion lane; reclamation is a real material decision.",
+      "input": "Native touch and keyboard controls; Choose a labeled edge entrance and push direction, then choose any eligible completed row to reclaim; show returned and captured counts."
+    },
+    {
+      "id": "last-defense",
+      "name": "Last Defense",
+      "definingDecision": "Attack with a card, defend each attack with a higher same-suit card or trump, and add attacks only using ranks already on the table. Taking the whole table changes hands and attack initiative; drawing order determines who can shed after the deck ends.",
+      "nearestExisting": [
+        {
+          "id": "last-hand",
+          "differentiator": "No ascending group-size contest and pass reset: individually paired attack/defense cards permit rank-linked volleys and all-table pickup."
+        },
+        {
+          "id": "velvet-tricks",
+          "differentiator": "There is no trick score or follow-suit trick winner; defense can take multiple pairs and alter initiative under a refill rule."
+        }
+      ],
+      "controls": "Tap a legal attack/defense card, add a rank-linked attack, finish a defended volley, or Take table. Show the paired table and trump suit.",
+      "finite": "Three fully playable compact-deck matches: trump conservation, rank-linked volleys and depleted-deck initiative.",
+      "failure": "House empties its hand after the deck is exhausted; taking cards is legal but can become fatal.",
+      "levelsGeneration": "Two suits and bounded ranks, seeded full shuffle, exact attacker-first refill and defense hand-size limits.",
+      "endless": {
+        "kind": "match-series",
+        "design": "Fresh shuffled deals and trump suits create finite shedding matches.",
+        "difficultyCap": "Fixed compact deck and bounded opponent policy.",
+        "candidate": true,
+        "supportStatus": "Provisional design only; runtime support requires source-bound generated witnesses and full UI optional-mode evidence."
+      },
+      "objective": "Empty your hand after the draw deck is exhausted before the house sheds its last card.",
+      "naturalLoss": "Take a rank-linked volley and fail to shed the accumulated cards after deck exhaustion.",
+      "failureChallenge": "House empties its hand after the deck is exhausted; taking cards is legal but can become fatal.",
+      "input": "Native touch and keyboard controls; Tap a legal attack/defense card, add a rank-linked attack, finish a defended volley, or Take table. Show the paired table and trump suit."
+    },
+    {
+      "id": "covered-columns",
+      "name": "Covered Columns",
+      "definingDecision": "Draw or take the exposed discard, replace one card in a partly concealed two-row grid, or reveal a hidden card while discarding. A matching vertical pair cancels its score, and revealing your final card forces the opponent's final turn.",
+      "nearestExisting": [
+        {
+          "id": "meld-atelier",
+          "differentiator": "Cards occupy persistent concealed grid positions; vertical cancellation and the reveal-triggered ending replace hand runs/sets and deadwood submission."
+        },
+        {
+          "id": "one-last-card",
+          "differentiator": "No role action or identity elimination; draw/replace decisions trade concealed spatial score against control of the ending."
+        }
+      ],
+      "controls": "Draw deck or Take discard, then choose a grid position for replacement or discard-and-reveal; finish timing is explicit.",
+      "finite": "Three six-card-grid matches: low-card replacement, vertical cancellation, then early-closing pressure.",
+      "failure": "Higher revealed grid score after the final turn loses; known high cards and negative/cancelled pairs change risk.",
+      "levelsGeneration": "Bounded shuffled deck and two six-card grids; no hidden answers exposed by production UI.",
+      "endless": {
+        "kind": "match-series",
+        "design": "Fresh concealed deals and draw order create finite scored matches.",
+        "difficultyCap": "Six cards per side and a finite draw/turn limit.",
+        "candidate": true,
+        "supportStatus": "Provisional design only; runtime support requires source-bound generated witnesses and full UI optional-mode evidence."
+      },
+      "objective": "Finish the triggered final round with a strictly lower six-card grid score than the house.",
+      "naturalLoss": "Close with unreplaced high cards while the house scores lower after its final turn.",
+      "failureChallenge": "Higher revealed grid score after the final turn loses; known high cards and negative/cancelled pairs change risk.",
+      "input": "Native touch and keyboard controls; Draw deck or Take discard, then choose a grid position for replacement or discard-and-reveal; finish timing is explicit."
+    },
+    {
+      "id": "double-written",
+      "name": "Double Written",
+      "definingDecision": "Write each move tentatively in two empty squares. When these linked marks close a cycle, the opponent chooses one endpoint to make classical, forcing the connected component to collapse consistently. Winning lines depend on that collapse choice and move priority.",
+      "nearestExisting": [
+        {
+          "id": "four",
+          "differentiator": "Moves add graph edges rather than permanent cells; an adversarial choice resolves a cycle and propagates many earlier moves before a line can exist."
+        },
+        {
+          "id": "diagonal-grove",
+          "differentiator": "Cycles are a deliberate adversarial state transition with owned marks and collapse choices, not a forbidden static drawing constraint."
+        }
+      ],
+      "controls": "Choose two uncollapsed squares for a linked mark; in a collapse phase choose one highlighted endpoint. All links show owner and move number.",
+      "finite": "Three cycle-choice duels: a simple component, intersecting candidate cycles and a priority-sensitive double-line ending.",
+      "failure": "House gets the earlier winning classical line, or the fully classical board settles without a player win.",
+      "levelsGeneration": "3x3 board with numbered entangled edges; seeded legal alternating prefixes must contain no unsettled cycle or terminal line.",
+      "endless": {
+        "kind": "match-series",
+        "design": "Varied legal link histories create finite fresh collapse games; disable if the implemented generator only reproduces a small template family.",
+        "difficultyCap": "Nine cells and at most nine marks.",
+        "candidate": true,
+        "supportStatus": "Provisional design only; runtime support requires source-bound generated witnesses and full UI optional-mode evidence."
+      },
+      "objective": "Force the earlier-priority winning classical three-mark line through legal linked moves and cycle collapse.",
+      "naturalLoss": "Choose a collapse endpoint that forces an earlier house classical line.",
+      "failureChallenge": "House gets the earlier winning classical line, or the fully classical board settles without a player win.",
+      "input": "Native touch and keyboard controls; Choose two uncollapsed squares for a linked mark; in a collapse phase choose one highlighted endpoint. All links show owner and move number."
+    },
+    {
+      "id": "outward-and-home",
+      "name": "Outward and Home",
+      "definingDecision": "Choose which lane runner advances its individual distance; on reaching the far edge it turns and uses a different return speed. Crossing an enemy resets that enemy to its current leg's starting edge and jumps beyond it, so timing intersections can outweigh raw distance.",
+      "nearestExisting": [
+        {
+          "id": "pawns",
+          "differentiator": "Pieces make a round trip with two speeds, cannot change lanes, and reset crossed enemies without capturing them."
+        },
+        {
+          "id": "homeward-pips",
+          "differentiator": "No dice allocation, blot hit or bearing-off points; deterministic orthogonal lane intersections and outward/return speed asymmetry govern progress."
+        }
+      ],
+      "controls": "Select one active runner; preview its deterministic endpoint and crossed enemy resets before committing.",
+      "finite": "Three opposed crossing races: outward timing, fast return versus slow outward, then multiple reset threats.",
+      "failure": "House returns its required number of runners first; a finite turn cap settles by completed legs and distance.",
+      "levelsGeneration": "Five horizontal versus five vertical lanes with bounded speed permutations and seeded reachable race prefixes.",
+      "endless": {
+        "kind": "match-series",
+        "design": "New speed assignments and legal progress histories yield fresh finite races.",
+        "difficultyCap": "Fixed crossing field and bounded runner speeds.",
+        "candidate": true,
+        "supportStatus": "Provisional design only; runtime support requires source-bound generated witnesses and full UI optional-mode evidence."
+      },
+      "objective": "Return the required number of runners to their home edge before the house does.",
+      "naturalLoss": "Let repeated crossings reset a returning runner while the house completes its target.",
+      "failureChallenge": "House returns its required number of runners first; a finite turn cap settles by completed legs and distance.",
+      "input": "Native touch and keyboard controls; Select one active runner; preview its deterministic endpoint and crossed enemy resets before committing."
+    },
+    {
+      "id": "crossing-court",
+      "name": "Crossing Court",
+      "definingDecision": "Pieces have movement ranks but belong to whoever controls the half of the board they currently occupy. Capturing across the boundary can hand the moved piece to your rival for a countercapture; score captured rank value before either court empties.",
+      "nearestExisting": [
+        {
+          "id": "returned-banner",
+          "differentiator": "Ownership follows location immediately, not a permanent side plus captured reserve drop; there is no king or check."
+        },
+        {
+          "id": "shared-comet",
+          "differentiator": "Every ranked piece can switch control across a fixed boundary; captures score instead of delivering one shared neutral token to an edge."
+        }
+      ],
+      "controls": "Select any ranked piece currently in your court and a legal movement/capture endpoint; identify the resulting controller before the move.",
+      "finite": "Three scored court duels: boundary countercapture, low-rank evacuation, then finishing a court while ahead.",
+      "failure": "Lower captured value when either court empties; moving a valuable piece across can yield it to the opponent.",
+      "levelsGeneration": "A compact split court with king-step, diagonal-ray and orthogonal-ray ranks; varied legal rank locations and capture histories preserve total material.",
+      "endless": {
+        "kind": "match-series",
+        "design": "Seeded legal court distributions create fresh finite allegiance games.",
+        "difficultyCap": "Bounded ranked pool and a repetition/turn limit.",
+        "candidate": true,
+        "supportStatus": "Provisional design only; runtime support requires source-bound generated witnesses and full UI optional-mode evidence."
+      },
+      "objective": "When either court empties, have a strictly higher captured-rank value than the house.",
+      "naturalLoss": "Send a valuable rank across the boundary for a countercapture, then empty a court while behind.",
+      "failureChallenge": "Lower captured value when either court empties; moving a valuable piece across can yield it to the opponent.",
+      "input": "Native touch and keyboard controls; Select any ranked piece currently in your court and a legal movement/capture endpoint; identify the resulting controller before the move."
+    },
+    {
+      "id": "marble-vault",
+      "name": "Marble Vault",
+      "definingDecision": "Build a shared supported sphere pyramid using finite personal reserves, or promote an uncovered lower sphere to a supported higher socket. Completing an own square permits reclaiming up to two uncovered own spheres, making recycling and support denial part of the race to the apex.",
+      "nearestExisting": [
+        {
+          "id": "terrace-duel",
+          "differentiator": "Players place their actual finite pieces into four-support sockets and may promote/reclaim them; no worker move/build turn or scalar tower height."
+        },
+        {
+          "id": "anchor-stacks",
+          "differentiator": "No moving stacks or graph disconnection: support is geometric and removing a supporting sphere is illegal."
+        }
+      ],
+      "controls": "Choose a reserve placement or uncovered promotion source, then a supported higher socket; after an own square choose legal reclaimed spheres or keep them.",
+      "finite": "Three legal pyramid positions: first support square, promotion/reclamation, then a reserve-limited apex contest.",
+      "failure": "House places the apex or the player has no legal reserve/promotion turn; unsupported placements and supporting-stone removals stay disabled.",
+      "levelsGeneration": "Four layers (4x4,3x3,2x2,1) with exact support coordinates; seed-driven legal building prefixes conserve both 15-sphere pools.",
+      "endless": {
+        "kind": "match-series",
+        "design": "Fresh legal building histories create distinct support/recycling races.",
+        "difficultyCap": "Thirty sockets and fixed personal pools.",
+        "candidate": true,
+        "supportStatus": "Provisional design only; runtime support requires source-bound generated witnesses and full UI optional-mode evidence."
+      },
+      "objective": "Place the apex sphere, or leave the house without a legal reserve-placement/promotion turn.",
+      "naturalLoss": "Exhaust reserve spheres without a legal promotion while leaving the house able to finish the apex.",
+      "failureChallenge": "House places the apex or the player has no legal reserve/promotion turn; unsupported placements and supporting-stone removals stay disabled.",
+      "input": "Native touch and keyboard controls; Choose a reserve placement or uncovered promotion source, then a supported higher socket; after an own square choose legal reclaimed spheres or keep them."
+    },
+    {
+      "id": "capital-lines",
+      "name": "Capital Lines",
+      "definingDecision": "Advance armies through owned territory while maintaining a connected supply path to the capital. Cutting an enemy link marks isolated armies for attrition on their next turn; restoring a route, capturing a relay or attacking a capital competes with immediate local gains.",
+      "nearestExisting": [
+        {
+          "id": "orders-at-dusk",
+          "differentiator": "Sequential single-army actions and persistent supply connectivity cause delayed attrition; no simultaneous support orders, retreat adjudication or autumn recruitment."
+        },
+        {
+          "id": "four-houses",
+          "differentiator": "Connected supply determines an army's continued existence, not colored culture scoring or internal/external leader conflict."
+        }
+      ],
+      "controls": "Select an army and a legal advance/attack, or spend a finite relay action; highlight supplied paths and the isolated countdown before ending the turn.",
+      "finite": "Three tactical network battles: one bridge link, redundant relays and a capital flank with simultaneous isolated threats.",
+      "failure": "Capital captured or all armies lost; unsupported armies expire after a disclosed recovery window.",
+      "levelsGeneration": "Bounded board graphs and sparse armies; generated legal connected starting domains, relays and passable maps must keep both capitals initially supplied.",
+      "endless": {
+        "kind": "match-series",
+        "design": "Seeded network maps and legal armies create finite fresh supply contests.",
+        "difficultyCap": "Fixed maximum map and army count, bounded rival search.",
+        "candidate": true,
+        "supportStatus": "Provisional design only; runtime support requires source-bound generated witnesses and full UI optional-mode evidence."
+      },
+      "objective": "Capture the house capital or eliminate its army by tactical attacks and supply attrition.",
+      "naturalLoss": "Fail to repair a severed supply path before the isolated army countdown expires, exposing the capital.",
+      "failureChallenge": "Capital captured or all armies lost; unsupported armies expire after a disclosed recovery window.",
+      "input": "Native touch and keyboard controls; Select an army and a legal advance/attack, or spend a finite relay action; highlight supplied paths and the isolated countdown before ending the turn."
+    },
+    {
+      "id": "bracket-and-effort",
+      "name": "Bracket and Effort",
+      "definingDecision": "Set a progressive marginal tax schedule, then workers independently choose effort from their after-tax wage and convex effort cost. Revenue must fund dated services while disposable income preserves next-period training, so higher rates can reduce both work and future productivity.",
+      "nearestExisting": [
+        {
+          "id": "quiet-majority",
+          "differentiator": "No coalition weights or concessions: individuals choose work effort endogenously under marginal brackets."
+        },
+        {
+          "id": "price-of-plenty",
+          "differentiator": "Government selects marginal tax wedges, not production quantity; worker effort and training determine later taxable income."
+        }
+      ],
+      "controls": "Adjust three marginal brackets within the disclosed change cap, inspect the worker response forecast, then enact one period.",
+      "finite": "Three three-period economies: revenue/effort tradeoff, training preservation and a high-service-liability calendar.",
+      "failure": "Miss a dated service payment, bankrupt the budget, or push a household below the stated living-income requirement.",
+      "levelsGeneration": "Small exact integer/quarter-unit effort models with public wage, cost and service calendars; varied generated data must include a legal feasible policy witness.",
+      "endless": {
+        "kind": "challenge-stream",
+        "design": "Fresh bounded worker preferences, calendars and bracket-change constraints create new policy studies.",
+        "difficultyCap": "Three households, three brackets and three periods; witness validation precedes support claims.",
+        "candidate": true,
+        "supportStatus": "Provisional design only; runtime support requires source-bound generated witnesses and full UI optional-mode evidence."
+      },
+      "objective": "Pay all three dated service liabilities while meeting household living-income and final reserve requirements.",
+      "naturalLoss": "Enact a high marginal rate that reduces induced work enough to miss the current service payment.",
+      "failureChallenge": "Miss a dated service payment, bankrupt the budget, or push a household below the stated living-income requirement.",
+      "input": "Native touch and keyboard controls; Adjust three marginal brackets within the disclosed change cap, inspect the worker response forecast, then enact one period."
+    },
+    {
+      "id": "club-tariff",
+      "name": "Club Tariff",
+      "definingDecision": "Set a one-time membership fee and a per-use price. New customers compare total consumer surplus with the fee, while existing members treat that fee as sunk and choose only marginal usage; fee commitment, capacity and successive arriving cohorts change the best tariff over time.",
+      "nearestExisting": [
+        {
+          "id": "price-of-plenty",
+          "differentiator": "Customers choose membership and usage under a two-part tariff; no rival quantity sets one market-clearing price."
+        },
+        {
+          "id": "market-of-five",
+          "differentiator": "No exchanged cards or diminishing set-sale rewards; persistent paid memberships separate fixed and marginal demand decisions."
+        }
+      ],
+      "controls": "Choose fee before the first opening and adjust the unit price each period; show new enrollment, returning demand and capacity, then Open club.",
+      "finite": "Three three-period clubs: homogeneous entrants, mixed willingness/budgets and delayed high-value cohorts under capacity pressure.",
+      "failure": "Opening above service capacity, insolvency after dated fixed costs, or missing both the membership and profit objectives.",
+      "levelsGeneration": "Bounded discrete consumer value curves and arrival/budget calendars; generated studies need a validated feasible tariff sequence.",
+      "endless": {
+        "kind": "challenge-stream",
+        "design": "Seeded consumer cohorts and budgets create fresh demand structures while preserving finite club sessions.",
+        "difficultyCap": "Bounded cohorts, usage and periods; no unverified quota scaling.",
+        "candidate": true,
+        "supportStatus": "Provisional design only; runtime support requires source-bound generated witnesses and full UI optional-mode evidence."
+      },
+      "objective": "Serve all three club sessions within capacity, retain solvency, and meet both enrolled-member and profit requirements.",
+      "naturalLoss": "Open a low unit price with excessive aggregate usage, or price out new memberships until fixed cost exhausts cash.",
+      "failureChallenge": "Opening above service capacity, insolvency after dated fixed costs, or missing both the membership and profit objectives.",
+      "input": "Native touch and keyboard controls; Choose fee before the first opening and adjust the unit price each period; show new enrollment, returning demand and capacity, then Open club."
+    },
+    {
+      "id": "pooling-desk",
+      "name": "Pooling Desk",
+      "definingDecision": "Quote one premium/deductible contract to a population whose risk groups decide whether to enroll. The price changes the composition of the pool before claims are paid; maintain coverage and protection while avoiding the high-risk-only insolvency trap.",
+      "nearestExisting": [
+        {
+          "id": "safe-return",
+          "differentiator": "No selected collateralized policy portfolio or overlapping durations: one posted contract causes endogenous enrollment and changes the pool's risk mix."
+        },
+        {
+          "id": "permit-and-progress",
+          "differentiator": "No conserved permits or production quotas; private enrollment response determines who contributes premiums and receives claim protection."
+        }
+      ],
+      "controls": "Adjust premium and deductible, inspect risk-group enrollment and disclosed claim-calendar exposure, then issue the period's contract.",
+      "finite": "Three three-period pools: broad enrollment, strong adverse selection and changing affordability/claim stress.",
+      "failure": "Negative reserve, insufficient enrolled coverage, or excessive uncovered losses under the disclosed protection requirement.",
+      "levelsGeneration": "Small risk groups with explicit certainty-equivalent enrollment rules and claim schedules; generated populations require a feasible bounded quote witness.",
+      "endless": {
+        "kind": "challenge-stream",
+        "design": "Fresh group populations, affordability and claim calendars alter selection and reserves.",
+        "difficultyCap": "Three periods and bounded groups/loss amounts; support depends on actual generator validation.",
+        "candidate": true,
+        "supportStatus": "Provisional design only; runtime support requires source-bound generated witnesses and full UI optional-mode evidence."
+      },
+      "objective": "Settle all three claim periods solvent while meeting enrolled coverage, protection and closing-reserve requirements.",
+      "naturalLoss": "Raise the premium until lower-risk members exit, then pay a high-risk-only claim period into insolvency.",
+      "failureChallenge": "Negative reserve, insufficient enrolled coverage, or excessive uncovered losses under the disclosed protection requirement.",
+      "input": "Native touch and keyboard controls; Adjust premium and deductible, inspect risk-group enrollment and disclosed claim-calendar exposure, then issue the period's contract."
+    },
+    {
+      "id": "network-tipping",
+      "name": "Network Tipping",
+      "definingDecision": "Invest in durable platform quality or subsidize new adopters. Each cohort compares intrinsic appeal, switching cost and its neighbors' prior adoption; early critical-mass spending can sustain later adoption, but poorly placed subsidies expire without creating a stable network.",
+      "nearestExisting": [
+        {
+          "id": "growing-block",
+          "differentiator": "No zoning plots, housing capacity or city tax migration; discrete cohorts choose between rival platforms through a fixed peer graph and switching hysteresis."
+        },
+        {
+          "id": "many-hands",
+          "differentiator": "No threshold cash project or matching pledge: independent adoption responses depend on local previous-period neighbors, not pooled contributions."
+        }
+      ],
+      "controls": "Choose a quality investment and new-adopter subsidy, inspect the simultaneous response forecast, then launch one period; show adoption and spent subsidy per cohort.",
+      "finite": "Three five-period adoption contests: a connected pair, a bridge cohort and a rival stronghold with expensive switching.",
+      "failure": "Bankruptcy or too little stable adoption at the end; subsidies are paid only to genuinely new adopters.",
+      "levelsGeneration": "Bounded connected cohort graphs, preferences and switching costs; fresh generated studies require a constructive affordable critical-mass route.",
+      "endless": {
+        "kind": "challenge-stream",
+        "design": "Seeded peer graphs and preference distributions create new tipping structures, with rival reaction capped.",
+        "difficultyCap": "At most six cohorts and five periods; no unbounded population growth.",
+        "candidate": true,
+        "supportStatus": "Provisional design only; runtime support requires source-bound generated witnesses and full UI optional-mode evidence."
+      },
+      "objective": "Complete five periods solvent with the required stable platform adoption and closing cash.",
+      "naturalLoss": "Spend scarce subsidies on a cohort whose network support vanishes, then fail the adoption/cash target.",
+      "failureChallenge": "Bankruptcy or too little stable adoption at the end; subsidies are paid only to genuinely new adopters.",
+      "input": "Native touch and keyboard controls; Choose a quality investment and new-adopter subsidy, inspect the simultaneous response forecast, then launch one period; show adoption and spent subsidy per cohort."
+    },
+    {
+      "id": "bonus-and-burden",
+      "name": "Bonus and Burden",
+      "definingDecision": "Write a base wage and two performance bonuses, then an agent chooses costly quantity, real quality or metric manipulation. One scarce audit can remove proxy gaming, while induced practice changes later effort costs; high measured output can still leave the principal worse off.",
+      "nearestExisting": [
+        {
+          "id": "price-of-plenty",
+          "differentiator": "A contract induces a separate optimizing agent's multidimensional effort and proxy gaming; the employer cannot directly choose actual output."
+        },
+        {
+          "id": "privacy-dials",
+          "differentiator": "No response-probability matrix or likelihood-ratio certificate; effort choice, wages, auditing and persistent practice determine realized economic payoff."
+        }
+      ],
+      "controls": "Set base wage, quantity bonus and metric bonus, choose whether to spend the remaining audit, inspect the disclosed agent-response model, then offer the contract.",
+      "finite": "Three three-project employers: balanced effort, one vulnerable metric and persistent practice under a tighter payroll budget.",
+      "failure": "Agent rejects an inadequate participation payoff, payroll causes insolvency, or real quality/profit requirements fail despite good proxy scores.",
+      "levelsGeneration": "Bounded integer effort choices with explicit tie rules, outside options and manipulation coefficients; every generated contract sequence needs a validated feasible witness.",
+      "endless": {
+        "kind": "challenge-stream",
+        "design": "Fresh task sensitivities, outside options and effort costs create new incentive studies; preserve each finite employer session.",
+        "difficultyCap": "Three projects, one audit and a small exact response set.",
+        "candidate": true,
+        "supportStatus": "Provisional design only; runtime support requires source-bound generated witnesses and full UI optional-mode evidence."
+      },
+      "objective": "Complete three accepted contracts with payroll solvency, sufficient real quality and profit; measured proxy success alone does not count.",
+      "naturalLoss": "Pay an unaudited manipulable metric bonus, inducing gaming rather than quality and failing the real-quality/profit target.",
+      "failureChallenge": "Agent rejects an inadequate participation payoff, payroll causes insolvency, or real quality/profit requirements fail despite good proxy scores.",
+      "input": "Native touch and keyboard controls; Set base wage, quantity bonus and metric bonus, choose whether to spend the remaining audit, inspect the disclosed agent-response model, then offer the contract."
+    },
+    {
+      "id": "triad-and-tower",
+      "name": "Triad and Tower",
+      "definingDecision": "Make a mandatory ray capture using a stack at least as tall as its victim, then optionally capture again or merge onto a friendly stack. Preserve an exposed top of each of three army types: stacking strengthens one attacker but can bury your last visible type and lose immediately.",
+      "nearestExisting": [
+        {
+          "id": "anchor-stacks",
+          "source": "parlour-room/anchor-stacks.mjs",
+          "differentiator": "Captures remove the opposing stack permanently rather than merge both armies; travel stops at the first occupied hex ray and is not exact-height distance. No anchors or disconnected-component erasure. Height is attack strength, capture-first initiative and exposed-type survival govern play."
+        },
+        {
+          "id": "four-step-menagerie",
+          "source": "parlour-room/four-step-menagerie.mjs",
+          "differentiator": "No four-action manipulation, stronger-neighbor freezing or unsupported traps. A first-occupied ray/height comparison and friendly type burial determine legal attacks and terminal survival."
+        }
+      ],
+      "controls": "Select an exposed own stack and a legal first-occupied ray capture. After the compulsory capture choose another capture, a friendly stacking move, or Finish turn; label every destination strength and surviving top types.",
+      "finite": "Three opposed legal studies: first-occupied screening, capture-plus-merge strength planning, then a thin exposed-type endgame where self-burial can lose.",
+      "failure": "Lose the last exposed top of any one type, or lack a legal mandatory capture at the start of a turn. Captures and merges strictly reduce stack count so every match is finite.",
+      "levelsGeneration": "A radius-two19-cell hex field, finite three-type pools and actual stack contents. Seeded legal capture/merge histories preserve total material accounting and exclude already-lost starting types.",
+      "endless": {
+        "candidate": true,
+        "kind": "match-series",
+        "design": "Fresh legal typed-stack configurations and histories create bounded strength-versus-survival matches; retain each settled result before starting the next.",
+        "difficultyCap": "Fixed19-cell field, bounded total18pieces and opponent search.",
+        "supportStatus": "Provisional design only; runtime support requires source-bound generated witnesses and full UI optional-mode evidence."
+      },
+      "objective": "Remove the last exposed top of any house type, or leave the house unable to make its compulsory first capture.",
+      "naturalLoss": "Merge onto the sole exposed friendly top of one type and bury that type, causing immediate self-loss.",
+      "failureChallenge": "Lose the last exposed top of any one type, or lack a legal mandatory capture at the start of a turn. Captures and merges strictly reduce stack count so every match is finite.",
+      "input": "Native touch and keyboard controls; Select an exposed own stack and a legal first-occupied ray capture. After the compulsory capture choose another capture, a friendly stacking move, or Finish turn; label every destination strength and surviving top types."
+    }
+  ],
+  "count": 20,
+  "sharedControls": "Every essential action is a labeled native button: touchscreen tap, or keyboard Tab/focus and Enter/Space. Board labels expose real coordinates, ownership, support and phase; diagrams and scroll-contained tables explain the current rule state.",
+  "sharedVerification": "Every20 completes all3 finite studies through desktop and touch browser controls, natural failure/recovery, score, reset, undo, restart and320px checks. Test-only legal plans are source-informed and disclose hidden-information use. Each supported optional mode must independently pass two fresh UI challenges, accumulated score, defeat/restart and End run, plus dispersed-seed late-stage legal witnesses with source-bound properties.",
+  "implementation": {
+    "room": "mini-games/civic-room",
+    "games": 20,
+    "finiteStudies": 60,
+    "coupledRuleChecks": 23,
+    "generatedOpeningTraces": 400,
+    "optionalModeKinds": {
+      "match-series": 15,
+      "challenge-stream": 5
+    },
+    "verification": "mini-games/tests/civic-room.cjs",
+    "currentEvidence": "40/40 native primary cases and 40/40 supported-mode cases passed; 160 native four-seed openings,23 coupled rules,400 generated traces,80 complete generated economy-model wins. Capital Lines reachable isolation/expiry and restored-supply branches passed native keyboard and touch.",
+    "sourceHash": "774dc2f32a9c3b5bc2bd362610a99f5bef83e0555a36670d2965073823b28b69",
+    "report": "mini-games/coverage/civic-room.json"
+  }
+}

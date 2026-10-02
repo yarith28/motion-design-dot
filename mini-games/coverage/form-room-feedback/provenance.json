@@ -1,0 +1,100 @@
+{
+  "passed": true,
+  "verifiedAt": "2026-10-02T21:10:38.356Z",
+  "scope": "Real native UI screenshots at a split, with exact room/Journey/Form-test bytes before and after capture; campaign play and opening coverage are separate reports.",
+  "sourceHash": "cc74124eb6b4982ae5de8f9a2c3010c42556d5153e9f53fb02fe5ee5fad1d340",
+  "sourceUnchanged": true,
+  "fileHashes": {
+    "form-room/README.md": "cdf08bbded5e8090bf6f3a71565d5131bbbcafc11c2122175132ee8db9bbca81",
+    "form-room/acoustics.mjs": "b9f13835ee48e9da222c4ca698d283e76e930badf326cf366d8b23641422f9d1",
+    "form-room/contact.mjs": "9945bc2f6751f8284a85d12203b2e676d6e889fca2ed0d4435f73a6cfd66d4db",
+    "form-room/core.mjs": "7d7f2b691586869340e9e0e09c7c2b3dfe548c4d034c09755d87eaa201f7cf7f",
+    "form-room/engines.mjs": "27f6be8f5bc550809b2b1ef8eac26935e031f6bbe2f1eddd73abe3907f1c48c3",
+    "form-room/equilibrium.mjs": "650a1436d3d48a2700acec3c0bb84717a68ee3ce091dcc3e8fba9c45b68c134b",
+    "form-room/games.json": "5e7bd22bb042d24c03ea15cbe4f4bc09bfe35117dafb5f039bf421b05b6aa953",
+    "form-room/index.html": "f6947c2e4f4f75dbd0bead31dcbae133053599b78fa1685dd5587d04ecf98ce0",
+    "form-room/material.mjs": "710f5a66db6f987b88376bd8eb1784d25c7b8af9b2dd226187f89f02bc69f51b",
+    "form-room/matter.mjs": "41572e351971b08b9efdfd4a04d88ce46b6b540f9c69534e94ce25cb0a78c3ea",
+    "form-room/process.mjs": "422eb28a1b95227055454d2a00ffb14465c1fd6af803669394f243ef69dd4fbc",
+    "form-room/room.mjs": "746afd1428d5b454c22f51fd6d916442c3bcddb7f4b159eb472c4e85abcacb03",
+    "form-room/shaping.mjs": "88ce31d8670412225b88afa55c6fcdb47cba0d2d59c58c252f528d369bebbb93",
+    "form-room/structure.mjs": "e6453202d58e8146b71745673f6ffe5e577bed3005c7bca55b2b79da3c66e056",
+    "form-room/textile.mjs": "1773d7b46bc2fa45c83b6775b18df141e818743e3b19954aadaac80bfd18c958",
+    "journey/journey.css": "e77e387075c86ad3addcf7220c9eeabfc06fec45987116205b75ed50cac83e67",
+    "journey/journey.mjs": "86a92fbd52ee7f5d34fd01225120feb74a336dd499a11e9e4780cf8f1f207872",
+    "tests/form-room-opening.cjs": "bdf6693a1f6d62b8826de3b22e5a7f7071ab8fe2a92ce614405477ad42d706a8",
+    "tests/form-room-plans.mjs": "ac8fa7ef7f4634b8e3753dbaf0cb873bfb522fe6ba7c368a933f2c2371ab9528",
+    "tests/form-room-regressions.mjs": "23ed3ae4e7a1ec04160ddf859a6ad0353b395f5d9875a46a1dd7b532fb5de0f4",
+    "tests/form-room.cjs": "264a741f8c26b442db4b76e525c3d76d070967467d3cd3882290a5af8a6a6784"
+  },
+  "browser": {
+    "engine": "Chromium",
+    "physicalDevice": false
+  },
+  "records": [
+    {
+      "profile": "desktop-keyboard",
+      "input": "Native focused Enter activation",
+      "seed": 12345,
+      "actions": [
+        "start",
+        "coat:2",
+        "split:0.5"
+      ],
+      "status": "The split conserved oil and adsorbed coating. New interface area increased. The split used the first grace action; each child has four remaining, as shown in the table.",
+      "table": "Drop\tOil volume\tInterface area\tCoating\tGrace\n1\t3.000\t2.080\t1.000\t4\n2\t3.000\t2.080\t1.000\t4",
+      "visibleRemainingGrace": [
+        4,
+        4
+      ],
+      "screenshots": [
+        "desktop-keyboard-split-board.png",
+        "desktop-keyboard-split-screen.png"
+      ],
+      "errors": []
+    },
+    {
+      "profile": "mobile-touch",
+      "input": "Actual Chromium emulated touch taps",
+      "seed": 12345,
+      "actions": [
+        "start",
+        "coat:2",
+        "split:0.5"
+      ],
+      "status": "The split conserved oil and adsorbed coating. New interface area increased. The split used the first grace action; each child has four remaining, as shown in the table.",
+      "table": "Drop\tOil volume\tInterface area\tCoating\tGrace\n1\t3.000\t2.080\t1.000\t4\n2\t3.000\t2.080\t1.000\t4",
+      "visibleRemainingGrace": [
+        4,
+        4
+      ],
+      "screenshots": [
+        "mobile-touch-split-board.png",
+        "mobile-touch-split-screen.png"
+      ],
+      "errors": []
+    }
+  ],
+  "screenshotHashes": {
+    "desktop-keyboard-split-board.png": "e8798139b5acde2180260b0df3806d93dad81f7873548c0f4134956b8d04cb24",
+    "desktop-keyboard-split-screen.png": "82d23310ef7783d17cf7f6b6fa31b4515209e1a60aec1162a06ec4273c27e2a2",
+    "mobile-touch-split-board.png": "9054385de01fedc71c4e4d1b2f56c4069d8f1b90bd99a19a9d72a6d0cf198f9b",
+    "mobile-touch-split-screen.png": "358a05e7aaaf964ba5f3c7e4c987ba0ea5f9189f3c5dd0dad2ee887a148f4119",
+    "historical-mismatch/before-split-board.png": "11e83c20e05f16102e076ed1f7e440f525f77fa622cee9c567a588688728ec26",
+    "historical-mismatch/before-split-screen.png": "14e6c372cd6c450a7d05c14dda9a7d62a218d567d863a20d0b7219d8d04465ff"
+  },
+  "historical": {
+    "current": false,
+    "sourceHash": "a102b433b356958ccf0fa23292e22beb63ba84faa00f093cc324362267cfd16e",
+    "screenshots": [
+      "historical-mismatch/before-split-board.png",
+      "historical-mismatch/before-split-screen.png"
+    ],
+    "status": "The split conserved oil and adsorbed coating. New interface area increased; both children have five committing actions of protection grace.",
+    "visibleRemainingGrace": [
+      4,
+      4
+    ],
+    "scope": "Historical old-loaded-runtime mismatch captured before repair. Retained as historical only; no current-source or complete-campaign claim."
+  }
+}

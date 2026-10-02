@@ -1,0 +1,706 @@
+{
+  "scope": "Own prior ordinary visible-rule action logs only; no owner engines/planners/hidden state. These routes are genuinely executed after text-only source repairs and labeled learned-route.",
+  "routes": [
+    {
+      "id": "delaunay-bench",
+      "room": "form-room",
+      "fromSample": 3,
+      "actions": [
+        {
+          "cmd": "click",
+          "id": "start",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"certify\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"certify\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"certify\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "id": "reset",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"flip\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"certify\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "id": "next",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"edge:1:5\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"edge:1:4\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"flip\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"certify\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "id": "next",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"edge:0:6\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"edge:2:4\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"flip\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"certify\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "id": "restart",
+          "touch": true
+        }
+      ]
+    },
+    {
+      "id": "rubber-boundary",
+      "room": "form-room",
+      "fromSample": 4,
+      "actions": [
+        {
+          "cmd": "click",
+          "id": "start",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"rehang\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "id": "reset",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"left:1\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"right:2\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"rehang\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"left:4\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"right:3\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"rehang\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"left:3\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"right:0\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"rehang\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "id": "next",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"right:2\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"rehang\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"left:4\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"right:3\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"rehang\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"left:5\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"right:0\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"rehang\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "id": "next",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"left:1\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"right:3\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"rehang\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"right:3\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"rehang\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"left:5\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"right:0\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"rehang\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "id": "restart",
+          "touch": true
+        }
+      ]
+    },
+    {
+      "id": "emulsion-bench",
+      "room": "form-room",
+      "fromSample": 5,
+      "actions": [
+        {
+          "cmd": "click",
+          "id": "start",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"inspect\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"inspect\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"inspect\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "id": "reset",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"coat:2\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"coat:2\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"split:0.3333333333333333\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"coat:0.5\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"drop:1\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"coat:0.5\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"split:0.5\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"coat:0.5\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"drop:2\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"coat:0.5\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"rest\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"rest\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"inspect\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "id": "next",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"coat:2\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"coat:2\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"split:0.3333333333333333\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"coat:0.5\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"drop:1\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"coat:0.5\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"split:0.5\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"coat:0.5\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"drop:2\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"coat:0.5\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"drop:3\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"coat:2\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"split:0.5\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"coat:0.5\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"drop:4\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"coat:0.5\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"rest\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"rest\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"inspect\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "id": "next",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"split:0.5\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "id": "reset",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"dilute\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"coat:2\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"coat:2\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"split:0.5\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"coat:0.5\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"drop:1\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"coat:0.5\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"drop:0\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"split:0.5\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"coat:0.5\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"drop:1\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"coat:0.5\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"drop:2\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"split:0.5\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"coat:0.5\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"drop:3\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"coat:0.5\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"coat:1\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"rest\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"rest\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"inspect\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "id": "reset",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"dilute\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"drop:1\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"coat:1\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"drop:0\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"coat:2\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"coat:2\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"split:0.5\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"coat:0.5\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"drop:1\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"coat:0.5\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"drop:0\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"split:0.5\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"coat:0.5\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"drop:1\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"coat:0.5\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"drop:2\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"split:0.5\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"coat:0.5\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"drop:3\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"coat:0.5\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"rest\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"rest\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "selector": "[data-action=\"inspect\"]",
+          "touch": true
+        },
+        {
+          "cmd": "click",
+          "id": "restart",
+          "touch": true
+        }
+      ]
+    }
+  ]
+}

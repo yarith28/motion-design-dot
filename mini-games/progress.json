@@ -1,6 +1,6 @@
 {
   "target": 500,
-  "phase": "400-game milestone passed local release gate; next100 isolated implementations and reviews in progress; exact-commit CI and Pages verification pending",
+  "phase": "500 games locally checked: all34 current suites, final release gate, audit and1000routes passed; exact-commit publication is attested by GitHub Actions and Pages",
   "publicationRule": "Implemented playable entries are linked in the catalog; source-matched verification is tracked independently in coverage/index.json. Planned inventory is not playable.",
   "collections": [
     {
@@ -102,9 +102,34 @@
       "id": "atelier-room",
       "target": 20,
       "status": "catalog-linked; current source-bound evidence in coverage/index.json"
+    },
+    {
+      "id": "relation-room",
+      "target": 20,
+      "status": "catalog-linked local candidate; current source-bound evidence in coverage/index.json"
+    },
+    {
+      "id": "trajectory-room",
+      "target": 20,
+      "status": "catalog-linked local candidate; current source-bound evidence in coverage/index.json"
+    },
+    {
+      "id": "protocol-room",
+      "target": 20,
+      "status": "catalog-linked local candidate; current source-bound evidence in coverage/index.json"
+    },
+    {
+      "id": "civic-room",
+      "target": 20,
+      "status": "catalog-linked local candidate; current source-bound evidence in coverage/index.json"
+    },
+    {
+      "id": "form-room",
+      "target": 20,
+      "status": "catalog-linked local candidate; current source-bound evidence in coverage/index.json"
     }
   ],
-  "catalogPlayable": 400,
+  "catalogPlayable": 500,
   "liveCommitMeaning": "The nested historicalRelease identifies the previously verified publication; it is not proof for current changed source.",
   "historicalRelease": {
     "verifiedLive": 100,
@@ -118,29 +143,63 @@
   "currentLocalEvidence": "coverage/index.json",
   "currentLiveVerification": {
     "workflow": "https://github.com/yarith28/motion-design-dot/actions/workflows/verify-pages.yml",
-    "policy": "A successful workflow run matching the published commit is required: served-source byte equivalence,800 route/viewport cases, original reviewed-issue regressions, new-game Chromium/WebKit openings, full new-game Chromium completion jobs and lifecycle checks. Local evidence or a push is not deployment proof."
+    "policy": "A successful workflow matching the pushed commit is required: served-source bytes,1000 route/viewport cases,19 expansion-room completion jobs, Chromium/WebKit controls/openings and shared lifecycle checks. Local candidates and pushes do not attest deployment.",
+    "milestone400": {
+      "commit": "3239a0be3fce85b851d969327df507a873bd55f0",
+      "pagesDeploymentRun": "https://github.com/yarith28/motion-design-dot/actions/runs/37062535553",
+      "pagesDeployment": "success",
+      "verificationRun": "https://github.com/yarith28/motion-design-dot/actions/runs/37062536968",
+      "verification": "success",
+      "liveAssetsMatched": 654,
+      "liveRouteResetCases": 800,
+      "liveErrors": 0,
+      "completedJobs": 17,
+      "totalJobs": 17,
+      "browserRegressionEngines": [
+        "Chromium140.0.7339.16",
+        "WebKit26.0"
+      ]
+    }
   },
   "currentLocalVerification": {
     "evidence": "coverage/index.json",
-    "status": "Passed all29 current source-matched suites and expansion400 release gate",
-    "originalGamesPreserved": 300,
-    "newGames": 100,
-    "verifiedGames": 400,
-    "desktopCompletions": 400,
-    "mobileViewportCompletions": 400,
-    "touchGameplayCompletions": 347,
-    "newDesktopCases": 100,
-    "newMobileTouchCases": 100,
-    "newFiniteStudyWins": 600,
-    "newOptionalChallengeWins": 328,
-    "newGeneratedChallengeStreams": 75,
-    "newMatchSeries": 7,
-    "newFiniteOnlyCampaigns": 18,
-    "nativeOpeningCases": 800,
-    "localRouteResetCases": 800,
-    "genericExpansionControlsCases": 600,
-    "browserEngine": "Chromium 151.0.7922.173",
-    "limits": "Native controls use source-informed legal plans. Original competitive terminal results and older mixed mobile input retain disclosed scope. Short ordinary samples cover100 new games; six selected campaigns were independently replayed. Local route asset checks include isolated unlinked500 prototypes and do not attest deployed source. No physical-device or screen-reader session."
+    "status": "Passed all34 current source-matched suites, final500 release gate, complete audit, preservation checks,1600opening controls,800keyboard/touch controls and1000route/reset cases",
+    "previousCheckedMilestone": 400,
+    "previousMilestoneCommit": "3239a0be3fce85b851d969327df507a873bd55f0",
+    "releaseGate": "tests/expansion500-review-gate.cjs",
+    "requiredNativeOpeningCases": 1600,
+    "requiredRouteResetCases": 1000,
+    "newGames": 200,
+    "verifiedGames": 500,
+    "desktopCompletions": 500,
+    "mobileViewportCompletions": 500,
+    "touchGameplayCompletions": 447,
+    "currentSuites": 34,
+    "releaseGatePassed": true,
+    "newDesktopCases": 200,
+    "newMobileTouchCases": 200,
+    "newFiniteStudyWins": 1200,
+    "newOptionalChallengeWins": 660,
+    "generatedChallengeStreams": 142,
+    "matchSeries": 23,
+    "finiteOnlyCampaigns": 35,
+    "nativeOpeningCases": 1600,
+    "genericExpansionControlsCases": 800,
+    "auditGames": 500,
+    "auditSourceFiles": 247,
+    "auditSourceAnchors": 4886,
+    "localRouteResetCheck": {
+      "status": "passed",
+      "completed": 1000,
+      "total": 1000,
+      "verifiedAt": "2026-10-02T23:20:24.421Z",
+      "report": "coverage/local500-route-reset.json"
+    },
+    "publicationStatus": "Exact pushed-commit GitHub Actions and Pages are authoritative; this local record does not self-certify deployment",
+    "localRouteResetCases": 1000,
+    "localAssetsMatched": 836,
+    "localErrors": 0,
+    "limits": "Full finite/optional winning paths use source-informed legal plans in Chromium; touch is emulated. WebKit controls/openings/lifecycle and deployed byte matching are verified by exact-commit CI. No physical-device, screen-reader or exhaustive random-sequence certification."
   },
   "baselinePreserved": {
     "commit": "6f4469cc7491b2b6255e7479c20880adf99787df",
@@ -184,7 +243,10 @@
     "games": 300,
     "runtimeAndUnrelatedFiles": 227,
     "previews": 290,
-    "test": "tests/preservation300.cjs"
+    "test": "tests/preservation300.cjs",
+    "intentionalRuntimeRemediations": [
+      "puzzle-lab/engines.js: Arrow Audit initialization only; original archived and baseline hashes retained"
+    ]
   },
   "next100": {
     "plannedGames": 100,
@@ -195,7 +257,39 @@
       "civic-room",
       "form-room"
     ],
-    "catalogLinked": false,
-    "status": "isolated implementation and source review; full native execution, generation checks and integration gate required"
+    "catalogLinked": true,
+    "status": "All100 implemented; source-bound full campaigns, independent review and final local integration passed",
+    "implementedGames": 100
+  },
+  "historical400LocalMilestone": {
+    "evidence": "coverage/index.json",
+    "status": "Passed all29 current source-matched suites and expansion400 release gate",
+    "originalGamesPreserved": 300,
+    "newGames": 100,
+    "verifiedGames": 400,
+    "desktopCompletions": 400,
+    "mobileViewportCompletions": 400,
+    "touchGameplayCompletions": 347,
+    "newDesktopCases": 100,
+    "newMobileTouchCases": 100,
+    "newFiniteStudyWins": 600,
+    "newOptionalChallengeWins": 328,
+    "newGeneratedChallengeStreams": 75,
+    "newMatchSeries": 7,
+    "newFiniteOnlyCampaigns": 18,
+    "nativeOpeningCases": 800,
+    "localRouteResetCases": 800,
+    "genericExpansionControlsCases": 600,
+    "browserEngine": "Chromium 151.0.7922.173",
+    "limits": "Native controls use source-informed legal plans. Original competitive terminal results and older mixed mobile input retain disclosed scope. Short ordinary samples cover100 new games; six selected campaigns were independently replayed. Local route asset checks include isolated unlinked500 prototypes and do not attest deployed source. No physical-device or screen-reader session."
+  },
+  "preserved400Milestone": {
+    "commit": "3239a0be3fce85b851d969327df507a873bd55f0",
+    "games": 400,
+    "runtimeAndUnrelatedFiles": 276,
+    "intentionalRuntimeRemediations": 1,
+    "previews": 390,
+    "test": "tests/preservation400.cjs",
+    "repair": "ARROW-AUDIT-REPAIR.md"
   }
 }

@@ -3,9 +3,9 @@
   "suite": "commons-room",
   "passed": true,
   "status": "passed",
-  "startedAt": "2026-10-02T20:18:33.919Z",
+  "startedAt": "2026-10-02T22:10:24.646Z",
   "source": {
-    "sha256": "3d527adfb3efc41ab43fa3f0387a5aef8fcefb4946dc19deb0dd4bf6f9a38f78",
+    "sha256": "07267ef745981205a9aeff6d464945d4e33def733cf32a71c753559e8fb9b400",
     "files": [
       "catalog.css",
       "catalog.js",
@@ -33,6 +33,7 @@
       "tests/fixtures/baseline100.json",
       "tests/fixtures/baseline200.json",
       "tests/fixtures/baseline300.json",
+      "tests/fixtures/baseline400.json",
       "tests/fixtures/parlour-b02-b05-paths.json",
       "tests/fixtures/parlour-b13-guided-paths.json",
       "tests/fixtures/parlour-paths.json",
@@ -86,9 +87,9 @@
   "servedRuntimeBefore": {
     "baseURL": "http://127.0.0.1:8790",
     "passed": true,
-    "sha256": "f027c7fa6b6f256a89c41cf7496e3bf63823a74500b0dee2be743f8a9fec5ee8",
+    "sha256": "f5491a77ab1f1dbb472e7b639c6ed110afb7b234eb5e6b4705afa104ce858ea4",
     "fileCount": 18,
-    "verifiedAt": "2026-10-02T20:18:34.047Z"
+    "verifiedAt": "2026-10-02T22:10:24.819Z"
   },
   "exitCode": 0,
   "signal": null,
@@ -96,12 +97,12 @@
   "servedRuntime": {
     "baseURL": "http://127.0.0.1:8790",
     "passed": true,
-    "sha256": "f027c7fa6b6f256a89c41cf7496e3bf63823a74500b0dee2be743f8a9fec5ee8",
+    "sha256": "f5491a77ab1f1dbb472e7b639c6ed110afb7b234eb5e6b4705afa104ce858ea4",
     "fileCount": 18,
-    "verifiedAt": "2026-10-02T20:23:29.607Z"
+    "verifiedAt": "2026-10-02T22:16:45.721Z"
   },
   "completionEvidence": {
-    "sha256": "7d5e130969339d787a15f9261acb0fc3347dd6669699543c5e87463419225c0b",
+    "sha256": "b5b26eac563c6787f3b7e9e138d1425ee69a229080002624cca64451e0a78164",
     "file": "coverage/commons-room.json",
     "cases": [
       {
@@ -1484,5 +1485,5 @@
       }
     ]
   },
-  "finishedAt": "2026-10-02T20:23:29.608Z"
+  "finishedAt": "2026-10-02T22:16:45.725Z"
 }

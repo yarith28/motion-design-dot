@@ -1,0 +1,842 @@
+[
+  {
+    "id": "last-contact",
+    "name": "Last Contact",
+    "category": "strategy",
+    "url": "civic-room/?game=last-contact",
+    "mechanic": "The only move replaces an orthogonally adjacent enemy with the moving piece, leaving its source empty. Every action destroys a future contact, so preserving your final capture while cutting the opponent's matters more than material advantage.",
+    "description": "The only move replaces an orthogonally adjacent enemy with the moving piece, leaving its source empty. Every action destroys a future contact, so preserving your final capture while cutting the opponent's matters more than material advantage.",
+    "rules": [
+      "Select your piece and an orthogonally adjacent occupied enemy. The mover replaces that enemy and its source becomes empty; empty destinations and diagonal captures are illegal.",
+      "Every action reduces total material. If the next player has no adjacent enemy to capture, the preceding player wins; material advantage alone is irrelevant.",
+      "Complete all three contact boards. Undo reverses the preceding action; Reset retries this study and Restart begins the three-study campaign."
+    ],
+    "controls": "Select your piece and an adjacent occupied enemy; empty destinations stay disabled. Touchscreen taps or keyboard Tab then Enter/Space operate every essential choice.",
+    "accent": "#b4c9d4",
+    "symbol": "◇",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "match-series",
+      "design": "Each won match opens a newly seeded 4×4 contact graph with six pieces per side and four gaps. Both armies initially have legal contacts; every action reduces occupied material. Results remain visible before the next match.",
+      "difficultyCap": "Fixed 4×4 field, twelve pieces and fixed depth-three tactical house response."
+    },
+    "nearestExisting": [
+      {
+        "id": "draught-garden",
+        "difference": "A move lands directly on an adjacent victim; empty cells are unusable and there is no jump, promotion, or non-capturing step."
+      },
+      {
+        "id": "nim",
+        "difference": "Legal removal depends on changing spatial adjacency and allegiance, not independent heap sizes."
+      }
+    ],
+    "source": [
+      "civic-room/contact-and-stacks.mjs",
+      "civic-room/core.mjs",
+      "civic-room/engines.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"square-0\"]"
+    }
+  },
+  {
+    "id": "triad-and-tower",
+    "name": "Triad and Tower",
+    "category": "strategy",
+    "url": "civic-room/?game=triad-and-tower",
+    "mechanic": "Make a mandatory ray capture using a stack at least as tall as its victim, then optionally capture again or merge onto a friendly stack. Preserve an exposed top of each of three army types: stacking strengthens one attacker but can bury your last visible type and lose immediately.",
+    "description": "Make a mandatory ray capture using a stack at least as tall as its victim, then optionally capture again or merge onto a friendly stack. Preserve an exposed top of each of three army types: stacking strengthens one attacker but can bury your last visible type and lose immediately.",
+    "rules": [
+      "A ray stops at its first occupied hex stack. Your mandatory first action must capture an enemy whose height is no greater than yours; the whole enemy stack leaves permanently.",
+      "You may then capture again, merge onto a friendly first-occupied stack, or finish. A merge adds heights and keeps the moving top type. Every army must retain an EXPOSED Sun, Moon and Leaf; burying your last top of a type immediately loses.",
+      "Eliminating a house top type or leaving the house without a compulsory capture wins. Three legal positions form the campaign. Reset restores a study; Restart begins all three."
+    ],
+    "controls": "Select an exposed own stack and a legal first-occupied ray capture. After the compulsory capture choose another capture, a friendly stacking move, or Finish turn; label every destination strength and surviving top types. Touchscreen taps or keyboard Tab then Enter/Space operate every essential choice.",
+    "accent": "#b4c9d4",
+    "symbol": "◇",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "match-series",
+      "design": "A won match opens a newly seeded nineteen-cell hex field with nine typed pieces per side and one gap. All three types are initially exposed. Stack contents, captures and results reset only after the settled match score banks.",
+      "difficultyCap": "Nineteen cells, eighteen initial pieces and a bounded complete-turn opponent heuristic."
+    },
+    "nearestExisting": [
+      {
+        "id": "anchor-stacks",
+        "difference": "Captures remove the opposing stack permanently rather than merge both armies; travel stops at the first occupied hex ray and is not exact-height distance. No anchors or disconnected-component erasure. Height is attack strength, capture-first initiative and exposed-type survival govern play."
+      },
+      {
+        "id": "four-step-menagerie",
+        "difference": "No four-action manipulation, stronger-neighbor freezing or unsupported traps. A first-occupied ray/height comparison and friendly type burial determine legal attacks and terminal survival."
+      }
+    ],
+    "source": [
+      "civic-room/contact-and-stacks.mjs",
+      "civic-room/core.mjs",
+      "civic-room/engines.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board button:not(:disabled)"
+    }
+  },
+  {
+    "id": "crossing-court",
+    "name": "Crossing Court",
+    "category": "strategy",
+    "url": "civic-room/?game=crossing-court",
+    "mechanic": "Pieces have movement ranks but belong to whoever controls the half of the board they currently occupy. Capturing across the boundary can hand the moved piece to your rival for a countercapture; score captured rank value before either court empties.",
+    "description": "Pieces have movement ranks but belong to whoever controls the half of the board they currently occupy. Capturing across the boundary can hand the moved piece to your rival for a countercapture; score captured rank value before either court empties.",
+    "rules": [
+      "Control follows location: rows 1–3 belong to the house and rows 4–6 to you. Rank 1 steps diagonally, rank 2 moves up to two orthogonal squares, and rank 3 slides along any of eight clear rays.",
+      "Capture only occupied squares in the opposite court, scoring the victim rank. A moved piece crossing the middle immediately changes controller. The preceding move cannot be reversed immediately.",
+      "An empty court, no legal next move or 48 full turns settles captured value: strictly more than the house wins; a tie holds its defense. Complete three positions; Reset retries and Restart begins the campaign."
+    ],
+    "controls": "Select any ranked piece currently in your court and a legal movement/capture endpoint; identify the resulting controller before the move. Touchscreen taps or keyboard Tab then Enter/Space operate every essential choice.",
+    "accent": "#b4c9d4",
+    "symbol": "◇",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "match-series",
+      "design": "A won court duel opens a new seeded distribution of nine ranked pieces in each half of a4×6 court. The rank pools stay balanced; locations and legal lanes change. Each duel retains its final capture-value result.",
+      "difficultyCap": "Fixed 4×6 court, eighteen pieces,48-turn settlement and bounded threat-aware rival."
+    },
+    "nearestExisting": [
+      {
+        "id": "returned-banner",
+        "difference": "Ownership follows location immediately, not a permanent side plus captured reserve drop; there is no king or check."
+      },
+      {
+        "id": "shared-comet",
+        "difference": "Every ranked piece can switch control across a fixed boundary; captures score instead of delivering one shared neutral token to an edge."
+      }
+    ],
+    "source": [
+      "civic-room/contact-and-stacks.mjs",
+      "civic-room/core.mjs",
+      "civic-room/engines.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board button:not(:disabled)"
+    }
+  },
+  {
+    "id": "chromatic-command",
+    "name": "Chromatic Command",
+    "category": "strategy",
+    "url": "civic-room/?game=chromatic-command",
+    "mechanic": "A pawn slides forward along clear rays; the color of its landing square forces the opponent to use their pawn of that color. A blocked forced pawn passes control using the color under it, so movement chooses the opponent's next move family.",
+    "description": "A pawn slides forward along clear rays; the color of its landing square forces the opponent to use their pawn of that color. A blocked forced pawn passes control using the color under it, so movement chooses the opponent's next move family.",
+    "rules": [
+      "Slide an eligible pawn forward vertically or diagonally along a clear ray. Pawns do not capture or jump occupied squares. Your first move may use any pawn.",
+      "The landing square color forces the next player to use their pawn of that color. When the forced pawn cannot move, Pass uses the color underneath it to force the opposing pawn. A repeated blocked pass state settles the house defense.",
+      "Reaching row 1 wins for you; house reaching row 5 loses. Complete three color maps/positions. Reset restores the current study; Restart begins all three."
+    ],
+    "controls": "Select the currently eligible colored pawn and a clear forward-ray endpoint; a native Pass control appears only when the forced pawn is blocked. Touchscreen taps or keyboard Tab then Enter/Space operate every essential choice.",
+    "accent": "#b4c9d4",
+    "symbol": "◇",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "match-series",
+      "design": "A won race opens a fresh seeded 5×5 color map built from independently shuffled row, column and color permutations. Both home rows retain five opposing pawns; landing colors create a new forcing graph. Each race has its own result.",
+      "difficultyCap": "Five colors and pawns per side; forward motion and blocked-cycle settlement keep races finite."
+    },
+    "nearestExisting": [
+      {
+        "id": "pawns",
+        "difference": "No diagonal capture or unrestricted choice of pawn: landing colors couple successive players' legal movers."
+      },
+      {
+        "id": "borrowed-steps",
+        "difference": "No movement-card exchange; persistent square colors force a specific opposing pawn and can force a pass."
+      }
+    ],
+    "source": [
+      "civic-room/forced-races.mjs",
+      "civic-room/core.mjs",
+      "civic-room/engines.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board button:not(:disabled)"
+    }
+  },
+  {
+    "id": "outward-and-home",
+    "name": "Outward and Home",
+    "category": "strategy",
+    "url": "civic-room/?game=outward-and-home",
+    "mechanic": "Choose which lane runner advances its individual distance; on reaching the far edge it turns and uses a different return speed. Crossing an enemy resets that enemy to its current leg's starting edge and jumps beyond it, so timing intersections can outweigh raw distance.",
+    "description": "Choose which lane runner advances its individual distance; on reaching the far edge it turns and uses a different return speed. Crossing an enemy resets that enemy to its current leg's starting edge and jumps beyond it, so timing intersections can outweigh raw distance.",
+    "rules": [
+      "Choose one horizontal runner. It moves its disclosed outward speed toward coordinate 6, turns there, then uses its return speed toward coordinate 0. A completed home runner leaves play. House runners use the same rules vertically.",
+      "Crossing an opposing runner resets that enemy to its CURRENT leg start (0 outward,6 returning). The mover continues over any contiguous crossed run and stops at the first clear coordinate beyond it; the enemy does not disappear.",
+      "Return 2, then3, then4 runners in the three finite studies before the house reaches the same target. After 90 turns total completed-leg progress settles ties in the house defense. Reset retries the race; Restart begins all three."
+    ],
+    "controls": "Select one active runner; preview its deterministic endpoint and crossed enemy resets before committing. Touchscreen taps or keyboard Tab then Enter/Space operate every essential choice.",
+    "accent": "#b4c9d4",
+    "symbol": "◇",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "match-series",
+      "design": "A won four-runner race opens fresh outward/return speed permutations and a six-action legal alternating race prefix. Crossed runners are actually reset during this prefix, so no two runners overlap. Finite campaign targets remain2/3/4.",
+      "difficultyCap": "Five runners per side, speed 1–3, target 4 and90-turn settlement."
+    },
+    "nearestExisting": [
+      {
+        "id": "pawns",
+        "difference": "Pieces make a round trip with two speeds, cannot change lanes, and reset crossed enemies without capturing them."
+      },
+      {
+        "id": "homeward-pips",
+        "difference": "No dice allocation, blot hit or bearing-off points; deterministic orthogonal lane intersections and outward/return speed asymmetry govern progress."
+      }
+    ],
+    "source": [
+      "civic-room/forced-races.mjs",
+      "civic-room/core.mjs",
+      "civic-room/engines.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board button:not(:disabled)"
+    }
+  },
+  {
+    "id": "pair-breaker",
+    "name": "Pair Breaker",
+    "category": "strategy",
+    "url": "civic-room/?game=pair-breaker",
+    "mechanic": "Place a stone to create a five-stone line or bracket exactly two enemies between the new stone and an older one. Captured pairs reopen cells and can dismantle a threatened line; either alignment or enough captured pairs wins.",
+    "description": "Place a stone to create a five-stone line or bracket exactly two enemies between the new stone and an older one. Captured pairs reopen cells and can dismantle a threatened line; either alignment or enough captured pairs wins.",
+    "rules": [
+      "Place an own stone on any empty square. Five consecutive own stones on a straight horizontal, vertical or diagonal line win.",
+      "A newly placed stone brackets EXACTLY two consecutive enemies against another own stone: remove that pair permanently and reopen its cells. Capturing five pairs also wins; a run of three enemies cannot be captured by this rule.",
+      "The house blocks immediate line and capture threats. Complete three tactical positions; after 80 placements the house holds a defense. Reset retries a study and Restart begins the campaign."
+    ],
+    "controls": "Tap an empty square to place; feedback highlights the removed pairs, line threats and both capture totals. Touchscreen taps or keyboard Tab then Enter/Space operate every essential choice.",
+    "accent": "#b4c9d4",
+    "symbol": "◇",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "match-series",
+      "design": "Seeded alternating legal placement prefixes change open lines, capture targets and historical pair counts on a 7×7 field; nonterminal prefixes retain both player choices and the match result.",
+      "difficultyCap": "Fixed 7×7, at most 80 player turns and bounded tactical rival."
+    },
+    "nearestExisting": [
+      {
+        "id": "four",
+        "difference": "Free placement, pair removal and an independent capture victory change occupancy and defensive priorities; gravity alignment cannot express these transitions."
+      },
+      {
+        "id": "reversi",
+        "difference": "Exactly two bracketed enemies are removed rather than arbitrary rays changing allegiance; capture totals can win before any line."
+      }
+    ],
+    "source": [
+      "civic-room/lines-and-loops.mjs",
+      "civic-room/core.mjs",
+      "civic-room/engines.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board button:not(:disabled)"
+    }
+  },
+  {
+    "id": "looping-guard",
+    "name": "Looping Guard",
+    "category": "strategy",
+    "url": "civic-room/?game=looping-guard",
+    "mechanic": "Reposition by adjacent steps, but capture only by following an unobstructed orthogonal route that has traversed at least one corner loop. Empty loops can turn a remote blocker into a capture shield or expose a distant piece.",
+    "description": "Reposition by adjacent steps, but capture only by following an unobstructed orthogonal route that has traversed at least one corner loop. Empty loops can turn a remote blocker into a capture shield or expose a distant piece.",
+    "rules": [
+      "An ordinary step moves one square in any direction into an empty cell. Captures follow an orthogonal ray and must cross at least one fixed corner loop BEFORE meeting their first occupied cell.",
+      "Loop ports turn the ray back into the field. A friendly first blocker or an enemy encountered before any loop forbids the capture. A legal loop capture replaces the victim permanently; choose the labeled route when more than one ray exists.",
+      "Eliminate the house or leave it without a legal move. After 48 full turns, strictly greater surviving material wins; ties defend the house. Complete three loop positions; Reset and Restart restore the finite options."
+    ],
+    "controls": "Select a piece, then an adjacent step or explicitly labeled legal loop-capture route; every route is shown with its traversed loop count. Touchscreen taps or keyboard Tab then Enter/Space operate every essential choice.",
+    "accent": "#b4c9d4",
+    "symbol": "◇",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "match-series",
+      "design": "Seeded four-versus-four locations across 36 cells vary ordinary screens, loop approaches and capturable port paths. Each settled duel precedes a fresh match.",
+      "difficultyCap": "Fixed 6×6 loop graph, eight pieces and 48-turn settlement."
+    },
+    "nearestExisting": [
+      {
+        "id": "draught-garden",
+        "difference": "No jump-over landing or compulsory capture: capture traverses an empty directed route through corner loops and ends on the first enemy."
+      },
+      {
+        "id": "cannon-council",
+        "difference": "No three-piece formation or empty muzzle; the capture route changes direction around fixed off-board loops."
+      }
+    ],
+    "source": [
+      "civic-room/lines-and-loops.mjs",
+      "civic-room/core.mjs",
+      "civic-room/engines.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board button:not(:disabled)"
+    }
+  },
+  {
+    "id": "mill-and-flight",
+    "name": "Mill and Flight",
+    "category": "strategy",
+    "url": "civic-room/?game=mill-and-flight",
+    "mechanic": "Deploy reserves to a connected mill graph, then move along its edges; completing a three-point mill earns a selective removal. At three surviving pieces the movement rule changes to flying, so depletion can create a last tactical resource.",
+    "description": "Deploy reserves to a connected mill graph, then move along its edges; completing a three-point mill earns a selective removal. At three surviving pieces the movement rule changes to flying, so depletion can create a last tactical resource.",
+    "rules": [
+      "While reserves remain, place one reserve on any empty graph point. After deployment, move one piece along a printed graph edge; with exactly three survivors you may fly to any empty point.",
+      "Completing an own three-point mill grants one opposing capture. Remove a piece outside any opposing mill if possible; a protected mill piece is eligible only when every enemy is protected.",
+      "Reduce the house below three after deployment, or block its next legal move. Three repeated board/reserve/next-player states or 70 turns defend the house. Three studies exercise deployment, movement and flying; Reset retries and Restart begins all three."
+    ],
+    "controls": "Place a reserve, or select piece and graph neighbor; after a mill choose an eligible opposing piece to remove. Flying destinations are explicitly highlighted. Touchscreen taps or keyboard Tab then Enter/Space operate every essential choice.",
+    "accent": "#b4c9d4",
+    "symbol": "◇",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "match-series",
+      "design": "Seeded legal alternating deployment prefixes retain every reserve and captured piece. The resulting graph positions continue through placement, mill capture, movement and flying, with explicit finite match results.",
+      "difficultyCap": "24 points, nine-piece pools per side, repetition and 70-turn settlement."
+    },
+    "nearestExisting": [
+      {
+        "id": "four",
+        "difference": "Alignment is an intermittent capture action, not the win condition; reserves, graph movement, protected mills and flying determine survival."
+      },
+      {
+        "id": "joining-lines",
+        "difference": "Movement uses fixed graph edges (or late flying) and wins by reducing mobility/material; occupancy-dependent distance and army connectivity are absent."
+      }
+    ],
+    "source": [
+      "civic-room/mill-graph.mjs",
+      "civic-room/core.mjs",
+      "civic-room/engines.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board button:not(:disabled)"
+    }
+  },
+  {
+    "id": "mirrored-offensive",
+    "name": "Mirrored Offensive",
+    "category": "strategy",
+    "url": "civic-room/?game=mirrored-offensive",
+    "mechanic": "First make a non-pushing passive move on one of your home boards; then reuse its exact displacement on a board of the other color for an aggressive move that can push one enemy off an edge. Choose a passive move that licenses the needed attack.",
+    "description": "First make a non-pushing passive move on one of your home boards; then reuse its exact displacement on a board of the other color for an aggressive move that can push one enemy off an edge. Choose a passive move that licenses the needed attack.",
+    "rules": [
+      "Your passive move is on home board 1 or 2, moves one or two squares on a clear straight ray and never pushes. It commits an exact direction and distance.",
+      "Your aggressive move must use that same vector on any board of the opposite color. It may push one enemy off an edge, but a friendly blocker or two different enemies makes the attack illegal. Both halves of the turn must be legal.",
+      "Losing all stones on any single board, or having no complete two-part turn, loses for the next army. Sixty turns hold the house defense. Complete three four-board contests; Reset retries and Restart begins the campaign."
+    ],
+    "controls": "Select passive board, stone and displacement, then an eligible aggressive stone and endpoint; show the committed vector throughout the second phase. Touchscreen taps or keyboard Tab then Enter/Space operate every essential choice.",
+    "accent": "#b4c9d4",
+    "symbol": "◇",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "match-series",
+      "design": "Four seeded legal boards contain three stones per side each; complete two-part turns for both armies are checked before play. Locations alter passive space and aggressive edge pressure; each eliminated-board result settles before a fresh match.",
+      "difficultyCap": "Four 4×4 fields, three stones per side per field and 60-turn settlement."
+    },
+    "nearestExisting": [
+      {
+        "id": "marble-council",
+        "difference": "No inline numerical superiority: one aggressive stone can push, but its displacement must first be paid for by a separate clear passive move on a different board."
+      },
+      {
+        "id": "twin-steps",
+        "difference": "Adversarial four-board material play with a chosen passive origin and a separately chosen aggressive origin; not mirrored maze navigation."
+      }
+    ],
+    "source": [
+      "civic-room/licensed-boards.mjs",
+      "civic-room/core.mjs",
+      "civic-room/engines.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board button:not(:disabled)"
+    }
+  },
+  {
+    "id": "marble-vault",
+    "name": "Marble Vault",
+    "category": "strategy",
+    "url": "civic-room/?game=marble-vault",
+    "mechanic": "Build a shared supported sphere pyramid using finite personal reserves, or promote an uncovered lower sphere to a supported higher socket. Completing an own square permits reclaiming up to two uncovered own spheres, making recycling and support denial part of the race to the apex.",
+    "description": "Build a shared supported sphere pyramid using finite personal reserves, or promote an uncovered lower sphere to a supported higher socket. Completing an own square permits reclaiming up to two uncovered own spheres, making recycling and support denial part of the race to the apex.",
+    "rules": [
+      "Place a reserve in an empty socket only when all four sockets immediately below are occupied. You may instead promote an uncovered own sphere upward, provided it is not one of the destination supports.",
+      "A sphere supporting an occupied socket cannot move or be reclaimed. Completing an own 2×2 square permits returning up to two uncovered own spheres to your finite reserve; Keep declines remaining recycling.",
+      "Place the apex or leave the house without a reserve placement or legal promotion. Eighty turns hold the recycling defense. Three legal pyramid studies retain finite reserves; Reset retries and Restart begins all three."
+    ],
+    "controls": "Choose a reserve placement or uncovered promotion source, then a supported higher socket; after an own square choose legal reclaimed spheres or keep them. Touchscreen taps or keyboard Tab then Enter/Space operate every essential choice.",
+    "accent": "#b4c9d4",
+    "symbol": "◇",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "match-series",
+      "design": "Fresh legal alternating building prefixes shuffle the base sockets and conserve each fifteen-sphere pool. Some later prefixes reach supported upper layers. Every apex/reserve result remains settled before a new match.",
+      "difficultyCap": "Thirty sockets in four layers, fifteen-sphere personal pools and 80-turn settlement."
+    },
+    "nearestExisting": [
+      {
+        "id": "terrace-duel",
+        "difference": "Players place their actual finite pieces into four-support sockets and may promote/reclaim them; no worker move/build turn or scalar tower height."
+      },
+      {
+        "id": "anchor-stacks",
+        "difference": "No moving stacks or graph disconnection: support is geometric and removing a supporting sphere is illegal."
+      }
+    ],
+    "source": [
+      "civic-room/supported-vault.mjs",
+      "civic-room/core.mjs",
+      "civic-room/engines.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board button:not(:disabled)"
+    }
+  },
+  {
+    "id": "brimline-reserves",
+    "name": "Brimline Reserves",
+    "category": "strategy",
+    "url": "civic-room/?game=brimline-reserves",
+    "mechanic": "Insert a reserve at the edge of a hex field and push a whole occupied row toward its first gap. A completed own line can be removed with all connected row stones: recover your own reserves, permanently capture enemies, and keep enough reserve to take another turn.",
+    "description": "Insert a reserve at the edge of a hex field and push a whole occupied row toward its first gap. A completed own line can be removed with all connected row stones: recover your own reserves, permanently capture enemies, and keep enough reserve to take another turn.",
+    "rules": [
+      "Insert one reserve through a labeled hex edge entrance. Every occupied cell along that lane shifts toward its FIRST empty cell; a full lane cannot receive an insertion.",
+      "Three consecutive own stones qualify a completed row. Reclaim its entire contiguous occupied segment: your stones return to reserve, opposing stones leave permanently. You may reclaim more available rows or finish.",
+      "An army without reserve or an insertion lane loses on its next turn. Sixty turns hold the house defense. Three studies vary recycling, intersecting rows and scarce reserves; Reset retries and Restart begins all three."
+    ],
+    "controls": "Choose a labeled edge entrance and push direction, then choose any eligible completed row to reclaim; show returned and captured counts. Touchscreen taps or keyboard Tab then Enter/Space operate every essential choice.",
+    "accent": "#b4c9d4",
+    "symbol": "◇",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "match-series",
+      "design": "Legal seeded alternating insertion histories actually shift mixed rows and recycle completed segments, preserving seven-piece pools and all captures. New histories yield new bounded reserve matches.",
+      "difficultyCap": "Nineteen hexes, seven-piece personal pools and 60-turn settlement."
+    },
+    "nearestExisting": [
+      {
+        "id": "marble-council",
+        "difference": "The mover enters from outside; mixed rows shift without a superior group, and line removal/recycling governs reserve exhaustion instead of edge ejection."
+      },
+      {
+        "id": "anchor-stacks",
+        "difference": "No height-controlled stacks or disconnected-island collapse; linear insertion changes all intervening cells and captured rows replenish only their owner."
+      }
+    ],
+    "source": [
+      "civic-room/row-reserves.mjs",
+      "civic-room/core.mjs",
+      "civic-room/engines.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board button:not(:disabled)"
+    }
+  },
+  {
+    "id": "last-defense",
+    "name": "Last Defense",
+    "category": "strategy",
+    "url": "civic-room/?game=last-defense",
+    "mechanic": "Attack with a card, defend each attack with a higher same-suit card or trump, and add attacks only using ranks already on the table. Taking the whole table changes hands and attack initiative; drawing order determines who can shed after the deck ends.",
+    "description": "Attack with a card, defend each attack with a higher same-suit card or trump, and add attacks only using ranks already on the table. Taking the whole table changes hands and attack initiative; drawing order determines who can shed after the deck ends.",
+    "rules": [
+      "Attack with one card; beat an attack using a higher card in its suit, or any trump against a non-trump. Additional attacks may only use a rank already present on the paired table.",
+      "A volley is limited to the defender’s starting hand, at most three attacks. Successful defense discards the table and switches attacker; Take adds the whole table to the defender and keeps the attacker. Refill attacker first to four cards, then defender.",
+      "After the draw deck empties, shedding your final card before the house wins. A simultaneous empty hand or 80 volleys holds the house defense. Complete three compact-deck matches; Reset retries and Restart begins all three."
+    ],
+    "controls": "Tap a legal attack/defense card, add a rank-linked attack, finish a defended volley, or Take table. Show the paired table and trump suit. Touchscreen taps or keyboard Tab then Enter/Space operate every essential choice.",
+    "accent": "#b4c9d4",
+    "symbol": "◇",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "match-series",
+      "design": "A fresh full shuffle of twelve distinct cards and a changing trump suit yields each finite shedding duel. Exact hand/deck/table/discard ownership and attacker-first refill remain conserved.",
+      "difficultyCap": "Two suits, ranks 1–6, four-card refill and 80-volley settlement."
+    },
+    "nearestExisting": [
+      {
+        "id": "last-hand",
+        "difference": "No ascending group-size contest and pass reset: individually paired attack/defense cards permit rank-linked volleys and all-table pickup."
+      },
+      {
+        "id": "velvet-tricks",
+        "difference": "There is no trick score or follow-suit trick winner; defense can take multiple pairs and alter initiative under a refill rule."
+      }
+    ],
+    "source": [
+      "civic-room/card-tables.mjs",
+      "civic-room/core.mjs",
+      "civic-room/engines.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board button:not(:disabled)"
+    }
+  },
+  {
+    "id": "covered-columns",
+    "name": "Covered Columns",
+    "category": "strategy",
+    "url": "civic-room/?game=covered-columns",
+    "mechanic": "Draw or take the exposed discard, replace one card in a partly concealed two-row grid, or reveal a hidden card while discarding. A matching vertical pair cancels its score, and revealing your final card forces the opponent's final turn.",
+    "description": "Draw or take the exposed discard, replace one card in a partly concealed two-row grid, or reveal a hidden card while discarding. A matching vertical pair cancels its score, and revealing your final card forces the opponent's final turn.",
+    "rules": [
+      "Your six-card grid begins with two revealed cards. Draw from the deck or take the visible discard, then replace a grid position. Only a deck draw may instead be discarded to reveal a hidden position.",
+      "Identical vertical pairs score zero; otherwise all card values add. Revealing your final hidden card gives the opponent one final turn, and vice versa. Deck exhaustion reveals and settles both grids.",
+      "A strictly lower grid total wins; ties defend the house. The house evaluates its revealed cards and an expected hidden value, without looking at its concealed cards. Complete three deals; Reset retries and Restart begins the campaign."
+    ],
+    "controls": "Draw deck or Take discard, then choose a grid position for replacement or discard-and-reveal; finish timing is explicit. Touchscreen taps or keyboard Tab then Enter/Space operate every essential choice.",
+    "accent": "#b4c9d4",
+    "symbol": "◇",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "match-series",
+      "design": "Fresh shuffled 24-card pools change both hidden six-card grids, the exposed discard and the remaining draw order. Each draw/replace/reveal contest settles its complete grid scores before a new deal.",
+      "difficultyCap": "Six cells per side, 24-card pool, finite deck and 16-turn settlement."
+    },
+    "nearestExisting": [
+      {
+        "id": "meld-atelier",
+        "difference": "Cards occupy persistent concealed grid positions; vertical cancellation and the reveal-triggered ending replace hand runs/sets and deadwood submission."
+      },
+      {
+        "id": "one-last-card",
+        "difference": "No role action or identity elimination; draw/replace decisions trade concealed spatial score against control of the ending."
+      }
+    ],
+    "source": [
+      "civic-room/card-tables.mjs",
+      "civic-room/core.mjs",
+      "civic-room/engines.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"draw\"]"
+    }
+  },
+  {
+    "id": "double-written",
+    "name": "Double Written",
+    "category": "strategy",
+    "url": "civic-room/?game=double-written",
+    "mechanic": "Write each move tentatively in two empty squares. When these linked marks close a cycle, the opponent chooses one endpoint to make classical, forcing the connected component to collapse consistently. Winning lines depend on that collapse choice and move priority.",
+    "description": "Write each move tentatively in two empty squares. When these linked marks close a cycle, the opponent chooses one endpoint to make classical, forcing the connected component to collapse consistently. Winning lines depend on that collapse choice and move priority.",
+    "rules": [
+      "Choose two uncollapsed cells for one numbered tentative mark. Each mark is an edge; multiple marks may share a cell while remaining tentative.",
+      "Closing an edge cycle gives the opponent a choice of the triggering mark’s endpoint. That mark becomes classical there; every other incident mark is forced to its other endpoint, recursively collapsing the component. Classical cells accept no further links.",
+      "Three classical own marks in a line win. Simultaneous lines compare their largest move numbers, earlier wins; ties or an exhausted board defend the house. Complete three increasingly open link duels; Reset retries and Restart begins all three."
+    ],
+    "controls": "Choose two uncollapsed squares for a linked mark; in a collapse phase choose one highlighted endpoint. All links show owner and move number. Touchscreen taps or keyboard Tab then Enter/Space operate every essential choice.",
+    "accent": "#b4c9d4",
+    "symbol": "◇",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "match-series",
+      "design": "Seeded legal acyclic alternating edge prefixes create different forests and collapse opportunities over all nine cells, rather than cycling three authored boards. Each classical result settles before a new duel.",
+      "difficultyCap": "Nine cells and finite numbered link/collapse play."
+    },
+    "nearestExisting": [
+      {
+        "id": "four",
+        "difference": "Moves add graph edges rather than permanent cells; an adversarial choice resolves a cycle and propagates many earlier moves before a line can exist."
+      },
+      {
+        "id": "diagonal-grove",
+        "difference": "Cycles are a deliberate adversarial state transition with owned marks and collapse choices, not a forbidden static drawing constraint."
+      }
+    ],
+    "source": [
+      "civic-room/linked-marks.mjs",
+      "civic-room/core.mjs",
+      "civic-room/engines.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"square-0\"]"
+    }
+  },
+  {
+    "id": "capital-lines",
+    "name": "Capital Lines",
+    "category": "strategy",
+    "url": "civic-room/?game=capital-lines",
+    "mechanic": "Advance armies through owned territory while maintaining a connected supply path to the capital. Cutting an enemy link marks isolated armies for attrition on their next turn; restoring a route, capturing a relay or attacking a capital competes with immediate local gains.",
+    "description": "Advance armies through owned territory while maintaining a connected supply path to the capital. Cutting an enemy link marks isolated armies for attrition on their next turn; restoring a route, capturing a relay or attacking a capital competes with immediate local gains.",
+    "rules": [
+      "Advance one army to an orthogonally adjacent non-rock cell; capture an enemy there and claim the landing territory. Vacated territory stays yours until recaptured.",
+      "Supply follows connected owned territory to your capital. Isolated armies are marked and expire after their next own action unless reconnected. A finite relay claims an empty adjacent frontier without moving an army; it spends a full turn.",
+      "Capture the house capital or its last army. After 60 turns, strictly greater surviving army count wins; ties defend the house. Complete three supply maps; Reset retries and Restart begins all three."
+    ],
+    "controls": "Select an army and a legal advance/attack, or spend a finite relay action; highlight supplied paths and the isolated countdown before ending the turn. Touchscreen taps or keyboard Tab then Enter/Space operate every essential choice.",
+    "accent": "#b4c9d4",
+    "symbol": "◇",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "match-series",
+      "design": "Seeded center obstacles and army positions begin inside each connected capital domain. These change approach paths and redundant supply choices; all isolated countdown and capital results are preserved as finite matches.",
+      "difficultyCap": "Fixed 5×5 field, three starting armies and three relays per side, 60-turn settlement."
+    },
+    "nearestExisting": [
+      {
+        "id": "orders-at-dusk",
+        "difference": "Sequential single-army actions and persistent supply connectivity cause delayed attrition; no simultaneous support orders, retreat adjudication or autumn recruitment."
+      },
+      {
+        "id": "four-houses",
+        "difference": "Connected supply determines an army's continued existence, not colored culture scoring or internal/external leader conflict."
+      }
+    ],
+    "source": [
+      "civic-room/supply-front.mjs",
+      "civic-room/core.mjs",
+      "civic-room/engines.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "#board button:not(:disabled)"
+    }
+  },
+  {
+    "id": "bracket-and-effort",
+    "name": "Bracket and Effort",
+    "category": "strategy",
+    "url": "civic-room/?game=bracket-and-effort",
+    "mechanic": "Set a progressive marginal tax schedule, then workers independently choose effort from their after-tax wage and convex effort cost. Revenue must fund dated services while disposable income preserves next-period training, so higher rates can reduce both work and future productivity.",
+    "description": "Set a progressive marginal tax schedule, then workers independently choose effort from their after-tax wage and convex effort cost. Revenue must fund dated services while disposable income preserves next-period training, so higher rates can reduce both work and future productivity.",
+    "rules": [
+      "Choose separate marginal rates 0%,25%,50% or 75% for income below 4, from 4 to 10, and above 10. Workers choose hours 0–4 to maximize after-tax income minus their disclosed convex effort cost.",
+      "Tax funds each dated service bill. Two consecutive periods with disposable income at least 8 train that worker and raise the next wage. Rate changes consume a finite adjustment budget; you cannot command worker effort.",
+      "After four periods retain cash at least 4 and the displayed cumulative household-income floor. Insolvency loses immediately. Three studies change wages, costs and service demands; Reset retries and Restart begins all three."
+    ],
+    "controls": "Adjust three marginal brackets within the disclosed change cap, inspect the worker response forecast, then enact one period. Touchscreen taps or keyboard Tab then Enter/Space operate every essential choice.",
+    "accent": "#b4c9d4",
+    "symbol": "◇",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Independent bounded wages, effort costs and service calendars alter actual labor responses and wage training. Each four-period fiscal study settles its income and reserve requirements before a fresh study.",
+      "difficultyCap": "Three workers, four periods, three marginal brackets and bounded wages/costs."
+    },
+    "nearestExisting": [
+      {
+        "id": "quiet-majority",
+        "difference": "No coalition weights or concessions: individuals choose work effort endogenously under marginal brackets."
+      },
+      {
+        "id": "price-of-plenty",
+        "difference": "Government selects marginal tax wedges, not production quantity; worker effort and training determine later taxable income."
+      }
+    ],
+    "source": [
+      "civic-room/incentive-economies.mjs",
+      "civic-room/core.mjs",
+      "civic-room/engines.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"rate-0-1\"]"
+    }
+  },
+  {
+    "id": "club-tariff",
+    "name": "Club Tariff",
+    "category": "strategy",
+    "url": "civic-room/?game=club-tariff",
+    "mechanic": "Set a one-time membership fee and a per-use price. New customers compare total consumer surplus with the fee, while existing members treat that fee as sunk and choose only marginal usage; fee commitment, capacity and successive arriving cohorts change the best tariff over time.",
+    "description": "Set a one-time membership fee and a per-use price. New customers compare total consumer surplus with the fee, while existing members treat that fee as sunk and choose only marginal usage; fee commitment, capacity and successive arriving cohorts change the best tariff over time.",
+    "rules": [
+      "Choose a one-time entry fee at the first opening; it remains locked. Set a visit price each period. Arriving customers join only if optimized visit utility minus their entry fee is positive.",
+      "Existing members treat the fee as sunk and optimize later visits without paying again. Every promised visit must fit capacity; facility bills plus one per visit must be paid from tariff cash.",
+      "After three periods require at least five members, eighteen visits and cash at least 3. Capacity overrun or insolvency loses immediately. Three cohort calendars form the campaign; Reset retries and Restart begins all three."
+    ],
+    "controls": "Choose fee before the first opening and adjust the unit price each period; show new enrollment, returning demand and capacity, then Open club. Touchscreen taps or keyboard Tab then Enter/Space operate every essential choice.",
+    "accent": "#b4c9d4",
+    "symbol": "◇",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Seeded independent cohort values, capacity, initial reserve and facility bills change entry timing and later sunk-fee usage. Each three-period membership study has a complete finite result.",
+      "difficultyCap": "Six possible arriving members, three periods, bounded quadratic usage and prices 0–6."
+    },
+    "nearestExisting": [
+      {
+        "id": "price-of-plenty",
+        "difference": "Customers choose membership and usage under a two-part tariff; no rival quantity sets one market-clearing price."
+      },
+      {
+        "id": "market-of-five",
+        "difference": "No exchanged cards or diminishing set-sale rewards; persistent paid memberships separate fixed and marginal demand decisions."
+      }
+    ],
+    "source": [
+      "civic-room/incentive-economies.mjs",
+      "civic-room/core.mjs",
+      "civic-room/engines.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"fee-1\"]"
+    }
+  },
+  {
+    "id": "pooling-desk",
+    "name": "Pooling Desk",
+    "category": "strategy",
+    "url": "civic-room/?game=pooling-desk",
+    "mechanic": "Quote one premium/deductible contract to a population whose risk groups decide whether to enroll. The price changes the composition of the pool before claims are paid; maintain coverage and protection while avoiding the high-risk-only insolvency trap.",
+    "description": "Quote one premium/deductible contract to a population whose risk groups decide whether to enroll. The price changes the composition of the pool before claims are paid; maintain coverage and protection while avoiding the high-risk-only insolvency trap.",
+    "rules": [
+      "Post one premium and deductible for every risk group. Each group enrolls only when coverage plus its risk-aversion value is worth the price and its affordability limit permits it; you cannot pick policyholders individually.",
+      "Enrollment determines premium income before the dated group claim counts pay coverage = 6 − deductible. The pool also pays administration 1 per period; higher deductibles reduce willingness and protected losses together. Dated affordability can lower a later group’s enrollment ceiling.",
+      "After three periods retain cash at least 4, enrollment-periods at least 9 and protected losses at least 24. Insolvency loses immediately. Three calendars form the campaign; Reset retries and Restart begins all three."
+    ],
+    "controls": "Adjust premium and deductible, inspect risk-group enrollment and disclosed claim-calendar exposure, then issue the period's contract. Touchscreen taps or keyboard Tab then Enter/Space operate every essential choice.",
+    "accent": "#b4c9d4",
+    "symbol": "◇",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Bounded independently varied risk estimates, low-risk population, dated affordability ceilings and shuffled aggregate claim calendars alter adverse selection and realized coverage. Each pool closes after three periods before a fresh study.",
+      "difficultyCap": "Three risk groups, three periods, one uniform premium/deductible and finite reserve."
+    },
+    "nearestExisting": [
+      {
+        "id": "safe-return",
+        "difference": "No selected collateralized policy portfolio or overlapping durations: one posted contract causes endogenous enrollment and changes the pool's risk mix."
+      },
+      {
+        "id": "permit-and-progress",
+        "difference": "No conserved permits or production quotas; private enrollment response determines who contributes premiums and receives claim protection."
+      }
+    ],
+    "source": [
+      "civic-room/incentive-economies.mjs",
+      "civic-room/core.mjs",
+      "civic-room/engines.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"premium-1\"]"
+    }
+  },
+  {
+    "id": "network-tipping",
+    "name": "Network Tipping",
+    "category": "strategy",
+    "url": "civic-room/?game=network-tipping",
+    "mechanic": "Invest in durable platform quality or subsidize new adopters. Each cohort compares intrinsic appeal, switching cost and its neighbors' prior adoption; early critical-mass spending can sustain later adoption, but poorly placed subsidies expire without creating a stable network.",
+    "description": "Invest in durable platform quality or subsidize new adopters. Each cohort compares intrinsic appeal, switching cost and its neighbors' prior adoption; early critical-mass spending can sustain later adoption, but poorly placed subsidies expire without creating a stable network.",
+    "rules": [
+      "Choose a durable quality investment and a subsidy paid only to newly switching adopters. Six users choose simultaneously from disclosed intrinsic preference, PREVIOUS neighbor adoption, quality and switching cost.",
+      "Quality investment costs two per unit and decays one per period. Each adopter earns two; operation costs two. When at least four choose you, the rival raises its quality, capped at three; otherwise it retreats toward one.",
+      "After five periods retain nonnegative cash and at least four adopters. Insolvency loses immediately. Three peer-preference studies form the campaign; Reset retries and Restart begins all three."
+    ],
+    "controls": "Choose a quality investment and new-adopter subsidy, inspect the simultaneous response forecast, then launch one period; show adoption and spent subsidy per cohort. Touchscreen taps or keyboard Tab then Enter/Space operate every essential choice.",
+    "accent": "#b4c9d4",
+    "symbol": "◇",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Seeded cycle relabelings, initially adjacent adopters and independent preference permutations change the actual peer response path and hysteresis. Each five-period adoption contest settles before a new network.",
+      "difficultyCap": "Six-node degree-two peer graph, five periods, quality cap six and rival cap three."
+    },
+    "nearestExisting": [
+      {
+        "id": "growing-block",
+        "difference": "No zoning plots, housing capacity or city tax migration; discrete cohorts choose between rival platforms through a fixed peer graph and switching hysteresis."
+      },
+      {
+        "id": "many-hands",
+        "difference": "No threshold cash project or matching pledge: independent adoption responses depend on local previous-period neighbors, not pooled contributions."
+      }
+    ],
+    "source": [
+      "civic-room/incentive-economies.mjs",
+      "civic-room/core.mjs",
+      "civic-room/engines.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"invest-1\"]"
+    }
+  },
+  {
+    "id": "bonus-and-burden",
+    "name": "Bonus and Burden",
+    "category": "strategy",
+    "url": "civic-room/?game=bonus-and-burden",
+    "mechanic": "Write a base wage and two performance bonuses, then an agent chooses costly quantity, real quality or metric manipulation. One scarce audit can remove proxy gaming, while induced practice changes later effort costs; high measured output can still leave the principal worse off.",
+    "description": "Write a base wage and two performance bonuses, then an agent chooses costly quantity, real quality or metric manipulation. One scarce audit can remove proxy gaming, while induced practice changes later effort costs; high measured output can still leave the principal worse off.",
+    "rules": [
+      "Choose a base wage, quantity bonus and proxy bonus. The worker chooses quantity, real quality and gaming under effort budget five to maximize wage minus disclosed convex costs; an outside option can reject the offer.",
+      "Proxy equals real quality plus the project gaming multiplier times gaming. One scarce audit can remove gaming from paid proxy. Genuine revenue uses quantity × (quality + 1) × project value; quality at least two builds practice and reduces later quality cost.",
+      "After three projects require real quality output at least 16 and cash at least 8. Insolvency loses immediately; proxy points never count toward real output. Three project orders form the campaign; Reset retries and Restart begins all three."
+    ],
+    "controls": "Set base wage, quantity bonus and metric bonus, choose whether to spend the remaining audit, inspect the disclosed agent-response model, then offer the contract. Touchscreen taps or keyboard Tab then Enter/Space operate every essential choice.",
+    "accent": "#b4c9d4",
+    "symbol": "◇",
+    "stages": 3,
+    "endless": {
+      "supported": true,
+      "kind": "challenge-stream",
+      "design": "Seeded project order and genuine-output values, plus independently varied quantity/quality/gaming cost coefficients, outside options and quality-practice gains, change the worker’s actual optimum and the employer’s audit timing. Each three-project study settles before a fresh workplace.",
+      "difficultyCap": "Three projects, one audit, effort budget five, bounded worker cost coefficients/outside option and a visible quality-cost floor."
+    },
+    "nearestExisting": [
+      {
+        "id": "price-of-plenty",
+        "difference": "A contract induces a separate optimizing agent's multidimensional effort and proxy gaming; the employer cannot directly choose actual output."
+      },
+      {
+        "id": "privacy-dials",
+        "difference": "No response-probability matrix or likelihood-ratio certificate; effort choice, wages, auditing and persistent practice determine realized economic payoff."
+      }
+    ],
+    "source": [
+      "civic-room/incentive-economies.mjs",
+      "civic-room/core.mjs",
+      "civic-room/engines.mjs"
+    ],
+    "smoke": {
+      "startSelector": "#start",
+      "actionSelector": "[data-action=\"base-1\"]"
+    }
+  }
+]

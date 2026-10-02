@@ -3,9 +3,9 @@
   "suite": "atelier-room",
   "passed": true,
   "status": "passed",
-  "startedAt": "2026-10-02T20:19:56.083Z",
+  "startedAt": "2026-10-02T22:16:14.027Z",
   "source": {
-    "sha256": "92edb3be26fe306df8cc9ea6078b4dbdf73a7a030ed91f5e35a7b291fd737b43",
+    "sha256": "28f5681fb9e8bf37cfb231d779cf802ec0bbf3d87e5250baaf9d0144011c69c2",
     "files": [
       "atelier-room/README.md",
       "atelier-room/construction.mjs",
@@ -32,6 +32,7 @@
       "tests/fixtures/baseline100.json",
       "tests/fixtures/baseline200.json",
       "tests/fixtures/baseline300.json",
+      "tests/fixtures/baseline400.json",
       "tests/fixtures/parlour-b02-b05-paths.json",
       "tests/fixtures/parlour-b13-guided-paths.json",
       "tests/fixtures/parlour-paths.json",
@@ -85,9 +86,9 @@
   "servedRuntimeBefore": {
     "baseURL": "http://127.0.0.1:8790",
     "passed": true,
-    "sha256": "66fa788a62161850736c0556d1bd55840cb561d3b2f9f2043dc70c1949fac900",
+    "sha256": "6d2395acca8a0b9c07c020dc57a43720a6174071d61cded73ec74d092b10929e",
     "fileCount": 19,
-    "verifiedAt": "2026-10-02T20:19:56.276Z"
+    "verifiedAt": "2026-10-02T22:16:14.575Z"
   },
   "exitCode": 0,
   "signal": null,
@@ -95,9 +96,9 @@
   "servedRuntime": {
     "baseURL": "http://127.0.0.1:8790",
     "passed": true,
-    "sha256": "66fa788a62161850736c0556d1bd55840cb561d3b2f9f2043dc70c1949fac900",
+    "sha256": "6d2395acca8a0b9c07c020dc57a43720a6174071d61cded73ec74d092b10929e",
     "fileCount": 19,
-    "verifiedAt": "2026-10-02T20:22:26.361Z"
+    "verifiedAt": "2026-10-02T22:20:42.870Z"
   },
   "completionEvidence": {
     "sha256": "c406f40f9c0c735f69e4aff96785cdfb027da7d8e360857ed70d650d420d29c0",
@@ -5023,5 +5024,5 @@
       }
     ]
   },
-  "finishedAt": "2026-10-02T20:22:26.362Z"
+  "finishedAt": "2026-10-02T22:20:42.874Z"
 }

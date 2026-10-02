@@ -7,7 +7,7 @@ const base=(process.env.LIVE_BASE_URL||'https://yarith28.github.io/motion-design
 const out=process.env.SCREENSHOT_DIR||'live-verification';fs.mkdirSync(out,{recursive:true});
 const inventory=JSON.parse(fs.readFileSync('mini-games/inventory.json','utf8'));
 const total=inventory.games.length;
-const expansionRooms=new Set(['systems-room','tabletop-room','puzzle-lab','kinetic-room','discovery-room','construct-room','parlour-room','motion-room','workbench-room','constraint-room','field-room','signal-lab','commons-room','atelier-room']);
+const expansionRooms=new Set(require('../tools/evidence.cjs').expansionRooms);
 const categories=[...new Set(inventory.games.map(g=>g.category))];
 const categoryCount=c=>c==='all'?total:inventory.games.filter(g=>g.category===c).length;
 const games=['signal-run','double-take','pocket-orbit','good-order','afterglow','lantern-lines','tide-pool','word-weave','sky-stack','pebble-post'];

@@ -1,0 +1,1844 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "id": "page-orchard",
+      "profile": "desktop",
+      "passed": true,
+      "outcome": "win",
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": false,
+      "inputMethod": "Native keyboard focus and Enter on buttons; Home/ArrowRight on sliders; source-informed routes through every study.",
+      "winActions": 32,
+      "lossActions": 2,
+      "edgeCases": [
+        "All three finite studies completed with native controls",
+        "Natural failure, disabled terminal controls and public-seed restart",
+        "Undo/Reset restore finite rendered state and preserve study",
+        "Positive accumulated scores, personal best and clean Play again",
+        "Desktop/390px/320px bounds and zero page errors",
+        "Mechanic-specific pure-model regression assertions separately cover all20 IDs"
+      ],
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "24 enabled-control pure-model witnesses including stages17and250; native browser coverage completes the first two generated challenges, fails the third and recovers."
+      }
+    },
+    {
+      "id": "paired-harbor",
+      "profile": "desktop",
+      "passed": true,
+      "outcome": "win",
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": false,
+      "inputMethod": "Native keyboard focus and Enter on buttons; Home/ArrowRight on sliders; source-informed routes through every study.",
+      "winActions": 39,
+      "lossActions": 2,
+      "edgeCases": [
+        "All three finite studies completed with native controls",
+        "Natural failure, disabled terminal controls and public-seed restart",
+        "Undo/Reset restore finite rendered state and preserve study",
+        "Positive accumulated scores, personal best and clean Play again",
+        "Desktop/390px/320px bounds and zero page errors",
+        "Mechanic-specific pure-model regression assertions separately cover all20 IDs"
+      ],
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "24 enabled-control pure-model witnesses including stages17and250; native browser coverage completes the first two generated challenges, fails the third and recovers."
+      }
+    },
+    {
+      "id": "ring-transfer",
+      "profile": "desktop",
+      "passed": true,
+      "outcome": "win",
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": false,
+      "inputMethod": "Native keyboard focus and Enter on buttons; Home/ArrowRight on sliders; source-informed routes through every study.",
+      "winActions": 38,
+      "lossActions": 1,
+      "edgeCases": [
+        "All three finite studies completed with native controls",
+        "Natural failure, disabled terminal controls and public-seed restart",
+        "Undo/Reset restore finite rendered state and preserve study",
+        "Positive accumulated scores, personal best and clean Play again",
+        "Desktop/390px/320px bounds and zero page errors",
+        "Mechanic-specific pure-model regression assertions separately cover all20 IDs"
+      ],
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "24 enabled-control pure-model witnesses including stages17and250; native browser coverage completes the first two generated challenges, fails the third and recovers."
+      }
+    },
+    {
+      "id": "durable-ink",
+      "profile": "desktop",
+      "passed": true,
+      "outcome": "win",
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": false,
+      "inputMethod": "Native keyboard focus and Enter on buttons; Home/ArrowRight on sliders; source-informed routes through every study.",
+      "winActions": 48,
+      "lossActions": 2,
+      "edgeCases": [
+        "All three finite studies completed with native controls",
+        "Natural failure, disabled terminal controls and public-seed restart",
+        "Undo/Reset restore finite rendered state and preserve study",
+        "Positive accumulated scores, personal best and clean Play again",
+        "Desktop/390px/320px bounds and zero page errors",
+        "Mechanic-specific pure-model regression assertions separately cover all20 IDs"
+      ],
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "24 enabled-control pure-model witnesses including stages17and250; native browser coverage completes the first two generated challenges, fails the third and recovers."
+      }
+    },
+    {
+      "id": "safe-advance",
+      "profile": "desktop",
+      "passed": true,
+      "outcome": "win",
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": false,
+      "inputMethod": "Native keyboard focus and Enter on buttons; Home/ArrowRight on sliders; source-informed routes through every study.",
+      "winActions": 52,
+      "lossActions": 4,
+      "edgeCases": [
+        "All three finite studies completed with native controls",
+        "Natural failure, disabled terminal controls and public-seed restart",
+        "Undo/Reset restore finite rendered state and preserve study",
+        "Positive accumulated scores, personal best and clean Play again",
+        "Desktop/390px/320px bounds and zero page errors",
+        "Mechanic-specific pure-model regression assertions separately cover all20 IDs"
+      ],
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "24 enabled-control pure-model witnesses including stages17and250; native browser coverage completes the first two generated challenges, fails the third and recovers."
+      }
+    },
+    {
+      "id": "version-valley",
+      "profile": "desktop",
+      "passed": true,
+      "outcome": "win",
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": false,
+      "inputMethod": "Native keyboard focus and Enter on buttons; Home/ArrowRight on sliders; source-informed routes through every study.",
+      "winActions": 14,
+      "lossActions": 4,
+      "edgeCases": [
+        "All three finite studies completed with native controls",
+        "Natural failure, disabled terminal controls and public-seed restart",
+        "Undo/Reset restore finite rendered state and preserve study",
+        "Positive accumulated scores, personal best and clean Play again",
+        "Desktop/390px/320px bounds and zero page errors",
+        "Mechanic-specific pure-model regression assertions separately cover all20 IDs"
+      ],
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "24 enabled-control pure-model witnesses including stages17and250; native browser coverage completes the first two generated challenges, fails the third and recovers."
+      }
+    },
+    {
+      "id": "term-tower",
+      "profile": "desktop",
+      "passed": true,
+      "outcome": "win",
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": false,
+      "inputMethod": "Native keyboard focus and Enter on buttons; Home/ArrowRight on sliders; source-informed routes through every study.",
+      "winActions": 23,
+      "lossActions": 1,
+      "edgeCases": [
+        "All three finite studies completed with native controls",
+        "Natural failure, disabled terminal controls and public-seed restart",
+        "Undo/Reset restore finite rendered state and preserve study",
+        "Positive accumulated scores, personal best and clean Play again",
+        "Desktop/390px/320px bounds and zero page errors",
+        "Mechanic-specific pure-model regression assertions separately cover all20 IDs"
+      ],
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "24 enabled-control pure-model witnesses including stages17and250; native browser coverage completes the first two generated challenges, fails the third and recovers."
+      }
+    },
+    {
+      "id": "pipeline-parade",
+      "profile": "desktop",
+      "passed": true,
+      "outcome": "win",
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": false,
+      "inputMethod": "Native keyboard focus and Enter on buttons; Home/ArrowRight on sliders; source-informed routes through every study.",
+      "winActions": 89,
+      "lossActions": 27,
+      "edgeCases": [
+        "All three finite studies completed with native controls",
+        "Natural failure, disabled terminal controls and public-seed restart",
+        "Undo/Reset restore finite rendered state and preserve study",
+        "Positive accumulated scores, personal best and clean Play again",
+        "Desktop/390px/320px bounds and zero page errors",
+        "Mechanic-specific pure-model regression assertions separately cover all20 IDs"
+      ],
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "24 enabled-control pure-model witnesses including stages17and250; native browser coverage completes the first two generated challenges, fails the third and recovers."
+      }
+    },
+    {
+      "id": "delta-garden",
+      "profile": "desktop",
+      "passed": true,
+      "outcome": "win",
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": false,
+      "inputMethod": "Native keyboard focus and Enter on buttons; Home/ArrowRight on sliders; source-informed routes through every study.",
+      "winActions": 43,
+      "lossActions": 3,
+      "edgeCases": [
+        "All three finite studies completed with native controls",
+        "Natural failure, disabled terminal controls and public-seed restart",
+        "Undo/Reset restore finite rendered state and preserve study",
+        "Positive accumulated scores, personal best and clean Play again",
+        "Desktop/390px/320px bounds and zero page errors",
+        "Mechanic-specific pure-model regression assertions separately cover all20 IDs"
+      ],
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "24 enabled-control pure-model witnesses including stages17and250; native browser coverage completes the first two generated challenges, fails the third and recovers."
+      }
+    },
+    {
+      "id": "shared-cursors",
+      "profile": "desktop",
+      "passed": true,
+      "outcome": "win",
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": false,
+      "inputMethod": "Native keyboard focus and Enter on buttons; Home/ArrowRight on sliders; source-informed routes through every study.",
+      "winActions": 33,
+      "lossActions": 5,
+      "edgeCases": [
+        "All three finite studies completed with native controls",
+        "Natural failure, disabled terminal controls and public-seed restart",
+        "Undo/Reset restore finite rendered state and preserve study",
+        "Positive accumulated scores, personal best and clean Play again",
+        "Desktop/390px/320px bounds and zero page errors",
+        "Mechanic-specific pure-model regression assertions separately cover all20 IDs"
+      ],
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "24 enabled-control pure-model witnesses including stages17and250; native browser coverage completes the first two generated challenges, fails the third and recovers."
+      }
+    },
+    {
+      "id": "quiet-network",
+      "profile": "desktop",
+      "passed": true,
+      "outcome": "win",
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": false,
+      "inputMethod": "Native keyboard focus and Enter on buttons; Home/ArrowRight on sliders; source-informed routes through every study.",
+      "winActions": 87,
+      "lossActions": 2,
+      "edgeCases": [
+        "All three finite studies completed with native controls",
+        "Natural failure, disabled terminal controls and public-seed restart",
+        "Undo/Reset restore finite rendered state and preserve study",
+        "Positive accumulated scores, personal best and clean Play again",
+        "Desktop/390px/320px bounds and zero page errors",
+        "Mechanic-specific pure-model regression assertions separately cover all20 IDs"
+      ],
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "24 enabled-control pure-model witnesses including stages17and250; native browser coverage completes the first two generated challenges, fails the third and recovers."
+      }
+    },
+    {
+      "id": "lantern-ring",
+      "profile": "desktop",
+      "passed": true,
+      "outcome": "win",
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": false,
+      "inputMethod": "Native keyboard focus and Enter on buttons; Home/ArrowRight on sliders; source-informed routes through every study.",
+      "winActions": 12,
+      "lossActions": 4,
+      "edgeCases": [
+        "All three finite studies completed with native controls",
+        "Natural failure, disabled terminal controls and public-seed restart",
+        "Undo/Reset restore finite rendered state and preserve study",
+        "Positive accumulated scores, personal best and clean Play again",
+        "Desktop/390px/320px bounds and zero page errors",
+        "Mechanic-specific pure-model regression assertions separately cover all20 IDs"
+      ],
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "24 enabled-control pure-model witnesses including stages17and250; native browser coverage completes the first two generated challenges, fails the third and recovers."
+      }
+    },
+    {
+      "id": "lease-lighthouse",
+      "profile": "desktop",
+      "passed": true,
+      "outcome": "win",
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": false,
+      "inputMethod": "Native keyboard focus and Enter on buttons; Home/ArrowRight on sliders; source-informed routes through every study.",
+      "winActions": 45,
+      "lossActions": 12,
+      "edgeCases": [
+        "All three finite studies completed with native controls",
+        "Natural failure, disabled terminal controls and public-seed restart",
+        "Undo/Reset restore finite rendered state and preserve study",
+        "Positive accumulated scores, personal best and clean Play again",
+        "Desktop/390px/320px bounds and zero page errors",
+        "Mechanic-specific pure-model regression assertions separately cover all20 IDs"
+      ],
+      "optionalMode": {
+        "supported": false
+      }
+    },
+    {
+      "id": "echo-seals",
+      "profile": "desktop",
+      "passed": true,
+      "outcome": "win",
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": false,
+      "inputMethod": "Native keyboard focus and Enter on buttons; Home/ArrowRight on sliders; source-informed routes through every study.",
+      "winActions": 123,
+      "lossActions": 1,
+      "edgeCases": [
+        "All three finite studies completed with native controls",
+        "Natural failure, disabled terminal controls and public-seed restart",
+        "Undo/Reset restore finite rendered state and preserve study",
+        "Positive accumulated scores, personal best and clean Play again",
+        "Desktop/390px/320px bounds and zero page errors",
+        "Mechanic-specific pure-model regression assertions separately cover all20 IDs"
+      ],
+      "optionalMode": {
+        "supported": false
+      }
+    },
+    {
+      "id": "timestamp-current",
+      "profile": "desktop",
+      "passed": true,
+      "outcome": "win",
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": false,
+      "inputMethod": "Native keyboard focus and Enter on buttons; Home/ArrowRight on sliders; source-informed routes through every study.",
+      "winActions": 94,
+      "lossActions": 2,
+      "edgeCases": [
+        "All three finite studies completed with native controls",
+        "Natural failure, disabled terminal controls and public-seed restart",
+        "Undo/Reset restore finite rendered state and preserve study",
+        "Positive accumulated scores, personal best and clean Play again",
+        "Desktop/390px/320px bounds and zero page errors",
+        "Mechanic-specific pure-model regression assertions separately cover all20 IDs"
+      ],
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "24 enabled-control pure-model witnesses including stages17and250; native browser coverage completes the first two generated challenges, fails the third and recovers."
+      }
+    },
+    {
+      "id": "changing-roads",
+      "profile": "desktop",
+      "passed": true,
+      "outcome": "win",
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": false,
+      "inputMethod": "Native keyboard focus and Enter on buttons; Home/ArrowRight on sliders; source-informed routes through every study.",
+      "winActions": 161,
+      "lossActions": 2,
+      "edgeCases": [
+        "All three finite studies completed with native controls",
+        "Natural failure, disabled terminal controls and public-seed restart",
+        "Undo/Reset restore finite rendered state and preserve study",
+        "Positive accumulated scores, personal best and clean Play again",
+        "Desktop/390px/320px bounds and zero page errors",
+        "Mechanic-specific pure-model regression assertions separately cover all20 IDs"
+      ],
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "24 enabled-control pure-model witnesses including stages17and250; native browser coverage completes the first two generated challenges, fails the third and recovers."
+      }
+    },
+    {
+      "id": "branch-archive",
+      "profile": "desktop",
+      "passed": true,
+      "outcome": "win",
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": false,
+      "inputMethod": "Native keyboard focus and Enter on buttons; Home/ArrowRight on sliders; source-informed routes through every study.",
+      "winActions": 65,
+      "lossActions": 3,
+      "edgeCases": [
+        "All three finite studies completed with native controls",
+        "Natural failure, disabled terminal controls and public-seed restart",
+        "Undo/Reset restore finite rendered state and preserve study",
+        "Positive accumulated scores, personal best and clean Play again",
+        "Desktop/390px/320px bounds and zero page errors",
+        "Mechanic-specific pure-model regression assertions separately cover all20 IDs"
+      ],
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "24 enabled-control pure-model witnesses including stages17and250; native browser coverage completes the first two generated challenges, fails the third and recovers."
+      }
+    },
+    {
+      "id": "cancellation-desk",
+      "profile": "desktop",
+      "passed": true,
+      "outcome": "win",
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": false,
+      "inputMethod": "Native keyboard focus and Enter on buttons; Home/ArrowRight on sliders; source-informed routes through every study.",
+      "winActions": 38,
+      "lossActions": 7,
+      "edgeCases": [
+        "All three finite studies completed with native controls",
+        "Natural failure, disabled terminal controls and public-seed restart",
+        "Undo/Reset restore finite rendered state and preserve study",
+        "Positive accumulated scores, personal best and clean Play again",
+        "Desktop/390px/320px bounds and zero page errors",
+        "Mechanic-specific pure-model regression assertions separately cover all20 IDs"
+      ],
+      "optionalMode": {
+        "supported": false
+      }
+    },
+    {
+      "id": "bracket-ferry",
+      "profile": "desktop",
+      "passed": true,
+      "outcome": "win",
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": false,
+      "inputMethod": "Native keyboard focus and Enter on buttons; Home/ArrowRight on sliders; source-informed routes through every study.",
+      "winActions": 83,
+      "lossActions": 4,
+      "edgeCases": [
+        "All three finite studies completed with native controls",
+        "Natural failure, disabled terminal controls and public-seed restart",
+        "Undo/Reset restore finite rendered state and preserve study",
+        "Positive accumulated scores, personal best and clean Play again",
+        "Desktop/390px/320px bounds and zero page errors",
+        "Mechanic-specific pure-model regression assertions separately cover all20 IDs"
+      ],
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "24 enabled-control pure-model witnesses including stages17and250; native browser coverage completes the first two generated challenges, fails the third and recovers."
+      }
+    },
+    {
+      "id": "pivot-gallery",
+      "profile": "desktop",
+      "passed": true,
+      "outcome": "win",
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": false,
+      "inputMethod": "Native keyboard focus and Enter on buttons; Home/ArrowRight on sliders; source-informed routes through every study.",
+      "winActions": 27,
+      "lossActions": 3,
+      "edgeCases": [
+        "All three finite studies completed with native controls",
+        "Natural failure, disabled terminal controls and public-seed restart",
+        "Undo/Reset restore finite rendered state and preserve study",
+        "Positive accumulated scores, personal best and clean Play again",
+        "Desktop/390px/320px bounds and zero page errors",
+        "Mechanic-specific pure-model regression assertions separately cover all20 IDs"
+      ],
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "24 enabled-control pure-model witnesses including stages17and250; native browser coverage completes the first two generated challenges, fails the third and recovers."
+      }
+    },
+    {
+      "id": "page-orchard",
+      "profile": "mobile-touch",
+      "passed": true,
+      "outcome": "win",
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": true,
+      "inputMethod": "Touchscreen taps on native buttons and actual slider tracks; source-informed routes through every study. Native selectOption configures optional mode.",
+      "winActions": 32,
+      "lossActions": 2,
+      "edgeCases": [
+        "All three finite studies completed with native controls",
+        "Natural failure, disabled terminal controls and public-seed restart",
+        "Undo/Reset restore finite rendered state and preserve study",
+        "Positive accumulated scores, personal best and clean Play again",
+        "Desktop/390px/320px bounds and zero page errors",
+        "Mechanic-specific pure-model regression assertions separately cover all20 IDs"
+      ],
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "24 enabled-control pure-model witnesses including stages17and250; native browser coverage completes the first two generated challenges, fails the third and recovers."
+      }
+    },
+    {
+      "id": "paired-harbor",
+      "profile": "mobile-touch",
+      "passed": true,
+      "outcome": "win",
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": true,
+      "inputMethod": "Touchscreen taps on native buttons and actual slider tracks; source-informed routes through every study. Native selectOption configures optional mode.",
+      "winActions": 39,
+      "lossActions": 2,
+      "edgeCases": [
+        "All three finite studies completed with native controls",
+        "Natural failure, disabled terminal controls and public-seed restart",
+        "Undo/Reset restore finite rendered state and preserve study",
+        "Positive accumulated scores, personal best and clean Play again",
+        "Desktop/390px/320px bounds and zero page errors",
+        "Mechanic-specific pure-model regression assertions separately cover all20 IDs"
+      ],
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "24 enabled-control pure-model witnesses including stages17and250; native browser coverage completes the first two generated challenges, fails the third and recovers."
+      }
+    },
+    {
+      "id": "ring-transfer",
+      "profile": "mobile-touch",
+      "passed": true,
+      "outcome": "win",
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": true,
+      "inputMethod": "Touchscreen taps on native buttons and actual slider tracks; source-informed routes through every study. Native selectOption configures optional mode.",
+      "winActions": 38,
+      "lossActions": 1,
+      "edgeCases": [
+        "All three finite studies completed with native controls",
+        "Natural failure, disabled terminal controls and public-seed restart",
+        "Undo/Reset restore finite rendered state and preserve study",
+        "Positive accumulated scores, personal best and clean Play again",
+        "Desktop/390px/320px bounds and zero page errors",
+        "Mechanic-specific pure-model regression assertions separately cover all20 IDs"
+      ],
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "24 enabled-control pure-model witnesses including stages17and250; native browser coverage completes the first two generated challenges, fails the third and recovers."
+      }
+    },
+    {
+      "id": "durable-ink",
+      "profile": "mobile-touch",
+      "passed": true,
+      "outcome": "win",
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": true,
+      "inputMethod": "Touchscreen taps on native buttons and actual slider tracks; source-informed routes through every study. Native selectOption configures optional mode.",
+      "winActions": 48,
+      "lossActions": 2,
+      "edgeCases": [
+        "All three finite studies completed with native controls",
+        "Natural failure, disabled terminal controls and public-seed restart",
+        "Undo/Reset restore finite rendered state and preserve study",
+        "Positive accumulated scores, personal best and clean Play again",
+        "Desktop/390px/320px bounds and zero page errors",
+        "Mechanic-specific pure-model regression assertions separately cover all20 IDs"
+      ],
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "24 enabled-control pure-model witnesses including stages17and250; native browser coverage completes the first two generated challenges, fails the third and recovers."
+      }
+    },
+    {
+      "id": "safe-advance",
+      "profile": "mobile-touch",
+      "passed": true,
+      "outcome": "win",
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": true,
+      "inputMethod": "Touchscreen taps on native buttons and actual slider tracks; source-informed routes through every study. Native selectOption configures optional mode.",
+      "winActions": 52,
+      "lossActions": 4,
+      "edgeCases": [
+        "All three finite studies completed with native controls",
+        "Natural failure, disabled terminal controls and public-seed restart",
+        "Undo/Reset restore finite rendered state and preserve study",
+        "Positive accumulated scores, personal best and clean Play again",
+        "Desktop/390px/320px bounds and zero page errors",
+        "Mechanic-specific pure-model regression assertions separately cover all20 IDs"
+      ],
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "24 enabled-control pure-model witnesses including stages17and250; native browser coverage completes the first two generated challenges, fails the third and recovers."
+      }
+    },
+    {
+      "id": "version-valley",
+      "profile": "mobile-touch",
+      "passed": true,
+      "outcome": "win",
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": true,
+      "inputMethod": "Touchscreen taps on native buttons and actual slider tracks; source-informed routes through every study. Native selectOption configures optional mode.",
+      "winActions": 14,
+      "lossActions": 4,
+      "edgeCases": [
+        "All three finite studies completed with native controls",
+        "Natural failure, disabled terminal controls and public-seed restart",
+        "Undo/Reset restore finite rendered state and preserve study",
+        "Positive accumulated scores, personal best and clean Play again",
+        "Desktop/390px/320px bounds and zero page errors",
+        "Mechanic-specific pure-model regression assertions separately cover all20 IDs"
+      ],
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "24 enabled-control pure-model witnesses including stages17and250; native browser coverage completes the first two generated challenges, fails the third and recovers."
+      }
+    },
+    {
+      "id": "term-tower",
+      "profile": "mobile-touch",
+      "passed": true,
+      "outcome": "win",
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": true,
+      "inputMethod": "Touchscreen taps on native buttons and actual slider tracks; source-informed routes through every study. Native selectOption configures optional mode.",
+      "winActions": 23,
+      "lossActions": 1,
+      "edgeCases": [
+        "All three finite studies completed with native controls",
+        "Natural failure, disabled terminal controls and public-seed restart",
+        "Undo/Reset restore finite rendered state and preserve study",
+        "Positive accumulated scores, personal best and clean Play again",
+        "Desktop/390px/320px bounds and zero page errors",
+        "Mechanic-specific pure-model regression assertions separately cover all20 IDs"
+      ],
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "24 enabled-control pure-model witnesses including stages17and250; native browser coverage completes the first two generated challenges, fails the third and recovers."
+      }
+    },
+    {
+      "id": "pipeline-parade",
+      "profile": "mobile-touch",
+      "passed": true,
+      "outcome": "win",
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": true,
+      "inputMethod": "Touchscreen taps on native buttons and actual slider tracks; source-informed routes through every study. Native selectOption configures optional mode.",
+      "winActions": 89,
+      "lossActions": 27,
+      "edgeCases": [
+        "All three finite studies completed with native controls",
+        "Natural failure, disabled terminal controls and public-seed restart",
+        "Undo/Reset restore finite rendered state and preserve study",
+        "Positive accumulated scores, personal best and clean Play again",
+        "Desktop/390px/320px bounds and zero page errors",
+        "Mechanic-specific pure-model regression assertions separately cover all20 IDs"
+      ],
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "24 enabled-control pure-model witnesses including stages17and250; native browser coverage completes the first two generated challenges, fails the third and recovers."
+      }
+    },
+    {
+      "id": "delta-garden",
+      "profile": "mobile-touch",
+      "passed": true,
+      "outcome": "win",
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": true,
+      "inputMethod": "Touchscreen taps on native buttons and actual slider tracks; source-informed routes through every study. Native selectOption configures optional mode.",
+      "winActions": 43,
+      "lossActions": 3,
+      "edgeCases": [
+        "All three finite studies completed with native controls",
+        "Natural failure, disabled terminal controls and public-seed restart",
+        "Undo/Reset restore finite rendered state and preserve study",
+        "Positive accumulated scores, personal best and clean Play again",
+        "Desktop/390px/320px bounds and zero page errors",
+        "Mechanic-specific pure-model regression assertions separately cover all20 IDs"
+      ],
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "24 enabled-control pure-model witnesses including stages17and250; native browser coverage completes the first two generated challenges, fails the third and recovers."
+      }
+    },
+    {
+      "id": "shared-cursors",
+      "profile": "mobile-touch",
+      "passed": true,
+      "outcome": "win",
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": true,
+      "inputMethod": "Touchscreen taps on native buttons and actual slider tracks; source-informed routes through every study. Native selectOption configures optional mode.",
+      "winActions": 33,
+      "lossActions": 5,
+      "edgeCases": [
+        "All three finite studies completed with native controls",
+        "Natural failure, disabled terminal controls and public-seed restart",
+        "Undo/Reset restore finite rendered state and preserve study",
+        "Positive accumulated scores, personal best and clean Play again",
+        "Desktop/390px/320px bounds and zero page errors",
+        "Mechanic-specific pure-model regression assertions separately cover all20 IDs"
+      ],
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "24 enabled-control pure-model witnesses including stages17and250; native browser coverage completes the first two generated challenges, fails the third and recovers."
+      }
+    },
+    {
+      "id": "quiet-network",
+      "profile": "mobile-touch",
+      "passed": true,
+      "outcome": "win",
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": true,
+      "inputMethod": "Touchscreen taps on native buttons and actual slider tracks; source-informed routes through every study. Native selectOption configures optional mode.",
+      "winActions": 87,
+      "lossActions": 2,
+      "edgeCases": [
+        "All three finite studies completed with native controls",
+        "Natural failure, disabled terminal controls and public-seed restart",
+        "Undo/Reset restore finite rendered state and preserve study",
+        "Positive accumulated scores, personal best and clean Play again",
+        "Desktop/390px/320px bounds and zero page errors",
+        "Mechanic-specific pure-model regression assertions separately cover all20 IDs"
+      ],
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "24 enabled-control pure-model witnesses including stages17and250; native browser coverage completes the first two generated challenges, fails the third and recovers."
+      }
+    },
+    {
+      "id": "lantern-ring",
+      "profile": "mobile-touch",
+      "passed": true,
+      "outcome": "win",
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": true,
+      "inputMethod": "Touchscreen taps on native buttons and actual slider tracks; source-informed routes through every study. Native selectOption configures optional mode.",
+      "winActions": 12,
+      "lossActions": 4,
+      "edgeCases": [
+        "All three finite studies completed with native controls",
+        "Natural failure, disabled terminal controls and public-seed restart",
+        "Undo/Reset restore finite rendered state and preserve study",
+        "Positive accumulated scores, personal best and clean Play again",
+        "Desktop/390px/320px bounds and zero page errors",
+        "Mechanic-specific pure-model regression assertions separately cover all20 IDs"
+      ],
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "24 enabled-control pure-model witnesses including stages17and250; native browser coverage completes the first two generated challenges, fails the third and recovers."
+      }
+    },
+    {
+      "id": "lease-lighthouse",
+      "profile": "mobile-touch",
+      "passed": true,
+      "outcome": "win",
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": true,
+      "inputMethod": "Touchscreen taps on native buttons and actual slider tracks; source-informed routes through every study. Native selectOption configures optional mode.",
+      "winActions": 45,
+      "lossActions": 12,
+      "edgeCases": [
+        "All three finite studies completed with native controls",
+        "Natural failure, disabled terminal controls and public-seed restart",
+        "Undo/Reset restore finite rendered state and preserve study",
+        "Positive accumulated scores, personal best and clean Play again",
+        "Desktop/390px/320px bounds and zero page errors",
+        "Mechanic-specific pure-model regression assertions separately cover all20 IDs"
+      ],
+      "optionalMode": {
+        "supported": false
+      }
+    },
+    {
+      "id": "echo-seals",
+      "profile": "mobile-touch",
+      "passed": true,
+      "outcome": "win",
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": true,
+      "inputMethod": "Touchscreen taps on native buttons and actual slider tracks; source-informed routes through every study. Native selectOption configures optional mode.",
+      "winActions": 123,
+      "lossActions": 1,
+      "edgeCases": [
+        "All three finite studies completed with native controls",
+        "Natural failure, disabled terminal controls and public-seed restart",
+        "Undo/Reset restore finite rendered state and preserve study",
+        "Positive accumulated scores, personal best and clean Play again",
+        "Desktop/390px/320px bounds and zero page errors",
+        "Mechanic-specific pure-model regression assertions separately cover all20 IDs"
+      ],
+      "optionalMode": {
+        "supported": false
+      }
+    },
+    {
+      "id": "timestamp-current",
+      "profile": "mobile-touch",
+      "passed": true,
+      "outcome": "win",
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": true,
+      "inputMethod": "Touchscreen taps on native buttons and actual slider tracks; source-informed routes through every study. Native selectOption configures optional mode.",
+      "winActions": 94,
+      "lossActions": 2,
+      "edgeCases": [
+        "All three finite studies completed with native controls",
+        "Natural failure, disabled terminal controls and public-seed restart",
+        "Undo/Reset restore finite rendered state and preserve study",
+        "Positive accumulated scores, personal best and clean Play again",
+        "Desktop/390px/320px bounds and zero page errors",
+        "Mechanic-specific pure-model regression assertions separately cover all20 IDs"
+      ],
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "24 enabled-control pure-model witnesses including stages17and250; native browser coverage completes the first two generated challenges, fails the third and recovers."
+      }
+    },
+    {
+      "id": "changing-roads",
+      "profile": "mobile-touch",
+      "passed": true,
+      "outcome": "win",
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": true,
+      "inputMethod": "Touchscreen taps on native buttons and actual slider tracks; source-informed routes through every study. Native selectOption configures optional mode.",
+      "winActions": 161,
+      "lossActions": 2,
+      "edgeCases": [
+        "All three finite studies completed with native controls",
+        "Natural failure, disabled terminal controls and public-seed restart",
+        "Undo/Reset restore finite rendered state and preserve study",
+        "Positive accumulated scores, personal best and clean Play again",
+        "Desktop/390px/320px bounds and zero page errors",
+        "Mechanic-specific pure-model regression assertions separately cover all20 IDs"
+      ],
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "24 enabled-control pure-model witnesses including stages17and250; native browser coverage completes the first two generated challenges, fails the third and recovers."
+      }
+    },
+    {
+      "id": "branch-archive",
+      "profile": "mobile-touch",
+      "passed": true,
+      "outcome": "win",
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": true,
+      "inputMethod": "Touchscreen taps on native buttons and actual slider tracks; source-informed routes through every study. Native selectOption configures optional mode.",
+      "winActions": 65,
+      "lossActions": 3,
+      "edgeCases": [
+        "All three finite studies completed with native controls",
+        "Natural failure, disabled terminal controls and public-seed restart",
+        "Undo/Reset restore finite rendered state and preserve study",
+        "Positive accumulated scores, personal best and clean Play again",
+        "Desktop/390px/320px bounds and zero page errors",
+        "Mechanic-specific pure-model regression assertions separately cover all20 IDs"
+      ],
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "24 enabled-control pure-model witnesses including stages17and250; native browser coverage completes the first two generated challenges, fails the third and recovers."
+      }
+    },
+    {
+      "id": "cancellation-desk",
+      "profile": "mobile-touch",
+      "passed": true,
+      "outcome": "win",
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": true,
+      "inputMethod": "Touchscreen taps on native buttons and actual slider tracks; source-informed routes through every study. Native selectOption configures optional mode.",
+      "winActions": 38,
+      "lossActions": 7,
+      "edgeCases": [
+        "All three finite studies completed with native controls",
+        "Natural failure, disabled terminal controls and public-seed restart",
+        "Undo/Reset restore finite rendered state and preserve study",
+        "Positive accumulated scores, personal best and clean Play again",
+        "Desktop/390px/320px bounds and zero page errors",
+        "Mechanic-specific pure-model regression assertions separately cover all20 IDs"
+      ],
+      "optionalMode": {
+        "supported": false
+      }
+    },
+    {
+      "id": "bracket-ferry",
+      "profile": "mobile-touch",
+      "passed": true,
+      "outcome": "win",
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": true,
+      "inputMethod": "Touchscreen taps on native buttons and actual slider tracks; source-informed routes through every study. Native selectOption configures optional mode.",
+      "winActions": 83,
+      "lossActions": 4,
+      "edgeCases": [
+        "All three finite studies completed with native controls",
+        "Natural failure, disabled terminal controls and public-seed restart",
+        "Undo/Reset restore finite rendered state and preserve study",
+        "Positive accumulated scores, personal best and clean Play again",
+        "Desktop/390px/320px bounds and zero page errors",
+        "Mechanic-specific pure-model regression assertions separately cover all20 IDs"
+      ],
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "24 enabled-control pure-model witnesses including stages17and250; native browser coverage completes the first two generated challenges, fails the third and recovers."
+      }
+    },
+    {
+      "id": "pivot-gallery",
+      "profile": "mobile-touch",
+      "passed": true,
+      "outcome": "win",
+      "finiteStudiesCompleted": 3,
+      "restart": true,
+      "touchOnly": true,
+      "inputMethod": "Touchscreen taps on native buttons and actual slider tracks; source-informed routes through every study. Native selectOption configures optional mode.",
+      "winActions": 27,
+      "lossActions": 3,
+      "edgeCases": [
+        "All three finite studies completed with native controls",
+        "Natural failure, disabled terminal controls and public-seed restart",
+        "Undo/Reset restore finite rendered state and preserve study",
+        "Positive accumulated scores, personal best and clean Play again",
+        "Desktop/390px/320px bounds and zero page errors",
+        "Mechanic-specific pure-model regression assertions separately cover all20 IDs"
+      ],
+      "optionalMode": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "completedChallenges": 2,
+        "freshChallenges": true,
+        "scoreAccumulated": true,
+        "terminalRecovery": true,
+        "playerEndRun": true,
+        "lateStageProperties": true,
+        "lateStageScope": "24 enabled-control pure-model witnesses including stages17and250; native browser coverage completes the first two generated challenges, fails the third and recovers."
+      }
+    }
+  ],
+  "generationProperties": [
+    {
+      "id": "page-orchard",
+      "passed": true,
+      "samples": 24,
+      "stages": [
+        0,
+        1,
+        2,
+        3,
+        17,
+        250
+      ],
+      "seeds": [
+        0,
+        1,
+        20261002,
+        4294967295
+      ],
+      "scope": "Pure-model enabled-control legal witnesses, bounded serializable state and positive terminal score; does not substitute for the separate native browser cases."
+    },
+    {
+      "id": "paired-harbor",
+      "passed": true,
+      "samples": 24,
+      "stages": [
+        0,
+        1,
+        2,
+        3,
+        17,
+        250
+      ],
+      "seeds": [
+        0,
+        1,
+        20261002,
+        4294967295
+      ],
+      "scope": "Pure-model enabled-control legal witnesses, bounded serializable state and positive terminal score; does not substitute for the separate native browser cases."
+    },
+    {
+      "id": "ring-transfer",
+      "passed": true,
+      "samples": 24,
+      "stages": [
+        0,
+        1,
+        2,
+        3,
+        17,
+        250
+      ],
+      "seeds": [
+        0,
+        1,
+        20261002,
+        4294967295
+      ],
+      "scope": "Pure-model enabled-control legal witnesses, bounded serializable state and positive terminal score; does not substitute for the separate native browser cases."
+    },
+    {
+      "id": "durable-ink",
+      "passed": true,
+      "samples": 24,
+      "stages": [
+        0,
+        1,
+        2,
+        3,
+        17,
+        250
+      ],
+      "seeds": [
+        0,
+        1,
+        20261002,
+        4294967295
+      ],
+      "scope": "Pure-model enabled-control legal witnesses, bounded serializable state and positive terminal score; does not substitute for the separate native browser cases."
+    },
+    {
+      "id": "safe-advance",
+      "passed": true,
+      "samples": 24,
+      "stages": [
+        0,
+        1,
+        2,
+        3,
+        17,
+        250
+      ],
+      "seeds": [
+        0,
+        1,
+        20261002,
+        4294967295
+      ],
+      "scope": "Pure-model enabled-control legal witnesses, bounded serializable state and positive terminal score; does not substitute for the separate native browser cases."
+    },
+    {
+      "id": "version-valley",
+      "passed": true,
+      "samples": 24,
+      "stages": [
+        0,
+        1,
+        2,
+        3,
+        17,
+        250
+      ],
+      "seeds": [
+        0,
+        1,
+        20261002,
+        4294967295
+      ],
+      "scope": "Pure-model enabled-control legal witnesses, bounded serializable state and positive terminal score; does not substitute for the separate native browser cases."
+    },
+    {
+      "id": "term-tower",
+      "passed": true,
+      "samples": 24,
+      "stages": [
+        0,
+        1,
+        2,
+        3,
+        17,
+        250
+      ],
+      "seeds": [
+        0,
+        1,
+        20261002,
+        4294967295
+      ],
+      "scope": "Pure-model enabled-control legal witnesses, bounded serializable state and positive terminal score; does not substitute for the separate native browser cases."
+    },
+    {
+      "id": "pipeline-parade",
+      "passed": true,
+      "samples": 24,
+      "stages": [
+        0,
+        1,
+        2,
+        3,
+        17,
+        250
+      ],
+      "seeds": [
+        0,
+        1,
+        20261002,
+        4294967295
+      ],
+      "scope": "Pure-model enabled-control legal witnesses, bounded serializable state and positive terminal score; does not substitute for the separate native browser cases."
+    },
+    {
+      "id": "delta-garden",
+      "passed": true,
+      "samples": 24,
+      "stages": [
+        0,
+        1,
+        2,
+        3,
+        17,
+        250
+      ],
+      "seeds": [
+        0,
+        1,
+        20261002,
+        4294967295
+      ],
+      "scope": "Pure-model enabled-control legal witnesses, bounded serializable state and positive terminal score; does not substitute for the separate native browser cases."
+    },
+    {
+      "id": "shared-cursors",
+      "passed": true,
+      "samples": 24,
+      "stages": [
+        0,
+        1,
+        2,
+        3,
+        17,
+        250
+      ],
+      "seeds": [
+        0,
+        1,
+        20261002,
+        4294967295
+      ],
+      "scope": "Pure-model enabled-control legal witnesses, bounded serializable state and positive terminal score; does not substitute for the separate native browser cases."
+    },
+    {
+      "id": "quiet-network",
+      "passed": true,
+      "samples": 24,
+      "stages": [
+        0,
+        1,
+        2,
+        3,
+        17,
+        250
+      ],
+      "seeds": [
+        0,
+        1,
+        20261002,
+        4294967295
+      ],
+      "scope": "Pure-model enabled-control legal witnesses, bounded serializable state and positive terminal score; does not substitute for the separate native browser cases."
+    },
+    {
+      "id": "lantern-ring",
+      "passed": true,
+      "samples": 24,
+      "stages": [
+        0,
+        1,
+        2,
+        3,
+        17,
+        250
+      ],
+      "seeds": [
+        0,
+        1,
+        20261002,
+        4294967295
+      ],
+      "scope": "Pure-model enabled-control legal witnesses, bounded serializable state and positive terminal score; does not substitute for the separate native browser cases."
+    },
+    {
+      "id": "timestamp-current",
+      "passed": true,
+      "samples": 24,
+      "stages": [
+        0,
+        1,
+        2,
+        3,
+        17,
+        250
+      ],
+      "seeds": [
+        0,
+        1,
+        20261002,
+        4294967295
+      ],
+      "scope": "Pure-model enabled-control legal witnesses, bounded serializable state and positive terminal score; does not substitute for the separate native browser cases."
+    },
+    {
+      "id": "changing-roads",
+      "passed": true,
+      "samples": 24,
+      "stages": [
+        0,
+        1,
+        2,
+        3,
+        17,
+        250
+      ],
+      "seeds": [
+        0,
+        1,
+        20261002,
+        4294967295
+      ],
+      "scope": "Pure-model enabled-control legal witnesses, bounded serializable state and positive terminal score; does not substitute for the separate native browser cases."
+    },
+    {
+      "id": "branch-archive",
+      "passed": true,
+      "samples": 24,
+      "stages": [
+        0,
+        1,
+        2,
+        3,
+        17,
+        250
+      ],
+      "seeds": [
+        0,
+        1,
+        20261002,
+        4294967295
+      ],
+      "scope": "Pure-model enabled-control legal witnesses, bounded serializable state and positive terminal score; does not substitute for the separate native browser cases."
+    },
+    {
+      "id": "bracket-ferry",
+      "passed": true,
+      "samples": 24,
+      "stages": [
+        0,
+        1,
+        2,
+        3,
+        17,
+        250
+      ],
+      "seeds": [
+        0,
+        1,
+        20261002,
+        4294967295
+      ],
+      "scope": "Pure-model enabled-control legal witnesses, bounded serializable state and positive terminal score; does not substitute for the separate native browser cases."
+    },
+    {
+      "id": "pivot-gallery",
+      "passed": true,
+      "samples": 24,
+      "stages": [
+        0,
+        1,
+        2,
+        3,
+        17,
+        250
+      ],
+      "seeds": [
+        0,
+        1,
+        20261002,
+        4294967295
+      ],
+      "scope": "Pure-model enabled-control legal witnesses, bounded serializable state and positive terminal score; does not substitute for the separate native browser cases."
+    }
+  ],
+  "limits": [
+    "Source-informed legal routes and negative cases prove reachability and rule regression, not unaided solving.",
+    "Chromium keyboard and emulated touchscreen inputs; no physical-device or screen-reader certification.",
+    "Mode setup uses native selectOption; every mobile gameplay action uses touchscreen taps, including native range tracks.",
+    "Generated late-stage samples use pure models; browser optional-mode coverage completes its first two challenges then a third challenge failure and recovery."
+  ],
+  "ruleRegressionAssertions": [
+    {
+      "id": "page-orchard",
+      "label": "All three finite studies have enabled-control legal completions and real terminal failures",
+      "passed": true
+    },
+    {
+      "id": "paired-harbor",
+      "label": "All three finite studies have enabled-control legal completions and real terminal failures",
+      "passed": true
+    },
+    {
+      "id": "ring-transfer",
+      "label": "All three finite studies have enabled-control legal completions and real terminal failures",
+      "passed": true
+    },
+    {
+      "id": "branch-archive",
+      "label": "All three finite studies have enabled-control legal completions and real terminal failures",
+      "passed": true
+    },
+    {
+      "id": "safe-advance",
+      "label": "All three finite studies have enabled-control legal completions and real terminal failures",
+      "passed": true
+    },
+    {
+      "id": "version-valley",
+      "label": "All three finite studies have enabled-control legal completions and real terminal failures",
+      "passed": true
+    },
+    {
+      "id": "lantern-ring",
+      "label": "All three finite studies have enabled-control legal completions and real terminal failures",
+      "passed": true
+    },
+    {
+      "id": "quiet-network",
+      "label": "All three finite studies have enabled-control legal completions and real terminal failures",
+      "passed": true
+    },
+    {
+      "id": "term-tower",
+      "label": "All three finite studies have enabled-control legal completions and real terminal failures",
+      "passed": true
+    },
+    {
+      "id": "changing-roads",
+      "label": "All three finite studies have enabled-control legal completions and real terminal failures",
+      "passed": true
+    },
+    {
+      "id": "lease-lighthouse",
+      "label": "All three finite studies have enabled-control legal completions and real terminal failures",
+      "passed": true
+    },
+    {
+      "id": "durable-ink",
+      "label": "All three finite studies have enabled-control legal completions and real terminal failures",
+      "passed": true
+    },
+    {
+      "id": "pipeline-parade",
+      "label": "All three finite studies have enabled-control legal completions and real terminal failures",
+      "passed": true
+    },
+    {
+      "id": "delta-garden",
+      "label": "All three finite studies have enabled-control legal completions and real terminal failures",
+      "passed": true
+    },
+    {
+      "id": "timestamp-current",
+      "label": "All three finite studies have enabled-control legal completions and real terminal failures",
+      "passed": true
+    },
+    {
+      "id": "shared-cursors",
+      "label": "All three finite studies have enabled-control legal completions and real terminal failures",
+      "passed": true
+    },
+    {
+      "id": "echo-seals",
+      "label": "All three finite studies have enabled-control legal completions and real terminal failures",
+      "passed": true
+    },
+    {
+      "id": "cancellation-desk",
+      "label": "All three finite studies have enabled-control legal completions and real terminal failures",
+      "passed": true
+    },
+    {
+      "id": "bracket-ferry",
+      "label": "All three finite studies have enabled-control legal completions and real terminal failures",
+      "passed": true
+    },
+    {
+      "id": "pivot-gallery",
+      "label": "All three finite studies have enabled-control legal completions and real terminal failures",
+      "passed": true
+    },
+    {
+      "id": "page-orchard",
+      "label": "Overflow cannot be ignored before the next request",
+      "passed": true
+    },
+    {
+      "id": "page-orchard",
+      "label": "Deletion campaign legally contracts the root with exact keys and equal leaf depth",
+      "passed": true
+    },
+    {
+      "id": "paired-harbor",
+      "label": "A displaced cycle can preserve all keys using the real one-slot stash",
+      "passed": true
+    },
+    {
+      "id": "paired-harbor",
+      "label": "Rehash consumes rescue and changes the full incidence graph without refunding work",
+      "passed": true
+    },
+    {
+      "id": "ring-transfer",
+      "label": "Clockwise wraparound and exact-marker ownership",
+      "passed": true
+    },
+    {
+      "id": "ring-transfer",
+      "label": "Missing destination copy cannot become authoritative",
+      "passed": true
+    },
+    {
+      "id": "durable-ink",
+      "label": "Write-ahead gate rejects an undurable data write",
+      "passed": true
+    },
+    {
+      "id": "durable-ink",
+      "label": "Checkpoint preserves committed data and reclaims journal before TWO",
+      "passed": true
+    },
+    {
+      "id": "safe-advance",
+      "label": "Affordable is different from safe for maximum remaining claims",
+      "passed": true
+    },
+    {
+      "id": "safe-advance",
+      "label": "Completing clients returns all originally held resources",
+      "passed": true
+    },
+    {
+      "id": "version-valley",
+      "label": "Separate rows can violate the same stale capacity predicate",
+      "passed": true
+    },
+    {
+      "id": "version-valley",
+      "label": "Range guard aborts the write skew without overbooking",
+      "passed": true
+    },
+    {
+      "id": "term-tower",
+      "label": "Old-term entries cannot commit without a current-term authority entry",
+      "passed": true
+    },
+    {
+      "id": "term-tower",
+      "label": "Higher-term interruption is recovered through election and suffix matching",
+      "passed": true
+    },
+    {
+      "id": "pipeline-parade",
+      "label": "Store forwarding captures an older completed matching-address value",
+      "passed": true
+    },
+    {
+      "id": "pipeline-parade",
+      "label": "A premature same-address load fails final architectural validation",
+      "passed": true
+    },
+    {
+      "id": "delta-garden",
+      "label": "Deletion deltas are legal, and new multiplicities never become negative",
+      "passed": true
+    },
+    {
+      "id": "delta-garden",
+      "label": "The simultaneous cross product cannot be omitted or counted twice",
+      "passed": true
+    },
+    {
+      "id": "shared-cursors",
+      "label": "Delete/delete collision collapses, while equal-position inserts retain author order",
+      "passed": true
+    },
+    {
+      "id": "shared-cursors",
+      "label": "Both packet receivers converge across three-edit generated histories",
+      "passed": true
+    },
+    {
+      "id": "quiet-network",
+      "label": "An executed idle root still owes spawned child credits",
+      "passed": true
+    },
+    {
+      "id": "quiet-network",
+      "label": "Completed batches discharge every exact obligation and empty every channel",
+      "passed": true
+    },
+    {
+      "id": "lantern-ring",
+      "label": "A legal root increment moves the unique token to its successor",
+      "passed": true
+    },
+    {
+      "id": "lease-lighthouse",
+      "label": "Fencing rejects a delayed old epoch after new work while missing fencing loses",
+      "passed": true
+    },
+    {
+      "id": "echo-seals",
+      "label": "Duplicate faulty READY signatures cannot form a threshold",
+      "passed": true
+    },
+    {
+      "id": "echo-seals",
+      "label": "Equivocating sender schedule still admits certified agreement among all honest receivers",
+      "passed": true
+    },
+    {
+      "id": "timestamp-current",
+      "label": "Frontier cannot advance beyond the slowest certified source",
+      "passed": true
+    },
+    {
+      "id": "timestamp-current",
+      "label": "Look-ahead events remain counted after earlier window buffers are released",
+      "passed": true
+    },
+    {
+      "id": "changing-roads",
+      "label": "Poisoned reverse advertises infinity specifically to the current next hop",
+      "passed": true
+    },
+    {
+      "id": "branch-archive",
+      "label": "Published roots remain immutable after shared-path update and optional version release",
+      "passed": true
+    },
+    {
+      "id": "cancellation-desk",
+      "label": "Large cancellation ordering changes the rounded result; grouping retains the exact residual",
+      "passed": true
+    },
+    {
+      "id": "bracket-ferry",
+      "label": "Fractional boundary comparisons are exact and wrong-side retention destroys the certificate",
+      "passed": true
+    },
+    {
+      "id": "pivot-gallery",
+      "label": "Nonnegative dual weights certify objective, and a farther blocking row violates feasibility",
+      "passed": true
+    }
+  ],
+  "sourceFiles": [
+    "protocol-room/collaboration.mjs",
+    "protocol-room/core.mjs",
+    "protocol-room/engines.mjs",
+    "protocol-room/execution.mjs",
+    "protocol-room/games.json",
+    "protocol-room/index.html",
+    "protocol-room/network.mjs",
+    "protocol-room/numerics.mjs",
+    "protocol-room/room.mjs",
+    "protocol-room/storage.mjs",
+    "protocol-room/streams.mjs",
+    "protocol-room/systems.mjs",
+    "journey/journey.css",
+    "journey/journey.mjs",
+    "play.css",
+    "tests/protocol-room-collaboration-plans.mjs",
+    "tests/protocol-room-execution-plans.mjs",
+    "tests/protocol-room-network-plans.mjs",
+    "tests/protocol-room-numeric-plans.mjs",
+    "tests/protocol-room-openings.cjs",
+    "tests/protocol-room-paths.json",
+    "tests/protocol-room-plans.mjs",
+    "tests/protocol-room-play.cjs",
+    "tests/protocol-room-regressions.mjs",
+    "tests/protocol-room-storage-plans.mjs",
+    "tests/protocol-room-stream-plans.mjs",
+    "tests/protocol-room-systems-plans.mjs",
+    "tests/protocol-room.cjs"
+  ],
+  "sourceHash": "1378d4f0e8d1913ff2fbdbb53b468153f9c1d684106141c72508a6b045000543",
+  "sourceUnchanged": true
+}

@@ -3,9 +3,9 @@
   "suite": "field-room",
   "passed": true,
   "status": "passed",
-  "startedAt": "2026-10-02T20:12:24.084Z",
+  "startedAt": "2026-10-02T22:04:37.333Z",
   "source": {
-    "sha256": "e332c5a84e0ab00e5e9d1ab1d19a63fd8779d3b817ef6b47f16685a9555d5eab",
+    "sha256": "ec1a703c4db0feed2fac564fb59707997e80a957364afe5441916e3460af5808",
     "files": [
       "catalog.css",
       "catalog.js",
@@ -35,6 +35,7 @@
       "tests/fixtures/baseline100.json",
       "tests/fixtures/baseline200.json",
       "tests/fixtures/baseline300.json",
+      "tests/fixtures/baseline400.json",
       "tests/fixtures/parlour-b02-b05-paths.json",
       "tests/fixtures/parlour-b13-guided-paths.json",
       "tests/fixtures/parlour-paths.json",
@@ -88,9 +89,9 @@
   "servedRuntimeBefore": {
     "baseURL": "http://127.0.0.1:8790",
     "passed": true,
-    "sha256": "ee9b071c9bb5dd2738f34445cf07977ac5eecaec3c5e32dea0ffbb1671d72cb5",
+    "sha256": "d58d11428b21b10142ff44205726c2651637091472f94deeb326818c4a8404f5",
     "fileCount": 20,
-    "verifiedAt": "2026-10-02T20:12:24.461Z"
+    "verifiedAt": "2026-10-02T22:04:37.491Z"
   },
   "exitCode": 0,
   "signal": null,
@@ -98,12 +99,12 @@
   "servedRuntime": {
     "baseURL": "http://127.0.0.1:8790",
     "passed": true,
-    "sha256": "ee9b071c9bb5dd2738f34445cf07977ac5eecaec3c5e32dea0ffbb1671d72cb5",
+    "sha256": "d58d11428b21b10142ff44205726c2651637091472f94deeb326818c4a8404f5",
     "fileCount": 20,
-    "verifiedAt": "2026-10-02T20:18:33.863Z"
+    "verifiedAt": "2026-10-02T22:10:14.164Z"
   },
   "completionEvidence": {
-    "sha256": "3d1e487b76a3ca41d3a4a6c808512db8c0ede922381c48f878fdeddc67b9fbb5",
+    "sha256": "d2188a273158026ac223e854d9403d0d0c0235520467f503f818d01a439e3102",
     "file": "coverage/field-room.json",
     "cases": [
       {
@@ -1440,5 +1441,5 @@
       }
     ]
   },
-  "finishedAt": "2026-10-02T20:18:33.866Z"
+  "finishedAt": "2026-10-02T22:10:14.166Z"
 }

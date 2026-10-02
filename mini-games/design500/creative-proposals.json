@@ -1,0 +1,958 @@
+[
+  {
+    "id": "warp-shed",
+    "name": "Warp Shed",
+    "room": "form-room",
+    "status": "implemented-native-QA-passed-pending-independent-release-review",
+    "definingDecision": "Choose an entire shed and weft spool before advancing one continuous shuttle; ambiguous same-color crossings must still obey warp and weft float limits.",
+    "actualStateTransition": "Each shuttle step permanently interlaces one warp/weft crossing. Raised warp shows its color; lowered warp shows the selected weft color. The shuttle reverses only at the selvage, and consecutive unsupported floats are counted across each row and down each warp.",
+    "finiteStudies": [
+      "Two-color plain weave with explicit two-thread float cap.",
+      "Twill face pattern with ambiguous equal-color cells and coupled vertical float history.",
+      "Scarce weft colors and a second face contract require selecting row color as well as shed under both float caps."
+    ],
+    "controls": "Toggle labeled warp lifts, select available weft spool, pass shuttle one crossing, turn at selvage; native buttons support keyboard and touch.",
+    "failureAndRecovery": "An overlong float or irreversible face mismatch breaks the woven contract; finite yarn also limits passes. Undo/reset/restart follow Journey rules.",
+    "optionalMode": {
+      "proposedSupported": true,
+      "design": "Generate legal varied binary interlacings with bounded horizontal/vertical runs, mixed warp colors and limited row spools. Derive visible face colors from the witness and reject trivial/all-identical cloth. QA must reconstruct a legal shed/spool path from public colors and float constraints.",
+      "admission": "Enable only after seed/late-stage legal witnesses and two real native-control completions pass; otherwise record finite-only honestly."
+    },
+    "nearestSources": [
+      {
+        "id": "seam-quilt",
+        "source": "constraint-room/composition.mjs",
+        "difference": "No edge-labeled tile placement: one continuous shuttle forms crossings over fixed warp, with persistent vertical/horizontal float histories and spool consumption."
+      },
+      {
+        "id": "exclusive-print",
+        "source": "constraint-room/composition.mjs",
+        "difference": "Face colors can hide ambiguous crossings; legality depends on physical over/under continuity, not independent selected plate incidence."
+      }
+    ],
+    "requiredRegression": "Two equal-looking face colors can have different vertical float histories; only one shed remains legal on the next row.",
+    "visual": "Draw actual warp strands, shuttle position, over/under crossing gaps and cloth face beside its target.",
+    "actualSource": "form-room/textile.mjs",
+    "implementedOptionalMode": true,
+    "verification": {
+      "finiteStudies": 3,
+      "nativeProfiles": [
+        "desktop-keyboard",
+        "mobile-touch"
+      ],
+      "roomReport": "coverage/form-room.json",
+      "openingReport": "coverage/form-room-opening.json",
+      "sourceHash": "cc74124eb6b4982ae5de8f9a2c3010c42556d5153e9f53fb02fe5ee5fad1d340",
+      "optionalGeneratorSeedChecks": 100,
+      "scope": "Source/public-target-derived legal plans; independent ordinary-input review is separate."
+    }
+  },
+  {
+    "id": "live-loops",
+    "name": "Live Loops",
+    "room": "form-room",
+    "status": "implemented-native-QA-passed-pending-independent-release-review",
+    "definingDecision": "Consume held loops in needle order while deciding whether to knit, purl, merge two loops or create a yarn-over opening.",
+    "actualStateTransition": "Knit/purl pulls a new yarn loop through one existing loop; knit-two-together consumes two parents into one child; yarn-over creates a child without consuming a parent. A row cannot turn until every held loop is secured. The persistent stitch graph records branching, holes and handed loop orientation.",
+    "finiteStudies": [
+      "Knit/purl texture with a fixed live-loop width.",
+      "Shaped decrease row: merging parents changes both the next row width and its available attachment sites.",
+      "Lace row balances yarn-overs and decreases while preserving specified openings and final loop orientation."
+    ],
+    "controls": "Choose native knit/purl/decrease/yarn-over controls for the front held loop; turn completed row or cast off the completed work.",
+    "failureAndRecovery": "An unsecured row turn drops live loops; wrong row width or exhausted yarn makes the required fabric unreachable. Reset/restart restores the needle.",
+    "optionalMode": {
+      "proposedSupported": false,
+      "design": "The initial three stitch topologies are authored. A future generator must certify parent-child graph reachability and every live-loop width, rather than repeat a knit/purl picture.",
+      "admission": "Enable only after seed/late-stage legal witnesses and two real native-control completions pass; otherwise record finite-only honestly."
+    },
+    "nearestSources": [
+      {
+        "id": "a-stitch-in-time",
+        "source": "parlour-room/a-stitch-in-time.mjs",
+        "difference": "Patchwork buys existing spatial patches with time/income; this constructs loop topology by consuming and creating held loops."
+      },
+      {
+        "id": "gentle-unknot",
+        "source": "construct-room/engines.js",
+        "difference": "Closed braid simplification preserves one knot; knitting grows a new fabric graph with live-loop consumption, branching and dropped-loop failure."
+      }
+    ],
+    "requiredRegression": "A decrease changes the next row attachment count, while a yarn-over restores width but creates a persistent hole rather than an equivalent stitch.",
+    "visual": "Draw yarn curves and parent-child loops, both needle frontiers, retained openings and a row-contract table.",
+    "actualSource": "form-room/textile.mjs",
+    "implementedOptionalMode": false,
+    "verification": {
+      "finiteStudies": 3,
+      "nativeProfiles": [
+        "desktop-keyboard",
+        "mobile-touch"
+      ],
+      "roomReport": "coverage/form-room.json",
+      "openingReport": "coverage/form-room-opening.json",
+      "sourceHash": "cc74124eb6b4982ae5de8f9a2c3010c42556d5153e9f53fb02fe5ee5fad1d340",
+      "optionalGeneratorSeedChecks": 0,
+      "scope": "Source/public-target-derived legal plans; independent ordinary-input review is separate."
+    }
+  },
+  {
+    "id": "corbel-tower",
+    "name": "Corbel Tower",
+    "room": "form-room",
+    "status": "implemented-native-QA-passed-pending-independent-release-review",
+    "definingDecision": "Place unequal blocks and a crown load so every cumulative load resultant remains inside every earlier contact interval.",
+    "actualStateTransition": "Each added block changes the mass and center of mass above all lower joints. A joint only transmits compression inside the overlapping contact interval; a new upper load can overturn an otherwise stable earlier placement.",
+    "finiteStudies": [
+      "Three equal blocks achieve a modest crown reach.",
+      "Unequal masses require reserving lower-joint support for a heavier crown.",
+      "A narrow contact and off-center crown test force a less greedy overhang sequence."
+    ],
+    "controls": "Select the next stock block, choose a labeled horizontal offset, place it irreversibly, then apply the shown crown load.",
+    "failureAndRecovery": "Any cumulative resultant outside a contact interval overturns the stack immediately; insufficient crown reach or spent stock fails the completed load test.",
+    "optionalMode": {
+      "proposedSupported": true,
+      "design": "Generate varied block lengths, masses, contact margins and crown loads from sampled legal offset witnesses. Derive a reachable crown interval and validate every intermediate placement, not only the final stack. Bound stack size at five.",
+      "admission": "Enable only after seed/late-stage legal witnesses and two real native-control completions pass; otherwise record finite-only honestly."
+    },
+    "nearestSources": [
+      {
+        "id": "balance-mobile",
+        "source": "spatial-room/room.js",
+        "difference": "Balance Mobile assigns fixed values to independent moment arms and requires torque equality. Sequential block placement changes every earlier support interval and cumulative resultant; contacts cannot pull."
+      },
+      {
+        "id": "span-workshop",
+        "source": "motion-room/physics.js",
+        "difference": "No chosen axial members or stiffness solve: rigid block overlap and cumulative compression contact determine overturning."
+      }
+    ],
+    "requiredRegression": "A stable lower pair becomes unstable after an off-center crown even though no existing block moves.",
+    "visual": "Draw every block and overlap joint with its actual resultant marker; list all support intervals and loaded centers of mass.",
+    "actualSource": "form-room/structure.mjs",
+    "implementedOptionalMode": true,
+    "verification": {
+      "finiteStudies": 3,
+      "nativeProfiles": [
+        "desktop-keyboard",
+        "mobile-touch"
+      ],
+      "roomReport": "coverage/form-room.json",
+      "openingReport": "coverage/form-room-opening.json",
+      "sourceHash": "cc74124eb6b4982ae5de8f9a2c3010c42556d5153e9f53fb02fe5ee5fad1d340",
+      "optionalGeneratorSeedChecks": 100,
+      "scope": "Source/public-target-derived legal plans; independent ordinary-input review is separate."
+    }
+  },
+  {
+    "id": "pivot-network",
+    "name": "Pivot Network",
+    "room": "form-room",
+    "status": "implemented-native-QA-passed-pending-independent-release-review",
+    "definingDecision": "Configure a closed four-bar linkage, choose its assembly branch, and drive one input while the other joints must satisfy loop closure.",
+    "actualStateTransition": "The output joint is the intersection of two length-constrained circles. Advancing the input changes both possible assembly solutions; the selected branch cannot jump unless the linkage passes a permitted toggle. Impossible circle intersection jams the mechanism.",
+    "finiteStudies": [
+      "A reachable crank sweep drives a coupler through three receivers.",
+      "Unequal bars produce distinct open/crossed branches; only one coupler branch reaches all receivers.",
+      "A toggle and keep-out envelope constrain both assembly choice and the order of the input sweep."
+    ],
+    "controls": "Select stock bar lengths, fixed-pivot sockets and open/crossed assembly; step the crank through labeled angles and stamp the receiver.",
+    "failureAndRecovery": "Loop closure failure, forbidden branch switching or a bar crossing a keep-out area jams the drive. Incorrect stamps consume the finite inspection allowance.",
+    "optionalMode": {
+      "proposedSupported": false,
+      "design": "Three authored linkage benches first. A generator needs certified continuous branch tracking through a full permitted sweep, with varied receivers and nontrivial keep-out geometry.",
+      "admission": "Enable only after seed/late-stage legal witnesses and two real native-control completions pass; otherwise record finite-only honestly."
+    },
+    "nearestSources": [
+      {
+        "id": "elbow-room",
+        "source": "motion-room/physics.js",
+        "difference": "The robotic arm has independently controlled serial joints. A closed four-bar has one input degree of freedom and a coupled output constrained by circle intersections and assembly branch."
+      },
+      {
+        "id": "gear-train",
+        "source": "spatial-room/room.js",
+        "difference": "Static tooth-count ratios do not determine a spatial closed-loop coupler path or toggle reachability."
+      }
+    ],
+    "requiredRegression": "The same input angle and bar inventory has two spatial output branches; a branch jump away from a toggle must fail.",
+    "visual": "Draw all rigid links, fixed pivots, both candidate circle intersections, current coupler path and receiver/keep-out geometry.",
+    "actualSource": "form-room/structure.mjs",
+    "implementedOptionalMode": false,
+    "verification": {
+      "finiteStudies": 3,
+      "nativeProfiles": [
+        "desktop-keyboard",
+        "mobile-touch"
+      ],
+      "roomReport": "coverage/form-room.json",
+      "openingReport": "coverage/form-room-opening.json",
+      "sourceHash": "cc74124eb6b4982ae5de8f9a2c3010c42556d5153e9f53fb02fe5ee5fad1d340",
+      "optionalGeneratorSeedChecks": 0,
+      "scope": "Source/public-target-derived legal plans; independent ordinary-input review is separate."
+    }
+  },
+  {
+    "id": "fiber-panel",
+    "name": "Fiber Panel",
+    "room": "form-room",
+    "status": "implemented-native-QA-passed-pending-independent-release-review",
+    "definingDecision": "Choose ply directions and stack order so the same laminated panel resists several loads without unwanted extension-to-bend coupling.",
+    "actualStateTransition": "Each directional ply contributes an anisotropic in-plane stiffness matrix. Its signed distance from the laminate midplane contributes a coupling matrix, so reordering the same ply multiset changes bend response even when total in-plane stiffness is unchanged.",
+    "finiteStudies": [
+      "Balance horizontal and vertical stiffness with 0°/90° plies.",
+      "Signed ±45° plies trade shear resistance against directional extension.",
+      "An asymmetric inventory must meet two load cases while keeping a bounded coupling moment; stack order matters."
+    ],
+    "controls": "Select a stock ply, choose its permitted angle, place at a labeled layer, remove/reorder before bonding and run each visible load case.",
+    "failureAndRecovery": "Bonding freezes the layup; excessive deflection or bend coupling under the required load cases spoils the panel. Material/inspection allowances remain finite.",
+    "optionalMode": {
+      "proposedSupported": true,
+      "design": "Generate varied directional ply inventories, stiffness coefficients and midplane positions from feasible symmetric/balanced witnesses, then set nontrivial multi-load response bands. Sample all generated witnesses and require stack-order regression, not target labels alone.",
+      "admission": "Enable only after seed/late-stage legal witnesses and two real native-control completions pass; otherwise record finite-only honestly."
+    },
+    "nearestSources": [
+      {
+        "id": "seal-shop",
+        "source": "atelier-room/mechanical.mjs",
+        "difference": "Seal Shop modifies neighboring contact compression through bolt turns. A panel combines directional stiffness tensors and signed layer moments; order alters multi-load bend coupling without changing total stiffness."
+      },
+      {
+        "id": "wave-desk",
+        "source": "discovery-room/room.js",
+        "difference": "Independent scalar harmonic weights cannot represent coupled vector load response and a stack-order coupling matrix."
+      }
+    ],
+    "requiredRegression": "Reordering identical plies preserves the total stiffness matrix while changing bend coupling and passing/failing the second load case.",
+    "visual": "Draw the actual stacked ply directions, midplane, load/deflection arrows and stiffness/coupling response table.",
+    "actualSource": "form-room/equilibrium.mjs",
+    "implementedOptionalMode": true,
+    "verification": {
+      "finiteStudies": 3,
+      "nativeProfiles": [
+        "desktop-keyboard",
+        "mobile-touch"
+      ],
+      "roomReport": "coverage/form-room.json",
+      "openingReport": "coverage/form-room-opening.json",
+      "sourceHash": "cc74124eb6b4982ae5de8f9a2c3010c42556d5153e9f53fb02fe5ee5fad1d340",
+      "optionalGeneratorSeedChecks": 100,
+      "scope": "Source/public-target-derived legal plans; independent ordinary-input review is separate."
+    }
+  },
+  {
+    "id": "remanence-bench",
+    "name": "Remanence Bench",
+    "room": "form-room",
+    "status": "implemented-native-QA-passed-pending-independent-release-review",
+    "definingDecision": "Choose field direction and pulse strength to move coercive magnetic domains while anticipating neighbor-triggered avalanches and remanence after the field returns to zero.",
+    "actualStateTransition": "A domain flips only when local applied-plus-neighbor field exceeds its coercive threshold. Flipped neighbors can destabilize others in the same relaxation cascade. Returning applied field to zero leaves history-dependent magnetization.",
+    "finiteStudies": [
+      "Unequal coercivities allow a partial remanent pattern after a pulse.",
+      "Ferromagnetic neighbor coupling produces an avalanche that must be arrested with a clamp coil.",
+      "A negative minor loop selectively reverses unequal-coercivity domains while a strongly coupled domain retains opposite remanence."
+    ],
+    "controls": "Select a visible coil footprint, pulse strength/direction and relaxation step; return coils to zero before measuring remanence.",
+    "failureAndRecovery": "Excessive field heats the sample or consumes pulse energy; an irreversible saturated pattern can make the required remanence unreachable within the remaining reversals.",
+    "optionalMode": {
+      "proposedSupported": true,
+      "design": "Generate actual varied coercive thresholds, neighbor couplings and coil masks from legal bounded pulse histories. Targets are remanent states at zero field; reject trivial saturation and certify a legal history for high stages.",
+      "admission": "Enable only after seed/late-stage legal witnesses and two real native-control completions pass; otherwise record finite-only honestly."
+    },
+    "nearestSources": [
+      {
+        "id": "magnetic-quartet",
+        "source": "motion-room/physics.js",
+        "difference": "Movable field sources steer charged pucks continuously. Domain hysteresis changes the persistent material state via coercive flips and avalanches after fields are removed."
+      },
+      {
+        "id": "seed-tomorrow",
+        "source": "puzzle-lab/engines.js",
+        "difference": "Cellular intervention alone is insufficient: thresholds, signed field reversal, cascade relaxation and zero-field memory must all affect decisions."
+      }
+    ],
+    "requiredRegression": "Equal final applied field zero reached by different pulse histories yields different remanent states; one flip can trigger a neighboring avalanche.",
+    "visual": "Draw domain orientation arrows, coil footprints, coercivity/coupling values and a field-versus-magnetization history trace.",
+    "actualSource": "form-room/material.mjs",
+    "implementedOptionalMode": true,
+    "verification": {
+      "finiteStudies": 3,
+      "nativeProfiles": [
+        "desktop-keyboard",
+        "mobile-touch"
+      ],
+      "roomReport": "coverage/form-room.json",
+      "openingReport": "coverage/form-room-opening.json",
+      "sourceHash": "cc74124eb6b4982ae5de8f9a2c3010c42556d5153e9f53fb02fe5ee5fad1d340",
+      "optionalGeneratorSeedChecks": 100,
+      "scope": "Source/public-target-derived legal plans; independent ordinary-input review is separate."
+    }
+  },
+  {
+    "id": "sieve-cascade",
+    "name": "Sieve Cascade",
+    "room": "form-room",
+    "status": "implemented-native-QA-passed-pending-independent-release-review",
+    "definingDecision": "Arrange shape-sensitive screens and choose when to reverse-shake a clogged deck before useful grains are stranded above it.",
+    "actualStateTransition": "A particle passes only if its actual projected width fits the screen opening. Two trapped particles can bridge a pore, blocking later smaller grains. Reverse shaking releases bridges and changes particle orientation, consuming stroke budget and risking wrong-bin release.",
+    "finiteStudies": [
+      "Separate round grains by actual aperture and deck order.",
+      "Needle-shaped grains change passability with orientation, while large grains can bridge openings.",
+      "Three output grades require backshaking one clogged deck without releasing another grade into the wrong receiver."
+    ],
+    "controls": "Select a stock screen for each deck, choose the receiving bin, forward shake one discrete stroke or reverse-shake the selected deck.",
+    "failureAndRecovery": "Wrong-grade discharge contaminates a receiver; a locked bridge or spent shake budget strands required mass. Reset/restart restores all particles.",
+    "optionalMode": {
+      "proposedSupported": true,
+      "design": "Generate varied particle sizes, aspect ratios, orientations, screen stocks and legal discharge/backshake traces with explicitly checked mass conservation. Finite deck/particle caps prevent late-stage state explosion.",
+      "admission": "Enable only after seed/late-stage legal witnesses and two real native-control completions pass; otherwise record finite-only honestly."
+    },
+    "nearestSources": [
+      {
+        "id": "sand-table",
+        "source": "atelier-room/construction.mjs",
+        "difference": "Avalanche baffles regulate column height and slope. Screens create size/shape passability, blocked pores and bridge-release history rather than granular height support."
+      },
+      {
+        "id": "air-sieve",
+        "source": "trajectory-room (new proposal)",
+        "difference": "Air Sieve sorts by aerodynamic drag/slip and delayed gates. This uses aperture fit, particle orientation and pore bridges; no airflow or terminal-velocity control."
+      }
+    ],
+    "requiredRegression": "A smaller grain cannot pass a bridged pore despite fitting the bare aperture; reverse-shake reopens it while conserving every particle.",
+    "visual": "Draw particle shapes and orientations, physical screen holes/bridges, deck contents and receiver composition.",
+    "actualSource": "form-room/matter.mjs",
+    "implementedOptionalMode": true,
+    "verification": {
+      "finiteStudies": 3,
+      "nativeProfiles": [
+        "desktop-keyboard",
+        "mobile-touch"
+      ],
+      "roomReport": "coverage/form-room.json",
+      "openingReport": "coverage/form-room-opening.json",
+      "sourceHash": "cc74124eb6b4982ae5de8f9a2c3010c42556d5153e9f53fb02fe5ee5fad1d340",
+      "optionalGeneratorSeedChecks": 100,
+      "scope": "Source/public-target-derived legal plans; independent ordinary-input review is separate."
+    }
+  },
+  {
+    "id": "solvent-ladder",
+    "name": "Solvent Ladder",
+    "room": "form-room",
+    "status": "implemented-native-QA-passed-pending-independent-release-review",
+    "definingDecision": "Change solvent volume to cross different saturation boundaries, filter at useful compositions, and redissolve mixed solids before purity becomes permanently lost.",
+    "actualStateTransition": "Each dissolved species has a displayed solvent-capacity law. Concentration precipitates excess material; dilution can redissolve it. Filtering transfers all current solid species into one persistent packet, so phase timing couples purity and recovery.",
+    "finiteStudies": [
+      "Two species with separated saturation thresholds allow sequential pure filtration.",
+      "A wash redissolves contamination while preserving the less soluble product; washing changes the dissolved reservoir.",
+      "Three species and a shared solvent budget require reserving enough solvent for a later recovery stage."
+    ],
+    "controls": "Add a measured solvent portion, evaporate a portion, equilibrate, select filter packet and collect the current solid phase.",
+    "failureAndRecovery": "Contaminated required packets, spent solvent or discarded target material lose the separation contract. Finite resets restore the mixed solution.",
+    "optionalMode": {
+      "proposedSupported": true,
+      "design": "Generate varied species amounts/capacity laws and feasible concentration/filter/wash witnesses, deriving recovery and purity contracts from real phase states. Certify positive solvent volume, species mass conservation and every packet before enabling optional mode.",
+      "admission": "Enable only after seed/late-stage legal witnesses and two real native-control completions pass; otherwise record finite-only honestly."
+    },
+    "nearestSources": [
+      {
+        "id": "measured-pour",
+        "source": "spatial-room/room.js",
+        "difference": "Jug transfer changes container volumes only. Saturation moves individual species between dissolved and solid phases, and filtration irreversibly separates a mixture."
+      },
+      {
+        "id": "cold-chain",
+        "source": "systems-room/cold-chain.mjs",
+        "difference": "No age/cooling recipe scheduling: each decision changes equilibrium composition and the purity of collected solids."
+      }
+    ],
+    "requiredRegression": "Filtering before a wash captures two species; washing the same solid with a small solvent volume leaves a pure target and moves contaminant back into solution.",
+    "visual": "Draw solvent level, separate dissolved/solid quantities, persistent filter packets and saturation-capacity curves.",
+    "actualSource": "form-room/material.mjs",
+    "implementedOptionalMode": true,
+    "verification": {
+      "finiteStudies": 3,
+      "nativeProfiles": [
+        "desktop-keyboard",
+        "mobile-touch"
+      ],
+      "roomReport": "coverage/form-room.json",
+      "openingReport": "coverage/form-room-opening.json",
+      "sourceHash": "cc74124eb6b4982ae5de8f9a2c3010c42556d5153e9f53fb02fe5ee5fad1d340",
+      "optionalGeneratorSeedChecks": 100,
+      "scope": "Source/public-target-derived legal plans; independent ordinary-input review is separate."
+    }
+  },
+  {
+    "id": "resonator-rack",
+    "name": "Resonator Rack",
+    "room": "form-room",
+    "status": "implemented-native-QA-passed-pending-independent-release-review",
+    "definingDecision": "Build cavity-and-neck topology to suppress chosen noise frequencies while transmitting useful bands; a branch changes the entire coupled frequency response.",
+    "actualStateTransition": "Neck inertance/resistance and cavity compliance produce a complex nodal admittance system at each test frequency. Changing a connection or cavity alters interacting resonances and notches; output is not a sum of independently adjustable waveform coefficients.",
+    "finiteStudies": [
+      "One side cavity must create a stop band while retaining a neighboring pass band.",
+      "Two coupled cavities must cover separated noise tones without blocking the useful band.",
+      "Finite neck/cavity inventory and two output ports make topology and component assignment both matter."
+    ],
+    "controls": "Place cavity/neck stock at labeled ports, choose allowed connections, then sweep the visible test frequencies and certify measured transmission bands.",
+    "failureAndRecovery": "A sealed output, wrong pass/stop response or exhausted construction/inspection allowance fails. Rebuild/reset/restart preserves finite alternatives.",
+    "optionalMode": {
+      "proposedSupported": false,
+      "design": "Authored acoustic networks first. A generated mode needs varied topology with certified complex responses and broad pass/stop feasibility, not rescaled copies of one resonance.",
+      "admission": "Enable only after seed/late-stage legal witnesses and two real native-control completions pass; otherwise record finite-only honestly."
+    },
+    "nearestSources": [
+      {
+        "id": "wave-desk",
+        "source": "discovery-room/room.js",
+        "difference": "Wave Desk sums independent harmonic basis coefficients. Topology here changes a coupled nodal admittance inverse, creating interacting resonances/antiresonances and tradeoffs across bands."
+      },
+      {
+        "id": "resonant-switch",
+        "source": "trajectory-room (new proposal)",
+        "difference": "No timed switching, signed capacitor charge, diode path or stored-energy delivery: decisions build a static acoustic network and test its steady frequency response."
+      }
+    ],
+    "requiredRegression": "Removing a side branch can improve one pass band while destroying the required notch; swapping the same two necks changes both coupled band responses.",
+    "visual": "Draw actual cavity volumes and neck connections plus a measured frequency-response curve and per-band transmission limits.",
+    "actualSource": "form-room/acoustics.mjs",
+    "implementedOptionalMode": false,
+    "verification": {
+      "finiteStudies": 3,
+      "nativeProfiles": [
+        "desktop-keyboard",
+        "mobile-touch"
+      ],
+      "roomReport": "coverage/form-room.json",
+      "openingReport": "coverage/form-room-opening.json",
+      "sourceHash": "cc74124eb6b4982ae5de8f9a2c3010c42556d5153e9f53fb02fe5ee5fad1d340",
+      "optionalGeneratorSeedChecks": 0,
+      "scope": "Source/public-target-derived legal plans; independent ordinary-input review is separate."
+    }
+  },
+  {
+    "id": "mesh-form",
+    "name": "Mesh Form",
+    "room": "form-room",
+    "status": "implemented-native-QA-passed-pending-independent-release-review",
+    "definingDecision": "Choose boundary clamps and one grip, then impose that grip’s displacement while all free sheet vertices respond through elastic equilibrium. Embedded marks must fit without tearing any material element.",
+    "actualStateTransition": "A triangular plane-stress finite-element stiffness matrix couples every incident displacement. Boundary clamps and the one prescribed grip supply displacement constraints; the engine solves the remaining free displacements. Each pull therefore moves many vertices. Actual triangle deformation determines signed area, strain and clamp reaction, so changing clamp placement changes the whole response.",
+    "finiteStudies": [
+      "A single corner grip elastically aligns an interior mark while two base clamps retain the sheet.",
+      "An extra boundary clamp and unequal material stiffness alter load paths; choose the clamp/grip pair that aligns two embedded marks without concentrated strain.",
+      "A rigid seam and a notch require a different boundary constraint choice; pulling the visibly closest grip tears the ligament, while another grip distributes strain safely."
+    ],
+    "controls": "Before loading, choose the permitted boundary clamp and one grip using native controls. Pull only that grip with X/Y step buttons; inspect equilibrium/forces and secure the stretched sheet. Free vertices cannot be directly edited.",
+    "failureAndRecovery": "Element inversion, exceeded material strain, clamp-reaction limit or spent pulling allowance tears the sheet. Reset/restart restores the unstretched mesh and releases clamps.",
+    "optionalMode": {
+      "proposedSupported": false,
+      "design": "Three authored material meshes. A future generator must certify a complete strain-safe deformation path, not merely a noncrossing final drawing.",
+      "admission": "Enable only after seed/late-stage legal witnesses and two real native-control completions pass; otherwise record finite-only honestly."
+    },
+    "nearestSources": [
+      {
+        "id": "loose-ends",
+        "source": "spatial-room/room.js",
+        "difference": "Loose Ends directly swaps graph-node positions until crossings disappear. Here only a chosen boundary grip is prescribed; material equilibrium moves every free vertex, and clamp choices change load/strain distribution. Players cannot edit the free layout."
+      },
+      {
+        "id": "span-workshop",
+        "source": "motion-room/physics.js",
+        "difference": "Span Workshop adds axial members and tests moving loads. A persistent triangular material sheet is stretched by boundary displacement constraints; full plane-stress elements couple area, shear and extension, with tearing and grip/clamp reaction limits."
+      }
+    ],
+    "requiredRegression": "One handle step moves several free vertices through equilibrium; changing only the boundary clamp changes the same grip displacement’s strain distribution and can tear a ligament. Free vertices have no action control.",
+    "visual": "Draw the material triangle mesh and undeformed reference, embedded marks/targets, actual selected clamps/grip, strain coloring and clamp-reaction arrows with numeric extrema.",
+    "actualSource": "form-room/equilibrium.mjs",
+    "implementedOptionalMode": false,
+    "verification": {
+      "finiteStudies": 3,
+      "nativeProfiles": [
+        "desktop-keyboard",
+        "mobile-touch"
+      ],
+      "roomReport": "coverage/form-room.json",
+      "openingReport": "coverage/form-room-opening.json",
+      "sourceHash": "cc74124eb6b4982ae5de8f9a2c3010c42556d5153e9f53fb02fe5ee5fad1d340",
+      "optionalGeneratorSeedChecks": 0,
+      "scope": "Source/public-target-derived legal plans; independent ordinary-input review is separate."
+    }
+  },
+  {
+    "id": "catenary-yard",
+    "name": "Catenary Yard",
+    "room": "form-room",
+    "status": "implemented-native-QA-passed-pending-independent-release-review",
+    "definingDecision": "Choose hanging cable length, anchors and point-load attachment positions so the nonlinear equilibrium clears obstacles in both required load cases without exceeding anchor tension.",
+    "actualStateTransition": "The solver finds one horizontal tension that satisfies the exact finite cable arclength; cumulative point weights determine segment slopes and vertical reactions. Moving an attachment changes the whole sag profile, and changing cable length changes both clearance and tension.",
+    "finiteStudies": [
+      "Uniform self-weight cable must clear a low obstacle and a ceiling.",
+      "An off-center pendant changes the loaded sag profile and unequal endpoint tensions.",
+      "Two load cases and permitted attachment hooks require a configuration that survives both without retensioning."
+    ],
+    "controls": "Select actual cable stock length, anchor heights and load hooks; lower onto the shown load case and certify clearance/anchor forces.",
+    "failureAndRecovery": "Contact with a keep-out area, too-short cable or excessive anchor tension fails the released construction. Reset/restart rebuilds it.",
+    "optionalMode": {
+      "proposedSupported": false,
+      "design": "Three authored cable yards. Generated contracts require certified arclength equilibrium and clearance under varied independent point-load cases, rather than uniform-load scaling.",
+      "admission": "Enable only after seed/late-stage legal witnesses and two real native-control completions pass; otherwise record finite-only honestly."
+    },
+    "nearestSources": [
+      {
+        "id": "span-workshop",
+        "source": "motion-room/physics.js",
+        "difference": "A hanging cable has nonlinear finite-length geometry and one tension field; it is not a straight axial-member truss stiffness network."
+      },
+      {
+        "id": "threaded-return",
+        "source": "motion-room/navigation.js",
+        "difference": "A moving avatar stores rope wrapping history. This is static construction equilibrium under distributed/point loads with no avatar route or winding."
+      }
+    ],
+    "requiredRegression": "Moving a pendant hook changes sag/clearance globally even though total weight is unchanged; shortening cable can restore clearance while exceeding anchor capacity.",
+    "visual": "Draw the actual solved cable, both load-case shapes, keep-out geometry, attachment hooks and endpoint reaction arrows.",
+    "actualSource": "form-room/structure.mjs",
+    "implementedOptionalMode": false,
+    "verification": {
+      "finiteStudies": 3,
+      "nativeProfiles": [
+        "desktop-keyboard",
+        "mobile-touch"
+      ],
+      "roomReport": "coverage/form-room.json",
+      "openingReport": "coverage/form-room-opening.json",
+      "sourceHash": "cc74124eb6b4982ae5de8f9a2c3010c42556d5153e9f53fb02fe5ee5fad1d340",
+      "optionalGeneratorSeedChecks": 0,
+      "scope": "Source/public-target-derived legal plans; independent ordinary-input review is separate."
+    }
+  },
+  {
+    "id": "gel-window",
+    "name": "Gel Window",
+    "room": "form-room",
+    "status": "implemented-native-QA-passed-pending-independent-release-review",
+    "definingDecision": "Grow and branch polymer chains through functional end sites, then join them into the required gel before local gel formation blocks remaining reaction access.",
+    "actualStateTransition": "A bond consumes one functional site on each selected monomer/chain end and merges or cyclizes molecular components. Branch functionality and network cycles determine a gelled component; inaccessible interior reactive sites stop accepting later monomers, so connection order changes reachable networks.",
+    "finiteStudies": [
+      "Linear bifunctional monomers must reach a target chain-length distribution before termination.",
+      "A branching monomer creates multiple live ends but premature cyclization traps a needed end site.",
+      "A crosslinked gel must include every required chain while keeping one surface functional site available for the final attachment."
+    ],
+    "controls": "Select two visible monomer sites, join compatible accessible sites, terminate an end and inspect the actual component/cycle/gel structure. All stock monomers begin visible in the bath.",
+    "failureAndRecovery": "Consumed/blocked sites cannot be restored; wrong termination, trapped required monomer or spent crosslink stock makes the target network impossible. Reset/restart restores the bath.",
+    "optionalMode": {
+      "proposedSupported": false,
+      "design": "Authored molecular networks first. An unlimited mode requires reachability certification with varied branching, cycles and accessibility; random graph labels are inadequate.",
+      "admission": "Enable only after seed/late-stage legal witnesses and two real native-control completions pass; otherwise record finite-only honestly."
+    },
+    "nearestSources": [
+      {
+        "id": "bonding-room",
+        "source": "construct-room/engines.js",
+        "difference": "Bonding Room joins rigid atoms by spatial contact and navigates their changing footprint to a dock. This grows chemical connectivity by consuming functional sites, with chain distribution/cyclization and gel accessibility."
+      },
+      {
+        "id": "soft-sluice",
+        "source": "trajectory-room (new proposal)",
+        "difference": "No viscoelastic moving capsule, squeeze/release axes or throat clearance; the state is molecular graph growth and functional-site consumption."
+      }
+    ],
+    "requiredRegression": "Joining the same monomers in a different order forms a gelled interior before the final functional site can be reached.",
+    "visual": "Draw monomer nodes with actual free/consumed sites, linear/branched chains, cycles and inaccessible gel interior.",
+    "actualSource": "form-room/matter.mjs",
+    "implementedOptionalMode": false,
+    "verification": {
+      "finiteStudies": 3,
+      "nativeProfiles": [
+        "desktop-keyboard",
+        "mobile-touch"
+      ],
+      "roomReport": "coverage/form-room.json",
+      "openingReport": "coverage/form-room-opening.json",
+      "sourceHash": "cc74124eb6b4982ae5de8f9a2c3010c42556d5153e9f53fb02fe5ee5fad1d340",
+      "optionalGeneratorSeedChecks": 0,
+      "scope": "Source/public-target-derived legal plans; independent ordinary-input review is separate."
+    }
+  },
+  {
+    "id": "emulsion-bench",
+    "name": "Emulsion Bench",
+    "room": "form-room",
+    "status": "implemented-native-QA-passed-pending-independent-release-review",
+    "definingDecision": "Split droplets and dose surfactant while reserving enough interfacial coverage for the additional area; uncovered droplets coalesce and can reverse the continuous phase.",
+    "actualStateTransition": "Droplet breakup conserves oil volume but increases total surface area proportional to volume^(2/3). Adsorbed surfactant is persistent per droplet; resting merges under-covered neighbors and redistributes that coverage. Water/oil fraction controls which phase remains continuous.",
+    "finiteStudies": [
+      "Split one large oil droplet into stable small droplets using sufficient surface coverage.",
+      "Unequal splits require allocating surfactant before a rest/coalescence step.",
+      "Limited water and surfactant require a narrow stable droplet-size distribution while avoiding phase inversion."
+    ],
+    "controls": "Select a drawn droplet, choose permitted split ratio, add a measured surfactant dose to the selected interface, add water or rest one equilibration step.",
+    "failureAndRecovery": "Phase inversion, an oversized final droplet or exhausted interface stock fails the stability test. Finite reset/restart restores the batch.",
+    "optionalMode": {
+      "proposedSupported": true,
+      "design": "Generate varied initial droplet volumes, split ratios and coverage budgets from volume-conserving feasible split/coating witnesses; derive stable size bands and reject trivial no-split targets. Late stages cap droplet count while varying area tradeoffs.",
+      "admission": "Enable only after seed/late-stage legal witnesses and two real native-control completions pass; otherwise record finite-only honestly."
+    },
+    "nearestSources": [
+      {
+        "id": "ratio-mixer",
+        "source": "number-room/room.js",
+        "difference": "A static integer recipe does not track droplet interfaces, nonlinear area growth, persistent adsorbed coverage or coalescence history."
+      },
+      {
+        "id": "vacuum-patch",
+        "source": "atelier-room/materials.mjs",
+        "difference": "Patch overlaps reinforce a solid membrane. Droplet splitting changes total interfacial area under volume conservation and missing coverage reverses that breakup through coalescence."
+      }
+    ],
+    "requiredRegression": "A volume-conserving split needs more surfactant than the parent; resting under-covered children restores a larger droplet while retaining total oil volume.",
+    "visual": "Draw actual droplet sizes, coated interface arcs and continuous phase, with oil volume/surface-area/coverage totals.",
+    "actualSource": "form-room/process.mjs",
+    "implementedOptionalMode": true,
+    "verification": {
+      "finiteStudies": 3,
+      "nativeProfiles": [
+        "desktop-keyboard",
+        "mobile-touch"
+      ],
+      "roomReport": "coverage/form-room.json",
+      "openingReport": "coverage/form-room-opening.json",
+      "sourceHash": "cc74124eb6b4982ae5de8f9a2c3010c42556d5153e9f53fb02fe5ee5fad1d340",
+      "optionalGeneratorSeedChecks": 100,
+      "scope": "Source/public-target-derived legal plans; independent ordinary-input review is separate."
+    }
+  },
+  {
+    "id": "curved-compass",
+    "name": "Curved Compass",
+    "room": "form-room",
+    "status": "implemented-native-QA-passed-pending-independent-release-review",
+    "definingDecision": "Walk a construction seam along sphere geodesics and turn in its transported tangent frame; the same endpoint can retain different seam orientations.",
+    "actualStateTransition": "A great-circle arc rotates the sphere position and forward tangent together. Relative turns change the tangent plane direction; after a closed route the frame can have nonzero holonomy. The final seam must meet both position and orientation constraints while avoiding forbidden caps.",
+    "finiteStudies": [
+      "Two great-circle arcs connect visible surface points.",
+      "A spherical triangle returns to its start with a required rotated seam direction.",
+      "A forbidden cap and finite arc/turn budget require a detour whose transported frame still matches the receiver."
+    ],
+    "controls": "Turn the local heading by labeled angles, lay a geodesic arc of selected length and join the end seam; independent view controls only rotate the display.",
+    "failureAndRecovery": "Crossing a forbidden cap, exceeding seam length or joining with wrong endpoint/frame orientation fails. Reset/restart restores the initial frame.",
+    "optionalMode": {
+      "proposedSupported": false,
+      "design": "Three authored spherical seam routes. A generator needs meaningful varied cap geometry and certified orientation-aware legal paths, not rotations of one triangle.",
+      "admission": "Enable only after seed/late-stage legal witnesses and two real native-control completions pass; otherwise record finite-only honestly."
+    },
+    "nearestSources": [
+      {
+        "id": "cube-seal",
+        "source": "puzzle-lab/engines.js",
+        "difference": "Discrete cube rolling tracks face orientation on a flat grid; sphere geodesics parallel-transport a continuous tangent frame and expose closed-route holonomy."
+      },
+      {
+        "id": "compass-house",
+        "source": "construct-room/engines.js",
+        "difference": "Euclidean points/lines/circles are construction dependencies; they do not transport orientation over a curved intrinsic surface."
+      }
+    ],
+    "requiredRegression": "Two legal paths end at the same sphere point but yield different forward tangents; the seam join must distinguish them.",
+    "visual": "Draw a rotatable sphere, dashed back-side geodesics, start/end tangent arrows, forbidden caps and exact position/frame coordinates.",
+    "actualSource": "form-room/structure.mjs",
+    "implementedOptionalMode": false,
+    "verification": {
+      "finiteStudies": 3,
+      "nativeProfiles": [
+        "desktop-keyboard",
+        "mobile-touch"
+      ],
+      "roomReport": "coverage/form-room.json",
+      "openingReport": "coverage/form-room-opening.json",
+      "sourceHash": "cc74124eb6b4982ae5de8f9a2c3010c42556d5153e9f53fb02fe5ee5fad1d340",
+      "optionalGeneratorSeedChecks": 0,
+      "scope": "Source/public-target-derived legal plans; independent ordinary-input review is separate."
+    }
+  },
+  {
+    "id": "three-flats",
+    "name": "Three Flats",
+    "room": "form-room",
+    "status": "implemented-native-QA-passed-pending-independent-release-review",
+    "definingDecision": "Choose which two plates to lap and their relative orientation so complementary mating errors cannot hide persistent nonflatness.",
+    "actualStateTransition": "Two facing height maps contact at cells with maximal combined height. A lap removes stock only at those actual high contacts on both plates. A complementary pair can mate uniformly while each plate remains curved; a third plate and rotation break that false-flat condition.",
+    "finiteStudies": [
+      "Two matching localized contact high spots must be removed while the independent third flat plate remains certified.",
+      "Complementary concave/convex errors require the third plate to reveal and remove hidden nonflatness.",
+      "Unequal stock reserves and orientation-dependent contacts require distributing wear without thinning a plate below its minimum."
+    ],
+    "controls": "Select two visible plates, choose relative quarter turn, bring them into contact and lap one measured pass; gauge each individual plate.",
+    "failureAndRecovery": "A plate worn below its thickness reserve, exhausted abrasive passes or nonflat final surfaces fails. Reset/restart restores the height maps.",
+    "optionalMode": {
+      "proposedSupported": false,
+      "design": "Authored contact/wear examples first. A generator needs witnessed convergence and stock safety over varied complementary maps, not arbitrary initial relief.",
+      "admission": "Enable only after seed/late-stage legal witnesses and two real native-control completions pass; otherwise record finite-only honestly."
+    },
+    "nearestSources": [
+      {
+        "id": "mill-fixture",
+        "source": "atelier-room/construction.mjs",
+        "difference": "Milling directly removes a selected accessible target voxel. Lapping automatically removes the coupled maxima of two mating surfaces; the choice is pair/orientation and wear distribution."
+      },
+      {
+        "id": "cam-workshop",
+        "source": "atelier-room/mechanical.mjs",
+        "difference": "Cam cuts one chosen radial sample against follower traces. Contact wear changes both whole mating height maps and can conceal individual surface error."
+      }
+    ],
+    "requiredRegression": "A complementary pair reports full contact while both individual plates remain nonflat; a rotated third-plate lap changes that error.",
+    "visual": "Draw all three colored relief maps, actual current contact cells and individual flatness/thickness gauges.",
+    "actualSource": "form-room/contact.mjs",
+    "implementedOptionalMode": false,
+    "verification": {
+      "finiteStudies": 3,
+      "nativeProfiles": [
+        "desktop-keyboard",
+        "mobile-touch"
+      ],
+      "roomReport": "coverage/form-room.json",
+      "openingReport": "coverage/form-room-opening.json",
+      "sourceHash": "cc74124eb6b4982ae5de8f9a2c3010c42556d5153e9f53fb02fe5ee5fad1d340",
+      "optionalGeneratorSeedChecks": 0,
+      "scope": "Source/public-target-derived legal plans; independent ordinary-input review is separate."
+    }
+  },
+  {
+    "id": "delaunay-bench",
+    "name": "Delaunay Bench",
+    "room": "form-room",
+    "status": "implemented-native-QA-passed-pending-independent-release-review",
+    "definingDecision": "Flip a legal convex quadrilateral diagonal to remove geometric circumcircle violations while keeping constrained edges and a bounded repair budget.",
+    "actualStateTransition": "Each flip replaces two triangles with the other diagonal of their convex union. Incircle tests depend on actual point coordinates and change neighboring local legality; points never move. Fixed edges cannot flip, and a nonconvex union is not a valid move.",
+    "finiteStudies": [
+      "A non-cocircular four-point quadrilateral reveals one illegal diagonal.",
+      "A triangulated point set with an interior point requires neighboring edge repairs after a flip.",
+      "Fixed seam constraints and a narrow quadrilateral require distinguishing locked and geometrically invalid flips."
+    ],
+    "controls": "Select a visible internal edge, inspect its two circumcircles, flip if legal and certify the triangulation.",
+    "failureAndRecovery": "Exhausted legal-flip budget or repeated illegal geometric certifications ends a study; reset/restart restores the original triangulation.",
+    "optionalMode": {
+      "proposedSupported": true,
+      "design": "Generate general-position planar points and a valid certified triangulation, scramble with reversible legal flips and retain the explicit inverse witness. Vary point geometry, interior placement and locked constraints; validate orientation, coverage and every high-stage incircle.",
+      "admission": "Enable only after seed/late-stage legal witnesses and two real native-control completions pass; otherwise record finite-only honestly."
+    },
+    "nearestSources": [
+      {
+        "id": "loose-ends",
+        "source": "spatial-room/room.js",
+        "difference": "Node positions are fixed; the operation changes triangle incidence through a legal local edge exchange rather than swapping positions to eliminate crossings."
+      }
+    ],
+    "requiredRegression": "One flip removes the selected incircle violation but changes a neighboring edge legality; nonconvex and fixed-edge flips remain prohibited.",
+    "visual": "Draw triangulation, selected convex union, circumcircles and visible offending points with native edge controls.",
+    "crossProposalReview": "Relation owner withdrew arbitrary target-diagonal flips before implementation; Form exclusively owns constrained convex-quadrilateral flips with actual incircle geometry.",
+    "actualSource": "form-room/structure.mjs",
+    "implementedOptionalMode": true,
+    "verification": {
+      "finiteStudies": 3,
+      "nativeProfiles": [
+        "desktop-keyboard",
+        "mobile-touch"
+      ],
+      "roomReport": "coverage/form-room.json",
+      "openingReport": "coverage/form-room-opening.json",
+      "sourceHash": "cc74124eb6b4982ae5de8f9a2c3010c42556d5153e9f53fb02fe5ee5fad1d340",
+      "optionalGeneratorSeedChecks": 100,
+      "scope": "Source/public-target-derived legal plans; independent ordinary-input review is separate."
+    }
+  },
+  {
+    "id": "thread-portrait",
+    "name": "Thread Portrait",
+    "room": "form-room",
+    "status": "implemented-native-QA-passed-pending-independent-release-review",
+    "definingDecision": "Route one continuous thread between pegs so overlapping chords accumulate the desired tonal image without exhausting pin wraps or over-darkening a cell.",
+    "actualStateTransition": "A chord adds ink density to the raster cells intersected by its actual segment and moves the active thread end to the selected peg. Subsequent legal chords must start there; each peg has a wrap capacity. Density is additive and irreversible, so path order changes available continuation.",
+    "finiteStudies": [
+      "Four pegs and three chords form an exact simple image.",
+      "Six pegs produce overlapping tones; a tempting early chord strands the active endpoint.",
+      "Eight pegs and unequal wrap reserves require selecting an edge order that matches all density counts without over-darkening."
+    ],
+    "controls": "Tap a labeled next peg to stretch the actual chord, choose an available thread spool before tying and certify the portrait.",
+    "failureAndRecovery": "Over-darkened target cells, spent thread or exceeded peg-wrap capacity spoil the portrait. Reset/restart restores blank stock.",
+    "optionalMode": {
+      "proposedSupported": true,
+      "design": "Generate varied peg coordinates and legal bounded continuous chord paths, then derive the exact density target. Reject repeated/no-op templates and certify a public-target legal route with unchanged chord rasterization. Cap pegs/chords for late stages.",
+      "admission": "Enable only after seed/late-stage legal witnesses and two real native-control completions pass; otherwise record finite-only honestly."
+    },
+    "nearestSources": [
+      {
+        "id": "cable-loom",
+        "source": "spatial-room/room.js",
+        "difference": "Hamiltonian peg traversal visits every grid node once. This allows useful revisits and arbitrary chords, with the persistent end and per-peg wraps constrained by an additive tonal image."
+      },
+      {
+        "id": "stamp-studio",
+        "source": "spatial-room/room.js",
+        "difference": "Selected stamps form a set union independent of application order. Continuous chord routing accumulates density and changes the next available start; overlapping cells can need multiple thread passes."
+      }
+    ],
+    "requiredRegression": "The same desired chord multiset can have a valid continuous route and an invalid stranded order; extra overlap permanently exceeds image density.",
+    "visual": "Draw numbered pegs and actual laid thread next to the grayscale density target; expose exact cell densities in a native table.",
+    "actualSource": "form-room/process.mjs",
+    "implementedOptionalMode": true,
+    "verification": {
+      "finiteStudies": 3,
+      "nativeProfiles": [
+        "desktop-keyboard",
+        "mobile-touch"
+      ],
+      "roomReport": "coverage/form-room.json",
+      "openingReport": "coverage/form-room-opening.json",
+      "sourceHash": "cc74124eb6b4982ae5de8f9a2c3010c42556d5153e9f53fb02fe5ee5fad1d340",
+      "optionalGeneratorSeedChecks": 100,
+      "scope": "Source/public-target-derived legal plans; independent ordinary-input review is separate."
+    }
+  },
+  {
+    "id": "rubber-boundary",
+    "name": "Rubber Boundary",
+    "room": "form-room",
+    "status": "implemented-native-QA-passed-pending-independent-release-review",
+    "definingDecision": "Choose both visible tangency contacts when a new required site arrives, replacing the obsolete support chain while retaining the tight convex enclosure.",
+    "actualStateTransition": "An atomic rehang removes the clockwise chain between selected supports and inserts the new external site. The remaining elastic loop must be simple, convex and contain all observed required sites. A valid tangent pair can retire several supports at once; wrong pairs cut across an earlier site.",
+    "finiteStudies": [
+      "One arriving site replaces a single obsolete boundary edge.",
+      "Successive sites remove multi-vertex chains while a pin-stock cap prevents retaining every old support.",
+      "Collinear and nearly collinear arrivals require removing redundant supports without losing a required boundary point."
+    ],
+    "controls": "Select the two native support-contact controls, rehang through the new site and advance only after the enclosure is tight.",
+    "failureAndRecovery": "A lost required site, nonconvex loop, exceeded pin stock or spent rehang allowance snaps the enclosure. Reset/restart restores the observed sequence.",
+    "optionalMode": {
+      "proposedSupported": true,
+      "design": "Generate varied convex support loops plus external arriving sites; compute witnessed tangent-chain replacements and bound site count. Include multi-support removals and near-collinear cases rather than rotating a fixed enclosure.",
+      "admission": "Enable only after seed/late-stage legal witnesses and two real native-control completions pass; otherwise record finite-only honestly."
+    },
+    "nearestSources": [
+      {
+        "id": "copper-tree",
+        "source": "puzzle-lab/engines.js",
+        "difference": "Minimum spanning tree edge selection seeks a connected network. The state is a persistent enclosing convex loop and each new site replaces a contiguous visible support chain."
+      },
+      {
+        "id": "loose-ends",
+        "source": "spatial-room/room.js",
+        "difference": "No point swapping or general untangling: arriving sites are fixed, and geometric support/tangency determines which old boundary vertices become obsolete."
+      }
+    ],
+    "requiredRegression": "A new site legally retires two existing support vertices at once while all old sites remain enclosed; the opposite contact pair loses an old site.",
+    "visual": "Draw the stretched boundary, all observed required sites, new external peg, tangent candidates and retired support chain.",
+    "actualSource": "form-room/structure.mjs",
+    "implementedOptionalMode": true,
+    "verification": {
+      "finiteStudies": 3,
+      "nativeProfiles": [
+        "desktop-keyboard",
+        "mobile-touch"
+      ],
+      "roomReport": "coverage/form-room.json",
+      "openingReport": "coverage/form-room-opening.json",
+      "sourceHash": "cc74124eb6b4982ae5de8f9a2c3010c42556d5153e9f53fb02fe5ee5fad1d340",
+      "optionalGeneratorSeedChecks": 100,
+      "scope": "Source/public-target-derived legal plans; independent ordinary-input review is separate."
+    }
+  },
+  {
+    "id": "powder-press",
+    "name": "Powder Press",
+    "room": "form-room",
+    "status": "implemented-native-QA-passed-pending-independent-release-review",
+    "definingDecision": "Choose a two-sided compaction history so wall-friction attenuation does not leave a porous core or an unload density gradient that cracks the finished compact.",
+    "actualStateTransition": "Each layer retains solid volume while plastic densification reduces its height/porosity. Stress transmitted from a pressed face attenuates through the current overlying thickness and wall friction; earlier densification changes later transmission. Unloading adds elastic rebound and tests the gradient between adjacent layers.",
+    "finiteStudies": [
+      "A two-layer powder charge requires one-sided compaction without over-densifying the top.",
+      "Unequal compressibilities and wall friction require alternating the pressed face.",
+      "A three-layer mixture and finite press-energy budget require a history whose rebound leaves both porosity and gradient in safe bands."
+    ],
+    "controls": "Select top/bottom pressing face and a labeled load pulse, unload, then eject/test the compact; layer material and porosity are always visible.",
+    "failureAndRecovery": "Over-densification, excessive rebound-gradient cracking or spent press energy spoils the compact. Reset/restart restores the loose powder.",
+    "optionalMode": {
+      "proposedSupported": false,
+      "design": "Authored compaction histories first. A future generator must certify path-dependent densification and unload gradients, not scale the same pressure schedule.",
+      "admission": "Enable only after seed/late-stage legal witnesses and two real native-control completions pass; otherwise record finite-only honestly."
+    },
+    "nearestSources": [
+      {
+        "id": "pressure-gallery",
+        "source": "atelier-room/mechanical.mjs",
+        "difference": "Hydraulic pumping distributes conserved liquid units by branch resistance. Solid powder loses void volume irreversibly, changes transmission geometry through densification and rebounds/cracks on unloading."
+      },
+      {
+        "id": "sand-table",
+        "source": "atelier-room/construction.mjs",
+        "difference": "No column avalanches or baffle topology: bulk porosity and stress attenuation, rather than granular height differences, govern the state."
+      }
+    ],
+    "requiredRegression": "Equal final load reached from opposite press faces leaves different layer porosities; changing an upper thickness changes later pressure reaching the core.",
+    "visual": "Draw actual current layer heights, retained solid volume, void fraction and stress profile before/after unloading.",
+    "actualSource": "form-room/shaping.mjs",
+    "implementedOptionalMode": false,
+    "verification": {
+      "finiteStudies": 3,
+      "nativeProfiles": [
+        "desktop-keyboard",
+        "mobile-touch"
+      ],
+      "roomReport": "coverage/form-room.json",
+      "openingReport": "coverage/form-room-opening.json",
+      "sourceHash": "cc74124eb6b4982ae5de8f9a2c3010c42556d5153e9f53fb02fe5ee5fad1d340",
+      "optionalGeneratorSeedChecks": 0,
+      "scope": "Source/public-target-derived legal plans; independent ordinary-input review is separate."
+    }
+  },
+  {
+    "id": "clay-spindle",
+    "name": "Clay Spindle",
+    "room": "form-room",
+    "status": "implemented-native-QA-passed-pending-independent-release-review",
+    "definingDecision": "Redistribute a conserved hollow wall between axial bands while retaining bore access and enough wall thickness for the final neck.",
+    "actualStateTransition": "Radial shaping changes outer/inner radius together under each band’s current clay volume. Pulling transfers material between adjacent bands rather than deleting it. The inner tool must pass through every higher bore, and a thin or overhanging wall collapses permanently.",
+    "finiteStudies": [
+      "Open and widen a simple hollow cylinder with conserved material.",
+      "A belly/shoulder profile requires transferring material to preserve wall thickness while widening.",
+      "The narrow neck must be formed after the deeper bore work; closing it early blocks the inner tool and cannot satisfy the remaining profile."
+    ],
+    "controls": "Select an axial band, move the outer shaping tool inward/outward, transfer a measured wall portion upward/downward or use the inner tool; gauge the finished profile.",
+    "failureAndRecovery": "A sealed required bore, thin-wall collapse, unsupported overhang or spent shaping allowance fails; reset/restart restores the clay body.",
+    "optionalMode": {
+      "proposedSupported": false,
+      "design": "Three authored vessel profiles first. A generated mode needs a certified material-transfer and inner-tool-access path with varied geometry; target radius relabeling alone is unacceptable.",
+      "admission": "Enable only after seed/late-stage legal witnesses and two real native-control completions pass; otherwise record finite-only honestly."
+    },
+    "nearestSources": [
+      {
+        "id": "cam-workshop",
+        "source": "atelier-room/mechanical.mjs",
+        "difference": "Cam removes one radial stock unit irreversibly to meet neighboring follower sums. Hollow clay preserves total wall volume, transfers material between bands and changes both bore/outer geometry; access and thickness govern order."
+      },
+      {
+        "id": "spring-form",
+        "source": "atelier-room/materials.mjs",
+        "difference": "Plastic strip bends preserve a fixed cross-section and die disk access. The vessel changes wall cross-section through conserved material flow and can close its own internal tool path."
+      }
+    ],
+    "requiredRegression": "Widening a band thins its wall at fixed volume; transferring material restores thickness but changes a neighbor. Forming the neck early blocks a needed lower inner-tool operation.",
+    "visual": "Draw the full outer and inner vessel contours, actual wall volume/thickness per band, tool path and target profile.",
+    "actualSource": "form-room/shaping.mjs",
+    "implementedOptionalMode": false,
+    "verification": {
+      "finiteStudies": 3,
+      "nativeProfiles": [
+        "desktop-keyboard",
+        "mobile-touch"
+      ],
+      "roomReport": "coverage/form-room.json",
+      "openingReport": "coverage/form-room-opening.json",
+      "sourceHash": "cc74124eb6b4982ae5de8f9a2c3010c42556d5153e9f53fb02fe5ee5fad1d340",
+      "optionalGeneratorSeedChecks": 0,
+      "scope": "Source/public-target-derived legal plans; independent ordinary-input review is separate."
+    }
+  }
+]

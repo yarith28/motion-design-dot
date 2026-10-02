@@ -1,0 +1,74 @@
+{
+  "passed": true,
+  "sourceFiles": [
+    {
+      "path": "mini-games/journey/journey.mjs",
+      "sha256": "86a92fbd52ee7f5d34fd01225120feb74a336dd499a11e9e4780cf8f1f207872"
+    },
+    {
+      "path": "mini-games/journey/journey.css",
+      "sha256": "e77e387075c86ad3addcf7220c9eeabfc06fec45987116205b75ed50cac83e67"
+    },
+    {
+      "path": "mini-games/trajectory-room/contact.mjs",
+      "sha256": "2ca3400b152bf9952cf5e5b0fd52fcd5c588c04549b08f6f21f828cfbf5b6830"
+    },
+    {
+      "path": "mini-games/trajectory-room/core.mjs",
+      "sha256": "426aecd3bac2e6499c8f60de2d435c4ffba9783677e2429f9f44f14244fda771"
+    },
+    {
+      "path": "mini-games/trajectory-room/engines.mjs",
+      "sha256": "1a7f5fd92bb6a8a527747033091e0adcd2f13a9b420d90046d5baad8c999270f"
+    },
+    {
+      "path": "mini-games/trajectory-room/fluids.mjs",
+      "sha256": "df9af92919191ee9073bd360c2c3142e4a5b67fea9aa45b4af611ca76cc89db0"
+    },
+    {
+      "path": "mini-games/trajectory-room/games.json",
+      "sha256": "e943d273f307a3359cb242c6918d7f85067beb2763ddc8816a96255a9bef1e06"
+    },
+    {
+      "path": "mini-games/trajectory-room/handles.mjs",
+      "sha256": "e79ac184001304099181241ec2d2425e375f80d0533c1eac00d6a2918faebb60"
+    },
+    {
+      "path": "mini-games/trajectory-room/index.html",
+      "sha256": "f6947c2e4f4f75dbd0bead31dcbae133053599b78fa1685dd5587d04ecf98ce0"
+    },
+    {
+      "path": "mini-games/trajectory-room/orbits.mjs",
+      "sha256": "b176d30e3cb60fde41012d293cf04f2528f582bd398af3a1bfd3b0321ebb84b7"
+    },
+    {
+      "path": "mini-games/trajectory-room/room.mjs",
+      "sha256": "faf0bd8143c3875126c73975a8c5bee9782f716d1048f0d3367d57681a243054"
+    },
+    {
+      "path": "mini-games/trajectory-room/transport.mjs",
+      "sha256": "eef2484a8e7e1343b2475f937d3c23ac735e85975fe1da47da72dfe3020ef302"
+    }
+  ],
+  "sourceUnchanged": true,
+  "verifiedAt": "2026-10-02T22:10:39.212Z",
+  "profile": "390px Chromium mobile touch emulation",
+  "browserVersion": "151.0.7922.173",
+  "scope": "One source-informed finite study0 eight-second terminal regression through native touchscreen taps; not a complete three-study campaign or ordinary blind play.",
+  "game": "suspension-course",
+  "publicRunSeed": 20261002,
+  "nativeActions": 81,
+  "actions": [
+    "tap damping:1.6",
+    "79 native taps advance",
+    "80th native tap advance"
+  ],
+  "playingAt79": true,
+  "studyWinAt80": true,
+  "at79Readout": "Damping 1.6 · actuator 0 · road time 7.90/8s · cabin -0.04 / 0.01 velocity · wheel -0.01 / 0.01 velocity · tire normal 5.30 · suspension travel -0.04/±0.55.\n\nRoad event\tCenter time\tHalf width\tHeight\n1\t2.00\t0.65\t0.20\nPull cabin down 0.6\nActuator neutral 0\nPush cabin up 0.6\nDamping 0.2\nDamping 0.8\nDamping 1.6\nAdvance suspension · 0.1 s\n\nPrescribed travel crosses the public bumps. Cabin mass 2 and wheel mass 0.5 move independently; suspension stiffness 8 and tire stiffness 40. Actuator force reacts on the wheel. Comfort integrates cabin acceleration squared; tire lift, travel stops and work also constrain the ride. Finish at 8 s with cabin displacement<0.08 and speed<0.2.",
+  "at80Readout": "Damping 1.6 · actuator 0 · road time 8.00/8s · cabin -0.04 / 0.03 velocity · wheel -0.01 / 0.01 velocity · tire normal 5.27 · suspension travel -0.04/±0.55.\n\nRoad event\tCenter time\tHalf width\tHeight\n1\t2.00\t0.65\t0.20\nPull cabin down 0.6\nActuator neutral 0\nPush cabin up 0.6\nDamping 0.2\nDamping 0.8\nDamping 1.6\nAdvance suspension · 0.1 s\n\nPrescribed travel crosses the public bumps. Cabin mass 2 and wheel mass 0.5 move independently; suspension stiffness 8 and tire stiffness 40. Actuator force reacts on the wheel. Comfort integrates cabin acceleration squared; tire lift, travel stops and work also constrain the ride. Finish at 8 s with cabin displacement<0.08 and speed<0.2.",
+  "score": 1331,
+  "terminalControlsDisabled": true,
+  "exactSeedRestartVerified": true,
+  "errors": []
+}

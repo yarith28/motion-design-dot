@@ -1,0 +1,757 @@
+{
+  "owner": "motion_additions",
+  "room": "trajectory-room",
+  "inventoryCount": 400,
+  "status": "Implemented20 distinct cores; source/model and native verification in progress. Public integration requires the final full suite and source audit.",
+  "sharedContract": "design400/ENGINE-CONTRACT.md",
+  "sourceNeighborsInspected": [
+    "arcade-room/room.js",
+    "motion-room/physics.js",
+    "motion-room/navigation.js",
+    "kinetic-room/engines.js",
+    "spatial-room/room.js",
+    "puzzle-lab/engines.js",
+    "discovery-room/room.js",
+    "systems-room/assembly-belt.mjs",
+    "systems-room/power-desk.mjs",
+    "systems-room/reservoir.mjs",
+    "atelier-room/mechanical.mjs",
+    "atelier-room/materials.mjs",
+    "atelier-room/construction.mjs",
+    "signal-lab/signals.mjs",
+    "field-room/sports.mjs",
+    "field-room/travel.mjs",
+    "field-room/balance.mjs",
+    "field-room/flow.mjs"
+  ],
+  "scope": "Twenty new state/choice systems, not reused first-batch engines. Physics models are explicitly simplified; optional generation remains conditional on varied-seed and late-stage witnesses plus actual two-challenge UI evidence.",
+  "games": [
+    {
+      "id": "rendezvous-window",
+      "name": "Rendezvous Window",
+      "definingDecision": "Time prograde/radial burns in a central-gravity orbit to meet an independently orbiting target with low relative position AND velocity; an orbit crossing alone cannot dock.",
+      "nearestExisting": [
+        {
+          "id": "orbit-transfer",
+          "differentiator": "Existing source traverses directed station arrows and spends integer fuel; this proposal integrates inverse-square acceleration and continuous orbital phase."
+        },
+        {
+          "id": "soft-landing",
+          "differentiator": "Existing source lands against constant downward gravity and a stationary pad; this mission has a moving circular/elliptic target and matching orbital velocity."
+        },
+        {
+          "id": "star-tow",
+          "differentiator": "Existing source has damped inertial motion with cargo pickup; central gravity, coast-phase timing and relative-velocity docking define this game."
+        }
+      ],
+      "controls": "Signed native burn slider; prograde/radial direction, Apply impulse, Coast 0.1, Dock. Use Tab+Enter/Space or mobile touch on native controls; sliders support keyboard arrows and touch.",
+      "finite": "Dock with distance<0.30 and relative speed<0.20 after a central-gravity coast/burn route. Propellant impulse allowance 2.5; impact, escape and 28-time-unit expiry lose.",
+      "failureChallenge": "Central-body impact, escaping the outer bound, fuel/time exhaustion, or an unsafe committed docking attempt loses. The flight trace, target ephemeris and relative velocity explain failures.",
+      "endless": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "design": "Generate bounded outward/inward central-gravity transfers with varied source/target radii and orbital phase. Each rendezvous retains both position and relative-velocity docking constraints, finite impulse2.5 and28-time-unit coast allowance.",
+        "difficultyCap": "Physical sizes and3 bounded route/target families stay capped for unbounded stage indices.24 dispersed generated initializations and8 legal late-stage witnesses per game are model evidence; native two-challenge coverage is recorded separately."
+      },
+      "definingRegression": "Central-force angular momentum is conserved between burns; the same position crossing with excessive relative velocity must fail docking.",
+      "implementation": {
+        "sourceModules": [
+          "engines.mjs",
+          "core.mjs",
+          "orbits.mjs"
+        ],
+        "stages": 3
+      }
+    },
+    {
+      "id": "ballast-bay",
+      "name": "Ballast Bay",
+      "definingDecision": "Control fore/aft flood and compressed-air blow while pressure shrinks ballast air with depth; neutral buoyancy and pitch depend on both water mass and compressible volume.",
+      "nearestExisting": [
+        {
+          "id": "breathing-lane",
+          "differentiator": "Existing swimming advances through depth gates using stroke recovery and oxygen. Here two ballast tanks change mass, volume, trim and depth-dependent buoyancy; there is no stroke or respiration model."
+        },
+        {
+          "id": "pressure-gallery",
+          "differentiator": "Existing incompressible pump units choose loaded piston branches. This vehicle has compressible tank air, hydrostatic pressure, pitched motion and full hull clearance."
+        }
+      ],
+      "controls": "Select fore/aft, Flood/Blow measured air amount, ahead/off/astern propeller, Advance 0.2 s, Dock. Use Tab+Enter/Space or mobile touch on native controls; sliders support keyboard arrows and touch.",
+      "finite": "Dock the full hull within 0.25 of the receiver with speed<0.18, pitch<0.08 and angular speed<0.1. Hydrostatic pressure compresses air, admits water and changes buoyancy; fore/aft imbalance torques trim.",
+      "failureChallenge": "Bow/stern contact, uncontrolled bottom impact, depleted compressed-air reserve, corridor exit or moving/unlevel docking loses. Display tank water/air, external pressure, pitch and full hull endpoints.",
+      "endless": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "design": "Generate bounded receiver horizontal/depth positions across open bay, submerged sill and two-wall gap routes. Pressure-compressed air volume and fore/aft water mass determine buoyancy/trim, with finite compressed-air reserve and full swept hull checks.",
+        "difficultyCap": "Physical sizes and3 bounded route/target families stay capped for unbounded stage indices.24 dispersed generated initializations and8 legal late-stage witnesses per game are model evidence; native two-challenge coverage is recorded separately."
+      },
+      "definingRegression": "Equal tank commands at different depths yield different air volumes/buoyancy; asymmetric tank mass changes pitch and clearance.",
+      "implementation": {
+        "sourceModules": [
+          "engines.mjs",
+          "core.mjs",
+          "fluids.mjs"
+        ],
+        "stages": 3
+      }
+    },
+    {
+      "id": "induction-coast",
+      "name": "Induction Coast",
+      "definingDecision": "Switch electrical loads on a moving conducting rail so induced current both brakes the runner and transfers mechanical energy to a receiver; stronger load changes later available voltage.",
+      "nearestExisting": [
+        {
+          "id": "magnetic-quartet",
+          "differentiator": "Existing source moves charged pucks in static inverse-square fields. Induction uses velocity-generated EMF and current-dependent opposing mechanical force, with no movable magnetic source."
+        },
+        {
+          "id": "clutch-circuit",
+          "differentiator": "Existing engine/gear RPM creates propulsion and heat. Here the conductor receives gravity/initial kinetic energy, and circuit load simultaneously changes its speed and stored electrical energy."
+        },
+        {
+          "id": "power-desk",
+          "differentiator": "Existing source allocates hourly turbine/battery stocks. This energy comes from coupled continuous motion and back-EMF rather than chosen production units."
+        }
+      ],
+      "controls": "Open/receiver/resistor circuit, resistance 0.5/1/2, receiver polarity, Advance 0.25 s, Clamp. Use Tab+Enter/Space or mobile touch on native controls; sliders support keyboard arrows and touch.",
+      "finite": "Clamp at x11.2–12.1, speed<1.2 and recovered energy within 1.0 of the public target. Moving through alternating field signs changes EMF; resistor/receiver heat and voltage are bounded.",
+      "failureChallenge": "Overvoltage, heat loss, rail-end collision or wrong-energy/unsafe clamp loses. Read voltage, signed current, speed, recovered energy and brake force.",
+      "endless": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "design": "Generate bounded field strengths, receiver capacitances0.8–1.2 and target energies6–7.5. The same actual back-EMF/current force couples charging, resistive heat and terminal braking in each fresh track.",
+        "difficultyCap": "Physical sizes and3 bounded route/target families stay capped for unbounded stage indices.24 dispersed generated initializations and8 legal late-stage witnesses per game are model evidence; native two-challenge coverage is recorded separately."
+      },
+      "definingRegression": "Closing a conducting load must reduce runner kinetic energy while increasing delivered/dissipated electrical energy; open circuit cannot recover energy.",
+      "implementation": {
+        "sourceModules": [
+          "engines.mjs",
+          "core.mjs",
+          "orbits.mjs"
+        ],
+        "stages": 3
+      }
+    },
+    {
+      "id": "resonant-switch",
+      "name": "Resonant Switch",
+      "definingDecision": "Observe capacitor charge and inductor current, then switch at the useful oscillation phase to move energy through a one-way receiver without reversing or overcharging it.",
+      "nearestExisting": [
+        {
+          "id": "phase-paper",
+          "differentiator": "Existing source composes instantaneous amplitude gates and compares coherent vectors. This circuit evolves charge/current in time and switches physical paths with dissipative/diode limits."
+        },
+        {
+          "id": "power-desk",
+          "differentiator": "Existing battery balances lumped hourly stock. Resonant transfer depends on current polarity and stored magnetic/electric energy at the switching instant."
+        },
+        {
+          "id": "induction-coast",
+          "differentiator": "New neighbor derives voltage from moving conductors and brakes motion. This circuit has no rail or mechanical source; its central choice is switching the phase of a lumped LC oscillation."
+        }
+      ],
+      "controls": "Source/receiver/dump/isolate circuits, Advance 0.08 s, Seal receivers. Use Tab+Enter/Space or mobile touch on native controls; sliders support keyboard arrows and touch.",
+      "finite": "Charge every unequal receiver within its displayed voltage band and finish at current<0.1. Wrong phase, receiver overvoltage or opening a live coil loses.",
+      "failureChallenge": "Receiver overvoltage, reverse-current exposure, wasted energy beyond allowance or time expiry loses. Show signed current, every capacitor voltage and stored/dissipated energy.",
+      "endless": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "design": "Generate inductor values0.9–1.1, unequal receiver capacitances and energy-feasible receiver voltage bands. Signed phase/current and diode zero-current transfer remain actual state; each challenge begins with a fresh finite source charge.",
+        "difficultyCap": "Physical sizes and3 bounded route/target families stay capped for unbounded stage indices.24 dispersed generated initializations and8 legal late-stage witnesses per game are model evidence; native two-challenge coverage is recorded separately."
+      },
+      "definingRegression": "A switched path must depend on signed inductor current; identical capacitor voltage at opposite current phases produces different transfer.",
+      "implementation": {
+        "sourceModules": [
+          "engines.mjs",
+          "core.mjs",
+          "orbits.mjs"
+        ],
+        "stages": 3
+      }
+    },
+    {
+      "id": "suspension-course",
+      "name": "Suspension Course",
+      "definingDecision": "Apply force between sprung cabin and unsprung wheel while road excitation changes their relative displacement; improve comfort without unloading the tire or bottoming the suspension.",
+      "nearestExisting": [
+        {
+          "id": "balance-beam",
+          "differentiator": "Existing source leans a beam to move a single marble against a breeze. This is two vertically coupled masses, a tire-ground contact force and internal actuator work."
+        },
+        {
+          "id": "cable-carrier",
+          "differentiator": "Existing pendulum couples angular sway to an overhead trolley/rope length. This uses independent cabin/wheel vertical velocities and suspension travel/contact constraints; no hanging load."
+        },
+        {
+          "id": "clutch-circuit",
+          "differentiator": "Existing car chooses gear/throttle/brakes for longitudinal travel. Travel here is prescribed, and the player controls vertical force and damping through road bumps."
+        }
+      ],
+      "controls": "Three actuator forces, three damping settings, Advance 0.1 s. Use Tab+Enter/Space or mobile touch on native controls; sliders support keyboard arrows and touch.",
+      "finite": "Finish the 8s bump route with cabin displacement<0.08 and speed<0.2, tire lift≤0.15s, travel≤0.55, and the public shock/work allowances. Separate cabin/wheel dynamics react to damping and actuator forces.",
+      "failureChallenge": "Tire lift for too long, suspension travel stop, cabin shock integral or exhausted actuator energy loses. Display both masses, suspension extension and tire normal force.",
+      "endless": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "design": "Generate bounded bump heights and center-time offsets across isolated, paired and alternating bump/dip road profiles. Cabin/wheel masses, tire contact and finite comfort/work limits remain fixed; some generated rides require active force/damping choices.",
+        "difficultyCap": "Physical sizes and3 bounded route/target families stay capped for unbounded stage indices.24 dispersed generated initializations and8 legal late-stage witnesses per game are model evidence; native two-challenge coverage is recorded separately."
+      },
+      "definingRegression": "The same actuator force acts oppositely on cabin and wheel; suppressing cabin motion can unload the tire, so single-body cancellation cannot satisfy both constraints.",
+      "implementation": {
+        "sourceModules": [
+          "engines.mjs",
+          "core.mjs",
+          "contact.mjs"
+        ],
+        "stages": 3
+      }
+    },
+    {
+      "id": "pawl-and-tooth",
+      "name": "Pawl and Tooth",
+      "definingDecision": "Engage a drive pawl only at a tooth’s useful face, then transfer the load to the holding pawl before returning the drive; tooth phase and reverse torque determine safe advancement.",
+      "nearestExisting": [
+        {
+          "id": "gear-train",
+          "differentiator": "Existing source swaps adjacent gears to meet static ratios. Here pawls collide with oriented tooth faces and an applied load attempts to backdrive the wheel."
+        },
+        {
+          "id": "clutch-dock",
+          "differentiator": "Existing source couples flywheel speeds by momentum-conserving clutches. Pawls impose unilateral angular stops and ratchet phase, with no speed averaging."
+        },
+        {
+          "id": "cam-workshop",
+          "differentiator": "Existing source edits follower profiles and validates slope. Here a fixed tooth profile determines real engagement and anti-reversal timing."
+        }
+      ],
+      "controls": "Raise/lower each pawl; Push/Wait/Return 0.1 s; Secure. Use Tab+Enter/Space or mobile touch on native controls; sliders support keyboard arrows and touch.",
+      "finite": "Raise the loaded wheel to the target whole tooth, transfer to the holding pawl, raise the drive and return its arm before securing. Tooth phase, unilateral holding contact and loaded angular inertia determine safe cycles. The final finite study shares a bridge: raise the holder during the carried drive stroke, then raise drive before lowering holder without an unsupported Advance.",
+      "failureChallenge": "Backdrive beyond allowance, tooth-tip jam/shear, excessive drive force or uncontrolled load drop loses. Show tooth angle, contacting faces and which pawl currently bears load.",
+      "endless": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "design": "Generate physical tooth pitch0.9–1.15, loaded torque0.5–0.75 and2–4 required teeth. The shared bridge appears in one bounded family; stroke lengths, phase contacts and loaded holding transfers respond to the actual generated geometry.",
+        "difficultyCap": "Physical sizes and3 bounded route/target families stay capped for unbounded stage indices.24 dispersed generated initializations and8 legal late-stage witnesses per game are model evidence; native two-challenge coverage is recorded separately."
+      },
+      "definingRegression": "Returning a drive arm with the holding pawl disengaged must allow backdrive; tooth-back contact cannot count as useful forward advancement.",
+      "implementation": {
+        "sourceModules": [
+          "engines.mjs",
+          "core.mjs",
+          "handles.mjs"
+        ],
+        "stages": 3
+      }
+    },
+    {
+      "id": "footfall-foundry",
+      "name": "Footfall Foundry",
+      "definingDecision": "Place a swinging foot only after moving weight onto the supporting foot, then control hip impulse so the moving center of mass enters the next support region without falling.",
+      "nearestExisting": [
+        {
+          "id": "four-holds",
+          "differentiator": "Existing source repositions climbing limbs under static reach/order and fatigue checks. This walker has horizontal center-of-mass velocity, one/double-support phases, time-consuming swings and landing impulses."
+        },
+        {
+          "id": "step-and-spring",
+          "differentiator": "Existing platformer directly jumps/air-steers a body and resets on landing. This game cannot command free body translation; feet and hip torque create the support transitions."
+        }
+      ],
+      "controls": "Foot selection, load/landing native sliders, Lift/Place, three hip forces, Advance 0.1 s, Settle. Use Tab+Enter/Space or mobile touch on native controls; sliders support keyboard arrows and touch.",
+      "finite": "Transport the dynamic center of mass onto the final stone with both feet planted, COM error<0.25 and speed<0.25. Lift only a≤25%-loaded foot, swing two beats and land within 1.1 reach on a real stone.",
+      "failureChallenge": "Center of mass leaves viable support/reach, a swing foot lands over a gap, forbidden loaded-foot lift or high-speed final landing loses. Show feet, support phase, COM position/velocity and reachable landing interval.",
+      "endless": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "design": "Generate5–7 real support stones with spacing0.7–0.85 and widths0.28–0.38. Native landing ticks stay finer than support widths; single/double support, moving COM and landing impulses govern the complete walk.",
+        "difficultyCap": "Physical sizes and3 bounded route/target families stay capped for unbounded stage indices.24 dispersed generated initializations and8 legal late-stage witnesses per game are model evidence; native two-challenge coverage is recorded separately."
+      },
+      "definingRegression": "The same foot destination can be safe or a fall depending on COM velocity/support; lifting the loaded support cannot silently teleport the body.",
+      "implementation": {
+        "sourceModules": [
+          "engines.mjs",
+          "core.mjs",
+          "contact.mjs"
+        ],
+        "stages": 3
+      }
+    },
+    {
+      "id": "belt-corner",
+      "name": "Belt Corner",
+      "definingDecision": "Use differential conveyor surface velocities to rotate and translate a rigid package through distributed friction contacts; one contact patch can spin the package while another carries it.",
+      "nearestExisting": [
+        {
+          "id": "assembly-belt",
+          "differentiator": "Existing source advances badges between discrete processing stations with die/oven scheduling. Here the body has continuous position, rotation and velocity under several contact forces."
+        },
+        {
+          "id": "corner-carry",
+          "differentiator": "Existing source directly previews/commits rigid translation and rotation. Here the player never sets the package pose; belt forces and friction generate it."
+        },
+        {
+          "id": "two-oars",
+          "differentiator": "Existing separate oar impulses create yaw with recovery/fatigue. Conveyor contact forces depend on each package point’s actual slip against its local moving surface, including frictional torque."
+        }
+      ],
+      "controls": "Upper/lower belt direction or stop, belt speed 0.3/1.2, Advance 0.1 s, Dock. Use Tab+Enter/Space or mobile touch on native controls; sliders support keyboard arrows and touch.",
+      "finite": "Use four distributed slip contacts to settle the rigid package at receiver position<0.35 and angle<0.12, with translation<0.18 and spin<0.16. Full oriented-body obstacle/wall checks run during motion.",
+      "failureChallenge": "Full swept package contact, falling off conveyor, speed/angular-velocity limit or unsafe receiver settle loses. Display package corners and each contact’s force/slip.",
+      "endless": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "design": "Generate varied receiver centers across translation, quarter-turn and obstacle-detour warehouse families. Package pose comes only from distributed belt slip; full oriented-body sweeps and settled receiver pose remain required.",
+        "difficultyCap": "Physical sizes and3 bounded route/target families stay capped for unbounded stage indices.24 dispersed generated initializations and8 legal late-stage witnesses per game are model evidence; native two-challenge coverage is recorded separately."
+      },
+      "definingRegression": "Equal surface speeds translate without the same torque as differential speeds; local slip must include angular velocity, not only body center velocity.",
+      "implementation": {
+        "sourceModules": [
+          "engines.mjs",
+          "core.mjs",
+          "contact.mjs"
+        ],
+        "stages": 3
+      }
+    },
+    {
+      "id": "stance-circle",
+      "name": "Stance Circle",
+      "definingDecision": "Choose foot span and weight shift before pushing an opponent: stance changes both traction and tipping support, while the same push creates a recoil impulse on the player.",
+      "nearestExisting": [
+        {
+          "id": "quiet-foil",
+          "differentiator": "Existing fencing uses range, telegraphed intents, stamina and health touches. This contest resolves actual center-of-mass/recoil/foot support and ends by falling or ring-out, with no health bar."
+        },
+        {
+          "id": "marble-council",
+          "differentiator": "Existing source ejects discrete hex groups through numerical superiority. Here support geometry and friction determine whether an opposed force moves a body or tips it."
+        },
+        {
+          "id": "footfall-foundry",
+          "differentiator": "New neighbor solves solo dynamic stepping between supports. This game adds opposed contact force, reaction impulse and an adversary; stepping is not the scoring route."
+        }
+      ],
+      "controls": "Foot span, brace/release, step/rest, high/low push, Advance 0.2 s. Use Tab+Enter/Space or mobile touch on native controls; sliders support keyboard arrows and touch.",
+      "finite": "Win three independently settled ring matches by slipping or tipping the opponent outside their support/ring. Read the public 0.8s opponent policy; your push also recoils against your own friction and support span.",
+      "failureChallenge": "A body COM crosses its foot support bound or a body crosses the ring edge. Exhausted effort reduces effective traction/push but does not replace the geometric loss rules.",
+      "endless": {
+        "supported": false,
+        "design": "Authored finite campaign currently available.",
+        "reason": "The three authored opponent policies do not yet supply fresh procedurally varied matches; preserve each finite match settlement."
+      },
+      "definingRegression": "An equal push must apply opposite impulses; changing stance can prevent sliding while increasing a tipping risk under high force.",
+      "implementation": {
+        "sourceModules": [
+          "engines.mjs",
+          "core.mjs",
+          "contact.mjs"
+        ],
+        "stages": 3
+      }
+    },
+    {
+      "id": "compliant-socket",
+      "name": "Compliant Socket",
+      "definingDecision": "Move the base of a compliant peg instead of directly moving its tip; contact deflection, yaw and Coulomb friction determine whether downward feed self-centers or jams against both walls.",
+      "nearestExisting": [
+        {
+          "id": "shrink-fit",
+          "differentiator": "Existing source heats rigid rings until clearance admits insertion and then cooling locks them. This socket has contact-dependent forces, elastic tip displacement and two-point wedging at fixed dimensions."
+        },
+        {
+          "id": "elbow-room",
+          "differentiator": "Existing source changes articulated arm joint configurations with swept link clearance. This has no arm-link planning; force/compliance transforms commanded base pose into loaded peg pose."
+        },
+        {
+          "id": "seal-shop",
+          "differentiator": "Existing bolt turns redistribute static gasket compression. Here insertion advances through geometric chamfer contacts and frictional jamming."
+        }
+      ],
+      "controls": "Native command center/depth/yaw sliders, soft/firm mount, Advance 0.1 s, Seat. Use Tab+Enter/Space or mobile touch on native controls; sliders support keyboard arrows and touch.",
+      "finite": "Seat the actual spring-mounted peg at depth 2.25–2.65 and the displayed lateral/yaw pose, with low velocity. Distributed side contacts create centering torque/friction; force, wedge duration and work are bounded.",
+      "failureChallenge": "Contact force/yield, excessive wedging, wrong bottom position or the feed/time allowance loses. Display commanded base pose, actual tip pose, wall contacts and force components.",
+      "endless": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "design": "Generate straight/lightly curved and signed bend0.28–0.33 sockets. Full sampled side geometry, spring command/actual-pose deflection, contact yaw and insertion friction remain active; each peg has finite force/work limits.",
+        "difficultyCap": "Physical sizes and3 bounded route/target families stay capped for unbounded stage indices.24 dispersed generated initializations and8 legal late-stage witnesses per game are model evidence; native two-challenge coverage is recorded separately."
+      },
+      "definingRegression": "Softening compliance changes actual contact displacement; simultaneous opposite-wall contact can jam even when the peg center fits.",
+      "implementation": {
+        "sourceModules": [
+          "engines.mjs",
+          "core.mjs",
+          "contact.mjs"
+        ],
+        "stages": 3
+      }
+    },
+    {
+      "id": "stick-slip-studio",
+      "name": "Stick Slip Studio",
+      "definingDecision": "Advance a spring-driven stylus just enough to break static friction, then reduce drive before kinetic slip carries it past the next registration mark; stored spring force remains after the base stops.",
+      "nearestExisting": [
+        {
+          "id": "quiet-curl",
+          "differentiator": "Existing source launches freely sliding stones under decelerating kinetic friction. This stylus sticks under a static threshold and receives ongoing force from a moving compliant drive."
+        },
+        {
+          "id": "paper-links",
+          "differentiator": "Existing source aims/powers one friction-driven ball. Here the player controls the drive-base motion over time, and elastic preload/history determines each slip."
+        },
+        {
+          "id": "cable-carrier",
+          "differentiator": "Existing pendulum oscillation uses trolley/rope geometry. This is tangential static/kinetic surface friction with a spring preload, not a suspended angle problem."
+        }
+      ],
+      "controls": "Coarse/fine drive-base steps, stiffness 4/6, Advance 0.1 s, Stamp. Use Tab+Enter/Space or mobile touch on native controls; sliders support keyboard arrows and touch.",
+      "finite": "Stamp every ordered registration mark within 0.08 while speed<0.05 and sticking. Drive-base motion stores spring force below static friction; the same preload releases into kinetic slip after the threshold.",
+      "failureChallenge": "Cross a protected boundary, tear through excessive spring force, stamp outside a mark or run out of drive work/time loses. Show spring extension, friction regime and stylus speed.",
+      "endless": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "design": "Generate small independent ordered mark offsets across uniform, rough-patch and reversing registration families. Actual spring preload, static/kinetic transition and prior stamped-state history remain coupled.",
+        "difficultyCap": "Physical sizes and3 bounded route/target families stay capped for unbounded stage indices.24 dispersed generated initializations and8 legal late-stage witnesses per game are model evidence; native two-challenge coverage is recorded separately."
+      },
+      "definingRegression": "A base motion below static threshold leaves stylus still; after release kinetic friction can cause continued motion even when the drive base stops.",
+      "implementation": {
+        "sourceModules": [
+          "engines.mjs",
+          "core.mjs",
+          "handles.mjs"
+        ],
+        "stages": 3
+      }
+    },
+    {
+      "id": "backlash-observatory",
+      "name": "Backlash Observatory",
+      "definingDecision": "Track a moving star by driving through a gearbox with reversal slack and telescope inertia; a reversed motor can take up backlash without moving the view at all.",
+      "nearestExisting": [
+        {
+          "id": "lens-library",
+          "differentiator": "Existing source calibrates a hidden blur kernel and reconstructs pixels. This is public mechanical drive/angle state and time-varying target tracking, not hidden optical inference."
+        },
+        {
+          "id": "crease-keeper",
+          "differentiator": "Existing source prepositions once and commits a bounded dive to one shot. Telescope control reverses repeatedly, with path-dependent dead travel and low relative angular-speed exposure."
+        }
+      ],
+      "controls": "Five signed motor torques, Advance 0.1 s, Commit four-beat exposure. Use Tab+Enter/Space or mobile touch on native controls; sliders support keyboard arrows and touch.",
+      "finite": "Complete four consecutive exposure beats inside the public observation window, with angle error≤0.08 and relative rate≤0.075. Take up backlash without exceeding contact/travel limits.",
+      "failureChallenge": "Target leaves the view, motor torque/velocity limit or blurred/off-target exposure loses. Display motor angle, loaded flank, telescope angle/rate and star angle/rate.",
+      "endless": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "design": "Generate gear slack0.08–0.16, star offsets and oscillation phases in bounded drift/reversal families. A fresh scheduled four-beat exposure must still satisfy actual angular/rate errors through drive hysteresis and both inertial rotors.",
+        "difficultyCap": "Physical sizes and3 bounded route/target families stay capped for unbounded stage indices.24 dispersed generated initializations and8 legal late-stage witnesses per game are model evidence; native two-challenge coverage is recorded separately."
+      },
+      "definingRegression": "Reversing motor direction must traverse a dead zone before output angle changes; matching angle with excessive relative rate cannot certify an exposure.",
+      "implementation": {
+        "sourceModules": [
+          "engines.mjs",
+          "core.mjs",
+          "orbits.mjs"
+        ],
+        "stages": 3
+      }
+    },
+    {
+      "id": "surge-passage",
+      "name": "Surge Passage",
+      "definingDecision": "Close and open a downstream valve while pressure waves propagate along a pipe and reflect; controlling mean delivery alone cannot prevent a delayed upstream burst.",
+      "nearestExisting": [
+        {
+          "id": "pressure-gallery",
+          "differentiator": "Existing source selects incompressible piston branches and spends pump units. Here distributed pressure/flow characteristics travel through segments and reflect at boundary impedance."
+        },
+        {
+          "id": "reservoir",
+          "differentiator": "Existing source chooses daily releases from a storage forecast. This has signed traveling wave state, finite propagation delay and local instantaneous pressure limits."
+        },
+        {
+          "id": "resonant-switch",
+          "differentiator": "New neighbor switches a lumped LC energy phase. Surge Passage controls a spatial pipe with delay/reflection and net delivered water, rather than charging capacitors."
+        }
+      ],
+      "controls": "Pump pressure, valve opening, Advance one-cell propagation, Isolate/verify. Use Tab+Enter/Space or mobile touch on native controls; sliders support keyboard arrows and touch.",
+      "finite": "Deliver target water±0.12, close the outlet and survive two full wave traversals before isolation completes. Every pipe cell must stay pressure 0.18–1.18; traveling/reflected characteristics can burst or cavitate later.",
+      "failureChallenge": "Local pressure burst, negative-pressure cavitation, receiver overflow or delivery/time miss loses. Show segment pressure/flow and directional wave fronts.",
+      "endless": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "design": "Generate bounded5/7/9-cell lines and delivered-volume targets2.7–3.7; the longest line contains a real impedance junction. Every local pressure remains constrained, and isolated lines verify two complete delayed reflection traversals.",
+        "difficultyCap": "Physical sizes and3 bounded route/target families stay capped for unbounded stage indices.24 dispersed generated initializations and8 legal late-stage witnesses per game are model evidence; native two-challenge coverage is recorded separately."
+      },
+      "definingRegression": "A closure must launch a reflected pressure front with a delay to the upstream sensor; checking only one mean pressure cannot pass the rule test.",
+      "implementation": {
+        "sourceModules": [
+          "engines.mjs",
+          "core.mjs",
+          "fluids.mjs"
+        ],
+        "stages": 3
+      }
+    },
+    {
+      "id": "osmotic-port",
+      "name": "Osmotic Port",
+      "definingDecision": "Route water through semipermeable membranes while salt remains in its own chamber; every transfer changes concentration, osmotic driving pressure and hydrostatic head for later transfers.",
+      "nearestExisting": [
+        {
+          "id": "measured-pour",
+          "differentiator": "Existing source transfers jug contents until capacity/empty stops. These connected chambers transfer only solvent, and concentration-dependent flow approaches a changing equilibrium."
+        },
+        {
+          "id": "ratio-mixer",
+          "differentiator": "Existing source plans integer ratios/capacity. Here salt is conserved locally across selective membranes while water movement changes pressure nonlinearly."
+        },
+        {
+          "id": "pressure-gallery",
+          "differentiator": "Existing pistons move fixed incompressible units under chosen pressure. Osmotic flow direction can reverse as concentrations/head change, with no piston or forced per-unit stroke."
+        }
+      ],
+      "controls": "Three counterpressure sliders, individual membrane toggles, Advance 0.5 s, Seal. Use Tab+Enter/Space or mobile touch on native controls; sliders support keyboard arrows and touch.",
+      "finite": "Seal all three chamber water targets±0.09 with membranes closed. Only solvent crosses; local salt mass stays fixed, concentration/head update the flow direction, pressure difference≤6 and pump work≤12.",
+      "failureChallenge": "Chamber overflow/dry-out, membrane pressure rupture, premature wrong-volume seal or depleted pump/time allowance loses. Display water amount, fixed salt, concentration, head and membrane flow.",
+      "endless": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "design": "Generate total-water-conserving target perturbations across forward-transfer, salty-chamber reverse-transfer and unequal chamber targets. Local salt is fixed; solvent concentration/head change pressure and later membrane direction.",
+        "difficultyCap": "Physical sizes and3 bounded route/target families stay capped for unbounded stage indices.24 dispersed generated initializations and8 legal late-stage witnesses per game are model evidence; native two-challenge coverage is recorded separately."
+      },
+      "definingRegression": "Salt must never cross a semipermeable edge; moving water changes both concentrations and can reverse subsequent flow direction.",
+      "implementation": {
+        "sourceModules": [
+          "engines.mjs",
+          "core.mjs",
+          "fluids.mjs"
+        ],
+        "stages": 3
+      }
+    },
+    {
+      "id": "rocking-parcel",
+      "name": "Rocking Parcel",
+      "definingDecision": "Apply a push at a selected contact height to tip an asymmetric crate over a supporting corner, then catch its landing without excessive angular impact; its center of mass determines the tipping threshold.",
+      "nearestExisting": [
+        {
+          "id": "corner-carry",
+          "differentiator": "Existing rigid load directly translates/rotates around chosen handles with preview. This body rotates under gravity and torque about its current floor-contact corner, switching pivot on landing."
+        },
+        {
+          "id": "balance-mobile",
+          "differentiator": "Existing source places weights to satisfy static torque. Here an offset fixed mass affects dynamic tipping, angular velocity and successive contacts."
+        },
+        {
+          "id": "domino-relay",
+          "differentiator": "Existing source arranges many hinged rods to transmit knockdown. This player controls one repeatedly rocking body and must arrest, place and orient it safely."
+        }
+      ],
+      "controls": "Low/high contact, nine signed push forces, Advance 0.1 s, Settle. Use Tab+Enter/Space or mobile touch on native controls; sliders support keyboard arrows and touch.",
+      "finite": "Settle the marked crate face at its receiver after one/two quarter-turns. Choose push height/force, overcome the actual COM torque barrier and counterpush to keep corner impact speed≤0.8. Each landing transforms dimensions, COM and pivot.",
+      "failureChallenge": "Fragile angular landing impact, leaving the floor/receiver span, wrong committed face or exhausted push allowance loses. Display pivot, COM projection and angular energy.",
+      "endless": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "design": "Generate COM offsets0.25–0.65 across one/two-quarter-turn floor placements. Each landing transforms dimensions and COM, with actual gravity torque, push height and finite fragile angular impact/work constraints.",
+        "difficultyCap": "Physical sizes and3 bounded route/target families stay capped for unbounded stage indices.24 dispersed generated initializations and8 legal late-stage witnesses per game are model evidence; native two-challenge coverage is recorded separately."
+      },
+      "definingRegression": "A low push may slide/stop without crossing the gravitational tipping threshold; equal angular impulse with different COM gives different recovery.",
+      "implementation": {
+        "sourceModules": [
+          "engines.mjs",
+          "core.mjs",
+          "handles.mjs"
+        ],
+        "stages": 3
+      }
+    },
+    {
+      "id": "loop-runner",
+      "name": "Loop Runner",
+      "definingDecision": "Carry a cart around a vertical track while normal force depends on speed AND curvature; braking avoids excessive loads but can remove the contact needed at the top of a loop.",
+      "nearestExisting": [
+        {
+          "id": "vector-rally",
+          "differentiator": "Existing source traces accumulated grid velocity around a course. This cart is constrained to a vertical curve and may detach when track normal force becomes negative."
+        },
+        {
+          "id": "clutch-circuit",
+          "differentiator": "Existing longitudinal engine/gear controls obey scalar road caps. This game has no gearbox; gravitational energy, loop contact and load limits define a lower as well as upper speed envelope."
+        },
+        {
+          "id": "vault-runway",
+          "differentiator": "Existing athlete releases an elastic pole into ballistic flight. This cart must retain track contact through loop curvature and complete a controlled terminal stop."
+        }
+      ],
+      "controls": "Native release-speed slider; Coast/weak/strong brake 0.1 s, finite work pulse, Clamp. Use Tab+Enter/Space or mobile touch on native controls; sliders support keyboard arrows and touch.",
+      "finite": "Keep normal contact force 0–25 through actual vertical loops and valleys, then stop in the last coordinate unit below speed 0.6. Finite work pulses and study-specific brake heat constrain the route.",
+      "failureChallenge": "Negative normal contact, excessive rider load, stalled reverse roll, brake heat or unsafe terminal stop loses. Show track tangent, height, curvature and computed normal force.",
+      "endless": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "design": "Generate release heights4.65–4.95, bounded first-loop radii, valley depths and second-loop radii2.1–2.25. All sections retain actual gravity/contact/load constraints and finite work pulses, with20/30 brake-heat capacity by route family.",
+        "difficultyCap": "Physical sizes and3 bounded route/target families stay capped for unbounded stage indices.24 dispersed generated initializations and8 legal late-stage witnesses per game are model evidence; native two-challenge coverage is recorded separately."
+      },
+      "definingRegression": "At the loop top slowing can reduce normal force below zero; on a valley the same speed can exceed the permitted compressive load.",
+      "implementation": {
+        "sourceModules": [
+          "engines.mjs",
+          "core.mjs",
+          "orbits.mjs"
+        ],
+        "stages": 3
+      }
+    },
+    {
+      "id": "refractory-route",
+      "name": "Refractory Route",
+      "definingDecision": "Inject and block excitation pulses in a spatial excitable corridor: a recently fired cell cannot fire again, and colliding fronts annihilate rather than add amplitudes.",
+      "nearestExisting": [
+        {
+          "id": "seed-tomorrow",
+          "differentiator": "Existing source intervenes in binary cellular growth to reach a final pattern. This signal has resting/excited/refractory phases and timed arrival obligations across a branched excitable path."
+        },
+        {
+          "id": "wave-desk",
+          "differentiator": "Existing source sets static harmonic coefficients to match samples. These nonlinear pulse fronts propagate, block through refractory history and collide without linear superposition."
+        },
+        {
+          "id": "reset-post",
+          "differentiator": "Existing source applies a common word to collapse a finite state set. Here spatial fronts and refractory timing determine which receivers fire and when."
+        }
+      ],
+      "controls": "Select injector/gate, Stimulate resting cell, gate toggle, Advance one cell beat, Certify. Use Tab+Enter/Space or mobile touch on native controls; sliders support keyboard arrows and touch.",
+      "finite": "Deliver the ordered receiver windows±1 while keeping the protected receiver silent, then certify no active fronts. Recently fired cells recover for three beats; simultaneous opposing fronts annihilate and shortcut loops alter arrival histories.",
+      "failureChallenge": "Forbidden receiver firing, repeated arrival inside its recovery period, intervention/time budget or an uncontrolled sustained circuit loses. Cell phases and recent receiver times are visible.",
+      "endless": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "design": "Generate ordered arrival-window delays0–4, second-pulse spacing12–16 and shortcut endpoints among bounded14-cell networks. Rest/excited/refractory history, collision annihilation and protected receiver constraints remain actual spatial signal rules.",
+        "difficultyCap": "Physical sizes and3 bounded route/target families stay capped for unbounded stage indices.24 dispersed generated initializations and8 legal late-stage witnesses per game are model evidence; native two-challenge coverage is recorded separately."
+      },
+      "definingRegression": "An excited neighbor cannot fire a refractory cell; opposing fronts must annihilate, and receiver acceptance depends on actual arrival history.",
+      "implementation": {
+        "sourceModules": [
+          "engines.mjs",
+          "core.mjs",
+          "transport.mjs"
+        ],
+        "stages": 3
+      }
+    },
+    {
+      "id": "air-sieve",
+      "name": "Air Sieve",
+      "definingDecision": "Choose counterflow air speed and collection timing so particles with different mass/drag settle into separate hoppers; accelerating the air changes their velocities gradually rather than teleporting classifications.",
+      "nearestExisting": [
+        {
+          "id": "common-meadow",
+          "differentiator": "Existing source herds cohesive animals using separation and repulsion. These independent particles follow drag/gravity with different terminal velocities and cannot be individually commanded."
+        },
+        {
+          "id": "sand-table",
+          "differentiator": "Existing source drops grains that avalanche to support heights. Here suspended particles evolve continuously through counterflow and are collected by velocity-dependent sorting."
+        },
+        {
+          "id": "assembly-belt",
+          "differentiator": "Existing badges travel deterministic station queues. Particle residence time and drag inertia determine whether a hopper gate receives the right class."
+        }
+      ],
+      "controls": "Native upward-air slider, matching hopper/closed, Advance 0.2 s, Finish. Use Tab+Enter/Space or mobile touch on native controls; sliders support keyboard arrows and touch.",
+      "finite": "Collect every particle from every feed burst in its matching hopper without contamination. Actual mass/relative-slip drag/gravity govern inertial settling; changing air cannot teleport a class. Avoid top/bottom escapes and finite airflow energy.",
+      "failureChallenge": "Wrong-class hopper contamination, particles escaping the top/bottom, excessive rejects or airflow energy/time budget loses. Show particle classes/positions/velocities, air speed and hopper counts.",
+      "endless": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "design": "Generate independent feed heights and second-burst phases across wide/closer drag-class batches. Particle mass, air slip, gravity and velocity history govern real arrival ordering; no per-particle direct placement or class teleportation.",
+        "difficultyCap": "Physical sizes and3 bounded route/target families stay capped for unbounded stage indices.24 dispersed generated initializations and8 legal late-stage witnesses per game are model evidence; native two-challenge coverage is recorded separately."
+      },
+      "definingRegression": "Changing air speed affects acceleration through relative slip; heavier/lower-drag particles retain velocity and cannot be sorted by instantly assigning altitude.",
+      "implementation": {
+        "sourceModules": [
+          "engines.mjs",
+          "core.mjs",
+          "transport.mjs"
+        ],
+        "stages": 3
+      }
+    },
+    {
+      "id": "meniscus-maze",
+      "name": "Meniscus Maze",
+      "definingDecision": "Prime wetting channels so capillary pressure overcomes height and entry barriers, then isolate them before a receding meniscus drains an already supplied branch; contact-angle history changes later flow.",
+      "nearestExisting": [
+        {
+          "id": "wet-paper",
+          "differentiator": "Existing wet fibers diffuse pigment and dry/fix color. This has explicit advancing liquid fronts, capillary rise thresholds and different advancing/receding entry pressures."
+        },
+        {
+          "id": "pressure-gallery",
+          "differentiator": "Existing source distributes pump strokes through valves to pistons. Meniscus pressure depends on pore width, height and wetting history, and channels can stall unfilled despite connection."
+        },
+        {
+          "id": "osmotic-port",
+          "differentiator": "New neighbor flows water through salt-selective concentration gradients. This has no salt/semipermeability: interface curvature and priming barriers determine connectivity and hysteresis."
+        }
+      ],
+      "controls": "Select channel, gate, base pressure, finite Prime pulse, competing siphon, Advance 0.5 s, Seal. Use Tab+Enter/Space or mobile touch on native controls; sliders support keyboard arrows and touch.",
+      "finite": "Fill and isolate every cup within 0.08 with full channel fronts and the competing siphon closed. Radius determines capillary rise and conductance; dry entry barriers and advancing/receding thresholds depend on wetting history.",
+      "failureChallenge": "Overflow, air break/drained target, excessive priming pressure or depleted source/operations loses. Show liquid-front positions, entry thresholds and wet/receding branch states.",
+      "endless": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "design": "Generate bounded pore radii and cup bands0.55–0.73 across parallel lift/entry-barrier/siphon networks. Advancing/receding capillary pressures, priming history, finite source and isolation determine retained delivery.",
+        "difficultyCap": "Physical sizes and3 bounded route/target families stay capped for unbounded stage indices.24 dispersed generated initializations and8 legal late-stage witnesses per game are model evidence; native two-challenge coverage is recorded separately."
+      },
+      "definingRegression": "A narrower wetting pore can rise higher despite lower flow conductance; advancing and receding thresholds must differ after priming.",
+      "implementation": {
+        "sourceModules": [
+          "engines.mjs",
+          "core.mjs",
+          "fluids.mjs"
+        ],
+        "stages": 3
+      }
+    },
+    {
+      "id": "soft-sluice",
+      "name": "Soft Sluice",
+      "definingDecision": "Control flow pressure and temporary squeezing of one viscoelastic capsule: deformation preserves its volume, stress relaxes over time, and releasing a squeeze before a constriction clears can trap the expanding body.",
+      "nearestExisting": [
+        {
+          "id": "corner-carry",
+          "differentiator": "Existing body is rigid and freely previewed/rotated. This capsule changes aspect ratio through compliant stress and pressure-driven motion; its full time-varying envelope is checked."
+        },
+        {
+          "id": "many-as-one",
+          "differentiator": "Existing source splits discrete conserved mass cells to pass capacity gates. This body never splits/merges; volume-preserving continuous deformation and stress history govern clearance."
+        },
+        {
+          "id": "spring-form",
+          "differentiator": "Existing irreversible strip bends subtract a static springback allowance. This body relaxes dynamically under load, and the history of squeeze/release affects later passage."
+        }
+      ],
+      "controls": "Seven signed sleeve forces; flow force 0.3/0.8, four flow directions/stop, Advance 0.2 s, Seal relaxed capsule. Native buttons use keyboard Enter/Space or touchscreen taps.",
+      "finite": "Transport one unsplit capsule through alternating clearances and seal relaxed at the receiver. Reducing one axis lengthens the other under constant volume; stress memory changes later deformation, and the full ellipse is checked against every wall at each substep.",
+      "failureChallenge": "Swept capsule-wall interference, stress rupture, pocket overextension or pressure/work/time allowance loses. Display volume, axes, strain, stress and full occupied envelope.",
+      "endless": {
+        "supported": true,
+        "kind": "challenge-stream",
+        "design": "Generate throat half-clearances0.39–0.425 and relaxation times1.3–1.6 across straight/L/return routes. An unsplit unit-thickness ellipse preserves area, evolves stress memory, clears every wall during the full transport route and relaxes inside its receiver.",
+        "difficultyCap": "Physical sizes and3 bounded route/target families stay capped for unbounded stage indices.24 dispersed generated initializations and8 legal late-stage witnesses per game are model evidence; native two-challenge coverage is recorded separately."
+      },
+      "definingRegression": "Reducing one capsule axis must lengthen another under volume conservation; stress relaxation changes recovery, and release can cause a later clearance failure.",
+      "implementation": {
+        "sourceModules": [
+          "engines.mjs",
+          "core.mjs",
+          "transport.mjs"
+        ],
+        "stages": 3
+      }
+    }
+  ]
+}

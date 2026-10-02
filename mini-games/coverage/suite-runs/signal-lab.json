@@ -3,9 +3,9 @@
   "suite": "signal-lab",
   "passed": true,
   "status": "passed",
-  "startedAt": "2026-10-02T20:15:58.431Z",
+  "startedAt": "2026-10-02T22:10:14.275Z",
   "source": {
-    "sha256": "10d176adf4d746901702d64b60fa18389ecd83937ba73c65de992a9f0ca1e9e3",
+    "sha256": "4ac861874b845a59c3e7ce91d7613b4bf4ef3982b2d10ad8b06ddac956adb977",
     "files": [
       "catalog.css",
       "catalog.js",
@@ -29,6 +29,7 @@
       "tests/fixtures/baseline100.json",
       "tests/fixtures/baseline200.json",
       "tests/fixtures/baseline300.json",
+      "tests/fixtures/baseline400.json",
       "tests/fixtures/parlour-b02-b05-paths.json",
       "tests/fixtures/parlour-b13-guided-paths.json",
       "tests/fixtures/parlour-paths.json",
@@ -87,9 +88,9 @@
   "servedRuntimeBefore": {
     "baseURL": "http://127.0.0.1:8790",
     "passed": true,
-    "sha256": "bc6e5fae660ad814778505762f427aa3f300d5137bbf41915338c286882cdc73",
+    "sha256": "e5bdee6b228364f5275f9dc1faf72905d0d52b40823c2bcadaecfab408a3571a",
     "fileCount": 19,
-    "verifiedAt": "2026-10-02T20:15:58.588Z"
+    "verifiedAt": "2026-10-02T22:10:14.479Z"
   },
   "exitCode": 0,
   "signal": null,
@@ -97,9 +98,9 @@
   "servedRuntime": {
     "baseURL": "http://127.0.0.1:8790",
     "passed": true,
-    "sha256": "bc6e5fae660ad814778505762f427aa3f300d5137bbf41915338c286882cdc73",
+    "sha256": "e5bdee6b228364f5275f9dc1faf72905d0d52b40823c2bcadaecfab408a3571a",
     "fileCount": 19,
-    "verifiedAt": "2026-10-02T20:19:55.997Z"
+    "verifiedAt": "2026-10-02T22:15:33.262Z"
   },
   "completionEvidence": {
     "sha256": "4329900f93c3589afffdf6aedb8faf79b9892e0896b78c9762c1c03015cb3623",
@@ -1267,5 +1268,5 @@
       }
     ]
   },
-  "finishedAt": "2026-10-02T20:19:55.998Z"
+  "finishedAt": "2026-10-02T22:15:33.268Z"
 }

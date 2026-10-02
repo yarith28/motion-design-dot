@@ -1,0 +1,4137 @@
+{
+  "runSeed": 20261002,
+  "scope": "Author source-derived legal plans drive native UI. No writable browser state hooks. Sealed Posterior outcomes used by test-only planning; Recall UI collects rendered pulses before hiding. Tactical Council wins are full placement-plus-rotation from balanced tactical openings.",
+  "records": [
+    {
+      "id": "minor-museum",
+      "runSeed": 20261002,
+      "finite": [
+        [
+          "node:0",
+          "node:3",
+          "contract",
+          "node:1",
+          "node:4",
+          "contract",
+          "check"
+        ],
+        [
+          "node:0",
+          "node:5",
+          "contract",
+          "node:1",
+          "node:4",
+          "contract",
+          "node:2",
+          "node:6",
+          "contract",
+          "check"
+        ],
+        [
+          "delete:3,6",
+          "delete:6,7",
+          "node:0",
+          "node:5",
+          "contract",
+          "node:0",
+          "node:6",
+          "contract",
+          "node:0",
+          "node:8",
+          "contract",
+          "node:3",
+          "node:7",
+          "contract",
+          "check"
+        ]
+      ],
+      "lossStage": 0,
+      "loss": [
+        "delete:0,3",
+        "delete:1,2",
+        "delete:1,3",
+        "delete:1,4",
+        "delete:2,4"
+      ],
+      "optional": [
+        [
+          "node:0",
+          "node:4",
+          "contract",
+          "node:1",
+          "node:3",
+          "contract",
+          "check"
+        ],
+        [
+          "delete:0,2",
+          "delete:3,5",
+          "node:0",
+          "node:5",
+          "contract",
+          "node:0",
+          "node:6",
+          "contract",
+          "node:2",
+          "node:4",
+          "contract",
+          "check"
+        ]
+      ]
+    },
+    {
+      "id": "twin-graph",
+      "runSeed": 20261002,
+      "finite": [
+        [
+          "left:0",
+          "right:3",
+          "left:1",
+          "right:1",
+          "left:2",
+          "right:0",
+          "left:3",
+          "right:4",
+          "left:4",
+          "right:2",
+          "check"
+        ],
+        [
+          "left:0",
+          "right:0",
+          "left:1",
+          "right:5",
+          "left:2",
+          "right:2",
+          "left:3",
+          "right:1",
+          "left:4",
+          "right:4",
+          "left:5",
+          "right:3",
+          "check"
+        ],
+        [
+          "left:0",
+          "right:3",
+          "left:1",
+          "right:1",
+          "left:2",
+          "right:5",
+          "left:3",
+          "right:4",
+          "left:4",
+          "right:2",
+          "left:5",
+          "right:6",
+          "left:6",
+          "right:0",
+          "check"
+        ]
+      ],
+      "lossStage": 0,
+      "loss": [
+        "check",
+        "check",
+        "check"
+      ],
+      "optional": [
+        [
+          "left:0",
+          "right:5",
+          "left:1",
+          "right:4",
+          "left:2",
+          "right:1",
+          "left:3",
+          "right:0",
+          "left:4",
+          "right:3",
+          "left:5",
+          "right:2",
+          "check"
+        ],
+        [
+          "left:0",
+          "right:1",
+          "left:1",
+          "right:0",
+          "left:2",
+          "right:6",
+          "left:3",
+          "right:4",
+          "left:4",
+          "right:2",
+          "left:5",
+          "right:5",
+          "left:6",
+          "right:3",
+          "check"
+        ]
+      ]
+    },
+    {
+      "id": "interval-museum",
+      "runSeed": 20261002,
+      "finite": [
+        [
+          "select:0",
+          "select:1",
+          "endpoint:0:-1",
+          "endpoint:0:-1",
+          "endpoint:1:-1",
+          "select:2",
+          "endpoint:0:-1",
+          "endpoint:0:-1",
+          "endpoint:1:-1",
+          "endpoint:1:-1",
+          "select:3",
+          "endpoint:0:-1",
+          "endpoint:0:-1",
+          "endpoint:0:-1",
+          "endpoint:0:-1",
+          "endpoint:0:-1",
+          "endpoint:0:-1",
+          "endpoint:1:-1",
+          "endpoint:1:-1",
+          "endpoint:1:-1",
+          "endpoint:1:-1",
+          "endpoint:1:-1",
+          "check"
+        ],
+        [
+          "select:0",
+          "endpoint:1:1",
+          "select:1",
+          "endpoint:0:-1",
+          "endpoint:0:-1",
+          "endpoint:1:-1",
+          "select:2",
+          "endpoint:0:-1",
+          "endpoint:0:-1",
+          "endpoint:0:-1",
+          "endpoint:0:-1",
+          "endpoint:1:-1",
+          "endpoint:1:-1",
+          "endpoint:1:-1",
+          "endpoint:1:-1",
+          "select:3",
+          "endpoint:0:-1",
+          "endpoint:0:-1",
+          "endpoint:0:-1",
+          "endpoint:0:-1",
+          "endpoint:0:-1",
+          "endpoint:0:-1",
+          "endpoint:1:-1",
+          "endpoint:1:-1",
+          "endpoint:1:-1",
+          "endpoint:1:-1",
+          "endpoint:1:-1",
+          "select:4",
+          "endpoint:0:-1",
+          "endpoint:0:-1",
+          "endpoint:0:-1",
+          "endpoint:0:-1",
+          "endpoint:0:-1",
+          "endpoint:0:-1",
+          "endpoint:1:-1",
+          "endpoint:1:-1",
+          "endpoint:1:-1",
+          "endpoint:1:-1",
+          "endpoint:1:-1",
+          "endpoint:1:-1",
+          "check"
+        ],
+        [
+          "select:0",
+          "select:1",
+          "select:2",
+          "select:3",
+          "endpoint:0:-1",
+          "endpoint:0:-1",
+          "endpoint:0:-1",
+          "endpoint:0:-1",
+          "endpoint:0:-1",
+          "endpoint:0:-1",
+          "endpoint:1:-1",
+          "endpoint:1:-1",
+          "endpoint:1:-1",
+          "endpoint:1:-1",
+          "endpoint:1:-1",
+          "select:4",
+          "endpoint:0:-1",
+          "endpoint:0:-1",
+          "endpoint:0:-1",
+          "endpoint:0:-1",
+          "endpoint:0:-1",
+          "endpoint:0:-1",
+          "endpoint:0:-1",
+          "endpoint:0:-1",
+          "endpoint:1:-1",
+          "endpoint:1:-1",
+          "endpoint:1:-1",
+          "endpoint:1:-1",
+          "endpoint:1:-1",
+          "endpoint:1:-1",
+          "endpoint:1:-1",
+          "endpoint:1:-1",
+          "select:5",
+          "endpoint:0:-1",
+          "endpoint:0:-1",
+          "endpoint:0:-1",
+          "endpoint:0:-1",
+          "endpoint:0:-1",
+          "endpoint:0:-1",
+          "endpoint:0:-1",
+          "endpoint:0:-1",
+          "endpoint:1:-1",
+          "endpoint:1:-1",
+          "endpoint:1:-1",
+          "endpoint:1:-1",
+          "endpoint:1:-1",
+          "endpoint:1:-1",
+          "endpoint:1:-1",
+          "check"
+        ]
+      ],
+      "lossStage": 0,
+      "loss": [
+        "check",
+        "check",
+        "check"
+      ],
+      "optional": [
+        [
+          "select:0",
+          "endpoint:0:1",
+          "endpoint:0:1",
+          "endpoint:1:1",
+          "endpoint:1:1",
+          "select:1",
+          "endpoint:0:-1",
+          "endpoint:0:-1",
+          "endpoint:1:-1",
+          "select:2",
+          "endpoint:0:-1",
+          "endpoint:1:-1",
+          "select:3",
+          "endpoint:0:-1",
+          "endpoint:0:-1",
+          "endpoint:1:-1",
+          "endpoint:1:-1",
+          "select:4",
+          "endpoint:0:-1",
+          "endpoint:0:-1",
+          "endpoint:0:-1",
+          "endpoint:0:-1",
+          "endpoint:0:-1",
+          "endpoint:0:-1",
+          "endpoint:0:-1",
+          "endpoint:0:-1",
+          "endpoint:1:-1",
+          "endpoint:1:-1",
+          "endpoint:1:-1",
+          "endpoint:1:-1",
+          "endpoint:1:-1",
+          "endpoint:1:-1",
+          "endpoint:1:-1",
+          "endpoint:1:-1",
+          "check"
+        ],
+        [
+          "select:0",
+          "endpoint:1:1",
+          "select:1",
+          "endpoint:0:-1",
+          "endpoint:0:-1",
+          "endpoint:1:-1",
+          "endpoint:1:-1",
+          "select:2",
+          "endpoint:0:-1",
+          "endpoint:0:-1",
+          "endpoint:0:-1",
+          "endpoint:0:-1",
+          "endpoint:1:-1",
+          "endpoint:1:-1",
+          "endpoint:1:-1",
+          "endpoint:1:-1",
+          "select:3",
+          "endpoint:0:-1",
+          "endpoint:0:-1",
+          "endpoint:0:-1",
+          "endpoint:0:-1",
+          "endpoint:0:-1",
+          "endpoint:0:-1",
+          "endpoint:1:-1",
+          "endpoint:1:-1",
+          "endpoint:1:-1",
+          "endpoint:1:-1",
+          "endpoint:1:-1",
+          "endpoint:1:-1",
+          "select:4",
+          "endpoint:0:-1",
+          "endpoint:0:-1",
+          "endpoint:0:-1",
+          "endpoint:0:-1",
+          "endpoint:0:-1",
+          "endpoint:0:-1",
+          "endpoint:1:-1",
+          "endpoint:1:-1",
+          "endpoint:1:-1",
+          "endpoint:1:-1",
+          "endpoint:1:-1",
+          "endpoint:1:-1",
+          "select:5",
+          "endpoint:0:-1",
+          "endpoint:0:-1",
+          "endpoint:0:-1",
+          "endpoint:0:-1",
+          "endpoint:0:-1",
+          "endpoint:0:-1",
+          "endpoint:0:-1",
+          "endpoint:0:-1",
+          "endpoint:0:-1",
+          "endpoint:0:-1",
+          "endpoint:1:-1",
+          "endpoint:1:-1",
+          "endpoint:1:-1",
+          "endpoint:1:-1",
+          "endpoint:1:-1",
+          "endpoint:1:-1",
+          "endpoint:1:-1",
+          "endpoint:1:-1",
+          "endpoint:1:-1",
+          "check"
+        ]
+      ]
+    },
+    {
+      "id": "knowledge-circle",
+      "runSeed": 20261002,
+      "finite": [
+        [
+          "world:0",
+          "world:1",
+          "world:3",
+          "world:6",
+          "world:7",
+          "apply"
+        ],
+        [
+          "world:0",
+          "world:1",
+          "world:2",
+          "world:3",
+          "world:4",
+          "world:5",
+          "world:6",
+          "world:7",
+          "world:8",
+          "apply",
+          "world:2",
+          "apply"
+        ],
+        [
+          "world:0",
+          "world:1",
+          "world:2",
+          "world:3",
+          "world:5",
+          "world:6",
+          "world:7",
+          "world:8",
+          "world:9",
+          "world:10",
+          "apply",
+          "world:0",
+          "world:1",
+          "world:2",
+          "world:3",
+          "world:5",
+          "world:6",
+          "world:7",
+          "world:8",
+          "world:9",
+          "apply",
+          "world:9",
+          "apply"
+        ]
+      ],
+      "lossStage": 0,
+      "loss": [
+        "apply",
+        "apply",
+        "apply"
+      ],
+      "optional": [
+        [
+          "world:0",
+          "world:1",
+          "world:3",
+          "world:6",
+          "world:7",
+          "apply"
+        ],
+        [
+          "world:0",
+          "world:1",
+          "world:2",
+          "world:3",
+          "world:4",
+          "world:5",
+          "world:6",
+          "world:7",
+          "world:8",
+          "apply",
+          "world:2",
+          "apply"
+        ]
+      ]
+    },
+    {
+      "id": "modal-witness",
+      "runSeed": 20261002,
+      "finite": [
+        [
+          "from:0",
+          "to:1",
+          "arrow",
+          "from:0",
+          "to:2",
+          "arrow",
+          "value:1:P",
+          "check"
+        ],
+        [
+          "from:0",
+          "to:1",
+          "arrow",
+          "from:0",
+          "to:2",
+          "arrow",
+          "value:1:P",
+          "value:2:Q",
+          "check"
+        ],
+        [
+          "from:0",
+          "to:1",
+          "arrow",
+          "from:0",
+          "to:2",
+          "arrow",
+          "from:1",
+          "to:2",
+          "arrow",
+          "from:1",
+          "to:0",
+          "arrow",
+          "from:2",
+          "to:1",
+          "arrow",
+          "from:2",
+          "to:0",
+          "arrow",
+          "value:1:P",
+          "value:1:Q",
+          "value:2:P",
+          "check"
+        ]
+      ],
+      "lossStage": 0,
+      "loss": [
+        "check",
+        "check",
+        "check"
+      ],
+      "optional": []
+    },
+    {
+      "id": "polygon-passport",
+      "runSeed": 20261002,
+      "finite": [
+        [
+          "side:0",
+          "side:2",
+          "pair",
+          "side:1",
+          "side:3",
+          "pair",
+          "check"
+        ],
+        [
+          "side:0",
+          "side:1",
+          "orientation",
+          "pair",
+          "side:2",
+          "side:3",
+          "pair",
+          "check"
+        ],
+        [
+          "side:0",
+          "side:2",
+          "pair",
+          "side:1",
+          "side:3",
+          "pair",
+          "side:4",
+          "side:6",
+          "pair",
+          "side:5",
+          "side:7",
+          "pair",
+          "check"
+        ]
+      ],
+      "lossStage": 0,
+      "loss": [
+        "check",
+        "check",
+        "check"
+      ],
+      "optional": []
+    },
+    {
+      "id": "hairpin-studio",
+      "runSeed": 20261002,
+      "finite": [
+        [
+          "site:0",
+          "site:5",
+          "bond",
+          "site:2",
+          "site:4",
+          "bond",
+          "check"
+        ],
+        [
+          "site:0",
+          "site:9",
+          "bond",
+          "site:1",
+          "site:8",
+          "bond",
+          "site:2",
+          "site:7",
+          "bond",
+          "check"
+        ],
+        [
+          "site:0",
+          "site:11",
+          "bond",
+          "site:1",
+          "site:10",
+          "bond",
+          "site:2",
+          "site:9",
+          "bond",
+          "site:3",
+          "site:8",
+          "bond",
+          "check"
+        ]
+      ],
+      "lossStage": 0,
+      "loss": [
+        "check",
+        "check",
+        "check"
+      ],
+      "optional": [
+        [
+          "site:0",
+          "site:11",
+          "bond",
+          "site:1",
+          "site:10",
+          "bond",
+          "site:2",
+          "site:9",
+          "bond",
+          "site:3",
+          "site:8",
+          "bond",
+          "site:4",
+          "site:7",
+          "bond",
+          "check"
+        ],
+        [
+          "site:0",
+          "site:13",
+          "bond",
+          "site:1",
+          "site:12",
+          "bond",
+          "site:2",
+          "site:11",
+          "bond",
+          "site:3",
+          "site:10",
+          "bond",
+          "site:4",
+          "site:8",
+          "bond",
+          "check"
+        ]
+      ]
+    },
+    {
+      "id": "letter-carries",
+      "runSeed": 20261002,
+      "finite": [
+        [
+          "letter:A",
+          "digit:2",
+          "letter:D",
+          "digit:1",
+          "letter:F",
+          "digit:4",
+          "letter:G",
+          "digit:3",
+          "letter:I",
+          "digit:7",
+          "check"
+        ],
+        [
+          "letter:B",
+          "digit:0",
+          "letter:C",
+          "digit:7",
+          "letter:H",
+          "digit:1",
+          "letter:I",
+          "digit:3",
+          "letter:J",
+          "digit:2",
+          "check"
+        ],
+        [
+          "letter:A",
+          "digit:2",
+          "letter:B",
+          "digit:9",
+          "letter:C",
+          "digit:6",
+          "letter:D",
+          "digit:1",
+          "letter:F",
+          "digit:3",
+          "letter:G",
+          "digit:0",
+          "letter:J",
+          "digit:5",
+          "check"
+        ]
+      ],
+      "lossStage": 0,
+      "loss": [
+        "letter:A",
+        "digit:2",
+        "letter:D",
+        "digit:1",
+        "letter:F",
+        "digit:4",
+        "letter:G",
+        "digit:3",
+        "letter:I",
+        "digit:7",
+        "letter:G",
+        "digit:0",
+        "check",
+        "check",
+        "check"
+      ],
+      "optional": [
+        [
+          "letter:A",
+          "digit:2",
+          "letter:D",
+          "digit:1",
+          "letter:F",
+          "digit:4",
+          "letter:G",
+          "digit:3",
+          "letter:I",
+          "digit:7",
+          "check"
+        ],
+        [
+          "letter:B",
+          "digit:0",
+          "letter:C",
+          "digit:7",
+          "letter:H",
+          "digit:1",
+          "letter:I",
+          "digit:3",
+          "letter:J",
+          "digit:2",
+          "check"
+        ]
+      ]
+    },
+    {
+      "id": "fill-in-station",
+      "runSeed": 20261002,
+      "finite": [
+        [
+          "select:2",
+          "eliminate",
+          "select:3",
+          "eliminate",
+          "select:1",
+          "eliminate",
+          "select:0",
+          "eliminate",
+          "select:4",
+          "eliminate"
+        ],
+        [
+          "select:0",
+          "eliminate",
+          "select:1",
+          "eliminate",
+          "select:2",
+          "eliminate",
+          "select:3",
+          "eliminate",
+          "select:4",
+          "eliminate",
+          "select:5",
+          "eliminate"
+        ],
+        [
+          "select:0",
+          "eliminate",
+          "select:3",
+          "eliminate",
+          "select:2",
+          "eliminate",
+          "select:4",
+          "eliminate",
+          "select:1",
+          "eliminate",
+          "select:5",
+          "eliminate",
+          "select:6",
+          "eliminate"
+        ]
+      ],
+      "lossStage": 0,
+      "loss": [
+        "select:0",
+        "eliminate"
+      ],
+      "optional": [
+        [
+          "select:2",
+          "eliminate",
+          "select:3",
+          "eliminate",
+          "select:1",
+          "eliminate",
+          "select:0",
+          "eliminate",
+          "select:4",
+          "eliminate"
+        ],
+        [
+          "select:0",
+          "eliminate",
+          "select:1",
+          "eliminate",
+          "select:2",
+          "eliminate",
+          "select:3",
+          "eliminate",
+          "select:4",
+          "eliminate",
+          "select:5",
+          "eliminate"
+        ]
+      ]
+    },
+    {
+      "id": "alternating-couriers",
+      "runSeed": 20261002,
+      "finite": [
+        [
+          "walk:1",
+          "walk:5",
+          "walk:0",
+          "walk:7",
+          "flip"
+        ],
+        [
+          "walk:2",
+          "walk:5",
+          "walk:1",
+          "walk:6",
+          "walk:4",
+          "walk:7",
+          "flip"
+        ],
+        [
+          "walk:0",
+          "walk:9",
+          "flip",
+          "walk:3",
+          "walk:7",
+          "walk:2",
+          "walk:6",
+          "walk:1",
+          "walk:8",
+          "flip"
+        ]
+      ],
+      "lossStage": 0,
+      "loss": [
+        "walk:1",
+        "cancel",
+        "walk:1",
+        "cancel",
+        "walk:1",
+        "cancel",
+        "walk:1",
+        "cancel",
+        "walk:1",
+        "cancel",
+        "walk:1",
+        "cancel",
+        "walk:1",
+        "cancel",
+        "walk:1",
+        "cancel",
+        "walk:1",
+        "cancel",
+        "walk:1",
+        "cancel",
+        "walk:1",
+        "cancel",
+        "walk:1",
+        "cancel",
+        "walk:1",
+        "cancel",
+        "walk:1",
+        "cancel",
+        "walk:1",
+        "cancel",
+        "walk:1",
+        "cancel",
+        "walk:1",
+        "cancel",
+        "walk:1"
+      ],
+      "optional": [
+        [
+          "walk:1",
+          "walk:5",
+          "walk:0",
+          "walk:7",
+          "flip"
+        ],
+        [
+          "walk:2",
+          "walk:6",
+          "walk:4",
+          "walk:7",
+          "flip"
+        ]
+      ]
+    },
+    {
+      "id": "recursive-rings",
+      "runSeed": 20261002,
+      "finite": [
+        [
+          "ring:0",
+          "ring:2",
+          "ring:0",
+          "ring:1",
+          "ring:0"
+        ],
+        [
+          "ring:1",
+          "ring:0",
+          "ring:3",
+          "ring:0",
+          "ring:1",
+          "ring:0",
+          "ring:2",
+          "ring:0",
+          "ring:1",
+          "ring:0"
+        ],
+        [
+          "ring:0",
+          "ring:2",
+          "ring:0",
+          "ring:1",
+          "ring:0",
+          "ring:4",
+          "ring:0",
+          "ring:1",
+          "ring:0",
+          "ring:2",
+          "ring:0",
+          "ring:1",
+          "ring:0",
+          "ring:3",
+          "ring:0",
+          "ring:1",
+          "ring:0",
+          "ring:2",
+          "ring:0",
+          "ring:1",
+          "ring:0"
+        ]
+      ],
+      "lossStage": 0,
+      "loss": [
+        "ring:0",
+        "ring:0",
+        "ring:0",
+        "ring:0",
+        "ring:0",
+        "ring:0",
+        "ring:0",
+        "ring:0"
+      ],
+      "optional": []
+    },
+    {
+      "id": "ordered-echo",
+      "runSeed": 20261002,
+      "finite": [
+        [
+          "next-pulse",
+          "next-pulse",
+          "next-pulse",
+          "next-pulse",
+          "symbol:1",
+          "symbol:2",
+          "symbol:1",
+          "symbol:2"
+        ],
+        [
+          "next-pulse",
+          "next-pulse",
+          "next-pulse",
+          "next-pulse",
+          "next-pulse",
+          "next-pulse",
+          "symbol:2",
+          "symbol:4",
+          "symbol:2",
+          "symbol:3",
+          "symbol:3",
+          "symbol:0"
+        ],
+        [
+          "next-pulse",
+          "next-pulse",
+          "next-pulse",
+          "next-pulse",
+          "next-pulse",
+          "next-pulse",
+          "next-pulse",
+          "next-pulse",
+          "symbol:0",
+          "symbol:3",
+          "symbol:0",
+          "symbol:4",
+          "symbol:5",
+          "symbol:3",
+          "symbol:2",
+          "symbol:5"
+        ]
+      ],
+      "lossStage": 0,
+      "loss": [
+        "next-pulse",
+        "next-pulse",
+        "next-pulse",
+        "next-pulse",
+        "symbol:2"
+      ],
+      "optional": [
+        [
+          "next-pulse",
+          "next-pulse",
+          "next-pulse",
+          "next-pulse",
+          "symbol:1",
+          "symbol:2",
+          "symbol:1",
+          "symbol:2"
+        ],
+        [
+          "next-pulse",
+          "next-pulse",
+          "next-pulse",
+          "next-pulse",
+          "next-pulse",
+          "next-pulse",
+          "symbol:2",
+          "symbol:4",
+          "symbol:2",
+          "symbol:3",
+          "symbol:3",
+          "symbol:0"
+        ]
+      ]
+    },
+    {
+      "id": "heritage-house",
+      "runSeed": 20261002,
+      "finite": [
+        [
+          "person:0",
+          "person:0",
+          "person:1",
+          "person:1",
+          "person:2",
+          "check"
+        ],
+        [
+          "person:0",
+          "person:0",
+          "person:1",
+          "person:2",
+          "person:2",
+          "person:4",
+          "person:4",
+          "check"
+        ],
+        [
+          "person:0",
+          "person:0",
+          "person:1",
+          "person:1",
+          "person:2",
+          "person:2",
+          "person:5",
+          "person:5",
+          "person:6",
+          "person:6",
+          "person:7",
+          "check"
+        ]
+      ],
+      "lossStage": 0,
+      "loss": [
+        "person:0",
+        "person:0",
+        "person:1",
+        "person:1",
+        "person:2",
+        "person:0",
+        "person:0",
+        "person:0",
+        "check",
+        "check",
+        "check"
+      ],
+      "optional": [
+        [
+          "person:0",
+          "person:0",
+          "person:1",
+          "person:1",
+          "person:2",
+          "check"
+        ],
+        [
+          "person:0",
+          "person:0",
+          "person:1",
+          "person:1",
+          "person:4",
+          "person:4",
+          "person:5",
+          "check"
+        ]
+      ]
+    },
+    {
+      "id": "posterior-post",
+      "runSeed": 20261002,
+      "finite": [
+        [
+          "probe:2",
+          "probe:1",
+          "respond:1"
+        ],
+        [
+          "probe:2",
+          "respond:0"
+        ],
+        [
+          "probe:1",
+          "probe:0",
+          "respond:0"
+        ]
+      ],
+      "lossStage": 0,
+      "loss": [
+        "respond:0"
+      ],
+      "optional": [
+        [
+          "probe:2",
+          "respond:0"
+        ],
+        [
+          "probe:2",
+          "probe:1",
+          "respond:0"
+        ]
+      ]
+    },
+    {
+      "id": "heap-foundry",
+      "runSeed": 20261002,
+      "finite": [
+        [
+          "slot:1",
+          "swap:4",
+          "slot:0",
+          "swap:2",
+          "extract",
+          "slot:0",
+          "swap:1",
+          "extract",
+          "slot:0",
+          "swap:1",
+          "extract",
+          "extract",
+          "extract"
+        ],
+        [
+          "slot:2",
+          "swap:6",
+          "extract",
+          "slot:0",
+          "swap:1",
+          "extract",
+          "slot:0",
+          "swap:2",
+          "extract",
+          "slot:0",
+          "swap:1",
+          "extract",
+          "slot:0",
+          "swap:1",
+          "extract",
+          "extract",
+          "extract"
+        ],
+        [
+          "slot:3",
+          "swap:7",
+          "slot:1",
+          "swap:4",
+          "slot:0",
+          "swap:1",
+          "slot:1",
+          "swap:4",
+          "extract",
+          "slot:0",
+          "swap:2",
+          "slot:2",
+          "swap:5",
+          "extract",
+          "slot:0",
+          "swap:1",
+          "slot:1",
+          "swap:4",
+          "extract",
+          "slot:0",
+          "swap:1",
+          "slot:1",
+          "swap:3",
+          "extract",
+          "slot:0",
+          "swap:1",
+          "extract",
+          "slot:0",
+          "swap:2",
+          "extract",
+          "slot:0",
+          "swap:1",
+          "extract",
+          "extract",
+          "extract"
+        ]
+      ],
+      "lossStage": 0,
+      "loss": [
+        "extract"
+      ],
+      "optional": [
+        [
+          "slot:2",
+          "swap:6",
+          "slot:1",
+          "swap:3",
+          "slot:0",
+          "swap:2",
+          "slot:2",
+          "swap:6",
+          "extract",
+          "slot:0",
+          "swap:1",
+          "slot:1",
+          "swap:3",
+          "extract",
+          "slot:0",
+          "swap:1",
+          "slot:1",
+          "swap:4",
+          "extract",
+          "slot:0",
+          "swap:1",
+          "slot:1",
+          "swap:3",
+          "extract",
+          "slot:0",
+          "swap:2",
+          "extract",
+          "slot:0",
+          "swap:1",
+          "extract",
+          "extract"
+        ],
+        [
+          "slot:1",
+          "swap:3",
+          "slot:3",
+          "swap:7",
+          "slot:0",
+          "swap:2",
+          "extract",
+          "slot:0",
+          "swap:2",
+          "slot:2",
+          "swap:5",
+          "extract",
+          "slot:0",
+          "swap:1",
+          "slot:1",
+          "swap:4",
+          "extract",
+          "slot:0",
+          "swap:2",
+          "extract",
+          "slot:0",
+          "swap:1",
+          "extract",
+          "slot:0",
+          "swap:1",
+          "extract",
+          "slot:0",
+          "swap:1",
+          "extract",
+          "extract"
+        ]
+      ]
+    },
+    {
+      "id": "diagram-order",
+      "runSeed": 20261002,
+      "finite": [
+        [
+          "up:0",
+          "up:0",
+          "up:1",
+          "check"
+        ],
+        [
+          "up:1",
+          "up:2",
+          "check"
+        ],
+        [
+          "up:4",
+          "up:4",
+          "up:4",
+          "up:4",
+          "up:0",
+          "up:0",
+          "up:0",
+          "check"
+        ]
+      ],
+      "lossStage": 0,
+      "loss": [
+        "check",
+        "check",
+        "check"
+      ],
+      "optional": [
+        [
+          "up:3",
+          "up:3",
+          "up:1",
+          "check"
+        ],
+        [
+          "up:0",
+          "up:0",
+          "up:0",
+          "up:1",
+          "up:1",
+          "up:2",
+          "up:3",
+          "check"
+        ]
+      ]
+    },
+    {
+      "id": "turning-council",
+      "runSeed": 20261002,
+      "finite": [
+        [
+          "place:4",
+          "rotate:0:-1"
+        ],
+        [
+          "place:1",
+          "rotate:1:1"
+        ],
+        [
+          "place:2",
+          "rotate:2:-1"
+        ]
+      ],
+      "lossStage": 2,
+      "loss": [
+        "place:0",
+        "rotate:0:1"
+      ],
+      "optional": [
+        [
+          "place:24",
+          "rotate:0:1"
+        ],
+        [
+          "place:22",
+          "rotate:2:1"
+        ]
+      ]
+    },
+    {
+      "id": "witness-table",
+      "runSeed": 20261002,
+      "finite": [
+        [
+          "branch:0",
+          "choose:2",
+          "branch:1",
+          "choose:1",
+          "branch:2",
+          "choose:1",
+          "check"
+        ],
+        [
+          "branch:0",
+          "choose:0",
+          "check"
+        ],
+        [
+          "branch:0",
+          "choose:0",
+          "later-branch:0",
+          "later:1",
+          "later-branch:1",
+          "later:0",
+          "later-branch:2",
+          "later:0",
+          "branch:1",
+          "choose:0",
+          "later-branch:3",
+          "later:1",
+          "later-branch:4",
+          "later:0",
+          "later-branch:5",
+          "later:0",
+          "branch:2",
+          "choose:0",
+          "later-branch:6",
+          "later:1",
+          "later-branch:7",
+          "later:0",
+          "later-branch:8",
+          "later:0",
+          "check"
+        ]
+      ],
+      "lossStage": 0,
+      "loss": [
+        "check",
+        "check",
+        "check"
+      ],
+      "optional": [
+        [
+          "branch:0",
+          "choose:2",
+          "branch:1",
+          "choose:0",
+          "branch:2",
+          "choose:0",
+          "branch:3",
+          "choose:2",
+          "check"
+        ],
+        [
+          "branch:0",
+          "choose:0",
+          "check"
+        ]
+      ]
+    },
+    {
+      "id": "one-lie-archive",
+      "runSeed": 20261002,
+      "finite": [
+        [
+          "ask:0",
+          "ask:0",
+          "ask:0",
+          "ask:1",
+          "identify:1"
+        ],
+        [
+          "ask:0",
+          "ask:0",
+          "ask:0",
+          "ask:1",
+          "ask:1",
+          "ask:1",
+          "ask:2",
+          "identify:1"
+        ],
+        [
+          "ask:0",
+          "ask:0",
+          "ask:0",
+          "ask:1",
+          "ask:1",
+          "ask:1",
+          "ask:2",
+          "ask:2",
+          "ask:2",
+          "ask:3",
+          "identify:4"
+        ]
+      ],
+      "lossStage": 0,
+      "loss": [
+        "identify:0"
+      ],
+      "optional": [
+        [
+          "ask:0",
+          "ask:0",
+          "ask:0",
+          "ask:1",
+          "ask:1",
+          "ask:1",
+          "ask:2",
+          "ask:2",
+          "ask:2",
+          "ask:3",
+          "identify:0"
+        ],
+        [
+          "ask:0",
+          "ask:0",
+          "ask:0",
+          "ask:1",
+          "ask:1",
+          "ask:1",
+          "ask:2",
+          "ask:2",
+          "ask:2",
+          "ask:3",
+          "ask:3",
+          "ask:3",
+          "ask:4",
+          "identify:6"
+        ]
+      ]
+    },
+    {
+      "id": "invariant-gallery",
+      "runSeed": 20261002,
+      "finite": [
+        [
+          "inequality:0",
+          "coefficient:0:-1",
+          "coefficient:1:1",
+          "coefficient:2:-1",
+          "coefficient:2:-1",
+          "inequality:1",
+          "coefficient:0:1",
+          "coefficient:1:-1",
+          "coefficient:1:-1",
+          "coefficient:2:-1",
+          "coefficient:2:-1",
+          "coefficient:2:-1",
+          "coefficient:2:-1",
+          "check"
+        ],
+        [
+          "inequality:0",
+          "coefficient:0:-1",
+          "coefficient:1:1",
+          "coefficient:2:-1",
+          "coefficient:2:-1",
+          "coefficient:2:-1",
+          "inequality:1",
+          "coefficient:0:1",
+          "coefficient:1:-1",
+          "coefficient:1:-1",
+          "coefficient:2:-1",
+          "coefficient:2:-1",
+          "coefficient:2:-1",
+          "coefficient:2:-1",
+          "check"
+        ],
+        [
+          "inequality:0",
+          "coefficient:0:-1",
+          "coefficient:1:1",
+          "coefficient:2:-1",
+          "coefficient:2:-1",
+          "coefficient:2:-1",
+          "coefficient:2:-1",
+          "coefficient:2:-1",
+          "inequality:1",
+          "coefficient:0:1",
+          "coefficient:1:-1",
+          "coefficient:1:-1",
+          "coefficient:1:-1",
+          "coefficient:2:-1",
+          "coefficient:2:-1",
+          "coefficient:2:-1",
+          "coefficient:2:-1",
+          "coefficient:2:-1",
+          "check"
+        ]
+      ],
+      "lossStage": 0,
+      "loss": [
+        "inequality:0",
+        "coefficient:2:-1",
+        "coefficient:2:-1",
+        "coefficient:2:-1",
+        "inequality:1",
+        "coefficient:2:-1",
+        "coefficient:2:-1",
+        "check",
+        "check",
+        "check"
+      ],
+      "optional": [
+        [
+          "inequality:0",
+          "coefficient:0:-1",
+          "coefficient:1:-1",
+          "coefficient:1:-1",
+          "coefficient:2:-1",
+          "coefficient:2:-1",
+          "coefficient:2:-1",
+          "coefficient:2:-1",
+          "coefficient:2:-1",
+          "coefficient:2:-1",
+          "coefficient:2:-1",
+          "coefficient:2:-1",
+          "coefficient:2:-1",
+          "coefficient:2:-1",
+          "inequality:1",
+          "coefficient:2:-1",
+          "coefficient:2:-1",
+          "check"
+        ],
+        [
+          "inequality:0",
+          "coefficient:0:-1",
+          "coefficient:1:1",
+          "coefficient:2:-1",
+          "coefficient:2:-1",
+          "coefficient:2:-1",
+          "coefficient:2:-1",
+          "coefficient:2:-1",
+          "coefficient:2:-1",
+          "coefficient:2:-1",
+          "inequality:1",
+          "coefficient:0:1",
+          "coefficient:1:-1",
+          "coefficient:1:-1",
+          "coefficient:1:-1",
+          "coefficient:2:-1",
+          "coefficient:2:-1",
+          "coefficient:2:-1",
+          "coefficient:2:-1",
+          "check"
+        ]
+      ]
+    }
+  ],
+  "lateModelEvidence": [
+    {
+      "id": "minor-museum",
+      "runSeed": 0,
+      "stage": 7,
+      "stageSeed": 4055616968,
+      "actions": 15,
+      "initialModelFingerprint": "91930f064890543de6a62465836822ea4e7a41b270efd1aca9cc23c7205ea9f7"
+    },
+    {
+      "id": "minor-museum",
+      "runSeed": 0,
+      "stage": 100,
+      "stageSeed": 1810040317,
+      "actions": 14,
+      "initialModelFingerprint": "86ff03c7e963107d5feef231dd6e20f10c408ac0c141c71619d31a4fc69739e3"
+    },
+    {
+      "id": "minor-museum",
+      "runSeed": 0,
+      "stage": 100000,
+      "stageSeed": 72573785,
+      "actions": 14,
+      "initialModelFingerprint": "cf07a30aae8e68248e4430afea3f18d5cfd5703b79d4898f940f0c36290ed7e2"
+    },
+    {
+      "id": "minor-museum",
+      "runSeed": 1,
+      "stage": 7,
+      "stageSeed": 4055616969,
+      "actions": 14,
+      "initialModelFingerprint": "96cafd243e0d980773376738bbdfcc21230da813b8b822e2645da04b634db68e"
+    },
+    {
+      "id": "minor-museum",
+      "runSeed": 1,
+      "stage": 100,
+      "stageSeed": 1810040318,
+      "actions": 13,
+      "initialModelFingerprint": "5819082b6c3eac7e955069ea24050e21b054fa1d08cc3f2a6f44c517f5d3cc7c"
+    },
+    {
+      "id": "minor-museum",
+      "runSeed": 1,
+      "stage": 100000,
+      "stageSeed": 72573786,
+      "actions": 16,
+      "initialModelFingerprint": "27ce89327e7099f55a409a5331bcc6f73ba79e00dbf7b8c9602fef7d1d0f6233"
+    },
+    {
+      "id": "minor-museum",
+      "runSeed": 20261002,
+      "stage": 7,
+      "stageSeed": 4075877970,
+      "actions": 14,
+      "initialModelFingerprint": "2b12e9d8783b38df3ec11125f9946af90567ff58b06feb3d98b03d7986d542ce"
+    },
+    {
+      "id": "minor-museum",
+      "runSeed": 20261002,
+      "stage": 100,
+      "stageSeed": 1830301319,
+      "actions": 13,
+      "initialModelFingerprint": "9800183f6ce98bdf218199e56a8f6e0d92d362f19397635d81105e7c42221dd4"
+    },
+    {
+      "id": "minor-museum",
+      "runSeed": 20261002,
+      "stage": 100000,
+      "stageSeed": 92834787,
+      "actions": 13,
+      "initialModelFingerprint": "e62578eb46924234ae8150b6dbfdc430ee4fda5a16d1592aeed1d28967c2671a"
+    },
+    {
+      "id": "minor-museum",
+      "runSeed": 4294967295,
+      "stage": 7,
+      "stageSeed": 4055616967,
+      "actions": 15,
+      "initialModelFingerprint": "42ae33fc60172e0bae1c728955b2c54fbbe1286371628773a8036d369805a81f"
+    },
+    {
+      "id": "minor-museum",
+      "runSeed": 4294967295,
+      "stage": 100,
+      "stageSeed": 1810040316,
+      "actions": 14,
+      "initialModelFingerprint": "fd458c73bdcd764a2dc31620067aa2204d5b316f2838429cb6d5f6e939143b9d"
+    },
+    {
+      "id": "minor-museum",
+      "runSeed": 4294967295,
+      "stage": 100000,
+      "stageSeed": 72573784,
+      "actions": 16,
+      "initialModelFingerprint": "f27298366b964db3b5ce72f6806f3265f5af3a7f5b1f4ba37e048789ab87f37e"
+    },
+    {
+      "id": "minor-museum",
+      "runSeed": 937182,
+      "stage": 7,
+      "stageSeed": 4056554150,
+      "actions": 13,
+      "initialModelFingerprint": "1a05a8c9a6a9314b08b64aca24a67c7971dce3d1ec25feb254e03684ae9a88fe"
+    },
+    {
+      "id": "minor-museum",
+      "runSeed": 937182,
+      "stage": 100,
+      "stageSeed": 1810977499,
+      "actions": 15,
+      "initialModelFingerprint": "f548ce24e17a8f4930dfe6aafdf5ded965beff855c00c4f524d48b793fa6057b"
+    },
+    {
+      "id": "minor-museum",
+      "runSeed": 937182,
+      "stage": 100000,
+      "stageSeed": 73510967,
+      "actions": 16,
+      "initialModelFingerprint": "78437079e1d9ee270f7b360684e0a7434f6c59087050a12fe434c58eb03d9eff"
+    },
+    {
+      "id": "minor-museum",
+      "runSeed": 728391,
+      "stage": 7,
+      "stageSeed": 4056345359,
+      "actions": 14,
+      "initialModelFingerprint": "0f56b04786c938f304984517d0461488cca8c2e182abd5230403447c5aadd2c4"
+    },
+    {
+      "id": "minor-museum",
+      "runSeed": 728391,
+      "stage": 100,
+      "stageSeed": 1810768708,
+      "actions": 16,
+      "initialModelFingerprint": "33264c97990086e633be92a67e32ab3a8fbe8c52269dca08b33751679cecbf24"
+    },
+    {
+      "id": "minor-museum",
+      "runSeed": 728391,
+      "stage": 100000,
+      "stageSeed": 73302176,
+      "actions": 14,
+      "initialModelFingerprint": "93b437d9203eaf1a6bb4f59cb975fe66bc249682c02a15f51ce530204b223747"
+    },
+    {
+      "id": "twin-graph",
+      "runSeed": 0,
+      "stage": 7,
+      "stageSeed": 4055616968,
+      "actions": 15,
+      "initialModelFingerprint": "73169f83897ddf8a89352e2f5b977b3ca64897e3abaa435dd75f99a58651e7d8"
+    },
+    {
+      "id": "twin-graph",
+      "runSeed": 0,
+      "stage": 100,
+      "stageSeed": 1810040317,
+      "actions": 15,
+      "initialModelFingerprint": "87e8f544b1f3957d2a63d27a5283c2fb46e53476cb75bcd3cbaa4455d19557ad"
+    },
+    {
+      "id": "twin-graph",
+      "runSeed": 0,
+      "stage": 100000,
+      "stageSeed": 72573785,
+      "actions": 15,
+      "initialModelFingerprint": "c3133a6808dc1a336b7a40a5c9695fa0258da30fbde9a3e4ba28eebc942ae5fc"
+    },
+    {
+      "id": "twin-graph",
+      "runSeed": 1,
+      "stage": 7,
+      "stageSeed": 4055616969,
+      "actions": 15,
+      "initialModelFingerprint": "4f8a0064721f3be1e316259dfde6ca401064f25c5241d6a33416357c699fae64"
+    },
+    {
+      "id": "twin-graph",
+      "runSeed": 1,
+      "stage": 100,
+      "stageSeed": 1810040318,
+      "actions": 15,
+      "initialModelFingerprint": "463393c44027f6eb995a642de56fde637c454af3a38784a80b3778b9dea0acb8"
+    },
+    {
+      "id": "twin-graph",
+      "runSeed": 1,
+      "stage": 100000,
+      "stageSeed": 72573786,
+      "actions": 15,
+      "initialModelFingerprint": "0f1c1673cf05cff87d295a6f0f4b5149c0c95e368270c07c156a0c69bd8c8284"
+    },
+    {
+      "id": "twin-graph",
+      "runSeed": 20261002,
+      "stage": 7,
+      "stageSeed": 4075877970,
+      "actions": 15,
+      "initialModelFingerprint": "870cb28057c54eb23f171349920975f87e95c6115ff7e02b5de3b0080c86e452"
+    },
+    {
+      "id": "twin-graph",
+      "runSeed": 20261002,
+      "stage": 100,
+      "stageSeed": 1830301319,
+      "actions": 15,
+      "initialModelFingerprint": "b4b9e15c2d3fc357329362b1a901884e2bea66a8f917a0f90b95f043615530fd"
+    },
+    {
+      "id": "twin-graph",
+      "runSeed": 20261002,
+      "stage": 100000,
+      "stageSeed": 92834787,
+      "actions": 15,
+      "initialModelFingerprint": "b14da9d77a4b52396d5d879b8945a8655f07cf86cce9f2cdcc84c92d88196c03"
+    },
+    {
+      "id": "twin-graph",
+      "runSeed": 4294967295,
+      "stage": 7,
+      "stageSeed": 4055616967,
+      "actions": 15,
+      "initialModelFingerprint": "cbea47f47b676622ef4d98abcc2bde6f5f50aebee42f04f8f98ce088f4360f6a"
+    },
+    {
+      "id": "twin-graph",
+      "runSeed": 4294967295,
+      "stage": 100,
+      "stageSeed": 1810040316,
+      "actions": 15,
+      "initialModelFingerprint": "de69f5884ea99867975f60ae39be0fa3e5c9138b5f5517cf8ab936e1ec200619"
+    },
+    {
+      "id": "twin-graph",
+      "runSeed": 4294967295,
+      "stage": 100000,
+      "stageSeed": 72573784,
+      "actions": 15,
+      "initialModelFingerprint": "e79dfd56b884821213ff95bf3870e1402372bd26aefe382194b92cdf12bab24e"
+    },
+    {
+      "id": "twin-graph",
+      "runSeed": 937182,
+      "stage": 7,
+      "stageSeed": 4056554150,
+      "actions": 15,
+      "initialModelFingerprint": "7d14cdbd2e03ec86ee3f58f3d0c88f25f12c6935d1980920a1561688bba723c7"
+    },
+    {
+      "id": "twin-graph",
+      "runSeed": 937182,
+      "stage": 100,
+      "stageSeed": 1810977499,
+      "actions": 15,
+      "initialModelFingerprint": "b202eadd2ff570533e71514ae71b11740582c2a278df4f8cb93b46286f676a3a"
+    },
+    {
+      "id": "twin-graph",
+      "runSeed": 937182,
+      "stage": 100000,
+      "stageSeed": 73510967,
+      "actions": 15,
+      "initialModelFingerprint": "7b876705bb9a882bff2eb78cbb3cf6801ae20088189243ceb18770e13ecdc3e1"
+    },
+    {
+      "id": "twin-graph",
+      "runSeed": 728391,
+      "stage": 7,
+      "stageSeed": 4056345359,
+      "actions": 15,
+      "initialModelFingerprint": "a0290f7095cbf08641a167d8b52be227e390e1f618119e47f21ee42090496673"
+    },
+    {
+      "id": "twin-graph",
+      "runSeed": 728391,
+      "stage": 100,
+      "stageSeed": 1810768708,
+      "actions": 15,
+      "initialModelFingerprint": "dc902ff8a40689181941eb527dd4792967e334c8d1247a5f6e8befe803b906c3"
+    },
+    {
+      "id": "twin-graph",
+      "runSeed": 728391,
+      "stage": 100000,
+      "stageSeed": 73302176,
+      "actions": 15,
+      "initialModelFingerprint": "96fe6f6c410a490ab57cbc0ec4e2e004be3085173910d318aaca36e486362c83"
+    },
+    {
+      "id": "interval-museum",
+      "runSeed": 0,
+      "stage": 7,
+      "stageSeed": 4055616968,
+      "actions": 67,
+      "initialModelFingerprint": "12f85b15374ba6768430643c610990bdd4386b10709896db530f86af68bf971d"
+    },
+    {
+      "id": "interval-museum",
+      "runSeed": 0,
+      "stage": 100,
+      "stageSeed": 1810040317,
+      "actions": 49,
+      "initialModelFingerprint": "02efe127096a3c2222612c99461b9cb6ce58d5dc769c5074bee97fa35506dd9c"
+    },
+    {
+      "id": "interval-museum",
+      "runSeed": 0,
+      "stage": 100000,
+      "stageSeed": 72573785,
+      "actions": 30,
+      "initialModelFingerprint": "563529f481e4dacffc4a019f9262596ed22a824d44d0a99040fa0e16fb088493"
+    },
+    {
+      "id": "interval-museum",
+      "runSeed": 1,
+      "stage": 7,
+      "stageSeed": 4055616969,
+      "actions": 61,
+      "initialModelFingerprint": "19213cff12131b5cb9c74904d6035450707cbe9d6e47a637eb69b15363f63c60"
+    },
+    {
+      "id": "interval-museum",
+      "runSeed": 1,
+      "stage": 100,
+      "stageSeed": 1810040318,
+      "actions": 46,
+      "initialModelFingerprint": "84faea113776776cea6d8c1f261dc56c833fdd1b2d9d771cb733879f9aafa2c0"
+    },
+    {
+      "id": "interval-museum",
+      "runSeed": 1,
+      "stage": 100000,
+      "stageSeed": 72573786,
+      "actions": 37,
+      "initialModelFingerprint": "df3540b2fffc9cee5cbb4d14361b3eb89438f8b4ed9ee1d96bd01c487c1e68b4"
+    },
+    {
+      "id": "interval-museum",
+      "runSeed": 20261002,
+      "stage": 7,
+      "stageSeed": 4075877970,
+      "actions": 59,
+      "initialModelFingerprint": "48674b2a31594ba5b2ec090e326b83e0a5f09c93a603e4fca94a0bd24f9f310a"
+    },
+    {
+      "id": "interval-museum",
+      "runSeed": 20261002,
+      "stage": 100,
+      "stageSeed": 1830301319,
+      "actions": 25,
+      "initialModelFingerprint": "5b4583856409a59442e629dbbec06ad402c2c1966677d5b90fdfebc35153f506"
+    },
+    {
+      "id": "interval-museum",
+      "runSeed": 20261002,
+      "stage": 100000,
+      "stageSeed": 92834787,
+      "actions": 42,
+      "initialModelFingerprint": "095b18dbc1ae17eda79eaeade70c9b6014a476998068fde619671efca1185b88"
+    },
+    {
+      "id": "interval-museum",
+      "runSeed": 4294967295,
+      "stage": 7,
+      "stageSeed": 4055616967,
+      "actions": 62,
+      "initialModelFingerprint": "c2326107ac40d4b71cf81e17d316d88bee85e1ba3a1adf0f7800e121d5c06429"
+    },
+    {
+      "id": "interval-museum",
+      "runSeed": 4294967295,
+      "stage": 100,
+      "stageSeed": 1810040316,
+      "actions": 48,
+      "initialModelFingerprint": "b3e11b12a1ccc86554ce3b1d5ea2f38ceaa031ab41adb18ec945cb1c2fcda469"
+    },
+    {
+      "id": "interval-museum",
+      "runSeed": 4294967295,
+      "stage": 100000,
+      "stageSeed": 72573784,
+      "actions": 41,
+      "initialModelFingerprint": "9607860aec9ad5e0d44a72db3410186ce62c89058d574e074af1faa59b5350e6"
+    },
+    {
+      "id": "interval-museum",
+      "runSeed": 937182,
+      "stage": 7,
+      "stageSeed": 4056554150,
+      "actions": 60,
+      "initialModelFingerprint": "755c74a7c915468a2ab30948c5f61d47b6ae3c1ca3a6ca2069c650845a7f3789"
+    },
+    {
+      "id": "interval-museum",
+      "runSeed": 937182,
+      "stage": 100,
+      "stageSeed": 1810977499,
+      "actions": 41,
+      "initialModelFingerprint": "404d4a40afd63a79ecf835d66acb1a2bf1dcc0d620281436af2851ca31bd28a7"
+    },
+    {
+      "id": "interval-museum",
+      "runSeed": 937182,
+      "stage": 100000,
+      "stageSeed": 73510967,
+      "actions": 46,
+      "initialModelFingerprint": "560583f4daf4683afe579fea0d971124d22ec89b314891e9d6022f2caa5e2fc7"
+    },
+    {
+      "id": "interval-museum",
+      "runSeed": 728391,
+      "stage": 7,
+      "stageSeed": 4056345359,
+      "actions": 50,
+      "initialModelFingerprint": "ad97925ed9cf6ace3a0122948f40d9557a902eb016dd60a6b41e907e3b747fc7"
+    },
+    {
+      "id": "interval-museum",
+      "runSeed": 728391,
+      "stage": 100,
+      "stageSeed": 1810768708,
+      "actions": 39,
+      "initialModelFingerprint": "c0335884312ddc10eb73785db2f4d065580218eacbd0e9f69728cb69e6f4824e"
+    },
+    {
+      "id": "interval-museum",
+      "runSeed": 728391,
+      "stage": 100000,
+      "stageSeed": 73302176,
+      "actions": 41,
+      "initialModelFingerprint": "84a840cc98dfb23cdffee7c221c822ed0fb7343ac90e4b4b3640bd5836b031b0"
+    },
+    {
+      "id": "knowledge-circle",
+      "runSeed": 0,
+      "stage": 7,
+      "stageSeed": 4055616968,
+      "actions": 9,
+      "initialModelFingerprint": "d047c9171135139d253e590cc1d9a4d7d884171022310499588bc58fe2728d17"
+    },
+    {
+      "id": "knowledge-circle",
+      "runSeed": 0,
+      "stage": 100,
+      "stageSeed": 1810040317,
+      "actions": 11,
+      "initialModelFingerprint": "6563dc8195235a53630811e83ff925c1107a18e895a2acbd749d2a71966208db"
+    },
+    {
+      "id": "knowledge-circle",
+      "runSeed": 0,
+      "stage": 100000,
+      "stageSeed": 72573785,
+      "actions": 17,
+      "initialModelFingerprint": "364ffbd44dd778820c1b0c02baa62add56d478a4e741b99d7e79e7ba66645e93"
+    },
+    {
+      "id": "knowledge-circle",
+      "runSeed": 1,
+      "stage": 7,
+      "stageSeed": 4055616969,
+      "actions": 16,
+      "initialModelFingerprint": "7860190fe23eda9fe8f6bd096f3532315f73a16cdc4b5b01f6032ec377b3807f"
+    },
+    {
+      "id": "knowledge-circle",
+      "runSeed": 1,
+      "stage": 100,
+      "stageSeed": 1810040318,
+      "actions": 14,
+      "initialModelFingerprint": "586f8de31372fc14fd75c23845fd75b93c45ed60cdfbd98bc23961a5ff26e1d0"
+    },
+    {
+      "id": "knowledge-circle",
+      "runSeed": 1,
+      "stage": 100000,
+      "stageSeed": 72573786,
+      "actions": 25,
+      "initialModelFingerprint": "fd3c61f70f288da0dd3e0e4e0cd1dd68f335f4f8254d2a5e8d5f8b1f8d9b5ca9"
+    },
+    {
+      "id": "knowledge-circle",
+      "runSeed": 20261002,
+      "stage": 7,
+      "stageSeed": 4075877970,
+      "actions": 27,
+      "initialModelFingerprint": "104403c2e95e71d59a123abdf6710dd663c5eba110281203a7ca550b5543a66a"
+    },
+    {
+      "id": "knowledge-circle",
+      "runSeed": 20261002,
+      "stage": 100,
+      "stageSeed": 1830301319,
+      "actions": 23,
+      "initialModelFingerprint": "f7e0b6cf7f2aa1ca5b5eeb1eeec6256c5d532dd4fcf93066fb40c968cbbb5d70"
+    },
+    {
+      "id": "knowledge-circle",
+      "runSeed": 20261002,
+      "stage": 100000,
+      "stageSeed": 92834787,
+      "actions": 21,
+      "initialModelFingerprint": "6c6a02c470cb1b7d1c8b99866699e169784bf09b3e5eba631960695fe152a658"
+    },
+    {
+      "id": "knowledge-circle",
+      "runSeed": 4294967295,
+      "stage": 7,
+      "stageSeed": 4055616967,
+      "actions": 21,
+      "initialModelFingerprint": "759a584ed33a0db7d1b7f3ab452eaf20c3fdd4449fa646d80d15f6b87481ab3b"
+    },
+    {
+      "id": "knowledge-circle",
+      "runSeed": 4294967295,
+      "stage": 100,
+      "stageSeed": 1810040316,
+      "actions": 21,
+      "initialModelFingerprint": "ed02c731a4c52be2a303dc40d5efcbc7163a8309e437f74e19abafe09d3c8235"
+    },
+    {
+      "id": "knowledge-circle",
+      "runSeed": 4294967295,
+      "stage": 100000,
+      "stageSeed": 72573784,
+      "actions": 17,
+      "initialModelFingerprint": "c86951a91ba4197270f1adec884cba4a66c8e4c71b7c2c10d58e96f91f5e6e39"
+    },
+    {
+      "id": "knowledge-circle",
+      "runSeed": 937182,
+      "stage": 7,
+      "stageSeed": 4056554150,
+      "actions": 18,
+      "initialModelFingerprint": "542c35f49b67a497572a837c12d640a5a608c5e6471b5b8688f411a75772e9cd"
+    },
+    {
+      "id": "knowledge-circle",
+      "runSeed": 937182,
+      "stage": 100,
+      "stageSeed": 1810977499,
+      "actions": 9,
+      "initialModelFingerprint": "c0bb49a28386c2cdafa30c9861c6820ae003f517d993a6cfb9965c824e784ebf"
+    },
+    {
+      "id": "knowledge-circle",
+      "runSeed": 937182,
+      "stage": 100000,
+      "stageSeed": 73510967,
+      "actions": 16,
+      "initialModelFingerprint": "f2ee5caa13411bf8a2bcfba6a3a70989965b3636a70d6e09d59e2d7876c6ad61"
+    },
+    {
+      "id": "knowledge-circle",
+      "runSeed": 728391,
+      "stage": 7,
+      "stageSeed": 4056345359,
+      "actions": 17,
+      "initialModelFingerprint": "eb9c33d9666dd2ff3551751a5bf2f3747643c9929b65f9da5bd7d75757846541"
+    },
+    {
+      "id": "knowledge-circle",
+      "runSeed": 728391,
+      "stage": 100,
+      "stageSeed": 1810768708,
+      "actions": 25,
+      "initialModelFingerprint": "e92e6fac76332fb584f8527e673a4688af3f562651708e2cc4a4955814e19d5c"
+    },
+    {
+      "id": "knowledge-circle",
+      "runSeed": 728391,
+      "stage": 100000,
+      "stageSeed": 73302176,
+      "actions": 15,
+      "initialModelFingerprint": "6a27f6794f2540d303a16891e03e36133df26e45949d932bdd7c5c1d91ccbdb9"
+    },
+    {
+      "id": "hairpin-studio",
+      "runSeed": 0,
+      "stage": 7,
+      "stageSeed": 4055616968,
+      "actions": 16,
+      "initialModelFingerprint": "2c88884718dffcb3c14b6d4458f7a1b9c35375b9e626958f141e64961e4ffba2"
+    },
+    {
+      "id": "hairpin-studio",
+      "runSeed": 0,
+      "stage": 100,
+      "stageSeed": 1810040317,
+      "actions": 16,
+      "initialModelFingerprint": "bcb6e1744f573a78af39cea6bdd313b69822c73ef8104bcd7a7dd48a67b617aa"
+    },
+    {
+      "id": "hairpin-studio",
+      "runSeed": 0,
+      "stage": 100000,
+      "stageSeed": 72573785,
+      "actions": 13,
+      "initialModelFingerprint": "954849bebd3ed92d96e5432a66c2a1d13fdf251463f56d2b853e72e6740aaae4"
+    },
+    {
+      "id": "hairpin-studio",
+      "runSeed": 1,
+      "stage": 7,
+      "stageSeed": 4055616969,
+      "actions": 13,
+      "initialModelFingerprint": "4d7cc831d63dbf298c722d4252baefd358127a1129ca0ce4610308baf37765ef"
+    },
+    {
+      "id": "hairpin-studio",
+      "runSeed": 1,
+      "stage": 100,
+      "stageSeed": 1810040318,
+      "actions": 13,
+      "initialModelFingerprint": "7f78752c7643295114360df37078d7a2ac287a2fde649b41b820cbafdf446ae9"
+    },
+    {
+      "id": "hairpin-studio",
+      "runSeed": 1,
+      "stage": 100000,
+      "stageSeed": 72573786,
+      "actions": 13,
+      "initialModelFingerprint": "89dcb31ef4de4fcdca56713b8cc1f6a3695b98ef026290f934757addd58bd849"
+    },
+    {
+      "id": "hairpin-studio",
+      "runSeed": 20261002,
+      "stage": 7,
+      "stageSeed": 4075877970,
+      "actions": 16,
+      "initialModelFingerprint": "89cf940531433d047a6cc8af3a857888f36a7b461a207bf3446cee49097e8d22"
+    },
+    {
+      "id": "hairpin-studio",
+      "runSeed": 20261002,
+      "stage": 100,
+      "stageSeed": 1830301319,
+      "actions": 13,
+      "initialModelFingerprint": "a933374741110a1bdefee6d3891f61b444377660b7a77b0a4a30e07df48f1fcf"
+    },
+    {
+      "id": "hairpin-studio",
+      "runSeed": 20261002,
+      "stage": 100000,
+      "stageSeed": 92834787,
+      "actions": 16,
+      "initialModelFingerprint": "b5a9a7ae21e5cdcf3a360d8d832f79ad323397a33bfd4a0923e36e950a850aa3"
+    },
+    {
+      "id": "hairpin-studio",
+      "runSeed": 4294967295,
+      "stage": 7,
+      "stageSeed": 4055616967,
+      "actions": 16,
+      "initialModelFingerprint": "5db32e9747a4886db2816cb0aee9be8ad1debd817cff983651a19d2b280e1bcb"
+    },
+    {
+      "id": "hairpin-studio",
+      "runSeed": 4294967295,
+      "stage": 100,
+      "stageSeed": 1810040316,
+      "actions": 13,
+      "initialModelFingerprint": "12cf6bbb9be5fa5c30505988ba418876287e2ea42180506326594e533fce66d6"
+    },
+    {
+      "id": "hairpin-studio",
+      "runSeed": 4294967295,
+      "stage": 100000,
+      "stageSeed": 72573784,
+      "actions": 13,
+      "initialModelFingerprint": "92dc0650624c8934597497fcbca4db710456008e9bb988dae0a28493cb922714"
+    },
+    {
+      "id": "hairpin-studio",
+      "runSeed": 937182,
+      "stage": 7,
+      "stageSeed": 4056554150,
+      "actions": 13,
+      "initialModelFingerprint": "1515b5b75ea2581bdc1f38a057b90d0ff29b417a45254b587319bf9c6252ad4f"
+    },
+    {
+      "id": "hairpin-studio",
+      "runSeed": 937182,
+      "stage": 100,
+      "stageSeed": 1810977499,
+      "actions": 13,
+      "initialModelFingerprint": "011a6435a0745aa8802e7dc3e437322fade7c9b787da9cdc93313ebb4ca1dcda"
+    },
+    {
+      "id": "hairpin-studio",
+      "runSeed": 937182,
+      "stage": 100000,
+      "stageSeed": 73510967,
+      "actions": 13,
+      "initialModelFingerprint": "9d20672e6880fbf7ef0f4fc723d879266b5e11eac6ecda195d567dbb682d4492"
+    },
+    {
+      "id": "hairpin-studio",
+      "runSeed": 728391,
+      "stage": 7,
+      "stageSeed": 4056345359,
+      "actions": 16,
+      "initialModelFingerprint": "a165e2a01ba78c270057317213d3418ea7a57c5285c701200407faceb285b5e7"
+    },
+    {
+      "id": "hairpin-studio",
+      "runSeed": 728391,
+      "stage": 100,
+      "stageSeed": 1810768708,
+      "actions": 13,
+      "initialModelFingerprint": "ef3c4309138fab769a0f94a284d94272f1cb3fae148b709afb1a48a966dedade"
+    },
+    {
+      "id": "hairpin-studio",
+      "runSeed": 728391,
+      "stage": 100000,
+      "stageSeed": 73302176,
+      "actions": 13,
+      "initialModelFingerprint": "9d6c432e93d4981a2dd40b1ef6ba462a8f42e0b0fd41deb1dbae5ba1fd8039a9"
+    },
+    {
+      "id": "letter-carries",
+      "runSeed": 0,
+      "stage": 7,
+      "stageSeed": 4055616968,
+      "actions": 15,
+      "initialModelFingerprint": "94b5639d2ccf7c3d0c1412ed0a0b18c00ed2cb0c9ee4f467c2d4f3ca63c4ed47"
+    },
+    {
+      "id": "letter-carries",
+      "runSeed": 0,
+      "stage": 100,
+      "stageSeed": 1810040317,
+      "actions": 15,
+      "initialModelFingerprint": "d6220aa47ec1004671657acebe78ea7bc37d3de0d6b79a4a0c65aa147fde3a64"
+    },
+    {
+      "id": "letter-carries",
+      "runSeed": 0,
+      "stage": 100000,
+      "stageSeed": 72573785,
+      "actions": 13,
+      "initialModelFingerprint": "95c83c7e9bacd38d429929b10bb9d05c8558e815318529aaeb8d21deff0d24a2"
+    },
+    {
+      "id": "letter-carries",
+      "runSeed": 1,
+      "stage": 7,
+      "stageSeed": 4055616969,
+      "actions": 13,
+      "initialModelFingerprint": "be03dc856ad2a36c5f6ac19ff209c6d6c0a19a6eb9b82021bcf061608a007e7a"
+    },
+    {
+      "id": "letter-carries",
+      "runSeed": 1,
+      "stage": 100,
+      "stageSeed": 1810040318,
+      "actions": 13,
+      "initialModelFingerprint": "1a6ff02f469287126d785ea4e0dbad563b3e9677069a84d6f00767b1fb3e76c6"
+    },
+    {
+      "id": "letter-carries",
+      "runSeed": 1,
+      "stage": 100000,
+      "stageSeed": 72573786,
+      "actions": 13,
+      "initialModelFingerprint": "0fcad83103c0b98cb24e80ac66676599bc3192098b151c4f2b5f55dd50c00bd3"
+    },
+    {
+      "id": "letter-carries",
+      "runSeed": 20261002,
+      "stage": 7,
+      "stageSeed": 4075877970,
+      "actions": 13,
+      "initialModelFingerprint": "227219f7b5231cb4d36e7b4c9fec1a8ad605a35f79895f1c7bf388d0046e3655"
+    },
+    {
+      "id": "letter-carries",
+      "runSeed": 20261002,
+      "stage": 100,
+      "stageSeed": 1830301319,
+      "actions": 13,
+      "initialModelFingerprint": "808cac3221ce4b3ea3ef3baccd840218c0c6af1f7cec2a316ea4d9ff8e1d75c3"
+    },
+    {
+      "id": "letter-carries",
+      "runSeed": 20261002,
+      "stage": 100000,
+      "stageSeed": 92834787,
+      "actions": 15,
+      "initialModelFingerprint": "e9262f240b666552525a7eb512d1004f9f0b5a7ec7af4b406db04ac6db49b0dc"
+    },
+    {
+      "id": "letter-carries",
+      "runSeed": 4294967295,
+      "stage": 7,
+      "stageSeed": 4055616967,
+      "actions": 13,
+      "initialModelFingerprint": "955b6de853bd4debae3f653eb2235c765362952950f2c7120b3cf356ce926f40"
+    },
+    {
+      "id": "letter-carries",
+      "runSeed": 4294967295,
+      "stage": 100,
+      "stageSeed": 1810040316,
+      "actions": 9,
+      "initialModelFingerprint": "44f5db83e752ab9ce98cdf79d7937f3b97adfcb8f2637b0efbb7d79510cca953"
+    },
+    {
+      "id": "letter-carries",
+      "runSeed": 4294967295,
+      "stage": 100000,
+      "stageSeed": 72573784,
+      "actions": 15,
+      "initialModelFingerprint": "95805ecb0a5d95b395f1c8635c5aa941509b2fed0091f5a8a2a78f582fe74488"
+    },
+    {
+      "id": "letter-carries",
+      "runSeed": 937182,
+      "stage": 7,
+      "stageSeed": 4056554150,
+      "actions": 15,
+      "initialModelFingerprint": "9ba87a247ae79c68f2e75e44627305f78f521c874f585552b52aa449dc965f8a"
+    },
+    {
+      "id": "letter-carries",
+      "runSeed": 937182,
+      "stage": 100,
+      "stageSeed": 1810977499,
+      "actions": 13,
+      "initialModelFingerprint": "ce123938c3b1ac8477664c902b32ecccff8d6548db37bb088ad44f4a3dbbb4e7"
+    },
+    {
+      "id": "letter-carries",
+      "runSeed": 937182,
+      "stage": 100000,
+      "stageSeed": 73510967,
+      "actions": 15,
+      "initialModelFingerprint": "88427cb52f6c0eb6aad37e3a47d5a729cef401ab459011e8cd0fd27fdd970a46"
+    },
+    {
+      "id": "letter-carries",
+      "runSeed": 728391,
+      "stage": 7,
+      "stageSeed": 4056345359,
+      "actions": 11,
+      "initialModelFingerprint": "abb2cdb471d520f2a45e8de6a30e9b4695dfdc94ec0a7b4650e5201ac9ddba0c"
+    },
+    {
+      "id": "letter-carries",
+      "runSeed": 728391,
+      "stage": 100,
+      "stageSeed": 1810768708,
+      "actions": 15,
+      "initialModelFingerprint": "50e11da4ce8ae63a4747b791a421ff1b3259bfc4240e44a9fc9ba9357bf23e8f"
+    },
+    {
+      "id": "letter-carries",
+      "runSeed": 728391,
+      "stage": 100000,
+      "stageSeed": 73302176,
+      "actions": 13,
+      "initialModelFingerprint": "09817ab9837f2b76c7a21b4000f21dd25a5e80b2967a2f9c9457d03abb3bbe6e"
+    },
+    {
+      "id": "fill-in-station",
+      "runSeed": 0,
+      "stage": 7,
+      "stageSeed": 4055616968,
+      "actions": 14,
+      "initialModelFingerprint": "861185d3b61688226f072a7de27d6e63b6de8f434d2f55fffec1edd08ea2681a"
+    },
+    {
+      "id": "fill-in-station",
+      "runSeed": 0,
+      "stage": 100,
+      "stageSeed": 1810040317,
+      "actions": 14,
+      "initialModelFingerprint": "9cc82372eb22fe769bf6b7706450b365be1f47fc85f1e1382705ca2e267ca503"
+    },
+    {
+      "id": "fill-in-station",
+      "runSeed": 0,
+      "stage": 100000,
+      "stageSeed": 72573785,
+      "actions": 14,
+      "initialModelFingerprint": "aab2286fc8ff2575cc5a7983715e9c23b1e80aa245a9252b827f36ed0b3b4bec"
+    },
+    {
+      "id": "fill-in-station",
+      "runSeed": 1,
+      "stage": 7,
+      "stageSeed": 4055616969,
+      "actions": 14,
+      "initialModelFingerprint": "b7839b1466bc5ce5157b43ccab330994f33b1e881050323633c285228cf99ba2"
+    },
+    {
+      "id": "fill-in-station",
+      "runSeed": 1,
+      "stage": 100,
+      "stageSeed": 1810040318,
+      "actions": 14,
+      "initialModelFingerprint": "02dac402111b5fa0eac934de5a7eb8a224a0c02f5afa1c5aecfe2ecc67378081"
+    },
+    {
+      "id": "fill-in-station",
+      "runSeed": 1,
+      "stage": 100000,
+      "stageSeed": 72573786,
+      "actions": 14,
+      "initialModelFingerprint": "c071ed5b6a001135953d17515016aae1e69070fadced93f12fa2337afe3db99a"
+    },
+    {
+      "id": "fill-in-station",
+      "runSeed": 20261002,
+      "stage": 7,
+      "stageSeed": 4075877970,
+      "actions": 14,
+      "initialModelFingerprint": "f0a3ffa976c05a1427d0cd79680af9c4b01b3af6968395353d99d662779bd4c5"
+    },
+    {
+      "id": "fill-in-station",
+      "runSeed": 20261002,
+      "stage": 100,
+      "stageSeed": 1830301319,
+      "actions": 14,
+      "initialModelFingerprint": "110fa42f91f080f96ca70bc0ca93a098a56013986937d0d8a5e8eff2eaa193ed"
+    },
+    {
+      "id": "fill-in-station",
+      "runSeed": 20261002,
+      "stage": 100000,
+      "stageSeed": 92834787,
+      "actions": 14,
+      "initialModelFingerprint": "e6db6c88829962feae8797299597ee11e43f2cc3a6668641e761946127fc9cd0"
+    },
+    {
+      "id": "fill-in-station",
+      "runSeed": 4294967295,
+      "stage": 7,
+      "stageSeed": 4055616967,
+      "actions": 14,
+      "initialModelFingerprint": "5340cb69ee1402a02a170c35e9730df9f17eb597adada06452682bfe9157efae"
+    },
+    {
+      "id": "fill-in-station",
+      "runSeed": 4294967295,
+      "stage": 100,
+      "stageSeed": 1810040316,
+      "actions": 14,
+      "initialModelFingerprint": "e45f2e860c4f619e94068eef555ba0807dd9c0daaa565c7b50155d1f0316c5fd"
+    },
+    {
+      "id": "fill-in-station",
+      "runSeed": 4294967295,
+      "stage": 100000,
+      "stageSeed": 72573784,
+      "actions": 14,
+      "initialModelFingerprint": "4cf1d08950cde4269463fb2e5b83b98ac3a550a2ecc6a0a6712c045c9a2b7c07"
+    },
+    {
+      "id": "fill-in-station",
+      "runSeed": 937182,
+      "stage": 7,
+      "stageSeed": 4056554150,
+      "actions": 14,
+      "initialModelFingerprint": "245157e8d358a6daf70b757a191335807dcc76ea29347205e7b7298f8bbf93c4"
+    },
+    {
+      "id": "fill-in-station",
+      "runSeed": 937182,
+      "stage": 100,
+      "stageSeed": 1810977499,
+      "actions": 14,
+      "initialModelFingerprint": "98080aa641a37be143823ee02c1cbf9b8ff2c03133427db89a5ef20d73bf495f"
+    },
+    {
+      "id": "fill-in-station",
+      "runSeed": 937182,
+      "stage": 100000,
+      "stageSeed": 73510967,
+      "actions": 14,
+      "initialModelFingerprint": "eebaefef31c1601abc5c70c3454dd120ab06f3bfe7a64ec2322c697ea55d0533"
+    },
+    {
+      "id": "fill-in-station",
+      "runSeed": 728391,
+      "stage": 7,
+      "stageSeed": 4056345359,
+      "actions": 14,
+      "initialModelFingerprint": "5e7583a3bcdf19b947d44888af43505ea87805312c6e4a9869457d825958294b"
+    },
+    {
+      "id": "fill-in-station",
+      "runSeed": 728391,
+      "stage": 100,
+      "stageSeed": 1810768708,
+      "actions": 14,
+      "initialModelFingerprint": "f391d18cc7bb246fc637576ca969feca1d2fb563e48db656e1d023bb8ab55047"
+    },
+    {
+      "id": "fill-in-station",
+      "runSeed": 728391,
+      "stage": 100000,
+      "stageSeed": 73302176,
+      "actions": 14,
+      "initialModelFingerprint": "c4226ac3161e18f713f9bdbc94cb4a611838b91efcd1aaa2dec0cc53e9c54baa"
+    },
+    {
+      "id": "alternating-couriers",
+      "runSeed": 0,
+      "stage": 7,
+      "stageSeed": 4055616968,
+      "actions": 6,
+      "initialModelFingerprint": "b2cb6ec5da784712b88790f2a7e713560bdb9b393504a4fa0bcf1f6bddcd3141"
+    },
+    {
+      "id": "alternating-couriers",
+      "runSeed": 0,
+      "stage": 100,
+      "stageSeed": 1810040317,
+      "actions": 6,
+      "initialModelFingerprint": "9828ac78ee15a263ebfda6c7723ae9fb9b989a4bb4656fe8073dfb1d9acffc9e"
+    },
+    {
+      "id": "alternating-couriers",
+      "runSeed": 0,
+      "stage": 100000,
+      "stageSeed": 72573785,
+      "actions": 8,
+      "initialModelFingerprint": "ae401f5cba01d7d48dd20a16a1dd2744586ae7483515ef0f5703bf0b4e6164e0"
+    },
+    {
+      "id": "alternating-couriers",
+      "runSeed": 1,
+      "stage": 7,
+      "stageSeed": 4055616969,
+      "actions": 10,
+      "initialModelFingerprint": "2b336db8f093748e18fefd06ee335cb3a0e0464dc2bbe6cdad8d113b18308266"
+    },
+    {
+      "id": "alternating-couriers",
+      "runSeed": 1,
+      "stage": 100,
+      "stageSeed": 1810040318,
+      "actions": 6,
+      "initialModelFingerprint": "50a23654e40e7db20fcf7ac52fd6151ffb45f9d6ec7142f6672fe463a7b96ebd"
+    },
+    {
+      "id": "alternating-couriers",
+      "runSeed": 1,
+      "stage": 100000,
+      "stageSeed": 72573786,
+      "actions": 10,
+      "initialModelFingerprint": "3b6f88c5cf84964c191095f7985baa667b7adcb31a1506fd5e1bfa5a5ae071dc"
+    },
+    {
+      "id": "alternating-couriers",
+      "runSeed": 20261002,
+      "stage": 7,
+      "stageSeed": 4075877970,
+      "actions": 10,
+      "initialModelFingerprint": "d4357b30f62fd175d3745db890f977e78e01065a5f28ed8ea48328c0c5adce8b"
+    },
+    {
+      "id": "alternating-couriers",
+      "runSeed": 20261002,
+      "stage": 100,
+      "stageSeed": 1830301319,
+      "actions": 6,
+      "initialModelFingerprint": "401fa9dc3c564d66c7118a1dcd53ff206c0117dd40aa344f11bf20d36909e25a"
+    },
+    {
+      "id": "alternating-couriers",
+      "runSeed": 20261002,
+      "stage": 100000,
+      "stageSeed": 92834787,
+      "actions": 10,
+      "initialModelFingerprint": "910b7ce2351b12d14c5deaf2648d2e86a90f9e26d2030ca11fc2415b866c0ac6"
+    },
+    {
+      "id": "alternating-couriers",
+      "runSeed": 4294967295,
+      "stage": 7,
+      "stageSeed": 4055616967,
+      "actions": 6,
+      "initialModelFingerprint": "1e81ca8c6ab840f30299d0465fbf0f4ee0f3a6f2c5a01a2c0466b2929b99fccc"
+    },
+    {
+      "id": "alternating-couriers",
+      "runSeed": 4294967295,
+      "stage": 100,
+      "stageSeed": 1810040316,
+      "actions": 10,
+      "initialModelFingerprint": "648f8acb4c215f493900d6253e24af695d90fc9954e66625dff18650d6c51c0f"
+    },
+    {
+      "id": "alternating-couriers",
+      "runSeed": 4294967295,
+      "stage": 100000,
+      "stageSeed": 72573784,
+      "actions": 6,
+      "initialModelFingerprint": "1cef26ac0d5cca641aa07b379bb7d5394ec1bf097f2d970a6bce3ec575c4264f"
+    },
+    {
+      "id": "alternating-couriers",
+      "runSeed": 937182,
+      "stage": 7,
+      "stageSeed": 4056554150,
+      "actions": 10,
+      "initialModelFingerprint": "e0d6a7572fc23ef31ed61ca9d8479f9cf67bd0e306b3271dcf81c746f29f6f55"
+    },
+    {
+      "id": "alternating-couriers",
+      "runSeed": 937182,
+      "stage": 100,
+      "stageSeed": 1810977499,
+      "actions": 6,
+      "initialModelFingerprint": "e895b041daf349556fb8b3e796c94627dad8e1b779d190c5ffbce401f3998ea6"
+    },
+    {
+      "id": "alternating-couriers",
+      "runSeed": 937182,
+      "stage": 100000,
+      "stageSeed": 73510967,
+      "actions": 10,
+      "initialModelFingerprint": "116d02bbae0c8bb7551361a9bfc74a989f6ebd33e47bdc4146487de0e5bb59cd"
+    },
+    {
+      "id": "alternating-couriers",
+      "runSeed": 728391,
+      "stage": 7,
+      "stageSeed": 4056345359,
+      "actions": 8,
+      "initialModelFingerprint": "98c0d25b4fedf8317baf55d24dc55a22d7f5ecb972d95849c8814d73f4f3d0a0"
+    },
+    {
+      "id": "alternating-couriers",
+      "runSeed": 728391,
+      "stage": 100,
+      "stageSeed": 1810768708,
+      "actions": 6,
+      "initialModelFingerprint": "8e1833a6068233f95eb67ce16d1e63a0b13762187b10230635cbe7ed0a563c33"
+    },
+    {
+      "id": "alternating-couriers",
+      "runSeed": 728391,
+      "stage": 100000,
+      "stageSeed": 73302176,
+      "actions": 8,
+      "initialModelFingerprint": "949a755aff10816a55481bfc82f9a5c4c8c4a878665b71fe0eb2989e57fc5760"
+    },
+    {
+      "id": "ordered-echo",
+      "runSeed": 0,
+      "stage": 7,
+      "stageSeed": 4055616968,
+      "actions": 20,
+      "initialModelFingerprint": "649c69ccd4752ddc650b50b37ddcd64c33e078be341c1b38878a31a1db49491e"
+    },
+    {
+      "id": "ordered-echo",
+      "runSeed": 0,
+      "stage": 100,
+      "stageSeed": 1810040317,
+      "actions": 20,
+      "initialModelFingerprint": "25cd183007970d4f800430fb7e16e4dae6f2157972c1b56f14583f83def873e7"
+    },
+    {
+      "id": "ordered-echo",
+      "runSeed": 0,
+      "stage": 100000,
+      "stageSeed": 72573785,
+      "actions": 20,
+      "initialModelFingerprint": "a1a50fa101d465f0452c58b2b6ac876a3da81af565ef92022f789aad22ab1c6c"
+    },
+    {
+      "id": "ordered-echo",
+      "runSeed": 1,
+      "stage": 7,
+      "stageSeed": 4055616969,
+      "actions": 20,
+      "initialModelFingerprint": "8451b1dca2bb80ea19feb333f5f849da54957e230b6d44d383e84d6ae83adf76"
+    },
+    {
+      "id": "ordered-echo",
+      "runSeed": 1,
+      "stage": 100,
+      "stageSeed": 1810040318,
+      "actions": 20,
+      "initialModelFingerprint": "dc7f72ebb6f3bb9410457e9b1c911dfa2e24be310f8ed70bae40cb351a6e06f4"
+    },
+    {
+      "id": "ordered-echo",
+      "runSeed": 1,
+      "stage": 100000,
+      "stageSeed": 72573786,
+      "actions": 20,
+      "initialModelFingerprint": "14eaaa3bfaf672326f7498294b1cb36ca4509b85f100021cb0870c56825b91aa"
+    },
+    {
+      "id": "ordered-echo",
+      "runSeed": 20261002,
+      "stage": 7,
+      "stageSeed": 4075877970,
+      "actions": 20,
+      "initialModelFingerprint": "c7dab6cb030c9b2bfa4fc61bb974bdc6fbd400eba06a6cd55aa8c7363399a028"
+    },
+    {
+      "id": "ordered-echo",
+      "runSeed": 20261002,
+      "stage": 100,
+      "stageSeed": 1830301319,
+      "actions": 20,
+      "initialModelFingerprint": "9e8817cfcfe68e65b52c8fcc8b0c7c5d94c6e04376638d8505627bed801fd3ad"
+    },
+    {
+      "id": "ordered-echo",
+      "runSeed": 20261002,
+      "stage": 100000,
+      "stageSeed": 92834787,
+      "actions": 20,
+      "initialModelFingerprint": "57c0388e1b6d6ac72dcc0b3c98cd7f415944bbbf16f100ddfe05f401744fbac0"
+    },
+    {
+      "id": "ordered-echo",
+      "runSeed": 4294967295,
+      "stage": 7,
+      "stageSeed": 4055616967,
+      "actions": 20,
+      "initialModelFingerprint": "233959e5fae908445d6c72c8ba3cf6b5f52dc216aacb843ef1e2d53bbb13b8a1"
+    },
+    {
+      "id": "ordered-echo",
+      "runSeed": 4294967295,
+      "stage": 100,
+      "stageSeed": 1810040316,
+      "actions": 20,
+      "initialModelFingerprint": "61f71925f48766eaed6a198c1e38d8fb6d87b7d6630b7c8756281d959a02d5e8"
+    },
+    {
+      "id": "ordered-echo",
+      "runSeed": 4294967295,
+      "stage": 100000,
+      "stageSeed": 72573784,
+      "actions": 20,
+      "initialModelFingerprint": "1d35a7c366969cd7a1da260bc182704392c79e350351fe5896a5fe30a7bee45a"
+    },
+    {
+      "id": "ordered-echo",
+      "runSeed": 937182,
+      "stage": 7,
+      "stageSeed": 4056554150,
+      "actions": 20,
+      "initialModelFingerprint": "9016507e2a268580cf594164eb01e3075d7389d5588f1b01bf37317bfae3007a"
+    },
+    {
+      "id": "ordered-echo",
+      "runSeed": 937182,
+      "stage": 100,
+      "stageSeed": 1810977499,
+      "actions": 20,
+      "initialModelFingerprint": "debef25fe395451b2d72652ae365e475b371d5b819ccc80fdb63cf95178e141b"
+    },
+    {
+      "id": "ordered-echo",
+      "runSeed": 937182,
+      "stage": 100000,
+      "stageSeed": 73510967,
+      "actions": 20,
+      "initialModelFingerprint": "fedd98583b6ebe42e75ba606f2ed9014222315e49e3e45db5a21ebdb362a67a3"
+    },
+    {
+      "id": "ordered-echo",
+      "runSeed": 728391,
+      "stage": 7,
+      "stageSeed": 4056345359,
+      "actions": 20,
+      "initialModelFingerprint": "fb9667fee9581c95bf4f1ffd295a79f57f32c344664bdc9c14dc0e8885f876c3"
+    },
+    {
+      "id": "ordered-echo",
+      "runSeed": 728391,
+      "stage": 100,
+      "stageSeed": 1810768708,
+      "actions": 20,
+      "initialModelFingerprint": "d27f2e7b284dcb5b2e6d809ebd136f3da0ca585e2d0eb76cdb8b60a9dfa24f35"
+    },
+    {
+      "id": "ordered-echo",
+      "runSeed": 728391,
+      "stage": 100000,
+      "stageSeed": 73302176,
+      "actions": 20,
+      "initialModelFingerprint": "b623b1a814d7cf4ae35f7d7f5c6d7ad59a28d04e9185126d6406fa7b75e7e513"
+    },
+    {
+      "id": "heritage-house",
+      "runSeed": 0,
+      "stage": 7,
+      "stageSeed": 4055616968,
+      "actions": 10,
+      "initialModelFingerprint": "68b2a4d70ac2131ca57aeea6cb64583f155551bcf31643a01808cf7b9e84c92a"
+    },
+    {
+      "id": "heritage-house",
+      "runSeed": 0,
+      "stage": 100,
+      "stageSeed": 1810040317,
+      "actions": 11,
+      "initialModelFingerprint": "18ccc7f23d47abf658c60c7a736be9155ad22e9f18cd667810204aa750af2eac"
+    },
+    {
+      "id": "heritage-house",
+      "runSeed": 0,
+      "stage": 100000,
+      "stageSeed": 72573785,
+      "actions": 12,
+      "initialModelFingerprint": "80d88adc9b00a806bbb569a774a143cc93cb18a16b69a548342f04bd7f4f1014"
+    },
+    {
+      "id": "heritage-house",
+      "runSeed": 1,
+      "stage": 7,
+      "stageSeed": 4055616969,
+      "actions": 11,
+      "initialModelFingerprint": "86ac0408f35b0269f531327169f904770ec6ef3b776785b22a3021e609a33972"
+    },
+    {
+      "id": "heritage-house",
+      "runSeed": 1,
+      "stage": 100,
+      "stageSeed": 1810040318,
+      "actions": 10,
+      "initialModelFingerprint": "467f691ab1c95f70f887a4aaa79e5378ba7195a82687ef3c3c412ec5f97d53e2"
+    },
+    {
+      "id": "heritage-house",
+      "runSeed": 1,
+      "stage": 100000,
+      "stageSeed": 72573786,
+      "actions": 12,
+      "initialModelFingerprint": "1065c9d4cd5d083d670f05812d408cfb5b8d839154121f0981aa4e9a4c6624e6"
+    },
+    {
+      "id": "heritage-house",
+      "runSeed": 20261002,
+      "stage": 7,
+      "stageSeed": 4075877970,
+      "actions": 12,
+      "initialModelFingerprint": "4bdf120a36cfe9312f2267d5fe3238ef3bd4a0bf7c2e489a4480fcab9b33e0de"
+    },
+    {
+      "id": "heritage-house",
+      "runSeed": 20261002,
+      "stage": 100,
+      "stageSeed": 1830301319,
+      "actions": 12,
+      "initialModelFingerprint": "f5d1f6b9b54487b5bc52f5ef13bb39890bdccdf40845b106809d860066ac9f7a"
+    },
+    {
+      "id": "heritage-house",
+      "runSeed": 20261002,
+      "stage": 100000,
+      "stageSeed": 92834787,
+      "actions": 12,
+      "initialModelFingerprint": "bdb8323dfdf9d577e8a68817d76e2c83373350f12258e2862297319e97c892fb"
+    },
+    {
+      "id": "heritage-house",
+      "runSeed": 4294967295,
+      "stage": 7,
+      "stageSeed": 4055616967,
+      "actions": 13,
+      "initialModelFingerprint": "1c4338e9e3f762e67f0fef602be3bd6fbdc0396bf3e9f0b544cfe0338dee570f"
+    },
+    {
+      "id": "heritage-house",
+      "runSeed": 4294967295,
+      "stage": 100,
+      "stageSeed": 1810040316,
+      "actions": 12,
+      "initialModelFingerprint": "75341aa702067641669588f874434edfb22c543920098d25cf99fe5e08280541"
+    },
+    {
+      "id": "heritage-house",
+      "runSeed": 4294967295,
+      "stage": 100000,
+      "stageSeed": 72573784,
+      "actions": 11,
+      "initialModelFingerprint": "fc2bb611cd890a4cff28848e5761cc800e609e66da7406b061252c80a7f5aca4"
+    },
+    {
+      "id": "heritage-house",
+      "runSeed": 937182,
+      "stage": 7,
+      "stageSeed": 4056554150,
+      "actions": 10,
+      "initialModelFingerprint": "24ce9fc9ba593676b6768e010f75ee1642e034ea163b8943d1ca57a5dc2bb0e4"
+    },
+    {
+      "id": "heritage-house",
+      "runSeed": 937182,
+      "stage": 100,
+      "stageSeed": 1810977499,
+      "actions": 12,
+      "initialModelFingerprint": "045baf2729836f5b22fc142fdc1488818d77b2bf09f804a5c75c990db402054b"
+    },
+    {
+      "id": "heritage-house",
+      "runSeed": 937182,
+      "stage": 100000,
+      "stageSeed": 73510967,
+      "actions": 11,
+      "initialModelFingerprint": "dd5982c2cdb17538f54f37945559f6040e25409f087ef1e9fa7a6beb23f3982e"
+    },
+    {
+      "id": "heritage-house",
+      "runSeed": 728391,
+      "stage": 7,
+      "stageSeed": 4056345359,
+      "actions": 10,
+      "initialModelFingerprint": "a89e85e995f2b467289d65025ae93f853f36d13a08bde3159e275d2ce6f38137"
+    },
+    {
+      "id": "heritage-house",
+      "runSeed": 728391,
+      "stage": 100,
+      "stageSeed": 1810768708,
+      "actions": 13,
+      "initialModelFingerprint": "5fd4e2fd520ecb09e63f5c390f48e5343622e393a3364b4adcfe77fa2cfc1471"
+    },
+    {
+      "id": "heritage-house",
+      "runSeed": 728391,
+      "stage": 100000,
+      "stageSeed": 73302176,
+      "actions": 12,
+      "initialModelFingerprint": "5aa100b9ff7f7fa10b7a39a886e9b944afebbab7756998fb9991c0d45ef798a1"
+    },
+    {
+      "id": "posterior-post",
+      "runSeed": 0,
+      "stage": 7,
+      "stageSeed": 4055616968,
+      "actions": 2,
+      "initialModelFingerprint": "6ad2766f507fd5937ac2eeb2594f2de1c4af6776c21533eeafbc60c26f4e1a3a"
+    },
+    {
+      "id": "posterior-post",
+      "runSeed": 0,
+      "stage": 100,
+      "stageSeed": 1810040317,
+      "actions": 2,
+      "initialModelFingerprint": "d45691188ca11460d2518bba317d0d8e8d80f3b7f4e22b885f104896a0b858a2"
+    },
+    {
+      "id": "posterior-post",
+      "runSeed": 0,
+      "stage": 100000,
+      "stageSeed": 72573785,
+      "actions": 2,
+      "initialModelFingerprint": "5fe545d59079060f7bdb152109e981d3b6cef66bcf346eb7ff06d0890226762f"
+    },
+    {
+      "id": "posterior-post",
+      "runSeed": 1,
+      "stage": 7,
+      "stageSeed": 4055616969,
+      "actions": 3,
+      "initialModelFingerprint": "ecaaeb4b1368e46f30f691344bfe2a76473ffb6fc1d4e6995ac8742bc0929a29"
+    },
+    {
+      "id": "posterior-post",
+      "runSeed": 1,
+      "stage": 100,
+      "stageSeed": 1810040318,
+      "actions": 2,
+      "initialModelFingerprint": "0ea315d9b1f708d0fa20baadea4e4980f483014f3aa06c07533c9ebf5826530b"
+    },
+    {
+      "id": "posterior-post",
+      "runSeed": 1,
+      "stage": 100000,
+      "stageSeed": 72573786,
+      "actions": 2,
+      "initialModelFingerprint": "2f9485d19c6794563315ed9d8fc571a4cb1bd3e9cbd98410d554a7c6088fbc2c"
+    },
+    {
+      "id": "posterior-post",
+      "runSeed": 20261002,
+      "stage": 7,
+      "stageSeed": 4075877970,
+      "actions": 3,
+      "initialModelFingerprint": "2774f63dbb2c9581acb74b66dc29a9ee631af0c69caa16765c1a518fb6fda52d"
+    },
+    {
+      "id": "posterior-post",
+      "runSeed": 20261002,
+      "stage": 100,
+      "stageSeed": 1830301319,
+      "actions": 2,
+      "initialModelFingerprint": "9483d986599bdab6b69f7c1887223eeaae755116c76c3747719221568485fd9b"
+    },
+    {
+      "id": "posterior-post",
+      "runSeed": 20261002,
+      "stage": 100000,
+      "stageSeed": 92834787,
+      "actions": 2,
+      "initialModelFingerprint": "2a5725e79df05fde6234474bd1b224783e3a6fe124164927a264dcf907f6980e"
+    },
+    {
+      "id": "posterior-post",
+      "runSeed": 4294967295,
+      "stage": 7,
+      "stageSeed": 4055616967,
+      "actions": 2,
+      "initialModelFingerprint": "66a33139b7b5e4eee0cea521b5201cee2b4a4403c3eb14de42d36122251837e5"
+    },
+    {
+      "id": "posterior-post",
+      "runSeed": 4294967295,
+      "stage": 100,
+      "stageSeed": 1810040316,
+      "actions": 2,
+      "initialModelFingerprint": "38748374e001d869cba39867ac74ac33334008a50041c566d6206ebbd7b10055"
+    },
+    {
+      "id": "posterior-post",
+      "runSeed": 4294967295,
+      "stage": 100000,
+      "stageSeed": 72573784,
+      "actions": 2,
+      "initialModelFingerprint": "8585f8c2d7ca410a8651ed352c83981d04ba75c73e7414f97016f47e1fed7b10"
+    },
+    {
+      "id": "posterior-post",
+      "runSeed": 937182,
+      "stage": 7,
+      "stageSeed": 4056554150,
+      "actions": 2,
+      "initialModelFingerprint": "faf0021a7c2ba2f95a31d05e6f67ec269b160a875d32b18dc1ce7f35706d8801"
+    },
+    {
+      "id": "posterior-post",
+      "runSeed": 937182,
+      "stage": 100,
+      "stageSeed": 1810977499,
+      "actions": 2,
+      "initialModelFingerprint": "963b69d73cd8a0a05b03a8311d6fdc439fd37e7fe19fbd9cc77a875f1c767665"
+    },
+    {
+      "id": "posterior-post",
+      "runSeed": 937182,
+      "stage": 100000,
+      "stageSeed": 73510967,
+      "actions": 2,
+      "initialModelFingerprint": "514be39c08166062e783fa8af9df3e1ad2a7e56b9188d159a9c4380f16865feb"
+    },
+    {
+      "id": "posterior-post",
+      "runSeed": 728391,
+      "stage": 7,
+      "stageSeed": 4056345359,
+      "actions": 2,
+      "initialModelFingerprint": "9ac4eb10b8b9b0b1e8f6c66a3c71a5d7365709e8a0c748481e7340805aa9d347"
+    },
+    {
+      "id": "posterior-post",
+      "runSeed": 728391,
+      "stage": 100,
+      "stageSeed": 1810768708,
+      "actions": 3,
+      "initialModelFingerprint": "0edda3df1c1b690d41a821d8201130b3d9b026ce4b6006be83cdb1105b5c20bd"
+    },
+    {
+      "id": "posterior-post",
+      "runSeed": 728391,
+      "stage": 100000,
+      "stageSeed": 73302176,
+      "actions": 3,
+      "initialModelFingerprint": "869b3eda3e56b12b3d7aa38bdb10ba50b80114bb19e545c32d2421274950b91c"
+    },
+    {
+      "id": "heap-foundry",
+      "runSeed": 0,
+      "stage": 7,
+      "stageSeed": 4055616968,
+      "actions": 36,
+      "initialModelFingerprint": "fcab2705145a60e24b4618be4a93def85a1381156f57104daf784f10f8a1b1f2"
+    },
+    {
+      "id": "heap-foundry",
+      "runSeed": 0,
+      "stage": 100,
+      "stageSeed": 1810040317,
+      "actions": 32,
+      "initialModelFingerprint": "eb44c540807f970cfa1269fb255cd21a9b98041f765aaffed9a03fdcd320f86c"
+    },
+    {
+      "id": "heap-foundry",
+      "runSeed": 0,
+      "stage": 100000,
+      "stageSeed": 72573785,
+      "actions": 30,
+      "initialModelFingerprint": "5c1e7c3de269072d39beafc6226062f3da6e76c413e3b2b897e3b24bce10e10f"
+    },
+    {
+      "id": "heap-foundry",
+      "runSeed": 1,
+      "stage": 7,
+      "stageSeed": 4055616969,
+      "actions": 34,
+      "initialModelFingerprint": "5938c57df97fe69f505b36681e07c1030059f4c48f5a290c1982b6536ef25c28"
+    },
+    {
+      "id": "heap-foundry",
+      "runSeed": 1,
+      "stage": 100,
+      "stageSeed": 1810040318,
+      "actions": 40,
+      "initialModelFingerprint": "a7e542aeb37a1ae8d4c592bd4a0b98d7e8aa3974c5da42d69484d74d301d8029"
+    },
+    {
+      "id": "heap-foundry",
+      "runSeed": 1,
+      "stage": 100000,
+      "stageSeed": 72573786,
+      "actions": 32,
+      "initialModelFingerprint": "861dae2e962fc4ed2571adc5ac44cd6907194bffd6b6fe92f83a2d641abe02d1"
+    },
+    {
+      "id": "heap-foundry",
+      "runSeed": 20261002,
+      "stage": 7,
+      "stageSeed": 4075877970,
+      "actions": 36,
+      "initialModelFingerprint": "e0829e2b093fe4c57321c76eec4d21b05d033410d487a1a1c581593734d2fa63"
+    },
+    {
+      "id": "heap-foundry",
+      "runSeed": 20261002,
+      "stage": 100,
+      "stageSeed": 1830301319,
+      "actions": 34,
+      "initialModelFingerprint": "b93ec3ba996a0f4d571f5dc97025819798509e5cff69fee362e84eb2d2279689"
+    },
+    {
+      "id": "heap-foundry",
+      "runSeed": 20261002,
+      "stage": 100000,
+      "stageSeed": 92834787,
+      "actions": 32,
+      "initialModelFingerprint": "6239278df3e77e8f9594ad323d1b19d1c1ae1f06d18af9a9ef17aa6e86bc7bf6"
+    },
+    {
+      "id": "heap-foundry",
+      "runSeed": 4294967295,
+      "stage": 7,
+      "stageSeed": 4055616967,
+      "actions": 36,
+      "initialModelFingerprint": "0fa6cae6f2c142097dd30e762e26860dab7b736773e51881a12380d369b73a41"
+    },
+    {
+      "id": "heap-foundry",
+      "runSeed": 4294967295,
+      "stage": 100,
+      "stageSeed": 1810040316,
+      "actions": 36,
+      "initialModelFingerprint": "8dede1b8d8206acfeef6ff170416dfc43a0a71ae8e98a242c20e24118c207d90"
+    },
+    {
+      "id": "heap-foundry",
+      "runSeed": 4294967295,
+      "stage": 100000,
+      "stageSeed": 72573784,
+      "actions": 28,
+      "initialModelFingerprint": "e5439d715b03f1d4b710802e52f2e9c0eb9c1e5177d8fa200ccbf105eac8d917"
+    },
+    {
+      "id": "heap-foundry",
+      "runSeed": 937182,
+      "stage": 7,
+      "stageSeed": 4056554150,
+      "actions": 28,
+      "initialModelFingerprint": "49b5a5722a6fe3ed406d08311953e2081fa9a3649957386985c8fa4492408bdb"
+    },
+    {
+      "id": "heap-foundry",
+      "runSeed": 937182,
+      "stage": 100,
+      "stageSeed": 1810977499,
+      "actions": 34,
+      "initialModelFingerprint": "39330d9ce2073940d29b7e7bc812f5fc5bb3ce7f03d28fc0fca704f4c3c1be19"
+    },
+    {
+      "id": "heap-foundry",
+      "runSeed": 937182,
+      "stage": 100000,
+      "stageSeed": 73510967,
+      "actions": 30,
+      "initialModelFingerprint": "5f6881076c13bdd0c6fee8154b7cbafff66a16a2af1962cdb3e4e987a1f3f982"
+    },
+    {
+      "id": "heap-foundry",
+      "runSeed": 728391,
+      "stage": 7,
+      "stageSeed": 4056345359,
+      "actions": 28,
+      "initialModelFingerprint": "99076bae5a820243c8e5b53fdbe5a884a4be4f0650863493dc1b173c650b5119"
+    },
+    {
+      "id": "heap-foundry",
+      "runSeed": 728391,
+      "stage": 100,
+      "stageSeed": 1810768708,
+      "actions": 30,
+      "initialModelFingerprint": "9b078f894585ff81202deb88f3330d24eff6969e21bbc7fa2e5759ebf21ca4f6"
+    },
+    {
+      "id": "heap-foundry",
+      "runSeed": 728391,
+      "stage": 100000,
+      "stageSeed": 73302176,
+      "actions": 36,
+      "initialModelFingerprint": "bc8468e7d9d1fd0cb0c127d571e23e62b68b8737ebd05182ec8ca47a451de4c4"
+    },
+    {
+      "id": "diagram-order",
+      "runSeed": 0,
+      "stage": 7,
+      "stageSeed": 4055616968,
+      "actions": 7,
+      "initialModelFingerprint": "abd283ad1a1cb6930704acac8c111697fb0a41834efa942f207d4fb15adf781a"
+    },
+    {
+      "id": "diagram-order",
+      "runSeed": 0,
+      "stage": 100,
+      "stageSeed": 1810040317,
+      "actions": 6,
+      "initialModelFingerprint": "371b046de42721f4c908b8d053cbac438a668fd359b7253061ebfb44b5edf887"
+    },
+    {
+      "id": "diagram-order",
+      "runSeed": 0,
+      "stage": 100000,
+      "stageSeed": 72573785,
+      "actions": 6,
+      "initialModelFingerprint": "3e9e9c6acf7e85bccf493ddde7ea3ed2d3b96eece908f42d5e6a4e67502758d5"
+    },
+    {
+      "id": "diagram-order",
+      "runSeed": 1,
+      "stage": 7,
+      "stageSeed": 4055616969,
+      "actions": 5,
+      "initialModelFingerprint": "8760c643a6f18905aa435378be0ea3908fb04e2e932828b26426177e255c3f52"
+    },
+    {
+      "id": "diagram-order",
+      "runSeed": 1,
+      "stage": 100,
+      "stageSeed": 1810040318,
+      "actions": 1,
+      "initialModelFingerprint": "cc5e11f4c30f58e6e79a077650f21a420464260e343fa207efb8b5ae212cefa7"
+    },
+    {
+      "id": "diagram-order",
+      "runSeed": 1,
+      "stage": 100000,
+      "stageSeed": 72573786,
+      "actions": 3,
+      "initialModelFingerprint": "562ca36d57de29d4e97a1e0578b1ee76ea5fef1529430261e4c7ad42c4c78de9"
+    },
+    {
+      "id": "diagram-order",
+      "runSeed": 20261002,
+      "stage": 7,
+      "stageSeed": 4075877970,
+      "actions": 6,
+      "initialModelFingerprint": "c0b31efb6ef859f037ecc2806ab302da2b7158642d4c1e9a50586c300f7064de"
+    },
+    {
+      "id": "diagram-order",
+      "runSeed": 20261002,
+      "stage": 100,
+      "stageSeed": 1830301319,
+      "actions": 2,
+      "initialModelFingerprint": "0a73288d5e235c64eb6b3be3ecadc0d6ffeac7cc8d04a94532bd84dbf9deb598"
+    },
+    {
+      "id": "diagram-order",
+      "runSeed": 20261002,
+      "stage": 100000,
+      "stageSeed": 92834787,
+      "actions": 4,
+      "initialModelFingerprint": "850d69c1d34f2535d4ccb9ce063e232b6237a2d3fab90dce691e3caf0c8bc0f7"
+    },
+    {
+      "id": "diagram-order",
+      "runSeed": 4294967295,
+      "stage": 7,
+      "stageSeed": 4055616967,
+      "actions": 7,
+      "initialModelFingerprint": "9fa47bd10ed951682d644b57899e989df0c3b9dc6dd23bb348ae8a0785a60b9e"
+    },
+    {
+      "id": "diagram-order",
+      "runSeed": 4294967295,
+      "stage": 100,
+      "stageSeed": 1810040316,
+      "actions": 5,
+      "initialModelFingerprint": "95da7e0dde47a33e0eb79f983f7ab4784b5f48836837e87024909c5dacc9e9d8"
+    },
+    {
+      "id": "diagram-order",
+      "runSeed": 4294967295,
+      "stage": 100000,
+      "stageSeed": 72573784,
+      "actions": 5,
+      "initialModelFingerprint": "7eae2a716b7311a8bcc9dcbd31b54f6dc1b807a22b69962ed46e277c055e896a"
+    },
+    {
+      "id": "diagram-order",
+      "runSeed": 937182,
+      "stage": 7,
+      "stageSeed": 4056554150,
+      "actions": 5,
+      "initialModelFingerprint": "49bb0600ae9119ceb7b381ac3fe5e3b66c3dcf24d029dd1d03fb557514d60a83"
+    },
+    {
+      "id": "diagram-order",
+      "runSeed": 937182,
+      "stage": 100,
+      "stageSeed": 1810977499,
+      "actions": 6,
+      "initialModelFingerprint": "a0643e2f094f21ebddbb7c5d521eac280c39b370572078581022bbd3056ec330"
+    },
+    {
+      "id": "diagram-order",
+      "runSeed": 937182,
+      "stage": 100000,
+      "stageSeed": 73510967,
+      "actions": 6,
+      "initialModelFingerprint": "34f1b27e4c9f073639507a7dbab18089f87ab639baa7c6e1ea2fe782e7284055"
+    },
+    {
+      "id": "diagram-order",
+      "runSeed": 728391,
+      "stage": 7,
+      "stageSeed": 4056345359,
+      "actions": 7,
+      "initialModelFingerprint": "6136c0bd20c950c1166d24cbeea6d12b963e6a2dc988afd45bab50f85c5696b9"
+    },
+    {
+      "id": "diagram-order",
+      "runSeed": 728391,
+      "stage": 100,
+      "stageSeed": 1810768708,
+      "actions": 4,
+      "initialModelFingerprint": "caf2fd28ff872e36e3999555c9980b8a365deed20e9edf900763295c4b07d411"
+    },
+    {
+      "id": "diagram-order",
+      "runSeed": 728391,
+      "stage": 100000,
+      "stageSeed": 73302176,
+      "actions": 4,
+      "initialModelFingerprint": "429260cd25f49d9a25259388e89e5afa1f54367c590184c9c4deea77588c8701"
+    },
+    {
+      "id": "turning-council",
+      "runSeed": 0,
+      "stage": 7,
+      "stageSeed": 4055616968,
+      "actions": 2,
+      "initialModelFingerprint": "67c02b4ef1f735c20cd8225fa20972fb287d9fd2e7c771d675417db16c063b90"
+    },
+    {
+      "id": "turning-council",
+      "runSeed": 0,
+      "stage": 100,
+      "stageSeed": 1810040317,
+      "actions": 2,
+      "initialModelFingerprint": "94169264be15543da43fd8150d66d5437382ce0e80bb8fd8a33ccc30c3e3c8bb"
+    },
+    {
+      "id": "turning-council",
+      "runSeed": 0,
+      "stage": 100000,
+      "stageSeed": 72573785,
+      "actions": 2,
+      "initialModelFingerprint": "1a174df4022f5e2722c1ec340971ba5ff3b08affe0b48aa7c6e92a2f3167f22d"
+    },
+    {
+      "id": "turning-council",
+      "runSeed": 1,
+      "stage": 7,
+      "stageSeed": 4055616969,
+      "actions": 2,
+      "initialModelFingerprint": "c48415f6aca794fc6564ab5c97f56bb72595d368cba7bc25dfb0bfb2206a895d"
+    },
+    {
+      "id": "turning-council",
+      "runSeed": 1,
+      "stage": 100,
+      "stageSeed": 1810040318,
+      "actions": 2,
+      "initialModelFingerprint": "4edf6ec93d01461640a7d3770ddaa19838d713abe50d24e03ce6d4a39fb93a9f"
+    },
+    {
+      "id": "turning-council",
+      "runSeed": 1,
+      "stage": 100000,
+      "stageSeed": 72573786,
+      "actions": 2,
+      "initialModelFingerprint": "e4d752eed27dbf0234769f998c0042e2e395f1dce71d93c46415a92b402fa1cc"
+    },
+    {
+      "id": "turning-council",
+      "runSeed": 20261002,
+      "stage": 7,
+      "stageSeed": 4075877970,
+      "actions": 2,
+      "initialModelFingerprint": "f03cfc6a55d97b9045b59f522aa25b58171f690e8258e19a7550da40c02c79bf"
+    },
+    {
+      "id": "turning-council",
+      "runSeed": 20261002,
+      "stage": 100,
+      "stageSeed": 1830301319,
+      "actions": 2,
+      "initialModelFingerprint": "255713cb12424d8ba44ff5daf36c40cfaa5f28d78cc20d134b7ac9569e5702ba"
+    },
+    {
+      "id": "turning-council",
+      "runSeed": 20261002,
+      "stage": 100000,
+      "stageSeed": 92834787,
+      "actions": 2,
+      "initialModelFingerprint": "701c7f15de40ed09fbe78264c706d1376ed7745e2b0890cc7878e06f14c3df26"
+    },
+    {
+      "id": "turning-council",
+      "runSeed": 4294967295,
+      "stage": 7,
+      "stageSeed": 4055616967,
+      "actions": 2,
+      "initialModelFingerprint": "15a9edab4b8ccdbc0aa43bb7da6e8e32d816db32708a24f18534a9aa30919cd5"
+    },
+    {
+      "id": "turning-council",
+      "runSeed": 4294967295,
+      "stage": 100,
+      "stageSeed": 1810040316,
+      "actions": 2,
+      "initialModelFingerprint": "cec6a478f43469a2559d65182db0b58e090b434253e5b70a2cdcec59bc73592c"
+    },
+    {
+      "id": "turning-council",
+      "runSeed": 4294967295,
+      "stage": 100000,
+      "stageSeed": 72573784,
+      "actions": 2,
+      "initialModelFingerprint": "15d53ae97773408c8571243286df566a4ceb85e24fe9fcdae3f26b50bd7c0745"
+    },
+    {
+      "id": "turning-council",
+      "runSeed": 937182,
+      "stage": 7,
+      "stageSeed": 4056554150,
+      "actions": 2,
+      "initialModelFingerprint": "f71b99ef0ab2cab7d6a43ec2fc054b5fc9266bb9da6a7fd87667a740deb6f468"
+    },
+    {
+      "id": "turning-council",
+      "runSeed": 937182,
+      "stage": 100,
+      "stageSeed": 1810977499,
+      "actions": 2,
+      "initialModelFingerprint": "aacc1c2e3a26e893acdabe9d45e486900bac1d836b1190af4538927bbe22e127"
+    },
+    {
+      "id": "turning-council",
+      "runSeed": 937182,
+      "stage": 100000,
+      "stageSeed": 73510967,
+      "actions": 2,
+      "initialModelFingerprint": "75e42704664da8f17c707cfb558107f4191c034224bb89b3eff41c0cfe60b2b8"
+    },
+    {
+      "id": "turning-council",
+      "runSeed": 728391,
+      "stage": 7,
+      "stageSeed": 4056345359,
+      "actions": 2,
+      "initialModelFingerprint": "ed32b5cb0cc8f35df90ac34126f7ae262fdf5a76563381d721138ce7e2cb731f"
+    },
+    {
+      "id": "turning-council",
+      "runSeed": 728391,
+      "stage": 100,
+      "stageSeed": 1810768708,
+      "actions": 2,
+      "initialModelFingerprint": "4b4bb392908e506aba84a1050cff0702121054130f360de82815a2b012e7633b"
+    },
+    {
+      "id": "turning-council",
+      "runSeed": 728391,
+      "stage": 100000,
+      "stageSeed": 73302176,
+      "actions": 2,
+      "initialModelFingerprint": "c141b2c7a4d452b2dbc05b410254a40b9322685823fbaf40a2dc4cd8e1f53dab"
+    },
+    {
+      "id": "witness-table",
+      "runSeed": 0,
+      "stage": 7,
+      "stageSeed": 4055616968,
+      "actions": 25,
+      "initialModelFingerprint": "71996e0e75fb6a8f72a435af86bf70016a460ad1682f8a2d11fb65d52fed4e96"
+    },
+    {
+      "id": "witness-table",
+      "runSeed": 0,
+      "stage": 100,
+      "stageSeed": 1810040317,
+      "actions": 25,
+      "initialModelFingerprint": "573a72386c3837456f51a92bd7d2ef19f1737fcb4ed18f4a9a5a3594049a6f5e"
+    },
+    {
+      "id": "witness-table",
+      "runSeed": 0,
+      "stage": 100000,
+      "stageSeed": 72573785,
+      "actions": 25,
+      "initialModelFingerprint": "f54c3a3caac20591c5bc9b337cfb485ab6b1ebc0d35865a75d55ad85d43117ee"
+    },
+    {
+      "id": "witness-table",
+      "runSeed": 1,
+      "stage": 7,
+      "stageSeed": 4055616969,
+      "actions": 25,
+      "initialModelFingerprint": "415f191dba6a6b9d165a4a48e72db3b3c52468bc7fd8d9ffbdc30530889283d0"
+    },
+    {
+      "id": "witness-table",
+      "runSeed": 1,
+      "stage": 100,
+      "stageSeed": 1810040318,
+      "actions": 25,
+      "initialModelFingerprint": "50c732e69b1912a31444af7aff28424f9cca6f0f2ac2909e3d5ae30208b033c6"
+    },
+    {
+      "id": "witness-table",
+      "runSeed": 1,
+      "stage": 100000,
+      "stageSeed": 72573786,
+      "actions": 25,
+      "initialModelFingerprint": "b8f36af3fd656a9843a51a5a0b024740f28f8b2dd5fb3a9f33dbfddef8603f22"
+    },
+    {
+      "id": "witness-table",
+      "runSeed": 20261002,
+      "stage": 7,
+      "stageSeed": 4075877970,
+      "actions": 25,
+      "initialModelFingerprint": "91748e136f04d16f4fd1ea82a56bb8ab1843d206d2bf0e8c2db1b7be6d5e8258"
+    },
+    {
+      "id": "witness-table",
+      "runSeed": 20261002,
+      "stage": 100,
+      "stageSeed": 1830301319,
+      "actions": 25,
+      "initialModelFingerprint": "b447a9d66affeeef9d4f5a25f61e15a4b4c9983d577e86c022c71cc7b0aa8a42"
+    },
+    {
+      "id": "witness-table",
+      "runSeed": 20261002,
+      "stage": 100000,
+      "stageSeed": 92834787,
+      "actions": 25,
+      "initialModelFingerprint": "c69a66a0358f582861526264f36d819083f42258692ed78d79b0334b02b20856"
+    },
+    {
+      "id": "witness-table",
+      "runSeed": 4294967295,
+      "stage": 7,
+      "stageSeed": 4055616967,
+      "actions": 25,
+      "initialModelFingerprint": "f45ba2c674817a9c2fe3d262a9db43d357a54e4cf9ebfa75956989defbf2e821"
+    },
+    {
+      "id": "witness-table",
+      "runSeed": 4294967295,
+      "stage": 100,
+      "stageSeed": 1810040316,
+      "actions": 25,
+      "initialModelFingerprint": "84f7f281d01ec8d209734578fc6d6343280c4163e6d162f9929f289fc6062e8d"
+    },
+    {
+      "id": "witness-table",
+      "runSeed": 4294967295,
+      "stage": 100000,
+      "stageSeed": 72573784,
+      "actions": 25,
+      "initialModelFingerprint": "464d72cdf2323f4067685888bc62cfe6f49d9a9bc56d8e4c0a8424825c592f36"
+    },
+    {
+      "id": "witness-table",
+      "runSeed": 937182,
+      "stage": 7,
+      "stageSeed": 4056554150,
+      "actions": 25,
+      "initialModelFingerprint": "d71b98542c0e1230f4f91e6476e2275f430e16552cffb733173e212d57274979"
+    },
+    {
+      "id": "witness-table",
+      "runSeed": 937182,
+      "stage": 100,
+      "stageSeed": 1810977499,
+      "actions": 25,
+      "initialModelFingerprint": "f9db6e27e10cf9955312e7b0195ecf89a02864bb4e6e0516af032b8ad0d884c0"
+    },
+    {
+      "id": "witness-table",
+      "runSeed": 937182,
+      "stage": 100000,
+      "stageSeed": 73510967,
+      "actions": 25,
+      "initialModelFingerprint": "475dbac19789271c5af48cfc4f386d48b555c0018ca9a95b30c7fe319f7edfec"
+    },
+    {
+      "id": "witness-table",
+      "runSeed": 728391,
+      "stage": 7,
+      "stageSeed": 4056345359,
+      "actions": 25,
+      "initialModelFingerprint": "023d4f582c2aa6a65d92995443d7a88f3d74492483c9a8d38583459383708387"
+    },
+    {
+      "id": "witness-table",
+      "runSeed": 728391,
+      "stage": 100,
+      "stageSeed": 1810768708,
+      "actions": 25,
+      "initialModelFingerprint": "34d4974646196a2fcc56bdc151525669f42ded8434e4fd44e93e6c61fb68e970"
+    },
+    {
+      "id": "witness-table",
+      "runSeed": 728391,
+      "stage": 100000,
+      "stageSeed": 73302176,
+      "actions": 25,
+      "initialModelFingerprint": "9575a53c1a39cdd92d4a87aef7c7ef13d2724a941641f6ad4705b2e9ae47f4c4"
+    },
+    {
+      "id": "one-lie-archive",
+      "runSeed": 0,
+      "stage": 7,
+      "stageSeed": 4055616968,
+      "actions": 8,
+      "initialModelFingerprint": "b117e2de83ebd2fda026add3dbf2b2ab87050913d4bb1b33383eebc357cddf94"
+    },
+    {
+      "id": "one-lie-archive",
+      "runSeed": 0,
+      "stage": 100,
+      "stageSeed": 1810040317,
+      "actions": 11,
+      "initialModelFingerprint": "53e8ff79c41034ae7dc65f74809ec3db3bffec59274ba3f9aec71e48a0d5f159"
+    },
+    {
+      "id": "one-lie-archive",
+      "runSeed": 0,
+      "stage": 100000,
+      "stageSeed": 72573785,
+      "actions": 11,
+      "initialModelFingerprint": "c901c9038c1588d855d8995aba5f9b8faecbcb9473b3c2f842f59b7d2d35cd09"
+    },
+    {
+      "id": "one-lie-archive",
+      "runSeed": 1,
+      "stage": 7,
+      "stageSeed": 4055616969,
+      "actions": 11,
+      "initialModelFingerprint": "e9aff53d440b8ff642503dce11f3d5565ac3b2e377d50e520e9899708d7cac73"
+    },
+    {
+      "id": "one-lie-archive",
+      "runSeed": 1,
+      "stage": 100,
+      "stageSeed": 1810040318,
+      "actions": 11,
+      "initialModelFingerprint": "7140452f2c90697cb1b1661eb3e19013263ae5589efd5006b3e9b10380b2c737"
+    },
+    {
+      "id": "one-lie-archive",
+      "runSeed": 1,
+      "stage": 100000,
+      "stageSeed": 72573786,
+      "actions": 11,
+      "initialModelFingerprint": "030b012ad329447c813aad37a61c08b0038f8ae44ac4a243392ea8d002df379c"
+    },
+    {
+      "id": "one-lie-archive",
+      "runSeed": 20261002,
+      "stage": 7,
+      "stageSeed": 4075877970,
+      "actions": 14,
+      "initialModelFingerprint": "86dfac520ef1d260f8db8ab3245a8ac6a7cc43be5214b67c65f1ca04f851035b"
+    },
+    {
+      "id": "one-lie-archive",
+      "runSeed": 20261002,
+      "stage": 100,
+      "stageSeed": 1830301319,
+      "actions": 8,
+      "initialModelFingerprint": "7c1e22cc91f9febf7400053400acffaea06d0380504dfe4e0513994200cbded2"
+    },
+    {
+      "id": "one-lie-archive",
+      "runSeed": 20261002,
+      "stage": 100000,
+      "stageSeed": 92834787,
+      "actions": 8,
+      "initialModelFingerprint": "923278a6ea9886de0f9c98c36bd2c3060f90f9ccc002bb2667320c839c1edb8f"
+    },
+    {
+      "id": "one-lie-archive",
+      "runSeed": 4294967295,
+      "stage": 7,
+      "stageSeed": 4055616967,
+      "actions": 11,
+      "initialModelFingerprint": "5c35aeb4f0db5a2da1edb6aa6767492091e0c18ffad8532a97952affd1e042d4"
+    },
+    {
+      "id": "one-lie-archive",
+      "runSeed": 4294967295,
+      "stage": 100,
+      "stageSeed": 1810040316,
+      "actions": 11,
+      "initialModelFingerprint": "5809159dd2b38a54820c1890f835c947ff2cf958d2622019ed1f4c403c0b8523"
+    },
+    {
+      "id": "one-lie-archive",
+      "runSeed": 4294967295,
+      "stage": 100000,
+      "stageSeed": 72573784,
+      "actions": 11,
+      "initialModelFingerprint": "9fbf0ccaad49cfa5a62e46da4316d01800ae52fd3e46fcf76e628f81d581c126"
+    },
+    {
+      "id": "one-lie-archive",
+      "runSeed": 937182,
+      "stage": 7,
+      "stageSeed": 4056554150,
+      "actions": 14,
+      "initialModelFingerprint": "34fb16bcbf39ef0ea7c0a168863f9789169de915a9b537dcb5bc9eb9b7fa50ae"
+    },
+    {
+      "id": "one-lie-archive",
+      "runSeed": 937182,
+      "stage": 100,
+      "stageSeed": 1810977499,
+      "actions": 11,
+      "initialModelFingerprint": "98a838d02c13a1513f099a5f9ead7ca5a7a1f412bf4bf608f89c3cc0016b2e16"
+    },
+    {
+      "id": "one-lie-archive",
+      "runSeed": 937182,
+      "stage": 100000,
+      "stageSeed": 73510967,
+      "actions": 11,
+      "initialModelFingerprint": "962e69294200da77bf43d8453a9c250b2367444992985ba34c389170f3bd9a11"
+    },
+    {
+      "id": "one-lie-archive",
+      "runSeed": 728391,
+      "stage": 7,
+      "stageSeed": 4056345359,
+      "actions": 14,
+      "initialModelFingerprint": "ea8b45647e76c9269ada47b31aafa7bcb1a28bae9b11bad46b62ab4edc955c42"
+    },
+    {
+      "id": "one-lie-archive",
+      "runSeed": 728391,
+      "stage": 100,
+      "stageSeed": 1810768708,
+      "actions": 11,
+      "initialModelFingerprint": "98c105e1fe8f6c876648f6ed19a20d4925eaac20d2b82466d2ce168f5016d162"
+    },
+    {
+      "id": "one-lie-archive",
+      "runSeed": 728391,
+      "stage": 100000,
+      "stageSeed": 73302176,
+      "actions": 11,
+      "initialModelFingerprint": "96be8e8713670640a58a24c2a52f31a2ec5fb4fc240e197b347c551eb393bb85"
+    },
+    {
+      "id": "invariant-gallery",
+      "runSeed": 0,
+      "stage": 7,
+      "stageSeed": 4055616968,
+      "actions": 16,
+      "initialModelFingerprint": "e12cd3214f7ddda0a4df519d9adaea7080d7618a5595620830289fe27a80bd58"
+    },
+    {
+      "id": "invariant-gallery",
+      "runSeed": 0,
+      "stage": 100,
+      "stageSeed": 1810040317,
+      "actions": 19,
+      "initialModelFingerprint": "0ad06259787ad9db51ffd80ba0cda35c605c50835b0b7216df39574a694a0e95"
+    },
+    {
+      "id": "invariant-gallery",
+      "runSeed": 0,
+      "stage": 100000,
+      "stageSeed": 72573785,
+      "actions": 19,
+      "initialModelFingerprint": "a8e2f4fec5a2adaacab02ca47f7355e319d2c551f8c88bdc2a4e7e1302746941"
+    },
+    {
+      "id": "invariant-gallery",
+      "runSeed": 1,
+      "stage": 7,
+      "stageSeed": 4055616969,
+      "actions": 14,
+      "initialModelFingerprint": "0f70ccfc861ba69f68748a5ed53c14a52a4d22ecdb3e4c01e1acf46ce9609fc5"
+    },
+    {
+      "id": "invariant-gallery",
+      "runSeed": 1,
+      "stage": 100,
+      "stageSeed": 1810040318,
+      "actions": 14,
+      "initialModelFingerprint": "9706e2bd846f3ce6bf380fffae23ab60030af13fdae2d2a345556a80f5cef0f2"
+    },
+    {
+      "id": "invariant-gallery",
+      "runSeed": 1,
+      "stage": 100000,
+      "stageSeed": 72573786,
+      "actions": 22,
+      "initialModelFingerprint": "fde3eef9f9ab7f8fa457fa98c11f192357d3a9bee92d2eb84fa033442c0c7780"
+    },
+    {
+      "id": "invariant-gallery",
+      "runSeed": 20261002,
+      "stage": 7,
+      "stageSeed": 4075877970,
+      "actions": 17,
+      "initialModelFingerprint": "1ab1af70e631f92bf337562b7f7c52b190e8f2ae011efcb26486f6dd46028854"
+    },
+    {
+      "id": "invariant-gallery",
+      "runSeed": 20261002,
+      "stage": 100,
+      "stageSeed": 1830301319,
+      "actions": 21,
+      "initialModelFingerprint": "aee3d9288465df00d4077b633b876716813b29d8c9185fbbd1dea90931fd7b86"
+    },
+    {
+      "id": "invariant-gallery",
+      "runSeed": 20261002,
+      "stage": 100000,
+      "stageSeed": 92834787,
+      "actions": 21,
+      "initialModelFingerprint": "e623caeb5ff8d9222c69b72491994131eb37ffdcbdbc950a992ce0b8a6c9a540"
+    },
+    {
+      "id": "invariant-gallery",
+      "runSeed": 4294967295,
+      "stage": 7,
+      "stageSeed": 4055616967,
+      "actions": 14,
+      "initialModelFingerprint": "5205bd00a159b303c918bf35ba1ea1a42f6f0ea8043415de96f0f7615bee4bc4"
+    },
+    {
+      "id": "invariant-gallery",
+      "runSeed": 4294967295,
+      "stage": 100,
+      "stageSeed": 1810040316,
+      "actions": 15,
+      "initialModelFingerprint": "0321556f0abae63242b656aae5103dd7432909f29f350cd7822c9c05fe1100ff"
+    },
+    {
+      "id": "invariant-gallery",
+      "runSeed": 4294967295,
+      "stage": 100000,
+      "stageSeed": 72573784,
+      "actions": 21,
+      "initialModelFingerprint": "7c99f71f498018e3ab7f247c6bd3a5fd7e423fb8d4c4d48574623bfeeb0afa91"
+    },
+    {
+      "id": "invariant-gallery",
+      "runSeed": 937182,
+      "stage": 7,
+      "stageSeed": 4056554150,
+      "actions": 17,
+      "initialModelFingerprint": "6e225af9827534235ce30e9dc6db6219b0adc40113f29d4749aee5b427554fd5"
+    },
+    {
+      "id": "invariant-gallery",
+      "runSeed": 937182,
+      "stage": 100,
+      "stageSeed": 1810977499,
+      "actions": 16,
+      "initialModelFingerprint": "633e7dcdaadae22b65043ae76fc8c419383a531125bbfaa47c52b9faa7e24bef"
+    },
+    {
+      "id": "invariant-gallery",
+      "runSeed": 937182,
+      "stage": 100000,
+      "stageSeed": 73510967,
+      "actions": 20,
+      "initialModelFingerprint": "90bb01265555c2c9708f01f2c78136b372fa55612551f5ff121b4f9f3ee9ea14"
+    },
+    {
+      "id": "invariant-gallery",
+      "runSeed": 728391,
+      "stage": 7,
+      "stageSeed": 4056345359,
+      "actions": 18,
+      "initialModelFingerprint": "baeb89d6b3c191db248939a377b0a407fbc57d873f21f2fb19232168699e8c8d"
+    },
+    {
+      "id": "invariant-gallery",
+      "runSeed": 728391,
+      "stage": 100,
+      "stageSeed": 1810768708,
+      "actions": 16,
+      "initialModelFingerprint": "ffe679c00d18147b037397928311d868ec5d451cb82e63b2d26d5b5c2653c8d1"
+    },
+    {
+      "id": "invariant-gallery",
+      "runSeed": 728391,
+      "stage": 100000,
+      "stageSeed": 73302176,
+      "actions": 19,
+      "initialModelFingerprint": "add8a18e7e9c57d9df420201af2e307a18e9d7fe9958ceb0b035d3624228ebae"
+    }
+  ]
+}
