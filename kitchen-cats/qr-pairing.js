@@ -1,8 +1,8 @@
 import QrScanner from "./vendor/qr-scanner.min.js";
 
 export const QR_PREFIX = "KCQR1";
-export const QR_MAX_FRAMES = 64;
-export const QR_FRAME_CHARS = 420;
+export const QR_MAX_FRAMES = 84;
+export const QR_FRAME_CHARS = 320;
 export const QR_MAX_RAW_CHARS = 20000;
 
 const SAFE_TOKEN = /^[A-Za-z0-9._:~-]{1,80}$/;
