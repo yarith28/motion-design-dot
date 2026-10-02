@@ -49,15 +49,25 @@ const base = process.env.BASE_URL || "http://127.0.0.1:8000/kitchen-cats/";
         const frames = qr.createQrFrames(makeSignal(type), role);
         const assembler = new qr.QrFrameAssembler(role);
         const canvas = document.createElement("canvas");
+        const imageScanner = new qr.QrCameraScanner(
+          document.createElement("video"),
+          () => {},
+        );
         document.body.append(canvas);
         const decoded = [];
         let assembled;
         for (const frame of frames) {
           qr.drawQr(canvas, frame);
-          const scanned = await qr.QrScanner.scanImage(canvas, {
-            returnDetailedScanResult: true,
-          });
-          const text = typeof scanned === "string" ? scanned : scanned.data;
+          const blob = await new Promise((resolve, reject) =>
+            canvas.toBlob(
+              (value) =>
+                value ? resolve(value) : reject(Error("QR PNG export failed.")),
+              "image/png",
+            ),
+          );
+          const text = await imageScanner.scanImage(
+            new File([blob], "kitchen-cats-pairing.png", { type: "image/png" }),
+          );
           decoded.push(text);
           assembled = assembler.add(text);
         }
