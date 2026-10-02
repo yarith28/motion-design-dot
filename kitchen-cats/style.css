@@ -1019,6 +1019,7 @@ body.game-active .stats b {
 
 body.game-active .stats button {
   padding: 6px 8px;
+  min-width: 44px;
   min-height: 44px;
   border-radius: 10px;
   font-size: 11px;
