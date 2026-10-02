@@ -1,6 +1,7 @@
 import { KitchenGame } from "./game-core.js";
 import { MultiplayerSession } from "./multiplayer-session.js";
 import { WebRTCTransport } from "./webrtc-transport.js";
+import { createPresentationState, resetPresentation, updatePhasePresentation, updatePlayerVisual, updateServeEffect, prepPose, potEffect, burstOffset } from "./presentation-animation.js";
 const offlineGame = new KitchenGame();
 let runtimeMode = "solo"; // solo | host | guest
 let multiplayer = null;
@@ -62,16 +63,21 @@ let selectedAvatar = Math.max(
 );
 let lastPhase;
 let lastServed = 0;
+
 let lastActionTouch = 0;
+// Presentation-only animation clock. Gameplay/session clocks remain untouched.
+const presentation = createPresentationState();
 let audioContext;
+
+function clearPresentationMotion(){ resetPresentation(presentation, state); lastServed = state?.served || 0; }
 
 function send(v) {
   if (runtimeMode === "solo") {
     if (v.type === "move") offlineGame.move(v.x, v.y);
     if (v.type === "interact") offlineGame.interact(v.station);
-    if (v.type === "start") offlineGame.start(v.name || "Chef", v.avatar || 0);
+    if (v.type === "start") { clearPresentationMotion(); offlineGame.start(v.name || "Chef", v.avatar || 0); }
     if (v.type === "stop") offlineGame.stop();
-    if (v.type === "replay") offlineGame.replay();
+    if (v.type === "replay") { clearPresentationMotion(); offlineGame.replay(); }
     return;
   }
   if (!multiplayer) return;
@@ -335,7 +341,7 @@ $("solo")?.addEventListener("click", () => {
 $("start")?.addEventListener("click", () => send({ type: "start" }));
 $("replay")?.addEventListener("click", () => send({ type: "replay" }));
 
-$("leave").addEventListener("click", () => returnToSolo("Kitchen closed."));
+$("leave").addEventListener("click", () => { clearPresentationMotion(); returnToSolo("Kitchen closed."); });
 
 function nearest() {
   const player = state?.players.find((entry) => entry.id === me);
@@ -630,6 +636,8 @@ function renderUI() {
     near?.d <= 110 ? `E · ${near.label}` : "E · Interact";
   $("notice").textContent = state.notice || "";
 
+  if (lastPhase !== state.phase) { updatePhasePresentation(presentation, state); }
+
   if (lastPhase !== state.phase && state.phase === "playing") {
     window.scrollTo(0, 0);
     $("kitchen").focus({ preventScroll: true });
@@ -782,6 +790,11 @@ function vegetable(ctx, item, x, y, scale = 1) {
 const ctx = $("kitchen").getContext("2d");
 
 function drawChefSprite(player) {
+  const now = performance.now();
+  const visual = updatePlayerVisual(presentation, player, now, reducedMotion);
+  const bob = visual.bob;
+  const tilt = visual.tilt;
+
   const image =
     chefImages[
       (((player.avatar ?? player.color ?? 0) % CHEFS.length) + CHEFS.length) %
@@ -791,6 +804,9 @@ function drawChefSprite(player) {
   const anchorY = player.y;
 
   ctx.save();
+  ctx.translate(anchorX, anchorY + bob);
+  ctx.rotate(tilt);
+  ctx.translate(-anchorX, -anchorY);
   ctx.globalAlpha = player.connected ? 1 : 0.45;
   ctx.fillStyle = "rgba(39, 61, 52, 0.12)";
   ctx.beginPath();
@@ -886,7 +902,12 @@ function drawKitchen() {
 
     if (station.kind === "prep") {
       rounded(ctx, station.x - 34, station.y - 25, 68, 40, 8, "#cca97a");
-      text(ctx, "╱", station.x + 20, station.y, 24, "#5c473a");
+      const knife = prepPose(performance.now(), reducedMotion);
+      ctx.save();
+      ctx.translate(station.x + 20, station.y);
+      ctx.rotate(reducedMotion || !state.prep || state.now >= state.prep.ready ? 0 : [-.45,-.15,.25,.55][knife]);
+      text(ctx, "╱", 0, 0, 24, "#5c473a");
+      ctx.restore();
       if (state.prep)
         vegetable(ctx, state.prep.item, station.x - 12, station.y, 1);
     }
@@ -896,6 +917,11 @@ function drawKitchen() {
       text(ctx, "≈", station.x, station.y - 2, 32, "#f0bd6c");
       if (state.pot)
         vegetable(ctx, state.pot.item, station.x, station.y - 4, 0.8);
+      const potFx = potEffect(performance.now(), !!state.pot, reducedMotion);
+      if (potFx.active) {
+        text(ctx, potFx.frame % 2 ? "~" : "≈", station.x - 16, station.y - 36 - potFx.frame * 3, 18, "#95a08d");
+        text(ctx, "•", station.x + 10, station.y - 28 - potFx.frame * 2, 12, "#95a08d");
+      }
     }
 
     if (station.kind === "pass") {
@@ -943,6 +969,9 @@ function drawKitchen() {
       );
     }
   }
+
+  const serveFx = updateServeEffect(presentation, state.served || 0, performance.now(), reducedMotion);
+  if (serveFx.active) { for (let i=0;i<8;i++){ const b=burstOffset(i,serveFx.age,reducedMotion); text(ctx,"✦",650+b.x,180+b.y,18,"#edb66a"); } }
 
   for (const player of [...state.players].sort((a, b) => a.y - b.y))
     drawChefSprite(player);

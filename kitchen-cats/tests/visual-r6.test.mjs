@@ -1,0 +1,3 @@
+import assert from "node:assert/strict";
+import {createPresentationState,updatePlayerVisual,updateServeEffect,resetPresentation,prepPose,potEffect} from "../presentation-animation.js";
+let s=createPresentationState(); assert.equal(updatePlayerVisual(s,{id:1,x:0,y:0},0).moving,false); assert.equal(updatePlayerVisual(s,{id:1,x:2,y:0},100).moving,true); resetPresentation(s,{served:2,phase:"playing"}); updateServeEffect(s,1,100); assert.equal(s.serveBurstUntil,0); updateServeEffect(s,3,100); assert.ok(s.serveBurstUntil>100); assert.notEqual(prepPose(0),prepPose(100)); assert.equal(potEffect(1,false).active,false); console.log("PASS visual r6");
