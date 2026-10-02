@@ -3,9 +3,9 @@
   "suite": "trajectory-room",
   "passed": true,
   "status": "passed",
-  "startedAt": "2026-10-02T22:08:36.193Z",
+  "startedAt": "2026-10-02T23:34:56.073Z",
   "source": {
-    "sha256": "56a93877d8dabcc05d75f59c70b554fef697cb6c83bda042adaba23a27ce3f8f",
+    "sha256": "ca7efeddb33c213da3dac3410f8ab305eeb45baf0cc836c56d8e113834fccc0f",
     "files": [
       "catalog.css",
       "catalog.js",
@@ -93,7 +93,7 @@
     "passed": true,
     "sha256": "5c923d5a299851ec31d2769f039f810b66f3bc0ba9957a59c4e12c03f6f951e9",
     "fileCount": 21,
-    "verifiedAt": "2026-10-02T22:08:36.337Z"
+    "verifiedAt": "2026-10-02T23:34:56.193Z"
   },
   "exitCode": 0,
   "signal": null,
@@ -103,10 +103,10 @@
     "passed": true,
     "sha256": "5c923d5a299851ec31d2769f039f810b66f3bc0ba9957a59c4e12c03f6f951e9",
     "fileCount": 21,
-    "verifiedAt": "2026-10-02T22:36:30.720Z"
+    "verifiedAt": "2026-10-02T23:50:54.850Z"
   },
   "completionEvidence": {
-    "sha256": "b249fd8b33116ee39fd23c211220851d9b549ad44f7f5e89501b4908f3f53bd0",
+    "sha256": "75038c04c3ddd16f61d3ed3d3625b97eebe8e9a2ba82c356d87a7548e3dfa0e8",
     "file": "coverage/trajectory-room.json",
     "cases": [
       {
@@ -1457,5 +1457,5 @@
       }
     ]
   },
-  "finishedAt": "2026-10-02T22:36:30.721Z"
+  "finishedAt": "2026-10-02T23:50:54.851Z"
 }

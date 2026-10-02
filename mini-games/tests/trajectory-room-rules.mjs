@@ -13,6 +13,69 @@ function act(id,s,as){for(const a of as){assert.equal(s.outcome,'playing',id+': 
 function canvasMock(){return new Proxy({},{get:(_,k)=>k==='measureText'?()=>({width:10}):()=>{},set:()=>true})}
 function render(id,s){availableControls(id,s);engines[id].render({p(){},h(){},pre(){},group(){},grid(){},table(){},range(){},button(){},canvas(k,w,h,draw){draw(canvasMock(),s)}},s)}
 function allFiniteNumbers(value,path='state'){if(typeof value==='number')assert(Number.isFinite(value),path);else if(value&&typeof value==='object')for(const[k,v]of Object.entries(value))allFiniteNumbers(v,path+'.'+k)}
+// Only sqrt/power-derived initial physical scalars may differ between libm/Node
+// implementations. RNG parameters, native controls, integer counters/indices, topology,
+// strings and object/array structure must still match the recorded fixture exactly.
+// 64 machine epsilons of absolute + relative error cover the observed 4e-16
+// orbital-phase discrepancy; in these bounded physical units the budget is below
+// 1e-13, far below the smallest 0.01 input step and any physical acceptance band.
+const fixtureAbsoluteTolerance=64*Number.EPSILON,fixtureRelativeTolerance=64*Number.EPSILON;
+function libmFixtureScalar(id,path){return id==='rendezvous-window'&&['vy','targetRate','targetPhase'].includes(path)||id==='resonant-switch'&&/^receivers\.[0-9]+\.target$/.test(path)}
+function assertGeneratedFixture(id,actual,expected,path=''){
+  const label=`Current source generation must match source-bound fixture: ${id}.${path||'state'}`;
+  assert.equal(typeof actual,typeof expected,label+' type');
+  if(typeof expected==='number'){
+    assert(Number.isFinite(actual)&&Number.isFinite(expected),label+' finite number');
+    if(libmFixtureScalar(id,path)){
+      const tolerance=fixtureAbsoluteTolerance+fixtureRelativeTolerance*Math.max(Math.abs(actual),Math.abs(expected));
+      assert(Math.abs(actual-expected)<=tolerance,`${label}: ${actual} vs ${expected}, tolerance ${tolerance}`);
+    }else assert.equal(actual,expected,label);
+    return;
+  }
+  if(expected===null||typeof expected!=='object'){assert.equal(actual,expected,label);return}
+  assert(actual!==null,label+' object');
+  assert.equal(Array.isArray(actual),Array.isArray(expected),label+' array type');
+  assert.equal(Object.getPrototypeOf(actual),Object.getPrototypeOf(expected),label+' prototype');
+  if(Array.isArray(expected))assert.equal(actual.length,expected.length,label+' array length');
+  assert.deepEqual(Object.keys(actual).sort(),Object.keys(expected).sort(),label+' exact keys');
+  for(const key of Object.keys(expected))assertGeneratedFixture(id,actual[key],expected[key],path?path+'.'+key:key);
+}
+function fixtureComparisonRegression(fixtures){
+  const orbital=fixtures.generation['rendezvous-window'].initialStates.find(p=>p.state.targetPhase===.5542446503348666)?.state;
+  assert(orbital,'Keep the actual CI last-bit discrepancy represented in comparator regression');
+  const receiver=fixtures.generation['resonant-switch'].initialStates.find(p=>p.state.receivers.length===2).state;
+  const topology=fixtures.generation['osmotic-port'].initialStates[0].state;
+  const accepted=[],rejected=[];
+  const accept=(name,id,expected,change)=>{const actual=clone(expected);change(actual);const before=JSON.stringify(actual);assertGeneratedFixture(id,actual,expected);assert.equal(JSON.stringify(actual),before,'Comparison never rounds or replaces actual state');accepted.push(name)};
+  const reject=(name,id,expected,change)=>{const actual=clone(expected);change(actual);assert.throws(()=>assertGeneratedFixture(id,actual,expected),{name:'AssertionError'},name);rejected.push(name)};
+  accept('Observed CI orbital phase differs by 4e-16','rendezvous-window',orbital,s=>s.targetPhase=.554244650334867);
+  for(const field of ['vy','targetRate','targetPhase'])accept('One rounding step in orbital '+field,'rendezvous-window',orbital,s=>s[field]+=Number.EPSILON*Math.max(1,Math.abs(s[field])));
+  accept('One rounding step in computed receiver target','resonant-switch',receiver,s=>s.receivers[0].target+=Number.EPSILON*Math.max(1,s.receivers[0].target));
+  accept('Integer-valued physical scalar is still continuous','rendezvous-window',{targetRate:1},s=>s.targetRate+=Number.EPSILON);
+  for(const field of ['stage','seed','score','turn'])reject('Integer '+field+' changes','rendezvous-window',orbital,s=>s[field]+=1);
+  reject('Integer score becomes a tiny fraction','rendezvous-window',orbital,s=>s.score+=Number.EPSILON);
+  reject('Fractional native impulse changes','rendezvous-window',orbital,s=>s.burn+=Number.EPSILON);
+  reject('RNG-derived physical radius changes','rendezvous-window',orbital,s=>s.targetRadius+=1e-12);
+  for(const field of ['vy','targetRate','targetPhase'])reject('Physical orbital '+field+' changes beyond rounding budget','rendezvous-window',orbital,s=>s[field]+=1e-9);
+  reject('Receiver voltage changes beyond rounding budget','resonant-switch',receiver,s=>s.receivers[0].target+=1e-9);
+  reject('Same field name on another game has no tolerance','induction-coast',orbital,s=>s.targetPhase+=Number.EPSILON);
+  reject('Direction token changes','rendezvous-window',orbital,s=>s.direction='radial');
+  reject('Numeric type changes','rendezvous-window',orbital,s=>s.targetPhase=String(s.targetPhase));
+  reject('Missing physical field','rendezvous-window',orbital,s=>delete s.targetPhase);
+  reject('Unexpected field','rendezvous-window',orbital,s=>s.unrecorded=0);
+  reject('Array replaced by object','rendezvous-window',orbital,s=>s.trace={});
+  reject('Receiver count changes','resonant-switch',receiver,s=>s.receivers.pop());
+  reject('Receiver order changes','resonant-switch',receiver,s=>s.receivers.reverse());
+  reject('Nested receiver key missing','resonant-switch',receiver,s=>delete s.receivers[0].charge);
+  reject('Receiver capacitance changes by a rounding step','resonant-switch',receiver,s=>s.receivers[0].C+=Number.EPSILON*Math.max(1,s.receivers[0].C));
+  reject('Receiver charge becomes a tiny fraction','resonant-switch',receiver,s=>s.receivers[0].charge+=Number.EPSILON);
+  reject('Circuit path token changes','resonant-switch',receiver,s=>s.path='source');
+  reject('Membrane topology edge changes','osmotic-port',topology,s=>s.edges[0][0]+=1);
+  reject('Integer topology endpoint becomes tiny fraction','osmotic-port',topology,s=>s.edges[0][0]+=Number.EPSILON);
+  reject('Topology array length changes','osmotic-port',topology,s=>s.edges.pop());
+  for(const value of [NaN,Infinity,-Infinity])reject('Nonfinite physical scalar '+String(value),'rendezvous-window',orbital,s=>s.targetPhase=value);
+  return{scope:'Initial fixture comparison only; actual generated states are retained for legal witness play/rendering. No tolerance for controls, counters, topology, tokens or other physical parameters.',absoluteTolerance:fixtureAbsoluteTolerance,relativeTolerance:fixtureRelativeTolerance,tolerantPaths:{'rendezvous-window':['vy','targetRate','targetPhase'],'resonant-switch':['receivers.<index>.target']},acceptedRoundingCases:accepted,rejectedMutationCases:rejected};
+}
 const rules={
 'rendezvous-window'(){const s=init('rendezvous-window'),L=s.x*s.vy-s.y*s.vx;act('rendezvous-window',s,Array(20).fill('coast'));assert(Math.abs((s.x*s.vy-s.y*s.vx)-L)<1e-8);const fail=clone(s);fail.x=fail.targetRadius*Math.cos(fail.targetPhase+fail.targetRate*fail.time);fail.y=fail.targetRadius*Math.sin(fail.targetPhase+fail.targetRate*fail.time);fail.vx=8;fail.vy=8;engines['rendezvous-window'].act(fail,'dock');assert.equal(fail.outcome,'loss');return 'Central-force angular momentum remains constant between burns; equal target position with wrong relative velocity cannot dock.'},
 'induction-coast'(){const a=init('induction-coast'),b=clone(a);act('induction-coast',a,['advance']);act('induction-coast',b,['receiver','advance']);assert.equal(a.energy,0);assert(b.v<a.v&&b.energy>0&&b.heat>0);const E=b.v*b.v/2+b.energy+b.heat-.45*b.x;assert(Math.abs(E-32)<.04,'Recovered energy, resistive heat and kinetic energy balance gravity work');return 'Back-EMF couples mechanical deceleration to stored charge and I²R heat; open circuit cannot recover energy.'},
@@ -38,5 +101,5 @@ return 'An internal upward cabin force reacts downward on the independently movi
 'air-sieve'(){const s=init('air-sieve');act('air-sieve',s,['air:2']);assert(s.particles.every(p=>p.v===0&&p.y>=4));act('air-sieve',s,['heavy',...Array(3).fill('advance')]);const heavy=s.particles.find(p=>p.kind==='heavy'),light=s.particles.find(p=>p.kind==='light');assert(heavy.v<light.v&&heavy.y<light.y);return 'Air selection does not teleport particles; different mass/drag gives different inertial acceleration and settling order.'},
 'soft-sluice'(){const s=init('soft-sluice');act('soft-sluice',s,['sleeve:0.8',...Array(5).fill('advance')]);const a=.7*Math.exp(s.strain),b=.55*Math.exp(-s.strain);assert(a>.7&&b<.55&&Math.abs(a*b-.385)<1e-12);const stress=s.stress;act('soft-sluice',s,['sleeve:0',...Array(4).fill('advance')]);assert(s.stress<stress&&s.memory>0);const wall=init('soft-sluice');wall.x=3.5;engines['soft-sluice'].act(wall,'advance');assert.equal(wall.outcome,'loss');return 'Deformation conserves volume and leaves relaxing stress memory; a center inside the throat still fails when its full ellipse intersects a wall.'}
 };
-export function checkRules(){const games=JSON.parse(fs.readFileSync(new URL('../trajectory-room/games.json',import.meta.url))),fixtures=JSON.parse(fs.readFileSync(new URL('trajectory-room-paths.json',import.meta.url))),report={scope:'Pure model legal action replays and explicitly labeled physical-state perturbations. Separate from native browser/ordinary-play evidence.',games:[],generation:[]};assert.equal(games.length,20);assert.equal(Object.keys(engines).length,20);for(const g of games){const rule=rules[g.id]();for(let stage=0;stage<3;stage++){const s=init(g.id,stage);act(g.id,s,fixtures.games[g.id].finite[stage].actions);assert.equal(s.outcome,'win',g.id+' finite'+stage);assert.equal(s.score,fixtures.games[g.id].finite[stage].score);allFiniteNumbers(s);render(g.id,s);const terminal=JSON.stringify(s);engines[g.id].act(s,'advance');assert.equal(JSON.stringify(s),terminal,'Terminal outcomes remain stable')}const fail=init(g.id);act(g.id,fail,fixtures.games[g.id].loss);assert.equal(fail.outcome,'loss');render(g.id,fail);report.games.push({id:g.id,rule,finiteStudies:3,terminalWinLossRender:true,naturalLoss:true});if(g.endless.supported){assert.notEqual(nativeDescription(g.id,init(g.id,0,'endless')),nativeDescription(g.id,init(g.id,1,'endless')),g.id+' first two generated challenges must expose changed physical content in native text');const generation=fixtures.generation[g.id],fingerprints=new Set;for(const item of generation.initialStates){const state=engines[g.id].init({stage:item.stage,seed:seedFor(item.stage,item.seed),mode:'endless'});assert.deepEqual(state,item.state,'Current source generation must match source-bound fixture');allFiniteNumbers(state);render(g.id,state);const actual={...state};for(const k of ['stage','seed','mode','note','outcome','score','turn'])delete actual[k];fingerprints.add(crypto.createHash('sha256').update(JSON.stringify(actual)).digest('hex'))}assert(fingerprints.size>=6,g.id+' must have substantial fresh physical content');for(const p of generation.witnesses){const s=init(g.id,p.stage,'endless',p.seed);act(g.id,s,p.actions);assert.equal(s.outcome,'win',g.id+' late legal controls '+p.stage+'/'+p.seed);assert.equal(s.score,p.score);render(g.id,s)}report.generation.push({id:g.id,initializedDispersedSeeds:generation.initialStates.length,freshPhysicalStates:fingerprints.size,winningWitnesses:generation.witnesses.length,stages:[10000,10001],runSeeds:[0,1,20261002,4294967295],boundedStageStrategy:'Generated init selects bounded families/physical parameter ranges independently of stage index; sampled source properties, not a formal proof or late browser certification.'})}}return report}
+export function checkRules(){const games=JSON.parse(fs.readFileSync(new URL('../trajectory-room/games.json',import.meta.url))),fixtures=JSON.parse(fs.readFileSync(new URL('trajectory-room-paths.json',import.meta.url))),report={scope:'Pure model legal action replays and explicitly labeled physical-state perturbations. Separate from native browser/ordinary-play evidence.',fixtureComparison:fixtureComparisonRegression(fixtures),games:[],generation:[]};assert.equal(games.length,20);assert.equal(Object.keys(engines).length,20);for(const g of games){const rule=rules[g.id]();for(let stage=0;stage<3;stage++){const s=init(g.id,stage);act(g.id,s,fixtures.games[g.id].finite[stage].actions);assert.equal(s.outcome,'win',g.id+' finite'+stage);assert.equal(s.score,fixtures.games[g.id].finite[stage].score);allFiniteNumbers(s);render(g.id,s);const terminal=JSON.stringify(s);engines[g.id].act(s,'advance');assert.equal(JSON.stringify(s),terminal,'Terminal outcomes remain stable')}const fail=init(g.id);act(g.id,fail,fixtures.games[g.id].loss);assert.equal(fail.outcome,'loss');render(g.id,fail);report.games.push({id:g.id,rule,finiteStudies:3,terminalWinLossRender:true,naturalLoss:true});if(g.endless.supported){assert.notEqual(nativeDescription(g.id,init(g.id,0,'endless')),nativeDescription(g.id,init(g.id,1,'endless')),g.id+' first two generated challenges must expose changed physical content in native text');const generation=fixtures.generation[g.id],fingerprints=new Set;for(const item of generation.initialStates){const state=engines[g.id].init({stage:item.stage,seed:seedFor(item.stage,item.seed),mode:'endless'});assertGeneratedFixture(g.id,state,item.state);allFiniteNumbers(state);render(g.id,state);const actual={...state};for(const k of ['stage','seed','mode','note','outcome','score','turn'])delete actual[k];fingerprints.add(crypto.createHash('sha256').update(JSON.stringify(actual)).digest('hex'))}assert(fingerprints.size>=6,g.id+' must have substantial fresh physical content');for(const p of generation.witnesses){const s=init(g.id,p.stage,'endless',p.seed);act(g.id,s,p.actions);assert.equal(s.outcome,'win',g.id+' late legal controls '+p.stage+'/'+p.seed);assert.equal(s.score,p.score);render(g.id,s)}report.generation.push({id:g.id,initializedDispersedSeeds:generation.initialStates.length,freshPhysicalStates:fingerprints.size,winningWitnesses:generation.witnesses.length,stages:[10000,10001],runSeeds:[0,1,20261002,4294967295],boundedStageStrategy:'Generated init selects bounded families/physical parameter ranges independently of stage index; sampled source properties, not a formal proof or late browser certification.'})}}return report}
 if(process.argv[1]?.endsWith('trajectory-room-rules.mjs'))console.log(JSON.stringify(checkRules(),null,2));

@@ -291,5 +291,23 @@
     "previews": 390,
     "test": "tests/preservation400.cjs",
     "repair": "ARROW-AUDIT-REPAIR.md"
+  },
+  "ciRemediation500": {
+    "initialCommit": "0665990e14364a75b6f5321687c138ddc329b8de",
+    "initialRun": "https://github.com/yarith28/motion-design-dot/actions/runs/37077312836",
+    "failedJob": "https://github.com/yarith28/motion-design-dot/actions/runs/37077312836/job/111069974407",
+    "failure": "Exact computed orbital phase fixture comparison differed by4.44e-16; shell Node version was not recorded",
+    "historicalRecord": "coverage/ci500-initial-trajectory-failure.json",
+    "correction": "Bounded64machine-epsilon comparison only for named computed Rendezvous scalars and Resonant receiver targets; all other values remain exact; game runtime and saved fixture unchanged",
+    "acceptedRoundingCases": 6,
+    "rejectedMutationCases": 29,
+    "replacementNativeProfiles": 40,
+    "replacementFiniteStudyWins": 120,
+    "replacementOptionalChallengeWins": 76,
+    "replacementFinishedAt": "2026-10-02T23:50:54.851Z",
+    "replacementSourceUnchanged": true,
+    "replacementServedRuntimeFiles": 21,
+    "replacementSuiteSourceSha256": "ca7efeddb33c213da3dac3410f8ab305eeb45baf0cc836c56d8e113834fccc0f",
+    "publication": "Corrective commit requires its own exact-commit CI and Pages verification; initial failed run is retained"
   }
 }

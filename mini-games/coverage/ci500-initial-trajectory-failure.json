@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "scope": "Read-only remote GitHub Actions observations; no retroactive source binding, no model-bug dismissal.",
+  "observedAt": "2026-10-02T23:30:43.508Z",
+  "repository": "yarith28/motion-design-dot",
+  "headSha": "0665990e14364a75b6f5321687c138ddc329b8de",
+  "run": {
+    "id": 37077312836,
+    "url": "https://github.com/yarith28/motion-design-dot/actions/runs/37077312836"
+  },
+  "job": {
+    "id": 111069974407,
+    "name": "new-game-completion (trajectory-room)",
+    "url": "https://github.com/yarith28/motion-design-dot/actions/runs/37077312836/job/111069974407",
+    "conclusion": "failure",
+    "failedStep": "Complete every new game through desktop and touch UI"
+  },
+  "error": {
+    "type": "AssertionError",
+    "code": "ERR_ASSERTION",
+    "message": "Current source generation must match source-bound fixture",
+    "operator": "deepStrictEqual",
+    "location": "mini-games/tests/trajectory-room-rules.mjs:41:1572",
+    "caller": "mini-games/tests/trajectory-room.cjs:12:103",
+    "difference": {
+      "stage": 10011,
+      "field": "targetPhase",
+      "actual": 0.554244650334867,
+      "expected": 0.5542446503348666,
+      "absoluteDifference": 4.440892098500626e-16
+    },
+    "limits": "Node abbreviated the objects; the displayed diff identifies targetPhase. No remote browser campaign completed in this failed job."
+  },
+  "nodeVersion": {
+    "commandNode": null,
+    "explicitCommandVersionInLog": false,
+    "actionWarning": "The log states Node.js20 checkout/upload actions were forced to run on Node.js24; this does not identify the shell node executable version."
+  },
+  "wrapper": {
+    "passed": false,
+    "sourceUnchanged": true
+  },
+  "artifact": {
+    "id": 11257266756,
+    "name": "completion-trajectory-room",
+    "url": "https://github.com/yarith28/motion-design-dot/actions/runs/37077312836/artifacts/11257266756",
+    "zipSha256": "7e4bbcd517480c50ae7908712ad396f5c18bb7aab38f07d338eb964258d538bd"
+  },
+  "logExcerpt": [
+    "2026-10-02T23:23:26.0806613Z AssertionError [ERR_ASSERTION]: Current source generation must match source-bound fixture",
+    "2026-10-02T23:23:26.0837486Z     stage: 10011,",
+    "2026-10-02T23:23:26.0837732Z +   targetPhase: 0.554244650334867,",
+    "2026-10-02T23:23:26.0838025Z -   targetPhase: 0.5542446503348666,",
+    "2026-10-02T23:23:26.0840119Z     at Module.checkRules (file:///home/runner/work/motion-design-dot/motion-design-dot/mini-games/tests/trajectory-room-rules.mjs:41:1572)",
+    "2026-10-02T23:23:26.0841119Z     at /home/runner/work/motion-design-dot/motion-design-dot/mini-games/tests/trajectory-room.cjs:12:103 {",
+    "2026-10-02T23:23:26.0936880Z {\"suite\":\"trajectory-room\",\"passed\":false,\"evidence\":\"mini-games/coverage/suite-runs/trajectory-room.json\",\"sourceUnchanged\":true}",
+    "2026-10-02T23:23:26.0994312Z ##[error]Process completed with exit code 1."
+  ]
+}

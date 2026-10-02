@@ -1,8 +1,8 @@
 {
   "passed": true,
   "browser": "chromium",
-  "generatedAt": "2026-10-02T22:08:36.679Z",
-  "sourceHash": "517de6faa20300637c14ebb921a9ec57cf32496504dd945a54252b974de42809",
+  "generatedAt": "2026-10-02T23:34:56.484Z",
+  "sourceHash": "6243767e03f69c49d6df574585cb1b6a98e4b7af43b2f158b7bd1aaf883cd00b",
   "sourceHashes": {
     "trajectory-room/ENDLESS-REVIEW.md": "6f2a26354640c53144b4c1ac2d45ae1f319e0ec2858ec1b545fb6d3cd7cf9216",
     "trajectory-room/README.md": "5d23ba8fca2340ba61a403f0180c544a2301ff50105be094259d7b168914714d",
@@ -21,7 +21,7 @@
     "tests/trajectory-room.cjs": "2db2a7bdada0a32a41343949949ae6c3119eedf2c060331f61f828447cbdb095",
     "tests/trajectory-room-paths.json": "c6f2ebce55840f9a7ba93debe764df57231ed81c0f05bbb7244f8868be499dc8",
     "tests/trajectory-room-plans.mjs": "7260997e5a1edb184b266febed107ad352a4998843b66f87addd761741b32220",
-    "tests/trajectory-room-rules.mjs": "d6d9a807ac000d4f3d33613134b6205a51f0a2d43994343ee97c23536893fd9a",
+    "tests/trajectory-room-rules.mjs": "e7c5b16db5c88fb5e4cc3448c1190517a9a6977f8108efa485192baf4a62ed50",
     "tests/trajectory-room-generate.mjs": "9aa1c2d84d6a4e3b183c13d47199ef904c98912581a2803b38713d719b205078",
     "tests/trajectory-room-opening.cjs": "5362eabf05a6ee130fe46715b4ad0d1bf8d0ab38cc7710f30e394f9180e1493b"
   },
@@ -1383,6 +1383,60 @@
   ],
   "modelProperties": {
     "scope": "Pure model legal action replays and explicitly labeled physical-state perturbations. Separate from native browser/ordinary-play evidence.",
+    "fixtureComparison": {
+      "scope": "Initial fixture comparison only; actual generated states are retained for legal witness play/rendering. No tolerance for controls, counters, topology, tokens or other physical parameters.",
+      "absoluteTolerance": 1.4210854715202004e-14,
+      "relativeTolerance": 1.4210854715202004e-14,
+      "tolerantPaths": {
+        "rendezvous-window": [
+          "vy",
+          "targetRate",
+          "targetPhase"
+        ],
+        "resonant-switch": [
+          "receivers.<index>.target"
+        ]
+      },
+      "acceptedRoundingCases": [
+        "Observed CI orbital phase differs by 4e-16",
+        "One rounding step in orbital vy",
+        "One rounding step in orbital targetRate",
+        "One rounding step in orbital targetPhase",
+        "One rounding step in computed receiver target",
+        "Integer-valued physical scalar is still continuous"
+      ],
+      "rejectedMutationCases": [
+        "Integer stage changes",
+        "Integer seed changes",
+        "Integer score changes",
+        "Integer turn changes",
+        "Integer score becomes a tiny fraction",
+        "Fractional native impulse changes",
+        "RNG-derived physical radius changes",
+        "Physical orbital vy changes beyond rounding budget",
+        "Physical orbital targetRate changes beyond rounding budget",
+        "Physical orbital targetPhase changes beyond rounding budget",
+        "Receiver voltage changes beyond rounding budget",
+        "Same field name on another game has no tolerance",
+        "Direction token changes",
+        "Numeric type changes",
+        "Missing physical field",
+        "Unexpected field",
+        "Array replaced by object",
+        "Receiver count changes",
+        "Receiver order changes",
+        "Nested receiver key missing",
+        "Receiver capacitance changes by a rounding step",
+        "Receiver charge becomes a tiny fraction",
+        "Circuit path token changes",
+        "Membrane topology edge changes",
+        "Integer topology endpoint becomes tiny fraction",
+        "Topology array length changes",
+        "Nonfinite physical scalar NaN",
+        "Nonfinite physical scalar Infinity",
+        "Nonfinite physical scalar -Infinity"
+      ]
+    },
     "games": [
       {
         "id": "rendezvous-window",
@@ -1851,5 +1905,5 @@
       }
     ]
   },
-  "completedAt": "2026-10-02T22:36:30.586Z"
+  "completedAt": "2026-10-02T23:50:54.695Z"
 }
