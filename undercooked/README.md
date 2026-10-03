@@ -38,7 +38,7 @@ CHROMIUM_PATH=/path/to/chromium npm run test:browser
 
 Browser tests use Playwright **1.62.1**, installed separately and pinned in CI. They drive the real keyboard and native Chromium touch input. A read-only game snapshot helps verify outcomes; it cannot change the game. Playwright’s browser clock advances animation frames and the same production physics loop, allowing complete 180 second shifts to be tested without waiting three minutes per case.
 
-The browser suite covers repeated complete orders, both pots, garden soup, incorrect serving, collision, set down/pickup/compost, focus loss, results, replay, paused restart, native simultaneous touch and cancellation, four viewport sizes, reduced motion, and a WebGL recovery screen. Screenshots and reports go in ignored `test-results/`. CI rebuilds, checks bundle reproducibility, and runs the same gates.
+The browser suites cover repeated complete orders, both pots, garden soup, incorrect serving, collision, set down/pickup/compost, focus loss, results, replay, paused restart, native simultaneous touch and cancellation, four viewport sizes, reduced motion, and a WebGL recovery screen. A separate normal-clock run completes a full order using native keyboard input and unmodified requestAnimationFrame. Screenshots and reports go in ignored `test-results/`. CI rebuilds, checks bundle reproducibility, and runs the same gates locally and against the published URL.
 
 The UI supports landscape phone sizes including 568×320, 667×375, and 844×390, with a playable portrait layout. Fullscreen appears where supported. A current browser with WebGL2 is required by Three.js r170.
 
