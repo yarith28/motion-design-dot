@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+  <meta name="theme-color" content="#a7ccbf">
+  <meta name="description" content="One chef. Two pots. A little lunch rush. An original playable 3D cooking game.">
+  <title>Undercooked — A little lunch rush</title>
+  <link rel="icon" type="image/svg+xml" href="assets/icon.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main id="app" aria-label="Undercooked cooking game">
+  <canvas id="game" aria-label="3D kitchen. Use WASD or arrow keys to move, E or Space to interact."></canvas>
+  <div id="loading" class="loading"><span class="loading-pot">♨</span><span>Warming up the kitchen…</span></div>
+  <div id="station-labels" aria-hidden="true"></div>
+  <div id="hud" hidden>
+    <div class="topbar">
+      <div class="brand"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M8 17C1 17 3 8 9 9 8 1 23 1 22 9c7-2 10 8 2 8v10H8Z" fill="currentColor"/><path d="M9 21h14" fill="none" stroke="#45675c" stroke-width="2"/></svg><span>undercooked<span class="brand-small">LUNCH CLUB</span></span></div>
+      <div id="orders" class="orders" aria-label="Current orders"></div>
+      <div class="metrics"><div class="metric score"><span class="metric-name">SCORE</span><strong id="score">0</strong></div><div class="metric clock"><span class="metric-name">SHIFT</span><strong id="timer">3:00</strong></div></div>
+      <button id="pause" class="icon-button" aria-label="Pause game" title="Pause (Escape)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14M16 5v14"/></svg></button>
+    </div>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <div class="bottom-guide"><span id="holding">Empty hands</span><span class="desktop-hint">WASD / arrows <b>move</b> · E / Space <b>action</b></span></div>
+    <div class="touch-controls">
+      <div id="joystick" class="joystick" role="group" aria-label="Movement thumbstick"><div class="joystick-arrows" aria-hidden="true">＋</div><div id="stick" class="stick"></div><span>MOVE</span></div>
+      <div class="action-wrap"><span id="nearby">Find a counter</span><button id="action" class="action-button" aria-label="Interact with nearest station"><span id="action-icon">↗</span><span id="action-text">Move closer</span><kbd>E</kbd></button></div>
+    </div>
+    <span class="portrait-tip">A little more room in landscape ↻</span>
+  </div>
+  <div class="utilities"><button id="mute" class="icon-button" aria-label="Mute sound" title="Mute sound">♫</button><button id="fullscreen" class="icon-button" aria-label="Enter fullscreen" title="Fullscreen">⛶</button></div>
+  <section id="home" class="screen home" hidden>
+    <div class="home-card">
+      <span class="eyebrow"><i></i> A ONE-CHEF KITCHEN</span>
+      <h1>under<span>cooked.</span></h1>
+      <p class="tagline">A little kitchen.<br>A lovely lunch rush.</p>
+      <div class="home-recipe"><span>CHOP</span><b>→</b><span>SIMMER</span><b>→</b><span>SERVE</span></div>
+      <button id="start" class="primary-button">Start cooking <span>→</span></button>
+      <div class="home-footer"><span>3 minute shift · single player</span><button id="help" class="text-button">How to play</button></div>
+      <p id="best-home" class="best-home"></p>
+    </div>
+    <span class="home-scene-caption">FRESH SOUP · GOOD COMPANY</span>
+  </section>
+  <section id="help-screen" class="screen modal-screen" hidden aria-labelledby="help-title">
+    <div class="modal help-card"><span class="eyebrow">THE SHORT RECIPE</span><h2 id="help-title">You’ve got this, chef.</h2><div class="help-steps"><div><b>1</b><p><strong>Take & chop</strong>Pick a vegetable from a crate. At the board, act to chop. Stay until it’s ready, then pick it up.</p></div><div><b>2</b><p><strong>Simmer & plate</strong>Add chopped veg to a pot. Get a clean plate. Fill it when the pot turns green.</p></div><div><b>3</b><p><strong>Serve the ticket</strong>Bring matching soup to the hatch. Garden soup needs both vegetables in one pot.</p></div></div><p class="help-controls"><b>WASD / arrows</b> to move · <b>E / Space</b> to act<br>On a phone: left thumbstick + right action button.</p><p class="help-note">Use the middle counters to set things down. Clear burnt pots with an action. Pause anytime.</p><button id="help-close" class="primary-button">Ready, chef! <span>✓</span></button></div>
+  </section>
+  <section id="pause-screen" class="screen modal-screen" hidden aria-labelledby="pause-title"><div class="modal pause-card"><span class="eyebrow">TAKE A BREATHER</span><h2 id="pause-title">Kitchen paused.</h2><p>The soup can wait a moment.</p><button id="resume" class="primary-button">Keep cooking <span>→</span></button><button id="restart-pause" class="secondary-button">Start a fresh shift</button><button id="help-pause" class="text-button">How to play</button></div></section>
+  <section id="results" class="screen modal-screen" hidden aria-labelledby="results-title"><div class="modal results-card"><span class="eyebrow">THAT’S A WRAP</span><div id="stars" class="stars" aria-label="Stars earned"></div><h2 id="results-title">Lovely lunch, chef.</h2><p id="results-message">Every bowl is a little victory.</p><div class="result-score"><span>YOUR SCORE</span><strong id="final-score">0</strong><span id="best-result"></span></div><div class="result-stats"><span><b id="served-count">0</b>served</span><span><b id="missed-count">0</b>missed</span><span><b id="burnt-count">0</b>burnt</span></div><button id="replay" class="primary-button">Another lunch rush <span>↻</span></button><button id="home-button" class="text-button">Back to kitchen</button></div></section>
+  <section id="unsupported" class="screen modal-screen" hidden><div class="modal"><span class="eyebrow">A LITTLE TECHNICAL HICCUP</span><h2>This kitchen needs WebGL.</h2><p>Your browser couldn’t start the 3D kitchen. Try a current browser with hardware acceleration enabled.</p><button id="reload" class="primary-button">Try again <span>↻</span></button></div></section>
+</main>
+<script type="module" src="assets/game.js"></script>
+</body>
+</html>

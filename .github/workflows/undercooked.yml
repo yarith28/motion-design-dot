@@ -1,0 +1,96 @@
+name: Verify Undercooked
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'undercooked/**'
+      - '.github/workflows/undercooked.yml'
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: undercooked-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  cooking-shift:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: undercooked/package-lock.json
+      - name: Build and verify deterministic gameplay
+        working-directory: undercooked
+        run: |
+          npm ci
+          npm test
+          npm run build
+          git diff --exit-code -- assets/
+      - name: Install test browser
+        run: |
+          npm install --prefix "$RUNNER_TEMP/undercooked-tests" playwright@1.55.0
+          "$RUNNER_TEMP/undercooked-tests/node_modules/.bin/playwright" install --with-deps chromium
+      - name: Serve the committed game
+        run: |
+          python3 -m http.server 8790 --bind 127.0.0.1 --directory undercooked > "$RUNNER_TEMP/undercooked-server.log" 2>&1 &
+          for attempt in 1 2 3 4 5; do
+            if curl --fail --silent http://127.0.0.1:8790/ > /dev/null; then exit 0; fi
+            sleep 1
+          done
+          exit 1
+      - name: Complete real keyboard and mobile touch cooking flows
+        env:
+          NODE_PATH: ${{ runner.temp }}/undercooked-tests/node_modules
+          BASE_URL: http://127.0.0.1:8790/
+        run: |
+          export CHROMIUM_PATH="$(node -e 'process.stdout.write(require("playwright").chromium.executablePath())')"
+          node undercooked/tests/browser.cjs
+          node undercooked/tests/browser-edges.cjs
+      - name: Save gameplay reports and real screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: undercooked-gameplay
+          path: undercooked/test-results/
+          retention-days: 30
+
+  published-kitchen:
+    needs: cooking-shift
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Verify exact Pages commit and all published asset bytes
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node undercooked/tests/live.mjs
+      - name: Install live test browser
+        run: |
+          npm install --prefix "$RUNNER_TEMP/undercooked-live" playwright@1.55.0
+          "$RUNNER_TEMP/undercooked-live/node_modules/.bin/playwright" install --with-deps chromium
+      - name: Play the published kitchen through complete shifts and phone touch
+        env:
+          NODE_PATH: ${{ runner.temp }}/undercooked-live/node_modules
+          BASE_URL: https://yarith28.github.io/motion-design-dot/undercooked/
+        run: |
+          export CHROMIUM_PATH="$(node -e 'process.stdout.write(require("playwright").chromium.executablePath())')"
+          node undercooked/tests/browser.cjs
+          node undercooked/tests/browser-edges.cjs
+      - name: Save published gameplay and exact release evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: undercooked-published-gameplay
+          path: undercooked/test-results/
+          retention-days: 30
