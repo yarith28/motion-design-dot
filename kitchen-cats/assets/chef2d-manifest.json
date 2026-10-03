@@ -1,0 +1,1180 @@
+{
+  "version": 1,
+  "note": "Original 2D Kitchen Cats artwork. Idle/carry use exact tracked portrait PNGs; atlas contains real pose changes.",
+  "cats": {
+    "cream": {
+      "portrait": "./assets/cat-cream.png",
+      "atlas": "./assets/chef2d-cream-atlas.webp",
+      "sources": [
+        "assets/cream-chef-pose-atlas.png",
+        "tools/chef2d-source/cream-serve14-repaired.png"
+      ],
+      "bytes": 1126828,
+      "rowScale": [
+        0.9934,
+        0.9934,
+        0.9934,
+        0.9934
+      ],
+      "frames": [
+        {
+          "frame": 0,
+          "sourceBounds": [
+            37,
+            11,
+            287,
+            306
+          ],
+          "atlasBounds": [
+            36,
+            18,
+            284,
+            311
+          ],
+          "components": 1
+        },
+        {
+          "frame": 1,
+          "sourceBounds": [
+            30,
+            13,
+            277,
+            306
+          ],
+          "atlasBounds": [
+            38,
+            20,
+            283,
+            311
+          ],
+          "components": 1
+        },
+        {
+          "frame": 2,
+          "sourceBounds": [
+            31,
+            7,
+            281,
+            307
+          ],
+          "atlasBounds": [
+            36,
+            13,
+            284,
+            311
+          ],
+          "components": 1
+        },
+        {
+          "frame": 3,
+          "sourceBounds": [
+            37,
+            7,
+            280,
+            306
+          ],
+          "atlasBounds": [
+            40,
+            14,
+            281,
+            311
+          ],
+          "components": 1
+        },
+        {
+          "frame": 4,
+          "sourceBounds": [
+            23,
+            0,
+            273,
+            305
+          ],
+          "atlasBounds": [
+            36,
+            8,
+            284,
+            311
+          ],
+          "components": 1
+        },
+        {
+          "frame": 5,
+          "sourceBounds": [
+            20,
+            14,
+            283,
+            306
+          ],
+          "atlasBounds": [
+            30,
+            21,
+            291,
+            311
+          ],
+          "components": 3
+        },
+        {
+          "frame": 6,
+          "sourceBounds": [
+            32,
+            8,
+            287,
+            304
+          ],
+          "atlasBounds": [
+            34,
+            17,
+            287,
+            311
+          ],
+          "components": 1
+        },
+        {
+          "frame": 7,
+          "sourceBounds": [
+            35,
+            14,
+            283,
+            304
+          ],
+          "atlasBounds": [
+            37,
+            23,
+            283,
+            311
+          ],
+          "components": 3
+        },
+        {
+          "frame": 8,
+          "sourceBounds": [
+            37,
+            14,
+            294,
+            303
+          ],
+          "atlasBounds": [
+            33,
+            24,
+            288,
+            311
+          ],
+          "components": 1
+        },
+        {
+          "frame": 9,
+          "sourceBounds": [
+            57,
+            11,
+            270,
+            299
+          ],
+          "atlasBounds": [
+            54,
+            25,
+            266,
+            311
+          ],
+          "components": 1
+        },
+        {
+          "frame": 10,
+          "sourceBounds": [
+            27,
+            5,
+            276,
+            304
+          ],
+          "atlasBounds": [
+            37,
+            14,
+            284,
+            311
+          ],
+          "components": 1
+        },
+        {
+          "frame": 11,
+          "sourceBounds": [
+            23,
+            9,
+            279,
+            303
+          ],
+          "atlasBounds": [
+            33,
+            19,
+            287,
+            311
+          ],
+          "components": 1
+        },
+        {
+          "frame": 12,
+          "sourceBounds": [
+            39,
+            8,
+            276,
+            297
+          ],
+          "atlasBounds": [
+            43,
+            24,
+            278,
+            311
+          ],
+          "components": 3
+        },
+        {
+          "frame": 13,
+          "sourceBounds": [
+            31,
+            0,
+            287,
+            298
+          ],
+          "atlasBounds": [
+            33,
+            15,
+            287,
+            311
+          ],
+          "components": 1
+        },
+        {
+          "frame": 14,
+          "sourceBounds": [
+            300,
+            217,
+            977,
+            996
+          ],
+          "atlasBounds": [
+            38,
+            30,
+            282,
+            311
+          ],
+          "components": 1
+        },
+        {
+          "frame": 15,
+          "sourceBounds": [
+            40,
+            0,
+            277,
+            298
+          ],
+          "atlasBounds": [
+            43,
+            15,
+            278,
+            311
+          ],
+          "components": 2
+        }
+      ]
+    },
+    "tabby": {
+      "portrait": "./assets/cat-tabby.png",
+      "atlas": "./assets/chef2d-tabby-atlas.webp",
+      "sources": [
+        "tools/chef2d-source/tabby-dense-original-style.png",
+        "tools/chef2d-source/tabby-serve13-repaired.png"
+      ],
+      "bytes": 1337464,
+      "rowScale": [
+        1.0134,
+        1.0134,
+        1.0134,
+        1.0134
+      ],
+      "frames": [
+        {
+          "frame": 0,
+          "sourceBounds": [
+            37,
+            15,
+            266,
+            309
+          ],
+          "atlasBounds": [
+            44,
+            13,
+            276,
+            311
+          ],
+          "components": 1
+        },
+        {
+          "frame": 1,
+          "sourceBounds": [
+            26,
+            15,
+            276,
+            309
+          ],
+          "atlasBounds": [
+            34,
+            13,
+            287,
+            311
+          ],
+          "components": 1
+        },
+        {
+          "frame": 2,
+          "sourceBounds": [
+            38,
+            15,
+            289,
+            309
+          ],
+          "atlasBounds": [
+            33,
+            13,
+            287,
+            311
+          ],
+          "components": 1
+        },
+        {
+          "frame": 3,
+          "sourceBounds": [
+            43,
+            16,
+            286,
+            309
+          ],
+          "atlasBounds": [
+            37,
+            14,
+            283,
+            311
+          ],
+          "components": 1
+        },
+        {
+          "frame": 4,
+          "sourceBounds": [
+            25,
+            9,
+            308,
+            308
+          ],
+          "atlasBounds": [
+            17,
+            8,
+            304,
+            311
+          ],
+          "components": 6
+        },
+        {
+          "frame": 5,
+          "sourceBounds": [
+            26,
+            13,
+            295,
+            307
+          ],
+          "atlasBounds": [
+            24,
+            13,
+            297,
+            311
+          ],
+          "components": 7
+        },
+        {
+          "frame": 6,
+          "sourceBounds": [
+            40,
+            9,
+            304,
+            307
+          ],
+          "atlasBounds": [
+            26,
+            9,
+            294,
+            311
+          ],
+          "components": 4
+        },
+        {
+          "frame": 7,
+          "sourceBounds": [
+            47,
+            19,
+            293,
+            308
+          ],
+          "atlasBounds": [
+            36,
+            18,
+            285,
+            311
+          ],
+          "components": 8
+        },
+        {
+          "frame": 8,
+          "sourceBounds": [
+            32,
+            7,
+            282,
+            302
+          ],
+          "atlasBounds": [
+            34,
+            12,
+            287,
+            311
+          ],
+          "components": 2
+        },
+        {
+          "frame": 9,
+          "sourceBounds": [
+            40,
+            5,
+            293,
+            300
+          ],
+          "atlasBounds": [
+            32,
+            12,
+            288,
+            311
+          ],
+          "components": 3
+        },
+        {
+          "frame": 10,
+          "sourceBounds": [
+            31,
+            7,
+            298,
+            304
+          ],
+          "atlasBounds": [
+            25,
+            10,
+            296,
+            311
+          ],
+          "components": 3
+        },
+        {
+          "frame": 11,
+          "sourceBounds": [
+            44,
+            9,
+            288,
+            303
+          ],
+          "atlasBounds": [
+            37,
+            13,
+            284,
+            311
+          ],
+          "components": 2
+        },
+        {
+          "frame": 12,
+          "sourceBounds": [
+            32,
+            1,
+            278,
+            297
+          ],
+          "atlasBounds": [
+            36,
+            11,
+            285,
+            311
+          ],
+          "components": 1
+        },
+        {
+          "frame": 13,
+          "sourceBounds": [
+            328,
+            223,
+            982,
+            961
+          ],
+          "atlasBounds": [
+            29,
+            14,
+            292,
+            311
+          ],
+          "components": 4
+        },
+        {
+          "frame": 14,
+          "sourceBounds": [
+            28,
+            0,
+            294,
+            293
+          ],
+          "atlasBounds": [
+            25,
+            14,
+            295,
+            311
+          ],
+          "components": 3
+        },
+        {
+          "frame": 15,
+          "sourceBounds": [
+            47,
+            1,
+            286,
+            298
+          ],
+          "atlasBounds": [
+            39,
+            10,
+            281,
+            311
+          ],
+          "components": 1
+        }
+      ]
+    },
+    "gray": {
+      "portrait": "./assets/cat-gray.png",
+      "atlas": "./assets/chef2d-gray-atlas.webp",
+      "sources": [
+        "tools/chef2d-source/gray-dense-original-style.png",
+        "tools/chef2d-source/gray-walk-safe.png",
+        "tools/chef2d-source/gray-celebrate-safe.png"
+      ],
+      "bytes": 1334534,
+      "rowScale": [
+        0.5357,
+        1.0134,
+        1.0033,
+        0.511
+      ],
+      "frames": [
+        {
+          "frame": 0,
+          "sourceBounds": [
+            106,
+            25,
+            570,
+            589
+          ],
+          "atlasBounds": [
+            36,
+            9,
+            285,
+            311
+          ],
+          "components": 1
+        },
+        {
+          "frame": 1,
+          "sourceBounds": [
+            82,
+            30,
+            551,
+            589
+          ],
+          "atlasBounds": [
+            35,
+            12,
+            286,
+            311
+          ],
+          "components": 1
+        },
+        {
+          "frame": 2,
+          "sourceBounds": [
+            94,
+            17,
+            562,
+            578
+          ],
+          "atlasBounds": [
+            35,
+            10,
+            286,
+            311
+          ],
+          "components": 1
+        },
+        {
+          "frame": 3,
+          "sourceBounds": [
+            81,
+            19,
+            552,
+            577
+          ],
+          "atlasBounds": [
+            34,
+            12,
+            286,
+            311
+          ],
+          "components": 1
+        },
+        {
+          "frame": 4,
+          "sourceBounds": [
+            35,
+            14,
+            269,
+            313
+          ],
+          "atlasBounds": [
+            42,
+            8,
+            279,
+            311
+          ],
+          "components": 1
+        },
+        {
+          "frame": 5,
+          "sourceBounds": [
+            17,
+            19,
+            266,
+            313
+          ],
+          "atlasBounds": [
+            34,
+            13,
+            286,
+            311
+          ],
+          "components": 4
+        },
+        {
+          "frame": 6,
+          "sourceBounds": [
+            22,
+            17,
+            287,
+            313
+          ],
+          "atlasBounds": [
+            26,
+            11,
+            295,
+            311
+          ],
+          "components": 3
+        },
+        {
+          "frame": 7,
+          "sourceBounds": [
+            16,
+            18,
+            276,
+            313
+          ],
+          "atlasBounds": [
+            29,
+            12,
+            292,
+            311
+          ],
+          "components": 4
+        },
+        {
+          "frame": 8,
+          "sourceBounds": [
+            52,
+            4,
+            287,
+            306
+          ],
+          "atlasBounds": [
+            42,
+            8,
+            278,
+            311
+          ],
+          "components": 2
+        },
+        {
+          "frame": 9,
+          "sourceBounds": [
+            27,
+            10,
+            273,
+            307
+          ],
+          "atlasBounds": [
+            37,
+            13,
+            284,
+            311
+          ],
+          "components": 4
+        },
+        {
+          "frame": 10,
+          "sourceBounds": [
+            45,
+            11,
+            290,
+            306
+          ],
+          "atlasBounds": [
+            37,
+            15,
+            283,
+            311
+          ],
+          "components": 4
+        },
+        {
+          "frame": 11,
+          "sourceBounds": [
+            66,
+            7,
+            280,
+            306
+          ],
+          "atlasBounds": [
+            53,
+            11,
+            268,
+            311
+          ],
+          "components": 1
+        },
+        {
+          "frame": 12,
+          "sourceBounds": [
+            79,
+            37,
+            538,
+            630
+          ],
+          "atlasBounds": [
+            43,
+            8,
+            278,
+            311
+          ],
+          "components": 1
+        },
+        {
+          "frame": 13,
+          "sourceBounds": [
+            81,
+            60,
+            560,
+            618
+          ],
+          "atlasBounds": [
+            38,
+            26,
+            283,
+            311
+          ],
+          "components": 1
+        },
+        {
+          "frame": 14,
+          "sourceBounds": [
+            39,
+            26,
+            571,
+            596
+          ],
+          "atlasBounds": [
+            24,
+            20,
+            296,
+            311
+          ],
+          "components": 1
+        },
+        {
+          "frame": 15,
+          "sourceBounds": [
+            82,
+            22,
+            542,
+            604
+          ],
+          "atlasBounds": [
+            43,
+            14,
+            278,
+            311
+          ],
+          "components": 1
+        }
+      ]
+    },
+    "tuxedo": {
+      "portrait": "./assets/cat-tuxedo.png",
+      "atlas": "./assets/chef2d-tuxedo-atlas.webp",
+      "sources": [
+        "tools/chef2d-source/tuxedo-dense-original-style.png",
+        "tools/chef2d-source/tuxedo-walk-safe.png",
+        "tools/chef2d-source/tuxedo-celebrate-safe.png"
+      ],
+      "bytes": 1246536,
+      "rowScale": [
+        0.5549,
+        1.0134,
+        1.0202,
+        0.5179
+      ],
+      "frames": [
+        {
+          "frame": 0,
+          "sourceBounds": [
+            107,
+            51,
+            563,
+            589
+          ],
+          "atlasBounds": [
+            34,
+            12,
+            287,
+            311
+          ],
+          "components": 1
+        },
+        {
+          "frame": 1,
+          "sourceBounds": [
+            50,
+            46,
+            550,
+            592
+          ],
+          "atlasBounds": [
+            22,
+            8,
+            299,
+            311
+          ],
+          "components": 1
+        },
+        {
+          "frame": 2,
+          "sourceBounds": [
+            108,
+            12,
+            593,
+            545
+          ],
+          "atlasBounds": [
+            26,
+            15,
+            295,
+            311
+          ],
+          "components": 1
+        },
+        {
+          "frame": 3,
+          "sourceBounds": [
+            95,
+            16,
+            574,
+            542
+          ],
+          "atlasBounds": [
+            27,
+            19,
+            293,
+            311
+          ],
+          "components": 1
+        },
+        {
+          "frame": 4,
+          "sourceBounds": [
+            36,
+            18,
+            269,
+            312
+          ],
+          "atlasBounds": [
+            42,
+            13,
+            278,
+            311
+          ],
+          "components": 1
+        },
+        {
+          "frame": 5,
+          "sourceBounds": [
+            23,
+            25,
+            296,
+            313
+          ],
+          "atlasBounds": [
+            22,
+            19,
+            299,
+            311
+          ],
+          "components": 4
+        },
+        {
+          "frame": 6,
+          "sourceBounds": [
+            39,
+            14,
+            266,
+            313
+          ],
+          "atlasBounds": [
+            45,
+            8,
+            275,
+            311
+          ],
+          "components": 1
+        },
+        {
+          "frame": 7,
+          "sourceBounds": [
+            32,
+            33,
+            295,
+            313
+          ],
+          "atlasBounds": [
+            27,
+            27,
+            294,
+            311
+          ],
+          "components": 4
+        },
+        {
+          "frame": 8,
+          "sourceBounds": [
+            32,
+            8,
+            292,
+            305
+          ],
+          "atlasBounds": [
+            28,
+            8,
+            293,
+            311
+          ],
+          "components": 1
+        },
+        {
+          "frame": 9,
+          "sourceBounds": [
+            28,
+            16,
+            284,
+            304
+          ],
+          "atlasBounds": [
+            30,
+            17,
+            291,
+            311
+          ],
+          "components": 1
+        },
+        {
+          "frame": 10,
+          "sourceBounds": [
+            22,
+            10,
+            282,
+            303
+          ],
+          "atlasBounds": [
+            28,
+            12,
+            293,
+            311
+          ],
+          "components": 1
+        },
+        {
+          "frame": 11,
+          "sourceBounds": [
+            29,
+            11,
+            282,
+            303
+          ],
+          "atlasBounds": [
+            31,
+            13,
+            289,
+            311
+          ],
+          "components": 1
+        },
+        {
+          "frame": 12,
+          "sourceBounds": [
+            67,
+            28,
+            580,
+            613
+          ],
+          "atlasBounds": [
+            27,
+            8,
+            293,
+            311
+          ],
+          "components": 1
+        },
+        {
+          "frame": 13,
+          "sourceBounds": [
+            104,
+            34,
+            546,
+            612
+          ],
+          "atlasBounds": [
+            46,
+            12,
+            275,
+            311
+          ],
+          "components": 1
+        },
+        {
+          "frame": 14,
+          "sourceBounds": [
+            119,
+            11,
+            556,
+            583
+          ],
+          "atlasBounds": [
+            47,
+            15,
+            273,
+            311
+          ],
+          "components": 1
+        },
+        {
+          "frame": 15,
+          "sourceBounds": [
+            129,
+            12,
+            518,
+            583
+          ],
+          "atlasBounds": [
+            60,
+            15,
+            261,
+            311
+          ],
+          "components": 1
+        }
+      ]
+    }
+  },
+  "cellWidth": 320,
+  "cellHeight": 320,
+  "columns": 4,
+  "rows": 4,
+  "footY": 311,
+  "drawHeight": 122,
+  "portraitDrawHeight": 116,
+  "poses": {
+    "idle": {
+      "source": "portrait",
+      "frames": [
+        0
+      ],
+      "frameMs": 0,
+      "loop": false
+    },
+    "walk": {
+      "source": "atlas",
+      "frames": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "frameMs": 125,
+      "loop": true
+    },
+    "chop": {
+      "source": "atlas",
+      "frames": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "frameMs": 125,
+      "loop": true
+    },
+    "stir": {
+      "source": "atlas",
+      "frames": [
+        8,
+        9,
+        10,
+        11
+      ],
+      "frameMs": 125,
+      "loop": true
+    },
+    "carry": {
+      "source": "portrait",
+      "frames": [
+        0
+      ],
+      "frameMs": 0,
+      "loop": false
+    },
+    "carrywalk": {
+      "source": "atlas",
+      "frames": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "frameMs": 125,
+      "loop": true
+    },
+    "celebrate": {
+      "source": "atlas",
+      "frames": [
+        12,
+        13,
+        14,
+        15
+      ],
+      "frameMs": 125,
+      "loop": false
+    }
+  }
+}

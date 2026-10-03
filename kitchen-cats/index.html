@@ -8,40 +8,34 @@
     />
     <title>Kitchen Cats · A little chaos. A lot of soup.</title>
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./assets/ui-3d/ui-theme.css" />
+    <link rel="icon" href="./assets/icon-192.png" type="image/png" />
     <link rel="manifest" href="./manifest.json" />
   </head>
   <body>
     <header>
       <a class="brand" href="./">Kitchen<span>Cats</span><i>✦</i></a>
-      <div class="tag">LOCAL SOUP CLUB <b>02</b><small>r25</small></div>
+      <div class="tag">LOCAL SOUP CLUB <b>02</b><small>r33</small></div>
       <span id="connection" role="status" aria-live="polite">Connecting…</span>
     </header>
     <main>
       <section id="welcome">
         <div class="intro card">
-          <span class="eyebrow">OFFLINE SOLO KITCHEN FOR PHONES</span>
+          <span class="eyebrow home-wordmark">KITCHEN CATS <small>· A LITTLE CHAOS. A LOT OF SOUP.</small></span>
           <h1>Good soup.<br />Better <em>company.</em></h1>
-          <p>
-            Pick a cat chef and run a complete offline cooking shift directly on
-            your phone.
-          </p>
-          <div class="badges">
-            <span>Offline after setup</span>
-            <span>2–4 cat chefs</span>
-            <span>Solo practice too</span>
-          </div>
           <div class="entry">
-            <label for="name">YOUR CHEF NAME</label>
-            <input
-              id="name"
-              maxlength="16"
-              value="Miso"
-              autocomplete="nickname"
-            />
-
+            <div class="name-field">
+              <label for="name">CHEF NAME</label>
+              <input
+                id="name"
+                maxlength="16"
+                value="Miso"
+                autocomplete="nickname"
+              />
+            </div>
             <div class="pickerblock">
               <div class="pickerlabel-row">
-                <label>CHOOSE YOUR CAT CHEF</label>
+                <label id="picker-label">PICK YOUR CAT</label>
                 <span id="chosen-chef-name">Cream whisker</span>
               </div>
               <div
@@ -51,45 +45,40 @@
                 aria-label="Choose your cat chef"
               ></div>
             </div>
-
-            <button id="solo" class="textbutton">
-              Just me? Start solo practice →
-            </button>
+            <div class="home-actions">
+              <button id="solo" class="primary">Start solo shift <span aria-hidden="true">→</span></button>
+              <button id="home-host" type="button">Host friends</button>
+              <button id="home-join" type="button">Join friends</button>
+            </div>
           </div>
-
-          <div class="localnote">
-            <strong>Download for offline play</strong
-            ><span id="build-version">Build kitchen-cats-20261002-r25-qr-camera-recovery</span>
-            <p>
-              Wait for “Offline ready” above before disconnecting. On your
-              phone, add this page to your Home Screen for easy reopening.
-            </p>
-          </div>
+          <a class="help-link" href="#how">How to play <span aria-hidden="true">↗</span></a>
         </div>
 
         <figure class="poster card">
-          <div class="poster-top">
-            TODAY'S SPECIAL <span>♡ made together</span>
+          <div class="hero-scene">
+            <img id="hero-art" src="./assets/ui-3d/hero-kitchen.png"
+              alt="A miniature soup kitchen with a prep station, copper pot, and serving counter" />
+            <img class="hero-chef hero-chef-left" src="./assets/cat-cream.png" alt="" aria-hidden="true" />
+            <img class="hero-chef hero-chef-right" src="./assets/cat-tuxedo.png" alt="" aria-hidden="true" />
           </div>
-          <img
-            id="hero-art"
-            src="./assets/title-illustration.png"
-            alt="Kitchen Cats title illustration with four cat chefs cooking together"
-          />
           <figcaption class="poster-bottom">
-            <strong>Too many cooks?<br />Never too many cats.</strong>
-            <span>CREAM · PEACH · MINT<br />LOCAL EDITION</span>
+            <strong>Today's special: teamwork.</strong>
+            <span>SOLO OR LOCAL CREW</span>
           </figcaption>
+          <span id="home-connection" class="offline-chip">Preparing offline…</span>
         </figure>
       </section>
       <section id="experimental-mp" class="panel card">
-        <span class="eyebrow">EXPERIMENTAL LOCAL MULTIPLAYER</span>
-        <p id="mp-intro">
-          Connect two phones without a server. Both phones download the game
-          first, then use the same Wi-Fi. Two scans are needed: the host shows
-          a code, then the guest shows a reply code. Browser and router support
-          still decide whether the local connection works.
-        </p>
+        <span class="eyebrow">LOCAL CREW · EXPERIMENTAL</span>
+        <h2>Cook together</h2>
+        <details class="pair-help">
+          <summary>How pairing works</summary>
+          <p id="mp-intro">
+            Download on both phones first and use the same Wi-Fi. The host shows
+            a code, then the guest shows a reply code. Browser and router support
+            decide whether the local connection works.
+          </p>
+        </details>
         <div id="mp-actions" class="pair-actions">
           <button id="mp-host">Host: show a code</button>
           <button id="mp-join">Join: scan a code</button>
@@ -142,9 +131,11 @@
             <span>SCORE <b id="score">0</b></span>
             <button id="mute" aria-label="Toggle sound">🔊 Sound</button>
             <button id="motion" aria-label="Toggle motion">✨ Motion</button>
+            <button id="fullscreen" type="button" aria-label="Enter fullscreen" title="Enter fullscreen">⛶</button>
             <button id="leave">Leave</button>
           </div>
         </div>
+        <span id="fullscreen-note" class="sr-only" role="status" aria-live="polite"></span>
         <div id="lobby" class="panel card" hidden>
           <p id="hosthint"></p>
           <div id="crew"></div>
@@ -152,6 +143,7 @@
         </div>
         <div id="play" class="play-shell" hidden>
           <div id="orders" aria-live="polite"></div>
+          <p class="rotate-hint">Rotate to landscape for a larger kitchen.</p>
           <div class="game-stage">
             <div class="control-rail movement-rail">
               <strong class="rail-title">MOVE</strong>
@@ -168,7 +160,7 @@
               <canvas
                 id="kitchen"
                 width="800"
-                height="620"
+                height="470"
                 aria-label="Shared kitchen. Move with arrows or WASD. Press E to interact."
                 tabindex="0"
               ></canvas>
@@ -179,9 +171,8 @@
               <button id="action" class="primary" aria-label="Interact">
                 E · Interact
               </button>
-
-              <span id="holding" role="status" aria-live="polite">PAWS · Empty paws</span>
             </div>
+            <span id="holding" role="status" aria-live="polite">PAWS · Empty paws</span>
           </div>
           <div class="actionbar card slim">
             <span id="holding-legacy" hidden></span>
@@ -197,6 +188,7 @@
           <div id="totals"></div>
           <p id="results-note"></p>
           <div class="results-art-row" aria-hidden="true">
+            <img class="result-trophy" src="./assets/ui-3d/result-soup-trophy.png" alt="" />
             <img src="./assets/cat-cream.png" alt="" />
             <img src="./assets/cat-tabby.png" alt="" />
             <img src="./assets/cat-gray.png" alt="" />
@@ -209,30 +201,24 @@
         </div>
       </section>
 
-      <section class="how card slim">
-        <div>
-          <span>01 / PICK</span>
-          <p>Grab tomatoes or carrots from the top counter.</p>
+      <details id="how" class="how card slim">
+        <summary>How to play <span>4 quick steps</span></summary>
+        <div class="how-steps">
+          <div><img class="help-motif" src="./assets/ui-3d/help-pick.png" alt="" /><span>01 / PICK</span><p>Grab tomatoes or carrots from the top counter.</p></div>
+          <div><img class="help-motif" src="./assets/ui-3d/help-prep.png" alt="" /><span>02 / PREP</span><p>Chop at the board. Anyone can collect the finished prep.</p></div>
+          <div><img class="help-motif" src="./assets/ui-3d/help-simmer.png" alt="" /><span>03 / SIMMER</span><p>Drop chopped veg in the soup pot and wait for it to finish.</p></div>
+          <div><img class="help-motif" src="./assets/ui-3d/help-serve.png" alt="" /><span>04 / SERVE</span><p>Bring matching soup to the service window before the order expires.</p></div>
         </div>
-        <div>
-          <span>02 / PREP</span>
-          <p>Chop at the board. Anyone can collect the finished prep.</p>
+        <p class="teamtip">Use the team counter to hand ingredients to a friend. The board and pot are shared.</p>
+        <div class="localnote">
+          <strong>Offline play</strong>
+          <span>Wait for “Offline ready” above before disconnecting. Add this page to your Home Screen for easy reopening.</span>
+          <details class="version-details">
+            <summary>App version</summary>
+            <small id="build-version">Build kitchen-cats-20261003-r33-original-cats</small>
+          </details>
         </div>
-        <div>
-          <span>03 / SIMMER</span>
-          <p>Drop chopped veg in the soup pot and wait for it to finish.</p>
-        </div>
-        <div>
-          <span>04 / SERVE</span>
-          <p>
-            Bring matching soup to the service window before the order expires.
-          </p>
-        </div>
-      </section>
-      <p class="teamtip">
-        CHEF’S TIP · Use the team counter to hand ingredients to a friend. The
-        board and pot are shared, so teamwork is always faster.
-      </p>
+      </details>
     </main>
     <div id="toast" role="alert"></div>
     <footer>

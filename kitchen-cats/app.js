@@ -7,12 +7,16 @@ import {
   drawQr,
   QrCameraScanner,
 } from "./qr-pairing.js";
-import { createPresentationState, resetPresentation, updatePhasePresentation, updatePlayerVisual, updateServeEffect, prepPose, potEffect, burstOffset } from "./presentation-animation.js";
+import { createPresentationState, resetPresentation, updatePhasePresentation, updatePlayerVisual, updateServeEffect, burstOffset, selectChefPose } from "./presentation-animation.js";
 const offlineGame = new KitchenGame();
 let runtimeMode = "solo"; // solo | host | guest
 let multiplayer = null;
 const $ = (id) => document.getElementById(id);
 const on = (id, event, fn) => $(id)?.addEventListener(event, fn);
+const setOfflineStatus = (message) => {
+  $("connection").textContent = message;
+  $("home-connection").textContent = message;
+};
 
 const CHEFS = [
   {
@@ -46,19 +50,58 @@ const CHEFS = [
 ];
 
 const colors = ["#e8aa69", "#a1b9a5", "#c8afd7", "#e7ca69"];
-const creamAtlas = new Image();
-creamAtlas.decoding = "async";
-creamAtlas.src = "./assets/cream-chef-pose-atlas.png";
-// Atlas cell metrics are intentionally fixed after inspection. The sprite uses
-// one common scale/baseline across frames, never per-frame rescaling.
-const CREAM_ATLAS_CELLS = { cols: 4, rows: 4, visibleW: 313, visibleH: 313, height: 102 };
-
 const chefImages = CHEFS.map((chef) => {
   const image = new Image();
   image.decoding = "async";
   image.src = chef.src;
   return image;
 });
+// Exact original portrait alpha bottoms keep idle/carry and atlas poses on the
+// same floor line; portraits also remain the fallback during atlas loading.
+const portraitFootY = [475 / 482, 473 / 487, 471 / 485, 462 / 482];
+
+const loadArt = (path) => {
+  const image = new Image();
+  image.decoding = "async";
+  image.src = path;
+  return image;
+};
+const chefPoseAtlases = CHEFS.map(() => null);
+let chefPoseManifest = null;
+fetch("./assets/chef2d-manifest.json")
+  .then((response) => {
+    if (!response.ok) throw Error(`Chef pose manifest: ${response.status}`);
+    return response.json();
+  })
+  .then((manifest) => {
+    chefPoseManifest = manifest;
+    CHEFS.forEach((chef, index) => {
+      const atlasPath = manifest.cats?.[chef.key]?.atlas;
+      if (atlasPath) chefPoseAtlases[index] = loadArt(atlasPath);
+    });
+  })
+  .catch(() => { /* Exact original portraits remain playable offline. */ });
+const sceneArt = {
+  room: loadArt("./assets/world-3d/room-1000x470@2x.png"),
+  stations: loadArt("./assets/world-3d/station-atlas.png"),
+  foods: loadArt("./assets/world-3d/food-atlas.png"),
+  marker: loadArt("./assets/world-3d/local-marker.png"),
+  halo: loadArt("./assets/ui-3d/effect-station-halo.png"),
+  steam: loadArt("./assets/ui-3d/effect-steam.png"),
+  sparkle: loadArt("./assets/ui-3d/effect-sparkle.png"),
+  progressTrack: loadArt("./assets/ui-3d/progress-track.png"),
+  progressFill: loadArt("./assets/ui-3d/progress-fill-gold.png"),
+  progressReady: loadArt("./assets/ui-3d/progress-fill-sage.png"),
+  badge: loadArt("./assets/ui-3d/status-badge.png"),
+};
+let sceneManifest = null;
+fetch("./assets/world-3d/manifest.json")
+  .then((response) => {
+    if (!response.ok) throw Error(`World art manifest: ${response.status}`);
+    return response.json();
+  })
+  .then((manifest) => { sceneManifest = manifest; })
+  .catch(() => toast("Kitchen artwork could not load. Reload while online."));
 
 let state,
   me = "solo";
@@ -86,12 +129,15 @@ const writePreference = (key, value) => {
 };
 const storedAvatar = Number(readPreference("kitchen-avatar", "0"));
 let muted = readPreference("kitchen-muted") === "1";
-let reducedMotion = readPreference("kitchen-reduced-motion") === "1";
+const systemMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)");
+const savedMotion = readPreference("kitchen-reduced-motion", "");
+let reducedMotion = savedMotion === "" ? !!systemMotion?.matches : savedMotion === "1";
 let selectedAvatar = Number.isInteger(storedAvatar)
   ? Math.max(0, Math.min(CHEFS.length - 1, storedAvatar))
   : 0;
 let lastPhase;
 let lastServed = 0;
+let playingNoticeUntil = 0;
 
 let lastActionTouch = 0;
 let soloTickLoop = null;
@@ -178,10 +224,6 @@ function toast(message) {
   toast.timer = setTimeout(() => ($("toast").style.display = "none"), 3500);
 }
 
-creamAtlas.addEventListener("error", () => {
-  if (state?.phase === "playing")
-    toast("Cream's pose atlas failed to load; showing a fallback chef.");
-});
 for (const image of chefImages)
   image.addEventListener("error", () => {
     if (state?.phase === "playing") toast("A chef portrait failed to load.");
@@ -202,7 +244,61 @@ function persistPrefs() {
 function updateToggles() {
   $("mute").textContent = muted ? "🔇 Sound" : "🔊 Sound";
   $("motion").textContent = reducedMotion ? "✦ Reduced" : "✨ Motion";
+  $("mute").dataset.muted = String(muted);
+  $("motion").dataset.reduced = String(reducedMotion);
+  $("mute").setAttribute("aria-label", muted ? "Unmute sound" : "Mute sound");
+  $("motion").setAttribute("aria-label", reducedMotion ? "Enable motion" : "Reduce motion");
 }
+
+const gameShell = $("game");
+const fullscreenElement = () => document.fullscreenElement || document.webkitFullscreenElement;
+const requestGameFullscreen = gameShell.requestFullscreen || gameShell.webkitRequestFullscreen;
+const exitDocumentFullscreen = document.exitFullscreen || document.webkitExitFullscreen;
+const canFullscreen = !!requestGameFullscreen && !!exitDocumentFullscreen &&
+  document.fullscreenEnabled !== false && document.webkitFullscreenEnabled !== false;
+
+function updateFullscreenControl() {
+  const button = $("fullscreen");
+  const active = fullscreenElement() === gameShell;
+  const toastElement = $("toast");
+  if (active && toastElement.parentElement !== gameShell) gameShell.append(toastElement);
+  else if (!active && toastElement.parentElement !== document.body) document.body.append(toastElement);
+  button.disabled = !canFullscreen;
+  button.textContent = active ? "↙" : "⛶";
+  button.setAttribute("aria-pressed", String(active));
+  const label = !canFullscreen
+    ? "Fullscreen unavailable in this browser; rotate for a larger kitchen"
+    : active ? "Exit fullscreen" : "Enter fullscreen";
+  button.setAttribute("aria-label", label);
+  button.title = label;
+  $("fullscreen-note").textContent = !canFullscreen
+    ? "Fullscreen unavailable in this browser. Rotate to landscape for a larger kitchen."
+    : active ? "Fullscreen on" : "Fullscreen off";
+}
+
+async function exitGameFullscreen() {
+  if (fullscreenElement() !== gameShell || !exitDocumentFullscreen) return;
+  try { await Promise.resolve(exitDocumentFullscreen.call(document)); }
+  catch { /* The browser may already have exited on visibility change. */ }
+  updateFullscreenControl();
+}
+
+on("fullscreen", "click", async () => {
+  if (!canFullscreen) {
+    toast("Fullscreen is unavailable here. Rotate to landscape for a larger kitchen.");
+    return;
+  }
+  try {
+    if (fullscreenElement() === gameShell) await exitGameFullscreen();
+    else await Promise.resolve(requestGameFullscreen.call(gameShell, { navigationUI: "hide" }));
+  } catch {
+    toast("Fullscreen could not start in this browser.");
+  }
+  updateFullscreenControl();
+});
+for (const event of ["fullscreenchange", "webkitfullscreenchange", "fullscreenerror", "webkitfullscreenerror"])
+  document.addEventListener(event, updateFullscreenControl);
+updateFullscreenControl();
 
 function getChef(index) {
   return CHEFS[
@@ -222,6 +318,7 @@ function renderAvatarPicker() {
         "avatar-option" + (index === selectedAvatar ? " selected" : "");
       button.setAttribute("role", "radio");
       button.setAttribute("aria-checked", String(index === selectedAvatar));
+      button.setAttribute("aria-label", chef.name);
       button.dataset.avatar = String(index);
 
       const image = document.createElement("img");
@@ -229,7 +326,7 @@ function renderAvatarPicker() {
       image.alt = "";
 
       const title = document.createElement("strong");
-      title.textContent = chef.name;
+      title.textContent = chef.name.split(" ")[0];
 
       const tag = document.createElement("span");
       tag.textContent = chef.tag;
@@ -248,7 +345,7 @@ function connect() {
       renderUI();
     }
   });
-  $("connection").textContent = "● Offline";
+  setOfflineStatus("● Offline");
   state = offlineGame.snapshot();
   updateSoloTickLoop();
   updateInputLoop();
@@ -556,6 +653,7 @@ async function acceptAnswerText(answer) {
   }
 }
 function returnToSolo(message = "Cancelled") {
+  void exitGameFullscreen();
   pairingGeneration++;
   stopPairingMedia();
   pairingBusy(false);
@@ -666,6 +764,23 @@ $("solo")?.addEventListener("click", () => {
     avatar: chosenAvatar(),
   });
 });
+for (const [homeId, pairingId] of [
+  ["home-host", "mp-host"],
+  ["home-join", "mp-join"],
+]) {
+  on(homeId, "click", () => {
+    $(pairingId)?.click();
+    $("experimental-mp")?.scrollIntoView({ block: "start" });
+  });
+}
+document.querySelector(".help-link")?.addEventListener("click", () => {
+  $("how").open = true;
+});
+systemMotion?.addEventListener?.("change", (event) => {
+  if (readPreference("kitchen-reduced-motion", "") !== "") return;
+  reducedMotion = event.matches;
+  updateToggles();
+});
 $("start")?.addEventListener("click", () => send({ type: "start" }));
 $("replay")?.addEventListener("click", () => send({ type: "replay" }));
 
@@ -684,9 +799,15 @@ function nearest() {
 
 function interact() {
   const station = nearest();
-  if (station && station.d <= 110)
+  if (station && station.d <= 110) {
+    const beforeServe = state.served || 0;
     send({ type: "interact", station: station.id });
-  else toast("Walk closer to a station, then interact.");
+    // Solo and host interactions resolve synchronously. The guest snapshot has
+    // no serving actor, so never attribute a remote serve to this local chef.
+    if (runtimeMode !== "guest" && station.id === "serve" &&
+      (state?.served || 0) > beforeServe)
+      presentation.localCelebrateUntil = performance.now() + 700;
+  } else toast("Walk closer to a station, then interact.");
 }
 
 $("action").addEventListener("pointerdown", (event) => {
@@ -882,13 +1003,19 @@ function renderOrders() {
   $("orders").replaceChildren(
     ...(Array.isArray(state?.orders) ? state.orders : []).map((order) => {
       const item = document.createElement("div");
-      item.className = "order";
+      item.className = `order ${order.recipe}`;
+      item.classList.toggle("urgent", order.expires - state.now <= 10000);
+      item.style.setProperty("--time-ratio",
+        `${Math.max(0, Math.min(100, (order.expires - state.now) / 300))}%`);
 
       const info = document.createElement("div");
       info.className = "order-info";
 
       const name = document.createElement("strong");
       name.textContent = recipeName(order.recipe);
+      const icon = document.createElement("span");
+      icon.className = `order-icon soup-${order.recipe}`;
+      icon.setAttribute("aria-hidden", "true");
 
       const recipe = document.createElement("div");
       recipe.className = "order-recipe";
@@ -904,7 +1031,7 @@ function renderOrders() {
       timer.textContent =
         Math.max(0, Math.ceil((order.expires - state.now) / 1000)) + "s";
 
-      item.append(info, timer);
+      item.append(icon, info, timer);
       return item;
     }),
   );
@@ -913,7 +1040,9 @@ function renderOrders() {
 function renderUI() {
   if (!state) return;
   document.body.classList.toggle("game-active", state?.phase === "playing");
+  document.body.classList.toggle("game-results", state?.phase === "results");
   const idle = !state || state.phase === "idle";
+  $("fullscreen").hidden = idle || (state.phase !== "playing" && fullscreenElement() !== gameShell);
   $("welcome").hidden = !idle;
   $("game").hidden = idle;
   $("room").textContent = runtimeMode === "solo" ? "SOLO" : "LOCAL KITCHEN";
@@ -939,6 +1068,7 @@ function renderUI() {
     state.phase === "lobby"
       ? "1:30"
       : `${Math.floor(remain / 60)}:${String(remain % 60).padStart(2, "0")}`;
+  $("clock").classList.toggle("time-urgent", state.phase === "playing" && remain <= 20);
   $("score").textContent = state.score;
 
   renderCrew();
@@ -971,7 +1101,11 @@ function renderUI() {
     "aria-label",
     near?.d <= 110 ? `Interact with ${near.label}` : "Interact with nearest station",
   );
+  if (lastPhase !== state.phase && state.phase === "playing")
+    playingNoticeUntil = performance.now() + 2800;
   $("notice").textContent = state.notice || "";
+  $("notice").dataset.visible = String(state.phase === "playing" &&
+    !!state.notice && performance.now() < playingNoticeUntil);
 
   if (lastPhase !== state.phase) { updatePhasePresentation(presentation, state); }
 
@@ -1097,40 +1231,37 @@ function fallbackCat(ctx, x, y, color, scale = 1, hat = true) {
   ctx.restore();
 }
 
-function vegetable(ctx, item, x, y, scale = 1) {
-  ctx.save();
-  ctx.translate(x, y);
-  ctx.scale(scale, scale);
-  if (item?.startsWith("soup")) {
-    rounded(ctx, -18, -7, 36, 20, 8, "#fffcf0");
-    ctx.fillStyle = item.includes("tomato") ? "#d86c42" : "#edae4b";
-    ctx.beginPath();
-    ctx.ellipse(0, -6, 17, 7, 0, 0, 7);
-    ctx.fill();
-    text(ctx, "~", 0, -15, 18, "#95a08d");
-  } else if (item?.includes("carrot")) {
-    ctx.fillStyle = "#eb9b43";
-    ctx.beginPath();
-    ctx.moveTo(-9, -11);
-    ctx.lineTo(12, -8);
-    ctx.lineTo(-6, 17);
-    ctx.fill();
-    text(ctx, "✦", 4, -12, 20, "#5c8b54");
-  } else {
-    ctx.fillStyle = "#d8664e";
-    ctx.beginPath();
-    ctx.arc(0, 2, 13, 0, 7);
-    ctx.fill();
-    text(ctx, "✦", 0, -6, 20, "#5c8b54");
-  }
-  if (item?.startsWith("chopped")) text(ctx, "≋", 0, 8, 22, "#fff4d3");
-  ctx.restore();
-}
-
 const canvas = $("kitchen");
 const ctx = canvas?.getContext("2d");
-if (!ctx) $("connection").textContent = "Canvas unavailable in this browser";
-
+if (!ctx) setOfflineStatus("Canvas unavailable in this browser");
+const kitchenY = (worldY) => 87 + worldY * .56;
+// The counter sockets use the room's station projection. Chef feet travel on
+// the narrower walkable floor lane in front of those counters.
+const chefY = (worldY) => 125 + worldY * .405;
+const artReady = (image) => image?.complete && image.naturalWidth > 0;
+function drawArt(image, x, y, width, height) {
+  if (artReady(image)) ctx.drawImage(image, x, y, width, height);
+}
+function drawFood(item, x, y, size = 34) {
+  const crop = sceneManifest?.foods?.[item];
+  if (!crop || !artReady(sceneArt.foods)) return;
+  ctx.drawImage(sceneArt.foods, crop.x, crop.y, crop.w, crop.h,
+    x - size / 2, y - size / 2, size, size);
+}
+function drawStationArt(name, x, y) {
+  const crop = sceneManifest?.stations?.[name];
+  if (!crop || !artReady(sceneArt.stations)) return;
+  ctx.drawImage(sceneArt.stations, crop.x, crop.y, crop.w, crop.h,
+    x - 60, y - 45, 120, 90);
+}
+function drawBadge(label, x, y, width = 75) {
+  drawArt(sceneArt.badge, x - width / 2, y - 12, width, 26);
+  ctx.save();
+  ctx.shadowColor = "#fff9e7";
+  ctx.shadowBlur = 2;
+  text(ctx, label, x, y + 5, 12, "#284b3a");
+  ctx.restore();
+}
 function drawChefSprite(player) {
   const now = performance.now();
   const near = (kind) => (state?.stations || []).some(s =>
@@ -1142,58 +1273,124 @@ function drawChefSprite(player) {
     nearPot: near("pot"),
     prepActive: !!state?.prep && state.now < state.prep.ready,
     potActive: !!state?.pot && state.now < state.pot.ready,
-    celebrate: now < (presentation.serveBurstUntil || 0)
+    // A global snapshot alone cannot identify the server; only locally
+    // confirmed interactions set this chef-specific presentation timer.
+    celebrate: player.id === me && now < presentation.localCelebrateUntil,
   });
-  const bob = visual.bob || 0;
-  const tilt = visual.tilt || 0;
-  const anchorX = player.x, anchorY = player.y;
-  const isCream = player.avatar === 0 || (player.avatar == null && player.color === 0);
+  // Atlas cells have transparent side gutters; this keeps visible ears and
+  // utensils inside the world even when a chef reaches its boundary.
+  const anchorX = Math.max(58, Math.min(742, player.x));
+  const anchorY = chefY(player.y);
+  const avatarIndex = (((player.avatar ?? player.color ?? 0) % CHEFS.length) + CHEFS.length) % CHEFS.length;
 
   ctx.save();
-  ctx.translate(anchorX, anchorY + bob);
-  ctx.rotate(tilt);
-  ctx.translate(-anchorX, -anchorY);
   ctx.globalAlpha = player.connected ? 1 : .45;
-  ctx.fillStyle = "rgba(39,61,52,.12)";
-  ctx.beginPath(); ctx.ellipse(anchorX, anchorY+32, 28, 9, 0, 0, Math.PI*2); ctx.fill();
-
-  // Preserve the local-player selection ring from r6.
+  // The rendered medallion and contact shadow stay fixed on the floor.
   if (player.id === me) {
-    ctx.strokeStyle = "#e9a05d";
-    ctx.lineWidth = 3;
+    drawArt(sceneArt.marker, anchorX - 60, anchorY + 1, 120, 60);
+  } else {
+    ctx.fillStyle = "rgba(29, 49, 35, .28)";
     ctx.beginPath();
-    ctx.ellipse(anchorX, anchorY + 31, 35, 14, 0, 0, Math.PI * 2);
-    ctx.stroke();
+    ctx.ellipse(anchorX, anchorY + 31, 26, 8, 0, 0, Math.PI * 2);
+    ctx.fill();
   }
 
-  if (isCream && creamAtlas.complete && creamAtlas.naturalWidth) {
-    const { cols, rows, visibleW, visibleH, height } = CREAM_ATLAS_CELLS;
-    const cw = creamAtlas.naturalWidth / cols;
-    const ch = creamAtlas.naturalHeight / rows;
-    const dh = height;
-    const dw = visibleW * (height / visibleH);
-    ctx.drawImage(creamAtlas, visual.frame*cw, visual.row*ch, cw, ch,
-      anchorX-dw/2, anchorY-dh+34, dw, dh);
+  const pose = selectChefPose(chefPoseManifest?.poses, visual.mode, visual.elapsed, reducedMotion);
+  const atlas = chefPoseAtlases[avatarIndex];
+  const cellWidth = chefPoseManifest?.cellWidth;
+  const cellHeight = chefPoseManifest?.cellHeight;
+  if (pose?.source === "atlas" && artReady(atlas) && cellWidth && cellHeight) {
+    const columns = chefPoseManifest.columns;
+    const frame = pose.frame;
+    const sx = (frame % columns) * cellWidth;
+    const sy = Math.floor(frame / columns) * cellHeight;
+    const height = chefPoseManifest.drawHeight || 116;
+    const width = height * cellWidth / cellHeight;
+    const top = anchorY + 31 - (chefPoseManifest.footY / cellHeight) * height;
+    ctx.drawImage(atlas, sx, sy, cellWidth, cellHeight,
+      anchorX - width / 2, top, width, height);
+  } else if (artReady(chefImages[avatarIndex])) {
+    const image = chefImages[avatarIndex];
+    const height = 116, width = image.naturalWidth * (height / image.naturalHeight);
+    const top = anchorY + 31 - portraitFootY[avatarIndex] * height;
+    ctx.drawImage(image, anchorX - width / 2, top, width, height);
   } else {
-    const image=chefImages[(((player.avatar ?? player.color ?? 0)%CHEFS.length)+CHEFS.length)%CHEFS.length];
-    if(image?.complete && image.naturalWidth){
-      const height=102, width=image.naturalWidth*(height/image.naturalHeight);
-      ctx.drawImage(image,anchorX-width/2,anchorY-height+34,width,height);
-    } else {
-      const colorIndex = Number.isInteger(player.color) ? player.color : player.avatar;
-      fallbackCat(
-        ctx,
-        anchorX,
-        anchorY,
-        colors[((colorIndex || 0) % colors.length + colors.length) % colors.length],
-        .9,
-      );
-    }
+    const colorIndex = Number.isInteger(player.color) ? player.color : player.avatar;
+    fallbackCat(
+      ctx,
+      anchorX,
+      anchorY,
+      colors[((colorIndex || 0) % colors.length + colors.length) % colors.length],
+      .9,
+    );
   }
   ctx.globalAlpha=1;
-  text(ctx,player.name+(player.id===me?" · you":""),anchorX,anchorY+54,12);
-  if(player.held) vegetable(ctx,player.held,anchorX+28,anchorY+8,.8);
+  const nameLabel = player.name + (player.id === me ? " · you" : "");
+  const labelSize = nameLabel.length > 14 ? 11 : 13;
+  ctx.font = `700 ${labelSize}px Arial`;
+  const labelWidth = Math.min(150, Math.ceil(ctx.measureText(nameLabel).width) + 16);
+  const labelX = Math.max(5, Math.min(795 - labelWidth, anchorX - labelWidth / 2));
+  drawArt(sceneArt.badge, labelX, anchorY + 37, labelWidth, 24);
+  text(ctx, nameLabel, labelX + labelWidth / 2, anchorY + 54, labelSize, "#294d3c");
+  if(player.held) {
+    // Put the item beside the pose, where other cooks can read it without
+    // covering the original cat's face. Flip at the left world boundary.
+    const heldX = anchorX - 103 < 4 ? anchorX + 58 : anchorX - 103;
+    drawArt(sceneArt.badge, heldX, anchorY - 46, 48, 42);
+    drawFood(player.held, heldX + 24, anchorY - 25, 50);
+  }
   ctx.restore();
+}
+
+function fitKitchenCanvas() {
+  const box = canvas.getBoundingClientRect();
+  const ratio = Math.max(.2, box.width / Math.max(1, box.height));
+  const width = Math.max(800, Math.round(470 * ratio));
+  const height = Math.max(470, Math.round(width / ratio));
+  if (canvas.width !== width || canvas.height !== height) {
+    canvas.width = width;
+    canvas.height = height;
+  }
+  return { width, height, x: (width - 800) / 2, y: (height - 470) / 2 };
+}
+
+function drawRoom(view) {
+  if (!artReady(sceneArt.room)) return;
+  const room = sceneArt.room;
+  ctx.drawImage(room, -100, 0, 1000, 470);
+  // Extend the rendered side wall into wider landscape viewports without
+  // stretching the playable center or moving any gameplay station.
+  const left = -view.x, right = view.width - view.x;
+  if (left < -100)
+    ctx.drawImage(room, 0, 0, 24, 940, left, 0, -100 - left, 470);
+  if (right > 900)
+    ctx.drawImage(room, 1976, 0, 24, 940, 900, 0, right - 900, 470);
+}
+
+function stationPose(station) {
+  if (station.kind === "source") return `station-${station.id}`;
+  if (station.kind === "prep")
+    return !state.prep ? "station-prep-idle"
+      : state.now < state.prep.ready ? "station-prep-working" : "station-prep-ready";
+  if (station.kind === "pot") {
+    if (!state.pot) return "station-pot-idle";
+    const kind = state.pot.item.includes("tomato") ? "tomato" : "carrot";
+    return `station-pot-${state.now < state.pot.ready ? "working" : "ready"}-${kind}`;
+  }
+  return `station-${station.kind}`;
+}
+
+function drawJobProgress(job, x, y) {
+  const ratio = Math.max(0, Math.min(1,
+    (state.now - job.started) / Math.max(1, job.ready - job.started)));
+  drawArt(sceneArt.progressTrack, x - 45, y + 48, 90, 13);
+  const fill = ratio >= 1 ? sceneArt.progressReady : sceneArt.progressFill;
+  if (artReady(fill) && ratio > 0) {
+    const sourceWidth = fill.naturalWidth * ratio;
+    ctx.drawImage(fill, 0, 0, sourceWidth, fill.naturalHeight,
+      x - 43, y + 50, 86 * ratio, 9);
+  }
+  drawBadge(ratio >= 1 ? "READY" : `${Math.round(ratio * 100)}%`, x, y - 48, 66);
 }
 
 function drawKitchenFrame() {
@@ -1203,125 +1400,61 @@ function drawKitchenFrame() {
     return;
   }
 
-  ctx.clearRect(0, 0, 800, 620);
-
-  const gradient = ctx.createLinearGradient(0, 0, 0, 620);
-  gradient.addColorStop(0, "#f5f0e6");
-  gradient.addColorStop(1, "#e9efdd");
-  ctx.fillStyle = gradient;
-  ctx.fillRect(0, 0, 800, 620);
-
-  for (let y = 155; y < 490; y += 42) {
-    for (let x = 0; x < 800; x += 42) {
-      ctx.fillStyle = ((x / 42 + y / 42) | 0) % 2 ? "#e4ead4" : "#eef2e3";
-      ctx.fillRect(x, y, 41, 41);
-    }
-  }
-
-  rounded(ctx, 15, 20, 770, 121, 20, "#abc2af");
-  rounded(ctx, 15, 480, 770, 125, 20, "#abc2af");
-  rounded(ctx, 40, 40, 165, 54, 16, "#fff8ed");
-  text(ctx, "KITCHEN CATS", 123, 73, 18, "#d2764f");
-  text(ctx, "cozy local shift", 684, 73, 12, "#f8fbf1");
+  const now = performance.now();
+  const view = fitKitchenCanvas();
+  ctx.clearRect(0, 0, view.width, view.height);
+  ctx.save();
+  ctx.translate(view.x, view.y);
+  drawRoom(view);
 
   const near = nearest();
   for (const station of state.stations) {
+    const x = station.x, y = kitchenY(station.y);
     const active = near?.id === station.id && near.d <= 110;
-    rounded(
-      ctx,
-      station.x - 62,
-      station.y - 44,
-      124,
-      75,
-      16,
-      active ? "#ffe3a4" : "#fff9ef",
-    );
-    if (active) {
-      ctx.strokeStyle = "#e69957";
-      ctx.lineWidth = 3;
-      ctx.strokeRect(station.x - 65, station.y - 47, 130, 81);
+    if (active) drawArt(sceneArt.halo, x - 65, y - 48, 130, 96);
+    drawStationArt(stationPose(station), x, y);
+
+    if (station.kind === "prep" && state.prep) {
+      const kind = state.prep.item.includes("tomato") ? "tomato" : "carrot";
+      drawFood(state.now < state.prep.ready ? kind : `chopped-${kind}`,
+        x - 11, y - 10, 29);
     }
-    text(ctx, station.label, station.x, station.y + 51, 16, "#3f5a4a");
+    if (station.kind === "pass" && state.pass) drawFood(state.pass, x, y - 7, 36);
 
-    if (station.kind === "source")
-      vegetable(ctx, station.id, station.x, station.y - 5, 1.4);
+    const job = station.kind === "prep" ? state.prep
+      : station.kind === "pot" ? state.pot : null;
+    if (job) drawJobProgress(job, x, y);
+    else drawBadge(station.label.toUpperCase(),
+      x + (station.id === "carrot" ? 45 : 0), y + 48,
+      Math.max(62, station.label.length * 9 + 18));
 
-    if (station.kind === "prep") {
-      rounded(ctx, station.x - 34, station.y - 25, 68, 40, 8, "#cca97a");
-      const knife = prepPose(performance.now(), reducedMotion);
+    if (station.kind === "pot" && state.pot && !reducedMotion && artReady(sceneArt.steam)) {
+      const phase = Math.max(0, (state.now - state.pot.started) / 900) % 1;
       ctx.save();
-      ctx.translate(station.x + 20, station.y);
-      ctx.rotate(reducedMotion || !state.prep || state.now >= state.prep.ready ? 0 : [-.45,-.15,.25,.55][knife]);
-      text(ctx, "╱", 0, 0, 24, "#5c473a");
+      ctx.globalAlpha = .36 + .26 * (1 - phase);
+      ctx.drawImage(sceneArt.steam, x - 21, y - 62 - phase * 12, 42, 47);
       ctx.restore();
-      if (state.prep)
-        vegetable(ctx, state.prep.item, station.x - 12, station.y, 1);
-    }
-
-    if (station.kind === "pot") {
-      rounded(ctx, station.x - 34, station.y - 24, 68, 46, 12, "#5d7f6c");
-      text(ctx, "≈", station.x, station.y - 2, 32, "#f0bd6c");
-      if (state.pot)
-        vegetable(ctx, state.pot.item, station.x, station.y - 4, 0.8);
-      const potFx = potEffect(performance.now(), !!state.pot, reducedMotion);
-      if (potFx.active) {
-        text(ctx, potFx.frame % 2 ? "~" : "≈", station.x - 16, station.y - 36 - potFx.frame * 3, 18, "#95a08d");
-        text(ctx, "•", station.x + 10, station.y - 28 - potFx.frame * 2, 12, "#95a08d");
-      }
-    }
-
-    if (station.kind === "pass") {
-      rounded(ctx, station.x - 36, station.y - 18, 72, 36, 12, "#efe7cf");
-      text(ctx, "↔", station.x, station.y + 4, 28, "#7e8f77");
-      if (state.pass) vegetable(ctx, state.pass, station.x, station.y - 6, 1.2);
-    }
-
-    if (station.kind === "serve") {
-      text(ctx, "ORDER UP", station.x, station.y - 5, 16, "#c26f4c");
-      text(ctx, "✦", station.x, station.y + 17, 22, "#edb66a");
-    }
-
-    if (station.kind === "bin")
-      text(ctx, "↻", station.x, station.y + 8, 32, "#829175");
-
-    const job =
-      station.kind === "prep"
-        ? state.prep
-        : station.kind === "pot"
-          ? state.pot
-          : null;
-    if (job) {
-      const progress = Math.min(
-        1,
-        (state.now - job.started) / (job.ready - job.started),
-      );
-      rounded(ctx, station.x - 43, station.y + 19, 86, 7, 4, "#d5d8c4");
-      rounded(
-        ctx,
-        station.x - 43,
-        station.y + 19,
-        86 * progress,
-        7,
-        4,
-        "#67956c",
-      );
-      text(
-        ctx,
-        progress >= 1 ? "READY" : "working…",
-        station.x,
-        station.y - 51,
-        11,
-        "#54695c",
-      );
     }
   }
-
-  const serveFx = updateServeEffect(presentation, state.served || 0, performance.now(), reducedMotion);
-  if (serveFx.active) { for (let i=0;i<8;i++){ const b=burstOffset(i,serveFx.age,reducedMotion); text(ctx,"✦",650+b.x,180+b.y,18,"#edb66a"); } }
 
   for (const player of [...state.players].sort((a, b) => a.y - b.y))
     drawChefSprite(player);
 
+  // Serving is a global snapshot event: no chef is falsely credited with it.
+  const serveFx = updateServeEffect(presentation, state.served || 0, now, reducedMotion);
+  if (serveFx.active) {
+    const x = 690, y = kitchenY(540) - 36;
+    for (let i = 0; i < 7; i++) {
+      const burst = burstOffset(i, serveFx.age);
+      ctx.save();
+      ctx.globalAlpha = burst.a;
+      drawArt(sceneArt.sparkle, x + burst.x - 15, y + burst.y - 15, 30, 30);
+      ctx.restore();
+    }
+    drawBadge("+100 SERVED!", 589, y - 41, 120);
+  }
+
+  ctx.restore();
   animationFrame = requestAnimationFrame(drawKitchenFrame);
 }
 
@@ -1341,26 +1474,25 @@ syncRenderLoop();
 
 renderUI();
 // Cache setup is successful only after a completely installed worker controls us.
-const offlineStatus = $("connection");
 if ("serviceWorker" in navigator) {
-  offlineStatus.textContent = "Preparing offline…";
+  setOfflineStatus("Preparing offline…");
   navigator.serviceWorker
     .register("./sw.js", { scope: "./" })
     .then((reg) => {
       const update = () => {
-        offlineStatus.textContent = reg.waiting
+        setOfflineStatus(reg.waiting
           ? "Update downloaded · close all Kitchen Cats tabs to apply"
           : navigator.serviceWorker.controller
             ? "Offline ready"
-            : "Preparing offline…";
+            : "Preparing offline…");
       };
       const watch = (worker) => {
         if (!worker) return;
         worker.addEventListener("statechange", () => {
           if (worker.state === "redundant" && !reg.waiting)
-            offlineStatus.textContent = navigator.serviceWorker.controller
+            setOfflineStatus(navigator.serviceWorker.controller
               ? "Offline ready · update failed; retry online"
-              : "Offline setup failed · reload online to retry";
+              : "Offline setup failed · reload online to retry");
           else update();
         });
       };
@@ -1370,10 +1502,7 @@ if ("serviceWorker" in navigator) {
       update();
     })
     .catch(
-      () =>
-        (offlineStatus.textContent =
-          "Offline unavailable · reload online to retry"),
+      () => setOfflineStatus("Offline unavailable · reload online to retry"),
     );
 } else
-  offlineStatus.textContent =
-    "Offline installation unavailable in this browser";
+  setOfflineStatus("Offline installation unavailable in this browser");

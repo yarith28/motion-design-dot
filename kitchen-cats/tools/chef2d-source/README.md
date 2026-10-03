@@ -1,0 +1,7 @@
+# Kitchen Cats 2D animation sources
+
+The four original character portraits remain unchanged in `assets/cat-{cream,tabby,gray,tuxedo}.png`. Cream's original 4×4 pose sheet remains `assets/cream-chef-pose-atlas.png`. The other PNG files here are painterly pose sources made with those exact original portraits as image references. Gray and Tuxedo use the separate `*-safe.png` sheets for walk and serve because those poses have clearer spacing than the dense sources. Two ImageGen-edited serving poses (`cream-serve14-repaired.png` and `tabby-serve13-repaired.png`) restore ear tips cut by the dense sheets; the original sources remain unchanged.
+
+Run `node tools/chef2d-source/build-atlas.cjs` from the repository root to rebuild the four runtime `assets/chef2d-*-atlas.webp` files and `assets/chef2d-manifest.json`. The script removes detached source-sheet speckles, fits each pose inside a 320×320 cell with at least eight transparent pixels of top gutter, aligns feet at y=311, and encodes lossless WebP. It does not redraw any pose. The original portraits supply the idle and stationary carry art at runtime.
+
+Each runtime atlas has four distinct poses for walk, prep, stir, and serve. Moving pose sequences play at 125 ms per pose (8 fps). Carry while walking uses the walk sequence with the game's held-item display; idle and stationary carry hold a single portrait frame. Reduced-motion mode also holds a single frame. Extra in-between studies were rejected because they clipped, changed scale or props, repeated gait motifs, or disrupted the chop rhythm.

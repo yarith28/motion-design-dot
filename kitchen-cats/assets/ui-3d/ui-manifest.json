@@ -1,0 +1,52 @@
+{
+  "artDirection": "Orthographic 3D toy kitchen: sage enamel, cream porcelain, honey oak, brushed copper, warm key and mint fill. Native text remains HTML/canvas text.",
+  "source": "build_ui.py",
+  "basePath": "./assets/ui-3d/",
+  "frames": [
+    {"file": "panel-cream.png", "size": [1000, 600], "slice": 160, "cssBorder": "23px", "use": "#welcome .intro, #experimental-mp, #lobby, #results, #how; quiet cream text surface"},
+    {"file": "panel-sage.png", "size": [1000, 600], "slice": 160, "cssBorder": "23px", "use": ".poster or dark result/help accent surface; use light native text"},
+    {"file": "hud-ribbon.png", "size": [1400, 180], "slice": 160, "cssBorder": "12px", "use": "active game top overlay HUD only; native timer, score and buttons atop it"},
+    {"file": "order-card.png", "size": [600, 220], "slice": 80, "cssBorder": "12px", "use": "#orders .order at ordinary live time remaining"},
+    {"file": "order-card-urgent.png", "size": [600, 220], "slice": 80, "cssBorder": "12px", "use": "#orders .order when remaining time <=10s; coral frame and native light text"},
+    {"file": "status-badge.png", "size": [560, 160], "slice": 70, "cssBorder": "10px", "use": ".offline-chip and #holding/status badges"}
+  ],
+  "buttons": [
+    {"files": ["button-coral.png", "button-coral-pressed.png"], "size": [720, 210], "slice": 95, "cssBorder": "15px", "use": "primary Solo, Start, Replay and other main actions; pressed state on :active"},
+    {"files": ["button-sage.png", "button-sage-pressed.png"], "size": [720, 210], "slice": 95, "cssBorder": "15px", "use": "secondary Host/Join and game control buttons; pressed state on :active"},
+    {"files": ["button-cream.png", "button-cream-pressed.png"], "size": [720, 210], "slice": 95, "cssBorder": "15px", "use": "light tertiary Help, Cancel and pairing buttons; pressed state on :active"},
+    {"files": ["button-disabled.png"], "size": [720, 210], "slice": 95, "cssBorder": "15px", "use": "disabled fullscreen or unavailable actions; disabled attribute still controls behavior"}
+  ],
+  "picker": [
+    {"file": "avatar-plate.png", "size": [256, 256], "anchor": "center", "use": ".avatar-option regular cat portrait backdrop"},
+    {"file": "avatar-plate-selected.png", "size": [256, 256], "anchor": "center", "use": ".avatar-option[aria-checked=true] coral selected portrait backdrop"}
+  ],
+  "controls": [
+    {"file": "button-icon-tile.png", "size": [192, 192], "anchor": "center", "use": "#mute, #motion, #fullscreen and #leave 44px HUD button body"},
+    {"file": "joystick-base.png", "size": [320, 320], "anchor": "center", "use": "#joystick, visual base; native pointer drag area remains >=44px"},
+    {"file": "joystick-knob.png", "size": [180, 180], "anchor": "center", "use": "#stick-knob; CSS translate for analog movement"},
+    {"files": ["action-disc.png", "action-disc-pressed.png"], "size": [320, 320], "anchor": "center", "use": "#action visual face, switch on pressed/held state; native accessible label"}
+  ],
+  "progress": [
+    {"file": "progress-track.png", "size": [600, 86], "slice": 70, "cssBorder": "8px", "use": "live order, prep and pot progress recessed frame"},
+    {"files": ["progress-fill-sage.png", "progress-fill-coral.png", "progress-fill-gold.png"], "size": [600, 86], "slice": 70, "cssBorder": "8px", "use": "live width 0..100% based on simulation; sage ready, coral urgent, gold working"}
+  ],
+  "icons": {
+    "size": [192, 192],
+    "files": ["icon-clock.png", "icon-score.png", "icon-paw.png", "icon-fullscreen.png", "icon-fullscreen-exit.png", "icon-help.png", "icon-leave.png", "icon-sound.png", "icon-sound-off.png", "icon-motion.png", "icon-motion-off.png", "icon-ready.png", "icon-urgent.png", "icon-camera.png", "icon-qr.png", "icon-tomato.png", "icon-carrot.png"],
+    "use": "HUD, status, recipe, help and pairing; set aria-hidden on decorative img while native button label/aria-label names the control"
+  },
+  "illustrations": [
+    {"file": "hero-kitchen.png", "size": [1200, 760], "use": "home poster kitchen backdrop with world agent 3D cat chef sprites overlaid"},
+    {"file": "result-soup-trophy.png", "size": [480, 360], "use": "#results celebration motif"},
+    {"file": "help-pick.png", "size": [240, 240], "use": "#how step 1"},
+    {"file": "help-prep.png", "size": [240, 240], "use": "#how step 2"},
+    {"file": "help-simmer.png", "size": [240, 240], "use": "#how step 3"},
+    {"file": "help-serve.png", "size": [240, 240], "use": "#how step 4"}
+  ],
+  "effects": [
+    {"file": "effect-sparkle.png", "size": [256, 256], "anchor": "center", "use": "serve burst; optional short scale/opacity animation, static on reduced motion"},
+    {"file": "effect-steam.png", "size": [256, 320], "anchor": "bottom center", "use": "cooking pot; optional upward drift, static on reduced motion"},
+    {"file": "effect-bubble.png", "size": [160, 160], "anchor": "center", "use": "simmer effect; optional rising motion, static on reduced motion"},
+    {"file": "effect-station-halo.png", "size": [320, 220], "anchor": "center", "use": "nearest interactable station at approximately 130x90 logical pixels, distinct from local-player ring"}
+  ]
+}

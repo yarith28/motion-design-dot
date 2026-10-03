@@ -53,6 +53,7 @@ jobs:
           export CHROMIUM_PATH="$(node -e 'process.stdout.write(require("playwright").chromium.executablePath())')"
           node kitchen-cats/tests/browser.cjs
           node kitchen-cats/tests/responsive.cjs
+          node kitchen-cats/tests/fullscreen.cjs
           node kitchen-cats/tests/qr-pairing.cjs
           node kitchen-cats/tests/qr-camera.cjs
           node kitchen-cats/tests/pwa.cjs
