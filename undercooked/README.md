@@ -36,7 +36,7 @@ npm test
 CHROMIUM_PATH=/path/to/chromium npm run test:browser
 ```
 
-Browser tests require Playwright 1.55.0 or newer, installed separately. They drive the real keyboard and native Chromium touch input. A read-only game snapshot helps verify outcomes; it cannot change the game. Playwright’s browser clock advances animation frames and the same production physics loop, allowing complete 180 second shifts to be tested without waiting three minutes per case.
+Browser tests use Playwright **1.62.1**, installed separately and pinned in CI. They drive the real keyboard and native Chromium touch input. A read-only game snapshot helps verify outcomes; it cannot change the game. Playwright’s browser clock advances animation frames and the same production physics loop, allowing complete 180 second shifts to be tested without waiting three minutes per case.
 
 The browser suite covers repeated complete orders, both pots, garden soup, incorrect serving, collision, set down/pickup/compost, focus loss, results, replay, paused restart, native simultaneous touch and cancellation, four viewport sizes, reduced motion, and a WebGL recovery screen. Screenshots and reports go in ignored `test-results/`. CI rebuilds, checks bundle reproducibility, and runs the same gates.
 
@@ -50,6 +50,6 @@ Every chef, food, kitchen, utensil, plant, and decorative model is original proc
 
 - Three.js **0.170.0**, MIT: [license](assets/THREE-LICENSE.txt)
 - esbuild **0.24.2**, MIT: build tool only
-- Playwright **1.55.0**, Apache-2.0: CI test tool only
+- Playwright **1.62.1**, Apache-2.0: CI test tool only
 
 The game is broadly inspired by cooperative cooking games, with original branding, assets, and a layout designed for one player. No multiplayer or paid infrastructure is used.

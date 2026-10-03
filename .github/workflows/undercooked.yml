@@ -36,7 +36,7 @@ jobs:
           git diff --exit-code -- assets/
       - name: Install test browser
         run: |
-          npm install --prefix "$RUNNER_TEMP/undercooked-tests" playwright@1.55.0
+          npm install --prefix "$RUNNER_TEMP/undercooked-tests" playwright@1.62.1
           "$RUNNER_TEMP/undercooked-tests/node_modules/.bin/playwright" install --with-deps chromium
       - name: Serve the committed game
         run: |
@@ -77,7 +77,7 @@ jobs:
         run: node undercooked/tests/live.mjs
       - name: Install live test browser
         run: |
-          npm install --prefix "$RUNNER_TEMP/undercooked-live" playwright@1.55.0
+          npm install --prefix "$RUNNER_TEMP/undercooked-live" playwright@1.62.1
           "$RUNNER_TEMP/undercooked-live/node_modules/.bin/playwright" install --with-deps chromium
       - name: Play the published kitchen through complete shifts and phone touch
         env:
