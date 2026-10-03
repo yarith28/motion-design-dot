@@ -21,7 +21,14 @@ async function bridge(page) {
           t.peers.set(m.id, { dc: { readyState: "open" } });
           t.onStatus(m.id, "connected");
         }
-        if (m.kind === "data") t.onMessage(m.id, m.msg);
+        if (m.kind === "data") {
+          // A real guest can receive the connected event before its first lobby
+          // snapshot. Delay that snapshot to exercise the focus handoff.
+          if (t.role === "guest" && m.msg?.type === "snapshot" && !t.delayedFirstSnapshot) {
+            t.delayedFirstSnapshot = true;
+            setTimeout(() => t.onMessage(m.id, m.msg), 120);
+          } else t.onMessage(m.id, m.msg);
+        }
         if (m.kind === "close") {
           t.peers.delete(m.id);
           t.onStatus(m.id, "closed");
@@ -120,6 +127,7 @@ async function bridge(page) {
         .fill(await g.locator("#mp-answer").inputValue());
       await h.locator("#mp-import").click();
       await g.locator("#lobby").waitFor({ state: "visible" });
+      await g.waitForFunction(() => document.activeElement?.id === "lobby");
       assert.equal(await g.locator(".crewcat").count(), 2);
       assert.equal(await h.locator(".crewcat").count(), 2);
     }
@@ -191,7 +199,7 @@ async function bridge(page) {
     assert(await g.locator("#play").isVisible());
     assert.deepEqual(errors, []);
     console.log(
-      "PASS simulated-transport browser UI: role-specific copy, two chefs, guest cooking/score, results, host replay, guest leave, re-pair, host disconnect, solo recovery. NOT real WebRTC evidence.",
+      "PASS simulated-transport browser UI: delayed guest snapshot focus, role-specific copy, two chefs, guest cooking/score, results, host replay, guest leave, re-pair, host disconnect, solo recovery. NOT real WebRTC evidence.",
     );
   } finally {
     await b.close();

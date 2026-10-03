@@ -319,6 +319,7 @@ function renderAvatarPicker() {
       button.setAttribute("role", "radio");
       button.setAttribute("aria-checked", String(index === selectedAvatar));
       button.setAttribute("aria-label", chef.name);
+      button.tabIndex = index === selectedAvatar ? 0 : -1;
       button.dataset.avatar = String(index);
 
       const image = document.createElement("img");
@@ -335,6 +336,15 @@ function renderAvatarPicker() {
       return button;
     }),
   );
+}
+
+function chooseAvatar(index, focus = false) {
+  selectedAvatar = Math.max(0, Math.min(CHEFS.length - 1, index));
+  persistPrefs();
+  renderAvatarPicker();
+  if (focus)
+    $("avatar-picker")?.querySelector(`[data-avatar="${selectedAvatar}"]`)
+      ?.focus({ preventScroll: true });
 }
 
 function connect() {
@@ -702,7 +712,12 @@ $("mp-import").addEventListener("click", async () => {
   if (runtimeMode === "guest") await acceptOfferText($("mp-offer").value);
   else await acceptAnswerText($("mp-answer").value);
 });
-$("mp-cancel").addEventListener("click", () => returnToSolo());
+$("mp-cancel").addEventListener("click", () => {
+  const homeAction = runtimeMode === "guest" ? $("home-join") : $("home-host");
+  returnToSolo();
+  homeAction?.focus({ preventScroll: true });
+  $("welcome")?.scrollIntoView({ block: "start" });
+});
 mpScanButton.addEventListener("click", () => {
   if (qrScanBusy) stopQrCamera();
   startQrCamera();
@@ -735,9 +750,16 @@ function chosenAvatar() {
 $("avatar-picker")?.addEventListener("click", (event) => {
   const option = event.target.closest(".avatar-option");
   if (!option) return;
-  selectedAvatar = Number(option.dataset.avatar) || 0;
-  persistPrefs();
-  renderAvatarPicker();
+  chooseAvatar(Number(option.dataset.avatar) || 0, true);
+});
+$("avatar-picker")?.addEventListener("keydown", (event) => {
+  const keys = ["ArrowRight", "ArrowDown", "ArrowLeft", "ArrowUp", "Home", "End"];
+  if (!keys.includes(event.key)) return;
+  event.preventDefault();
+  const next = event.key === "Home" ? 0 : event.key === "End"
+    ? CHEFS.length - 1 : (selectedAvatar +
+      (["ArrowRight", "ArrowDown"].includes(event.key) ? 1 : CHEFS.length - 1)) % CHEFS.length;
+  chooseAvatar(next, true);
 });
 
 $("mute") &&
@@ -770,6 +792,7 @@ for (const [homeId, pairingId] of [
 ]) {
   on(homeId, "click", () => {
     $(pairingId)?.click();
+    $("experimental-mp")?.focus({ preventScroll: true });
     $("experimental-mp")?.scrollIntoView({ block: "start" });
   });
 }
@@ -784,7 +807,11 @@ systemMotion?.addEventListener?.("change", (event) => {
 $("start")?.addEventListener("click", () => send({ type: "start" }));
 $("replay")?.addEventListener("click", () => send({ type: "replay" }));
 
-$("leave").addEventListener("click", () => { clearPresentationMotion(); returnToSolo("Kitchen closed."); });
+$("leave").addEventListener("click", () => {
+  clearPresentationMotion();
+  returnToSolo("Kitchen closed.");
+  $("solo")?.focus({ preventScroll: true });
+});
 
 function nearest() {
   const player = state?.players?.find((entry) => entry.id === me);
@@ -1042,6 +1069,7 @@ function renderUI() {
   document.body.classList.toggle("game-active", state?.phase === "playing");
   document.body.classList.toggle("game-results", state?.phase === "results");
   const idle = !state || state.phase === "idle";
+  document.body.classList.toggle("home-active", idle);
   $("fullscreen").hidden = idle || (state.phase !== "playing" && fullscreenElement() !== gameShell);
   $("welcome").hidden = !idle;
   $("game").hidden = idle;
@@ -1056,7 +1084,16 @@ function renderUI() {
   const paired =
     (runtimeMode === "host" && mpSession.peers.size > 0) ||
     (runtimeMode === "guest" && !!mpSession.serverPeer);
-  $("experimental-mp").hidden = !idle && (state.phase !== "lobby" || paired);
+  const pairingPanel = $("experimental-mp");
+  const hidePairing = !idle && (state.phase !== "lobby" || paired);
+  const focusPairedLobby = !pairingPanel.hidden && hidePairing && paired && state.phase === "lobby";
+  pairingPanel.hidden = hidePairing;
+  if (focusPairedLobby)
+    requestAnimationFrame(() => {
+      if (state?.phase === "lobby")
+        (runtimeMode === "host" ? $("start") : $("lobby"))
+          ?.focus({ preventScroll: true });
+    });
   $("mp-join").hidden = runtimeMode === "host";
   $("mp-host").textContent =
     runtimeMode === "host" ? "Offer for another chef" : "Host game";

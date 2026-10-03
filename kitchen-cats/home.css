@@ -1,0 +1,502 @@
+/* Home is a single soft placemat; the original 2D chefs carry the artwork. */
+body.home-active {
+  background:
+    radial-gradient(circle at 12% 12%, #ffe3cf 0, transparent 32%),
+    radial-gradient(circle at 91% 70%, #d9e9d6 0, transparent 35%),
+    #f5efdf;
+}
+
+body.home-active header { display: none; }
+body.home-active main { padding-top: 12px; }
+
+#welcome {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  grid-template-columns: minmax(0, 1.06fr) minmax(0, .94fr);
+  grid-template-rows: minmax(0, 1fr) auto;
+  gap: 18px 26px;
+  min-height: calc(100svh - 24px);
+  padding: clamp(20px, 3.5vw, 38px);
+  padding-top: max(clamp(20px, 3.5vw, 38px), calc(env(safe-area-inset-top) + 12px));
+  padding-right: max(clamp(20px, 3.5vw, 38px), calc(env(safe-area-inset-right) + 12px));
+  padding-bottom: max(clamp(20px, 3.5vw, 38px), calc(env(safe-area-inset-bottom) + 12px));
+  padding-left: max(clamp(20px, 3.5vw, 38px), calc(env(safe-area-inset-left) + 12px));
+  overflow: hidden;
+  border: 1px solid #e8d8bb;
+  border-radius: 36px;
+  background: linear-gradient(138deg, #fffaf0 0%, #fff8eb 61%, #e6f0df 100%);
+  box-shadow: 0 20px 48px #674d3430, inset 0 2px 0 #fffef9;
+}
+
+#welcome::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: min(56%, 660px);
+  aspect-ratio: 1;
+  right: -11%;
+  top: -26%;
+  border-radius: 48% 52% 55% 45%;
+  background: #e4efdc;
+}
+
+#welcome .intro,
+#welcome .poster {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-image: none;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  color: #254937;
+}
+
+#welcome .intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: clamp(20px, 3.1vh, 32px);
+}
+
+#welcome .home-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+#welcome .home-wordmark {
+  color: #315843;
+  font: 900 clamp(15px, 1.8vw, 20px)/1 "Trebuchet MS", Arial, sans-serif;
+  letter-spacing: .055em;
+  white-space: nowrap;
+}
+
+#welcome .home-wordmark strong { color: #d87050; }
+#welcome .home-wordmark i {
+  margin-left: 7px;
+  color: #e3ad61;
+  font-style: normal;
+}
+
+#welcome .help-link {
+  display: inline-flex;
+  align-items: center;
+  align-self: auto;
+  flex: 0 0 auto;
+  gap: 7px;
+  min-height: 44px;
+  color: #315843;
+  font-size: 13px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+#welcome .help-link span {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border: 1px solid #bbceb4;
+  border-radius: 50%;
+  background: #f3f7e9;
+  font-size: 16px;
+}
+
+#welcome .help-link:hover { text-decoration: underline; text-underline-offset: 4px; }
+#welcome .help-link:focus-visible { outline: 3px solid #b85239; outline-offset: 3px; border-radius: 8px; }
+
+#welcome h1 {
+  margin: 0;
+  color: #254937;
+  font: 900 clamp(44px, 5.6vw, 78px)/.98 "Trebuchet MS", Arial, sans-serif;
+  letter-spacing: -.055em;
+}
+
+#welcome h1 em {
+  color: #d56c4d;
+  font-style: normal;
+  font-weight: 900;
+}
+
+#welcome .entry { display: grid; gap: 22px; }
+#welcome .name-field { display: grid; gap: 8px; }
+#welcome .name-field label,
+#welcome .pickerlabel-row label {
+  color: #4b6651;
+  font: 800 12px/1.15 "Trebuchet MS", Arial, sans-serif;
+  letter-spacing: .035em;
+}
+
+#welcome #name {
+  width: min(100%, 430px);
+  min-height: 50px;
+  padding: 10px 18px;
+  border: 2px solid #dac9ab;
+  border-image: none;
+  border-radius: 17px;
+  background: #fffdf8;
+  box-shadow: inset 0 2px 4px #71614b12;
+  color: #254937;
+  font-size: 16px;
+}
+
+#welcome .pickerblock {
+  width: min(100%, 480px);
+  padding: 0;
+  border: 0;
+  border-image: none;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+#welcome .pickerlabel-row { margin-bottom: 9px; }
+#welcome #chosen-chef-name {
+  color: #a4523a;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+#welcome .avatar-picker { gap: 9px; }
+#welcome .avatar-option,
+#welcome .avatar-option.selected {
+  min-width: 0;
+  min-height: 94px;
+  padding: 7px 3px 8px;
+  gap: 3px;
+  border: 2px solid #e5dec9;
+  border-radius: 24px;
+  background: #fffdf7;
+  box-shadow: 0 4px 0 #e6dcc6;
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+}
+
+#welcome .avatar-option.selected {
+  border-color: #d66f50;
+  background: #ffead9;
+  box-shadow: 0 4px 0 #dfaa8d, 0 8px 14px #bc71482c;
+}
+
+#welcome .avatar-option img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: 62px;
+  object-fit: contain;
+}
+
+#welcome .avatar-option strong {
+  color: #345542;
+  font-size: 12px;
+  line-height: 1.1;
+}
+
+#welcome .avatar-option.selected strong { color: #9a4933; }
+#welcome .avatar-option span { display: none; }
+#welcome .avatar-option:hover,
+#welcome .avatar-option:focus-visible { transform: translateY(-2px); }
+
+#welcome .poster {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto auto;
+  justify-items: center;
+  align-items: stretch;
+  gap: 10px;
+}
+
+#welcome .hero-scene {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 330px;
+  aspect-ratio: auto;
+  overflow: hidden;
+  border-radius: 48% 52% 45% 55% / 48% 48% 52% 52%;
+  background:
+    radial-gradient(circle at 76% 18%, #fff9d6 0 5px, transparent 6px),
+    radial-gradient(circle at 19% 26%, #fff9d6 0 3px, transparent 4px),
+    radial-gradient(circle at 50% 35%, #e5efd9 0 28%, transparent 69%),
+    linear-gradient(150deg, #b9d6bb, #dbe9cc);
+  box-shadow: inset 0 -20px 0 #8dad9330;
+}
+
+#welcome .hero-scene::before {
+  content: "";
+  position: absolute;
+  right: 9%;
+  bottom: 3%;
+  left: 9%;
+  height: 19%;
+  border-radius: 50%;
+  background: #84ad8b5c;
+}
+
+#welcome .hero-chef {
+  position: absolute;
+  z-index: 2;
+  bottom: 8%;
+  width: 53%;
+  height: 84%;
+  object-fit: contain;
+  object-position: center bottom;
+  filter: drop-shadow(0 8px 6px #3f62454a);
+  pointer-events: none;
+}
+
+#welcome .hero-chef-left { left: 2%; }
+#welcome .hero-chef-right { right: 1%; height: 82%; }
+
+#welcome .home-pot {
+  position: absolute;
+  z-index: 3;
+  left: 43%;
+  bottom: 8%;
+  width: 16%;
+  height: 17%;
+  border-radius: 7px 7px 42% 42%;
+  background: #305b4d;
+  box-shadow: inset -8px -5px 0 #204839, 0 7px 0 #395f4b32;
+}
+
+#welcome .home-pot::before {
+  content: "";
+  position: absolute;
+  top: -17%;
+  right: -6%;
+  left: -6%;
+  height: 32%;
+  border: 3px solid #d9a064;
+  border-radius: 50%;
+  background: #e48b50;
+}
+
+#welcome .home-pot::after {
+  content: "";
+  position: absolute;
+  top: 19%;
+  right: -15%;
+  left: -15%;
+  height: 30%;
+  border: 4px solid #d9a064;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+#welcome .poster-bottom {
+  width: auto;
+  margin: -19px 0 0;
+  padding: 7px 15px;
+  border: 1px solid #ead9b5;
+  border-radius: 999px;
+  background: #fff8e8;
+  box-shadow: 0 4px 0 #e3d3b4;
+  z-index: 4;
+}
+
+#welcome .poster-bottom strong {
+  color: #42634b;
+  font: 800 14px/1.2 "Trebuchet MS", Arial, sans-serif;
+  text-shadow: none;
+}
+
+#welcome .offline-chip {
+  max-width: 100%;
+  min-height: 28px;
+  padding: 4px 11px;
+  border: 1px solid #c9d9bd;
+  border-image: none;
+  border-radius: 999px;
+  background: #eff6e7;
+  color: #456952;
+  box-shadow: none;
+  font-size: 11px;
+  font-weight: 800;
+  line-height: 1.15;
+  text-align: center;
+}
+
+#welcome .home-actions {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr;
+  gap: 12px;
+}
+
+#welcome .home-actions button,
+#welcome .home-actions button:active {
+  min-height: 58px;
+  padding: 9px 18px;
+  border: 2px solid #c8d8c3;
+  border-image: none;
+  border-radius: 999px;
+  background: #f7fcf1;
+  box-shadow: 0 5px 0 #c3d1b9;
+  color: #315542;
+  font: 800 17px/1.1 "Trebuchet MS", Arial, sans-serif;
+  text-align: center;
+  text-shadow: none;
+}
+
+#welcome .home-actions #solo,
+#welcome .home-actions #solo:active {
+  grid-column: auto;
+  border-color: #a8462f;
+  background: #b85239;
+  box-shadow: 0 5px 0 #823824;
+  color: #fff9ee;
+  font-size: 19px;
+}
+
+#welcome .home-actions button:hover { filter: brightness(.98); }
+#welcome .home-actions button:active { transform: translateY(3px); box-shadow: 0 2px 0 #c3d1b9; }
+#welcome .home-actions #solo:active { box-shadow: 0 2px 0 #823824; }
+#welcome .home-actions #solo span { margin-left: 8px; }
+
+/* Pairing and optional help are the continuation of the home surface. */
+#experimental-mp,
+#how {
+  border: 1px solid #e7d9bf;
+  border-image: none;
+  border-radius: 28px;
+  background: #fffaf0;
+  box-shadow: 0 12px 28px #674d3420;
+}
+
+#experimental-mp { padding: 24px; }
+#experimental-mp h2 {
+  color: #254937;
+  font: 900 clamp(25px, 3vw, 32px)/1.1 "Trebuchet MS", Arial, sans-serif;
+}
+#experimental-mp .eyebrow { color: #a35b42; }
+#experimental-mp .pair-step {
+  border-color: #dce5d4;
+  border-radius: 20px;
+  background: #f3f7ed;
+}
+#experimental-mp button:not(.avatar-option),
+#experimental-mp button:not(.avatar-option):active {
+  min-height: 44px;
+  border: 1px solid #bdd1bf;
+  border-image: none;
+  border-radius: 999px;
+  background: #f0f7ea;
+  box-shadow: 0 3px 0 #c9d7c2;
+  color: #2a5540;
+  text-shadow: none;
+}
+#experimental-mp #mp-host,
+#experimental-mp #mp-join {
+  border-color: #305d48;
+  background: #37674f;
+  box-shadow: 0 3px 0 #234a39;
+  color: #fffdf4;
+}
+#experimental-mp button:not(.avatar-option):active { transform: translateY(2px); box-shadow: 0 1px 0 #c9d7c2; }
+#experimental-mp #mp-host:active,
+#experimental-mp #mp-join:active { box-shadow: 0 1px 0 #234a39; }
+#experimental-mp button:disabled { opacity: .65; }
+#experimental-mp #mp-qr,
+#experimental-mp #mp-video { filter: none; }
+#how { padding: 16px 20px; }
+#how summary { color: #254937; font-family: "Trebuchet MS", Arial, sans-serif; }
+#how .how-steps div {
+  border-radius: 18px;
+  background: #f6f4e8;
+}
+
+@media (max-width: 700px) and (orientation: portrait) {
+  body.home-active main { padding: 8px 0 0; }
+  #welcome {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto auto auto;
+    align-content: space-between;
+    gap: 18px;
+    min-height: calc(100svh - 24px);
+    padding: 20px;
+    padding-top: max(20px, calc(env(safe-area-inset-top) + 12px));
+    padding-bottom: max(20px, calc(env(safe-area-inset-bottom) + 12px));
+    border-radius: 30px;
+  }
+  #welcome .intro { gap: 18px; }
+  #welcome h1 { font-size: clamp(38px, 10.5vw, 58px); }
+  #welcome .entry { gap: 14px; }
+  #welcome .poster { grid-row: 2; gap: 4px; }
+  #welcome .hero-scene { min-height: 235px; height: 235px; }
+  #welcome .poster-bottom { margin-top: -17px; }
+  #welcome .home-actions { grid-column: auto; grid-row: 3; gap: 8px; }
+  #welcome .home-actions button,
+  #welcome .home-actions #solo { min-height: 52px; padding: 8px; font-size: 14px; }
+  #welcome .avatar-option,
+  #welcome .avatar-option.selected { min-height: 78px; }
+  #welcome .avatar-option img { height: 47px; }
+}
+
+@media (max-height: 520px) and (orientation: landscape) {
+  body.home-active main { width: 100%; padding: 4px; }
+  #welcome {
+    grid-template-columns: minmax(0, 1.16fr) minmax(0, .84fr);
+    grid-template-rows: minmax(0, 1fr) auto;
+    gap: 5px 13px;
+    min-height: calc(100svh - 8px);
+    padding: 10px max(14px, calc(env(safe-area-inset-right) + 10px))
+      max(10px, calc(env(safe-area-inset-bottom) + 8px))
+      max(14px, calc(env(safe-area-inset-left) + 10px));
+    border-radius: 25px;
+  }
+  #welcome .intro {
+    justify-content: space-between;
+    gap: 2px;
+  }
+  #welcome .home-wordmark { font-size: clamp(12px, 1.6vw, 16px); }
+  #welcome .home-wordmark i { margin-left: 3px; }
+  #welcome .help-link { min-height: 44px; font-size: 11px; }
+  #welcome .help-link span { width: 25px; height: 25px; }
+  #welcome h1 { font-size: clamp(26px, 4.7vw, 39px); line-height: 1; }
+  #welcome .entry { gap: 4px; }
+  #welcome .name-field { display: flex; align-items: center; gap: 7px; }
+  #welcome .name-field label { flex: 0 0 68px; font-size: 11px; }
+  #welcome #name { width: 100%; min-height: 44px; height: 44px; padding: 5px 12px; font-size: 14px; }
+  #welcome .pickerlabel-row { margin-bottom: 3px; }
+  #welcome .pickerlabel-row label,
+  #welcome #chosen-chef-name { font-size: 11px; }
+  #welcome .avatar-picker { gap: 5px; }
+  #welcome .avatar-option,
+  #welcome .avatar-option.selected {
+    min-height: 58px;
+    padding: 2px 1px 3px;
+    gap: 1px;
+    border-radius: 19px;
+    box-shadow: 0 2px 0 #e6dcc6;
+  }
+  #welcome .avatar-option.selected { box-shadow: 0 2px 0 #dfaa8d; }
+  #welcome .avatar-option img { height: 39px; max-width: 100%; }
+  #welcome .avatar-option strong { font-size: 11px; }
+  #welcome .poster { gap: 3px; }
+  #welcome .hero-scene { min-height: 0; height: 100%; border-radius: 45% 55% 43% 57%; }
+  #welcome .poster-bottom { margin-top: -11px; padding: 4px 10px; }
+  #welcome .poster-bottom strong { font-size: 10px; }
+  #welcome .offline-chip { min-height: 21px; padding: 3px 8px; font-size: 11px; }
+  #welcome .home-actions { gap: 7px; }
+  #welcome .home-actions button,
+  #welcome .home-actions button:active,
+  #welcome .home-actions #solo,
+  #welcome .home-actions #solo:active {
+    min-height: 44px;
+    padding: 6px 9px;
+    font-size: 13px;
+    box-shadow: 0 3px 0 #c3d1b9;
+  }
+  #welcome .home-actions #solo,
+  #welcome .home-actions #solo:active { font-size: 14px; box-shadow: 0 3px 0 #823824; }
+}
+
+@media (max-width: 600px) and (orientation: portrait) {
+  #welcome .home-topline { gap: 4px; }
+  #welcome .home-wordmark { font-size: 14px; }
+  #welcome .help-link { font-size: 11px; }
+  #welcome .help-link span { width: 26px; height: 26px; }
+}

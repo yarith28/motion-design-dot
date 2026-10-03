@@ -9,23 +9,27 @@
     <title>Kitchen Cats · A little chaos. A lot of soup.</title>
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./assets/ui-3d/ui-theme.css" />
+    <link rel="stylesheet" href="./home.css" />
     <link rel="icon" href="./assets/icon-192.png" type="image/png" />
     <link rel="manifest" href="./manifest.json" />
   </head>
   <body>
     <header>
       <a class="brand" href="./">Kitchen<span>Cats</span><i>✦</i></a>
-      <div class="tag">LOCAL SOUP CLUB <b>02</b><small>r33</small></div>
+      <div class="tag">LOCAL SOUP CLUB <b>02</b><small>r34</small></div>
       <span id="connection" role="status" aria-live="polite">Connecting…</span>
     </header>
     <main>
       <section id="welcome">
-        <div class="intro card">
-          <span class="eyebrow home-wordmark">KITCHEN CATS <small>· A LITTLE CHAOS. A LOT OF SOUP.</small></span>
-          <h1>Good soup.<br />Better <em>company.</em></h1>
+        <div class="intro">
+          <div class="home-topline">
+            <span class="home-wordmark">KITCHEN <strong>CATS</strong><i aria-hidden="true">✦</i></span>
+            <a class="help-link" href="#how">How to play <span aria-hidden="true">?</span></a>
+          </div>
+          <h1>Ready, <em>chef?</em></h1>
           <div class="entry">
             <div class="name-field">
-              <label for="name">CHEF NAME</label>
+              <label for="name">Your name</label>
               <input
                 id="name"
                 maxlength="16"
@@ -35,7 +39,7 @@
             </div>
             <div class="pickerblock">
               <div class="pickerlabel-row">
-                <label id="picker-label">PICK YOUR CAT</label>
+                <label id="picker-label">Choose your cat</label>
                 <span id="chosen-chef-name">Cream whisker</span>
               </div>
               <div
@@ -45,30 +49,27 @@
                 aria-label="Choose your cat chef"
               ></div>
             </div>
-            <div class="home-actions">
-              <button id="solo" class="primary">Start solo shift <span aria-hidden="true">→</span></button>
-              <button id="home-host" type="button">Host friends</button>
-              <button id="home-join" type="button">Join friends</button>
-            </div>
           </div>
-          <a class="help-link" href="#how">How to play <span aria-hidden="true">↗</span></a>
         </div>
 
-        <figure class="poster card">
-          <div class="hero-scene">
-            <img id="hero-art" src="./assets/ui-3d/hero-kitchen.png"
-              alt="A miniature soup kitchen with a prep station, copper pot, and serving counter" />
+        <figure class="poster">
+          <div class="hero-scene" aria-hidden="true">
+            <div class="home-pot"><span></span></div>
             <img class="hero-chef hero-chef-left" src="./assets/cat-cream.png" alt="" aria-hidden="true" />
             <img class="hero-chef hero-chef-right" src="./assets/cat-tuxedo.png" alt="" aria-hidden="true" />
           </div>
           <figcaption class="poster-bottom">
-            <strong>Today's special: teamwork.</strong>
-            <span>SOLO OR LOCAL CREW</span>
+            <strong>A little chaos. A lot of soup.</strong>
           </figcaption>
-          <span id="home-connection" class="offline-chip">Preparing offline…</span>
+          <span id="home-connection" class="offline-chip" role="status" aria-live="polite">Preparing offline…</span>
         </figure>
+        <div class="home-actions">
+          <button id="solo" class="primary">Cook solo <span aria-hidden="true">→</span></button>
+          <button id="home-host" type="button">Host game</button>
+          <button id="home-join" type="button">Join game</button>
+        </div>
       </section>
-      <section id="experimental-mp" class="panel card">
+      <section id="experimental-mp" class="panel card" tabindex="-1">
         <span class="eyebrow">LOCAL CREW · EXPERIMENTAL</span>
         <h2>Cook together</h2>
         <details class="pair-help">
@@ -136,7 +137,7 @@
           </div>
         </div>
         <span id="fullscreen-note" class="sr-only" role="status" aria-live="polite"></span>
-        <div id="lobby" class="panel card" hidden>
+        <div id="lobby" class="panel card" tabindex="-1" hidden>
           <p id="hosthint"></p>
           <div id="crew"></div>
           <button id="start" class="primary">Start shift</button>
@@ -215,7 +216,7 @@
           <span>Wait for “Offline ready” above before disconnecting. Add this page to your Home Screen for easy reopening.</span>
           <details class="version-details">
             <summary>App version</summary>
-            <small id="build-version">Build kitchen-cats-20261003-r33-original-cats</small>
+            <small id="build-version">Build kitchen-cats-20261003-r34-rounded-home</small>
           </details>
         </div>
       </details>
