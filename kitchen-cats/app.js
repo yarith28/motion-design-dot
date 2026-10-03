@@ -369,7 +369,7 @@ const mpSession = new MultiplayerSession({ transport: mpTransport });
 multiplayer = mpSession;
 const mpStatus = $("mp-status");
 const mpFlow = $("mp-flow");
-const mpActions = $("mp-actions");
+const mpRetry = $("mp-retry");
 const mpStep = $("mp-step");
 const mpInstruction = $("mp-instruction");
 const mpQrView = $("mp-qr-view");
@@ -382,6 +382,9 @@ const mpScanButton = $("mp-scan");
 const mpImagePick = $("mp-image-pick");
 const mpImage = $("mp-image");
 let mpPending = false,
+  pairingSurface = false,
+  pairingFromLobby = false,
+  hostPeersAtOffer = 0,
   pairingGeneration = 0,
   qrFrames = [],
   qrFrameTimer = null,
@@ -408,8 +411,12 @@ const profile = () => ({
 });
 function pairingBusy(busy) {
   mpPending = busy;
-  for (const id of ["mp-host", "mp-join", "mp-import", "start"])
+  for (const id of ["mp-retry", "add-player", "mp-import", "start", "mp-start"])
     $(id).disabled = busy;
+}
+function closePendingPeers() {
+  for (const [id, peer] of mpTransport.peers)
+    if (peer.dc?.readyState !== "open") mpTransport.closePeer(id);
 }
 function stopQrAnimation() {
   clearInterval(qrFrameTimer);
@@ -434,7 +441,7 @@ function stopPairingMedia() {
 }
 function resetPairingUi(message = "Idle") {
   stopPairingMedia();
-  mpActions.hidden = false;
+  mpRetry.hidden = true;
   mpFlow.hidden = true;
   mpQrView.hidden = true;
   mpScanButton.hidden = false;
@@ -444,13 +451,15 @@ function resetPairingUi(message = "Idle") {
   mpStatus.textContent = message;
 }
 function setPairingStep(step, instruction) {
-  mpActions.hidden = true;
+  mpRetry.hidden = true;
   mpFlow.hidden = false;
   mpStep.textContent = step;
   mpInstruction.textContent = instruction;
 }
 function showQrFrames(frames, instruction) {
+  stopQrAnimation();
   stopQrCamera();
+  $("mp-advanced").open = false;
   qrFrames = frames;
   mpQrView.hidden = false;
   mpInstruction.textContent = instruction;
@@ -501,7 +510,6 @@ function cameraErrorMessage(error) {
 }
 async function startQrCamera() {
   if (!qrAssembler || !qrScanRole || qrScanBusy) return;
-  stopQrAnimation();
   const attempt = ++qrCameraAttempt;
   qrScanBusy = true;
   qrLastProgress = Date.now();
@@ -571,23 +579,29 @@ async function scanImageFile(file) {
 }
 function showConnectedPairing() {
   stopPairingMedia();
-  mpActions.hidden = true;
+  mpRetry.hidden = true;
   mpFlow.hidden = true;
   mpStatus.textContent = "Connected. The host can start the shift.";
 }
 async function createHostOffer() {
   if (mpPending) return;
+  $("how").open = false;
   if (runtimeMode !== "host") {
     returnToSolo();
     runtimeMode = "host";
+    pairingSurface = true;
+    pairingFromLobby = false;
     const p = profile();
     mpSession.startHost(makeId("session"), p.name, p.avatar);
+  } else {
+    pairingSurface = true;
   }
+  hostPeersAtOffer = mpSession.peers.size;
+  renderUI();
   const generation = ++pairingGeneration;
   pairingBusy(true);
   try {
-    for (const [id, p] of mpTransport.peers)
-      if (p.dc?.readyState !== "open") mpTransport.closePeer(id);
+    closePendingPeers();
     if (mpSession.peers.size >= 3) throw Error("Kitchen full: four chefs maximum.");
     $("mp-offer").value = "";
     $("mp-answer").value = "";
@@ -612,13 +626,15 @@ async function createHostOffer() {
   } catch (e) {
     if (generation === pairingGeneration) {
       showPairingError("Host setup failed", e);
-      // No offer exists yet, so return to the two primary actions for a clean
-      // retry. During the next attempt setPairingStep keeps Cancel visible.
-      mpActions.hidden = false;
+      mpStatus.textContent = `Host setup failed: ${e?.message || e} Tap Retry code or ${pairingFromLobby ? "Back to lobby" : "Back home"}.`;
+      mpRetry.hidden = false;
       mpFlow.hidden = true;
     }
   } finally {
-    if (generation === pairingGeneration) pairingBusy(false);
+    if (generation === pairingGeneration) {
+      pairingBusy(false);
+      if (!mpRetry.hidden) mpRetry.focus({ preventScroll: true });
+    }
   }
 }
 async function acceptOfferText(offer) {
@@ -654,6 +670,7 @@ async function acceptAnswerText(answer) {
     await mpTransport.acceptAnswer(answer);
     if (generation === pairingGeneration) {
       stopPairingMedia();
+      $("mp-advanced").open = false;
       mpStatus.textContent = "Reply accepted. Connecting…";
     }
   } catch (e) {
@@ -669,6 +686,11 @@ function returnToSolo(message = "Cancelled") {
   pairingBusy(false);
   stop();
   runtimeMode = "solo";
+  pairingSurface = false;
+  pairingFromLobby = false;
+  hostPeersAtOffer = 0;
+  $("mp-advanced").open = false;
+  document.querySelector(".pair-help").open = false;
   mpSession.stop();
   offlineGame.stop();
   me = "solo";
@@ -693,16 +715,19 @@ mpSession.onStatus((s) => {
     showConnectedPairing();
   } else mpStatus.textContent = s;
 });
-$("mp-host").addEventListener("click", createHostOffer);
-$("mp-join").addEventListener("click", () => {
+function beginGuestJoin() {
   returnToSolo();
   runtimeMode = "guest";
+  pairingSurface = true;
+  $("how").open = false;
   const p = profile();
   mpSession.join(p.name, p.avatar);
   setPairingStep("Guest · 1 of 2", "Tap Scan with camera, then point it at the host code.");
   prepareQrScan("o", "Tap Scan with camera, then point it at the host code.");
   mpStatus.textContent = "Ready to scan the host code.";
-});
+  renderUI();
+}
+mpRetry.addEventListener("click", createHostOffer);
 $("mp-import").addEventListener("click", async () => {
   if (mpPending) return;
   if (runtimeMode === "solo") {
@@ -713,10 +738,33 @@ $("mp-import").addEventListener("click", async () => {
   else await acceptAnswerText($("mp-answer").value);
 });
 $("mp-cancel").addEventListener("click", () => {
+  if (runtimeMode === "host" && pairingFromLobby && mpSession.peers.size > 0) {
+    pairingGeneration++;
+    stopPairingMedia();
+    closePendingPeers();
+    pairingBusy(false);
+    pairingSurface = false;
+    pairingFromLobby = false;
+    $("mp-advanced").open = false;
+    document.querySelector(".pair-help").open = false;
+    resetPairingUi("Ready for another chef.");
+    renderUI();
+    $("add-player").focus({ preventScroll: true });
+    return;
+  }
   const homeAction = runtimeMode === "guest" ? $("home-join") : $("home-host");
   returnToSolo();
   homeAction?.focus({ preventScroll: true });
-  $("welcome")?.scrollIntoView({ block: "start" });
+});
+$("mp-start").addEventListener("click", () => {
+  if (runtimeMode !== "host" || mpPending) return;
+  pairingGeneration++;
+  stopPairingMedia();
+  closePendingPeers();
+  pairingSurface = false;
+  pairingFromLobby = false;
+  pairingBusy(false);
+  send({ type: "start" });
 });
 mpScanButton.addEventListener("click", () => {
   if (qrScanBusy) stopQrCamera();
@@ -786,18 +834,32 @@ $("solo")?.addEventListener("click", () => {
     avatar: chosenAvatar(),
   });
 });
-for (const [homeId, pairingId] of [
-  ["home-host", "mp-host"],
-  ["home-join", "mp-join"],
-]) {
-  on(homeId, "click", () => {
-    $(pairingId)?.click();
-    $("experimental-mp")?.focus({ preventScroll: true });
-    $("experimental-mp")?.scrollIntoView({ block: "start" });
-  });
-}
-document.querySelector(".help-link")?.addEventListener("click", () => {
+on("home-host", "click", () => {
+  void createHostOffer();
+  $("experimental-mp").focus({ preventScroll: true });
+});
+on("home-join", "click", () => {
+  beginGuestJoin();
+  $("experimental-mp").focus({ preventScroll: true });
+});
+on("add-player", "click", () => {
+  if (runtimeMode !== "host" || state?.phase !== "lobby" ||
+      mpSession.peers.size < 1 || mpSession.peers.size >= 3 || pairingSurface) return;
+  pairingFromLobby = true;
+  void createHostOffer();
+  $("experimental-mp").focus({ preventScroll: true });
+});
+document.querySelector(".help-link")?.addEventListener("click", (event) => {
+  event.preventDefault();
   $("how").open = true;
+  renderUI();
+  $("how").querySelector("summary")?.focus({ preventScroll: true });
+});
+$("how").addEventListener("toggle", renderUI);
+$("close-help").addEventListener("click", () => {
+  $("how").open = false;
+  renderUI();
+  document.querySelector(".help-link")?.focus({ preventScroll: true });
 });
 systemMotion?.addEventListener?.("change", (event) => {
   if (readPreference("kitchen-reduced-motion", "") !== "") return;
@@ -1069,9 +1131,22 @@ function renderUI() {
   document.body.classList.toggle("game-active", state?.phase === "playing");
   document.body.classList.toggle("game-results", state?.phase === "results");
   const idle = !state || state.phase === "idle";
-  document.body.classList.toggle("home-active", idle);
+  const paired =
+    (runtimeMode === "host" && mpSession.peers.size > 0) ||
+    (runtimeMode === "guest" && !!mpSession.serverPeer);
+  if (paired && state.phase === "lobby" &&
+      (runtimeMode === "guest" || mpSession.peers.size > hostPeersAtOffer)) {
+    pairingSurface = false;
+    pairingFromLobby = false;
+  }
+  const showPairing = pairingSurface && (idle || state.phase === "lobby");
+  const showHelp = idle && !showPairing && $("how").open;
+  document.body.classList.toggle("home-active", idle && !showPairing && !showHelp);
+  document.body.classList.toggle("help-active", showHelp);
+  document.body.classList.toggle("pairing-active", showPairing);
+  document.body.classList.toggle("lobby-active", state.phase === "lobby" && !showPairing);
   $("fullscreen").hidden = idle || (state.phase !== "playing" && fullscreenElement() !== gameShell);
-  $("welcome").hidden = !idle;
+  $("welcome").hidden = !idle || showPairing || showHelp;
   $("game").hidden = idle;
   $("room").textContent = runtimeMode === "solo" ? "SOLO" : "LOCAL KITCHEN";
   $("roomcode-large") && ($("roomcode-large").textContent = "SOLO");
@@ -1081,22 +1156,19 @@ function renderUI() {
       : runtimeMode.toUpperCase();
 
   $("lobby").hidden = state.phase !== "lobby";
-  const paired =
-    (runtimeMode === "host" && mpSession.peers.size > 0) ||
-    (runtimeMode === "guest" && !!mpSession.serverPeer);
   const pairingPanel = $("experimental-mp");
-  const hidePairing = !idle && (state.phase !== "lobby" || paired);
-  const focusPairedLobby = !pairingPanel.hidden && hidePairing && paired && state.phase === "lobby";
-  pairingPanel.hidden = hidePairing;
+  const focusPairedLobby = !pairingPanel.hidden && !showPairing && paired &&
+    state.phase === "lobby" &&
+    (runtimeMode === "guest" || mpSession.peers.size > hostPeersAtOffer);
+  pairingPanel.hidden = !showPairing;
+  $("mp-start").hidden = runtimeMode !== "host" || !showPairing;
+  $("mp-cancel").textContent = pairingFromLobby ? "Back to lobby" : "Back home";
   if (focusPairedLobby)
     requestAnimationFrame(() => {
       if (state?.phase === "lobby")
         (runtimeMode === "host" ? $("start") : $("lobby"))
           ?.focus({ preventScroll: true });
     });
-  $("mp-join").hidden = runtimeMode === "host";
-  $("mp-host").textContent =
-    runtimeMode === "host" ? "Offer for another chef" : "Host game";
   $("play").hidden = state.phase !== "playing";
   $("results").hidden = state.phase !== "results";
 
@@ -1113,6 +1185,9 @@ function renderUI() {
 
   $("start").hidden = runtimeMode !== "host";
   $("start").disabled = mpPending;
+  $("add-player").hidden = runtimeMode !== "host" ||
+    state.phase !== "lobby" || showPairing ||
+    mpSession.peers.size < 1 || mpSession.peers.size >= 3;
   $("hosthint").textContent =
     runtimeMode === "guest"
       ? "Waiting for the host to start."

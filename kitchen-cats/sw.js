@@ -1,4 +1,4 @@
-const VERSION = "kitchen-cats-20261003-r34-rounded-home";
+const VERSION = "kitchen-cats-20261003-r36-host-actions";
 const PREFIX = "kitchen-cats-";
 const CACHE = VERSION + "-precache";
 const ASSETS = [
@@ -6,6 +6,7 @@ const ASSETS = [
   "./index.html",
   "./style.css",
   "./home.css",
+  "./viewport.css",
   "./assets/ui-3d/ui-theme.css",
   "./app.js",
   "./presentation-animation.js",

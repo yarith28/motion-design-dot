@@ -268,7 +268,7 @@ const base = process.env.BASE_URL || "http://127.0.0.1:8000/kitchen-cats/";
     );
     assert(screenshotEvidence.match, `rendered canvas screenshot did not roundtrip: ${JSON.stringify(screenshotEvidence)}`);
 
-    await p.locator("#mp-join").click();
+    await p.locator("#home-join").click();
     assert(await p.locator("#mp-flow").isVisible());
     const continuousFeed = await p.evaluate(async () => {
       const qr = await import("./qr-pairing.js");
@@ -387,8 +387,8 @@ const base = process.env.BASE_URL || "http://127.0.0.1:8000/kitchen-cats/";
       assert.match(await p.locator("#mp-step").innerText(), /Guest · 1 of 2/);
       await p.locator("#mp-cancel").click();
     }
-    assert(await p.locator("#mp-actions").isVisible());
-    await p.locator("#mp-join").click();
+    assert(await p.locator("#welcome").isVisible());
+    await p.locator("#home-join").click();
     assert(await p.locator("#mp-scan").isVisible());
     await p.locator("#mp-cancel").click();
     assert(await p.locator("#mp-flow").isHidden());

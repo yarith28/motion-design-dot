@@ -68,7 +68,9 @@ async function transferQr(from, to, complete) {
         return orig.apply(this, a);
       };
     });
-    await h.locator("#mp-host").click();
+    await h.locator("#home-host").click();
+    assert.equal(await h.locator("#mp-host, #mp-join").count(), 0);
+    assert(await h.locator("#mp-start").isVisible(), "Host did not enter pairing directly");
     await h.waitForFunction(
       () =>
         document.querySelector("#mp-offer").value ||
@@ -79,15 +81,18 @@ async function transferQr(from, to, complete) {
         await h.locator("#mp-status").textContent(),
         /No ICE candidates|timed out|unavailable/,
       );
+      assert(await h.locator("#mp-retry").isVisible(), "Failed offer has no retry action");
+      assert(!(await h.locator("#mp-flow").isVisible()), "Failed offer still shows an empty QR step");
       assert.equal(await h.evaluate(() => testTransport.peers.size), 0);
       for (let i = 0; i < 2; i++) {
-        await h.locator("#mp-host").click();
+        await h.locator("#mp-retry").click();
         await h.waitForFunction(() =>
           document.querySelector("#mp-status").textContent.includes("failed"),
         );
+        assert(await h.locator("#mp-retry").isVisible());
         assert.equal(await h.evaluate(() => testTransport.peers.size), 0);
       }
-      await h.locator("#mp-host").click();
+      await h.locator("#mp-retry").click();
       await h.locator("#mp-cancel").click();
       await h.waitForTimeout(300);
       assert.equal(await h.locator("#mp-status").textContent(), "Cancelled");
@@ -102,7 +107,7 @@ async function transferQr(from, to, complete) {
       const gc = await b.newContext(),
         g = await gc.newPage();
       await g.goto(base);
-      await g.locator("#mp-join").click();
+      await g.locator("#home-join").click();
       const offerFrames = await transferQr(
         h,
         g,
@@ -120,6 +125,18 @@ async function transferQr(from, to, complete) {
       assert(offerFrames >= 1);
       assert(answerFrames >= 1);
       await g.locator("#lobby").waitFor({ state: "visible" });
+      await h.locator("#lobby").waitFor({ state: "visible" });
+      assert(await h.locator("#add-player").isVisible(), "Connected host cannot invite another guest");
+      await h.locator("#add-player").click();
+      await h.waitForFunction(() =>
+        document.querySelector("#mp-offer").value ||
+        document.querySelector("#mp-status").textContent.includes("failed"),
+      );
+      assert(await h.locator("#experimental-mp").isVisible(), "Add player did not enter pairing");
+      await h.locator("#mp-cancel").click();
+      await h.locator("#lobby").waitFor({ state: "visible" });
+      assert.equal(await h.locator(".crewcat").count(), 2, "Cancel disconnected the first guest");
+      assert.equal(await h.evaluate(() => document.activeElement?.id), "add-player");
       await h.locator("#start").click();
       await g.locator("#play").waitFor({ state: "visible" });
       await g.keyboard.down("ArrowUp");
@@ -128,7 +145,7 @@ async function transferQr(from, to, complete) {
       await h.locator("#leave").click();
       await g.locator("#welcome").waitFor({ state: "visible" });
       console.log(
-        "PASS real local WebRTC + QR image pairing: two browser contexts paired, guest reply scanned from animated QR, started, guest input, host leave. Physical phones remain untested.",
+        "PASS real local WebRTC + QR image pairing: two browser contexts paired, Add player/cancel kept the guest, started, guest input, host leave. Physical phones remain untested.",
       );
       await gc.close();
     }

@@ -388,16 +388,14 @@ body.home-active main { padding-top: 12px; }
   color: #2a5540;
   text-shadow: none;
 }
-#experimental-mp #mp-host,
-#experimental-mp #mp-join {
+#experimental-mp #mp-retry {
   border-color: #305d48;
   background: #37674f;
   box-shadow: 0 3px 0 #234a39;
   color: #fffdf4;
 }
 #experimental-mp button:not(.avatar-option):active { transform: translateY(2px); box-shadow: 0 1px 0 #c9d7c2; }
-#experimental-mp #mp-host:active,
-#experimental-mp #mp-join:active { box-shadow: 0 1px 0 #234a39; }
+#experimental-mp #mp-retry:active { box-shadow: 0 1px 0 #234a39; }
 #experimental-mp button:disabled { opacity: .65; }
 #experimental-mp #mp-qr,
 #experimental-mp #mp-video { filter: none; }

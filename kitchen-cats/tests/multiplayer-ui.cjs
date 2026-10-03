@@ -97,14 +97,15 @@ async function bridge(page) {
     await g.locator("#name").fill("Guest Cat");
     await g.locator('[data-avatar="2"]').click();
     async function pair() {
-      await h.locator("#mp-host").click();
-      await g.locator("#mp-join").click();
+      await h.locator("#home-host").click();
+      await g.locator("#home-join").click();
       if (!(await g.locator("#mp-advanced").getAttribute("open")))
         await g.locator("#mp-advanced").click();
       await g
         .locator("#mp-offer")
         .fill(await h.locator("#mp-offer").inputValue());
       await g.locator("#mp-import").click();
+      await g.locator("#mp-advanced").click();
       await g.evaluate(() => {
         Object.defineProperty(navigator, "clipboard", {
           configurable: true,

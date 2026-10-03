@@ -17,6 +17,8 @@ npm test
 cd ..
 node kitchen-cats/tests/core.mjs
 node kitchen-cats/tests/session-security.mjs
+node kitchen-cats/tests/home.cjs
+node kitchen-cats/tests/viewport.cjs
 node kitchen-cats/tests/browser.cjs
 node kitchen-cats/tests/qr-pairing.cjs
 node kitchen-cats/tests/qr-camera.cjs
@@ -31,13 +33,15 @@ Set `BASE_URL` to the Kitchen Cats URL (including its trailing slash) to test an
 
 - `core.mjs`: cooking, timers, scoring, movement, reset, and session contracts. Its paired in-memory transport is not WebRTC evidence.
 - `session-security.mjs`: identity binding, malformed/flood/reordered input and snapshot rejection, ticker cleanup, disconnect, and fresh-peer rejoin.
+- `home.cjs`: one Home Host and Join action, direct Host offer creation, failure-only Retry, successful retry, cancel and focus paths, and Home touch target sizes.
 - `browser.cjs`: real UI actions through a complete solo recipe, results/replay, repeated leave/restart, timer cleanup, landscape bounds, and simultaneous touch contacts. Time is accelerated with Playwright's clock; snapshots are observed without changing gameplay state.
 - `responsive.cjs`: real browser layout/accessibility checks at 667x375 and 812x375 landscape, portrait return, no overflow, visible touch targets, and orientation input reset.
+- `viewport.cjs`: Home, Help, failed and retried Host setup, QR/camera/manual pairing, Add player and cancel with connected guests, four-chef lobby limit, active play, Join/reply, results, and replay at 568x320, 667x375, 844x390, 390x844, and desktop. It checks document height, essential control bounds and touch sizes; Chromium also dispatches real touch swipes to confirm the page stays put. Camera transport is mocked for layout only; the QR/camera and RTC suites remain the behavior gates.
 - `qr-pairing.test.mjs` and `qr-pairing.cjs`: bounded versioned QR framing and CRC, actual browser QR image encode/decode roundtrips for realistic long offer/answer SDP, corrupted/unrelated rejection, repeated cancel/retry, and camera-track cleanup. The browser gate also feeds rendered QR pixels through `canvas.captureStream()` into the real live camera decoder; camera starts only from the explicit Scan button, requests video only with the rear-camera preference, and stops tracks on cleanup. Permission behavior and physical phone scanning remain device validation.
 - `qr-camera.cjs`: real rendered pixels with hidden-preview startup, injected frame-callback stalls, off-center QR placement, rapid restart, late permission, rejected consumer callbacks, rejected/hung decoder operations, and temporarily unready video. A UI check holds a repeated partial QR, waits for recovery guidance, restarts, and verifies saved-frame progress. These are fault regressions, not physical camera or transport validation.
 - `pwa.cjs`: interrupted first-install recovery, initial caching, warm/cold offline reopening, update during an active shift, failed update recovery, failed first download, and cache/scope isolation.
 - `multiplayer-ui.cjs`: two pages using a simulated transport, including guest cooking, score, replay, leave, and re-pairing. This is integration coverage, not proof of native transport.
-- `rtc.cjs`: native WebRTC pairing attempt with no ICE servers or media permissions. If the browser produces no candidates, it explicitly reports peer gameplay NOT RUN and checks cleanup/cancellation instead. It never disables network security or requests media access.
+- `rtc.cjs`: native WebRTC pairing attempt with no ICE servers or media permissions. If the browser produces no candidates, it explicitly reports peer gameplay NOT RUN and checks failure-only Retry, cleanup, and cancellation instead. On a successful connection it checks that Add player and cancel preserve the first guest. It never disables network security or requests media access.
 
 Physical iOS/Android installation, notch/safe-area behavior on real hardware, offline cold launch after OS termination, and two phones on a Wi-Fi network without internet remain required device validation. Keep the host foregrounded: backgrounding a playing host closes the session, and guests can return to solo or pair again.
 - `cream-animation.test.mjs`: Cream atlas idle/walk/work/celebrate/reduced-motion routing, 200ms movement hold, and presentation reset.

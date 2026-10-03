@@ -89,13 +89,13 @@ button.primary:active, #solo:active, #replay:active, #start:active {
   border-image-source: url("./button-coral-pressed.png");
 }
 
-#home-host, #home-join, #mp-host, #mp-join {
+#home-host, #home-join, #add-player {
   border-image-source: url("./button-sage.png");
   color: #fff9e7;
   text-shadow: 0 1px 1px #163e31;
 }
 
-#home-host:active, #home-join:active, #mp-host:active, #mp-join:active {
+#home-host:active, #home-join:active, #add-player:active {
   border-image-source: url("./button-sage-pressed.png");
 }
 

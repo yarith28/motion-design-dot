@@ -38,6 +38,8 @@ const base = process.env.BASE_URL || "http://127.0.0.1:8000/kitchen-cats/";
       assert(Math.abs(bounds.height - viewport.height) < 2);
       assert(Math.abs(intrinsic[0] / intrinsic[1] - bounds.width / bounds.height) < .01,
         "resizing stretched the room canvas");
+      assert(await page.evaluate(() => document.documentElement.scrollHeight <= document.documentElement.clientHeight + 1 && window.scrollY === 0),
+        "fullscreen shift became scrollable");
     }
 
     await page.locator("#fullscreen").click();
@@ -53,6 +55,8 @@ const base = process.env.BASE_URL || "http://127.0.0.1:8000/kitchen-cats/";
     const replayBounds = await page.locator("#replay").boundingBox();
     assert(replayBounds.y >= 0 && replayBounds.y + replayBounds.height <= 375,
       "fullscreen results clipped the replay action");
+    assert(await page.evaluate(() => document.documentElement.scrollHeight <= document.documentElement.clientHeight + 1 && window.scrollY === 0),
+      "fullscreen results became scrollable");
     await page.locator("#replay").click();
     await page.locator("#play").waitFor({ state: "visible" });
     await page.locator("#leave").click();

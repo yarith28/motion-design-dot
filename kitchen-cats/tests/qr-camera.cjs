@@ -134,7 +134,7 @@ const { launchBrowser } = require('./browser-launch.cjs');
       const page = await browser.newPage();
       try {
         await page.goto(process.env.BASE_URL || 'http://127.0.0.1:8000/kitchen-cats/');
-        await page.locator('#mp-join').click();
+        await page.locator('#home-join').click();
         await page.evaluate(async () => {
           const qr = await import('./qr-pairing.js');
           const canvas = document.createElement('canvas');

@@ -10,13 +10,14 @@
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./assets/ui-3d/ui-theme.css" />
     <link rel="stylesheet" href="./home.css" />
+    <link rel="stylesheet" href="./viewport.css" />
     <link rel="icon" href="./assets/icon-192.png" type="image/png" />
     <link rel="manifest" href="./manifest.json" />
   </head>
   <body>
     <header>
       <a class="brand" href="./">Kitchen<span>Cats</span><i>✦</i></a>
-      <div class="tag">LOCAL SOUP CLUB <b>02</b><small>r34</small></div>
+      <div class="tag">LOCAL SOUP CLUB <b>02</b><small>r36</small></div>
       <span id="connection" role="status" aria-live="polite">Connecting…</span>
     </header>
     <main>
@@ -70,20 +71,23 @@
         </div>
       </section>
       <section id="experimental-mp" class="panel card" tabindex="-1">
-        <span class="eyebrow">LOCAL CREW · EXPERIMENTAL</span>
-        <h2>Cook together</h2>
-        <details class="pair-help">
-          <summary>How pairing works</summary>
-          <p id="mp-intro">
-            Download on both phones first and use the same Wi-Fi. The host shows
-            a code, then the guest shows a reply code. Browser and router support
-            decide whether the local connection works.
-          </p>
-        </details>
-        <div id="mp-actions" class="pair-actions">
-          <button id="mp-host">Host: show a code</button>
-          <button id="mp-join">Join: scan a code</button>
+        <div class="pair-head">
+          <div>
+            <span class="eyebrow">LOCAL CREW · EXPERIMENTAL</span>
+            <h2>Cook together</h2>
+          </div>
+          <details class="pair-help">
+            <summary>Pairing help</summary>
+            <p id="mp-intro">
+              Download on both phones first and use the same Wi-Fi. The host shows
+              a code, then the guest shows a reply code. Browser and router support
+              decide whether the local connection works.
+            </p>
+          </details>
+          <button id="mp-start" class="primary" type="button" hidden>Start shift</button>
+          <button id="mp-cancel" class="pair-cancel" type="button">Back home</button>
         </div>
+        <button id="mp-retry" type="button" hidden>Retry code</button>
         <div id="mp-flow" hidden>
           <div class="pair-step">
             <strong id="mp-step">Step 1 of 2</strong>
@@ -107,16 +111,17 @@
           </div>
           <details id="mp-advanced">
             <summary>Advanced: use pairing text</summary>
-            <label for="mp-offer">Host code text</label>
-            <textarea id="mp-offer" placeholder="Paste host code here"></textarea>
-            <label for="mp-answer">Guest reply text</label>
-            <textarea id="mp-answer" placeholder="Paste guest reply here"></textarea>
-            <div class="pair-tools">
-              <button id="mp-copy">Copy current text</button>
-              <button id="mp-import">Use pasted text</button>
+            <div class="manual-grid">
+              <label for="mp-offer">Host code text</label>
+              <textarea id="mp-offer" placeholder="Paste host code here"></textarea>
+              <label for="mp-answer">Guest reply text</label>
+              <textarea id="mp-answer" placeholder="Paste guest reply here"></textarea>
+              <div class="pair-tools">
+                <button id="mp-copy">Copy current text</button>
+                <button id="mp-import">Use pasted text</button>
+              </div>
             </div>
           </details>
-          <button id="mp-cancel" class="pair-cancel">Cancel pairing</button>
         </div>
         <div id="mp-status" role="status" aria-live="polite">Idle</div>
         <div id="mp-lobby"></div>
@@ -140,7 +145,10 @@
         <div id="lobby" class="panel card" tabindex="-1" hidden>
           <p id="hosthint"></p>
           <div id="crew"></div>
-          <button id="start" class="primary">Start shift</button>
+          <div class="lobby-actions">
+            <button id="add-player" type="button" hidden>Add another player</button>
+            <button id="start" class="primary">Start shift</button>
+          </div>
         </div>
         <div id="play" class="play-shell" hidden>
           <div id="orders" aria-live="polite"></div>
@@ -204,6 +212,7 @@
 
       <details id="how" class="how card slim">
         <summary>How to play <span>4 quick steps</span></summary>
+        <button id="close-help" type="button">Back home</button>
         <div class="how-steps">
           <div><img class="help-motif" src="./assets/ui-3d/help-pick.png" alt="" /><span>01 / PICK</span><p>Grab tomatoes or carrots from the top counter.</p></div>
           <div><img class="help-motif" src="./assets/ui-3d/help-prep.png" alt="" /><span>02 / PREP</span><p>Chop at the board. Anyone can collect the finished prep.</p></div>
@@ -216,7 +225,7 @@
           <span>Wait for “Offline ready” above before disconnecting. Add this page to your Home Screen for easy reopening.</span>
           <details class="version-details">
             <summary>App version</summary>
-            <small id="build-version">Build kitchen-cats-20261003-r34-rounded-home</small>
+            <small id="build-version">Build kitchen-cats-20261003-r36-host-actions</small>
           </details>
         </div>
       </details>
